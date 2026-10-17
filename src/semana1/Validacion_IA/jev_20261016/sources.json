@@ -1,0 +1,55 @@
+{
+  "consulted_on": "2026-10-16",
+  "sources": [
+    {
+      "url": "https://www.youtube.com/watch?v=AwYYpXfFM9k&t=45s",
+      "type": "User-provided commentary video",
+      "scope": "Automatic Spanish transcript read; not a benchmark. Distinguishes bounded decisions from generated text; cautions against domain overconfidence."
+    },
+    {
+      "url": "https://docs.typesafe.ai/introduction",
+      "type": "Official documentation",
+      "scope": "State and typed questions; bounded decisions and atomic questions."
+    },
+    {
+      "url": "https://docs.typesafe.ai/models",
+      "type": "Official model and pricing documentation",
+      "scope": "Price, versions, aliases, language support, context and privacy."
+    },
+    {
+      "url": "https://docs.typesafe.ai/api",
+      "type": "Official API documentation",
+      "scope": "POST /v1/systemone; model, state, questions; answers and usage."
+    },
+    {
+      "url": "https://docs.typesafe.ai/confidence",
+      "type": "Official documentation",
+      "scope": "Confidence is calculated from model probabilities; not an empirical domain validation."
+    },
+    {
+      "url": "https://docs.typesafe.ai/model-jaggedness/jev-1.13",
+      "type": "Official limitations",
+      "scope": "Arithmetic, dates, order bias, adversarial state, irrelevant context and generation."
+    },
+    {
+      "url": "https://typesafe.ai/legal/privacy-policy",
+      "type": "Official privacy policy",
+      "scope": "No training/fine-tuning on inputs; service-provider disclosure; retention and US processing."
+    },
+    {
+      "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+      "type": "Provider benchmark explanation",
+      "scope": "Workflow reference is an average of other model probabilities; vendor-authored workloads, not actuarial ground truth."
+    },
+    {
+      "url": "https://console.typesafe.ai/playground",
+      "type": "Authenticated Chrome observation",
+      "scope": "Zero balance; one bounded test failed Out of funds; no model decision returned."
+    },
+    {
+      "url": "https://console.typesafe.ai/settings/billing",
+      "type": "Authenticated Chrome observation",
+      "scope": "No payment method or billing history; auto-recharge off; top-up form default 25; credits expire after 12 months. No purchase."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "source": "captura.json",
+  "arithmetic": "Decimal, 28 significant digits",
+  "scores_are_rounded": true,
+  "same_evaluation_assumed": true,
+  "comparisons_vs_glm": [
+    {
+      "delta_D2": "0.00853",
+      "relative_deviance_reduction_pct": "0.9537439762067153415253194986",
+      "candidate_deviance_over_reference": "0.9904625602379328465847468050",
+      "name": "RiskForge",
+      "gap_to_visible_leader": "0.00000",
+      "normalized_deviance": "0.88584"
+    },
+    {
+      "delta_D2": "0.00000",
+      "relative_deviance_reduction_pct": "0",
+      "candidate_deviance_over_reference": "1",
+      "name": "sandbox_2_basic_glm.csv",
+      "gap_to_visible_leader": "0.00853",
+      "normalized_deviance": "0.89437"
+    },
+    {
+      "delta_D2": "-0.03394",
+      "relative_deviance_reduction_pct": "-3.794850006149580151391482272",
+      "candidate_deviance_over_reference": "1.037948500061495801513914823",
+      "name": "sample_submission.csv",
+      "gap_to_visible_leader": "0.04247",
+      "normalized_deviance": "0.92831"
+    },
+    {
+      "delta_D2": "-0.03394",
+      "relative_deviance_reduction_pct": "-3.794850006149580151391482272",
+      "candidate_deviance_over_reference": "1.037948500061495801513914823",
+      "name": "sandbox_1_average_cost_baseline.csv",
+      "gap_to_visible_leader": "0.04247",
+      "normalized_deviance": "0.92831"
+    }
+  ],
+  "leader_vs_average_cost": {
+    "delta_D2": "0.04247",
+    "relative_deviance_reduction_pct": "4.574980340618974265062317545",
+    "candidate_deviance_over_reference": "0.9542501965938102573493768246"
+  },
+  "glm_vs_average_cost": {
+    "delta_D2": "0.03394",
+    "relative_deviance_reduction_pct": "3.656106257607911150370027254",
+    "candidate_deviance_over_reference": "0.9634389374239208884962997275"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "passed": 7,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "Actual second CLI invocation is verified no-op",
+      "passed": true
+    },
+    {
+      "check": "Second invocation changes neither current index",
+      "passed": true
+    },
+    {
+      "check": "All originals, prior files and baseline index unchanged",
+      "passed": true
+    },
+    {
+      "check": "Closed new run and previous CAP02R manifests intact",
+      "passed": true
+    },
+    {
+      "check": "Retrospective pointer has 576 pending, 2951 corrections and 112 cumulative test signals",
+      "passed": true
+    },
+    {
+      "check": "Default protocol still points to unchanged baseline",
+      "passed": true
+    },
+    {
+      "check": "No modeling or causal backtest approval introduced",
+      "passed": true
+    }
+  ],
+  "actual_second_cli": {
+    "status": "already_applied_verified_noop",
+    "run": "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Limpieza\\runs\\capnumeric_20261016T215017Z_75a1fda5",
+    "new_changes": 0,
+    "CAP03R_changes": 11
+  },
+  "stderr": "",
+  "independent_validation": false
+}

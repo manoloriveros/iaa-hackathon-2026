@@ -1,0 +1,499 @@
+{
+  "schema_version": 1,
+  "created_on": "2026-10-16",
+  "timezone": "America/Bogota",
+  "status": "planned_not_executed",
+  "executable_runner_config": false,
+  "governing_methodology": "METODOLOGIA_ACTUARIAL.md",
+  "protocol": "protocolo_metodologico.json",
+  "research_report": "Investigacion_tecnicas/INFORME.md",
+  "research_decision": "D37",
+  "metric": {
+    "name": "d2_tweedie",
+    "power": 1.5,
+    "direction": "maximize",
+    "prediction_unit": "CU_per_policy_period",
+    "local_primary_weights": "none_provisional_not_verified_official_scorer",
+    "fit_power_vs_evaluation_power": "p_fit may vary by declared experiment; evaluate every candidate with p_eval=1.5"
+  },
+  "comparison_axes": [
+    "separate_lines_vs_pooled",
+    "proxy_vs_development_scenarios",
+    "exposure_vs_sqrt_exposure_rate_weights",
+    "history_and_cross_line_features",
+    "uncalibrated_vs_calibrated",
+    "direct_cost_vs_peril_components",
+    "exposure_offset_vs_offset_plus_duration_function"
+  ],
+  "required_before_training": [
+    "versioned_verified_input_catalog",
+    "claim_period_assignment_and_reconciliation",
+    "versioned_nonnegative_target_with_limitations",
+    "feature_availability_contract",
+    "saved_temporal_partitions",
+    "metric_implementation",
+    "Parquet_multitable_runner_adaptation",
+    "exclude_customer_service_contacts_in_real_feature_guard_and_verify_D50_gap"
+  ],
+  "validation": {
+    "primary": "V22 internal tuning; V23 development with separate calibration/selection halves; V24 final first-round evaluation after candidate freeze. Label valuation at 2024-12-31 disclosed",
+    "secondary": "Known versus new entities; connected-component grouping after checking component sizes",
+    "strict_historical_backtest_available": false,
+    "reason": "Single 2024 valuation cannot reconstruct past paid/incurred/status snapshots",
+    "tuning_calibration_and_ensembling": "Internal partitions only; external evaluation untouched"
+  },
+  "candidates": [
+    {
+      "id": "M00",
+      "family": "line_constant_rate",
+      "wave": 1,
+      "status": "planned",
+      "depends_on": [],
+      "calculation_contract": {
+        "status": "proposed_not_implemented_or_fitted",
+        "period_prediction": "m=e*q_r",
+        "fit_and_controls": "Comparar q_r=sum(Y)/sum(e) y q_r=sum(Y/sqrt(e))/sum(sqrt(e)); ajustar por ramo en train.",
+        "evaluation_power": 1.5,
+        "rate_weight_if_equivalent_tweedie_fit": "exposure**(2-p_fit)",
+        "local_D2": null,
+        "public_D2": null
+      }
+    },
+    {
+      "id": "M01",
+      "family": "glm_tweedie",
+      "wave": 1,
+      "status": "planned",
+      "depends_on": [
+        "M00"
+      ],
+      "calculation_contract": {
+        "status": "proposed_not_implemented_or_fitted",
+        "period_prediction": "m=e*exp(beta0+x*beta)",
+        "fit_and_controls": "GLM con enlace log; minimizar desviación Tweedie de importes; p_fit=1.5 de referencia y p_fit=1.9 como sensibilidad D50.",
+        "evaluation_power": 1.5,
+        "rate_weight_if_equivalent_tweedie_fit": "exposure**(2-p_fit)",
+        "local_D2": null,
+        "public_D2": null
+      }
+    },
+    {
+      "id": "M02",
+      "family": "gam_tweedie",
+      "wave": 2,
+      "status": "planned",
+      "depends_on": [
+        "M01"
+      ],
+      "calculation_contract": {
+        "status": "proposed_not_implemented_or_fitted",
+        "period_prediction": "m=e*exp(beta0+sum_j f_j(x_j))",
+        "fit_and_controls": "GAM: curvas y penalización dentro de train; interacciones solo como variante identificada.",
+        "evaluation_power": 1.5,
+        "rate_weight_if_equivalent_tweedie_fit": "exposure**(2-p_fit)",
+        "local_D2": null,
+        "public_D2": null
+      }
+    },
+    {
+      "id": "M03",
+      "family": "glm_gam_frequency_severity",
+      "wave": 2,
+      "status": "planned",
+      "depends_on": [
+        "M01"
+      ],
+      "calculation_contract": {
+        "status": "proposed_not_implemented_or_fitted",
+        "period_prediction": "m=e*lambda(x)*s(x)",
+        "fit_and_controls": "Poisson para conteo de costes positivos con offset log(e); gamma-log para severidad positiva por siniestro. Si se agregan medias por periodo, ponderar severidad por el conteo positivo.",
+        "evaluation_power": 1.5,
+        "rate_weight_if_equivalent_tweedie_fit": "exposure**(2-p_fit)",
+        "local_D2": null,
+        "public_D2": null
+      }
+    },
+    {
+      "id": "M04",
+      "family": "lightgbm_tweedie",
+      "wave": 1,
+      "status": "planned",
+      "depends_on": [
+        "M00",
+        "M01"
+      ],
+      "calculation_contract": {
+        "status": "proposed_not_implemented_or_fitted",
+        "period_prediction": "m=e*exp(f_arboles(x))",
+        "fit_and_controls": "Boosting Tweedie: verificar base margin/offset o ajustar tasa Y/e con peso e**(2-p_fit). No multiplicar exposición dos veces.",
+        "evaluation_power": 1.5,
+        "rate_weight_if_equivalent_tweedie_fit": "exposure**(2-p_fit)",
+        "local_D2": null,
+        "public_D2": null
+      }
+    },
+    {
+      "id": "M05",
+      "family": "xgboost_tweedie",
+      "wave": 1,
+      "status": "planned",
+      "depends_on": [
+        "M00",
+        "M01"
+      ],
+      "calculation_contract": {
+        "status": "proposed_not_implemented_or_fitted",
+        "period_prediction": "m=e*exp(f_arboles(x))",
+        "fit_and_controls": "Boosting Tweedie: mismo contrato de importe y exposición; verificar soporte del offset en la versión elegida.",
+        "evaluation_power": 1.5,
+        "rate_weight_if_equivalent_tweedie_fit": "exposure**(2-p_fit)",
+        "local_D2": null,
+        "public_D2": null
+      }
+    },
+    {
+      "id": "M06",
+      "family": "catboost_tweedie",
+      "wave": 1,
+      "status": "planned",
+      "depends_on": [
+        "M00",
+        "M01"
+      ],
+      "calculation_contract": {
+        "status": "proposed_not_implemented_or_fitted",
+        "period_prediction": "m=e*exp(f_arboles(x))",
+        "fit_and_controls": "Boosting Tweedie: usar tasa Y/e y peso e**(2-p_fit) si no hay offset; revertir cualquier reescala de CU antes de evaluar.",
+        "evaluation_power": 1.5,
+        "rate_weight_if_equivalent_tweedie_fit": "exposure**(2-p_fit)",
+        "local_D2": null,
+        "public_D2": null
+      }
+    },
+    {
+      "id": "M07",
+      "family": "catboost_frequency_severity",
+      "wave": 2,
+      "status": "planned",
+      "depends_on": [
+        "M03",
+        "M06"
+      ],
+      "condition": "Verify positive severity objective; Tweedie power 2 is invalid in CatBoost",
+      "calculation_contract": {
+        "status": "proposed_not_implemented_or_fitted",
+        "period_prediction": "m=e*lambda_cat(x)*s_cat(x)",
+        "fit_and_controls": "Frecuencia de coste positivo y severidad positiva separadas; verificar objetivo gamma o likelihood válida. Tweedie con p=2 no es gamma admisible en CatBoost.",
+        "evaluation_power": 1.5,
+        "rate_weight_if_equivalent_tweedie_fit": "exposure**(2-p_fit)",
+        "local_D2": null,
+        "public_D2": null
+      }
+    },
+    {
+      "id": "M08",
+      "family": "credibility_glmm",
+      "wave": 2,
+      "status": "planned",
+      "depends_on": [
+        "M01"
+      ],
+      "condition": "Causal history availability and variance specification",
+      "calculation_contract": {
+        "status": "proposed_not_implemented_or_fitted",
+        "period_prediction": "m=e*E[exp(eta(x)+u_grupo) dado historia disponible]",
+        "fit_and_controls": "Especificar distribución, varianza y posterior del efecto; integrar en la escala de coste. Grupos nuevos usan distribución predictiva, sin etiquetas futuras.",
+        "evaluation_power": 1.5,
+        "rate_weight_if_equivalent_tweedie_fit": "exposure**(2-p_fit)",
+        "local_D2": null,
+        "public_D2": null
+      }
+    },
+    {
+      "id": "M09",
+      "family": "glm_gam_residual_boosting",
+      "wave": 2,
+      "status": "planned",
+      "depends_on": [
+        "M01",
+        "M04",
+        "M05",
+        "M06"
+      ],
+      "calculation_contract": {
+        "status": "proposed_not_implemented_or_fitted",
+        "period_prediction": "m=m_base*exp(g(x))",
+        "fit_and_controls": "Refinamiento multiplicativo con log(m_base) como offset; minimizar pérdida sobre Y, sin log(Y) ni regresión Tweedie sobre residuos negativos. Folds internos para selección.",
+        "evaluation_power": 1.5,
+        "rate_weight_if_equivalent_tweedie_fit": "exposure**(2-p_fit)",
+        "local_D2": null,
+        "public_D2": null
+      }
+    },
+    {
+      "id": "M10",
+      "family": "tabular_cann",
+      "wave": 3,
+      "status": "planned",
+      "depends_on": [
+        "M01",
+        "M09"
+      ],
+      "calculation_contract": {
+        "status": "proposed_not_implemented_or_fitted",
+        "period_prediction": "m=m_GLM*exp(g_red(x))",
+        "fit_and_controls": "CANN con salida positiva; pérdida de importe Tweedie y exposición ya incluida en m_GLM. Comparar contra base sin corrección.",
+        "evaluation_power": 1.5,
+        "rate_weight_if_equivalent_tweedie_fit": "exposure**(2-p_fit)",
+        "local_D2": null,
+        "public_D2": null
+      }
+    },
+    {
+      "id": "M11",
+      "family": "mlp_and_ft_transformer",
+      "wave": 3,
+      "status": "planned",
+      "depends_on": [
+        "M04",
+        "M05",
+        "M06"
+      ],
+      "calculation_contract": {
+        "status": "proposed_not_implemented_or_fitted",
+        "period_prediction": "m=e*exp(f_red(x))",
+        "fit_and_controls": "MLP/FT-Transformer: mismo objetivo y contrato F0 que árboles; regularización y parada dentro del desarrollo.",
+        "evaluation_power": 1.5,
+        "rate_weight_if_equivalent_tweedie_fit": "exposure**(2-p_fit)",
+        "local_D2": null,
+        "public_D2": null
+      }
+    },
+    {
+      "id": "M12",
+      "family": "localglmnet",
+      "wave": 3,
+      "status": "planned",
+      "depends_on": [
+        "M01",
+        "M10"
+      ],
+      "calculation_contract": {
+        "status": "proposed_not_implemented_or_fitted",
+        "period_prediction": "m=e*exp(beta0+sum_j beta_j(x)*x_j)",
+        "fit_and_controls": "LocalGLMnet: coeficientes dependientes de x; centrar/identificar efectos y revisar estabilidad sin atribuir causalidad.",
+        "evaluation_power": 1.5,
+        "rate_weight_if_equivalent_tweedie_fit": "exposure**(2-p_fit)",
+        "local_D2": null,
+        "public_D2": null
+      }
+    },
+    {
+      "id": "M13",
+      "family": "localglmftt_and_caftt",
+      "wave": 3,
+      "status": "conditional_implementation_review",
+      "depends_on": [
+        "M10",
+        "M11",
+        "M12"
+      ],
+      "primary_reference": "https://arxiv.org/abs/2311.07597",
+      "author_repository": "https://github.com/BrauerAlexej/Enhancing_actuarial_non-life_pricing_models_via_transformers_Public",
+      "condition": "Inspect implementation and license; adapt original Poisson frequency experiment to frequency-severity or Tweedie claim cost",
+      "calculation_contract": {
+        "status": "proposed_not_implemented_or_fitted",
+        "period_prediction": "m=e*lambda_transformer(x)*s(x), o salida Tweedie positiva adaptada",
+        "fit_and_controls": "LocalGLMftt/CAFTT: escoger adaptación explícita antes de implementar. No atribuir coste agregado a un experimento original de frecuencia.",
+        "evaluation_power": 1.5,
+        "rate_weight_if_equivalent_tweedie_fit": "exposure**(2-p_fit)",
+        "local_D2": null,
+        "public_D2": null
+      }
+    },
+    {
+      "id": "M14",
+      "family": "longitudinal_cann_poisson_nb_mvnb",
+      "wave": 3,
+      "status": "conditional_data_contract",
+      "depends_on": [
+        "M03",
+        "M08",
+        "M10"
+      ],
+      "condition": "Tabular adaptation only; granular telematics missing",
+      "calculation_contract": {
+        "status": "proposed_not_implemented_or_fitted",
+        "period_prediction": "m=E[N_periodo dado historia]*s(x,historia)",
+        "fit_and_controls": "CANN longitudinal Poisson/NB/MVNB para conteos; duración incorporada en E[N]. Severidad positiva y contracción histórica se validan por separado.",
+        "evaluation_power": 1.5,
+        "rate_weight_if_equivalent_tweedie_fit": "exposure**(2-p_fit)",
+        "local_D2": null,
+        "public_D2": null
+      }
+    },
+    {
+      "id": "M15",
+      "family": "distributional_refinement_network",
+      "wave": 3,
+      "status": "planned",
+      "depends_on": [
+        "M01",
+        "M10"
+      ],
+      "condition": "Validate zero mass, tails and expected-cost extraction",
+      "calculation_contract": {
+        "status": "proposed_not_implemented_or_fitted",
+        "period_prediction": "m=integral_0_infinito (1-F_refinada(t dado x)) dt",
+        "fit_and_controls": "DRN: extraer esperanza finita en CU del periodo, con masa cero y cola explícitas; no sustituirla por mediana o cuantiles.",
+        "evaluation_power": 1.5,
+        "rate_weight_if_equivalent_tweedie_fit": "exposure**(2-p_fit)",
+        "local_D2": null,
+        "public_D2": null
+      }
+    },
+    {
+      "id": "M16",
+      "family": "blend_then_stacking",
+      "wave": 4,
+      "status": "planned",
+      "depends_on": [],
+      "condition": "At least two compatible models with complementary held-out errors; nested evaluation",
+      "calculation_contract": {
+        "status": "proposed_not_implemented_or_fitted",
+        "period_prediction": "m=sum_k alpha_k*m_k, alpha_k>=0, sum_k alpha_k=1",
+        "fit_and_controls": "Primero mezcla convexa de importes compatibles; pesos y stacking con predicciones fuera de muestra y evaluación externa. Stacking posterior exige salida positiva.",
+        "evaluation_power": 1.5,
+        "rate_weight_if_equivalent_tweedie_fit": "exposure**(2-p_fit)",
+        "local_D2": null,
+        "public_D2": null
+      }
+    },
+    {
+      "id": "M17",
+      "family": "tabm",
+      "wave": 3,
+      "status": "proposed_implementation_review",
+      "depends_on": [
+        "M04",
+        "M05",
+        "M06"
+      ],
+      "primary_reference": "https://arxiv.org/abs/2410.24210v3",
+      "condition": "Review implementation/license, adapt Tweedie or frequency-severity objective and exposure; same feature contract as other networks",
+      "calculation_contract": {
+        "status": "proposed_not_implemented_or_fitted",
+        "period_prediction": "m=e*exp(f_TabM(x))",
+        "fit_and_controls": "Propuesta de adaptación Tweedie; salida y pérdida verificadas antes de piloto. Si es frecuencia-severidad, conservar contrato M03.",
+        "evaluation_power": 1.5,
+        "rate_weight_if_equivalent_tweedie_fit": "exposure**(2-p_fit)",
+        "local_D2": null,
+        "public_D2": null
+      }
+    },
+    {
+      "id": "M18",
+      "family": "actuarial_neural_additive_model",
+      "wave": 3,
+      "status": "proposed_implementation_review",
+      "depends_on": [
+        "M02",
+        "M10"
+      ],
+      "primary_reference": "https://arxiv.org/abs/2509.08467",
+      "condition": "Review implementation/license; justify sparsity, smoothness and monotonic constraints; evaluate interaction stability",
+      "calculation_contract": {
+        "status": "proposed_not_implemented_or_fitted",
+        "period_prediction": "m=e*exp(beta0+sum_j f_j_red(x_j))",
+        "fit_and_controls": "ANAM: especificar efectos, suavidad, restricciones e interacciones antes de medir; propuesta de coste por periodo.",
+        "evaluation_power": 1.5,
+        "rate_weight_if_equivalent_tweedie_fit": "exposure**(2-p_fit)",
+        "local_D2": null,
+        "public_D2": null
+      }
+    },
+    {
+      "id": "M19",
+      "family": "credibility_transformer_and_in_context_extension",
+      "wave": 3,
+      "status": "conditional_implementation_review",
+      "depends_on": [
+        "M08",
+        "M11"
+      ],
+      "primary_reference": "https://link.springer.com/article/10.1007/s13385-025-00413-y",
+      "extension_reference": "https://arxiv.org/abs/2509.08122v2",
+      "condition": "Distinguish token credibility from policy-history credibility; no held-out labels in context, memory or fine-tuning",
+      "calculation_contract": {
+        "status": "proposed_not_implemented_or_fitted",
+        "period_prediction": "m=e*exp(f_transformer(x,contexto_admisible))",
+        "fit_and_controls": "Propuesta de coste: definir tokens, contexto y contracción; no incluir etiquetas de evaluación ni memoria con información futura.",
+        "evaluation_power": 1.5,
+        "rate_weight_if_equivalent_tweedie_fit": "exposure**(2-p_fit)",
+        "local_D2": null,
+        "public_D2": null
+      }
+    },
+    {
+      "id": "M20",
+      "family": "tabpfn_positive_severity_first",
+      "wave": 3,
+      "status": "conditional_version_license_and_objective_review",
+      "depends_on": [
+        "M03",
+        "M07"
+      ],
+      "primary_reference": "https://arxiv.org/html/2605.22892v3",
+      "version_reference": "https://arxiv.org/abs/2605.13986v2",
+      "condition": "Verify actual version and license, sample weights/offset support, CU expectation extraction, memory and inference; no API or weight download authorized by catalog",
+      "calculation_contract": {
+        "status": "proposed_not_implemented_or_fitted",
+        "period_prediction": "m=e*lambda(x)*E[S_positivo dado x]",
+        "fit_and_controls": "TabPFN solo en severidad inicialmente; extraer media en CU. exp(E[log(S)]) no equivale a E[S]; revisar retransfomación, versión, licencia y pesos.",
+        "evaluation_power": 1.5,
+        "rate_weight_if_equivalent_tweedie_fit": "exposure**(2-p_fit)",
+        "local_D2": null,
+        "public_D2": null
+      }
+    },
+    {
+      "id": "M21",
+      "family": "zero_inflated_tweedie_boosting",
+      "wave": 3,
+      "status": "conditional_zero_mass_diagnostic",
+      "depends_on": [
+        "M01",
+        "M06"
+      ],
+      "primary_reference": "https://arxiv.org/abs/2406.16206v2",
+      "condition": "Tweedie already has zero mass; require retained evidence of extra-zero misspecification and improvement in aggregate cost, not zero classification alone",
+      "calculation_contract": {
+        "status": "proposed_not_implemented_or_fitted",
+        "period_prediction": "m=(1-pi(x))*e*q_Tweedie(x)",
+        "fit_and_controls": "Mezcla cero adicional/Tweedie: pi es masa estructural adicional y q es media del componente Tweedie. Exigir evidencia de ceros extra; D50 no la encontró en conteos.",
+        "evaluation_power": 1.5,
+        "rate_weight_if_equivalent_tweedie_fit": "exposure**(2-p_fit)",
+        "local_D2": null,
+        "public_D2": null
+      }
+    }
+  ],
+  "submission_policy": {
+    "decision": "D29",
+    "daily_cap_provisional": 5,
+    "must_exhaust_daily_cap": false,
+    "criterion": "Hypothesis and local validation evidence; log exact file and public score",
+    "submissions_executed": 0
+  },
+  "models_trained": 0,
+  "updated_on": "2026-10-16",
+  "calculation_contract_decision": "D64",
+  "public_reference": {
+    "source": "Referencias_publicas/captura.json",
+    "table": "Referencias_publicas/TABLA_Y_CALCULOS.md",
+    "own_results": false,
+    "live_verified": false,
+    "selection_threshold": null,
+    "changes_candidate_priority": false
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-16",
+  "timezone": "America/Bogota",
+  "requested_url": "https://share.gemini.google/d9DH352vPdnd",
+  "resolved_share_url": "https://gemini.google.com/share/fb23eb65536d",
+  "document_title": "Arquitectura Actuarial y de Aprendizaje Automático para la Tarificación Multirramo del Coste Último de Siniestros (IAA 2026)",
+  "access_method": "Lectura del contenido renderizado mediante navegador y árbol de accesibilidad; acceso web directo fallido",
+  "source_type": "AI_assisted_proposal_supplied_by_user",
+  "full_source_export_saved": false,
+  "record_scope": "Procedencia y paráfrasis de afirmaciones analizadas; no es una transcripción íntegra ni un export de la conversación original",
+  "instructions_in_source": "Material de análisis; no amplía la solicitud del participante ni autoriza acciones externas",
+  "claims_reviewed": [
+    {"id": "G01", "claim": "GLM/GAM, frecuencia-severidad y credibilidad como base actuarial", "assessment": "Candidatos pertinentes pendientes de prueba"},
+    {"id": "G02", "claim": "LightGBM, XGBoost y CatBoost Tweedie como modelos flexibles", "assessment": "Priorizar comparación con misma validación y objetivo"},
+    {"id": "G03", "claim": "Reconstruir desarrollo individual y triángulos de pagos con los archivos actuales", "assessment": "Faltan movimientos, fechas de cierre y snapshots históricos; no identificado"},
+    {"id": "G04", "claim": "Ajustar IBNR mediante retrasos de notificación", "assessment": "Investigar madurez y truncamiento; no usar CDF empírica global como corrección validada"},
+    {"id": "G05", "claim": "Telematics MVNB-CANN con vectores de conducción", "assessment": "Vectores ausentes; estudiar variante tabular sin atribuir reproducción completa"},
+    {"id": "G06", "claim": "Equivalencia de evaluación sobre importes y tasas", "assessment": "Derivar pesos e**(2-p), distinguir referencias D2 y verificar numéricamente"},
+    {"id": "G07", "claim": "Balance e isotónica garantizan mejora", "assessment": "No garantizado fuera de muestra ni equivalente a optimización Tweedie"},
+    {"id": "G08", "claim": "Parámetros de hojas equivalentes a años-póliza", "assessment": "Confunde observaciones/Hessianos con exposición"},
+    {"id": "G09", "claim": "Init_score en CatBoost y Gamma sin restricciones", "assessment": "Usar baseline en CatBoost; Gamma requiere etiquetas positivas y objetivo compatible"},
+    {"id": "G10", "claim": "CANN, LocalGLMnet, LocalGLMftt, CAFTT y DRN superiores por construcción", "assessment": "Candidatos con fuentes primarias localizadas; superioridad no demostrada en el concurso. Brauer define LocalGLMftt y CAFTT en arXiv:2311.07597; código y licencia pendientes de revisión"},
+    {"id": "G11", "claim": "Mejora superior al 17%, umbrales SHAP y balance y valores de doble lift", "assessment": "Sin evidencia reproducida para esta cartera; no adoptar como resultados o umbrales"},
+    {"id": "G12", "claim": "Rechazos prueban riesgo moral; papers IAA son normas", "assessment": "No inferir conducta ni cumplimiento; conservar interpretación y alcance educativo"},
+    {"id": "G13", "claim": "Cinco fases con envíos asignados", "assessment": "Sustituir por fases dependientes de evidencia y política D29 sin cuota diaria obligatoria"}
+  ],
+  "review_document": "README.md",
+  "experiments_catalog": "experimentos.json",
+  "trained_in_this_review": false,
+  "submitted_in_this_review": false
+}

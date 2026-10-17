@@ -1,0 +1,23 @@
+{
+  "workspace_relative_run": "Hackaton/Semana 1/Revision_pendientes_restantes_claude/runs/rest_20261017T021239Z_929ce606",
+  "status": "verified_review_only_no_data_changes",
+  "evidence": "runs/rest_20261017T021239Z_929ce606/evidencia.json",
+  "report_html": "informe.html",
+  "report_md": "INFORME.md",
+  "cohort_rows": 265,
+  "cohort_sha256": "8530dc3ce2afefd4fd27749746749953c44600fd474d9261f873d22a2fc9192f",
+  "groups": {"G_other_conflicts": 138, "C_no_original_normal_reference": 108, "E_TW_dependency": 16, "D_CAP01_dependency_only": 2, "A_retrospective_D34": 1},
+  "candidates_NOT_APPLIED": {"MOV01-R": 47, "END01-R": 32, "END02-R": 17, "TW01-R": 17, "CHAIN01-R": 3, "total": 116},
+  "without_reference_in_policy": 149,
+  "proposed_rules": ["MOV01-R", "END01-R", "END02-R", "TW01-R", "CHAIN01-R"],
+  "modeling_proposal_for_rows_without_reference": "transformación documentada en F0: sum_insured/1000 cuando supera el umbral del ramo, con marca capital_scale_suspect fuera de los predictores; alternativa: capital no disponible con imputador de entrenamiento",
+  "correction_authorized": false,
+  "capital_changes": 0,
+  "active_retrospective_index": "Hackaton/Semana 1/Limpieza/current_retrospective_dataset.json",
+  "retrospective_run_reviewed": "capendorse_20261017T010844Z_fbf8cc20 (CAP06R)",
+  "group_F_review": "Hackaton/Semana 1/Revision_contexto_pendiente_claude/current_run.json (D63)",
+  "checks_passed": 23,
+  "checks_total": 23,
+  "models_trained": 0,
+  "human_review": "pending"
+}

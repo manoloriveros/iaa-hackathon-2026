@@ -1,0 +1,41 @@
+{
+  "passed": 7,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "Actual second CLI prepare is a verified no-op",
+      "passed": true
+    },
+    {
+      "check": "No-op preserves both active indexes",
+      "passed": true
+    },
+    {
+      "check": "All protected originals, parent files and prior indexes unchanged",
+      "passed": true
+    },
+    {
+      "check": "New, CAP05R and D60 manifests intact",
+      "passed": true
+    },
+    {
+      "check": "Correct419/3108/1035/136 counters and zero new test support",
+      "passed": true
+    },
+    {
+      "check": "Default catalog unchanged and no modeling approval",
+      "passed": true
+    },
+    {
+      "check": "Every report link present after sealing",
+      "passed": true
+    }
+  ],
+  "actual_second_cli": {
+    "status": "already_applied_verified_noop",
+    "new_changes": 0,
+    "run": "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Limpieza\\runs\\capendorse_20261017T010844Z_fbf8cc20"
+  },
+  "stderr": "",
+  "independent_validation": false
+}

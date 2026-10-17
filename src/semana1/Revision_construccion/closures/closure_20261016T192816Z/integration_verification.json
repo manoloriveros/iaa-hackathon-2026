@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "checks_count": 9,
+  "checks": [
+    {
+      "name": "immutable_review_manifest_still_identical",
+      "passed": true
+    },
+    {
+      "name": "active_prepared_index_still_identical",
+      "passed": true
+    },
+    {
+      "name": "candidate_never_published_in_active_index",
+      "passed": true
+    },
+    {
+      "name": "state_preserves_all_preexisting_top_level_fields",
+      "passed": true
+    },
+    {
+      "name": "state_paths_resolve",
+      "passed": true
+    },
+    {
+      "name": "route_index_and_report_resolve",
+      "passed": true
+    },
+    {
+      "name": "decision_unique_and_referenced",
+      "passed": true
+    },
+    {
+      "name": "no_model_protocol_or_active_data_change_in_documentation",
+      "passed": true
+    },
+    {
+      "name": "report_logic_passed_without_browser_claim",
+      "passed": true
+    }
+  ],
+  "decision_id": "D39",
+  "review_run": "Hackaton/Semana 1/Revision_construccion/runs/construction_20261016T192514Z_779b361e",
+  "review_manifest_sha256": "702360587e6daea6e4c851440bd683c41b82716a141a670125ee68de578deb62",
+  "original_data_checks_not_repeated_for_editorial_changes": true,
+  "independent_validation": false
+}

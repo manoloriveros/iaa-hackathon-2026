@@ -1,0 +1,27 @@
+{
+  "status": "proposal_no_paid_execution_authorized",
+  "seed_cases": 18,
+  "before_execution": [
+    "Human review of proposed labels",
+    "Representative blind cases held aside before prompt tuning",
+    "Exact model ID, frozen prompts, input hash, raw answer, usage, latency, error and cost ledger"
+  ],
+  "comparators": [
+    "Deterministic current pipeline",
+    "Human review with documented rubric"
+  ],
+  "metrics": [
+    "Confusion matrix by proposed route",
+    "Unsupported correction suggestions",
+    "Abstention and manual review coverage",
+    "Accuracy conditional on confidence (not just confidence average)",
+    "Order permutation and Spanish/English stability",
+    "Review time saved and observed cost"
+  ],
+  "initial_gate": "No automatic capital repairs under any confidence; reject adoption on any critical unsupported correction until analyzed.",
+  "sample_limit": "18 illustrative development cases cannot establish actuarial accuracy or calibration.",
+  "fallback": "All transformations remain deterministic; Jev may only propose routing, logged and reviewed.",
+  "cash_budget": null,
+  "spend_authorized": false,
+  "request_retries": "Must be bounded and counted if a future pilot is authorized."
+}

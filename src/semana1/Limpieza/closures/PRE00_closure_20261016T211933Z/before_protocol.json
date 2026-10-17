@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "version": "1.4",
+  "created_on": "2026-10-16",
+  "timezone": "America/Bogota",
+  "status": "methodology_defined_implementation_pending",
+  "document": "METODOLOGIA_ACTUARIAL.md",
+  "source_of_authority": "Competition contract, verified project data, and methodological decisions of the project",
+  "target": {
+    "economic_estimand": "Expected ultimate accepted claim cost, net of excess and recoveries, for each provided policy period",
+    "unit": "CU_per_policy_period",
+    "valuation_date": "2024-12-31",
+    "first_operational_label": "T0_net_observed_incurred",
+    "T0_claim_formula": "incurred_to_date - recoveries for open/closed claims; repudiated excluded",
+    "claim_assignment": [
+      "policy_id",
+      "line",
+      "period_start <= loss_date <= period_end"
+    ],
+    "reject_ambiguous_assignment": true,
+    "pre_window_claims": "Reconcile separately; do not assign to first available period",
+    "no_claim_policy_label": 0,
+    "negative_or_nonfinite_label_policy": "Investigate and define explicit rule before fitting; no silent clipping",
+    "T1_reserve_sensitivity": {
+      "open_claim_formula": "paid + a*(incurred-paid) - observed_recoveries",
+      "a_scenarios": [
+        0.75,
+        1.0,
+        1.25
+      ],
+      "interpretation": "Design stress only, not fitted development factors or confidence intervals"
+    },
+    "T2_reporting_completion": {
+      "status": "requires_truncated_delay_model_and_validation",
+      "count_completion_equals_cost_completion": false,
+      "double_correction_prohibited": true
+    },
+    "ultimate_ground_truth_available": false,
+    "prehistory_claim_records_after_DUP01": 413,
+    "operational_T0_materialized": false
+  },
+  "inputs": {
+    "catalog_index": "../Limpieza/current_dataset.json",
+    "catalog_paths_relative_to": "workspace_root",
+    "verify_hashes": true,
+    "exposure_rule": "D32 inclusive covered days/365 rounded to 4 decimals",
+    "capital_auto_correction": false,
+    "capital_correction": {
+      "rule": "CAP01",
+      "mode": "participant_authorized_frozen_cohort",
+      "rows": 2073,
+      "divisor": 1000,
+      "other_extreme_pending": 1454,
+      "automatic_expansion": false,
+      "source_unit_confirmation": false,
+      "ledger_and_reversal_verified": true,
+      "baseline_catalog": "../Limpieza/runs/clean_20261016T175335Z_a6412ce0/dataset_catalog.json"
+    },
+    "category_normalization": {
+      "rule": "CAT01",
+      "field": "construction_type",
+      "case_aliases_only": true,
+      "t_w_semantic_merge": false
+    },
+    "policyholder_age": {
+      "rule": "AGE01",
+      "scope": "buildings and contents only",
+      "definition": "Completed calendar years from customers.date_of_birth at period_start",
+      "source_priority": "Birth-date master adopted as project reference; old reported ages retained in ledger",
+      "driver_age_changed": false
+    },
+    "missing_value_imputation": "Not applied in prepared layer; any model-specific imputer must fit within temporal training folds.",
+    "claims_deduplication": {
+      "rule": "DUP01",
+      "mode": "participant_authorized_frozen_604_pairs",
+      "review_decision": "D41",
+      "source_rows": 163150,
+      "derived_rows": 162546,
+      "excluded_copies": 604,
+      "keep": "CL plus 8 digits after full non-ID equality and assignment checks",
+      "automatic_expansion": false,
+      "retained_values_changed": 0,
+      "aliases_and_typed_exclusions_preserved": true,
+      "active_application_index": "../Limpieza/current_duplicate_application.json",
+      "source_events_confirmed_by_organizer": false
+    },
+    "historical_EDA_claim_aggregates_reused": false,
+    "audit_annotations": {
+      "rule": "REN00",
+      "column": "audit_ren00",
+      "role": "audit_only",
+      "policy_ids": 2742,
+      "marked_periods": 12041,
+      "mark_scope": "All periods of frozen cohort policies, including historical rows; no claim rows modified.",
+      "all_source_values_preserved": true,
+      "forward_looking_membership": true,
+      "automatic_expansion": false,
+      "report": "../Limpieza/runs/renaudit_20261016T203904Z_657dd741/informe.html"
+    }
+  },
+  "validation": {
+    "V22": {
+      "train_years": [
+        2021
+      ],
+      "prediction_year": 2022,
+      "role": "internal_tuning"
+    },
+    "V23": {
+      "train_years": [
+        2021,
+        2022
+      ],
+      "prediction_year": 2023,
+      "role": "development_and_internal_calibration_selection"
+    },
+    "V24": {
+      "train_years": [
+        2021,
+        2022,
+        2023
+      ],
+      "prediction_year": 2024,
+      "role": "first_round_final_holdout_after_candidate_freeze"
+    },
+    "production": {
+      "train_years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "prediction_year": 2025
+    },
+    "historical_information_reconstruction_exact": false,
+    "label_valuation_all_splits": "2024-12-31",
+    "reason": "No historical payment/reserve/status snapshots; temporal proxy validation must disclose later valuation",
+    "keep_renewals_across_years": true,
+    "known_new_entity_reporting": [
+      "policy",
+      "customer",
+      "address"
+    ],
+    "cold_entity_validation": "secondary_after_component_size_analysis",
+    "calibration_selection_2023": "SHA256 UTF-8 cal_v1|customer_id; first 16 hex digits as integer modulo 2: 0 calibration, 1 selection; address-dependence audit and versioned regrouping if needed",
+    "holdout_reuse_log_required": true
+  },
+  "features": {
+    "F0": "Contractual and physical-risk baseline with explicit master stability assumptions",
+    "F1": "Past reported-count history using occurrence and report dates; no retrospective final-status filtering",
+    "F2": "Weather years strictly before information cutoff",
+    "F3": "Conditional telematics and operational/master variables with unresolved timestamps",
+    "F4": "Existing commercial tariff ablation",
+    "excluded_initially": [
+      "renewal_decision",
+      "same_period_claim_cost_or_status",
+      "raw_identifier_memorization",
+      "repair_audit_metadata",
+      "personal_names",
+      "audit_ren00",
+      "audit_*",
+      "derived_renewal_decision_fields"
+    ],
+    "amount_history_in_historical_backtests": false,
+    "max_available_information_2025": "2024-12-31",
+    "exclusion_guard": {
+      "version": "1.0",
+      "module": "Preparación/src/iaa_lab/predictor_guard.py",
+      "consumer": "iaa_lab.data.feature_frames, used by the existing runner",
+      "blocked": "Any name containing renewal_decision, audit_ prefix (case-insensitive), or explicit audit_only role.",
+      "explicit_forbidden_request": "ValueError",
+      "automatic_selection": "Removes blocked columns while preserving all rows.",
+      "verification_run": "Hackaton/Semana 1/Limpieza/runs/renaudit_20261016T203904Z_657dd741",
+      "F0_availability_complete": false,
+      "generic_runner_fully_adapted_to_2026": false
+    }
+  },
+  "metric": {
+    "primary": "d2_tweedie",
+    "power": 1.5,
+    "direction": "maximize",
+    "scale": "period_amount",
+    "sample_weights": "none_provisional",
+    "official_full_scorer_verified": false,
+    "annual_rate_equivalent_loss_weights": "sqrt(exposure)",
+    "secondary_rate_weight_sensitivity": "exposure",
+    "numeric_floor_annual_CU": 1e-08
+  },
+  "line_design": {
+    "motor": {
+      "first": "direct_tweedie",
+      "comparison": "frequency_positive_cost_times_positive_severity",
+      "development_component": "bodily_injury",
+      "recovery_review": [
+        "own_damage",
+        "theft"
+      ],
+      "telematics": "conditional_block"
+    },
+    "buildings": {
+      "first": "direct_tweedie",
+      "comparison": "frequency_positive_cost_times_positive_severity",
+      "development_component": "subsidence",
+      "severe_peril_diagnostics": [
+        "fire",
+        "flood"
+      ],
+      "capital": "preserve_and_model_with_documented_transformations"
+    },
+    "contents": {
+      "first": "direct_tweedie",
+      "comparison": "frequency_positive_cost_times_positive_severity",
+      "cross_line": "causal_feature_ablation",
+      "zero_IBNR_assumed": false
+    }
+  },
+  "pilot_deliverables": [
+    "claim_assignment_and_reconciliation",
+    "T0_target_components_table",
+    "F0_availability_contract",
+    "persistent_temporal_roles_and_hash_groups",
+    "line_baselines_and_GLM_with_heldout_predictions"
+  ],
+  "training_performed_by_this_document": false,
+  "remote_execution_performed": false,
+  "submission_performed": false,
+  "human_review": "pending",
+  "independent_validation": false
+}

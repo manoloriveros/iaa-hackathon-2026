@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "created_on": "2026-10-16",
+  "timezone": "America/Bogota",
+  "status": "planned_not_executed",
+  "executable_runner_config": false,
+  "source_record": "fuente_gemini.json",
+  "protocol": "README.md",
+  "metric": {"name": "d2_tweedie", "power": 1.5, "direction": "maximize", "prediction_unit": "CU_per_policy_period", "local_primary_weights": "none_provisional_not_verified_official_scorer"},
+  "comparison_axes": ["separate_lines_vs_pooled", "proxy_vs_development_scenarios", "exposure_vs_sqrt_exposure_rate_weights", "history_and_cross_line_features", "uncalibrated_vs_calibrated"],
+  "required_before_training": ["versioned_verified_input_catalog", "claim_period_assignment_and_reconciliation", "versioned_nonnegative_target_with_limitations", "feature_availability_contract", "saved_temporal_partitions", "metric_implementation", "Parquet_multitable_runner_adaptation"],
+  "validation": {
+    "primary": "Temporal 2021-2022 to 2023 and 2021-2023 to 2024 where supported; later valuation of labels explicitly disclosed",
+    "secondary": "Known versus new entities; connected-component grouping after checking component sizes",
+    "strict_historical_backtest_available": false,
+    "reason": "Single 2024 valuation cannot reconstruct past paid/incurred/status snapshots",
+    "tuning_calibration_and_ensembling": "Internal partitions only; external evaluation untouched"
+  },
+  "candidates": [
+    {"id": "M00", "family": "line_constant_rate", "wave": 1, "status": "planned", "depends_on": []},
+    {"id": "M01", "family": "glm_tweedie", "wave": 1, "status": "planned", "depends_on": ["M00"]},
+    {"id": "M02", "family": "gam_tweedie", "wave": 2, "status": "planned", "depends_on": ["M01"]},
+    {"id": "M03", "family": "glm_gam_frequency_severity", "wave": 2, "status": "planned", "depends_on": ["M01"]},
+    {"id": "M04", "family": "lightgbm_tweedie", "wave": 1, "status": "planned", "depends_on": ["M00", "M01"]},
+    {"id": "M05", "family": "xgboost_tweedie", "wave": 1, "status": "planned", "depends_on": ["M00", "M01"]},
+    {"id": "M06", "family": "catboost_tweedie", "wave": 1, "status": "planned", "depends_on": ["M00", "M01"]},
+    {"id": "M07", "family": "catboost_frequency_severity", "wave": 2, "status": "planned", "depends_on": ["M03", "M06"], "condition": "Verify positive severity objective; Tweedie power 2 is invalid in CatBoost"},
+    {"id": "M08", "family": "credibility_glmm", "wave": 2, "status": "planned", "depends_on": ["M01"], "condition": "Causal history availability and variance specification"},
+    {"id": "M09", "family": "glm_gam_residual_boosting", "wave": 2, "status": "planned", "depends_on": ["M01", "M04", "M05", "M06"]},
+    {"id": "M10", "family": "tabular_cann", "wave": 3, "status": "planned", "depends_on": ["M01", "M09"]},
+    {"id": "M11", "family": "mlp_and_ft_transformer", "wave": 3, "status": "planned", "depends_on": ["M04", "M05", "M06"]},
+    {"id": "M12", "family": "localglmnet", "wave": 3, "status": "planned", "depends_on": ["M01", "M10"]},
+    {"id": "M13", "family": "localglmftt_and_caftt", "wave": 3, "status": "conditional_implementation_review", "depends_on": ["M10", "M11", "M12"], "primary_reference": "https://arxiv.org/abs/2311.07597", "author_repository": "https://github.com/BrauerAlexej/Enhancing_actuarial_non-life_pricing_models_via_transformers_Public", "condition": "Inspect implementation and license; adapt original Poisson frequency experiment to frequency-severity or Tweedie claim cost"},
+    {"id": "M14", "family": "longitudinal_cann_poisson_nb_mvnb", "wave": 3, "status": "conditional_data_contract", "depends_on": ["M03", "M08", "M10"], "condition": "Tabular adaptation only; granular telematics missing"},
+    {"id": "M15", "family": "distributional_refinement_network", "wave": 3, "status": "planned", "depends_on": ["M01", "M10"], "condition": "Validate zero mass, tails and expected-cost extraction"},
+    {"id": "M16", "family": "blend_then_stacking", "wave": 4, "status": "planned", "depends_on": [], "condition": "At least two compatible models with complementary held-out errors; nested evaluation"}
+  ],
+  "submission_policy": {"decision": "D29", "daily_cap_provisional": 5, "must_exhaust_daily_cap": false, "criterion": "Hypothesis and local validation evidence; log exact file and public score", "submissions_executed": 0},
+  "models_trained": 0
+}

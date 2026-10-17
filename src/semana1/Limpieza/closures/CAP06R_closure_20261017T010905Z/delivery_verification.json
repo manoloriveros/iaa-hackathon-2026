@@ -1,0 +1,47 @@
+{
+  "passed": 10,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "Closed CAP06R and D60 manifests intact",
+      "passed": true
+    },
+    {
+      "check": "Every closure document retains recorded hash",
+      "passed": true
+    },
+    {
+      "check": "Active pointer, operation and state agree on D61/CAP06R",
+      "passed": true
+    },
+    {
+      "check": "Only protocol version and retrospective lineage changed",
+      "passed": true
+    },
+    {
+      "check": "Historical CAP05R layer retained exactly in protocol history",
+      "passed": true
+    },
+    {
+      "check": "Base index byte-for-byte identical",
+      "passed": true
+    },
+    {
+      "check": "All source snapshots still match",
+      "passed": true
+    },
+    {
+      "check": "New route resolves",
+      "passed": true
+    },
+    {
+      "check": "Actual two corrections and four preserved endorsement/renewal capitals re-read",
+      "passed": true
+    },
+    {
+      "check": "419pending/3108total/1035retrospective/136test counts correct",
+      "passed": true
+    }
+  ],
+  "independent_validation": false
+}

@@ -1,0 +1,54 @@
+{
+  "status": "passed_own_delivery_checks",
+  "passed": 11,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "Closed run, parent and review manifests intact",
+      "passed": true
+    },
+    {
+      "check": "All closure documents retain recorded hashes",
+      "passed": true
+    },
+    {
+      "check": "Current operation, pointer and state agree",
+      "passed": true
+    },
+    {
+      "check": "Counts reconcile: pending421, corrected3106, retrospective1033, testanchors136",
+      "passed": true
+    },
+    {
+      "check": "Only protocol version and retrospective lineage changed",
+      "passed": true
+    },
+    {
+      "check": "Historical CAP04R layer added intact to protocol history",
+      "passed": true
+    },
+    {
+      "check": "Routes resolve to the new application",
+      "passed": true
+    },
+    {
+      "check": "Seven test-anchor rows explicitly future and separated from thirteen corrected test rows",
+      "passed": true
+    },
+    {
+      "check": "823 verification controls and seven postactivation controls passed",
+      "passed": true
+    },
+    {
+      "check": "Base pointer still byte-for-byte identical to pre-operation evidence",
+      "passed": true
+    },
+    {
+      "check": "All source snapshots still match scripts",
+      "passed": true
+    }
+  ],
+  "closed_run_not_modified": true,
+  "independent_validation": false,
+  "review_time_fields_note": "candidate_NOT_APPLIED and review_status in the consolidated ledger are copied D57 assessment fields. operation_authorized, correction_authorized and capital_change_applied reflect this later CAP05R application."
+}

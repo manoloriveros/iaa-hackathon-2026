@@ -1,0 +1,62 @@
+{
+  "workspace_relative_run": "Hackaton/Semana 1/Limpieza/runs/capendorse_20261017T010844Z_fbf8cc20",
+  "status": "verified_retrospective_CAP06R",
+  "catalog_workspace_relative": "Hackaton/Semana 1/Limpieza/runs/capendorse_20261017T010844Z_fbf8cc20/dataset_catalog.json",
+  "inherited_rules": [
+    "ID01",
+    "EXP01",
+    "CAP01",
+    "CAT01",
+    "AGE01"
+  ],
+  "claims_rule": "DUP01",
+  "claims_records": 162546,
+  "claims_excluded": 604,
+  "capital_changes_inherited": 3106,
+  "pending_capitals": 419,
+  "category_changes_inherited": 700210,
+  "age_changes_inherited": 2936,
+  "CON01_activated": false,
+  "approved_for_modeling": false,
+  "audit_rules": [
+    "REN00",
+    "PRE00"
+  ],
+  "audit_columns": [
+    "audit_ren00",
+    "audit_pre00"
+  ],
+  "audit_marked_rows": 12041,
+  "audit_frozen_policies": 2742,
+  "predictor_exclusion_guard_version": "1.0",
+  "audit_marked_claims": 413,
+  "audit_counts_by_rule": {
+    "REN00": {
+      "policy_period_rows": 12041,
+      "policy_ids": 2742
+    },
+    "PRE00": {
+      "claim_rows": 413,
+      "policy_ids": 413
+    }
+  },
+  "capital_rule": "CAP06R",
+  "capital_changes_this_layer": 2,
+  "total_capital_changes": 3108,
+  "retrospective_only": true,
+  "later_test2025_supported_rows": 136,
+  "not_approved_for_cutoff_specific_backtesting": true,
+  "base_catalog_index_workspace_relative": "Hackaton/Semana 1/Limpieza/current_dataset.json",
+  "base_catalog_index_sha256": "82968c5a8966e7e6857ab112092451b900e5771c650628b6189aa233432a4a15",
+  "cohort_sha256": "950fa3bd010d477961f82e739952c1076b3c1c447330b3440f35af9863321896",
+  "CAP01_inherited_changes": 2073,
+  "CAP02R_inherited_changes": 867,
+  "retrospective_capital_changes_total": 1035,
+  "this_layer_test2025_supported_rows": 0,
+  "parent_catalog_index_sha256": "3052f3fd866d9cd045b43d487944a0f65bb41f315c4362eb47ee184d8fe9aa3a",
+  "application_index_workspace_relative": "Hackaton/Semana 1/Limpieza/current_endorsement_capital_correction.json",
+  "CAP03R_inherited_changes": 11,
+  "CAP04R_inherited_changes": 109,
+  "corrected_test2025_rows_this_layer": 0,
+  "CAP05R_inherited_changes": 46
+}

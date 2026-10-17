@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "checks_count": 15,
+  "checks": [
+    {
+      "name": "active_catalog_and_verified_DUP01_pointer_agree",
+      "passed": true
+    },
+    {
+      "name": "consumer_reads_derived_claims_hash",
+      "passed": true
+    },
+    {
+      "name": "all_consumer_input_hashes_match_active_catalog",
+      "passed": true
+    },
+    {
+      "name": "no_historical_EDA_cost_proxy_reused",
+      "passed": true
+    },
+    {
+      "name": "consumer_financial_controls_clean_and_single_zero_preserved",
+      "passed": true
+    },
+    {
+      "name": "consumer_assignments_cover_all_162546_claims_and_413_prehistory",
+      "passed": true
+    },
+    {
+      "name": "current_consumer_accepted_count_matches_exact_book",
+      "passed": true
+    },
+    {
+      "name": "current_consumer_cost_matches_exact_Decimal_book_to_cent",
+      "passed": true
+    },
+    {
+      "name": "all_accepted_claim_diagnostic_count_matches_book",
+      "passed": true
+    },
+    {
+      "name": "protocol_13_preserves_validation_features_metric_and_line_design",
+      "passed": true
+    },
+    {
+      "name": "protocol_frozen_DUP01_and_no_CON01_or_T0_activation",
+      "passed": true
+    },
+    {
+      "name": "policy_entity_overlap_and_products_unchanged_by_claim_filter",
+      "passed": true
+    },
+    {
+      "name": "consumer_is_descriptive_no_training_or_target_file",
+      "passed": true
+    },
+    {
+      "name": "model_pre_DUP01_archive_matches_its_manifest",
+      "passed": true
+    },
+    {
+      "name": "all_new_artifacts_exist",
+      "passed": true
+    }
+  ],
+  "consumer_run": "Hackaton/Semana 1/Modelado/diagnosticos/objetivo_20261016T200359Z",
+  "consumer_source_sha256": "12cce8c0862bec601f6e62923ee72f72a4c175d763db0c6f8bbf214895f88c20",
+  "current_proxy_net_sum_CU": "741156868.43",
+  "independent_validation": false,
+  "models_trained": false
+}

@@ -1,0 +1,67 @@
+{
+  "scope": "Synthetic arithmetic check only; no competition data or model training",
+  "checked_on": "2026-10-16",
+  "sklearn_version": "1.7.2",
+  "power": 1.5,
+  "exposure": [
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "observed_rates": [
+    0.0,
+    10.0,
+    30.0,
+    80.0
+  ],
+  "predicted_rates": [
+    2.0,
+    20.0,
+    25.0,
+    60.0
+  ],
+  "observed_amounts": [
+    0.0,
+    2.5,
+    15.0,
+    80.0
+  ],
+  "predicted_amounts": [
+    0.2,
+    5.0,
+    12.5,
+    60.0
+  ],
+  "unit_deviances_amounts": [
+    1.7888543819998317,
+    0.7672972243252207,
+    0.12883160254875392,
+    0.7415138492118416
+  ],
+  "sqrt_exposure_times_unit_deviances_rates": [
+    1.788854381999832,
+    0.7672972243252207,
+    0.1288316025487557,
+    0.7415138492118416
+  ],
+  "homogeneity_max_abs_error": 1.7763568394002505e-15,
+  "mean_deviance_amounts": 0.8566242645214137,
+  "sqrt_exposure_weighted_rate_mean_deviance": 1.3579242046534208,
+  "d2_amounts_unweighted": 0.9199420102529863,
+  "d2_rates_sqrt_exposure": 0.7828759599871199,
+  "d2_rates_exposure": 0.767229491906402,
+  "calibration_tweedie_factor": 1.1234425337435812,
+  "calibration_balance_factor": 1.2548262548262548,
+  "deviance_uncalibrated": 0.8566242645214119,
+  "deviance_tweedie_calibrated": 0.8064754466942392,
+  "deviance_balance_calibrated": 0.8517512620223809,
+  "formulas": {
+    "unit_deviance": "4*(y/sqrt(m)-2*sqrt(y)+sqrt(m))",
+    "homogeneity": "d_p(e*r,e*q)=e**(2-p)*d_p(r,q)",
+    "tweedie_multiplier_p_1_5": "sum(y/sqrt(m))/sum(sqrt(m))",
+    "balance_multiplier": "sum(y)/sum(m)"
+  },
+  "identity_passed": true,
+  "interpretation": "Unit deviance identity holds; mean normalizers and D2 baselines differ; portfolio balancing and Tweedie calibration need not coincide."
+}

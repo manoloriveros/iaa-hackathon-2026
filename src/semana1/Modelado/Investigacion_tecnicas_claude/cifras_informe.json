@@ -1,0 +1,557 @@
+{
+  "note": "Cifras citadas en INFORME.md con su ruta en evidencia.json (segmentos separados por '/', filtros [k=v;k=v]). verificar_entrega.py las compara con la corrida indicada en current_run.json. Tolerancias relativas salvo tol 0 (igualdad exacta).",
+  "checks": [
+    {
+      "name": "autos periodos",
+      "path": "line_summary/motor/rows",
+      "expected": 979968,
+      "tol": 0
+    },
+    {
+      "name": "autos exposición",
+      "path": "line_summary/motor/exposure_years",
+      "expected": 787158,
+      "tol": 1e-05
+    },
+    {
+      "name": "autos coste",
+      "path": "line_summary/motor/net_cost",
+      "expected": 428762847,
+      "tol": 1e-05
+    },
+    {
+      "name": "autos prima de riesgo",
+      "path": "line_summary/motor/pure_premium_per_year",
+      "expected": 544.7,
+      "tol": 0.0001
+    },
+    {
+      "name": "autos frecuencia",
+      "path": "line_summary/motor/frequency_accepted_per_year",
+      "expected": 0.1404,
+      "tol": 0.001
+    },
+    {
+      "name": "autos ceros",
+      "path": "line_summary/motor/rows_with_zero_cost_share",
+      "expected": 0.8999,
+      "tol": 0.0002
+    },
+    {
+      "name": "autos ceros poisson",
+      "path": "line_summary/motor/poisson_constant_rate_expected_zero_share",
+      "expected": 0.8942,
+      "tol": 0.0002
+    },
+    {
+      "name": "autos dispersión",
+      "path": "line_summary/motor/pearson_dispersion_constant_rate",
+      "expected": 1.14,
+      "tol": 0.005
+    },
+    {
+      "name": "autos reserva",
+      "path": "line_summary/motor/reserve_share_of_incurred",
+      "expected": 0.14,
+      "tol": 0.005
+    },
+    {
+      "name": "edificios periodos",
+      "path": "line_summary/buildings/rows",
+      "expected": 707726,
+      "tol": 0
+    },
+    {
+      "name": "edificios exposición",
+      "path": "line_summary/buildings/exposure_years",
+      "expected": 590560,
+      "tol": 1e-05
+    },
+    {
+      "name": "edificios coste",
+      "path": "line_summary/buildings/net_cost",
+      "expected": 246656437,
+      "tol": 1e-05
+    },
+    {
+      "name": "edificios prima de riesgo",
+      "path": "line_summary/buildings/pure_premium_per_year",
+      "expected": 417.67,
+      "tol": 0.0001
+    },
+    {
+      "name": "edificios frecuencia",
+      "path": "line_summary/buildings/frequency_accepted_per_year",
+      "expected": 0.0445,
+      "tol": 0.002
+    },
+    {
+      "name": "edificios dispersión",
+      "path": "line_summary/buildings/pearson_dispersion_constant_rate",
+      "expected": 1.05,
+      "tol": 0.005
+    },
+    {
+      "name": "edificios reserva",
+      "path": "line_summary/buildings/reserve_share_of_incurred",
+      "expected": 0.097,
+      "tol": 0.01
+    },
+    {
+      "name": "contenidos periodos",
+      "path": "line_summary/contents/rows",
+      "expected": 721617,
+      "tol": 0
+    },
+    {
+      "name": "contenidos coste",
+      "path": "line_summary/contents/net_cost",
+      "expected": 65737585,
+      "tol": 1e-05
+    },
+    {
+      "name": "contenidos prima de riesgo",
+      "path": "line_summary/contents/pure_premium_per_year",
+      "expected": 111.26,
+      "tol": 0.0001
+    },
+    {
+      "name": "contenidos frecuencia",
+      "path": "line_summary/contents/frequency_accepted_per_year",
+      "expected": 0.0401,
+      "tol": 0.002
+    },
+    {
+      "name": "contenidos dispersión",
+      "path": "line_summary/contents/pearson_dispersion_constant_rate",
+      "expected": 1.03,
+      "tol": 0.005
+    },
+    {
+      "name": "contenidos reserva",
+      "path": "line_summary/contents/reserve_share_of_incurred",
+      "expected": 0.04,
+      "tol": 0.01
+    },
+    {
+      "name": "asignados autos",
+      "path": "claim_assignment/motor/by_category/unique/accepted",
+      "expected": 110496,
+      "tol": 0
+    },
+    {
+      "name": "asignados edificios",
+      "path": "claim_assignment/buildings/by_category/unique/accepted",
+      "expected": 26266,
+      "tol": 0
+    },
+    {
+      "name": "asignados contenidos",
+      "path": "claim_assignment/contents/by_category/unique/accepted",
+      "expected": 23670,
+      "tol": 0
+    },
+    {
+      "name": "prehistoria autos aceptados",
+      "path": "claim_assignment/motor/by_category/pre_history/accepted",
+      "expected": 293,
+      "tol": 0
+    },
+    {
+      "name": "prehistoria edificios",
+      "path": "claim_assignment/buildings/by_category/pre_history/accepted",
+      "expected": 67,
+      "tol": 0
+    },
+    {
+      "name": "prehistoria contenidos",
+      "path": "claim_assignment/contents/by_category/pre_history/accepted",
+      "expected": 49,
+      "tol": 0
+    },
+    {
+      "name": "duplicados restantes",
+      "path": "claims_duplicates_vd04/groups",
+      "expected": 0,
+      "tol": 0
+    },
+    {
+      "name": "comprehensive frecuencia",
+      "path": "motor_by_cover_type/comprehensive/freq_acc",
+      "expected": 0.156,
+      "tol": 0.005
+    },
+    {
+      "name": "TPO prima",
+      "path": "motor_by_cover_type/third_party_only/pure_premium",
+      "expected": 635,
+      "tol": 0.001
+    },
+    {
+      "name": "TPFT daños propios",
+      "path": "motor_cover_type_x_peril_accepted/third_party_fire_theft/own_damage",
+      "expected": 3,
+      "tol": 0
+    },
+    {
+      "name": "TPO daños propios",
+      "path": "motor_cover_type_x_peril_accepted/third_party_only/own_damage",
+      "expected": 1,
+      "tol": 0
+    },
+    {
+      "name": "lesiones CV",
+      "path": "severity_by_peril[line=motor;peril=bodily_injury]/cv",
+      "expected": 6.52,
+      "tol": 0.002
+    },
+    {
+      "name": "lesiones hill",
+      "path": "severity_by_peril[line=motor;peril=bodily_injury]/hill_alpha_top5pct",
+      "expected": 2.02,
+      "tol": 0.005
+    },
+    {
+      "name": "lesiones máximo",
+      "path": "severity_by_peril[line=motor;peril=bodily_injury]/max",
+      "expected": 11894277,
+      "tol": 0.0001
+    },
+    {
+      "name": "lesiones p implícita",
+      "path": "severity_by_peril[line=motor;peril=bodily_injury]/tweedie_p_implied_by_gamma_severity",
+      "expected": 1.98,
+      "tol": 0.003
+    },
+    {
+      "name": "incendio media",
+      "path": "severity_by_peril[line=buildings;peril=fire]/mean",
+      "expected": 51773,
+      "tol": 0.0001
+    },
+    {
+      "name": "inundación hill",
+      "path": "severity_by_peril[line=buildings;peril=flood]/hill_alpha_top5pct",
+      "expected": 2.85,
+      "tol": 0.004
+    },
+    {
+      "name": "autos todos CV",
+      "path": "severity_by_peril[line=motor;peril=<todos>]/cv",
+      "expected": 9.58,
+      "tol": 0.002
+    },
+    {
+      "name": "autos todos p implícita",
+      "path": "severity_by_peril[line=motor;peril=<todos>]/tweedie_p_implied_by_gamma_severity",
+      "expected": 1.99,
+      "tol": 0.003
+    },
+    {
+      "name": "edificios todos p implícita",
+      "path": "severity_by_peril[line=buildings;peril=<todos>]/tweedie_p_implied_by_gamma_severity",
+      "expected": 1.85,
+      "tol": 0.003
+    },
+    {
+      "name": "contenidos todos p implícita",
+      "path": "severity_by_peril[line=contents;peril=<todos>]/tweedie_p_implied_by_gamma_severity",
+      "expected": 1.74,
+      "tol": 0.003
+    },
+    {
+      "name": "taylor autos",
+      "path": "taylor_power_law/motor/slope_p",
+      "expected": 2.06,
+      "tol": 0.003
+    },
+    {
+      "name": "taylor edificios",
+      "path": "taylor_power_law/buildings/slope_p",
+      "expected": 2.12,
+      "tol": 0.003
+    },
+    {
+      "name": "taylor contenidos",
+      "path": "taylor_power_law/contents/slope_p",
+      "expected": 1.89,
+      "tol": 0.003
+    },
+    {
+      "name": "lesiones 90d cohorte 2021",
+      "path": "delay_by_peril_year[line=motor;peril=bodily_injury;occ_year=2021]/share_reported_within_90d",
+      "expected": 0.381,
+      "tol": 0.003
+    },
+    {
+      "name": "lesiones p90 2021",
+      "path": "delay_by_peril_year[line=motor;peril=bodily_injury;occ_year=2021]/delay_p90",
+      "expected": 426,
+      "tol": 0.003
+    },
+    {
+      "name": "lesiones abiertos 2024",
+      "path": "delay_by_peril_year[line=motor;peril=bodily_injury;occ_year=2024]/share_open",
+      "expected": 0.798,
+      "tol": 0.003
+    },
+    {
+      "name": "hundimiento abiertos 2024",
+      "path": "delay_by_peril_year[line=buildings;peril=subsidence;occ_year=2024]/share_open",
+      "expected": 0.687,
+      "tol": 0.003
+    },
+    {
+      "name": "daños propios abiertos 2024",
+      "path": "delay_by_peril_year[line=motor;peril=own_damage;occ_year=2024]/share_open",
+      "expected": 0.171,
+      "tol": 0.006
+    },
+    {
+      "name": "incendio reserva 2024",
+      "path": "delay_by_peril_year[line=buildings;peril=fire;occ_year=2024]/reserve_share",
+      "expected": 0.255,
+      "tol": 0.004
+    },
+    {
+      "name": "autos frecuencia bruta 2024",
+      "path": "frequency_by_year[line=motor;year=2024]/freq_accepted",
+      "expected": 0.1295,
+      "tol": 0.001
+    },
+    {
+      "name": "autos frecuencia bruta 2023",
+      "path": "frequency_by_year[line=motor;year=2023]/freq_accepted",
+      "expected": 0.1402,
+      "tol": 0.001
+    },
+    {
+      "name": "edificios media 2021",
+      "path": "frequency_by_year[line=buildings;year=2021]/mean_net",
+      "expected": 8725,
+      "tol": 0.0001
+    },
+    {
+      "name": "edificios media 2024",
+      "path": "frequency_by_year[line=buildings;year=2024]/mean_net",
+      "expected": 10250,
+      "tol": 0.0001
+    },
+    {
+      "name": "autos frecuencia controlada 2021",
+      "path": "trend_truncation_controlled[line=motor;year=2021]/freq_jan_sep_reported_within_60d",
+      "expected": 0.1322,
+      "tol": 0.001
+    },
+    {
+      "name": "autos frecuencia controlada 2024",
+      "path": "trend_truncation_controlled[line=motor;year=2024]/freq_jan_sep_reported_within_60d",
+      "expected": 0.1276,
+      "tol": 0.001
+    },
+    {
+      "name": "edificios cerrados media 2021",
+      "path": "trend_truncation_controlled[line=buildings;year=2021]/closed_claims_mean_net",
+      "expected": 8686,
+      "tol": 0.0001
+    },
+    {
+      "name": "edificios cerrados mediana 2023",
+      "path": "trend_truncation_controlled[line=buildings;year=2023]/closed_claims_median_net",
+      "expected": 3103,
+      "tol": 0.0001
+    },
+    {
+      "name": "tormenta top10 días",
+      "path": "event_clustering[line=buildings;peril=storm]/top10_days_share_of_claims",
+      "expected": 0.021,
+      "tol": 0.03
+    },
+    {
+      "name": "tormenta máximo diario",
+      "path": "event_clustering[line=buildings;peril=storm]/max_claims_single_day",
+      "expected": 20,
+      "tol": 0
+    },
+    {
+      "name": "inundación edificios top10",
+      "path": "event_clustering[line=buildings;peril=flood]/top10_days_share_of_claims",
+      "expected": 0.026,
+      "tol": 0.03
+    },
+    {
+      "name": "contactos 3+ train autos",
+      "path": "operational_variables_train_vs_test/motor/customer_service_contacts/train_share_by_value_capped_3/3.0",
+      "expected": 0.072,
+      "tol": 0.01
+    },
+    {
+      "name": "contactos 3+ test autos",
+      "path": "operational_variables_train_vs_test/motor/customer_service_contacts/test_share_by_value_capped_3/3.0",
+      "expected": 0.008,
+      "tol": 0.02
+    },
+    {
+      "name": "contactos 3+ frecuencia autos",
+      "path": "operational_variables_train_vs_test/motor/contacts_vs_claims_train[c=3]/freq",
+      "expected": 1.081,
+      "tol": 0.001
+    },
+    {
+      "name": "contactos 0 frecuencia autos",
+      "path": "operational_variables_train_vs_test/motor/contacts_vs_claims_train[c=0]/freq",
+      "expected": 0.0003,
+      "tol": 0.01
+    },
+    {
+      "name": "contactos D2 autos",
+      "path": "oneway_d2[line=motor;column=customer_service_contacts]/d2_oneway_vs_constant_rate",
+      "expected": 0.43,
+      "tol": 0.003
+    },
+    {
+      "name": "ncb D2",
+      "path": "oneway_d2[line=motor;column=ncb_years]/d2_oneway_vs_constant_rate",
+      "expected": 0.027,
+      "tol": 0.02
+    },
+    {
+      "name": "zona inundación D2 edificios",
+      "path": "oneway_d2[line=buildings;column=flood_zone]/d2_oneway_vs_constant_rate",
+      "expected": 0.038,
+      "tol": 0.02
+    },
+    {
+      "name": "elevación D2 edificios",
+      "path": "oneway_d2[line=buildings;column=elevation_m]/d2_oneway_vs_constant_rate",
+      "expected": 0.03,
+      "tol": 0.02
+    },
+    {
+      "name": "prima vigente D2 edificios",
+      "path": "oneway_d2[line=buildings;column=written_premium]/d2_oneway_vs_constant_rate",
+      "expected": 0.049,
+      "tol": 0.01
+    },
+    {
+      "name": "marketing D2 autos",
+      "path": "oneway_d2[line=motor;column=marketing_segment]/d2_oneway_vs_constant_rate",
+      "expected": 0.019,
+      "tol": 0.03
+    },
+    {
+      "name": "historia póliza autos D2",
+      "path": "prior_history_oneway/motor/prior_known_claims_policy/d2_oneway_vs_constant_rate",
+      "expected": 0.0059,
+      "tol": 0.02
+    },
+    {
+      "name": "historia póliza autos freq 2+",
+      "path": "prior_history_oneway/motor/prior_known_claims_policy/bands[prior_known_claims_policy=2.0]/freq",
+      "expected": 0.338,
+      "tol": 0.003
+    },
+    {
+      "name": "lift contenidos dado edificios",
+      "path": "multi_line/lift_contents_given_buildings",
+      "expected": 1.17,
+      "tol": 0.005
+    },
+    {
+      "name": "zona 5 frecuencia inundación",
+      "path": "buildings_flood_by_flood_zone[flood_zone=5.0]/freq",
+      "expected": 0.075,
+      "tol": 0.003
+    },
+    {
+      "name": "zona 1 frecuencia inundación",
+      "path": "buildings_flood_by_flood_zone[flood_zone=1.0]/freq",
+      "expected": 0.0004,
+      "tol": 0.01
+    },
+    {
+      "name": "test autos enero",
+      "path": "test_2025/motor/start_month_share/1",
+      "expected": 0.804,
+      "tol": 0.002
+    },
+    {
+      "name": "test nuevo negocio autos",
+      "path": "test_2025/motor/new_business_share",
+      "expected": 0.152,
+      "tol": 0.005
+    },
+    {
+      "name": "capitales extremos edificios train",
+      "path": "capital/buildings/extreme_rows_train_above_threshold",
+      "expected": 593,
+      "tol": 0
+    },
+    {
+      "name": "capitales extremos contenidos train",
+      "path": "capital/contents/extreme_rows_train_above_threshold",
+      "expected": 671,
+      "tol": 0
+    },
+    {
+      "name": "duración autos corto",
+      "path": "duration[line=motor;dimension=exposure_band;level=(0,0.25]]/freq_accepted",
+      "expected": 0.158,
+      "tol": 0.004
+    },
+    {
+      "name": "duración autos año completo",
+      "path": "duration[line=motor;dimension=exposure_band;level=año completo]/freq_accepted",
+      "expected": 0.136,
+      "tol": 0.004
+    },
+    {
+      "name": "nuevo negocio autos frecuencia",
+      "path": "duration[line=motor;dimension=new_business;level=True]/freq_accepted",
+      "expected": 0.189,
+      "tol": 0.004
+    },
+    {
+      "name": "lluvia rezagada inundación",
+      "path": "weather_lag_comparison[line=buildings;peril=flood;weather=lag1;variable=rainfall_mm]/ratio_highest_over_lowest",
+      "expected": 5.2,
+      "tol": 0.01
+    },
+    {
+      "name": "lluvia mismo año inundación",
+      "path": "weather_lag_comparison[line=buildings;peril=flood;weather=same_year;variable=rainfall_mm]/ratio_highest_over_lowest",
+      "expected": 3.8,
+      "tol": 0.01
+    },
+    {
+      "name": "viento rezagado tormenta",
+      "path": "weather_lag_comparison[line=buildings;peril=storm;weather=lag1;variable=wind_exposure_index]/ratio_highest_over_lowest",
+      "expected": 1.75,
+      "tol": 0.01
+    },
+    {
+      "name": "viento mismo año tormenta",
+      "path": "weather_lag_comparison[line=buildings;peril=storm;weather=same_year;variable=wind_exposure_index]/ratio_highest_over_lowest",
+      "expected": 2.22,
+      "tol": 0.01
+    },
+    {
+      "name": "heladas rezagadas escape de agua",
+      "path": "weather_lag_comparison[line=buildings;peril=escape_of_water;weather=lag1;variable=freezing_days]/ratio_highest_over_lowest",
+      "expected": 2.19,
+      "tol": 0.01
+    },
+    {
+      "name": "granizo rezagado cristales",
+      "path": "weather_lag_comparison[line=motor;peril=glass_hail;weather=lag1;variable=hail_days]/ratio_highest_over_lowest",
+      "expected": 1.66,
+      "tol": 0.01
+    },
+    {
+      "name": "spearman lluvia rezagada",
+      "path": "weather_lag_comparison[line=buildings;peril=flood;weather=lag1;variable=rainfall_mm]/spearman_decile_vs_freq",
+      "expected": 0.87,
+      "tol": 0.01
+    }
+  ]
+}

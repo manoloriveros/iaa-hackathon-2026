@@ -1,0 +1,17 @@
+evalmachine.<anonymous>:5
+function putTable(id,rows,fields){const node=document.getElementById(id);node.replaceChildren();const table=document.createElement('table');const head=table.createTHead().insertRow();for(const field of fields){const th=document.createElement('th');th.textContent=field;head.appendChild(th);}const body=table.createTBody();for(const row of rows){const tr=body.insertRow();if(row.proposed_role==='exclude_if_approved')tr.className='proposed-exclude';for(const field of fields){let value=row[field];if((field.endsWith('_date')||field.startsWith('period_'))&&value)value=value.slice(0,10);tr.insertCell().textContent=value===null||value===undefined?'Sin dato':String(value);}}node.appendChild(table);}function show(line,policy,group,reason){document.getElementById('reason').textContent=reason;const h=histories[line+'|'+policy];const p=proposal.filter(x=>x.line===line&&x.policy_id===policy);putTable('pair',p,['duplicate_group','proposed_keep_claim_id','proposed_exclude_claim_id','peril','loss_date','status','observed_net_CU','assignment_status']);putTable('periods',h.periods,policyFields);putTable('claims',h.claims,claimFields);}const caseSelect=document.getElementById('case');function showExample(){const c=examples[Number(caseSelect.value)];show(c.line,c.policy_id,c.duplicate_group,c.reason);}caseSelect.addEventListener('change',showExample);showExample();const search=document.getElementById('search'),groupSelect=document.getElementById('group');function filterGroups(){const q=search.value.toLocaleLowerCase('es');groupSelect.replaceChildren();let n=0;for(const p of proposal){const text=[p.duplicate_group,p.policy_id,p.proposed_keep_claim_id,p.proposed_exclude_claim_id,p.peril].join(' ');if(text.toLocaleLowerCase('es').includes(q)){const option=document.createElement('option');option.value=p.duplicate_group;option.textContent=text;groupSelect.appendChild(option);n++;}}document.getElementById('groupcount').textContent=n+' de '+proposal.length+' parejas';}function showGroup(){const p=proposal.find(x=>x.duplicate_group===groupSelect.value);if(p)show(p.line,p.policy_id,p.duplicate_group,'Pareja '+p.duplicate_group+': historia completa de la póliza. El papel de cada ID es una propuesta sin aplicar.');}search.addEventListener('input',filterGroups);groupSelect.addEventListener('change',showGroup);filterGroups();
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ^
+
+TypeError: value.slice is not a function
+    at putTable (evalmachine.<anonymous>:5:574)
+    at show (evalmachine.<anonymous>:5:1092)
+    at showExample (evalmachine.<anonymous>:5:1248)
+    at evalmachine.<anonymous>:5:1351
+    at Script.runInContext (node:vm:149:12)
+    at Object.runInContext (node:vm:301:6)
+    at Object.<anonymous> (C:\dev\Hakaton\Hackaton\Semana 1\Revision_duplicados\verify_report.js:14:4)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+
+Node.js v24.21.0

@@ -1,0 +1,376 @@
+{
+  "checked_at_utc": "2026-10-16T19:05:40.093665+00:00",
+  "passed": false,
+  "checks": [
+    {
+      "name": "evidence_active_input_index",
+      "passed": false,
+      "detail": null
+    },
+    {
+      "name": "active_catalog_hash",
+      "passed": false,
+      "detail": null
+    },
+    {
+      "name": "catalog_input_unchanged:addresses",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_input_unchanged:claims",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_input_unchanged:customers",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_input_unchanged:policies_buildings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_input_unchanged:policies_contents",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_input_unchanged:policies_motor",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_input_unchanged:sample_submission",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_input_unchanged:test_buildings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_input_unchanged:test_contents",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_input_unchanged:test_motor",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "catalog_input_unchanged:weather",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "analysis_input_unchanged:claims",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "analysis_input_unchanged:historical_proxy_motor",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "analysis_input_unchanged:historical_proxy_buildings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "analysis_input_unchanged:historical_proxy_contents",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "analysis_input_unchanged:policies_motor",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "analysis_input_unchanged:test_motor",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "analysis_input_unchanged:policies_buildings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "analysis_input_unchanged:test_buildings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "analysis_input_unchanged:policies_contents",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "analysis_input_unchanged:test_contents",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "analysis_input_unchanged:original_profile_restricted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "script_matches_snapshot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "analysis_script_parses",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "perils_reconcile_count:buildings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "perils_reconcile:buildings:net_incurred_CU",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "perils_reconcile:buildings:case_reserve_CU",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "peril_shares_sum_one:buildings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "perils_reconcile_count:contents",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "perils_reconcile:contents:net_incurred_CU",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "perils_reconcile:contents:case_reserve_CU",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "peril_shares_sum_one:contents",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "perils_reconcile_count:motor",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "perils_reconcile:motor:net_incurred_CU",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "perils_reconcile:motor:case_reserve_CU",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "peril_shares_sum_one:motor",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "csv_matches_json:buildings",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "csv_matches_json:contents",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "csv_matches_json:motor",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "test_rows_626639",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pending_capitals_reconciled",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_nonpositive_exposures",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "23_unique_sources",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_inspection_and_limits",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "22_unique_planned_candidates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "candidate_dependencies_exist",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "not_trained",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_operational_labels_created",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_current_source_independent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_link:../METODOLOGIA_ACTUARIAL.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_link:../protocolo_metodologico.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_link:../../Limpieza/current_dataset.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_link:runs/soporte_20261016T185910Z/evidencia.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_link:runs/soporte_20261016T185910Z/ramos.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_link:runs/soporte_20261016T185910Z/riesgos.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_link:runs/soporte_20261016T185910Z/cohortes.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_link:runs/soporte_20261016T185910Z/riesgos.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_link:../diagnosticos/actual.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_link:runs/soporte_20261016T185910Z/perfil_campos_sin_cambios.csv",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_link:../verificacion_metrica.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_link:../METODOLOGIA_ACTUARIAL.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_link:fuentes.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_link:actual.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "report_link:../../../../Preparación/Antecedentes/IAA_IA/PRACTICAS_PRIORITARIAS.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "index_link:report",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "index_link:sources",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "index_link:evidence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "index_link:script_snapshot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "state_research_catalog_consistent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "methodology_version_preserved",
+      "passed": false,
+      "detail": null
+    },
+    {
+      "name": "unique_D37",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "check_count": 73,
+  "verification_kind": "own_assisted_by_AI",
+  "human_review": "pending",
+  "independent_validation": false,
+  "scope": "Integrity, descriptive reconciliation, source/catalog/links consistency. No model-performance or ultimate-target validation."
+}

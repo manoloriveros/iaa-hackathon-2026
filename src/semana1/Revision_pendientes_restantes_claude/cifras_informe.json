@@ -1,0 +1,851 @@
+{
+  "description": "Cifras citadas en INFORME.md, ligadas por ruta a evidencia.json de la corrida vigente. Sintaxis de ruta: a/b[k=v;k=v]/c. tol es relativo (0 = igualdad exacta).",
+  "checks": [
+    {
+      "name": "cohorte 265",
+      "path": "cohort/rows",
+      "expected": 265,
+      "tol": 0
+    },
+    {
+      "name": "pólizas 264",
+      "path": "cohort/policies",
+      "expected": 264,
+      "tol": 0
+    },
+    {
+      "name": "periodos 844",
+      "path": "cohort/history_rows",
+      "expected": 844,
+      "tol": 0
+    },
+    {
+      "name": "hash cohorte",
+      "path": "cohort/sha256_sorted_row_ids",
+      "expected": "8530dc3ce2afefd4fd27749746749953c44600fd474d9261f873d22a2fc9192f",
+      "tol": 0
+    },
+    {
+      "name": "pendientes rama 419",
+      "path": "cohort/pending_in_branch_total",
+      "expected": 419,
+      "tol": 0
+    },
+    {
+      "name": "grupo F revisado 154",
+      "path": "cohort/group_F_review/cohort_rows",
+      "expected": 154,
+      "tol": 0
+    },
+    {
+      "name": "G 138",
+      "path": "cohort/groups/G_other_conflicts",
+      "expected": 138,
+      "tol": 0
+    },
+    {
+      "name": "C 108",
+      "path": "cohort/groups/C_no_original_normal_reference",
+      "expected": 108,
+      "tol": 0
+    },
+    {
+      "name": "E 16",
+      "path": "cohort/groups/E_TW_dependency",
+      "expected": 16,
+      "tol": 0
+    },
+    {
+      "name": "D 2",
+      "path": "cohort/groups/D_CAP01_dependency_only",
+      "expected": 2,
+      "tol": 0
+    },
+    {
+      "name": "A 1",
+      "path": "cohort/groups/A_retrospective_D34",
+      "expected": 1,
+      "tol": 0
+    },
+    {
+      "name": "rama CAP06R",
+      "path": "provenance/retrospective_status",
+      "expected": "verified_retrospective_CAP06R",
+      "tol": 0
+    },
+    {
+      "name": "edificios filas",
+      "path": "global_statistics/buildings/rows",
+      "expected": 891881,
+      "tol": 0
+    },
+    {
+      "name": "contenidos filas",
+      "path": "global_statistics/contents/rows",
+      "expected": 909115,
+      "tol": 0
+    },
+    {
+      "name": "edificios mudanza pares 34.315",
+      "path": "global_statistics/buildings/pairs_address_change",
+      "expected": 34315,
+      "tol": 0
+    },
+    {
+      "name": "edificios mudanza en banda 13,9 %",
+      "path": "global_statistics/buildings/pairs_address_change_in_band",
+      "expected": 0.139,
+      "tol": 0.004
+    },
+    {
+      "name": "edificios mudanza p10 0,47",
+      "path": "global_statistics/buildings/pairs_address_change_ratio_quantiles/0.1",
+      "expected": 0.47,
+      "tol": 0.01
+    },
+    {
+      "name": "edificios mudanza p90 2,18",
+      "path": "global_statistics/buildings/pairs_address_change_ratio_quantiles/0.9",
+      "expected": 2.18,
+      "tol": 0.003
+    },
+    {
+      "name": "contenidos mudanza pares 34.548",
+      "path": "global_statistics/contents/pairs_address_change",
+      "expected": 34548,
+      "tol": 0
+    },
+    {
+      "name": "contenidos mudanza razón 1 en 99,78 %",
+      "path": "global_statistics/contents/pairs_address_change_ratio_exactly_1",
+      "expected": 0.9978,
+      "tol": 0.0001
+    },
+    {
+      "name": "contenidos mudanza en banda 100 %",
+      "path": "global_statistics/contents/pairs_address_change_in_band",
+      "expected": 1.0,
+      "tol": 1e-05
+    },
+    {
+      "name": "ampliaciones 13.055",
+      "path": "global_statistics/contents/periods_after_mid_term_change_same_address",
+      "expected": 13055,
+      "tol": 0
+    },
+    {
+      "name": "ampliación p1 1,203",
+      "path": "global_statistics/contents/after_mid_term_change_ratio_quantiles/0.01",
+      "expected": 1.203,
+      "tol": 0.001
+    },
+    {
+      "name": "ampliación p99 1,596",
+      "path": "global_statistics/contents/after_mid_term_change_ratio_quantiles/0.99",
+      "expected": 1.596,
+      "tol": 0.001
+    },
+    {
+      "name": "ampliación mediana 1,399",
+      "path": "global_statistics/contents/after_mid_term_change_ratio_quantiles/0.5",
+      "expected": 1.399,
+      "tol": 0.001
+    },
+    {
+      "name": "ampliación nunca baja",
+      "path": "global_statistics/contents/after_mid_term_change_share_below_0_9",
+      "expected": 0.0,
+      "tol": 0
+    },
+    {
+      "name": "reversión casos 11.490",
+      "path": "global_statistics/contents/endorsements_with_next_period_same_address",
+      "expected": 11490,
+      "tol": 0
+    },
+    {
+      "name": "reversión p1 1,016",
+      "path": "global_statistics/contents/reversion_next_over_base_quantiles/0.01",
+      "expected": 1.016,
+      "tol": 0.001
+    },
+    {
+      "name": "reversión p99 1,024",
+      "path": "global_statistics/contents/reversion_next_over_base_quantiles/0.99",
+      "expected": 1.024,
+      "tol": 0.001
+    },
+    {
+      "name": "reversión en banda 100 %",
+      "path": "global_statistics/contents/reversion_next_over_base_in_band",
+      "expected": 1.0,
+      "tol": 1e-05
+    },
+    {
+      "name": "firma: mtc dado contiguo 100 %",
+      "path": "global_statistics/contents/structural_signature/share_mid_term_change_given_contiguous_same_counter",
+      "expected": 1.0,
+      "tol": 1e-05
+    },
+    {
+      "name": "firma: contiguo dado mtc 99,8 %",
+      "path": "global_statistics/contents/structural_signature/share_contiguous_same_counter_given_mid_term_change",
+      "expected": 0.998,
+      "tol": 0.001
+    },
+    {
+      "name": "t/w pares 18.202",
+      "path": "global_statistics/buildings/tw_alias_pairs_same_address",
+      "expected": 18202,
+      "tol": 0
+    },
+    {
+      "name": "t/w en banda 100 %",
+      "path": "global_statistics/buildings/tw_alias_pairs_in_band",
+      "expected": 1.0,
+      "tol": 1e-05
+    },
+    {
+      "name": "t/w 99,8 % el 1-ene-2023",
+      "path": "global_statistics/buildings/tw_alias_pairs_starting_2023_01_01",
+      "expected": 0.998,
+      "tol": 0.001
+    },
+    {
+      "name": "t/w mediana 1,030",
+      "path": "global_statistics/buildings/tw_alias_ratio_quantiles/0.5",
+      "expected": 1.03,
+      "tol": 0.001
+    },
+    {
+      "name": "otros cambios de construcción 0",
+      "path": "global_statistics/buildings/other_construction_changes_same_address",
+      "expected": 0,
+      "tol": 0
+    },
+    {
+      "name": "MOV01 47",
+      "path": "summary/by_proposal/MOV01-R/rows",
+      "expected": 47,
+      "tol": 0
+    },
+    {
+      "name": "MOV01 anterior 19",
+      "path": "summary/by_proposal/MOV01-R/prior_supported",
+      "expected": 19,
+      "tol": 0
+    },
+    {
+      "name": "MOV01 posterior 28",
+      "path": "summary/by_proposal/MOV01-R/later_supported",
+      "expected": 28,
+      "tol": 0
+    },
+    {
+      "name": "MOV01 test 15",
+      "path": "summary/by_proposal/MOV01-R/test2025_rows",
+      "expected": 15,
+      "tol": 0
+    },
+    {
+      "name": "MOV01 ref test 15",
+      "path": "summary/by_proposal/MOV01-R/reference_test2025",
+      "expected": 15,
+      "tol": 0
+    },
+    {
+      "name": "MOV01 razón 1",
+      "path": "summary/by_proposal/MOV01-R/ratio_quantiles/1.0",
+      "expected": 1.0,
+      "tol": 1e-05
+    },
+    {
+      "name": "END01 32",
+      "path": "summary/by_proposal/END01-R/rows",
+      "expected": 32,
+      "tol": 0
+    },
+    {
+      "name": "END01 test 5",
+      "path": "summary/by_proposal/END01-R/test2025_rows",
+      "expected": 5,
+      "tol": 0
+    },
+    {
+      "name": "END01 ref test 5",
+      "path": "summary/by_proposal/END01-R/reference_test2025",
+      "expected": 5,
+      "tol": 0
+    },
+    {
+      "name": "END01 sandwich 24",
+      "path": "summary/END01_sandwich",
+      "expected": 24,
+      "tol": 0
+    },
+    {
+      "name": "END01 sin siguiente 8",
+      "path": "summary/END01_without_next",
+      "expected": 8,
+      "tol": 0
+    },
+    {
+      "name": "END01 razón mín 1,207",
+      "path": "summary/endorsement_ratio_quantiles_END01/0.0",
+      "expected": 1.207,
+      "tol": 0.001
+    },
+    {
+      "name": "END01 razón máx 1,594",
+      "path": "summary/endorsement_ratio_quantiles_END01/1.0",
+      "expected": 1.594,
+      "tol": 0.001
+    },
+    {
+      "name": "END01 razón mediana 1,370",
+      "path": "summary/endorsement_ratio_quantiles_END01/0.5",
+      "expected": 1.37,
+      "tol": 0.001
+    },
+    {
+      "name": "END01 reversión mín 1,019",
+      "path": "summary/reversion_ratio_quantiles_END01/0.0",
+      "expected": 1.019,
+      "tol": 0.001
+    },
+    {
+      "name": "END01 reversión máx 1,022",
+      "path": "summary/reversion_ratio_quantiles_END01/1.0",
+      "expected": 1.022,
+      "tol": 0.001
+    },
+    {
+      "name": "END02 17",
+      "path": "summary/by_proposal/END02-R/rows",
+      "expected": 17,
+      "tol": 0
+    },
+    {
+      "name": "END02 G 16",
+      "path": "summary/by_proposal/END02-R/by_group/G_other_conflicts",
+      "expected": 16,
+      "tol": 0
+    },
+    {
+      "name": "END02 A 1",
+      "path": "summary/by_proposal/END02-R/by_group/A_retrospective_D34",
+      "expected": 1,
+      "tol": 0
+    },
+    {
+      "name": "END02 anterior 11",
+      "path": "summary/by_proposal/END02-R/prior_supported",
+      "expected": 11,
+      "tol": 0
+    },
+    {
+      "name": "END02 posterior 6",
+      "path": "summary/by_proposal/END02-R/later_supported",
+      "expected": 6,
+      "tol": 0
+    },
+    {
+      "name": "END02 test 5",
+      "path": "summary/by_proposal/END02-R/test2025_rows",
+      "expected": 5,
+      "tol": 0
+    },
+    {
+      "name": "END02 contradicción mín 0,625",
+      "path": "summary/contradiction_ratio_quantiles_END02/0.0",
+      "expected": 0.625,
+      "tol": 0.001
+    },
+    {
+      "name": "END02 contradicción máx 0,815",
+      "path": "summary/contradiction_ratio_quantiles_END02/1.0",
+      "expected": 0.815,
+      "tol": 0.001
+    },
+    {
+      "name": "END02 razón mín 0,979",
+      "path": "summary/by_proposal/END02-R/ratio_quantiles/0.0",
+      "expected": 0.979,
+      "tol": 0.001
+    },
+    {
+      "name": "END02 razón máx 1,021",
+      "path": "summary/by_proposal/END02-R/ratio_quantiles/1.0",
+      "expected": 1.0205,
+      "tol": 0.001
+    },
+    {
+      "name": "TW01 17",
+      "path": "summary/by_proposal/TW01-R/rows",
+      "expected": 17,
+      "tol": 0
+    },
+    {
+      "name": "TW01 E 16",
+      "path": "summary/by_proposal/TW01-R/by_group/E_TW_dependency",
+      "expected": 16,
+      "tol": 0
+    },
+    {
+      "name": "TW01 G 1",
+      "path": "summary/by_proposal/TW01-R/by_group/G_other_conflicts",
+      "expected": 1,
+      "tol": 0
+    },
+    {
+      "name": "TW01 anterior 9",
+      "path": "summary/by_proposal/TW01-R/prior_supported",
+      "expected": 9,
+      "tol": 0
+    },
+    {
+      "name": "TW01 posterior 8",
+      "path": "summary/by_proposal/TW01-R/later_supported",
+      "expected": 8,
+      "tol": 0
+    },
+    {
+      "name": "TW01 test 0",
+      "path": "summary/by_proposal/TW01-R/test2025_rows",
+      "expected": 0,
+      "tol": 0
+    },
+    {
+      "name": "TW01 razón mín 0,9669",
+      "path": "summary/by_proposal/TW01-R/ratio_quantiles/0.0",
+      "expected": 0.9669,
+      "tol": 0.0001
+    },
+    {
+      "name": "TW01 razón máx 1,0357",
+      "path": "summary/by_proposal/TW01-R/ratio_quantiles/1.0",
+      "expected": 1.0357,
+      "tol": 0.0001
+    },
+    {
+      "name": "CHAIN01 3",
+      "path": "summary/by_proposal/CHAIN01-R/rows",
+      "expected": 3,
+      "tol": 0
+    },
+    {
+      "name": "CHAIN01 D 2",
+      "path": "summary/by_proposal/CHAIN01-R/by_group/D_CAP01_dependency_only",
+      "expected": 2,
+      "tol": 0
+    },
+    {
+      "name": "CHAIN01 test 2",
+      "path": "summary/by_proposal/CHAIN01-R/test2025_rows",
+      "expected": 2,
+      "tol": 0
+    },
+    {
+      "name": "CHAIN01 anterior 2",
+      "path": "summary/by_proposal/CHAIN01-R/prior_supported",
+      "expected": 2,
+      "tol": 0
+    },
+    {
+      "name": "candidatas 116",
+      "path": "candidates_NOT_APPLIED/rows",
+      "expected": 116,
+      "tol": 0
+    },
+    {
+      "name": "candidatas anterior 73",
+      "path": "candidates_NOT_APPLIED/prior_supported",
+      "expected": 73,
+      "tol": 0
+    },
+    {
+      "name": "candidatas posterior 43",
+      "path": "candidates_NOT_APPLIED/later_supported",
+      "expected": 43,
+      "tol": 0
+    },
+    {
+      "name": "candidatas test 27",
+      "path": "candidates_NOT_APPLIED/test2025_rows",
+      "expected": 27,
+      "tol": 0
+    },
+    {
+      "name": "suma original 9.116.400.000",
+      "path": "candidates_NOT_APPLIED/sum_original_CU",
+      "expected": 9116400000,
+      "tol": 1e-06
+    },
+    {
+      "name": "suma hipotética 9.116.400",
+      "path": "candidates_NOT_APPLIED/sum_hypothetical_CU",
+      "expected": 9116400,
+      "tol": 1e-06
+    },
+    {
+      "name": "hash MOV01",
+      "path": "candidates_NOT_APPLIED/sha256_by_proposal/MOV01-R",
+      "expected": "aa59644bdf93d37ad260286578ba8b7fdbe1f1e5131e118318c3b34f8c0e8b3e",
+      "tol": 0
+    },
+    {
+      "name": "hash END01",
+      "path": "candidates_NOT_APPLIED/sha256_by_proposal/END01-R",
+      "expected": "c185d8048391d79f2e490aa86ea3dbfe0a0f16cc0cedbda78e501ec699e10298",
+      "tol": 0
+    },
+    {
+      "name": "hash END02",
+      "path": "candidates_NOT_APPLIED/sha256_by_proposal/END02-R",
+      "expected": "34b8792034ca3600e551125b6d81de348c4caa34421661dc4cbe6caa0b0c7200",
+      "tol": 0
+    },
+    {
+      "name": "hash TW01",
+      "path": "candidates_NOT_APPLIED/sha256_by_proposal/TW01-R",
+      "expected": "23da90bf3695f6a8972359a71a3c1c6d116e0edaa0ea23097eb0ed2b477dc0ff",
+      "tol": 0
+    },
+    {
+      "name": "hash CHAIN01",
+      "path": "candidates_NOT_APPLIED/sha256_by_proposal/CHAIN01-R",
+      "expected": "193b2eabfca4ab28ee314eecc80fb92a4b78a6b643d7efc0f01b61203811a9b9",
+      "tol": 0
+    },
+    {
+      "name": "sin referencia 149",
+      "path": "summary/no_reference_rows",
+      "expected": 149,
+      "tol": 0
+    },
+    {
+      "name": "sin referencia edificios 103",
+      "path": "summary/no_reference_by_line/buildings",
+      "expected": 103,
+      "tol": 0
+    },
+    {
+      "name": "sin referencia contenidos 46",
+      "path": "summary/no_reference_by_line/contents",
+      "expected": 46,
+      "tol": 0
+    },
+    {
+      "name": "sin referencia test 123",
+      "path": "summary/no_reference_test2025_rows",
+      "expected": 123,
+      "tol": 0
+    },
+    {
+      "name": "sin referencia C 108",
+      "path": "without_proposal/by_group/C_no_original_normal_reference",
+      "expected": 108,
+      "tol": 0
+    },
+    {
+      "name": "sin referencia G 41",
+      "path": "without_proposal/by_group/G_other_conflicts",
+      "expected": 41,
+      "tol": 0
+    },
+    {
+      "name": "C test 107",
+      "path": "summary/by_group/C_no_original_normal_reference/test2025_rows",
+      "expected": 107,
+      "tol": 0
+    },
+    {
+      "name": "C edificios 62",
+      "path": "summary/by_group/C_no_original_normal_reference/by_line/buildings",
+      "expected": 62,
+      "tol": 0
+    },
+    {
+      "name": "G contenidos 95",
+      "path": "summary/by_group/G_other_conflicts/by_line/contents",
+      "expected": 95,
+      "tol": 0
+    },
+    {
+      "name": "G edificios 43",
+      "path": "summary/by_group/G_other_conflicts/by_line/buildings",
+      "expected": 43,
+      "tol": 0
+    },
+    {
+      "name": "G otra dirección 64",
+      "path": "summary/by_group/G_other_conflicts/reasons/otra_direccion",
+      "expected": 64,
+      "tol": 0
+    },
+    {
+      "name": "G otra dirección y otros campos 22",
+      "path": "summary/by_group/G_other_conflicts/reasons/otra_direccion_y_otros_campos",
+      "expected": 22,
+      "tol": 0
+    },
+    {
+      "name": "G MOV01 47",
+      "path": "summary/by_group/G_other_conflicts/proposals/MOV01-R",
+      "expected": 47,
+      "tol": 0
+    },
+    {
+      "name": "G sin referencia 41",
+      "path": "summary/by_group/G_other_conflicts/holds/sin_referencia_en_la_poliza",
+      "expected": 41,
+      "tol": 0
+    },
+    {
+      "name": "G END01 32",
+      "path": "summary/by_group/G_other_conflicts/proposals/END01-R",
+      "expected": 32,
+      "tol": 0
+    },
+    {
+      "name": "G END02 16",
+      "path": "summary/by_group/G_other_conflicts/proposals/END02-R",
+      "expected": 16,
+      "tol": 0
+    },
+    {
+      "name": "E edificios 16",
+      "path": "summary/by_group/E_TW_dependency/by_line/buildings",
+      "expected": 16,
+      "tol": 0
+    },
+    {
+      "name": "E test 0",
+      "path": "summary/by_group/E_TW_dependency/test2025_rows",
+      "expected": 0,
+      "tol": 0
+    },
+    {
+      "name": "D test 2",
+      "path": "summary/by_group/D_CAP01_dependency_only/test2025_rows",
+      "expected": 2,
+      "tol": 0
+    },
+    {
+      "name": "percentil ÷1000 edificios mín 4,2 %",
+      "path": "no_reference_percentiles/buildings/percentile_of_hypothetical_in_normal_distribution_quantiles/0.0",
+      "expected": 0.042,
+      "tol": 0.03
+    },
+    {
+      "name": "percentil ÷1000 edificios máx 99,5 %",
+      "path": "no_reference_percentiles/buildings/percentile_of_hypothetical_in_normal_distribution_quantiles/1.0",
+      "expected": 0.995,
+      "tol": 0.001
+    },
+    {
+      "name": "percentil ÷1000 contenidos máx 99,5 %",
+      "path": "no_reference_percentiles/contents/percentile_of_hypothetical_in_normal_distribution_quantiles/1.0",
+      "expected": 0.995,
+      "tol": 0.001
+    },
+    {
+      "name": "edificios ÷1000 mín 93.000",
+      "path": "no_reference_percentiles/buildings/hypothetical_min_CU",
+      "expected": 93000,
+      "tol": 0
+    },
+    {
+      "name": "edificios ÷1000 máx 556.000",
+      "path": "no_reference_percentiles/buildings/hypothetical_max_CU",
+      "expected": 556000,
+      "tol": 0
+    },
+    {
+      "name": "edificios normal máx 1.061.000",
+      "path": "no_reference_percentiles/buildings/normal_max_CU",
+      "expected": 1061000,
+      "tol": 0
+    },
+    {
+      "name": "contenidos ÷1000 mín 10.700",
+      "path": "no_reference_percentiles/contents/hypothetical_min_CU",
+      "expected": 10700,
+      "tol": 0
+    },
+    {
+      "name": "contenidos ÷1000 máx 126.200",
+      "path": "no_reference_percentiles/contents/hypothetical_max_CU",
+      "expected": 126200,
+      "tol": 0
+    },
+    {
+      "name": "contenidos normal máx 346.700",
+      "path": "no_reference_percentiles/contents/normal_max_CU",
+      "expected": 346700,
+      "tol": 0
+    },
+    {
+      "name": "vecinas 101 filas",
+      "path": "neighbour_evidence/no_reference_rows_with_neighbour",
+      "expected": 101,
+      "tol": 0
+    },
+    {
+      "name": "vecinas extremas 0",
+      "path": "neighbour_evidence/neighbour_extreme_rows",
+      "expected": 0,
+      "tol": 0
+    },
+    {
+      "name": "vecinas en 90 % central 90,1 %",
+      "path": "neighbour_evidence/share_within_population_p05_p95",
+      "expected": 0.901,
+      "tol": 0.002
+    },
+    {
+      "name": "población pares 633.693",
+      "path": "neighbour_evidence/population/pairs_same_customer_address_overlap_normal",
+      "expected": 633693,
+      "tol": 0
+    },
+    {
+      "name": "población mediana 0,213",
+      "path": "neighbour_evidence/population/contents_over_buildings_ratio_quantiles/0.5",
+      "expected": 0.213,
+      "tol": 0.003
+    },
+    {
+      "name": "prima edificios año completo pendientes 0,828",
+      "path": "premium_diagnostic/buildings/focus_full_year_premium_per_1000_hypothetical_capital_quantiles/0.5",
+      "expected": 0.828,
+      "tol": 0.001
+    },
+    {
+      "name": "prima edificios año completo normales 0,973",
+      "path": "premium_diagnostic/buildings/normal_full_year_rows_premium_per_1000_capital_quantiles/0.5",
+      "expected": 0.973,
+      "tol": 0.001
+    },
+    {
+      "name": "prima contenidos año completo pendientes 3,371",
+      "path": "premium_diagnostic/contents/focus_full_year_premium_per_1000_hypothetical_capital_quantiles/0.5",
+      "expected": 3.371,
+      "tol": 0.001
+    },
+    {
+      "name": "prima contenidos año completo normales 3,304",
+      "path": "premium_diagnostic/contents/normal_full_year_rows_premium_per_1000_capital_quantiles/0.5",
+      "expected": 3.304,
+      "tol": 0.001
+    },
+    {
+      "name": "periodos pendientes de año completo 11+7",
+      "path": "premium_diagnostic/buildings/focus_full_year_rows",
+      "expected": 11,
+      "tol": 0
+    },
+    {
+      "name": "contenidos año completo 7",
+      "path": "premium_diagnostic/contents/focus_full_year_rows",
+      "expected": 7,
+      "tol": 0
+    },
+    {
+      "name": "R03 razón 1,586",
+      "path": "cases[key=R03]/endorsement_ratio",
+      "expected": 1.586,
+      "tol": 0.001
+    },
+    {
+      "name": "R03 reversión 1,021",
+      "path": "cases[key=R03]/reversion_ratio",
+      "expected": 1.021,
+      "tol": 0.001
+    },
+    {
+      "name": "R04 razón 1,350",
+      "path": "cases[key=R04]/endorsement_ratio",
+      "expected": 1.35,
+      "tol": 0.001
+    },
+    {
+      "name": "R04b razón 1,576",
+      "path": "cases[key=R04b]/endorsement_ratio",
+      "expected": 1.576,
+      "tol": 0.001
+    },
+    {
+      "name": "R06 razón 0,981",
+      "path": "cases[key=R06]/chosen_ratio",
+      "expected": 0.981,
+      "tol": 0.001
+    },
+    {
+      "name": "R07 razón 0,967",
+      "path": "cases[key=R07]/chosen_ratio",
+      "expected": 0.967,
+      "tol": 0.001
+    },
+    {
+      "name": "R08 razón 0,969",
+      "path": "cases[key=R08]/chosen_ratio",
+      "expected": 0.969,
+      "tol": 0.001
+    },
+    {
+      "name": "R09 razón 1,062",
+      "path": "cases[key=R09]/chosen_ratio",
+      "expected": 1.062,
+      "tol": 0.001
+    },
+    {
+      "name": "R09b razón 0,9425",
+      "path": "cases[key=R09b]/chosen_ratio",
+      "expected": 0.9425,
+      "tol": 0.0001
+    },
+    {
+      "name": "R01 razón 1",
+      "path": "cases[key=R01]/chosen_ratio",
+      "expected": 1.0,
+      "tol": 1e-05
+    },
+    {
+      "name": "R02 razón 1",
+      "path": "cases[key=R02]/chosen_ratio",
+      "expected": 1.0,
+      "tol": 1e-05
+    },
+    {
+      "name": "R05 razón 1,017",
+      "path": "cases[key=R05]/chosen_ratio",
+      "expected": 1.017,
+      "tol": 0.001
+    },
+    {
+      "name": "controles 23",
+      "path": "checks_summary/checks_total",
+      "expected": 23,
+      "tol": 0
+    },
+    {
+      "name": "controles pasados 23",
+      "path": "checks_summary/checks_passed",
+      "expected": 23,
+      "tol": 0
+    },
+    {
+      "name": "sin datos modificados",
+      "path": "scope/data_modified",
+      "expected": false,
+      "tol": 0
+    },
+    {
+      "name": "sin modelos",
+      "path": "scope/models_trained",
+      "expected": false,
+      "tol": 0
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "checks_count": 7,
+  "checks": [
+    {
+      "name": "core_manifest_and_every_artifact_still_identical",
+      "passed": true
+    },
+    {
+      "name": "active_prepared_pointer_unchanged_during_documentation",
+      "passed": true
+    },
+    {
+      "name": "state_and_current_catalog_agree",
+      "passed": true
+    },
+    {
+      "name": "all_application_state_paths_exist",
+      "passed": true
+    },
+    {
+      "name": "all_prior_state_top_level_sections_preserved",
+      "passed": true
+    },
+    {
+      "name": "decision_unique_and_referenced_in_memory",
+      "passed": true
+    },
+    {
+      "name": "actual_diagnostic_index_resolves_to_fresh_current_claims",
+      "passed": true
+    }
+  ],
+  "decision_id": "D42",
+  "core_manifest_sha256": "32bb9852063ea3aeeba0e3f1cd81b69a7cf6f456e7bba6a92c643ae53264d9d7",
+  "independent_validation": false
+}

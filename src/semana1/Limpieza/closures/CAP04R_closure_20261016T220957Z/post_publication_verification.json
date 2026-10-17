@@ -1,0 +1,42 @@
+{
+  "passed": 7,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "Actual second CLI invocation is verified no-op",
+      "passed": true
+    },
+    {
+      "check": "No-op preserves both current indexes",
+      "passed": true
+    },
+    {
+      "check": "Originals, parent files, baseline and prior operation/review indexes unchanged",
+      "passed": true
+    },
+    {
+      "check": "Closed new and parent/review manifests intact",
+      "passed": true
+    },
+    {
+      "check": "Pointer counts 467/3060/129 correct",
+      "passed": true
+    },
+    {
+      "check": "Default protocol baseline unchanged and no modeling approval",
+      "passed": true
+    },
+    {
+      "check": "All report links resolve after sealing",
+      "passed": true
+    }
+  ],
+  "actual_second_cli": {
+    "status": "already_applied_verified_noop",
+    "run": "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Limpieza\\runs\\capcontext_20261016T220924Z_4b397220",
+    "new_changes": 0,
+    "CAP04R_changes": 109
+  },
+  "stderr": "",
+  "independent_validation": false
+}

@@ -1,0 +1,42 @@
+{
+  "passed": 7,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "Actual second CLI invocation is verified no-op",
+      "passed": true
+    },
+    {
+      "check": "Active and operation indexes unchanged by second CLI invocation",
+      "passed": true
+    },
+    {
+      "check": "Immutable application manifest intact",
+      "passed": true
+    },
+    {
+      "check": "Every original, parent and review hash unchanged",
+      "passed": true
+    },
+    {
+      "check": "Parent closed run and D46 review manifests intact",
+      "passed": true
+    },
+    {
+      "check": "No global modeling approval introduced",
+      "passed": true
+    },
+    {
+      "check": "Protocol 1.5 keeps REN00 and adds PRE00 separately",
+      "passed": true
+    }
+  ],
+  "actual_second_cli": {
+    "status": "already_applied_verified_noop",
+    "run": "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Limpieza\\runs\\preaudit_20261016T211816Z_817285a5",
+    "marked_claims": 413,
+    "new_columns_added": 0
+  },
+  "stderr": "",
+  "independent_validation": false
+}

@@ -1,0 +1,15 @@
+{
+  "state": "A synthetic insurance data audit found sum_insured values about 1000 times the median of other periods of the same policy. No source-system correction notice or currency-unit confirmation exists. Capital corrections have not been authorized. Decide how this anomaly should be handled.",
+  "model": "jev-latest",
+  "questions": {
+    "capital_action": {
+      "type": "choice",
+      "instructions": "Given the audit evidence in state, choose the supported next action.",
+      "criteria": {
+        "divide_now": "Automatically divide all flagged sums insured by 1000 and accept them as correct.",
+        "review": "Preserve amounts and route flagged records for actuarial and source-data review.",
+        "ignore": "Declare the records correct and close the issue."
+      }
+    }
+  }
+}

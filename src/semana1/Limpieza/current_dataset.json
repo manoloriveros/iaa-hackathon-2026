@@ -1,0 +1,43 @@
+{
+  "workspace_relative_run": "Hackaton/Semana 1/Limpieza/runs/preaudit_20261016T211816Z_817285a5",
+  "status": "verified_REN00_PRE00_audit_only",
+  "catalog_workspace_relative": "Hackaton/Semana 1/Limpieza/runs/preaudit_20261016T211816Z_817285a5/dataset_catalog.json",
+  "inherited_rules": [
+    "ID01",
+    "EXP01",
+    "CAP01",
+    "CAT01",
+    "AGE01"
+  ],
+  "claims_rule": "DUP01",
+  "claims_records": 162546,
+  "claims_excluded": 604,
+  "capital_changes_inherited": 2073,
+  "pending_capitals": 1454,
+  "category_changes_inherited": 700210,
+  "age_changes_inherited": 2936,
+  "CON01_activated": false,
+  "approved_for_modeling": false,
+  "audit_rules": [
+    "REN00",
+    "PRE00"
+  ],
+  "audit_columns": [
+    "audit_ren00",
+    "audit_pre00"
+  ],
+  "audit_marked_rows": 12041,
+  "audit_frozen_policies": 2742,
+  "predictor_exclusion_guard_version": "1.0",
+  "audit_marked_claims": 413,
+  "audit_counts_by_rule": {
+    "REN00": {
+      "policy_period_rows": 12041,
+      "policy_ids": 2742
+    },
+    "PRE00": {
+      "claim_rows": 413,
+      "policy_ids": 413
+    }
+  }
+}

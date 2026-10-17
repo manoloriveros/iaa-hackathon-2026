@@ -1,0 +1,82 @@
+{
+  "checked_at_utc": "2026-10-16T21:38:05+00:00",
+  "checks": [
+    {
+      "name": "evidencia existe",
+      "passed": true,
+      "detail": "Hackaton/Semana 1/Modelado/Investigacion_tecnicas_claude/runs/diag_20261016T210304Z_df57908a"
+    },
+    {
+      "name": "manifiesto de la corrida",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "procedencia compatible con el catálogo activo",
+      "passed": true,
+      "detail": {
+        "catalogo_activo": "Hackaton/Semana 1/Limpieza/runs/preaudit_20261016T211816Z_817285a5",
+        "catalogo_corrida": "Hackaton/Semana 1/Limpieza/runs/dupfix_20261016T195843Z_fc0bb423/dataset_catalog.json",
+        "tablas": {
+          "addresses": "igual",
+          "claims": "capa de auditoría sobre la tabla usada (valores previos sin cambios)",
+          "customers": "igual",
+          "policies_buildings": "capa de auditoría sobre la tabla usada (valores previos sin cambios)",
+          "policies_contents": "capa de auditoría sobre la tabla usada (valores previos sin cambios)",
+          "policies_motor": "capa de auditoría sobre la tabla usada (valores previos sin cambios)",
+          "sample_submission": "igual",
+          "test_buildings": "capa de auditoría sobre la tabla usada (valores previos sin cambios)",
+          "test_contents": "capa de auditoría sobre la tabla usada (valores previos sin cambios)",
+          "test_motor": "capa de auditoría sobre la tabla usada (valores previos sin cambios)",
+          "weather": "igual"
+        }
+      }
+    },
+    {
+      "name": "hashes de las once tablas",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "sin entrenamiento",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sin marcador RUNID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "enlaces locales del informe",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "figuras y tablas listadas",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "cifras del informe (92)",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "fuentes citadas existen",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "fuentes sin citar",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "passed": true,
+  "run": "Hackaton/Semana 1/Modelado/Investigacion_tecnicas_claude/runs/diag_20261016T210304Z_df57908a",
+  "checks_passed": 11,
+  "checks_total": 11,
+  "independent_validation": false,
+  "human_review": "pending"
+}

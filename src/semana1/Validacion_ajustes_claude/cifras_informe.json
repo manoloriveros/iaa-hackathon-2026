@@ -1,0 +1,911 @@
+{
+  "description": "Cifras citadas en INFORME.md y su ruta dentro de evidencia.json de la corrida vigente. Sintaxis: segmentos separados por '/', filtros [clave=valor;clave=valor] sobre listas de objetos. tol 0 exige igualdad exacta; tol>0 es tolerancia relativa.",
+  "checks": [
+    {
+      "name": "controles superados",
+      "path": "summary/checks_passed",
+      "expected": 41,
+      "tol": 0
+    },
+    {
+      "name": "controles totales",
+      "path": "summary/checks_total",
+      "expected": 41,
+      "tol": 0
+    },
+    {
+      "name": "clientes en el maestro con ceros iniciales",
+      "path": "rules/ID01/master_leading_zero_share",
+      "expected": 0.1001,
+      "tol": 0.02
+    },
+    {
+      "name": "ID01 cambios autos train",
+      "path": "rules/ID01/tables/policies_motor/changed",
+      "expected": 98110,
+      "tol": 0
+    },
+    {
+      "name": "ID01 cambios autos test",
+      "path": "rules/ID01/tables/test_motor/changed",
+      "expected": 25554,
+      "tol": 0
+    },
+    {
+      "name": "ID01 proporción corta autos train",
+      "path": "rules/ID01/tables/policies_motor/short_id_share",
+      "expected": 0.1001,
+      "tol": 0.001
+    },
+    {
+      "name": "ID01 sin pareja después",
+      "path": "rules/ID01/tables/policies_motor/unmatched_after",
+      "expected": 0,
+      "tol": 0
+    },
+    {
+      "name": "EXP01 ACT365 autos",
+      "path": "rules/EXP01/tables/policies_motor/modes_all_rows/ACT365",
+      "expected": 974232,
+      "tol": 0
+    },
+    {
+      "name": "EXP01 ACT365 edificios",
+      "path": "rules/EXP01/tables/policies_buildings/modes_all_rows/ACT365",
+      "expected": 703544,
+      "tol": 0
+    },
+    {
+      "name": "EXP01 ACT365 contenidos",
+      "path": "rules/EXP01/tables/policies_contents/modes_all_rows/ACT365",
+      "expected": 717306,
+      "tol": 0
+    },
+    {
+      "name": "EXP01 ACT360 autos",
+      "path": "rules/EXP01/tables/policies_motor/modes_all_rows/ACT360",
+      "expected": 4802,
+      "tol": 0
+    },
+    {
+      "name": "EXP01 días autos",
+      "path": "rules/EXP01/tables/policies_motor/modes_all_rows/day_amount",
+      "expected": 934,
+      "tol": 0
+    },
+    {
+      "name": "EXP01 cambios autos",
+      "path": "rules/EXP01/tables/policies_motor/changed",
+      "expected": 5736,
+      "tol": 0
+    },
+    {
+      "name": "EXP01 cambios edificios",
+      "path": "rules/EXP01/tables/policies_buildings/changed",
+      "expected": 4182,
+      "tol": 0
+    },
+    {
+      "name": "EXP01 cambios contenidos",
+      "path": "rules/EXP01/tables/policies_contents/changed",
+      "expected": 4311,
+      "tol": 0
+    },
+    {
+      "name": "EXP01 año completo en días autos",
+      "path": "rules/EXP01/tables/policies_motor/day_amount_full_year_rows",
+      "expected": 574,
+      "tol": 0
+    },
+    {
+      "name": "EXP01 exposición train cruda",
+      "path": "rules/EXP01/totals/train_raw",
+      "expected": 2658636.1771,
+      "tol": 1e-07
+    },
+    {
+      "name": "EXP01 exposición train recalculada",
+      "path": "rules/EXP01/totals/train_recomputed",
+      "expected": 1968577.0591,
+      "tol": 1e-07
+    },
+    {
+      "name": "EXP01 días máximos autos",
+      "path": "rules/EXP01/tables/policies_motor/covered_days_max",
+      "expected": 365,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 extremos edificios",
+      "path": "rules/CAP01/lines/buildings/extreme_rows",
+      "expected": 1765,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 cohorte edificios",
+      "path": "rules/CAP01/lines/buildings/recomputed_prior_supported",
+      "expected": 1074,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 cohorte contenidos",
+      "path": "rules/CAP01/lines/contents/recomputed_prior_supported",
+      "expected": 999,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 máximo normal edificios",
+      "path": "rules/CAP01/lines/buildings/normal_cluster_max_CU",
+      "expected": 1061000,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 mínimo extremo edificios",
+      "path": "rules/CAP01/lines/buildings/extreme_cluster_min_CU",
+      "expected": 52000000,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 máximo normal contenidos",
+      "path": "rules/CAP01/lines/contents/normal_cluster_max_CU",
+      "expected": 346700,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 mínimo extremo contenidos",
+      "path": "rules/CAP01/lines/contents/extreme_cluster_min_CU",
+      "expected": 8200000,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 mediana normal edificios",
+      "path": "rules/CAP01/lines/buildings/normal_median_CU",
+      "expected": 226000,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 mediana extrema/1000 edificios",
+      "path": "rules/CAP01/lines/buildings/extreme_median_div1000_CU",
+      "expected": 227000,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 mediana normal contenidos",
+      "path": "rules/CAP01/lines/contents/normal_median_CU",
+      "expected": 39300,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 mediana extrema/1000 contenidos",
+      "path": "rules/CAP01/lines/contents/extreme_median_div1000_CU",
+      "expected": 38650,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 capfix edificios train",
+      "path": "rules/CAP01/capfix_layer/policies_buildings/changed",
+      "expected": 802,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 capfix edificios test",
+      "path": "rules/CAP01/capfix_layer/test_buildings/changed",
+      "expected": 272,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 capfix contenidos train",
+      "path": "rules/CAP01/capfix_layer/policies_contents/changed",
+      "expected": 731,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 capfix contenidos test",
+      "path": "rules/CAP01/capfix_layer/test_contents/changed",
+      "expected": 268,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 pendientes",
+      "path": "rules/CAP01/pending_rows",
+      "expected": 1454,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 pendientes sin ancla edificios",
+      "path": "rules/CAP01/lines/buildings/pending/no_prior_anchor",
+      "expected": 526,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 pendientes sin ancla contenidos",
+      "path": "rules/CAP01/lines/contents/pending/no_prior_anchor",
+      "expected": 534,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 pendientes contexto distinto edificios",
+      "path": "rules/CAP01/lines/buildings/pending/anchor_context_changed_or_incomplete",
+      "expected": 163,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 pendientes contexto distinto contenidos",
+      "path": "rules/CAP01/lines/contents/pending/anchor_context_changed_or_incomplete",
+      "expected": 176,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 pendientes cociente fuera contenidos",
+      "path": "rules/CAP01/lines/contents/pending/anchor_same_context_ratio_outside",
+      "expected": 52,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 pendientes test edificios",
+      "path": "rules/CAP01/lines/buildings/pending/test_rows",
+      "expected": 98,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 pendientes test contenidos",
+      "path": "rules/CAP01/lines/contents/pending/test_rows",
+      "expected": 92,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 cascada edificios",
+      "path": "rules/CAP01/lines/buildings/cascade_rows_if_recomputed_on_corrected_data",
+      "expected": 2,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 cascada contenidos",
+      "path": "rules/CAP01/lines/contents/cascade_rows_if_recomputed_on_corrected_data",
+      "expected": 1,
+      "tol": 0
+    },
+    {
+      "name": "CAP01 cociente mínimo edificios",
+      "path": "rules/CAP01/lines/buildings/hypothetical_ratio_quantiles_cohort/0.0",
+      "expected": 1.0161,
+      "tol": 0.001
+    },
+    {
+      "name": "CAP01 cociente máximo edificios",
+      "path": "rules/CAP01/lines/buildings/hypothetical_ratio_quantiles_cohort/1.0",
+      "expected": 1.0395,
+      "tol": 0.001
+    },
+    {
+      "name": "CAP01 cociente mínimo contenidos",
+      "path": "rules/CAP01/lines/contents/hypothetical_ratio_quantiles_cohort/0.0",
+      "expected": 1.0144,
+      "tol": 0.001
+    },
+    {
+      "name": "CAP01 cociente máximo contenidos",
+      "path": "rules/CAP01/lines/contents/hypothetical_ratio_quantiles_cohort/1.0",
+      "expected": 1.025,
+      "tol": 0.001
+    },
+    {
+      "name": "CAT01 cambios pólizas",
+      "path": "rules/CAT01/tables/policies_buildings/changed",
+      "expected": 555824,
+      "tol": 0
+    },
+    {
+      "name": "CAT01 cambios test",
+      "path": "rules/CAT01/tables/test_buildings/changed",
+      "expected": 144386,
+      "tol": 0
+    },
+    {
+      "name": "AGE01 discrepancias edificios",
+      "path": "rules/AGE01/tables/policies_buildings/discrepancies",
+      "expected": 1122,
+      "tol": 0
+    },
+    {
+      "name": "AGE01 discrepancias contenidos",
+      "path": "rules/AGE01/tables/policies_contents/discrepancies",
+      "expected": 1209,
+      "tol": 0
+    },
+    {
+      "name": "AGE01 discrepancias test edificios",
+      "path": "rules/AGE01/tables/test_buildings/discrepancies",
+      "expected": 300,
+      "tol": 0
+    },
+    {
+      "name": "AGE01 discrepancias test contenidos",
+      "path": "rules/AGE01/tables/test_contents/discrepancies",
+      "expected": 305,
+      "tol": 0
+    },
+    {
+      "name": "AGE01 cotización edificios",
+      "path": "rules/AGE01/tables/policies_buildings/explained_by_age_at_quote_date",
+      "expected": 936,
+      "tol": 0
+    },
+    {
+      "name": "AGE01 cotización contenidos",
+      "path": "rules/AGE01/tables/policies_contents/explained_by_age_at_quote_date",
+      "expected": 999,
+      "tol": 0
+    },
+    {
+      "name": "AGE01 cotización test edificios",
+      "path": "rules/AGE01/tables/test_buildings/explained_by_age_at_quote_date",
+      "expected": 246,
+      "tol": 0
+    },
+    {
+      "name": "AGE01 cotización test contenidos",
+      "path": "rules/AGE01/tables/test_contents/explained_by_age_at_quote_date",
+      "expected": 251,
+      "tol": 0
+    },
+    {
+      "name": "AGE01 cumpleaños día inicio edificios",
+      "path": "rules/AGE01/tables/policies_buildings/explained_by_birthday_on_period_start_exclusive",
+      "expected": 162,
+      "tol": 0
+    },
+    {
+      "name": "AGE01 cumpleaños día inicio contenidos",
+      "path": "rules/AGE01/tables/policies_contents/explained_by_birthday_on_period_start_exclusive",
+      "expected": 187,
+      "tol": 0
+    },
+    {
+      "name": "AGE01 fin de periodo edificios",
+      "path": "rules/AGE01/tables/policies_buildings/plus_one_explained_by_age_at_period_end",
+      "expected": 23,
+      "tol": 0
+    },
+    {
+      "name": "AGE01 fin de periodo contenidos",
+      "path": "rules/AGE01/tables/policies_contents/plus_one_explained_by_age_at_period_end",
+      "expected": 22,
+      "tol": 0
+    },
+    {
+      "name": "AGE01 sin explicar edificios",
+      "path": "rules/AGE01/tables/policies_buildings/unexplained",
+      "expected": 1,
+      "tol": 0
+    },
+    {
+      "name": "AGE01 sin explicar contenidos",
+      "path": "rules/AGE01/tables/policies_contents/unexplained",
+      "expected": 1,
+      "tol": 0
+    },
+    {
+      "name": "driver_age igual a edad del tomador",
+      "path": "rules/AGE01/motor_driver_age_vs_policyholder_age_at_start/share_equal",
+      "expected": 0.9982,
+      "tol": 0.001
+    },
+    {
+      "name": "driver_age diferencia mayor de 5",
+      "path": "rules/AGE01/motor_driver_age_vs_policyholder_age_at_start/abs_diff_gt_5",
+      "expected": 0,
+      "tol": 0
+    },
+    {
+      "name": "DUP01 pares",
+      "path": "rules/DUP01/identical_groups_size2",
+      "expected": 604,
+      "tol": 0
+    },
+    {
+      "name": "DUP01 grupos mayores",
+      "path": "rules/DUP01/identical_groups_larger",
+      "expected": 0,
+      "tol": 0
+    },
+    {
+      "name": "DUP01 IDs de 11 caracteres",
+      "path": "rules/DUP01/eleven_char_ids_total",
+      "expected": 604,
+      "tol": 0
+    },
+    {
+      "name": "DUP01 filas dupfix",
+      "path": "rules/DUP01/rows_dupfix",
+      "expected": 162546,
+      "tol": 0
+    },
+    {
+      "name": "DUP01 neto excluido",
+      "path": "rules/DUP01/net_accepted_excluded_CU",
+      "expected": 3174167.49,
+      "tol": 1e-09
+    },
+    {
+      "name": "DUP01 por año 2022",
+      "path": "rules/DUP01/excluded_by_year/2022",
+      "expected": 600,
+      "tol": 0
+    },
+    {
+      "name": "DUP01 por ramo autos",
+      "path": "rules/DUP01/excluded_by_line/motor",
+      "expected": 411,
+      "tol": 0
+    },
+    {
+      "name": "DUP01 por ramo edificios",
+      "path": "rules/DUP01/excluded_by_line/buildings",
+      "expected": 109,
+      "tol": 0
+    },
+    {
+      "name": "DUP01 por ramo contenidos",
+      "path": "rules/DUP01/excluded_by_line/contents",
+      "expected": 84,
+      "tol": 0
+    },
+    {
+      "name": "DUP01 cerrados",
+      "path": "rules/DUP01/excluded_by_status/closed",
+      "expected": 586,
+      "tol": 0
+    },
+    {
+      "name": "DUP01 colisiones no idénticas",
+      "path": "rules/DUP01/near_duplicates_not_identical/policy_line_lossdate/groups",
+      "expected": 57,
+      "tol": 0
+    },
+    {
+      "name": "DUP01 colisiones mismo peligro",
+      "path": "rules/DUP01/near_duplicates_not_identical/policy_line_peril_lossdate/groups",
+      "expected": 17,
+      "tol": 0
+    },
+    {
+      "name": "DUP01 relajando clave",
+      "path": "rules/DUP01/additional_duplicates_if_relaxing_key/ignoring_report_repairer_third_party",
+      "expected": 0,
+      "tol": 0
+    },
+    {
+      "name": "siniestros 2022 autos",
+      "path": "profiles/motor/claims/by_loss_year/2022",
+      "expected": 29694,
+      "tol": 0
+    },
+    {
+      "name": "siniestros 2022 edificios",
+      "path": "profiles/buildings/claims/by_loss_year/2022",
+      "expected": 6688,
+      "tol": 0
+    },
+    {
+      "name": "siniestros 2022 contenidos",
+      "path": "profiles/contents/claims/by_loss_year/2022",
+      "expected": 6022,
+      "tol": 0
+    },
+    {
+      "name": "REN00 cohorte",
+      "path": "rules/REN00/cohort_policies",
+      "expected": 2742,
+      "tol": 0
+    },
+    {
+      "name": "REN00 autos",
+      "path": "rules/REN00/by_line/motor",
+      "expected": 1513,
+      "tol": 0
+    },
+    {
+      "name": "REN00 edificios",
+      "path": "rules/REN00/by_line/buildings",
+      "expected": 1010,
+      "tol": 0
+    },
+    {
+      "name": "REN00 contenidos",
+      "path": "rules/REN00/by_line/contents",
+      "expected": 219,
+      "tol": 0
+    },
+    {
+      "name": "REN00 periodos train",
+      "path": "rules/REN00/cohort_periods/train",
+      "expected": 9110,
+      "tol": 0
+    },
+    {
+      "name": "REN00 periodos test",
+      "path": "rules/REN00/cohort_periods/test",
+      "expected": 2931,
+      "tol": 0
+    },
+    {
+      "name": "REN00 sucesor 2021",
+      "path": "rules/REN00/successor_share_by_label_year[year=2021;renewal_decision=declined_by_insurer]/successor_share",
+      "expected": 1.0,
+      "tol": 0
+    },
+    {
+      "name": "REN00 sucesor 2024",
+      "path": "rules/REN00/successor_share_by_label_year[year=2024;renewal_decision=declined_by_insurer]/successor_share",
+      "expected": 0.9134,
+      "tol": 0.001
+    },
+    {
+      "name": "REN00 lapsed sin sucesor 2024",
+      "path": "rules/REN00/successor_share_by_label_year[year=2024;renewal_decision=lapsed_by_customer]/successor_share",
+      "expected": 0.0,
+      "tol": 0
+    },
+    {
+      "name": "REN00 cancelled sin sucesor 2024",
+      "path": "rules/REN00/successor_share_by_label_year[year=2024;renewal_decision=cancelled]/successor_share",
+      "expected": 0.0,
+      "tol": 0
+    },
+    {
+      "name": "PRE00 únicos",
+      "path": "rules/PRE00/assignment_categories/unique",
+      "expected": 162133,
+      "tol": 0
+    },
+    {
+      "name": "PRE00 antes del primer periodo",
+      "path": "rules/PRE00/assignment_categories/before_first_period",
+      "expected": 413,
+      "tol": 0
+    },
+    {
+      "name": "PRE00 solapes",
+      "path": "rules/PRE00/overlapping_periods_within_policy",
+      "expected": 0,
+      "tol": 0
+    },
+    {
+      "name": "PRE00 reportados en cobertura",
+      "path": "rules/PRE00/before_first_reported_within_observed_coverage",
+      "expected": 413,
+      "tol": 0
+    },
+    {
+      "name": "PRE00 días mínimo",
+      "path": "rules/PRE00/days_before_first_quantiles/0.0",
+      "expected": 4,
+      "tol": 0
+    },
+    {
+      "name": "PRE00 días mediana",
+      "path": "rules/PRE00/days_before_first_quantiles/0.5",
+      "expected": 31,
+      "tol": 0
+    },
+    {
+      "name": "PRE00 días máximo",
+      "path": "rules/PRE00/days_before_first_quantiles/1.0",
+      "expected": 499,
+      "tol": 0
+    },
+    {
+      "name": "PRE00 por año 2020",
+      "path": "rules/PRE00/before_first_by_loss_year/2020",
+      "expected": 273,
+      "tol": 0
+    },
+    {
+      "name": "PRE00 aceptados",
+      "path": "rules/PRE00/accepted_before_first/records",
+      "expected": 409,
+      "tol": 0
+    },
+    {
+      "name": "PRE00 pagado",
+      "path": "rules/PRE00/accepted_before_first/paid",
+      "expected": 1616071.21,
+      "tol": 1e-09
+    },
+    {
+      "name": "PRE00 incurrido",
+      "path": "rules/PRE00/accepted_before_first/incurred",
+      "expected": 1786628.82,
+      "tol": 1e-09
+    },
+    {
+      "name": "PRE00 recuperaciones",
+      "path": "rules/PRE00/accepted_before_first/recoveries",
+      "expected": 65168.98,
+      "tol": 1e-09
+    },
+    {
+      "name": "PRE00 neto",
+      "path": "rules/PRE00/accepted_before_first/net",
+      "expected": 1721459.84,
+      "tol": 1e-09
+    },
+    {
+      "name": "PRE00 marcados",
+      "path": "rules/PRE00/marks/marked",
+      "expected": 413,
+      "tol": 0
+    },
+    {
+      "name": "rama cambios",
+      "path": "rules/CAP0xR/ledger_rows",
+      "expected": 1033,
+      "tol": 0
+    },
+    {
+      "name": "rama CAP02R",
+      "path": "rules/CAP0xR/by_rule/CAP02R",
+      "expected": 867,
+      "tol": 0
+    },
+    {
+      "name": "rama CAP03R",
+      "path": "rules/CAP0xR/by_rule/CAP03R",
+      "expected": 11,
+      "tol": 0
+    },
+    {
+      "name": "rama CAP04R",
+      "path": "rules/CAP0xR/by_rule/CAP04R",
+      "expected": 109,
+      "tol": 0
+    },
+    {
+      "name": "rama CAP05R",
+      "path": "rules/CAP0xR/by_rule/CAP05R",
+      "expected": 46,
+      "tol": 0
+    },
+    {
+      "name": "rama pólizas edificios",
+      "path": "rules/CAP0xR/by_table/policies_buildings",
+      "expected": 516,
+      "tol": 0
+    },
+    {
+      "name": "rama pólizas contenidos",
+      "path": "rules/CAP0xR/by_table/policies_contents",
+      "expected": 504,
+      "tol": 0
+    },
+    {
+      "name": "rama test edificios",
+      "path": "rules/CAP0xR/by_table/test_buildings",
+      "expected": 7,
+      "tol": 0
+    },
+    {
+      "name": "rama test contenidos",
+      "path": "rules/CAP0xR/by_table/test_contents",
+      "expected": 6,
+      "tol": 0
+    },
+    {
+      "name": "rama test 2025",
+      "path": "rules/CAP0xR/test2025_supported",
+      "expected": 136,
+      "tol": 0
+    },
+    {
+      "name": "rama pendientes",
+      "path": "rules/CAP0xR/pending_in_branch",
+      "expected": 421,
+      "tol": 0
+    },
+    {
+      "name": "rama pendientes pólizas edificios",
+      "path": "rules/CAP0xR/pending_by_table/policies_buildings",
+      "expected": 77,
+      "tol": 0
+    },
+    {
+      "name": "rama pendientes pólizas contenidos",
+      "path": "rules/CAP0xR/pending_by_table/policies_contents",
+      "expected": 167,
+      "tol": 0
+    },
+    {
+      "name": "rama pendientes test edificios",
+      "path": "rules/CAP0xR/pending_by_table/test_buildings",
+      "expected": 91,
+      "tol": 0
+    },
+    {
+      "name": "rama pendientes test contenidos",
+      "path": "rules/CAP0xR/pending_by_table/test_contents",
+      "expected": 86,
+      "tol": 0
+    },
+    {
+      "name": "rama referencias posteriores",
+      "path": "rules/CAP0xR/references_after_corrected_period",
+      "expected": 1012,
+      "tol": 0
+    },
+    {
+      "name": "rama referencias anteriores",
+      "path": "rules/CAP0xR/references_before_corrected_period",
+      "expected": 21,
+      "tol": 0
+    },
+    {
+      "name": "rama referencias solapadas",
+      "path": "rules/CAP0xR/references_overlapping_or_missing",
+      "expected": 0,
+      "tol": 0
+    },
+    {
+      "name": "rama cociente mínimo",
+      "path": "rules/CAP0xR/ratio_new_over_reference_quantiles/0.0",
+      "expected": 0.9408,
+      "tol": 0.001
+    },
+    {
+      "name": "rama cociente p5",
+      "path": "rules/CAP0xR/ratio_new_over_reference_quantiles/0.05",
+      "expected": 0.9683,
+      "tol": 0.001
+    },
+    {
+      "name": "rama cociente mediana",
+      "path": "rules/CAP0xR/ratio_new_over_reference_quantiles/0.5",
+      "expected": 0.975,
+      "tol": 0.001
+    },
+    {
+      "name": "rama cociente p95",
+      "path": "rules/CAP0xR/ratio_new_over_reference_quantiles/0.95",
+      "expected": 0.9823,
+      "tol": 0.001
+    },
+    {
+      "name": "rama cociente máximo",
+      "path": "rules/CAP0xR/ratio_new_over_reference_quantiles/1.0",
+      "expected": 1.0634,
+      "tol": 0.001
+    },
+    {
+      "name": "rama separación máxima posterior",
+      "path": "rules/CAP0xR/reference_gap_days_quantiles_later/1.0",
+      "expected": 367,
+      "tol": 0
+    },
+    {
+      "name": "rama CAP05R anteriores",
+      "path": "rules/CAP0xR/by_rule_reference_direction[rule=CAP05R;direction=earlier]/rows",
+      "expected": 21,
+      "tol": 0
+    },
+    {
+      "name": "rama CAP05R posteriores",
+      "path": "rules/CAP0xR/by_rule_reference_direction[rule=CAP05R;direction=later]/rows",
+      "expected": 25,
+      "tol": 0
+    },
+    {
+      "name": "rama corrida activa",
+      "path": "rules/CAP0xR/active_run",
+      "expected": "capdistant_20261017T004534Z_6e8f8e18",
+      "tol": 0
+    },
+    {
+      "name": "NCB train",
+      "path": "open_issues/VD_ncb_gt_licensed/train",
+      "expected": 127041,
+      "tol": 0
+    },
+    {
+      "name": "NCB test",
+      "path": "open_issues/VD_ncb_gt_licensed/test",
+      "expected": 34781,
+      "tol": 0
+    },
+    {
+      "name": "licencia train",
+      "path": "open_issues/VD34_licence_age_lt_16/train",
+      "expected": 2962,
+      "tol": 0
+    },
+    {
+      "name": "licencia test",
+      "path": "open_issues/VD34_licence_age_lt_16/test",
+      "expected": 755,
+      "tol": 0
+    },
+    {
+      "name": "eléctricos sin cilindrada",
+      "path": "open_issues/VD35_electric/engine_missing",
+      "expected": 2533,
+      "tol": 0
+    },
+    {
+      "name": "eléctricos con cilindrada",
+      "path": "open_issues/VD35_electric/engine_positive",
+      "expected": 96843,
+      "tol": 0
+    },
+    {
+      "name": "own_damage fuera de comprehensive",
+      "path": "open_issues/VD09_own_damage_outside_comprehensive_original_claims",
+      "expected": 4,
+      "tol": 0
+    },
+    {
+      "name": "accidental edificios original",
+      "path": "open_issues/VD10_accidental_damage_without_option_buildings_original_claims",
+      "expected": 506,
+      "tol": 0
+    },
+    {
+      "name": "accidental contenidos original",
+      "path": "open_issues/VD10_accidental_damage_without_option_contents_original_claims",
+      "expected": 1090,
+      "tol": 0
+    },
+    {
+      "name": "accidental edificios DUP01",
+      "path": "open_issues/VD10_accidental_damage_without_option_buildings_dup01_claims",
+      "expected": 502,
+      "tol": 0
+    },
+    {
+      "name": "accidental contenidos DUP01",
+      "path": "open_issues/VD10_accidental_damage_without_option_contents_dup01_claims",
+      "expected": 1087,
+      "tol": 0
+    },
+    {
+      "name": "neto sobre capital edificios",
+      "path": "open_issues/VD11_net_incurred_above_capital_buildings_original_claims",
+      "expected": 8,
+      "tol": 0
+    },
+    {
+      "name": "neto sobre capital contenidos",
+      "path": "open_issues/VD11_net_incurred_above_capital_contents_original_claims",
+      "expected": 3,
+      "tol": 0
+    },
+    {
+      "name": "periodos que terminan 30-12-2024",
+      "path": "open_issues/VD16_periods_ending_2024_12_30/total",
+      "expected": 500245,
+      "tol": 0
+    },
+    {
+      "name": "periodos 30-12 autos",
+      "path": "open_issues/VD16_periods_ending_2024_12_30/motor",
+      "expected": 200063,
+      "tol": 0
+    },
+    {
+      "name": "periodos 30-12 edificios",
+      "path": "open_issues/VD16_periods_ending_2024_12_30/buildings",
+      "expected": 150111,
+      "tol": 0
+    },
+    {
+      "name": "periodos 30-12 contenidos",
+      "path": "open_issues/VD16_periods_ending_2024_12_30/contents",
+      "expected": 150071,
+      "tol": 0
+    },
+    {
+      "name": "verificaciones de Codex",
+      "path": "lineage/codex_verifications_passed/clean",
+      "expected": true,
+      "tol": 0
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+- region "Announcement":
+  - button "Image models are dreamer-ready Try them in the Playground and enable it via the API Learn more":
+    - generic: Image models are dreamer-ready
+    - generic: Try them in the Playground and enable it via the API
+    - generic: Learn more
+  - button "Dismiss":
+- button "Toggle Sidebar":
+  - generic: Toggle Sidebar
+- list:
+  - link "Home":
+    - /url: /home
+    - generic: Home
+  - link "Playground":
+    - /url: /playground
+    - generic: Playground
+  - link "Usage":
+    - /url: /usage
+    - generic: Usage
+  - link "API Keys":
+    - /url: /keys
+    - generic: API Keys
+  - link "Documentation":
+    - /url: https://docs.typesafe.ai
+    - generic: Documentation
+- link "View billing settings":
+  - /url: /settings/billing
+  - generic: View billing settings
+- heading "Balance" [level=3]
+- generic: $0.00
+- list:
+  - button "User menu for Manuel Rodríguez":
+    - generic: MR
+    - generic: Manuel Rodríguez
+    - generic: Manuel's org
+- main:
+  - button "Playground":
+    - generic: Playground
+  - button "Clear"
+  - button "Share":
+    - text: Share
+  - button "Preferences":
+  - generic: State
+  - button "Plain text" [pressed]:
+  - button "JSON":
+  - generic: "1"
+  - textbox:
+    - generic: A synthetic insurance data audit found sum_insured values about 1000 times the median of other periods of the same policy. No source-system correction notice or currency-unit confirmation exists. Capital corrections have not been authorized. Decide how this anomaly should be handled.
+  - separator "Resize state/questions"
+  - generic: Questions
+  - button "No issues blocking Run — show details":
+    - text: "0"
+  - generic: "1"
+  - generic: "2"
+  - generic: "3"
+  - generic: "4"
+  - generic: "5"
+  - generic: "6"
+  - generic: "7"
+  - generic: "8"
+  - generic: "9"
+  - generic: "10"
+  - generic: "11"
+  - generic: ⌄
+  - generic: ⌄
+  - generic: ⌄
+  - textbox:
+    - generic: "{"
+    - generic: "\"capital_action\": {"
+    - text: "\"type\":"
+    - generic: "\"choice\""
+    - text: ","
+    - generic: "\"instructions\": \"Given the audit evidence in state, choose the supported next action.\","
+    - generic: "\"criteria\": {"
+    - generic: "\"divide_now\": \"Automatically divide all flagged sums insured by 1000 and accept them as correct.\","
+    - generic: "\"review\": \"Preserve amounts and route flagged records for actuarial and source-data review.\","
+    - generic: "\"ignore\": \"Declare the records correct and close the issue.\""
+    - generic: "}"
+    - generic: "}"
+    - button "Add Question":
+      - generic: Add Question
+    - generic: "}"
+  - button "Upload assets":
+  - button "Click to upload assets"
+  - button "Add model":
+  - button "Change jev-latest": jev-latest
+  - button "Run request Ctrl+↵":
+    - text: Run
+    - generic: request
+    - generic: Ctrl+↵
+- complementary:
+  - separator "Resize panel"
+  - generic: Response
+  - generic: ·
+  - generic: Ran 30 sec ago
+  - button "Overview" [pressed]:
+  - button "JSON":
+  - paragraph: Your organization is out of funds. Add funds to keep running requests.
+  - link "Add funds":
+    - /url: /settings/billing
+  - button "Expand all questions":
+  - generic: Key & instructions
+  - generic: jev-latest
+  - generic: Primitive type
+  - button "Expand capital_action":
+  - generic: capital_action
+  - button "Find capital_action in Questions JSON":
+  - generic: Given the audit evidence in state, choose the supported next action.
+  - generic: Billing error
+  - generic: Your organization is out of funds. Add funds to keep running requests.
+  - generic: Choice
+  - generic: 3 options
+- region "Notifications alt+T":
+  - list:
+    - button "Close toast":
+    - generic: Out of funds
+    - generic: Your organization is out of funds. Add funds to keep running requests.
+- alert: TypeSafe
+- region "Notifications (F8)":
+  - list
+- text:         +          
