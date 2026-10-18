@@ -1,0 +1,40 @@
+{
+ "motor": {
+  "params": {
+   "learning_rate": 0.02,
+   "num_leaves": 7,
+   "min_data_in_leaf": 2000,
+   "cat_smooth": 200,
+   "cat_l2": 50,
+   "min_data_per_group": 1000,
+   "max_cat_threshold": 16,
+   "feature_fraction": 0.6,
+   "cap": 15000.0
+  },
+  "rounds": 606
+ },
+ "buildings": {
+  "params": {
+   "learning_rate": 0.02,
+   "num_leaves": 5,
+   "min_data_in_leaf": 2000,
+   "cat_smooth": 200,
+   "cat_l2": 50,
+   "min_data_per_group": 1000,
+   "max_cat_threshold": 16
+  },
+  "rounds": 350
+ },
+ "contents": {
+  "params": {
+   "learning_rate": 0.02,
+   "num_leaves": 7,
+   "min_data_in_leaf": 4000,
+   "cat_smooth": 200,
+   "cat_l2": 50,
+   "min_data_per_group": 1000,
+   "max_cat_threshold": 16
+  },
+  "rounds": 303
+ }
+}

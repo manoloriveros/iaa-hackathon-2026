@@ -1,0 +1,73 @@
+{
+ "id": "S10_claude_mezcla_hogar_F3s2_forma_edif",
+ "autor": "Claude (Modelos_claude), tercera ronda",
+ "recomendacion": "Sustituye a S09b como candidato recomendado: mismos componentes y mismos pesos, más la potencia de forma 1,10 en edificios. Si S09b ya se envió, S10 es el siguiente.",
+ "archivo": "Hackaton/Semana 1/Envios/archivos/S10_claude_mezcla_hogar_F3s2_forma_edif.csv",
+ "sha256": "aefdda6d12fbca6e4d8baffaf03aab475df99d11e290092d33e5fc0279f91a51",
+ "filas": 626639,
+ "columnas": [
+  "row_id",
+  "prediction"
+ ],
+ "total_CU": 211891641.87,
+ "por_ramo_CU": {
+  "motor": 116364297.27,
+  "buildings": 76914711.68,
+  "contents": 18612632.92
+ },
+ "composicion": {
+  "motor": "Ensamble S06 de Claude: CatBoost Tweedie F01234 (0,5), LightGBM F01234 (0,1), LightGBM reducido (0,1), frecuencia por peligro (0,3)",
+  "buildings": "50 % LightGBM Claude F0124 + 7 F3 de cliente y 50 % stack S08 de Codex; después mu = g (mu/g)^1,10 con g la media geométrica, y factor de año siguiente",
+  "contents": "56 % LightGBM Claude F0124 + 7 F3, 14 % frecuencia-severidad Claude, 30 % stack S08 de Codex",
+  "nivel": "Cada componente se reescala al total medio ponderado de los componentes de Claude en cada corte; luego un factor de año siguiente por ramo, media de los factores Tweedie de V23 selección y V24, aplicado una vez y sin segundo IBNR"
+ },
+ "forma_edificios": {
+  "alfa": 1.1,
+  "alfa_optimo_V23": 1.109,
+  "alfa_optimo_V24": 1.102,
+  "efecto": "edificios V23 0,11513 -> 0,11653; V24 (alfa fijado en V23) 0,11437 -> 0,11530",
+  "lectura": "las predicciones de edificios quedan demasiado concentradas; los dos años coinciden en el exponente. En autos (1,03 frente a 0,96) y contenidos (0,87 frente a 1,01) no coinciden y no se aplica"
+ },
+ "validacion": {
+  "d2_v24_global_con_factor_v23": 0.13585,
+  "por_ramo": {
+   "motor": {
+    "d2_sel": 0.09344,
+    "d2_v24_f23": 0.08877,
+    "f23": 0.98626,
+    "f24": 1.01276,
+    "f": 0.99951
+   },
+   "buildings": {
+    "d2_sel": 0.11653,
+    "d2_v24_f23": 0.1153,
+    "f23": 1.01421,
+    "f24": 1.07975,
+    "f": 1.04698
+   },
+   "contents": {
+    "d2_sel": 0.08797,
+    "d2_v24_f23": 0.09322,
+    "f23": 1.06982,
+    "f24": 1.07679,
+    "f": 1.07331
+   }
+  },
+  "publico_esperado": 0.12733,
+  "comparacion": "S08 0,13247 y S09b 0,13552 en el mismo V24",
+  "escala": "publico = 0,0099 + 0,8644 x V24",
+  "limite": "V24 es desarrollo reutilizado; el exponente se eligió en V23 y se comprobó en V24"
+ },
+ "autorizacion": {
+  "F3_hogar": "D80 (participante, 18-10-2026 ~02:54 UTC)",
+  "envio": "Lo hace Codex por decisión del participante; un solo envío, con recibo y puntaje en el registro"
+ },
+ "controles_claude": [
+  "626.639 filas en el orden de sample_submission",
+  "columnas row_id,prediction",
+  "sin faltantes",
+  "mínimo 0.08341 > 0",
+  "SHA-256 recalculado tras la copia"
+ ],
+ "creado_utc": "2026-10-18T03:29:40Z"
+}

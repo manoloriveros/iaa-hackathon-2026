@@ -1,0 +1,30 @@
+{
+  "decision_id": "D71",
+  "status": "authorized_local_experiments",
+  "recorded_utc": "2026-10-17T18:05:19+00:00",
+  "f0_run": "Hackaton/Semana 1/Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca",
+  "f0_manifest_sha256": "21b6af41d30a7d97db736b82f0700ff5e7c5c59e3f62178f5312db6febfd3efd",
+  "active_catalog_sha256": "77daf0cf5a199eabced637e206cd0ff5e35ab80d841c5ee6d63ae7db7d5d41fd",
+  "protocol_path": "Hackaton/Semana 1/Modelado/protocolo_metodologico.json",
+  "protocol_sha256": "52279cc9cd8c33c75154cff04c7b6029e6725ef6a079d51484a42784480f6629",
+  "allowed_blocks": [
+    "F0",
+    "F1",
+    "F2",
+    "F4"
+  ],
+  "scope": "local model experiments, no remote training or competition submission",
+  "human_review_of_results": "pending",
+  "independent_validation": false,
+  "authorization": "Preparación/artifacts/verification/improvement_20261017_D71/authorization.json",
+  "additional_column_authorizations_D76": {
+    "motor": [
+      "prior_claims_5y",
+      "previous_insurer",
+      "campaign_code"
+    ],
+    "scope": "local experiments under continued user improvement request after column-specific availability audit",
+    "evidence": "Preparación/artifacts/verification/improvement_D76/prejoin_availability.json",
+    "other_F3_not_authorized": true
+  }
+}

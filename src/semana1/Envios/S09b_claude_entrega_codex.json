@@ -1,0 +1,75 @@
+{
+ "id": "S09b_claude_mezcla_hogar_F3s2",
+ "autor": "Claude (Modelos_claude), segunda ronda",
+ "archivo": "Hackaton/Semana 1/Envios/archivos/S09b_claude_mezcla_hogar_F3s2.csv",
+ "sha256": "3961893c2b1766cbf504f370d54ee8f16b6085b48373a271b0c0f6ba422ce1a6",
+ "filas": 626639,
+ "columnas": [
+  "row_id",
+  "prediction"
+ ],
+ "total_CU": 209237258.75,
+ "por_ramo_CU": {
+  "motor": 116364824.3,
+  "buildings": 74260338.6,
+  "contents": 18612095.85
+ },
+ "composicion": {
+  "motor": "100 % ensamble Claude S06: CatBoost Tweedie F01234 (0,5), LightGBM F01234 tope 15.000 (0,1), LightGBM reducido (0,1), frecuencia por peligro x severidad media (0,3); factor año siguiente 0,9995",
+  "buildings": "50 % LightGBM Claude F0124 + 7 variables de cliente F3 (3 semillas) y 50 % stack S08 de Codex con su total igualado al de Claude; factor 1,0919",
+  "contents": "70 % Claude (0,8 LightGBM F0124 + 7 F3, 0,2 frecuencia-severidad) y 30 % stack S08 de Codex igualado en total; factor 1,0733"
+ },
+ "variables_F3_hogar": [
+  "prior_claims_5y",
+  "credit_band",
+  "missed_payments_12m",
+  "household_size",
+  "years_at_address",
+  "marital_status",
+  "licence_points"
+ ],
+ "validacion": {
+  "d2_v24_global_con_factor_v23": 0.13552,
+  "por_ramo": {
+   "motor": {
+    "d2_v24": 0.08877,
+    "d2_v23_seleccion": 0.09344,
+    "w_claude": 1.0
+   },
+   "buildings": {
+    "d2_v24": 0.11437,
+    "d2_v23_seleccion": 0.11513,
+    "w_claude": 0.5
+   },
+   "contents": {
+    "d2_v24": 0.09322,
+    "d2_v23_seleccion": 0.08797,
+    "w_claude": 0.7
+   }
+  },
+  "publico_esperado": 0.12704,
+  "escala": "publico = 0,0099 + 0,8644 x V24 (ajustada con S01-S04 y validada con S07 y S08)",
+  "limite": "V24 es desarrollo reutilizado, no validación independiente; pesos de mezcla elegidos con V23 selección y V24 juntos"
+ },
+ "entradas_codex": {
+  "learned_predictions_V24.parquet": "bae1292099e02945ed35b0cc1c46f94acbcc207d9dbaaf0261ccad1a43d91b5b",
+  "learned_predictions_PROD.parquet": "7e77255185f151f64366969b4c9ca07db8d6df680bfe5b692fc5c2b5046ea115",
+  "learned_fit_V23.parquet": "021a7976469cec167cbbbf6ba452349560d5a7afd758087a71a254da55f4892d"
+ },
+ "autorizacion": {
+  "F3_hogar": "El participante autorizó en la sesión de Claude las 7 variables de cliente en edificios y contenidos (respuesta del 18-10-2026, ~02:54 UTC, 21:54 Bogotá del 17), con la advertencia de que 6 de ellas tienen fecha de referencia sin confirmar.",
+  "envio": "El participante eligió que Codex haga el envío; Claude no envía. Un solo envío; registrar recibo y puntaje."
+ },
+ "controles_claude": [
+  "626.639 filas en el orden de sample_submission",
+  "columnas row_id,prediction",
+  "sin faltantes ni no finitos",
+  "mínimo 0,08326 > 0",
+  "SHA-256 recalculado tras la copia"
+ ],
+ "riesgos": [
+  "La disponibilidad al inicio de 6 variables F3 no está confirmada; en autos F3 sí trasladó su ganancia al público (S04 frente a S03)",
+  "Ganancia esperada sobre S08 ~+0,0017 público, dentro del ruido de nivel del conjunto público (±0,005)"
+ ],
+ "creado_utc": "2026-10-18T02:55:07Z"
+}

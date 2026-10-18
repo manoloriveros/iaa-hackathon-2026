@@ -1,0 +1,50 @@
+[
+ {
+  "i": 0,
+  "d2_sel": 0.09026,
+  "best": 595,
+  "secs": 53,
+  "cfg": {
+   "num_leaves": 7,
+   "min_data_in_leaf": 2000,
+   "feature_fraction": 0.6,
+   "learning_rate": 0.02,
+   "extra_trees": null,
+   "path_smooth": null
+  }
+ },
+ {
+  "i": 1,
+  "d2_sel": 0.08889,
+  "best": 338,
+  "secs": 54,
+  "cfg": {
+   "num_leaves": 15,
+   "min_data_in_leaf": 500,
+   "feature_fraction": 0.4,
+   "bagging_fraction": 0.8,
+   "lambda_l2": 10.0,
+   "learning_rate": 0.02,
+   "tweedie_variance_power": 1.5,
+   "extra_trees": false,
+   "path_smooth": 10.0
+  }
+ },
+ {
+  "i": 2,
+  "d2_sel": 0.09075,
+  "best": 535,
+  "secs": 31,
+  "cfg": {
+   "num_leaves": 5,
+   "min_data_in_leaf": 8000,
+   "feature_fraction": 0.8,
+   "bagging_fraction": 0.9,
+   "lambda_l2": 100.0,
+   "learning_rate": 0.03,
+   "tweedie_variance_power": 1.5,
+   "extra_trees": false,
+   "path_smooth": 50.0
+  }
+ }
+]

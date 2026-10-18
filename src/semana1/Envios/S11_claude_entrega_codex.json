@@ -1,0 +1,94 @@
+{
+ "id": "S11_claude_forma_tasa_exposicion",
+ "autor": "Claude (Modelos_claude), tercera ronda",
+ "recomendacion": "Candidato recomendado; sustituye a S10 y S09b. Mismos modelos y pesos que S09b, con calibración de forma por ramo.",
+ "archivo": "Hackaton/Semana 1/Envios/archivos/S11_claude_forma_tasa_exposicion.csv",
+ "sha256": "3b2afde720da6fc5187402e17b6c47e176368f21bc697ec82216f6b85e0b23f0",
+ "filas": 626639,
+ "columnas": [
+  "row_id",
+  "prediction"
+ ],
+ "total_CU": 213452778.04,
+ "por_ramo_CU": {
+  "motor": 117644963.33,
+  "buildings": 76854996.39,
+  "contents": 18952818.33
+ },
+ "composicion": {
+  "motor": "Ensamble S06 de Claude: CatBoost Tweedie F01234 (0,5), LightGBM F01234 (0,1), LightGBM reducido (0,1), frecuencia por peligro (0,3)",
+  "buildings": "50 % LightGBM Claude F0124 + 7 F3 de cliente y 50 % stack S08 de Codex",
+  "contents": "56 % LightGBM Claude F0124 + 7 F3, 14 % frecuencia-severidad Claude, 30 % stack S08 de Codex",
+  "nivel": "Cada componente se reescala al total medio ponderado de los componentes de Claude en cada corte; factor de año siguiente por ramo (media de V23 selección y V24), una vez y sin segundo IBNR"
+ },
+ "forma": {
+  "formula": "mu = e (e/ē)^(b-1) g (r/g)^a, con r = mu/e, g y ē medias geométricas del corte; e = exposición efectiva en V23/V24 y nominal en 2025",
+  "parametros": {
+   "motor": [
+    1.09,
+    0.95
+   ],
+   "buildings": [
+    1.087,
+    1.15
+   ],
+   "contents": [
+    1.09,
+    1.0
+   ]
+  },
+  "evidencia": {
+   "motor": "a óptimo 1,095 (V23) y 1,097 (V24); b 0,966 y 0,849; ajustado en V23 mejora V24 +0,0009",
+   "buildings": "(a, b) óptimos (1,082; 1,172) en V23 y (1,091; 1,127) en V24; cruzado mejora +0,0009 y +0,0012",
+   "contents": "a óptimo 1,069 (V23) y 1,124 (V24); b no coincide entre años y se deja en 1; cruzado +0,0006 y +0,0001"
+  },
+  "lectura": "las predicciones de los tres ramos salen demasiado concentradas (efecto del promedio de modelos y de la regularización); en edificios los periodos cortos cuestan menos por unidad de exposición que lo proporcional y en autos algo más"
+ },
+ "validacion": {
+  "d2_v24_global_con_factor_v23": 0.13643,
+  "por_ramo": {
+   "motor": {
+    "d2_sel": 0.09387,
+    "d2_v24_f23": 0.08986,
+    "f23": 0.98401,
+    "f24": 1.01057,
+    "f": 0.99729
+   },
+   "buildings": {
+    "d2_sel": 0.11669,
+    "d2_v24_f23": 0.11531,
+    "f23": 1.00644,
+    "f24": 1.071,
+    "f": 1.03872
+   },
+   "contents": {
+    "d2_sel": 0.08847,
+    "d2_v24_f23": 0.09389,
+    "f23": 1.05225,
+    "f24": 1.06033,
+    "f": 1.05629
+   }
+  },
+  "publico_esperado": 0.12783,
+  "pareada_frente_a_S09b_V24": {
+   "motor": "+0,00105 (P>0 0,90)",
+   "buildings": "+0,00095 (P>0 0,90)",
+   "contents": "+0,00067 (P>0 0,97)",
+   "global": "+0,00091 (P>0 0,993)"
+  },
+  "escala": "publico = 0,0099 + 0,8644 x V24",
+  "limite": "Los parámetros de forma se fijaron mirando V23 y V24 (media de los óptimos); V24 es desarrollo reutilizado"
+ },
+ "autorizacion": {
+  "F3_hogar": "D80",
+  "envio": "Lo hace Codex por decisión del participante; un solo envío, con recibo y puntaje en el registro"
+ },
+ "controles_claude": [
+  "626.639 filas en el orden de sample_submission",
+  "columnas row_id,prediction",
+  "sin faltantes",
+  "mínimo 0.07346 > 0",
+  "SHA-256 recalculado tras la copia"
+ ],
+ "creado_utc": "2026-10-18T03:38:29Z"
+}

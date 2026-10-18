@@ -1,0 +1,13 @@
+inter motor {'d2_sel': 0.08942, 'best': 602, 'gain_extra': {'edad_licencia': 0.0, 'ncb_sobre_licencia': 0.0072, 'km_por_anio_licencia': 0.1125, 'valor_por_antiguedad': 0.0016, 'joven_inexperto': 0.0069, 'mm_frec_suav': 0.0002, 'mm_expuestos_previos': 0.0001}, 'secs': 56}
+inter buildings {'d2_sel': 0.1122, 'best': 329, 'gain_extra': {'capital_por_habitacion': 0.0039, 'antiguedad_inmueble': 0.046, 'inundacion_baja_elevacion': 0.089, 'rio_baja_elevacion': 0.0027, 'prima_por_mil_capital': 0.0043}, 'secs': 19}
+inter contents {'d2_sel': 0.08433, 'best': 322, 'gain_extra': {'capital_por_habitacion': 0.0065, 'antiguedad_inmueble': 0.0019, 'inundacion_baja_elevacion': 0.3011, 'rio_baja_elevacion': 0.0117, 'prima_por_mil_capital': 0.0146}, 'secs': 27}
+==  inter global 0.14022
+motor listo 236 s; media esperado previo 2025: 0.3317 observado: 0.3353
+buildings listo 126 s; media esperado previo 2025: 0.1046 observado: 0.1052
+contents listo 112 s; media esperado previo 2025: 0.0957 observado: 0.096
+cred motor {'d2_sel': 0.08821, 'best': 723, 'gain_extra': {'cred_esperado_prev': 0.0209, 'cred_ratio_k05': 0.0042, 'cred_ratio_k20': 0.0024}, 'secs': 64}
+cred buildings {'d2_sel': 0.11264, 'best': 377, 'gain_extra': {'cred_esperado_prev': 0.0055, 'cred_ratio_k05': 0.0047, 'cred_ratio_k20': 0.0009}, 'secs': 23}
+cred contents {'d2_sel': 0.08301, 'best': 321, 'gain_extra': {'cred_esperado_prev': 0.0088, 'cred_ratio_k05': 0.0054, 'cred_ratio_k20': 0.0005}, 'secs': 19}
+==  cred global 0.1396
+cat1 motor {'d2_sel': 0.09273, 'best': 393, 'balance_sel': 1.0026, 'secs': 227}
+/home/claude/work/cola4.sh: line 7:  1935 Killed                  python3 -W ignore cat_experimento.py cat1
