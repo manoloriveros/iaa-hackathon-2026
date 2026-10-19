@@ -1,0 +1,30 @@
+{
+ "fecha_utc": "2026-10-18T14:17:50+00:00",
+ "que": "Repetición de S18_claude_propio en la máquina virtual del equipo del participante con reproducir_mezcla.py, solo con los archivos de Modelos_claude (runs/, selecciones_v23/, insumos/, experimentos/spec_s18_propio.json) y la plantilla de Datos/",
+ "orden": "python3 reproducir_mezcla.py experimentos/spec_s18_propio.json motor:1.09:0.95,buildings:1.08:1.14,contents:1.07:1 s17 S18_claude_propio a97ad416cbe2967d4734d635bef3e679b64ebceebeb6bb30581358d70b79e7e8",
+ "sha256_entregado": "a97ad416cbe2967d4734d635bef3e679b64ebceebeb6bb30581358d70b79e7e8",
+ "sha256_repetido": "a97ad416cbe2967d4734d635bef3e679b64ebceebeb6bb30581358d70b79e7e8",
+ "coincide": true,
+ "d2": {
+  "motor": [
+   0.09439,
+   0.09161
+  ],
+  "buildings": [
+   0.11822,
+   0.11591
+  ],
+  "contents": [
+   0.09047,
+   0.09612
+  ],
+  "global_v24": 0.13779
+ },
+ "entorno": {
+  "python": "3.10.12",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "pyarrow": "25.0.1"
+ },
+ "alcance": "Repite la mezcla, la forma, la regla de nivel y el factor de año siguiente a partir de las predicciones guardadas de cada componente; no reentrena los componentes (eso exige los scripts de entrenamiento y las matrices con variables adicionales)."
+}

@@ -1,0 +1,8 @@
+{
+ "regla_de_pesos": "Los mismos pesos de S21 (rejilla de 0,1 con la peor de las dos mejoras, CLA-20261018-006); no se volvieron a elegir pesos sin la forma de hogar, para que la variante cambie una sola cosa",
+ "regla_de_nivel": "mezcla3.py --nivel=s17, sin cambios respecto de S21",
+ "cambio_unico": "Calibración de forma solo en autos (1,09; 0,95); edificios y contenidos con a = b = 1",
+ "motivo_y_prueba_previa": "Frente a S09b, la mejora de S21 sin el 0,1 % superior de las filas era −0,00103 en V23 (edificios −0,00335, contenidos −0,00186; robustez_s21.json y la nota de S21), una dependencia de la cola ya señalada para la forma de hogar en la sección 4.5 del INFORME y en S14c. El resultado público de S21 (0,12874, por debajo de S09b; COD-20261018-049) llevó a revisarla; la variante no se ajusta a ese resultado",
+ "lectura_fijada_antes_del_resultado_publico": "Si S22 queda por encima de S21 en el público, es coherente con que la forma de hogar no se traslada a 2025; si queda igual o por debajo, la inversión viene de otra parte y la forma no se cambia solo por eso (CLA-20261018-012). Un solo envío no identifica la causa",
+ "limite": "V23 y V24 son desarrollo reutilizado; en los subconjuntos del 30 % de 2024 S21 supera a S22 en el 86,4 % (V23) y el 79,8 % (V24) de los casos"
+}

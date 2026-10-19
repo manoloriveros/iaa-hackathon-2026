@@ -1,0 +1,798 @@
+{
+ "id": "S22_claude_propio",
+ "autor": "Claude (Modelos_claude), 18 de octubre",
+ "linaje": "Estimación propia de Claude: ningún componente, total ni factor de Codex (acuerdo del foro, COD-20261018-001 y CLA-20261018-001)",
+ "recomendacion": "Variante de robustez de S21_claude_propio: mismos componentes y pesos, sin la calibración de forma en hogar (la forma queda solo en autos). La mejora de S21 frente a S09b dependía del 0,1 % superior de las filas (sin él, −0,00103 en V23); la de esta variante no (+0,00097 en V23 y +0,00114 en V24). Cede algo de D² local frente a S21 a cambio de no apoyarse en la cola. El resultado público de S21 (0,12874, por debajo de S09b) llevó a revisar esa fragilidad, ya documentada en el INFORME (sección 4.5) y en S14c; la variante no se ajusta al público.",
+ "archivo": "Hackaton/Semana 1/Envios/archivos/S22_claude_propio.csv",
+ "sha256": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0",
+ "filas": 626639,
+ "columnas": [
+  "row_id",
+  "prediction"
+ ],
+ "total_CU": 211689735.38,
+ "por_ramo_CU": {
+  "motor": 118894299.7,
+  "buildings": 73930561.36,
+  "contents": 18864874.32
+ },
+ "tasa_2025_por_unidad_de_exposicion": {
+  "motor": 594.5,
+  "buildings": 492.1,
+  "contents": 125.7
+ },
+ "composicion": {
+  "motor": "CatBoost Tweedie F01234 sin marketing_segment, cuatro semillas (0,2); CatBoost Poisson por peligro, cuatro semillas, con severidad GLM gamma por grupo de valor y antigüedad del vehículo en daños propios, robo y lunas (CFSS_motor) (0,6); LightGBM F01234 (0,1); LightGBM reducido (0,1)",
+  "buildings": "LightGBM F0124 + siete F3 de D80 con min_data_in_leaf 1000 (0,4); CatBoost Poisson por peligro, cuatro semillas, con severidad GLM por capital y sótano en inundación (CFSS4_buildings) (0,3); frecuencia aditiva por peligro, cuatro semillas, con la misma severidad (FSAS4_buildings) (0,3)",
+  "contents": "LightGBM F0124 + siete F3 (0,2); red neuronal Tweedie (0,1); modelo aditivo por peligro con severidad gamma (FSA_contents) (0,2); frecuencia aditiva por peligro, cuatro semillas, con severidad GLM por capital ampliada con covariables físicas (FSAXc4_contents, severidad_cfs3.py) (0,5)",
+  "forma": "mu = e (e/ē)^(b-1) g (r/g)^a solo en autos (1,09; 0,95); edificios y contenidos sin forma (a = b = 1)",
+  "nivel": "Regla s17 sin etiquetas: fuera de la referencia de nivel CFSS (autos -4,4 %, edificios con cuatro semillas según deriva_nivel_s22.json), la red de contenidos y FSAXc4 de contenidos (-1,53 %); dentro FSAS4 de edificios y los Tweedie de árboles. Factor de año siguiente por ramo (media V23/V24), una vez y sin segundo IBNR"
+ },
+ "validacion": {
+  "d2_v24_global_con_factor_v23": 0.13774,
+  "por_ramo": {
+   "motor": {
+    "d2_sel": 0.09439,
+    "d2_v24_f23": 0.09161,
+    "f23": 0.98635,
+    "f24": 1.00503,
+    "f": 0.99569
+   },
+   "buildings": {
+    "d2_sel": 0.1171,
+    "d2_v24_f23": 0.11551,
+    "f23": 1.03662,
+    "f24": 1.11418,
+    "f": 1.0754
+   },
+   "contents": {
+    "d2_sel": 0.09125,
+    "d2_v24_f23": 0.09662,
+    "f23": 1.07183,
+    "f24": 1.08732,
+    "f": 1.07957
+   }
+  },
+  "pareada_frente_a_S09b": {
+   "V23_seleccion": {
+    "motor": "+0,00095 (P>0 0,896)",
+    "buildings": "+0,00197 (P>0 0,929)",
+    "contents": "+0,00328 (P>0 0,999)",
+    "global": "+0,00164 (P>0 0,998)"
+   },
+   "V24": {
+    "motor": "+0,00283 (P>0 0,999)",
+    "buildings": "+0,00114 (P>0 0,891)",
+    "contents": "+0,00340 (P>0 1,0)",
+    "global": "+0,00222 (P>0 1,0)"
+   },
+   "sin_el_0_1_por_ciento_superior_V23_V24": {
+    "motor": "+0,00075 / +0,00099",
+    "buildings": "+0,00136 / +0,00170",
+    "contents": "+0,00112 / +0,00074",
+    "global": "+0,00097 / +0,00114"
+   }
+  },
+  "d2_local_2024_mismos_IDs": {
+   "tabla": {
+    "motor": {
+     "CL": 0.09161,
+     "AG": 0.0893,
+     "H": 0.09071,
+     "S09b": 0.08877
+    },
+    "buildings": {
+     "CL": 0.11551,
+     "AG": 0.11451,
+     "H": 0.11582,
+     "S09b": 0.11437
+    },
+    "contents": {
+     "CL": 0.09662,
+     "AG": 0.09491,
+     "H": 0.09546,
+     "S09b": 0.09322
+    },
+    "agregado": {
+     "CL": 0.13774,
+     "AG": 0.1361,
+     "H": 0.13726,
+     "S09b": 0.13552
+    }
+   },
+   "nota": "CL es esta estimación; A_G y H ajustan su meta con validación cruzada por cliente dentro de 2024, así que su D² local es optimista frente a uno fuera de año"
+  },
+  "limite": "V23 y V24 ya se consultaron para elegir pesos y forma; no es validación nueva",
+  "intervalos_2024_frente_a_A_G_y_H": {
+   "valores": {
+    "motor": {
+     "frente_a_AG": "+0,00231; IC95 cliente [+0,00029; +0,00536], dirección [+0,00035; +0,00536]",
+     "frente_a_H": "+0,00090; IC95 cliente [-0,00031; +0,00260], dirección [-0,00034; +0,00277]"
+    },
+    "buildings": {
+     "frente_a_AG": "+0,00101; IC95 cliente [-0,00046; +0,00265], dirección [-0,00048; +0,00263]",
+     "frente_a_H": "-0,00030; IC95 cliente [-0,00196; +0,00140], dirección [-0,00198; +0,00144]"
+    },
+    "contents": {
+     "frente_a_AG": "+0,00171; IC95 cliente [+0,00022; +0,00330], dirección [+0,00013; +0,00335]",
+     "frente_a_H": "+0,00116; IC95 cliente [-0,00027; +0,00255], dirección [-0,00037; +0,00264]"
+    },
+    "agregado": {
+     "frente_a_AG": "+0,00165; IC95 cliente [+0,00055; +0,00304], dirección [+0,00049; +0,00327]",
+     "frente_a_H": "+0,00048; IC95 cliente [-0,00041; +0,00147], dirección [-0,00041; +0,00143]"
+    }
+   },
+   "metodo": "Modelos_claude/bootstrap_codex.py: 1.000 réplicas Poisson por grupo, denominador fijo; mismas filas y T0",
+   "nota": "A_G y H ajustan su meta dentro de 2024, así que la comparación local los favorece"
+  },
+  "frente_a_S21": {
+   "V23": {
+    "motor": "+0,00000 (P>0 0,0)",
+    "buildings": "-0,00153 (P>0 0,048)",
+    "contents": "-0,00016 (P>0 0,398)",
+    "global": "-0,00054 (P>0 0,05)"
+   },
+   "V24": {
+    "motor": "+0,00000 (P>0 0,0)",
+    "buildings": "-0,00089 (P>0 0,123)",
+    "contents": "-0,00010 (P>0 0,328)",
+    "global": "-0,00033 (P>0 0,087)"
+   },
+   "sin_el_0_1_por_ciento_superior_V23_V24": {
+    "motor": "+0,00000 / +0,00000",
+    "buildings": "+0,00471 / +0,00146",
+    "contents": "+0,00298 / +0,00160",
+    "global": "+0,00200 / +0,00077"
+   }
+  },
+  "reservas_de_caso_2024": {
+   "tabla": {
+    "0.75": {
+     "motor": {
+      "d2_S22_S21_H_A_G": [
+       0.09277,
+       0.09277,
+       0.092005,
+       0.090919
+      ],
+      "S22_menos_H": "+0,000764; IC95 cliente [-0,000293; +0,002244], dirección [-0,000339; +0,002411]",
+      "S22_menos_S21": "+0,000000; IC95 cliente [+0,000000; +0,000000], dirección [+0,000000; +0,000000]",
+      "S22_menos_A_G": "+0,001851; IC95 cliente [+0,000127; +0,004903], dirección [+0,000148; +0,004649]",
+      "diez_clientes_mas_favorables_frente_a_H": "+0,001025",
+      "frente_a_H_sin_esos_diez": "-0,000261"
+     },
+     "buildings": {
+      "d2_S22_S21_H_A_G": [
+       0.11711,
+       0.118058,
+       0.116803,
+       0.115793
+      ],
+      "S22_menos_H": "+0,000307; IC95 cliente [-0,001341; +0,001962], dirección [-0,001243; +0,002005]",
+      "S22_menos_S21": "-0,000949; IC95 cliente [-0,002291; +0,000517], dirección [-0,002192; +0,000486]",
+      "S22_menos_A_G": "+0,001317; IC95 cliente [-0,000205; +0,002811], dirección [-0,000227; +0,002930]",
+      "diez_clientes_mas_favorables_frente_a_H": "+0,001167",
+      "frente_a_H_sin_esos_diez": "-0,000860"
+     },
+     "contents": {
+      "d2_S22_S21_H_A_G": [
+       0.096023,
+       0.096032,
+       0.094646,
+       0.094343
+      ],
+      "S22_menos_H": "+0,001377; IC95 cliente [-0,000014; +0,002878], dirección [-0,000093; +0,002781]",
+      "S22_menos_S21": "-0,000009; IC95 cliente [-0,000553; +0,000513], dirección [-0,000532; +0,000515]",
+      "S22_menos_A_G": "+0,001680; IC95 cliente [+0,000130; +0,003138], dirección [+0,000128; +0,003179]",
+      "diez_clientes_mas_favorables_frente_a_H": "+0,000937",
+      "frente_a_H_sin_esos_diez": "+0,000440"
+     },
+     "agregado": {
+      "d2_S22_S21_H_A_G": [
+       0.137131,
+       0.137468,
+       0.136444,
+       0.135572
+      ],
+      "S22_menos_H": "+0,000687; IC95 cliente [-0,000061; +0,001576], dirección [-0,000154; +0,001582]",
+      "S22_menos_S21": "-0,000337; IC95 cliente [-0,000813; +0,000187], dirección [-0,000823; +0,000185]",
+      "S22_menos_A_G": "+0,001559; IC95 cliente [+0,000533; +0,002904], dirección [+0,000579; +0,002863]",
+      "diez_clientes_mas_favorables_frente_a_H": "+0,000678",
+      "frente_a_H_sin_esos_diez": "+0,000008"
+     }
+    },
+    "1.0": {
+     "motor": {
+      "d2_S22_S21_H_A_G": [
+       0.091605,
+       0.091605,
+       0.090707,
+       0.089296
+      ],
+      "S22_menos_H": "+0,000899; IC95 cliente [-0,000281; +0,002436], dirección [-0,000291; +0,002837]",
+      "S22_menos_S21": "+0,000000; IC95 cliente [+0,000000; +0,000000], dirección [+0,000000; +0,000000]",
+      "S22_menos_A_G": "+0,002310; IC95 cliente [+0,000364; +0,005418], dirección [+0,000288; +0,005602]",
+      "diez_clientes_mas_favorables_frente_a_H": "+0,001195",
+      "frente_a_H_sin_esos_diez": "-0,000296"
+     },
+     "buildings": {
+      "d2_S22_S21_H_A_G": [
+       0.115514,
+       0.116402,
+       0.115818,
+       0.114508
+      ],
+      "S22_menos_H": "-0,000304; IC95 cliente [-0,002002; +0,001221], dirección [-0,001874; +0,001501]",
+      "S22_menos_S21": "-0,000888; IC95 cliente [-0,002180; +0,000492], dirección [-0,002247; +0,000520]",
+      "S22_menos_A_G": "+0,001006; IC95 cliente [-0,000519; +0,002593], dirección [-0,000550; +0,002508]",
+      "diez_clientes_mas_favorables_frente_a_H": "+0,001165",
+      "frente_a_H_sin_esos_diez": "-0,001469"
+     },
+     "contents": {
+      "d2_S22_S21_H_A_G": [
+       0.096618,
+       0.096714,
+       0.095462,
+       0.094912
+      ],
+      "S22_menos_H": "+0,001156; IC95 cliente [-0,000277; +0,002608], dirección [-0,000270; +0,002704]",
+      "S22_menos_S21": "-0,000096; IC95 cliente [-0,000634; +0,000475], dirección [-0,000646; +0,000424]",
+      "S22_menos_A_G": "+0,001706; IC95 cliente [+0,000319; +0,003256], dirección [+0,000239; +0,003300]",
+      "diez_clientes_mas_favorables_frente_a_H": "+0,000966",
+      "frente_a_H_sin_esos_diez": "+0,000189"
+     },
+     "agregado": {
+      "d2_S22_S21_H_A_G": [
+       0.137742,
+       0.138073,
+       0.137258,
+       0.136096
+      ],
+      "S22_menos_H": "+0,000484; IC95 cliente [-0,000412; +0,001384], dirección [-0,000412; +0,001508]",
+      "S22_menos_S21": "-0,000331; IC95 cliente [-0,000798; +0,000160], dirección [-0,000799; +0,000177]",
+      "S22_menos_A_G": "+0,001646; IC95 cliente [+0,000524; +0,003076], dirección [+0,000508; +0,003089]",
+      "diez_clientes_mas_favorables_frente_a_H": "+0,000726",
+      "frente_a_H_sin_esos_diez": "-0,000242"
+     }
+    },
+    "1.25": {
+     "motor": {
+      "d2_S22_S21_H_A_G": [
+       0.088901,
+       0.088901,
+       0.087878,
+       0.086166
+      ],
+      "S22_menos_H": "+0,001023; IC95 cliente [-0,000315; +0,002869], dirección [-0,000367; +0,002948]",
+      "S22_menos_S21": "+0,000000; IC95 cliente [+0,000000; +0,000000], dirección [+0,000000; +0,000000]",
+      "S22_menos_A_G": "+0,002735; IC95 cliente [+0,000470; +0,006480], dirección [+0,000486; +0,006437]",
+      "diez_clientes_mas_favorables_frente_a_H": "+0,001358",
+      "frente_a_H_sin_esos_diez": "-0,000334",
+      "cambio_numerador_frente_a_H_por_peligro": {
+       "bodily_injury": 1617.691,
+       "glass_hail": 133.317,
+       "own_damage": 2332.373,
+       "theft": 500.974,
+       "third_party_prop": 201.697
+      }
+     },
+     "buildings": {
+      "d2_S22_S21_H_A_G": [
+       0.112743,
+       0.113575,
+       0.113615,
+       0.112025
+      ],
+      "S22_menos_H": "-0,000873; IC95 cliente [-0,002448; +0,001004], dirección [-0,002732; +0,000757]",
+      "S22_menos_S21": "-0,000832; IC95 cliente [-0,002082; +0,000694], dirección [-0,002187; +0,000802]",
+      "S22_menos_A_G": "+0,000717; IC95 cliente [-0,000894; +0,002551], dirección [-0,000857; +0,002320]",
+      "diez_clientes_mas_favorables_frente_a_H": "+0,001180",
+      "frente_a_H_sin_esos_diez": "-0,002052",
+      "cambio_numerador_frente_a_H_por_peligro": {
+       "accidental_damage": -46.299,
+       "escape_of_water": -1434.651,
+       "fire": -2914.282,
+       "flood": -8739.578,
+       "storm": -378.929,
+       "subsidence": -993.57
+      }
+     },
+     "contents": {
+      "d2_S22_S21_H_A_G": [
+       0.096845,
+       0.097024,
+       0.095902,
+       0.095113
+      ],
+      "S22_menos_H": "+0,000942; IC95 cliente [-0,000595; +0,002452], dirección [-0,000619; +0,002508]",
+      "S22_menos_S21": "-0,000180; IC95 cliente [-0,000802; +0,000399], dirección [-0,000763; +0,000381]",
+      "S22_menos_A_G": "+0,001732; IC95 cliente [+0,000211; +0,003270], dirección [+0,000186; +0,003419]",
+      "diez_clientes_mas_favorables_frente_a_H": "+0,000995",
+      "frente_a_H_sin_esos_diez": "-0,000053",
+      "cambio_numerador_frente_a_H_por_peligro": {
+       "accidental_damage": -116.379,
+       "escape_of_water": -476.856,
+       "flood": -1667.711,
+       "theft": -179.709
+      }
+     },
+     "agregado": {
+      "d2_S22_S21_H_A_G": [
+       0.137039,
+       0.137365,
+       0.136743,
+       0.135311
+      ],
+      "S22_menos_H": "+0,000296; IC95 cliente [-0,000658; +0,001348], dirección [-0,000614; +0,001355]",
+      "S22_menos_S21": "-0,000326; IC95 cliente [-0,000820; +0,000205], dirección [-0,000826; +0,000176]",
+      "S22_menos_A_G": "+0,001728; IC95 cliente [+0,000560; +0,003479], dirección [+0,000493; +0,003330]",
+      "diez_clientes_mas_favorables_frente_a_H": "+0,000775",
+      "frente_a_H_sin_esos_diez": "-0,000480",
+      "cambio_numerador_frente_a_H_por_peligro": {
+       "accidental_damage": -162.678,
+       "bodily_injury": 1617.691,
+       "escape_of_water": -1911.507,
+       "fire": -2914.282,
+       "flood": -10407.289,
+       "glass_hail": 133.317,
+       "own_damage": 2332.373,
+       "storm": -378.929,
+       "subsidence": -993.57,
+       "theft": 321.265,
+       "third_party_prop": 201.697
+      }
+     }
+    }
+   },
+   "metodo": "Modelos_claude/influencia_reservas.py: etiqueta T0 + (a - 1) x reserva de caso de los abiertos aceptados (a = 0,75; 1; 1,25), predicciones sin cambio; IC95 por cliente; los diez clientes más favorables son un diagnóstico de influencia, no un criterio de descarte"
+  },
+  "semestres_2024": {
+   "tabla": {
+    "1.0": {
+     "motor_H1": {
+      "filas": 226877,
+      "peso_exposicion": 0.9667,
+      "madurez": 0.801,
+      "S22_menos_H": "+0,000934; IC95 cliente [-0,000319; +0,002745], dirección [-0,000329; +0,002779]",
+      "S22_menos_S21": "+0,000000; IC95 cliente [+0,000000; +0,000000], dirección [+0,000000; +0,000000]",
+      "S22_menos_A_G": "+0,002364; IC95 cliente [+0,000272; +0,005968], dirección [+0,000147; +0,005650]"
+     },
+     "motor_H2": {
+      "filas": 27821,
+      "peso_exposicion": 0.0333,
+      "madurez": 0.616,
+      "S22_menos_H": "+0,000609; IC95 cliente [-0,003277; +0,004869], dirección [-0,003157; +0,004837]",
+      "S22_menos_S21": "+0,000000; IC95 cliente [+0,000000; +0,000000], dirección [+0,000000; +0,000000]",
+      "S22_menos_A_G": "+0,002032; IC95 cliente [-0,002817; +0,006986], dirección [-0,002304; +0,007091]"
+     },
+     "buildings_H1": {
+      "filas": 166962,
+      "peso_exposicion": 0.9721,
+      "madurez": 0.929,
+      "S22_menos_H": "-0,000314; IC95 cliente [-0,002177; +0,001651], dirección [-0,002162; +0,001478]",
+      "S22_menos_S21": "-0,000853; IC95 cliente [-0,002147; +0,000540], dirección [-0,002137; +0,000440]",
+      "S22_menos_A_G": "+0,000993; IC95 cliente [-0,000482; +0,002577], dirección [-0,000407; +0,002808]"
+     },
+     "buildings_H2": {
+      "filas": 17039,
+      "peso_exposicion": 0.0279,
+      "madurez": 0.818,
+      "S22_menos_H": "-0,000207; IC95 cliente [-0,005366; +0,005281], dirección [-0,005605; +0,005466]",
+      "S22_menos_S21": "-0,001822; IC95 cliente [-0,014208; +0,012308], dirección [-0,013767; +0,013064]",
+      "S22_menos_A_G": "+0,001562; IC95 cliente [-0,005451; +0,008249], dirección [-0,005531; +0,007589]"
+     },
+     "contents_H1": {
+      "filas": 168680,
+      "peso_exposicion": 0.9696,
+      "madurez": 0.971,
+      "S22_menos_H": "+0,001407; IC95 cliente [-0,000016; +0,002863], dirección [-0,000088; +0,002893]",
+      "S22_menos_S21": "-0,000143; IC95 cliente [-0,000732; +0,000441], dirección [-0,000711; +0,000448]",
+      "S22_menos_A_G": "+0,002071; IC95 cliente [+0,000515; +0,003685], dirección [+0,000550; +0,003718]"
+     },
+     "contents_H2": {
+      "filas": 18811,
+      "peso_exposicion": 0.0304,
+      "madurez": 0.903,
+      "S22_menos_H": "-0,002720; IC95 cliente [-0,010782; +0,004462], dirección [-0,010638; +0,004914]",
+      "S22_menos_S21": "+0,000658; IC95 cliente [-0,001527; +0,002708], dirección [-0,001528; +0,002818]",
+      "S22_menos_A_G": "-0,003919; IC95 cliente [-0,010296; +0,002204], dirección [-0,009976; +0,002014]"
+     },
+     "agregado_H1": {
+      "filas": 562519,
+      "peso_exposicion": 0.9692,
+      "madurez": 0.891,
+      "S22_menos_H": "+0,000536; IC95 cliente [-0,000322; +0,001645], dirección [-0,000354; +0,001538]",
+      "S22_menos_S21": "-0,000331; IC95 cliente [-0,000778; +0,000145], dirección [-0,000757; +0,000129]",
+      "S22_menos_A_G": "+0,001724; IC95 cliente [+0,000539; +0,003270], dirección [+0,000477; +0,003408]"
+     },
+     "agregado_H2": {
+      "filas": 63671,
+      "peso_exposicion": 0.0308,
+      "madurez": 0.756,
+      "S22_menos_H": "-0,000206; IC95 cliente [-0,003136; +0,002709], dirección [-0,003051; +0,002712]",
+      "S22_menos_S21": "-0,000410; IC95 cliente [-0,003808; +0,003418], dirección [-0,003709; +0,003727]",
+      "S22_menos_A_G": "+0,000815; IC95 cliente [-0,002288; +0,004034], dirección [-0,002213; +0,004124]"
+     }
+    },
+    "1.25": {
+     "motor_H1": {
+      "filas": 226877,
+      "peso_exposicion": 0.9667,
+      "madurez": 0.801,
+      "S22_menos_H": "+0,000849; IC95 cliente [-0,000644; +0,002970], dirección [-0,000638; +0,002932]",
+      "S22_menos_S21": "+0,000000; IC95 cliente [+0,000000; +0,000000], dirección [+0,000000; +0,000000]",
+      "S22_menos_A_G": "+0,002506; IC95 cliente [+0,000054; +0,006156], dirección [+0,000138; +0,006338]"
+     },
+     "motor_H2": {
+      "filas": 27821,
+      "peso_exposicion": 0.0333,
+      "madurez": 0.616,
+      "S22_menos_H": "+0,003351; IC95 cliente [-0,000872; +0,008028], dirección [-0,000817; +0,008114]",
+      "S22_menos_S21": "+0,000000; IC95 cliente [+0,000000; +0,000000], dirección [+0,000000; +0,000000]",
+      "S22_menos_A_G": "+0,006026; IC95 cliente [+0,000998; +0,011590], dirección [+0,000940; +0,011663]"
+     },
+     "buildings_H1": {
+      "filas": 166962,
+      "peso_exposicion": 0.9721,
+      "madurez": 0.929,
+      "S22_menos_H": "-0,000940; IC95 cliente [-0,002823; +0,000824], dirección [-0,002826; +0,001029]",
+      "S22_menos_S21": "-0,001125; IC95 cliente [-0,002462; +0,000182], dirección [-0,002490; +0,000239]",
+      "S22_menos_A_G": "+0,000710; IC95 cliente [-0,000974; +0,002368], dirección [-0,000950; +0,002435]"
+     },
+     "buildings_H2": {
+      "filas": 17039,
+      "peso_exposicion": 0.0279,
+      "madurez": 0.818,
+      "S22_menos_H": "+0,000125; IC95 cliente [-0,005848; +0,005827], dirección [-0,005516; +0,005736]",
+      "S22_menos_S21": "+0,004322; IC95 cliente [-0,009265; +0,018998], dirección [-0,009924; +0,019208]",
+      "S22_menos_A_G": "+0,001052; IC95 cliente [-0,006873; +0,007882], dirección [-0,006309; +0,007673]"
+     },
+     "contents_H1": {
+      "filas": 168680,
+      "peso_exposicion": 0.9696,
+      "madurez": 0.971,
+      "S22_menos_H": "+0,001260; IC95 cliente [-0,000255; +0,002814], dirección [-0,000157; +0,002898]",
+      "S22_menos_S21": "-0,000222; IC95 cliente [-0,000877; +0,000382], dirección [-0,000828; +0,000346]",
+      "S22_menos_A_G": "+0,002144; IC95 cliente [+0,000507; +0,003764], dirección [+0,000476; +0,003712]"
+     },
+     "contents_H2": {
+      "filas": 18811,
+      "peso_exposicion": 0.0304,
+      "madurez": 0.903,
+      "S22_menos_H": "-0,003961; IC95 cliente [-0,012284; +0,004126], dirección [-0,012717; +0,004706]",
+      "S22_menos_S21": "+0,000454; IC95 cliente [-0,002177; +0,002655], dirección [-0,001957; +0,002600]",
+      "S22_menos_A_G": "-0,004514; IC95 cliente [-0,011860; +0,002123], dirección [-0,011514; +0,001896]"
+     },
+     "agregado_H1": {
+      "filas": 562519,
+      "peso_exposicion": 0.9692,
+      "madurez": 0.891,
+      "S22_menos_H": "+0,000247; IC95 cliente [-0,000764; +0,001372], dirección [-0,000755; +0,001417]",
+      "S22_menos_S21": "-0,000442; IC95 cliente [-0,000882; +0,000049], dirección [-0,000900; +0,000027]",
+      "S22_menos_A_G": "+0,001693; IC95 cliente [+0,000416; +0,003326], dirección [+0,000460; +0,003421]"
+     },
+     "agregado_H2": {
+      "filas": 63671,
+      "peso_exposicion": 0.0308,
+      "madurez": 0.756,
+      "S22_menos_H": "+0,001068; IC95 cliente [-0,002126; +0,004081], dirección [-0,002169; +0,004160]",
+      "S22_menos_S21": "+0,001318; IC95 cliente [-0,002683; +0,005572], dirección [-0,002473; +0,005721]",
+      "S22_menos_A_G": "+0,002586; IC95 cliente [-0,000998; +0,006189], dirección [-0,000934; +0,006667]"
+     }
+    }
+   },
+   "metodo": "Modelos_claude/semestres.py: semestre de inicio del periodo (H1 enero-junio, H2 julio-diciembre); madurez = exposición efectiva / nominal; IC95 por cliente y, si se calculó, por dirección"
+  },
+  "medias_por_ramo": {
+   "tabla": {
+    "motor": {
+     "V23": {
+      "filas": 127361,
+      "media_predicha": 427.4281,
+      "a=0.75": {
+       "media_observada": 409.1052,
+       "observada_entre_predicha": 0.9571,
+       "d2": 0.094628
+      },
+      "a=1.0": {
+       "media_observada": 422.3458,
+       "observada_entre_predicha": 0.9881,
+       "d2": 0.094391
+      },
+      "a=1.25": {
+       "media_observada": 435.5863,
+       "observada_entre_predicha": 1.0191,
+       "d2": 0.09385
+      }
+     },
+     "V24": {
+      "filas": 254698,
+      "media_predicha": 352.7484,
+      "a=0.75": {
+       "media_observada": 329.9502,
+       "observada_entre_predicha": 0.9354,
+       "d2": 0.09277
+      },
+      "a=1.0": {
+       "media_observada": 355.9784,
+       "observada_entre_predicha": 1.0092,
+       "d2": 0.091605
+      },
+      "a=1.25": {
+       "media_observada": 382.0065,
+       "observada_entre_predicha": 1.0829,
+       "d2": 0.088901
+      }
+     },
+     "2025": {
+      "filas": 254986,
+      "media_predicha": 466.2778
+     }
+    },
+    "buildings": {
+     "V23": {
+      "filas": 92214,
+      "media_predicha": 325.4716,
+      "a=0.75": {
+       "media_observada": 346.6026,
+       "observada_entre_predicha": 1.0649,
+       "d2": 0.117864
+      },
+      "a=1.0": {
+       "media_observada": 351.423,
+       "observada_entre_predicha": 1.0797,
+       "d2": 0.117097
+      },
+      "a=1.25": {
+       "media_observada": 356.2435,
+       "observada_entre_predicha": 1.0945,
+       "d2": 0.116284
+      }
+     },
+     "V24": {
+      "filas": 184001,
+      "media_predicha": 330.4426,
+      "a=0.75": {
+       "media_observada": 340.3309,
+       "observada_entre_predicha": 1.0299,
+       "d2": 0.11711
+      },
+      "a=1.0": {
+       "media_observada": 366.0521,
+       "observada_entre_predicha": 1.1078,
+       "d2": 0.115514
+      },
+      "a=1.25": {
+       "media_observada": 391.7733,
+       "observada_entre_predicha": 1.1856,
+       "d2": 0.112743
+      }
+     },
+     "2025": {
+      "filas": 184155,
+      "media_predicha": 401.4583
+     }
+    },
+    "contents": {
+     "V23": {
+      "filas": 93940,
+      "media_predicha": 83.7091,
+      "a=0.75": {
+       "media_observada": 88.0496,
+       "observada_entre_predicha": 1.0519,
+       "d2": 0.091224
+      },
+      "a=1.0": {
+       "media_observada": 88.262,
+       "observada_entre_predicha": 1.0544,
+       "d2": 0.091249
+      },
+      "a=1.25": {
+       "media_observada": 88.4743,
+       "observada_entre_predicha": 1.0569,
+       "d2": 0.09127
+      }
+     },
+     "V24": {
+      "filas": 187491,
+      "media_predicha": 92.708,
+      "a=0.75": {
+       "media_observada": 90.1204,
+       "observada_entre_predicha": 0.9721,
+       "d2": 0.096023
+      },
+      "a=1.0": {
+       "media_observada": 93.4233,
+       "observada_entre_predicha": 1.0077,
+       "d2": 0.096618
+      },
+      "a=1.25": {
+       "media_observada": 96.7263,
+       "observada_entre_predicha": 1.0433,
+       "d2": 0.096845
+      }
+     },
+     "2025": {
+      "filas": 187498,
+      "media_predicha": 100.6137
+     }
+    },
+    "agregado": {
+     "V23": {
+      "filas": 313515,
+      "media_predicha": 294.4495,
+      "a=0.75": {
+       "media_observada": 294.5219,
+       "observada_entre_predicha": 1.0002,
+       "d2": 0.144554
+      },
+      "a=1.0": {
+       "media_observada": 301.3822,
+       "observada_entre_predicha": 1.0235,
+       "d2": 0.145257
+      },
+      "a=1.25": {
+       "media_observada": 308.2424,
+       "observada_entre_predicha": 1.0468,
+       "d2": 0.145788
+      }
+     },
+     "V24": {
+      "filas": 626190,
+      "media_predicha": 268.3339,
+      "a=0.75": {
+       "media_observada": 261.1917,
+       "observada_entre_predicha": 0.9734,
+       "d2": 0.137131
+      },
+      "a=1.0": {
+       "media_observada": 280.3254,
+       "observada_entre_predicha": 1.0447,
+       "d2": 0.137742
+      },
+      "a=1.25": {
+       "media_observada": 299.4591,
+       "observada_entre_predicha": 1.116,
+       "d2": 0.137039
+      }
+     }
+    }
+   },
+   "definiciones": {
+    "V23": "selección: entrenamiento 2021-22, evaluación 2023 con cal_half = 1; mezcla con forma y regla de nivel, sin factor (d2_sel)",
+    "V24": "entrenamiento 2021-23, evaluación 2024; mezcla con forma y regla de nivel por el factor ftw de V23 (d2_v24_f23)",
+    "a": "etiqueta T0 + (a - 1) x reserva de caso de los siniestros abiertos aceptados asignados a la fila"
+   },
+   "metodo": "Modelos_claude/exportar_predicciones.py (experimentos/medias_por_ramo_s22.json)"
+  },
+  "seleccion_de_pesos": "Mismos pesos que S21 en los tres ramos; solo cambia la forma (autos 1,09; 0,95; hogar sin forma). V23 y V24 entran en la comparación: no es validación nueva",
+  "regla_de_nivel": {
+   "metodo": "mezcla3.py --nivel=s17: fuera de la referencia de nivel los componentes cuyo total 2025/V24 se aparta más de un 1,5 % del ancla del ramo",
+   "deriva_por_componente": {
+    "motor": {
+     "CAT_motor_4s": 0.0,
+     "CFSS_motor": -0.044,
+     "S04b_lgbm_F0124_F3autos": -0.0073,
+     "S06c_lgbm_motor_red": 0.0001
+    },
+    "buildings": {
+     "S12h_edif_md1000": 0.0,
+     "CFSS4_buildings": -0.0172,
+     "FSAS4_buildings": 0.0006
+    },
+    "contents": {
+     "S08h_hogar_F3s2": 0.0,
+     "MLP3_contents": -0.1682,
+     "FSA_contents": -0.0017,
+     "FSAXc4_contents": -0.0153
+    }
+   }
+  },
+  "intervalos_region_2024": {
+   "tabla": {
+    "0.75": {
+     "motor": {
+      "S22_menos_S21": "+0,000000; IC95 cliente [+0,000000; +0,000000], dirección [+0,000000; +0,000000], región [+0,000000; +0,000000]; regiones negativas 0 de 12",
+      "S22_menos_H": "+0,000764; IC95 cliente [-0,000253; +0,002149], dirección [-0,000271; +0,002219], región [-0,000385; +0,002661]; regiones negativas 3 de 12",
+      "S22_menos_A_G": "+0,001851; IC95 cliente [+0,000083; +0,004458], dirección [+0,000106; +0,004494], región [+0,000003; +0,004904]; regiones negativas 3 de 12"
+     },
+     "buildings": {
+      "S22_menos_S21": "-0,000949; IC95 cliente [-0,002229; +0,000445], dirección [-0,002326; +0,000391], región [-0,002588; +0,000595]; regiones negativas 8 de 12",
+      "S22_menos_H": "+0,000307; IC95 cliente [-0,001362; +0,002077], dirección [-0,001313; +0,001878], región [-0,001728; +0,002196]; regiones negativas 7 de 12",
+      "S22_menos_A_G": "+0,001317; IC95 cliente [-0,000178; +0,002930], dirección [-0,000234; +0,002826], región [-0,000232; +0,003222]; regiones negativas 6 de 12"
+     },
+     "contents": {
+      "S22_menos_S21": "-0,000009; IC95 cliente [-0,000539; +0,000533], dirección [-0,000569; +0,000508], región [-0,000712; +0,000524]; regiones negativas 5 de 12",
+      "S22_menos_H": "+0,001377; IC95 cliente [-0,000049; +0,002749], dirección [-0,000098; +0,002866], región [-0,000144; +0,003344]; regiones negativas 4 de 12",
+      "S22_menos_A_G": "+0,001680; IC95 cliente [+0,000121; +0,003094], dirección [+0,000224; +0,003188], región [+0,000151; +0,003810]; regiones negativas 3 de 12"
+     },
+     "agregado": {
+      "S22_menos_S21": "-0,000337; IC95 cliente [-0,000790; +0,000144], dirección [-0,000785; +0,000124], región [-0,000945; +0,000213]; regiones negativas 8 de 12",
+      "S22_menos_H": "+0,000687; IC95 cliente [-0,000179; +0,001520], dirección [-0,000148; +0,001515], región [-0,000270; +0,001807]; regiones negativas 4 de 12",
+      "S22_menos_A_G": "+0,001559; IC95 cliente [+0,000561; +0,002807], dirección [+0,000531; +0,002840], región [+0,000388; +0,003291]; regiones negativas 2 de 12"
+     }
+    },
+    "1.0": {
+     "motor": {
+      "S22_menos_S21": "+0,000000; IC95 cliente [+0,000000; +0,000000], dirección [+0,000000; +0,000000], región [+0,000000; +0,000000]; regiones negativas 0 de 12",
+      "S22_menos_H": "+0,000899; IC95 cliente [-0,000263; +0,002543], dirección [-0,000308; +0,002610], región [-0,000313; +0,002853]; regiones negativas 5 de 12",
+      "S22_menos_A_G": "+0,002310; IC95 cliente [+0,000290; +0,005365], dirección [+0,000295; +0,005423], región [+0,000226; +0,005728]; regiones negativas 3 de 12"
+     },
+     "buildings": {
+      "S22_menos_S21": "-0,000888; IC95 cliente [-0,002198; +0,000564], dirección [-0,002271; +0,000486], región [-0,002521; +0,000616]; regiones negativas 9 de 12",
+      "S22_menos_H": "-0,000304; IC95 cliente [-0,002021; +0,001461], dirección [-0,002003; +0,001286], región [-0,002433; +0,001660]; regiones negativas 7 de 12",
+      "S22_menos_A_G": "+0,001006; IC95 cliente [-0,000587; +0,002631], dirección [-0,000563; +0,002548], región [-0,000475; +0,002879]; regiones negativas 5 de 12"
+     },
+     "contents": {
+      "S22_menos_S21": "-0,000096; IC95 cliente [-0,000622; +0,000460], dirección [-0,000662; +0,000422], región [-0,000812; +0,000404]; regiones negativas 6 de 12",
+      "S22_menos_H": "+0,001156; IC95 cliente [-0,000251; +0,002516], dirección [-0,000375; +0,002682], región [-0,000380; +0,002972]; regiones negativas 5 de 12",
+      "S22_menos_A_G": "+0,001706; IC95 cliente [+0,000165; +0,003188], dirección [+0,000255; +0,003212], región [+0,000188; +0,003788]; regiones negativas 4 de 12"
+     },
+     "agregado": {
+      "S22_menos_S21": "-0,000331; IC95 cliente [-0,000797; +0,000158], dirección [-0,000800; +0,000144], región [-0,000936; +0,000213]; regiones negativas 8 de 12",
+      "S22_menos_H": "+0,000484; IC95 cliente [-0,000445; +0,001410], dirección [-0,000400; +0,001383], región [-0,000438; +0,001501]; regiones negativas 4 de 12",
+      "S22_menos_A_G": "+0,001646; IC95 cliente [+0,000540; +0,003097], dirección [+0,000526; +0,003133], región [+0,000411; +0,003518]; regiones negativas 1 de 12"
+     }
+    },
+    "1.25": {
+     "motor": {
+      "S22_menos_S21": "+0,000000; IC95 cliente [+0,000000; +0,000000], dirección [+0,000000; +0,000000], región [+0,000000; +0,000000]; regiones negativas 0 de 12",
+      "S22_menos_H": "+0,001023; IC95 cliente [-0,000270; +0,002891], dirección [-0,000353; +0,002976], región [-0,000324; +0,003133]; regiones negativas 6 de 12",
+      "S22_menos_A_G": "+0,002735; IC95 cliente [+0,000465; +0,006158], dirección [+0,000480; +0,006287], región [+0,000364; +0,006691]; regiones negativas 3 de 12"
+     },
+     "buildings": {
+      "S22_menos_S21": "-0,000832; IC95 cliente [-0,002192; +0,000670], dirección [-0,002237; +0,000597], región [-0,002454; +0,000655]; regiones negativas 9 de 12",
+      "S22_menos_H": "-0,000873; IC95 cliente [-0,002718; +0,000913], dirección [-0,002678; +0,000835], región [-0,003248; +0,001225]; regiones negativas 7 de 12",
+      "S22_menos_A_G": "+0,000717; IC95 cliente [-0,001001; +0,002362], dirección [-0,000876; +0,002320], región [-0,000823; +0,002605]; regiones negativas 5 de 12"
+     },
+     "contents": {
+      "S22_menos_S21": "-0,000180; IC95 cliente [-0,000723; +0,000384], dirección [-0,000776; +0,000349], región [-0,000930; +0,000293]; regiones negativas 7 de 12",
+      "S22_menos_H": "+0,000942; IC95 cliente [-0,000514; +0,002313], dirección [-0,000610; +0,002538], región [-0,000579; +0,002692]; regiones negativas 5 de 12",
+      "S22_menos_A_G": "+0,001732; IC95 cliente [+0,000154; +0,003245], dirección [+0,000262; +0,003287], región [+0,000222; +0,003667]; regiones negativas 4 de 12"
+     },
+     "agregado": {
+      "S22_menos_S21": "-0,000326; IC95 cliente [-0,000804; +0,000171], dirección [-0,000811; +0,000172], región [-0,000922; +0,000203]; regiones negativas 8 de 12",
+      "S22_menos_H": "+0,000296; IC95 cliente [-0,000697; +0,001314], dirección [-0,000653; +0,001307], región [-0,000615; +0,001236]; regiones negativas 5 de 12",
+      "S22_menos_A_G": "+0,001728; IC95 cliente [+0,000523; +0,003368], dirección [+0,000508; +0,003404], región [+0,000446; +0,003719]; regiones negativas 1 de 12"
+     }
+    }
+   },
+   "metodo": "Modelos_claude/intervalos_region.py: Poisson(1) por cliente, dirección y región (12 regiones), 1.000 réplicas, denominador fijo, generador propio por agrupación; etiqueta T0 + (a - 1) x reserva de caso de los abiertos aceptados (a = 0,75; 1; 1,25)"
+  }
+ },
+ "autorizacion": {
+  "F3_hogar": "D80",
+  "envio": "Lo coordina Codex con autorización del participante; Claude no envía"
+ },
+ "controles_claude": [
+  "626.639 filas en el orden de sample_submission",
+  "columnas row_id,prediction",
+  "sin faltantes",
+  "mínimo 0.06710 > 0",
+  "SHA-256 recalculado tras la copia"
+ ],
+ "creado_utc": "2026-10-18T20:14:27Z",
+ "predicciones_por_fila_v23_v24": {
+  "archivo": "Hackaton/Semana 1/Modelos_claude/experimentos/predicciones_v23_v24_s22.parquet",
+  "sha256": "22c816319a17e386b04d3901ac87615d3fd1e415a5b3431e55cd5bc093259d7c",
+  "columnas": [
+   "row_id",
+   "line",
+   "corte",
+   "y_T0",
+   "reserva_caso",
+   "prediction"
+  ],
+  "nota": "las mismas predicciones que miden d2_sel (V23, sin factor) y d2_v24_f23 (V24, con el factor de V23); reserva_caso permite rehacer T0 + (a - 1) x reserva"
+ },
+ "criterio_fijado_antes_de_resultados": {
+  "regla_de_pesos": "Los mismos pesos de S21 (rejilla de 0,1 con la peor de las dos mejoras, CLA-20261018-006); no se volvieron a elegir pesos sin la forma de hogar, para que la variante cambie una sola cosa",
+  "regla_de_nivel": "mezcla3.py --nivel=s17, sin cambios respecto de S21",
+  "cambio_unico": "Calibración de forma solo en autos (1,09; 0,95); edificios y contenidos con a = b = 1",
+  "motivo_y_prueba_previa": "Frente a S09b, la mejora de S21 sin el 0,1 % superior de las filas era −0,00103 en V23 (edificios −0,00335, contenidos −0,00186; robustez_s21.json y la nota de S21), una dependencia de la cola ya señalada para la forma de hogar en la sección 4.5 del INFORME y en S14c. El resultado público de S21 (0,12874, por debajo de S09b; COD-20261018-049) llevó a revisarla; la variante no se ajusta a ese resultado",
+  "lectura_fijada_antes_del_resultado_publico": "Si S22 queda por encima de S21 en el público, es coherente con que la forma de hogar no se traslada a 2025; si queda igual o por debajo, la inversión viene de otra parte y la forma no se cambia solo por eso (CLA-20261018-012). Un solo envío no identifica la causa",
+  "limite": "V23 y V24 son desarrollo reutilizado; en los subconjuntos del 30 % de 2024 S21 supera a S22 en el 86,4 % (V23) y el 79,8 % (V24) de los casos"
+ },
+ "publico_simulado": "En 1.000 subconjuntos aleatorios del 30 % de los clientes, S22 supera a S09b en el 99,7 % de los casos en V24 y el 96,8 % en V23, y a S21 en el 20,2 % (V24) y el 13,6 % (V23) (Modelos_claude/experimentos/publico_simulado_s22.json)",
+ "reproduccion": "En el equipo: python3 reproducir_mezcla.py experimentos/spec_s22_propio.json motor:1.09:0.95 s17 S22_claude_propio c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0 (desde Modelos_claude; repite la mezcla a partir de las predicciones guardadas de cada componente)"
+}

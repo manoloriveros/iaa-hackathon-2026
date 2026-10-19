@@ -1,0 +1,7 @@
+{"recomendacion": "Estimación propia de Claude recomendada para la ventana de las 19:00; sustituye a S16_claude_propio. Frente a S09b mejora los tres ramos en V23 y en V24 con probabilidades de mejora de 0,83 a 1,00 por ramo y 1,00 en el agregado. En 2024 local supera a A_G en los tres ramos (agregado +0,00109, IC95 por cliente positivo) y empata con H en el agregado (−0,00007): mejor en edificios y contenidos, peor en autos.",
+ "composicion": {
+  "motor": "CatBoost Tweedie F01234 sin marketing_segment, cuatro semillas (0,4); CatBoost Poisson por peligro x severidad media del peligro, cuatro semillas (0,4); LightGBM F01234 (0,1); LightGBM reducido (0,1)",
+  "buildings": "LightGBM F0124 + siete F3 de D80 con min_data_in_leaf 1000 (0,5); CatBoost Poisson por peligro con severidad por capital asegurado (GLM gamma por peligro con log del capital y, en inundación, sótano; CFSS_buildings) (0,5)",
+  "contents": "LightGBM F0124 + siete F3 (0,3); red neuronal Tweedie (0,1, solo relatividades); modelo aditivo por peligro con severidad gamma (0,4); CatBoost Poisson por peligro con severidad por capital (CFSS_contents) (0,2)",
+  "forma": "mu = e (e/ē)^(b-1) g (r/g)^a: autos (1,09; 0,95), edificios (1,08; 1,14), contenidos (1,07; 1)",
+  "nivel": "Componentes reescalados al total medio ponderado de los de Claude salvo las redes neuronales; factor de año siguiente por ramo (media V23/V24), una vez y sin segundo IBNR"}}

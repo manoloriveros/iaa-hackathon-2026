@@ -1,0 +1,111 @@
+{
+ "origen": "CFS_motor_4s",
+ "line": "motor",
+ "tope": 0.995,
+ "perils": {
+  "own_damage": {
+   "V23": {
+    "betas": [
+     0.3035,
+     -0.4597
+    ],
+    "siniestros": 24851
+   },
+   "V24": {
+    "betas": [
+     0.3142,
+     -0.4656
+    ],
+    "siniestros": 36721
+   },
+   "PROD": {
+    "betas": [
+     0.3116,
+     -0.4658
+    ],
+    "siniestros": 48258
+   }
+  },
+  "third_party_prop": {
+   "V23": {
+    "betas": [],
+    "siniestros": 16980
+   },
+   "V24": {
+    "betas": [],
+    "siniestros": 25337
+   },
+   "PROD": {
+    "betas": [],
+    "siniestros": 32963
+   }
+  },
+  "bodily_injury": {
+   "V23": {
+    "betas": [],
+    "siniestros": 4285
+   },
+   "V24": {
+    "betas": [],
+    "siniestros": 6334
+   },
+   "PROD": {
+    "betas": [],
+    "siniestros": 7512
+   }
+  },
+  "theft": {
+   "V23": {
+    "betas": [
+     0.3296,
+     -0.3094
+    ],
+    "siniestros": 3015
+   },
+   "V24": {
+    "betas": [
+     0.3448,
+     -0.2958
+    ],
+    "siniestros": 4616
+   },
+   "PROD": {
+    "betas": [
+     0.3505,
+     -0.3182
+    ],
+    "siniestros": 6119
+   }
+  },
+  "glass_hail": {
+   "V23": {
+    "betas": [
+     0.2687,
+     0.0579
+    ],
+    "siniestros": 7511
+   },
+   "V24": {
+    "betas": [
+     0.2656,
+     0.0688
+    ],
+    "siniestros": 11623
+   },
+   "PROD": {
+    "betas": [
+     0.2578,
+     0.0614
+    ],
+    "siniestros": 15643
+   }
+  }
+ },
+ "d2_sel": 0.09305,
+ "d2_v24": 0.09096,
+ "pred_2025_total_CU": 110206602.05,
+ "referencia_cfs": {
+  "d2_sel": null,
+  "d2_v24": 0.08865
+ }
+}

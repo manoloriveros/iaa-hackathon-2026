@@ -1,0 +1,10 @@
+{
+ "recomendacion": "Estimación propia de Claude para la ventana de las 19:00; sustituye a S20_claude_propio. Respecto de S20 cambia contenidos (la frecuencia aditiva lleva una severidad GLM ampliada con covariables físicas: nivel de seguridad, objetos de valor, densidad urbana, tipo de vivienda, antigüedad y zona de inundación) y edificios promedia cuatro semillas en la frecuencia CatBoost por peligro; autos queda como en S18 y S20.",
+ "composicion": {
+  "motor": "CatBoost Tweedie F01234 sin marketing_segment, cuatro semillas (0,2); CatBoost Poisson por peligro, cuatro semillas, con severidad GLM gamma por grupo de valor y antigüedad del vehículo en daños propios, robo y lunas (CFSS_motor) (0,6); LightGBM F01234 (0,1); LightGBM reducido (0,1)",
+  "buildings": "LightGBM F0124 + siete F3 de D80 con min_data_in_leaf 1000 (0,4); CatBoost Poisson por peligro, cuatro semillas, con severidad GLM por capital y sótano en inundación (CFSS4_buildings) (0,3); frecuencia aditiva por peligro, cuatro semillas, con la misma severidad (FSAS4_buildings) (0,3)",
+  "contents": "LightGBM F0124 + siete F3 (0,2); red neuronal Tweedie (0,1); modelo aditivo por peligro con severidad gamma (FSA_contents) (0,2); frecuencia aditiva por peligro, cuatro semillas, con severidad GLM por capital ampliada con covariables físicas (FSAXc4_contents, severidad_cfs3.py) (0,5)",
+  "forma": "mu = e (e/ē)^(b-1) g (r/g)^a: autos (1,09; 0,95), edificios (1,08; 1,14), contenidos (1,07; 1)",
+  "nivel": "Regla s17 sin etiquetas: fuera de la referencia de nivel CFSS (autos -4,4 %, edificios con cuatro semillas según deriva_nivel_s21.json), la red de contenidos y FSAXc4 de contenidos (-1,53 %); dentro FSAS4 de edificios y los Tweedie de árboles. Factor de año siguiente por ramo (media V23/V24), una vez y sin segundo IBNR"
+ }
+}

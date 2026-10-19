@@ -1,0 +1,26 @@
+{"origen": "CFS_motor_4s", "line": "motor", "tope": 0.995, "d2_sel": 0.09305, "d2_v24": 0.09096, "pred_2025_total_CU": 110206602.05, "referencia_cfs": {"d2_sel": null, "d2_v24": 0.08865}}
+   own_damage {'V23': {'betas': [0.3035, -0.4597], 'siniestros': 24851}, 'V24': {'betas': [0.3142, -0.4656], 'siniestros': 36721}, 'PROD': {'betas': [0.3116, -0.4658], 'siniestros': 48258}}
+   third_party_prop {'V23': {'betas': [], 'siniestros': 16980}, 'V24': {'betas': [], 'siniestros': 25337}, 'PROD': {'betas': [], 'siniestros': 32963}}
+   bodily_injury {'V23': {'betas': [], 'siniestros': 4285}, 'V24': {'betas': [], 'siniestros': 6334}, 'PROD': {'betas': [], 'siniestros': 7512}}
+   theft {'V23': {'betas': [0.3296, -0.3094], 'siniestros': 3015}, 'V24': {'betas': [0.3448, -0.2958], 'siniestros': 4616}, 'PROD': {'betas': [0.3505, -0.3182], 'siniestros': 6119}}
+   glass_hail {'V23': {'betas': [0.2687, 0.0579], 'siniestros': 7511}, 'V24': {'betas': [0.2656, 0.0688], 'siniestros': 11623}, 'PROD': {'betas': [0.2578, 0.0614], 'siniestros': 15643}}
+{"origen": "CFS_buildings", "line": "buildings", "tope": 0.995, "d2_sel": 0.1156, "d2_v24": 0.1131, "pred_2025_total_CU": 68806657.45, "referencia_cfs": {"d2_sel": 0.10519, "d2_v24": 0.10477}}
+   storm {'V23': {'betas': [0.6001], 'siniestros': 3737}, 'V24': {'betas': [0.5828], 'siniestros': 5868}, 'PROD': {'betas': [0.5816], 'siniestros': 7762}}
+   flood {'V23': {'betas': [0.5892, 0.4139], 'siniestros': 1139}, 'V24': {'betas': [0.6244, 0.4195], 'siniestros': 1689}, 'PROD': {'betas': [0.6168, 0.433], 'siniestros': 2219}}
+   escape_of_water {'V23': {'betas': [0.5499], 'siniestros': 4997}, 'V24': {'betas': [0.5837], 'siniestros': 7507}, 'PROD': {'betas': [0.5798], 'siniestros': 10065}}
+   subsidence {'V23': {'betas': [0.4892], 'siniestros': 617}, 'V24': {'betas': [0.5685], 'siniestros': 997}, 'PROD': {'betas': [0.5412], 'siniestros': 1288}}
+   fire {'V23': {'betas': [0.7289], 'siniestros': 519}, 'V24': {'betas': [0.8125], 'siniestros': 798}, 'PROD': {'betas': [0.7935], 'siniestros': 1107}}
+   accidental_damage {'V23': {'betas': [0.2471], 'siniestros': 1869}, 'V24': {'betas': [0.2132], 'siniestros': 2836}, 'PROD': {'betas': [0.2339], 'siniestros': 3825}}
+{"origen": "FSAP_buildings", "line": "buildings", "tope": 0.995, "d2_sel": 0.11519, "d2_v24": 0.11454, "pred_2025_total_CU": 69908363.44, "referencia_cfs": {"d2_sel": 0.10934, "d2_v24": 0.11021}}
+   storm {'V23': {'betas': [0.6001], 'siniestros': 3737}, 'V24': {'betas': [0.5828], 'siniestros': 5868}, 'PROD': {'betas': [0.5816], 'siniestros': 7762}}
+   flood {'V23': {'betas': [0.5892, 0.4139], 'siniestros': 1139}, 'V24': {'betas': [0.6244, 0.4195], 'siniestros': 1689}, 'PROD': {'betas': [0.6168, 0.433], 'siniestros': 2219}}
+   escape_of_water {'V23': {'betas': [0.5499], 'siniestros': 4997}, 'V24': {'betas': [0.5837], 'siniestros': 7507}, 'PROD': {'betas': [0.5798], 'siniestros': 10065}}
+   subsidence {'V23': {'betas': [0.4892], 'siniestros': 617}, 'V24': {'betas': [0.5685], 'siniestros': 997}, 'PROD': {'betas': [0.5412], 'siniestros': 1288}}
+   fire {'V23': {'betas': [0.7289], 'siniestros': 519}, 'V24': {'betas': [0.8125], 'siniestros': 798}, 'PROD': {'betas': [0.7935], 'siniestros': 1107}}
+   accidental_damage {'V23': {'betas': [0.2471], 'siniestros': 1869}, 'V24': {'betas': [0.2132], 'siniestros': 2836}, 'PROD': {'betas': [0.2339], 'siniestros': 3825}}
+{"origen": {"v23": "FSAP_contents", "v24": ["FSAP_contents", "FSAP2_contents"], "prod": ["FSAP_contents", "FSAP2_contents"]}, "line": "contents", "lambda": 20.0, "tope": 0.995, "d2_sel": 0.09292, "d2_v24": 0.09545, "pred_2025_total_CU": 17582866.94}
+   theft {'V23': {'parametros': 8, 'siniestros': 3680, 'rel_p5_p95': [0.5, 1.756]}, 'V24': {'parametros': 8, 'siniestros': 5650, 'rel_p5_p95': [0.511, 1.736]}, 'PROD': {'parametros': 8, 'siniestros': 7626, 'rel_p5_p95': [0.508, 1.769]}}
+   escape_of_water {'V23': {'parametros': 5, 'siniestros': 2632, 'rel_p5_p95': [0.461, 1.713]}, 'V24': {'parametros': 5, 'siniestros': 4004, 'rel_p5_p95': [0.492, 1.667]}, 'PROD': {'parametros': 5, 'siniestros': 5366, 'rel_p5_p95': [0.495, 1.682]}}
+   accidental_damage {'V23': {'parametros': 2, 'siniestros': 4406, 'rel_p5_p95': [0.695, 1.313]}, 'V24': {'parametros': 2, 'siniestros': 6774, 'rel_p5_p95': [0.694, 1.323]}, 'PROD': {'parametros': 2, 'siniestros': 9063, 'rel_p5_p95': [0.712, 1.309]}}
+   flood {'V23': {'parametros': 7, 'siniestros': 806, 'rel_p5_p95': [0.465, 1.746]}, 'V24': {'parametros': 7, 'siniestros': 1254, 'rel_p5_p95': [0.475, 1.748]}, 'PROD': {'parametros': 7, 'siniestros': 1615, 'rel_p5_p95': [0.494, 1.775]}}
+FIN_COLA45

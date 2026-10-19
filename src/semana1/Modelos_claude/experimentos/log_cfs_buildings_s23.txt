@@ -1,0 +1,22 @@
+CFS_buildings_s23 v24 storm 111
+CFS_buildings_s23 v24 flood 349
+CFS_buildings_s23 v24 escape_of_water 414
+CFS_buildings_s23 v24 subsidence 563
+CFS_buildings_s23 v24 fire 701
+CFS_buildings_s23 v24 accidental_damage 1050
+CFS_buildings_s23 V24 0.10451
+CFS_buildings_s23 2025 storm 1213
+CFS_buildings_s23 2025 flood 1457
+CFS_buildings_s23 2025 escape_of_water 1531
+CFS_buildings_s23 2025 subsidence 1680
+CFS_buildings_s23 2025 fire 1864
+CFS_buildings_s23 2025 accidental_damage 2205
+CFS_buildings_s23 {"line": "buildings", "depth": 6, "lr": 0.05, "seeds": 2, "f3s2": true, "perils": {"storm": {"best": 172}, "flood": {"best": 276}, "escape_of_water": {"best": 101}, "subsidence": {"best": 171}, "fire": {"best": 216}, "accidental_damage": {"best": 398}}, "desde": "CFS_buildings", "semilla_inicial": 2, "d2_v24": 0.10451, "pred_2025_total_CU": 66002125.65, "secs": 2205}
+{"origen": "CFS_buildings", "line": "buildings", "d2_sel": 0.11562, "d2_v24": 0.11304, "pred_2025_total_CU": 68883957.39, "referencia_cfs": {"d2_sel": 0.10519, "d2_v24": 0.10477}}
+   storm {'V23': {'betas': [0.6106], 'siniestros': 3737}, 'V24': {'betas': [0.6005], 'siniestros': 5868}, 'PROD': {'betas': [0.5965], 'siniestros': 7762}}
+   flood {'V23': {'betas': [0.5984, 0.4188], 'siniestros': 1139}, 'V24': {'betas': [0.6389, 0.437], 'siniestros': 1689}, 'PROD': {'betas': [0.6344, 0.4425], 'siniestros': 2219}}
+   escape_of_water {'V23': {'betas': [0.5641], 'siniestros': 4997}, 'V24': {'betas': [0.5973], 'siniestros': 7507}, 'PROD': {'betas': [0.5935], 'siniestros': 10065}}
+   subsidence {'V23': {'betas': [0.4945], 'siniestros': 617}, 'V24': {'betas': [0.5844], 'siniestros': 997}, 'PROD': {'betas': [0.5524], 'siniestros': 1288}}
+   fire {'V23': {'betas': [0.7347], 'siniestros': 519}, 'V24': {'betas': [0.8241], 'siniestros': 798}, 'PROD': {'betas': [0.814], 'siniestros': 1107}}
+   accidental_damage {'V23': {'betas': [0.2495], 'siniestros': 1869}, 'V24': {'betas': [0.2141], 'siniestros': 2836}, 'PROD': {'betas': [0.2389], 'siniestros': 3825}}
+FIN_COLA42

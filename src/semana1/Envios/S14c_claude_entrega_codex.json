@@ -1,0 +1,92 @@
+{
+ "id": "S14c_claude_cat4s_forma_autos",
+ "autor": "Claude (Modelos_claude y Evaluacion_integral_claude), madrugada del 18 de octubre",
+ "recomendacion": "Contraste conservador de S14: mismos componentes, forma solo en autos. Pasa el filtro sin el 0,1 % superior en el agregado y en autos y contenidos; sirve para medir en el público el efecto de la forma de hogar.",
+ "archivo": "Hackaton/Semana 1/Envios/archivos/S14c_claude_cat4s_forma_autos.csv",
+ "sha256": "7360c1a4d68b2bfa7d5f5e708c63b21967226189386601820ce16856e59c7318",
+ "filas": 626639,
+ "columnas": [
+  "row_id",
+  "prediction"
+ ],
+ "total_CU": 210296244.12,
+ "por_ramo_CU": {
+  "motor": 117245746.84,
+  "buildings": 74325736.89,
+  "contents": 18724760.39
+ },
+ "tasa_2025_por_unidad_de_exposicion": {
+  "motor": 586.3,
+  "buildings": 494.7,
+  "contents": 124.7
+ },
+ "composicion": {
+  "motor": "CatBoost Tweedie F01234 con cuatro semillas (0,4; antes dos), CatBoost Poisson por peligro x severidad media del peligro (0,4), LightGBM F01234 (0,1), LightGBM reducido (0,1)",
+  "buildings": "50 % LightGBM Claude F0124 + 7 F3 (min_data_in_leaf 1000) y 50 % stack S08 de Codex",
+  "contents": "45 % LightGBM Claude F0124 + 7 F3, 30 % frecuencia por peligro x severidad gamma modelada, 25 % stack S08 de Codex",
+  "nivel": "Componentes reescalados al total medio ponderado de los de Claude; factor de año siguiente por ramo (media V23/V24), una vez y sin segundo IBNR",
+  "forma": "mu = e (e/ē)^(b-1) g (r/g)^a: autos (1,09; 0,95); hogar sin forma"
+ },
+ "validacion": {
+  "d2_v24_global_con_factor_v23": 0.13637,
+  "por_ramo": {
+   "motor": {
+    "d2_sel": 0.09401,
+    "d2_v24_f23": 0.09016,
+    "f23": 0.98832,
+    "f24": 1.01248,
+    "f": 1.0004
+   },
+   "buildings": {
+    "d2_sel": 0.11538,
+    "d2_v24_f23": 0.11468,
+    "f23": 1.06219,
+    "f24": 1.12983,
+    "f": 1.09601
+   },
+   "contents": {
+    "d2_sel": 0.0887,
+    "d2_v24_f23": 0.09409,
+    "f23": 1.07293,
+    "f24": 1.08193,
+    "f": 1.07743
+   }
+  },
+  "pareada_frente_a_S09b": {
+   "V23_seleccion": {
+    "motor": "+0,00057 (P>0 0,82)",
+    "buildings": "+0,00025 (P>0 0,81)",
+    "contents": "+0,00073 (P>0 0,96)",
+    "global": "+0,00047 (P>0 0,93)"
+   },
+   "V24": {
+    "motor": "+0,00139 (P>0 0,95)",
+    "buildings": "+0,00031 (P>0 0,995)",
+    "contents": "+0,00087 (P>0 0,995)",
+    "global": "+0,00086 (P>0 0,994)"
+   },
+   "sin_el_0_1_por_ciento_superior_V23_V24": {
+    "motor": "+0,00056 / +0,00037",
+    "buildings": "+0,00016 / -0,00008",
+    "contents": "+0,00020 / +0,00034",
+    "global": "+0,00034 / +0,00020"
+   }
+  },
+  "nota": "Nivel de hogar como S09b (edificios 494,7 y contenidos 124,7 por unidad de exposición), por debajo del contraste actuarial por tendencias (513,0 y 126,1).",
+  "ruido_de_semilla": "Dos pares de semillas del mismo CatBoost Tweedie de autos dan V24 0,08864 y 0,08795; diferencias de V24 de 0,0003 en autos están dentro del ruido",
+  "publico_de_referencia": "S09b 0,12889 (V24 0,13552); N01_A_G de Codex 0,12908, el mejor público",
+  "limite": "V24 es desarrollo reutilizado; forma y pesos se eligieron mirando V23 y V24"
+ },
+ "autorizacion": {
+  "F3_hogar": "D80",
+  "envio": "Lo decide Codex con la autorización del participante; Claude no envía"
+ },
+ "controles_claude": [
+  "626.639 filas en el orden de sample_submission",
+  "columnas row_id,prediction",
+  "sin faltantes",
+  "mínimo 0.07832 > 0",
+  "SHA-256 recalculado tras la copia"
+ ],
+ "creado_utc": "2026-10-18T08:24:44Z"
+}

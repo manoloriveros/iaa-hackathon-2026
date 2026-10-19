@@ -1,0 +1,237 @@
+{
+ "line": "buildings",
+ "cap": 0.15,
+ "siniestros_credibilidad_plena": 1082,
+ "detalle": {
+  "cat": {
+   "corrida": "CFS_buildings",
+   "cocientes": {
+    "storm": {
+     "V22": {
+      "cociente": 1.0542,
+      "siniestros": 994
+     },
+     "V23": {
+      "cociente": 1.0981,
+      "siniestros": 1088
+     },
+     "V24": {
+      "cociente": 0.9352,
+      "siniestros": 1894
+     }
+    },
+    "flood": {
+     "V22": {
+      "cociente": 1.0613,
+      "siniestros": 308
+     },
+     "V23": {
+      "cociente": 0.9738,
+      "siniestros": 276
+     },
+     "V24": {
+      "cociente": 0.9989,
+      "siniestros": 530
+     }
+    },
+    "escape_of_water": {
+     "V22": {
+      "cociente": 0.9076,
+      "siniestros": 1189
+     },
+     "V23": {
+      "cociente": 0.9909,
+      "siniestros": 1248
+     },
+     "V24": {
+      "cociente": 1.077,
+      "siniestros": 2558
+     }
+    },
+    "subsidence": {
+     "V22": {
+      "cociente": 1.1657,
+      "siniestros": 168
+     },
+     "V23": {
+      "cociente": 1.1127,
+      "siniestros": 182
+     },
+     "V24": {
+      "cociente": 1.0989,
+      "siniestros": 291
+     }
+    },
+    "fire": {
+     "V22": {
+      "cociente": 1.15,
+      "siniestros": 141
+     },
+     "V23": {
+      "cociente": 0.9808,
+      "siniestros": 135
+     },
+     "V24": {
+      "cociente": 1.1021,
+      "siniestros": 309
+     }
+    },
+    "accidental_damage": {
+     "V22": {
+      "cociente": 1.0632,
+      "siniestros": 485
+     },
+     "V23": {
+      "cociente": 0.9964,
+      "siniestros": 495
+     },
+     "V24": {
+      "cociente": 1.0321,
+      "siniestros": 989
+     }
+    }
+   }
+  },
+  "aditivo": {
+   "corrida": "FSAP_buildings",
+   "cocientes": {
+    "storm": {
+     "V22": {
+      "cociente": 1.0472,
+      "siniestros": 994
+     },
+     "V23": {
+      "cociente": 1.1146,
+      "siniestros": 1088
+     },
+     "V24": {
+      "cociente": 0.9591,
+      "siniestros": 1894
+     }
+    },
+    "flood": {
+     "V22": {
+      "cociente": 1.0464,
+      "siniestros": 308
+     },
+     "V23": {
+      "cociente": 0.9647,
+      "siniestros": 276
+     },
+     "V24": {
+      "cociente": 0.9788,
+      "siniestros": 530
+     }
+    },
+    "escape_of_water": {
+     "V22": {
+      "cociente": 0.8991,
+      "siniestros": 1189
+     },
+     "V23": {
+      "cociente": 0.9799,
+      "siniestros": 1248
+     },
+     "V24": {
+      "cociente": 1.0567,
+      "siniestros": 2558
+     }
+    },
+    "subsidence": {
+     "V22": {
+      "cociente": 1.1224,
+      "siniestros": 168
+     },
+     "V23": {
+      "cociente": 1.0961,
+      "siniestros": 182
+     },
+     "V24": {
+      "cociente": 1.1508,
+      "siniestros": 291
+     }
+    },
+    "fire": {
+     "V22": {
+      "cociente": 1.1282,
+      "siniestros": 141
+     },
+     "V23": {
+      "cociente": 0.9355,
+      "siniestros": 135
+     },
+     "V24": {
+      "cociente": 1.1164,
+      "siniestros": 309
+     }
+    },
+    "accidental_damage": {
+     "V22": {
+      "cociente": 1.0533,
+      "siniestros": 485
+     },
+     "V23": {
+      "cociente": 0.9976,
+      "siniestros": 495
+     },
+     "V24": {
+      "cociente": 1.0362,
+      "siniestros": 989
+     }
+    }
+   }
+  }
+ },
+ "factores_cat": {
+  "V23": {
+   "storm": 1.0,
+   "flood": 1.0,
+   "escape_of_water": 1.0,
+   "subsidence": 1.0623,
+   "fire": 1.0,
+   "accidental_damage": 1.0
+  },
+  "V24": {
+   "storm": 1.0,
+   "flood": 1.0,
+   "escape_of_water": 1.0,
+   "subsidence": 1.0768,
+   "fire": 1.0,
+   "accidental_damage": 1.0
+  },
+  "PROD": {
+   "storm": 1.0,
+   "flood": 1.0,
+   "escape_of_water": 1.0,
+   "subsidence": 1.0687,
+   "fire": 1.0,
+   "accidental_damage": 1.0
+  }
+ },
+ "factores_aditivo": {
+  "V23": {
+   "storm": 1.0,
+   "flood": 1.0,
+   "escape_of_water": 1.0,
+   "subsidence": 1.0466,
+   "fire": 1.0,
+   "accidental_damage": 1.0
+  },
+  "V24": {
+   "storm": 1.0,
+   "flood": 1.0,
+   "escape_of_water": 1.0,
+   "subsidence": 1.0607,
+   "fire": 1.0,
+   "accidental_damage": 1.0
+  },
+  "PROD": {
+   "storm": 1.0,
+   "flood": 1.0,
+   "escape_of_water": 1.0,
+   "subsidence": 1.0798,
+   "fire": 1.0,
+   "accidental_damage": 1.0
+  }
+ }
+}

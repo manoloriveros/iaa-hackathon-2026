@@ -1,0 +1,10 @@
+{
+ "recomendacion": "Variante de robustez de S21_claude_propio: mismos componentes y pesos, sin la calibración de forma en hogar (la forma queda solo en autos). La mejora de S21 frente a S09b dependía del 0,1 % superior de las filas (sin él, −0,00103 en V23); la de esta variante no (+0,00097 en V23 y +0,00114 en V24). Cede algo de D² local frente a S21 a cambio de no apoyarse en la cola. El resultado público de S21 (0,12874, por debajo de S09b) llevó a revisar esa fragilidad, ya documentada en el INFORME (sección 4.5) y en S14c; la variante no se ajusta al público.",
+ "composicion": {
+  "motor": "CatBoost Tweedie F01234 sin marketing_segment, cuatro semillas (0,2); CatBoost Poisson por peligro, cuatro semillas, con severidad GLM gamma por grupo de valor y antigüedad del vehículo en daños propios, robo y lunas (CFSS_motor) (0,6); LightGBM F01234 (0,1); LightGBM reducido (0,1)",
+  "buildings": "LightGBM F0124 + siete F3 de D80 con min_data_in_leaf 1000 (0,4); CatBoost Poisson por peligro, cuatro semillas, con severidad GLM por capital y sótano en inundación (CFSS4_buildings) (0,3); frecuencia aditiva por peligro, cuatro semillas, con la misma severidad (FSAS4_buildings) (0,3)",
+  "contents": "LightGBM F0124 + siete F3 (0,2); red neuronal Tweedie (0,1); modelo aditivo por peligro con severidad gamma (FSA_contents) (0,2); frecuencia aditiva por peligro, cuatro semillas, con severidad GLM por capital ampliada con covariables físicas (FSAXc4_contents, severidad_cfs3.py) (0,5)",
+  "forma": "mu = e (e/ē)^(b-1) g (r/g)^a solo en autos (1,09; 0,95); edificios y contenidos sin forma (a = b = 1)",
+  "nivel": "Regla s17 sin etiquetas: fuera de la referencia de nivel CFSS (autos -4,4 %, edificios con cuatro semillas según deriva_nivel_s22.json), la red de contenidos y FSAXc4 de contenidos (-1,53 %); dentro FSAS4 de edificios y los Tweedie de árboles. Factor de año siguiente por ramo (media V23/V24), una vez y sin segundo IBNR"
+ }
+}

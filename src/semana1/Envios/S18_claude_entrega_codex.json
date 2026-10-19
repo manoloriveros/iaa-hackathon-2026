@@ -1,0 +1,144 @@
+{
+ "id": "S18_claude_propio",
+ "autor": "Claude (Modelos_claude), 18 de octubre",
+ "linaje": "Estimación propia de Claude: ningún componente, total ni factor de Codex (acuerdo del foro, COD-20261018-001 y CLA-20261018-001)",
+ "recomendacion": "Estimación propia de Claude recomendada para la ventana de las 19:00; sustituye a S16_claude_propio (S17 fue un paso intermedio sin entrega). Frente a S09b mejora los tres ramos en V23 y en V24. El cambio respecto de S16: la frecuencia CatBoost por peligro deja de usar una severidad media constante y pasa a una severidad por capital asegurado en hogar y por valor y antigüedad del vehículo en autos.",
+ "archivo": "Hackaton/Semana 1/Envios/archivos/S18_claude_propio.csv",
+ "sha256": "a97ad416cbe2967d4734d635bef3e679b64ebceebeb6bb30581358d70b79e7e8",
+ "filas": 626639,
+ "columnas": [
+  "row_id",
+  "prediction"
+ ],
+ "total_CU": 214392450.97,
+ "por_ramo_CU": {
+  "motor": 118894299.7,
+  "buildings": 76494990.76,
+  "contents": 19003160.51
+ },
+ "tasa_2025_por_unidad_de_exposicion": {
+  "motor": 594.5,
+  "buildings": 509.1,
+  "contents": 126.6
+ },
+ "composicion": {
+  "motor": "CatBoost Tweedie F01234 sin marketing_segment, cuatro semillas (0,2); CatBoost Poisson por peligro, cuatro semillas, con severidad por grupo de valor y antigüedad del vehículo en daños propios, robo y lunas (GLM gamma por peligro; CFSS_motor) (0,6); LightGBM F01234 (0,1); LightGBM reducido (0,1)",
+  "buildings": "LightGBM F0124 + siete F3 de D80 con min_data_in_leaf 1000 (0,5); CatBoost Poisson por peligro con severidad por capital asegurado y sótano en inundación (CFSS_buildings) (0,5)",
+  "contents": "LightGBM F0124 + siete F3 (0,3); red neuronal Tweedie (0,1); modelo aditivo por peligro con severidad gamma (0,4); CatBoost Poisson por peligro con severidad por capital (CFSS_contents) (0,2)",
+  "forma": "mu = e (e/ē)^(b-1) g (r/g)^a: autos (1,09; 0,95), edificios (1,08; 1,14), contenidos (1,07; 1)",
+  "nivel": "Referencia de nivel solo con los componentes cuyo total se mueve con el ancla del ramo entre V24 y 2025 (Tweedie de árboles y modelo aditivo); las frecuencias CatBoost y la red neuronal aportan relatividades. Factor de año siguiente por ramo (media V23/V24), una vez y sin segundo IBNR"
+ },
+ "validacion": {
+  "d2_v24_global_con_factor_v23": 0.13779,
+  "por_ramo": {
+   "motor": {
+    "d2_sel": 0.09439,
+    "d2_v24_f23": 0.09161,
+    "f23": 0.98635,
+    "f24": 1.00503,
+    "f": 0.99569
+   },
+   "buildings": {
+    "d2_sel": 0.11822,
+    "d2_v24_f23": 0.11591,
+    "f23": 1.01184,
+    "f24": 1.07685,
+    "f": 1.04434
+   },
+   "contents": {
+    "d2_sel": 0.09047,
+    "d2_v24_f23": 0.09612,
+    "f23": 1.04942,
+    "f24": 1.0647,
+    "f": 1.05706
+   }
+  },
+  "pareada_frente_a_S09b": {
+   "V23_seleccion": {
+    "motor": "+0,00095 (P>0 0,895)",
+    "buildings": "+0,00309 (P>0 0,98)",
+    "contents": "+0,00250 (P>0 0,993)",
+    "global": "+0,00189 (P>0 1,0)"
+   },
+   "V24": {
+    "motor": "+0,00283 (P>0 1,0)",
+    "buildings": "+0,00154 (P>0 0,875)",
+    "contents": "+0,00290 (P>0 1,0)",
+    "global": "+0,00227 (P>0 1,0)"
+   },
+   "sin_el_0_1_por_ciento_superior_V23_V24": {
+    "motor": "+0,00075 / +0,00099",
+    "buildings": "-0,00247 / -0,00091",
+    "contents": "-0,00166 / -0,00033",
+    "global": "-0,00072 / +0,00008"
+   }
+  },
+  "d2_local_2024_mismos_IDs": {
+   "tabla": {
+    "motor": {
+     "CL": 0.09161,
+     "AG": 0.0893,
+     "H": 0.09071,
+     "S09b": 0.08877
+    },
+    "buildings": {
+     "CL": 0.11591,
+     "AG": 0.11451,
+     "H": 0.11582,
+     "S09b": 0.11437
+    },
+    "contents": {
+     "CL": 0.09612,
+     "AG": 0.09491,
+     "H": 0.09546,
+     "S09b": 0.09322
+    },
+    "agregado": {
+     "CL": 0.13779,
+     "AG": 0.1361,
+     "H": 0.13726,
+     "S09b": 0.13552
+    }
+   },
+   "nota": "CL es esta estimación; A_G y H ajustan su meta con validación cruzada por cliente dentro de 2024, así que su D² local es optimista frente a uno fuera de año"
+  },
+  "limite": "V23 y V24 ya se consultaron para elegir pesos y forma; no es validación nueva",
+  "intervalos_2024_frente_a_A_G_y_H": {
+   "valores": {
+    "motor": {
+     "frente_a_AG": "+0,00231; IC95 cliente [+0,00029; +0,00536], dirección [+0,00035; +0,00536]",
+     "frente_a_H": "+0,00090; IC95 cliente [-0,00031; +0,00260], dirección [-0,00034; +0,00277]"
+    },
+    "buildings": {
+     "frente_a_AG": "+0,00140; IC95 cliente [-0,00063; +0,00346], dirección [-0,00082; +0,00364]",
+     "frente_a_H": "+0,00009; IC95 cliente [-0,00183; +0,00191], dirección [-0,00181; +0,00205]"
+    },
+    "contents": {
+     "frente_a_AG": "+0,00121; IC95 cliente [-0,00031; +0,00278], dirección [-0,00043; +0,00272]",
+     "frente_a_H": "+0,00066; IC95 cliente [-0,00070; +0,00204], dirección [-0,00088; +0,00200]"
+    },
+    "agregado": {
+     "frente_a_AG": "+0,00169; IC95 cliente [+0,00041; +0,00321], dirección [+0,00039; +0,00338]",
+     "frente_a_H": "+0,00053; IC95 cliente [-0,00039; +0,00156], dirección [-0,00036; +0,00149]"
+    }
+   },
+   "metodo": "Modelos_claude/bootstrap_codex.py: 1.000 réplicas Poisson por grupo, denominador fijo; mismas filas y T0",
+   "lectura": "Frente a A_G gana en los tres ramos y +0,00169 en el agregado, con intervalo por cliente y por dirección por encima de cero; frente a H las medias son positivas en los tres ramos (+0,00090 autos, +0,00009 edificios, +0,00066 contenidos) y +0,00053 en el agregado, con intervalos que incluyen cero. A_G y H ajustan su meta dentro de 2024, así que la comparación local los favorece"
+  },
+  "nota_cfss_motor": "CFSS_motor sale de severidad_cfs.py CFS_motor_4s motor CFSS_motor --v23=CFS_motor_v23 --v24=CFS_motor_s23 --prod=CFS_motor,CFS_motor_s23: en V24 usa las dos semillas de CFS_motor_s23, porque CFS_motor no guardó sus partes por peligro de V24; en 2025 promedia las cuatro semillas. Reproducción comprobada con diferencia máxima 0",
+  "regla_de_nivel": "mezcla3.py --nivel=s17: la referencia de nivel de cada corte excluye los componentes cuyo total frente al ancla del ramo se mueve más de un 1,5 % entre V24 y 2025, medido sin etiquetas (CFSS: -4,4 % autos, -2,0 % edificios, -2,0 % contenidos; redes neuronales: -16,8 % contenidos)"
+ },
+ "autorizacion": {
+  "F3_hogar": "D80",
+  "envio": "Lo coordina Codex con autorización del participante; Claude no envía"
+ },
+ "controles_claude": [
+  "626.639 filas en el orden de sample_submission",
+  "columnas row_id,prediction",
+  "sin faltantes",
+  "mínimo 0.07173 > 0",
+  "SHA-256 recalculado tras la copia"
+ ],
+ "creado_utc": "2026-10-18T13:55:24Z",
+ "publico_simulado": "En 1.000 subconjuntos aleatorios del 30 % de los clientes, S18 supera a S09b en el 99 % de los casos en V24 y en el 97 % en V23, y a S16 en el 94 % (V24) y el 94 % (V23) (Modelos_claude/experimentos/publico_simulado_s18.json)"
+}

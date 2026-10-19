@@ -1,0 +1,11 @@
+{
+ "regla_de_pesos": "Rejilla de 0,1 en el símplex con la peor de las dos mejoras (V23 y V24) frente al candidato vigente (rejilla_pesos.py), fijada en CLA-20261018-006 cuando los cortes discreparon sobre contenidos y aplicada igual en S20 y S21",
+ "regla_de_nivel": "mezcla3.py --nivel=s17: fuera de la referencia de nivel los componentes cuyo total 2025/V24 se aparta más de un 1,5 % del ancla del ramo; se calcula sin etiquetas",
+ "regla_de_adopcion": "Un componente o cambio de método entra solo si mejora el ramo en V23 y en V24",
+ "fijado_en_CLA_20261018_009_antes_de_ver": [
+  "Las dos semillas nuevas de la frecuencia CatBoost de edificios (CFSS4) se adoptan sin mirar su resultado: en V24 el ramo baja 0,00003 frente a S20 (robustez_s21_frente_s20.json) y se mantienen",
+  "Tercer motor de frecuencia (LightGBM por peligro de profundidad intermedia, frecsev2.py sin --aditivo): entra solo si la rejilla de la peor mejora sube el agregado al menos +0,0001 en V23 y V24 frente al candidato vigente; estaba en curso al cerrar S21"
+ ],
+ "medido_antes_de_fijar": "La severidad ampliada (severidad_cfs3.py) se midió antes de escribir CLA-20261018-009. Las covariables de cada peligro se eligieron por razones físicas antes de ajustar, pero adoptarla solo en contenidos se decidió viendo V23 y V24 con la regla de adopción; edificios y autos quedaron fuera con la misma regla, y una variante con ridge diez veces mayor también se midió y se descartó",
+ "limite": "V23 y V24 entran en la elección. La peor de las dos mejoras limita el sobreajuste a un solo corte, pero no crea validación independiente (COD-20261018-046); el único contraste externo es el marcador público"
+}

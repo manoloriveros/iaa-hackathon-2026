@@ -1,0 +1,18 @@
+{
+ "fecha_utc": "2026-10-18T20:16:08+00:00",
+ "que": "Repetición de S22_claude_propio en la máquina virtual del equipo con reproducir_mezcla.py, solo con los archivos de Modelos_claude y la plantilla de Datos/",
+ "orden": "python3 reproducir_mezcla.py experimentos/spec_s22_propio.json motor:1.09:0.95 s17 S22_claude_propio c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0",
+ "sha256_entregado": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0",
+ "sha256_repetido": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0",
+ "coincide_byte_a_byte": true,
+ "filas": 626639,
+ "total_entregado_CU": 211689735.38,
+ "lectura": "El CSV repetido es idéntico byte a byte al entregado; mezcla3.py ya incluye FS2Xc_contents en la regla s17, que no forma parte de S22 y no cambia el resultado.",
+ "entorno": {
+  "python": "3.10.12",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "pyarrow": "25.0.1"
+ },
+ "alcance": "Repite la mezcla, la forma, la regla de nivel y el factor de año siguiente a partir de las predicciones guardadas de cada componente; no reentrena los componentes."
+}

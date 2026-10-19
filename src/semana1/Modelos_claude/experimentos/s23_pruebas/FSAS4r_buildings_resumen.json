@@ -1,0 +1,137 @@
+{
+ "origen": "FSAP_buildings",
+ "line": "buildings",
+ "tope": 0.995,
+ "perils": {
+  "storm": {
+   "V23": {
+    "betas": [
+     0.6001
+    ],
+    "siniestros": 3737
+   },
+   "V24": {
+    "betas": [
+     0.5828
+    ],
+    "siniestros": 5868
+   },
+   "PROD": {
+    "betas": [
+     0.5816
+    ],
+    "siniestros": 7762
+   }
+  },
+  "flood": {
+   "V23": {
+    "betas": [
+     0.5892,
+     0.4139
+    ],
+    "siniestros": 1139
+   },
+   "V24": {
+    "betas": [
+     0.6244,
+     0.4195
+    ],
+    "siniestros": 1689
+   },
+   "PROD": {
+    "betas": [
+     0.6168,
+     0.433
+    ],
+    "siniestros": 2219
+   }
+  },
+  "escape_of_water": {
+   "V23": {
+    "betas": [
+     0.5499
+    ],
+    "siniestros": 4997
+   },
+   "V24": {
+    "betas": [
+     0.5837
+    ],
+    "siniestros": 7507
+   },
+   "PROD": {
+    "betas": [
+     0.5798
+    ],
+    "siniestros": 10065
+   }
+  },
+  "subsidence": {
+   "V23": {
+    "betas": [
+     0.4892
+    ],
+    "siniestros": 617
+   },
+   "V24": {
+    "betas": [
+     0.5685
+    ],
+    "siniestros": 997
+   },
+   "PROD": {
+    "betas": [
+     0.5412
+    ],
+    "siniestros": 1288
+   }
+  },
+  "fire": {
+   "V23": {
+    "betas": [
+     0.7289
+    ],
+    "siniestros": 519
+   },
+   "V24": {
+    "betas": [
+     0.8125
+    ],
+    "siniestros": 798
+   },
+   "PROD": {
+    "betas": [
+     0.7935
+    ],
+    "siniestros": 1107
+   }
+  },
+  "accidental_damage": {
+   "V23": {
+    "betas": [
+     0.2471
+    ],
+    "siniestros": 1869
+   },
+   "V24": {
+    "betas": [
+     0.2132
+    ],
+    "siniestros": 2836
+   },
+   "PROD": {
+    "betas": [
+     0.2339
+    ],
+    "siniestros": 3825
+   }
+  }
+ },
+ "d2_sel": 0.11519,
+ "d2_v24": 0.11454,
+ "pred_2025_total_CU": 69908363.44,
+ "referencia_cfs": {
+  "d2_sel": 0.10934,
+  "d2_v24": 0.11021
+ }
+}

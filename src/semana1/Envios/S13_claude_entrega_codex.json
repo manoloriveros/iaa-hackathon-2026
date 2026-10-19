@@ -1,0 +1,85 @@
+{
+ "id": "S13_claude_cfs_motor_forma",
+ "autor": "Claude (Modelos_claude y Evaluacion_integral_claude), madrugada del 18 de octubre",
+ "recomendacion": "Candidato recomendado; sustituye a S12, S11, S10 y S09b. Igual que S12 en hogar y mejor en autos.",
+ "archivo": "Hackaton/Semana 1/Envios/archivos/S13_claude_cfs_motor_forma.csv",
+ "sha256": "c1a3bccc8bdb174ede380aff400c3083063cbdd47dcda76a84c7711f3a7fd1d6",
+ "filas": 626639,
+ "columnas": [
+  "row_id",
+  "prediction"
+ ],
+ "total_CU": 213040510.29,
+ "por_ramo_CU": {
+  "motor": 117310608.47,
+  "buildings": 76723383.21,
+  "contents": 19006518.62
+ },
+ "tasa_2025_por_unidad_de_exposicion": {
+  "motor": 586.6,
+  "buildings": 510.7,
+  "contents": 126.6
+ },
+ "composicion": {
+  "motor": "CatBoost Tweedie F01234 (0,4), CatBoost Poisson por peligro x severidad media del peligro (0,4; nuevo, V23 0,0918 y V24 0,0886 solo), LightGBM F01234 (0,1), LightGBM reducido (0,1)",
+  "buildings": "50 % LightGBM Claude F0124 + 7 F3 (min_data_in_leaf 1000) y 50 % stack S08 de Codex",
+  "contents": "45 % LightGBM Claude F0124 + 7 F3, 30 % frecuencia por peligro x severidad gamma modelada, 25 % stack S08 de Codex",
+  "forma": "mu = e (e/ē)^(b-1) g (r/g)^a: autos (1,09; 0,95), edificios (1,08; 1,14), contenidos (1,07; 1)",
+  "nivel": "Componentes reescalados al total medio ponderado de los de Claude; factor de año siguiente por ramo (media V23/V24), una vez y sin segundo IBNR"
+ },
+ "validacion": {
+  "d2_v24_global_con_factor_v23": 0.13678,
+  "por_ramo": {
+   "motor": {
+    "d2_sel": 0.09401,
+    "d2_v24_f23": 0.09025,
+    "f23": 0.98832,
+    "f24": 1.01329,
+    "f": 1.0008
+   },
+   "buildings": {
+    "d2_sel": 0.11684,
+    "d2_v24_f23": 0.11552,
+    "f23": 1.01493,
+    "f24": 1.07719,
+    "f": 1.04606
+   },
+   "contents": {
+    "d2_sel": 0.089,
+    "d2_v24_f23": 0.09448,
+    "f23": 1.05862,
+    "f24": 1.06838,
+    "f": 1.0635
+   }
+  },
+  "pareada_V24": {
+   "frente_a_S12": {
+    "motor": "+0,00036 (P>0 0,90)",
+    "buildings": "0",
+    "contents": "0",
+    "global": "+0,00017 (P>0 0,93)"
+   },
+   "frente_a_S09b": {
+    "motor": "+0,00142 (P>0 0,96)",
+    "buildings": "+0,00108 (P>0 0,92)",
+    "contents": "+0,00128 (P>0 1,00)",
+    "global": "+0,00125 (P>0 0,993)"
+   }
+  },
+  "publico_esperado": "S09b obtuvo 0,12889 con V24 0,13552; con la ganancia pareada de +0,00125 y la respuesta observada del público (pendiente entre 0,86 y 1,17), S13 quedaría entre 0,1300 y 0,1303",
+  "contraste_de_nivel": "Tasas 2025: autos 586,6, edificios 510,7, contenidos 126,6; tendencias por peligro: 586,4, 513,0 y 126,1",
+  "limite": "V24 es desarrollo reutilizado; forma y pesos se eligieron mirando V23 y V24"
+ },
+ "autorizacion": {
+  "F3_hogar": "D80",
+  "envio": "Lo decide Codex con la autorización nocturna del participante; Claude no envía"
+ },
+ "controles_claude": [
+  "626.639 filas en el orden de sample_submission",
+  "columnas row_id,prediction",
+  "sin faltantes",
+  "mínimo 0.07063 > 0",
+  "SHA-256 recalculado tras la copia"
+ ],
+ "creado_utc": "2026-10-18T07:50:47Z"
+}

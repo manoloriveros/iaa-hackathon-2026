@@ -1,0 +1,7 @@
+{"recomendacion": "Estimación propia de Claude recomendada para la ventana de las 19:00; sustituye a S16_claude_propio (S17 fue un paso intermedio sin entrega). Frente a S09b mejora los tres ramos en V23 y en V24. El cambio respecto de S16: la frecuencia CatBoost por peligro deja de usar una severidad media constante y pasa a una severidad por capital asegurado en hogar y por valor y antigüedad del vehículo en autos.",
+ "composicion": {
+  "motor": "CatBoost Tweedie F01234 sin marketing_segment, cuatro semillas (0,2); CatBoost Poisson por peligro, cuatro semillas, con severidad por grupo de valor y antigüedad del vehículo en daños propios, robo y lunas (GLM gamma por peligro; CFSS_motor) (0,6); LightGBM F01234 (0,1); LightGBM reducido (0,1)",
+  "buildings": "LightGBM F0124 + siete F3 de D80 con min_data_in_leaf 1000 (0,5); CatBoost Poisson por peligro con severidad por capital asegurado y sótano en inundación (CFSS_buildings) (0,5)",
+  "contents": "LightGBM F0124 + siete F3 (0,3); red neuronal Tweedie (0,1); modelo aditivo por peligro con severidad gamma (0,4); CatBoost Poisson por peligro con severidad por capital (CFSS_contents) (0,2)",
+  "forma": "mu = e (e/ē)^(b-1) g (r/g)^a: autos (1,09; 0,95), edificios (1,08; 1,14), contenidos (1,07; 1)",
+  "nivel": "Referencia de nivel solo con los componentes cuyo total se mueve con el ancla del ramo entre V24 y 2025 (Tweedie de árboles y modelo aditivo); las frecuencias CatBoost y la red neuronal aportan relatividades. Factor de año siguiente por ramo (media V23/V24), una vez y sin segundo IBNR"}}

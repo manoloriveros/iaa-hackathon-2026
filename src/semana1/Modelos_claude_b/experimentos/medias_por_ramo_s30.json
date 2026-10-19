@@ -1,0 +1,182 @@
+{
+ "candidato": "S30",
+ "medias": {
+  "motor": {
+   "V23": {
+    "filas": 127361,
+    "media_predicha": 427.4453,
+    "a=0.75": {
+     "media_observada": 409.1052,
+     "observada_entre_predicha": 0.9571,
+     "d2": 0.094644
+    },
+    "a=1.0": {
+     "media_observada": 422.3458,
+     "observada_entre_predicha": 0.9881,
+     "d2": 0.094408
+    },
+    "a=1.25": {
+     "media_observada": 435.5863,
+     "observada_entre_predicha": 1.019,
+     "d2": 0.093868
+    }
+   },
+   "V24": {
+    "filas": 254698,
+    "media_predicha": 352.7674,
+    "a=0.75": {
+     "media_observada": 329.9502,
+     "observada_entre_predicha": 0.9353,
+     "d2": 0.092837
+    },
+    "a=1.0": {
+     "media_observada": 355.9784,
+     "observada_entre_predicha": 1.0091,
+     "d2": 0.091681
+    },
+    "a=1.25": {
+     "media_observada": 382.0065,
+     "observada_entre_predicha": 1.0829,
+     "d2": 0.088984
+    }
+   },
+   "2025": {
+    "filas": 254986,
+    "media_predicha": 466.3038
+   }
+  },
+  "buildings": {
+   "V23": {
+    "filas": 92214,
+    "media_predicha": 318.797,
+    "a=0.75": {
+     "media_observada": 346.6026,
+     "observada_entre_predicha": 1.0872,
+     "d2": 0.117722
+    },
+    "a=1.0": {
+     "media_observada": 351.423,
+     "observada_entre_predicha": 1.1023,
+     "d2": 0.116871
+    },
+    "a=1.25": {
+     "media_observada": 356.2435,
+     "observada_entre_predicha": 1.1175,
+     "d2": 0.115976
+    }
+   },
+   "V24": {
+    "filas": 184001,
+    "media_predicha": 333.068,
+    "a=0.75": {
+     "media_observada": 340.3309,
+     "observada_entre_predicha": 1.0218,
+     "d2": 0.117337
+    },
+    "a=1.0": {
+     "media_observada": 366.0521,
+     "observada_entre_predicha": 1.099,
+     "d2": 0.115798
+    },
+    "a=1.25": {
+     "media_observada": 391.7733,
+     "observada_entre_predicha": 1.1763,
+     "d2": 0.113079
+    }
+   },
+   "2025": {
+    "filas": 184155,
+    "media_predicha": 403.8241
+   }
+  },
+  "contents": {
+   "V23": {
+    "filas": 93940,
+    "media_predicha": 82.5019,
+    "a=0.75": {
+     "media_observada": 88.0496,
+     "observada_entre_predicha": 1.0672,
+     "d2": 0.092552
+    },
+    "a=1.0": {
+     "media_observada": 88.262,
+     "observada_entre_predicha": 1.0698,
+     "d2": 0.092594
+    },
+    "a=1.25": {
+     "media_observada": 88.4743,
+     "observada_entre_predicha": 1.0724,
+     "d2": 0.092634
+    }
+   },
+   "V24": {
+    "filas": 187491,
+    "media_predicha": 91.8435,
+    "a=0.75": {
+     "media_observada": 90.1204,
+     "observada_entre_predicha": 0.9812,
+     "d2": 0.096003
+    },
+    "a=1.0": {
+     "media_observada": 93.4233,
+     "observada_entre_predicha": 1.0172,
+     "d2": 0.09665
+    },
+    "a=1.25": {
+     "media_observada": 96.7263,
+     "observada_entre_predicha": 1.0532,
+     "d2": 0.096928
+    }
+   },
+   "2025": {
+    "filas": 187498,
+    "media_predicha": 99.7073
+   }
+  },
+  "agregado": {
+   "V23": {
+    "filas": 313515,
+    "media_predicha": 292.1316,
+    "a=0.75": {
+     "media_observada": 294.5219,
+     "observada_entre_predicha": 1.0082,
+     "d2": 0.144742
+    },
+    "a=1.0": {
+     "media_observada": 301.3822,
+     "observada_entre_predicha": 1.0317,
+     "d2": 0.145418
+    },
+    "a=1.25": {
+     "media_observada": 308.2424,
+     "observada_entre_predicha": 1.0551,
+     "d2": 0.145923
+    }
+   },
+   "V24": {
+    "filas": 626190,
+    "media_predicha": 268.8542,
+    "a=0.75": {
+     "media_observada": 261.1917,
+     "observada_entre_predicha": 0.9715,
+     "d2": 0.137236
+    },
+    "a=1.0": {
+     "media_observada": 280.3254,
+     "observada_entre_predicha": 1.0427,
+     "d2": 0.13788
+    },
+    "a=1.25": {
+     "media_observada": 299.4591,
+     "observada_entre_predicha": 1.1138,
+     "d2": 0.137208
+    }
+   }
+  }
+ },
+ "definiciones": {
+  "V23": "selección: entrenamiento 2021-22, evaluación 2023 con cal_half = 1; mezcla con forma y regla de nivel, sin factor (d2_sel)",
+  "V24": "entrenamiento 2021-23, evaluación 2024; mezcla con forma y regla de nivel por el factor ftw de V23 (d2_v24_f23)",
+  "a": "etiqueta T0 + (a - 1) x reserva de caso de los siniestros abiertos aceptados asignados a la fila"
+ }
+}

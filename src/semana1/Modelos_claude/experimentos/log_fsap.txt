@@ -1,0 +1,49 @@
+FSAP_buildings storm {'best_frec': 509, 'best_sev': 75, 'sev_media': 3146.9, 'd2_peligro_sev_modelo': 0.07122, 'd2_peligro_sev_constante': 0.06269} 18
+FSAP_buildings flood {'best_frec': 1215, 'best_sev': 0, 'sev_media': 28907.1, 'd2_peligro_sev_modelo': 0.4827, 'd2_peligro_sev_constante': 0.4827} 42
+FSAP_buildings escape_of_water {'best_frec': 966, 'best_sev': 415, 'sev_media': 5228.0, 'd2_peligro_sev_modelo': 0.06024, 'd2_peligro_sev_constante': 0.04932} 62
+FSAP_buildings subsidence {'best_frec': 749, 'best_sev': 0, 'sev_media': 22548.8, 'd2_peligro_sev_modelo': 0.08967, 'd2_peligro_sev_constante': 0.08967} 78
+FSAP_buildings fire {'best_frec': 240, 'best_sev': 0, 'sev_media': 52976.3, 'd2_peligro_sev_modelo': 0.05816, 'd2_peligro_sev_constante': 0.05816} 86
+FSAP_buildings accidental_damage {'best_frec': 610, 'best_sev': 35, 'sev_media': 1205.6, 'd2_peligro_sev_modelo': 0.16796, 'd2_peligro_sev_constante': 0.1677} 101
+FSAP_buildings V23 selección 0.10934
+FSAP_buildings V24 0.11021 366
+FSAP_buildings {"line": "buildings", "aditivo": true, "perils": {"storm": {"best_frec": 509, "best_sev": 75, "sev_media": 3146.9, "d2_peligro_sev_modelo": 0.07122, "d2_peligro_sev_constante": 0.06269}, "flood": {"best_frec": 1215, "best_sev": 0, "sev_media": 28907.1, "d2_peligro_sev_modelo": 0.4827, "d2_peligro_sev_constante": 0.4827}, "escape_of_water": {"best_frec": 966, "best_sev": 415, "sev_media": 5228.0, "d2_peligro_sev_modelo": 0.06024, "d2_peligro_sev_constante": 0.04932}, "subsidence": {"best_frec": 749, "best_sev": 0, "sev_media": 22548.8, "d2_peligro_sev_modelo": 0.08967, "d2_peligro_sev_constante": 0.08967}, "fire": {"best_frec": 240, "best_sev": 0, "sev_media": 52976.3, "d2_peligro_sev_modelo": 0.05816, "d2_peligro_sev_constante": 0.05816}, "accidental_damage": {"best_frec": 610, "best_sev": 35, "sev_media": 1205.6, "d2_peligro_sev_modelo": 0.16796, "d2_peligro_sev_constante": 0.1677}}, "d2_sel": 0.10934, "d2_v24": 0.11021, "pred_2025_total_CU": 68595084.63}
+{"origen": "FSAP_buildings", "line": "buildings", "d2_sel": 0.11521, "d2_v24": 0.11439, "pred_2025_total_CU": 70053296.93, "referencia_cfs": {"d2_sel": 0.10934, "d2_v24": 0.11021}}
+   storm {'V23': {'betas': [0.6106], 'siniestros': 3737}, 'V24': {'betas': [0.6005], 'siniestros': 5868}, 'PROD': {'betas': [0.5965], 'siniestros': 7762}}
+   flood {'V23': {'betas': [0.5984, 0.4188], 'siniestros': 1139}, 'V24': {'betas': [0.6389, 0.437], 'siniestros': 1689}, 'PROD': {'betas': [0.6344, 0.4425], 'siniestros': 2219}}
+   escape_of_water {'V23': {'betas': [0.5641], 'siniestros': 4997}, 'V24': {'betas': [0.5973], 'siniestros': 7507}, 'PROD': {'betas': [0.5935], 'siniestros': 10065}}
+   subsidence {'V23': {'betas': [0.4945], 'siniestros': 617}, 'V24': {'betas': [0.5844], 'siniestros': 997}, 'PROD': {'betas': [0.5524], 'siniestros': 1288}}
+   fire {'V23': {'betas': [0.7347], 'siniestros': 519}, 'V24': {'betas': [0.8241], 'siniestros': 798}, 'PROD': {'betas': [0.814], 'siniestros': 1107}}
+   accidental_damage {'V23': {'betas': [0.2495], 'siniestros': 1869}, 'V24': {'betas': [0.2141], 'siniestros': 2836}, 'PROD': {'betas': [0.2389], 'siniestros': 3825}}
+FSAP_contents theft {'best_frec': 1330, 'best_sev': 467, 'sev_media': 3484.8, 'd2_peligro_sev_modelo': 0.03289, 'd2_peligro_sev_constante': 0.01275} 34
+FSAP_contents escape_of_water {'best_frec': 559, 'best_sev': 55, 'sev_media': 2688.2, 'd2_peligro_sev_modelo': 0.03701, 'd2_peligro_sev_constante': 0.03267} 49
+FSAP_contents accidental_damage {'best_frec': 1469, 'best_sev': 51, 'sev_media': 759.7, 'd2_peligro_sev_modelo': 0.16984, 'd2_peligro_sev_constante': 0.16494} 77
+FSAP_contents flood {'best_frec': 1094, 'best_sev': 0, 'sev_media': 9225.6, 'd2_peligro_sev_modelo': 0.51251, 'd2_peligro_sev_constante': 0.51251} 97
+FSAP_contents V23 selección 0.08925
+FSAP_contents V24 0.09352 349
+FSAP_contents {"line": "contents", "aditivo": true, "perils": {"theft": {"best_frec": 1330, "best_sev": 467, "sev_media": 3484.8, "d2_peligro_sev_modelo": 0.03289, "d2_peligro_sev_constante": 0.01275}, "escape_of_water": {"best_frec": 559, "best_sev": 55, "sev_media": 2688.2, "d2_peligro_sev_modelo": 0.03701, "d2_peligro_sev_constante": 0.03267}, "accidental_damage": {"best_frec": 1469, "best_sev": 51, "sev_media": 759.7, "d2_peligro_sev_modelo": 0.16984, "d2_peligro_sev_constante": 0.16494}, "flood": {"best_frec": 1094, "best_sev": 0, "sev_media": 9225.6, "d2_peligro_sev_modelo": 0.51251, "d2_peligro_sev_constante": 0.51251}}, "d2_sel": 0.08925, "d2_v24": 0.09352, "pred_2025_total_CU": 17535316.5}
+{"origen": "FSAP_contents", "line": "contents", "d2_sel": 0.09175, "d2_v24": 0.0947, "pred_2025_total_CU": 17618258.97, "referencia_cfs": {"d2_sel": 0.08925, "d2_v24": 0.09352}}
+   theft {'V23': {'betas': [0.6902], 'siniestros': 3680}, 'V24': {'betas': [0.6815], 'siniestros': 5650}, 'PROD': {'betas': [0.6959], 'siniestros': 7626}}
+   escape_of_water {'V23': {'betas': [0.7821], 'siniestros': 2632}, 'V24': {'betas': [0.7281], 'siniestros': 4004}, 'PROD': {'betas': [0.7285], 'siniestros': 5366}}
+   accidental_damage {'V23': {'betas': [0.3814], 'siniestros': 4406}, 'V24': {'betas': [0.3846], 'siniestros': 6774}, 'PROD': {'betas': [0.3632], 'siniestros': 9063}}
+   flood {'V23': {'betas': [0.7767, -0.0206], 'siniestros': 806}, 'V24': {'betas': [0.7749, -0.0735], 'siniestros': 1254}, 'PROD': {'betas': [0.7603, -0.04], 'siniestros': 1615}}
+FSAP_motor own_damage {'best_frec': 4581, 'best_sev': 311, 'sev_media': 1763.8, 'd2_peligro_sev_modelo': 0.18117, 'd2_peligro_sev_constante': 0.16986} 376
+FSAP_motor third_party_prop {'best_frec': 3409, 'best_sev': 253, 'sev_media': 3413.6, 'd2_peligro_sev_modelo': 0.10252, 'd2_peligro_sev_constante': 0.10203} 570
+FSAP_motor bodily_injury {'best_frec': 739, 'best_sev': 10, 'sev_media': 21806.9, 'd2_peligro_sev_modelo': 0.07324, 'd2_peligro_sev_constante': 0.07326} 623
+FSAP_motor theft {'best_frec': 1094, 'best_sev': 57, 'sev_media': 5980.6, 'd2_peligro_sev_modelo': 0.09465, 'd2_peligro_sev_constante': 0.09279} 786
+FSAP_motor glass_hail {'best_frec': 1091, 'best_sev': 78, 'sev_media': 1001.1, 'd2_peligro_sev_modelo': 0.1533, 'd2_peligro_sev_constante': 0.1515} 1038
+FSAP_motor V23 selección 0.09096
+Traceback (most recent call last):
+  File "/home/claude/modelos_claude/severidad_cfs.py", line 119, in <module>
+    main()
+    ~~~~^^
+  File "/home/claude/modelos_claude/severidad_cfs.py", line 95, in main
+    part = sum(np.load(WORK / r / f"{'v24' if fold == 'V24' else 'prod'}_{p}.npy") for r in rr) / len(rr)
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/claude/modelos_claude/severidad_cfs.py", line 95, in <genexpr>
+    part = sum(np.load(WORK / r / f"{'v24' if fold == 'V24' else 'prod'}_{p}.npy") for r in rr) / len(rr)
+               ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/numpy/lib/_npyio_impl.py", line 454, in load
+    fid = stack.enter_context(open(os.fspath(file), "rb"))
+                              ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/claude/work/FSAP_motor/v24_theft.npy'
+FIN_COLA39

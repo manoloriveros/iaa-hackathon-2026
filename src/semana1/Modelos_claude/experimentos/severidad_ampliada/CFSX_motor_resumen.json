@@ -1,0 +1,149 @@
+{
+ "origen": {
+  "v23": "CFS_motor_v23",
+  "v24": [
+   "CFS_motor_s23"
+  ],
+  "prod": [
+   "CFS_motor",
+   "CFS_motor_s23"
+  ]
+ },
+ "line": "motor",
+ "lambda": 20.0,
+ "perils": {
+  "own_damage": {
+   "V23": {
+    "parametros": 10,
+    "siniestros": 24851,
+    "rel_p5_p95": [
+     0.573,
+     1.34
+    ]
+   },
+   "V24": {
+    "parametros": 10,
+    "siniestros": 36721,
+    "rel_p5_p95": [
+     0.554,
+     1.342
+    ]
+   },
+   "PROD": {
+    "parametros": 10,
+    "siniestros": 48258,
+    "rel_p5_p95": [
+     0.546,
+     1.336
+    ]
+   }
+  },
+  "third_party_prop": {
+   "V23": {
+    "parametros": 9,
+    "siniestros": 16980,
+    "rel_p5_p95": [
+     0.925,
+     1.074
+    ]
+   },
+   "V24": {
+    "parametros": 9,
+    "siniestros": 25337,
+    "rel_p5_p95": [
+     0.903,
+     1.069
+    ]
+   },
+   "PROD": {
+    "parametros": 9,
+    "siniestros": 32963,
+    "rel_p5_p95": [
+     0.913,
+     1.05
+    ]
+   }
+  },
+  "bodily_injury": {
+   "V23": {
+    "parametros": 7,
+    "siniestros": 4285,
+    "rel_p5_p95": [
+     0.912,
+     1.105
+    ]
+   },
+   "V24": {
+    "parametros": 7,
+    "siniestros": 6334,
+    "rel_p5_p95": [
+     0.848,
+     1.394
+    ]
+   },
+   "PROD": {
+    "parametros": 7,
+    "siniestros": 7512,
+    "rel_p5_p95": [
+     0.864,
+     1.35
+    ]
+   }
+  },
+  "theft": {
+   "V23": {
+    "parametros": 5,
+    "siniestros": 3015,
+    "rel_p5_p95": [
+     0.646,
+     1.233
+    ]
+   },
+   "V24": {
+    "parametros": 5,
+    "siniestros": 4616,
+    "rel_p5_p95": [
+     0.635,
+     1.242
+    ]
+   },
+   "PROD": {
+    "parametros": 5,
+    "siniestros": 6119,
+    "rel_p5_p95": [
+     0.618,
+     1.243
+    ]
+   }
+  },
+  "glass_hail": {
+   "V23": {
+    "parametros": 6,
+    "siniestros": 7511,
+    "rel_p5_p95": [
+     0.807,
+     1.153
+    ]
+   },
+   "V24": {
+    "parametros": 6,
+    "siniestros": 11623,
+    "rel_p5_p95": [
+     0.807,
+     1.155
+    ]
+   },
+   "PROD": {
+    "parametros": 6,
+    "siniestros": 15643,
+    "rel_p5_p95": [
+     0.814,
+     1.148
+    ]
+   }
+  }
+ },
+ "d2_sel": 0.09259,
+ "d2_v24": 0.09107,
+ "pred_2025_total_CU": 110026451.96
+}

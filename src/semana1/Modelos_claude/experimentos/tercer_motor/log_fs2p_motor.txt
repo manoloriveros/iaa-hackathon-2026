@@ -1,0 +1,15 @@
+FS2P_motor own_damage {'best_frec': 2787, 'best_sev': 176, 'sev_media': 1763.8, 'd2_peligro_sev_modelo': 0.17948, 'd2_peligro_sev_constante': 0.16871} 205
+FS2P_motor third_party_prop {'best_frec': 1970, 'best_sev': 154, 'sev_media': 3413.6, 'd2_peligro_sev_modelo': 0.10117, 'd2_peligro_sev_constante': 0.10149} 334
+FS2P_motor bodily_injury {'best_frec': 740, 'best_sev': 10, 'sev_media': 21806.9, 'd2_peligro_sev_modelo': 0.07319, 'd2_peligro_sev_constante': 0.07317} 389
+FS2P_motor theft {'best_frec': 442, 'best_sev': 35, 'sev_media': 5980.6, 'd2_peligro_sev_modelo': 0.09162, 'd2_peligro_sev_constante': 0.08948} 427
+FS2P_motor glass_hail {'best_frec': 584, 'best_sev': 77, 'sev_media': 1001.1, 'd2_peligro_sev_modelo': 0.15398, 'd2_peligro_sev_constante': 0.15237} 474
+FS2P_motor V23 selección 0.09104
+FS2P_motor V24 0.08888 4246
+FS2P_motor {"line": "motor", "aditivo": false, "perils": {"own_damage": {"best_frec": 2787, "best_sev": 176, "sev_media": 1763.8, "d2_peligro_sev_modelo": 0.17948, "d2_peligro_sev_constante": 0.16871}, "third_party_prop": {"best_frec": 1970, "best_sev": 154, "sev_media": 3413.6, "d2_peligro_sev_modelo": 0.10117, "d2_peligro_sev_constante": 0.10149}, "bodily_injury": {"best_frec": 740, "best_sev": 10, "sev_media": 21806.9, "d2_peligro_sev_modelo": 0.07319, "d2_peligro_sev_constante": 0.07317}, "theft": {"best_frec": 442, "best_sev": 35, "sev_media": 5980.6, "d2_peligro_sev_modelo": 0.09162, "d2_peligro_sev_constante": 0.08948}, "glass_hail": {"best_frec": 584, "best_sev": 77, "sev_media": 1001.1, "d2_peligro_sev_modelo": 0.15398, "d2_peligro_sev_constante": 0.15237}}, "d2_sel": 0.09104, "d2_v24": 0.08888, "pred_2025_total_CU": 111546976.69}
+{"origen": "FS2P_motor", "line": "motor", "d2_sel": 0.09166, "d2_v24": 0.08926, "pred_2025_total_CU": 110867692.8, "referencia_cfs": {"d2_sel": 0.09104, "d2_v24": 0.08888}}
+   own_damage {'V23': {'betas': [0.3111, -0.4688], 'siniestros': 24851}, 'V24': {'betas': [0.3242, -0.4743], 'siniestros': 36721}, 'PROD': {'betas': [0.3221, -0.4754], 'siniestros': 48258}}
+   third_party_prop {'V23': {'betas': [], 'siniestros': 16980}, 'V24': {'betas': [], 'siniestros': 25337}, 'PROD': {'betas': [], 'siniestros': 32963}}
+   bodily_injury {'V23': {'betas': [], 'siniestros': 4285}, 'V24': {'betas': [], 'siniestros': 6334}, 'PROD': {'betas': [], 'siniestros': 7512}}
+   theft {'V23': {'betas': [0.3386, -0.3208], 'siniestros': 3015}, 'V24': {'betas': [0.3497, -0.3037], 'siniestros': 4616}, 'PROD': {'betas': [0.3549, -0.3258], 'siniestros': 6119}}
+   glass_hail {'V23': {'betas': [0.2752, 0.0564], 'siniestros': 7511}, 'V24': {'betas': [0.2738, 0.0672], 'siniestros': 11623}, 'PROD': {'betas': [0.2648, 0.0598], 'siniestros': 15643}}
+FIN_COLA44

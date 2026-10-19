@@ -1,0 +1,125 @@
+{
+ "origen": {
+  "v23": "FSAP_contents",
+  "v24": [
+   "FSAP_contents",
+   "FSAP2_contents"
+  ],
+  "prod": [
+   "FSAP_contents",
+   "FSAP2_contents"
+  ]
+ },
+ "line": "contents",
+ "lambda": 20.0,
+ "tope": 0.995,
+ "perils": {
+  "theft": {
+   "V23": {
+    "parametros": 8,
+    "siniestros": 3680,
+    "rel_p5_p95": [
+     0.5,
+     1.756
+    ]
+   },
+   "V24": {
+    "parametros": 8,
+    "siniestros": 5650,
+    "rel_p5_p95": [
+     0.511,
+     1.736
+    ]
+   },
+   "PROD": {
+    "parametros": 8,
+    "siniestros": 7626,
+    "rel_p5_p95": [
+     0.508,
+     1.769
+    ]
+   }
+  },
+  "escape_of_water": {
+   "V23": {
+    "parametros": 5,
+    "siniestros": 2632,
+    "rel_p5_p95": [
+     0.461,
+     1.713
+    ]
+   },
+   "V24": {
+    "parametros": 5,
+    "siniestros": 4004,
+    "rel_p5_p95": [
+     0.492,
+     1.667
+    ]
+   },
+   "PROD": {
+    "parametros": 5,
+    "siniestros": 5366,
+    "rel_p5_p95": [
+     0.495,
+     1.682
+    ]
+   }
+  },
+  "accidental_damage": {
+   "V23": {
+    "parametros": 2,
+    "siniestros": 4406,
+    "rel_p5_p95": [
+     0.695,
+     1.313
+    ]
+   },
+   "V24": {
+    "parametros": 2,
+    "siniestros": 6774,
+    "rel_p5_p95": [
+     0.694,
+     1.323
+    ]
+   },
+   "PROD": {
+    "parametros": 2,
+    "siniestros": 9063,
+    "rel_p5_p95": [
+     0.712,
+     1.309
+    ]
+   }
+  },
+  "flood": {
+   "V23": {
+    "parametros": 7,
+    "siniestros": 806,
+    "rel_p5_p95": [
+     0.465,
+     1.746
+    ]
+   },
+   "V24": {
+    "parametros": 7,
+    "siniestros": 1254,
+    "rel_p5_p95": [
+     0.475,
+     1.748
+    ]
+   },
+   "PROD": {
+    "parametros": 7,
+    "siniestros": 1615,
+    "rel_p5_p95": [
+     0.494,
+     1.775
+    ]
+   }
+  }
+ },
+ "d2_sel": 0.09292,
+ "d2_v24": 0.09545,
+ "pred_2025_total_CU": 17582866.94
+}

@@ -1,0 +1,20 @@
+{
+ "fecha_utc": "2026-10-18T16:07:00+00:00",
+ "que": "Repetición de S20_claude_propio en la máquina virtual del equipo con reproducir_mezcla.py, solo con los archivos de Modelos_claude y la plantilla de Datos/",
+ "orden": "python3 reproducir_mezcla.py experimentos/spec_s20_propio.json motor:1.09:0.95,buildings:1.08:1.14,contents:1.07:1 s17 S20_claude_propio 98f62b886cac00bd5abfd2c8d1efa842165e6d0554e16d9249c57ffc129c3659",
+ "sha256_entregado": "98f62b886cac00bd5abfd2c8d1efa842165e6d0554e16d9249c57ffc129c3659",
+ "sha256_repetido": "8353bcbbfff0e0717b5e6020d1a0b9b09e8b3dbd54a23400ef377edfe01a8413",
+ "coincide_byte_a_byte": false,
+ "filas_distintas": 1,
+ "dif_max_CU": 1e-06,
+ "total_entregado_CU": 214227019.91,
+ "total_repetido_CU": 214227019.91,
+ "lectura": "Una de las 626.639 predicciones cambia en la sexta cifra decimal (el redondeo de %.6f cae en el límite por una diferencia de último bit entre versiones de numpy); el resto coincide y el total es el mismo. Se considera reproducida con la tolerancia de una unidad en la última cifra impresa.",
+ "entorno": {
+  "python": "3.10.12",
+  "numpy": "2.2.6",
+  "pandas": "2.3.3",
+  "pyarrow": "25.0.1"
+ },
+ "alcance": "Repite la mezcla, la forma, la regla de nivel y el factor de año siguiente a partir de las predicciones guardadas de cada componente; no reentrena los componentes."
+}

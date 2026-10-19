@@ -1,0 +1,732 @@
+{
+ "id": "S21_claude_propio",
+ "autor": "Claude (Modelos_claude), 18 de octubre",
+ "linaje": "Estimación propia de Claude: ningún componente, total ni factor de Codex (acuerdo del foro, COD-20261018-001 y CLA-20261018-001)",
+ "recomendacion": "Estimación propia de Claude para la ventana de las 19:00; sustituye a S20_claude_propio. Respecto de S20 cambia contenidos (la frecuencia aditiva lleva una severidad GLM ampliada con covariables físicas: nivel de seguridad, objetos de valor, densidad urbana, tipo de vivienda, antigüedad y zona de inundación) y edificios promedia cuatro semillas en la frecuencia CatBoost por peligro; autos queda como en S18 y S20.",
+ "archivo": "Hackaton/Semana 1/Envios/archivos/S21_claude_propio.csv",
+ "sha256": "4e934f595ab7e64d4bcde0e50c5a0a676a2570f46748260a5b1b86c2523d211b",
+ "filas": 626639,
+ "columnas": [
+  "row_id",
+  "prediction"
+ ],
+ "total_CU": 214287079.57,
+ "por_ramo_CU": {
+  "motor": 118894299.7,
+  "buildings": 76215167.36,
+  "contents": 19177612.51
+ },
+ "tasa_2025_por_unidad_de_exposicion": {
+  "motor": 594.5,
+  "buildings": 507.3,
+  "contents": 127.7
+ },
+ "composicion": {
+  "motor": "CatBoost Tweedie F01234 sin marketing_segment, cuatro semillas (0,2); CatBoost Poisson por peligro, cuatro semillas, con severidad GLM gamma por grupo de valor y antigüedad del vehículo en daños propios, robo y lunas (CFSS_motor) (0,6); LightGBM F01234 (0,1); LightGBM reducido (0,1)",
+  "buildings": "LightGBM F0124 + siete F3 de D80 con min_data_in_leaf 1000 (0,4); CatBoost Poisson por peligro, cuatro semillas, con severidad GLM por capital y sótano en inundación (CFSS4_buildings) (0,3); frecuencia aditiva por peligro, cuatro semillas, con la misma severidad (FSAS4_buildings) (0,3)",
+  "contents": "LightGBM F0124 + siete F3 (0,2); red neuronal Tweedie (0,1); modelo aditivo por peligro con severidad gamma (FSA_contents) (0,2); frecuencia aditiva por peligro, cuatro semillas, con severidad GLM por capital ampliada con covariables físicas (FSAXc4_contents, severidad_cfs3.py) (0,5)",
+  "forma": "mu = e (e/ē)^(b-1) g (r/g)^a: autos (1,09; 0,95), edificios (1,08; 1,14), contenidos (1,07; 1)",
+  "nivel": "Regla s17 sin etiquetas: fuera de la referencia de nivel CFSS (autos -4,4 %, edificios con cuatro semillas según deriva_nivel_s21.json), la red de contenidos y FSAXc4 de contenidos (-1,53 %); dentro FSAS4 de edificios y los Tweedie de árboles. Factor de año siguiente por ramo (media V23/V24), una vez y sin segundo IBNR"
+ },
+ "validacion": {
+  "d2_v24_global_con_factor_v23": 0.13807,
+  "por_ramo": {
+   "motor": {
+    "d2_sel": 0.09439,
+    "d2_v24_f23": 0.09161,
+    "f23": 0.98635,
+    "f24": 1.00503,
+    "f": 0.99569
+   },
+   "buildings": {
+    "d2_sel": 0.11863,
+    "d2_v24_f23": 0.1164,
+    "f23": 0.991,
+    "f24": 1.06236,
+    "f": 1.02668
+   },
+   "contents": {
+    "d2_sel": 0.09141,
+    "d2_v24_f23": 0.09671,
+    "f23": 1.05684,
+    "f24": 1.07243,
+    "f": 1.06464
+   }
+  },
+  "pareada_frente_a_S09b": {
+   "V23_seleccion": {
+    "motor": "+0,00095 (P>0 0,896)",
+    "buildings": "+0,00350 (P>0 0,99)",
+    "contents": "+0,00345 (P>0 0,999)",
+    "global": "+0,00218 (P>0 1,0)"
+   },
+   "V24": {
+    "motor": "+0,00283 (P>0 0,999)",
+    "buildings": "+0,00203 (P>0 0,957)",
+    "contents": "+0,00350 (P>0 1,0)",
+    "global": "+0,00255 (P>0 1,0)"
+   },
+   "sin_el_0_1_por_ciento_superior_V23_V24": {
+    "motor": "+0,00075 / +0,00099",
+    "buildings": "-0,00335 / +0,00024",
+    "contents": "-0,00186 / -0,00086",
+    "global": "-0,00103 / +0,00036"
+   }
+  },
+  "d2_local_2024_mismos_IDs": {
+   "tabla": {
+    "motor": {
+     "CL": 0.09161,
+     "AG": 0.0893,
+     "H": 0.09071,
+     "S09b": 0.08877
+    },
+    "buildings": {
+     "CL": 0.1164,
+     "AG": 0.11451,
+     "H": 0.11582,
+     "S09b": 0.11437
+    },
+    "contents": {
+     "CL": 0.09671,
+     "AG": 0.09491,
+     "H": 0.09546,
+     "S09b": 0.09322
+    },
+    "agregado": {
+     "CL": 0.13807,
+     "AG": 0.1361,
+     "H": 0.13726,
+     "S09b": 0.13552
+    }
+   },
+   "nota": "CL es esta estimación; A_G y H ajustan su meta con validación cruzada por cliente dentro de 2024, así que su D² local es optimista frente a uno fuera de año"
+  },
+  "limite": "V23 y V24 ya se consultaron para elegir pesos y forma; no es validación nueva",
+  "intervalos_2024_frente_a_A_G_y_H": {
+   "valores": {
+    "motor": {
+     "frente_a_AG": "+0,00231; IC95 cliente [+0,00029; +0,00536], dirección [+0,00035; +0,00536]",
+     "frente_a_H": "+0,00090; IC95 cliente [-0,00031; +0,00260], dirección [-0,00034; +0,00277]"
+    },
+    "buildings": {
+     "frente_a_AG": "+0,00189; IC95 cliente [-0,00016; +0,00404], dirección [-0,00029; +0,00420]",
+     "frente_a_H": "+0,00058; IC95 cliente [-0,00122; +0,00243], dirección [-0,00128; +0,00256]"
+    },
+    "contents": {
+     "frente_a_AG": "+0,00180; IC95 cliente [-0,00004; +0,00365], dirección [-0,00010; +0,00367]",
+     "frente_a_H": "+0,00125; IC95 cliente [-0,00024; +0,00280], dirección [-0,00036; +0,00279]"
+    },
+    "agregado": {
+     "frente_a_AG": "+0,00198; IC95 cliente [+0,00068; +0,00352], dirección [+0,00066; +0,00364]",
+     "frente_a_H": "+0,00081; IC95 cliente [-0,00015; +0,00186], dirección [-0,00010; +0,00178]"
+    }
+   },
+   "metodo": "Modelos_claude/bootstrap_codex.py: 1.000 réplicas Poisson por grupo, denominador fijo; mismas filas y T0",
+   "nota": "A_G y H ajustan su meta dentro de 2024, así que la comparación local los favorece"
+  },
+  "frente_a_S20": {
+   "V23": {
+    "motor": "+0,00000 (P>0 0,0)",
+    "buildings": "+0,00000 (P>0 0,0)",
+    "contents": "+0,00044 (P>0 0,905)",
+    "global": "+0,00007 (P>0 0,929)"
+   },
+   "V24": {
+    "motor": "+0,00000 (P>0 0,0)",
+    "buildings": "-0,00003 (P>0 0,301)",
+    "contents": "+0,00028 (P>0 0,875)",
+    "global": "+0,00004 (P>0 0,785)"
+   },
+   "sin_el_0_1_por_ciento_superior_V23_V24": {
+    "motor": "+0,00000 / +0,00000",
+    "buildings": "+0,00000 / -0,00001",
+    "contents": "-0,00014 / -0,00024",
+    "global": "-0,00002 / -0,00005"
+   }
+  },
+  "reservas_de_caso_2024": {
+   "tabla": {
+    "0.75": {
+     "motor": {
+      "d2_S21_S20_H_A_G": [
+       0.09277,
+       0.09277,
+       0.092005,
+       0.090919
+      ],
+      "S21_menos_H": "+0,000764; IC95 cliente [-0,000293; +0,002244], dirección [-0,000339; +0,002411]",
+      "S21_menos_S20": "+0,000000; IC95 cliente [+0,000000; +0,000000], dirección [+0,000000; +0,000000]",
+      "S21_menos_A_G": "+0,001851; IC95 cliente [+0,000127; +0,004903], dirección [+0,000148; +0,004649]",
+      "diez_clientes_mas_favorables_frente_a_H": "+0,001025",
+      "frente_a_H_sin_esos_diez": "-0,000261"
+     },
+     "buildings": {
+      "d2_S21_S20_H_A_G": [
+       0.118058,
+       0.118095,
+       0.116803,
+       0.115793
+      ],
+      "S21_menos_H": "+0,001256; IC95 cliente [-0,000501; +0,003166], dirección [-0,000491; +0,003134]",
+      "S21_menos_S20": "-0,000037; IC95 cliente [-0,000156; +0,000090], dirección [-0,000153; +0,000087]",
+      "S21_menos_A_G": "+0,002266; IC95 cliente [+0,000150; +0,004468], dirección [-0,000029; +0,004626]",
+      "diez_clientes_mas_favorables_frente_a_H": "+0,001344",
+      "frente_a_H_sin_esos_diez": "-0,000088"
+     },
+     "contents": {
+      "d2_S21_S20_H_A_G": [
+       0.096032,
+       0.095722,
+       0.094646,
+       0.094343
+      ],
+      "S21_menos_H": "+0,001386; IC95 cliente [-0,000010; +0,002932], dirección [-0,000115; +0,002905]",
+      "S21_menos_S20": "+0,000310; IC95 cliente [-0,000165; +0,000805], dirección [-0,000155; +0,000787]",
+      "S21_menos_A_G": "+0,001689; IC95 cliente [-0,000084; +0,003431], dirección [-0,000035; +0,003447]",
+      "diez_clientes_mas_favorables_frente_a_H": "+0,001079",
+      "frente_a_H_sin_esos_diez": "+0,000307"
+     },
+     "agregado": {
+      "d2_S21_S20_H_A_G": [
+       0.137468,
+       0.137424,
+       0.136444,
+       0.135572
+      ],
+      "S21_menos_H": "+0,001024; IC95 cliente [+0,000138; +0,001935], dirección [+0,000205; +0,002008]",
+      "S21_menos_S20": "+0,000044; IC95 cliente [-0,000054; +0,000157], dirección [-0,000048; +0,000142]",
+      "S21_menos_A_G": "+0,001896; IC95 cliente [+0,000754; +0,003371], dirección [+0,000694; +0,003276]",
+      "diez_clientes_mas_favorables_frente_a_H": "+0,000732",
+      "frente_a_H_sin_esos_diez": "+0,000292"
+     }
+    },
+    "1.0": {
+     "motor": {
+      "d2_S21_S20_H_A_G": [
+       0.091605,
+       0.091605,
+       0.090707,
+       0.089296
+      ],
+      "S21_menos_H": "+0,000899; IC95 cliente [-0,000281; +0,002436], dirección [-0,000291; +0,002837]",
+      "S21_menos_S20": "+0,000000; IC95 cliente [+0,000000; +0,000000], dirección [+0,000000; +0,000000]",
+      "S21_menos_A_G": "+0,002310; IC95 cliente [+0,000364; +0,005418], dirección [+0,000288; +0,005602]",
+      "diez_clientes_mas_favorables_frente_a_H": "+0,001195",
+      "frente_a_H_sin_esos_diez": "-0,000296"
+     },
+     "buildings": {
+      "d2_S21_S20_H_A_G": [
+       0.116402,
+       0.116435,
+       0.115818,
+       0.114508
+      ],
+      "S21_menos_H": "+0,000584; IC95 cliente [-0,001151; +0,002453], dirección [-0,001216; +0,002498]",
+      "S21_menos_S20": "-0,000032; IC95 cliente [-0,000150; +0,000088], dirección [-0,000154; +0,000095]",
+      "S21_menos_A_G": "+0,001894; IC95 cliente [-0,000316; +0,004195], dirección [-0,000315; +0,004134]",
+      "diez_clientes_mas_favorables_frente_a_H": "+0,001336",
+      "frente_a_H_sin_esos_diez": "-0,000751"
+     },
+     "contents": {
+      "d2_S21_S20_H_A_G": [
+       0.096714,
+       0.096438,
+       0.095462,
+       0.094912
+      ],
+      "S21_menos_H": "+0,001252; IC95 cliente [-0,000286; +0,002760], dirección [-0,000271; +0,002921]",
+      "S21_menos_S20": "+0,000275; IC95 cliente [-0,000221; +0,000780], dirección [-0,000217; +0,000746]",
+      "S21_menos_A_G": "+0,001802; IC95 cliente [+0,000162; +0,003630], dirección [+0,000059; +0,003713]",
+      "diez_clientes_mas_favorables_frente_a_H": "+0,001092",
+      "frente_a_H_sin_esos_diez": "+0,000160"
+     },
+     "agregado": {
+      "d2_S21_S20_H_A_G": [
+       0.138073,
+       0.138034,
+       0.137258,
+       0.136096
+      ],
+      "S21_menos_H": "+0,000815; IC95 cliente [-0,000185; +0,001743], dirección [-0,000126; +0,001813]",
+      "S21_menos_S20": "+0,000039; IC95 cliente [-0,000061; +0,000140], dirección [-0,000061; +0,000138]",
+      "S21_menos_A_G": "+0,001977; IC95 cliente [+0,000608; +0,003534], dirección [+0,000773; +0,003504]",
+      "diez_clientes_mas_favorables_frente_a_H": "+0,000778",
+      "frente_a_H_sin_esos_diez": "+0,000037"
+     }
+    },
+    "1.25": {
+     "motor": {
+      "d2_S21_S20_H_A_G": [
+       0.088901,
+       0.088901,
+       0.087878,
+       0.086166
+      ],
+      "S21_menos_H": "+0,001023; IC95 cliente [-0,000315; +0,002869], dirección [-0,000367; +0,002948]",
+      "S21_menos_S20": "+0,000000; IC95 cliente [+0,000000; +0,000000], dirección [+0,000000; +0,000000]",
+      "S21_menos_A_G": "+0,002735; IC95 cliente [+0,000470; +0,006480], dirección [+0,000486; +0,006437]",
+      "diez_clientes_mas_favorables_frente_a_H": "+0,001358",
+      "frente_a_H_sin_esos_diez": "-0,000334",
+      "cambio_numerador_frente_a_H_por_peligro": {
+       "bodily_injury": 1617.691,
+       "glass_hail": 133.317,
+       "own_damage": 2332.373,
+       "theft": 500.974,
+       "third_party_prop": 201.697
+      }
+     },
+     "buildings": {
+      "d2_S21_S20_H_A_G": [
+       0.113575,
+       0.113603,
+       0.113615,
+       0.112025
+      ],
+      "S21_menos_H": "-0,000040; IC95 cliente [-0,001901; +0,001959], dirección [-0,002061; +0,001972]",
+      "S21_menos_S20": "-0,000028; IC95 cliente [-0,000154; +0,000088], dirección [-0,000149; +0,000090]",
+      "S21_menos_A_G": "+0,001550; IC95 cliente [-0,000769; +0,004300], dirección [-0,000702; +0,003913]",
+      "diez_clientes_mas_favorables_frente_a_H": "+0,001334",
+      "frente_a_H_sin_esos_diez": "-0,001374",
+      "cambio_numerador_frente_a_H_por_peligro": {
+       "accidental_damage": -93.587,
+       "escape_of_water": -3604.794,
+       "fire": -4445.156,
+       "flood": -3587.87,
+       "storm": -2149.971,
+       "subsidence": -1259.672
+      }
+     },
+     "contents": {
+      "d2_S21_S20_H_A_G": [
+       0.097024,
+       0.096782,
+       0.095902,
+       0.095113
+      ],
+      "S21_menos_H": "+0,001122; IC95 cliente [-0,000502; +0,002750], dirección [-0,000489; +0,002731]",
+      "S21_menos_S20": "+0,000242; IC95 cliente [-0,000243; +0,000733], dirección [-0,000233; +0,000755]",
+      "S21_menos_A_G": "+0,001911; IC95 cliente [+0,000026; +0,003858], dirección [+0,000026; +0,003844]",
+      "diez_clientes_mas_favorables_frente_a_H": "+0,001134",
+      "frente_a_H_sin_esos_diez": "-0,000012",
+      "cambio_numerador_frente_a_H_por_peligro": {
+       "accidental_damage": -172.762,
+       "escape_of_water": -360.598,
+       "flood": -344.179,
+       "theft": -480.613
+      }
+     },
+     "agregado": {
+      "d2_S21_S20_H_A_G": [
+       0.137365,
+       0.137332,
+       0.136743,
+       0.135311
+      ],
+      "S21_menos_H": "+0,000622; IC95 cliente [-0,000402; +0,001702], dirección [-0,000315; +0,001734]",
+      "S21_menos_S20": "+0,000033; IC95 cliente [-0,000070; +0,000133], dirección [-0,000066; +0,000126]",
+      "S21_menos_A_G": "+0,002054; IC95 cliente [+0,000653; +0,003916], dirección [+0,000539; +0,003866]",
+      "diez_clientes_mas_favorables_frente_a_H": "+0,000824",
+      "frente_a_H_sin_esos_diez": "-0,000202",
+      "cambio_numerador_frente_a_H_por_peligro": {
+       "accidental_damage": -266.349,
+       "bodily_injury": 1617.691,
+       "escape_of_water": -3965.392,
+       "fire": -4445.156,
+       "flood": -3932.049,
+       "glass_hail": 133.317,
+       "own_damage": 2332.373,
+       "storm": -2149.971,
+       "subsidence": -1259.672,
+       "theft": 20.361,
+       "third_party_prop": 201.697
+      }
+     }
+    }
+   },
+   "metodo": "Modelos_claude/influencia_reservas.py: etiqueta T0 + (a - 1) x reserva de caso de los abiertos aceptados (a = 0,75; 1; 1,25), predicciones sin cambio; IC95 por cliente; los diez clientes más favorables son un diagnóstico de influencia, no un criterio de descarte"
+  },
+  "semestres_2024": {
+   "tabla": {
+    "1.0": {
+     "motor_H1": {
+      "filas": 226877,
+      "peso_exposicion": 0.9667,
+      "madurez": 0.801,
+      "S21_menos_H": "+0,000934; IC95 cliente [-0,000319; +0,002745], dirección [-0,000329; +0,002779]",
+      "S21_menos_S20": "+0,000000; IC95 cliente [+0,000000; +0,000000], dirección [+0,000000; +0,000000]",
+      "S21_menos_A_G": "+0,002364; IC95 cliente [+0,000272; +0,005968], dirección [+0,000147; +0,005650]"
+     },
+     "motor_H2": {
+      "filas": 27821,
+      "peso_exposicion": 0.0333,
+      "madurez": 0.616,
+      "S21_menos_H": "+0,000609; IC95 cliente [-0,003277; +0,004869], dirección [-0,003157; +0,004837]",
+      "S21_menos_S20": "+0,000000; IC95 cliente [+0,000000; +0,000000], dirección [+0,000000; +0,000000]",
+      "S21_menos_A_G": "+0,002032; IC95 cliente [-0,002817; +0,006986], dirección [-0,002304; +0,007091]"
+     },
+     "buildings_H1": {
+      "filas": 166962,
+      "peso_exposicion": 0.9721,
+      "madurez": 0.929,
+      "S21_menos_H": "+0,000539; IC95 cliente [-0,001341; +0,002422], dirección [-0,001191; +0,002517]",
+      "S21_menos_S20": "-0,000036; IC95 cliente [-0,000168; +0,000097], dirección [-0,000162; +0,000093]",
+      "S21_menos_A_G": "+0,001845; IC95 cliente [-0,000160; +0,004248], dirección [-0,000114; +0,004188]"
+     },
+     "buildings_H2": {
+      "filas": 17039,
+      "peso_exposicion": 0.0279,
+      "madurez": 0.818,
+      "S21_menos_H": "+0,001616; IC95 cliente [-0,013859; +0,015580], dirección [-0,013947; +0,014415]",
+      "S21_menos_S20": "+0,000027; IC95 cliente [-0,000379; +0,000431], dirección [-0,000383; +0,000449]",
+      "S21_menos_A_G": "+0,003385; IC95 cliente [-0,016566; +0,019106], dirección [-0,015024; +0,018737]"
+     },
+     "contents_H1": {
+      "filas": 168680,
+      "peso_exposicion": 0.9696,
+      "madurez": 0.971,
+      "S21_menos_H": "+0,001549; IC95 cliente [+0,000014; +0,003058], dirección [-0,000187; +0,003249]",
+      "S21_menos_S20": "+0,000425; IC95 cliente [-0,000094; +0,000976], dirección [-0,000062; +0,000960]",
+      "S21_menos_A_G": "+0,002213; IC95 cliente [+0,000378; +0,004244], dirección [+0,000258; +0,004283]"
+     },
+     "contents_H2": {
+      "filas": 18811,
+      "peso_exposicion": 0.0304,
+      "madurez": 0.903,
+      "S21_menos_H": "-0,003379; IC95 cliente [-0,010229; +0,003085], dirección [-0,010711; +0,003599]",
+      "S21_menos_S20": "-0,002134; IC95 cliente [-0,003908; -0,000577], dirección [-0,003650; -0,000471]",
+      "S21_menos_A_G": "-0,004577; IC95 cliente [-0,011294; +0,001479], dirección [-0,010476; +0,001341]"
+     },
+     "agregado_H1": {
+      "filas": 562519,
+      "peso_exposicion": 0.9692,
+      "madurez": 0.891,
+      "S21_menos_H": "+0,000867; IC95 cliente [-0,000028; +0,001932], dirección [-0,000090; +0,001950]",
+      "S21_menos_S20": "+0,000065; IC95 cliente [-0,000041; +0,000165], dirección [-0,000038; +0,000169]",
+      "S21_menos_A_G": "+0,002055; IC95 cliente [+0,000749; +0,003712], dirección [+0,000641; +0,003752]"
+     },
+     "agregado_H2": {
+      "filas": 63671,
+      "peso_exposicion": 0.0308,
+      "madurez": 0.756,
+      "S21_menos_H": "+0,000205; IC95 cliente [-0,005527; +0,004663], dirección [-0,004910; +0,004723]",
+      "S21_menos_S20": "-0,000348; IC95 cliente [-0,000640; -0,000025], dirección [-0,000653; -0,000066]",
+      "S21_menos_A_G": "+0,001226; IC95 cliente [-0,003972; +0,006489], dirección [-0,004409; +0,006634]"
+     }
+    },
+    "1.25": {
+     "motor_H1": {
+      "filas": 226877,
+      "peso_exposicion": 0.9667,
+      "madurez": 0.801,
+      "S21_menos_H": "+0,000849; IC95 cliente [-0,000644; +0,002970], dirección [-0,000638; +0,002932]",
+      "S21_menos_S20": "+0,000000; IC95 cliente [+0,000000; +0,000000], dirección [+0,000000; +0,000000]",
+      "S21_menos_A_G": "+0,002506; IC95 cliente [+0,000054; +0,006156], dirección [+0,000138; +0,006338]"
+     },
+     "motor_H2": {
+      "filas": 27821,
+      "peso_exposicion": 0.0333,
+      "madurez": 0.616,
+      "S21_menos_H": "+0,003351; IC95 cliente [-0,000872; +0,008028], dirección [-0,000817; +0,008114]",
+      "S21_menos_S20": "+0,000000; IC95 cliente [+0,000000; +0,000000], dirección [+0,000000; +0,000000]",
+      "S21_menos_A_G": "+0,006026; IC95 cliente [+0,000998; +0,011590], dirección [+0,000940; +0,011663]"
+     },
+     "buildings_H1": {
+      "filas": 166962,
+      "peso_exposicion": 0.9721,
+      "madurez": 0.929,
+      "S21_menos_H": "+0,000186; IC95 cliente [-0,001706; +0,002202], dirección [-0,001807; +0,002243]",
+      "S21_menos_S20": "-0,000028; IC95 cliente [-0,000153; +0,000095], dirección [-0,000154; +0,000100]",
+      "S21_menos_A_G": "+0,001835; IC95 cliente [-0,000476; +0,004228], dirección [-0,000340; +0,004098]"
+     },
+     "buildings_H2": {
+      "filas": 17039,
+      "peso_exposicion": 0.0279,
+      "madurez": 0.818,
+      "S21_menos_H": "-0,004197; IC95 cliente [-0,020794; +0,010602], dirección [-0,022652; +0,009909]",
+      "S21_menos_S20": "-0,000047; IC95 cliente [-0,000488; +0,000387], dirección [-0,000494; +0,000382]",
+      "S21_menos_A_G": "-0,003270; IC95 cliente [-0,024874; +0,012758], dirección [-0,023983; +0,014342]"
+     },
+     "contents_H1": {
+      "filas": 168680,
+      "peso_exposicion": 0.9696,
+      "madurez": 0.971,
+      "S21_menos_H": "+0,001481; IC95 cliente [-0,000155; +0,003133], dirección [-0,000054; +0,003124]",
+      "S21_menos_S20": "+0,000400; IC95 cliente [-0,000120; +0,000982], dirección [-0,000067; +0,000941]",
+      "S21_menos_A_G": "+0,002365; IC95 cliente [+0,000361; +0,004290], dirección [+0,000403; +0,004308]"
+     },
+     "contents_H2": {
+      "filas": 18811,
+      "peso_exposicion": 0.0304,
+      "madurez": 0.903,
+      "S21_menos_H": "-0,004415; IC95 cliente [-0,011879; +0,002653], dirección [-0,012043; +0,003358]",
+      "S21_menos_S20": "-0,002244; IC95 cliente [-0,004015; -0,000381], dirección [-0,004050; -0,000522]",
+      "S21_menos_A_G": "-0,004968; IC95 cliente [-0,012295; +0,001541], dirección [-0,012002; +0,001026]"
+     },
+     "agregado_H1": {
+      "filas": 562519,
+      "peso_exposicion": 0.9692,
+      "madurez": 0.891,
+      "S21_menos_H": "+0,000689; IC95 cliente [-0,000275; +0,001875], dirección [-0,000276; +0,001902]",
+      "S21_menos_S20": "+0,000062; IC95 cliente [-0,000038; +0,000168], dirección [-0,000043; +0,000165]",
+      "S21_menos_A_G": "+0,002135; IC95 cliente [+0,000649; +0,003991], dirección [+0,000690; +0,003909]"
+     },
+     "agregado_H2": {
+      "filas": 63671,
+      "peso_exposicion": 0.0308,
+      "madurez": 0.756,
+      "S21_menos_H": "-0,000250; IC95 cliente [-0,005505; +0,004662], dirección [-0,005202; +0,004866]",
+      "S21_menos_S20": "-0,000382; IC95 cliente [-0,000702; -0,000062], dirección [-0,000750; -0,000092]",
+      "S21_menos_A_G": "+0,001269; IC95 cliente [-0,005081; +0,006708], dirección [-0,005264; +0,007449]"
+     }
+    }
+   },
+   "metodo": "Modelos_claude/semestres.py: semestre de inicio del periodo (H1 enero-junio, H2 julio-diciembre); madurez = exposición efectiva / nominal; IC95 por cliente y, si se calculó, por dirección"
+  },
+  "seleccion_de_pesos": "Contenidos: rejilla de 0,1 en el símplex con el criterio de la peor de las dos mejoras (V23 y V24) frente a S20, declarado en CLA-20261018-006 y CLA-20261018-009; edificios cambia solo por las dos semillas añadidas de CFSS, adoptadas sin mirar su resultado; autos sin cambios. V23 y V24 entran en la elección: no es validación nueva",
+  "regla_de_nivel": {
+   "metodo": "mezcla3.py --nivel=s17: fuera de la referencia de nivel los componentes cuyo total 2025/V24 se aparta más de un 1,5 % del ancla del ramo",
+   "deriva_por_componente": {
+    "motor": {
+     "CAT_motor_4s": 0.0,
+     "CFSS_motor": -0.044,
+     "S04b_lgbm_F0124_F3autos": -0.0073,
+     "S06c_lgbm_motor_red": 0.0001
+    },
+    "buildings": {
+     "S12h_edif_md1000": 0.0,
+     "CFSS4_buildings": -0.0172,
+     "FSAS4_buildings": 0.0006
+    },
+    "contents": {
+     "S08h_hogar_F3s2": 0.0,
+     "MLP3_contents": -0.1682,
+     "FSA_contents": -0.0017,
+     "FSAXc4_contents": -0.0153
+    }
+   }
+  },
+  "nota_semestres": "Frente a S20, contenidos gana en el primer semestre de inicio (+0,00043 nominal) y pierde en el segundo (-0,00213, IC95 por cliente [-0,00391; -0,00058]), una cohorte de 18.811 filas con el 3,0 % de la exposición y madurez 0,90. La pérdida del segundo semestre la explican diez filas con siniestro (sin ellas la diferencia de devianza pasa de -1.483 a -103) y los cocientes real/esperado del semestre son iguales en S20 y S21 (0,915): es un diagnóstico de influencia, no un cambio de nivel",
+  "severidad_ampliada": "severidad_cfs3.py: GLM gamma por peligro con el capital (sin penalizar) y covariables F0 fijadas antes de mirar resultados, con ridge 20 solo en las nuevas. Contenidos (adoptada): robo con nivel de seguridad, objetos de valor y densidad urbana; escape de agua con tipo de vivienda y antigüedad; daños accidentales con objetos de valor; inundación con sótano y zona de inundación. La frecuencia aditiva con esa severidad pasa de 0,09175 a 0,09286 en V23 y de 0,09459 a 0,09542 en V24. En edificios y autos empeora V23 y no se adopta",
+  "medias_por_ramo": {
+   "tabla": {
+    "motor": {
+     "V23": {
+      "filas": 127361,
+      "media_predicha": 427.4281,
+      "a=0.75": {
+       "media_observada": 409.1052,
+       "observada_entre_predicha": 0.9571,
+       "d2": 0.094628
+      },
+      "a=1.0": {
+       "media_observada": 422.3458,
+       "observada_entre_predicha": 0.9881,
+       "d2": 0.094391
+      },
+      "a=1.25": {
+       "media_observada": 435.5863,
+       "observada_entre_predicha": 1.0191,
+       "d2": 0.09385
+      }
+     },
+     "V24": {
+      "filas": 254698,
+      "media_predicha": 352.7484,
+      "a=0.75": {
+       "media_observada": 329.9502,
+       "observada_entre_predicha": 0.9354,
+       "d2": 0.09277
+      },
+      "a=1.0": {
+       "media_observada": 355.9784,
+       "observada_entre_predicha": 1.0092,
+       "d2": 0.091605
+      },
+      "a=1.25": {
+       "media_observada": 382.0065,
+       "observada_entre_predicha": 1.0829,
+       "d2": 0.088901
+      }
+     },
+     "2025": {
+      "filas": 254986,
+      "media_predicha": 466.2778
+     }
+    },
+    "buildings": {
+     "V23": {
+      "filas": 92214,
+      "media_predicha": 351.0662,
+      "a=0.75": {
+       "media_observada": 346.6026,
+       "observada_entre_predicha": 0.9873,
+       "d2": 0.119291
+      },
+      "a=1.0": {
+       "media_observada": 351.423,
+       "observada_entre_predicha": 1.001,
+       "d2": 0.118629
+      },
+      "a=1.25": {
+       "media_observada": 356.2435,
+       "observada_entre_predicha": 1.0147,
+       "d2": 0.117919
+      }
+     },
+     "V24": {
+      "filas": 184001,
+      "media_predicha": 342.2524,
+      "a=0.75": {
+       "media_observada": 340.3309,
+       "observada_entre_predicha": 0.9944,
+       "d2": 0.118058
+      },
+      "a=1.0": {
+       "media_observada": 366.0521,
+       "observada_entre_predicha": 1.0695,
+       "d2": 0.116402
+      },
+      "a=1.25": {
+       "media_observada": 391.7733,
+       "observada_entre_predicha": 1.1447,
+       "d2": 0.113575
+      }
+     },
+     "2025": {
+      "filas": 184155,
+      "media_predicha": 413.8642
+     }
+    },
+    "contents": {
+     "V23": {
+      "filas": 93940,
+      "media_predicha": 86.5654,
+      "a=0.75": {
+       "media_observada": 88.0496,
+       "observada_entre_predicha": 1.0171,
+       "d2": 0.091365
+      },
+      "a=1.0": {
+       "media_observada": 88.262,
+       "observada_entre_predicha": 1.0196,
+       "d2": 0.091414
+      },
+      "a=1.25": {
+       "media_observada": 88.4743,
+       "observada_entre_predicha": 1.0221,
+       "d2": 0.091461
+      }
+     },
+     "V24": {
+      "filas": 187491,
+      "media_predicha": 94.4922,
+      "a=0.75": {
+       "media_observada": 90.1204,
+       "observada_entre_predicha": 0.9537,
+       "d2": 0.096032
+      },
+      "a=1.0": {
+       "media_observada": 93.4233,
+       "observada_entre_predicha": 0.9887,
+       "d2": 0.096714
+      },
+      "a=1.25": {
+       "media_observada": 96.7263,
+       "observada_entre_predicha": 1.0236,
+       "d2": 0.097024
+      }
+     },
+     "2025": {
+      "filas": 187498,
+      "media_predicha": 102.2817
+     }
+    },
+    "agregado": {
+     "V23": {
+      "filas": 313515,
+      "media_predicha": 302.8335,
+      "a=0.75": {
+       "media_observada": 294.5219,
+       "observada_entre_predicha": 0.9726,
+       "d2": 0.145058
+      },
+      "a=1.0": {
+       "media_observada": 301.3822,
+       "observada_entre_predicha": 0.9952,
+       "d2": 0.145797
+      },
+      "a=1.25": {
+       "media_observada": 308.2424,
+       "observada_entre_predicha": 1.0179,
+       "d2": 0.146364
+      }
+     },
+     "V24": {
+      "filas": 626190,
+      "media_predicha": 272.3384,
+      "a=0.75": {
+       "media_observada": 261.1917,
+       "observada_entre_predicha": 0.9591,
+       "d2": 0.137468
+      },
+      "a=1.0": {
+       "media_observada": 280.3254,
+       "observada_entre_predicha": 1.0293,
+       "d2": 0.138073
+      },
+      "a=1.25": {
+       "media_observada": 299.4591,
+       "observada_entre_predicha": 1.0996,
+       "d2": 0.137365
+      }
+     }
+    }
+   },
+   "definiciones": {
+    "V23": "selección: entrenamiento 2021-22, evaluación 2023 con cal_half = 1; mezcla con forma y regla de nivel, sin factor (d2_sel)",
+    "V24": "entrenamiento 2021-23, evaluación 2024; mezcla con forma y regla de nivel por el factor ftw de V23 (d2_v24_f23)",
+    "a": "etiqueta T0 + (a - 1) x reserva de caso de los siniestros abiertos aceptados asignados a la fila"
+   },
+   "metodo": "Modelos_claude/exportar_predicciones.py (experimentos/medias_por_ramo_s21.json)"
+  }
+ },
+ "autorizacion": {
+  "F3_hogar": "D80",
+  "envio": "Lo coordina Codex con autorización del participante; Claude no envía"
+ },
+ "controles_claude": [
+  "626.639 filas en el orden de sample_submission",
+  "columnas row_id,prediction",
+  "sin faltantes",
+  "mínimo 0.05983 > 0",
+  "SHA-256 recalculado tras la copia"
+ ],
+ "creado_utc": "2026-10-18T19:03:23Z",
+ "publico_simulado": "En 1.000 subconjuntos aleatorios del 30 % de los clientes, S21 supera a S09b en el 99,6 % de los casos en V24 y el 98,4 % en V23, y a S20 en el 67,8 % (V24) y el 79,1 % (V23) (Modelos_claude/experimentos/publico_simulado_s21.json)",
+ "reproduccion": "En el equipo: python3 reproducir_mezcla.py experimentos/spec_s21_propio.json motor:1.09:0.95,buildings:1.08:1.14,contents:1.07:1 s17 S21_claude_propio 4e934f595ab7e64d4bcde0e50c5a0a676a2570f46748260a5b1b86c2523d211b (desde Modelos_claude; repite la mezcla a partir de las predicciones guardadas de cada componente)",
+ "predicciones_por_fila_v23_v24": {
+  "archivo": "Hackaton/Semana 1/Modelos_claude/experimentos/predicciones_v23_v24_s21.parquet",
+  "sha256": "8cadcbdde21edd47a475b114ea920b3ad86a375467292b4fa00e6c1ff3b6d980",
+  "columnas": [
+   "row_id",
+   "line",
+   "corte",
+   "y_T0",
+   "reserva_caso",
+   "prediction"
+  ],
+  "nota": "las mismas predicciones que miden d2_sel (V23, sin factor) y d2_v24_f23 (V24, con el factor de V23); reserva_caso permite rehacer T0 + (a - 1) x reserva"
+ },
+ "criterio_fijado_antes_de_resultados": {
+  "regla_de_pesos": "Rejilla de 0,1 en el símplex con la peor de las dos mejoras (V23 y V24) frente al candidato vigente (rejilla_pesos.py), fijada en CLA-20261018-006 cuando los cortes discreparon sobre contenidos y aplicada igual en S20 y S21",
+  "regla_de_nivel": "mezcla3.py --nivel=s17: fuera de la referencia de nivel los componentes cuyo total 2025/V24 se aparta más de un 1,5 % del ancla del ramo; se calcula sin etiquetas",
+  "regla_de_adopcion": "Un componente o cambio de método entra solo si mejora el ramo en V23 y en V24",
+  "fijado_en_CLA_20261018_009_antes_de_ver": [
+   "Las dos semillas nuevas de la frecuencia CatBoost de edificios (CFSS4) se adoptan sin mirar su resultado: en V24 el ramo baja 0,00003 frente a S20 (robustez_s21_frente_s20.json) y se mantienen",
+   "Tercer motor de frecuencia (LightGBM por peligro de profundidad intermedia, frecsev2.py sin --aditivo): entra solo si la rejilla de la peor mejora sube el agregado al menos +0,0001 en V23 y V24 frente al candidato vigente; estaba en curso al cerrar S21"
+  ],
+  "medido_antes_de_fijar": "La severidad ampliada (severidad_cfs3.py) se midió antes de escribir CLA-20261018-009. Las covariables de cada peligro se eligieron por razones físicas antes de ajustar, pero adoptarla solo en contenidos se decidió viendo V23 y V24 con la regla de adopción; edificios y autos quedaron fuera con la misma regla, y una variante con ridge diez veces mayor también se midió y se descartó",
+  "limite": "V23 y V24 entran en la elección. La peor de las dos mejoras limita el sobreajuste a un solo corte, pero no crea validación independiente (COD-20261018-046); el único contraste externo es el marcador público"
+ }
+}

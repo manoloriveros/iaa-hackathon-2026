@@ -1,0 +1,174 @@
+{
+ "origen": {
+  "v23": "CFS_buildings",
+  "v24": [
+   "CFS_buildings"
+  ],
+  "prod": [
+   "CFS_buildings"
+  ]
+ },
+ "line": "buildings",
+ "lambda": 20.0,
+ "perils": {
+  "storm": {
+   "V23": {
+    "parametros": 9,
+    "siniestros": 3737,
+    "rel_p5_p95": [
+     0.576,
+     1.378
+    ]
+   },
+   "V24": {
+    "parametros": 9,
+    "siniestros": 5868,
+    "rel_p5_p95": [
+     0.597,
+     1.384
+    ]
+   },
+   "PROD": {
+    "parametros": 9,
+    "siniestros": 7762,
+    "rel_p5_p95": [
+     0.603,
+     1.395
+    ]
+   }
+  },
+  "flood": {
+   "V23": {
+    "parametros": 11,
+    "siniestros": 1139,
+    "rel_p5_p95": [
+     0.63,
+     1.553
+    ]
+   },
+   "V24": {
+    "parametros": 11,
+    "siniestros": 1689,
+    "rel_p5_p95": [
+     0.577,
+     1.562
+    ]
+   },
+   "PROD": {
+    "parametros": 11,
+    "siniestros": 2219,
+    "rel_p5_p95": [
+     0.601,
+     1.653
+    ]
+   }
+  },
+  "escape_of_water": {
+   "V23": {
+    "parametros": 7,
+    "siniestros": 4997,
+    "rel_p5_p95": [
+     0.638,
+     1.407
+    ]
+   },
+   "V24": {
+    "parametros": 7,
+    "siniestros": 7507,
+    "rel_p5_p95": [
+     0.624,
+     1.448
+    ]
+   },
+   "PROD": {
+    "parametros": 7,
+    "siniestros": 10065,
+    "rel_p5_p95": [
+     0.629,
+     1.456
+    ]
+   }
+  },
+  "subsidence": {
+   "V23": {
+    "parametros": 10,
+    "siniestros": 617,
+    "rel_p5_p95": [
+     0.671,
+     1.352
+    ]
+   },
+   "V24": {
+    "parametros": 10,
+    "siniestros": 997,
+    "rel_p5_p95": [
+     0.617,
+     1.381
+    ]
+   },
+   "PROD": {
+    "parametros": 11,
+    "siniestros": 1288,
+    "rel_p5_p95": [
+     0.644,
+     1.382
+    ]
+   }
+  },
+  "fire": {
+   "V23": {
+    "parametros": 9,
+    "siniestros": 519,
+    "rel_p5_p95": [
+     0.599,
+     1.489
+    ]
+   },
+   "V24": {
+    "parametros": 9,
+    "siniestros": 798,
+    "rel_p5_p95": [
+     0.553,
+     1.572
+    ]
+   },
+   "PROD": {
+    "parametros": 9,
+    "siniestros": 1107,
+    "rel_p5_p95": [
+     0.55,
+     1.595
+    ]
+   }
+  },
+  "accidental_damage": {
+   "V23": {
+    "parametros": 4,
+    "siniestros": 1869,
+    "rel_p5_p95": [
+     0.821,
+     1.158
+    ]
+   },
+   "V24": {
+    "parametros": 4,
+    "siniestros": 2836,
+    "rel_p5_p95": [
+     0.849,
+     1.141
+    ]
+   },
+   "PROD": {
+    "parametros": 4,
+    "siniestros": 3825,
+    "rel_p5_p95": [
+     0.834,
+     1.166
+    ]
+   }
+  }
+ },
+ "d2_sel": 0.11483,
+ "d2_v24": 0.11331,
+ "pred_2025_total_CU": 68475887.78
+}

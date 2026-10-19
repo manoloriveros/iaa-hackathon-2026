@@ -1,0 +1,125 @@
+motor {'d2_sel': 0.09439, 'd2_v24_f23': 0.09161, 'f23': 0.98635, 'f24': 1.00503, 'f': 0.99569}
+buildings {'d2_sel': 0.11863, 'd2_v24_f23': 0.11643, 'f23': 0.991, 'f24': 1.06228, 'f': 1.02664}
+contents {'d2_sel': 0.09098, 'd2_v24_f23': 0.09644, 'f23': 1.0536, 'f24': 1.06917, 'f': 1.06138}
+global V24 0.13803 público esperado 0.12921
+{
+ "path": "/home/claude/work/S20_claude_propio/S20_claude_propio.csv",
+ "sha256": "98f62b886cac00bd5abfd2c8d1efa842165e6d0554e16d9249c57ffc129c3659",
+ "rows": 626639,
+ "total_CU": 214227019.91,
+ "by_line_CU": {
+  "motor": 118894299.7,
+  "buildings": 76214222.31,
+  "contents": 19118497.9
+ }
+}
+== S18 frente a S09b
+  V23 motor     dif +0.00095  P>0 0.888  IC90 [-0.00031, +0.00236]  sin top 0,1 % +0.00075  renivelado +0.00095  sin top renivelado +0.00071  nivel 1.0057
+  V23 buildings dif +0.00309  P>0 0.975  IC90 [+0.00052, +0.00573]  sin top 0,1 % -0.00247  renivelado +0.00271  sin top renivelado +0.00055  nivel 1.0749
+  V23 contents  dif +0.00250  P>0 0.994  IC90 [+0.00078, +0.00415]  sin top 0,1 % -0.00166  renivelado +0.00220  sin top renivelado -0.00104  nivel 1.0381
+  V23 global    dif +0.00189  P>0 0.999  IC90 [+0.00085, +0.00296]  sin top 0,1 % -0.00072
+  V24 motor     dif +0.00283  P>0 1.000  IC90 [+0.00092, +0.00576]  sin top 0,1 % +0.00099  renivelado +0.00278  sin top renivelado +0.00123  nivel 1.0132
+  V24 buildings dif +0.00154  P>0 0.879  IC90 [-0.00052, +0.00358]  sin top 0,1 % -0.00091  renivelado +0.00150  sin top renivelado -0.00111  nivel 1.0372
+  V24 contents  dif +0.00290  P>0 0.999  IC90 [+0.00158, +0.00441]  sin top 0,1 % -0.00033  renivelado +0.00292  sin top renivelado -0.00131  nivel 1.0167
+  V24 global    dif +0.00227  P>0 1.000  IC90 [+0.00106, +0.00369]  sin top 0,1 % +0.00008
+== S20 frente a S09b
+  V23 motor     dif +0.00095  P>0 0.896  IC90 [-0.00026, +0.00227]  sin top 0,1 % +0.00075  renivelado +0.00095  sin top renivelado +0.00071  nivel 1.0057
+  V23 buildings dif +0.00350  P>0 0.990  IC90 [+0.00101, +0.00628]  sin top 0,1 % -0.00335  renivelado +0.00311  sin top renivelado +0.00151  nivel 1.0974
+  V23 contents  dif +0.00301  P>0 0.998  IC90 [+0.00098, +0.00506]  sin top 0,1 % -0.00172  renivelado +0.00277  sin top renivelado -0.00138  nivel 1.0406
+  V23 global    dif +0.00211  P>0 1.000  IC90 [+0.00100, +0.00313]  sin top 0,1 % -0.00101
+  V24 motor     dif +0.00283  P>0 0.999  IC90 [+0.00090, +0.00556]  sin top 0,1 % +0.00099  renivelado +0.00278  sin top renivelado +0.00123  nivel 1.0132
+  V24 buildings dif +0.00206  P>0 0.960  IC90 [+0.00014, +0.00431]  sin top 0,1 % +0.00026  renivelado +0.00215  sin top renivelado -0.00048  nivel 1.0295
+  V24 contents  dif +0.00322  P>0 1.000  IC90 [+0.00167, +0.00481]  sin top 0,1 % -0.00061  renivelado +0.00325  sin top renivelado -0.00169  nivel 1.0227
+  V24 global    dif +0.00252  P>0 1.000  IC90 [+0.00132, +0.00401]  sin top 0,1 % +0.00041
+== S20 frente a S18
+  V23 motor     dif +0.00000  P>0 0.000  IC90 [+0.00000, +0.00000]  sin top 0,1 % +0.00000  renivelado +0.00000  sin top renivelado +0.00000  nivel 1.0
+  V23 buildings dif +0.00041  P>0 0.744  IC90 [-0.00064, +0.00146]  sin top 0,1 % -0.00089  renivelado +0.00040  sin top renivelado +0.00097  nivel 1.0209
+  V23 contents  dif +0.00051  P>0 0.819  IC90 [-0.00041, +0.00139]  sin top 0,1 % -0.00007  renivelado +0.00056  sin top renivelado -0.00034  nivel 1.0024
+  V23 global    dif +0.00022  P>0 0.827  IC90 [-0.00012, +0.00060]  sin top 0,1 % -0.00029
+  V24 motor     dif +0.00000  P>0 0.000  IC90 [+0.00000, +0.00000]  sin top 0,1 % +0.00000  renivelado +0.00000  sin top renivelado +0.00000  nivel 1.0
+  V24 buildings dif +0.00053  P>0 0.957  IC90 [+0.00003, +0.00111]  sin top 0,1 % +0.00116  renivelado +0.00065  sin top renivelado +0.00063  nivel 0.9925
+  V24 contents  dif +0.00032  P>0 0.849  IC90 [-0.00020, +0.00085]  sin top 0,1 % -0.00028  renivelado +0.00032  sin top renivelado -0.00037  nivel 1.0059
+  V24 global    dif +0.00024  P>0 0.968  IC90 [+0.00003, +0.00047]  sin top 0,1 % +0.00033
+motor {'CL': (0.09161, 0.09166), 'AG': (0.0893, 0.08941), 'H': (0.09071, 0.09077), 'S09b': (0.08877, 0.08888), 'arit_0.3CL_AG': (0.09035, 0.09043), 'geom_0.3CL_AG': (0.09031, 0.09041), 'arit_0.5CL_AG': (0.09087, 0.09094), 'geom_0.5CL_AG': (0.09083, 0.09092), 'arit_0.7CL_AG': (0.09126, 0.09132), 'geom_0.7CL_AG': (0.09123, 0.0913), 'arit_0.3CL_H': (0.09118, 0.09123), 'geom_0.3CL_H': (0.09118, 0.09124), 'arit_0.5CL_H': (0.09139, 0.09145), 'geom_0.5CL_H': (0.0914, 0.09146), 'arit_0.7CL_H': (0.09154, 0.09159), 'geom_0.7CL_H': (0.09154, 0.0916)}
+buildings {'CL': (0.11643, 0.11707), 'AG': (0.11451, 0.11507), 'H': (0.11582, 0.11615), 'S09b': (0.11437, 0.11492), 'arit_0.3CL_AG': (0.11561, 0.11616), 'geom_0.3CL_AG': (0.11559, 0.11617), 'arit_0.5CL_AG': (0.11609, 0.11665), 'geom_0.5CL_AG': (0.11607, 0.11666), 'arit_0.7CL_AG': (0.11638, 0.11695), 'geom_0.7CL_AG': (0.11636, 0.11697), 'arit_0.3CL_H': (0.11637, 0.11676), 'geom_0.3CL_H': (0.11636, 0.11678), 'arit_0.5CL_H': (0.11657, 0.11701), 'geom_0.5CL_H': (0.11655, 0.11703), 'arit_0.7CL_H': (0.11663, 0.11714), 'geom_0.7CL_H': (0.11661, 0.11714)}
+contents {'CL': (0.09644, 0.09647), 'AG': (0.09491, 0.09492), 'H': (0.09546, 0.09547), 'S09b': (0.09322, 0.09322), 'arit_0.3CL_AG': (0.09591, 0.09592), 'geom_0.3CL_AG': (0.09586, 0.09588), 'arit_0.5CL_AG': (0.09631, 0.09632), 'geom_0.5CL_AG': (0.09626, 0.09628), 'arit_0.7CL_AG': (0.0965, 0.09652), 'geom_0.7CL_AG': (0.09647, 0.09649), 'arit_0.3CL_H': (0.09613, 0.09613), 'geom_0.3CL_H': (0.0961, 0.0961), 'arit_0.5CL_H': (0.0964, 0.0964), 'geom_0.5CL_H': (0.09636, 0.09637), 'arit_0.7CL_H': (0.09652, 0.09653), 'geom_0.7CL_H': (0.09649, 0.0965)}
+global {'CL': 0.13803, 'AG': 0.1361, 'H': 0.13726, 'S09b': 0.13552, 'arit_0.3CL_AG': 0.13711, 'geom_0.3CL_AG': 0.13708, 'arit_0.5CL_AG': 0.13758, 'geom_0.5CL_AG': 0.13754, 'arit_0.7CL_AG': 0.13788, 'geom_0.7CL_AG': 0.13785, 'arit_0.3CL_H': 0.13777, 'geom_0.3CL_H': 0.13777, 'arit_0.5CL_H': 0.13798, 'geom_0.5CL_H': 0.13797, 'arit_0.7CL_H': 0.13809, 'geom_0.7CL_H': 0.13808}
+motor {'CL_menos_AG': {'dif': 0.00231, 'ic95_cliente': [0.00029, 0.005365], 'ic95_direccion': [0.000349, 0.005356]}, 'CL_menos_H': {'dif': 0.000899, 'ic95_cliente': [-0.000314, 0.002601], 'ic95_direccion': [-0.000342, 0.002774]}}
+buildings {'CL_menos_AG': {'dif': 0.001926, 'ic95_cliente': [-0.000128, 0.004076], 'ic95_direccion': [-0.000278, 0.004284]}, 'CL_menos_H': {'dif': 0.000616, 'ic95_cliente': [-0.001191, 0.002453], 'ic95_direccion': [-0.001234, 0.002546]}}
+contents {'CL_menos_AG': {'dif': 0.001527, 'ic95_cliente': [-0.000227, 0.003265], 'ic95_direccion': [-0.000208, 0.00325]}, 'CL_menos_H': {'dif': 0.000976, 'ic95_cliente': [-0.000455, 0.002405], 'ic95_direccion': [-0.000633, 0.002406]}}
+agregado {'CL_menos_AG': {'dif': 0.001938, 'ic95_cliente': [0.000645, 0.00348], 'ic95_direccion': [0.000618, 0.003615]}, 'CL_menos_H': {'dif': 0.000777, 'ic95_cliente': [-0.000172, 0.001805], 'ic95_direccion': [-0.000141, 0.001749]}}
+V23 30 % S18-S09b {'media': 0.00185, 'P_mayor_que_0': 0.969, 'ic90': [0.0003, 0.00347]}
+V23 30 % S20-S09b {'media': 0.00209, 'P_mayor_que_0': 0.983, 'ic90': [0.00044, 0.00379]}
+V23 30 % S18-S20 {'media': -0.00024, 'P_mayor_que_0': 0.251, 'ic90': [-0.00083, 0.00029]}
+V23 50 % S18-S09b {'media': 0.0019, 'P_mayor_que_0': 0.998, 'ic90': [0.00076, 0.00299]}
+V23 50 % S20-S09b {'media': 0.00212, 'P_mayor_que_0': 0.997, 'ic90': [0.00092, 0.00331]}
+V23 50 % S18-S20 {'media': -0.00023, 'P_mayor_que_0': 0.181, 'ic90': [-0.00059, 0.00016]}
+V24 30 % S18-S09b {'media': 0.00225, 'P_mayor_que_0': 0.989, 'ic90': [0.00055, 0.00445]}
+V24 30 % S20-S09b {'media': 0.00249, 'P_mayor_que_0': 0.996, 'ic90': [0.00074, 0.00469]}
+V24 30 % S18-S20 {'media': -0.00025, 'P_mayor_que_0': 0.096, 'ic90': [-0.00057, 8e-05]}
+V24 50 % S18-S09b {'media': 0.00225, 'P_mayor_que_0': 1.0, 'ic90': [0.00103, 0.00347]}
+V24 50 % S20-S09b {'media': 0.00249, 'P_mayor_que_0': 1.0, 'ic90': [0.00122, 0.00372]}
+V24 50 % S18-S20 {'media': -0.00024, 'P_mayor_que_0': 0.038, 'ic90': [-0.00047, -1e-05]}
+a=0.75
+   motor D2 {'S20': 0.09277, 'S18': 0.09277, 'H': 0.092005, 'A_G': 0.090919}
+     frente a S18: +0.000000 IC95 cliente [0.0, 0.0] dirección [0.0, 0.0] diez +0.000000 sin ellos +0.000000
+     frente a H: +0.000764 IC95 cliente [-0.000293, 0.002244] dirección [-0.000339, 0.002411] diez +0.001025 sin ellos -0.000261
+     frente a A_G: +0.001851 IC95 cliente [0.000127, 0.004903] dirección [0.000148, 0.004649] diez +0.001783 sin ellos +0.000068
+   buildings D2 {'S20': 0.118095, 'S18': 0.117423, 'H': 0.116803, 'A_G': 0.115793}
+     frente a S18: +0.000672 IC95 cliente [6e-06, 0.001334] dirección [1e-06, 0.00136] diez +0.000506 sin ellos +0.000167
+     frente a H: +0.001292 IC95 cliente [-0.000489, 0.003226] dirección [-0.000483, 0.003223] diez +0.001330 sin ellos -0.000037
+     frente a A_G: +0.002302 IC95 cliente [0.000168, 0.004536] dirección [2.1e-05, 0.004674] diez +0.001679 sin ellos +0.000624
+   contents D2 {'S20': 0.095722, 'S18': 0.095415, 'H': 0.094646, 'A_G': 0.094343}
+     frente a S18: +0.000307 IC95 cliente [-0.000293, 0.000881] dirección [-0.000281, 0.000909] diez +0.000505 sin ellos -0.000198
+     frente a H: +0.001076 IC95 cliente [-0.000382, 0.002553] dirección [-0.000361, 0.00256] diez +0.001035 sin ellos +0.000041
+     frente a A_G: +0.001379 IC95 cliente [-0.000303, 0.003003] dirección [-0.000308, 0.003009] diez +0.001476 sin ellos -0.000097
+   agregado D2 {'S20': 0.137424, 'S18': 0.137129, 'H': 0.136444, 'A_G': 0.135572}
+     frente a S18: +0.000295 IC95 cliente [4.4e-05, 0.000552] dirección [5.4e-05, 0.000575] diez +0.000187 sin ellos +0.000107
+     frente a H: +0.000979 IC95 cliente [0.000109, 0.001886] dirección [0.000143, 0.001899] diez +0.000733 sin ellos +0.000247
+     frente a A_G: +0.001852 IC95 cliente [0.000736, 0.003322] dirección [0.000663, 0.003244] diez +0.001074 sin ellos +0.000777
+a=1.0
+   motor D2 {'S20': 0.091605, 'S18': 0.091605, 'H': 0.090707, 'A_G': 0.089296}
+     frente a S18: +0.000000 IC95 cliente [0.0, 0.0] dirección [0.0, 0.0] diez +0.000000 sin ellos +0.000000
+     frente a H: +0.000899 IC95 cliente [-0.000281, 0.002436] dirección [-0.000291, 0.002837] diez +0.001195 sin ellos -0.000296
+     frente a A_G: +0.002310 IC95 cliente [0.000364, 0.005418] dirección [0.000288, 0.005602] diez +0.002059 sin ellos +0.000251
+   buildings D2 {'S20': 0.116435, 'S18': 0.115906, 'H': 0.115818, 'A_G': 0.114508}
+     frente a S18: +0.000528 IC95 cliente [-0.0001, 0.00118] dirección [-0.000107, 0.001248] diez +0.000512 sin ellos +0.000016
+     frente a H: +0.000616 IC95 cliente [-0.001099, 0.002495] dirección [-0.001176, 0.002567] diez +0.001323 sin ellos -0.000707
+     frente a A_G: +0.001926 IC95 cliente [-0.000245, 0.004245] dirección [-0.000302, 0.004207] diez +0.001659 sin ellos +0.000268
+   contents D2 {'S20': 0.096438, 'S18': 0.096119, 'H': 0.095462, 'A_G': 0.094912}
+     frente a S18: +0.000320 IC95 cliente [-0.000291, 0.000903] dirección [-0.000299, 0.000919] diez +0.000508 sin ellos -0.000189
+     frente a H: +0.000976 IC95 cliente [-0.00052, 0.002493] dirección [-0.000425, 0.002567] diez +0.001058 sin ellos -0.000082
+     frente a A_G: +0.001527 IC95 cliente [-9.1e-05, 0.003308] dirección [-0.000106, 0.00336] diez +0.001481 sin ellos +0.000046
+   agregado D2 {'S20': 0.138034, 'S18': 0.137789, 'H': 0.137258, 'A_G': 0.136096}
+     frente a S18: +0.000245 IC95 cliente [-1e-06, 0.000506] dirección [-8e-06, 0.000493] diez +0.000187 sin ellos +0.000058
+     frente a H: +0.000777 IC95 cliente [-0.000229, 0.00172] dirección [-0.000134, 0.001758] diez +0.000779 sin ellos -0.000002
+     frente a A_G: +0.001938 IC95 cliente [0.000575, 0.003449] dirección [0.000732, 0.003459] diez +0.001167 sin ellos +0.000771
+a=1.25
+   motor D2 {'S20': 0.088901, 'S18': 0.088901, 'H': 0.087878, 'A_G': 0.086166}
+     frente a S18: +0.000000 IC95 cliente [0.0, 0.0] dirección [0.0, 0.0] diez +0.000000 sin ellos +0.000000  por peligro {'bodily_injury': 0.0, 'glass_hail': 0.0, 'own_damage': 0.0, 'theft': 0.0, 'third_party_prop': 0.0}
+     frente a H: +0.001023 IC95 cliente [-0.000315, 0.002869] dirección [-0.000367, 0.002948] diez +0.001358 sin ellos -0.000334  por peligro {'bodily_injury': 1617.691, 'glass_hail': 133.317, 'own_damage': 2332.373, 'theft': 500.974, 'third_party_prop': 201.697}
+     frente a A_G: +0.002735 IC95 cliente [0.00047, 0.00648] dirección [0.000486, 0.006437] diez +0.002320 sin ellos +0.000415  por peligro {'bodily_injury': 7588.131, 'glass_hail': 134.935, 'own_damage': 4790.775, 'theft': 669.197, 'third_party_prop': 2283.205}
+   buildings D2 {'S20': 0.113603, 'S18': 0.113209, 'H': 0.113615, 'A_G': 0.112025}
+     frente a S18: +0.000394 IC95 cliente [-0.00023, 0.00112] dirección [-0.000292, 0.001059] diez +0.000526 sin ellos -0.000132  por peligro {'accidental_damage': -1.955, 'escape_of_water': -389.096, 'fire': -1348.537, 'flood': -108.326, 'storm': 267.104, 'subsidence': -1319.393}
+     frente a H: -0.000012 IC95 cliente [-0.001875, 0.002004] dirección [-0.00206, 0.001983] diez +0.001329 sin ellos -0.001341  por peligro {'accidental_damage': -94.647, 'escape_of_water': -3563.239, 'fire': -4502.415, 'flood': -3634.102, 'storm': -2109.735, 'subsidence': -1308.121}
+     frente a A_G: +0.001578 IC95 cliente [-0.000792, 0.004285] dirección [-0.000758, 0.003941] diez +0.001667 sin ellos -0.000089  por peligro {'accidental_damage': -53.661, 'escape_of_water': -3202.433, 'fire': -4074.55, 'flood': 3745.708, 'storm': -2454.156, 'subsidence': -1032.732}
+   contents D2 {'S20': 0.096782, 'S18': 0.09645, 'H': 0.095902, 'A_G': 0.095113}
+     frente a S18: +0.000332 IC95 cliente [-0.000278, 0.000971] dirección [-0.000308, 0.000982] diez +0.000517 sin ellos -0.000185  por peligro {'accidental_damage': -0.211, 'escape_of_water': 92.868, 'flood': 8.992, 'theft': 122.513}
+     frente a H: +0.000880 IC95 cliente [-0.000608, 0.002401] dirección [-0.000665, 0.002445] diez +0.001090 sin ellos -0.000210  por peligro {'accidental_damage': -148.329, 'escape_of_water': -366.483, 'flood': -215.87, 'theft': -269.566}
+     frente a A_G: +0.001669 IC95 cliente [-0.000169, 0.003418] dirección [-7.4e-05, 0.003534] diez +0.001488 sin ellos +0.000181  por peligro {'accidental_damage': -84.303, 'escape_of_water': 175.156, 'flood': 2038.853, 'theft': 14.921}
+   agregado D2 {'S20': 0.137332, 'S18': 0.137133, 'H': 0.136743, 'A_G': 0.135311}
+     frente a S18: +0.000199 IC95 cliente [-6.9e-05, 0.000466] dirección [-6.4e-05, 0.000485] diez +0.000190 sin ellos +0.000009  por peligro {'accidental_damage': -2.166, 'bodily_injury': 0.0, 'escape_of_water': -296.227, 'fire': -1348.537, 'flood': -99.333, 'glass_hail': 0.0, 'own_damage': 0.0, 'storm': 267.104, 'subsidence': -1319.393, 'theft': 122.513, 'third_party_prop': 0.0}
+     frente a H: +0.000589 IC95 cliente [-0.000433, 0.001636] dirección [-0.000351, 0.001694] diez +0.000825 sin ellos -0.000237  por peligro {'accidental_damage': -242.976, 'bodily_injury': 1617.691, 'escape_of_water': -3929.723, 'fire': -4502.415, 'flood': -3849.972, 'glass_hail': 133.317, 'own_damage': 2332.373, 'storm': -2109.735, 'subsidence': -1308.121, 'theft': 231.408, 'third_party_prop': 201.697}
+     frente a A_G: +0.002021 IC95 cliente [0.000646, 0.003843] dirección [0.000528, 0.003777] diez +0.001260 sin ellos +0.000760  por peligro {'accidental_damage': -137.964, 'bodily_injury': 7588.131, 'escape_of_water': -3027.278, 'fire': -4074.55, 'flood': 5784.561, 'glass_hail': 134.935, 'own_damage': 4790.775, 'storm': -2454.156, 'subsidence': -1032.732, 'theft': 684.117, 'third_party_prop': 2283.205}
+motor CAT_motor_4s {'peso': 0.2, 'deriva': 0.0, 'fuera_de_la_referencia': False, 'regla_coherente': True}
+motor CFSS_motor {'peso': 0.6, 'deriva': -0.044, 'fuera_de_la_referencia': True, 'regla_coherente': True}
+motor S04b_lgbm_F0124_F3autos {'peso': 0.1, 'deriva': -0.0073, 'fuera_de_la_referencia': False, 'regla_coherente': True}
+motor S06c_lgbm_motor_red {'peso': 0.1, 'deriva': 0.0001, 'fuera_de_la_referencia': False, 'regla_coherente': True}
+buildings S12h_edif_md1000 {'peso': 0.4, 'deriva': 0.0, 'fuera_de_la_referencia': False, 'regla_coherente': True}
+buildings CFSS_buildings {'peso': 0.3, 'deriva': -0.0199, 'fuera_de_la_referencia': True, 'regla_coherente': True}
+buildings FSAS4_buildings {'peso': 0.3, 'deriva': 0.0006, 'fuera_de_la_referencia': False, 'regla_coherente': True}
+contents S08h_hogar_F3s2 {'peso': 0.2, 'deriva': 0.0, 'fuera_de_la_referencia': False, 'regla_coherente': True}
+contents MLP3_contents {'peso': 0.1, 'deriva': -0.1682, 'fuera_de_la_referencia': True, 'regla_coherente': True}
+contents FSA_contents {'peso': 0.3, 'deriva': -0.0017, 'fuera_de_la_referencia': False, 'regla_coherente': True}
+contents FSAS4_contents {'peso': 0.4, 'deriva': -0.0157, 'fuera_de_la_referencia': True, 'regla_coherente': True}
+FIN_FINALIZAR_S20

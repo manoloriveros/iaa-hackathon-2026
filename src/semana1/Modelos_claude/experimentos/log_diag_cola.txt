@@ -1,0 +1,84 @@
+motor V23 top 128 cuota 0.1877 {'bodily_injury': 119, 'theft': 9}
+   AE por decil [0.896, 0.886, 0.953, 0.874, 1.055, 1.082, 0.958, 0.999, 1.05, 1.03]
+   AE sin top   [0.688, 0.719, 0.812, 0.728, 0.824, 0.847, 0.828, 0.826, 0.844, 0.835]
+   filas top    [7, 8, 9, 9, 13, 8, 8, 13, 19, 34]
+   forma 1.0:0.95 {'todo': 6e-05, 'sin_top': 3e-05}
+   forma 1.0:1.0 {'todo': 0.0, 'sin_top': 0.0}
+   forma 1.02:0.95 {'todo': 0.00021, 'sin_top': 0.00019}
+   forma 1.02:1.0 {'todo': 0.00016, 'sin_top': 0.00016}
+   forma 1.04:0.95 {'todo': 0.00033, 'sin_top': 0.00031}
+   forma 1.04:1.0 {'todo': 0.00029, 'sin_top': 0.00029}
+   forma 1.06:0.95 {'todo': 0.00041, 'sin_top': 0.00039}
+   forma 1.06:1.0 {'todo': 0.00038, 'sin_top': 0.00038}
+   forma 1.08:0.95 {'todo': 0.00046, 'sin_top': 0.00043}
+   forma 1.08:1.0 {'todo': 0.00043, 'sin_top': 0.00043}
+   forma 1.1:0.95 {'todo': 0.00047, 'sin_top': 0.00044}
+   forma 1.1:1.0 {'todo': 0.00045, 'sin_top': 0.00045}
+motor V24 top 255 cuota 0.155 {'bodily_injury': 207, 'theft': 25, 'third_party_prop': 18, 'own_damage': 5}
+   AE por decil [0.983, 0.933, 0.883, 0.937, 1.047, 1.025, 1.039, 1.051, 1.007, 1.09]
+   AE sin top   [0.744, 0.841, 0.813, 0.836, 0.871, 0.865, 0.869, 0.875, 0.893, 0.888]
+   filas top    [19, 9, 9, 14, 20, 24, 25, 27, 28, 80]
+   forma 1.0:0.95 {'todo': 0.00068, 'sin_top': -1e-05}
+   forma 1.0:1.0 {'todo': 0.0, 'sin_top': 0.0}
+   forma 1.02:0.95 {'todo': 0.00083, 'sin_top': 9e-05}
+   forma 1.02:1.0 {'todo': 0.00016, 'sin_top': 0.00011}
+   forma 1.04:0.95 {'todo': 0.00094, 'sin_top': 0.00016}
+   forma 1.04:1.0 {'todo': 0.00029, 'sin_top': 0.00019}
+   forma 1.06:0.95 {'todo': 0.00102, 'sin_top': 0.00018}
+   forma 1.06:1.0 {'todo': 0.00038, 'sin_top': 0.00023}
+   forma 1.08:0.95 {'todo': 0.00106, 'sin_top': 0.00018}
+   forma 1.08:1.0 {'todo': 0.00042, 'sin_top': 0.00023}
+   forma 1.1:0.95 {'todo': 0.00106, 'sin_top': 0.00013}
+   forma 1.1:1.0 {'todo': 0.00044, 'sin_top': 0.00019}
+buildings V23 top 93 cuota 0.3189 {'flood': 45, 'fire': 31, 'subsidence': 17}
+   AE por decil [1.073, 1.23, 1.05, 0.899, 0.91, 1.02, 0.89, 1.206, 1.027, 1.269]
+   AE sin top   [0.834, 0.937, 0.766, 0.802, 0.782, 0.899, 0.679, 0.768, 0.778, 0.661]
+   filas top    [3, 4, 5, 2, 3, 4, 5, 11, 9, 47]
+   forma 1.0:1.0 {'todo': 0.0, 'sin_top': 0.0}
+   forma 1.0:1.14 {'todo': 0.00066, 'sin_top': -0.00036}
+   forma 1.02:1.0 {'todo': 0.00017, 'sin_top': -0.00033}
+   forma 1.02:1.14 {'todo': 0.00082, 'sin_top': -0.0007}
+   forma 1.04:1.0 {'todo': 0.00028, 'sin_top': -0.00071}
+   forma 1.04:1.14 {'todo': 0.00094, 'sin_top': -0.00109}
+   forma 1.06:1.0 {'todo': 0.00035, 'sin_top': -0.00114}
+   forma 1.06:1.14 {'todo': 0.001, 'sin_top': -0.00152}
+   forma 1.08:1.0 {'todo': 0.00038, 'sin_top': -0.00161}
+   forma 1.08:1.14 {'todo': 0.00101, 'sin_top': -0.00199}
+   forma 1.1:1.0 {'todo': 0.00035, 'sin_top': -0.00213}
+   forma 1.1:1.14 {'todo': 0.00098, 'sin_top': -0.00252}
+buildings V24 top 184 cuota 0.3259 {'flood': 82, 'fire': 74, 'subsidence': 27, 'escape_of_water': 1}
+   AE por decil [0.748, 1.056, 1.2, 1.072, 1.097, 0.923, 1.016, 1.181, 1.103, 1.164]
+   AE sin top   [0.715, 0.968, 0.834, 0.78, 0.851, 0.673, 0.783, 0.756, 0.732, 0.662]
+   filas top    [1, 2, 12, 10, 9, 11, 11, 22, 29, 77]
+   forma 1.0:1.0 {'todo': 0.0, 'sin_top': 0.0}
+   forma 1.0:1.14 {'todo': 0.0004, 'sin_top': -0.00032}
+   forma 1.02:1.0 {'todo': 0.00018, 'sin_top': -0.00027}
+   forma 1.02:1.14 {'todo': 0.00057, 'sin_top': -0.0006}
+   forma 1.04:1.0 {'todo': 0.0003, 'sin_top': -0.00059}
+   forma 1.04:1.14 {'todo': 0.0007, 'sin_top': -0.00092}
+   forma 1.06:1.0 {'todo': 0.00038, 'sin_top': -0.00096}
+   forma 1.06:1.14 {'todo': 0.00077, 'sin_top': -0.00129}
+   forma 1.08:1.0 {'todo': 0.00042, 'sin_top': -0.00137}
+   forma 1.08:1.14 {'todo': 0.0008, 'sin_top': -0.0017}
+   forma 1.1:1.0 {'todo': 0.00041, 'sin_top': -0.00183}
+   forma 1.1:1.14 {'todo': 0.00078, 'sin_top': -0.00216}
+contents V23 top 94 cuota 0.2592 {'flood': 57, 'theft': 31, 'escape_of_water': 6}
+   AE por decil [0.931, 1.027, 0.886, 1.166, 0.988, 1.028, 0.949, 1.097, 0.924, 1.203]
+   AE sin top   [0.931, 0.988, 0.886, 1.045, 0.934, 0.922, 0.802, 0.808, 0.787, 0.567]
+   filas top    [0, 1, 0, 3, 2, 4, 7, 11, 8, 58]
+   forma 1.0:1.0 {'todo': 0.0, 'sin_top': 0.0}
+   forma 1.02:1.0 {'todo': 8e-05, 'sin_top': -0.00061}
+   forma 1.04:1.0 {'todo': 0.00011, 'sin_top': -0.00127}
+   forma 1.06:1.0 {'todo': 9e-05, 'sin_top': -0.00197}
+   forma 1.08:1.0 {'todo': 3e-05, 'sin_top': -0.00271}
+   forma 1.1:1.0 {'todo': -8e-05, 'sin_top': -0.00349}
+contents V24 top 188 cuota 0.249 {'flood': 100, 'theft': 69, 'escape_of_water': 19}
+   AE por decil [0.891, 0.847, 0.91, 0.811, 0.991, 1.083, 1.052, 1.135, 1.053, 1.028]
+   AE sin top   [0.838, 0.76, 0.839, 0.784, 0.86, 0.921, 0.83, 0.898, 0.748, 0.577]
+   filas top    [2, 4, 4, 2, 10, 11, 20, 23, 30, 82]
+   forma 1.0:1.0 {'todo': 0.0, 'sin_top': 0.0}
+   forma 1.02:1.0 {'todo': 0.00016, 'sin_top': -0.00034}
+   forma 1.04:1.0 {'todo': 0.00029, 'sin_top': -0.00072}
+   forma 1.06:1.0 {'todo': 0.00037, 'sin_top': -0.00114}
+   forma 1.08:1.0 {'todo': 0.00041, 'sin_top': -0.0016}
+   forma 1.1:1.0 {'todo': 0.00041, 'sin_top': -0.0021}

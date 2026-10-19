@@ -1,0 +1,10 @@
+{
+ "recomendacion": "Estimación propia de Claude propuesta para la ventana de las 19:00; sustituye a S18_claude_propio. Cambia solo hogar: añade una frecuencia aditiva por peligro (árboles de una división, cuatro semillas) con la severidad GLM por capital de CFSS (FSAS4) en edificios y contenidos, con pesos elegidos por la peor de las dos mejoras (V23 y V24) frente a S18; autos queda como en S18. Frente a S09b mejora los tres ramos en V23 y en V24; frente a S18, +0,00022 y +0,00024 en el agregado.",
+ "composicion": {
+  "motor": "CatBoost Tweedie F01234 sin marketing_segment, cuatro semillas (0,2); CatBoost Poisson por peligro, cuatro semillas, con severidad GLM gamma por grupo de valor y antigüedad del vehículo en daños propios, robo y lunas (CFSS_motor) (0,6); LightGBM F01234 (0,1); LightGBM reducido (0,1)",
+  "buildings": "LightGBM F0124 + siete F3 de D80 con min_data_in_leaf 1000 (0,4); CatBoost Poisson por peligro con severidad GLM por capital y sótano en inundación (CFSS_buildings) (0,3); frecuencia aditiva por peligro (frecsev2.py --aditivo, cuatro semillas) con la misma severidad GLM (FSAS4_buildings) (0,3)",
+  "contents": "LightGBM F0124 + siete F3 (0,2); red neuronal Tweedie (0,1); modelo aditivo por peligro con severidad gamma (FSA_contents) (0,3); frecuencia aditiva por peligro con severidad GLM por capital (FSAS4_contents) (0,4)",
+  "forma": "mu = e (e/ē)^(b-1) g (r/g)^a: autos (1,09; 0,95), edificios (1,08; 1,14), contenidos (1,07; 1)",
+  "nivel": "Regla s17 sin etiquetas: fuera de la referencia de nivel los componentes cuyo total 2025/V24 se aparta más de un 1,5 % del ancla del ramo (CFSS -4,4 %, -2,0 %, -2,0 %; red de contenidos -16,8 %; FSAS4 de contenidos -1,57 %); FSAS4 de edificios entra (+0,06 %). Factor de año siguiente por ramo (media V23/V24), una vez y sin segundo IBNR"
+ }
+}

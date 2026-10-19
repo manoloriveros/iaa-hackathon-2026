@@ -1,0 +1,36 @@
+{
+ "descripcion": "Predicciones de V23 selección (2023, mitad cal_half = 1; entrenamiento 2021-2022 y parada en la mitad de calibración) de los cuatro componentes de autos de S09b a S14. Columnas row_id, line, y, mu. Producidas el 17 de octubre en la nube de Claude; se archivan aquí sin cambios para que Codex pueda reconstruir la mezcla.",
+ "archivos": {
+  "sel_cat1a.parquet": {
+   "corrida": "CAT_motor",
+   "origen": "cat_experimento.py cat1a motor (CatBoost Tweedie F01234, profundidad 6, tasa 0,05, parada en la mitad de calibración de 2023)",
+   "sha256": "b93d1920cdb06ca2e7f3248f39bfed1fd832422a944ab22af5fc9641c8c10916",
+   "bytes": 2184468
+  },
+  "sel_total_F01234.parquet": {
+   "corrida": "S04b_lgbm_F0124_F3autos",
+   "origen": "evaluar.py total_F01234 (LightGBM Tweedie, F3 en autos; trae también hogar con F0124)",
+   "sha256": "1fd58048eeeed3dcb7f5719ac35f2c61552254806cb71e9046c53f3d84f2b1c4",
+   "bytes": 4649229
+  },
+  "sel_total_motor_red.parquet": {
+   "corrida": "S06c_lgbm_motor_red",
+   "origen": "evaluar.py total_motor_red (LightGBM reducido de autos; hogar como total_F0124)",
+   "sha256": "23c0cea11720a4a7f01e71ac0c78cf687bf110dc51033dd16444674a2c01f407",
+   "bytes": 4649229
+  },
+  "sel_fs1.parquet": {
+   "corrida": "FS_frecsev",
+   "origen": "evaluar_frecsev.py fs1 (frecuencia Poisson por peligro x severidad media)",
+   "sha256": "e2350dc8320381a1d9dafd9b248b7b2c4cdd4cc00a84201a1d8f5feb4f1f02ad",
+   "bytes": 4649229
+  },
+  "sel_total_F0124.parquet": {
+   "corrida": "S03_lgbm_F0124",
+   "origen": "evaluar.py total_F0124 (LightGBM Tweedie F0124, los tres ramos)",
+   "uso": "mezcla3.labels() toma de aquí la etiqueta y de V23 selección de cada ramo; se añadió el 18 de octubre para poder repetir S16 a S18 en el equipo",
+   "sha256": "f5c512a4469ce73a368c4f86b1092f6c6f6888ce73bc7e25d9446177905690a3",
+   "bytes": 4649229
+  }
+ }
+}

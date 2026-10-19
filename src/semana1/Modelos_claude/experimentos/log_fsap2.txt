@@ -1,0 +1,17 @@
+FSAP2_buildings V24 0.11035 999
+FSAP2_buildings {"line": "buildings", "aditivo": true, "perils": {"storm": {"best_frec": 509, "best_sev": 75}, "flood": {"best_frec": 1215, "best_sev": 0}, "escape_of_water": {"best_frec": 966, "best_sev": 415}, "subsidence": {"best_frec": 749, "best_sev": 0}, "fire": {"best_frec": 240, "best_sev": 0}, "accidental_damage": {"best_frec": 610, "best_sev": 35}}, "desde": "FSAP_buildings", "semilla_inicial": 2, "d2_v24": 0.11035, "pred_2025_total_CU": 68467377.14}
+{"origen": "FSAP_buildings", "line": "buildings", "d2_sel": 0.11521, "d2_v24": 0.11449, "pred_2025_total_CU": 69989890.25, "referencia_cfs": {"d2_sel": 0.10934, "d2_v24": 0.11021}}
+   storm {'V23': {'betas': [0.6106], 'siniestros': 3737}, 'V24': {'betas': [0.6005], 'siniestros': 5868}, 'PROD': {'betas': [0.5965], 'siniestros': 7762}}
+   flood {'V23': {'betas': [0.5984, 0.4188], 'siniestros': 1139}, 'V24': {'betas': [0.6389, 0.437], 'siniestros': 1689}, 'PROD': {'betas': [0.6344, 0.4425], 'siniestros': 2219}}
+   escape_of_water {'V23': {'betas': [0.5641], 'siniestros': 4997}, 'V24': {'betas': [0.5973], 'siniestros': 7507}, 'PROD': {'betas': [0.5935], 'siniestros': 10065}}
+   subsidence {'V23': {'betas': [0.4945], 'siniestros': 617}, 'V24': {'betas': [0.5844], 'siniestros': 997}, 'PROD': {'betas': [0.5524], 'siniestros': 1288}}
+   fire {'V23': {'betas': [0.7347], 'siniestros': 519}, 'V24': {'betas': [0.8241], 'siniestros': 798}, 'PROD': {'betas': [0.814], 'siniestros': 1107}}
+   accidental_damage {'V23': {'betas': [0.2495], 'siniestros': 1869}, 'V24': {'betas': [0.2141], 'siniestros': 2836}, 'PROD': {'betas': [0.2389], 'siniestros': 3825}}
+FSAP2_contents V24 0.09336 223
+FSAP2_contents {"line": "contents", "aditivo": true, "perils": {"theft": {"best_frec": 1330, "best_sev": 467}, "escape_of_water": {"best_frec": 559, "best_sev": 55}, "accidental_damage": {"best_frec": 1469, "best_sev": 51}, "flood": {"best_frec": 1094, "best_sev": 0}}, "desde": "FSAP_contents", "semilla_inicial": 2, "d2_v24": 0.09336, "pred_2025_total_CU": 17532037.47}
+{"origen": "FSAP_contents", "line": "contents", "d2_sel": 0.09175, "d2_v24": 0.09459, "pred_2025_total_CU": 17616971.78, "referencia_cfs": {"d2_sel": 0.08925, "d2_v24": 0.09352}}
+   theft {'V23': {'betas': [0.6902], 'siniestros': 3680}, 'V24': {'betas': [0.6815], 'siniestros': 5650}, 'PROD': {'betas': [0.6959], 'siniestros': 7626}}
+   escape_of_water {'V23': {'betas': [0.7821], 'siniestros': 2632}, 'V24': {'betas': [0.7281], 'siniestros': 4004}, 'PROD': {'betas': [0.7285], 'siniestros': 5366}}
+   accidental_damage {'V23': {'betas': [0.3814], 'siniestros': 4406}, 'V24': {'betas': [0.3846], 'siniestros': 6774}, 'PROD': {'betas': [0.3632], 'siniestros': 9063}}
+   flood {'V23': {'betas': [0.7767, -0.0206], 'siniestros': 806}, 'V24': {'betas': [0.7749, -0.0735], 'siniestros': 1254}, 'PROD': {'betas': [0.7603, -0.04], 'siniestros': 1615}}
+FIN_COLA40

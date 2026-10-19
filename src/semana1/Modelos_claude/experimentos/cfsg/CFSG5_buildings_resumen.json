@@ -1,0 +1,183 @@
+{
+ "origen": "CFS_buildings",
+ "line": "buildings",
+ "hojas": 5,
+ "min_sev": 1500,
+ "features": 76,
+ "perils": {
+  "storm": {
+   "V23": {
+    "betas": [
+     0.6106
+    ],
+    "siniestros": 3737,
+    "filas_pos": 3690,
+    "rondas": 0,
+    "d2_peligro_sel": 0.07858,
+    "d2_peligro_sel_constante": 0.06919
+   },
+   "V24": {
+    "betas": [
+     0.6005
+    ],
+    "siniestros": 5868,
+    "filas_pos": 5790,
+    "rondas": 0
+   },
+   "PROD": {
+    "betas": [
+     0.5965
+    ],
+    "siniestros": 7762,
+    "filas_pos": 7668,
+    "rondas": 0
+   }
+  },
+  "flood": {
+   "V23": {
+    "betas": [
+     0.5984,
+     0.4188
+    ],
+    "siniestros": 1139,
+    "filas_pos": 1113,
+    "rondas": 0,
+    "d2_peligro_sel": 0.47894,
+    "d2_peligro_sel_constante": 0.46929
+   },
+   "V24": {
+    "betas": [
+     0.6389,
+     0.437
+    ],
+    "siniestros": 1689,
+    "filas_pos": 1654,
+    "rondas": 0
+   },
+   "PROD": {
+    "betas": [
+     0.6344,
+     0.4425
+    ],
+    "siniestros": 2219,
+    "filas_pos": 2173,
+    "rondas": 0
+   }
+  },
+  "escape_of_water": {
+   "V23": {
+    "betas": [
+     0.5641
+    ],
+    "siniestros": 4997,
+    "filas_pos": 4920,
+    "rondas": 14,
+    "d2_peligro_sel": 0.05938,
+    "d2_peligro_sel_constante": 0.04627
+   },
+   "V24": {
+    "betas": [
+     0.5973
+    ],
+    "siniestros": 7507,
+    "filas_pos": 7405,
+    "rondas": 16
+   },
+   "PROD": {
+    "betas": [
+     0.5935
+    ],
+    "siniestros": 10065,
+    "filas_pos": 9928,
+    "rondas": 18
+   }
+  },
+  "subsidence": {
+   "V23": {
+    "betas": [
+     0.4945
+    ],
+    "siniestros": 617,
+    "filas_pos": 615,
+    "rondas": 0,
+    "d2_peligro_sel": 0.10281,
+    "d2_peligro_sel_constante": 0.10243
+   },
+   "V24": {
+    "betas": [
+     0.5844
+    ],
+    "siniestros": 997,
+    "filas_pos": 992,
+    "rondas": 0
+   },
+   "PROD": {
+    "betas": [
+     0.5524
+    ],
+    "siniestros": 1288,
+    "filas_pos": 1280,
+    "rondas": 0
+   }
+  },
+  "fire": {
+   "V23": {
+    "betas": [
+     0.7347
+    ],
+    "siniestros": 519,
+    "filas_pos": 519,
+    "rondas": 0,
+    "d2_peligro_sel": 0.07289,
+    "d2_peligro_sel_constante": 0.06369
+   },
+   "V24": {
+    "betas": [
+     0.8241
+    ],
+    "siniestros": 798,
+    "filas_pos": 797,
+    "rondas": 0
+   },
+   "PROD": {
+    "betas": [
+     0.814
+    ],
+    "siniestros": 1107,
+    "filas_pos": 1105,
+    "rondas": 0
+   }
+  },
+  "accidental_damage": {
+   "V23": {
+    "betas": [
+     0.2495
+    ],
+    "siniestros": 1869,
+    "filas_pos": 1855,
+    "rondas": 6,
+    "d2_peligro_sel": 0.17344,
+    "d2_peligro_sel_constante": 0.17322
+   },
+   "V24": {
+    "betas": [
+     0.2141
+    ],
+    "siniestros": 2836,
+    "filas_pos": 2812,
+    "rondas": 7
+   },
+   "PROD": {
+    "betas": [
+     0.2389
+    ],
+    "siniestros": 3825,
+    "filas_pos": 3796,
+    "rondas": 8
+   }
+  }
+ },
+ "d2_sel": 0.11571,
+ "d2_v24": 0.1132,
+ "pred_2025_total_CU": 68978909.01
+}

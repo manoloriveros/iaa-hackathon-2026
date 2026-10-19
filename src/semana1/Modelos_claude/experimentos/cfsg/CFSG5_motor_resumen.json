@@ -1,0 +1,149 @@
+{
+ "origen": "CFS_motor_4s",
+ "line": "motor",
+ "hojas": 5,
+ "min_sev": 1500,
+ "features": 87,
+ "perils": {
+  "own_damage": {
+   "V23": {
+    "betas": [
+     0.3111,
+     -0.4688
+    ],
+    "siniestros": 24851,
+    "filas_pos": 23051,
+    "rondas": 90,
+    "d2_peligro_sel": 0.19271,
+    "d2_peligro_sel_constante": 0.18146
+   },
+   "V24": {
+    "betas": [
+     0.3242,
+     -0.4743
+    ],
+    "siniestros": 36721,
+    "filas_pos": 34149,
+    "rondas": 103
+   },
+   "PROD": {
+    "betas": [
+     0.3221,
+     -0.4754
+    ],
+    "siniestros": 48258,
+    "filas_pos": 44994,
+    "rondas": 117
+   }
+  },
+  "third_party_prop": {
+   "V23": {
+    "betas": [],
+    "siniestros": 16980,
+    "filas_pos": 16219,
+    "rondas": 154,
+    "d2_peligro_sel": 0.1034,
+    "d2_peligro_sel_constante": 0.10355
+   },
+   "V24": {
+    "betas": [],
+    "siniestros": 25337,
+    "filas_pos": 24231,
+    "rondas": 177
+   },
+   "PROD": {
+    "betas": [],
+    "siniestros": 32963,
+    "filas_pos": 31585,
+    "rondas": 200
+   }
+  },
+  "bodily_injury": {
+   "V23": {
+    "betas": [],
+    "siniestros": 4285,
+    "filas_pos": 4241,
+    "rondas": 0,
+    "d2_peligro_sel": 0.07987,
+    "d2_peligro_sel_constante": 0.07987
+   },
+   "V24": {
+    "betas": [],
+    "siniestros": 6334,
+    "filas_pos": 6270,
+    "rondas": 0
+   },
+   "PROD": {
+    "betas": [],
+    "siniestros": 7512,
+    "filas_pos": 7443,
+    "rondas": 0
+   }
+  },
+  "theft": {
+   "V23": {
+    "betas": [
+     0.3386,
+     -0.3208
+    ],
+    "siniestros": 3015,
+    "filas_pos": 2997,
+    "rondas": 0,
+    "d2_peligro_sel": 0.09725,
+    "d2_peligro_sel_constante": 0.09149
+   },
+   "V24": {
+    "betas": [
+     0.3497,
+     -0.3037
+    ],
+    "siniestros": 4616,
+    "filas_pos": 4584,
+    "rondas": 0
+   },
+   "PROD": {
+    "betas": [
+     0.3549,
+     -0.3258
+    ],
+    "siniestros": 6119,
+    "filas_pos": 6080,
+    "rondas": 0
+   }
+  },
+  "glass_hail": {
+   "V23": {
+    "betas": [
+     0.2752,
+     0.0564
+    ],
+    "siniestros": 7511,
+    "filas_pos": 7378,
+    "rondas": 28,
+    "d2_peligro_sel": 0.15433,
+    "d2_peligro_sel_constante": 0.15196
+   },
+   "V24": {
+    "betas": [
+     0.2738,
+     0.0672
+    ],
+    "siniestros": 11623,
+    "filas_pos": 11408,
+    "rondas": 32
+   },
+   "PROD": {
+    "betas": [
+     0.2648,
+     0.0598
+    ],
+    "siniestros": 15643,
+    "filas_pos": 15356,
+    "rondas": 36
+   }
+  }
+ },
+ "d2_sel": 0.09296,
+ "d2_v24": 0.09093,
+ "pred_2025_total_CU": 113274202.3
+}

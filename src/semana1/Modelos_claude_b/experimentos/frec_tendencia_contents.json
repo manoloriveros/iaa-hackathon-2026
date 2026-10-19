@@ -1,0 +1,189 @@
+{
+ "line": "contents",
+ "cortes": {
+  "V22": {
+   "theft": {
+    "iteraciones": 61,
+    "observados": 1938,
+    "esperados": 1841.1,
+    "cociente": 1.0527,
+    "cociente_h1": 1.0516,
+    "cociente_h2": 1.0842,
+    "frecuencia_entrenamiento_x1000": 12.361,
+    "frecuencia_medida_x1000": 12.921
+   },
+   "escape_of_water": {
+    "iteraciones": 24,
+    "observados": 1363,
+    "esperados": 1334.0,
+    "cociente": 1.0218,
+    "cociente_h1": 1.0193,
+    "cociente_h2": 1.0987,
+    "frecuencia_entrenamiento_x1000": 9.004,
+    "frecuencia_medida_x1000": 9.088
+   },
+   "accidental_damage": {
+    "iteraciones": 159,
+    "observados": 2239,
+    "esperados": 2300.3,
+    "cociente": 0.9733,
+    "cociente_h1": 0.974,
+    "cociente_h2": 0.9521,
+    "frecuencia_entrenamiento_x1000": 15.376,
+    "frecuencia_medida_x1000": 14.928
+   },
+   "flood": {
+    "iteraciones": 145,
+    "observados": 402,
+    "esperados": 387.8,
+    "cociente": 1.0367,
+    "cociente_h1": 1.0435,
+    "cociente_h2": 0.806,
+    "frecuencia_entrenamiento_x1000": 2.867,
+    "frecuencia_medida_x1000": 2.68
+   }
+  },
+  "V23": {
+   "theft": {
+    "iteraciones": 124,
+    "observados": 1970,
+    "esperados": 1901.0,
+    "cociente": 1.0363,
+    "cociente_h1": 1.0376,
+    "cociente_h2": 0.9994,
+    "frecuencia_entrenamiento_x1000": 12.65,
+    "frecuencia_medida_x1000": 13.149
+   },
+   "escape_of_water": {
+    "iteraciones": 87,
+    "observados": 1372,
+    "esperados": 1332.1,
+    "cociente": 1.0299,
+    "cociente_h1": 1.0204,
+    "cociente_h2": 1.3136,
+    "frecuencia_entrenamiento_x1000": 9.047,
+    "frecuencia_medida_x1000": 9.164
+   },
+   "accidental_damage": {
+    "iteraciones": 230,
+    "observados": 2368,
+    "esperados": 2237.4,
+    "cociente": 1.0584,
+    "cociente_h1": 1.0583,
+    "cociente_h2": 1.06,
+    "frecuencia_entrenamiento_x1000": 15.145,
+    "frecuencia_medida_x1000": 15.812
+   },
+   "flood": {
+    "iteraciones": 263,
+    "observados": 448,
+    "esperados": 368.0,
+    "cociente": 1.2174,
+    "cociente_h1": 1.1949,
+    "cociente_h2": 2.3301,
+    "frecuencia_entrenamiento_x1000": 2.771,
+    "frecuencia_medida_x1000": 2.995
+   }
+  },
+  "V24": {
+   "theft": {
+    "iteraciones": 225,
+    "observados": 1976,
+    "esperados": 1967.1,
+    "cociente": 1.0045,
+    "cociente_h1": 1.0017,
+    "cociente_h2": 1.0884,
+    "frecuencia_entrenamiento_x1000": 12.819,
+    "frecuencia_medida_x1000": 13.421
+   },
+   "escape_of_water": {
+    "iteraciones": 140,
+    "observados": 1362,
+    "esperados": 1273.0,
+    "cociente": 1.0699,
+    "cociente_h1": 1.0781,
+    "cociente_h2": 0.815,
+    "frecuencia_entrenamiento_x1000": 9.087,
+    "frecuencia_medida_x1000": 9.53
+   },
+   "accidental_damage": {
+    "iteraciones": 241,
+    "observados": 2289,
+    "esperados": 2272.6,
+    "cociente": 1.0072,
+    "cociente_h1": 1.008,
+    "cociente_h2": 0.9835,
+    "frecuencia_entrenamiento_x1000": 15.372,
+    "frecuencia_medida_x1000": 15.791
+   },
+   "flood": {
+    "iteraciones": 194,
+    "observados": 361,
+    "esperados": 370.7,
+    "cociente": 0.9739,
+    "cociente_h1": 0.9794,
+    "cociente_h2": 0.7318,
+    "frecuencia_entrenamiento_x1000": 2.847,
+    "frecuencia_medida_x1000": 2.5
+   }
+  }
+ },
+ "factores": {
+  "V23": {
+   "theft": 1.0527,
+   "escape_of_water": 1.0218,
+   "accidental_damage": 0.9733,
+   "flood": 1.0367
+  },
+  "V24": {
+   "theft": 1.0445,
+   "escape_of_water": 1.0258,
+   "accidental_damage": 1.015,
+   "flood": 1.1234
+  },
+  "PROD": {
+   "theft": 1.0203,
+   "escape_of_water": 1.0497,
+   "accidental_damage": 1.0325,
+   "flood": 1.0889
+  }
+ },
+ "guardadas": {
+  "CFS_contents": {
+   "theft": {
+    "V23": 0.9621,
+    "V24": 1.0084
+   },
+   "escape_of_water": {
+    "V23": 1.0229,
+    "V24": 1.0677
+   },
+   "accidental_damage": {
+    "V23": 1.0663,
+    "V24": 1.0013
+   },
+   "flood": {
+    "V23": 1.1287,
+    "V24": 0.9594
+   }
+  },
+  "FSAP_contents": {
+   "theft": {
+    "V23": 0.9815,
+    "V24": 0.9922
+   },
+   "escape_of_water": {
+    "V23": 1.0268,
+    "V24": 1.0551
+   },
+   "accidental_damage": {
+    "V23": 1.0475,
+    "V24": 0.9962
+   },
+   "flood": {
+    "V23": 1.0443,
+    "V24": 0.904
+   }
+  }
+ }
+}

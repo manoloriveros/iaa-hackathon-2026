@@ -1,0 +1,12 @@
+motor base best 595 V23 0.09026 V24 0.08673 
+motor cambio best 558 V23 0.0898 V24 0.08631 {'fin_anticipado': 0.0001, 'mes_fin': 0.0002, 'dias_al_fin_anio': 0.0003, 'inicio_1ene': 0.0}
+motor V23 cambio menos base -0.00043 desv 0.00041 P(>0) 0.14
+motor V24 cambio menos base -0.00043 desv 0.00025 P(>0) 0.02
+buildings base best 334 V23 0.11361 V24 0.11216 
+buildings cambio best 350 V23 0.11372 V24 0.11245 {'fin_anticipado': 0.0, 'mes_fin': 0.0, 'dias_al_fin_anio': 0.0041, 'inicio_1ene': 0.0}
+buildings V23 cambio menos base 0.00017 desv 0.00065 P(>0) 0.57
+buildings V24 cambio menos base 0.00028 desv 0.00019 P(>0) 0.94
+contents base best 322 V23 0.08478 V24 0.09282 
+contents cambio best 325 V23 0.08426 V24 0.09209 {'fin_anticipado': 0.0025, 'mes_fin': 0.0005, 'dias_al_fin_anio': 0.0057, 'inicio_1ene': 0.0002}
+contents V23 cambio menos base -0.00050 desv 0.00086 P(>0) 0.27
+contents V24 cambio menos base -0.00075 desv 0.00047 P(>0) 0.04

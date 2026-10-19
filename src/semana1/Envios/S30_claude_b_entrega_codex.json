@@ -1,0 +1,1060 @@
+{
+ "id": "S30_claude_b",
+ "autor": "Claude, línea B (Modelos_claude_b), 18 de octubre",
+ "linaje": "Estimación propia de Claude: ningún componente, total ni factor de Codex (acuerdo del foro, COD-20261018-001 y CLA-20261018-001). Reutiliza las partes guardadas de frecuencia por peligro de Modelos_claude (CFS, FSAP) y los componentes Tweedie de la línea principal; los componentes nuevos son de esta carpeta",
+ "recomendacion": "S22 con tres cambios medidos con el mismo criterio (mejorar el completo y el cuerpo en V23 y V24): severidad con tendencia por peligro en autos y edificios (el nivel de severidad de 2025 de cada peligro sale de la serie anual recortada, no de la media 2021-2024; relatividades GLM sin cambios; fuera de la referencia de nivel por la regla s17), y pesos de cuerpo en contenidos (sin la red neuronal, aditivo 0,3, severidad ampliada 0,4, LightGBM 0,3, elasticidad de exposición 0,95). Frente a S22: +0,00016 en V23 y +0,00014 en V24 en el completo, +0,00072 y +0,00020 sin el 0,1 % superior, +0,00075 y +0,00032 en el cuerpo sin el 0,5 % renivelado. Mejora pequeña, consistente en los dos cortes y en los dos criterios, no apoyada en la cola. No usa el clima del año (S31 quedó sin entregar: no mejora el total del ramo).",
+ "archivo": "Hackaton/Semana 1/Envios/archivos/S30_claude_b.csv",
+ "sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+ "filas": 626639,
+ "columnas": [
+  "row_id",
+  "prediction"
+ ],
+ "total_CU": 211962091.19,
+ "por_ramo_CU": {
+  "motor": 118900944.02,
+  "buildings": 74366227.96,
+  "contents": 18694919.21
+ },
+ "tasa_2025_por_unidad_de_exposicion": {
+  "motor": 594.6,
+  "buildings": 495.0,
+  "contents": 124.5
+ },
+ "composicion": {
+  "motor": "CatBoost Tweedie F01234 sin marketing_segment, cuatro semillas (0,2); CatBoost Poisson por peligro (partes CFS de Modelos_claude: V23 CFS_motor_v23, V24 CFS_motor_s23, 2025 CFS_motor y CFS_motor_s23) con severidad GLM gamma por valor y antigüedad del vehículo y nivel de severidad con tendencia por peligro (B_CFST_motor_tendencia) (0,6); LightGBM F01234 (0,1); LightGBM reducido (0,1). Forma de tasa y exposición 1,09/0,95 como S21 y S22",
+  "buildings": "LightGBM F0124 con las siete F3 de D80 y min_data_in_leaf 1000 (S12h_edif_md1000) (0,4); CatBoost Poisson por peligro (CFS_buildings y CFS_buildings_s23) con severidad GLM por capital y sótano y tendencia por peligro (B_CFST_buildings_tendencia) (0,3); frecuencia aditiva por peligro (FSAP_buildings y FSAP2_buildings) con la misma severidad y tendencia (B_FSAST_buildings_tendencia) (0,3). Sin forma",
+  "contents": "LightGBM con las siete F3 (S08h_hogar_F3s2) (0,3); modelo aditivo por peligro con severidad modelada (FSA_contents) (0,3); frecuencia aditiva de cuatro semillas con severidad GLM ampliada con covariables físicas (FSAXc4_contents) (0,4). Sin red neuronal. Forma de exposición 0,95 (a = 1)",
+  "regla_de_nivel": "mezcla3.py --nivel=s17 extendida a las corridas B_ (nivel_b.py: fuera de la referencia de nivel si el total 2025/V24 se aparta más de un 1,5 % del ancla del ramo, calculado sin etiquetas): fuera B_CFST_motor_tendencia, B_CFST_buildings_tendencia, B_FSAST_buildings_tendencia, FSAXc4_contents; el nivel lo fijan CAT_motor_4s, S12h_edif_md1000, S08h_hogar_F3s2 y FSA_contents, y el factor de año siguiente de D70",
+  "spec": {
+   "motor": [
+    [
+     "CAT_motor_4s",
+     "cat1a",
+     0.2
+    ],
+    [
+     "B_CFST_motor_tendencia",
+     "B_CFST_motor_tendencia",
+     0.6
+    ],
+    [
+     "S04b_lgbm_F0124_F3autos",
+     "total_F01234",
+     0.1
+    ],
+    [
+     "S06c_lgbm_motor_red",
+     "total_motor_red",
+     0.1
+    ]
+   ],
+   "buildings": [
+    [
+     "S12h_edif_md1000",
+     "hS3",
+     0.4
+    ],
+    [
+     "B_CFST_buildings_tendencia",
+     "B_CFST_buildings_tendencia",
+     0.3
+    ],
+    [
+     "B_FSAST_buildings_tendencia",
+     "B_FSAST_buildings_tendencia",
+     0.3
+    ]
+   ],
+   "contents": [
+    [
+     "S08h_hogar_F3s2",
+     "hS2",
+     0.3
+    ],
+    [
+     "FSA_contents",
+     "FSA_contents",
+     0.3
+    ],
+    [
+     "FSAXc4_contents",
+     "FSAXc4_contents",
+     0.4
+    ]
+   ]
+  },
+  "forma": "motor:1.09:0.95,contents:1:0.95"
+ },
+ "validacion": {
+  "d2_v24_global_con_factor_v23": 0.13788,
+  "por_ramo": {
+   "motor": {
+    "d2_sel": 0.09441,
+    "d2_v24_f23": 0.09168,
+    "f23": 0.98641,
+    "f24": 1.00467,
+    "f": 0.99554
+   },
+   "buildings": {
+    "d2_sel": 0.11687,
+    "d2_v24_f23": 0.1158,
+    "f23": 1.05892,
+    "f24": 1.1343,
+    "f": 1.09661
+   },
+   "contents": {
+    "d2_sel": 0.09259,
+    "d2_v24_f23": 0.09665,
+    "f23": 1.07761,
+    "f24": 1.09236,
+    "f": 1.08498
+   }
+  },
+  "frente_a_S22": {
+   "V23_seleccion": {
+    "motor": "+0,00002 (P>0 0,85)",
+    "buildings": "-0,00023 (P>0 0,158)",
+    "contents": "+0,00135 (P>0 0,802)",
+    "global": "+0,00016 (P>0 0,67)"
+   },
+   "V24": {
+    "motor": "+0,00007 (P>0 0,799)",
+    "buildings": "+0,00028 (P>0 0,99)",
+    "contents": "+0,00003 (P>0 0,493)",
+    "global": "+0,00014 (P>0 0,885)"
+   },
+   "sin_el_0_1_por_ciento_superior_V23_V24": {
+    "motor": "-0,00000 / +0,00030",
+    "buildings": "+0,00159 / -0,00011",
+    "contents": "+0,00129 / +0,00059",
+    "global": "+0,00072 / +0,00020"
+   }
+  },
+  "frente_a_S21": "en rob_s30.json, S21 frente a S22: S30 cede frente a S21 −0,00038 (V23) y −0,00019 (V24) en el completo y gana +0,00272 y +0,00097 sin el 0,1 % superior",
+  "cuerpo_global": {
+   "S22": {
+    "V23": {
+     "d2_completo": 0.14526,
+     "sin_0_5_renivelado": 0.09417,
+     "sin_1_renivelado": 0.08343
+    },
+    "V24": {
+     "d2_completo": 0.13774,
+     "sin_0_5_renivelado": 0.09686,
+     "sin_1_renivelado": 0.08594
+    }
+   },
+   "S30": {
+    "V23": {
+     "d2_completo": 0.14542,
+     "sin_0_5_renivelado": 0.09492,
+     "sin_1_renivelado": 0.08429
+    },
+    "V24": {
+     "d2_completo": 0.13788,
+     "sin_0_5_renivelado": 0.09718,
+     "sin_1_renivelado": 0.08641
+    }
+   },
+   "S21": {
+    "V23": {
+     "d2_completo": 0.1458,
+     "sin_0_5_renivelado": 0.09114,
+     "sin_1_renivelado": 0.07993
+    },
+    "V24": {
+     "d2_completo": 0.13807,
+     "sin_0_5_renivelado": 0.09513,
+     "sin_1_renivelado": 0.08384
+    }
+   }
+  },
+  "frente_a_AG_y_H_2024": {
+   "motor": {
+    "CL_menos_AG": {
+     "dif": 0.002385,
+     "ic95_cliente": [
+      0.000337,
+      0.005363
+     ],
+     "ic95_direccion": [
+      0.000425,
+      0.005412
+     ]
+    },
+    "CL_menos_H": {
+     "dif": 0.000974,
+     "ic95_cliente": [
+      -0.000269,
+      0.00271
+     ],
+     "ic95_direccion": [
+      -0.000302,
+      0.002855
+     ]
+    }
+   },
+   "buildings": {
+    "CL_menos_AG": {
+     "dif": 0.00129,
+     "ic95_cliente": [
+      -0.000188,
+      0.002961
+     ],
+     "ic95_direccion": [
+      -0.000277,
+      0.002921
+     ]
+    },
+    "CL_menos_H": {
+     "dif": -2e-05,
+     "ic95_cliente": [
+      -0.001582,
+      0.001686
+     ],
+     "ic95_direccion": [
+      -0.001673,
+      0.001687
+     ]
+    }
+   },
+   "contents": {
+    "CL_menos_AG": {
+     "dif": 0.001739,
+     "ic95_cliente": [
+      0.000262,
+      0.003407
+     ],
+     "ic95_direccion": [
+      0.000131,
+      0.003451
+     ]
+    },
+    "CL_menos_H": {
+     "dif": 0.001188,
+     "ic95_cliente": [
+      -0.00038,
+      0.002743
+     ],
+     "ic95_direccion": [
+      -0.000426,
+      0.002865
+     ]
+    }
+   },
+   "agregado": {
+    "CL_menos_AG": {
+     "dif": 0.001784,
+     "ic95_cliente": [
+      0.000684,
+      0.003149
+     ],
+     "ic95_direccion": [
+      0.000612,
+      0.003368
+     ]
+    },
+    "CL_menos_H": {
+     "dif": 0.000622,
+     "ic95_cliente": [
+      -0.000243,
+      0.001623
+     ],
+     "ic95_direccion": [
+      -0.000272,
+      0.001583
+     ]
+    }
+   }
+  },
+  "reservas_de_caso": {
+   "candidato": "S30",
+   "comparadores": [
+    "S22",
+    "H",
+    "A_G"
+   ],
+   "escenarios": {
+    "0.75": {
+     "motor": {
+      "d2": {
+       "S30": 0.092837,
+       "S22": 0.09277,
+       "H": 0.092005,
+       "A_G": 0.090919
+      },
+      "S30_menos_S22": {
+       "dif": 6.7e-05,
+       "ic95_cliente": [
+        -8.9e-05,
+        0.00022
+       ],
+       "ic95_direccion": [
+        -8.9e-05,
+        0.000211
+       ],
+       "diez_clientes_mas_favorables": 5.7e-05,
+       "dif_sin_esos_diez": 1e-05
+      },
+      "S30_menos_H": {
+       "dif": 0.000832,
+       "ic95_cliente": [
+        -0.000268,
+        0.002314
+       ],
+       "ic95_direccion": [
+        -0.000282,
+        0.002449
+       ],
+       "diez_clientes_mas_favorables": 0.001017,
+       "dif_sin_esos_diez": -0.000185
+      },
+      "S30_menos_A_G": {
+       "dif": 0.001918,
+       "ic95_cliente": [
+        0.000189,
+        0.004848
+       ],
+       "ic95_direccion": [
+        0.000238,
+        0.004731
+       ],
+       "diez_clientes_mas_favorables": 0.001763,
+       "dif_sin_esos_diez": 0.000155
+      }
+     },
+     "buildings": {
+      "d2": {
+       "S30": 0.117337,
+       "S22": 0.11711,
+       "H": 0.116803,
+       "A_G": 0.115793
+      },
+      "S30_menos_S22": {
+       "dif": 0.000227,
+       "ic95_cliente": [
+        -5e-06,
+        0.000483
+       ],
+       "ic95_direccion": [
+        -2.7e-05,
+        0.000475
+       ],
+       "diez_clientes_mas_favorables": 0.000174,
+       "dif_sin_esos_diez": 5.3e-05
+      },
+      "S30_menos_H": {
+       "dif": 0.000534,
+       "ic95_cliente": [
+        -0.001049,
+        0.002177
+       ],
+       "ic95_direccion": [
+        -0.001012,
+        0.002299
+       ],
+       "diez_clientes_mas_favorables": 0.001134,
+       "dif_sin_esos_diez": -0.0006
+      },
+      "S30_menos_A_G": {
+       "dif": 0.001544,
+       "ic95_cliente": [
+        -3.6e-05,
+        0.003133
+       ],
+       "ic95_direccion": [
+        -0.00011,
+        0.003199
+       ],
+       "diez_clientes_mas_favorables": 0.001321,
+       "dif_sin_esos_diez": 0.000223
+      }
+     },
+     "contents": {
+      "d2": {
+       "S30": 0.096003,
+       "S22": 0.096023,
+       "H": 0.094646,
+       "A_G": 0.094343
+      },
+      "S30_menos_S22": {
+       "dif": -2e-05,
+       "ic95_cliente": [
+        -0.000966,
+        0.001016
+       ],
+       "ic95_direccion": [
+        -0.000987,
+        0.001033
+       ],
+       "diez_clientes_mas_favorables": 0.000847,
+       "dif_sin_esos_diez": -0.000867
+      },
+      "S30_menos_H": {
+       "dif": 0.001357,
+       "ic95_cliente": [
+        -8.7e-05,
+        0.002878
+       ],
+       "ic95_direccion": [
+        -0.000248,
+        0.00286
+       ],
+       "diez_clientes_mas_favorables": 0.001101,
+       "dif_sin_esos_diez": 0.000256
+      },
+      "S30_menos_A_G": {
+       "dif": 0.00166,
+       "ic95_cliente": [
+        0.000163,
+        0.0032
+       ],
+       "ic95_direccion": [
+        0.000178,
+        0.003219
+       ],
+       "diez_clientes_mas_favorables": 0.001286,
+       "dif_sin_esos_diez": 0.000373
+      }
+     },
+     "agregado": {
+      "d2": {
+       "S30": 0.137236,
+       "S22": 0.137131,
+       "H": 0.136444,
+       "A_G": 0.135572
+      },
+      "S30_menos_S22": {
+       "dif": 0.000105,
+       "ic95_cliente": [
+        -0.000113,
+        0.000311
+       ],
+       "ic95_direccion": [
+        -0.0001,
+        0.000331
+       ],
+       "diez_clientes_mas_favorables": 0.000162,
+       "dif_sin_esos_diez": -5.7e-05
+      },
+      "S30_menos_H": {
+       "dif": 0.000791,
+       "ic95_cliente": [
+        2.6e-05,
+        0.001689
+       ],
+       "ic95_direccion": [
+        -1.5e-05,
+        0.001647
+       ],
+       "diez_clientes_mas_favorables": 0.000698,
+       "dif_sin_esos_diez": 9.3e-05
+      },
+      "S30_menos_A_G": {
+       "dif": 0.001664,
+       "ic95_cliente": [
+        0.00066,
+        0.00301
+       ],
+       "ic95_direccion": [
+        0.00068,
+        0.002971
+       ],
+       "diez_clientes_mas_favorables": 0.000997,
+       "dif_sin_esos_diez": 0.000666
+      }
+     }
+    },
+    "1.0": {
+     "motor": {
+      "d2": {
+       "S30": 0.091681,
+       "S22": 0.091605,
+       "H": 0.090707,
+       "A_G": 0.089296
+      },
+      "S30_menos_S22": {
+       "dif": 7.5e-05,
+       "ic95_cliente": [
+        -0.000101,
+        0.000239
+       ],
+       "ic95_direccion": [
+        -0.000115,
+        0.000228
+       ],
+       "diez_clientes_mas_favorables": 6.6e-05,
+       "dif_sin_esos_diez": 9e-06
+      },
+      "S30_menos_H": {
+       "dif": 0.000974,
+       "ic95_cliente": [
+        -0.000212,
+        0.002502
+       ],
+       "ic95_direccion": [
+        -0.000241,
+        0.002923
+       ],
+       "diez_clientes_mas_favorables": 0.001177,
+       "dif_sin_esos_diez": -0.000203
+      },
+      "S30_menos_A_G": {
+       "dif": 0.002385,
+       "ic95_cliente": [
+        0.000393,
+        0.005462
+       ],
+       "ic95_direccion": [
+        0.000368,
+        0.005661
+       ],
+       "diez_clientes_mas_favorables": 0.002032,
+       "dif_sin_esos_diez": 0.000353
+      }
+     },
+     "buildings": {
+      "d2": {
+       "S30": 0.115798,
+       "S22": 0.115514,
+       "H": 0.115818,
+       "A_G": 0.114508
+      },
+      "S30_menos_S22": {
+       "dif": 0.000283,
+       "ic95_cliente": [
+        2.6e-05,
+        0.000526
+       ],
+       "ic95_direccion": [
+        3.8e-05,
+        0.000527
+       ],
+       "diez_clientes_mas_favorables": 0.000179,
+       "dif_sin_esos_diez": 0.000105
+      },
+      "S30_menos_H": {
+       "dif": -2e-05,
+       "ic95_cliente": [
+        -0.001615,
+        0.001552
+       ],
+       "ic95_direccion": [
+        -0.001564,
+        0.001749
+       ],
+       "diez_clientes_mas_favorables": 0.001131,
+       "dif_sin_esos_diez": -0.001152
+      },
+      "S30_menos_A_G": {
+       "dif": 0.00129,
+       "ic95_cliente": [
+        -0.000294,
+        0.002968
+       ],
+       "ic95_direccion": [
+        -0.000245,
+        0.002863
+       ],
+       "diez_clientes_mas_favorables": 0.00132,
+       "dif_sin_esos_diez": -3e-05
+      }
+     },
+     "contents": {
+      "d2": {
+       "S30": 0.09665,
+       "S22": 0.096618,
+       "H": 0.095462,
+       "A_G": 0.094912
+      },
+      "S30_menos_S22": {
+       "dif": 3.2e-05,
+       "ic95_cliente": [
+        -0.000959,
+        0.001388
+       ],
+       "ic95_direccion": [
+        -0.000899,
+        0.001289
+       ],
+       "diez_clientes_mas_favorables": 0.000928,
+       "dif_sin_esos_diez": -0.000896
+      },
+      "S30_menos_H": {
+       "dif": 0.001188,
+       "ic95_cliente": [
+        -0.000297,
+        0.002849
+       ],
+       "ic95_direccion": [
+        -0.000396,
+        0.003026
+       ],
+       "diez_clientes_mas_favorables": 0.001187,
+       "dif_sin_esos_diez": 1e-06
+      },
+      "S30_menos_A_G": {
+       "dif": 0.001739,
+       "ic95_cliente": [
+        0.000211,
+        0.003415
+       ],
+       "ic95_direccion": [
+        0.000256,
+        0.003376
+       ],
+       "diez_clientes_mas_favorables": 0.001373,
+       "dif_sin_esos_diez": 0.000365
+      }
+     },
+     "agregado": {
+      "d2": {
+       "S30": 0.13788,
+       "S22": 0.137742,
+       "H": 0.137258,
+       "A_G": 0.136096
+      },
+      "S30_menos_S22": {
+       "dif": 0.000138,
+       "ic95_cliente": [
+        -8.7e-05,
+        0.000381
+       ],
+       "ic95_direccion": [
+        -8.5e-05,
+        0.000385
+       ],
+       "diez_clientes_mas_favorables": 0.000173,
+       "dif_sin_esos_diez": -3.5e-05
+      },
+      "S30_menos_H": {
+       "dif": 0.000622,
+       "ic95_cliente": [
+        -0.000309,
+        0.001509
+       ],
+       "ic95_direccion": [
+        -0.000273,
+        0.00164
+       ],
+       "diez_clientes_mas_favorables": 0.000765,
+       "dif_sin_esos_diez": -0.000143
+      },
+      "S30_menos_A_G": {
+       "dif": 0.001784,
+       "ic95_cliente": [
+        0.000571,
+        0.003265
+       ],
+       "ic95_direccion": [
+        0.000661,
+        0.003224
+       ],
+       "diez_clientes_mas_favorables": 0.001114,
+       "dif_sin_esos_diez": 0.000669
+      }
+     }
+    },
+    "1.25": {
+     "motor": {
+      "d2": {
+       "S30": 0.088984,
+       "S22": 0.088901,
+       "H": 0.087878,
+       "A_G": 0.086166
+      },
+      "S30_menos_S22": {
+       "dif": 8.3e-05,
+       "ic95_cliente": [
+        -0.000125,
+        0.000279
+       ],
+       "ic95_direccion": [
+        -0.000115,
+        0.000261
+       ],
+       "diez_clientes_mas_favorables": 7.5e-05,
+       "dif_sin_esos_diez": 7e-06,
+       "cambio_numerador_por_peligro_a_mas25": {
+        "bodily_injury": -1327.184,
+        "glass_hail": 70.988,
+        "own_damage": 1020.586,
+        "theft": 321.537,
+        "third_party_prop": 224.84
+       }
+      },
+      "S30_menos_H": {
+       "dif": 0.001106,
+       "ic95_cliente": [
+        -0.000261,
+        0.002926
+       ],
+       "ic95_direccion": [
+        -0.000279,
+        0.003074
+       ],
+       "diez_clientes_mas_favorables": 0.001335,
+       "dif_sin_esos_diez": -0.000229,
+       "cambio_numerador_por_peligro_a_mas25": {
+        "bodily_injury": 290.508,
+        "glass_hail": 204.305,
+        "own_damage": 3352.959,
+        "theft": 822.511,
+        "third_party_prop": 426.537
+       }
+      },
+      "S30_menos_A_G": {
+       "dif": 0.002818,
+       "ic95_cliente": [
+        0.000578,
+        0.006479
+       ],
+       "ic95_direccion": [
+        0.000577,
+        0.006449
+       ],
+       "diez_clientes_mas_favorables": 0.002291,
+       "dif_sin_esos_diez": 0.000527,
+       "cambio_numerador_por_peligro_a_mas25": {
+        "bodily_injury": 6260.948,
+        "glass_hail": 205.922,
+        "own_damage": 5811.361,
+        "theft": 990.733,
+        "third_party_prop": 2508.045
+       }
+      }
+     },
+     "buildings": {
+      "d2": {
+       "S30": 0.113079,
+       "S22": 0.112743,
+       "H": 0.113615,
+       "A_G": 0.112025
+      },
+      "S30_menos_S22": {
+       "dif": 0.000336,
+       "ic95_cliente": [
+        6.9e-05,
+        0.000577
+       ],
+       "ic95_direccion": [
+        6.6e-05,
+        0.000571
+       ],
+       "diez_clientes_mas_favorables": 0.000186,
+       "dif_sin_esos_diez": 0.000151,
+       "cambio_numerador_por_peligro_a_mas25": {
+        "accidental_damage": 3.18,
+        "escape_of_water": 356.414,
+        "fire": -289.473,
+        "flood": 1951.763,
+        "storm": -40.248,
+        "subsidence": -412.079
+       }
+      },
+      "S30_menos_H": {
+       "dif": -0.000536,
+       "ic95_cliente": [
+        -0.002105,
+        0.00127
+       ],
+       "ic95_direccion": [
+        -0.002372,
+        0.001028
+       ],
+       "diez_clientes_mas_favorables": 0.001142,
+       "dif_sin_esos_diez": -0.001678,
+       "cambio_numerador_por_peligro_a_mas25": {
+        "accidental_damage": -43.119,
+        "escape_of_water": -1078.237,
+        "fire": -3203.755,
+        "flood": -6787.815,
+        "storm": -419.178,
+        "subsidence": -1405.649
+       }
+      },
+      "S30_menos_A_G": {
+       "dif": 0.001054,
+       "ic95_cliente": [
+        -0.000618,
+        0.002962
+       ],
+       "ic95_direccion": [
+        -0.000553,
+        0.002695
+       ],
+       "diez_clientes_mas_favorables": 0.001328,
+       "dif_sin_esos_diez": -0.000274,
+       "cambio_numerador_por_peligro_a_mas25": {
+        "accidental_damage": -2.133,
+        "escape_of_water": -717.431,
+        "fire": -2775.889,
+        "flood": 591.996,
+        "storm": -763.598,
+        "subsidence": -1130.26
+       }
+      }
+     },
+     "contents": {
+      "d2": {
+       "S30": 0.096928,
+       "S22": 0.096845,
+       "H": 0.095902,
+       "A_G": 0.095113
+      },
+      "S30_menos_S22": {
+       "dif": 8.3e-05,
+       "ic95_cliente": [
+        -0.000927,
+        0.001374
+       ],
+       "ic95_direccion": [
+        -0.000953,
+        0.001402
+       ],
+       "diez_clientes_mas_favorables": 0.001011,
+       "dif_sin_esos_diez": -0.000928,
+       "cambio_numerador_por_peligro_a_mas25": {
+        "accidental_damage": 51.767,
+        "escape_of_water": -227.358,
+        "flood": 857.6,
+        "theft": -31.887
+       }
+      },
+      "S30_menos_H": {
+       "dif": 0.001025,
+       "ic95_cliente": [
+        -0.00066,
+        0.002871
+       ],
+       "ic95_direccion": [
+        -0.000718,
+        0.002838
+       ],
+       "diez_clientes_mas_favorables": 0.00128,
+       "dif_sin_esos_diez": -0.000255,
+       "cambio_numerador_por_peligro_a_mas25": {
+        "accidental_damage": -64.612,
+        "escape_of_water": -704.215,
+        "flood": -810.111,
+        "theft": -211.596
+       }
+      },
+      "S30_menos_A_G": {
+       "dif": 0.001815,
+       "ic95_cliente": [
+        0.000165,
+        0.003538
+       ],
+       "ic95_direccion": [
+        0.000181,
+        0.003532
+       ],
+       "diez_clientes_mas_favorables": 0.001469,
+       "dif_sin_esos_diez": 0.000346,
+       "cambio_numerador_por_peligro_a_mas25": {
+        "accidental_damage": -0.587,
+        "escape_of_water": -162.576,
+        "flood": 1444.611,
+        "theft": 72.891
+       }
+      }
+     },
+     "agregado": {
+      "d2": {
+       "S30": 0.137208,
+       "S22": 0.137039,
+       "H": 0.136743,
+       "A_G": 0.135311
+      },
+      "S30_menos_S22": {
+       "dif": 0.000169,
+       "ic95_cliente": [
+        -6.7e-05,
+        0.000445
+       ],
+       "ic95_direccion": [
+        -5.2e-05,
+        0.000449
+       ],
+       "diez_clientes_mas_favorables": 0.000185,
+       "dif_sin_esos_diez": -1.6e-05,
+       "cambio_numerador_por_peligro_a_mas25": {
+        "accidental_damage": 54.947,
+        "bodily_injury": -1327.184,
+        "escape_of_water": 129.056,
+        "fire": -289.473,
+        "flood": 2809.363,
+        "glass_hail": 70.988,
+        "own_damage": 1020.586,
+        "storm": -40.248,
+        "subsidence": -412.079,
+        "theft": 289.649,
+        "third_party_prop": 224.84
+       }
+      },
+      "S30_menos_H": {
+       "dif": 0.000465,
+       "ic95_cliente": [
+        -0.000523,
+        0.001522
+       ],
+       "ic95_direccion": [
+        -0.000516,
+        0.001508
+       ],
+       "diez_clientes_mas_favorables": 0.000831,
+       "dif_sin_esos_diez": -0.000367,
+       "cambio_numerador_por_peligro_a_mas25": {
+        "accidental_damage": -107.731,
+        "bodily_injury": 290.508,
+        "escape_of_water": -1782.452,
+        "fire": -3203.755,
+        "flood": -7597.925,
+        "glass_hail": 204.305,
+        "own_damage": 3352.959,
+        "storm": -419.178,
+        "subsidence": -1405.649,
+        "theft": 610.915,
+        "third_party_prop": 426.537
+       }
+      },
+      "S30_menos_A_G": {
+       "dif": 0.001897,
+       "ic95_cliente": [
+        0.000711,
+        0.00374
+       ],
+       "ic95_direccion": [
+        0.00062,
+        0.003527
+       ],
+       "diez_clientes_mas_favorables": 0.001228,
+       "dif_sin_esos_diez": 0.000668,
+       "cambio_numerador_por_peligro_a_mas25": {
+        "accidental_damage": -2.72,
+        "bodily_injury": 6260.948,
+        "escape_of_water": -880.006,
+        "fire": -2775.889,
+        "flood": 2036.607,
+        "glass_hail": 205.922,
+        "own_damage": 5811.361,
+        "storm": -763.598,
+        "subsidence": -1130.26,
+        "theft": 1063.624,
+        "third_party_prop": 2508.045
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "publico_simulado": {
+  "V23 30%": {
+   "S30-S22": {
+    "media": 0.00014,
+    "P_mayor_que_0": 0.506,
+    "ic90": [
+     -0.00033,
+     0.00087
+    ]
+   },
+   "S30-S21": {
+    "media": -0.00039,
+    "P_mayor_que_0": 0.282,
+    "ic90": [
+     -0.00156,
+     0.00083
+    ]
+   }
+  },
+  "V23 50%": {
+   "S30-S22": {
+    "media": 0.00015,
+    "P_mayor_que_0": 0.6,
+    "ic90": [
+     -0.00023,
+     0.00054
+    ]
+   },
+   "S30-S21": {
+    "media": -0.0004,
+    "P_mayor_que_0": 0.226,
+    "ic90": [
+     -0.00119,
+     0.0004
+    ]
+   }
+  },
+  "V24 30%": {
+   "S30-S22": {
+    "media": 0.00014,
+    "P_mayor_que_0": 0.768,
+    "ic90": [
+     -0.00014,
+     0.00046
+    ]
+   },
+   "S30-S21": {
+    "media": -0.00017,
+    "P_mayor_que_0": 0.322,
+    "ic90": [
+     -0.00083,
+     0.00055
+    ]
+   }
+  },
+  "V24 50%": {
+   "S30-S22": {
+    "media": 0.00014,
+    "P_mayor_que_0": 0.874,
+    "ic90": [
+     -6e-05,
+     0.00033
+    ]
+   },
+   "S30-S21": {
+    "media": -0.00019,
+    "P_mayor_que_0": 0.25,
+    "ic90": [
+     -0.00064,
+     0.00024
+    ]
+   }
+  }
+ },
+ "criterio_fijado_antes_de_resultados": {
+  "regla_de_adopcion": "Un cambio entra solo si mejora el ramo en V23 y en V24 en el D² completo y en el cuerpo (sin el 0,5 % superior, renivelado), o mejora uno sin ceder más de 0,0003 en el otro; fijado en CLB-20261018-001 antes de construir S30",
+  "severidad_con_tendencia": "Regresión log-lineal de la serie anual recortada (cuantil 0,999), crecimiento acotado a ±15 %, un año adelante; control pooled reproduce CFSS/FSAS exactamente; en contenidos no entra (−0,0004 frente a la severidad ampliada)",
+  "pesos_de_contenidos": "Frontera de Pareto entre la peor mejora del completo y la peor mejora del cuerpo en V23 y V24 (rejilla_cuerpo_b.py); se eligió un punto intermedio, no el extremo de cuerpo",
+  "clima_del_anio": "Probado por peligro con variables fijadas de antemano; mejora el peligro en escape de agua y lunas, no el total del ramo (S31 frente a S30: +0,00002 y −0,00005); no se usa",
+  "limite": "V23 y V24 entran en la elección; la peor de las dos mejoras en dos criterios limita el sobreajuste a un corte y a la cola, pero no es validación independiente"
+ },
+ "autorizacion": {
+  "F3_hogar": "D80",
+  "envio": "Lo coordina Codex con autorización del participante; Claude no envía"
+ },
+ "controles_claude": [
+  "626.639 filas en el orden de sample_submission",
+  "columnas row_id,prediction",
+  "sin faltantes",
+  "mínimo 0.09331 > 0",
+  "SHA-256 recalculado tras la copia"
+ ],
+ "predicciones_por_fila_v23_v24": {
+  "archivo": "Hackaton/Semana 1/Modelos_claude_b/experimentos/predicciones_v23_v24_s30.parquet",
+  "sha256": "afd72dca917bf593202fb94cbee9382f5e9c35ea80c8aada81a68a2053d1131e",
+  "columnas": [
+   "row_id",
+   "line",
+   "corte",
+   "y_T0",
+   "reserva_caso",
+   "prediction"
+  ]
+ },
+ "reproduccion": "En el equipo: python3 reproducir_s30_b.py experimentos/spec_s30.json motor:1.09:0.95,contents:1:0.95 S30_claude_b fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5 (desde Modelos_claude_b, con Modelos_claude al lado; repite la mezcla a partir de las predicciones guardadas de cada componente)",
+ "creado_utc": "2026-10-18T22:30:01Z"
+}

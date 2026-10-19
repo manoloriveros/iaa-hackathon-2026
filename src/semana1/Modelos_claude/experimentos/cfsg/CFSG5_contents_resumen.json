@@ -1,0 +1,127 @@
+{
+ "origen": "CFS_contents",
+ "line": "contents",
+ "hojas": 5,
+ "min_sev": 1500,
+ "features": 75,
+ "perils": {
+  "theft": {
+   "V23": {
+    "betas": [
+     0.6902
+    ],
+    "siniestros": 3680,
+    "filas_pos": 3640,
+    "rondas": 101,
+    "d2_peligro_sel": 0.03425,
+    "d2_peligro_sel_constante": 0.01494
+   },
+   "V24": {
+    "betas": [
+     0.6815
+    ],
+    "siniestros": 5650,
+    "filas_pos": 5589,
+    "rondas": 116
+   },
+   "PROD": {
+    "betas": [
+     0.6959
+    ],
+    "siniestros": 7626,
+    "filas_pos": 7541,
+    "rondas": 131
+   }
+  },
+  "escape_of_water": {
+   "V23": {
+    "betas": [
+     0.7821
+    ],
+    "siniestros": 2632,
+    "filas_pos": 2618,
+    "rondas": 68,
+    "d2_peligro_sel": 0.03826,
+    "d2_peligro_sel_constante": 0.03532
+   },
+   "V24": {
+    "betas": [
+     0.7281
+    ],
+    "siniestros": 4004,
+    "filas_pos": 3978,
+    "rondas": 78
+   },
+   "PROD": {
+    "betas": [
+     0.7285
+    ],
+    "siniestros": 5366,
+    "filas_pos": 5330,
+    "rondas": 88
+   }
+  },
+  "accidental_damage": {
+   "V23": {
+    "betas": [
+     0.3814
+    ],
+    "siniestros": 4406,
+    "filas_pos": 4327,
+    "rondas": 0,
+    "d2_peligro_sel": 0.16756,
+    "d2_peligro_sel_constante": 0.16127
+   },
+   "V24": {
+    "betas": [
+     0.3846
+    ],
+    "siniestros": 6774,
+    "filas_pos": 6654,
+    "rondas": 0
+   },
+   "PROD": {
+    "betas": [
+     0.3632
+    ],
+    "siniestros": 9063,
+    "filas_pos": 8894,
+    "rondas": 0
+   }
+  },
+  "flood": {
+   "V23": {
+    "betas": [
+     0.7767,
+     -0.0206
+    ],
+    "siniestros": 806,
+    "filas_pos": 793,
+    "rondas": 0,
+    "d2_peligro_sel": 0.49082,
+    "d2_peligro_sel_constante": 0.47913
+   },
+   "V24": {
+    "betas": [
+     0.7749,
+     -0.0735
+    ],
+    "siniestros": 1254,
+    "filas_pos": 1233,
+    "rondas": 0
+   },
+   "PROD": {
+    "betas": [
+     0.7603,
+     -0.04
+    ],
+    "siniestros": 1615,
+    "filas_pos": 1586,
+    "rondas": 0
+   }
+  }
+ },
+ "d2_sel": 0.09044,
+ "d2_v24": 0.09134,
+ "pred_2025_total_CU": 17309736.97
+}
