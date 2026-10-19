@@ -1,77 +1,105 @@
-# Prima de riesgo por periodo de póliza: semana 1
+# Una prima de riesgo para cada periodo de póliza
 
-Borrador para revisión del participante, 19 de octubre de 2026, Bogotá. El informe del concurso debe cubrir las dos partes; solo se califican sus primeras cinco páginas. Este documento prepara la primera y conserva pendientes reales. La versión PDF tiene cinco páginas; el panel amplía datos, ensayos y evidencias para la revisión.
+AI Hackathon IAA 2026 · Primera semana · Borrador para revisión del participante
 
-## 1. Propósito, resultado y estado de entrega
+## Resumen
 
-El reto pide el coste último esperado de cada periodo de póliza de 2025 en autos particulares, edificios y contenidos del hogar, en unidades monetarias ficticias (CU). Incluye siniestros ocurridos durante la cobertura, netos de franquicia y recuperaciones, y excluye rechazados. La prima comercial escrita no es la variable objetivo. La métrica publicada es D² Tweedie con potencia 1,5, que se maximiza; no es un porcentaje de aciertos.
+Estimamos el coste esperado de los siniestros de cada periodo asegurado. El enfoque combina modelos de coste total con modelos que separan la frecuencia y el importe de los siniestros. La combinación se adapta a autos, edificios y contenidos del hogar.
 
-El candidato principal de revisión es S30, una mezcla por ramo construida por Claude a partir de componentes conservados de su línea principal y su línea B. El respaldo es S22. La preparación de datos y parte de la verificación incorporan trabajo de Codex. La gestión se unifica desde hoy sin cambiar ese linaje. S30 conserva un CSV de 626.639 filas con SHA-256 `fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5`, envío Kaggle 57371361, estado COMPLETE y score público 0,12996. S22 tiene score público 0,12988, envío 57370117. Fuente: recibos archivados en `docs/evidencia/recibo_S30.json` y `recibo_S22.json`.
+El trabajo empieza por reconstruir los datos y asignar cada siniestro a la cobertura que le corresponde. Después incorpora el retraso de notificación, compara alternativas en el tiempo y verifica el archivo de entrega. La IA interviene en ese recorrido con propuestas, código y revisión crítica de los resultados.
 
-S30 alcanza D² local V24 completo de 0,137879634652177 sobre T0, con ganancia 0,000138041187091 frente a S22. La ganancia agregada es pequeña: el IC95 condicional por cliente [-0,00008236; 0,00036948] y por dirección [-0,00007807; 0,00038911] incluye cero. No se presenta como superioridad concluyente. El objetivo y muestra del leaderboard difieren de los de la validación local.
+La propuesta principal obtiene una mejora pequeña frente al respaldo. Conservamos ambos candidatos porque la incertidumbre de la comparación todavía admite resultados equivalentes. La elección final y la revisión humana siguen pendientes.
 
-La revisión actual vuelve a comprobar esquema, cobertura de los tres test, IDs únicos, orden frente a sample_submission, valores finitos no negativos y SHA de ambos CSV frente a entrega y recibo. También coteja los once originales. Copias exactas quedan en `privado/predicciones/`, fuera de Git. La revisión no produce nuevas predicciones ni entrena. Los resultados exactos están en `docs/evidencia/preflight.json` y `registro/panel_datos.json`.
+## Preparar los datos para que el modelo aprenda lo correcto
 
-El cierre de la parte 1 es el viernes 23 de octubre de 2026 a las 16:00 UTC, 11:00 a. m. Bogotá, según metadatos oficiales consultados el 19 de octubre. Los CSV ya puntuados son candidatos; no se acredita selección final manual. Las reglas permiten elegir hasta uno y toman el mejor público si no se elige. Informe, video, ambos CSV y repositorio se entregan al finalizar la parte 2, por un formulario cuyo enlace sigue pendiente. Fuentes oficiales archivadas: `docs/fuentes/reglas_kaggle_20261019.json`, páginas rules y Submissions.
+La información reúne clientes, ubicaciones, pólizas y siniestros de un mercado sintético. Algunas pólizas cambian durante el año y un mismo identificador reaparece en renovaciones. Por eso asignamos cada siniestro usando su póliza, ramo y fecha de ocurrencia. Un enlace que ignore el periodo de cobertura puede duplicar costes o asignarlos al año equivocado.
 
-## 2. Datos, limpieza y construcción del objetivo
+Las decisiones de preparación responden a problemas concretos:
 
-Se conservan once Parquet sintéticos: clientes, direcciones, clima dirección-año, siniestros, tres tablas de pólizas 2021-2024, tres test 2025 y la plantilla. Hay 2.409.311 periodos de entrenamiento y 626.639 de test. El diccionario de 107 campos y los perfiles originales D30/D61 están en el panel; ese corte histórico precede al modelado. Las claves permanecen como texto. Clientes y direcciones pueden repetirse entre ramos y años, por lo que la dependencia se considera al analizar incertidumbre.
+| Decisión | Qué resuelve |
+| --- | --- |
+| Armonizar claves de cliente | Recupera enlaces con el maestro sin cambiar la identidad del asegurado. |
+| Corregir unidades de exposición | Evita que días registrados como años distorsionen las tasas y el coste del periodo. |
+| Revisar la escala de los capitales | Aplica el tratamiento documentado y conserva los casos sin confirmación como incertidumbre. |
+| Unificar categorías y edad de referencia | Hace comparables las variables y distingue una convención de un error demostrado. |
+| Excluir copias exactas de siniestros | Evita contar dos veces el mismo coste. |
+| Conservar marcas de auditoría | Permite revisar incidencias sin convertirlas en predictores. |
 
-| Regla base | Cambio documentado | Alcance e interpretación |
+Los originales se preservan. Cada transformación tiene una regla, una conciliación y una referencia al dato de origen. El diccionario y el panel permiten revisar el recorrido de cada variable.
+
+## Del coste observado al coste último
+
+El objetivo es el coste final esperado de los siniestros del periodo cubierto, neto de franquicias y recuperaciones. Para aprender usamos el coste incurrido de los siniestros aceptados, descontando las recuperaciones. Los pagos ya son netos de franquicia, por lo que evitamos descontarla de nuevo. Los siniestros rechazados quedan fuera del coste.
+
+El cierre disponible todavía no recoge todos los siniestros que terminarán notificándose. Estimamos la proporción reportada por peligro con un método de desarrollo de conteos y la incorporamos a la exposición de entrenamiento. Al predecir usamos la duración nominal de la cobertura. Así, el ajuste por retraso de notificación entra una sola vez.
+
+Las reservas de caso de los siniestros abiertos se mantienen en el coste observado. Disponemos de una única valoración, que no permite demostrar su suficiencia ni la ausencia de sesgo. Esa limitación acompaña la propuesta.
+
+## Modelos con funciones distintas
+
+Los modelos de coste total captan relaciones entre las características del riesgo y su coste. Los de frecuencia y severidad permiten estudiar qué peligros impulsan la predicción y cómo cambia el importe de sus siniestros. Combinamos ambas lecturas con pesos específicos por ramo.
+
+| Ramo | Composición de la propuesta | Función de la combinación |
 | --- | --- | --- |
-| ID01 | 123.664 claves de cliente de autos | Normalización contra maestro, sin cambiar identidad asegurada |
-| EXP01 | 14.229 exposiciones | Conversión de registros en días o ACT360 a años |
-| CAP01 | 2.073 capitales extremos | Escala /1000 con referencia anterior admisible; base conserva 1.454 pendientes |
-| CAT01 | 700.210 valores de construcción | Unificación de alias por mayúsculas; no resuelve por sí sola t/w |
-| AGE01 | 2.936 edades de hogar | Convención de edad al inicio, no 2.936 errores demostrados; dos diferencias D59 sin explicar |
-| DUP01 | 604 copias de siniestro | Exclusión por igualdad estricta, conservando 162.546 siniestros |
-| REN00 | 12.041 periodos de 2.742 pólizas | Marca de continuidad con rechazo de renovación; solo auditoría |
-| PRE00 | 413 siniestros | Marca de prehistoria; se preservan y no se asignan a T0 del historial |
+| Autos | Frecuencia y severidad: 60 %. Modelos de coste total: 40 %. | Combina frecuencia por peligro, severidad con tendencia y relaciones de riesgo aprendidas con CatBoost y LightGBM. |
+| Edificios | Frecuencia y severidad: 60 %. Modelo de coste total: 40 %. | Incorpora peligro, capital asegurado y características del inmueble junto a un modelo LightGBM. |
+| Contenidos | Frecuencia y severidad: 70 %. Modelo de coste total: 30 %. | Combina frecuencia aditiva, distintas estimaciones de severidad y un modelo LightGBM. |
 
-N62 reconstruyó históricamente las once tablas de la base con igualdad en bytes; su comparador conserva 148.424.183 celdas sin diferencias. Esa corrida no se repite al organizar el expediente. La base activa es preaudit. La rama retrospectiva de capitales se documenta aparte. D66/D68 trata los 1.454 restantes en F0: 1.305 apoyados por historia y 149 bajo PRM01-R sin confirmación. No se atribuyen esas 1.454 transformaciones a los originales ni a la capa base. Las marcas audit_* quedan excluidas de predictores.
+El nivel de la predicción se calibra con los cortes históricos. Los componentes con una evolución de nivel inestable aportan forma al reparto del riesgo y quedan fuera de la referencia de nivel. Los pesos, parámetros y reglas exactas están conservados en la receta y el anexo técnico.
 
-D67 asigna cada siniestro por policy_id, ramo y fecha de ocurrencia al periodo cubierto, una sola vez. Los 160.432 aceptados asignados producen T0 = incurred_to_date - recoveries; no se vuelve a restar franquicia porque paid_to_date ya es neto. Rechazados fuera y periodos sin aceptados con cero. T0 suma 741.156.868,43 CU; 146.368 periodos tienen coste positivo. La reserva de caso abierta asciende a 90.168.216,94 CU. Son conciliaciones históricas D67, no importes últimos observados.
+## Cómo contrastamos la propuesta
 
-## 3. Método, variables y receta congelada
+La comparación respeta el orden temporal: ajustamos con años anteriores y evaluamos en un año posterior. Dentro del primer corte separamos clientes para calibración y selección.
 
-La etiqueta T0 usa la valoración declarada del 31-12-2024. La fecha máxima observada de reporte es 30-12-2024; se conserva la distinción. Hay siniestros no reportados y abiertos que cambiarán. El modelo aprende T0 con exposición efectiva, calculada mes a mes mediante completitud de reporte por peligro estimada con chain-ladder de conteos. Su logaritmo actúa como offset. En 2025 se usa exposición nominal, de modo que no se multiplica otra vez por el mismo IBNR. La receta no agrega IBNER sobre las reservas de caso; su suficiencia sigue siendo un supuesto no identificado con una sola valoración.
+| Evaluación | Periodo de ajuste | Uso del resultado |
+| --- | --- | --- |
+| Año 2023 | Años 2021 y 2022 | Calibración y comparación inicial de alternativas. |
+| Año 2024 | Años 2021 a 2023 | Contraste temporal y diagnósticos de estabilidad. |
+| Predicción de 2025 | Años 2021 a 2024 | Archivo que se entrega al concurso. |
 
-La validación temporal usa V23: ajuste 2021-2022, parada del boosting en mitad de calibración 2023 y medición en mitad de selección por cliente. V24 ajusta 2021-2023, usa rondas V23 multiplicadas por 1,15 y mide 2024. Producción ajusta 2021-2024, rondas por 1,3, y predice 2025. V23 y V24 se reutilizaron para elegir modelos, pesos y reglas; no son una evaluación final independiente. Las etiquetas históricas tienen valoración posterior y no existen snapshots anteriores para reconstruirla sin supuestos.
+Ambos cortes históricos participaron en decisiones de desarrollo. Sus resultados permiten comparar las recetas conservadas, pero no constituyen una prueba final independiente.
 
-| Ramo | Componente S30 | Peso |
-| --- | --- | ---: |
-| Autos | CatBoost Tweedie total, cuatro semillas | 0,20 |
-| Autos | CatBoost Poisson por peligro × severidad GLM con tendencia | 0,60 |
-| Autos | LightGBM total F0124 y F3 autos | 0,10 |
-| Autos | LightGBM reducido | 0,10 |
-| Edificios | LightGBM con siete F3 y hoja mínima 1.000 | 0,40 |
-| Edificios | CatBoost por peligro × severidad por capital con tendencia | 0,30 |
-| Edificios | Frecuencia aditiva × severidad por capital con tendencia | 0,30 |
-| Contenidos | LightGBM con siete F3 | 0,30 |
-| Contenidos | Frecuencia aditiva × severidad modelada | 0,30 |
-| Contenidos | Frecuencia aditiva × GLM con covariables físicas | 0,40 |
+Revisamos la pérdida completa por ramo, la influencia de los siniestros grandes, periodos cortos, segmentos de cartera y escenarios de reservas. Los recortes de cola sirven para estudiar pérdidas extremas; la métrica principal conserva todas las pérdidas.
 
-Autos usa exponentes 1,09 para tasa y 0,95 para exposición; contenidos, 1 y 0,95. El nivel 2025 toma la media de factores Tweedie óptimos de V23 y V24. La regla s17 aparta de la referencia de nivel los componentes cuyo cociente total 2025/V24 se aleja más de 1,5 % del ancla; siguen aportando forma. Las tendencias de severidad extrapolan un año con tope ±15 %. Todo esto está congelado en las especificaciones y 36 nodos de `receta/receta.json`.
+## Resultados y decisiones
 
-## 4. Verificación, experimentos y limitaciones
+La puntuación pública favorece ligeramente a la propuesta principal. El contraste local apunta en la misma dirección, con una diferencia agregada cuya incertidumbre incluye cero. La mejora se presenta con ese alcance.
 
-Se separa cada evidencia por corte y autor. D59 conserva 41 comprobaciones sobre ocho reglas base y la rama hasta CAP05R; no certifica capas posteriores. D67 conserva 18 controles y D68, 25. La integral recibida del 19 de octubre, 12:02 UTC, informa 99 controles de datos y 429 de modelos. Estos conteos y los 49 pytest históricos no se cuentan como pruebas nuevas. La comparación S22/S30 conserva 72 ámbitos con D² completo, semestres, segmentos, escenarios fijos de reserva e influencia; los recortes de cola se presentan solo como diagnósticos.
+| Candidato | Validación local sobre coste observado | Puntuación pública del concurso |
+| --- | --- | --- |
+| Propuesta principal | 0,13788 | 0,12996 |
+| Respaldo | 0,13774 | 0,12988 |
 
-S30 mejoró levemente completo y cuerpo en V23/V24 y obtuvo +0,00008 público frente a S22. El criterio de cuerpo se motivó con el orden público de pocos candidatos, por lo que añade selección. Más semillas (S33), pesos/calibración por segmento, deriva de frecuencia S34/S34s y ruptura de severidad S35 no aportaron evidencia suficiente para sustituir S30. El clima del año S31 no se entregó. Los README históricos copiados y el índice del panel conservan pruebas y resultados adversos; tener un plan o un archivo no acredita un proceso activo.
+Fuentes: comparación local y recibos archivados de ambos candidatos. La métrica es la puntuación Tweedie del concurso; mayor es mejor. Las columnas evalúan muestras y costes de referencia distintos y deben leerse por separado.
 
-Los CSV se reprodujeron históricamente desde componentes guardados en nube y VM. La VM produjo diferencias de último bit en Parquet y CSV exactos; con versión 1.1 el modo diagnóstico devuelve código 3, no éxito íntegro. La reconstrucción completa de componentes desde originales sigue pendiente de recoger. No se presenta la reproducción de mezcla como reentrenamiento completo ni reproducción por otra persona.
+La revisión del nivel también importa. En edificios, el coste observado en el último corte supera la predicción. Ese resultado exige revisar la calibración y sus sensibilidades antes de trasladar un cambio al siguiente año.
 
-En esta revisión, la batería 1.1 se interrumpió en Windows por privilegios de symlink y codificación de consola. La versión 1.2 copia insumos, resuelve la ruta de entrada y arranca los dos escritores finales con serialización LF, sin modificar los scripts de modelo, etiquetas o pesos. La batería final de 45 casos pasa: nueve nominales y 36 adversos, incluido el código 3 exacto, sin etapas reales. El replay real desde 47 archivos congelados en la carpeta común reproduce ambos CSV byte a byte. Los Parquet conservan diferencias relativas máximas inferiores a 7,2 × 10^-16; el proceso devuelve 3 y no acredita igualdad completa. Evidencia: `docs/controles/20261019_windows_v12_lf/resultado.json` y `docs/evidencia/replay_windows.json`. Los intentos iniciales adversos se conservan.
+| Ensayo | Decisión conservada |
+| --- | --- |
+| Tendencia de severidad por peligro y nuevos pesos en contenidos | Se incorpora a la propuesta por su mejora pequeña en los cortes revisados. |
+| Más semillas | La variación observada no justificó sustituir el candidato. |
+| Pesos y calibración por segmento | La mejora durante selección no se sostuvo de forma suficiente en el contraste posterior. |
+| Deriva de frecuencia y cambio de régimen en lesiones | Quedan como alternativas documentadas; no sustituyen la receta elegida. |
+| Clima del mismo año | La variante de la línea alternativa no aportó mejora suficiente para entregarla. |
 
-Quedan abiertos: disponibilidad temporal de F3, telemática, historia y clima; valoración única e IBNER no observado; 149 capitales sin confirmación; selección sobre V23/V24 y público; reproducción completa y por otra persona; revisión humana especializada; trazabilidad completa de prompts y una aclaración cronológica histórica. GOV-007 tiene corrección técnica posterior al registro importado, sin cierre automático global. Cada límite tiene criterio de cierre y fuente en el panel; los especialistas humanos aún no están designados. Las verificaciones IA no equivalen a validación profesional independiente.
+## Qué aportó la IA y cómo se comprobó
 
-## 5. IA, responsabilidad, adaptación y operación
+La IA ayudó a explorar incidencias, escribir las reglas de preparación, construir modelos y cuestionar conclusiones. Las revisiones cruzadas detectaron afirmaciones excesivas sobre las reservas y controles del programa que podían continuar pese a archivos incompletos o distintos de los esperados.
 
-El participante dirige el problema y conserva las decisiones y responsabilidades. Claude construyó las líneas predictivas que forman S30/S22; Codex desarrolló reglas y el productor N62, contrastó entregas y controles y consolidó el expediente. Las revisiones cruzadas detectaron controles permisivos del orquestador y afirmaciones excesivas sobre reservas. Los parches, fallos y pruebas posteriores muestran una aportación verificable de la IA a la fiabilidad. No se inventan transcripciones de prompts ni firmas humanas; el registro de conversaciones completas sigue pendiente.
+Esos controles se corrigieron y se comprobaron con casos válidos y errores intencionados. También se reprodujeron los archivos finales desde los componentes guardados. Los fallos iniciales y sus correcciones se conservan para poder revisar cómo se llegó al resultado.
 
-La rúbrica oficial pesa rendimiento/adaptación 40 %, IA 25 %, confianza/controles 20 % y comunicación 15 %. La primera categoría combina scores privados de ambas partes con igual peso y evaluación del jurado de métodos y adaptación; no se inventa otra ponderación. El informe final reservará espacio para lo que cambie en la segunda semana. Al llegar los datos se contrastarán contrato, unidades, exposición, mezcla de riesgos, faltantes, disponibilidad de predictores, desarrollo y estabilidad. Se congelará una referencia antes de adaptar, con hipótesis, criterios y resultados adversos; aún no hay evidencia del segundo mercado.
+Claude desarrolló las líneas predictivas de la propuesta y el respaldo. Codex aportó reglas de datos, reconstrucción, contrastes técnicos y consolidación del expediente. El participante dirige el trabajo y debe aprobar sus decisiones. La colaboración entre asistentes no se presenta como validación profesional independiente.
 
-La carpeta común es `Hackaton/Repositorio_IAA2026`: código en src, receta en receta, documentación en docs, seguimiento en registro y archivos restringidos en privado, excluido de Git. Originales y corridas previas quedan en sus rutas como evidencia. El repositorio privado es https://github.com/manoloriveros/iaa-hackathon-2026. Git comienza el 19 de octubre; el desarrollo anterior se conserva por hashes, decisiones y foro, sin commits retrospectivos inventados. No se suben datos, predicciones por fila, checkpoints o credenciales. Licencia de entrega, costes reales de herramientas y elegibilidad documental para premio siguen pendientes de revisión. El equipo continúa individual; no hay contacto nuevo a terceros ni inscripción en asociaciones.
+## Lo que falta antes de cerrar
 
-Para inspeccionar la receta: `python reproducir.py plan`. Para mezcla desde artefactos autorizados: `python reproducir.py mezcla --semana1=<Semana 1> --trabajo=privado/mezcla`. Componentes/todo implican entrenamiento y no se lanzaron en esta preparación. Entorno de referencia declarado en requirements y entorno; los controles Windows usan Python 3.12.14, numpy 2.3.5 y pyarrow 26.0.0. Códigos 0/1/2/3 distinguen coincidencia, fallo, uso incorrecto y diferencias toleradas. Antes del viernes: revisión del participante, evidencia de reproducción pendiente, decisión del candidato y confirmación de selección en Kaggle. El acta humana queda sin aprobar hasta que se registre una decisión real.
+| Asunto | Estado y siguiente decisión |
+| --- | --- |
+| Coste último y reservas | La suficiencia de reservas sigue sin demostrarse. Hace falta información posterior para contrastarla; mientras tanto se conserva el supuesto y su incertidumbre. |
+| Disponibilidad de variables | Debe aclararse cuándo existirían el historial, la información de dispositivos y los datos de clima en una cotización real. |
+| Capitales sin confirmación | Se mantienen documentados los 149 casos tratados sin referencia histórica suficiente. Su tratamiento requiere revisión y aceptación de alcance. |
+| Reproducción completa | Los archivos finales se reproducen desde componentes guardados. Sigue pendiente recuperar la evidencia completa de la cadena de entrenamiento. |
+| Revisión y selección | Falta registrar la decisión del participante y confirmar el candidato final en Kaggle. |
+
+Al llegar el nuevo mercado compararemos unidades, cobertura, calidad e información disponible antes de adaptar el modelo. Conservaremos una referencia de la primera semana para explicar qué cambió y qué resultado produjo cada adaptación. La segunda parte todavía no tiene resultados en este informe.
+
+El [anexo técnico](ANEXO_TECNICO_SEMANA1.md) reúne los identificadores de candidatos, las huellas de archivos, los parámetros efectivos, las cifras sin redondear y los enlaces a cada verificación. El repositorio conserva el código y las instrucciones de reproducción. El informe y el video finales incorporarán la adaptación al segundo mercado.
