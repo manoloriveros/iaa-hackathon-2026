@@ -1,0 +1,1480 @@
+{
+ "creado_utc": "2026-10-19T02:14:08+00:00",
+ "origenes": [
+  "/home/claude/work",
+  "/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1/Modelos_claude_b"
+ ],
+ "semana1": "/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1",
+ "entradas": {
+  "Datos/weather.parquet": {
+   "bytes": 41863008,
+   "sha256": "b8407f0f3c7279a49297c969a4ab2905641b232910e316fb806730065987cd49",
+   "contenido": "f53977e7ef041173e620734d70592414e9a3e84cea453b291da9657289c2c214",
+   "origen": "/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1/Datos/weather.parquet"
+  },
+  "Datos/sample_submission.parquet": {
+   "bytes": 3271617,
+   "sha256": "9529f3b6a679d3410350baa7c2ef3fb085d1d8843a838360c5852dfe820d4d95",
+   "contenido": "f94c1d55d824842b510af78f8f431a512ef4d4c0671ce82a8100ee54ee0bd32e",
+   "origen": "/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1/Datos/sample_submission.parquet"
+  },
+  "Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca/tables/f0_motor.parquet": {
+   "bytes": 98141422,
+   "sha256": "c503d0142e83818b2c202747ddbce53882ed9add6f8309ced714655caf25b392",
+   "contenido": "20f1a2ecfb2c012244ad8c4222ec8503e98f2efcc021c40cf1089fcc70afbbe6",
+   "origen": "/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1/Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca/tables/f0_motor.parquet"
+  },
+  "Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca/tables/f0_buildings.parquet": {
+   "bytes": 66919547,
+   "sha256": "2def2e2433062704e3762eae63f5b000e73d8284a62a6cc1a689aa63c2842454",
+   "contenido": "1506da562e28d3f28a9338b93c25424bfbdbe68c0efa1010867743977b0a4362",
+   "origen": "/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1/Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca/tables/f0_buildings.parquet"
+  },
+  "Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca/tables/f0_contents.parquet": {
+   "bytes": 65668739,
+   "sha256": "42328ddba499a77f9cc3c814506dc97fde7c3e2adf88cfc491058c7de92c76ff",
+   "contenido": "7b06b565833323090adcff185f2b5ab869b61936df75850acb69b80fe420c190",
+   "origen": "/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1/Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca/tables/f0_contents.parquet"
+  },
+  "Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca/tables/particiones.parquet": {
+   "bytes": 15848536,
+   "sha256": "d365981d07feec50e487ff0d8fa4b9e5b8a00d5af8f8e521e03f2a158931035b",
+   "contenido": "0987960a3498983daa25bbd27bd4258e3e4dbfbf372bedb33ccaa02bba6c4105",
+   "origen": "/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1/Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca/tables/particiones.parquet"
+  },
+  "Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca/contrato_disponibilidad.json": {
+   "bytes": 54543,
+   "sha256": "7e00fb2bb9efba56837ca3e6b04c016ae3ca1a8321ed6d7786eba11c6e2c541d",
+   "contenido": "388a625923b898238b01893d3b0b3ae83dda68927ebeec57b6eca839d1ec1c0a",
+   "origen": "/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1/Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca/contrato_disponibilidad.json"
+  },
+  "Bases_actuariales_claude/runs/bases_20261017T120251Z_45443ff0/tables/asignacion_por_siniestro.parquet": {
+   "bytes": 4805740,
+   "sha256": "535327e1bbba95f171820d27e345988b3c2cbdeec6f86eefefaedefc52992ae5",
+   "contenido": "f760aed27500d172209434c89967949ded6e324b7ecd8a414c34dceb065f2ed3",
+   "origen": "/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1/Bases_actuariales_claude/runs/bases_20261017T120251Z_45443ff0/tables/asignacion_por_siniestro.parquet"
+  }
+ },
+ "salidas": {
+  "feat_motor.parquet": {
+   "bytes": 126378469,
+   "sha256": "1941042d83ae7ba5609627a8dd12201351871f79659b428f29f74d17410768c5",
+   "contenido": "c4a34c2725944199bb9c928d5a5bdd8d53b965c04e6b078e885065e66ccc8359",
+   "origen": "/home/claude/work/feat_motor.parquet",
+   "nodo": "variables"
+  },
+  "feat_buildings.parquet": {
+   "bytes": 85622382,
+   "sha256": "f0809330d8bd828d22eec686d0ceda30d8c855be2dbd43f173406d13e0d8efd4",
+   "contenido": "ca33fab819676987a2a486bed3c97e3182c677da041a51a5078dfce22e94d745",
+   "origen": "/home/claude/work/feat_buildings.parquet",
+   "nodo": "variables"
+  },
+  "feat_contents.parquet": {
+   "bytes": 84020097,
+   "sha256": "82334958a4e2d9bce76c9833d16df1a154403f8822e65dfea6f5a0f761b53a8f",
+   "contenido": "6dfaa65541341ebd054267896a39344befe7cda4b0a5b77ff22d583751f6023a",
+   "origen": "/home/claude/work/feat_contents.parquet",
+   "nodo": "variables"
+  },
+  "sel_total_F0124.parquet": {
+   "bytes": 4649229,
+   "sha256": "f5c512a4469ce73a368c4f86b1092f6c6f6888ce73bc7e25d9446177905690a3",
+   "contenido": "9d696c5bb25d63147c4df749e091fc0f94df5f459d57c7110b2c5227df66fd63",
+   "origen": "/home/claude/work/sel_total_F0124.parquet",
+   "nodo": "sel_total_F0124"
+  },
+  "sel_total_F01234.parquet": {
+   "bytes": 4649229,
+   "sha256": "1fd58048eeeed3dcb7f5719ac35f2c61552254806cb71e9046c53f3d84f2b1c4",
+   "contenido": "f04b5251e4034a1fe2587a338a00fa112f5599ac315ed36de083af936258da07",
+   "origen": "/home/claude/work/sel_total_F01234.parquet",
+   "nodo": "sel_total_F01234"
+  },
+  "sel_total_motor_red.parquet": {
+   "bytes": 4649229,
+   "sha256": "23c0cea11720a4a7f01e71ac0c78cf687bf110dc51033dd16444674a2c01f407",
+   "contenido": "02fe38788ae79e54b46573381aa1b5028c63e1aee329e104292429f3913cdefe",
+   "origen": "/home/claude/work/sel_total_motor_red.parquet",
+   "nodo": "sel_total_motor_red"
+  },
+  "sel_hS2.parquet": {
+   "bytes": 2893890,
+   "sha256": "e1cde41f5e1cbc88958a59d380c39206bb935865a80e24210e358057ef0f79f4",
+   "contenido": "9d3116fc3efbf1c9633c98d7ef2bdc53a4b61e47fd6b2be634d69091d7778008",
+   "origen": "/home/claude/work/sel_hS2.parquet",
+   "nodo": "sel_hS2"
+  },
+  "sel_hS3.parquet": {
+   "bytes": 1574274,
+   "sha256": "b707d8aa2336323c58cfe2b104d3694f38a5b9f48cd095cbc2ce9b2a60c199b1",
+   "contenido": "35aa73651e11b154a6aabc3392e74911af9a490cb7e3abf1e25fd1353f32638d",
+   "origen": "/home/claude/work/sel_hS3.parquet",
+   "nodo": "sel_hS3"
+  },
+  "sel_cat1a.parquet": {
+   "bytes": 2184468,
+   "sha256": "b93d1920cdb06ca2e7f3248f39bfed1fd832422a944ab22af5fc9641c8c10916",
+   "contenido": "2be5c9b5994e32f6bcede94413c65245c4a24d40a94013fe2ab273609ecdb71b",
+   "origen": "/home/claude/work/sel_cat1a.parquet",
+   "nodo": "sel_cat1a"
+  },
+  "S03_lgbm_F0124/v24.parquet": {
+   "bytes": 8878138,
+   "sha256": "1e7e184e95807462ab37443f397bbefba8334d737c3a7853107cce7b55fb2ac8",
+   "contenido": "6c4fff5cfcce7b7ba3253959764ca91de148e926f86ea36efbb9dd490fce8b47",
+   "origen": "/home/claude/work/S03_lgbm_F0124/v24.parquet",
+   "nodo": "S03_lgbm_F0124"
+  },
+  "S03_lgbm_F0124/prediccion_2025.parquet": {
+   "bytes": 8557976,
+   "sha256": "53723ac0c3e49d9818b0451d3ed80b2e1ada3aecd40a3edfdd3f1b171d546556",
+   "contenido": "513660c46ad7c17fbfc47c9b10d768240a5260e09ec327aa53050bb8e3b6f3ac",
+   "origen": "/home/claude/work/S03_lgbm_F0124/prediccion_2025.parquet",
+   "nodo": "S03_lgbm_F0124"
+  },
+  "S03_lgbm_F0124/S03_lgbm_F0124.csv": {
+   "bytes": 12995807,
+   "sha256": "7877e9e968dfc094df6b9450f51ff1d5f97f12fa82b4d985e2fce18d6af93217",
+   "contenido": "7877e9e968dfc094df6b9450f51ff1d5f97f12fa82b4d985e2fce18d6af93217",
+   "origen": "/home/claude/work/S03_lgbm_F0124/S03_lgbm_F0124.csv",
+   "nodo": "S03_lgbm_F0124"
+  },
+  "S04b_lgbm_F0124_F3autos/v24.parquet": {
+   "bytes": 8878138,
+   "sha256": "acfb4eec8ac56d1f3a97d6a0a09e32f79681fd6379e0f3e86e495d9f5e30fb37",
+   "contenido": "b1882aa092b5e9d13b693c1e2424ae3e64ebf373e0662b387b5ada89303b82f8",
+   "origen": "/home/claude/work/S04b_lgbm_F0124_F3autos/v24.parquet",
+   "nodo": "S04b_lgbm_F0124_F3autos"
+  },
+  "S04b_lgbm_F0124_F3autos/prediccion_2025.parquet": {
+   "bytes": 8557976,
+   "sha256": "264ce035ffdd1c07ebcb8c3227aa6f4f2563e6b759c1b7a7c45d2581eafd4564",
+   "contenido": "08b40bd4ef1a0cb624d5d35f4af1cd646ae3dfe6ecd38e3b887d75985c349eb5",
+   "origen": "/home/claude/work/S04b_lgbm_F0124_F3autos/prediccion_2025.parquet",
+   "nodo": "S04b_lgbm_F0124_F3autos"
+  },
+  "S04b_lgbm_F0124_F3autos/S04b_lgbm_F0124_F3autos.csv": {
+   "bytes": 12996206,
+   "sha256": "23e09d9f27326d7a20d508c32b4da039bac43085c1726498618f668d1eaba1fe",
+   "contenido": "23e09d9f27326d7a20d508c32b4da039bac43085c1726498618f668d1eaba1fe",
+   "origen": "/home/claude/work/S04b_lgbm_F0124_F3autos/S04b_lgbm_F0124_F3autos.csv",
+   "nodo": "S04b_lgbm_F0124_F3autos"
+  },
+  "S06c_lgbm_motor_red/v24.parquet": {
+   "bytes": 8878138,
+   "sha256": "eaba43ef4455670133e763c6dddb6648acd9f864ad7e93f4c57ce9b8432825bf",
+   "contenido": "9e4835764d7a16c4d7afb6a4ccff5a6355f2a97f55629a750504ca36e4019393",
+   "origen": "/home/claude/work/S06c_lgbm_motor_red/v24.parquet",
+   "nodo": "S06c_lgbm_motor_red"
+  },
+  "S06c_lgbm_motor_red/prediccion_2025.parquet": {
+   "bytes": 8557976,
+   "sha256": "4a49db207b76127f3bf91c9bcd439e2bd90fab6a0eb79529d081604efb04b7ab",
+   "contenido": "ce20bc09337efb20e6b075f065a076be1ad1cef323e5382b3b66f05e45bbcb48",
+   "origen": "/home/claude/work/S06c_lgbm_motor_red/prediccion_2025.parquet",
+   "nodo": "S06c_lgbm_motor_red"
+  },
+  "S06c_lgbm_motor_red/S06c_lgbm_motor_red.csv": {
+   "bytes": 12997557,
+   "sha256": "8624c2331ab5d9eeed7ee6d6331528c1e7bf5c0bee2b1b02a9e421fb83d4a68e",
+   "contenido": "8624c2331ab5d9eeed7ee6d6331528c1e7bf5c0bee2b1b02a9e421fb83d4a68e",
+   "origen": "/home/claude/work/S06c_lgbm_motor_red/S06c_lgbm_motor_red.csv",
+   "nodo": "S06c_lgbm_motor_red"
+  },
+  "S08h_hogar_F3s2/v24.parquet": {
+   "bytes": 8878138,
+   "sha256": "cc604c6e645e27c525528b2de2c02138ccec56ddec186d7cd566edfb6020eedb",
+   "contenido": "40c627d97edc9c82650bd4c03d0a7bf1af9b9244790f118f8a7a121ee51e983e",
+   "origen": "/home/claude/work/S08h_hogar_F3s2/v24.parquet",
+   "nodo": "S08h_hogar_F3s2"
+  },
+  "S08h_hogar_F3s2/prediccion_2025.parquet": {
+   "bytes": 8557976,
+   "sha256": "f91932f301b817308c50a48bd5bf6297dd62c711fe815f9915dd4fa3d93e2cb2",
+   "contenido": "578cad2b2004e9777a05bd7d78e83095063f1f2102effb32f0bf5e54fc6b21dd",
+   "origen": "/home/claude/work/S08h_hogar_F3s2/prediccion_2025.parquet",
+   "nodo": "S08h_hogar_F3s2"
+  },
+  "S08h_hogar_F3s2/S08h_hogar_F3s2.csv": {
+   "bytes": 12995502,
+   "sha256": "9623c7b7585248e92a717643464a87d5610153ed77b86c4ca344087df1848ac7",
+   "contenido": "9623c7b7585248e92a717643464a87d5610153ed77b86c4ca344087df1848ac7",
+   "origen": "/home/claude/work/S08h_hogar_F3s2/S08h_hogar_F3s2.csv",
+   "nodo": "S08h_hogar_F3s2"
+  },
+  "S12h_edif_md1000/v24.parquet": {
+   "bytes": 8878138,
+   "sha256": "d535388f050b6893cd35d89ccc3c966b7f43e186a13841af3de1b885f37c4c3e",
+   "contenido": "b777023647e18780004936d4970645208d51a3d2c85a6d8618814d537730f5cd",
+   "origen": "/home/claude/work/S12h_edif_md1000/v24.parquet",
+   "nodo": "S12h_edif_md1000"
+  },
+  "S12h_edif_md1000/prediccion_2025.parquet": {
+   "bytes": 8557976,
+   "sha256": "70a3b8b61c40477c9f44725350aabe6adbe83ffc5498c2ea8ef564fd2cf6e663",
+   "contenido": "4716e9466d537e334279d5aaeac6ca28da4d6a81bc688d9fb6eab995f86fab60",
+   "origen": "/home/claude/work/S12h_edif_md1000/prediccion_2025.parquet",
+   "nodo": "S12h_edif_md1000"
+  },
+  "S12h_edif_md1000/S12h_edif_md1000.csv": {
+   "bytes": 12994639,
+   "sha256": "2ca725c0569daf79abf56516278afc8af8ade2ed9f9116662690767a380bdc19",
+   "contenido": "2ca725c0569daf79abf56516278afc8af8ade2ed9f9116662690767a380bdc19",
+   "origen": "/home/claude/work/S12h_edif_md1000/S12h_edif_md1000.csv",
+   "nodo": "S12h_edif_md1000"
+  },
+  "CAT_motor/v24.parquet": {
+   "bytes": 3958638,
+   "sha256": "ee475f23e30ac89f6410ce2f8a19424a505fca758da7a0c33271172abe9a902a",
+   "contenido": "e11fb2fd15be309b7c2d028e534dae6030aba40f5263ed6328712123b4bacb37",
+   "origen": "/home/claude/work/CAT_motor/v24.parquet",
+   "nodo": "CAT_motor"
+  },
+  "CAT_motor/prediccion_2025.parquet": {
+   "bytes": 3739277,
+   "sha256": "4e197e05938aa70e23c934909796d9392c7df46d5e6c045be444f59245a21cc9",
+   "contenido": "99a8bee3434d4be9f95937fe656f7181c5726a13906ccef1134f42bd577181dc",
+   "origen": "/home/claude/work/CAT_motor/prediccion_2025.parquet",
+   "nodo": "CAT_motor"
+  },
+  "CAT_motor_s23/v24.parquet": {
+   "bytes": 3958636,
+   "sha256": "3895cf1b73442c532da5172401de53db6f93ec2c596e8a3a5f746e770850b6d7",
+   "contenido": "c2ac3b0329020c4c81fb91d04d79593c001bacb7ede724795682268d0f4a8597",
+   "origen": "/home/claude/work/CAT_motor_s23/v24.parquet",
+   "nodo": "CAT_motor_s23"
+  },
+  "CAT_motor_s23/prediccion_2025.parquet": {
+   "bytes": 3739277,
+   "sha256": "ae5ee520b2f83d873bf9708629a536b3d1f44979ee6656a273a331d0a39470a4",
+   "contenido": "4d2fc235c404f224c71f33d86d285b5ae9631dfd57010d7feb4683fa3f816918",
+   "origen": "/home/claude/work/CAT_motor_s23/prediccion_2025.parquet",
+   "nodo": "CAT_motor_s23"
+  },
+  "CAT_motor_4s/v24.parquet": {
+   "bytes": 3958636,
+   "sha256": "62274dd4fab69a5ebd465da88315450414fadaf585013567b8ca44d8bc44ed9c",
+   "contenido": "ce3a64c582d95c8685c6210b1c1f27533a4f405be58964f3061d71db87c8e2da",
+   "origen": "/home/claude/work/CAT_motor_4s/v24.parquet",
+   "nodo": "CAT_motor_4s"
+  },
+  "CAT_motor_4s/prediccion_2025.parquet": {
+   "bytes": 3739277,
+   "sha256": "85b97f8c006497cf46dca694dd24f4bc537b28154a6d3a6042568884ef923c98",
+   "contenido": "a53ce47dd9c1c5248d5ff573d3956a929b054a0027aefd2f068565584e903c3b",
+   "origen": "/home/claude/work/CAT_motor_4s/prediccion_2025.parquet",
+   "nodo": "CAT_motor_4s"
+  },
+  "CFS_motor_v23/v23_own_damage.npz": {
+   "bytes": 1019396,
+   "sha256": "a86234806dee320a21ce6b6a574b913af61dc5f108fbf85e21f5f1c0491aec46",
+   "contenido": "9425f95af7a7cea889c32314a26c20d58c18c35f51be0af11fda06a246eca639",
+   "origen": "/home/claude/work/CFS_motor_v23/v23_own_damage.npz",
+   "nodo": "CFS_motor_v23"
+  },
+  "CFS_motor_v23/v23_third_party_prop.npz": {
+   "bytes": 1019396,
+   "sha256": "cd33ea937a6053ab457c6a17a34e0e9d6cf8726f780bd7c083ca4bb9ec2cb12a",
+   "contenido": "8cc4f0034db4333f4a8c9a6e0000cd80b9a576e3016a7120588a4ba0b73bdbb6",
+   "origen": "/home/claude/work/CFS_motor_v23/v23_third_party_prop.npz",
+   "nodo": "CFS_motor_v23"
+  },
+  "CFS_motor_v23/v23_bodily_injury.npz": {
+   "bytes": 1019396,
+   "sha256": "b90099af6169d02c3bf02424f6dc9fda942f2f87fec89a6eaeee48ea7d20de7a",
+   "contenido": "ea21503a8f0dc5ff308f814e32603fb0222c8b61028f689638cf255e99f38cc3",
+   "origen": "/home/claude/work/CFS_motor_v23/v23_bodily_injury.npz",
+   "nodo": "CFS_motor_v23"
+  },
+  "CFS_motor_v23/v23_theft.npz": {
+   "bytes": 1019396,
+   "sha256": "f288a47025a9895e639129d2db271b29ecd2a88e888d6012a8cfb2f693098da5",
+   "contenido": "fa956280856087080425e43adff7089398ce2858c26e43b619fb6cd210f41add",
+   "origen": "/home/claude/work/CFS_motor_v23/v23_theft.npz",
+   "nodo": "CFS_motor_v23"
+  },
+  "CFS_motor_v23/v23_glass_hail.npz": {
+   "bytes": 1019396,
+   "sha256": "411b4dadf36d4b4056a17fda53156a0b9eafe497199edaaec15107502d4a726f",
+   "contenido": "68c2e89ba917c93bc72f3666c5f7893fb45a4c5df1147f36713dc7cc14a30fe6",
+   "origen": "/home/claude/work/CFS_motor_v23/v23_glass_hail.npz",
+   "nodo": "CFS_motor_v23"
+  },
+  "sel_CFS_motor_v23.parquet": {
+   "bytes": 2184468,
+   "sha256": "900ab1601fc2ac25ae6f983ee21faa8596acf95e8c23dd4bec7d69945119fb15",
+   "contenido": "19872c9181f376b9e5f06e41ade0aee9f321790a0fc0f219139bd52a2aab1b35",
+   "origen": "/home/claude/work/sel_CFS_motor_v23.parquet",
+   "nodo": "CFS_motor_v23"
+  },
+  "CFS_motor/prod_own_damage.npy": {
+   "bytes": 2040016,
+   "sha256": "a3b99f874b3d52f644c5b82da96d212bf636ee6069be651ac125004f836a2517",
+   "contenido": "d047b991d0bf126b600f2e4d987083571f61f3e500a81a51b8fc8cb5da684425",
+   "origen": "/home/claude/work/CFS_motor/prod_own_damage.npy",
+   "nodo": "CFS_motor"
+  },
+  "CFS_motor/prod_third_party_prop.npy": {
+   "bytes": 2040016,
+   "sha256": "690a4c3bcec92d55bd861b4da095c0cbd370e227494ecbf9b5e8f4a8a8707259",
+   "contenido": "dea39f8e7a118c3736b19412d5b24e6b103ccebc70f2aad86a9493d0a348065c",
+   "origen": "/home/claude/work/CFS_motor/prod_third_party_prop.npy",
+   "nodo": "CFS_motor"
+  },
+  "CFS_motor/prod_bodily_injury.npy": {
+   "bytes": 2040016,
+   "sha256": "67d5aa89fa68feefe1646db753380940225c7fb26fe7852d1f93f9fd16e0a1ac",
+   "contenido": "0f4bd15add1ff1be34938900abb19eef53771612ac968bbe72e50302a301cb1c",
+   "origen": "/home/claude/work/CFS_motor/prod_bodily_injury.npy",
+   "nodo": "CFS_motor"
+  },
+  "CFS_motor/prod_theft.npy": {
+   "bytes": 2040016,
+   "sha256": "07f82c8865581daf90e7084b7a5876856f6404b683c9ebcdc06e8528a6dec3a8",
+   "contenido": "0b529132474385d25c402a7a6f62ce1f3b8ca66a2d3e5525fd0dd864dd9eb9bc",
+   "origen": "/home/claude/work/CFS_motor/prod_theft.npy",
+   "nodo": "CFS_motor"
+  },
+  "CFS_motor/prod_glass_hail.npy": {
+   "bytes": 2040016,
+   "sha256": "9387d36f3bccd89f661bde91f10859bb56e702d5d17ba4a39c2eb3acc5cc877f",
+   "contenido": "2f1e1ea5522131b6506209a692913a4c25f0497fdc089e73f2dd71b23c1cc6df",
+   "origen": "/home/claude/work/CFS_motor/prod_glass_hail.npy",
+   "nodo": "CFS_motor"
+  },
+  "sel_CFS_motor.parquet": {
+   "bytes": 2184468,
+   "sha256": "900ab1601fc2ac25ae6f983ee21faa8596acf95e8c23dd4bec7d69945119fb15",
+   "contenido": "19872c9181f376b9e5f06e41ade0aee9f321790a0fc0f219139bd52a2aab1b35",
+   "origen": "/home/claude/work/sel_CFS_motor.parquet",
+   "nodo": "CFS_motor"
+  },
+  "CFS_motor/v24.parquet": {
+   "bytes": 3958636,
+   "sha256": "cba09ca9072764aa37c89429db73a4639e227eb312b914136d7deae48bad3f3e",
+   "contenido": "74ac7d827138db3f62c99d14e9a23b133db6d9f8b465b7513f43598655ae2fc0",
+   "origen": "/home/claude/work/CFS_motor/v24.parquet",
+   "nodo": "CFS_motor"
+  },
+  "CFS_motor/prediccion_2025.parquet": {
+   "bytes": 3739277,
+   "sha256": "4d17abc843b341c27dfc4629d93bf07a874f6e02aa88016774476e5899791ee2",
+   "contenido": "996cc87eeedfe208b568cf75e6646b27790170ed80cf82878b5463a32f23ce79",
+   "origen": "/home/claude/work/CFS_motor/prediccion_2025.parquet",
+   "nodo": "CFS_motor"
+  },
+  "CFS_motor_s23/v24_own_damage.npy": {
+   "bytes": 2037712,
+   "sha256": "4d7afe91ca0b9870e42d8229a88116163ef8e97f210763df77fcad76ea93304b",
+   "contenido": "a5ef6ce5af02ad239f84441cf1ecc78ca03ece4fd7e013fd01b0d8abab2eb7fa",
+   "origen": "/home/claude/work/CFS_motor_s23/v24_own_damage.npy",
+   "nodo": "CFS_motor_s23"
+  },
+  "CFS_motor_s23/v24_third_party_prop.npy": {
+   "bytes": 2037712,
+   "sha256": "3b115c00c5c4793dffa7c6c0a25c9db979c0fecd22e419011faef6123f9b5856",
+   "contenido": "4e4ee5ee93b23cc2cbda594888f1f511c8937c6536f16eb8be88fefac7e2957c",
+   "origen": "/home/claude/work/CFS_motor_s23/v24_third_party_prop.npy",
+   "nodo": "CFS_motor_s23"
+  },
+  "CFS_motor_s23/v24_bodily_injury.npy": {
+   "bytes": 2037712,
+   "sha256": "a9317779bb6fed4f5989329b385a533facd41b9f5bd61e7d1e886a79e5af0fdb",
+   "contenido": "202fcb4d21542c7dc2b3b8832a57dba641de6ff84c18d54b79aad6d67571338b",
+   "origen": "/home/claude/work/CFS_motor_s23/v24_bodily_injury.npy",
+   "nodo": "CFS_motor_s23"
+  },
+  "CFS_motor_s23/v24_theft.npy": {
+   "bytes": 2037712,
+   "sha256": "fb20dd3bffd53ff99c3f51b1691072e4414d551e844b92afa146a2b2f28f73b1",
+   "contenido": "518fd4c60b0d9c684813dc65aa79095658c424e1afa4a1415edf7b752b14df7e",
+   "origen": "/home/claude/work/CFS_motor_s23/v24_theft.npy",
+   "nodo": "CFS_motor_s23"
+  },
+  "CFS_motor_s23/v24_glass_hail.npy": {
+   "bytes": 2037712,
+   "sha256": "ea815c321fdddc24049fd47e3bbc326b91a7585fb3baf6fc1f6464963bd80f9a",
+   "contenido": "d4d2a93ef4da9b2165b5ed937c1b1d862b6a57000d90405b707428008387b818",
+   "origen": "/home/claude/work/CFS_motor_s23/v24_glass_hail.npy",
+   "nodo": "CFS_motor_s23"
+  },
+  "CFS_motor_s23/prod_own_damage.npy": {
+   "bytes": 2040016,
+   "sha256": "81d33d4c78c5d22450fb9d636ee51dd921e67b0524dee1a1a45567811a0aa568",
+   "contenido": "a8d6b95778f2f03d28d6fc5bfd4b5ebd71cfa69e1bb9ea10ba9fcfbf93ba2c89",
+   "origen": "/home/claude/work/CFS_motor_s23/prod_own_damage.npy",
+   "nodo": "CFS_motor_s23"
+  },
+  "CFS_motor_s23/prod_third_party_prop.npy": {
+   "bytes": 2040016,
+   "sha256": "30cb12405c05c5789b0e63e2b2f425cbfc814004deb3f0b22c3a1fb9dc2d2e0f",
+   "contenido": "d5e41e24cfbeec1f725ce54721614d5bb0782aac03252eef666ace2745dd9d34",
+   "origen": "/home/claude/work/CFS_motor_s23/prod_third_party_prop.npy",
+   "nodo": "CFS_motor_s23"
+  },
+  "CFS_motor_s23/prod_bodily_injury.npy": {
+   "bytes": 2040016,
+   "sha256": "15b2bea45299746e98e08ba93074913d43b8d18b5eda58a8cf4c255fb0bcdfec",
+   "contenido": "16febd373be937250f773cbc62bfe339665e64f53bcb4008dfe8130145aadc0a",
+   "origen": "/home/claude/work/CFS_motor_s23/prod_bodily_injury.npy",
+   "nodo": "CFS_motor_s23"
+  },
+  "CFS_motor_s23/prod_theft.npy": {
+   "bytes": 2040016,
+   "sha256": "956aa7e8db64d6b56d8b3459b80ab9b92bbf67c8ffbff723bb95e8eb10a54078",
+   "contenido": "323094f6b8d6d62e1ac948d7367660d4ee94cc15f3af55f94ef1004a5926d0a5",
+   "origen": "/home/claude/work/CFS_motor_s23/prod_theft.npy",
+   "nodo": "CFS_motor_s23"
+  },
+  "CFS_motor_s23/prod_glass_hail.npy": {
+   "bytes": 2040016,
+   "sha256": "df52d7b2356006719b146ba0eb7a2e236b7c8d9b5ceea1f06200f99d40c6e2f4",
+   "contenido": "bf5308da3621fda7b258602bdfec2f544f113eaba4717955921ce9d1d8bf922a",
+   "origen": "/home/claude/work/CFS_motor_s23/prod_glass_hail.npy",
+   "nodo": "CFS_motor_s23"
+  },
+  "CFS_motor_s23/v24.parquet": {
+   "bytes": 3958636,
+   "sha256": "edd218f167d18c74c7fc42f5b5cc41dabae4940adb47cc57de1df6f3e97928c6",
+   "contenido": "b9dcd78b36d43e5700270e5db1c34d499964513a48e25c5797d27cf7cb2b64a2",
+   "origen": "/home/claude/work/CFS_motor_s23/v24.parquet",
+   "nodo": "CFS_motor_s23"
+  },
+  "CFS_motor_s23/prediccion_2025.parquet": {
+   "bytes": 3739277,
+   "sha256": "30a06f85fb051c40a79fc7de2b8da730715062bdc1176f6ab76b5c23df6da9f3",
+   "contenido": "0079edf0dcc8fd51536593b66efe082cb1462572b36326c2f42f9a2e3e6c534f",
+   "origen": "/home/claude/work/CFS_motor_s23/prediccion_2025.parquet",
+   "nodo": "CFS_motor_s23"
+  },
+  "CFS_buildings/v23_storm.npz": {
+   "bytes": 738220,
+   "sha256": "f3198f0bd2607ccc2385f67e725d10b7dfdede63ca83f50191b71159378169bf",
+   "contenido": "f9bea81ded4f4cb3b8720942d0aef01f290fcede646c9e369b685e46cb3bd880",
+   "origen": "/home/claude/work/CFS_buildings/v23_storm.npz",
+   "nodo": "CFS_buildings"
+  },
+  "CFS_buildings/v23_flood.npz": {
+   "bytes": 738220,
+   "sha256": "be7902e29055327a534df8455e72458c6d2aa0ba256c110f511052fb5cf6730e",
+   "contenido": "47cec25dec3967016a7cdf802c587192224d41d347700faaacd5289789401d98",
+   "origen": "/home/claude/work/CFS_buildings/v23_flood.npz",
+   "nodo": "CFS_buildings"
+  },
+  "CFS_buildings/v23_escape_of_water.npz": {
+   "bytes": 738220,
+   "sha256": "2122c2ce064d000f82ff5ec4bec3b0736fb84c69e148e0bfb399ef45b080719c",
+   "contenido": "d1efc155f0b3cd90b9ffd207c46ece1e6045579e42d682d0c1fc72586ff4d768",
+   "origen": "/home/claude/work/CFS_buildings/v23_escape_of_water.npz",
+   "nodo": "CFS_buildings"
+  },
+  "CFS_buildings/v23_subsidence.npz": {
+   "bytes": 738220,
+   "sha256": "533faac0e88a2c6a1b4a777e4f4a764a0c0ba6e9092d4f658f6211962d3968be",
+   "contenido": "4469f4e57564db66c421f7049f8c4f28ce8cc9997fdce059a139dfd3c4f5a493",
+   "origen": "/home/claude/work/CFS_buildings/v23_subsidence.npz",
+   "nodo": "CFS_buildings"
+  },
+  "CFS_buildings/v23_fire.npz": {
+   "bytes": 738220,
+   "sha256": "8663b1ffe7a7cd4b3cee0de2c57bd9e2b33bbb6cfd920d98cf44f25d15a97da2",
+   "contenido": "06c0e05e3945a3268187f82600938f13099ea29012eb165f3889c583bb48734b",
+   "origen": "/home/claude/work/CFS_buildings/v23_fire.npz",
+   "nodo": "CFS_buildings"
+  },
+  "CFS_buildings/v23_accidental_damage.npz": {
+   "bytes": 738220,
+   "sha256": "768d54f01f0b736ee6d0744afda2fdfe20a7f0ee3f6859c9f1294aa11e67ac5c",
+   "contenido": "60ff9f1f8db519b306c3ebd4a2e2501c3f4974482522bb0149346035cd337c08",
+   "origen": "/home/claude/work/CFS_buildings/v23_accidental_damage.npz",
+   "nodo": "CFS_buildings"
+  },
+  "CFS_buildings/v24_storm.npy": {
+   "bytes": 1472136,
+   "sha256": "af281fe9aad5f43c395c65ca4be2e569b01a0397af2f8d55373642724b36aca5",
+   "contenido": "502fcc5befbd612e88c5661fe407ed0e9c5f170e6e4018011d39301d92fdde30",
+   "origen": "/home/claude/work/CFS_buildings/v24_storm.npy",
+   "nodo": "CFS_buildings"
+  },
+  "CFS_buildings/v24_flood.npy": {
+   "bytes": 1472136,
+   "sha256": "3fbf1e53eb69949cac4c60cedd74bedce084ff76b76a8a068cc983335896593a",
+   "contenido": "cb23588bd3715eaa6373043d14116f4bc7eaa9278e87e05eebd41e7cde44b2cb",
+   "origen": "/home/claude/work/CFS_buildings/v24_flood.npy",
+   "nodo": "CFS_buildings"
+  },
+  "CFS_buildings/v24_escape_of_water.npy": {
+   "bytes": 1472136,
+   "sha256": "1472f036e25ad90fb8aa19db0b7db55f1bc3b1bea0be0e9308870300ec7000bb",
+   "contenido": "911b77aa064803159d52833f7fcd2abc6b59f06f20225486541d0a45145bf4ea",
+   "origen": "/home/claude/work/CFS_buildings/v24_escape_of_water.npy",
+   "nodo": "CFS_buildings"
+  },
+  "CFS_buildings/v24_subsidence.npy": {
+   "bytes": 1472136,
+   "sha256": "ed0068208cc4990b2b568b040f013510a695c36000323c86806ffb3fb3f96e1a",
+   "contenido": "7ed2c89b18fc4fd0f9f87b7ca64716aa0d2e7c6bed512818facb6216d23819c6",
+   "origen": "/home/claude/work/CFS_buildings/v24_subsidence.npy",
+   "nodo": "CFS_buildings"
+  },
+  "CFS_buildings/v24_fire.npy": {
+   "bytes": 1472136,
+   "sha256": "f0512ea785bd8cec311736b4005ac3a4d55c8dcb9324f48b50094b8c536bd39c",
+   "contenido": "3e21a01447bba5c26199b7c86eca4454d52f5e479d515183698905ef41d549f6",
+   "origen": "/home/claude/work/CFS_buildings/v24_fire.npy",
+   "nodo": "CFS_buildings"
+  },
+  "CFS_buildings/v24_accidental_damage.npy": {
+   "bytes": 1472136,
+   "sha256": "f0ae17d7bd550235dab7a9999e218c704f44ce34c77fbf81f9ae3bdbc83a9c89",
+   "contenido": "4dbf28bd059e514f6c049a168ce8eeac0ff57b1d319f351750df9c7cd5915c28",
+   "origen": "/home/claude/work/CFS_buildings/v24_accidental_damage.npy",
+   "nodo": "CFS_buildings"
+  },
+  "CFS_buildings/prod_storm.npy": {
+   "bytes": 1473368,
+   "sha256": "081473d7a42e4240bc11153b454cf3f7a16d1f2000dd9d74bbcd871b65f86c1b",
+   "contenido": "6461a529c8bc04e5c8f0c8e7feecb17592627dd68a6228c0ca22af9ad78e6ffc",
+   "origen": "/home/claude/work/CFS_buildings/prod_storm.npy",
+   "nodo": "CFS_buildings"
+  },
+  "CFS_buildings/prod_flood.npy": {
+   "bytes": 1473368,
+   "sha256": "3dff91ac41b110db777a4ccc7f28cb2ac1994d46097f7222fbdfd5390fec2142",
+   "contenido": "1ec7cd4011d92c9c8c9af051af10c9a3a971d59b9af2e7e62b1ad5ccf320734c",
+   "origen": "/home/claude/work/CFS_buildings/prod_flood.npy",
+   "nodo": "CFS_buildings"
+  },
+  "CFS_buildings/prod_escape_of_water.npy": {
+   "bytes": 1473368,
+   "sha256": "c7aabb1e756189060c9d66505d2c1187bca9f32951a6a39891cc2e015e15ee29",
+   "contenido": "c8744d97be8b25db88268c66db67b1d6affbc659f59bfeb44df19b23a43d39a0",
+   "origen": "/home/claude/work/CFS_buildings/prod_escape_of_water.npy",
+   "nodo": "CFS_buildings"
+  },
+  "CFS_buildings/prod_subsidence.npy": {
+   "bytes": 1473368,
+   "sha256": "a09ce50a92a08d75b974a7643ab2a365d912d94648daa0670e494bc5f6921a1b",
+   "contenido": "85df5a94a9b785f981b3b7d3ffdc265b3c19c62fc3e0ff976b5648dd4f749e33",
+   "origen": "/home/claude/work/CFS_buildings/prod_subsidence.npy",
+   "nodo": "CFS_buildings"
+  },
+  "CFS_buildings/prod_fire.npy": {
+   "bytes": 1473368,
+   "sha256": "1643fc97d5a0dece1ff9489462f024701a4264027085ec737abc7d032ce42291",
+   "contenido": "6c56c719e49b422109faee8f363eb27ed54ef88842ca85b0bb39f7717a14079d",
+   "origen": "/home/claude/work/CFS_buildings/prod_fire.npy",
+   "nodo": "CFS_buildings"
+  },
+  "CFS_buildings/prod_accidental_damage.npy": {
+   "bytes": 1473368,
+   "sha256": "00935979b230f2746fc698a5766d6b3b3b9cfeaebd61c75714a01a607dc62e95",
+   "contenido": "840f274befc462fa14a346cd3f83aa996b9393f62ee336f1de35400538db1e5d",
+   "origen": "/home/claude/work/CFS_buildings/prod_accidental_damage.npy",
+   "nodo": "CFS_buildings"
+  },
+  "sel_CFS_buildings.parquet": {
+   "bytes": 1574274,
+   "sha256": "65f62e51072a50cc359424a42b061fe13d0a9dca384e4b2956d3038f451fd22f",
+   "contenido": "61796de6874ad0523e7599425b4091e23b393c91a88116896d50dc8814fd6d6f",
+   "origen": "/home/claude/work/sel_CFS_buildings.parquet",
+   "nodo": "CFS_buildings"
+  },
+  "CFS_buildings/v24.parquet": {
+   "bytes": 2867461,
+   "sha256": "27493e4077bcc877a6769b516f7c477ff39364d7dc0ee9fa725584ae54c52d22",
+   "contenido": "3c2a85e509beb56dd83779ac2e893c0febd544b7bb4d2cfddfba050e33ee8b59",
+   "origen": "/home/claude/work/CFS_buildings/v24.parquet",
+   "nodo": "CFS_buildings"
+  },
+  "CFS_buildings/prediccion_2025.parquet": {
+   "bytes": 2820627,
+   "sha256": "682d515636eba93971f37e987938721185eac8700b81b14e52ac3a2b8b4f86e9",
+   "contenido": "6dc46287a66b9a542ab085ab10e672bc2419fd23c80e1e8b5a5ffb16e8a8e3ce",
+   "origen": "/home/claude/work/CFS_buildings/prediccion_2025.parquet",
+   "nodo": "CFS_buildings"
+  },
+  "CFS_buildings_s23/v24_storm.npy": {
+   "bytes": 1472136,
+   "sha256": "fd520b07ea423aaac1659688416bbd82380f1a70a732bae3c5162168440efe77",
+   "contenido": "d32856085b4d5db65fd281401be536c37c2f0af03245fe5cf8996fb2d97a3673",
+   "origen": "/home/claude/work/CFS_buildings_s23/v24_storm.npy",
+   "nodo": "CFS_buildings_s23"
+  },
+  "CFS_buildings_s23/v24_flood.npy": {
+   "bytes": 1472136,
+   "sha256": "b048655eab511d59fb15f20ff08e722f212e023ad15ff46e8ee076722fb232f7",
+   "contenido": "247e42c844db7dab10dc1524e50a6c67b863560f1c7d587a0b4bf75977c2d02e",
+   "origen": "/home/claude/work/CFS_buildings_s23/v24_flood.npy",
+   "nodo": "CFS_buildings_s23"
+  },
+  "CFS_buildings_s23/v24_escape_of_water.npy": {
+   "bytes": 1472136,
+   "sha256": "336980ef8844d6d23607ff926829ec81b1929d1425ffa2711310f95e9d777184",
+   "contenido": "e2a8e9ff6402859ee77eb71a54850b5e82b90e0e19d29a7a60c239e5fe2af5ce",
+   "origen": "/home/claude/work/CFS_buildings_s23/v24_escape_of_water.npy",
+   "nodo": "CFS_buildings_s23"
+  },
+  "CFS_buildings_s23/v24_subsidence.npy": {
+   "bytes": 1472136,
+   "sha256": "f63610d9318c9ae267edd4697695b753afbacb62b2f22d4539b95f6ade6ac9e1",
+   "contenido": "07cad8bed4b1049fc29bb2edead44fe851657a3f839ad65244b690a1245994b8",
+   "origen": "/home/claude/work/CFS_buildings_s23/v24_subsidence.npy",
+   "nodo": "CFS_buildings_s23"
+  },
+  "CFS_buildings_s23/v24_fire.npy": {
+   "bytes": 1472136,
+   "sha256": "c5ddb12650fbecddf7d92d734bc87057317ba8119eab7507707a050e99639d7e",
+   "contenido": "c7ebe61d1ab90192ca8db661587706b2683f2b6f050b39b2b78d8ea0b9895ed0",
+   "origen": "/home/claude/work/CFS_buildings_s23/v24_fire.npy",
+   "nodo": "CFS_buildings_s23"
+  },
+  "CFS_buildings_s23/v24_accidental_damage.npy": {
+   "bytes": 1472136,
+   "sha256": "2f416841812aefc2df37b2fadc3b5af5f036d275c5c284b1e4628424450f75e6",
+   "contenido": "5c1fbd3e2ba9a953edc3315b26981cfb6ba6c57aeae6bc3cafd8c848dac7fc94",
+   "origen": "/home/claude/work/CFS_buildings_s23/v24_accidental_damage.npy",
+   "nodo": "CFS_buildings_s23"
+  },
+  "CFS_buildings_s23/prod_storm.npy": {
+   "bytes": 1473368,
+   "sha256": "18fdd28dfb122345a3fc8364ac48e4c604f1829da21fc9fe98f9b61fe9586a8c",
+   "contenido": "7514a722f92d47ecfd65301247fb5389c88673d1aa35411ca1f3348fbdb1a59b",
+   "origen": "/home/claude/work/CFS_buildings_s23/prod_storm.npy",
+   "nodo": "CFS_buildings_s23"
+  },
+  "CFS_buildings_s23/prod_flood.npy": {
+   "bytes": 1473368,
+   "sha256": "3141b7e8b374e792971a0bbe5dd9e9cb74f923fd563849c3d4eeba9909ef758b",
+   "contenido": "f020daead573789d5195be84cf1fc57216ba2a84c05ad9eb3c9c988e6ba25e02",
+   "origen": "/home/claude/work/CFS_buildings_s23/prod_flood.npy",
+   "nodo": "CFS_buildings_s23"
+  },
+  "CFS_buildings_s23/prod_escape_of_water.npy": {
+   "bytes": 1473368,
+   "sha256": "d2d911f199ac71b35bfdda30794f0344d0b71be44a90039f329c92b90fdbff2e",
+   "contenido": "3f651d5f48b87cf3d7942dc855fc56345f834c74800ba1f91bf04b4c8a874205",
+   "origen": "/home/claude/work/CFS_buildings_s23/prod_escape_of_water.npy",
+   "nodo": "CFS_buildings_s23"
+  },
+  "CFS_buildings_s23/prod_subsidence.npy": {
+   "bytes": 1473368,
+   "sha256": "dcd98e60b1f8a82cb7df1ac613a90f4650f70cc31fda15b805c63c0369b75975",
+   "contenido": "5c0697bafa5c329671be1720672f28cb3c7adbba32d090f6f754e44b6d5c1e13",
+   "origen": "/home/claude/work/CFS_buildings_s23/prod_subsidence.npy",
+   "nodo": "CFS_buildings_s23"
+  },
+  "CFS_buildings_s23/prod_fire.npy": {
+   "bytes": 1473368,
+   "sha256": "18402ad417833b5e4480295ccd224a29b9112a6ceb6108bc3c4130a3eab0117b",
+   "contenido": "ee6ae48c6cbfd5c5e0ed2cbf802d6111026f7564730682e5f7b5f5e7c4c29962",
+   "origen": "/home/claude/work/CFS_buildings_s23/prod_fire.npy",
+   "nodo": "CFS_buildings_s23"
+  },
+  "CFS_buildings_s23/prod_accidental_damage.npy": {
+   "bytes": 1473368,
+   "sha256": "f4f2085fa3d307d15e08b9821ba7ce835abccedb04b24c9fabf0727a9c91a255",
+   "contenido": "819f879990d64982318bb2f02dbcaf20142907bb0ac5e4d19065a1db9ca44a37",
+   "origen": "/home/claude/work/CFS_buildings_s23/prod_accidental_damage.npy",
+   "nodo": "CFS_buildings_s23"
+  },
+  "CFS_buildings_s23/v24.parquet": {
+   "bytes": 2867461,
+   "sha256": "4478cd503b550cc95a4a8b9377557b2f5b3bdf769f76b832ff9ac6a2e466c2f7",
+   "contenido": "0b10942386dfff15aeffd1604c6332dddb02f44b5d179ec72cb1c7a8925cb4a8",
+   "origen": "/home/claude/work/CFS_buildings_s23/v24.parquet",
+   "nodo": "CFS_buildings_s23"
+  },
+  "CFS_buildings_s23/prediccion_2025.parquet": {
+   "bytes": 2820627,
+   "sha256": "9bad842a7c6690be04ab1be43f8710b03446cbe2f2c528c5fa7d3ab12ea1d89f",
+   "contenido": "b034db17088a976eb360764448b397415d2b2b2e76fad92ebcc55437f9717b65",
+   "origen": "/home/claude/work/CFS_buildings_s23/prediccion_2025.parquet",
+   "nodo": "CFS_buildings_s23"
+  },
+  "sel_FSA_contents.parquet": {
+   "bytes": 1583200,
+   "sha256": "5eb0386a57ee6ef715989e06a3b5f3fc4f767069fa2e65582c7ff87f0d91060a",
+   "contenido": "3d908254711203ca9da04c4113973934a7587415b84f0bc99d6daf99dd2eadc9",
+   "origen": "/home/claude/work/sel_FSA_contents.parquet",
+   "nodo": "FSA_contents"
+  },
+  "FSA_contents/v24.parquet": {
+   "bytes": 2907654,
+   "sha256": "92a05c3174853240db42344dee1c233a47a1f0bf2d4be59d177a4f802e260ff8",
+   "contenido": "418936f3e377ba69795b8df736804a4295115a8fde963066a424439258caed78",
+   "origen": "/home/claude/work/FSA_contents/v24.parquet",
+   "nodo": "FSA_contents"
+  },
+  "FSA_contents/prediccion_2025.parquet": {
+   "bytes": 2846950,
+   "sha256": "f3d02e2face2cf7ae18c44f615d3ad1969b2ce4bfc12e244569d0c35f720c1c2",
+   "contenido": "7f8da0b4396fccf8c6fef3131a5b5d489af18050319035266572265fde0d98a3",
+   "origen": "/home/claude/work/FSA_contents/prediccion_2025.parquet",
+   "nodo": "FSA_contents"
+  },
+  "FSAP_buildings/v23_storm.npz": {
+   "bytes": 738220,
+   "sha256": "850b3b4951cc143d9f37f8ccaad1c01d7256ab9dff8411777f811a2b97838134",
+   "contenido": "961171a27239f6d77f5212b21da9b7692da6a3a23270cb46ec7ca6d939c05e6c",
+   "origen": "/home/claude/work/FSAP_buildings/v23_storm.npz",
+   "nodo": "FSAP_buildings"
+  },
+  "FSAP_buildings/v23_flood.npz": {
+   "bytes": 738220,
+   "sha256": "58e74b143eac29633154aae8af5ba88eef8a13b6832d281a3d9050a476e19156",
+   "contenido": "e552f897970f1e1252d7351133f5e4a9d1024c756005b359e3da8862356dab48",
+   "origen": "/home/claude/work/FSAP_buildings/v23_flood.npz",
+   "nodo": "FSAP_buildings"
+  },
+  "FSAP_buildings/v23_escape_of_water.npz": {
+   "bytes": 738220,
+   "sha256": "425c10af118f637be9c71d4340150c13db4b2b4b42fce60bd81472cb925edaea",
+   "contenido": "c718763ca4de27b4255e4035f81fea32f004e1625615eba9483ab92d7e4fee4e",
+   "origen": "/home/claude/work/FSAP_buildings/v23_escape_of_water.npz",
+   "nodo": "FSAP_buildings"
+  },
+  "FSAP_buildings/v23_subsidence.npz": {
+   "bytes": 738220,
+   "sha256": "239ac4084751f448eccc5c2aba2c6ac9e874611ebabdb6ca325e620d6c72dc25",
+   "contenido": "027814bf5f1aeb153890b764cd1201c6e2b5d508c9ac3cec84eeac037f645615",
+   "origen": "/home/claude/work/FSAP_buildings/v23_subsidence.npz",
+   "nodo": "FSAP_buildings"
+  },
+  "FSAP_buildings/v23_fire.npz": {
+   "bytes": 738220,
+   "sha256": "8f23b38286754d7dea82b20d1508698e652f44f26debb17252f89bd77795510b",
+   "contenido": "29fde6af2f6860e07dfe851b1b32383da1a5a8d55d6a24978200e09dda3602f9",
+   "origen": "/home/claude/work/FSAP_buildings/v23_fire.npz",
+   "nodo": "FSAP_buildings"
+  },
+  "FSAP_buildings/v23_accidental_damage.npz": {
+   "bytes": 738220,
+   "sha256": "35b0ab7e6a8df8d161a0819815e382559697f127c138119471b92c06f6d80d72",
+   "contenido": "ded99cff8b3dd536a2980c1b7c8d7c5cd723bbf6f608d93bb7da159376bf48ba",
+   "origen": "/home/claude/work/FSAP_buildings/v23_accidental_damage.npz",
+   "nodo": "FSAP_buildings"
+  },
+  "FSAP_buildings/v24_storm.npy": {
+   "bytes": 1472136,
+   "sha256": "f187a0b5b41839749d1d462ecfd69ba2f60c3d6decaa7cdfeea9dc5c00dc2458",
+   "contenido": "051d204f575ba9cd70bc12030068dd8f6c20816d1aadc5a69b615b94c9ec25a6",
+   "origen": "/home/claude/work/FSAP_buildings/v24_storm.npy",
+   "nodo": "FSAP_buildings"
+  },
+  "FSAP_buildings/v24_flood.npy": {
+   "bytes": 1472136,
+   "sha256": "e946ded4c829ad8d9fc1b74868db0534d347e81578ebbcd2fa8c417700a70ec1",
+   "contenido": "aeb76d81aa4e26ecc2af8491e847c968c0b946cc55b63cef4875f4a7ba912ac8",
+   "origen": "/home/claude/work/FSAP_buildings/v24_flood.npy",
+   "nodo": "FSAP_buildings"
+  },
+  "FSAP_buildings/v24_escape_of_water.npy": {
+   "bytes": 1472136,
+   "sha256": "66987e0dc2c8e716aeaac725a935407c69aa28817e19bc7c8ba6fb80b2b3b8d6",
+   "contenido": "292469938160a6a06c012d94c434b3db8802626401abafc30537f97d65e50b55",
+   "origen": "/home/claude/work/FSAP_buildings/v24_escape_of_water.npy",
+   "nodo": "FSAP_buildings"
+  },
+  "FSAP_buildings/v24_subsidence.npy": {
+   "bytes": 1472136,
+   "sha256": "9a3fe6a967a80ce3247ca10d06f9d9f24435ecd9031653b30a76073f1f539dc4",
+   "contenido": "55da1950628a2b90cb499df99f9301800c18782a450d8d60d967724f23c767f5",
+   "origen": "/home/claude/work/FSAP_buildings/v24_subsidence.npy",
+   "nodo": "FSAP_buildings"
+  },
+  "FSAP_buildings/v24_fire.npy": {
+   "bytes": 1472136,
+   "sha256": "8b076b6b3d6a1fbd4c79d2498ef0450124587552601e0020aaed32ca9398d98c",
+   "contenido": "088544e713c5082e74e76abb3e5c19d35581fd66c5e074bfab36aacc91729219",
+   "origen": "/home/claude/work/FSAP_buildings/v24_fire.npy",
+   "nodo": "FSAP_buildings"
+  },
+  "FSAP_buildings/v24_accidental_damage.npy": {
+   "bytes": 1472136,
+   "sha256": "37337978de4dfc4d10fd549eb3153e7a19e3240653d3c9a5c7e074058fe864d6",
+   "contenido": "9226fc6b8303f70d11db01bd240b4c3113121552acb2d910c74e91b6f3704613",
+   "origen": "/home/claude/work/FSAP_buildings/v24_accidental_damage.npy",
+   "nodo": "FSAP_buildings"
+  },
+  "FSAP_buildings/prod_storm.npy": {
+   "bytes": 1473368,
+   "sha256": "388eba379c72789e19971a36e30b4d06c2e33b90e1adf7b3db466e0ea912cd7c",
+   "contenido": "7470367dfae54d656e6df0c63196545ecf4db75b7b60e58e1318a8e4e7645471",
+   "origen": "/home/claude/work/FSAP_buildings/prod_storm.npy",
+   "nodo": "FSAP_buildings"
+  },
+  "FSAP_buildings/prod_flood.npy": {
+   "bytes": 1473368,
+   "sha256": "835b8d795e217a14a8e9b90e4c858aa84460e4025e07e506d44fa4ee840b6434",
+   "contenido": "7b8a2b4bc978c6b6d954f7c235270eb6b59ee4bd4b2a6d5c2388478636f0c53b",
+   "origen": "/home/claude/work/FSAP_buildings/prod_flood.npy",
+   "nodo": "FSAP_buildings"
+  },
+  "FSAP_buildings/prod_escape_of_water.npy": {
+   "bytes": 1473368,
+   "sha256": "0a9bec1ecb3f5e7fba36e58a6b52aa63789b754892e307baf030961dd1d7637d",
+   "contenido": "bb0069ce0ebf05cece001ab3566953db3538fcea9c1dcf228dd0f3dec1588c65",
+   "origen": "/home/claude/work/FSAP_buildings/prod_escape_of_water.npy",
+   "nodo": "FSAP_buildings"
+  },
+  "FSAP_buildings/prod_subsidence.npy": {
+   "bytes": 1473368,
+   "sha256": "62c9859786d37a6159cc44e91884429d259f8719d3cd485dc09cf3a51a7c8c5c",
+   "contenido": "16c2ad51a1e683b48b94654ff4f173bc4506f5eba3febbdac69f84ec8cce85b2",
+   "origen": "/home/claude/work/FSAP_buildings/prod_subsidence.npy",
+   "nodo": "FSAP_buildings"
+  },
+  "FSAP_buildings/prod_fire.npy": {
+   "bytes": 1473368,
+   "sha256": "ffa156ed849afb427a6a4fd5f01dd9653f19611bbaa45c849219b5cc1704011d",
+   "contenido": "9fd207f858296b94926b73b64daf73d3f3f71feb6358591ef2c26224f163b7f2",
+   "origen": "/home/claude/work/FSAP_buildings/prod_fire.npy",
+   "nodo": "FSAP_buildings"
+  },
+  "FSAP_buildings/prod_accidental_damage.npy": {
+   "bytes": 1473368,
+   "sha256": "08b9f79f33f867a1c240f15ecb6ae5943a8138fa632db09cf180378645faca1f",
+   "contenido": "af8df6b54f4ce6cd7bf2f4bf0530de9359291ed978a76f4d390c367d3becd2dd",
+   "origen": "/home/claude/work/FSAP_buildings/prod_accidental_damage.npy",
+   "nodo": "FSAP_buildings"
+  },
+  "sel_FSAP_buildings.parquet": {
+   "bytes": 1574274,
+   "sha256": "8651e0c38f36c7604ed7cf004c9f346b794ae600251cc89278baf0dbc08c564d",
+   "contenido": "4da2f65013274fe32e8ad5e550a436ab3b391c178fc9ccd7848cc245536627d3",
+   "origen": "/home/claude/work/sel_FSAP_buildings.parquet",
+   "nodo": "FSAP_buildings"
+  },
+  "FSAP_buildings/v24.parquet": {
+   "bytes": 2867461,
+   "sha256": "a91de648d619bfdb1298988d25331d41bb45d296dd362c6e4faabe79af8c2348",
+   "contenido": "a1cab56bcf87ce5a6c80a03175b7467762a688df42d9c75f97dab912b85c39d5",
+   "origen": "/home/claude/work/FSAP_buildings/v24.parquet",
+   "nodo": "FSAP_buildings"
+  },
+  "FSAP_buildings/prediccion_2025.parquet": {
+   "bytes": 2820627,
+   "sha256": "e9fac7e4119262180180acb03a8a600137b65fd1920bb5aa4a363a0684da85e5",
+   "contenido": "8b500314fdbde9ffde0ac2abd14f7bc5d50a80b126c31c2c26387251032c9a41",
+   "origen": "/home/claude/work/FSAP_buildings/prediccion_2025.parquet",
+   "nodo": "FSAP_buildings"
+  },
+  "FSAP2_buildings/v24_storm.npy": {
+   "bytes": 1472136,
+   "sha256": "49034731247e67e0cebdb63a12280469f33e762e69c001c20723fab2221ff562",
+   "contenido": "5a3488b9190313e78922408356ddd9b279deb1a0c96118307eb911324f7907af",
+   "origen": "/home/claude/work/FSAP2_buildings/v24_storm.npy",
+   "nodo": "FSAP2_buildings"
+  },
+  "FSAP2_buildings/v24_flood.npy": {
+   "bytes": 1472136,
+   "sha256": "6cf339c36691da4e7bf026bcad8c662a0b8d7e989aa03dc2aafd236f415b92f9",
+   "contenido": "0d5623bdde055f40f886313579343c4a449444c5c6f37e69acc4e717fd1222c8",
+   "origen": "/home/claude/work/FSAP2_buildings/v24_flood.npy",
+   "nodo": "FSAP2_buildings"
+  },
+  "FSAP2_buildings/v24_escape_of_water.npy": {
+   "bytes": 1472136,
+   "sha256": "9177427a22ca85c120e6d8835a9bcc254c8d3d74f11041440eb324f6be1426a9",
+   "contenido": "a9b20654902aee33623c41575590caaa0eb90eb8355f31d45b49e16171512e4f",
+   "origen": "/home/claude/work/FSAP2_buildings/v24_escape_of_water.npy",
+   "nodo": "FSAP2_buildings"
+  },
+  "FSAP2_buildings/v24_subsidence.npy": {
+   "bytes": 1472136,
+   "sha256": "658d42f0564f47bed553a64a11039fd93027ab8783bdaa82e1dd5fd08dbeea57",
+   "contenido": "1073cf493df2370ee4bf8c679198c26ef1af5372dc5ac321ad6aef5337cfa985",
+   "origen": "/home/claude/work/FSAP2_buildings/v24_subsidence.npy",
+   "nodo": "FSAP2_buildings"
+  },
+  "FSAP2_buildings/v24_fire.npy": {
+   "bytes": 1472136,
+   "sha256": "4d07f0f0fb237a44c816a1a62af729ac25b49e2e6bf413476c123e3099da63f5",
+   "contenido": "2bc35b262ecb92d0773767a6d878f1b8d13dcb5bd7d6c997f18e990b59b22b4a",
+   "origen": "/home/claude/work/FSAP2_buildings/v24_fire.npy",
+   "nodo": "FSAP2_buildings"
+  },
+  "FSAP2_buildings/v24_accidental_damage.npy": {
+   "bytes": 1472136,
+   "sha256": "f04e2592832b7647c5e24e7e1a73f873f1f89bfbcdea710596e312fd382b77c2",
+   "contenido": "3236f232375e2213bc3706140a23b63d9c4cdf7e75f834e8085703416c774f04",
+   "origen": "/home/claude/work/FSAP2_buildings/v24_accidental_damage.npy",
+   "nodo": "FSAP2_buildings"
+  },
+  "FSAP2_buildings/prod_storm.npy": {
+   "bytes": 1473368,
+   "sha256": "aa8c63e86c531dd6793ef0319e259a373293a5ff922ea5220c7b22b5cbd5ba0c",
+   "contenido": "9df133ce6b258e598f4a7e79adce3d8a2eeaff81025d5acfba853538fe3064c7",
+   "origen": "/home/claude/work/FSAP2_buildings/prod_storm.npy",
+   "nodo": "FSAP2_buildings"
+  },
+  "FSAP2_buildings/prod_flood.npy": {
+   "bytes": 1473368,
+   "sha256": "da746c66ac3ac15c45ed769c96aeb15619f63a89090a278a0ccb97e19ae8afc6",
+   "contenido": "63f7430de45b45133ffab60ca6c43662edc63f5c305cce529490e316c17a73dd",
+   "origen": "/home/claude/work/FSAP2_buildings/prod_flood.npy",
+   "nodo": "FSAP2_buildings"
+  },
+  "FSAP2_buildings/prod_escape_of_water.npy": {
+   "bytes": 1473368,
+   "sha256": "0aa258443517200e7b48ea41ec90bd37037b9790a162f27f076d53ec63f8ba73",
+   "contenido": "ad92d8ae2610ec85b2192edc9c01c877a85b2aef0613c03b90d698972e129b48",
+   "origen": "/home/claude/work/FSAP2_buildings/prod_escape_of_water.npy",
+   "nodo": "FSAP2_buildings"
+  },
+  "FSAP2_buildings/prod_subsidence.npy": {
+   "bytes": 1473368,
+   "sha256": "52e3df3859fb429f940d6d59e97c7e660be29feaa4298723dbab030e54ca996d",
+   "contenido": "c171756be82f0ed42d375e4bce47aca1b1dca22072d13ee56d9cee609f0f792b",
+   "origen": "/home/claude/work/FSAP2_buildings/prod_subsidence.npy",
+   "nodo": "FSAP2_buildings"
+  },
+  "FSAP2_buildings/prod_fire.npy": {
+   "bytes": 1473368,
+   "sha256": "0246bcf85c25b1ddf89a6ceed6d379150ccdd2dab9d544183d6d094a49f4eabe",
+   "contenido": "a3d56d033c08f71d2e5309805020f023857a68f13247fc890addf526eb8f17af",
+   "origen": "/home/claude/work/FSAP2_buildings/prod_fire.npy",
+   "nodo": "FSAP2_buildings"
+  },
+  "FSAP2_buildings/prod_accidental_damage.npy": {
+   "bytes": 1473368,
+   "sha256": "1afbd944543d85ec1155f30d9d3343be142d37a01b2f0e2fd63b8f52fe7d4e82",
+   "contenido": "a8b6c5dd1c7aa4f411027e370558e07a40ac35855d6fb029e0782b1e05be115e",
+   "origen": "/home/claude/work/FSAP2_buildings/prod_accidental_damage.npy",
+   "nodo": "FSAP2_buildings"
+  },
+  "FSAP2_buildings/v24.parquet": {
+   "bytes": 2867461,
+   "sha256": "ee8c8846a5d9abbdde283b8eebdf496dc089ac8c7983cb7cc42b6ffb60fbb011",
+   "contenido": "437cb4038ecff8caae42e517b32d3d85c93246d08a27f500d19d1d2ffada4bd3",
+   "origen": "/home/claude/work/FSAP2_buildings/v24.parquet",
+   "nodo": "FSAP2_buildings"
+  },
+  "FSAP2_buildings/prediccion_2025.parquet": {
+   "bytes": 2820627,
+   "sha256": "a72c60d348bb756577ee4cd9b5c899e554c9a756b0939ac1b0c7ce66cf2139db",
+   "contenido": "e7102e79075f911177eb670d5daf24b0ae8b19436ea27a9573d5c1cc0e6b4d3a",
+   "origen": "/home/claude/work/FSAP2_buildings/prediccion_2025.parquet",
+   "nodo": "FSAP2_buildings"
+  },
+  "FSAP_contents/v23_theft.npz": {
+   "bytes": 752028,
+   "sha256": "bbd6650303c3b940e075927cee9803413d87a9e9cffef5a2b37a2f79da0e3c4f",
+   "contenido": "5d3a97a2a8a843dd3227040e887ce13890b74705163658ce68f37d02762fa1de",
+   "origen": "/home/claude/work/FSAP_contents/v23_theft.npz",
+   "nodo": "FSAP_contents"
+  },
+  "FSAP_contents/v23_escape_of_water.npz": {
+   "bytes": 752028,
+   "sha256": "96f944cf147439c979d9195a4064c7645ed9ee0ecd700dc0507f76155ef7140c",
+   "contenido": "835011fbc9b139b7bb596313e81e268dfafa1ec55caf3be17d2ca48a10f2613b",
+   "origen": "/home/claude/work/FSAP_contents/v23_escape_of_water.npz",
+   "nodo": "FSAP_contents"
+  },
+  "FSAP_contents/v23_accidental_damage.npz": {
+   "bytes": 752028,
+   "sha256": "d9f5e0b63937d106d5dfc8c5cd9ca8c6e7811eed16ca5af8d86f983e8bfafb1d",
+   "contenido": "7196137a11c967c1b46013a7f9c8999025a9217e84e4a1ee019f3f9c3378421a",
+   "origen": "/home/claude/work/FSAP_contents/v23_accidental_damage.npz",
+   "nodo": "FSAP_contents"
+  },
+  "FSAP_contents/v23_flood.npz": {
+   "bytes": 752028,
+   "sha256": "25a2adf3ca65e4dabda00284e627724e269b73bf6e634a82010ac0ec76c8bb63",
+   "contenido": "4677f9dd8df9a0ba503e3f3dd5c26426051e838a14e3b89dc7f74d342eac6405",
+   "origen": "/home/claude/work/FSAP_contents/v23_flood.npz",
+   "nodo": "FSAP_contents"
+  },
+  "FSAP_contents/v24_theft.npy": {
+   "bytes": 1500056,
+   "sha256": "cfe68a13afbbbda3335b46d7cfb01805c1bdaeec7f25938a8e194544a23cca29",
+   "contenido": "ea18aa845ea0529618fa4ff33927d3b5d1cbe8143bf5a9ca4d868599e7383105",
+   "origen": "/home/claude/work/FSAP_contents/v24_theft.npy",
+   "nodo": "FSAP_contents"
+  },
+  "FSAP_contents/v24_escape_of_water.npy": {
+   "bytes": 1500056,
+   "sha256": "8d9c3341a4c85ac780078b1ce295e0150c34348bc92f4e8eb43a05e0981db399",
+   "contenido": "a94ad4cc693a579dcf8e47c8d79f80796eeccf9cdc61f0f091ba67028ce96931",
+   "origen": "/home/claude/work/FSAP_contents/v24_escape_of_water.npy",
+   "nodo": "FSAP_contents"
+  },
+  "FSAP_contents/v24_accidental_damage.npy": {
+   "bytes": 1500056,
+   "sha256": "e57933947da62042f91b3d4156ffcba74131d13ea7abce90a0581fc04c4f9e54",
+   "contenido": "02e339ff1a89c3f29e9fbb3c1ce7745c26ad79304b17bf8305b78f211f872f6e",
+   "origen": "/home/claude/work/FSAP_contents/v24_accidental_damage.npy",
+   "nodo": "FSAP_contents"
+  },
+  "FSAP_contents/v24_flood.npy": {
+   "bytes": 1500056,
+   "sha256": "4aea53a01b546eab33b72268bd2c42c4f2eccf1037d1eb009fffde7c291afdda",
+   "contenido": "b62fcbbeae71f7114d61f92c467c75e12b481d35b0d9608bb4fa5e65c4e3514d",
+   "origen": "/home/claude/work/FSAP_contents/v24_flood.npy",
+   "nodo": "FSAP_contents"
+  },
+  "FSAP_contents/prod_theft.npy": {
+   "bytes": 1500112,
+   "sha256": "22035d69d31c08bebfe539f8ee09296f50c36b40f9f8038de13d7963a80eb8c4",
+   "contenido": "fa471b8c9d0a3be4da31c3d01f621ffac76532ae95fb0fc45c6f6e2f1cf6bf26",
+   "origen": "/home/claude/work/FSAP_contents/prod_theft.npy",
+   "nodo": "FSAP_contents"
+  },
+  "FSAP_contents/prod_escape_of_water.npy": {
+   "bytes": 1500112,
+   "sha256": "abafd8da5f6fac80251ff1a8baff4722847dacd2dfd1773007d0ef6d6a4cebec",
+   "contenido": "f6b43f005c642ed73589661ca5362a7c5c4701ac6a0dfcf42af5234c7089e7fe",
+   "origen": "/home/claude/work/FSAP_contents/prod_escape_of_water.npy",
+   "nodo": "FSAP_contents"
+  },
+  "FSAP_contents/prod_accidental_damage.npy": {
+   "bytes": 1500112,
+   "sha256": "26641f6003ed76e7835d5145e3b231ffb560c05c58a838304552eea38b745ca7",
+   "contenido": "c5005e29e122cd98ad8e1445b4ff022e881bf4402efb4b176c04ef4553e6cb56",
+   "origen": "/home/claude/work/FSAP_contents/prod_accidental_damage.npy",
+   "nodo": "FSAP_contents"
+  },
+  "FSAP_contents/prod_flood.npy": {
+   "bytes": 1500112,
+   "sha256": "ccdbfe8c871e39f9267eab378e8d92c545dab44bee281ef2bc9d2374b4f0e61b",
+   "contenido": "87988ea67c8bc26a02b02e45fb634158adf1b9c4c7404409adcfdedd9c7eb0e3",
+   "origen": "/home/claude/work/FSAP_contents/prod_flood.npy",
+   "nodo": "FSAP_contents"
+  },
+  "sel_FSAP_contents.parquet": {
+   "bytes": 1583200,
+   "sha256": "5eb0386a57ee6ef715989e06a3b5f3fc4f767069fa2e65582c7ff87f0d91060a",
+   "contenido": "3d908254711203ca9da04c4113973934a7587415b84f0bc99d6daf99dd2eadc9",
+   "origen": "/home/claude/work/sel_FSAP_contents.parquet",
+   "nodo": "FSAP_contents"
+  },
+  "FSAP_contents/v24.parquet": {
+   "bytes": 2907654,
+   "sha256": "b451b67b5a22020bd3ac2ba43fee68d1230a54087520433b6656e8dcfc08c161",
+   "contenido": "0293229b0a70a4d2d42df5e1f8bb0dc9b165d4be888db03694573bbdec786b29",
+   "origen": "/home/claude/work/FSAP_contents/v24.parquet",
+   "nodo": "FSAP_contents"
+  },
+  "FSAP_contents/prediccion_2025.parquet": {
+   "bytes": 2846950,
+   "sha256": "4e2721f75b11090cc3ebad37e97ba9060c0a5f6cbaf77346afcf27f56a90eb8a",
+   "contenido": "1ab6563930d58c91eff5e41a50032f1c2f12b22c7c44a740a5525eb099e5295b",
+   "origen": "/home/claude/work/FSAP_contents/prediccion_2025.parquet",
+   "nodo": "FSAP_contents"
+  },
+  "FSAP2_contents/v24_theft.npy": {
+   "bytes": 1500056,
+   "sha256": "d6b330d8f55508cd5e02ff459c851cfc523af68ec9f4c0e3dbf570299dffd1e0",
+   "contenido": "7107917ab6d0d5d51e547332db9fe78942be2e937cc3facbcff61c71687fa279",
+   "origen": "/home/claude/work/FSAP2_contents/v24_theft.npy",
+   "nodo": "FSAP2_contents"
+  },
+  "FSAP2_contents/v24_escape_of_water.npy": {
+   "bytes": 1500056,
+   "sha256": "6ee11df4a9fbb6f6747f7cb6c2a5579c9944285ac17b0dddb9689053df041ab3",
+   "contenido": "92fae148d1d97b8c1eb90c71fa2a1d298b49f13e04757a31467d094bf01791cc",
+   "origen": "/home/claude/work/FSAP2_contents/v24_escape_of_water.npy",
+   "nodo": "FSAP2_contents"
+  },
+  "FSAP2_contents/v24_accidental_damage.npy": {
+   "bytes": 1500056,
+   "sha256": "f276e677263db38f971491c24b246149671008da91c867f369abdd3983040ebf",
+   "contenido": "e960de5b9987702323fbf6d1e34b6ab219bcd85f44d10d5a188c934d893b76ab",
+   "origen": "/home/claude/work/FSAP2_contents/v24_accidental_damage.npy",
+   "nodo": "FSAP2_contents"
+  },
+  "FSAP2_contents/v24_flood.npy": {
+   "bytes": 1500056,
+   "sha256": "690e7b5b3c497c2df855d6f6923f96b64e5689a529d9485e46523e211b2e6205",
+   "contenido": "ead8ec1ee0c314469be019b1252e921a9298fa66db856bc1771b41cbb7624ac0",
+   "origen": "/home/claude/work/FSAP2_contents/v24_flood.npy",
+   "nodo": "FSAP2_contents"
+  },
+  "FSAP2_contents/prod_theft.npy": {
+   "bytes": 1500112,
+   "sha256": "9d80e12df99f83f36c854a80dacc4c6740e072bb7b7d65dc329234bb13421af3",
+   "contenido": "1a927dc5ef777c95e949079d24f5fc4262cf2415096071644805896878b34906",
+   "origen": "/home/claude/work/FSAP2_contents/prod_theft.npy",
+   "nodo": "FSAP2_contents"
+  },
+  "FSAP2_contents/prod_escape_of_water.npy": {
+   "bytes": 1500112,
+   "sha256": "7eadcd7a3e4a07457d4504c283513bbae835e79778005a97a9557d91fe8bc898",
+   "contenido": "48c21af0c89bd88414f418c9ce2d937ff2bb3c113118794381c343f602847cbb",
+   "origen": "/home/claude/work/FSAP2_contents/prod_escape_of_water.npy",
+   "nodo": "FSAP2_contents"
+  },
+  "FSAP2_contents/prod_accidental_damage.npy": {
+   "bytes": 1500112,
+   "sha256": "46bd228c7352a8e8f2a157ebceb28c3c1ab00446094982d9d3b2fe7273e18188",
+   "contenido": "1665c7d122790a4acabbd09aeab95146ae5797da0a4a07bb155f30538a872ac8",
+   "origen": "/home/claude/work/FSAP2_contents/prod_accidental_damage.npy",
+   "nodo": "FSAP2_contents"
+  },
+  "FSAP2_contents/prod_flood.npy": {
+   "bytes": 1500112,
+   "sha256": "88cf7525daf6c80c83d7f34c84f987be492c2566d05ded5be9a3b85cb904bc87",
+   "contenido": "79a9daa3ce6174dff505c36fb5f93badf37387bbdc93f7fc67ecb21ca6d02b9e",
+   "origen": "/home/claude/work/FSAP2_contents/prod_flood.npy",
+   "nodo": "FSAP2_contents"
+  },
+  "FSAP2_contents/v24.parquet": {
+   "bytes": 2907654,
+   "sha256": "c170d5bb8d9f3fce5ad61a2b8d220b8a3589a423ab702f94f2a469b064538fa2",
+   "contenido": "73364651f8348112037de7604cdefdce01c8da21b5101ed62708efcb189e2ca9",
+   "origen": "/home/claude/work/FSAP2_contents/v24.parquet",
+   "nodo": "FSAP2_contents"
+  },
+  "FSAP2_contents/prediccion_2025.parquet": {
+   "bytes": 2846950,
+   "sha256": "1bfdd92e10f76ded32d5e3b1b20e1e482105a99cfbc1f6624330064289a2d4c8",
+   "contenido": "3893b4c9fa4772ec7222ae8e0a7a4e05dea79773beeba143a5d7df9e178fd560",
+   "origen": "/home/claude/work/FSAP2_contents/prediccion_2025.parquet",
+   "nodo": "FSAP2_contents"
+  },
+  "sel_FSAXc4_contents.parquet": {
+   "bytes": 1583200,
+   "sha256": "8d1bc6092d030392a8cccb718c6977a9fe5d961a66830699f3f68b6277bf6e91",
+   "contenido": "ead7277d3490bef603db7eca4ae65918116cb91115418c0dc55118a29a747857",
+   "origen": "/home/claude/work/sel_FSAXc4_contents.parquet",
+   "nodo": "FSAXc4_contents"
+  },
+  "FSAXc4_contents/v24.parquet": {
+   "bytes": 2907654,
+   "sha256": "148c0fc478d5ecf6bfba4b7e49be6e092c305da96c74812e3007c1cff47e071b",
+   "contenido": "e55f3fa521d2d54e87fdf45777ca156709b8dd59eb04995ff327a8d287f44ec0",
+   "origen": "/home/claude/work/FSAXc4_contents/v24.parquet",
+   "nodo": "FSAXc4_contents"
+  },
+  "FSAXc4_contents/prediccion_2025.parquet": {
+   "bytes": 2846950,
+   "sha256": "7c1314c30b7dc66012acba3c31bdaf8614ba4003dfceb3c32c6d4947d5528693",
+   "contenido": "8e3d2185f0c53b77d7d0056fb503423cadd62ed2037b83cbd5b41ac47b373bcf",
+   "origen": "/home/claude/work/FSAXc4_contents/prediccion_2025.parquet",
+   "nodo": "FSAXc4_contents"
+  },
+  "CFS_motor_4s/v24.parquet": {
+   "bytes": 3958636,
+   "sha256": "1056f044b2b4ad4f44e00b707a5add3c8f270eb9f9d8eba50adc876b7f993d3b",
+   "contenido": "51da611d6fe392eacaa0a4cef21ec05d918b2b4aadb0d4e176a625d2bbd4d037",
+   "origen": "/home/claude/work/CFS_motor_4s/v24.parquet",
+   "nodo": "CFS_motor_4s"
+  },
+  "CFS_motor_4s/prediccion_2025.parquet": {
+   "bytes": 3739277,
+   "sha256": "1a561d3974c5ada13d39cbb495f5d9fe8103899800d1c787369c83d7157ad270",
+   "contenido": "6a89e9b402ad16fc5558457556de8cd7baf3b826e20d0582d786e36d1e837c32",
+   "origen": "/home/claude/work/CFS_motor_4s/prediccion_2025.parquet",
+   "nodo": "CFS_motor_4s"
+  },
+  "sel_CFSS_motor.parquet": {
+   "bytes": 2184468,
+   "sha256": "3999126bf6a41a40e143a698c962734342576b243d86d14a100323638b27cd30",
+   "contenido": "451a411d6a0766749ae965a0820de4b424aaaf87f110bb83a2d2001d9a13681d",
+   "origen": "/home/claude/work/sel_CFSS_motor.parquet",
+   "nodo": "CFSS_motor"
+  },
+  "CFSS_motor/v24.parquet": {
+   "bytes": 3958638,
+   "sha256": "7e7dc1ae042af79eff417300700d29ffc7ebf1470285d0b46a1cade635aa5c64",
+   "contenido": "ddf65387e08b4ca4b810a8bb5990e03dc8a01ec1831191c07940407cbee0cd98",
+   "origen": "/home/claude/work/CFSS_motor/v24.parquet",
+   "nodo": "CFSS_motor"
+  },
+  "CFSS_motor/prediccion_2025.parquet": {
+   "bytes": 3739277,
+   "sha256": "01879b6503846c2bcc787dffc568e2b4e54702e832a6188f8e28954a93636b0f",
+   "contenido": "f2c7f58463492168b95abf1288ce321dd5787f905d1d1bb78b26c6b6db03feda",
+   "origen": "/home/claude/work/CFSS_motor/prediccion_2025.parquet",
+   "nodo": "CFSS_motor"
+  },
+  "sel_CFSS4_buildings.parquet": {
+   "bytes": 1574274,
+   "sha256": "24720d1605dc96e864cc854e5d4b15140f810e45f824dd7b006181a7c77234dc",
+   "contenido": "f0fe47fda321f32a6886447d26bf0f7318d45f3bd2fb3b372dbb71a1f85609d6",
+   "origen": "/home/claude/work/sel_CFSS4_buildings.parquet",
+   "nodo": "CFSS4_buildings"
+  },
+  "CFSS4_buildings/v24.parquet": {
+   "bytes": 2867461,
+   "sha256": "5d62ca730fe58c37b2eba947cf3dd55bdbfe2f0c0d6664887aaf5e3aae985992",
+   "contenido": "a6a5c40bf934e4e0e77673c0e2d5199154b1c368676a5068a56d7d3a4431d48b",
+   "origen": "/home/claude/work/CFSS4_buildings/v24.parquet",
+   "nodo": "CFSS4_buildings"
+  },
+  "CFSS4_buildings/prediccion_2025.parquet": {
+   "bytes": 2820627,
+   "sha256": "a0e9b7f325f203659ddc5d28b01b2a6d99025a4b3600a3188f6c2135f6e97287",
+   "contenido": "fe236611aa1b5f4bf67f521e2cf0d8361375f08d04f2dd47bcecdce0f34417e6",
+   "origen": "/home/claude/work/CFSS4_buildings/prediccion_2025.parquet",
+   "nodo": "CFSS4_buildings"
+  },
+  "sel_FSAS4_buildings.parquet": {
+   "bytes": 1574274,
+   "sha256": "30fd205adbccd000ad5778e586ba50e9bfe878c7c27c5537c6050662d7d7fa0b",
+   "contenido": "eea1f6aea6bebe86dd5b365c93be4ac6d61702b0b41d74a9c1529d0e520f0224",
+   "origen": "/home/claude/work/sel_FSAS4_buildings.parquet",
+   "nodo": "FSAS4_buildings"
+  },
+  "FSAS4_buildings/v24.parquet": {
+   "bytes": 2867461,
+   "sha256": "efbc789e12135c4cb664adc8a75f483f50b5b26c41382c7a3cd480a7044555d7",
+   "contenido": "9bbd5ac062a378429f68cdb3622482968d6c309afed2951a8df731e39a5ed707",
+   "origen": "/home/claude/work/FSAS4_buildings/v24.parquet",
+   "nodo": "FSAS4_buildings"
+  },
+  "FSAS4_buildings/prediccion_2025.parquet": {
+   "bytes": 2820627,
+   "sha256": "e4c66502dafbd11706cede41cef0bf9157aa97d8fedc3186b90206b0fc51f513",
+   "contenido": "4f95dfb24f5f7168295054cbdc7168340c19ddea285dddf365ce25946fe599c4",
+   "origen": "/home/claude/work/FSAS4_buildings/prediccion_2025.parquet",
+   "nodo": "FSAS4_buildings"
+  },
+  "sel_MLP3_contents.parquet": {
+   "bytes": 1583200,
+   "sha256": "b0d6c5d6bd232a08fe68307a36882d2384f24100370a455d07a0e9c4999292bc",
+   "contenido": "0d43dc219dd678adf113bf7a8262d744d1a5bc74ed04109aa80b13e4496d099e",
+   "origen": "/home/claude/work/sel_MLP3_contents.parquet",
+   "nodo": "MLP3_contents"
+  },
+  "MLP3_contents/v24.parquet": {
+   "bytes": 2907654,
+   "sha256": "a32a06f39dc47a92bc4637fdf6cf7bba051f046d3395aab377d6f4b8abb60f09",
+   "contenido": "c5882d87bf4cd7d6f9a1986ee19f815b299d1a434e9980801b634c58ae6c49b1",
+   "origen": "/home/claude/work/MLP3_contents/v24.parquet",
+   "nodo": "MLP3_contents"
+  },
+  "MLP3_contents/prediccion_2025.parquet": {
+   "bytes": 2846950,
+   "sha256": "0dc7c784cbde615726f71c0f7fce473177a583de03dca0f06e69790227041d0d",
+   "contenido": "ec3a333653ace9fcc07e505a350ae2199272df0ec8f7e5273d87888b2c8248b8",
+   "origen": "/home/claude/work/MLP3_contents/prediccion_2025.parquet",
+   "nodo": "MLP3_contents"
+  },
+  "sel_B_CFST_motor_tendencia.parquet": {
+   "bytes": 2184468,
+   "sha256": "bab64358c15bc2937aebfbb52bf8614bb47030519bc895733796652ad6fa801e",
+   "contenido": "4c555e7e642ccb6716f2f2897b052cb6c08a41cef4ea0f134bd6098211a0fcf5",
+   "origen": "/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1/Modelos_claude_b/runs/B_CFST_motor_tendencia/sel_B_CFST_motor_tendencia.parquet",
+   "nodo": "B_CFST_motor_tendencia"
+  },
+  "B_CFST_motor_tendencia/v24.parquet": {
+   "bytes": 3958636,
+   "sha256": "7c964a8afbff304b89badc17fd359f64bbd2937f3605573280cf794c719c883a",
+   "contenido": "b947fcda025e9854f2927db224abc5270cf716a38a7ae91c596f6272ba128dbc",
+   "origen": "/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1/Modelos_claude_b/runs/B_CFST_motor_tendencia/v24.parquet",
+   "nodo": "B_CFST_motor_tendencia"
+  },
+  "B_CFST_motor_tendencia/prediccion_2025.parquet": {
+   "bytes": 3739277,
+   "sha256": "ce175b1f8bcf03869df82cbdc72bcb7576fbd0946b5ecd7a37eca3690c7cbd14",
+   "contenido": "ec1912f0241c5a0df24f89b1bf4de0c8ab641e4faba8c53f73a773b49518d1c2",
+   "origen": "/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1/Modelos_claude_b/runs/B_CFST_motor_tendencia/prediccion_2025.parquet",
+   "nodo": "B_CFST_motor_tendencia"
+  },
+  "sel_B_CFST_buildings_tendencia.parquet": {
+   "bytes": 1574274,
+   "sha256": "b4ca50868d4f646fd99a2723e52cbc907f392e7d39985e9ded229a0aa48e6903",
+   "contenido": "c3d1abfbea05f10c764fd520865693f0b9c9f38966c69f6536fb7c5be8cffa40",
+   "origen": "/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1/Modelos_claude_b/runs/B_CFST_buildings_tendencia/sel_B_CFST_buildings_tendencia.parquet",
+   "nodo": "B_CFST_buildings_tendencia"
+  },
+  "B_CFST_buildings_tendencia/v24.parquet": {
+   "bytes": 2867461,
+   "sha256": "548b3870f8e77e57d7134703845a59d53d83cd7c4142451e12f1494bb207f88d",
+   "contenido": "d84db3d67f3bdb02d19b07c215c6c96b1e99d9c4d81dc4d7cc9ec1af5f731845",
+   "origen": "/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1/Modelos_claude_b/runs/B_CFST_buildings_tendencia/v24.parquet",
+   "nodo": "B_CFST_buildings_tendencia"
+  },
+  "B_CFST_buildings_tendencia/prediccion_2025.parquet": {
+   "bytes": 2820627,
+   "sha256": "d07de2fdf5237cd391ba7304d36d3b1b343bd42a562e9ea048b3dc73194cc724",
+   "contenido": "e21facaf57951f15763253ca1dcd360779c330225a25764fcef5b98e33dbd626",
+   "origen": "/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1/Modelos_claude_b/runs/B_CFST_buildings_tendencia/prediccion_2025.parquet",
+   "nodo": "B_CFST_buildings_tendencia"
+  },
+  "sel_B_FSAST_buildings_tendencia.parquet": {
+   "bytes": 1574274,
+   "sha256": "849c9710b1370ce397096291cc7816283dce9ab06cd2027b3336aa81ffa270b3",
+   "contenido": "e584bb6a5cb622f93c28576cbc90705cf9d1d128cacc726fd3bb6d416c0e4ded",
+   "origen": "/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1/Modelos_claude_b/runs/B_FSAST_buildings_tendencia/sel_B_FSAST_buildings_tendencia.parquet",
+   "nodo": "B_FSAST_buildings_tendencia"
+  },
+  "B_FSAST_buildings_tendencia/v24.parquet": {
+   "bytes": 2867461,
+   "sha256": "b5eedbdfacf43bb4867863bc8bb2f69009dd9204d51abec087034ffd295013c4",
+   "contenido": "d5213e778557c64815a8df1f26905156a26ebdb7d9f003da9bf659a6319c5c20",
+   "origen": "/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1/Modelos_claude_b/runs/B_FSAST_buildings_tendencia/v24.parquet",
+   "nodo": "B_FSAST_buildings_tendencia"
+  },
+  "B_FSAST_buildings_tendencia/prediccion_2025.parquet": {
+   "bytes": 2820627,
+   "sha256": "38e947a6be4ae6856a9d54608ec033e3bf036e472b5427c4930d94fb6430e9dc",
+   "contenido": "15a21294e404af324988cdd9b0b6548925c4eca8d2a354f91ff08e1a32a043c6",
+   "origen": "/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1/Modelos_claude_b/runs/B_FSAST_buildings_tendencia/prediccion_2025.parquet",
+   "nodo": "B_FSAST_buildings_tendencia"
+  },
+  "S22_claude_propio/S22_claude_propio.csv": {
+   "bytes": 13012725,
+   "sha256": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0",
+   "contenido": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0",
+   "origen": "/home/claude/work/S22_claude_propio/S22_claude_propio.csv",
+   "nodo": "S22_claude_propio"
+  },
+  "S22_claude_propio/prediccion_2025.parquet": {
+   "bytes": 8557978,
+   "sha256": "35ffd557f43a32ad9a379a1df22386fc671e1f02f799c24f24e39c59da4719cf",
+   "contenido": "29ae79020644eebe6c5da25df5a99dfba0c48831cb5d52798c03d8ac98a1ee81",
+   "origen": "/home/claude/work/S22_claude_propio/prediccion_2025.parquet",
+   "nodo": "S22_claude_propio"
+  },
+  "S30_claude_b/S30_claude_b.csv": {
+   "bytes": 13012442,
+   "sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+   "contenido": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+   "origen": "/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1/Modelos_claude_b/runs/S30_claude_b/S30_claude_b.csv",
+   "nodo": "S30_claude_b"
+  },
+  "S30_claude_b/prediccion_2025.parquet": {
+   "bytes": 8557976,
+   "sha256": "231c6d174fa28fb73da432d4bae1dfb2287e7ec8bf9f07fa37f7bad772543e13",
+   "contenido": "d0c6cf5f0f3da2f01a519138648c74ccc91f64b2c2d9386a52aab199abb74e94",
+   "origen": "/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1/Modelos_claude_b/runs/S30_claude_b/prediccion_2025.parquet",
+   "nodo": "S30_claude_b"
+  }
+ },
+ "faltan": [
+  "CFS_motor/v23_own_damage.npz",
+  "CFS_motor/v23_third_party_prop.npz",
+  "CFS_motor/v23_bodily_injury.npz",
+  "CFS_motor/v23_theft.npz",
+  "CFS_motor/v23_glass_hail.npz",
+  "CFS_motor/v24_own_damage.npy",
+  "CFS_motor/v24_third_party_prop.npy",
+  "CFS_motor/v24_bodily_injury.npy",
+  "CFS_motor/v24_theft.npy",
+  "CFS_motor/v24_glass_hail.npy"
+ ],
+ "datos": {
+  "originales": {
+   "addresses.parquet": "2f1a9a157649a73ed1b0ee9b2caa3660b4c2a11766af3c64ab5131389079c0b1",
+   "claims.parquet": "323adf2e0f6c5975a026479d725d4cd04f51fce3aa069f897a99f664c6e392c0",
+   "customers.parquet": "065458a0b3aa9d3499e80b3b25b76baf0ef6245146477b6861f6ea35edf581eb",
+   "policies_buildings.parquet": "eb84372c23c16ed0619d89c8eb1396ab6916e5ec46a5907ce42c3dfce4a91cbe",
+   "policies_contents.parquet": "8c067cc80baed583100df999e1c3d5e389295702f7bac21d5331bbd639b83fcd",
+   "policies_motor.parquet": "4d2d7ae03971d5d6df3a71bbaf0ebc168250a6807b27d1561d38b638434dc95e",
+   "sample_submission.parquet": "9529f3b6a679d3410350baa7c2ef3fb085d1d8843a838360c5852dfe820d4d95",
+   "test_buildings.parquet": "7b2b96507de29241c70617c17df66146ed30b51f826ce5219bbda5da536d4957",
+   "test_contents.parquet": "c2212f62f3b7a21431c0073277549c3db5e63857565a8b88855e79a65fa1b8b6",
+   "test_motor.parquet": "8d28fb9fd091caf2a044913a013592226a4c0917d5c6fcc9c5e8cdcec2ab4fc5",
+   "weather.parquet": "b8407f0f3c7279a49297c969a4ab2905641b232910e316fb806730065987cd49"
+  },
+  "capa": {
+   "policies_motor": "d6b5e28f2b291c6ce285bc75c2426f63d78b2556b40273197f4a42a0652c9ef8",
+   "policies_buildings": "0378b2801849ba257cc06fc671e7d3ae4f7eade41a20efc6d08fb1eb6cbaf0f9",
+   "policies_contents": "09cdc7e56daf6765cf93c338351f84bf7d474d4fe148e88b35caa5f74f890dd4",
+   "test_motor": "27ddb9a3e6f9b56af223c9d50d01586a81d732dcb571a23bb793810e0655f43b",
+   "test_buildings": "99e983e3203fee57ee32f6e47166cdd8d0bb033455c236e1967839dac88276ae",
+   "test_contents": "55de22d263c113646568a5fe778b71635ff51a475bc78f747e69baad5e3ff39a",
+   "customers": "065458a0b3aa9d3499e80b3b25b76baf0ef6245146477b6861f6ea35edf581eb",
+   "addresses": "2f1a9a157649a73ed1b0ee9b2caa3660b4c2a11766af3c64ab5131389079c0b1",
+   "weather": "b8407f0f3c7279a49297c969a4ab2905641b232910e316fb806730065987cd49",
+   "claims": "31b1d8007ca9ee3a6dd00e73f99e7a7fc0d1fb8b13087b687342c999bd7b8336",
+   "sample_submission": "9529f3b6a679d3410350baa7c2ef3fb085d1d8843a838360c5852dfe820d4d95"
+  },
+  "decisiones": {
+   "Limpieza/runs/capendorse_20261017T010844Z_fbf8cc20/ledger/cumulative_retrospective_changes.parquet": {
+    "uso": "marca audit_capital_scale_confirmed (rama CAP02R a CAP06R)",
+    "sha256": "19682d0792858cf4b4df0172ef8658cfb1ff9a28f4431c5ba8e5bb5d25a704bd"
+   },
+   "Limpieza/runs/capfix_20261016T184904Z_099a22b1/ledger/all_capital_changes.parquet": {
+    "uso": "marca audit_capital_cap01",
+    "sha256": "4724971a9e788854cfa6e229b9acfd6b29cdb4012f3b2d87fd93b0cf662a921c"
+   },
+   "Decision_criterios_capital_claude/runs/dec_20261017T024905Z_c6e024cb/tables/autorizadas.csv": {
+    "uso": "marca audit_capital_scale_confirmed (lista D66)",
+    "sha256": "bf307355c2170b5d843751f0c543f6ffed25f318cb2e102a0fe07476b366d7c0"
+   }
+  },
+  "bases": {
+   "tables/t0_por_row_id.parquet": {
+    "bytes": 20018041,
+    "sha256": "caa8294e1d89dca5dfdc8b3de4db3f9a6fc2cba930506ec96a6abf5c31d3b340",
+    "contenido": "3bb22d23e7b5c10111c323733a808793acabd407918d0ab8ccb59ee6dfe0f70a"
+   },
+   "tables/asignacion_por_siniestro.parquet": {
+    "bytes": 4805740,
+    "sha256": "535327e1bbba95f171820d27e345988b3c2cbdeec6f86eefefaedefc52992ae5",
+    "contenido": "f760aed27500d172209434c89967949ded6e324b7ecd8a414c34dceb065f2ed3"
+   },
+   "tables/factores_desarrollo_conteos.csv": {
+    "bytes": 23362,
+    "sha256": "e02c7aa48b476ad7626cd7b2581745149830eabab19c4d2e95894a4e94d4e4b7",
+    "contenido": "e02c7aa48b476ad7626cd7b2581745149830eabab19c4d2e95894a4e94d4e4b7"
+   },
+   "tables/ibnr_por_peligro_anio.csv": {
+    "bytes": 4243,
+    "sha256": "4e1a723c0aa5691c64384fad32d6062b074a9794d72a4138a6f020f5ea572d71",
+    "contenido": "4e1a723c0aa5691c64384fad32d6062b074a9794d72a4138a6f020f5ea572d71"
+   },
+   "tables/completitud_2024_por_mes.csv": {
+    "bytes": 8572,
+    "sha256": "34ebf9ae430f8949f54d4e1d05cc1fd855e1bb40a86c0099a482ad44a70a9ff2",
+    "contenido": "34ebf9ae430f8949f54d4e1d05cc1fd855e1bb40a86c0099a482ad44a70a9ff2"
+   },
+   "tables/chain_ladder_conteos.csv": {
+    "bytes": 2366,
+    "sha256": "d643025262cbc9781febbb94217ffeb657ceadc0f750a17ea6c64d95ec0a88ef",
+    "contenido": "d643025262cbc9781febbb94217ffeb657ceadc0f750a17ea6c64d95ec0a88ef"
+   }
+  },
+  "f0": {
+   "tables/f0_motor.parquet": {
+    "bytes": 98141422,
+    "sha256": "c503d0142e83818b2c202747ddbce53882ed9add6f8309ced714655caf25b392",
+    "contenido": "20f1a2ecfb2c012244ad8c4222ec8503e98f2efcc021c40cf1089fcc70afbbe6"
+   },
+   "tables/f0_buildings.parquet": {
+    "bytes": 66919547,
+    "sha256": "2def2e2433062704e3762eae63f5b000e73d8284a62a6cc1a689aa63c2842454",
+    "contenido": "1506da562e28d3f28a9338b93c25424bfbdbe68c0efa1010867743977b0a4362"
+   },
+   "tables/f0_contents.parquet": {
+    "bytes": 65668739,
+    "sha256": "42328ddba499a77f9cc3c814506dc97fde7c3e2adf88cfc491058c7de92c76ff",
+    "contenido": "7b06b565833323090adcff185f2b5ab869b61936df75850acb69b80fe420c190"
+   },
+   "tables/particiones.parquet": {
+    "bytes": 15848536,
+    "sha256": "d365981d07feec50e487ff0d8fa4b9e5b8a00d5af8f8e521e03f2a158931035b",
+    "contenido": "0987960a3498983daa25bbd27bd4258e3e4dbfbf372bedb33ccaa02bba6c4105"
+   }
+  },
+  "f0_contrato_bloques": "5ddb45d8e2e07d2432f77cc7abe19226322b24391a813ae9e8e7efd071602972"
+ },
+ "mezcla": {
+  "insumos/exposicion_motor.parquet": {
+   "bytes": 8727967,
+   "sha256": "5555d11ca01e0afa16d6872295f24030f38be01e26e278a624d5fe53c47d54b1",
+   "contenido": "7a05a4165ca5029f508e188ff5dec1139a56fdd24f0b861655f61cefc99d70d5",
+   "origen": "Hackaton/Semana 1/Modelos_claude/insumos/exposicion_motor.parquet",
+   "uso": "exposición que lee el modo mezcla cuando no hay feat_<ramo>.parquet; columnas row_id, e_ef_coste y exposure"
+  },
+  "insumos/exposicion_buildings.parquet": {
+   "bytes": 6057353,
+   "sha256": "5d6a099be0d72858ef749257ed374dde80f62fe4ef07bc657df48b710f8e2673",
+   "contenido": "940ccd79edf673e1cbd7209cd8437f0fa8947cdca3f72156383833740fb124dc",
+   "origen": "Hackaton/Semana 1/Modelos_claude/insumos/exposicion_buildings.parquet",
+   "uso": "exposición que lee el modo mezcla cuando no hay feat_<ramo>.parquet; columnas row_id, e_ef_coste y exposure"
+  },
+  "insumos/exposicion_contents.parquet": {
+   "bytes": 6166024,
+   "sha256": "e115a4b0565cd134f47568b5cf0c35a9a931c72bd254967c17bf7bedd586ab5c",
+   "contenido": "d1b4ed9b35bc488254e1386b71ca3ec85699339bb1411d108a5186cdd9a0f881",
+   "origen": "Hackaton/Semana 1/Modelos_claude/insumos/exposicion_contents.parquet",
+   "uso": "exposición que lee el modo mezcla cuando no hay feat_<ramo>.parquet; columnas row_id, e_ef_coste y exposure"
+  }
+ }
+}

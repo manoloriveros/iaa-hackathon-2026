@@ -1,0 +1,154 @@
+{
+  "addresses": {
+    "workspace_relative_path": "Hackaton/Semana 1/Datos/addresses.parquet",
+    "layer": "original_unchanged",
+    "sha256": "2f1a9a157649a73ed1b0ee9b2caa3660b4c2a11766af3c64ab5131389079c0b1"
+  },
+  "claims": {
+    "workspace_relative_path": "Hackaton/Semana 1/Limpieza/runs/preaudit_20261016T211816Z_817285a5/data/claims.parquet",
+    "layer": "derived",
+    "sha256": "31b1d8007ca9ee3a6dd00e73f99e7a7fc0d1fb8b13087b687342c999bd7b8336",
+    "rule": "DUP01",
+    "parent_workspace_relative_path": "Hackaton/Semana 1/Datos/claims.parquet",
+    "parent_sha256": "323adf2e0f6c5975a026479d725d4cd04f51fce3aa069f897a99f664c6e392c0",
+    "rows_before": 163150,
+    "rows_after": 162546,
+    "excluded_records": 604,
+    "retained_values_changed": 0,
+    "aliases_workspace_relative_path": "Hackaton/Semana 1/Limpieza/runs/dupfix_20261016T195843Z_fc0bb423/ledger/claim_id_aliases.parquet",
+    "ledger_workspace_relative_path": "Hackaton/Semana 1/Limpieza/runs/dupfix_20261016T195843Z_fc0bb423/ledger/exclusion_ledger.parquet",
+    "audit_parent_workspace_relative_path": "Hackaton/Semana 1/Limpieza/runs/dupfix_20261016T195843Z_fc0bb423/data/claims.parquet",
+    "audit_parent_sha256": "284d2b610a7a6d66935e717fd26b400c47402d9784e1f094aa9cfba106f2e861",
+    "audit_rule": "PRE00",
+    "audit_columns": [
+      "audit_pre00"
+    ],
+    "audit_flag_true": 413,
+    "audit_only_not_predictor": true,
+    "audit_original_values_changed": 0,
+    "audit_ledger_workspace_relative_path": "Hackaton/Semana 1/Limpieza/runs/preaudit_20261016T211816Z_817285a5/ledger/pre00_marked_claims.parquet"
+  },
+  "customers": {
+    "workspace_relative_path": "Hackaton/Semana 1/Datos/customers.parquet",
+    "layer": "original_unchanged",
+    "sha256": "065458a0b3aa9d3499e80b3b25b76baf0ef6245146477b6861f6ea35edf581eb"
+  },
+  "policies_buildings": {
+    "workspace_relative_path": "Hackaton/Semana 1/Limpieza/runs/renaudit_20261016T203904Z_657dd741/data/policies_buildings.parquet",
+    "layer": "derived",
+    "sha256": "0378b2801849ba257cc06fc671e7d3ae4f7eade41a20efc6d08fb1eb6cbaf0f9",
+    "parent_workspace_relative_path": "Hackaton/Semana 1/Limpieza/runs/refine_20261016T190025Z_6751bba4/data/policies_buildings.parquet",
+    "parent_sha256": "46c4a75fc3d74179986f3315d89a8cc742cf0f4fbabb40b0b04fad8b57a06a27",
+    "category_changes": 555824,
+    "age_changes": 1122,
+    "capital_changes": 0,
+    "audit_rule": "REN00",
+    "audit_columns": [
+      "audit_ren00"
+    ],
+    "audit_flag_true": 3405,
+    "original_values_changed": 0,
+    "inherited_capital_changes_preserved": true,
+    "audit_only_not_predictor": true
+  },
+  "policies_contents": {
+    "workspace_relative_path": "Hackaton/Semana 1/Limpieza/runs/renaudit_20261016T203904Z_657dd741/data/policies_contents.parquet",
+    "layer": "derived",
+    "sha256": "09cdc7e56daf6765cf93c338351f84bf7d474d4fe148e88b35caa5f74f890dd4",
+    "parent_workspace_relative_path": "Hackaton/Semana 1/Limpieza/runs/refine_20261016T190025Z_6751bba4/data/policies_contents.parquet",
+    "parent_sha256": "6f737afaec5484807bf8071f7c3000710946432f72fa46a27f9fb7798e8a0ec5",
+    "category_changes": 0,
+    "age_changes": 1209,
+    "capital_changes": 0,
+    "audit_rule": "REN00",
+    "audit_columns": [
+      "audit_ren00"
+    ],
+    "audit_flag_true": 765,
+    "original_values_changed": 0,
+    "inherited_capital_changes_preserved": true,
+    "audit_only_not_predictor": true
+  },
+  "policies_motor": {
+    "workspace_relative_path": "Hackaton/Semana 1/Limpieza/runs/renaudit_20261016T203904Z_657dd741/data/policies_motor.parquet",
+    "layer": "derived",
+    "sha256": "d6b5e28f2b291c6ce285bc75c2426f63d78b2556b40273197f4a42a0652c9ef8",
+    "parent_workspace_relative_path": "Hackaton/Semana 1/Limpieza/runs/refine_20261016T190025Z_6751bba4/data/policies_motor.parquet",
+    "parent_sha256": "cfd13ee0756b24202a29fe72953313779deb05757f17b0cac2a4183db862bfd5",
+    "category_changes": 0,
+    "age_changes": 0,
+    "capital_changes": 0,
+    "audit_rule": "REN00",
+    "audit_columns": [
+      "audit_ren00"
+    ],
+    "audit_flag_true": 4940,
+    "original_values_changed": 0,
+    "inherited_capital_changes_preserved": true,
+    "audit_only_not_predictor": true
+  },
+  "sample_submission": {
+    "workspace_relative_path": "Hackaton/Semana 1/Datos/sample_submission.parquet",
+    "layer": "original_unchanged",
+    "sha256": "9529f3b6a679d3410350baa7c2ef3fb085d1d8843a838360c5852dfe820d4d95"
+  },
+  "test_buildings": {
+    "workspace_relative_path": "Hackaton/Semana 1/Limpieza/runs/renaudit_20261016T203904Z_657dd741/data/test_buildings.parquet",
+    "layer": "derived",
+    "sha256": "99e983e3203fee57ee32f6e47166cdd8d0bb033455c236e1967839dac88276ae",
+    "parent_workspace_relative_path": "Hackaton/Semana 1/Limpieza/runs/refine_20261016T190025Z_6751bba4/data/test_buildings.parquet",
+    "parent_sha256": "015b46a2aa1ca7ee473e1d878e9fb6f3137b7c0632ac3cbfd0d5b5213a1c245d",
+    "category_changes": 144386,
+    "age_changes": 300,
+    "capital_changes": 0,
+    "audit_rule": "REN00",
+    "audit_columns": [
+      "audit_ren00"
+    ],
+    "audit_flag_true": 1054,
+    "original_values_changed": 0,
+    "inherited_capital_changes_preserved": true,
+    "audit_only_not_predictor": true
+  },
+  "test_contents": {
+    "workspace_relative_path": "Hackaton/Semana 1/Limpieza/runs/renaudit_20261016T203904Z_657dd741/data/test_contents.parquet",
+    "layer": "derived",
+    "sha256": "55de22d263c113646568a5fe778b71635ff51a475bc78f747e69baad5e3ff39a",
+    "parent_workspace_relative_path": "Hackaton/Semana 1/Limpieza/runs/refine_20261016T190025Z_6751bba4/data/test_contents.parquet",
+    "parent_sha256": "a36e5e6e623bab0625de4be90f941c96292a53a604d02a57c6f1e98f48a1ae2e",
+    "category_changes": 0,
+    "age_changes": 305,
+    "capital_changes": 0,
+    "audit_rule": "REN00",
+    "audit_columns": [
+      "audit_ren00"
+    ],
+    "audit_flag_true": 231,
+    "original_values_changed": 0,
+    "inherited_capital_changes_preserved": true,
+    "audit_only_not_predictor": true
+  },
+  "test_motor": {
+    "workspace_relative_path": "Hackaton/Semana 1/Limpieza/runs/renaudit_20261016T203904Z_657dd741/data/test_motor.parquet",
+    "layer": "derived",
+    "sha256": "27ddb9a3e6f9b56af223c9d50d01586a81d732dcb571a23bb793810e0655f43b",
+    "parent_workspace_relative_path": "Hackaton/Semana 1/Limpieza/runs/refine_20261016T190025Z_6751bba4/data/test_motor.parquet",
+    "parent_sha256": "921252d06e088c3de720b2c7e7c8c0d9194ed14b8aa1dbdda08a27d2bf92f9eb",
+    "category_changes": 0,
+    "age_changes": 0,
+    "capital_changes": 0,
+    "audit_rule": "REN00",
+    "audit_columns": [
+      "audit_ren00"
+    ],
+    "audit_flag_true": 1646,
+    "original_values_changed": 0,
+    "inherited_capital_changes_preserved": true,
+    "audit_only_not_predictor": true
+  },
+  "weather": {
+    "workspace_relative_path": "Hackaton/Semana 1/Datos/weather.parquet",
+    "layer": "original_unchanged",
+    "sha256": "b8407f0f3c7279a49297c969a4ab2905641b232910e316fb806730065987cd49"
+  }
+}

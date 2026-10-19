@@ -1,0 +1,118 @@
+{
+  "version": "N62_frozen_preaudit_v1",
+  "originals_sha256": {
+    "addresses.parquet": "2f1a9a157649a73ed1b0ee9b2caa3660b4c2a11766af3c64ab5131389079c0b1",
+    "claims.parquet": "323adf2e0f6c5975a026479d725d4cd04f51fce3aa069f897a99f664c6e392c0",
+    "customers.parquet": "065458a0b3aa9d3499e80b3b25b76baf0ef6245146477b6861f6ea35edf581eb",
+    "policies_buildings.parquet": "eb84372c23c16ed0619d89c8eb1396ab6916e5ec46a5907ce42c3dfce4a91cbe",
+    "policies_contents.parquet": "8c067cc80baed583100df999e1c3d5e389295702f7bac21d5331bbd639b83fcd",
+    "policies_motor.parquet": "4d2d7ae03971d5d6df3a71bbaf0ebc168250a6807b27d1561d38b638434dc95e",
+    "sample_submission.parquet": "9529f3b6a679d3410350baa7c2ef3fb085d1d8843a838360c5852dfe820d4d95",
+    "test_buildings.parquet": "7b2b96507de29241c70617c17df66146ed30b51f826ce5219bbda5da536d4957",
+    "test_contents.parquet": "c2212f62f3b7a21431c0073277549c3db5e63857565a8b88855e79a65fa1b8b6",
+    "test_motor.parquet": "8d28fb9fd091caf2a044913a013592226a4c0917d5c6fcc9c5e8cdcec2ab4fc5",
+    "weather.parquet": "b8407f0f3c7279a49297c969a4ab2905641b232910e316fb806730065987cd49"
+  },
+  "ID01": {
+    "pattern": "[0-9]{1,8}",
+    "width": 8
+  },
+  "EXP01": {
+    "inclusive_days": true,
+    "denominator": 365,
+    "decimals": 4
+  },
+  "CAP01": {
+    "thresholds": {
+      "buildings": 10000000,
+      "contents": 1000000
+    },
+    "scale": 1000,
+    "context_fields": {
+      "buildings": [
+        "customer_id",
+        "address_id",
+        "construction_type",
+        "occupancy",
+        "accidental_damage_cover",
+        "voluntary_excess",
+        "compulsory_excess",
+        "smoke_alarms",
+        "mortgage"
+      ],
+      "contents": [
+        "customer_id",
+        "address_id",
+        "tenure",
+        "security_level",
+        "high_value_items",
+        "accidental_damage_cover",
+        "works_from_home",
+        "lodgers",
+        "bicycle_cover",
+        "voluntary_excess",
+        "compulsory_excess"
+      ]
+    },
+    "approved_sets": {
+      "policies_buildings": {
+        "count": 802,
+        "row_ids_sha256": "b262deab1c0cb371635c1b042032708b2ba42324e9c706e6c43e4fdc7cb95c20"
+      },
+      "policies_contents": {
+        "count": 731,
+        "row_ids_sha256": "af19838c5321bc453d20c733ca9c60a91076f2cef8def69bd54bf2039014e8f0"
+      },
+      "test_buildings": {
+        "count": 272,
+        "row_ids_sha256": "9f8490d0fb51aeb9b311e3357d11b00d5086ff3fe28a14b410198af545144ce6"
+      },
+      "test_contents": {
+        "count": 268,
+        "row_ids_sha256": "0bed421cb45f521b29b90be0d2850051e9b2b414416e3d97924c95ca71596b15"
+      }
+    },
+    "selection": "Most recent strictly earlier non-extreme original anchor; complete same context; start gap1..400; divided capital ratio0.9..1.1. Never reselect after correcting."
+  },
+  "CAT01": {
+    "map": {
+      "Brick": "brick",
+      "BRICK": "brick",
+      "NON_STANDARD": "non_standard",
+      "STONE": "stone",
+      "T": "t",
+      "W": "w"
+    }
+  },
+  "AGE01": {
+    "calendar_completed": true,
+    "feb29_on_feb28_nonleap": "abort",
+    "maximum_source_difference": 1
+  },
+  "DUP01": {
+    "count": 604,
+    "pairs_sha256": "ad61daaa2e217bbf3259932a72cfae5ec8c9931dc53c30294f414e5178396689"
+  },
+  "REN00": {
+    "cohort_source_file_sha256": "4e68ecadb8a00976a1601b5067ce73c87a43c74069cb542c1cafbdf8d9af764f",
+    "approved_sets": {
+      "buildings": {
+        "count": 1010,
+        "policy_ids_sha256": "1b68021fc8111739d1bece6eafe3f6acc8bc1dd54098c83bf5a9f5ec6f9efcdf"
+      },
+      "contents": {
+        "count": 219,
+        "policy_ids_sha256": "64da56e61f813b75b58eb3e08451dee91b0d7c9359d853bb90372eef7b604a94"
+      },
+      "motor": {
+        "count": 1513,
+        "policy_ids_sha256": "049e7b3480b1f35612007d3e580bfe3544991d164334fcebe6c5ab9bc12dfc84"
+      }
+    }
+  },
+  "PRE00": {
+    "cohort_source_file_sha256": "90d1cba5de82320aae81966aa1d248446cb2c758d6880378bbde855a4d1226bf",
+    "count": 413,
+    "claim_ids_sha256": "f31e2e94e7bb9d9bca6f50929be016275be72848eb6a2afa33976ef7f14d471c"
+  }
+}

@@ -1,0 +1,13 @@
+{
+ "descripcion": "Entorno donde se entrenaron los componentes y se escribieron S22 y S30 (espacio de trabajo en la nube de Claude). LightGBM y CatBoost se instalaron el 17 de octubre de 2026 a las 13:09 y 15:12; numpy, pandas, scipy y scikit-learn vienen de la imagen base. Ningún paquete cambió después de esas fechas.",
+ "python": "3.13.16",
+ "sistema": "Ubuntu 24.04.5 LTS, Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+ "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz, 2 núcleos",
+ "memoria_gb": 8,
+ "paquetes": {"numpy": "2.5.3", "pandas": "3.0.5", "scipy": "1.18.1", "scikit-learn": "1.9.1", "lightgbm": "4.7.0", "catboost": "1.2.10", "pyarrow": "26.0.0", "torch": "2.14.1+cu130 (solo CPU, solo MLP3_contents)"},
+ "hilos": "LightGBM num_threads=2, CatBoost thread_count=2 y torch.set_num_threads(2) fijados en el código",
+ "semillas": "fijadas en el código (20261017 + 101 x semilla)",
+ "otros_entornos_probados": {
+  "vm_local_del_participante": {"python": "3.10.12", "numpy": "2.2.6", "pandas": "2.3.3", "pyarrow": "25.0.1", "uso": "las matrices F0 y las bases actuariales se construyeron aquí el 17 de octubre; la mezcla final se repite aquí con el mismo SHA"}
+ }
+}

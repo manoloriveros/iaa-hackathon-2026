@@ -1,0 +1,37 @@
+# Datos del concurso y todo lo derivado de ellos: no se versionan ni se redistribuyen (reglas del reto)
+*.parquet
+*.npy
+*.npz
+*.csv
+!receta/**/*.csv
+trabajo/
+reconstruccion/
+work/
+runs/
+# Entornos y cachés
+.venv/
+__pycache__/
+*.pyc
+catboost_info/
+.env
+.env.*
+!.env.example
+privado/
+*.pkl
+*.pickle
+*.joblib
+*.cbm
+*.pt
+*.pth
+*.onnx
+*.zip
+*.7z
+*.pem
+*.key
+*kaggle.json
+*credentials*
+*access_token*
+*secret*
+**/.cache/
+.pytest_cache/
+revisiones_temporales/

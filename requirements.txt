@@ -1,0 +1,11 @@
+# Entorno de referencia en el que se entrenaron los componentes de S22 y S30 (espacio de trabajo en la nube de Claude,
+# Ubuntu 24.04, Python 3.13.16, 2 núcleos, 8 GB). Con estas versiones y dos hilos la reconstrucción es byte a byte.
+numpy==2.5.3
+pandas==3.0.5
+scipy==1.18.1
+scikit-learn==1.9.1
+lightgbm==4.7.0
+catboost==1.2.10
+pyarrow==26.0.0
+# Solo para MLP3_contents, que entra en S22 (respaldo) y no en S30:
+torch==2.14.1

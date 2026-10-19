@@ -1,0 +1,17 @@
+{
+ "utc": "2026-10-19T13:05:20+00:00",
+ "entorno": "máquina virtual del participante (Linux, Python 3.10.12, numpy 2.2.6, pandas 2.3.3, pyarrow 25.0.1, 2 núcleos, 3,9 GB)",
+ "version_reproducir": "1.1",
+ "orden_estricta": "python3 reproducir.py mezcla --semana1=<Semana 1> --trabajo=<nueva>",
+ "resultado_estricta": "código 1: los 46 componentes guardados enlazados coinciden en bytes y contenido; S22_claude_propio.csv coincide en bytes; S22_claude_propio/prediccion_2025.parquet difiere en contenido (último bit de numpy 2.2.6 frente a 2.5.3, documentado en docs/verificacion.md §1) y el paquete se detiene antes de S30",
+ "orden_tolerante": "python3 reproducir.py mezcla --continuar-si-difiere --semana1=<Semana 1> --trabajo=<nueva> (primero con --solo=S22_claude_propio por el límite de tiempo de la consola; la segunda orden reanudó S22 verificado y construyó S30)",
+ "resultado_tolerante": "código 3: S30_claude_b.csv fd9528e0… y S22_claude_propio.csv c21a02e1… iguales al entregado byte a byte; los dos prediccion_2025.parquet difieren en contenido; estado csv_iguales_con_diferencias_intermedias, no acreditada",
+ "archivos": {
+  "S22_claude_propio.log": "d8c1003e1f16b56c738e2b38904932de5b0878da3913e59708e589043c806a63",
+  "S30_claude_b.log": "52b61b2b13031b1731d6debc8544d7b27666fadfd96d406f31ca3a0f4d61fa85",
+  "estricta_S22_claude_propio.log": "2b0f6b11e40f64d60c273a9c9e2ca25f4317b456f39164e1af75da914d11c5d6",
+  "estricta_registro.jsonl": "13eebef5713c80838b5b60cf82b6c6817492a900de2bcd0feb7bc58ab0be8cfe",
+  "estricta_salida.txt": "704e53e77097e706d6579f3454b96e98aa919e601985626e6e984987d9450df0",
+  "tolerante_registro.jsonl": "9b7cc3f12abaef505aadb4ce7030a51e702f95fda9a9542f24126fbbe0471895"
+ }
+}

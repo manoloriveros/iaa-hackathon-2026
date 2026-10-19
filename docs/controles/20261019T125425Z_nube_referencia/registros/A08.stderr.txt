@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/tmp/claude-0/-home-claude/b26edd90-dbc8-5ea4-b3a4-a09131bd72dd/scratchpad/casos_final/A08/p/reproducir.py", line 449, in <module>
+    main()
+    ~~~~^^
+  File "/tmp/claude-0/-home-claude/b26edd90-dbc8-5ea4-b3a4-a09131bd72dd/scratchpad/casos_final/A08/p/reproducir.py", line 403, in main
+    semana1, informe = preparar_datos(originales, decisiones, trabajo)
+                       ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/claude-0/-home-claude/b26edd90-dbc8-5ea4-b3a4-a09131bd72dd/scratchpad/casos_final/A08/p/herramientas/etapas_datos.py", line 154, in preparar_datos
+    informe["f0"]["contrato_bloques_iguales"] = bloques == esp["f0_contrato_bloques"]
+                                                           ~~~^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'f0_contrato_bloques'

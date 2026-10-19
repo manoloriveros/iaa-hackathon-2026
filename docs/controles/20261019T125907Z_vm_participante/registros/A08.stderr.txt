@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/sessions/rcw-01scx2aw3ih12t3ebycytfjw/controles_tmp/20261019T125907Z/A08/p/reproducir.py", line 449, in <module>
+    main()
+  File "/sessions/rcw-01scx2aw3ih12t3ebycytfjw/controles_tmp/20261019T125907Z/A08/p/reproducir.py", line 403, in main
+    semana1, informe = preparar_datos(originales, decisiones, trabajo)
+  File "/sessions/rcw-01scx2aw3ih12t3ebycytfjw/controles_tmp/20261019T125907Z/A08/p/herramientas/etapas_datos.py", line 154, in preparar_datos
+    informe["f0"]["contrato_bloques_iguales"] = bloques == esp["f0_contrato_bloques"]
+KeyError: 'f0_contrato_bloques'

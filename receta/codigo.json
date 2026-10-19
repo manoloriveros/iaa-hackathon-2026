@@ -1,0 +1,219 @@
+{
+ "descripcion": "SHA-256 de cada script de src/. Los de src/modelos son copias exactas de los que se ejecutaron en la nube (/home/claude/modelos_claude); los de src/linea_b, de Modelos_claude_b. Donde hay un hash registrado en un manifiesto de corrida se indica si coincide. Los de src/datos son copias exactas de los scripts de las etapas de datos; los de src/datos/n62_codex, del productor de Codex integrado por hash.",
+ "archivos": {
+  "src/linea_b/mezcla3_b.py": {
+   "sha256": "9e2a1cb62e2056f98b721cd4e8b374558a216583af2f3634a65da2d642f0b98f",
+   "registrado": "9e2a1cb62e2056f98b721cd4e8b374558a216583af2f3634a65da2d642f0b98f",
+   "fuente": "Modelos_claude_b en la carpeta del equipo",
+   "coincide": true
+  },
+  "src/linea_b/nivel_b.py": {
+   "sha256": "21772f1b5ed829ec4f94b89237214f7b4829427637f3f9d651711e8c1ec31356",
+   "registrado": "21772f1b5ed829ec4f94b89237214f7b4829427637f3f9d651711e8c1ec31356",
+   "fuente": "Modelos_claude_b en la carpeta del equipo",
+   "coincide": true
+  },
+  "src/linea_b/reproducir_s30_b.py": {
+   "sha256": "927fe419d2c9898c391daebc9b678de4a4e20e6eb990e6c2c5ef8fefe4fa8c58",
+   "registrado": "927fe419d2c9898c391daebc9b678de4a4e20e6eb990e6c2c5ef8fefe4fa8c58",
+   "fuente": "Modelos_claude_b en la carpeta del equipo",
+   "coincide": true
+  },
+  "src/linea_b/severidad_tendencia.py": {
+   "sha256": "d4adbc26f9225d647f44447ae909aba946600ae5a5e45d2dfb35bd38becddbb0",
+   "registrado": "d4adbc26f9225d647f44447ae909aba946600ae5a5e45d2dfb35bd38becddbb0",
+   "fuente": "Modelos_claude_b en la carpeta del equipo",
+   "coincide": true
+  },
+  "src/modelos/anexar_entrega.py": {
+   "sha256": "5bef5d5cd7d4e044a929cf56fbc04c250d4137ceaffaedccd789109923890212"
+  },
+  "src/modelos/bootstrap_codex.py": {
+   "sha256": "8fb9019bc0775d39e5ea1ef6c8cf11112af8105e99e49fe6dc41e2919622e005"
+  },
+  "src/modelos/calibracion_deciles.py": {
+   "sha256": "2eeea1ca71a5b3ea49f9a6bb64007cab46c312b8d33139fb11c4978316cef7df"
+  },
+  "src/modelos/calibrar_siguiente_anio.py": {
+   "sha256": "e9240d605c7f1b6df9832ff5cf93e04a09f1e1200a15df190bdcb89c70fd8fdd",
+   "registrado": "e9240d605c7f1b6df9832ff5cf93e04a09f1e1200a15df190bdcb89c70fd8fdd",
+   "fuente": "manifest.json de S03_lgbm_F0124 y S04b_lgbm_F0124_F3autos",
+   "coincide": true
+  },
+  "src/modelos/cat_experimento.py": {
+   "sha256": "ba0dcc3b0b743882fd9011010d1ae789eab1d29b34e4b82b368229862d5edaca"
+  },
+  "src/modelos/cat_frecsev.py": {
+   "sha256": "77e153419bedcbaaefb9ec02af15d52d095d4631f9692bf55be3d34c26a6c423"
+  },
+  "src/modelos/cat_produccion.py": {
+   "sha256": "fd0a23f10732d599e3619ef9c46d3898d87b5356a15916525a83a884118923f0"
+  },
+  "src/modelos/combinar_semillas.py": {
+   "sha256": "d42d974e5ff9ece6bb0304253456ff7f4d43e3ecf05f63b503043b7bc0472976"
+  },
+  "src/modelos/comparar_codex.py": {
+   "sha256": "35eb47df917a6f95644737743298b9e851eec14ec67147017b06efd242e793ed"
+  },
+  "src/modelos/comun.py": {
+   "sha256": "7b475c1bf1d2f05b8132657680d23ffe10dc3e925f8a0991a809c5b79432cb84",
+   "registrado": "7b475c1bf1d2f05b8132657680d23ffe10dc3e925f8a0991a809c5b79432cb84",
+   "fuente": "manifest.json de S03_lgbm_F0124 y S04b_lgbm_F0124_F3autos",
+   "coincide": true
+  },
+  "src/modelos/construir_variables.py": {
+   "sha256": "b05681f33296449cd52044c558c5519d5515cfc6b8c01e01cbdc5fc2cf37d12e"
+  },
+  "src/modelos/deriva_nivel.py": {
+   "sha256": "8a7e526b8dd0b96f0ca3c5f8e9ea37d2094c33ade93cb2832adcc88738143f2a"
+  },
+  "src/modelos/diagnostico_cuerpo_cola.py": {
+   "sha256": "d043a0507ef2675e3bb984224c7021cfeba31545b54276030e8f633a67fe7a7a"
+  },
+  "src/modelos/diagnostico_forma_nivel.py": {
+   "sha256": "ad3cb969ca5900fd23994748cb38fae382b2cafc2b67f472ad6e9179674e5637"
+  },
+  "src/modelos/escenarios_reserva.py": {
+   "sha256": "d7f6e96799ad689de79ede8fe996ede3ac2c36dd4a0eb686ba36431475ec8cfa"
+  },
+  "src/modelos/evaluar.py": {
+   "sha256": "a299a74fad47b20e899b8b982afbb9f202ed7c2fdea39ecd9d4d9306242f3995"
+  },
+  "src/modelos/experimentos.py": {
+   "sha256": "d6b1b6cb6f2e81fd4eaf04ad3b395637532e56dd49c912efecad1c480ed3d18e",
+   "registrado": "d6b1b6cb6f2e81fd4eaf04ad3b395637532e56dd49c912efecad1c480ed3d18e",
+   "fuente": "manifest.json de S03_lgbm_F0124 y S04b_lgbm_F0124_F3autos",
+   "coincide": true
+  },
+  "src/modelos/exportar_predicciones.py": {
+   "sha256": "3f758d6d4af10c4800351c7fe9cbbaab1624870b3b7729747da43dc984b7262d"
+  },
+  "src/modelos/frecsev2.py": {
+   "sha256": "530f1e3f78ac925c317e0de3a639ced4d2e558a9607715287200ee06da7c2c5b"
+  },
+  "src/modelos/influencia_reservas.py": {
+   "sha256": "59307b0d7647e11913812b66e16dd6611eb2979e6734bb1277a3b4b0d44834b5"
+  },
+  "src/modelos/intervalos_region.py": {
+   "sha256": "ac6936dc64361a17c9aa3965b77046389d363e229d48cd16d7b625c90d577614"
+  },
+  "src/modelos/mezcla3.py": {
+   "sha256": "b190d24a8725f14d77ef857079570199900dfd0654b03a7ef605a0b3b35f605c"
+  },
+  "src/modelos/mlp_tweedie.py": {
+   "sha256": "0f7628317bc4555e475db59dbc23ae1797b790669d0ea68056001f53725a6ab1"
+  },
+  "src/modelos/produccion.py": {
+   "sha256": "5903804b477766b5d2581bfaed69025eb9c7be313e3963146453352aa122bbc2",
+   "registrado": "128c5854cb6243caa58fe1f0f0a39aaa24c812d724d163b83d52b6b90bdf09c9",
+   "fuente": "manifest.json de S03_lgbm_F0124 y S04b_lgbm_F0124_F3autos (versión anterior; la actual añade opciones y se usó desde S08h)",
+   "coincide": false
+  },
+  "src/modelos/publico_simulado.py": {
+   "sha256": "e41852c6cdb774bceb86020952b9b54b082b136a3c8ef9aa036940331f8102ca"
+  },
+  "src/modelos/rejilla_pesos.py": {
+   "sha256": "6f1ed55a08657e19cee77c57a611274804eacd4836cd6fdd80a1cf611ba56ef5"
+  },
+  "src/modelos/rejilla_robusta.py": {
+   "sha256": "61fd410bc1b80257dc46fc2690e1ccb49e346221412eb13cc5df300bf658ffef"
+  },
+  "src/modelos/reproducir_mezcla.py": {
+   "sha256": "eb98334ca3d50d8d42172ed3ff5653ad03905fc99109b3b492f03658e3b04cdd"
+  },
+  "src/modelos/robustez.py": {
+   "sha256": "1a02f5c34a19437186208c1258e3ba7e5c15a9e73dbaf22b5846c996011da3f5"
+  },
+  "src/modelos/semestres.py": {
+   "sha256": "8c96d271aa9918b0d45232f1ef01b40d860e7ff47f48208bd90d96e0af7b8d91"
+  },
+  "src/modelos/severidad_cfs.py": {
+   "sha256": "0967e3e5a43d1f25f4fae9f34948e4198dede9205e9d482b787d3bbf057fc584"
+  },
+  "src/modelos/severidad_cfs3.py": {
+   "sha256": "d6262f44f603b79b9dabe8d2e1b6c46ab2b6ba590630c0f5c5536028df50eec3"
+  },
+  "src/datos/bases_actuariales.py": {
+   "sha256": "e18fdf34d7332395b0c79ad19ef3e1e26a68dcd54853ac40b62bf2e3669f5193",
+   "registrado": "e18fdf34d7332395b0c79ad19ef3e1e26a68dcd54853ac40b62bf2e3669f5193",
+   "fuente": "copia guardada en Bases_actuariales_claude/runs/bases_20261017T120251Z_45443ff0",
+   "coincide": true
+  },
+  "src/datos/construir_f0.py": {
+   "sha256": "148c0532ae0032ace3b61ba04979003dea2ad974d02b9552bbe315d0a338afcd",
+   "registrado": "148c0532ae0032ace3b61ba04979003dea2ad974d02b9552bbe315d0a338afcd",
+   "fuente": "copia guardada en Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca",
+   "coincide": true
+  },
+  "src/datos/n62_codex/README.md": {
+   "sha256": "0205239fa866a21e88d18674ee51349708776aa66654916897730ce18402fd9e",
+   "registrado": "0205239fa866a21e88d18674ee51349708776aa66654916897730ce18402fd9e",
+   "fuente": "Modelado_codex/nocturna_20261017_N01/base_rebuild_N62 (Codex, COD-20261018-104)",
+   "coincide": true
+  },
+  "src/datos/n62_codex/compare_preaudit.py": {
+   "sha256": "de08d1b074b6a858b7a7bc4553d764371c1aa58906016a6d5973c27bfe358575",
+   "registrado": "de08d1b074b6a858b7a7bc4553d764371c1aa58906016a6d5973c27bfe358575",
+   "fuente": "Modelado_codex/nocturna_20261017_N01/base_rebuild_N62 (Codex, COD-20261018-104)",
+   "coincide": true
+  },
+  "src/datos/n62_codex/rebuild_base.py": {
+   "sha256": "7054dd7699c9f5868c507ffb834a49ee47ae90392df19928e9c97091ebb93085",
+   "registrado": "7054dd7699c9f5868c507ffb834a49ee47ae90392df19928e9c97091ebb93085",
+   "fuente": "Modelado_codex/nocturna_20261017_N01/base_rebuild_N62 (Codex, COD-20261018-104)",
+   "coincide": true
+  },
+  "src/datos/n62_codex/reference_contract.json": {
+   "sha256": "bb41870d3ca2b56b3f134471d80f2e55298e1c88bcd0db633f29b43e0e2bf641",
+   "registrado": "bb41870d3ca2b56b3f134471d80f2e55298e1c88bcd0db633f29b43e0e2bf641",
+   "fuente": "Modelado_codex/nocturna_20261017_N01/base_rebuild_N62 (Codex, COD-20261018-104)",
+   "coincide": true
+  },
+  "src/datos/n62_codex/requirements-observed.txt": {
+   "sha256": "0780a63ede84349c88a4db7404e7614f6dad59f338c3d21c57930cd1935cb2f0"
+  },
+  "src/datos/n62_codex/rules.json": {
+   "sha256": "dcca7a9dafbc59e0fd5f652620a9c2c9c9c310a632dc14a4791413f4c4163a43",
+   "registrado": "dcca7a9dafbc59e0fd5f652620a9c2c9c9c310a632dc14a4791413f4c4163a43",
+   "fuente": "Modelado_codex/nocturna_20261017_N01/base_rebuild_N62 (Codex, COD-20261018-104)",
+   "coincide": true
+  }
+ },
+ "paquete": {
+  "descripcion": "Orquestador y herramientas del paquete (no son código de modelo). Versión 1.1 del 19 de octubre de 2026: controles de conformidad del hallazgo GOV-007 (reanudar solo tras cotejar las huellas, verificar con código de error, rechazo del informe adverso de las etapas de datos, detención ante una salida que falta, un archivo ilegible o una huella esperada ausente, comprobación de los componentes guardados en el modo mezcla, códigos de salida 0/1/2/3). La batería herramientas/probar_controles.py comprueba esos controles desde la orden de consola con paquetes de prueba sintéticos; su evidencia queda en docs/controles/.",
+  "version": "1.1",
+  "fecha": "2026-10-19",
+  "archivos": {
+   "reproducir.py": {
+    "sha256": "6481db2efb2045a5d1907ab0900bf669b084507b38937d780b053859d3c5de19",
+    "anterior": "ec34abb25878a90e8dbc7b1814f31affc02965cde6ea8804a6e1f04d541108c6",
+    "cambio": "versión 1.1: controles GOV-007; incorpora los controles de main() propuestos por Codex en N66 (exigir informe de datos, verificar con error, cotejo al reanudar, salida parcial) y añade archivos ilegibles, huellas esperadas ausentes, comprobación de los componentes guardados en mezcla, --continuar-si-difiere (código 3) y --relanzar-parciales"
+   },
+   "herramientas/etapas_datos.py": {
+    "sha256": "0c0a90317130f5ee75054ef761edc5c84a52a57eea18652159fd71e056b8b9ab",
+    "anterior": "93751dab88966869806303f4baec3511f8b50993e0550969b216fe4ee4abedfc",
+    "cambio": "controles de datos de la propuesta N65 de Codex (package_data_review_N65/controles_datos_propuestos.patch), integrados en N66: la copia local de cada decisión congelada se comprueba por SHA-256 y las bases, las tablas F0 y los bloques del contrato tienen que coincidir en contenido antes de devolver el informe",
+    "identico_a_N66_salvo_finales_de_linea": true,
+    "sha256_con_crlf": "98c7dd56ed0208a6814cec912ba8d9c864ac4be6f6ce60802045cb5f17b56c13",
+    "fuente": "Modelado_codex/nocturna_20261017_N01/patch_integration_N66/integrated/herramientas/etapas_datos.py (Codex, COD-20261019-109)"
+   },
+   "herramientas/huella.py": {
+    "sha256": "1364d38abb5df33e550507eff881a5d52654426d8ae7c323fd9ee09cc085fcbc",
+    "cambio": "sin cambios"
+   },
+   "herramientas/inventario.py": {
+    "sha256": "ad0eb0b79a886f296e2628381f381f97fa98f21ff2714fb2d2c93a8604fc982b",
+    "cambio": "sin cambios"
+   },
+   "herramientas/probar_controles.py": {
+    "sha256": "5974197b0f6da2015325a0c2bcc5418446672015713b6569eedb04dda83a4729",
+    "cambio": "nuevo: 45 casos de control desde la orden de consola (9 nominales con código 0, 35 adversos con código distinto de 0 y 1 con código 3)"
+   },
+   "receta/huellas_esperadas.json": {
+    "sha256": "b2452d24cb2e491bee46c97b79f08b22612053d5406716ad944b4e0a8489a8f0",
+    "anterior": "fb2ea49a114124eb2808b6759993e9cd7a7c0654c50316741776b79042c80870",
+    "cambio": "añade la sección «mezcla» con las huellas de insumos/exposicion_<ramo>.parquet (Modelos_claude/insumos), que el modo mezcla usa como exposición cuando no hay feat_<ramo>.parquet; las 8 entradas, las 184 salidas y la sección datos no cambian"
+   }
+  }
+ }
+}

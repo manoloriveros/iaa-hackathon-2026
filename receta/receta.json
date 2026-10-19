@@ -1,0 +1,1453 @@
+{
+ "nombre": "Receta de S30_claude_b (selección final de la parte 1) y S22_claude_propio (respaldo)",
+ "version": "2026-10-19",
+ "entorno_de_referencia": "entorno/entorno_referencia.json",
+ "entradas": {
+  "descripcion": "Rutas relativas a la carpeta «Hackaton/Semana 1» del proyecto (variable IAA_SEMANA1). Las etapas de capa base, bases actuariales y F0 que las producen desde los once Parquet originales están en la receta de datos (etapas 00 a 02).",
+  "archivos": [
+   "Datos/weather.parquet",
+   "Datos/sample_submission.parquet",
+   "Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca/tables/f0_motor.parquet",
+   "Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca/tables/f0_buildings.parquet",
+   "Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca/tables/f0_contents.parquet",
+   "Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca/tables/particiones.parquet",
+   "Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca/contrato_disponibilidad.json",
+   "Bases_actuariales_claude/runs/bases_20261017T120251Z_45443ff0/tables/asignacion_por_siniestro.parquet"
+  ]
+ },
+ "objetivos": {
+  "S30": {
+   "nodo": "S30_claude_b",
+   "csv": "S30_claude_b/S30_claude_b.csv",
+   "sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5"
+  },
+  "S22": {
+   "nodo": "S22_claude_propio",
+   "csv": "S22_claude_propio/S22_claude_propio.csv",
+   "sha256": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0"
+  }
+ },
+ "nodos": [
+  {
+   "id": "variables",
+   "etapa": "variables",
+   "linea": "principal",
+   "script": "src/modelos/construir_variables.py",
+   "args": [],
+   "requiere": [],
+   "salidas": [
+    "feat_motor.parquet",
+    "feat_buildings.parquet",
+    "feat_contents.parquet"
+   ],
+   "verificar": [
+    "feat_motor.parquet",
+    "feat_buildings.parquet",
+    "feat_contents.parquet"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "construido una vez el 17-10 a las 13:14 (nube); comun.py con SHA 7b475c1b… igual al de los manifiestos de S03 y S04b",
+   "nota": "F0 (D68) + asignación de siniestros (D67) + clima original; variables F1, F2 y F4 con corte al 1 de enero del año del periodo",
+   "minutos_ref": 1
+  },
+  {
+   "id": "sel_total_F0124",
+   "etapa": "seleccion_v23",
+   "linea": "principal",
+   "script": "src/modelos/evaluar.py",
+   "args": [
+    "total_F0124",
+    "F0124",
+    "receta/especificaciones/cfg_total.json",
+    "total"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "salidas": [
+    "sel_total_F0124.parquet"
+   ],
+   "verificar": [
+    "sel_total_F0124.parquet"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "cola1.sh, log_cola1.txt",
+   "nota": "sus etiquetas y son las de V23 que usa mezcla3.labels",
+   "minutos_ref": 2
+  },
+  {
+   "id": "sel_total_F01234",
+   "etapa": "seleccion_v23",
+   "linea": "principal",
+   "script": "src/modelos/evaluar.py",
+   "args": [
+    "total_F01234",
+    "F01234",
+    "receta/especificaciones/cfg_total.json",
+    "total"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "salidas": [
+    "sel_total_F01234.parquet"
+   ],
+   "verificar": [
+    "sel_total_F01234.parquet"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "cola1.sh, log_cola1.txt",
+   "nota": "",
+   "minutos_ref": 2
+  },
+  {
+   "id": "sel_total_motor_red",
+   "etapa": "seleccion_v23",
+   "linea": "principal",
+   "script": "src/modelos/evaluar.py",
+   "args": [
+    "total_motor_red",
+    "F01234",
+    "receta/especificaciones/cfg_total_motor_red.json",
+    "total"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "salidas": [
+    "sel_total_motor_red.parquet"
+   ],
+   "verificar": [
+    "sel_total_motor_red.parquet"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "cola9.sh, log_cola9.txt",
+   "nota": "",
+   "minutos_ref": 2
+  },
+  {
+   "id": "sel_hS2",
+   "etapa": "seleccion_v23",
+   "linea": "principal",
+   "script": "src/modelos/evaluar.py",
+   "args": [
+    "hS2",
+    "F0124",
+    "receta/especificaciones/cfg_hogar_s2.json",
+    "total",
+    "buildings,contents"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "salidas": [
+    "sel_hS2.parquet"
+   ],
+   "verificar": [
+    "sel_hS2.parquet"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "cola19.sh, log_hS2.txt",
+   "nota": "",
+   "minutos_ref": 1
+  },
+  {
+   "id": "sel_hS3",
+   "etapa": "seleccion_v23",
+   "linea": "principal",
+   "script": "src/modelos/evaluar.py",
+   "args": [
+    "hS3",
+    "F0124",
+    "receta/especificaciones/cfg_hogar_s3.json",
+    "total",
+    "buildings"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "salidas": [
+    "sel_hS3.parquet"
+   ],
+   "verificar": [
+    "sel_hS3.parquet"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "cola29.sh, log_hS3.txt",
+   "nota": "",
+   "minutos_ref": 1
+  },
+  {
+   "id": "sel_cat1a",
+   "etapa": "seleccion_v23",
+   "linea": "principal",
+   "script": "src/modelos/cat_experimento.py",
+   "args": [
+    "cat1a",
+    "motor"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "salidas": [
+    "sel_cat1a.parquet"
+   ],
+   "verificar": [
+    "sel_cat1a.parquet"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "cola7.sh, log_cola7.txt (mejor iteración 393)",
+   "nota": "",
+   "minutos_ref": 4
+  },
+  {
+   "id": "S03_lgbm_F0124",
+   "etapa": "produccion",
+   "linea": "principal",
+   "script": "src/modelos/produccion.py",
+   "args": [
+    "S03_lgbm_F0124",
+    "F0124",
+    "receta/especificaciones/cfg_s03.json",
+    "--semillas=3"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "salidas": [
+    "S03_lgbm_F0124/v24.parquet",
+    "S03_lgbm_F0124/prediccion_2025.parquet",
+    "S03_lgbm_F0124/S03_lgbm_F0124.csv"
+   ],
+   "verificar": [
+    "S03_lgbm_F0124/v24.parquet",
+    "S03_lgbm_F0124/prediccion_2025.parquet",
+    "S03_lgbm_F0124/S03_lgbm_F0124.csv"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "README de Modelos_claude, «Cómo reproducir»; manifest.json de la corrida",
+   "nota": "",
+   "minutos_ref": 12
+  },
+  {
+   "id": "S04b_lgbm_F0124_F3autos",
+   "etapa": "produccion",
+   "linea": "principal",
+   "script": "src/modelos/produccion.py",
+   "args": [
+    "S04b_lgbm_F0124_F3autos",
+    "F01234",
+    "receta/especificaciones/cfg_m595_f3.json",
+    "--semillas=3",
+    "--solo=motor",
+    "--reusar=S03_lgbm_F0124"
+   ],
+   "requiere": [
+    "S03_lgbm_F0124"
+   ],
+   "salidas": [
+    "S04b_lgbm_F0124_F3autos/v24.parquet",
+    "S04b_lgbm_F0124_F3autos/prediccion_2025.parquet",
+    "S04b_lgbm_F0124_F3autos/S04b_lgbm_F0124_F3autos.csv"
+   ],
+   "verificar": [
+    "S04b_lgbm_F0124_F3autos/v24.parquet",
+    "S04b_lgbm_F0124_F3autos/prediccion_2025.parquet",
+    "S04b_lgbm_F0124_F3autos/S04b_lgbm_F0124_F3autos.csv"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "cola2.sh; manifest.json de la corrida",
+   "nota": "",
+   "minutos_ref": 8
+  },
+  {
+   "id": "S06c_lgbm_motor_red",
+   "etapa": "produccion",
+   "linea": "principal",
+   "script": "src/modelos/produccion.py",
+   "args": [
+    "S06c_lgbm_motor_red",
+    "F01234",
+    "receta/especificaciones/cfg_motor_red.json",
+    "--semillas=3",
+    "--solo=motor",
+    "--reusar=S04b_lgbm_F0124_F3autos"
+   ],
+   "requiere": [
+    "S04b_lgbm_F0124_F3autos"
+   ],
+   "salidas": [
+    "S06c_lgbm_motor_red/v24.parquet",
+    "S06c_lgbm_motor_red/prediccion_2025.parquet",
+    "S06c_lgbm_motor_red/S06c_lgbm_motor_red.csv"
+   ],
+   "verificar": [
+    "S06c_lgbm_motor_red/v24.parquet",
+    "S06c_lgbm_motor_red/prediccion_2025.parquet",
+    "S06c_lgbm_motor_red/S06c_lgbm_motor_red.csv"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "cola9.sh, log_cola9.txt",
+   "nota": "",
+   "minutos_ref": 8
+  },
+  {
+   "id": "S08h_hogar_F3s2",
+   "etapa": "produccion",
+   "linea": "principal",
+   "script": "src/modelos/produccion.py",
+   "args": [
+    "S08h_hogar_F3s2",
+    "F0124",
+    "receta/especificaciones/cfg_hogar_s2.json",
+    "--solo=buildings,contents",
+    "--reusar=S04b_lgbm_F0124_F3autos",
+    "--semillas=3"
+   ],
+   "requiere": [
+    "S04b_lgbm_F0124_F3autos"
+   ],
+   "salidas": [
+    "S08h_hogar_F3s2/v24.parquet",
+    "S08h_hogar_F3s2/prediccion_2025.parquet",
+    "S08h_hogar_F3s2/S08h_hogar_F3s2.csv"
+   ],
+   "verificar": [
+    "S08h_hogar_F3s2/v24.parquet",
+    "S08h_hogar_F3s2/prediccion_2025.parquet",
+    "S08h_hogar_F3s2/S08h_hogar_F3s2.csv"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "cola19.sh, log_S08h.txt",
+   "nota": "",
+   "minutos_ref": 4
+  },
+  {
+   "id": "S12h_edif_md1000",
+   "etapa": "produccion",
+   "linea": "principal",
+   "script": "src/modelos/produccion.py",
+   "args": [
+    "S12h_edif_md1000",
+    "F0124",
+    "receta/especificaciones/cfg_hogar_s3.json",
+    "--solo=buildings",
+    "--reusar=S08h_hogar_F3s2",
+    "--semillas=3"
+   ],
+   "requiere": [
+    "S08h_hogar_F3s2"
+   ],
+   "salidas": [
+    "S12h_edif_md1000/v24.parquet",
+    "S12h_edif_md1000/prediccion_2025.parquet",
+    "S12h_edif_md1000/S12h_edif_md1000.csv"
+   ],
+   "verificar": [
+    "S12h_edif_md1000/v24.parquet",
+    "S12h_edif_md1000/prediccion_2025.parquet",
+    "S12h_edif_md1000/S12h_edif_md1000.csv"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "cola29.sh, log_S12h.txt",
+   "nota": "",
+   "minutos_ref": 3
+  },
+  {
+   "id": "CAT_motor",
+   "etapa": "produccion",
+   "linea": "principal",
+   "script": "src/modelos/cat_produccion.py",
+   "args": [
+    "CAT_motor",
+    "motor",
+    "393",
+    "--semillas=2"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "salidas": [
+    "CAT_motor/v24.parquet",
+    "CAT_motor/prediccion_2025.parquet"
+   ],
+   "verificar": [
+    "CAT_motor/v24.parquet",
+    "CAT_motor/prediccion_2025.parquet"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "cola10.sh",
+   "nota": "",
+   "minutos_ref": 40
+  },
+  {
+   "id": "CAT_motor_s23",
+   "etapa": "produccion",
+   "linea": "principal",
+   "script": "src/modelos/cat_produccion.py",
+   "args": [
+    "CAT_motor_s23",
+    "motor",
+    "393",
+    "--semillas=2",
+    "--semilla_inicial=2"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "salidas": [
+    "CAT_motor_s23/v24.parquet",
+    "CAT_motor_s23/prediccion_2025.parquet"
+   ],
+   "verificar": [
+    "CAT_motor_s23/v24.parquet",
+    "CAT_motor_s23/prediccion_2025.parquet"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "cola30.sh y cola31.sh, log_cat_s23.txt",
+   "nota": "",
+   "minutos_ref": 40
+  },
+  {
+   "id": "CAT_motor_4s",
+   "etapa": "produccion",
+   "linea": "principal",
+   "script": "src/modelos/combinar_semillas.py",
+   "args": [
+    "CAT_motor_4s",
+    "CAT_motor",
+    "CAT_motor_s23"
+   ],
+   "requiere": [
+    "CAT_motor",
+    "CAT_motor_s23"
+   ],
+   "salidas": [
+    "CAT_motor_4s/v24.parquet",
+    "CAT_motor_4s/prediccion_2025.parquet"
+   ],
+   "verificar": [
+    "CAT_motor_4s/v24.parquet",
+    "CAT_motor_4s/prediccion_2025.parquet"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "resumen.json de CAT_motor_4s (corridas CAT_motor y CAT_motor_s23, semillas [2, 2])",
+   "nota": "",
+   "minutos_ref": 1
+  },
+  {
+   "id": "CFS_motor_v23",
+   "etapa": "partes",
+   "linea": "principal",
+   "script": "src/modelos/cat_frecsev.py",
+   "args": [
+    "CFS_motor_v23",
+    "motor"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "salidas": [
+    "CFS_motor_v23/v23_own_damage.npz",
+    "CFS_motor_v23/v23_third_party_prop.npz",
+    "CFS_motor_v23/v23_bodily_injury.npz",
+    "CFS_motor_v23/v23_theft.npz",
+    "CFS_motor_v23/v23_glass_hail.npz",
+    "sel_CFS_motor_v23.parquet"
+   ],
+   "verificar": [
+    "CFS_motor_v23/v23_own_damage.npz",
+    "CFS_motor_v23/v23_third_party_prop.npz",
+    "CFS_motor_v23/v23_bodily_injury.npz",
+    "CFS_motor_v23/v23_theft.npz",
+    "CFS_motor_v23/v23_glass_hail.npz",
+    "sel_CFS_motor_v23.parquet"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "cola37.sh, log_cfs_motor_v23.txt",
+   "nota": "",
+   "minutos_ref": 60
+  },
+  {
+   "id": "CFS_motor",
+   "etapa": "partes",
+   "linea": "principal",
+   "script": "src/modelos/cat_frecsev.py",
+   "args": [
+    "CFS_motor",
+    "motor",
+    "--prod",
+    "--semillas=2"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "salidas": [
+    "CFS_motor/v23_own_damage.npz",
+    "CFS_motor/v23_third_party_prop.npz",
+    "CFS_motor/v23_bodily_injury.npz",
+    "CFS_motor/v23_theft.npz",
+    "CFS_motor/v23_glass_hail.npz",
+    "CFS_motor/v24_own_damage.npy",
+    "CFS_motor/v24_third_party_prop.npy",
+    "CFS_motor/v24_bodily_injury.npy",
+    "CFS_motor/v24_theft.npy",
+    "CFS_motor/v24_glass_hail.npy",
+    "CFS_motor/prod_own_damage.npy",
+    "CFS_motor/prod_third_party_prop.npy",
+    "CFS_motor/prod_bodily_injury.npy",
+    "CFS_motor/prod_theft.npy",
+    "CFS_motor/prod_glass_hail.npy",
+    "sel_CFS_motor.parquet",
+    "CFS_motor/v24.parquet",
+    "CFS_motor/prediccion_2025.parquet"
+   ],
+   "verificar": [
+    "CFS_motor/prod_own_damage.npy",
+    "CFS_motor/prod_third_party_prop.npy",
+    "CFS_motor/prod_bodily_injury.npy",
+    "CFS_motor/prod_theft.npy",
+    "CFS_motor/prod_glass_hail.npy",
+    "CFS_motor/prediccion_2025.parquet"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "cola23.sh y cola25.sh (V23), cola29.sh (--prod), log_cfs_motor.txt y log_cfs_motor_prod.txt",
+   "nota": "la V23 y la V24 originales de esta corrida se calcularon en float64, antes del paso a float32 que documenta cat_frecsev.py; aguas abajo solo se usan sus partes de 2025 (hechas ya en float32) y sus mejores iteraciones, iguales a las de CFS_motor_v23",
+   "minutos_ref": 150
+  },
+  {
+   "id": "CFS_motor_s23",
+   "etapa": "partes",
+   "linea": "principal",
+   "script": "src/modelos/cat_frecsev.py",
+   "args": [
+    "CFS_motor_s23",
+    "motor",
+    "--prod",
+    "--semillas=2",
+    "--semilla_inicial=2",
+    "--desde=CFS_motor"
+   ],
+   "requiere": [
+    "CFS_motor"
+   ],
+   "salidas": [
+    "CFS_motor_s23/v24_own_damage.npy",
+    "CFS_motor_s23/v24_third_party_prop.npy",
+    "CFS_motor_s23/v24_bodily_injury.npy",
+    "CFS_motor_s23/v24_theft.npy",
+    "CFS_motor_s23/v24_glass_hail.npy",
+    "CFS_motor_s23/prod_own_damage.npy",
+    "CFS_motor_s23/prod_third_party_prop.npy",
+    "CFS_motor_s23/prod_bodily_injury.npy",
+    "CFS_motor_s23/prod_theft.npy",
+    "CFS_motor_s23/prod_glass_hail.npy",
+    "CFS_motor_s23/v24.parquet",
+    "CFS_motor_s23/prediccion_2025.parquet"
+   ],
+   "verificar": [
+    "CFS_motor_s23/v24_own_damage.npy",
+    "CFS_motor_s23/v24_third_party_prop.npy",
+    "CFS_motor_s23/v24_bodily_injury.npy",
+    "CFS_motor_s23/v24_theft.npy",
+    "CFS_motor_s23/v24_glass_hail.npy",
+    "CFS_motor_s23/prod_own_damage.npy",
+    "CFS_motor_s23/prod_third_party_prop.npy",
+    "CFS_motor_s23/prod_bodily_injury.npy",
+    "CFS_motor_s23/prod_theft.npy",
+    "CFS_motor_s23/prod_glass_hail.npy",
+    "CFS_motor_s23/v24.parquet",
+    "CFS_motor_s23/prediccion_2025.parquet"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "cola32.sh, log_cfs_motor_s23.txt (5.736 s)",
+   "nota": "",
+   "minutos_ref": 96
+  },
+  {
+   "id": "CFS_buildings",
+   "etapa": "partes",
+   "linea": "principal",
+   "script": "src/modelos/cat_frecsev.py",
+   "args": [
+    "CFS_buildings",
+    "buildings",
+    "--prod",
+    "--semillas=2",
+    "--f3s2"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "salidas": [
+    "CFS_buildings/v23_storm.npz",
+    "CFS_buildings/v23_flood.npz",
+    "CFS_buildings/v23_escape_of_water.npz",
+    "CFS_buildings/v23_subsidence.npz",
+    "CFS_buildings/v23_fire.npz",
+    "CFS_buildings/v23_accidental_damage.npz",
+    "CFS_buildings/v24_storm.npy",
+    "CFS_buildings/v24_flood.npy",
+    "CFS_buildings/v24_escape_of_water.npy",
+    "CFS_buildings/v24_subsidence.npy",
+    "CFS_buildings/v24_fire.npy",
+    "CFS_buildings/v24_accidental_damage.npy",
+    "CFS_buildings/prod_storm.npy",
+    "CFS_buildings/prod_flood.npy",
+    "CFS_buildings/prod_escape_of_water.npy",
+    "CFS_buildings/prod_subsidence.npy",
+    "CFS_buildings/prod_fire.npy",
+    "CFS_buildings/prod_accidental_damage.npy",
+    "sel_CFS_buildings.parquet",
+    "CFS_buildings/v24.parquet",
+    "CFS_buildings/prediccion_2025.parquet"
+   ],
+   "verificar": [
+    "CFS_buildings/v23_storm.npz",
+    "CFS_buildings/v23_flood.npz",
+    "CFS_buildings/v23_escape_of_water.npz",
+    "CFS_buildings/v23_subsidence.npz",
+    "CFS_buildings/v23_fire.npz",
+    "CFS_buildings/v23_accidental_damage.npz",
+    "CFS_buildings/v24_storm.npy",
+    "CFS_buildings/v24_flood.npy",
+    "CFS_buildings/v24_escape_of_water.npy",
+    "CFS_buildings/v24_subsidence.npy",
+    "CFS_buildings/v24_fire.npy",
+    "CFS_buildings/v24_accidental_damage.npy",
+    "CFS_buildings/prod_storm.npy",
+    "CFS_buildings/prod_flood.npy",
+    "CFS_buildings/prod_escape_of_water.npy",
+    "CFS_buildings/prod_subsidence.npy",
+    "CFS_buildings/prod_fire.npy",
+    "CFS_buildings/prod_accidental_damage.npy",
+    "sel_CFS_buildings.parquet",
+    "CFS_buildings/v24.parquet",
+    "CFS_buildings/prediccion_2025.parquet"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "cola31.sh, log_cfs_buildings.txt (2.606 s)",
+   "nota": "",
+   "minutos_ref": 44
+  },
+  {
+   "id": "CFS_buildings_s23",
+   "etapa": "partes",
+   "linea": "principal",
+   "script": "src/modelos/cat_frecsev.py",
+   "args": [
+    "CFS_buildings_s23",
+    "buildings",
+    "--prod",
+    "--semillas=2",
+    "--f3s2",
+    "--desde=CFS_buildings",
+    "--semilla_inicial=2"
+   ],
+   "requiere": [
+    "CFS_buildings"
+   ],
+   "salidas": [
+    "CFS_buildings_s23/v24_storm.npy",
+    "CFS_buildings_s23/v24_flood.npy",
+    "CFS_buildings_s23/v24_escape_of_water.npy",
+    "CFS_buildings_s23/v24_subsidence.npy",
+    "CFS_buildings_s23/v24_fire.npy",
+    "CFS_buildings_s23/v24_accidental_damage.npy",
+    "CFS_buildings_s23/prod_storm.npy",
+    "CFS_buildings_s23/prod_flood.npy",
+    "CFS_buildings_s23/prod_escape_of_water.npy",
+    "CFS_buildings_s23/prod_subsidence.npy",
+    "CFS_buildings_s23/prod_fire.npy",
+    "CFS_buildings_s23/prod_accidental_damage.npy",
+    "CFS_buildings_s23/v24.parquet",
+    "CFS_buildings_s23/prediccion_2025.parquet"
+   ],
+   "verificar": [
+    "CFS_buildings_s23/v24_storm.npy",
+    "CFS_buildings_s23/v24_flood.npy",
+    "CFS_buildings_s23/v24_escape_of_water.npy",
+    "CFS_buildings_s23/v24_subsidence.npy",
+    "CFS_buildings_s23/v24_fire.npy",
+    "CFS_buildings_s23/v24_accidental_damage.npy",
+    "CFS_buildings_s23/prod_storm.npy",
+    "CFS_buildings_s23/prod_flood.npy",
+    "CFS_buildings_s23/prod_escape_of_water.npy",
+    "CFS_buildings_s23/prod_subsidence.npy",
+    "CFS_buildings_s23/prod_fire.npy",
+    "CFS_buildings_s23/prod_accidental_damage.npy",
+    "CFS_buildings_s23/v24.parquet",
+    "CFS_buildings_s23/prediccion_2025.parquet"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "cola42.sh, log_cfs_buildings_s23.txt (2.205 s)",
+   "nota": "",
+   "minutos_ref": 37
+  },
+  {
+   "id": "FSA_contents",
+   "etapa": "produccion",
+   "linea": "principal",
+   "script": "src/modelos/frecsev2.py",
+   "args": [
+    "FSA_contents",
+    "contents",
+    "--prod",
+    "--semillas=2",
+    "--aditivo"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "salidas": [
+    "sel_FSA_contents.parquet",
+    "FSA_contents/v24.parquet",
+    "FSA_contents/prediccion_2025.parquet"
+   ],
+   "verificar": [
+    "sel_FSA_contents.parquet",
+    "FSA_contents/v24.parquet",
+    "FSA_contents/prediccion_2025.parquet"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "cola33.sh, log_fsa_contents.txt",
+   "nota": "",
+   "minutos_ref": 20
+  },
+  {
+   "id": "FSAP_buildings",
+   "etapa": "partes",
+   "linea": "principal",
+   "script": "src/modelos/frecsev2.py",
+   "args": [
+    "FSAP_buildings",
+    "buildings",
+    "--prod",
+    "--semillas=2",
+    "--aditivo",
+    "--partes"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "salidas": [
+    "FSAP_buildings/v23_storm.npz",
+    "FSAP_buildings/v23_flood.npz",
+    "FSAP_buildings/v23_escape_of_water.npz",
+    "FSAP_buildings/v23_subsidence.npz",
+    "FSAP_buildings/v23_fire.npz",
+    "FSAP_buildings/v23_accidental_damage.npz",
+    "FSAP_buildings/v24_storm.npy",
+    "FSAP_buildings/v24_flood.npy",
+    "FSAP_buildings/v24_escape_of_water.npy",
+    "FSAP_buildings/v24_subsidence.npy",
+    "FSAP_buildings/v24_fire.npy",
+    "FSAP_buildings/v24_accidental_damage.npy",
+    "FSAP_buildings/prod_storm.npy",
+    "FSAP_buildings/prod_flood.npy",
+    "FSAP_buildings/prod_escape_of_water.npy",
+    "FSAP_buildings/prod_subsidence.npy",
+    "FSAP_buildings/prod_fire.npy",
+    "FSAP_buildings/prod_accidental_damage.npy",
+    "sel_FSAP_buildings.parquet",
+    "FSAP_buildings/v24.parquet",
+    "FSAP_buildings/prediccion_2025.parquet"
+   ],
+   "verificar": [
+    "FSAP_buildings/v23_storm.npz",
+    "FSAP_buildings/v23_flood.npz",
+    "FSAP_buildings/v23_escape_of_water.npz",
+    "FSAP_buildings/v23_subsidence.npz",
+    "FSAP_buildings/v23_fire.npz",
+    "FSAP_buildings/v23_accidental_damage.npz",
+    "FSAP_buildings/v24_storm.npy",
+    "FSAP_buildings/v24_flood.npy",
+    "FSAP_buildings/v24_escape_of_water.npy",
+    "FSAP_buildings/v24_subsidence.npy",
+    "FSAP_buildings/v24_fire.npy",
+    "FSAP_buildings/v24_accidental_damage.npy",
+    "FSAP_buildings/prod_storm.npy",
+    "FSAP_buildings/prod_flood.npy",
+    "FSAP_buildings/prod_escape_of_water.npy",
+    "FSAP_buildings/prod_subsidence.npy",
+    "FSAP_buildings/prod_fire.npy",
+    "FSAP_buildings/prod_accidental_damage.npy",
+    "sel_FSAP_buildings.parquet",
+    "FSAP_buildings/v24.parquet",
+    "FSAP_buildings/prediccion_2025.parquet"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "cola39.sh, log_fsap.txt",
+   "nota": "",
+   "minutos_ref": 25
+  },
+  {
+   "id": "FSAP2_buildings",
+   "etapa": "partes",
+   "linea": "principal",
+   "script": "src/modelos/frecsev2.py",
+   "args": [
+    "FSAP2_buildings",
+    "buildings",
+    "--prod",
+    "--semillas=2",
+    "--aditivo",
+    "--partes",
+    "--desde=FSAP_buildings",
+    "--semilla_inicial=2"
+   ],
+   "requiere": [
+    "FSAP_buildings"
+   ],
+   "salidas": [
+    "FSAP2_buildings/v24_storm.npy",
+    "FSAP2_buildings/v24_flood.npy",
+    "FSAP2_buildings/v24_escape_of_water.npy",
+    "FSAP2_buildings/v24_subsidence.npy",
+    "FSAP2_buildings/v24_fire.npy",
+    "FSAP2_buildings/v24_accidental_damage.npy",
+    "FSAP2_buildings/prod_storm.npy",
+    "FSAP2_buildings/prod_flood.npy",
+    "FSAP2_buildings/prod_escape_of_water.npy",
+    "FSAP2_buildings/prod_subsidence.npy",
+    "FSAP2_buildings/prod_fire.npy",
+    "FSAP2_buildings/prod_accidental_damage.npy",
+    "FSAP2_buildings/v24.parquet",
+    "FSAP2_buildings/prediccion_2025.parquet"
+   ],
+   "verificar": [
+    "FSAP2_buildings/v24_storm.npy",
+    "FSAP2_buildings/v24_flood.npy",
+    "FSAP2_buildings/v24_escape_of_water.npy",
+    "FSAP2_buildings/v24_subsidence.npy",
+    "FSAP2_buildings/v24_fire.npy",
+    "FSAP2_buildings/v24_accidental_damage.npy",
+    "FSAP2_buildings/prod_storm.npy",
+    "FSAP2_buildings/prod_flood.npy",
+    "FSAP2_buildings/prod_escape_of_water.npy",
+    "FSAP2_buildings/prod_subsidence.npy",
+    "FSAP2_buildings/prod_fire.npy",
+    "FSAP2_buildings/prod_accidental_damage.npy",
+    "FSAP2_buildings/v24.parquet",
+    "FSAP2_buildings/prediccion_2025.parquet"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "cola40.sh y cola40b.sh, log_fsap2.txt",
+   "nota": "",
+   "minutos_ref": 15
+  },
+  {
+   "id": "FSAP_contents",
+   "etapa": "partes",
+   "linea": "principal",
+   "script": "src/modelos/frecsev2.py",
+   "args": [
+    "FSAP_contents",
+    "contents",
+    "--prod",
+    "--semillas=2",
+    "--aditivo",
+    "--partes"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "salidas": [
+    "FSAP_contents/v23_theft.npz",
+    "FSAP_contents/v23_escape_of_water.npz",
+    "FSAP_contents/v23_accidental_damage.npz",
+    "FSAP_contents/v23_flood.npz",
+    "FSAP_contents/v24_theft.npy",
+    "FSAP_contents/v24_escape_of_water.npy",
+    "FSAP_contents/v24_accidental_damage.npy",
+    "FSAP_contents/v24_flood.npy",
+    "FSAP_contents/prod_theft.npy",
+    "FSAP_contents/prod_escape_of_water.npy",
+    "FSAP_contents/prod_accidental_damage.npy",
+    "FSAP_contents/prod_flood.npy",
+    "sel_FSAP_contents.parquet",
+    "FSAP_contents/v24.parquet",
+    "FSAP_contents/prediccion_2025.parquet"
+   ],
+   "verificar": [
+    "FSAP_contents/v23_theft.npz",
+    "FSAP_contents/v23_escape_of_water.npz",
+    "FSAP_contents/v23_accidental_damage.npz",
+    "FSAP_contents/v23_flood.npz",
+    "FSAP_contents/v24_theft.npy",
+    "FSAP_contents/v24_escape_of_water.npy",
+    "FSAP_contents/v24_accidental_damage.npy",
+    "FSAP_contents/v24_flood.npy",
+    "FSAP_contents/prod_theft.npy",
+    "FSAP_contents/prod_escape_of_water.npy",
+    "FSAP_contents/prod_accidental_damage.npy",
+    "FSAP_contents/prod_flood.npy",
+    "sel_FSAP_contents.parquet",
+    "FSAP_contents/v24.parquet",
+    "FSAP_contents/prediccion_2025.parquet"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "cola39.sh, log_fsap.txt",
+   "nota": "",
+   "minutos_ref": 25
+  },
+  {
+   "id": "FSAP2_contents",
+   "etapa": "partes",
+   "linea": "principal",
+   "script": "src/modelos/frecsev2.py",
+   "args": [
+    "FSAP2_contents",
+    "contents",
+    "--prod",
+    "--semillas=2",
+    "--aditivo",
+    "--partes",
+    "--desde=FSAP_contents",
+    "--semilla_inicial=2"
+   ],
+   "requiere": [
+    "FSAP_contents"
+   ],
+   "salidas": [
+    "FSAP2_contents/v24_theft.npy",
+    "FSAP2_contents/v24_escape_of_water.npy",
+    "FSAP2_contents/v24_accidental_damage.npy",
+    "FSAP2_contents/v24_flood.npy",
+    "FSAP2_contents/prod_theft.npy",
+    "FSAP2_contents/prod_escape_of_water.npy",
+    "FSAP2_contents/prod_accidental_damage.npy",
+    "FSAP2_contents/prod_flood.npy",
+    "FSAP2_contents/v24.parquet",
+    "FSAP2_contents/prediccion_2025.parquet"
+   ],
+   "verificar": [
+    "FSAP2_contents/v24_theft.npy",
+    "FSAP2_contents/v24_escape_of_water.npy",
+    "FSAP2_contents/v24_accidental_damage.npy",
+    "FSAP2_contents/v24_flood.npy",
+    "FSAP2_contents/prod_theft.npy",
+    "FSAP2_contents/prod_escape_of_water.npy",
+    "FSAP2_contents/prod_accidental_damage.npy",
+    "FSAP2_contents/prod_flood.npy",
+    "FSAP2_contents/v24.parquet",
+    "FSAP2_contents/prediccion_2025.parquet"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "cola40.sh y cola40b.sh, log_fsap2.txt",
+   "nota": "",
+   "minutos_ref": 15
+  },
+  {
+   "id": "FSAXc4_contents",
+   "etapa": "severidad",
+   "linea": "principal",
+   "script": "src/modelos/severidad_cfs3.py",
+   "args": [
+    "FSAP_contents",
+    "contents",
+    "FSAXc4_contents",
+    "--v24=FSAP_contents,FSAP2_contents",
+    "--prod=FSAP_contents,FSAP2_contents"
+   ],
+   "requiere": [
+    "FSAP_contents",
+    "FSAP2_contents"
+   ],
+   "salidas": [
+    "sel_FSAXc4_contents.parquet",
+    "FSAXc4_contents/v24.parquet",
+    "FSAXc4_contents/prediccion_2025.parquet"
+   ],
+   "verificar": [
+    "sel_FSAXc4_contents.parquet",
+    "FSAXc4_contents/v24.parquet",
+    "FSAXc4_contents/prediccion_2025.parquet"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "evidencia": "resumen.json de FSAXc4_contents (origen v23 FSAP_contents; v24 y prod FSAP_contents y FSAP2_contents; lambda 20)",
+   "nota": "",
+   "minutos_ref": 1
+  },
+  {
+   "id": "CFS_motor_4s",
+   "etapa": "severidad",
+   "linea": "principal",
+   "script": "src/modelos/combinar_semillas.py",
+   "args": [
+    "CFS_motor_4s",
+    "CFS_motor",
+    "CFS_motor_s23"
+   ],
+   "requiere": [
+    "CFS_motor",
+    "CFS_motor_s23"
+   ],
+   "salidas": [
+    "CFS_motor_4s/v24.parquet",
+    "CFS_motor_4s/prediccion_2025.parquet"
+   ],
+   "verificar": [
+    "CFS_motor_4s/prediccion_2025.parquet"
+   ],
+   "objetivos": [
+    "S22"
+   ],
+   "evidencia": "finalizar_s15.sh",
+   "nota": "solo hace falta su resumen.json, que severidad_cfs.py lee como referencia; su V24 hereda la V24 en float64 de CFS_motor y no se compara",
+   "minutos_ref": 1
+  },
+  {
+   "id": "CFSS_motor",
+   "etapa": "severidad",
+   "linea": "principal",
+   "script": "src/modelos/severidad_cfs.py",
+   "args": [
+    "CFS_motor_4s",
+    "motor",
+    "CFSS_motor",
+    "--v23=CFS_motor_v23",
+    "--v24=CFS_motor_s23",
+    "--prod=CFS_motor,CFS_motor_s23"
+   ],
+   "requiere": [
+    "CFS_motor_4s",
+    "CFS_motor_v23"
+   ],
+   "salidas": [
+    "sel_CFSS_motor.parquet",
+    "CFSS_motor/v24.parquet",
+    "CFSS_motor/prediccion_2025.parquet"
+   ],
+   "verificar": [
+    "sel_CFSS_motor.parquet",
+    "CFSS_motor/v24.parquet",
+    "CFSS_motor/prediccion_2025.parquet"
+   ],
+   "objetivos": [
+    "S22"
+   ],
+   "evidencia": "resumen.json de CFSS_motor (origen CFS_motor_4s); misma orden que CFSSr_motor de cola45.sh sin --tope",
+   "nota": "",
+   "minutos_ref": 1
+  },
+  {
+   "id": "CFSS4_buildings",
+   "etapa": "severidad",
+   "linea": "principal",
+   "script": "src/modelos/severidad_cfs.py",
+   "args": [
+    "CFS_buildings",
+    "buildings",
+    "CFSS4_buildings",
+    "--v24=CFS_buildings,CFS_buildings_s23",
+    "--prod=CFS_buildings,CFS_buildings_s23"
+   ],
+   "requiere": [
+    "CFS_buildings_s23"
+   ],
+   "salidas": [
+    "sel_CFSS4_buildings.parquet",
+    "CFSS4_buildings/v24.parquet",
+    "CFSS4_buildings/prediccion_2025.parquet"
+   ],
+   "verificar": [
+    "sel_CFSS4_buildings.parquet",
+    "CFSS4_buildings/v24.parquet",
+    "CFSS4_buildings/prediccion_2025.parquet"
+   ],
+   "objetivos": [
+    "S22"
+   ],
+   "evidencia": "cola42.sh",
+   "nota": "",
+   "minutos_ref": 1
+  },
+  {
+   "id": "FSAS4_buildings",
+   "etapa": "severidad",
+   "linea": "principal",
+   "script": "src/modelos/severidad_cfs.py",
+   "args": [
+    "FSAP_buildings",
+    "buildings",
+    "FSAS4_buildings",
+    "--v24=FSAP_buildings,FSAP2_buildings",
+    "--prod=FSAP_buildings,FSAP2_buildings"
+   ],
+   "requiere": [
+    "FSAP_buildings",
+    "FSAP2_buildings"
+   ],
+   "salidas": [
+    "sel_FSAS4_buildings.parquet",
+    "FSAS4_buildings/v24.parquet",
+    "FSAS4_buildings/prediccion_2025.parquet"
+   ],
+   "verificar": [
+    "sel_FSAS4_buildings.parquet",
+    "FSAS4_buildings/v24.parquet",
+    "FSAS4_buildings/prediccion_2025.parquet"
+   ],
+   "objetivos": [
+    "S22"
+   ],
+   "evidencia": "cola40.sh",
+   "nota": "",
+   "minutos_ref": 1
+  },
+  {
+   "id": "MLP3_contents",
+   "etapa": "produccion",
+   "linea": "principal",
+   "script": "src/modelos/mlp_tweedie.py",
+   "args": [
+    "MLP3_contents",
+    "contents",
+    "--semillas=3",
+    "--v24",
+    "--prod",
+    "--wd=0.0001",
+    "--f3s2"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "salidas": [
+    "sel_MLP3_contents.parquet",
+    "MLP3_contents/v24.parquet",
+    "MLP3_contents/prediccion_2025.parquet"
+   ],
+   "verificar": [
+    "sel_MLP3_contents.parquet",
+    "MLP3_contents/v24.parquet",
+    "MLP3_contents/prediccion_2025.parquet"
+   ],
+   "objetivos": [
+    "S22"
+   ],
+   "evidencia": "cola21.sh, log_mlp3_contents.txt",
+   "nota": "red neuronal con torch en CPU; solo entra en S22 (peso 0,1)",
+   "minutos_ref": 3
+  },
+  {
+   "id": "B_CFST_motor_tendencia",
+   "etapa": "linea_b",
+   "linea": "B",
+   "script": "src/linea_b/severidad_tendencia.py",
+   "args": [
+    "motor",
+    "B_CFST_motor_tendencia",
+    "--regla=tendencia",
+    "--v23=CFS_motor_v23",
+    "--v24=CFS_motor_s23",
+    "--prod=CFS_motor,CFS_motor_s23"
+   ],
+   "requiere": [
+    "CFS_motor",
+    "CFS_motor_s23",
+    "CFS_motor_v23"
+   ],
+   "salidas": [
+    "sel_B_CFST_motor_tendencia.parquet",
+    "B_CFST_motor_tendencia/v24.parquet",
+    "B_CFST_motor_tendencia/prediccion_2025.parquet"
+   ],
+   "verificar": [
+    "sel_B_CFST_motor_tendencia.parquet",
+    "B_CFST_motor_tendencia/v24.parquet",
+    "B_CFST_motor_tendencia/prediccion_2025.parquet"
+   ],
+   "objetivos": [
+    "S30"
+   ],
+   "evidencia": "resumen.json de B_CFST_motor_tendencia (regla tendencia; v23 CFS_motor_v23; v24 CFS_motor_s23; prod CFS_motor,CFS_motor_s23); Modelos_claude_b/README.md §3",
+   "nota": "",
+   "minutos_ref": 1
+  },
+  {
+   "id": "B_CFST_buildings_tendencia",
+   "etapa": "linea_b",
+   "linea": "B",
+   "script": "src/linea_b/severidad_tendencia.py",
+   "args": [
+    "buildings",
+    "B_CFST_buildings_tendencia",
+    "--regla=tendencia",
+    "--v23=CFS_buildings",
+    "--v24=CFS_buildings,CFS_buildings_s23",
+    "--prod=CFS_buildings,CFS_buildings_s23"
+   ],
+   "requiere": [
+    "CFS_buildings",
+    "CFS_buildings_s23"
+   ],
+   "salidas": [
+    "sel_B_CFST_buildings_tendencia.parquet",
+    "B_CFST_buildings_tendencia/v24.parquet",
+    "B_CFST_buildings_tendencia/prediccion_2025.parquet"
+   ],
+   "verificar": [
+    "sel_B_CFST_buildings_tendencia.parquet",
+    "B_CFST_buildings_tendencia/v24.parquet",
+    "B_CFST_buildings_tendencia/prediccion_2025.parquet"
+   ],
+   "objetivos": [
+    "S30"
+   ],
+   "evidencia": "resumen.json de B_CFST_buildings_tendencia (regla tendencia; v23 CFS_buildings; v24 CFS_buildings,CFS_buildings_s23; prod CFS_buildings,CFS_buildings_s23); Modelos_claude_b/README.md §3",
+   "nota": "",
+   "minutos_ref": 1
+  },
+  {
+   "id": "B_FSAST_buildings_tendencia",
+   "etapa": "linea_b",
+   "linea": "B",
+   "script": "src/linea_b/severidad_tendencia.py",
+   "args": [
+    "buildings",
+    "B_FSAST_buildings_tendencia",
+    "--regla=tendencia",
+    "--v23=FSAP_buildings",
+    "--v24=FSAP_buildings,FSAP2_buildings",
+    "--prod=FSAP_buildings,FSAP2_buildings"
+   ],
+   "requiere": [
+    "FSAP2_buildings",
+    "FSAP_buildings"
+   ],
+   "salidas": [
+    "sel_B_FSAST_buildings_tendencia.parquet",
+    "B_FSAST_buildings_tendencia/v24.parquet",
+    "B_FSAST_buildings_tendencia/prediccion_2025.parquet"
+   ],
+   "verificar": [
+    "sel_B_FSAST_buildings_tendencia.parquet",
+    "B_FSAST_buildings_tendencia/v24.parquet",
+    "B_FSAST_buildings_tendencia/prediccion_2025.parquet"
+   ],
+   "objetivos": [
+    "S30"
+   ],
+   "evidencia": "resumen.json de B_FSAST_buildings_tendencia (regla tendencia; v23 FSAP_buildings; v24 FSAP_buildings,FSAP2_buildings; prod FSAP_buildings,FSAP2_buildings); Modelos_claude_b/README.md §3",
+   "nota": "",
+   "minutos_ref": 1
+  },
+  {
+   "id": "S22_claude_propio",
+   "etapa": "mezcla",
+   "linea": "principal",
+   "script": "src/modelos/mezcla3.py",
+   "args": [
+    "S22_claude_propio",
+    "receta/especificaciones/spec_s22_propio.json",
+    "--forma=motor:1.09:0.95",
+    "--nivel=s17",
+    "--escribir"
+   ],
+   "requiere": [
+    "sel_total_F0124",
+    "S04b_lgbm_F0124_F3autos",
+    "CAT_motor_4s",
+    "sel_cat1a",
+    "CFSS_motor",
+    "sel_total_F01234",
+    "S06c_lgbm_motor_red",
+    "sel_total_motor_red",
+    "S12h_edif_md1000",
+    "sel_hS3",
+    "CFSS4_buildings",
+    "FSAS4_buildings",
+    "S08h_hogar_F3s2",
+    "sel_hS2",
+    "MLP3_contents",
+    "FSA_contents",
+    "FSAXc4_contents"
+   ],
+   "salidas": [
+    "S22_claude_propio/S22_claude_propio.csv",
+    "S22_claude_propio/prediccion_2025.parquet"
+   ],
+   "verificar": [
+    "S22_claude_propio/S22_claude_propio.csv",
+    "S22_claude_propio/prediccion_2025.parquet"
+   ],
+   "objetivos": [
+    "S22"
+   ],
+   "evidencia": "finalizar_s22.sh; D86",
+   "nota": "SHA-256 entregado c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0 (Kaggle 57370117, público 0,12988)",
+   "minutos_ref": 1
+  },
+  {
+   "id": "S30_claude_b",
+   "etapa": "mezcla",
+   "linea": "B",
+   "script": "src/linea_b/mezcla3_b.py",
+   "args": [
+    "S30_claude_b",
+    "receta/especificaciones/spec_s30.json",
+    "--forma=motor:1.09:0.95,contents:1:0.95",
+    "--nivel=s17",
+    "--escribir"
+   ],
+   "requiere": [
+    "sel_total_F0124",
+    "S04b_lgbm_F0124_F3autos",
+    "CAT_motor_4s",
+    "sel_cat1a",
+    "B_CFST_motor_tendencia",
+    "sel_total_F01234",
+    "S06c_lgbm_motor_red",
+    "sel_total_motor_red",
+    "S12h_edif_md1000",
+    "sel_hS3",
+    "B_CFST_buildings_tendencia",
+    "B_FSAST_buildings_tendencia",
+    "S08h_hogar_F3s2",
+    "sel_hS2",
+    "FSA_contents",
+    "FSAXc4_contents"
+   ],
+   "salidas": [
+    "S30_claude_b/S30_claude_b.csv",
+    "S30_claude_b/prediccion_2025.parquet"
+   ],
+   "verificar": [
+    "S30_claude_b/S30_claude_b.csv",
+    "S30_claude_b/prediccion_2025.parquet"
+   ],
+   "objetivos": [
+    "S30"
+   ],
+   "evidencia": "Modelos_claude_b/README.md («Candidato S30_claude_b»); reproducir_s30_b.py; D88 y D89",
+   "nota": "SHA-256 entregado fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5 (Kaggle 57371361, público 0,12996); selección final de la parte 1",
+   "minutos_ref": 1
+  }
+ ],
+ "etapas_datos": {
+  "descripcion": "Etapas 00 a 03, de los once Parquet originales a las variables. reproducir.py datos las ejecuta en una raíz de proyecto mínima dentro de --trabajo, porque bases_actuariales.py y construir_f0.py localizan sus entradas subiendo hasta RUTAS_PROYECTO.json y escriben su corrida junto al script; los scripts se copian allí sin cambios y se comprueba su SHA-256. Las corridas nuevas se enlazan con los nombres que espera comun.py (f0_20261017T141732Z_65df7fca y bases_20261017T120251Z_45443ff0).",
+  "pasos": [
+   {
+    "id": "capa",
+    "script": "src/datos/n62_codex/rebuild_base.py",
+    "args": [
+     "--raw",
+     "<originales>",
+     "--rules",
+     "src/datos/n62_codex/rules.json",
+     "--out",
+     "<trabajo>/proyecto/Hackaton/Semana 1/Limpieza/runs/preaudit_20261016T211816Z_817285a5"
+    ],
+    "autor": "Codex (N62, COD-20261018-104)",
+    "verifica": "SHA-256 de las once tablas igual al de la capa preaudit"
+   },
+   {
+    "id": "bases",
+    "script": "src/datos/bases_actuariales.py",
+    "args": [],
+    "autor": "Claude (D67)",
+    "verifica": "huella de contenido de t0_por_row_id y asignacion_por_siniestro; bytes de las tablas de desarrollo"
+   },
+   {
+    "id": "f0",
+    "script": "src/datos/construir_f0.py",
+    "args": [
+     "--ramo motor",
+     "--run <id> --ramo buildings",
+     "--run <id> --ramo contents",
+     "--run <id> --finalizar"
+    ],
+    "autor": "Claude (D68)",
+    "verifica": "huella de contenido de las tres matrices y de las particiones; bloques del contrato de disponibilidad",
+    "decisiones_congeladas": "tres listas de row_id del proyecto que solo alimentan marcas audit_* (excluidas de los predictores), leídas de --decisiones y comprobadas por SHA-256"
+   },
+   {
+    "id": "variables",
+    "script": "src/modelos/construir_variables.py",
+    "args": [],
+    "autor": "Claude",
+    "verifica": "huella de contenido de feat_<ramo>.parquet"
+   }
+  ],
+  "prueba_19_oct": "En el entorno de referencia: once tablas con el SHA de preaudit; bases y F0 iguales en contenido; variables iguales en contenido y marcos de modelo (matriz X con tipos y categorías, etiquetas, offsets y particiones) idénticos a los de las variables originales. Los bytes de F0 y de las variables cambian porque pandas 3 guarda las fechas de periodo en segundos y la VM las guardó en nanosegundos."
+ }
+}

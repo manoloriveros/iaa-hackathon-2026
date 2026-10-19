@@ -1,0 +1,17 @@
+# 2026-10-19T13:04:59+00:00 /usr/bin/python3 -W ignore /sessions/rcw-01scx2aw3ih12t3ebycytfjw/mnt/Hakaton/Hackaton/Repositorio_IAA2026/src/linea_b/mezcla3_b.py S30_claude_b /sessions/rcw-01scx2aw3ih12t3ebycytfjw/mnt/Hakaton/Hackaton/Repositorio_IAA2026/receta/especificaciones/spec_s30.json --forma=motor:1.09:0.95,contents:1:0.95 --nivel=s17 --escribir
+fuera de la referencia de nivel (corridas B): ['B_CFST_buildings_tendencia', 'B_CFST_motor_tendencia', 'B_FSAST_buildings_tendencia']
+motor {'d2_sel': 0.09441, 'd2_v24_f23': 0.09168, 'f23': 0.98641, 'f24': 1.00467, 'f': 0.99554}
+buildings {'d2_sel': 0.11687, 'd2_v24_f23': 0.1158, 'f23': 1.05892, 'f24': 1.1343, 'f': 1.09661}
+contents {'d2_sel': 0.09259, 'd2_v24_f23': 0.09665, 'f23': 1.07761, 'f24': 1.09236, 'f': 1.08498}
+global V24 0.13788 público esperado 0.12908
+{
+ "path": "/sessions/rcw-01scx2aw3ih12t3ebycytfjw/mezcla_v11/tolerante/work/S30_claude_b/S30_claude_b.csv",
+ "sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+ "rows": 626639,
+ "total_CU": 211962091.19,
+ "by_line_CU": {
+  "motor": 118900944.02,
+  "buildings": 74366227.96,
+  "contents": 18694919.21
+ }
+}
