@@ -1,0 +1,35 @@
+{
+  "workspace_relative_run": "Hackaton/Semana 1/Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca",
+  "status": "verified_F0_matrix_and_partitions_preliminary_no_data_changes_no_training",
+  "evidence": "runs/f0_20261017T141732Z_65df7fca/evidencia.json",
+  "contract": "runs/f0_20261017T141732Z_65df7fca/contrato_disponibilidad.json",
+  "matrices": {
+    "motor": "runs/f0_20261017T141732Z_65df7fca/tables/f0_motor.parquet",
+    "buildings": "runs/f0_20261017T141732Z_65df7fca/tables/f0_buildings.parquet",
+    "contents": "runs/f0_20261017T141732Z_65df7fca/tables/f0_contents.parquet"
+  },
+  "partitions": "runs/f0_20261017T141732Z_65df7fca/tables/particiones.parquet",
+  "active_prepared_run_used": "Hackaton/Semana 1/Limpieza/runs/preaudit_20261016T211816Z_817285a5",
+  "bases_run_used": "Hackaton/Semana 1/Bases_actuariales_claude/runs/bases_20261017T120251Z_45443ff0",
+  "rows": {
+    "train": 2409311,
+    "test": 626639,
+    "partitions": 3035950
+  },
+  "capital_contract_D66": {
+    "adjusted": 1454,
+    "confirmed_by_history": 1305,
+    "unconfirmed_PRM01R": 149,
+    "adjusted_in_test": 190
+  },
+  "checks_passed": 25,
+  "checks_total": 25,
+  "models_trained": 0,
+  "data_modified": false,
+  "indices_modified": false,
+  "superseded_runs": [
+    "runs/f0_20261017T140949Z_4589a9c6 (primera versión sin partir por año: sin memoria en la VM de 3,9 GB, carpeta vacía)",
+    "runs/f0_20261017T141609Z_d4393d4a (solo autos: control K07 con tolerancia que no absorbía el redondeo de EXP01; corregido)"
+  ],
+  "human_review": "pending"
+}

@@ -1,0 +1,215 @@
+{
+  "id": "S22",
+  "kaggle_submission_id": 57370117,
+  "kaggle_status": "COMPLETE",
+  "public_score": 0.12988,
+  "public_score_text": "0.12988",
+  "submitted_utc": "2026-10-18T21:52:59.290Z",
+  "retrieved_utc": "2026-10-18T21:53:35Z",
+  "csv": "Hackaton\\Semana 1\\Modelado_codex\\nocturna_20261017_N01\\S22_crossreview_N34_r2\\S22_riesgo_ultimo.csv",
+  "sha256": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0",
+  "rows": 626639,
+  "message": "S22 peril frequency severity ensemble; home identity shape; ultimate estimate",
+  "delta_previous_public_best": 0.0007999999999999952,
+  "local_validation": {
+    "method": "Own reconstruction of frozen delivered S22 combination from saved component predictions, full-cost temporal V24 points/reserve+25 recomputed. Author provided conditional intervals retained separately. V23/V24 already used for weight/shape selection, not independent validation; not clear H superiority.",
+    "score_name": "S22_delivered_recipe_replayed_V24_reused",
+    "D2": 0.13774159346508574,
+    "reference": "N01_A_G",
+    "gain": 0.0016455607617947843,
+    "conditional_customer_CI95": null,
+    "conditional_address_CI95": null,
+    "per_line": [
+      {
+        "scenario": "reserve075",
+        "scope": "motor",
+        "D2": {
+          "S22": 0.09276986275125654,
+          "S20": 0.09276986275125654,
+          "H": 0.0920054822791655,
+          "A_G": 0.09091891693777987
+        },
+        "gains": {
+          "S20": 0.0,
+          "H": 0.0007643804720910419,
+          "A_G": 0.0018509458134766676
+        }
+      },
+      {
+        "scenario": "reserve075",
+        "scope": "buildings",
+        "D2": {
+          "S22": 0.1171098024753553,
+          "S20": 0.11809499067097928,
+          "H": 0.11680260964358025,
+          "A_G": 0.11579259256670615
+        },
+        "gains": {
+          "S20": -0.0009851881956239872,
+          "H": 0.0003071928317750494,
+          "A_G": 0.0013172099086491418
+        }
+      },
+      {
+        "scenario": "reserve075",
+        "scope": "contents",
+        "D2": {
+          "S22": 0.0960229687558597,
+          "S20": 0.0957220211632015,
+          "H": 0.0946458586660407,
+          "A_G": 0.0943427826153771
+        },
+        "gains": {
+          "S20": 0.00030094759265819615,
+          "H": 0.0013771100898190003,
+          "A_G": 0.001680186140482598
+        }
+      },
+      {
+        "scenario": "reserve075",
+        "scope": "aggregate",
+        "D2": {
+          "S22": 0.13713098509532773,
+          "S20": 0.13742360379821916,
+          "H": 0.1364444399152941,
+          "A_G": 0.13557208216448158
+        },
+        "gains": {
+          "S20": -0.000292618702891434,
+          "H": 0.0006865451800336375,
+          "A_G": 0.001558902930846151
+        }
+      },
+      {
+        "scenario": "nominal",
+        "scope": "motor",
+        "D2": {
+          "S22": 0.09160529106411586,
+          "S20": 0.09160529106411586,
+          "H": 0.09070666627456336,
+          "A_G": 0.0892956907592587
+        },
+        "gains": {
+          "S20": 0.0,
+          "H": 0.0008986247895524935,
+          "A_G": 0.0023096003048571623
+        }
+      },
+      {
+        "scenario": "nominal",
+        "scope": "buildings",
+        "D2": {
+          "S22": 0.11551438494253052,
+          "S20": 0.11643457426667725,
+          "H": 0.1158181085513339,
+          "A_G": 0.1145083232994476
+        },
+        "gains": {
+          "S20": -0.0009201893241467252,
+          "H": -0.00030372360880337457,
+          "A_G": 0.0010060616430829228
+        }
+      },
+      {
+        "scenario": "nominal",
+        "scope": "contents",
+        "D2": {
+          "S22": 0.09661800115872654,
+          "S20": 0.09643840933760961,
+          "H": 0.09546230730158856,
+          "A_G": 0.09491175360132198
+        },
+        "gains": {
+          "S20": 0.00017959182111693117,
+          "H": 0.001155693857137985,
+          "A_G": 0.001706247557404561
+        }
+      },
+      {
+        "scenario": "nominal",
+        "scope": "aggregate",
+        "D2": {
+          "S22": 0.13774159346508574,
+          "S20": 0.138034329815641,
+          "H": 0.13725777149871976,
+          "A_G": 0.13609603270329096
+        },
+        "gains": {
+          "S20": -0.00029273635055526714,
+          "H": 0.0004838219663659826,
+          "A_G": 0.0016455607617947843
+        }
+      },
+      {
+        "scenario": "reserve125",
+        "scope": "motor",
+        "D2": {
+          "S22": 0.0889011674425797,
+          "S20": 0.0889011674425797,
+          "H": 0.08787778418646175,
+          "A_G": 0.0861659690803559
+        },
+        "gains": {
+          "S20": 0.0,
+          "H": 0.001023383256117949,
+          "A_G": 0.0027351983622238007
+        }
+      },
+      {
+        "scenario": "reserve125",
+        "scope": "buildings",
+        "D2": {
+          "S22": 0.11274264655433008,
+          "S20": 0.11360316861241304,
+          "H": 0.11361515663011668,
+          "A_G": 0.11202524098208333
+        },
+        "gains": {
+          "S20": -0.0008605220580829576,
+          "H": -0.0008725100757865922,
+          "A_G": 0.0007174055722467543
+        }
+      },
+      {
+        "scenario": "reserve125",
+        "scope": "contents",
+        "D2": {
+          "S22": 0.0968447424755362,
+          "S20": 0.09678215928803158,
+          "H": 0.09590243879427962,
+          "A_G": 0.09511316769718703
+        },
+        "gains": {
+          "S20": 6.258318750462788e-05,
+          "H": 0.0009423036812565844,
+          "A_G": 0.0017315747783491764
+        }
+      },
+      {
+        "scenario": "reserve125",
+        "scope": "aggregate",
+        "D2": {
+          "S22": 0.1370386277996647,
+          "S20": 0.13733170695061048,
+          "H": 0.13674307756908055,
+          "A_G": 0.1353111103847804
+        },
+        "gains": {
+          "S20": -0.0002930791509457853,
+          "H": 0.00029555023058414065,
+          "A_G": 0.0017275174148843053
+        }
+      }
+    ],
+    "independent_validation": false
+  },
+  "availability_scope": "S22 uses its delivered separate-line F0124 and F3 components, including seven home F3 fields under D80. Measurement dates of some current F3/master data remain unresolved. S22 motor explicitly omits marketing_segment; it does not inherit the A_G G marketing head. No new input or base-model retraining in this comparative trial.",
+  "weather_scope": "Scope is the frozen S22 component manifests. The trial removes home shape only and adds no weather observations. It does not incorporate the own annual-weather A_G producer or H meta; no prospective weather-availability claim is made for supplied historical/scenario covariates.",
+  "validation_limits": "V23/V24 reused for components, weights, shape and year-level choices; not independent future validation. Component prediction assembly replayed numerically exactly, not raw inference of every delivered base model. Full-target gains coexist with adverse contents H2 and interval uncertainty against H. Author cluster intervals remain attributed, not independently reproduced here. One claims valuation cannot identify IBNER or ultimate reserve adequacy. N42 body/tail accounting is diagnostic on the same reused labels, without subset recalibration. A discretionary controlled trial is not automatic qualification or proof of public improvement.",
+  "ultimate_level": "Original frozen S22 s17 shape/level and mean(f23,f24), no new level, no additional IBNR.",
+  "authorization": "Direct human N46 instruction delegates the choice to use one remaining trial on the other model line, following N44 permission to submit whenever useful. S22 is a controlled comparative experiment: its automatic consistency gate remains failed, with H2 and H-comparison uncertainty recorded. Integrity, live quota, dryrun and duplicate checks required. No independent validation or manual final selection implied.",
+  "authorization_evidence": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/verification/N46_human_authorization.md",
+  "preparation_audit": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/production/S22_release_audit_N46.json",
+  "preparation_audit_sha256": "409c141719cf12a2cf569002cabcb0352526f04ebcce2c81265f0a8ac05081e5",
+  "no_manual_final_selection": true
+}

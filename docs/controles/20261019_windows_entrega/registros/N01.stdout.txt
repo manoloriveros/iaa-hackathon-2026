@@ -1,0 +1,62 @@
+reproducir.py versión 1.1 (2026-10-19), modo datos
+{
+ "capa": {
+  "policies_motor": true,
+  "policies_buildings": true,
+  "policies_contents": true,
+  "test_motor": true,
+  "test_buildings": true,
+  "test_contents": true,
+  "customers": true,
+  "addresses": true,
+  "weather": true,
+  "claims": true,
+  "sample_submission": true
+ },
+ "bases": {
+  "tables/t0_por_row_id.parquet": {
+   "igual_bytes": true,
+   "igual_contenido": true
+  },
+  "tables/asignacion_por_siniestro.parquet": {
+   "igual_bytes": true,
+   "igual_contenido": true
+  },
+  "tables/factores_desarrollo_conteos.csv": {
+   "igual_bytes": true,
+   "igual_contenido": true
+  },
+  "tables/ibnr_por_peligro_anio.csv": {
+   "igual_bytes": true,
+   "igual_contenido": true
+  },
+  "tables/completitud_2024_por_mes.csv": {
+   "igual_bytes": true,
+   "igual_contenido": true
+  },
+  "tables/chain_ladder_conteos.csv": {
+   "igual_bytes": true,
+   "igual_contenido": true
+  }
+ },
+ "f0": {
+  "tables/f0_motor.parquet": {
+   "igual_bytes": true,
+   "igual_contenido": true
+  },
+  "tables/f0_buildings.parquet": {
+   "igual_bytes": true,
+   "igual_contenido": true
+  },
+  "tables/f0_contents.parquet": {
+   "igual_bytes": true,
+   "igual_contenido": true
+  },
+  "tables/particiones.parquet": {
+   "igual_bytes": true,
+   "igual_contenido": true
+  },
+  "contrato_bloques_iguales": true
+ }
+}
+datos: conforme

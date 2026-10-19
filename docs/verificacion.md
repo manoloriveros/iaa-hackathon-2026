@@ -2,6 +2,8 @@
 
 Este archivo recoge cada prueba de reconstrucción con su fecha, la máquina, la orden y el resultado. Una prueba nueva se añade al final; las anteriores no se reescriben.
 
+Entrada vigente del 19 de octubre, Codex: el paquete 1.2 y la mezcla real en Windows se describen en la sección 5 al final. El trabajo nuevo se concentra en esta carpeta común por instrucción del participante. Las secciones 1-4 conservan los cortes históricos de Claude.
+
 ## 1. Mezcla desde los componentes guardados (19 de octubre de 2026)
 
 Orden: `python reproducir.py mezcla --semana1=<carpeta Semana 1> --trabajo=<carpeta nueva>`.
@@ -58,3 +60,15 @@ Comprobación. `herramientas/probar_controles.py` arma, por caso, un paquete de 
 Mezcla real con la versión 1.1 en la máquina virtual del participante (`docs/controles/20261019T125907Z_vm_participante/mezcla_real_vm/`): con la orden estricta, los 46 archivos que enlaza el modo mezcla (43 salidas guardadas de los 20 componentes y selecciones que leen las dos mezclas, más los 3 insumos de exposición) coinciden en bytes y en contenido, `S22_claude_propio.csv` sale con el SHA-256 entregado y el paquete se detiene con código 1 en `S22_claude_propio/prediccion_2025.parquet`, que difiere en contenido por el último bit de numpy 2.2.6 (sección 1). Con `--continuar-si-difiere`, S30 y S22 salen iguales al entregado byte a byte (`fd9528e0…e3bc5` y `c21a02e1…3541b0`), los dos Parquet de 2025 quedan anotados como diferencias y el paquete termina con código 3, estado `csv_iguales_con_diferencias_intermedias`. Es la lectura correcta de ese entorno: los CSV se reproducen, la cadena intermedia no es idéntica, y el paquete ya no lo llama éxito. En el entorno de referencia la mezcla dio contenido idéntico en la sección 1, así que allí la misma orden debe terminar con código 0; no se repitió en esta sesión.
 
 Lo que esto cierra y lo que no. Cierra la parte técnica de GOV-007: la versión identificada rechaza los casos adversos conocidos y acepta los válidos, con evidencia en dos entornos. No cierra GOV-003 (reproducción por otra persona en otro entorno), MOD-005 (reproducción completa de la cadena de predicciones, cuya reconstrucción de componentes sigue pendiente de recoger) ni la revisión humana especializada; las verificaciones de esta sección son propias y asistidas por IA.
+
+
+## 5. Carpeta común, portabilidad y mezcla real Windows, 19 de octubre (Codex)
+
+Petición humana de preparar entrega y unificar el trabajo nuevo en este repositorio. La versión1.2 conserva los44archivos src del manifiesto y los pesos de S30/S22. Cambia el orquestador y el harness: copias de insumos en Windows con las mismas huellas, resolución de semana1 contra el directorio de invocación y wrapper de los dos escritores finales con LF antes de importar pandas. Las salidas finales siguen exigiendo SHA exacto.
+
+El primer ensayo de1.1 falló en N07 por WinError1314 (symlink); después se interrumpió por UnicodeEncodeError cp1252. Se preserva en docs/controles/20261019_windows_entrega/. Se corrigió el entorno con PYTHONUTF8=1. Los recibos intermedios1.2 tienen sus propios SHA y no se suman como casos nuevos de la versión final. Batería final: docs/controles/20261019_windows_v12_lf/resultado.json,45/45, nueve nominales y36adversos,0etapas reales.
+
+47archivos de referencia (46insumos y plantilla,193.093.273bytes) se copiaron a privado/artefactos_s30_s22 tras cotejar origen y destino por SHA; registro/artefactos_mezcla.json conserva el linaje. El primer replay con ruta relativa mostró que semana1 no se resolvía antes del cwd del hijo; se corrigió. El siguiente escribió CRLF de Windows: los valores y el contenido normalizado coincidían, pero el SHA del CSV no. Cambiar CRLF a LF recuperaba exactamente ambos SHA. Se añadió un wrapper de serialización previo a la escritura, sin tocar los scripts de modelo; el guard de CSV distinto de la batería sigue rechazando bytes inesperados.
+
+Replay final en Python3.12.14/numpy2.3.5 de Windows: ambos CSV exactos (fd9528e0…e3bc5 y c21a02e1…3541b0). Parquet de S30:180.496/626.639 valores distintos, diferencia máxima absoluta1,8189894e-12, relativa7,1839296e-16. S22:18.891/626.639 distintos, máxima absoluta9,0949470e-13, relativa6,1713062e-16. El proceso real devuelve3 y declara csv_iguales_con_diferencias_intermedias. El rc se registra mediante subprocess; el envoltorio PowerShell de la herramienta podía representar cualquier salida no cero como1. Recibo completo y logs en docs/evidencia/replay_windows*. No hubo entrenamiento, búsqueda nueva o envío Kaggle. No cierra la reproducción completa de componentes ni la revisión humana.
+

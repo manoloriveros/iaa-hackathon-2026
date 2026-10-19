@@ -266,7 +266,7 @@ caso("N05", "componentes: carpeta de trabajo vacía, los dos nodos se emiten y c
 caso("N06", "verificar: Parquet intermedio con el mismo contenido y bytes distintos", "verificar", 0,
      preparar=lambda c: tabla(c.work / "comp" / "v24.parquet", compresion="none"))
 caso("N07", "mezcla: componentes guardados e insumos de exposición verificados; mezcla emitida", "mezcla", 0, work=False,
-     comprobar=lambda c: c.marcas_presentes() == ["emisor_mezcla.txt"] and (c.work / "feat_motor.parquet").is_symlink())
+     comprobar=lambda c: c.marcas_presentes() == ["emisor_mezcla.txt"] and (c.work / "feat_motor.parquet").is_file())
 caso("N08", "componentes --relanzar-parciales: una salida parcial se aparta y el nodo se repite", "componentes", 0,
      preparar=lambda c: quitar(c.work / "comp" / "prediccion_2025.parquet"), extra=("--relanzar-parciales",),
      comprobar=lambda c: any(p.name.startswith("v24.parquet.parcial_") for p in (c.work / "comp").iterdir())

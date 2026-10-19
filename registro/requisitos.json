@@ -1,0 +1,204 @@
+{
+  "fuente": "Kaggle, reglas, Evaluation y Submissions, consulta 19oct2026",
+  "url": "https://www.kaggle.com/competitions/iaa-ai-assisted-hackathon-2026-part-1",
+  "requisitos": [
+    {
+      "id": "REQ01",
+      "titulo": "Predicción de la parte 1",
+      "etapa": "Semana 1",
+      "requisito": "CSV único row_id,prediction para todos los test, importes no negativos de coste último del periodo.",
+      "estado": "Comprobado por integridad; dos candidatos puntuados",
+      "evidencia": "docs/evidencia/preflight.json",
+      "limite": "Recibo S30 57371361 y S22 57370117. Revisión de hoy coteja filas, orden, IDs, finitud y SHA.",
+      "responsable": "Participante",
+      "fecha": "2026-10-23 11:00 Bogotá"
+    },
+    {
+      "id": "REQ02",
+      "titulo": "Elección final en Kaggle",
+      "etapa": "Semana 1",
+      "requisito": "Elegir hasta un envío; por defecto las reglas toman el mejor público.",
+      "estado": "Pendiente de decisión humana",
+      "evidencia": "registro/estado_entrega.json",
+      "limite": "S30 es recomendación operativa. No se ha acreditado la selección manual.",
+      "responsable": "Participante",
+      "fecha": "2026-10-23 11:00 Bogotá"
+    },
+    {
+      "id": "REQ03",
+      "titulo": "Objetivo actuarial y métrica",
+      "etapa": "Semana 1",
+      "requisito": "Coste último neto de franquicia y recuperaciones, rechazados excluidos; D² Tweedie 1,5.",
+      "estado": "Documentado con limitaciones",
+      "evidencia": "docs/INFORME_SEMANA1.md",
+      "limite": "T0 es proxy; no hay último observado ni reproducción certificada del scorer oficial.",
+      "responsable": "Participante",
+      "fecha": "Antes de congelar"
+    },
+    {
+      "id": "REQ04",
+      "titulo": "Datos íntegros y permisos",
+      "etapa": "Semana 1",
+      "requisito": "Originales preservados; impedir redistribución a personas ajenas.",
+      "estado": "Hashes originales cotejados; Git excluye datos",
+      "evidencia": "registro/fuentes.json",
+      "limite": "11 archivos comparados; sin publicar datos, modelos ni predicciones por fila.",
+      "responsable": "Participante",
+      "fecha": "Antes de cada push"
+    },
+    {
+      "id": "REQ05",
+      "titulo": "Limpieza reproducible",
+      "etapa": "Semana 1",
+      "requisito": "Reglas, decisiones, reversibilidad y conciliación desde originales.",
+      "estado": "Código y evidencia disponibles",
+      "evidencia": "src/datos/n62_codex/README.md",
+      "limite": "Ocho reglas N62; D66/F0 separado. 149 capitales sin confirmación siguen como riesgo.",
+      "responsable": "Participante",
+      "fecha": "Revisión del 20oct"
+    },
+    {
+      "id": "REQ06",
+      "titulo": "Validación y limitaciones",
+      "etapa": "Ambas",
+      "requisito": "Comprobaciones, diagnósticos y guardas con responsabilidades humanas.",
+      "estado": "Parcial; pendientes explícitos",
+      "evidencia": "docs/evidencia/hallazgos.json",
+      "limite": "V23/V24 reutilizados, disponibilidad temporal y reservas necesitan lectura humana.",
+      "responsable": "Participante",
+      "fecha": "Revisión del 21oct"
+    },
+    {
+      "id": "REQ07",
+      "titulo": "Reproducción completa",
+      "etapa": "Ambas",
+      "requisito": "Código de entrenamiento e inferencia, entorno y documentación para generar la entrega.",
+      "estado": "Parcial",
+      "evidencia": "docs/verificacion.md",
+      "limite": "Mezcla documentada; reconstrucción completa de componentes desde originales pendiente. No repetir para un cambio editorial.",
+      "responsable": "Participante",
+      "fecha": "Evidencia antes del 22oct"
+    },
+    {
+      "id": "REQ08",
+      "titulo": "Control de versiones",
+      "etapa": "Ambas",
+      "requisito": "Repositorio con historial comprensible del desarrollo.",
+      "estado": "Git inicializado; historial de entrega desde hoy",
+      "evidencia": "README.md",
+      "limite": "La historia anterior vive en manifiestos, decisiones y foro. No se inventan commits retrospectivos.",
+      "responsable": "Participante",
+      "fecha": "19oct"
+    },
+    {
+      "id": "REQ09",
+      "titulo": "Uso eficaz de IA",
+      "etapa": "Final parte 2",
+      "requisito": "Explicar qué hizo la IA, mejoras y cómo se verificó cada aportación.",
+      "estado": "Documentado; prompts completos pendientes",
+      "evidencia": "docs/REGISTRO_IA.md",
+      "limite": "No atribuir prompts textuales o aprobación humana sin evidencia real.",
+      "responsable": "Participante",
+      "fecha": "Antes de entregar parte 2"
+    },
+    {
+      "id": "REQ10",
+      "titulo": "Informe",
+      "etapa": "Final parte 2",
+      "requisito": "Solo primeras cinco páginas se califican; método, decisiones, IA, supuestos, límites, adaptación y guardas.",
+      "estado": "Borrador de semana 1 preparado",
+      "evidencia": "docs/INFORME_SEMANA1.md",
+      "limite": "Reservar espacio para mercado nuevo; revisión humana y versión final pendientes.",
+      "responsable": "Participante",
+      "fecha": "Final parte 2"
+    },
+    {
+      "id": "REQ11",
+      "titulo": "Video",
+      "etapa": "Final parte 2",
+      "requisito": "Solo primeros cinco minutos; enfoque, resultados, IA y cambios del nuevo mercado.",
+      "estado": "Guion preparado; sin grabación",
+      "evidencia": "docs/GUION_VIDEO.md",
+      "limite": "No se requiere video para cerrar la primera semana según página vigente.",
+      "responsable": "Participante",
+      "fecha": "Final parte 2"
+    },
+    {
+      "id": "REQ12",
+      "titulo": "Predicción de la parte 2",
+      "etapa": "Final parte 2",
+      "requisito": "CSV adicional de la segunda competición.",
+      "estado": "Pendiente de datos y contrato oficiales",
+      "evidencia": "docs/ADAPTACION_SEMANA2.md",
+      "limite": "Mismo equipo. No inventar datos ni resultados futuros.",
+      "responsable": "Participante",
+      "fecha": "Final parte 2"
+    },
+    {
+      "id": "REQ13",
+      "titulo": "Formulario final",
+      "etapa": "Final parte 2",
+      "requisito": "Datos del equipo, ambos CSV, video, informe y código.",
+      "estado": "Pendiente de enlace oficial",
+      "evidencia": "docs/fuentes/reglas_kaggle_20261019.json",
+      "limite": "Detalles se publicarán con la parte 2.",
+      "responsable": "Participante",
+      "fecha": "Final parte 2"
+    },
+    {
+      "id": "REQ14",
+      "titulo": "Equipo y premio",
+      "etapa": "Ambas",
+      "requisito": "Máximo tres; mismo equipo en ambas partes. Afiliación o condición estudiantil de asociación miembro IAA para premio.",
+      "estado": "Equipo individual registrado; elegibilidad documental pendiente",
+      "evidencia": "docs/INFORME_SEMANA1.md",
+      "limite": "Dos exámenes SOA y maestría declarados no acreditan por sí solos elegibilidad.",
+      "responsable": "Participante",
+      "fecha": "Antes de entrega final"
+    },
+    {
+      "id": "REQ15",
+      "titulo": "Datos y herramientas externas",
+      "etapa": "Ambas",
+      "requisito": "Accesibles razonablemente a todos, coste mínimo y licencias adecuadas.",
+      "estado": "Inventario de herramientas parcial",
+      "evidencia": "docs/REGISTRO_IA.md",
+      "limite": "Verificar versiones, licencias y costes efectivos; los requirements son entorno declarado.",
+      "responsable": "Participante",
+      "fecha": "Antes de entrega final"
+    },
+    {
+      "id": "REQ16",
+      "titulo": "Compartir y licencias",
+      "etapa": "Ambas",
+      "requisito": "No compartir código en privado entre equipos; publicación voluntaria conforme a foros/notebooks y licencia OSI.",
+      "estado": "Repositorio privado del participante",
+      "evidencia": "README.md",
+      "limite": "No hay invitaciones a colaboradores. La elección/cesión final de licencia y canal del jurado sigue pendiente.",
+      "responsable": "Participante",
+      "fecha": "Antes de compartir"
+    },
+    {
+      "id": "REQ17",
+      "titulo": "Revisión humana",
+      "etapa": "Ambas",
+      "requisito": "Responsabilidad, revisión y escalamiento transparentes.",
+      "estado": "Pendiente; hoja disponible",
+      "evidencia": "registro/revision_humana.json",
+      "limite": "Las anotaciones del panel se exportan; no cambian automáticamente el registro.",
+      "responsable": "Participante",
+      "fecha": "Antes de aprobar"
+    },
+    {
+      "id": "REQ18",
+      "titulo": "Adaptación y confianza",
+      "etapa": "Final parte 2",
+      "requisito": "Rúbrica: rendimiento/adaptación 40%, IA 25%, confianza 20%, comunicación 15%.",
+      "estado": "Matriz trazada; parte 2 pendiente",
+      "evidencia": "docs/ADAPTACION_SEMANA2.md",
+      "limite": "La posición pública no determina el premio ni valida por sí sola los supuestos.",
+      "responsable": "Participante",
+      "fecha": "Final parte 2"
+    }
+  ]
+}

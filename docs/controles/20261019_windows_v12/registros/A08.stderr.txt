@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\dev\Hakaton\Hackaton\Repositorio_IAA2026\privado\controles_windows_v12\A08\p\reproducir.py", line 466, in <module>
+    main()
+  File "C:\dev\Hakaton\Hackaton\Repositorio_IAA2026\privado\controles_windows_v12\A08\p\reproducir.py", line 420, in main
+    semana1, informe = preparar_datos(originales, decisiones, trabajo)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\dev\Hakaton\Hackaton\Repositorio_IAA2026\privado\controles_windows_v12\A08\p\herramientas\etapas_datos.py", line 154, in preparar_datos
+    informe["f0"]["contrato_bloques_iguales"] = bloques == esp["f0_contrato_bloques"]
+                                                           ~~~^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'f0_contrato_bloques'

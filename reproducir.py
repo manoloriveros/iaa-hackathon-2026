@@ -1,4 +1,4 @@
-"""Punto de entrada único: reconstruye S30_claude_b (selección final de la parte 1) y S22_claude_propio (respaldo).
+"""Punto de entrada único: reconstruye S30_claude_b (candidato principal) y S22_claude_propio (respaldo).
 
 Versión 1.1 (19 de octubre de 2026): controles de conformidad del hallazgo GOV-007. El paquete solo termina con
 código 0 cuando todo lo que se le pidió coincide con la receta; reanudar, verificar y las etapas de datos fallan
@@ -60,13 +60,14 @@ from __future__ import annotations
 
 import json
 import os
+import shutil
 import subprocess
 import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
 
-VERSION = "1.1"
+VERSION = "1.2"
 VERSION_FECHA = "2026-10-19"
 
 REPO = Path(__file__).resolve().parent
@@ -115,6 +116,10 @@ def cierre(objetivos, solo=None):
 
 def orden_de(nodo):
     args = [str(REPO / a) if a.startswith("receta/") else a for a in nodo["args"]]
+    # Los dos escritores finales se ejecutan con serialización LF, como en la nube.
+    # No normalizamos una salida después de verificarla ni relajamos su SHA exigido.
+    if nodo["script"] in {"src/modelos/mezcla3.py", "src/linea_b/mezcla3_b.py"}:
+        return [sys.executable, "-W", "ignore", str(REPO / "herramientas" / "ejecutar_csv_lf.py"), str(REPO / nodo["script"])] + args
     return [sys.executable, "-W", "ignore", str(REPO / nodo["script"])] + args
 
 
@@ -309,6 +314,16 @@ def ejecutar(ids, semana1: Path, trabajo: Path, continuar=False, relanzar_parcia
     return toleradas
 
 
+def enlazar_archivo(src: Path, dst: Path):
+    """Windows usa una copia privada: no requiere privilegios ni cambia el origen.
+    Las comprobaciones posteriores exigen las mismas huellas que para un enlace.
+    """
+    if os.name == "nt":
+        shutil.copy2(src, dst)
+    else:
+        dst.symlink_to(src)
+
+
 def preparar_mezcla(ids, semana1: Path, trabajo: Path, extra: list[Path], esp: dict):
     """Enlaza en work/ las salidas guardadas de los nodos previos a las mezclas y las exposiciones, y comprueba la
     huella de contenido de cada archivo enlazado. Devuelve (faltan, no_conformes)."""
@@ -331,7 +346,7 @@ def preparar_mezcla(ids, semana1: Path, trabajo: Path, extra: list[Path], esp: d
                     faltan.append(rel)
                     continue
                 dst.parent.mkdir(parents=True, exist_ok=True)
-                dst.symlink_to(src)
+                enlazar_archivo(src, dst)
             comp.append(comparar(rel, work, esp))
     for line in ("motor", "buildings", "contents"):
         rel = f"feat_{line}.parquet"
@@ -342,13 +357,19 @@ def preparar_mezcla(ids, semana1: Path, trabajo: Path, extra: list[Path], esp: d
             if src is None:
                 faltan.append(f"{rel} (o insumos/exposicion_{line}.parquet)")
                 continue
-            dst.symlink_to(src)
+            enlazar_archivo(src, dst)
         # la exposición puede venir de la matriz de variables completa (huella en «salidas») o del extracto
         # insumos/exposicion_<ramo>.parquet que guarda el equipo (huella en «mezcla»)
-        if os.path.basename(os.path.realpath(dst)) == f"exposicion_{line}.parquet":
-            comp.append(comparar(rel, work, esp, "mezcla", clave=f"insumos/exposicion_{line}.parquet"))
+        # Acepta exactamente uno de los dos insumos permitidos por el contrato.
+        # Una copia Windows no conserva el nombre del origen al resolver realpath.
+        completo = comparar(rel, work, esp)
+        extracto = comparar(rel, work, esp, "mezcla", clave=f"insumos/exposicion_{line}.parquet")
+        if completo.get("igual_contenido") is True:
+            completo["contrato"] = "salidas"
+            comp.append(completo)
         else:
-            comp.append(comparar(rel, work, esp))
+            extracto["contrato"] = "mezcla"
+            comp.append(extracto)
     bloq, _ = no_conformidades(comp, tolerar_diferencias=False)
     registrar(trabajo, {"modo": "mezcla", "estado": "componentes_enlazados", "faltan": faltan, "no_conformes": bloq, "verificacion": comp, "utc": ahora()})
     return faltan, bloq
@@ -367,7 +388,7 @@ def main():
     desconocidos = [x for x in objetivos if x not in RECETA["objetivos"]]
     if desconocidos:
         raise SystemExit(f"Objetivos desconocidos: {desconocidos}; la receta define {sorted(RECETA['objetivos'])}")
-    semana1 = Path(o.get("semana1") or os.environ.get("IAA_SEMANA1", "")).expanduser()
+    semana1 = Path(o.get("semana1") or os.environ.get("IAA_SEMANA1", "")).expanduser().resolve()
     trabajo = Path(o.get("trabajo", "trabajo")).expanduser().resolve()
     solo = set(str(o["solo"]).split(",")) if o.get("solo") else None
     ids = cierre(objetivos, solo)

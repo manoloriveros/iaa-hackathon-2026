@@ -1,0 +1,28 @@
+reproducir.py versión 1.2 (2026-10-19), modo componentes
+[comp] C:\dev\Hakaton\Hackaton\Repositorio_IAA2026\privado\controles_windows_v12_lf\A27\p\emisor.py comp
+[comp] difiere en 1 s; difieren: ['comp/v24.parquet']
+[mezcla_final] C:\dev\Hakaton\Hackaton\Repositorio_IAA2026\privado\controles_windows_v12_lf\A27\p\emisor.py mezcla
+[mezcla_final] igual en 1 s
+{
+ "modo": "componentes",
+ "version": "1.2",
+ "objetivos": {
+  "S30": {
+   "csv": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\controles_windows_v12_lf\\A27\\w\\work\\final\\final.csv",
+   "sha256": "19024b5b5dd8057972ee905f54df3343adc1d6c64d811d22e14a4aaf82a706ae",
+   "esperado": "19024b5b5dd8057972ee905f54df3343adc1d6c64d811d22e14a4aaf82a706ae",
+   "coincide": true
+  }
+ },
+ "objetivos_no_construidos": [],
+ "diferencias_toleradas": [
+  {
+   "nodo": "comp",
+   "ruta": "comp/v24.parquet",
+   "motivo": "contenido distinto"
+  }
+ ],
+ "estado": "csv_iguales_con_diferencias_intermedias",
+ "utc": "2026-10-19T14:12:12+00:00"
+}
+Reconstrucción con 1 diferencias de contenido toleradas (--continuar-si-difiere): no acreditada

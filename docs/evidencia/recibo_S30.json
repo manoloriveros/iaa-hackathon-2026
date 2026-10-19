@@ -1,0 +1,148 @@
+{
+  "id": "S30",
+  "kaggle_submission_id": 57371361,
+  "kaggle_status": "COMPLETE",
+  "public_score": 0.12996,
+  "public_score_text": "0.12996",
+  "submitted_utc": "2026-10-18T22:52:27.650Z",
+  "retrieved_utc": "2026-10-18T22:52:59Z",
+  "csv": "Hackaton\\Semana 1\\Modelado_codex\\nocturna_20261017_N01\\S30_trial_N56\\S30_riesgo_ultimo.csv",
+  "sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+  "rows": 626639,
+  "message": "S30 peril severity trends and contents ensemble; ultimate risk estimate",
+  "delta_previous_public_best": 7.999999999999674e-05,
+  "local_validation": {
+    "method": "Frozen N48 full Tweedie 1.5 paired comparison vs original S22, reused V23 selection and V24; 72 scopes/reserves and fixed cluster diagnostics. Saved-component assembly replay separately verified.",
+    "score_name": "D2_full_Tweedie_1.5_reused_V24",
+    "D2": 0.137879634652177,
+    "reference": "S22",
+    "gain": 0.00013804118709126456,
+    "conditional_customer_CI95": [
+      -8.236111242738524e-05,
+      0.000369479295883567
+    ],
+    "conditional_address_CI95": [
+      -7.807012092126526e-05,
+      0.0003891139513401963
+    ],
+    "per_line": [
+      {
+        "cut": "V24",
+        "scope": "motor",
+        "semester": "all",
+        "scenario": "nominal",
+        "rows": 254698,
+        "D2": {
+          "S22": 0.09160529106411597,
+          "candidate": 0.09168058453051608
+        },
+        "gain": 7.529346640011703e-05,
+        "means": {
+          "target": 355.9783621779519,
+          "S22": 352.748440311316,
+          "candidate": 352.7673974756929
+        },
+        "observed_over_candidate": 1.0091022150154345,
+        "exposure": 199785.64179999998,
+        "conditional_CI95": {
+          "customer_id": [
+            -9.344078584759456e-05,
+            0.00023441388037857483
+          ],
+          "address_id": [
+            -0.00011128941893186185,
+            0.00024401161884134336
+          ],
+          "region": [
+            -0.00011732840130471343,
+            0.00025694620478822417
+          ]
+        }
+      },
+      {
+        "cut": "V24",
+        "scope": "buildings",
+        "semester": "all",
+        "scenario": "nominal",
+        "rows": 184001,
+        "D2": {
+          "S22": 0.11551438494253052,
+          "candidate": 0.11579786637265488
+        },
+        "gain": 0.0002834814301243549,
+        "means": {
+          "target": 366.0520842278031,
+          "S22": 330.44263348163184,
+          "candidate": 333.06797495991367
+        },
+        "observed_over_candidate": 1.0990311640494983,
+        "exposure": 149917.52240000002,
+        "conditional_CI95": {
+          "customer_id": [
+            4.7970226552165594e-05,
+            0.0005487945206047615
+          ],
+          "address_id": [
+            4.0229911417991294e-05,
+            0.0005430175483322453
+          ],
+          "region": [
+            8.702844126830463e-05,
+            0.00047640999011023475
+          ]
+        }
+      },
+      {
+        "cut": "V24",
+        "scope": "contents",
+        "semester": "all",
+        "scenario": "nominal",
+        "rows": 187491,
+        "D2": {
+          "S22": 0.09661800115872643,
+          "candidate": 0.09665027178817631
+        },
+        "gain": 3.2270629449882016e-05,
+        "means": {
+          "target": 93.42333792022015,
+          "S22": 92.70796435337067,
+          "candidate": 91.84348248139703
+        },
+        "observed_over_candidate": 1.0172016064301908,
+        "exposure": 149966.7683,
+        "conditional_CI95": {
+          "customer_id": [
+            -0.0009820085776232564,
+            0.00108776990554247
+          ],
+          "address_id": [
+            -0.0010276290086952326,
+            0.0012311253560312956
+          ],
+          "region": [
+            -0.0009530742116060526,
+            0.0010178916110720922
+          ]
+        }
+      }
+    ],
+    "independent_validation": false
+  },
+  "availability_scope": "Delivered separate B recipe reuses saved main-line F0/F1/F2/F4 and home F3 components. Historical master-date and F3 availability limitations persist; not fully prospective raw-feature availability certification. No own A_G annual-weather producer or marketing head imported.",
+  "weather_scope": "S30 contains no S31 annual-2025 weather anomaly increment. Existing source feature availability limits retained; no attribution of public change to climate, reserve adequacy or a particular peril.",
+  "validation_limits": [
+    "Automatic N48 improvement gate FAILED: gain below 0.0002, conditional CIs include zero and adverse line/semester/reserve points.",
+    "New specific human N56 request authorizes only this controlled comparative trial; not statistical promotion.",
+    "V23/V24 and public results reused for author selection: not independent validation.",
+    "V23 buildings and V24 contents/H2 adverse; ten favorable customers exceed net nominal gain in author fixed-denominator influence diagnostic.",
+    "Trend estimates may confound development, mix and inflation; one reserve valuation does not identify IBNER or unbiased reserves.",
+    "Saved-component assembly replay does not repeat every raw base-model inference or training.",
+    "No expected public score or sampling-error band inferred from local CV."
+  ],
+  "ultimate_level": "Ultimate expected cost under the delivered historical development assumptions; s17 level rule extended to B runs, motor shape 1.09/0.95, contents exposure elasticity 0.95, buildings identity. No extra IBNR added.",
+  "authorization": "Direct human N56 request explicitly asks to test S30 now. Controlled comparative trial despite failed N48 statistical qualification, negative conditional lower bounds and adverse segments. Prior clear-improvement gate remains unchanged for other candidates. Integrity, assembly replay, live quota, dryrun and duplicate checks required. No independent validation, expected public score or manual final selection implied.",
+  "authorization_evidence": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/verification/N56_human_authorization.md",
+  "preparation_audit": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/production/S30_release_audit_N56.json",
+  "preparation_audit_sha256": "1c33c68f3f85c3721f2d27e237ae696b37fdb88d62fa49dc1d8e843fe37c0bf8",
+  "no_manual_final_selection": true
+}

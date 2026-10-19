@@ -1,6 +1,10 @@
 # Prima de riesgo para el AI Hackathon IAA 2026 (parte 1)
 
-Este repositorio contiene el código, la receta y las comprobaciones que producen la predicción final de la parte 1 del reto: el coste último esperado de los siniestros de cada periodo de póliza de 2025 en autos, edificios y contenidos, evaluado con el D² Tweedie de potencia 1,5. La selección final es `S30_claude_b` (puntuación pública 0,12996, envío Kaggle 57371361) y el respaldo es `S22_claude_propio` (0,12988, envío 57370117). Las dos salen de los mismos datos preparados y de casi los mismos componentes; S30 cambia la severidad de autos y edificios por una con tendencia anual por peligro y reparte de otra forma los pesos de contenidos.
+Desde el 19 de octubre de 2026 esta es la carpeta común de trabajo y revisión de la semana 1, por solicitud del participante. El candidato principal es `S30_claude_b` (puntuación pública 0,12996, envío Kaggle 57371361) y el respaldo es `S22_claude_propio` (0,12988, envío 57370117). La selección final manual en Kaggle sigue pendiente. Ambos predicen el coste último esperado de cada periodo de póliza de 2025 en autos, edificios y contenidos. S30 cambia frente a S22 la severidad de autos y edificios por una con tendencia anual por peligro y los pesos de contenidos.
+
+Para empezar la revisión: [panel detallado](docs/panel_revision.html), [informe de cinco páginas](docs/informe_semana1.pdf), [informe editable](docs/INFORME_SEMANA1.md), [matriz de requisitos](registro/requisitos.json) y [estado de entrega](registro/estado_entrega.json). El panel funciona como archivo HTML local, sin servicios externos. Tiene filtros de variables, pruebas y hallazgos, y notas de revisión exportables. La página es una fotografía fechada; no acredita aprobación humana.
+
+El repositorio [manoloriveros/iaa-hackathon-2026](https://github.com/manoloriveros/iaa-hackathon-2026) es privado. El cierre de la parte 1 es el viernes 23 de octubre a las 11:00 a. m. Bogotá. Informe, video y código se entregan al finalizar la parte 2. Las [fuentes oficiales del 19 de octubre](docs/fuentes/reglas_kaggle_20261019.json) conservan el contrato consultado.
 
 Con una sola orden se repiten las dos mezclas a partir de los componentes guardados y se comprueba que los CSV coinciden byte a byte con los enviados. Con otra se reentrenan todos los componentes desde las matrices de variables y se compara cada artefacto intermedio con su huella original.
 
@@ -8,7 +12,7 @@ Con una sola orden se repiten las dos mezclas a partir de los componentes guarda
 
 | Carpeta o archivo | Contenido |
 | --- | --- |
-| `reproducir.py` | Punto de entrada único (modos `plan`, `datos`, `componentes`, `todo`, `mezcla` y `verificar`), versión 1.1: termina con código 0 solo cuando todo lo pedido coincide con la receta |
+| `reproducir.py` | Punto de entrada único (modos `plan`, `datos`, `componentes`, `todo`, `mezcla` y `verificar`), versión 1.2: controles de conformidad, copia de insumos en Windows, rutas absolutas antes de cambiar de directorio y serialización LF de los dos CSV finales |
 | `receta/receta.json` | Los 36 nodos que van de las variables a los dos CSV: script, argumentos exactos, dependencias, salidas, procedencia y tiempo de referencia |
 | `receta/huellas_esperadas.json` | Bytes, SHA-256 y huella de contenido de las 8 entradas, de las 184 salidas originales y de los 3 insumos de exposición del modo mezcla |
 | `receta/especificaciones/` | Configuraciones de los modelos LightGBM (`cfg_*.json`) y pesos de las dos mezclas (`spec_s22_propio.json`, `spec_s30.json`) |
@@ -19,6 +23,8 @@ Con una sola orden se repiten las dos mezclas a partir de los componentes guarda
 | `herramientas/` | `huella.py` (huellas de bytes y de contenido), `inventario.py` (huellas esperadas desde las corridas originales), `etapas_datos.py` (raíz de proyecto mínima para las etapas de datos) y `probar_controles.py` (45 casos que comprueban desde la consola que el paquete rechaza faltantes, archivos ilegibles, huellas ausentes y diferencias) |
 | `entorno/` | Entorno de referencia (versiones, núcleos, memoria) |
 | `docs/` | Verificación de la reconstrucción (`verificacion.md`), evidencia de los casos de control (`controles/`), lista de adaptación para la parte 2 e historia del desarrollo |
+| `registro/` | Estado, requisitos, fuentes por SHA, artefactos de mezcla y plantilla de revisión humana; se versionan |
+| `privado/` | Copias exactas de CSV, componentes de referencia y corridas nuevas; se excluye completo de Git |
 
 ## Datos
 
@@ -35,6 +41,16 @@ Semana 1/
 `reproducir.py componentes` comprueba antes de empezar que las ocho entradas tienen la huella de contenido registrada, y `reproducir.py mezcla` comprueba cada componente guardado antes de mezclar.
 
 ## Cómo reproducir
+
+Los 46 insumos de mezcla y la plantilla ya están congelados por SHA en `privado/artefactos_s30_s22/` (47 archivos, unos 193 MB). Son predicciones guardadas de componentes y exposiciones, no una reproducción completa del entrenamiento. Las corridas originales se conservan como evidencia. Para repetir la mezcla desde esta carpeta común:
+
+```powershell
+$env:PYTHONPATH='C:/dev/Hakaton/Preparación/.cache/parquet-reader'
+$env:PYTHONUTF8='1'
+& 'C:/dev/Hakaton/Preparación/.venv/Scripts/python.exe' reproducir.py mezcla --semana1=privado/artefactos_s30_s22 --artefactos=privado/artefactos_s30_s22 --trabajo=privado/mi_revision --continuar-si-difiere
+```
+
+La opción de continuar conserva las diferencias intermedias y devuelve 3 cuando las hay; no representa conformidad íntegra. Sin ella, la primera diferencia detiene con 1. Los CSV finales siempre requieren bytes exactos. `registro/artefactos_mezcla.json` permite volver a localizar cada original. Para recrear esas copias, `herramientas/congelar_mezcla.py --semana1=<Semana 1>` comprueba todos los SHA antes de copiar y se niega a sobrescribir una copia privada alterada.
 
 Instalar las versiones de `requirements.txt` (Python 3.13). Con otras versiones la mezcla se repite igual, pero el reentrenamiento de los componentes puede no ser byte a byte.
 
@@ -94,12 +110,14 @@ Desde los originales, la capa preparada sale con el SHA-256 de las once tablas d
 
 ## Control de versiones
 
-El desarrollo se hizo en un espacio de trabajo sin git, con un registro de decisiones de solo adición (`Preparación/DECISIONES.md`), un foro entre agentes (`foros/FORO.md`) y un manifiesto con hashes por corrida. Este repositorio se armó el 18 y 19 de octubre con los scripts que produjeron S22 y S30, sin modificarlos; `receta/codigo.json` lista sus hashes. A partir de aquí cada cambio queda en el historial. Para iniciarlo en Windows, desde esta carpeta:
+Git se inició aquí el 19 de octubre de 2026 y ya está conectado al repositorio privado. El primer commit conserva el paquete recibido de Claude y las fuentes oficiales. La consolidación posterior añade el expediente y corrige el orquestador Windows; los scripts de modelo y sus pesos permanecen identificados por sus hashes. La historia anterior se conserva por decisiones de solo adición, foro y manifiestos; no se inventaron commits retrospectivos. Para registrar cambios revisados, desde esta carpeta:
 
 ```text
-git init
-git add .
-git commit -m "Repositorio inicial: receta reproducible de S30 y S22 (parte 1)"
+git status
+git diff
+git add <archivos_revisados>
+git commit -m "Describir el cambio y su evidencia"
+git push
 ```
 
 El repositorio queda local o privado hasta que el formulario de la parte 2 indique cómo entregarlo: las reglas solo permiten compartir código públicamente en los foros o cuadernos de la competición.

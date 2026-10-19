@@ -1,0 +1,77 @@
+{
+  "utc": "2026-10-19T14:13:41.271027+00:00",
+  "estado": "csv_iguales_con_diferencias_intermedias",
+  "codigo_salida": 3,
+  "csv_exactos": true,
+  "objetivos": {
+    "S30": {
+      "csv": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\replay_windows_v12_lf\\work\\S30_claude_b\\S30_claude_b.csv",
+      "sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+      "esperado": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+      "coincide": true
+    },
+    "S22": {
+      "csv": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\replay_windows_v12_lf\\work\\S22_claude_propio\\S22_claude_propio.csv",
+      "sha256": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0",
+      "esperado": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0",
+      "coincide": true
+    }
+  },
+  "diferencias_intermedias": [
+    {
+      "candidato": "S30",
+      "columna": "prediction",
+      "filas": 626639,
+      "diferentes": 180496,
+      "max_abs": 1.8189894035458565e-12,
+      "max_rel": 7.1839296149526e-16
+    },
+    {
+      "candidato": "S22",
+      "columna": "prediction",
+      "filas": 626639,
+      "diferentes": 18891,
+      "max_abs": 9.094947017729282e-13,
+      "max_rel": 6.171306200737165e-16
+    }
+  ],
+  "recibo_completo": {
+    "modo": "mezcla",
+    "version": "1.2",
+    "objetivos": {
+      "S30": {
+        "csv": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\replay_windows_v12_lf\\work\\S30_claude_b\\S30_claude_b.csv",
+        "sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+        "esperado": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+        "coincide": true
+      },
+      "S22": {
+        "csv": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\replay_windows_v12_lf\\work\\S22_claude_propio\\S22_claude_propio.csv",
+        "sha256": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0",
+        "esperado": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0",
+        "coincide": true
+      }
+    },
+    "objetivos_no_construidos": [],
+    "diferencias_toleradas": [
+      {
+        "nodo": "S22_claude_propio",
+        "ruta": "S22_claude_propio/prediccion_2025.parquet",
+        "motivo": "contenido distinto"
+      },
+      {
+        "nodo": "S30_claude_b",
+        "ruta": "S30_claude_b/prediccion_2025.parquet",
+        "motivo": "contenido distinto"
+      }
+    ],
+    "estado": "csv_iguales_con_diferencias_intermedias",
+    "utc": "2026-10-19T14:13:40+00:00"
+  },
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "pandas": "3.0.1",
+  "codigo_sha256": "a346d125520bfc5c784f1b9f65072759efdb15594263485434857e348475de17",
+  "wrapper_LF_sha256": "0d4e555d122d1efb2d8efa90bf45b16f3ba429f72d53efe4f5e1b794499284cf",
+  "alcance": "Reanudación y cotejo de mezcla real desde componentes guardados en carpeta común; no entrenamiento completo. Código de subprocess, no del envoltorio PowerShell."
+}

@@ -1,0 +1,923 @@
+{
+ "utc": "2026-10-19T13:36:36+00:00",
+ "version_reproducir": "1.2",
+ "version_fecha": "2026-10-19",
+ "paquete": {
+  "reproducir.py": "cfa4ced6fbb42e9fd4a31fda8d451a726ff1e9de1118682b6756593177f8fa92",
+  "herramientas/huella.py": "1364d38abb5df33e550507eff881a5d52654426d8ae7c323fd9ee09cc085fcbc",
+  "herramientas/inventario.py": "ad0eb0b79a886f296e2628381f381f97fa98f21ff2714fb2d2c93a8604fc982b",
+  "herramientas/etapas_datos.py": "0c0a90317130f5ee75054ef761edc5c84a52a57eea18652159fd71e056b8b9ab"
+ },
+ "entorno": {
+  "python": "3.12.14",
+  "sistema": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.3.5",
+  "pyarrow": "26.0.0"
+ },
+ "casos": 45,
+ "nominales": 9,
+ "adversos": 36,
+ "pasan": 45,
+ "fallan": [],
+ "etapas_reales_invocadas": 0,
+ "todos_pasan": true,
+ "segundos": 77.6,
+ "carpeta_temporal": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\controles_windows_v12",
+ "alcance": "Paquetes de prueba aislados con receta sintética de dos nodos y archivos de dos filas; ningún dato del concurso, ningún modelo y ninguna etapa real de datos (los scripts de N62, D67 y D68 están sustituidos por guardias que fallan si se invocan).",
+ "resultados": [
+  {
+   "codigo": "N01",
+   "caso": "datos: capa, bases y F0 en caché coinciden",
+   "modo": "datos",
+   "opciones": [],
+   "esperado": 0,
+   "rc": 0,
+   "rc_conforme": true,
+   "comprobacion_adicional": null,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.13,
+   "ultima_linea": "datos: conforme",
+   "registros": {
+    "stdout": "registros/N01.stdout.txt",
+    "stderr": "registros/N01.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "N02",
+   "caso": "todo: datos en caché y los dos nodos emitidos correctamente",
+   "modo": "todo",
+   "opciones": [],
+   "esperado": 0,
+   "rc": 0,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [
+    "emisor_comp.txt",
+    "emisor_mezcla.txt"
+   ],
+   "segundos": 3.22,
+   "ultima_linea": "}",
+   "registros": {
+    "stdout": "registros/N02.stdout.txt",
+    "stderr": "registros/N02.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "N03",
+   "caso": "verificar: carpeta de trabajo completa e igual",
+   "modo": "verificar",
+   "opciones": [],
+   "esperado": 0,
+   "rc": 0,
+   "rc_conforme": true,
+   "comprobacion_adicional": null,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.07,
+   "ultima_linea": "}",
+   "registros": {
+    "stdout": "registros/N03.stdout.txt",
+    "stderr": "registros/N03.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "N04",
+   "caso": "componentes: reanudar con todas las salidas presentes y verificadas",
+   "modo": "componentes",
+   "opciones": [],
+   "esperado": 0,
+   "rc": 0,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.11,
+   "ultima_linea": "}",
+   "registros": {
+    "stdout": "registros/N04.stdout.txt",
+    "stderr": "registros/N04.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "N05",
+   "caso": "componentes: carpeta de trabajo vacía, los dos nodos se emiten y coinciden",
+   "modo": "componentes",
+   "opciones": [],
+   "esperado": 0,
+   "rc": 0,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [
+    "emisor_comp.txt",
+    "emisor_mezcla.txt"
+   ],
+   "segundos": 3.18,
+   "ultima_linea": "}",
+   "registros": {
+    "stdout": "registros/N05.stdout.txt",
+    "stderr": "registros/N05.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "N06",
+   "caso": "verificar: Parquet intermedio con el mismo contenido y bytes distintos",
+   "modo": "verificar",
+   "opciones": [],
+   "esperado": 0,
+   "rc": 0,
+   "rc_conforme": true,
+   "comprobacion_adicional": null,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.14,
+   "ultima_linea": "}",
+   "registros": {
+    "stdout": "registros/N06.stdout.txt",
+    "stderr": "registros/N06.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "N07",
+   "caso": "mezcla: componentes guardados e insumos de exposición verificados; mezcla emitida",
+   "modo": "mezcla",
+   "opciones": [],
+   "esperado": 0,
+   "rc": 0,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [
+    "emisor_mezcla.txt"
+   ],
+   "segundos": 2.15,
+   "ultima_linea": "}",
+   "registros": {
+    "stdout": "registros/N07.stdout.txt",
+    "stderr": "registros/N07.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "N08",
+   "caso": "componentes --relanzar-parciales: una salida parcial se aparta y el nodo se repite",
+   "modo": "componentes",
+   "opciones": [
+    "--relanzar-parciales"
+   ],
+   "esperado": 0,
+   "rc": 0,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [
+    "emisor_comp.txt"
+   ],
+   "segundos": 2.09,
+   "ultima_linea": "}",
+   "registros": {
+    "stdout": "registros/N08.stdout.txt",
+    "stderr": "registros/N08.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "N09",
+   "caso": "componentes --solo=comp: solo ese nodo; el objetivo no se construye y se declara",
+   "modo": "componentes",
+   "opciones": [
+    "--solo=comp"
+   ],
+   "esperado": 0,
+   "rc": 0,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [
+    "emisor_comp.txt"
+   ],
+   "segundos": 2.11,
+   "ultima_linea": "}",
+   "registros": {
+    "stdout": "registros/N09.stdout.txt",
+    "stderr": "registros/N09.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A01",
+   "caso": "datos: un original con SHA-256 distinto",
+   "modo": "datos",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": null,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 0.3,
+   "ultima_linea": "Los originales no tienen el SHA-256 congelado: ['claims.parquet']",
+   "registros": {
+    "stdout": "registros/A01.stdout.txt",
+    "stderr": "registros/A01.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A02",
+   "caso": "datos: una tabla de la capa con SHA-256 distinto",
+   "modo": "datos",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": null,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 0.29,
+   "ultima_linea": "La capa reconstruida no coincide con preaudit: {'policies_motor': True, 'policies_buildings': True, 'policies_contents': True, 'test_motor': True, 'test_buildings': True, 'test_contents': True, 'customers': True, 'addresses': True, 'weather': True, 'claims': False, 'sample_submission': True}",
+   "registros": {
+    "stdout": "registros/A02.stdout.txt",
+    "stderr": "registros/A02.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A03",
+   "caso": "datos: una base requerida con contenido distinto",
+   "modo": "datos",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": null,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.11,
+   "ultima_linea": "Las bases requeridas difieren en contenido: {'tables/t0_por_row_id.parquet': {'igual_bytes': False, 'igual_contenido': False}, 'tables/asignacion_por_siniestro.parquet': {'igual_bytes': True, 'igual_contenido': True}, 'tables/factores_desarrollo_conteos.csv': {'igual_bytes': True, 'igual_contenido':",
+   "registros": {
+    "stdout": "registros/A03.stdout.txt",
+    "stderr": "registros/A03.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A04",
+   "caso": "datos: una tabla F0 con contenido distinto",
+   "modo": "datos",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": null,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.1,
+   "ultima_linea": "Las tablas F0 requeridas difieren en contenido: {'tables/f0_motor.parquet': {'igual_bytes': False, 'igual_contenido': False}, 'tables/f0_buildings.parquet': {'igual_bytes': True, 'igual_contenido': True}, 'tables/f0_contents.parquet': {'igual_bytes': True, 'igual_contenido': True}, 'tables/particion",
+   "registros": {
+    "stdout": "registros/A04.stdout.txt",
+    "stderr": "registros/A04.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A05",
+   "caso": "datos: bloques del contrato F0 distintos",
+   "modo": "datos",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": null,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.12,
+   "ultima_linea": "Los bloques del contrato F0 difieren",
+   "registros": {
+    "stdout": "registros/A05.stdout.txt",
+    "stderr": "registros/A05.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A06",
+   "caso": "datos: la copia local de una decisión congelada cambió",
+   "modo": "datos",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": null,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 0.3,
+   "ultima_linea": "La copia local de la decisión congelada cambió: Limpieza/runs/capendorse_20261017T010844Z_fbf8cc20/ledger/cumulative_retrospective_changes.parquet",
+   "registros": {
+    "stdout": "registros/A06.stdout.txt",
+    "stderr": "registros/A06.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A07",
+   "caso": "datos: la fuente de una decisión congelada cambió",
+   "modo": "datos",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": null,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 0.35,
+   "ultima_linea": "Falta o cambió la decisión congelada Limpieza/runs/capendorse_20261017T010844Z_fbf8cc20/ledger/cumulative_retrospective_changes.parquet (se lee de --decisiones)",
+   "registros": {
+    "stdout": "registros/A07.stdout.txt",
+    "stderr": "registros/A07.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A08",
+   "caso": "datos: falta la huella esperada de los bloques del contrato",
+   "modo": "datos",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": null,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.23,
+   "ultima_linea": "KeyError: 'f0_contrato_bloques'",
+   "registros": {
+    "stdout": "registros/A08.stdout.txt",
+    "stderr": "registros/A08.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A09",
+   "caso": "todo: bases distintas; se detiene antes de ejecutar ningún nodo",
+   "modo": "todo",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.3,
+   "ultima_linea": "Las bases requeridas difieren en contenido: {'tables/t0_por_row_id.parquet': {'igual_bytes': False, 'igual_contenido': False}, 'tables/asignacion_por_siniestro.parquet': {'igual_bytes': True, 'igual_contenido': True}, 'tables/factores_desarrollo_conteos.csv': {'igual_bytes': True, 'igual_contenido':",
+   "registros": {
+    "stdout": "registros/A09.stdout.txt",
+    "stderr": "registros/A09.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A10",
+   "caso": "verificar: falta el CSV final",
+   "modo": "verificar",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": null,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.1,
+   "ultima_linea": "NO CONFORME: verificar: artefactos requeridos no conformes: [('final/final.csv', 'falta')]",
+   "registros": {
+    "stdout": "registros/A10.stdout.txt",
+    "stderr": "registros/A10.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A11",
+   "caso": "verificar: un componente con contenido distinto",
+   "modo": "verificar",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": null,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.19,
+   "ultima_linea": "NO CONFORME: verificar: artefactos requeridos no conformes: [('comp/v24.parquet', 'contenido distinto')]",
+   "registros": {
+    "stdout": "registros/A11.stdout.txt",
+    "stderr": "registros/A11.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A12",
+   "caso": "verificar: una salida sin huella esperada en la receta",
+   "modo": "verificar",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": null,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.23,
+   "ultima_linea": "NO CONFORME: verificar: artefactos requeridos no conformes: [('comp/v24.parquet', 'sin huella esperada en la receta')]",
+   "registros": {
+    "stdout": "registros/A12.stdout.txt",
+    "stderr": "registros/A12.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A13",
+   "caso": "verificar: CSV final con el mismo contenido normalizado y bytes distintos",
+   "modo": "verificar",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": null,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.18,
+   "ultima_linea": "NO CONFORME: verificar: artefactos requeridos no conformes: [('final/final.csv', 'CSV final con SHA-256 distinto')]",
+   "registros": {
+    "stdout": "registros/A13.stdout.txt",
+    "stderr": "registros/A13.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A14",
+   "caso": "verificar: falta receta/huellas_esperadas.json",
+   "modo": "verificar",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": null,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 0.3,
+   "ultima_linea": "NO CONFORME: falta receta\\huellas_esperadas.json; sin huellas esperadas no se puede verificar nada",
+   "registros": {
+    "stdout": "registros/A14.stdout.txt",
+    "stderr": "registros/A14.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A15",
+   "caso": "verificar: un Parquet truncado (ilegible)",
+   "modo": "verificar",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": null,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.21,
+   "ultima_linea": "NO CONFORME: verificar: artefactos requeridos no conformes: [('comp/prediccion_2025.parquet', \"no se puede leer: ArrowInvalid: Could not open Parquet input source 'C:/dev/Hakaton/Hackaton/Repositorio_IAA2026/privado/controles_windows_v12/A15/w/work/comp/prediccion_2025.parquet': Parquet magic bytes ",
+   "registros": {
+    "stdout": "registros/A15.stdout.txt",
+    "stderr": "registros/A15.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A16",
+   "caso": "verificar: la sección salidas de las huellas esperadas está vacía",
+   "modo": "verificar",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": null,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 0.36,
+   "ultima_linea": "NO CONFORME: receta/huellas_esperadas.json no tiene la sección «salidas» o está vacía",
+   "registros": {
+    "stdout": "registros/A16.stdout.txt",
+    "stderr": "registros/A16.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A17",
+   "caso": "componentes: reanudar con un componente cambiado; la mezcla no se ejecuta",
+   "modo": "componentes",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.4,
+   "ultima_linea": "NO CONFORME: reanudar comp: artefactos requeridos no conformes: [('comp/v24.parquet', 'contenido distinto')]",
+   "registros": {
+    "stdout": "registros/A17.stdout.txt",
+    "stderr": "registros/A17.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A18",
+   "caso": "componentes: salida parcial sin --relanzar-parciales; el nodo no se repite",
+   "modo": "componentes",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.34,
+   "ultima_linea": "NO CONFORME: comp: salidas parciales en work/ (['comp/v24.parquet']); revisar la carpeta de trabajo o relanzar con --relanzar-parciales",
+   "registros": {
+    "stdout": "registros/A18.stdout.txt",
+    "stderr": "registros/A18.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A19",
+   "caso": "componentes: reanudar con una salida sin huella esperada",
+   "modo": "componentes",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.25,
+   "ultima_linea": "NO CONFORME: reanudar comp: artefactos requeridos no conformes: [('comp/prediccion_2025.parquet', 'sin huella esperada en la receta')]",
+   "registros": {
+    "stdout": "registros/A19.stdout.txt",
+    "stderr": "registros/A19.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A20",
+   "caso": "componentes: Parquet truncado al reanudar",
+   "modo": "componentes",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.21,
+   "ultima_linea": "NO CONFORME: reanudar comp: artefactos requeridos no conformes: [('comp/v24.parquet', \"no se puede leer: ArrowInvalid: Could not open Parquet input source 'C:/dev/Hakaton/Hackaton/Repositorio_IAA2026/privado/controles_windows_v12/A20/w/work/comp/v24.parquet': Parquet magic bytes not found in footer.",
+   "registros": {
+    "stdout": "registros/A20.stdout.txt",
+    "stderr": "registros/A20.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A21",
+   "caso": "componentes: falta la huella esperada de los bloques del contrato (entradas)",
+   "modo": "componentes",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.16,
+   "ultima_linea": "NO CONFORME: las entradas no coinciden con las de la receta: [('Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca/contrato_disponibilidad.json', 'la receta no tiene la huella esperada de los bloques (datos/f0_contrato_bloques)')]",
+   "registros": {
+    "stdout": "registros/A21.stdout.txt",
+    "stderr": "registros/A21.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A22",
+   "caso": "componentes: una entrada con contenido distinto",
+   "modo": "componentes",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.12,
+   "ultima_linea": "NO CONFORME: las entradas no coinciden con las de la receta: [('Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca/tables/f0_contents.parquet', 'contenido distinto')]",
+   "registros": {
+    "stdout": "registros/A22.stdout.txt",
+    "stderr": "registros/A22.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A23",
+   "caso": "componentes: falta una entrada",
+   "modo": "componentes",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.28,
+   "ultima_linea": "NO CONFORME: las entradas no coinciden con las de la receta: [('Datos/weather.parquet', 'no existe')]",
+   "registros": {
+    "stdout": "registros/A23.stdout.txt",
+    "stderr": "registros/A23.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A24",
+   "caso": "componentes: el nodo termina con código de error",
+   "modo": "componentes",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [
+    "emisor_comp.txt"
+   ],
+   "segundos": 1.48,
+   "ultima_linea": "El nodo comp terminó con código 7; ver registros/comp.log",
+   "registros": {
+    "stdout": "registros/A24.stdout.txt",
+    "stderr": "registros/A24.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A25",
+   "caso": "componentes: el nodo omite una salida; la mezcla no se ejecuta",
+   "modo": "componentes",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [
+    "emisor_comp.txt"
+   ],
+   "segundos": 2.55,
+   "ultima_linea": "NO CONFORME: salida comp: artefactos requeridos no conformes: [('comp/prediccion_2025.parquet', 'falta')]",
+   "registros": {
+    "stdout": "registros/A25.stdout.txt",
+    "stderr": "registros/A25.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A26",
+   "caso": "componentes: el nodo produce contenido distinto; la mezcla no se ejecuta",
+   "modo": "componentes",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [
+    "emisor_comp.txt"
+   ],
+   "segundos": 2.52,
+   "ultima_linea": "NO CONFORME: salida comp: artefactos requeridos no conformes: [('comp/v24.parquet', 'contenido distinto')]",
+   "registros": {
+    "stdout": "registros/A26.stdout.txt",
+    "stderr": "registros/A26.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A27",
+   "caso": "componentes --continuar-si-difiere: contenido distinto en el componente, CSV final igual; termina con código 3",
+   "modo": "componentes",
+   "opciones": [
+    "--continuar-si-difiere"
+   ],
+   "esperado": 3,
+   "rc": 3,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [
+    "emisor_comp.txt",
+    "emisor_mezcla.txt"
+   ],
+   "segundos": 3.56,
+   "ultima_linea": "Reconstrucción con 1 diferencias de contenido toleradas (--continuar-si-difiere): no acreditada",
+   "registros": {
+    "stdout": "registros/A27.stdout.txt",
+    "stderr": "registros/A27.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A28",
+   "caso": "componentes --continuar-si-difiere: una salida que falta sigue deteniendo",
+   "modo": "componentes",
+   "opciones": [
+    "--continuar-si-difiere"
+   ],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [
+    "emisor_comp.txt"
+   ],
+   "segundos": 2.76,
+   "ultima_linea": "NO CONFORME: salida comp: artefactos requeridos no conformes: [('comp/prediccion_2025.parquet', 'falta')]",
+   "registros": {
+    "stdout": "registros/A28.stdout.txt",
+    "stderr": "registros/A28.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A29",
+   "caso": "componentes: la mezcla escribe el CSV final con bytes distintos y el mismo contenido",
+   "modo": "componentes",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": null,
+   "etapas_reales_invocadas": [],
+   "marcas": [
+    "emisor_comp.txt",
+    "emisor_mezcla.txt"
+   ],
+   "segundos": 3.84,
+   "ultima_linea": "NO CONFORME: salida mezcla_final: artefactos requeridos no conformes: [('final/final.csv', 'CSV final con SHA-256 distinto')]",
+   "registros": {
+    "stdout": "registros/A29.stdout.txt",
+    "stderr": "registros/A29.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A30",
+   "caso": "componentes: la mezcla escribe el CSV y el Parquet finales con contenido distinto",
+   "modo": "componentes",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": null,
+   "etapas_reales_invocadas": [],
+   "marcas": [
+    "emisor_comp.txt",
+    "emisor_mezcla.txt"
+   ],
+   "segundos": 3.43,
+   "ultima_linea": "NO CONFORME: salida mezcla_final: artefactos requeridos no conformes: [('final/final.csv', 'contenido distinto'), ('final/prediccion_2025.parquet', 'contenido distinto')]",
+   "registros": {
+    "stdout": "registros/A30.stdout.txt",
+    "stderr": "registros/A30.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A31",
+   "caso": "mezcla: un componente guardado con contenido distinto; la mezcla no se ejecuta",
+   "modo": "mezcla",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.23,
+   "ultima_linea": "NO CONFORME: componentes guardados que no coinciden con la receta: [('comp/v24.parquet', 'contenido distinto')]",
+   "registros": {
+    "stdout": "registros/A31.stdout.txt",
+    "stderr": "registros/A31.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A32",
+   "caso": "mezcla: falta un componente guardado",
+   "modo": "mezcla",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.2,
+   "ultima_linea": "NO CONFORME: no encuentro estas salidas guardadas: ['comp/prediccion_2025.parquet']",
+   "registros": {
+    "stdout": "registros/A32.stdout.txt",
+    "stderr": "registros/A32.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A33",
+   "caso": "mezcla: un insumo de exposición con contenido distinto",
+   "modo": "mezcla",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.14,
+   "ultima_linea": "NO CONFORME: componentes guardados que no coinciden con la receta: [('feat_contents.parquet', 'contenido distinto')]",
+   "registros": {
+    "stdout": "registros/A33.stdout.txt",
+    "stderr": "registros/A33.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A34",
+   "caso": "mezcla: el insumo de exposición no tiene huella esperada",
+   "modo": "mezcla",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 1.15,
+   "ultima_linea": "NO CONFORME: componentes guardados que no coinciden con la receta: [('feat_motor.parquet', 'sin huella esperada en la receta')]",
+   "registros": {
+    "stdout": "registros/A34.stdout.txt",
+    "stderr": "registros/A34.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A35",
+   "caso": "componentes --solo con un nodo que no está en la receta",
+   "modo": "componentes",
+   "opciones": [
+    "--solo=no_existe"
+   ],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 0.28,
+   "ultima_linea": "--solo nombra nodos que no están en la receta: ['no_existe']",
+   "registros": {
+    "stdout": "registros/A35.stdout.txt",
+    "stderr": "registros/A35.stderr.txt"
+   },
+   "pasa": true
+  },
+  {
+   "codigo": "A36",
+   "caso": "componentes: carpeta --semana1 inexistente",
+   "modo": "componentes",
+   "opciones": [],
+   "esperado": "≠0",
+   "rc": 1,
+   "rc_conforme": true,
+   "comprobacion_adicional": true,
+   "etapas_reales_invocadas": [],
+   "marcas": [],
+   "segundos": 0.39,
+   "ultima_linea": "Falta --semana1=<carpeta Hackaton/Semana 1> (o la variable IAA_SEMANA1)",
+   "registros": {
+    "stdout": "registros/A36.stdout.txt",
+    "stderr": "registros/A36.stderr.txt"
+   },
+   "pasa": true
+  }
+ ]
+}

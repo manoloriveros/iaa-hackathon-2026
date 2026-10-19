@@ -1,0 +1,63 @@
+{
+  "workspace_relative_run": "Hackaton/Semana 1/Bases_actuariales_claude/runs/bases_20261017T120251Z_45443ff0",
+  "status": "verified_actuarial_bases_no_data_changes_no_training",
+  "evidence": "runs/bases_20261017T120251Z_45443ff0/evidencia.json",
+  "document": "PLAN_PRUEBAS.md",
+  "active_prepared_index_used": "Hackaton/Semana 1/Limpieza/current_dataset.json",
+  "active_prepared_run_used": "Hackaton/Semana 1/Limpieza/runs/preaudit_20261016T211816Z_817285a5",
+  "cutoff_observed": "2024-12-30",
+  "assignment": {
+    "accepted_unique": {
+      "motor": 110496,
+      "buildings": 26266,
+      "contents": 23670,
+      "total": 160432
+    },
+    "out_of_window": 0,
+    "ambiguous": 0,
+    "no_policy": 0,
+    "pre00_excluded": 413
+  },
+  "t0": {
+    "total_CU": 741156868.43,
+    "rows": 2409311,
+    "rows_positive": 146368,
+    "open_claims": 10120,
+    "open_reserve_CU": 90168216.94,
+    "table": "runs/bases_20261017T120251Z_45443ff0/tables/t0_por_row_id.parquet"
+  },
+  "exposure_years": {
+    "train": 1968577.0591,
+    "test_2025": 500351.282
+  },
+  "ibnr_2024_cost_factor": {
+    "motor": 1.2877,
+    "buildings": 1.0796,
+    "contents": 1.0317
+  },
+  "reporting_completeness_2024": {
+    "motor_bodily_injury": 0.5639,
+    "buildings_subsidence": 0.621,
+    "short_tail_range": [
+      0.9313,
+      0.9806
+    ]
+  },
+  "m00_reference_d2": {
+    "V22": 0.08993,
+    "V23": 0.08672,
+    "V24": 0.07094,
+    "power": 1.5,
+    "public_average_cost_reference_D64": 0.07169
+  },
+  "checks_passed": 18,
+  "checks_total": 18,
+  "models_trained": 0,
+  "data_modified": false,
+  "indices_modified": false,
+  "submissions_made": 0,
+  "superseded_runs": [
+    "runs/bases_20261017T120043Z_d40a40af (control K18 mal formulado; conservada como historial)"
+  ],
+  "human_review": "pending"
+}

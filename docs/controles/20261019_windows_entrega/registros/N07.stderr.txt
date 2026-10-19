@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "C:\dev\Hakaton\Hackaton\Repositorio_IAA2026\privado\controles_windows\N07\p\reproducir.py", line 449, in <module>
+    main()
+  File "C:\dev\Hakaton\Hackaton\Repositorio_IAA2026\privado\controles_windows\N07\p\reproducir.py", line 414, in main
+    faltan, bloq = preparar_mezcla(ids, semana1, trabajo, extra, esp)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\dev\Hakaton\Hackaton\Repositorio_IAA2026\privado\controles_windows\N07\p\reproducir.py", line 334, in preparar_mezcla
+    dst.symlink_to(src)
+  File "C:\Users\manol\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1386, in symlink_to
+    os.symlink(target, self, target_is_directory)
+OSError: [WinError 1314] El cliente no dispone de un privilegio requerido: 'C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\controles_windows\\N07\\w\\proyecto\\Hackaton\\Semana 1\\Modelos_claude\\runs\\comp\\v24.parquet' -> 'C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\controles_windows\\N07\\w\\work\\comp\\v24.parquet'

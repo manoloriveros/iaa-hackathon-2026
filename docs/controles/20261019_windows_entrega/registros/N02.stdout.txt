@@ -1,0 +1,81 @@
+reproducir.py versión 1.1 (2026-10-19), modo todo
+{
+ "capa": {
+  "policies_motor": true,
+  "policies_buildings": true,
+  "policies_contents": true,
+  "test_motor": true,
+  "test_buildings": true,
+  "test_contents": true,
+  "customers": true,
+  "addresses": true,
+  "weather": true,
+  "claims": true,
+  "sample_submission": true
+ },
+ "bases": {
+  "tables/t0_por_row_id.parquet": {
+   "igual_bytes": true,
+   "igual_contenido": true
+  },
+  "tables/asignacion_por_siniestro.parquet": {
+   "igual_bytes": true,
+   "igual_contenido": true
+  },
+  "tables/factores_desarrollo_conteos.csv": {
+   "igual_bytes": true,
+   "igual_contenido": true
+  },
+  "tables/ibnr_por_peligro_anio.csv": {
+   "igual_bytes": true,
+   "igual_contenido": true
+  },
+  "tables/completitud_2024_por_mes.csv": {
+   "igual_bytes": true,
+   "igual_contenido": true
+  },
+  "tables/chain_ladder_conteos.csv": {
+   "igual_bytes": true,
+   "igual_contenido": true
+  }
+ },
+ "f0": {
+  "tables/f0_motor.parquet": {
+   "igual_bytes": true,
+   "igual_contenido": true
+  },
+  "tables/f0_buildings.parquet": {
+   "igual_bytes": true,
+   "igual_contenido": true
+  },
+  "tables/f0_contents.parquet": {
+   "igual_bytes": true,
+   "igual_contenido": true
+  },
+  "tables/particiones.parquet": {
+   "igual_bytes": true,
+   "igual_contenido": true
+  },
+  "contrato_bloques_iguales": true
+ }
+}
+[comp] C:\dev\Hakaton\Hackaton\Repositorio_IAA2026\privado\controles_windows\N02\p\emisor.py comp
+[comp] igual en 1 s
+[mezcla_final] C:\dev\Hakaton\Hackaton\Repositorio_IAA2026\privado\controles_windows\N02\p\emisor.py mezcla
+[mezcla_final] igual en 1 s
+{
+ "modo": "todo",
+ "version": "1.1",
+ "objetivos": {
+  "S30": {
+   "csv": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\controles_windows\\N02\\w\\work\\final\\final.csv",
+   "sha256": "19024b5b5dd8057972ee905f54df3343adc1d6c64d811d22e14a4aaf82a706ae",
+   "esperado": "19024b5b5dd8057972ee905f54df3343adc1d6c64d811d22e14a4aaf82a706ae",
+   "coincide": true
+  }
+ },
+ "objetivos_no_construidos": [],
+ "diferencias_toleradas": [],
+ "estado": "igual",
+ "utc": "2026-10-19T13:33:44+00:00"
+}
