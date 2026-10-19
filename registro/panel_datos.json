@@ -1,6 +1,6 @@
 {
-  "generado_utc": "2026-10-19T14:19:02.541315+00:00",
-  "generado_bogota": "2026-10-19T09:19:02.541315-05:00",
+  "generado_utc": "2026-10-19T14:56:41.163820+00:00",
+  "generado_bogota": "2026-10-19T09:56:41.163820-05:00",
   "estado": "Preparada para revisión; cierre humano y reproducción completa pendientes",
   "version_paquete": "1.2",
   "deadline_utc": "2026-10-23T16:00:00Z",
@@ -21697,7 +21697,7 @@
   "preflight": [
     {
       "candidato": "S30",
-      "utc": "2026-10-19T14:19:02.541315+00:00",
+      "utc": "2026-10-19T14:56:41.163820+00:00",
       "archivo_origen": "Hackaton/Semana 1/Envios/archivos/S30_claude_b.csv",
       "copia_local": "privado/predicciones/S30.csv",
       "sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
@@ -21725,7 +21725,7 @@
     },
     {
       "candidato": "S22",
-      "utc": "2026-10-19T14:19:02.541315+00:00",
+      "utc": "2026-10-19T14:56:41.163820+00:00",
       "archivo_origen": "Hackaton/Semana 1/Envios/archivos/S22_claude_propio.csv",
       "copia_local": "privado/predicciones/S22.csv",
       "sha256": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0",
@@ -21823,6 +21823,12 @@
       "revisor_necesario": "Actuario de tarificación y responsable de datos/dispositivos con conocimiento de las fechas de captura.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/datos/hallazgos.json",
       "revisiones_recibidas": 6,
+      "fuentes_campos": {
+        "detalle": "detalle_original.finding",
+        "impacto": "detalle_original.impact",
+        "criterio_cierre": "detalle_original.closure_criterion",
+        "revisor_necesario": "detalle_original.specialist"
+      },
       "responsable_humano": null
     },
     {
@@ -21837,6 +21843,12 @@
       "revisor_necesario": "Actuario de reservas/desarrollo y validador humano competente distinto del autor cuando exista autorización compatible con reglas.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/datos/hallazgos.json",
       "revisiones_recibidas": 6,
+      "fuentes_campos": {
+        "detalle": "detalle_original.finding",
+        "impacto": "detalle_original.impact",
+        "criterio_cierre": "detalle_original.closure_criterion",
+        "revisor_necesario": "detalle_original.specialist"
+      },
       "responsable_humano": null
     },
     {
@@ -21851,6 +21863,12 @@
       "revisor_necesario": "Actuario de hogar/capitales y responsable del diccionario fuente.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/datos/hallazgos.json",
       "revisiones_recibidas": 6,
+      "fuentes_campos": {
+        "detalle": "detalle_original.finding",
+        "impacto": "detalle_original.impact",
+        "criterio_cierre": "detalle_original.closure_criterion",
+        "revisor_necesario": "detalle_original.specialist"
+      },
       "responsable_humano": null
     },
     {
@@ -21865,6 +21883,12 @@
       "revisor_necesario": "Revisión técnica del comparador por ingeniero de datos o validador.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/datos/hallazgos.json",
       "revisiones_recibidas": 6,
+      "fuentes_campos": {
+        "detalle": "detalle_original.finding",
+        "impacto": "detalle_original.impact",
+        "criterio_cierre": "detalle_original.closure_criterion",
+        "revisor_necesario": "detalle_original.specialist"
+      },
       "responsable_humano": null
     },
     {
@@ -21873,12 +21897,18 @@
       "severidad": "alta",
       "estado_registro_recibido": "abierto",
       "titulo": "Seleccion sobre V23/V24 reutilizados",
-      "detalle": "Ver registro original",
-      "impacto": "",
-      "criterio_cierre": "",
-      "revisor_necesario": "Participante; especialista si procede",
+      "detalle": "Las fuentes y parametros ya consultaron V24; anidar ajustes nuevos no deshace seleccion previa.",
+      "impacto": "IC condicionales no cubren seleccion completa ni anio futuro.",
+      "criterio_cierre": "Evidencia futura nueva con receta congelada antes de observarla, o afirmacion limitada expresamente al desarrollo reutilizado.",
+      "revisor_necesario": "Participante y especialista en validacion estadistica; nadie designado ni contactado por este agente.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/modelos/hallazgos.json",
       "revisiones_recibidas": 3,
+      "fuentes_campos": {
+        "detalle": "detalle_original.hecho",
+        "impacto": "detalle_original.limite",
+        "criterio_cierre": "detalle_original.criterio_cierre",
+        "revisor_necesario": "detalle_original.revision_humana_requerida"
+      },
       "responsable_humano": null
     },
     {
@@ -21887,12 +21917,18 @@
       "severidad": "alta",
       "estado_registro_recibido": "abierto",
       "titulo": "Ultimo real y suficiencia de reservas no identificados",
-      "detalle": "Ver registro original",
-      "impacto": "",
-      "criterio_cierre": "",
-      "revisor_necesario": "Participante; especialista si procede",
+      "detalle": "La conciliacion T0 y las medias de estres pasan; solo existe una valoracion retrospectiva.",
+      "impacto": "No son ultimo observado, estimacion IBNER ni suficiencia comprobada.",
+      "criterio_cierre": "Juicio actuarial real respaldado por desarrollo/instantaneas adecuados o limitacion explicita al escenario suministrado; conservar aplicacion unica de nivel ultimo.",
+      "revisor_necesario": "Actuario competente en reservas y tarificacion, bajo reglas de colaboracion; no designado ni contactado.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/modelos/hallazgos.json",
       "revisiones_recibidas": 3,
+      "fuentes_campos": {
+        "detalle": "detalle_original.hecho",
+        "impacto": "detalle_original.limite",
+        "criterio_cierre": "detalle_original.criterio_cierre",
+        "revisor_necesario": "detalle_original.revision_humana_requerida"
+      },
       "responsable_humano": null
     },
     {
@@ -21901,12 +21937,18 @@
       "severidad": "alta",
       "estado_registro_recibido": "abierto",
       "titulo": "Disponibilidad temporal condicional",
-      "detalle": "Ver registro original",
-      "impacto": "",
-      "criterio_cierre": "",
-      "revisor_necesario": "Participante; especialista si procede",
+      "detalle": "F3/dispositivos, marketing y clima anual heredado conservan incertidumbre de fecha para uso prospectivo.",
+      "impacto": "No demuestra fuga directa ni identifica fechas ausentes.",
+      "criterio_cierre": "Certificar fuente/fecha material o limitar uso y contrastar escenario prospectivo si se autoriza.",
+      "revisor_necesario": "Responsable de datos y criterio actuarial del participante/especialista.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/modelos/hallazgos.json",
       "revisiones_recibidas": 3,
+      "fuentes_campos": {
+        "detalle": "detalle_original.hecho",
+        "impacto": "detalle_original.limite",
+        "criterio_cierre": "detalle_original.criterio_cierre",
+        "revisor_necesario": "detalle_original.revision_humana_requerida"
+      },
       "responsable_humano": null
     },
     {
@@ -21915,12 +21957,18 @@
       "severidad": "media",
       "estado_registro_recibido": "abierto",
       "titulo": "Mejora dependiente de cola y heterogeneidad",
-      "detalle": "Ver registro original",
-      "impacto": "",
-      "criterio_cierre": "",
-      "revisor_necesario": "Participante; especialista si procede",
+      "detalle": "La cola superior 0.1% acumula 32.59%/24.90% de T0 hogar; H pierde sin esa cola; IC H contenidos y J hogar incluyen cero.",
+      "impacto": "Recortar cambia objetivo; J regional varia alrededor de cero segun remuestreo de solo 12 grupos. No levantar retencion por una semilla.",
+      "criterio_cierre": "Decision humana de tolerancia de riesgo con IC y cola expuestos; evidencia externa nueva antes de afirmar robustez futura.",
+      "revisor_necesario": "Participante con revision actuarial/estadistica adecuada al uso.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/modelos/hallazgos.json",
       "revisiones_recibidas": 6,
+      "fuentes_campos": {
+        "detalle": "detalle_original.hecho",
+        "impacto": "detalle_original.limite",
+        "criterio_cierre": "detalle_original.criterio_cierre",
+        "revisor_necesario": "detalle_original.revision_humana_requerida"
+      },
       "responsable_humano": null
     },
     {
@@ -21929,12 +21977,18 @@
       "severidad": "media",
       "estado_registro_recibido": "abierto",
       "titulo": "Reproduccion parcial de cadena de predicciones",
-      "detalle": "Ver registro original",
-      "impacto": "",
-      "criterio_cierre": "",
-      "revisor_necesario": "Participante; especialista si procede",
+      "detalle": "Pasan cinco contratos CSV, S14/S14c vs vector persistido 2025 y J desde H/A_G. Las cuatro selecciones V23 ya se recibieron; no se repitio calibrador historico.",
+      "impacto": "No se recalcularon metricas mezcladas S14 V23/V24 ni se ejecutaron productores base; hash no certifica metodologia.",
+      "criterio_cierre": "Replay del calibrador y cadena exacta desde artefactos entregados, sin entrenamiento y en futura corrida autorizada; mantener separadas recepcion y reproduccion.",
+      "revisor_necesario": "Revisor de reproducibilidad y participante; no afirmar independencia profesional entre IA.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/modelos/hallazgos.json",
       "revisiones_recibidas": 6,
+      "fuentes_campos": {
+        "detalle": "detalle_original.hecho",
+        "impacto": "detalle_original.limite",
+        "criterio_cierre": "detalle_original.criterio_cierre",
+        "revisor_necesario": "detalle_original.revision_humana_requerida"
+      },
       "responsable_humano": null
     },
     {
@@ -21943,12 +21997,18 @@
       "severidad": "alta",
       "estado_registro_recibido": "remediacion_documental_verificada",
       "titulo": "Exclusion causal excesiva de insuficiencia de reservas",
-      "detalle": "Ver registro original",
-      "impacto": "",
-      "criterio_cierre": "",
-      "revisor_necesario": "Participante; especialista si procede",
+      "detalle": "El informe Claude dice que el patron de lesiones descarta insuficiencia de reservas y apunta al generador; las comparaciones de una valoracion no permiten esa exclusion causal.",
+      "impacto": "Datos sinteticos no dan certidumbre sobre su mecanismo generador; el enjambre no prueba que reservas sean insuficientes.",
+      "criterio_cierre": "Matizar como hipotesis en futura correccion autorizada del autor, o aportar evidencia temporal/adicional que identifique el mecanismo y revision actuarial humana real.",
+      "revisor_necesario": "Actuario competente en reservas; no designado ni contactado. No se cambia el informe ajeno.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/modelos/hallazgos.json",
       "revisiones_recibidas": 6,
+      "fuentes_campos": {
+        "detalle": "detalle_original.hecho",
+        "impacto": "detalle_original.limite",
+        "criterio_cierre": "detalle_original.criterio_cierre",
+        "revisor_necesario": "detalle_original.revision_humana_requerida"
+      },
       "responsable_humano": null
     },
     {
@@ -21957,12 +22017,16 @@
       "severidad": "alta",
       "estado_registro_recibido": "abierto",
       "titulo": "Revisión especializada humana pendiente y competencia no acreditada",
-      "detalle": "Ver registro original",
-      "impacto": "",
-      "criterio_cierre": "",
-      "revisor_necesario": "Participante; especialista si procede",
+      "detalle": "No especificado en la fuente; consultar el registro original.",
+      "impacto": "Los agentes producen revisión técnica propia; no acreditan aprobación profesional, independencia ni competencia de una persona especialista.",
+      "criterio_cierre": "Acta con identidad real, competencia pertinente acreditada por la persona, alcance, conflictos, artefactos/hash revisados, hallazgos, decisiones y firma/fecha. Independencia evaluada por separado.",
+      "revisor_necesario": "No especificado en la fuente; consultar el registro original.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/gobernanza/hallazgos.json",
       "revisiones_recibidas": 6,
+      "fuentes_campos": {
+        "impacto": "detalle_original.impacto",
+        "criterio_cierre": "detalle_original.criterio_cierre"
+      },
       "responsable_humano": null
     },
     {
@@ -21971,12 +22035,16 @@
       "severidad": "media",
       "estado_registro_recibido": "abierto",
       "titulo": "Vinculación de prompts reales a decisiones no acreditada en el registro raíz",
-      "detalle": "Ver registro original",
-      "impacto": "",
-      "criterio_cierre": "",
-      "revisor_necesario": "Participante; especialista si procede",
+      "detalle": "No especificado en la fuente; consultar el registro original.",
+      "impacto": "El registro raíz no basta para reconstruir qué contexto, mensajes, revisión del proveedor y respuestas guiaron las decisiones. No se concluye ausencia global de conversaciones: pueden estar en otros canales o corridas.",
+      "criterio_cierre": "Mapa verificable decisión→conversación→artefactos/hash para el candidato, con brechas explícitas y sin secretos. Las pruebas con fixtures se rotulan sintéticas.",
+      "revisor_necesario": "No especificado en la fuente; consultar el registro original.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/gobernanza/hallazgos.json",
       "revisiones_recibidas": 6,
+      "fuentes_campos": {
+        "impacto": "detalle_original.impacto",
+        "criterio_cierre": "detalle_original.criterio_cierre"
+      },
       "responsable_humano": null
     },
     {
@@ -21985,12 +22053,16 @@
       "severidad": "media",
       "estado_registro_recibido": "abierto",
       "titulo": "Reproducción por otra persona y otra plataforma no acreditada",
-      "detalle": "Ver registro original",
-      "impacto": "",
-      "criterio_cierre": "",
-      "revisor_necesario": "Participante; especialista si procede",
+      "detalle": "No especificado en la fuente; consultar el registro original.",
+      "impacto": "La integridad de archivos y el replay propio no demuestran reconstrucción integral en entorno limpio, Linux/Kaggle alojado ni repetición independiente de selecciones históricas.",
+      "criterio_cierre": "Recibo de reconstrucción en entorno nuevo con versiones/runtimes completos, entradas/salidas verificadas, tolerancias justificadas y autor real; declarar partes históricas no repetibles.",
+      "revisor_necesario": "No especificado en la fuente; consultar el registro original.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/gobernanza/hallazgos.json",
       "revisiones_recibidas": 6,
+      "fuentes_campos": {
+        "impacto": "detalle_original.impacto",
+        "criterio_cierre": "detalle_original.criterio_cierre"
+      },
       "responsable_humano": null
     },
     {
@@ -21999,12 +22071,16 @@
       "severidad": "media",
       "estado_registro_recibido": "abierto",
       "titulo": "La suite segura cubre contratos y trazabilidad; cobertura final del modelo sigue parcial",
-      "detalle": "Ver registro original",
-      "impacto": "",
-      "criterio_cierre": "",
-      "revisor_necesario": "Participante; especialista si procede",
+      "detalle": "No especificado en la fuente; consultar el registro original.",
+      "impacto": "No se probó en esta corrida fitting, backends, recarga de modelos finales, inferencia completa, ni reproducción de selección. Los resultados no certifican rendimiento o uso profesional.",
+      "criterio_cierre": "Matriz de cobertura del candidato exacto con hashes de receta/modelos/salidas, casos límite e inferencia reproducida sin ajuste; pendientes de fitting explícitos y revisión humana.",
+      "revisor_necesario": "No especificado en la fuente; consultar el registro original.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/gobernanza/hallazgos.json",
       "revisiones_recibidas": 6,
+      "fuentes_campos": {
+        "impacto": "detalle_original.impacto",
+        "criterio_cierre": "detalle_original.criterio_cierre"
+      },
       "responsable_humano": null
     },
     {
@@ -22013,12 +22089,16 @@
       "severidad": "informativo",
       "estado_registro_recibido": "control_verificado",
       "titulo": "Integridad y gates locales auditados sin modificar entradas",
-      "detalle": "Ver registro original",
-      "impacto": "",
-      "criterio_cierre": "",
-      "revisor_necesario": "Participante; especialista si procede",
+      "detalle": "No especificado en la fuente; consultar el registro original.",
+      "impacto": "Aporta evidencia reproducible de integridad técnica en el alcance inspeccionado; no acredita autorización fuera de los bloques/protocolos ni revisión humana.",
+      "criterio_cierre": "Control satisfecho en este corte; se vuelve a comprobar si cambian entradas o código.",
+      "revisor_necesario": "No especificado en la fuente; consultar el registro original.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/gobernanza/hallazgos.json",
       "revisiones_recibidas": 6,
+      "fuentes_campos": {
+        "impacto": "detalle_original.impacto",
+        "criterio_cierre": "detalle_original.criterio_cierre"
+      },
       "responsable_humano": null
     },
     {
@@ -22027,12 +22107,18 @@
       "severidad": "media",
       "estado_registro_recibido": "remediacion_documental_verificada",
       "titulo": "Base porcentual ambigua en la comparación de exposición diaria y mensual",
-      "detalle": "Ver registro original",
-      "impacto": "",
-      "criterio_cierre": "",
-      "revisor_necesario": "Participante; especialista si procede",
+      "detalle": "Con r=D/M, 100*(1-r) da reducción diaria respecto mensual; 100*(1/r-1) da exceso mensual respecto diaria. El texto no explicita la base al describir18–24%más.",
+      "impacto": "Aritmética de ratios publicados redondeados. No demuestra error en datos, exposición, modelos ni verdad del estimador diario.",
+      "criterio_cierre": "Explicitar base y fórmula por el autor/editor en el texto fuente, sin exigir cambiar exposición ni modelo.",
+      "revisor_necesario": "Responsable editorial y revisor técnico del cálculo presentado; nadie contactado.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/20261018T104509Z_cambios/modelos/ADENDA_MOD007.md",
       "revisiones_recibidas": 5,
+      "fuentes_campos": {
+        "detalle": "detalle_original.hecho",
+        "impacto": "detalle_original.limite",
+        "criterio_cierre": "detalle_original.criterio_cierre",
+        "revisor_necesario": "detalle_original.revision_humana_requerida"
+      },
       "responsable_humano": null
     },
     {
@@ -22041,12 +22127,17 @@
       "severidad": "alta",
       "estado_registro_recibido": "abierto",
       "titulo": "Historia Jan1 y clima de año anterior contienen información posterior al corte de cotización reconstruido",
-      "detalle": "Ver registro original",
+      "detalle": "No especificado en la fuente; consultar el registro original.",
       "impacto": "No se respalda describir toda esta cadena como disponible en cada cotización real. Un corte al año del periodo no equivale al corte de acceso al cotizar.",
       "criterio_cierre": "Identificar el momento operativo real con evidencia fuente, establecer por campo el corte permitido y, si se autoriza corregir, verificar el flujo afectado con report_date anterior al corte y clima cerrado/publicado antes del acceso; conservar comparadores y revisión humana. Un uso suministrado condicionado puede ser aceptado formalmente, pero no certifica cotización prospectiva ni borra este desfase.",
       "revisor_necesario": "Actuario de tarificación y responsable de datos de avisos/meteorología, con validador temporal competente y participante para decidir el uso. Nadie designado o contactado en esta corrida.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/20261018T164615Z_periodica/datos/hallazgos.json",
       "revisiones_recibidas": 4,
+      "fuentes_campos": {
+        "impacto": "detalle_original.impact",
+        "criterio_cierre": "detalle_original.closure_criterion",
+        "revisor_necesario": "detalle_original.specialist"
+      },
       "responsable_humano": null
     },
     {
@@ -22055,12 +22146,18 @@
       "severidad": "alta",
       "estado_registro_recibido": "remediacion_documental_verificada",
       "titulo": "Nueva afirmacion de reservas insesgadas y regimen real en linea B",
-      "detalle": "Ver registro original",
-      "impacto": "",
-      "criterio_cierre": "",
-      "revisor_necesario": "Participante; especialista si procede",
+      "detalle": "El README afirma que comparaciones abierto/cerrado de una valoracion se leen como reservas de caso insesgadas y un cambio de regimen real, no inmadurez, y justifica no IBNER. Las limitaciones generales de reutilizacion/IA no acotan esta afirmacion concreta como hipotesis no identificada.",
+      "impacto": "La justificación actuarial de excluir desarrollo adicional y atribuir un régimen real no está identificada con una valoración; no acredita suficiencia o uso profesional. No implica que deba añadirse IBNER automáticamente.",
+      "criterio_cierre": "Matizar en todas las nuevas fuentes pertinentes como hipotesis compatible, sin certificar insesgadez, regimen causal o suficiencia; o aportar trayectorias/valoraciones adicionales y revision actuarial humana real que respalden la conclusion. Registrar respuesta del autor con evidencia; no inferir aprobacion del silencio.",
+      "revisor_necesario": "Actuario competente en reservas/desarrollo y validador estadístico; participante responsable de designar.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/20261018T225020Z_periodica/modelos/hallazgos.json",
       "revisiones_recibidas": 3,
+      "fuentes_campos": {
+        "detalle": "detalle_original.hecho",
+        "impacto": "registro.consecuencia",
+        "criterio_cierre": "detalle_original.criterio_cierre",
+        "revisor_necesario": "registro.especialista_humano_requerido_por_designar"
+      },
       "responsable_humano": null
     },
     {
@@ -22070,11 +22167,16 @@
       "estado_registro_recibido": "abierto",
       "titulo": "Cronología interna de CLB004 y adenda D88 pendiente de aclaración",
       "detalle": "La cabecera local CLB004 registra00:04:09UTC; el cuerpo declara cierre19:40Bogotá=00:40UTC yla adendaD88 consigna00:45UTC. Son35m51s/40m51s posteriores a la cabecera. No se presupone causa ni se acusa alteración.",
-      "impacto": "",
-      "criterio_cierre": "",
-      "revisor_necesario": "Participante; especialista si procede",
+      "impacto": "No usar como cronología coherente hasta aclaración; no invalida por sí misma aritmética ni remediación textual MOD-008.",
+      "criterio_cierre": "Aclaración fechada yatribuida que identifique hora/huso/evento, preserve original yvincule snapshots/hashes. Si queda desconocido, limitar la afirmación temporal; no reconstruir retroactivamente una preinscripción.",
+      "revisor_necesario": "No especificado en la fuente; consultar el registro original.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/20261019T022424Z_seguimiento_ajustes/gobernanza/hallazgos.json",
       "revisiones_recibidas": 2,
+      "fuentes_campos": {
+        "detalle": "detalle_original.finding",
+        "impacto": "detalle_original.consequence",
+        "criterio_cierre": "detalle_original.closure_criteria"
+      },
       "responsable_humano": null
     },
     {
@@ -22083,12 +22185,17 @@
       "severidad": "alta",
       "estado_registro_recibido": "abierto",
       "titulo": "Controles del paquete permiten éxito y reanudación con incumplimientos",
-      "detalle": "Ver registro original",
-      "impacto": "",
-      "criterio_cierre": "",
-      "revisor_necesario": "Participante; especialista si procede",
+      "detalle": "No especificado en la fuente; consultar el registro original.",
+      "impacto": "Un éxito CLI, salida existente o verificación impresa puede presentarse como reconstrucción válida con artefactos sin verificar o controles adversos. No demuestra corrupción efectiva de los CSV.",
+      "criterio_cierre": "Versión aplicada identificada por hash, validación del control positivo, rechazo de todos los adversos, verificación antes de omitir, error ante faltantes/diferencias exigidas y destinos de decisiones alterados, más recibo/decisión humana fechados. Contratos de bytes/contenido explícitos.",
+      "revisor_necesario": "Responsable técnico del paquete y revisor humano competente en reproducibilidad, por designar; revisión actuarial según el uso y sin persona ficticia.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/20261019T120208Z_integral/gobernanza/hallazgos_UTF8.json",
       "revisiones_recibidas": 1,
+      "fuentes_campos": {
+        "impacto": "detalle_original.consequence",
+        "criterio_cierre": "detalle_original.closure_criteria",
+        "revisor_necesario": "detalle_original.required_human_role"
+      },
       "responsable_humano": null
     }
   ],

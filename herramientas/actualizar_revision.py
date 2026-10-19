@@ -40,6 +40,31 @@ def guardar(p, d):
     p.write_text(json.dumps(d, ensure_ascii=False, indent=2, allow_nan=False) + "\n", encoding="utf-8")
 
 
+def normalizar_hallazgo(h):
+    """Conserva los textos originales aunque la fuente use español o inglés.
+    No interpreta un criterio escrito como cierre o aprobación humana.
+    """
+    det = h.get("detalle_original", {})
+    fuentes_campos = {}
+
+    def campo(nombre, aliases, defecto="No especificado en la fuente; consultar el registro original."):
+        for origen, obj in (("detalle_original", det), ("registro", h)):
+            for key in aliases:
+                if isinstance(obj.get(key), str) and obj[key].strip():
+                    fuentes_campos[nombre] = origen + "." + key
+                    return obj[key]
+        return defecto
+
+    return {"id": h["id"], "area": h["area"], "severidad": h.get("severidad"),
+            "estado_registro_recibido": h["estado"], "titulo": h["titulo"],
+            "detalle": campo("detalle", ("finding", "detalle", "hecho")),
+            "impacto": campo("impacto", ("impact", "impacto", "consequence", "consecuencia", "limite")),
+            "criterio_cierre": campo("criterio_cierre", ("closure_criterion", "closure_criteria", "criterio_cierre", "condicion_de_cierre")),
+            "revisor_necesario": campo("revisor_necesario", ("specialist", "revision_humana_requerida", "required_human_role", "especialista_humano_requerido_por_designar")),
+            "fuente": h.get("fuente"), "revisiones_recibidas": len(h.get("revisiones_posteriores", [])),
+            "fuentes_campos": fuentes_campos, "responsable_humano": None}
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--raiz", type=Path, default=REPO.parents[1])
@@ -160,16 +185,7 @@ def main():
                            "columnas": t["columns"], "sha256": actual, "esperado": t["sha256"],
                            "coincide": actual == t["sha256"], "bytes": p.stat().st_size})
 
-    hallazgos = []
-    for h in hall["findings"]:
-        det = h.get("detalle_original", {})
-        hallazgos.append({"id": h["id"], "area": h["area"], "severidad": h.get("severidad"),
-                          "estado_registro_recibido": h["estado"], "titulo": h["titulo"],
-                          "detalle": det.get("finding", det.get("detalle", "Ver registro original")),
-                          "impacto": det.get("impact", ""), "criterio_cierre": det.get("closure_criterion", ""),
-                          "revisor_necesario": det.get("specialist", "Participante; especialista si procede"),
-                          "fuente": h.get("fuente"), "revisiones_recibidas": len(h.get("revisiones_posteriores", [])),
-                          "responsable_humano": None})
+    hallazgos = [normalizar_hallazgo(h) for h in hall["findings"]]
 
     suites = []
     for p in sorted((REPO / "docs/controles").glob("*/resultado.json")):
