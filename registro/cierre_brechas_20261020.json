@@ -1,0 +1,155 @@
+{
+  "id": "CIE-RUB-CODEX-20261020",
+  "autor": "Codex",
+  "utc": "2026-10-20T22:34:43.463025+00:00",
+  "encargo": "Cerrar brechas resolubles, actualizar estados y preparar revisión del participante, sin cambiar S30 o reentrenar.",
+  "resultado": {
+    "estados_desfasados": "corregidos_en_registros_guias_panel_y_recolector",
+    "modelo": "S30_definitivo",
+    "S22": "historico_sin_respaldo_operativo",
+    "reproduccion": "CSV exacto; 162/181 huellas históricas iguales, 19 diferentes, rc3; no conformidad íntegra o independencia.",
+    "revision_humana_general": "preparada_sin_firma_ni_decision",
+    "preguntas": 7,
+    "prompts": "seis_eventos_selectivos_verificados_mapa_aun_incompleto",
+    "guion": "borrador_abreviado_para_revision_3m20_semana1_1m20_adaptacion_15s_cierre",
+    "inventario_herramientas": "versiones_de_referencia_y_campos_pendientes_preparados",
+    "seleccion_manual_kaggle": "pendiente_no_realizada"
+  },
+  "cierres_tecnicos_documentales": [
+    "El recolector deriva S30, reproducción y revisión desde D97-D99 y el acta; conserva seguimientos y futuras decisiones ya registradas.",
+    "Doce requisitos conciliados; ruta del informe actual corregida; datos y enlaces del panel regenerados.",
+    "Se conservan responsables de hallazgos y finales de línea al actualizar archivos existentes.",
+    "Decisiones aceptadas y preguntas pendientes separadas; el formulario no firma o cierra hallazgos automáticamente."
+  ],
+  "pendientes_sustantivos": [
+    "Doce hallazgos abiertos y dos limitaciones aceptadas conservan su alcance.",
+    "Revisión humana general, disponibilidad temporal y capitales requieren respuesta o evidencia.",
+    "Prompts/respuestas completos de selección y calibración y aclaración de cronología siguen pendientes.",
+    "Constancia de elegibilidad, planes, costes, condiciones y licencia final requieren datos auténticos.",
+    "Grabación del video y adaptación medida del segundo mercado pendientes."
+  ],
+  "verificacion": {
+    "conciliacion": {
+      "alcance": "Pruebas de conciliación de estados con registros reales y copias adversas; sin modelos o cómputo predictivo.",
+      "casos": 12,
+      "pasan": 12,
+      "resultados": {
+        "corrige_desfase_sin_borrar_historia": true,
+        "distingue_csv_exacto_de_conformidad_integra": true,
+        "no_firma_revision_por_decisiones_tecnicas": true,
+        "segunda_conciliacion_no_revierte": true,
+        "conserva_seleccion_manual_ya_registrada": true,
+        "conserva_cierre_previo_sin_inventarlo": true,
+        "no_muta_la_fuente_de_estado": true,
+        "conserva_responsable_humano_previo": true,
+        "conserva_saltos_LF": true,
+        "conserva_saltos_CRLF": true,
+        "rechaza_csv_incompatible": true,
+        "rechaza_otro_modelo": true
+      }
+    },
+    "formulario": {
+      "alcance": "Lógica del formulario con dobles de DOM y almacenamiento; no prueba visual ni apertura de navegador.",
+      "casos": 9,
+      "pasan": 9,
+      "resultados": {
+        "sin_decisiones_preseleccionadas": true,
+        "fecha_humana_inicial_vacia": true,
+        "muestra_aceptaciones_existentes": true,
+        "no_exporta_decisiones_sin_fecha_y_alcance": true,
+        "exporta_notas_del_modelo_correcto": true,
+        "exportacion_no_firma_ni_actualiza_acta": true,
+        "conserva_aceptaciones_anteriores": true,
+        "no_inventa_respuestas_a_otros_puntos": true,
+        "registro_humano_permanece_pendiente": true
+      }
+    },
+    "integridad_y_coherencia": {
+      "pasan": 18,
+      "total": 18
+    },
+    "protegidos_sin_cambios": 173,
+    "documental": {
+      "pasan": 15,
+      "fallan": [],
+      "avisos": [
+        "fuentes_sin_cambios"
+      ]
+    },
+    "javascript_generado": "node --check conforme",
+    "limite_panel": "Comprobación estática y lógica con dobles, sin abrir el panel en navegador; se conserva el bloqueo de file: del turno anterior."
+  },
+  "guia": "docs/REVISION_PENDIENTE_PARTICIPANTE.md",
+  "plantilla": "registro/revision_preparada_20261020.json",
+  "artefactos": [
+    {
+      "ruta": "herramientas/actualizar_revision.py",
+      "sha256": "9616db80f6d3143c89ba8b2a713cacd02648076184ff762ff48a44644a57bd2e"
+    },
+    {
+      "ruta": "herramientas/revision_formulario.js",
+      "sha256": "fdd1fd09eecac99a6998d57675ede580103fe2c0dca17dc3a1e4c734fb8e9f28"
+    },
+    {
+      "ruta": "herramientas/panel_template.html",
+      "sha256": "7c0452822666817e1638c10c55a402f6184da1c63de9063b6c9982a63aa01b44"
+    },
+    {
+      "ruta": "registro/estado_entrega.json",
+      "sha256": "c2275ef229b89789917dbabddcb40157dd388d2a6832d227d790eaf2f134ff20"
+    },
+    {
+      "ruta": "registro/requisitos.json",
+      "sha256": "ce16f7dafe082b537d483b2ad5864e2ce575606db4d48853df25062a55823d4b"
+    },
+    {
+      "ruta": "registro/revision_humana.json",
+      "sha256": "08688500f49e5808ed535c3f388af93dd83f99b52d883c354522cf92b36edd18"
+    },
+    {
+      "ruta": "registro/revision_preparada_20261020.json",
+      "sha256": "fb270339dbf177bd1f72b3f0c916b721f855468d443e2208386dfbf894f79d67"
+    },
+    {
+      "ruta": "registro/trazabilidad_ia_revision_20261020.json",
+      "sha256": "850c36805af126dba9797c3266f248af8c9d422e951795c7e2641554eed5cb16"
+    },
+    {
+      "ruta": "registro/inventario_herramientas_revision_20261020.json",
+      "sha256": "e839c7d0fc215c4cca7f0cbc1a6fdc9c3dd92ddbe43305ce78997566baf19d78"
+    },
+    {
+      "ruta": "docs/REVISION_PENDIENTE_PARTICIPANTE.md",
+      "sha256": "f822700bf6b4477f4f83fd0e0f3749642e9b75377f455ca442aaa4ffeaa58efe"
+    },
+    {
+      "ruta": "docs/GUION_ABREVIADO_PARA_REVISION.md",
+      "sha256": "d0a0f67a4d00ad85c97ba4704374f0d57150f49bb85a215d0bb49c71f9f53cef"
+    },
+    {
+      "ruta": "docs/panel_revision.html",
+      "sha256": "d20e7f2622e118b1dae6b4d9be1ae4c0e8be936dc7cdb88942561ecf4d4057c3"
+    },
+    {
+      "ruta": "docs/GUIA_TECNICA.md",
+      "sha256": "25ca6c706c24d89a46c662ae69e6d18a7c6e96ce12a2e1f60853f132f05680e9"
+    }
+  ],
+  "evidencia_privada": "Hackaton/Repositorio_IAA2026/privado/cierre_brechas_20261020",
+  "historia": "Copias previas de 26 archivos y memoria, estado, decisiones y rutas conservadas en la evidencia privada.",
+  "actividad": {
+    "entrenamientos": 0,
+    "inferencias": 0,
+    "modelos_cargados": 0,
+    "mezclas": 0,
+    "replays": 0,
+    "Kaggle": 0,
+    "delegaciones_nuevas": 0,
+    "automatizaciones_nuevas": 0,
+    "publicaciones": 0,
+    "commits": 0
+  },
+  "evaluacion_rubrica_anterior": "registro/evaluacion_rubrica_20261020.json",
+  "nota_puntuacion": "No se convierte el trabajo documental en puntos oficiales ni se modifica retrospectivamente la evaluación anterior.",
+  "verificacion_actualizada_utc": "2026-10-20T22:35:38.957382+00:00"
+}

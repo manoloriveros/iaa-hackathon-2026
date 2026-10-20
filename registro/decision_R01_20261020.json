@@ -1,0 +1,51 @@
+{
+  "id": "REV-R01-20261020",
+  "punto": "R01",
+  "emisor": "Participante en este chat",
+  "registrado_por": "Codex",
+  "fecha_registro_utc": "2026-10-20T22:49:20.404005+00:00",
+  "fecha_registro_bogota": "2026-10-20T17:49:20.404005-05:00",
+  "nota_fecha": "Hora de registro de la decisión; no se atribuye un timestamp exacto al envío del mensaje.",
+  "candidato": "S30",
+  "sha256_csv": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+  "texto_literal": "Acepto S30 para el concurso con los datos suministrados. Reconozco que la disponibilidad temporal de sus predictores para una cotización real no está completamente acreditada pero corresponde a una hipótesis consistente con las bases de datos proporcionadas para el ejercicio. Esta aceptación no autoriza su uso operativo ni confirma las fechas que faltan.",
+  "texto_sha256_utf8": "876e5b01aa323865d6fde4572da4e939507052a61b6ea3ad0e5331884c331cca",
+  "fuente": {
+    "tipo": "mensaje directo del participante visible en este chat",
+    "transcripcion_privada": "privado/revision_humana_20261020/R01/declaracion_participante.txt",
+    "evento_bruto_exportado": false
+  },
+  "decision": "aceptar_alcance_concurso_con_hipotesis_de_consistencia",
+  "estado": "alcance_concurso_aceptado_fechas_no_acreditadas",
+  "alcance": "Uso de S30 para el concurso con los datos suministrados; la consistencia con las bases se registra como hipótesis y criterio del participante para el ejercicio.",
+  "no_acredita": [
+    "Disponibilidad temporal completa para cotización real",
+    "Fechas de captura o acceso que siguen sin fuente",
+    "Autorización de uso operativo",
+    "Revisión general aprobada",
+    "Cierre técnico de DATA-001, DATA-005 o MOD-003"
+  ],
+  "hallazgos_relacionados": [
+    "DATA-001",
+    "DATA-005",
+    "MOD-003"
+  ],
+  "evidencia_presentada": [
+    {
+      "ruta": "registro/disponibilidad_temporal_20261019.json",
+      "sha256": "75563ec70e1c6743f4fc3f824e0798af6ccc65c5e7b2507e5e593d0dc47f6014"
+    },
+    {
+      "ruta": "docs/entrega/informe/INFORME_ES.md",
+      "sha256": "b914bcd4f1cedca2f69d24586b8094708abf369cfc627698e4eb79f92162adaf"
+    }
+  ],
+  "regla_cierre": "Se registra la aceptación humana de alcance; los hallazgos conservan sus criterios y estados técnicos. No se recalcula un escenario prospectivo.",
+  "actividad": {
+    "entrenamientos": 0,
+    "inferencias": 0,
+    "modelos_cargados": 0,
+    "replays": 0,
+    "Kaggle": 0
+  }
+}

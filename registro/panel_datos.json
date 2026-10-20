@@ -1,8 +1,817 @@
 {
-  "generado_utc": "2026-10-19T18:09:59.419713+00:00",
-  "generado_bogota": "2026-10-19T13:09:59.419713-05:00",
-  "estado": "Preparada para revisión; cierre humano y reproducción completa pendientes",
+  "generado_utc": "2026-10-20T23:44:42.077610+00:00",
+  "generado_bogota": "2026-10-20T18:44:42.077610-05:00",
+  "estado": "S30 definitivo; S22 histórico; reconstrucción documentada con CSV exacto y 19 diferencias intermedias. revisión general pendiente; selección manual en Kaggle pendiente.",
   "version_paquete": "1.2",
+  "estado_entrega": {
+    "utc": "2026-10-20T23:44:42.077610+00:00",
+    "carpeta_activa": "Hackaton/Repositorio_IAA2026",
+    "principal": "S30",
+    "respaldo": null,
+    "seleccion_final_manual_kaggle": "pendiente_no_realizada",
+    "integridad_originales": true,
+    "preflight_csv": true,
+    "reproduccion_completa": "reconstruida_csv_exacto_con_diferencias_intermedias",
+    "revision_humana": "revision_general_pendiente_con_decisiones_especificas_registradas",
+    "entrega_cerrada": false,
+    "replay_windows": {
+      "utc": "2026-10-19T14:13:41.271027+00:00",
+      "estado": "csv_iguales_con_diferencias_intermedias",
+      "codigo_salida": 3,
+      "csv_exactos": true,
+      "objetivos": {
+        "S30": {
+          "csv": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\replay_windows_v12_lf\\work\\S30_claude_b\\S30_claude_b.csv",
+          "sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+          "esperado": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+          "coincide": true
+        },
+        "S22": {
+          "csv": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\replay_windows_v12_lf\\work\\S22_claude_propio\\S22_claude_propio.csv",
+          "sha256": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0",
+          "esperado": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0",
+          "coincide": true
+        }
+      },
+      "diferencias_intermedias": [
+        {
+          "candidato": "S30",
+          "columna": "prediction",
+          "filas": 626639,
+          "diferentes": 180496,
+          "max_abs": 1.8189894035458565e-12,
+          "max_rel": 7.1839296149526e-16
+        },
+        {
+          "candidato": "S22",
+          "columna": "prediction",
+          "filas": 626639,
+          "diferentes": 18891,
+          "max_abs": 9.094947017729282e-13,
+          "max_rel": 6.171306200737165e-16
+        }
+      ],
+      "recibo_completo": {
+        "modo": "mezcla",
+        "version": "1.2",
+        "objetivos": {
+          "S30": {
+            "csv": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\replay_windows_v12_lf\\work\\S30_claude_b\\S30_claude_b.csv",
+            "sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+            "esperado": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+            "coincide": true
+          },
+          "S22": {
+            "csv": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\replay_windows_v12_lf\\work\\S22_claude_propio\\S22_claude_propio.csv",
+            "sha256": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0",
+            "esperado": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0",
+            "coincide": true
+          }
+        },
+        "objetivos_no_construidos": [],
+        "diferencias_toleradas": [
+          {
+            "nodo": "S22_claude_propio",
+            "ruta": "S22_claude_propio/prediccion_2025.parquet",
+            "motivo": "contenido distinto"
+          },
+          {
+            "nodo": "S30_claude_b",
+            "ruta": "S30_claude_b/prediccion_2025.parquet",
+            "motivo": "contenido distinto"
+          }
+        ],
+        "estado": "csv_iguales_con_diferencias_intermedias",
+        "utc": "2026-10-19T14:13:40+00:00"
+      },
+      "python": "3.12.14",
+      "numpy": "2.3.5",
+      "pandas": "3.0.1",
+      "codigo_sha256": "a346d125520bfc5c784f1b9f65072759efdb15594263485434857e348475de17",
+      "wrapper_LF_sha256": "0d4e555d122d1efb2d8efa90bf45b16f3ba429f72d53efe4f5e1b794499284cf",
+      "alcance": "Reanudación y cotejo de mezcla real desde componentes guardados en carpeta común; no entrenamiento completo. Código de subprocess, no del envoltorio PowerShell."
+    },
+    "pruebas_activas": "No inspeccionadas en esta actualización; los registros no acreditan actividad de procesos en vivo.",
+    "corte_validacion_recibida": "20261020T193644Z_cambios",
+    "github": "https://github.com/manoloriveros/iaa-hackathon-2026",
+    "visibilidad": "private",
+    "limites": [
+      "No se acredita último observado",
+      "V23/V24 reutilizados",
+      "Fecha de disponibilidad de predictores",
+      "149 capitales sin confirmación",
+      "Elegibilidad para premio pendiente"
+    ],
+    "revision_perspectiva_participante": {
+      "utc": "2026-10-19T20:04:16.185760+00:00",
+      "autor": "Codex",
+      "informe": "docs/REVISION_DESDE_EL_PARTICIPANTE.md",
+      "registro": "registro/revision_participante_20261019.json",
+      "estado": "comprobaciones_tecnicas_conciliadas_decisiones_humanas_pendientes",
+      "revision_humana": false
+    },
+    "subsanacion_pendientes": {
+      "utc": "2026-10-19T22:18:17.577027+00:00",
+      "registro": "registro/subsanacion_20261019.json",
+      "guia": "docs/SUBSANACION_PENDIENTES.md",
+      "revisor_designado": "Manuel Ignacio Rodríguez",
+      "revision_realizada": false,
+      "cerrados": 1,
+      "abiertos": 14,
+      "decision_GOV007": "registro/decision_GOV007_20261019.json",
+      "ultimo_aporte": "COD-20261019-116",
+      "decision_humana_alcance": "Solo corrección técnica de la versión1.2 en GOV-007; revisión actuarial general pendiente."
+    },
+    "seguimiento_reproduccion_CLA005": {
+      "utc": "2026-10-19T23:04:33.686752+00:00",
+      "aporte": "CLA-20261019-005",
+      "revision": "registro/CLA-20261019-005_revision_codex.json",
+      "capa_nueva_claves_incompletas": true,
+      "pruebas_sinteticas": 2,
+      "recibos_remotos_no_disponibles_localmente": true,
+      "materialidad_1porciento": "Referida por Claude para su encargo, no adoptada como incertidumbre o autorización aquí.",
+      "estado": "evidencia_recibida_con_brechas_pendientes",
+      "respuesta_propia": {
+        "id": "COD-20261019-117",
+        "utc": "2026-10-19T23:04:33+00:00",
+        "recibo": "registro/COD-20261019-117_recibo.json"
+      }
+    },
+    "seguimiento_CLA006": {
+      "utc": "2026-10-19T23:20:45.697603+00:00",
+      "aporte": "CLA-20261019-006",
+      "revision": "registro/CLA-20261019-006_revision_codex.json",
+      "cifras102": "Recibidas, no recalculadas",
+      "paquetes_nuevos_comprobados": 7,
+      "miembros": 52,
+      "archivos_estimador": 13,
+      "interpretacion": "Integridad parcial, no replay o equivalencia",
+      "respuesta_propia": {
+        "id": "COD-20261019-118",
+        "utc": "2026-10-19T23:20:45+00:00",
+        "recibo": "registro/COD-20261019-118_recibo.json"
+      }
+    },
+    "entregables_finales": {
+      "utc": "2026-10-19T23:34:40+00:00",
+      "decision": "D96",
+      "carpeta": "docs/entrega",
+      "modelo_entregado": "S30",
+      "informe": [
+        "docs/entrega/report_en.pdf",
+        "docs/entrega/informe_es.pdf"
+      ],
+      "panel": "docs/entrega/panel_modelo.html",
+      "video": "docs/entrega/video/",
+      "uso_de_ia": [
+        "docs/entrega/AI_WORKFLOW_EN.md",
+        "docs/entrega/USO_DE_IA_ES.md"
+      ],
+      "expediente": "docs/expediente/",
+      "cifras_sha256": "aaad4a2ae19f76cb3ddedead581589894b4ed7093f519aa39694b2a07f4ffc17",
+      "verificacion": "docs/entrega/datos/verificacion_entregables.json",
+      "nota": "Un solo modelo entregado (S30); los envíos anteriores solo aparecen en la curva de aprendizaje. La selección final manual en Kaggle sigue a cargo del participante y no se ha realizado.",
+      "revisiones": [
+        {
+          "utc": "2026-10-20T00:13:29+00:00",
+          "motivo": "Precisiones ENT-CLA007-01..05 de COD-20261019-119 y acotación de reservas de CLA-20261019-008 (con las precisiones de COD-20261019-120) declarada como límite",
+          "aporte": "CLA-20261019-009",
+          "copias_previas": [
+            "privado/trazabilidad/precisiones_CLA007_20261020/",
+            "privado/trazabilidad/reservas_entregables_20261020/"
+          ],
+          "verificacion_sha256": "8148161ef9e478f432b6c22c89e718d4c7848a3152bca7c3b150bdb1827b33f9"
+        },
+        {
+          "utc": "2026-10-20T16:20:18+00:00",
+          "motivo": "Experimentos de validación y backtesting del IBNR (D95), reproducción completa (D97) y decisiones del participante (D98) en los entregables; nombre del modelo definitivo (D99)",
+          "aporte": "CLA-20261020-004",
+          "copias_previas": [
+            "privado/trazabilidad/experimentos_nombre_20261020/"
+          ],
+          "cifras_sha256": "1c0b604a52e3f30fa0db571c9244c0ce934b4065d8ed5a7b33a3d67cb3441caf",
+          "verificacion_sha256": "20a29ba62f9a353ceff1dc43ccef5fb95ee98e9da180250eee4fcc74914bfcde"
+        }
+      ],
+      "nombre_modelo": {
+        "es": "Mezcla por peligro",
+        "en": "Per-peril blend"
+      }
+    },
+    "seguimiento_CLA007": {
+      "utc": "2026-10-19T23:48:24.400740+00:00",
+      "aporte": "CLA-20261019-007",
+      "auditoria_recibida": "COD-IA-20261019T232535Z",
+      "revision": "registro/CLA-20261019-007_revision_codex.json",
+      "precisiones_de_entregables": "Pendientes de respuesta del autor; sin editar sus fuentes.",
+      "recibo_documental": "15pases/1fallo;11destinos actuales existen; no verificador nuevo",
+      "respuesta_propia": {
+        "id": "COD-20261019-119",
+        "utc": "2026-10-19T23:48:24+00:00",
+        "recibo": "registro/COD-20261019-119_recibo.json"
+      }
+    },
+    "seguimiento_CLA008": {
+      "utc": "2026-10-20T00:06:44.713851+00:00",
+      "aporte": "CLA-20261019-008",
+      "revision": "registro/CLA-20261019-008_revision_codex.json",
+      "captura_sha256": "c1cfdedd7dc670939e7fcf61f767799352ea1782724102023e68cea8fb3b5fcc",
+      "lanzador_sha256": "d934af4292b3e2e5ed2917408835b002b551e0fdd82969100afec5a1e32111e3",
+      "casos_AST": 8,
+      "conformes": 7,
+      "pendiente": "Pool preexistente sin huella",
+      "correcciones_acotadas": "DataFrame y Pool nuevo distinguen valores/categorías/pesos; cfg distinto rechazado.",
+      "reservas": "S1/S3 recibidos y condicionados; no suficiencia demostrada",
+      "respuesta_propia": {
+        "id": "COD-20261019-120",
+        "utc": "2026-10-20T00:06:44+00:00",
+        "recibo": "registro/COD-20261019-120_recibo.json"
+      }
+    },
+    "correccion_pool_previo_20261019": {
+      "utc": "2026-10-20T00:15:43.119818+00:00",
+      "autor": "Codex",
+      "hallazgo": "CLA008-CAP03",
+      "estado": "corregido_comprobado_14casos_sinteticos",
+      "version_captura": "1.1.1",
+      "captura_sha256": "07776e60e5f266a4f7c547ce92bcf7b3394a64a12d6a22a2db8060f141da31a0",
+      "registro": "registro/correccion_pool_previo_20261019.json",
+      "evidencia": "privado/trazabilidad/correccion_pool_previo_20261019",
+      "rechazos_antes_busqueda_carga": 10,
+      "controles_busqueda_simulada": 4,
+      "ajustes": 0,
+      "inferencias": 0,
+      "modelos_cargados": 0,
+      "Kaggle": 0,
+      "respuesta_propia": {
+        "author": "Codex",
+        "id": "COD-20261019-121",
+        "utc": "2026-10-20T00:14:55+00:00",
+        "previous_sha256": "5c18528828c0cdff34d6a9ca3dd7c35cceba6957af6ce566a089327cfb20c9be",
+        "sha256": "c474971e2e0542c4624c7a14d43f77c7acb90a066f038b263f2489047bdc9403"
+      },
+      "respuesta_Claude": "No se ha recibido una respuesta posterior a COD121; no se presume acuerdo.",
+      "limite": "Cierre acotado de la brecha; reproducción completa, reservas, independencia y revisión general pendientes. GOV007 no se amplía."
+    },
+    "kit_captura_1_1_1_20261019": {
+      "utc": "2026-10-20T00:53:12.585999+00:00",
+      "autor": "Codex",
+      "estado": "kit_local_incorporado_recibos_verificados_Claude_pendiente",
+      "registro": "registro/kit_captura_1_1_1_20261019.json",
+      "kit": "privado/kits/captura_1_1_1_20261019/codigo_incorporado",
+      "captura_version": "1.1.1",
+      "captura_sha256": "07776e60e5f266a4f7c547ce92bcf7b3394a64a12d6a22a2db8060f141da31a0",
+      "zip_sha256": "1007f1b04c9d3f0f44ffe2b6e16d9b93e5f00994651e5a8c9564428f249d14e3",
+      "archivos_incorporados": 85,
+      "recibos_reales": [
+        "privado/kits/captura_1_1_1_20261019/complemento/recibo_kit.json",
+        "privado/kits/captura_1_1_1_20261019/recibo_incorporacion_local.json"
+      ],
+      "pruebas_nuevas_metadata": {
+        "conformes": 11,
+        "total": 11,
+        "lanzador": "entorno/correr sustituidos por dobles"
+      },
+      "respuesta_propia": {
+        "author": "Codex",
+        "id": "COD-20261019-123",
+        "utc": "2026-10-20T00:52:10+00:00",
+        "previous_sha256": "b5429eff9eb2847ca22b7be87a6c82d0ee249a98737adf5b0ac7939a41e7a65e",
+        "sha256": "4f08a0428d4cc5770cbe120bdb8d13877288af554ef1ba14836af67c2217e608"
+      },
+      "adopcion_externa_Claude": "pendiente de respuesta auténtica y recibo localizable",
+      "actividad": {
+        "ajustes": 0,
+        "inferencias": 0,
+        "modelos_cargados": 0,
+        "replays": 0,
+        "Kaggle": 0
+      },
+      "limites": "No reproducción completa, independencia o suficiencia de reservas; GOV007 no se amplía."
+    },
+    "modelo_definitivo": {
+      "utc": "2026-10-20T16:20:18+00:00",
+      "decision": "D99",
+      "modelo": "S30",
+      "nombre": {
+        "es": "Mezcla por peligro",
+        "en": "Per-peril blend"
+      },
+      "parte1_cerrada": true,
+      "S22": "Registro histórico; no es respaldo operativo.",
+      "seleccion_final_manual_kaggle": "pendiente_no_realizada",
+      "registro": "registro/decision_modelo_definitivo_20261020.json",
+      "aporte": "CLA-20261020-004"
+    },
+    "principal_definitivo": true,
+    "candidatos_historicos": [
+      "S22"
+    ],
+    "nombre_modelo": {
+      "es": "Mezcla por peligro",
+      "en": "Per-peril blend"
+    },
+    "reproduccion": {
+      "registro": "registro/recibo_reproduccion_completa_20261020.json",
+      "documento": "docs/REPRODUCCION_COMPLETA.md",
+      "csv_S30_exacto": true,
+      "huellas_iguales": 162,
+      "huellas_verificadas": 181,
+      "huellas_diferentes": 19,
+      "codigo_salida": 3,
+      "conformidad_integra_historica": false,
+      "independiente": false,
+      "replay": "194/194 salidas según recibo del autor; VAL12 cotejó 191 salidas principales locales. No es un replay nuevo.",
+      "limite": "Recuperación de estimadores con recálculos actuariales; no igualdad de todos los intermedios ni bloqueo de cualquier ajuste posible."
+    },
+    "seguimiento_vigente": {
+      "hallazgos": 21,
+      "abiertos": 12,
+      "limitaciones_aceptadas": 2,
+      "otros_estados_acotados": 7,
+      "revision_general_realizada": false,
+      "decisiones_especificas": {
+        "GOV-007": {
+          "decision": "aceptar_correccion_tecnica_1_2",
+          "fecha": "2026-10-19T22:12:00.740Z",
+          "registro": "registro/decision_GOV007_20261019.json"
+        },
+        "GOV-008": {
+          "decision": "aceptar_correccion_tecnica_captura_1_1_2",
+          "estado": "cerrado_en_alcance_de_correccion_tecnica_captura_1_1_2",
+          "alcance": "Corrección técnica de la captura 1.1.2 (SHA 3ae39d78…32f0) y su recorrido en la réplica sin ajustes; no la revisión general ni otros hallazgos.",
+          "fecha": "2026-10-20T15:21:59.556Z",
+          "registro": "registro/decision_GOV008_20261020.json"
+        },
+        "GOV-003": {
+          "decision": "no_se_hara_reproduccion_por_otro_operador_con_el_kit",
+          "estado": "limitacion_aceptada_por_participante_sin_reproduccion_independiente",
+          "alcance": "La reproducción queda acreditada solo como hecha por Claude en la nube de Claude; la independencia se declara como limitación.",
+          "fecha": "2026-10-20T15:21:59.556Z",
+          "registro": "registro/decisiones_participante_20261020.json"
+        },
+        "MOD-002": {
+          "decision": "suficiencia_de_reservas_declarada_como_limitacion_del_ejercicio",
+          "estado": "limitacion_aceptada_por_participante",
+          "alcance": "Se mantiene la acotación de docs/RESERVAS_ACOTACION.md (incertidumbre material, sin ajuste adoptado); no cambian T0, la receta ni S30.",
+          "fecha": "2026-10-20T15:21:59.556Z",
+          "registro": "registro/decisiones_participante_20261020.json"
+        },
+        "R01": {
+          "decision": "aceptar_alcance_concurso_con_hipotesis_de_consistencia",
+          "estado": "alcance_concurso_aceptado_fechas_no_acreditadas",
+          "fecha": "2026-10-20T22:49:20.404005+00:00",
+          "alcance": "Uso de S30 para el concurso con los datos suministrados; la consistencia con las bases se registra como hipótesis y criterio del participante para el ejercicio.",
+          "texto_literal": "Acepto S30 para el concurso con los datos suministrados. Reconozco que la disponibilidad temporal de sus predictores para una cotización real no está completamente acreditada pero corresponde a una hipótesis consistente con las bases de datos proporcionadas para el ejercicio. Esta aceptación no autoriza su uso operativo ni confirma las fechas que faltan.",
+          "registro": "registro/decision_R01_20261020.json"
+        },
+        "R02": {
+          "decision": "aceptar_tratamiento_capitales_division_1000_como_hipotesis",
+          "estado": "supuesto_capitales_aceptado_unidad_no_confirmada",
+          "fecha": "2026-10-20T22:54:46.091924+00:00",
+          "alcance": "Mantener para el concurso la división entre mil de los 149 capitales como hipótesis coherente con la prima; el participante reconoce el efecto material por póliza y que la unidad original sigue sin confirmarse.",
+          "texto_literal": "Acepto R02: mantener para el concurso la división entre mil de los 149 capitales como hipótesis coherente con la prima, reconociendo su efecto material por póliza y que la unidad original sigue sin confirmarse.",
+          "registro": "registro/decision_R02_20261020.json"
+        },
+        "R03": {
+          "decision": "aceptar_presentacion_validacion_reutilizada_e_incertidumbre_material",
+          "estado": "presentacion_aceptada_con_limites_validacion_y_nivel",
+          "fecha": "2026-10-20T23:06:42.175649+00:00",
+          "alcance": "Aceptación de la presentación de resultados: cortes reutilizados, pruebas de estabilidad, ventaja sin superioridad robusta ni equivalencia acreditadas, coste último no observado e incertidumbre material del nivel. Las sensibilidades no prueban por sí solas intervalos de confianza o sesgos confirmados.",
+          "texto_literal": "Acepto R03 con la redacción propuesta. Reconozco los límites de la validación reutilizada y la incertidumbre material del nivel. Regístralo y pasemos a R04, sin cambiar S30 ni reentrenar.",
+          "redaccion_aprobada": "Considero adecuada la presentación de V23 y V24 como cortes reutilizados y de los experimentos posteriores como pruebas de estabilidad. Reconozco que la ventaja de S30 no acredita superioridad robusta ni equivalencia estadística, que no observamos el coste último y que persiste incertidumbre material en el nivel previsto. Los escenarios de sensibilidad no constituyen por sí solos intervalos de confianza ni sesgos confirmados.",
+          "registro": "registro/decision_R03_20261020.json"
+        },
+        "R04": {
+          "decision": "aceptar_presentacion_reconstruccion_y_controles_con_limites",
+          "estado": "presentacion_aceptada_con_limites_reconstruccion_y_cobertura",
+          "alcance": "Aceptación de la presentación de la reconstrucción y los controles: CSV exacto, 19 intermedios distintos y código 3, distinto alcance del replay del autor y del cotejo local, y cobertura no universal. No acredita independencia ni cierre técnico de MOD-005 o GOV-004.",
+          "texto_literal": "Acepto R04 con la redacción propuesta y los límites indicados. Regístralo y pasemos a R05, sin cambiar S30 ni reentrenar.",
+          "redaccion_aprobada": "Considero adecuada la presentación de la reconstrucción: el CSV de S30 se reproduce exactamente, aunque persisten 19 diferencias intermedias y el resultado conserva el código 3. Reconozco que el replay del autor y el cotejo local tienen alcances distintos, y que los controles no cubren universalmente todos los cálculos. Esta aceptación no acredita validación independiente ni cierra por sí sola MOD-005 o GOV-004.",
+          "fecha": "2026-10-20T23:10:11.363394+00:00",
+          "registro": "registro/decision_R04_20261020.json"
+        },
+        "R05": {
+          "decision": "conservar_explicitamente_carencias_trazabilidad_y_cronologia",
+          "estado": "carencias_declaradas_para_concurso_sin_cierre_tecnico",
+          "alcance": "Conservar expresamente las carencias de trazabilidad de selección y calibración y la discrepancia temporal CLB004/D88 para el concurso. No se acredita una cadena completa, la causa u hora correcta de ese episodio ni su preinscripción; GOV-002 y GOV-006 conservan sus estados técnicos.",
+          "texto_literal": "Acepto R05 con la redacción propuesta. Conservemos explícitas las carencias de trazabilidad y cronología. Regístralo y pasemos a R06, sin cambiar S30 ni reentrenar.",
+          "redaccion_aprobada": "Reconozco que la trazabilidad disponible es selectiva y no acredita una cadena completa de selección y calibración. Mantengo declarada la discrepancia temporal CLB004/D88, sin afirmar su causa ni una preinscripción acreditada para ese episodio. Conservo estas carencias expresamente para el concurso, sin reconstruir mensajes ausentes ni dar por cerrados GOV-002 o GOV-006.",
+          "fecha": "2026-10-20T23:44:42.025606+00:00",
+          "registro": "registro/decision_R05_20261020.json"
+        }
+      },
+      "revision_preparada": "registro/revision_preparada_20261020.json",
+      "guia": "docs/REVISION_PENDIENTE_PARTICIPANTE.md"
+    }
+  },
+  "revision_humana": {
+    "estado": "revision_general_en_curso_R01_a_R05_registradas",
+    "revisor": "Manuel Ignacio Rodríguez",
+    "fecha": null,
+    "candidato": "S30",
+    "decision": null,
+    "observaciones": [],
+    "nota": "Revisión actuarial general pendiente. Las decisiones específicas registradas conservan su alcance. La nueva plantilla y las notas del panel no firman esta acta.",
+    "competencia_declarada": "Actuario;13años de experiencia en actuaría y supervisión, declarado por el participante.",
+    "otro_entorno_declarado": true,
+    "fuente_designacion": "Respuesta directa del participante en este chat,19oct2026.",
+    "acta_detallada": "registro/revision_preparada_20261020.json",
+    "independencia_acreditada": false,
+    "decisiones_especificas": {
+      "GOV-007": {
+        "decision": "aceptar_correccion_tecnica_1_2",
+        "fecha": "2026-10-19T22:12:00.740Z",
+        "registro": "registro/decision_GOV007_20261019.json"
+      },
+      "GOV-008": {
+        "decision": "aceptar_correccion_tecnica_captura_1_1_2",
+        "estado": "cerrado_en_alcance_de_correccion_tecnica_captura_1_1_2",
+        "alcance": "Corrección técnica de la captura 1.1.2 (SHA 3ae39d78…32f0) y su recorrido en la réplica sin ajustes; no la revisión general ni otros hallazgos.",
+        "fecha": "2026-10-20T15:21:59.556Z",
+        "registro": "registro/decision_GOV008_20261020.json"
+      },
+      "GOV-003": {
+        "decision": "no_se_hara_reproduccion_por_otro_operador_con_el_kit",
+        "estado": "limitacion_aceptada_por_participante_sin_reproduccion_independiente",
+        "alcance": "La reproducción queda acreditada solo como hecha por Claude en la nube de Claude; la independencia se declara como limitación.",
+        "fecha": "2026-10-20T15:21:59.556Z",
+        "registro": "registro/decisiones_participante_20261020.json"
+      },
+      "MOD-002": {
+        "decision": "suficiencia_de_reservas_declarada_como_limitacion_del_ejercicio",
+        "estado": "limitacion_aceptada_por_participante",
+        "alcance": "Se mantiene la acotación de docs/RESERVAS_ACOTACION.md (incertidumbre material, sin ajuste adoptado); no cambian T0, la receta ni S30.",
+        "fecha": "2026-10-20T15:21:59.556Z",
+        "registro": "registro/decisiones_participante_20261020.json"
+      },
+      "R01": {
+        "decision": "aceptar_alcance_concurso_con_hipotesis_de_consistencia",
+        "estado": "alcance_concurso_aceptado_fechas_no_acreditadas",
+        "fecha": "2026-10-20T22:49:20.404005+00:00",
+        "alcance": "Uso de S30 para el concurso con los datos suministrados; la consistencia con las bases se registra como hipótesis y criterio del participante para el ejercicio.",
+        "texto_literal": "Acepto S30 para el concurso con los datos suministrados. Reconozco que la disponibilidad temporal de sus predictores para una cotización real no está completamente acreditada pero corresponde a una hipótesis consistente con las bases de datos proporcionadas para el ejercicio. Esta aceptación no autoriza su uso operativo ni confirma las fechas que faltan.",
+        "registro": "registro/decision_R01_20261020.json"
+      },
+      "R02": {
+        "decision": "aceptar_tratamiento_capitales_division_1000_como_hipotesis",
+        "estado": "supuesto_capitales_aceptado_unidad_no_confirmada",
+        "fecha": "2026-10-20T22:54:46.091924+00:00",
+        "alcance": "Mantener para el concurso la división entre mil de los 149 capitales como hipótesis coherente con la prima; el participante reconoce el efecto material por póliza y que la unidad original sigue sin confirmarse.",
+        "texto_literal": "Acepto R02: mantener para el concurso la división entre mil de los 149 capitales como hipótesis coherente con la prima, reconociendo su efecto material por póliza y que la unidad original sigue sin confirmarse.",
+        "registro": "registro/decision_R02_20261020.json"
+      },
+      "R03": {
+        "decision": "aceptar_presentacion_validacion_reutilizada_e_incertidumbre_material",
+        "estado": "presentacion_aceptada_con_limites_validacion_y_nivel",
+        "fecha": "2026-10-20T23:06:42.175649+00:00",
+        "alcance": "Aceptación de la presentación de resultados: cortes reutilizados, pruebas de estabilidad, ventaja sin superioridad robusta ni equivalencia acreditadas, coste último no observado e incertidumbre material del nivel. Las sensibilidades no prueban por sí solas intervalos de confianza o sesgos confirmados.",
+        "texto_literal": "Acepto R03 con la redacción propuesta. Reconozco los límites de la validación reutilizada y la incertidumbre material del nivel. Regístralo y pasemos a R04, sin cambiar S30 ni reentrenar.",
+        "redaccion_aprobada": "Considero adecuada la presentación de V23 y V24 como cortes reutilizados y de los experimentos posteriores como pruebas de estabilidad. Reconozco que la ventaja de S30 no acredita superioridad robusta ni equivalencia estadística, que no observamos el coste último y que persiste incertidumbre material en el nivel previsto. Los escenarios de sensibilidad no constituyen por sí solos intervalos de confianza ni sesgos confirmados.",
+        "registro": "registro/decision_R03_20261020.json"
+      },
+      "R04": {
+        "decision": "aceptar_presentacion_reconstruccion_y_controles_con_limites",
+        "estado": "presentacion_aceptada_con_limites_reconstruccion_y_cobertura",
+        "alcance": "Aceptación de la presentación de la reconstrucción y los controles: CSV exacto, 19 intermedios distintos y código 3, distinto alcance del replay del autor y del cotejo local, y cobertura no universal. No acredita independencia ni cierre técnico de MOD-005 o GOV-004.",
+        "texto_literal": "Acepto R04 con la redacción propuesta y los límites indicados. Regístralo y pasemos a R05, sin cambiar S30 ni reentrenar.",
+        "redaccion_aprobada": "Considero adecuada la presentación de la reconstrucción: el CSV de S30 se reproduce exactamente, aunque persisten 19 diferencias intermedias y el resultado conserva el código 3. Reconozco que el replay del autor y el cotejo local tienen alcances distintos, y que los controles no cubren universalmente todos los cálculos. Esta aceptación no acredita validación independiente ni cierra por sí sola MOD-005 o GOV-004.",
+        "fecha": "2026-10-20T23:10:11.363394+00:00",
+        "registro": "registro/decision_R04_20261020.json"
+      },
+      "R05": {
+        "decision": "conservar_explicitamente_carencias_trazabilidad_y_cronologia",
+        "estado": "carencias_declaradas_para_concurso_sin_cierre_tecnico",
+        "alcance": "Conservar expresamente las carencias de trazabilidad de selección y calibración y la discrepancia temporal CLB004/D88 para el concurso. No se acredita una cadena completa, la causa u hora correcta de ese episodio ni su preinscripción; GOV-002 y GOV-006 conservan sus estados técnicos.",
+        "texto_literal": "Acepto R05 con la redacción propuesta. Conservemos explícitas las carencias de trazabilidad y cronología. Regístralo y pasemos a R06, sin cambiar S30 ni reentrenar.",
+        "redaccion_aprobada": "Reconozco que la trazabilidad disponible es selectiva y no acredita una cadena completa de selección y calibración. Mantengo declarada la discrepancia temporal CLB004/D88, sin afirmar su causa ni una preinscripción acreditada para ese episodio. Conservo estas carencias expresamente para el concurso, sin reconstruir mensajes ausentes ni dar por cerrados GOV-002 o GOV-006.",
+        "fecha": "2026-10-20T23:44:42.025606+00:00",
+        "registro": "registro/decision_R05_20261020.json"
+      }
+    },
+    "revision_preparada": "registro/revision_preparada_20261020.json",
+    "guia_revision_actual": "docs/REVISION_PENDIENTE_PARTICIPANTE.md",
+    "acta_historica": "registro/acta_subsanacion_20261019.json",
+    "progreso_revision": {
+      "registrados": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05"
+      ],
+      "siguiente": "R06",
+      "total_puntos": 7,
+      "revision_general_aprobada": false
+    }
+  },
+  "revision_preparada": {
+    "id": "REV-PREPARADA-20261020",
+    "autor_preparacion": "Codex",
+    "preparado_utc": "2026-10-20T22:22:13.056278+00:00",
+    "estado": "revision_en_curso_R01_a_R05_registradas",
+    "revisor_designado": "Manuel Ignacio Rodríguez",
+    "competencia_declarada": "Actuario;13años de experiencia en actuaría y supervisión, declarado por el participante.",
+    "candidato": "S30",
+    "sha256_csv": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+    "fecha_revision": null,
+    "decision_general": null,
+    "alcance_revisado": null,
+    "firma_o_evidencia_humana": null,
+    "decisiones_ya_registradas": {
+      "GOV-007": {
+        "decision": "aceptar_correccion_tecnica_1_2",
+        "fecha": "2026-10-19T22:12:00.740Z",
+        "registro": "registro/decision_GOV007_20261019.json"
+      },
+      "GOV-008": {
+        "decision": "aceptar_correccion_tecnica_captura_1_1_2",
+        "estado": "cerrado_en_alcance_de_correccion_tecnica_captura_1_1_2",
+        "alcance": "Corrección técnica de la captura 1.1.2 (SHA 3ae39d78…32f0) y su recorrido en la réplica sin ajustes; no la revisión general ni otros hallazgos.",
+        "fecha": "2026-10-20T15:21:59.556Z",
+        "registro": "registro/decision_GOV008_20261020.json"
+      },
+      "GOV-003": {
+        "decision": "no_se_hara_reproduccion_por_otro_operador_con_el_kit",
+        "estado": "limitacion_aceptada_por_participante_sin_reproduccion_independiente",
+        "alcance": "La reproducción queda acreditada solo como hecha por Claude en la nube de Claude; la independencia se declara como limitación.",
+        "fecha": "2026-10-20T15:21:59.556Z",
+        "registro": "registro/decisiones_participante_20261020.json"
+      },
+      "MOD-002": {
+        "decision": "suficiencia_de_reservas_declarada_como_limitacion_del_ejercicio",
+        "estado": "limitacion_aceptada_por_participante",
+        "alcance": "Se mantiene la acotación de docs/RESERVAS_ACOTACION.md (incertidumbre material, sin ajuste adoptado); no cambian T0, la receta ni S30.",
+        "fecha": "2026-10-20T15:21:59.556Z",
+        "registro": "registro/decisiones_participante_20261020.json"
+      },
+      "R01": {
+        "decision": "aceptar_alcance_concurso_con_hipotesis_de_consistencia",
+        "estado": "alcance_concurso_aceptado_fechas_no_acreditadas",
+        "fecha": "2026-10-20T22:49:20.404005+00:00",
+        "alcance": "Uso de S30 para el concurso con los datos suministrados; la consistencia con las bases se registra como hipótesis y criterio del participante para el ejercicio.",
+        "texto_literal": "Acepto S30 para el concurso con los datos suministrados. Reconozco que la disponibilidad temporal de sus predictores para una cotización real no está completamente acreditada pero corresponde a una hipótesis consistente con las bases de datos proporcionadas para el ejercicio. Esta aceptación no autoriza su uso operativo ni confirma las fechas que faltan.",
+        "registro": "registro/decision_R01_20261020.json"
+      },
+      "R02": {
+        "decision": "aceptar_tratamiento_capitales_division_1000_como_hipotesis",
+        "estado": "supuesto_capitales_aceptado_unidad_no_confirmada",
+        "fecha": "2026-10-20T22:54:46.091924+00:00",
+        "alcance": "Mantener para el concurso la división entre mil de los 149 capitales como hipótesis coherente con la prima; el participante reconoce el efecto material por póliza y que la unidad original sigue sin confirmarse.",
+        "texto_literal": "Acepto R02: mantener para el concurso la división entre mil de los 149 capitales como hipótesis coherente con la prima, reconociendo su efecto material por póliza y que la unidad original sigue sin confirmarse.",
+        "registro": "registro/decision_R02_20261020.json"
+      },
+      "R03": {
+        "decision": "aceptar_presentacion_validacion_reutilizada_e_incertidumbre_material",
+        "estado": "presentacion_aceptada_con_limites_validacion_y_nivel",
+        "fecha": "2026-10-20T23:06:42.175649+00:00",
+        "alcance": "Aceptación de la presentación de resultados: cortes reutilizados, pruebas de estabilidad, ventaja sin superioridad robusta ni equivalencia acreditadas, coste último no observado e incertidumbre material del nivel. Las sensibilidades no prueban por sí solas intervalos de confianza o sesgos confirmados.",
+        "texto_literal": "Acepto R03 con la redacción propuesta. Reconozco los límites de la validación reutilizada y la incertidumbre material del nivel. Regístralo y pasemos a R04, sin cambiar S30 ni reentrenar.",
+        "redaccion_aprobada": "Considero adecuada la presentación de V23 y V24 como cortes reutilizados y de los experimentos posteriores como pruebas de estabilidad. Reconozco que la ventaja de S30 no acredita superioridad robusta ni equivalencia estadística, que no observamos el coste último y que persiste incertidumbre material en el nivel previsto. Los escenarios de sensibilidad no constituyen por sí solos intervalos de confianza ni sesgos confirmados.",
+        "registro": "registro/decision_R03_20261020.json"
+      },
+      "R04": {
+        "decision": "aceptar_presentacion_reconstruccion_y_controles_con_limites",
+        "estado": "presentacion_aceptada_con_limites_reconstruccion_y_cobertura",
+        "alcance": "Aceptación de la presentación de la reconstrucción y los controles: CSV exacto, 19 intermedios distintos y código 3, distinto alcance del replay del autor y del cotejo local, y cobertura no universal. No acredita independencia ni cierre técnico de MOD-005 o GOV-004.",
+        "texto_literal": "Acepto R04 con la redacción propuesta y los límites indicados. Regístralo y pasemos a R05, sin cambiar S30 ni reentrenar.",
+        "redaccion_aprobada": "Considero adecuada la presentación de la reconstrucción: el CSV de S30 se reproduce exactamente, aunque persisten 19 diferencias intermedias y el resultado conserva el código 3. Reconozco que el replay del autor y el cotejo local tienen alcances distintos, y que los controles no cubren universalmente todos los cálculos. Esta aceptación no acredita validación independiente ni cierra por sí sola MOD-005 o GOV-004.",
+        "fecha": "2026-10-20T23:10:11.363394+00:00",
+        "registro": "registro/decision_R04_20261020.json"
+      },
+      "R05": {
+        "decision": "conservar_explicitamente_carencias_trazabilidad_y_cronologia",
+        "estado": "carencias_declaradas_para_concurso_sin_cierre_tecnico",
+        "alcance": "Conservar expresamente las carencias de trazabilidad de selección y calibración y la discrepancia temporal CLB004/D88 para el concurso. No se acredita una cadena completa, la causa u hora correcta de ese episodio ni su preinscripción; GOV-002 y GOV-006 conservan sus estados técnicos.",
+        "texto_literal": "Acepto R05 con la redacción propuesta. Conservemos explícitas las carencias de trazabilidad y cronología. Regístralo y pasemos a R06, sin cambiar S30 ni reentrenar.",
+        "redaccion_aprobada": "Reconozco que la trazabilidad disponible es selectiva y no acredita una cadena completa de selección y calibración. Mantengo declarada la discrepancia temporal CLB004/D88, sin afirmar su causa ni una preinscripción acreditada para ese episodio. Conservo estas carencias expresamente para el concurso, sin reconstruir mensajes ausentes ni dar por cerrados GOV-002 o GOV-006.",
+        "fecha": "2026-10-20T23:44:42.025606+00:00",
+        "registro": "registro/decision_R05_20261020.json"
+      }
+    },
+    "modelo_ya_decidido": {
+      "ruta": "registro/decision_modelo_definitivo_20261020.json",
+      "sha256": "327303451289f4a7f667e31f719c94a789ff2f1ad5507ef11889cd302a1f9686"
+    },
+    "preguntas": [
+      {
+        "id": "R01",
+        "tema": "Uso previsto y fechas de las variables",
+        "hallazgos": [
+          "DATA-001",
+          "DATA-005",
+          "MOD-003"
+        ],
+        "pregunta": "¿Limitar el uso al concurso con los datos suministrados, o exigir acreditación por variable antes de afirmar que sirve para cotizar?",
+        "alcance": "El uso para cotización prospectiva no está acreditado. No hay fuga de S30 demostrada por esta revisión.",
+        "evidencia": [
+          "registro/disponibilidad_temporal_20261019.json",
+          "docs/entrega/informe_es.pdf"
+        ],
+        "opciones_sin_preseleccion": [
+          "Aceptar solo el alcance del concurso",
+          "Solicitar evidencia de disponibilidad por columna",
+          "Mantener abierto"
+        ],
+        "decision": "Aceptar solo el alcance del concurso",
+        "motivo": "Uso de S30 para el concurso con los datos suministrados; la consistencia con las bases se registra como hipótesis y criterio del participante para el ejercicio.",
+        "evidencia_adicional": [
+          "registro/decision_R01_20261020.json"
+        ],
+        "fecha": "2026-10-20T22:49:20.404005+00:00",
+        "texto_literal": "Acepto S30 para el concurso con los datos suministrados. Reconozco que la disponibilidad temporal de sus predictores para una cotización real no está completamente acreditada pero corresponde a una hipótesis consistente con las bases de datos proporcionadas para el ejercicio. Esta aceptación no autoriza su uso operativo ni confirma las fechas que faltan.",
+        "fecha_es_registro": true,
+        "registro_decision": "registro/decision_R01_20261020.json",
+        "estado": "alcance_concurso_aceptado_fechas_no_acreditadas"
+      },
+      {
+        "id": "R02",
+        "tema": "Capitales sin confirmación económica",
+        "hallazgos": [
+          "DATA-003"
+        ],
+        "pregunta": "¿Aceptar para el concurso el tratamiento de los 149 capitales, con el impacto por fila y la falta de confirmación de unidad declarados?",
+        "alcance": "123 casos están en test; el peso agregado pequeño no elimina el efecto por fila. La aceptación no confirma la unidad real.",
+        "evidencia": [
+          "registro/capitales_revision_20261019.json",
+          "docs/SENSIBILIDAD_S30_S22.md",
+          "docs/evidencia/capitales_149_prediccion.json"
+        ],
+        "opciones_sin_preseleccion": [
+          "Aceptar el supuesto para el concurso",
+          "Solicitar revisión especializada de hogar",
+          "Mantener abierto"
+        ],
+        "decision": "Aceptar el supuesto para el concurso",
+        "motivo": "Mantener para el concurso la división entre mil de los 149 capitales como hipótesis coherente con la prima; el participante reconoce el efecto material por póliza y que la unidad original sigue sin confirmarse.",
+        "evidencia_adicional": [
+          "registro/decision_R02_20261020.json"
+        ],
+        "fecha": "2026-10-20T22:54:46.091924+00:00",
+        "texto_literal": "Acepto R02: mantener para el concurso la división entre mil de los 149 capitales como hipótesis coherente con la prima, reconociendo su efecto material por póliza y que la unidad original sigue sin confirmarse.",
+        "fecha_es_registro": true,
+        "registro_decision": "registro/decision_R02_20261020.json",
+        "estado": "supuesto_capitales_aceptado_unidad_no_confirmada"
+      },
+      {
+        "id": "R03",
+        "tema": "Interpretación de la validación y del nivel",
+        "hallazgos": [
+          "DATA-002",
+          "MOD-001",
+          "MOD-004"
+        ],
+        "pregunta": "¿Es adecuada la presentación de V23/V24 como cortes reutilizados, de la ventaja no robusta de S30 y de la incertidumbre del nivel?",
+        "alcance": "S30 sigue definitivo. Las reservas ya se aceptaron como limitación; aquí se revisa cómo se comunica el alcance y no se pide otra selección.",
+        "evidencia": [
+          "docs/SENSIBILIDAD_S30_S22.md",
+          "docs/RESERVAS_ACOTACION.md",
+          "docs/entrega/informe_es.pdf"
+        ],
+        "opciones_sin_preseleccion": [
+          "Presentación adecuada con esos límites",
+          "Pedir corrección de la explicación",
+          "Mantener abierto"
+        ],
+        "decision": "Presentación adecuada con esos límites",
+        "motivo": "Aceptación de la presentación de resultados: cortes reutilizados, pruebas de estabilidad, ventaja sin superioridad robusta ni equivalencia acreditadas, coste último no observado e incertidumbre material del nivel. Las sensibilidades no prueban por sí solas intervalos de confianza o sesgos confirmados.",
+        "evidencia_adicional": [
+          "registro/decision_R03_20261020.json"
+        ],
+        "fecha": "2026-10-20T23:06:42.175649+00:00",
+        "texto_literal": "Acepto R03 con la redacción propuesta. Reconozco los límites de la validación reutilizada y la incertidumbre material del nivel. Regístralo y pasemos a R04, sin cambiar S30 ni reentrenar.",
+        "redaccion_aprobada": "Considero adecuada la presentación de V23 y V24 como cortes reutilizados y de los experimentos posteriores como pruebas de estabilidad. Reconozco que la ventaja de S30 no acredita superioridad robusta ni equivalencia estadística, que no observamos el coste último y que persiste incertidumbre material en el nivel previsto. Los escenarios de sensibilidad no constituyen por sí solos intervalos de confianza ni sesgos confirmados.",
+        "fecha_es_registro": true,
+        "registro_decision": "registro/decision_R03_20261020.json",
+        "estado": "presentacion_aceptada_con_limites_validacion_y_nivel"
+      },
+      {
+        "id": "R04",
+        "tema": "Alcance de la reconstrucción y los controles",
+        "hallazgos": [
+          "MOD-005",
+          "GOV-004"
+        ],
+        "pregunta": "¿La entrega explica adecuadamente que el CSV es exacto, existen 19 intermedios distintos y la cobertura del replay y del centinela tiene límites?",
+        "alcance": "La independencia ya se aceptó como limitación. No se exige repetir el entrenamiento; esta revisión no cierra por sí sola la cobertura técnica.",
+        "evidencia": [
+          "docs/REPRODUCCION_COMPLETA.md",
+          "registro/recibo_reproduccion_completa_20261020.json",
+          "docs/controles/pool_sin_huella.md"
+        ],
+        "opciones_sin_preseleccion": [
+          "Presentación adecuada con esos límites",
+          "Pedir corrección documental",
+          "Mantener abierto"
+        ],
+        "decision": "Presentación adecuada con esos límites",
+        "motivo": "Aceptación de la presentación de la reconstrucción y los controles: CSV exacto, 19 intermedios distintos y código 3, distinto alcance del replay del autor y del cotejo local, y cobertura no universal. No acredita independencia ni cierre técnico de MOD-005 o GOV-004.",
+        "evidencia_adicional": [
+          "registro/decision_R04_20261020.json"
+        ],
+        "fecha": "2026-10-20T23:10:11.363394+00:00",
+        "texto_literal": "Acepto R04 con la redacción propuesta y los límites indicados. Regístralo y pasemos a R05, sin cambiar S30 ni reentrenar.",
+        "redaccion_aprobada": "Considero adecuada la presentación de la reconstrucción: el CSV de S30 se reproduce exactamente, aunque persisten 19 diferencias intermedias y el resultado conserva el código 3. Reconozco que el replay del autor y el cotejo local tienen alcances distintos, y que los controles no cubren universalmente todos los cálculos. Esta aceptación no acredita validación independiente ni cierra por sí sola MOD-005 o GOV-004.",
+        "fecha_es_registro": true,
+        "registro_decision": "registro/decision_R04_20261020.json",
+        "estado": "presentacion_aceptada_con_limites_reconstruccion_y_cobertura"
+      },
+      {
+        "id": "R05",
+        "tema": "Evidencia de IA y cronología",
+        "hallazgos": [
+          "GOV-002",
+          "GOV-006"
+        ],
+        "pregunta": "¿Qué instrucciones y respuestas auténticas adicionales se pueden aportar sobre selección, calibración y la cronología de la adenda?",
+        "alcance": "El mapa ampliado conserva seis eventos selectivos; no reconstruye los prompts o las respuestas que faltan ni resuelve GOV-006.",
+        "evidencia": [
+          "registro/trazabilidad_ia_revision_20261020.json",
+          "docs/REGISTRO_IA.md"
+        ],
+        "opciones_sin_preseleccion": [
+          "Aportaré registros auténticos adicionales",
+          "Conservaré la carencia expresamente",
+          "Mantener abierto"
+        ],
+        "decision": "Conservaré la carencia expresamente",
+        "motivo": "Conservar expresamente las carencias de trazabilidad de selección y calibración y la discrepancia temporal CLB004/D88 para el concurso. No se acredita una cadena completa, la causa u hora correcta de ese episodio ni su preinscripción; GOV-002 y GOV-006 conservan sus estados técnicos.",
+        "evidencia_adicional": [
+          "registro/decision_R05_20261020.json"
+        ],
+        "fecha": "2026-10-20T23:44:42.025606+00:00",
+        "texto_literal": "Acepto R05 con la redacción propuesta. Conservemos explícitas las carencias de trazabilidad y cronología. Regístralo y pasemos a R06, sin cambiar S30 ni reentrenar.",
+        "redaccion_aprobada": "Reconozco que la trazabilidad disponible es selectiva y no acredita una cadena completa de selección y calibración. Mantengo declarada la discrepancia temporal CLB004/D88, sin afirmar su causa ni una preinscripción acreditada para ese episodio. Conservo estas carencias expresamente para el concurso, sin reconstruir mensajes ausentes ni dar por cerrados GOV-002 o GOV-006.",
+        "fecha_es_registro": true,
+        "registro_decision": "registro/decision_R05_20261020.json",
+        "estado": "carencias_declaradas_para_concurso_sin_cierre_tecnico"
+      },
+      {
+        "id": "R06",
+        "tema": "Revisión humana general de los entregables",
+        "hallazgos": [
+          "GOV-001"
+        ],
+        "pregunta": "Después de leer el informe y revisar el panel, ¿qué alcance puedes aceptar para el concurso y qué correcciones concretas quedan?",
+        "alcance": "Es tu revisión como participante del desarrollo. No constituye validación independiente; fecha, decisión y evidencia permanecen vacías hasta tu respuesta.",
+        "evidencia": [
+          "docs/entrega/informe_es.pdf",
+          "docs/panel_revision.html",
+          "registro/requisitos.json"
+        ],
+        "opciones_sin_preseleccion": [
+          "Aceptar el alcance de concurso con límites enumerados",
+          "Solicitar correcciones antes de aprobar",
+          "Mantener abierto"
+        ],
+        "decision": null,
+        "motivo": null,
+        "evidencia_adicional": [],
+        "fecha": null
+      },
+      {
+        "id": "R07",
+        "tema": "Elegibilidad y condiciones de herramientas",
+        "hallazgos": [],
+        "pregunta": "¿Qué constancia de afiliación o condición estudiantil aportas y cuáles fueron las versiones, planes, costes y condiciones de los servicios usados?",
+        "alcance": "Los exámenes y la experiencia declarados no sustituyen la constancia exigida por las reglas. No se presume gratuidad o licencia revisada.",
+        "evidencia": [
+          "registro/inventario_herramientas_revision_20261020.json",
+          "registro/requisitos.json"
+        ],
+        "opciones_sin_preseleccion": [
+          "Aportaré los documentos y datos faltantes",
+          "Requiere aclaración del organizador por mi parte",
+          "Mantener abierto"
+        ],
+        "decision": null,
+        "motivo": null,
+        "evidencia_adicional": [],
+        "fecha": null
+      }
+    ],
+    "registro_revision_general": "registro/revision_humana.json",
+    "instruccion": "Puedes responder por código en el chat o completar este archivo. Una respuesta específica no cierra automáticamente otros hallazgos; se verifican alcance, fecha y evidencia antes de actualizar el acta.",
+    "fuentes": [
+      {
+        "ruta": "registro/revision_humana.json",
+        "sha256": "31cdeadb9bd363f3a2ff461cea49452ba07fe7fb902828625f9ff1de8800a4eb"
+      },
+      {
+        "ruta": "registro/decision_modelo_definitivo_20261020.json",
+        "sha256": "327303451289f4a7f667e31f719c94a789ff2f1ad5507ef11889cd302a1f9686"
+      },
+      {
+        "ruta": "registro/recibo_reproduccion_completa_20261020.json",
+        "sha256": "6c580a371758b3c47286ee68f41b697e7db2196a16adfbc833ea9da51e6d9ef1"
+      }
+    ],
+    "progreso": {
+      "decisiones_registradas": 5,
+      "total_puntos": 7,
+      "siguiente": "R06"
+    }
+  },
   "deadline_utc": "2026-10-23T16:00:00Z",
   "best": {
     "id": "S30",
@@ -21697,7 +22506,7 @@
   "preflight": [
     {
       "candidato": "S30",
-      "utc": "2026-10-19T18:09:59.419713+00:00",
+      "utc": "2026-10-20T23:44:42.077610+00:00",
       "archivo_origen": "Hackaton/Semana 1/Envios/archivos/S30_claude_b.csv",
       "copia_local": "privado/predicciones/S30.csv",
       "sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
@@ -21721,11 +22530,12 @@
       "submission_id": 57371361,
       "public_score": 0.12996,
       "recibo_consultado_utc": "2026-10-18T22:52:59Z",
-      "seleccion_final_manual": "No acreditada; sigue pendiente de decisión humana"
+      "rol": "definitivo",
+      "seleccion_final_manual": "pendiente_no_realizada"
     },
     {
       "candidato": "S22",
-      "utc": "2026-10-19T18:09:59.419713+00:00",
+      "utc": "2026-10-20T23:44:42.077610+00:00",
       "archivo_origen": "Hackaton/Semana 1/Envios/archivos/S22_claude_propio.csv",
       "copia_local": "privado/predicciones/S22.csv",
       "sha256": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0",
@@ -21749,7 +22559,8 @@
       "submission_id": 57370117,
       "public_score": 0.12988,
       "recibo_consultado_utc": "2026-10-18T21:53:35Z",
-      "seleccion_final_manual": "No acreditada; sigue pendiente de decisión humana"
+      "rol": "registro_historico",
+      "seleccion_final_manual": "No corresponde: candidato histórico"
     }
   ],
   "validaciones": [
@@ -21782,10 +22593,10 @@
       "fuente": "docs/evidencia/F0_D68.json"
     },
     {
-      "id": "Integral 19oct 12:02 UTC",
-      "alcance": "Datos y modelos S22/S30",
-      "resultado": "99 controles datos y 429 modelos, según informe recibido",
-      "limite": "No son pruebas nuevas de esta sesión; 49 pytest históricos tampoco se suman otra vez.",
+      "id": "Última integral registrada",
+      "alcance": "Datos, modelos y gobierno; 2026-10-20T07:00:55.376364+00:00",
+      "resultado": "309 controles de datos, 680 diagnósticos de modelos y 49 pytest según el ciclo integral archivado",
+      "limite": "Clases solapadas no sumables. El seguimiento posterior no equivale a repetir la integral.",
       "fuente": "docs/evidencia/hallazgos.json"
     },
     {
@@ -21796,11 +22607,11 @@
       "fuente": "docs/evidencia/recibo_S30.json"
     },
     {
-      "id": "Reproducción mezcla",
-      "alcance": "CSV desde componentes guardados",
-      "resultado": "S22/S30 exactos en recibos nube y VM",
-      "limite": "VM: diferencias intermedias de último bit; versión 1.1 devuelve 3 en modo diagnóstico. Cadena completa pendiente.",
-      "fuente": "docs/verificacion.md"
+      "id": "Reconstrucción D97",
+      "alcance": "De los originales a los CSV y réplica desde estimadores capturados",
+      "resultado": "CSV exactos; 162/181 huellas históricas iguales; réplica 194/194 declarada por el autor",
+      "limite": "19 intermedios diferentes y código 3. VAL12 cotejó 191 salidas locales; no reproducción independiente.",
+      "fuente": "docs/REPRODUCCION_COMPLETA.md"
     },
     {
       "id": "Entrega de hoy",
@@ -21822,14 +22633,20 @@
       "criterio_cierre": "Revisor competente confirma por columna fecha de medición, corte de acceso y uso previsto, o limita formalmente el caso al escenario con datos suministrados y verifica una alternativa de cotización con canales disponibles.",
       "revisor_necesario": "Actuario de tarificación y responsable de datos/dispositivos con conocimiento de las fechas de captura.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/datos/hallazgos.json",
-      "revisiones_recibidas": 6,
+      "revisiones_recibidas": 11,
       "fuentes_campos": {
         "detalle": "detalle_original.finding",
         "impacto": "detalle_original.impact",
         "criterio_cierre": "detalle_original.closure_criterion",
         "revisor_necesario": "detalle_original.specialist"
       },
-      "responsable_humano": null
+      "responsable_humano": null,
+      "registro_vigente": {
+        "ruta": "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T193644Z_cambios/registro_hallazgos.json",
+        "sha256": "7f5637e1b809b47ec3c446bfa48ba3f1578b64ad5d21fd7060539de90db5fdf8",
+        "run_id": "20261020T193644Z_cambios",
+        "cerrado_utc": "2026-10-20T19:50:48.512203+00:00"
+      }
     },
     {
       "id": "DATA-002",
@@ -21842,14 +22659,20 @@
       "criterio_cierre": "Conservar explícito el límite en cada entrega; revisor actuarial acepta el alcance y las sensibilidades o se obtiene una nueva valoración/cohorte prospectiva no consultada y se congela el diseño antes de evaluarla. Ningún nuevo reparto de etiquetas 2024 elimina su reutilización.",
       "revisor_necesario": "Actuario de reservas/desarrollo y validador humano competente distinto del autor cuando exista autorización compatible con reglas.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/datos/hallazgos.json",
-      "revisiones_recibidas": 6,
+      "revisiones_recibidas": 11,
       "fuentes_campos": {
         "detalle": "detalle_original.finding",
         "impacto": "detalle_original.impact",
         "criterio_cierre": "detalle_original.closure_criterion",
         "revisor_necesario": "detalle_original.specialist"
       },
-      "responsable_humano": null
+      "responsable_humano": null,
+      "registro_vigente": {
+        "ruta": "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T193644Z_cambios/registro_hallazgos.json",
+        "sha256": "7f5637e1b809b47ec3c446bfa48ba3f1578b64ad5d21fd7060539de90db5fdf8",
+        "run_id": "20261020T193644Z_cambios",
+        "cerrado_utc": "2026-10-20T19:50:48.512203+00:00"
+      }
     },
     {
       "id": "DATA-003",
@@ -21862,14 +22685,20 @@
       "criterio_cierre": "Revisor de datos y actuario documentan unidad/capital para la cohorte pendiente o aceptan formalmente su tratamiento con sensibilidad por ramo y trazabilidad hasta el valor original.",
       "revisor_necesario": "Actuario de hogar/capitales y responsable del diccionario fuente.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/datos/hallazgos.json",
-      "revisiones_recibidas": 6,
+      "revisiones_recibidas": 11,
       "fuentes_campos": {
         "detalle": "detalle_original.finding",
         "impacto": "detalle_original.impact",
         "criterio_cierre": "detalle_original.closure_criterion",
         "revisor_necesario": "detalle_original.specialist"
       },
-      "responsable_humano": null
+      "responsable_humano": null,
+      "registro_vigente": {
+        "ruta": "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T193644Z_cambios/registro_hallazgos.json",
+        "sha256": "7f5637e1b809b47ec3c446bfa48ba3f1578b64ad5d21fd7060539de90db5fdf8",
+        "run_id": "20261020T193644Z_cambios",
+        "cerrado_utc": "2026-10-20T19:50:48.512203+00:00"
+      }
     },
     {
       "id": "DATA-004",
@@ -21882,14 +22711,20 @@
       "criterio_cierre": "Cero valores diferentes en ASSIGN-REPLAY de los tres ramos; consultar resultado final, sin inferir cierre por proporción de controles.",
       "revisor_necesario": "Revisión técnica del comparador por ingeniero de datos o validador.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/datos/hallazgos.json",
-      "revisiones_recibidas": 6,
+      "revisiones_recibidas": 11,
       "fuentes_campos": {
         "detalle": "detalle_original.finding",
         "impacto": "detalle_original.impact",
         "criterio_cierre": "detalle_original.closure_criterion",
         "revisor_necesario": "detalle_original.specialist"
       },
-      "responsable_humano": null
+      "responsable_humano": null,
+      "registro_vigente": {
+        "ruta": "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T193644Z_cambios/registro_hallazgos.json",
+        "sha256": "7f5637e1b809b47ec3c446bfa48ba3f1578b64ad5d21fd7060539de90db5fdf8",
+        "run_id": "20261020T193644Z_cambios",
+        "cerrado_utc": "2026-10-20T19:50:48.512203+00:00"
+      }
     },
     {
       "id": "MOD-001",
@@ -21902,34 +22737,46 @@
       "criterio_cierre": "Evidencia futura nueva con receta congelada antes de observarla, o afirmacion limitada expresamente al desarrollo reutilizado.",
       "revisor_necesario": "Participante y especialista en validacion estadistica; nadie designado ni contactado por este agente.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/modelos/hallazgos.json",
-      "revisiones_recibidas": 3,
+      "revisiones_recibidas": 8,
       "fuentes_campos": {
         "detalle": "detalle_original.hecho",
         "impacto": "detalle_original.limite",
         "criterio_cierre": "detalle_original.criterio_cierre",
         "revisor_necesario": "detalle_original.revision_humana_requerida"
       },
-      "responsable_humano": null
+      "responsable_humano": null,
+      "registro_vigente": {
+        "ruta": "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T193644Z_cambios/registro_hallazgos.json",
+        "sha256": "7f5637e1b809b47ec3c446bfa48ba3f1578b64ad5d21fd7060539de90db5fdf8",
+        "run_id": "20261020T193644Z_cambios",
+        "cerrado_utc": "2026-10-20T19:50:48.512203+00:00"
+      }
     },
     {
       "id": "MOD-002",
       "area": "modelos",
       "severidad": "alta",
-      "estado_registro_recibido": "abierto",
+      "estado_registro_recibido": "limitacion_aceptada_por_participante",
       "titulo": "Ultimo real y suficiencia de reservas no identificados",
       "detalle": "La conciliacion T0 y las medias de estres pasan; solo existe una valoracion retrospectiva.",
       "impacto": "No son ultimo observado, estimacion IBNER ni suficiencia comprobada.",
       "criterio_cierre": "Juicio actuarial real respaldado por desarrollo/instantaneas adecuados o limitacion explicita al escenario suministrado; conservar aplicacion unica de nivel ultimo.",
       "revisor_necesario": "Actuario competente en reservas y tarificacion, bajo reglas de colaboracion; no designado ni contactado.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/modelos/hallazgos.json",
-      "revisiones_recibidas": 3,
+      "revisiones_recibidas": 8,
       "fuentes_campos": {
         "detalle": "detalle_original.hecho",
         "impacto": "detalle_original.limite",
         "criterio_cierre": "detalle_original.criterio_cierre",
         "revisor_necesario": "detalle_original.revision_humana_requerida"
       },
-      "responsable_humano": null
+      "responsable_humano": null,
+      "registro_vigente": {
+        "ruta": "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T193644Z_cambios/registro_hallazgos.json",
+        "sha256": "7f5637e1b809b47ec3c446bfa48ba3f1578b64ad5d21fd7060539de90db5fdf8",
+        "run_id": "20261020T193644Z_cambios",
+        "cerrado_utc": "2026-10-20T19:50:48.512203+00:00"
+      }
     },
     {
       "id": "MOD-003",
@@ -21942,14 +22789,20 @@
       "criterio_cierre": "Certificar fuente/fecha material o limitar uso y contrastar escenario prospectivo si se autoriza.",
       "revisor_necesario": "Responsable de datos y criterio actuarial del participante/especialista.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/modelos/hallazgos.json",
-      "revisiones_recibidas": 3,
+      "revisiones_recibidas": 8,
       "fuentes_campos": {
         "detalle": "detalle_original.hecho",
         "impacto": "detalle_original.limite",
         "criterio_cierre": "detalle_original.criterio_cierre",
         "revisor_necesario": "detalle_original.revision_humana_requerida"
       },
-      "responsable_humano": null
+      "responsable_humano": null,
+      "registro_vigente": {
+        "ruta": "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T193644Z_cambios/registro_hallazgos.json",
+        "sha256": "7f5637e1b809b47ec3c446bfa48ba3f1578b64ad5d21fd7060539de90db5fdf8",
+        "run_id": "20261020T193644Z_cambios",
+        "cerrado_utc": "2026-10-20T19:50:48.512203+00:00"
+      }
     },
     {
       "id": "MOD-004",
@@ -21962,14 +22815,20 @@
       "criterio_cierre": "Decision humana de tolerancia de riesgo con IC y cola expuestos; evidencia externa nueva antes de afirmar robustez futura.",
       "revisor_necesario": "Participante con revision actuarial/estadistica adecuada al uso.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/modelos/hallazgos.json",
-      "revisiones_recibidas": 6,
+      "revisiones_recibidas": 11,
       "fuentes_campos": {
         "detalle": "detalle_original.hecho",
         "impacto": "detalle_original.limite",
         "criterio_cierre": "detalle_original.criterio_cierre",
         "revisor_necesario": "detalle_original.revision_humana_requerida"
       },
-      "responsable_humano": null
+      "responsable_humano": null,
+      "registro_vigente": {
+        "ruta": "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T193644Z_cambios/registro_hallazgos.json",
+        "sha256": "7f5637e1b809b47ec3c446bfa48ba3f1578b64ad5d21fd7060539de90db5fdf8",
+        "run_id": "20261020T193644Z_cambios",
+        "cerrado_utc": "2026-10-20T19:50:48.512203+00:00"
+      }
     },
     {
       "id": "MOD-005",
@@ -21982,14 +22841,20 @@
       "criterio_cierre": "Replay del calibrador y cadena exacta desde artefactos entregados, sin entrenamiento y en futura corrida autorizada; mantener separadas recepcion y reproduccion.",
       "revisor_necesario": "Revisor de reproducibilidad y participante; no afirmar independencia profesional entre IA.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/modelos/hallazgos.json",
-      "revisiones_recibidas": 6,
+      "revisiones_recibidas": 11,
       "fuentes_campos": {
         "detalle": "detalle_original.hecho",
         "impacto": "detalle_original.limite",
         "criterio_cierre": "detalle_original.criterio_cierre",
         "revisor_necesario": "detalle_original.revision_humana_requerida"
       },
-      "responsable_humano": null
+      "responsable_humano": null,
+      "registro_vigente": {
+        "ruta": "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T193644Z_cambios/registro_hallazgos.json",
+        "sha256": "7f5637e1b809b47ec3c446bfa48ba3f1578b64ad5d21fd7060539de90db5fdf8",
+        "run_id": "20261020T193644Z_cambios",
+        "cerrado_utc": "2026-10-20T19:50:48.512203+00:00"
+      }
     },
     {
       "id": "MOD-006",
@@ -22002,14 +22867,20 @@
       "criterio_cierre": "Matizar como hipotesis en futura correccion autorizada del autor, o aportar evidencia temporal/adicional que identifique el mecanismo y revision actuarial humana real.",
       "revisor_necesario": "Actuario competente en reservas; no designado ni contactado. No se cambia el informe ajeno.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/modelos/hallazgos.json",
-      "revisiones_recibidas": 6,
+      "revisiones_recibidas": 11,
       "fuentes_campos": {
         "detalle": "detalle_original.hecho",
         "impacto": "detalle_original.limite",
         "criterio_cierre": "detalle_original.criterio_cierre",
         "revisor_necesario": "detalle_original.revision_humana_requerida"
       },
-      "responsable_humano": null
+      "responsable_humano": null,
+      "registro_vigente": {
+        "ruta": "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T193644Z_cambios/registro_hallazgos.json",
+        "sha256": "7f5637e1b809b47ec3c446bfa48ba3f1578b64ad5d21fd7060539de90db5fdf8",
+        "run_id": "20261020T193644Z_cambios",
+        "cerrado_utc": "2026-10-20T19:50:48.512203+00:00"
+      }
     },
     {
       "id": "GOV-001",
@@ -22022,12 +22893,18 @@
       "criterio_cierre": "Acta con identidad real, competencia pertinente acreditada por la persona, alcance, conflictos, artefactos/hash revisados, hallazgos, decisiones y firma/fecha. Independencia evaluada por separado.",
       "revisor_necesario": "No especificado en la fuente; consultar el registro original.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/gobernanza/hallazgos.json",
-      "revisiones_recibidas": 6,
+      "revisiones_recibidas": 11,
       "fuentes_campos": {
         "impacto": "detalle_original.impacto",
         "criterio_cierre": "detalle_original.criterio_cierre"
       },
-      "responsable_humano": null
+      "responsable_humano": null,
+      "registro_vigente": {
+        "ruta": "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T193644Z_cambios/registro_hallazgos.json",
+        "sha256": "7f5637e1b809b47ec3c446bfa48ba3f1578b64ad5d21fd7060539de90db5fdf8",
+        "run_id": "20261020T193644Z_cambios",
+        "cerrado_utc": "2026-10-20T19:50:48.512203+00:00"
+      }
     },
     {
       "id": "GOV-002",
@@ -22040,30 +22917,42 @@
       "criterio_cierre": "Mapa verificable decisión→conversación→artefactos/hash para el candidato, con brechas explícitas y sin secretos. Las pruebas con fixtures se rotulan sintéticas.",
       "revisor_necesario": "No especificado en la fuente; consultar el registro original.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/gobernanza/hallazgos.json",
-      "revisiones_recibidas": 6,
+      "revisiones_recibidas": 11,
       "fuentes_campos": {
         "impacto": "detalle_original.impacto",
         "criterio_cierre": "detalle_original.criterio_cierre"
       },
-      "responsable_humano": null
+      "responsable_humano": null,
+      "registro_vigente": {
+        "ruta": "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T193644Z_cambios/registro_hallazgos.json",
+        "sha256": "7f5637e1b809b47ec3c446bfa48ba3f1578b64ad5d21fd7060539de90db5fdf8",
+        "run_id": "20261020T193644Z_cambios",
+        "cerrado_utc": "2026-10-20T19:50:48.512203+00:00"
+      }
     },
     {
       "id": "GOV-003",
       "area": "gobernanza",
       "severidad": "media",
-      "estado_registro_recibido": "abierto",
+      "estado_registro_recibido": "limitacion_aceptada_por_participante_sin_reproduccion_independiente",
       "titulo": "Reproducción por otra persona y otra plataforma no acreditada",
       "detalle": "No especificado en la fuente; consultar el registro original.",
       "impacto": "La integridad de archivos y el replay propio no demuestran reconstrucción integral en entorno limpio, Linux/Kaggle alojado ni repetición independiente de selecciones históricas.",
       "criterio_cierre": "Recibo de reconstrucción en entorno nuevo con versiones/runtimes completos, entradas/salidas verificadas, tolerancias justificadas y autor real; declarar partes históricas no repetibles.",
       "revisor_necesario": "No especificado en la fuente; consultar el registro original.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/gobernanza/hallazgos.json",
-      "revisiones_recibidas": 6,
+      "revisiones_recibidas": 11,
       "fuentes_campos": {
         "impacto": "detalle_original.impacto",
         "criterio_cierre": "detalle_original.criterio_cierre"
       },
-      "responsable_humano": null
+      "responsable_humano": null,
+      "registro_vigente": {
+        "ruta": "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T193644Z_cambios/registro_hallazgos.json",
+        "sha256": "7f5637e1b809b47ec3c446bfa48ba3f1578b64ad5d21fd7060539de90db5fdf8",
+        "run_id": "20261020T193644Z_cambios",
+        "cerrado_utc": "2026-10-20T19:50:48.512203+00:00"
+      }
     },
     {
       "id": "GOV-004",
@@ -22076,12 +22965,18 @@
       "criterio_cierre": "Matriz de cobertura del candidato exacto con hashes de receta/modelos/salidas, casos límite e inferencia reproducida sin ajuste; pendientes de fitting explícitos y revisión humana.",
       "revisor_necesario": "No especificado en la fuente; consultar el registro original.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/gobernanza/hallazgos.json",
-      "revisiones_recibidas": 6,
+      "revisiones_recibidas": 11,
       "fuentes_campos": {
         "impacto": "detalle_original.impacto",
         "criterio_cierre": "detalle_original.criterio_cierre"
       },
-      "responsable_humano": null
+      "responsable_humano": null,
+      "registro_vigente": {
+        "ruta": "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T193644Z_cambios/registro_hallazgos.json",
+        "sha256": "7f5637e1b809b47ec3c446bfa48ba3f1578b64ad5d21fd7060539de90db5fdf8",
+        "run_id": "20261020T193644Z_cambios",
+        "cerrado_utc": "2026-10-20T19:50:48.512203+00:00"
+      }
     },
     {
       "id": "GOV-005",
@@ -22094,12 +22989,18 @@
       "criterio_cierre": "Control satisfecho en este corte; se vuelve a comprobar si cambian entradas o código.",
       "revisor_necesario": "No especificado en la fuente; consultar el registro original.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/gobernanza/hallazgos.json",
-      "revisiones_recibidas": 6,
+      "revisiones_recibidas": 11,
       "fuentes_campos": {
         "impacto": "detalle_original.impacto",
         "criterio_cierre": "detalle_original.criterio_cierre"
       },
-      "responsable_humano": null
+      "responsable_humano": null,
+      "registro_vigente": {
+        "ruta": "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T193644Z_cambios/registro_hallazgos.json",
+        "sha256": "7f5637e1b809b47ec3c446bfa48ba3f1578b64ad5d21fd7060539de90db5fdf8",
+        "run_id": "20261020T193644Z_cambios",
+        "cerrado_utc": "2026-10-20T19:50:48.512203+00:00"
+      }
     },
     {
       "id": "MOD-007",
@@ -22112,14 +23013,20 @@
       "criterio_cierre": "Explicitar base y fórmula por el autor/editor en el texto fuente, sin exigir cambiar exposición ni modelo.",
       "revisor_necesario": "Responsable editorial y revisor técnico del cálculo presentado; nadie contactado.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/20261018T104509Z_cambios/modelos/ADENDA_MOD007.md",
-      "revisiones_recibidas": 5,
+      "revisiones_recibidas": 10,
       "fuentes_campos": {
         "detalle": "detalle_original.hecho",
         "impacto": "detalle_original.limite",
         "criterio_cierre": "detalle_original.criterio_cierre",
         "revisor_necesario": "detalle_original.revision_humana_requerida"
       },
-      "responsable_humano": null
+      "responsable_humano": null,
+      "registro_vigente": {
+        "ruta": "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T193644Z_cambios/registro_hallazgos.json",
+        "sha256": "7f5637e1b809b47ec3c446bfa48ba3f1578b64ad5d21fd7060539de90db5fdf8",
+        "run_id": "20261020T193644Z_cambios",
+        "cerrado_utc": "2026-10-20T19:50:48.512203+00:00"
+      }
     },
     {
       "id": "DATA-005",
@@ -22132,13 +23039,19 @@
       "criterio_cierre": "Identificar el momento operativo real con evidencia fuente, establecer por campo el corte permitido y, si se autoriza corregir, verificar el flujo afectado con report_date anterior al corte y clima cerrado/publicado antes del acceso; conservar comparadores y revisión humana. Un uso suministrado condicionado puede ser aceptado formalmente, pero no certifica cotización prospectiva ni borra este desfase.",
       "revisor_necesario": "Actuario de tarificación y responsable de datos de avisos/meteorología, con validador temporal competente y participante para decidir el uso. Nadie designado o contactado en esta corrida.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/20261018T164615Z_periodica/datos/hallazgos.json",
-      "revisiones_recibidas": 4,
+      "revisiones_recibidas": 9,
       "fuentes_campos": {
         "impacto": "detalle_original.impact",
         "criterio_cierre": "detalle_original.closure_criterion",
         "revisor_necesario": "detalle_original.specialist"
       },
-      "responsable_humano": null
+      "responsable_humano": null,
+      "registro_vigente": {
+        "ruta": "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T193644Z_cambios/registro_hallazgos.json",
+        "sha256": "7f5637e1b809b47ec3c446bfa48ba3f1578b64ad5d21fd7060539de90db5fdf8",
+        "run_id": "20261020T193644Z_cambios",
+        "cerrado_utc": "2026-10-20T19:50:48.512203+00:00"
+      }
     },
     {
       "id": "MOD-008",
@@ -22151,14 +23064,20 @@
       "criterio_cierre": "Matizar en todas las nuevas fuentes pertinentes como hipotesis compatible, sin certificar insesgadez, regimen causal o suficiencia; o aportar trayectorias/valoraciones adicionales y revision actuarial humana real que respalden la conclusion. Registrar respuesta del autor con evidencia; no inferir aprobacion del silencio.",
       "revisor_necesario": "Actuario competente en reservas/desarrollo y validador estadístico; participante responsable de designar.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/20261018T225020Z_periodica/modelos/hallazgos.json",
-      "revisiones_recibidas": 3,
+      "revisiones_recibidas": 8,
       "fuentes_campos": {
         "detalle": "detalle_original.hecho",
         "impacto": "registro.consecuencia",
         "criterio_cierre": "detalle_original.criterio_cierre",
         "revisor_necesario": "registro.especialista_humano_requerido_por_designar"
       },
-      "responsable_humano": null
+      "responsable_humano": null,
+      "registro_vigente": {
+        "ruta": "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T193644Z_cambios/registro_hallazgos.json",
+        "sha256": "7f5637e1b809b47ec3c446bfa48ba3f1578b64ad5d21fd7060539de90db5fdf8",
+        "run_id": "20261020T193644Z_cambios",
+        "cerrado_utc": "2026-10-20T19:50:48.512203+00:00"
+      }
     },
     {
       "id": "GOV-006",
@@ -22171,32 +23090,69 @@
       "criterio_cierre": "Aclaración fechada yatribuida que identifique hora/huso/evento, preserve original yvincule snapshots/hashes. Si queda desconocido, limitar la afirmación temporal; no reconstruir retroactivamente una preinscripción.",
       "revisor_necesario": "No especificado en la fuente; consultar el registro original.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/20261019T022424Z_seguimiento_ajustes/gobernanza/hallazgos.json",
-      "revisiones_recibidas": 2,
+      "revisiones_recibidas": 7,
       "fuentes_campos": {
         "detalle": "detalle_original.finding",
         "impacto": "detalle_original.consequence",
         "criterio_cierre": "detalle_original.closure_criteria"
       },
-      "responsable_humano": null
+      "responsable_humano": null,
+      "registro_vigente": {
+        "ruta": "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T193644Z_cambios/registro_hallazgos.json",
+        "sha256": "7f5637e1b809b47ec3c446bfa48ba3f1578b64ad5d21fd7060539de90db5fdf8",
+        "run_id": "20261020T193644Z_cambios",
+        "cerrado_utc": "2026-10-20T19:50:48.512203+00:00"
+      }
     },
     {
       "id": "GOV-007",
       "area": "gobernanza",
       "severidad": "alta",
-      "estado_registro_recibido": "abierto",
+      "estado_registro_recibido": "cerrado_en_alcance_de_correccion_tecnica_1_2",
       "titulo": "Controles del paquete permiten éxito y reanudación con incumplimientos",
       "detalle": "No especificado en la fuente; consultar el registro original.",
       "impacto": "Un éxito CLI, salida existente o verificación impresa puede presentarse como reconstrucción válida con artefactos sin verificar o controles adversos. No demuestra corrupción efectiva de los CSV.",
       "criterio_cierre": "Versión aplicada identificada por hash, validación del control positivo, rechazo de todos los adversos, verificación antes de omitir, error ante faltantes/diferencias exigidas y destinos de decisiones alterados, más recibo/decisión humana fechados. Contratos de bytes/contenido explícitos.",
       "revisor_necesario": "Responsable técnico del paquete y revisor humano competente en reproducibilidad, por designar; revisión actuarial según el uso y sin persona ficticia.",
       "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/20261019T120208Z_integral/gobernanza/hallazgos_UTF8.json",
-      "revisiones_recibidas": 1,
+      "revisiones_recibidas": 6,
       "fuentes_campos": {
         "impacto": "detalle_original.consequence",
         "criterio_cierre": "detalle_original.closure_criteria",
         "revisor_necesario": "detalle_original.required_human_role"
       },
-      "responsable_humano": null
+      "responsable_humano": null,
+      "registro_vigente": {
+        "ruta": "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T193644Z_cambios/registro_hallazgos.json",
+        "sha256": "7f5637e1b809b47ec3c446bfa48ba3f1578b64ad5d21fd7060539de90db5fdf8",
+        "run_id": "20261020T193644Z_cambios",
+        "cerrado_utc": "2026-10-20T19:50:48.512203+00:00"
+      }
+    },
+    {
+      "id": "GOV-008",
+      "area": "gobernanza",
+      "severidad": "alta",
+      "estado_registro_recibido": "cerrado_en_alcance_de_correccion_tecnica_captura_1_1_2",
+      "titulo": "Clave de CatBoost captura1.1.1 omite entradas posicionales",
+      "detalle": "No especificado en la fuente; consultar el registro original.",
+      "impacto": "Dos pesos de ajuste distintos por posición solicitan el mismo estimador; puede reutilizarse uno para entradas distintas. No demuestra uso en receta o error del CSV histórico.",
+      "criterio_cierre": "Corrección autorizada o restricción explícita de API; pruebas de identidad para argumentos posicionales válidos, controles keyword y Pool, versión/hash por nodo, comprobación de recorrido afectado y decisión humana fechada.",
+      "revisor_necesario": "Ingeniero de ML/revisor competente en reproducibilidad.",
+      "fuente": "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T004926Z_cambios/gobernanza/hallazgos.json",
+      "revisiones_recibidas": 3,
+      "fuentes_campos": {
+        "impacto": "detalle_original.consecuencia",
+        "criterio_cierre": "registro.condicion_de_cierre",
+        "revisor_necesario": "registro.especialista_humano_requerido_por_designar"
+      },
+      "responsable_humano": "Participante; responsable técnico específico por designar.",
+      "registro_vigente": {
+        "ruta": "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T193644Z_cambios/registro_hallazgos.json",
+        "sha256": "7f5637e1b809b47ec3c446bfa48ba3f1578b64ad5d21fd7060539de90db5fdf8",
+        "run_id": "20261020T193644Z_cambios",
+        "cerrado_utc": "2026-10-20T19:50:48.512203+00:00"
+      }
     }
   ],
   "suites": [
@@ -23116,7 +24072,7 @@
         "herramientas/inventario.py": "ad0eb0b79a886f296e2628381f381f97fa98f21ff2714fb2d2c93a8604fc982b",
         "herramientas/etapas_datos.py": "0c0a90317130f5ee75054ef761edc5c84a52a57eea18652159fd71e056b8b9ab"
       },
-      "procedencia": "Prueba propia de esta revisión en Windows"
+      "procedencia": "Recibo de control archivado, inspeccionado; no ejecutado otra vez al actualizar el panel"
     },
     {
       "archivo": "docs/controles/20261019_windows_v12_final/resultado.json",
@@ -24034,7 +24990,7 @@
         "herramientas/inventario.py": "ad0eb0b79a886f296e2628381f381f97fa98f21ff2714fb2d2c93a8604fc982b",
         "herramientas/etapas_datos.py": "0c0a90317130f5ee75054ef761edc5c84a52a57eea18652159fd71e056b8b9ab"
       },
-      "procedencia": "Prueba propia de esta revisión en Windows"
+      "procedencia": "Recibo de control archivado, inspeccionado; no ejecutado otra vez al actualizar el panel"
     },
     {
       "archivo": "docs/controles/20261019_windows_v12_lf/resultado.json",
@@ -24952,7 +25908,7 @@
         "herramientas/inventario.py": "ad0eb0b79a886f296e2628381f381f97fa98f21ff2714fb2d2c93a8604fc982b",
         "herramientas/etapas_datos.py": "0c0a90317130f5ee75054ef761edc5c84a52a57eea18652159fd71e056b8b9ab"
       },
-      "procedencia": "Prueba propia de esta revisión en Windows"
+      "procedencia": "Recibo de control archivado, inspeccionado; no ejecutado otra vez al actualizar el panel"
     },
     {
       "archivo": "docs/controles/20261019T125425Z_nube_referencia/resultado.json",
@@ -25870,7 +26826,7 @@
         "herramientas/inventario.py": "ad0eb0b79a886f296e2628381f381f97fa98f21ff2714fb2d2c93a8604fc982b",
         "herramientas/etapas_datos.py": "0c0a90317130f5ee75054ef761edc5c84a52a57eea18652159fd71e056b8b9ab"
       },
-      "procedencia": "Recibo histórico de Claude, inspeccionado"
+      "procedencia": "Recibo de control archivado, inspeccionado; no ejecutado otra vez al actualizar el panel"
     },
     {
       "archivo": "docs/controles/20261019T125907Z_vm_participante/resultado.json",
@@ -26788,7 +27744,7 @@
         "herramientas/inventario.py": "ad0eb0b79a886f296e2628381f381f97fa98f21ff2714fb2d2c93a8604fc982b",
         "herramientas/etapas_datos.py": "0c0a90317130f5ee75054ef761edc5c84a52a57eea18652159fd71e056b8b9ab"
       },
-      "procedencia": "Recibo histórico de Claude, inspeccionado"
+      "procedencia": "Recibo de control archivado, inspeccionado; no ejecutado otra vez al actualizar el panel"
     }
   ],
   "replay_windows": {
@@ -28358,16 +29314,16 @@
     {
       "nombre": "Último ciclo de validación recibido",
       "ruta_original": "Hackaton/Semana 1/Validacion_enjambre/ultimo_ciclo.json",
-      "sha256": "cf827e6f1809e1cb63c94b93ac0bb64d3a7ea76c3e7d2854464e16875d7545b1",
-      "bytes": 1385,
-      "modificado_utc": "2026-10-19T13:00:44.977334+00:00"
+      "sha256": "c66dc33d9a4b9ad7b61ce86d8e58bf33019856f5ec319866e477229d1df79835",
+      "bytes": 5980,
+      "modificado_utc": "2026-10-20T19:50:48.548879+00:00"
     },
     {
       "nombre": "Hallazgos del ciclo recibido",
-      "ruta_original": "Hackaton/Semana 1/Validacion_enjambre/runs/20261019T124539Z_cambios/registro_hallazgos.json",
-      "sha256": "fafd7050cbb2b9c3b192742487ee5c5f33c5d1123558c9f2a859113048196d42",
-      "bytes": 182458,
-      "modificado_utc": "2026-10-19T13:00:44.971536+00:00"
+      "ruta_original": "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T193644Z_cambios/registro_hallazgos.json",
+      "sha256": "7f5637e1b809b47ec3c446bfa48ba3f1578b64ad5d21fd7060539de90db5fdf8",
+      "bytes": 995281,
+      "modificado_utc": "2026-10-20T19:50:48.536949+00:00"
     },
     {
       "nombre": "Receta de reproducción",
@@ -28384,11 +29340,53 @@
       "modificado_utc": "2026-10-19T02:34:25.000090+00:00"
     },
     {
-      "nombre": "Reglas y metadatos consultados en vivo",
+      "nombre": "Reglas y metadatos archivados, consulta del 19 de octubre",
       "ruta_original": "Hackaton/Repositorio_IAA2026/docs/fuentes/reglas_kaggle_20261019.json",
       "sha256": "8dfed23536c3a9b03774dc6c1ea3f5e08514e1f1b7ce94e905664c264ccfaf22",
       "bytes": 55007,
       "modificado_utc": "2026-10-19T13:32:28.125720+00:00"
+    },
+    {
+      "nombre": "Decisión definitiva S30, D99",
+      "ruta_original": "Hackaton/Repositorio_IAA2026/registro/decision_modelo_definitivo_20261020.json",
+      "sha256": "327303451289f4a7f667e31f719c94a789ff2f1ad5507ef11889cd302a1f9686",
+      "bytes": 4709,
+      "modificado_utc": "2026-10-20T16:04:48.875122+00:00"
+    },
+    {
+      "nombre": "Reconstrucción completa documentada, D97",
+      "ruta_original": "Hackaton/Repositorio_IAA2026/registro/recibo_reproduccion_completa_20261020.json",
+      "sha256": "6c580a371758b3c47286ee68f41b697e7db2196a16adfbc833ea9da51e6d9ef1",
+      "bytes": 15673,
+      "modificado_utc": "2026-10-20T13:38:12.356672+00:00"
+    },
+    {
+      "nombre": "Revisión humana general y decisiones específicas",
+      "ruta_original": "Hackaton/Repositorio_IAA2026/registro/revision_humana.json",
+      "sha256": "31cdeadb9bd363f3a2ff461cea49452ba07fe7fb902828625f9ff1de8800a4eb",
+      "bytes": 7904,
+      "modificado_utc": "2026-10-20T23:44:42.030606+00:00"
+    },
+    {
+      "nombre": "Expediente preparado para revisión humana",
+      "ruta_original": "Hackaton/Repositorio_IAA2026/registro/revision_preparada_20261020.json",
+      "sha256": "1d953bc4f5145f6d0f47fe9eb50d0a6969531f2f0c681b10bf12ca7a34959aea",
+      "bytes": 19871,
+      "modificado_utc": "2026-10-20T23:44:42.033606+00:00"
+    },
+    {
+      "nombre": "Mapa selectivo ampliado de evidencia IA",
+      "ruta_original": "Hackaton/Repositorio_IAA2026/registro/trazabilidad_ia_revision_20261020.json",
+      "sha256": "850c36805af126dba9797c3266f248af8c9d422e951795c7e2641554eed5cb16",
+      "bytes": 7828,
+      "modificado_utc": "2026-10-20T22:28:45.428385+00:00"
+    },
+    {
+      "nombre": "Inventario de herramientas para acreditación",
+      "ruta_original": "Hackaton/Repositorio_IAA2026/registro/inventario_herramientas_revision_20261020.json",
+      "sha256": "e839c7d0fc215c4cca7f0cbc1a6fdc9c3dd92ddbe43305ce78997566baf19d78",
+      "bytes": 3712,
+      "modificado_utc": "2026-10-20T22:28:45.429386+00:00"
     },
     {
       "nombre": "metodologia_actuarial_historica.md",
@@ -28445,6 +29443,6 @@
       "tipo": "documentación histórica con corte propio; copia sin identificadores individuales"
     }
   ],
-  "procesos": "No acreditado en esta sesión: la consulta de procesos del sistema fue denegada. Los archivos y planes no prueban actividad en vivo.",
+  "procesos": "No inspeccionadas en esta actualización; los registros no acreditan actividad de procesos en vivo.",
   "linaje": "Se unifica la gestión y la documentación. S30 conserva sus componentes de Claude; la base N62 y verificaciones de Codex conservan su autoría. Las mezclas históricas compartidas siguen identificadas."
 }

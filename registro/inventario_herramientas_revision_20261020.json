@@ -1,0 +1,128 @@
+{
+  "autor": "Codex",
+  "utc": "2026-10-20T22:22:13.056278+00:00",
+  "estado": "preparado_inventario_parcial",
+  "entorno_referencia_documentado": {
+    "python": "3.13.16",
+    "plataforma": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+    "procesador": "x86_64",
+    "nucleos": 2,
+    "paquetes": {
+      "numpy": "2.5.3",
+      "pandas": "3.0.5",
+      "scipy": "1.18.1",
+      "sklearn": "1.9.1",
+      "lightgbm": "4.7.0",
+      "catboost": "1.2.10",
+      "pyarrow": "26.0.0",
+      "torch": "2.14.1+cu130"
+    },
+    "diferencias_con_referencia": {}
+  },
+  "fuente_entorno": {
+    "ruta": "registro/recibo_reproduccion_completa_20261020.json",
+    "sha256": "6c580a371758b3c47286ee68f41b697e7db2196a16adfbc833ea9da51e6d9ef1"
+  },
+  "condiciones_del_concurso": "registro/requisitos.json, REQ14–REQ16; consulta oficial archivada del 19 de octubre.",
+  "servicios": [
+    {
+      "servicio": "Claude",
+      "uso": "Modelado, reproducción y documentación",
+      "version_o_plan_efectivo": null,
+      "coste_efectivo_y_moneda": null,
+      "licencia_o_condiciones_fuente": null,
+      "comprobado_por_participante": false
+    },
+    {
+      "servicio": "Codex",
+      "uso": "Contraste, datos y controles",
+      "version_o_plan_efectivo": null,
+      "coste_efectivo_y_moneda": null,
+      "licencia_o_condiciones_fuente": null,
+      "comprobado_por_participante": false
+    },
+    {
+      "servicio": "Nube de Claude",
+      "uso": "Cómputo autorizado de D95 y D97",
+      "version_o_plan_efectivo": null,
+      "coste_efectivo_y_moneda": null,
+      "licencia_o_condiciones_fuente": null,
+      "comprobado_por_participante": false
+    },
+    {
+      "servicio": "Kaggle",
+      "uso": "Datos y scoring",
+      "version_o_plan_efectivo": null,
+      "coste_efectivo_y_moneda": null,
+      "licencia_o_condiciones_fuente": null,
+      "comprobado_por_participante": false
+    },
+    {
+      "servicio": "GitHub",
+      "uso": "Repositorio privado",
+      "version_o_plan_efectivo": null,
+      "coste_efectivo_y_moneda": null,
+      "licencia_o_condiciones_fuente": null,
+      "comprobado_por_participante": false
+    }
+  ],
+  "bibliotecas": [
+    {
+      "nombre": "numpy",
+      "version_referencia": "2.5.3",
+      "licencia_verificada": null,
+      "fuente_licencia": null
+    },
+    {
+      "nombre": "pandas",
+      "version_referencia": "3.0.5",
+      "licencia_verificada": null,
+      "fuente_licencia": null
+    },
+    {
+      "nombre": "scipy",
+      "version_referencia": "1.18.1",
+      "licencia_verificada": null,
+      "fuente_licencia": null
+    },
+    {
+      "nombre": "sklearn",
+      "version_referencia": "1.9.1",
+      "licencia_verificada": null,
+      "fuente_licencia": null
+    },
+    {
+      "nombre": "lightgbm",
+      "version_referencia": "4.7.0",
+      "licencia_verificada": null,
+      "fuente_licencia": null
+    },
+    {
+      "nombre": "catboost",
+      "version_referencia": "1.2.10",
+      "licencia_verificada": null,
+      "fuente_licencia": null
+    },
+    {
+      "nombre": "pyarrow",
+      "version_referencia": "26.0.0",
+      "licencia_verificada": null,
+      "fuente_licencia": null
+    },
+    {
+      "nombre": "torch",
+      "version_referencia": "2.14.1+cu130",
+      "licencia_verificada": null,
+      "fuente_licencia": null
+    }
+  ],
+  "licencia_final_codigo": null,
+  "canal_acceso_jurado": null,
+  "elegibilidad": {
+    "asociacion": null,
+    "condicion_vigente": null,
+    "constancia_privada": null,
+    "verificada": false
+  },
+  "nota": "Versiones del entorno recibidas, no instalaciones nuevas. Licencias, planes, coste y afiliación se dejan para acreditación real; esta plantilla no determina elegibilidad ni concede derechos."
+}

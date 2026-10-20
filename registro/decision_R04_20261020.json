@@ -1,0 +1,67 @@
+{
+  "id": "REV-R04-20261020",
+  "punto": "R04",
+  "emisor": "Participante en este chat",
+  "registrado_por": "Codex",
+  "fecha_registro_utc": "2026-10-20T23:10:11.363394+00:00",
+  "fecha_registro_bogota": "2026-10-20T18:10:11.363394-05:00",
+  "nota_fecha": "Hora de registro; no se atribuye un timestamp exacto al envío del mensaje.",
+  "candidato": "S30",
+  "sha256_csv": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+  "texto_literal": "Acepto R04 con la redacción propuesta y los límites indicados. Regístralo y pasemos a R05, sin cambiar S30 ni reentrenar.",
+  "texto_sha256_utf8": "2a68b8dd55cabd7ae1c5e6c8ede44ebf9c232f42b6f8209e1140378eb97425af",
+  "redaccion_aprobada": "Considero adecuada la presentación de la reconstrucción: el CSV de S30 se reproduce exactamente, aunque persisten 19 diferencias intermedias y el resultado conserva el código 3. Reconozco que el replay del autor y el cotejo local tienen alcances distintos, y que los controles no cubren universalmente todos los cálculos. Esta aceptación no acredita validación independiente ni cierra por sí sola MOD-005 o GOV-004.",
+  "redaccion_aprobada_sha256_utf8": "b854b3c8c2785f2bc753bbc6c71637b9aa364b73af4b213f5b7e304d04093c13",
+  "fuente_redaccion_aprobada": "Propuesta de Codex en la respuesta inmediatamente anterior de este chat, aceptada expresamente por el participante; no se presenta como texto escrito literalmente por él.",
+  "fuente": {
+    "tipo": "mensaje directo del participante visible en este chat",
+    "transcripcion_privada": "privado/revision_humana_20261020/R04/declaracion_participante.txt",
+    "evento_bruto_exportado": false
+  },
+  "decision": "aceptar_presentacion_reconstruccion_y_controles_con_limites",
+  "estado": "presentacion_aceptada_con_limites_reconstruccion_y_cobertura",
+  "alcance": "Aceptación de la presentación de la reconstrucción y los controles: CSV exacto, 19 intermedios distintos y código 3, distinto alcance del replay del autor y del cotejo local, y cobertura no universal. No acredita independencia ni cierre técnico de MOD-005 o GOV-004.",
+  "no_acredita": [
+    "Igualdad de todas las huellas intermedias o código 0",
+    "Reproducción independiente",
+    "Repetición local íntegra del replay de 194 salidas",
+    "Cobertura universal de los controles",
+    "Cierre técnico de MOD-005 o GOV-004",
+    "Revisión general aprobada",
+    "Uso operativo autorizado"
+  ],
+  "hallazgos_relacionados": [
+    "MOD-005",
+    "GOV-004"
+  ],
+  "evidencia_presentada": [
+    {
+      "ruta": "docs/REPRODUCCION_COMPLETA.md",
+      "path_base": "repo_root",
+      "sha256": "bce2805e3cb8f811d720574c5f0eb9c779f5da0ea131e72a57e6276342250063"
+    },
+    {
+      "ruta": "registro/recibo_reproduccion_completa_20261020.json",
+      "path_base": "repo_root",
+      "sha256": "6c580a371758b3c47286ee68f41b697e7db2196a16adfbc833ea9da51e6d9ef1"
+    },
+    {
+      "ruta": "docs/controles/pool_sin_huella.md",
+      "path_base": "repo_root",
+      "sha256": "38181b40d6c5bcb45f3837a67dc08f45cbe757a47327861f9656e76fb1e9ca8b"
+    },
+    {
+      "ruta": "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T193644Z_cambios/registro_hallazgos.json",
+      "path_base": "workspace_root",
+      "sha256": "7f5637e1b809b47ec3c446bfa48ba3f1578b64ad5d21fd7060539de90db5fdf8"
+    }
+  ],
+  "regla_cierre": "Aceptación de la explicación para el concurso, sin cerrar hallazgos técnicos ni repetir la decisión previa sobre falta de reproducción independiente.",
+  "actividad": {
+    "entrenamientos": 0,
+    "inferencias": 0,
+    "modelos_cargados": 0,
+    "replays": 0,
+    "Kaggle": 0
+  }
+}

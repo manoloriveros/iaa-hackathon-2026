@@ -1,0 +1,52 @@
+{
+  "id": "REV-R02-20261020",
+  "punto": "R02",
+  "emisor": "Participante en este chat",
+  "registrado_por": "Codex",
+  "fecha_registro_utc": "2026-10-20T22:54:46.091924+00:00",
+  "fecha_registro_bogota": "2026-10-20T17:54:46.091924-05:00",
+  "nota_fecha": "Hora de registro de la decisión; no se atribuye un timestamp exacto al envío del mensaje.",
+  "candidato": "S30",
+  "sha256_csv": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+  "texto_literal": "Acepto R02: mantener para el concurso la división entre mil de los 149 capitales como hipótesis coherente con la prima, reconociendo su efecto material por póliza y que la unidad original sigue sin confirmarse.",
+  "texto_sha256_utf8": "71ce4def674296a18705674a6e35e4ddaa01398fb4c55ebbd5d650c6898abcb5",
+  "fuente": {
+    "tipo": "mensaje directo del participante visible en este chat",
+    "transcripcion_privada": "privado/revision_humana_20261020/R02/declaracion_participante.txt",
+    "evento_bruto_exportado": false
+  },
+  "decision": "aceptar_tratamiento_capitales_division_1000_como_hipotesis",
+  "estado": "supuesto_capitales_aceptado_unidad_no_confirmada",
+  "alcance": "Mantener para el concurso la división entre mil de los 149 capitales como hipótesis coherente con la prima; el participante reconoce el efecto material por póliza y que la unidad original sigue sin confirmarse.",
+  "no_acredita": [
+    "Unidad económica original de los capitales",
+    "Cierre técnico de DATA-003",
+    "Revisión general aprobada",
+    "Autorización de uso operativo"
+  ],
+  "hallazgos_relacionados": [
+    "DATA-003"
+  ],
+  "evidencia_presentada": [
+    {
+      "ruta": "registro/capitales_revision_20261019.json",
+      "sha256": "a4fd03123b05bcdf05b4d33140f4d2e57d32a093caf7bb7d3572eb557061019c"
+    },
+    {
+      "ruta": "docs/SENSIBILIDAD_S30_S22.md",
+      "sha256": "60e54b4e0566b48b5078fb52278b4c64e7958178763d939d4f575a25f8565368"
+    },
+    {
+      "ruta": "docs/evidencia/capitales_149_prediccion.json",
+      "sha256": "a1cd0cdace3e39537a19691c43ada3099bfb252471a8a6476e37a0f34ab867d6"
+    }
+  ],
+  "regla_cierre": "Se registra la aceptación del supuesto para el concurso. DATA-003 conserva su estado y sus criterios técnicos; no se confirma la unidad original ni se modifica el tratamiento.",
+  "actividad": {
+    "entrenamientos": 0,
+    "inferencias": 0,
+    "modelos_cargados": 0,
+    "replays": 0,
+    "Kaggle": 0
+  }
+}

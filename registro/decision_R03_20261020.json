@@ -1,0 +1,55 @@
+{
+  "id": "REV-R03-20261020",
+  "punto": "R03",
+  "emisor": "Participante en este chat",
+  "registrado_por": "Codex",
+  "fecha_registro_utc": "2026-10-20T23:06:42.175649+00:00",
+  "fecha_registro_bogota": "2026-10-20T18:06:42.175649-05:00",
+  "nota_fecha": "Hora de registro de la decisión; no se atribuye un timestamp exacto al envío del mensaje.",
+  "candidato": "S30",
+  "sha256_csv": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+  "texto_literal": "Acepto R03 con la redacción propuesta. Reconozco los límites de la validación reutilizada y la incertidumbre material del nivel. Regístralo y pasemos a R04, sin cambiar S30 ni reentrenar.",
+  "texto_sha256_utf8": "0780bb818625ec0de71fdb8e51ac41e7f5e418336e27093aaa97011b7dcd6245",
+  "redaccion_aprobada": "Considero adecuada la presentación de V23 y V24 como cortes reutilizados y de los experimentos posteriores como pruebas de estabilidad. Reconozco que la ventaja de S30 no acredita superioridad robusta ni equivalencia estadística, que no observamos el coste último y que persiste incertidumbre material en el nivel previsto. Los escenarios de sensibilidad no constituyen por sí solos intervalos de confianza ni sesgos confirmados.",
+  "redaccion_aprobada_sha256_utf8": "13bbd33e8bf3d3cd601c3058b08654df448cc9ea3980ce011e02a616300f6834",
+  "fuente_redaccion_aprobada": "Propuesta de Codex en la respuesta inmediatamente anterior de este chat, aceptada expresamente por el participante; no se presenta como texto escrito literalmente por él.",
+  "fuente": {
+    "tipo": "mensaje directo del participante visible en este chat",
+    "transcripcion_privada": "privado/revision_humana_20261020/R03/declaracion_participante.txt",
+    "evento_bruto_exportado": false
+  },
+  "decision": "aceptar_presentacion_validacion_reutilizada_e_incertidumbre_material",
+  "estado": "presentacion_aceptada_con_limites_validacion_y_nivel",
+  "alcance": "Aceptación de la presentación de resultados: cortes reutilizados, pruebas de estabilidad, ventaja sin superioridad robusta ni equivalencia acreditadas, coste último no observado e incertidumbre material del nivel. Las sensibilidades no prueban por sí solas intervalos de confianza o sesgos confirmados.",
+  "no_acredita": [
+    "Validación independiente o rendimiento en un corte nuevo",
+    "Superioridad robusta o equivalencia estadística de S30 frente a S22",
+    "Coste último observado, suficiencia de reservas o sesgo confirmado",
+    "Cierre técnico de DATA-002, MOD-001 o MOD-004",
+    "Revisión general aprobada",
+    "Autorización de uso operativo"
+  ],
+  "hallazgos_relacionados": [
+    "DATA-002",
+    "MOD-001",
+    "MOD-004"
+  ],
+  "evidencia_presentada": [
+    {
+      "ruta": "docs/entrega/informe/INFORME_ES.md",
+      "sha256": "b914bcd4f1cedca2f69d24586b8094708abf369cfc627698e4eb79f92162adaf"
+    },
+    {
+      "ruta": "docs/RESERVAS_ACOTACION.md",
+      "sha256": "60488023796db66166b97dcfa3eb4ad56f1a9a17eda1197f91439705fca23625"
+    }
+  ],
+  "regla_cierre": "Se registra la aceptación humana de la explicación. Los hallazgos mantienen sus estados y criterios técnicos. No se repite la decisión previa sobre suficiencia de reservas ni se cambia el modelo definitivo.",
+  "actividad": {
+    "entrenamientos": 0,
+    "inferencias": 0,
+    "modelos_cargados": 0,
+    "replays": 0,
+    "Kaggle": 0
+  }
+}

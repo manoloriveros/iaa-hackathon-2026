@@ -1,15 +1,15 @@
 {
-  "estado": "decision_tecnica_especifica_registrada_revision_general_pendiente",
+  "estado": "revision_general_en_curso_R01_a_R05_registradas",
   "revisor": "Manuel Ignacio Rodríguez",
   "fecha": null,
   "candidato": "S30",
   "decision": null,
   "observaciones": [],
-  "nota": "Plantilla sin aprobar. El participante registra aquí sus decisiones reales con fecha, alcance y evidencia. Las revisiones IA y las anotaciones locales del panel no completan esta acta automáticamente.",
+  "nota": "Revisión actuarial general pendiente. Las decisiones específicas registradas conservan su alcance. La nueva plantilla y las notas del panel no firman esta acta.",
   "competencia_declarada": "Actuario;13años de experiencia en actuaría y supervisión, declarado por el participante.",
   "otro_entorno_declarado": true,
   "fuente_designacion": "Respuesta directa del participante en este chat,19oct2026.",
-  "acta_detallada": "registro/acta_subsanacion_20261019.json",
+  "acta_detallada": "registro/revision_preparada_20261020.json",
   "independencia_acreditada": false,
   "decisiones_especificas": {
     "GOV-007": {
@@ -37,6 +37,64 @@
       "alcance": "Se mantiene la acotación de docs/RESERVAS_ACOTACION.md (incertidumbre material, sin ajuste adoptado); no cambian T0, la receta ni S30.",
       "fecha": "2026-10-20T15:21:59.556Z",
       "registro": "registro/decisiones_participante_20261020.json"
+    },
+    "R01": {
+      "decision": "aceptar_alcance_concurso_con_hipotesis_de_consistencia",
+      "estado": "alcance_concurso_aceptado_fechas_no_acreditadas",
+      "fecha": "2026-10-20T22:49:20.404005+00:00",
+      "alcance": "Uso de S30 para el concurso con los datos suministrados; la consistencia con las bases se registra como hipótesis y criterio del participante para el ejercicio.",
+      "texto_literal": "Acepto S30 para el concurso con los datos suministrados. Reconozco que la disponibilidad temporal de sus predictores para una cotización real no está completamente acreditada pero corresponde a una hipótesis consistente con las bases de datos proporcionadas para el ejercicio. Esta aceptación no autoriza su uso operativo ni confirma las fechas que faltan.",
+      "registro": "registro/decision_R01_20261020.json"
+    },
+    "R02": {
+      "decision": "aceptar_tratamiento_capitales_division_1000_como_hipotesis",
+      "estado": "supuesto_capitales_aceptado_unidad_no_confirmada",
+      "fecha": "2026-10-20T22:54:46.091924+00:00",
+      "alcance": "Mantener para el concurso la división entre mil de los 149 capitales como hipótesis coherente con la prima; el participante reconoce el efecto material por póliza y que la unidad original sigue sin confirmarse.",
+      "texto_literal": "Acepto R02: mantener para el concurso la división entre mil de los 149 capitales como hipótesis coherente con la prima, reconociendo su efecto material por póliza y que la unidad original sigue sin confirmarse.",
+      "registro": "registro/decision_R02_20261020.json"
+    },
+    "R03": {
+      "decision": "aceptar_presentacion_validacion_reutilizada_e_incertidumbre_material",
+      "estado": "presentacion_aceptada_con_limites_validacion_y_nivel",
+      "fecha": "2026-10-20T23:06:42.175649+00:00",
+      "alcance": "Aceptación de la presentación de resultados: cortes reutilizados, pruebas de estabilidad, ventaja sin superioridad robusta ni equivalencia acreditadas, coste último no observado e incertidumbre material del nivel. Las sensibilidades no prueban por sí solas intervalos de confianza o sesgos confirmados.",
+      "texto_literal": "Acepto R03 con la redacción propuesta. Reconozco los límites de la validación reutilizada y la incertidumbre material del nivel. Regístralo y pasemos a R04, sin cambiar S30 ni reentrenar.",
+      "redaccion_aprobada": "Considero adecuada la presentación de V23 y V24 como cortes reutilizados y de los experimentos posteriores como pruebas de estabilidad. Reconozco que la ventaja de S30 no acredita superioridad robusta ni equivalencia estadística, que no observamos el coste último y que persiste incertidumbre material en el nivel previsto. Los escenarios de sensibilidad no constituyen por sí solos intervalos de confianza ni sesgos confirmados.",
+      "registro": "registro/decision_R03_20261020.json"
+    },
+    "R04": {
+      "decision": "aceptar_presentacion_reconstruccion_y_controles_con_limites",
+      "estado": "presentacion_aceptada_con_limites_reconstruccion_y_cobertura",
+      "alcance": "Aceptación de la presentación de la reconstrucción y los controles: CSV exacto, 19 intermedios distintos y código 3, distinto alcance del replay del autor y del cotejo local, y cobertura no universal. No acredita independencia ni cierre técnico de MOD-005 o GOV-004.",
+      "texto_literal": "Acepto R04 con la redacción propuesta y los límites indicados. Regístralo y pasemos a R05, sin cambiar S30 ni reentrenar.",
+      "redaccion_aprobada": "Considero adecuada la presentación de la reconstrucción: el CSV de S30 se reproduce exactamente, aunque persisten 19 diferencias intermedias y el resultado conserva el código 3. Reconozco que el replay del autor y el cotejo local tienen alcances distintos, y que los controles no cubren universalmente todos los cálculos. Esta aceptación no acredita validación independiente ni cierra por sí sola MOD-005 o GOV-004.",
+      "fecha": "2026-10-20T23:10:11.363394+00:00",
+      "registro": "registro/decision_R04_20261020.json"
+    },
+    "R05": {
+      "decision": "conservar_explicitamente_carencias_trazabilidad_y_cronologia",
+      "estado": "carencias_declaradas_para_concurso_sin_cierre_tecnico",
+      "alcance": "Conservar expresamente las carencias de trazabilidad de selección y calibración y la discrepancia temporal CLB004/D88 para el concurso. No se acredita una cadena completa, la causa u hora correcta de ese episodio ni su preinscripción; GOV-002 y GOV-006 conservan sus estados técnicos.",
+      "texto_literal": "Acepto R05 con la redacción propuesta. Conservemos explícitas las carencias de trazabilidad y cronología. Regístralo y pasemos a R06, sin cambiar S30 ni reentrenar.",
+      "redaccion_aprobada": "Reconozco que la trazabilidad disponible es selectiva y no acredita una cadena completa de selección y calibración. Mantengo declarada la discrepancia temporal CLB004/D88, sin afirmar su causa ni una preinscripción acreditada para ese episodio. Conservo estas carencias expresamente para el concurso, sin reconstruir mensajes ausentes ni dar por cerrados GOV-002 o GOV-006.",
+      "fecha": "2026-10-20T23:44:42.025606+00:00",
+      "registro": "registro/decision_R05_20261020.json"
     }
+  },
+  "revision_preparada": "registro/revision_preparada_20261020.json",
+  "guia_revision_actual": "docs/REVISION_PENDIENTE_PARTICIPANTE.md",
+  "acta_historica": "registro/acta_subsanacion_20261019.json",
+  "progreso_revision": {
+    "registrados": [
+      "R01",
+      "R02",
+      "R03",
+      "R04",
+      "R05"
+    ],
+    "siguiente": "R06",
+    "total_puntos": 7,
+    "revision_general_aprobada": false
   }
 }

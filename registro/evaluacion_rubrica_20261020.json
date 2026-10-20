@@ -1,0 +1,154 @@
+{
+  "id": "RUB-CODEX-20261020",
+  "autor": "Codex",
+  "fecha_corte_utc": "2026-10-20T21:24:07Z",
+  "encargo": "Valorar lo trabajado y definido frente a los cuatro criterios de la imagen del participante.",
+  "naturaleza": "Evaluación interna de madurez de la propuesta de semana 1. No es nota oficial, pronóstico del jurado ni puntuación asegurada.",
+  "metodologia": "Juicio cualitativo sobre evidencia implementada, verificada y pendiente; pesos oficiales 40/25/20/15. Las bandas son orientativas, no intervalos estadísticos. No se inventa una descomposición oficial del 40%.",
+  "estimacion": {
+    "indice_interno": 79,
+    "maximo": 100,
+    "banda_orientativa": [
+      74,
+      84
+    ],
+    "nota_final_concurso_estimable": false,
+    "motivo": "Parte 2 y scores privados desconocidos; video final sin grabar."
+  },
+  "criterios": [
+    {
+      "criterio": "Rendimiento de tarificación y adaptación",
+      "peso": 40,
+      "estimacion": 30,
+      "banda": [
+        28,
+        32
+      ],
+      "evidencia": [
+        "S30 definitivo según D99; puesto público 1 confirmado por Kaggle durante esta revisión, 30 equipos en metadatos.",
+        "Score público 0.12996 en recibo archivado; D² sobre T0 recalculado: V23 0.14541814890490412, V24 0.13787963465217712.",
+        "Tweedie total y frecuencia por severidad por peligro, exposición, IBNR una vez y calibración por ramo documentados.",
+        "Plan explícito para contrato, unidades, peligros, reporte, variables y recalibración del segundo mercado."
+      ],
+      "limites": [
+        "Adaptación de semana 2 propuesta, aún sin resultados.",
+        "V23/V24 y público reutilizados en selección; una sola valoración no acredita coste último.",
+        "Ventaja local de S30 sobre S22 se invierte al retirar seis clientes de 373831; no prueba superioridad robusta ni equivalencia.",
+        "IBNR fuera de criterio en 6 o 7 de 15 peligros por corte; reservas, nivel de edificios y capitales siguen siendo incertidumbres."
+      ]
+    },
+    {
+      "criterio": "Uso eficaz de IA",
+      "peso": 25,
+      "estimacion": 22,
+      "banda": [
+        21,
+        23
+      ],
+      "evidencia": [
+        "Aportación en datos, objetivo, variables, metodología, modelado, diagnóstico, pruebas y comunicación.",
+        "Foro con hipótesis, resultados adversos y contrastes auténticos; ejemplos de salidas IA cuestionadas y corregidas.",
+        "Controles evitaron éxitos falsos del paquete y colisiones de claves de estimadores; evidencia de captura y reconstrucción."
+      ],
+      "limites": [
+        "Mapa de prompts con cuatro eventos selectivos; selección y calibración no tienen vinculación completa de instrucciones, respuestas y decisiones.",
+        "Inventario efectivo de versiones, costes y licencias de herramientas parcial.",
+        "La correlación con el leaderboard público es diagnóstico sobre candidatos ya consultados, no prueba causal o validación independiente."
+      ]
+    },
+    {
+      "criterio": "Confianza, validación y controles",
+      "peso": 20,
+      "estimacion": 16,
+      "banda": [
+        15,
+        17
+      ],
+      "evidencia": [
+        "11/11 originales cotejados en esta revisión; CSV exacto, IDs, orden y cobertura verificados.",
+        "Evidencia conservada de 45/45 controles del paquete en tres entornos; 18/18 objetivo y 25/25 variables.",
+        "D97: CSV exactos tras reconstrucción completa; 162/181 intermedios iguales y 19 diferentes dentro de 3.9e-15 relativo, rc3 conservado.",
+        "VAL12: 191 salidas locales por SHA/tamaño y 436 claves/cargas conciliadas; 194/194 del replay es resultado del autor, no recálculo propio.",
+        "GOV007/GOV008 cerrados en alcance técnico; reservas e independencia aceptadas expresamente como limitaciones."
+      ],
+      "limites": [
+        "12 hallazgos abiertos y revisión actuarial humana general sin fecha ni decisión.",
+        "Disponibilidad temporal de predictores no acreditada completamente; no se afirma fuga demostrada de S30.",
+        "149 capitales sin confirmación económica, 123 en test; impacto por fila material.",
+        "Cobertura del centinela y reindexado acotada; no equivalen a bloquear cualquier recálculo actuarial.",
+        "La decisión de no hacer réplica independiente se respeta; se declara su ausencia."
+      ]
+    },
+    {
+      "criterio": "Comunicación y documentación",
+      "peso": 15,
+      "estimacion": 11,
+      "banda": [
+        10,
+        12
+      ],
+      "evidencia": [
+        "Informe bilingüe: cinco páginas calificables y tres de anexo; render de las diez páginas principales inspeccionado.",
+        "Panel, figuras, 17 láminas por idioma, guiones, guía de IA y cifras con 48 fuentes.",
+        "Git local limpio al inicio, HEAD 0ade351476b52fb2bafd68c8acc37458416c33b4; 820 archivos seguidos y sin rutas/extensiones restringidas en el índice consultado.",
+        "Verificador documental nuevo: 15 pases, cero fallos, aviso de fuentes cambiadas; recibo histórico preservado."
+      ],
+      "limites": [
+        "Video no grabado; guion inglés dedica 4:35 a parte 1 y reserva aproximadamente 44 segundos al sustituir la escena 17. Conviene ampliar la adaptación medida del segundo mercado.",
+        "La semana 2 debe incorporarse dentro de las primeras cinco páginas y cinco minutos, no depender del anexo.",
+        "Foro y puntero de ciclo cambiaron desde la extracción; 46/48 fuentes siguen iguales.",
+        "registro/requisitos.json y campos superiores de estado_entrega.json conservan estados antiguos de reproducción y respaldo; D97-D99 y VAL12 precisan el estado actual.",
+        "Cambiar expresiones como 'AI never validated itself' por 'contraste cruzado entre asistentes, sin independencia profesional'; el descargo posterior ya existe.",
+        "La afirmación general de que D² entre 0.10 y 0.15 separa bien por tener muchos ceros requiere contexto; es preferible apoyarla en el baseline y en los diagnósticos observados."
+      ]
+    }
+  ],
+  "comprobaciones_nuevas": {
+    "originales_sha": "11/11 conformes",
+    "csv": "8 controles propios pasan; recibo puntuado y SHA enlazados por evidencia previa",
+    "metricas": "V23 y V24, agregado y tres ramos, coinciden al redondear a cinco decimales",
+    "fuentes_cifras": {
+      "total": 48,
+      "iguales": 46,
+      "cambiadas": [
+        "foro",
+        "ciclo_validacion"
+      ]
+    },
+    "documentacion": {
+      "pases": 15,
+      "fallos": 0,
+      "avisos": 1,
+      "panel": "Omitido en verificador local; intento de apertura file: rechazado por política del navegador. No se buscó eludir el bloqueo. Se conserva la comprobación anterior del autor."
+    },
+    "pdf": "5 páginas calificables + 3 anexos por idioma, render Poppler e inspección visual",
+    "git": "Consulta del índice actual; no auditoría exhaustiva de secretos de todo el historial ni nueva comprobación de permisos remotos."
+  },
+  "prioridades": [
+    "Confirmar la selección manual de S30 antes del 23 de octubre de 2026, 11:00 Bogotá; no realizada en esta revisión.",
+    "Reservar espacio suficiente en informe y video para comparar mercado nuevo: modelo congelado, adaptación y resultado observado.",
+    "Completar la revisión humana general y el alcance de disponibilidad temporal y capitales, sin reabrir como pendientes las limitaciones ya aceptadas.",
+    "Vincular una muestra representativa de prompts auténticos a selección, calibración y correcciones, sin inventar ni publicar conversaciones privadas.",
+    "Conciliar estados operativos antiguos y regenerar cifras al corte final; conservar las versiones previas.",
+    "Resolver elegibilidad documental, licencias, costes y canal de entrega del jurado; son condiciones de participación, no puntos adicionales supuestos."
+  ],
+  "fuentes_principales": [
+    "Hackaton/REGLAS_2026.md",
+    "Hackaton/Repositorio_IAA2026/docs/entrega/datos/cifras_entregables.json",
+    "Hackaton/Repositorio_IAA2026/docs/entrega/informe/INFORME_ES.md",
+    "Hackaton/Repositorio_IAA2026/docs/entrega/USO_DE_IA_ES.md",
+    "Hackaton/Repositorio_IAA2026/docs/entrega/video/GUION_VIDEO_EN.md",
+    "Hackaton/Repositorio_IAA2026/registro/revision_humana.json",
+    "Hackaton/Repositorio_IAA2026/registro/mapa_prompts_20261019.json",
+    "Hackaton/Repositorio_IAA2026/registro/recibo_reproduccion_completa_20261020.json",
+    "Hackaton/Repositorio_IAA2026/registro/decision_modelo_definitivo_20261020.json",
+    "Hackaton/Semana 1/Validacion_enjambre/runs/20261020T193644Z_cambios/INFORME_CAMBIOS.md"
+  ],
+  "evidencia_propia": "Hackaton/Repositorio_IAA2026/privado/revision_rubrica_20261020",
+  "acciones_excluidas": [
+    "Sin entrenamiento, carga de estimadores, inferencia o replay nuevo.",
+    "Sin nuevas delegaciones, automatizaciones, publicaciones, mensajes a terceros, commits o envíos Kaggle.",
+    "Sin cambios a receta, predicciones, decisiones humanas o registros históricos de ejecución."
+  ],
+  "cierre": "Propuesta competitiva en semana 1 y con uso de IA demostrable; nota final aún indeterminada."
+}

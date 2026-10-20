@@ -1,0 +1,162 @@
+{
+  "autor": "Codex",
+  "utc": "2026-10-20T22:22:13.056278+00:00",
+  "estado": "selectivo_ampliado_incompleto",
+  "eventos": [
+    {
+      "id": "N62",
+      "tipo": "instruccion_autentica_selectiva",
+      "instruccion": {
+        "archivo_privado": "privado/subsanacion_20261019/prompts_autenticos/N62.jsonl",
+        "evento_sha256": "00f064e0dff95997d3878f558d89b766fbdac2f6aeb882622fe6b3d1686ff8be",
+        "fecha_utc": "2026-10-19T02:23:45.555Z",
+        "hash_evento_verificado": true,
+        "convencion_hash_verificada": "bytes_completos_incluido_salto_final",
+        "rol_usuario_en_evento": true
+      },
+      "artefactos_y_huellas_de_la_version_vinculada": [
+        {
+          "ruta": "src/datos/n62_codex/rebuild_base.py",
+          "sha256": "7054dd7699c9f5868c507ffb834a49ee47ae90392df19928e9c97091ebb93085"
+        },
+        {
+          "ruta": "docs/evidencia/base_N62.json",
+          "sha256": "b5dba85880788df85785b5b0d07797b399b8e3770cf881c19d5da7f7bebb38de"
+        }
+      ],
+      "respuesta_ia_completa": null,
+      "limite": "Evento heredado verificado por hash; los artefactos conservan su versión vinculada. No es una exportación completa del diálogo."
+    },
+    {
+      "id": "N66_N69",
+      "tipo": "instruccion_autentica_selectiva",
+      "instruccion": {
+        "archivo_privado": "privado/subsanacion_20261019/prompts_autenticos/N66_N69.jsonl",
+        "evento_sha256": "22e58c1a033e59f924d5a93810bc81c921b176856a83f8a84be000034bc2d91d",
+        "fecha_utc": "2026-10-19T12:20:08.468Z",
+        "hash_evento_verificado": true,
+        "convencion_hash_verificada": "bytes_completos_incluido_salto_final",
+        "rol_usuario_en_evento": true
+      },
+      "artefactos_y_huellas_de_la_version_vinculada": [
+        {
+          "ruta": "reproducir.py",
+          "sha256": "a346d125520bfc5c784f1b9f65072759efdb15594263485434857e348475de17"
+        },
+        {
+          "ruta": "herramientas/etapas_datos.py",
+          "sha256": "0c0a90317130f5ee75054ef761edc5c84a52a57eea18652159fd71e056b8b9ab"
+        },
+        {
+          "ruta": "docs/verificacion.md",
+          "sha256": "a68652d610545c964f9f45c6f2a5924665cbd055ec99577e574e3a17495f7336"
+        }
+      ],
+      "respuesta_ia_completa": null,
+      "limite": "Evento heredado verificado por hash; los artefactos conservan su versión vinculada. No es una exportación completa del diálogo."
+    },
+    {
+      "id": "COD113_114",
+      "tipo": "instruccion_autentica_selectiva",
+      "instruccion": {
+        "archivo_privado": "privado/subsanacion_20261019/prompts_autenticos/COD113_114.jsonl",
+        "evento_sha256": "78fdc84b8b57e5dee320a9511c24835bf908e81428150b7a193e7df05cc482f2",
+        "fecha_utc": "2026-10-19T17:53:37.586Z",
+        "hash_evento_verificado": true,
+        "convencion_hash_verificada": "bytes_completos_incluido_salto_final",
+        "rol_usuario_en_evento": true
+      },
+      "artefactos_y_huellas_de_la_version_vinculada": [
+        {
+          "ruta": "docs/COORDINACION_REPRODUCCION_RESERVAS.md",
+          "sha256": "bbc4a3d174891a87be7982971aea09b3335e7ae9697d78247eaae7d28f7abcc3"
+        },
+        {
+          "ruta": "registro/coordinacion_reproduccion_reservas.json",
+          "sha256": "5f5b90e6a35ac6a30c519b96365277a514420e43e99f4658829b9283f1467f82"
+        }
+      ],
+      "respuesta_ia_completa": null,
+      "limite": "Evento heredado verificado por hash; los artefactos conservan su versión vinculada. No es una exportación completa del diálogo."
+    },
+    {
+      "id": "subsanacion_20261019",
+      "tipo": "instruccion_autentica_selectiva",
+      "instruccion": {
+        "archivo_privado": "privado/subsanacion_20261019/prompts_autenticos/subsanacion_20261019.jsonl",
+        "evento_sha256": "5ef0431ab7508642a490ef39bf2fa3947c80f8ac7adba65634ec15854c822667",
+        "fecha_utc": "2026-10-19T21:55:21.746Z",
+        "hash_evento_verificado": true,
+        "convencion_hash_verificada": "bytes_completos_incluido_salto_final",
+        "rol_usuario_en_evento": true
+      },
+      "artefactos_y_huellas_de_la_version_vinculada": [
+        {
+          "ruta": "herramientas/validar_disponibilidad.py",
+          "sha256": "cfeea424044edfe53b8964a5236b42b50a9edce2db26262a20a669614a7b4fd4",
+          "sha256_version_de_preparacion": "b926730bcede280601bc419d2290df103186a742d3d6c3798ce5bc6ab420c948",
+          "nota": "Apoyo corregido antes de la comprobación de esta misma tarea; no se atribuye el código final a una ejecución anterior."
+        },
+        {
+          "ruta": "herramientas/verificar_traspaso.py",
+          "sha256": "98855c0b401c78291413a4ea5d55d7b412759ca1a1d46456b7e9a0fb358c5025",
+          "sha256_version_de_preparacion": "8bf6a3914a049597e513be7eb01fc0489a822e2213bf48bae9a9b2425425e706",
+          "nota": "Apoyo corregido antes de la comprobación de esta misma tarea; no se atribuye el código final a una ejecución anterior."
+        }
+      ],
+      "respuesta_ia_completa": null,
+      "limite": "Evento heredado verificado por hash; los artefactos conservan su versión vinculada. No es una exportación completa del diálogo."
+    },
+    {
+      "id": "D98",
+      "tipo": "decision_humana_autentica_con_respuesta_publicada_en_foro",
+      "instruccion": {
+        "archivo_privado": "privado/decisiones_participante_20261020/respuesta_humana_original.jsonl",
+        "evento_sha256": "4a7d4a76c72fdfe9e50058d73b742417dc1960be3cbdfd0139cbf0b3d54fbb6e",
+        "fecha_utc": "2026-10-20T15:21:59.556Z",
+        "hash_evento_verificado": true,
+        "convencion_hash_verificada": "evento_sin_salto_final"
+      },
+      "respuesta_ia_publicada": {
+        "ruta": "registro/CLA-20261020-003_cuerpo.md",
+        "sha256": "4832396bb18ec91530137b8247784cd676a44a5bb6e63e4e8ed45e04b29cf91b"
+      },
+      "decision_y_alcance": {
+        "ruta": "registro/decisiones_participante_20261020.json",
+        "sha256": "145a452e1a4c1f5f4ed98d1b77cb9c7d25089192235c8b0ec9d82479eb1aa841"
+      },
+      "respuesta_ia_completa": null,
+      "limite": "La respuesta del foro es una pieza auténtica distinta de la respuesta completa de la sesión. En D99 las opciones de nombre y cierre no tienen evento bruto."
+    },
+    {
+      "id": "D99",
+      "tipo": "decision_humana_autentica_con_respuesta_publicada_en_foro",
+      "instruccion": {
+        "archivo_privado": "privado/decision_modelo_definitivo_20261020/mensaje_original.jsonl",
+        "evento_sha256": "591f7d313fd5bec5d2d461f84f2f129cc2274e7a4b8e5d363beb812e95673099",
+        "fecha_utc": "2026-10-20T15:36:03.672Z",
+        "hash_evento_verificado": true,
+        "convencion_hash_verificada": "evento_sin_salto_final"
+      },
+      "respuesta_ia_publicada": {
+        "ruta": "registro/CLA-20261020-004_cuerpo.md",
+        "sha256": "d55983fb648c76b3e60c5a73ee37f30bf06425168fd4fe89565fde5ad60fb779"
+      },
+      "decision_y_alcance": {
+        "ruta": "registro/decision_modelo_definitivo_20261020.json",
+        "sha256": "327303451289f4a7f667e31f719c94a789ff2f1ad5507ef11889cd302a1f9686"
+      },
+      "respuesta_ia_completa": null,
+      "limite": "La respuesta del foro es una pieza auténtica distinta de la respuesta completa de la sesión. En D99 las opciones de nombre y cierre no tienen evento bruto."
+    }
+  ],
+  "eventos_autenticos_verificados": 6,
+  "mapa_previo": {
+    "ruta": "registro/mapa_prompts_20261019.json",
+    "sha256": "9daa323499332a7f03114f611dc09ee75917c867ed7bf5a6675c23a481f92a76"
+  },
+  "GOV002_cerrado": false,
+  "GOV006_cerrado": false,
+  "faltante": "Conversaciones auténticas de selección y calibración, respuestas completas y aclaración de cronología. No se inventan textos, modelos/versiones o costes.",
+  "privacidad": "Solo hashes y referencias en Git; eventos originales y conversaciones privadas fuera de Git."
+}

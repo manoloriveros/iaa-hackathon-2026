@@ -1,0 +1,59 @@
+{
+  "id": "REV-R05-20261020",
+  "punto": "R05",
+  "emisor": "Participante en este chat",
+  "registrado_por": "Codex",
+  "fecha_registro_utc": "2026-10-20T23:44:42.025606+00:00",
+  "fecha_registro_bogota": "2026-10-20T18:44:42.025606-05:00",
+  "nota_fecha": "Hora de registro; no se atribuye un timestamp exacto al envío del mensaje.",
+  "candidato": "S30",
+  "sha256_csv": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+  "texto_literal": "Acepto R05 con la redacción propuesta. Conservemos explícitas las carencias de trazabilidad y cronología. Regístralo y pasemos a R06, sin cambiar S30 ni reentrenar.",
+  "texto_sha256_utf8": "ac005c1df5b30297a20f7fcbf9f3855b4fae8b3d0bf4a66bf9e8b99bb23f23ba",
+  "redaccion_aprobada": "Reconozco que la trazabilidad disponible es selectiva y no acredita una cadena completa de selección y calibración. Mantengo declarada la discrepancia temporal CLB004/D88, sin afirmar su causa ni una preinscripción acreditada para ese episodio. Conservo estas carencias expresamente para el concurso, sin reconstruir mensajes ausentes ni dar por cerrados GOV-002 o GOV-006.",
+  "redaccion_aprobada_sha256_utf8": "05d01df793031c08bfaf942a2e8ecb6150ad0d8ebc02961ff0349e187bd7557f",
+  "fuente_redaccion_aprobada": "Propuesta de Codex en la respuesta inmediatamente anterior de este chat, aceptada expresamente por el participante; no se presenta como texto escrito literalmente por él.",
+  "fuente": {
+    "tipo": "mensaje directo del participante visible en este chat",
+    "transcripcion_privada": "privado/revision_humana_20261020/R05/declaracion_participante.txt",
+    "evento_bruto_exportado": false
+  },
+  "decision": "conservar_explicitamente_carencias_trazabilidad_y_cronologia",
+  "estado": "carencias_declaradas_para_concurso_sin_cierre_tecnico",
+  "alcance": "Conservar expresamente las carencias de trazabilidad de selección y calibración y la discrepancia temporal CLB004/D88 para el concurso. No se acredita una cadena completa, la causa u hora correcta de ese episodio ni su preinscripción; GOV-002 y GOV-006 conservan sus estados técnicos.",
+  "no_acredita": [
+    "Trazabilidad completa de selección y calibración",
+    "Respuestas completas o mensajes originales adicionales",
+    "Causa u hora correcta de CLB004/D88",
+    "Preinscripción acreditada para ese episodio",
+    "Cierre técnico de GOV-002 o GOV-006",
+    "Revisión general aprobada",
+    "Uso operativo autorizado"
+  ],
+  "hallazgos_relacionados": [
+    "GOV-002",
+    "GOV-006"
+  ],
+  "evidencia_presentada": [
+    {
+      "ruta": "registro/trazabilidad_ia_revision_20261020.json",
+      "sha256": "850c36805af126dba9797c3266f248af8c9d422e951795c7e2641554eed5cb16"
+    },
+    {
+      "ruta": "docs/REGISTRO_IA.md",
+      "sha256": "e5c5a94c1075e2302fb50e8ec22d52217a90a59c38e3d85d659193f45f4b3f15"
+    },
+    {
+      "ruta": "registro/cronologia_GOV006_20261019.json",
+      "sha256": "8a646b5f216976eb1f429fc80c706dfd7266efb09ff19a5ff3198bdd0ed1e63f"
+    }
+  ],
+  "regla_cierre": "Reconocimiento humano de las carencias documentales. No se transforma en evidencia faltante, aclaración del autor, promesa de exportación o cierre técnico.",
+  "actividad": {
+    "entrenamientos": 0,
+    "inferencias": 0,
+    "modelos_cargados": 0,
+    "replays": 0,
+    "Kaggle": 0
+  }
+}
