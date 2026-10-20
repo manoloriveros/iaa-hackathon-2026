@@ -15,3 +15,9 @@ Los comentarios del foro llevan autor e identificador. Las mezclas históricas c
 GOV-002 permanece abierto: no está acreditada en el registro raíz la vinculación completa de prompts reales a decisiones. Antes de cerrar la entrega final, exportar las conversaciones reales autorizadas, conservar un archivo privado con fecha/hash y vincular fragmentos pertinentes a la decisión y su corrección. No inventar el texto de un prompt, respuesta, coste o autorización. No subir conversaciones completas a GitHub por defecto.
 
 Herramientas declaradas: Codex y Claude, Python y bibliotecas listadas en requirements; Kaggle para datos/scoring y GitHub privado para código. Las versiones de bibliotecas son las declaradas por el entorno de referencia. Falta completar versiones efectivas de asistentes, costes, licencias de herramientas y decisión final de licencia del código. No se presenta afiliación profesional del participante como verificada.
+
+## Evidencia selectiva para la revisión del 20 de octubre
+
+El [mapa ampliado](../registro/trazabilidad_ia_revision_20261020.json) reúne los cuatro eventos originales del mapa anterior y las decisiones auténticas D98 y D99. Los seis se cotejaron por su hash, respetando la convención de cada archivo. D98 y D99 incluyen una respuesta auténtica publicada en el foro; no se confunde esa pieza con la conversación completa de la sesión. Las instrucciones originales permanecen en privado.
+
+La selección y la calibración aún no tienen una cadena completa de instrucciones, respuestas y decisiones. GOV-002 y la aclaración de cronología GOV-006 siguen abiertos. La [revisión preparada](REVISION_PENDIENTE_PARTICIPANTE.md) permite identificar qué registros adicionales puede aportar el participante sin reconstruir texto ausente. El [inventario de herramientas](../registro/inventario_herramientas_revision_20261020.json) reúne el entorno documentado y deja por completar planes, costes, condiciones y constancias reales.
