@@ -34,13 +34,75 @@ def sha(p):
     return h.hexdigest()
 
 
-def guardar(p, d):
+def escribir_texto(p, contenido):
+    """Conserva los saltos de línea del archivo existente; archivos nuevos usan LF."""
     p = Path(p)
     p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(d, ensure_ascii=False, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+    salto = "\r\n" if p.exists() and b"\r\n" in p.read_bytes() else "\n"
+    p.write_text(contenido, encoding="utf-8", newline=salto)
 
 
-def normalizar_hallazgo(h):
+def guardar(p, d):
+    escribir_texto(p, json.dumps(d, ensure_ascii=False, indent=2, allow_nan=False) + "\n")
+
+
+def conciliar_estado(actual, definitivo, reproduccion, revision_humana, hallazgos):
+    """Proyecta decisiones y recibos vigentes sin borrar los seguimientos anteriores.
+
+    Una decisión técnica no firma la revisión general. La coincidencia de los CSV
+    tampoco convierte las diferencias intermedias en conformidad íntegra.
+    """
+    estado = dict(actual)
+    decision = definitivo["decision"]
+    if decision["modelo"] != "S30":
+        raise ValueError("Esta actualización conserva S30; revisar una decisión incompatible")
+    corrida = reproduccion["reajuste_completo"]
+    csv = corrida["csv_finales"]["S30"]
+    if not csv["coincide"] or csv["sha256"] != decision["sha256_csv"]:
+        raise ValueError("El recibo de reproducción no corresponde al S30 definitivo")
+    huellas = corrida["huellas"]
+    revision_general = bool(revision_humana.get("fecha") and revision_humana.get("decision"))
+    abiertas = sum(h["estado"] == "abierto" for h in hallazgos["findings"])
+    aceptadas = sum(h["estado"].startswith("limitacion_aceptada") for h in hallazgos["findings"])
+    estado.update({
+        "principal": "S30", "principal_definitivo": True, "respaldo": None,
+        "candidatos_historicos": ["S22"], "nombre_modelo": decision["nombre"],
+        "seleccion_final_manual_kaggle": actual.get("seleccion_final_manual_kaggle")
+            or definitivo["seleccion_final_manual_kaggle"],
+        "reproduccion_completa": "reconstruida_csv_exacto_con_diferencias_intermedias",
+        "revision_humana": "revision_general_registrada" if revision_general
+            else "revision_general_pendiente_con_decisiones_especificas_registradas",
+        "entrega_cerrada": bool(actual.get("entrega_cerrada", False)),
+        "reproduccion": {
+            "registro": "registro/recibo_reproduccion_completa_20261020.json",
+            "documento": "docs/REPRODUCCION_COMPLETA.md", "csv_S30_exacto": True,
+            "huellas_iguales": huellas["iguales_contenido"],
+            "huellas_verificadas": huellas["verificadas_por_nodo"],
+            "huellas_diferentes": huellas["difieren"],
+            "codigo_salida": corrida["componentes"]["codigo_salida"],
+            "conformidad_integra_historica": False, "independiente": False,
+            "replay": "194/194 salidas según recibo del autor; VAL12 cotejó 191 salidas principales locales. No es un replay nuevo.",
+            "limite": "Recuperación de estimadores con recálculos actuariales; no igualdad de todos los intermedios ni bloqueo de cualquier ajuste posible."
+        },
+        "seguimiento_vigente": {
+            "hallazgos": len(hallazgos["findings"]), "abiertos": abiertas,
+            "limitaciones_aceptadas": aceptadas,
+            "otros_estados_acotados": len(hallazgos["findings"]) - abiertas - aceptadas,
+            "revision_general_realizada": revision_general,
+            "decisiones_especificas": revision_humana.get("decisiones_especificas", {}),
+            "revision_preparada": "registro/revision_preparada_20261020.json",
+            "guia": "docs/REVISION_PENDIENTE_PARTICIPANTE.md"
+        }
+    })
+    modelo = dict(actual.get("modelo_definitivo", {}))
+    modelo.update({"modelo": "S30", "nombre": decision["nombre"],
+                   "S22": "Registro histórico; no es respaldo operativo.",
+                   "registro": "registro/decision_modelo_definitivo_20261020.json"})
+    estado["modelo_definitivo"] = modelo
+    return estado
+
+
+def normalizar_hallazgo(h, anterior=None):
     """Conserva los textos originales aunque la fuente use español o inglés.
     No interpreta un criterio escrito como cierre o aprobación humana.
     """
@@ -62,7 +124,8 @@ def normalizar_hallazgo(h):
             "criterio_cierre": campo("criterio_cierre", ("closure_criterion", "closure_criteria", "criterio_cierre", "condicion_de_cierre")),
             "revisor_necesario": campo("revisor_necesario", ("specialist", "revision_humana_requerida", "required_human_role", "especialista_humano_requerido_por_designar")),
             "fuente": h.get("fuente"), "revisiones_recibidas": len(h.get("revisiones_posteriores", [])),
-            "fuentes_campos": fuentes_campos, "responsable_humano": None}
+            "fuentes_campos": fuentes_campos,
+            "responsable_humano": h.get("responsable_humano") or (anterior or {}).get("responsable_humano")}
 
 
 def main():
@@ -104,7 +167,17 @@ def main():
     hall = fuente("Hallazgos del ciclo recibido", raiz / cycle["findings_registry"])
     recipe = fuente("Receta de reproducción", REPO / "receta/receta.json")
     spec = fuente("Pesos S30", REPO / "receta/especificaciones/spec_s30.json")
-    oficial = fuente("Reglas y metadatos consultados en vivo", REPO / "docs/fuentes/reglas_kaggle_20261019.json")
+    oficial = fuente("Reglas y metadatos archivados, consulta del 19 de octubre", REPO / "docs/fuentes/reglas_kaggle_20261019.json")
+    estado_path = REPO / "registro/estado_entrega.json"
+    estado_anterior = leer(estado_path) if estado_path.exists() else {}
+    definitivo = fuente("Decisión definitiva S30, D99", REPO / "registro/decision_modelo_definitivo_20261020.json")
+    reproduccion = fuente("Reconstrucción completa documentada, D97", REPO / "registro/recibo_reproduccion_completa_20261020.json")
+    revision_humana = fuente("Revisión humana general y decisiones específicas", REPO / "registro/revision_humana.json")
+    revision_preparada = fuente("Expediente preparado para revisión humana", REPO / "registro/revision_preparada_20261020.json")
+    fuente("Mapa selectivo ampliado de evidencia IA", REPO / "registro/trazabilidad_ia_revision_20261020.json")
+    fuente("Inventario de herramientas para acreditación", REPO / "registro/inventario_herramientas_revision_20261020.json")
+    # Rechazar una fuente incompatible antes de escribir copias o proyecciones.
+    estado_conciliado = conciliar_estado(estado_anterior, definitivo, reproduccion, revision_humana, hall)
 
     # Copias documentales, sin reescribir las fuentes históricas.
     copiar_docs = {
@@ -120,7 +193,7 @@ def main():
         dst.parent.mkdir(parents=True, exist_ok=True)
         contenido = p.read_text(encoding="utf-8-sig")
         contenido, n_ids = re.subn(r"\b[MCBPA]\d{7,12}\b", "[identificador sintético omitido]", contenido)
-        dst.write_text(contenido, encoding="utf-8")
+        escribir_texto(dst, contenido)
         fuentes.append({"nombre": nombre, "ruta_original": p.relative_to(raiz).as_posix(), "sha256": sha(p),
                         "copia": dst.relative_to(REPO).as_posix(), "sha256_copia": sha(dst), "identificadores_omitidos": n_ids,
                         "tipo": "documentación histórica con corte propio; copia sin identificadores individuales"})
@@ -175,7 +248,9 @@ def main():
                           "min": min(values), "max": max(values), "total_CU": math.fsum(values),
                           "checks": checks, "pasa": all(checks.values()), "submission_id": receipt["kaggle_submission_id"],
                           "public_score": receipt["public_score"], "recibo_consultado_utc": receipt.get("retrieved_utc"),
-                          "seleccion_final_manual": "No acreditada; sigue pendiente de decisión humana"})
+                          "rol": "definitivo" if nombre == "S30" else "registro_historico",
+                          "seleccion_final_manual": estado_anterior.get("seleccion_final_manual_kaggle", "pendiente_no_realizada")
+                              if nombre == "S30" else "No corresponde: candidato histórico"})
 
     integridad = []
     for t in facts["raw_tables"]:
@@ -185,7 +260,12 @@ def main():
                            "columnas": t["columns"], "sha256": actual, "esperado": t["sha256"],
                            "coincide": actual == t["sha256"], "bytes": p.stat().st_size})
 
-    hallazgos = [normalizar_hallazgo(h) for h in hall["findings"]]
+    anteriores_path = ev / "hallazgos.json"
+    anteriores = {h["id"]: h for h in leer(anteriores_path)} if anteriores_path.exists() else {}
+    hallazgos = [normalizar_hallazgo(h, anteriores.get(h["id"])) for h in hall["findings"]]
+    for h in hallazgos:
+        h["registro_vigente"] = {"ruta": cycle["findings_registry"], "sha256": sha(raiz / cycle["findings_registry"]),
+                                  "run_id": cycle["run_id"], "cerrado_utc": cycle["closed_at_utc"]}
 
     suites = []
     for p in sorted((REPO / "docs/controles").glob("*/resultado.json")):
@@ -194,7 +274,7 @@ def main():
                        "entorno": x["entorno"], "casos": x["casos"], "pasan": x["pasan"],
                        "fallan": x["fallan"], "etapas_reales_invocadas": x["etapas_reales_invocadas"],
                        "resultados": x["resultados"], "paquete": x["paquete"],
-                       "procedencia": "Prueba propia de esta revisión en Windows" if "windows_v12" in str(p) else "Recibo histórico de Claude, inspeccionado"})
+                       "procedencia": "Recibo de control archivado, inspeccionado; no ejecutado otra vez al actualizar el panel"})
 
     candidatos = []
     for x in registry["candidates"]:
@@ -221,21 +301,35 @@ def main():
         ("PRE00", "Marcar siniestros anteriores al historial de pólizas", 413, "Se preservan en claims, se excluyen de la asignación T0 del historial."),
         ("D66/F0", "Tratar los 1.454 capitales restantes en la matriz de modelado", 1454, "1.305 apoyados por historia y 149 PRM01-R sin confirmación; los 11 originales y la capa base no cambian."),
     ]
+    ultima_integral = cycle.get("last_comprehensive_metrics", {})
+    resultado_integral = (f"{ultima_integral.get('data_controls_total', '?')} controles de datos, "
+                          f"{ultima_integral.get('model_checks_total', '?')} diagnósticos de modelos y "
+                          f"{ultima_integral.get('pytest_passed', '?')} pytest según el ciclo integral archivado")
     validaciones = [
         {"id": "D59", "alcance": "Ocho reglas base y rama retrospectiva hasta CAP05R", "resultado": "41/41 históricos", "limite": "No valida automáticamente CAP06R o el modelo final; segunda implementación IA.", "fuente": "docs/evidencia/documentacion_datos_D61.md"},
         {"id": "N62", "alcance": "Base desde 11 originales", "resultado": "11/11 bytes; 148.424.183 celdas comparadas históricamente sin diferencias", "limite": "Esta sesión solo coteja hashes de originales. No repite esa comparación ni entrenamiento.", "fuente": "docs/evidencia/base_N62.json"},
         {"id": "D67", "alcance": "Asignación, T0 y desarrollo", "resultado": "18/18 históricos; 160.432 aceptados asignados una vez", "limite": "Proxy de incurrido, sin último observado ni suficiencia de reservas acreditada.", "fuente": "docs/evidencia/bases_D67.json"},
         {"id": "D68", "alcance": "F0 y particiones", "resultado": "25/25 históricos", "limite": "Disponibilidad temporal F3 y clima requiere revisión adicional.", "fuente": "docs/evidencia/F0_D68.json"},
-        {"id": "Integral 19oct 12:02 UTC", "alcance": "Datos y modelos S22/S30", "resultado": "99 controles datos y 429 modelos, según informe recibido", "limite": "No son pruebas nuevas de esta sesión; 49 pytest históricos tampoco se suman otra vez.", "fuente": "docs/evidencia/hallazgos.json"},
+        {"id": "Última integral registrada", "alcance": "Datos, modelos y gobierno; " + cycle["last_comprehensive_completed_utc"], "resultado": resultado_integral, "limite": "Clases solapadas no sumables. El seguimiento posterior no equivale a repetir la integral.", "fuente": "docs/evidencia/hallazgos.json"},
         {"id": "S30 frente a S22", "alcance": "D² completo, semestres, segmentos, reservas fijas y dependencia", "resultado": "72 ámbitos; V24 +0,000138041", "limite": "IC95 cliente y dirección incluyen cero; cortes reutilizados.", "fuente": "docs/evidencia/recibo_S30.json"},
-        {"id": "Reproducción mezcla", "alcance": "CSV desde componentes guardados", "resultado": "S22/S30 exactos en recibos nube y VM", "limite": "VM: diferencias intermedias de último bit; versión 1.1 devuelve 3 en modo diagnóstico. Cadena completa pendiente.", "fuente": "docs/verificacion.md"},
+        {"id": "Reconstrucción D97", "alcance": "De los originales a los CSV y réplica desde estimadores capturados", "resultado": "CSV exactos; 162/181 huellas históricas iguales; réplica 194/194 declarada por el autor", "limite": "19 intermedios diferentes y código 3. VAL12 cotejó 191 salidas locales; no reproducción independiente.", "fuente": "docs/REPRODUCCION_COMPLETA.md"},
         {"id": "Entrega de hoy", "alcance": "Dos CSV, IDs, orden, cobertura, finitud y SHA", "resultado": f"{sum(x['pasa'] for x in preflight)}/2 conformes", "limite": "Verificación de formato/integridad, no de verdad última o score privado.", "fuente": "docs/evidencia/preflight.json"},
     ]
 
     replay_path = REPO / "docs/evidencia/replay_windows.json"
     replay = leer(replay_path) if replay_path.exists() else {"estado": "pendiente"}
+    estado = estado_conciliado
+    estado.update({"utc": now.isoformat(), "carpeta_activa": REPO.relative_to(raiz).as_posix(),
+                   "integridad_originales": all(x["coincide"] for x in integridad),
+                   "preflight_csv": all(x["pasa"] for x in preflight), "replay_windows": replay,
+                   "pruebas_activas": "No inspeccionadas en esta actualización; los registros no acreditan actividad de procesos en vivo.",
+                   "corte_validacion_recibida": cycle["run_id"]})
+    revision_texto = "revisión general registrada" if estado["seguimiento_vigente"]["revision_general_realizada"] else "revisión general pendiente"
+    seleccion = estado["seleccion_final_manual_kaggle"]
+    seleccion_texto = "selección manual en Kaggle pendiente" if seleccion.startswith("pendiente") else "selección manual: " + seleccion.replace("_", " ")
     datos = {"generado_utc": now.isoformat(), "generado_bogota": now.astimezone(timezone(timedelta(hours=-5))).isoformat(),
-             "estado": "Preparada para revisión; cierre humano y reproducción completa pendientes", "version_paquete": "1.2",
+             "estado": "S30 definitivo; S22 histórico; reconstrucción documentada con CSV exacto y 19 diferencias intermedias. " + revision_texto + "; " + seleccion_texto + ".", "version_paquete": "1.2",
+             "estado_entrega": estado, "revision_humana": revision_humana, "revision_preparada": revision_preparada,
              "deadline_utc": oficial["metadata"]["deadline"], "best": {"id": "S30", "public_score": receipt30["public_score"],
              "submission_id": receipt30["kaggle_submission_id"], "local_D2_V24": receipt30["local_validation"]["D2"],
              "gain_vs_S22": receipt30["local_validation"]["gain"], "CI95_cliente": receipt30["local_validation"]["conditional_customer_CI95"],
@@ -247,32 +341,28 @@ def main():
              "calibracion_s30": delivery30.get("validacion", {}), "candidatos": candidatos,
              "preflight": preflight, "validaciones": validaciones, "hallazgos": hallazgos, "suites": suites, "replay_windows": replay,
              "experimentos": experimentos, "fuentes": fuentes,
-             "procesos": "No acreditado en esta sesión: la consulta de procesos del sistema fue denegada. Los archivos y planes no prueban actividad en vivo.",
+             "procesos": estado["pruebas_activas"],
              "linaje": "Se unifica la gestión y la documentación. S30 conserva sus componentes de Claude; la base N62 y verificaciones de Codex conservan su autoría. Las mezclas históricas compartidas siguen identificadas."}
     for nombre, objeto in (("base_N62", n62), ("bases_D67", bases), ("F0_D68", f0), ("preflight", preflight), ("hallazgos", hallazgos),
                             ("recibo_S30", receipt30), ("recibo_S22", receipt22)):
         guardar(ev / (nombre + ".json"), objeto)
     guardar(REPO / "registro/fuentes.json", fuentes)
-    guardar(REPO / "registro/estado_entrega.json", {"utc": now.isoformat(), "carpeta_activa": REPO.relative_to(raiz).as_posix(),
-             "principal": "S30", "respaldo": "S22", "seleccion_final_manual_kaggle": "pendiente_no_realizada",
-             "integridad_originales": all(x["coincide"] for x in integridad), "preflight_csv": all(x["pasa"] for x in preflight),
-             "reproduccion_completa": "pendiente", "revision_humana": "pendiente", "entrega_cerrada": False,
-             "replay_windows": replay,
-             "pruebas_activas": datos["procesos"], "corte_validacion_recibida": cycle["run_id"],
-             "github": "https://github.com/manoloriveros/iaa-hackathon-2026", "visibilidad": "private",
-             "limites": ["No se acredita último observado", "V23/V24 reutilizados", "Fecha de disponibilidad de predictores", "149 capitales sin confirmación", "Elegibilidad para premio pendiente"]})
+    guardar(estado_path, estado)
     guardar(REPO / "registro/panel_datos.json", datos)
     template = (REPO / "herramientas/panel_template.html").read_text(encoding="utf-8")
     inline = json.dumps(datos, ensure_ascii=False, allow_nan=False).replace("</", "<\\/")
     requisitos = json.dumps(leer(REPO / "registro/requisitos.json"), ensure_ascii=False).replace("</", "<\\/")
     out = REPO / "docs/panel_revision.html"
-    out.write_text(template.replace("__DATOS_JSON__", inline).replace("__REQUISITOS_JSON__", requisitos), encoding="utf-8")
+    revision_js = (REPO / "herramientas/revision_formulario.js").read_text(encoding="utf-8")
+    escribir_texto(out, template.replace("__DATOS_JSON__", inline).replace("__REQUISITOS_JSON__", requisitos)
+                   .replace("__REVISION_FORMULARIO_JS__", revision_js)
+                   .replace("__ESTADO_OPERATIVO__", html.escape(datos["estado"])))
     guardar(REPO / f"privado/revisiones/{marca}/recibo.json", {"utc": now.isoformat(), "preflight": preflight,
             "originales": integridad, "fuentes": fuentes, "panel_sha256": sha(out), "entrenamientos": 0, "envios": 0})
     ok = all(x["pasa"] for x in preflight) and all(x["coincide"] for x in integridad)
     print(json.dumps({"csv_conformes": sum(x["pasa"] for x in preflight), "originales_conformes": sum(x["coincide"] for x in integridad),
                       "variables_diccionario": len(dictionary), "experimentos_indexados": len(experimentos), "fuentes": len(fuentes),
-                      "panel": str(out), "entrenamientos": 0, "entrega_cerrada": False}, ensure_ascii=False))
+                      "panel": str(out), "entrenamientos": 0, "entrega_cerrada": estado["entrega_cerrada"]}, ensure_ascii=False))
     raise SystemExit(0 if ok else 1)
 
 
