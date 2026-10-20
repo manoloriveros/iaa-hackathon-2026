@@ -1,0 +1,447 @@
+{
+ "autor": "Claude (Cowork, línea principal)",
+ "id": "recibo_reproduccion_completa_20261020",
+ "utc": "2026-10-20T13:37:56+00:00",
+ "corrida": "privado/corridas/repro_20261019T223638Z_d00a39dd",
+ "autorizacion": "registro/autorizacion_reproduccion_reservas_20261019.json",
+ "documento": {
+  "ruta": "docs/REPRODUCCION_COMPLETA.md",
+  "sha256": "fa0c2a8a49015920d701bfb41617a8c6adcb3e7c9ab3fa5e4033ab16cb69cc11"
+ },
+ "codigo": {
+  "reproducir.py": "a346d125520bfc5c784f1b9f65072759efdb15594263485434857e348475de17",
+  "herramientas/captura_modelos/captura.py": "3ae39d7828fda53b8c11e06bdd9e2e1c84fdad74bc490a20f03ad6a2be2f32f0",
+  "herramientas/captura_modelos/sitecustomize.py": "fb06e1eac3270311cc7ce30da862e5ac5e08e34926cbf6cf29b3ed3874c1c5de",
+  "herramientas/centinela_ajustes/usercustomize.py": "5e67930fb64363fa6c5b32f10286101f604e1c12ee830e6bbf3c5369bfeae20b",
+  "herramientas/reproducir_capturado.py": "7bdf635b03878ad2e34d62ce6c7e008f4763edbbb4a701a3a722feb9d2dcaa37",
+  "herramientas/identidad_captura.py": "111868a35133826d919eb564d534e7808834754197a6285f85d371e166550415",
+  "herramientas/montar_paquetes.py": "409599763701d38f24b4f03166eaa81ef77386b459817150ac0ec5b6d2d57f76",
+  "herramientas/comprobar_replay.py": "2a9fcfddcd45953b012aa494376358f5ff0643e6986943e03109754b8c3fcfa0",
+  "herramientas/inventario_estimadores.py": "8b525789c8be0500411c83a07171a3883fc180eb59acac131d7f1adfbff12f2d",
+  "herramientas/probar_centinela.py": "de58f0beb1433e5301b7c5f82f256dcfe6ad2b6b6a235e6529c2529ab37d49a9",
+  "herramientas/probar_captura.py": "a5242c30e5e8919e4e6067076338429c1ddf0a1aacdcaf08fc9244fd2f5a01d9",
+  "herramientas/huella.py": "1364d38abb5df33e550507eff881a5d52654426d8ae7c323fd9ee09cc085fcbc",
+  "herramientas/ejecutar_csv_lf.py": "0d4e555d122d1efb2d8efa90bf45b16f3ba429f72d53efe4f5e1b794499284cf",
+  "receta/receta.json": "2f8cb8325b2b4183aaed53aa42bec3cea65319a68edb521351815aeb1dafa1a3",
+  "receta/huellas_esperadas.json": "b2452d24cb2e491bee46c97b79f08b22612053d5406716ad944b4e0a8489a8f0",
+  "receta/especificaciones/cfg_total.json": "aca601c652ab7caed8a6db95e15349e67e35fe341c57757861329a66a2ed643d"
+ },
+ "entorno": {
+  "python": "3.13.16",
+  "plataforma": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+  "procesador": "x86_64",
+  "nucleos": 2,
+  "paquetes": {
+   "numpy": "2.5.3",
+   "pandas": "3.0.5",
+   "scipy": "1.18.1",
+   "sklearn": "1.9.1",
+   "lightgbm": "4.7.0",
+   "catboost": "1.2.10",
+   "pyarrow": "26.0.0",
+   "torch": "2.14.1+cu130"
+  },
+  "diferencias_con_referencia": {}
+ },
+ "reajuste_completo": {
+  "modo": "reproducir.py 1.2 datos + componentes --continuar-si-difiere, CAPTURA_MODO=guardar",
+  "datos": {
+   "inicio_utc": "2026-10-19T22:44:51+00:00",
+   "fin_utc": "2026-10-19T22:47:07+00:00",
+   "conforme": true
+  },
+  "componentes": {
+   "primer_lanzamiento_utc": "2026-10-19T22:48:31+00:00",
+   "relanzamientos_utc": [
+    "2026-10-20T01:16:30+00:00",
+    "2026-10-20T04:32:38+00:00"
+   ],
+   "fin_utc": "2026-10-20T11:06:24+00:00",
+   "estado": "csv_iguales_con_diferencias_intermedias",
+   "codigo_salida": 3,
+   "segundos_registrados_orquestador": 30165,
+   "segundos_segmento_manual_CFS_motor": 7862.3
+  },
+  "reinicios_contenedor_utc": [
+   "2026-10-20T01:14",
+   "2026-10-20T02:18"
+  ],
+  "csv_finales": {
+   "S30": {
+    "csv": "/home/claude/rep/corrida/trabajo/work/S30_claude_b/S30_claude_b.csv",
+    "sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+    "esperado": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+    "coincide": true
+   },
+   "S22": {
+    "csv": "/home/claude/rep/corrida/trabajo/work/S22_claude_propio/S22_claude_propio.csv",
+    "sha256": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0",
+    "esperado": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0",
+    "coincide": true
+   }
+  },
+  "huellas": {
+   "declaradas": 194,
+   "con_huella": 184,
+   "verificadas_por_nodo": 181,
+   "iguales_contenido": 162,
+   "difieren": 19,
+   "excluidas_del_cotejo": 3,
+   "sin_huella_historica": 10
+  },
+  "estados_nodos": {
+   "variables": "reanudado_verificado",
+   "sel_total_F0124": "reanudado_verificado",
+   "sel_total_F01234": "reanudado_verificado",
+   "sel_total_motor_red": "reanudado_verificado",
+   "sel_hS2": "reanudado_verificado",
+   "sel_hS3": "reanudado_verificado",
+   "sel_cat1a": "reanudado_verificado",
+   "S03_lgbm_F0124": "reanudado_verificado",
+   "S04b_lgbm_F0124_F3autos": "reanudado_verificado",
+   "S06c_lgbm_motor_red": "reanudado_verificado",
+   "S08h_hogar_F3s2": "reanudado_verificado",
+   "S12h_edif_md1000": "reanudado_verificado",
+   "CAT_motor": "reanudado_verificado",
+   "CAT_motor_s23": "reanudado_verificado",
+   "CAT_motor_4s": "reanudado_verificado",
+   "CFS_motor_v23": "reanudado_verificado",
+   "CFS_motor": "reanudado_verificado",
+   "CFS_motor_s23": "igual",
+   "CFS_buildings": "igual",
+   "CFS_buildings_s23": "igual",
+   "FSA_contents": "difiere",
+   "FSAP_buildings": "difiere",
+   "FSAP2_buildings": "difiere",
+   "FSAP_contents": "difiere",
+   "FSAP2_contents": "difiere",
+   "FSAXc4_contents": "difiere",
+   "CFS_motor_4s": "igual",
+   "CFSS_motor": "igual",
+   "CFSS4_buildings": "igual",
+   "FSAS4_buildings": "difiere",
+   "MLP3_contents": "igual",
+   "B_CFST_motor_tendencia": "igual",
+   "B_CFST_buildings_tendencia": "igual",
+   "B_FSAST_buildings_tendencia": "difiere",
+   "S22_claude_propio": "difiere",
+   "S30_claude_b": "difiere"
+  },
+  "diferencias": [
+   {
+    "nodo": "FSA_contents",
+    "ruta": "FSA_contents/v24.parquet"
+   },
+   {
+    "nodo": "FSA_contents",
+    "ruta": "FSA_contents/prediccion_2025.parquet"
+   },
+   {
+    "nodo": "FSAP_buildings",
+    "ruta": "FSAP_buildings/v24_accidental_damage.npy"
+   },
+   {
+    "nodo": "FSAP_buildings",
+    "ruta": "FSAP_buildings/v24.parquet"
+   },
+   {
+    "nodo": "FSAP2_buildings",
+    "ruta": "FSAP2_buildings/v24_flood.npy"
+   },
+   {
+    "nodo": "FSAP2_buildings",
+    "ruta": "FSAP2_buildings/prod_flood.npy"
+   },
+   {
+    "nodo": "FSAP2_buildings",
+    "ruta": "FSAP2_buildings/v24.parquet"
+   },
+   {
+    "nodo": "FSAP2_buildings",
+    "ruta": "FSAP2_buildings/prediccion_2025.parquet"
+   },
+   {
+    "nodo": "FSAP_contents",
+    "ruta": "FSAP_contents/prod_flood.npy"
+   },
+   {
+    "nodo": "FSAP_contents",
+    "ruta": "FSAP_contents/prediccion_2025.parquet"
+   },
+   {
+    "nodo": "FSAP2_contents",
+    "ruta": "FSAP2_contents/prod_accidental_damage.npy"
+   },
+   {
+    "nodo": "FSAP2_contents",
+    "ruta": "FSAP2_contents/prediccion_2025.parquet"
+   },
+   {
+    "nodo": "FSAXc4_contents",
+    "ruta": "FSAXc4_contents/prediccion_2025.parquet"
+   },
+   {
+    "nodo": "FSAS4_buildings",
+    "ruta": "FSAS4_buildings/v24.parquet"
+   },
+   {
+    "nodo": "FSAS4_buildings",
+    "ruta": "FSAS4_buildings/prediccion_2025.parquet"
+   },
+   {
+    "nodo": "B_FSAST_buildings_tendencia",
+    "ruta": "B_FSAST_buildings_tendencia/v24.parquet"
+   },
+   {
+    "nodo": "B_FSAST_buildings_tendencia",
+    "ruta": "B_FSAST_buildings_tendencia/prediccion_2025.parquet"
+   },
+   {
+    "nodo": "S22_claude_propio",
+    "ruta": "S22_claude_propio/prediccion_2025.parquet"
+   },
+   {
+    "nodo": "S30_claude_b",
+    "ruta": "S30_claude_b/prediccion_2025.parquet"
+   }
+  ],
+  "medida_diferencias": "privado/corridas/repro_20261019T223638Z_d00a39dd/diferencias/medida_diferencias.json",
+  "max_diferencia_relativa": 3.912238606583508e-15,
+  "excluidas": {
+   "sel_CFS_motor.parquet": "idéntica en bytes",
+   "CFS_motor/v24.parquet": "127.252 de 254.698 valores distintos, máximo relativo 7,7e-16",
+   "CFS_motor_4s/v24.parquet": "68.908 de 254.698 valores distintos, máximo relativo 4,4e-16"
+  },
+  "causa": {
+   "descripcion": "Con force_row_wise el vector coincide bit a bit con el histórico y con force_col_wise con la corrida principal: la diferencia viene de la elección automática del modo de construcción de histogramas, que LightGBM decide cronometrando los dos.",
+   "eleccion_automatica": {
+    "sin": {
+     "row-wise": 5,
+     "col-wise": 1
+    },
+    "clave": {
+     "row-wise": 6,
+     "col-wise": 0
+    },
+    "consolidar": {
+     "row-wise": 5,
+     "col-wise": 1
+    }
+   },
+   "lectura": "LightGBM elige col-wise en 2 de 18 repeticiones, una en la variante sin nada previo y otra consolidando el marco; ninguna de las dos calcula antes la clave de la captura, y con la clave calculada antes elige row-wise las seis veces. Las dos elecciones col-wise coinciden con una prueba anormalmente lenta (0,40 y 0,41 s frente a 0,11-0,17 s). La elección depende del ruido de cronometraje y no de la captura.",
+   "fuente_documental": "https://lightgbm.readthedocs.io/en/latest/Parameters.html (force_col_wise, force_row_wise, deterministic)",
+   "diagnostico": "privado/corridas/repro_20261019T223638Z_d00a39dd/diagnostico_lightgbm/diagnostico_lightgbm_fsap_buildings_ad.json"
+  },
+  "desviaciones": [
+   "copia de receta/especificaciones/cfg_total.json en work/ (aca601c6…643d) porque frecsev2.py la lee de MODELOS_WORK y reproducir.py 1.2 no la coloca",
+   "CFS_motor: relanzamiento con --relanzar-parciales tras el reinicio de las 01:14 y segmento manual de 7.862 s (correr_nodo.py) tras el de las 02:18, verificado después por reproducir.py",
+   "siete .cbm duplicados de CFS_motor que difieren solo en model_guid y train_finish_time; la réplica carga el primero",
+   "65 estimadores de doce nodos guardados con la captura 1.0, reindexados con la clave 1.1.2"
+  ],
+  "estimadores_guardados": {
+   "total": 436,
+   "por_tipo": {
+    "lgb": 209,
+    "cb": 113,
+    "glm": 102,
+    "mlp": 9,
+    "prep": 3
+   },
+   "duplicados_no_cargados": 7,
+   "bytes": 368307221,
+   "versiones_captura": {
+    "1.0 reindexado con clave 1.1.2": 65,
+    "1.1": 54,
+    "1.1.2": 317
+   }
+  }
+ },
+ "recaptura": {
+  "nodos": {
+   "variables": {
+    "estado": "igual",
+    "segundos": 54.0
+   },
+   "sel_total_F0124": {
+    "estado": "igual",
+    "segundos": 144.2
+   },
+   "sel_total_F01234": {
+    "estado": "igual",
+    "segundos": 155.4
+   },
+   "sel_total_motor_red": {
+    "estado": "igual",
+    "segundos": 138.1
+   },
+   "sel_hS2": {
+    "estado": "igual",
+    "segundos": 65.4
+   },
+   "sel_hS3": {
+    "estado": "igual",
+    "segundos": 35.5
+   },
+   "sel_cat1a": {
+    "estado": "igual",
+    "segundos": 312.2
+   },
+   "S03_lgbm_F0124": {
+    "estado": "igual",
+    "segundos": 1267.1
+   },
+   "S04b_lgbm_F0124_F3autos": {
+    "estado": "difiere",
+    "segundos": 661.7
+   },
+   "S06c_lgbm_motor_red": {
+    "estado": "difiere",
+    "segundos": 505.7
+   },
+   "S08h_hogar_F3s2": {
+    "estado": "difiere",
+    "segundos": 396.3
+   },
+   "S12h_edif_md1000": {
+    "estado": "difiere",
+    "segundos": 235.8
+   },
+   "CAT_motor": {
+    "estado": "igual",
+    "segundos": 1826.4
+   }
+  },
+  "codigo_salida": 3,
+  "nota_rc": "la línea rc=0 de encadenar.sh es un error del guion (leía $? después de date)",
+  "diferencias_frente_a_corrida_principal": "S04b (2025 autos, 182 filas), S06c (V24 100 y 2025 48 filas), S08h y S12h por reutilizar la parte de autos de S04b; máximo relativo 8,0e-16",
+  "reindexado": {
+   "pares": 65,
+   "iguales_contenido": 60,
+   "distintos": {
+    "S04b_lgbm_F0124_F3autos": 1,
+    "S06c_lgbm_motor_red": 3,
+    "S12h_edif_md1000": 1
+   },
+   "metadatos_coincidentes": 65,
+   "informe": "privado/corridas/repro_20261019T223638Z_d00a39dd/reindexado/reindexado_informe.json"
+  }
+ },
+ "replica": {
+  "orden": [
+   "repo/herramientas/reproducir_capturado.py",
+   "reproducir",
+   "--originales=/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1/Datos",
+   "--decisiones=/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1",
+   "--trabajo=/home/claude/rep/replay/trabajo",
+   "--capturas=/home/claude/rep/replay/capturas",
+   "--continuar-si-difiere"
+  ],
+  "inicio_utc": "2026-10-20T12:54:54+00:00",
+  "fin_utc": "2026-10-20T13:28:40+00:00",
+  "pasos": [
+   {
+    "paso": "datos",
+    "orden": [
+     "/usr/bin/python3",
+     "/home/claude/rep/repo/reproducir.py",
+     "datos",
+     "--originales=/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1/Datos",
+     "--decisiones=/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1",
+     "--semana1=/mnt/user-data/uploads/Hakaton/Hackaton/Semana 1",
+     "--trabajo=/home/claude/rep/replay/trabajo"
+    ],
+    "rc": 0,
+    "segundos": 216.7,
+    "fin_utc": "2026-10-20T12:58:36+00:00"
+   },
+   {
+    "paso": "componentes",
+    "orden": [
+     "/usr/bin/python3",
+     "/home/claude/rep/repo/reproducir.py",
+     "componentes",
+     "--semana1=/home/claude/rep/replay/trabajo/proyecto/Hackaton/Semana 1",
+     "--trabajo=/home/claude/rep/replay/trabajo",
+     "--continuar-si-difiere"
+    ],
+    "rc": 3,
+    "segundos": 1803.9,
+    "fin_utc": "2026-10-20T13:28:40+00:00"
+   }
+  ],
+  "estado": "csv_iguales_con_diferencias_intermedias",
+  "codigo_salida": 3,
+  "csv_finales": {
+   "S30": {
+    "csv": "/home/claude/rep/replay/trabajo/work/S30_claude_b/S30_claude_b.csv",
+    "sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+    "esperado": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+    "coincide": true
+   },
+   "S22": {
+    "csv": "/home/claude/rep/replay/trabajo/work/S22_claude_propio/S22_claude_propio.csv",
+    "sha256": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0",
+    "esperado": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0",
+    "coincide": true
+   }
+  },
+  "comprobacion": {
+   "herramienta": "herramientas/comprobar_replay.py --referencia=<trabajo de la corrida principal>",
+   "nodos": 36,
+   "nodos_conformes": 36,
+   "nodos_con_estimadores": 31,
+   "estimadores_guardados": 436,
+   "por_tipo": {
+    "lgb": 209,
+    "cb": 113,
+    "glm": 102,
+    "mlp": 9,
+    "prep": 3
+   },
+   "cargas": 436,
+   "procesos": 34,
+   "procesos_con_centinela": 34,
+   "estados": {
+    "igual": 26,
+    "difiere": 10
+   },
+   "salidas_cotejadas": 194,
+   "salidas_identicas_contenido": 194,
+   "salidas_identicas_bytes": 194,
+   "conforme": true,
+   "no_conformes": []
+  },
+  "nodos_de_mezcla_sin_eventos": "S22 y S30 corren a través de herramientas/ejecutar_csv_lf.py; la captura no los identifica como nodo y no escriben eventos; no tienen estimadores ni importan bibliotecas de aprendizaje; el centinela se instala igual en procesos sin nodo",
+  "montaje_en_el_equipo": "privado/corridas/repro_20261019T223638Z_d00a39dd/replica/verificacion_montaje_dispositivo.json"
+ },
+ "centinela": {
+  "version": "1.0",
+  "pruebas": {
+   "conformes": 21,
+   "total": 21,
+   "recibo": "privado/corridas/repro_20261019T223638Z_d00a39dd/pruebas_captura/probar_centinela_v1_0.json"
+  }
+ },
+ "paquetes": {
+  "nodos": 36,
+  "reindexado": 12,
+  "evidencia": {
+   "ruta": "privado/corridas/repro_20261019T223638Z_d00a39dd/evidencia_20261020.tar.gz",
+   "sha256": "05b2f22f0fef6fcf756d2833f1a642c132b6d07ab35240d11966c7477adce663",
+   "miembros": 198
+  }
+ },
+ "limites": [
+  "Reproducción hecha por Claude en la nube de Claude; la independencia exige otro operador y otro entorno.",
+  "El criterio prerregistrado de igualdad de contenido en las 181 huellas no se cumple (162 de 181); los dos CSV sí.",
+  "La réplica recalcula estimaciones cerradas que no son estimadores de la capa: factores f23/f24 de las mezclas, pendiente de tendencia de la línea B y cola de los factores de desarrollo.",
+  "Los GLM por IRLS no se pueden bloquear con el centinela; su control es el recuento exacto de cargas por clave.",
+  "GOV-008 conserva la aceptación humana pendiente; no hay revisión humana de este recibo."
+ ],
+ "sin": [
+  "envíos a Kaggle",
+  "cambios de receta, pesos, T0 o S30",
+  "cambios en archivos de Codex",
+  "datos, predicciones o modelos en Git"
+ ]
+}

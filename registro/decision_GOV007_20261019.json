@@ -1,0 +1,74 @@
+{
+  "id": "GOV-007",
+  "estado": "cerrado_en_alcance_de_correccion_tecnica_1_2",
+  "emisor": "Participante en este chat",
+  "revisor_designado_por_participante": "Manuel Ignacio Rodríguez",
+  "texto_respuesta": "Aceptar solo la corrección técnica indicada",
+  "fecha_declaracion_utc": "2026-10-19T22:12:00.740Z",
+  "registrado_utc": "2026-10-19T22:15:27.541274+00:00",
+  "alcance": "Aceptación de la corrección técnica del paquete1.2 identificada por hash; se conservan abiertos reproducción completa, reservas e independencia.",
+  "runtime_sha256": "a346d125520bfc5c784f1b9f65072759efdb15594263485434857e348475de17",
+  "version": "1.2",
+  "paquete_huellas": {
+    "reproducir.py": {
+      "sha256": "a346d125520bfc5c784f1b9f65072759efdb15594263485434857e348475de17",
+      "anterior": "6481db2efb2045a5d1907ab0900bf669b084507b38937d780b053859d3c5de19",
+      "cambio": "Portabilidad y comprobación Windows; ninguna modificación del método o de cifras de referencia."
+    },
+    "herramientas/etapas_datos.py": {
+      "sha256": "0c0a90317130f5ee75054ef761edc5c84a52a57eea18652159fd71e056b8b9ab",
+      "anterior": "93751dab88966869806303f4baec3511f8b50993e0550969b216fe4ee4abedfc",
+      "cambio": "controles de datos de la propuesta N65 de Codex (package_data_review_N65/controles_datos_propuestos.patch), integrados en N66: la copia local de cada decisión congelada se comprueba por SHA-256 y las bases, las tablas F0 y los bloques del contrato tienen que coincidir en contenido antes de devolver el informe",
+      "identico_a_N66_salvo_finales_de_linea": true,
+      "sha256_con_crlf": "98c7dd56ed0208a6814cec912ba8d9c864ac4be6f6ce60802045cb5f17b56c13",
+      "fuente": "Modelado_codex/nocturna_20261017_N01/patch_integration_N66/integrated/herramientas/etapas_datos.py (Codex, COD-20261019-109)"
+    },
+    "herramientas/huella.py": {
+      "sha256": "1364d38abb5df33e550507eff881a5d52654426d8ae7c323fd9ee09cc085fcbc",
+      "cambio": "sin cambios"
+    },
+    "herramientas/inventario.py": {
+      "sha256": "ad0eb0b79a886f296e2628381f381f97fa98f21ff2714fb2d2c93a8604fc982b",
+      "cambio": "sin cambios"
+    },
+    "herramientas/probar_controles.py": {
+      "sha256": "241e55b23ff62f4b442c51fcfa98c6525af7fc4bcd08b30e2f0ceb6a24f62bbd",
+      "anterior": "5974197b0f6da2015325a0c2bcc5418446672015713b6569eedb04dda83a4729",
+      "cambio": "Portabilidad y comprobación Windows; ninguna modificación del método o de cifras de referencia."
+    },
+    "receta/huellas_esperadas.json": {
+      "sha256": "b2452d24cb2e491bee46c97b79f08b22612053d5406716ad944b4e0a8489a8f0",
+      "anterior": "fb2ea49a114124eb2808b6759993e9cd7a7c0654c50316741776b79042c80870",
+      "cambio": "añade la sección «mezcla» con las huellas de insumos/exposicion_<ramo>.parquet (Modelos_claude/insumos), que el modo mezcla usa como exposición cuando no hay feat_<ramo>.parquet; las 8 entradas, las 184 salidas y la sección datos no cambian"
+    },
+    "herramientas/ejecutar_csv_lf.py": {
+      "sha256": "0d4e555d122d1efb2d8efa90bf45b16f3ba429f72d53efe4f5e1b794499284cf",
+      "anterior": null,
+      "cambio": "Portabilidad y comprobación Windows; ninguna modificación del método o de cifras de referencia."
+    }
+  },
+  "evidencia_tecnica": [
+    "docs/verificacion.md",
+    "docs/controles/20261019_windows_v12_lf/resultado.json",
+    "docs/COORDINACION_REPRODUCCION_RESERVAS.md"
+  ],
+  "pregunta_presentada": "¿Manuel acepta la corrección técnica del paquete1.2, conservando abiertos reproducción completa, reservas y revisión independiente?",
+  "fuente_autentica": {
+    "tipo": "response_item role=user; respuesta a pregunta específica en este chat",
+    "linea": 20994,
+    "offset_bytes": 89063046,
+    "sha256_evento": "813f33f7f0bd94a1aaf04ffe8dca12b908154c142f045ac8a2a32aaa1d8e9c74",
+    "archivo_privado": "privado/subsanacion_20261019/aceptacion_GOV007/respuesta_humana_original.jsonl"
+  },
+  "no_acredita": [
+    "revisión actuarial general realizada",
+    "competencia profesional verificada externamente",
+    "independencia",
+    "candidato aprobado",
+    "selección final Kaggle",
+    "suficiencia o insesgadez",
+    "reproducción completa",
+    "cierre de los otros14hallazgos"
+  ],
+  "registro_historico_auditor": "Se conserva sin reescribir; esta decisión posterior se aplica en el seguimiento común."
+}

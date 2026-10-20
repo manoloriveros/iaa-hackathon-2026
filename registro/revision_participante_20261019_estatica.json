@@ -1,0 +1,187 @@
+{
+  "autor": "Codex",
+  "revision_estatica": true,
+  "fuentes": [
+    {
+      "ruta": "src/modelos/comun.py",
+      "sha256": "7b475c1bf1d2f05b8132657680d23ffe10dc3e925f8a0991a809c5b79432cb84",
+      "lineas_clave": [
+        {
+          "linea": 122,
+          "texto": "ymean = df.groupby(\"year\")[\"written_premium\"].sum() / df.groupby(\"year\")[\"exposure\"].sum()"
+        }
+      ]
+    },
+    {
+      "ruta": "src/modelos/produccion.py",
+      "sha256": "5903804b477766b5d2581bfaed69025eb9c7be313e3963146453352aa122bbc2",
+      "lineas_clave": [
+        {
+          "linea": 73,
+          "texto": "bp, basep = fit(X[trp], y[trp], off[trp], rounds=int(round(r * 1.3)), early=None, params=dict(params))"
+        },
+        {
+          "linea": 98,
+          "texto": "pred.to_parquet(out / \"prediccion_2025.parquet\", index=False)"
+        }
+      ]
+    },
+    {
+      "ruta": "src/modelos/cat_produccion.py",
+      "sha256": "fd0a23f10732d599e3619ef9c46d3898d87b5356a15916525a83a884118923f0",
+      "lineas_clave": [
+        {
+          "linea": 60,
+          "texto": "m.fit(ptr)"
+        }
+      ]
+    },
+    {
+      "ruta": "src/modelos/mezcla3.py",
+      "sha256": "b190d24a8725f14d77ef857079570199900dfd0654b03a7ef605a0b3b35f605c",
+      "lineas_clave": [
+        {
+          "linea": 94,
+          "texto": "g = np.exp(np.log(mu).mean())"
+        },
+        {
+          "linea": 104,
+          "texto": "g = np.exp(np.log(r).mean()); eb = np.exp(np.log(e).mean())"
+        },
+        {
+          "linea": 114,
+          "texto": "f23, f24 = ftw(ysel, bsel), ftw(y24, b24)"
+        },
+        {
+          "linea": 161,
+          "texto": "rep[\"publico_esperado\"] = round(0.0099 + 0.8644 * rep[\"d2_v24_global_f23\"], 5)"
+        },
+        {
+          "linea": 162,
+          "texto": "print(\"global V24\", rep[\"d2_v24_global_f23\"], \"público esperado\", rep[\"publico_esperado\"], flush=True)"
+        },
+        {
+          "linea": 176,
+          "texto": "pred.to_parquet(out / \"prediccion_2025.parquet\", index=False)"
+        }
+      ]
+    },
+    {
+      "ruta": "src/linea_b/nivel_b.py",
+      "sha256": "21772f1b5ed829ec4f94b89237214f7b4829427637f3f9d651711e8c1ec31356",
+      "lineas_clave": [
+        {
+          "linea": 25,
+          "texto": "UMBRAL = 0.015"
+        },
+        {
+          "linea": 44,
+          "texto": "cache[run] = {\"ramo\": line, \"desvio_2025_v24_frente_ancla\": round(d, 5), \"fuera\": bool(abs(d) > UMBRAL)}"
+        }
+      ]
+    },
+    {
+      "ruta": "src/linea_b/severidad_tendencia.py",
+      "sha256": "d4adbc26f9225d647f44447ae909aba946600ae5a5e45d2dfb35bd38becddbb0",
+      "lineas_clave": []
+    },
+    {
+      "ruta": "README.md",
+      "sha256": "8af9538552bc36e620244eca1faea6216f2e1e3ca4aef2666d654d7f1d20f79f",
+      "lineas_clave": [
+        {
+          "linea": 9,
+          "texto": "Con una sola orden se repiten las dos mezclas a partir de los componentes guardados y se comprueba que los CSV coinciden byte a byte con los enviados. Con otra se reentrenan todos los componentes desde las matrices de variables y se compara cada artefacto intermedio con su huella original."
+        },
+        {
+          "linea": 55,
+          "texto": "Instalar las versiones de `requirements.txt` (Python 3.13). Con otras versiones la mezcla se repite igual, pero el reentrenamiento de los componentes puede no ser byte a byte."
+        },
+        {
+          "linea": 88,
+          "texto": "La validación es temporal y tiene tres cortes. V23 entrena con 2021 y 2022, para el boosting con la mitad de calibración de 2023 y mide en la mitad de selección. V24 entrena con 2021 a 2023 con las rondas de V23 multiplicadas por 1,15 y mide en 2024. Producción entrena con 2021 a 2024 con las rondas por 1,3 y predice 2025. Ningún dato de 2025 interviene en el ajuste."
+        }
+      ]
+    },
+    {
+      "ruta": "requirements.txt",
+      "sha256": "1b956eddded600b707d2f583e41d7f97415ef8b55bf0d5cb9149ac2ab9eae4ba",
+      "lineas_clave": [
+        {
+          "linea": 2,
+          "texto": "# Ubuntu 24.04, Python 3.13.16, 2 núcleos, 8 GB). Con estas versiones y dos hilos la reconstrucción es byte a byte."
+        }
+      ]
+    },
+    {
+      "ruta": "docs/INFORME_SEMANA1.md",
+      "sha256": "aa8b144ff43b8c3d1552403198fea16f44981a9e9b83aa4aa28e5798787d7d78",
+      "lineas_clave": [
+        {
+          "linea": 11,
+          "texto": "La propuesta principal obtiene una mejora pequeña frente al respaldo. Conservamos ambos candidatos porque la incertidumbre de la comparación todavía admite resultados equivalentes. La elección final y la revisión humana siguen pendientes."
+        }
+      ]
+    },
+    {
+      "ruta": "docs/verificacion.md",
+      "sha256": "4ffca2482d91c7140afa60faf18061282403bd5d53f1a2920dfbc68474cf9507",
+      "lineas_clave": [
+        {
+          "linea": 16,
+          "texto": "En la máquina virtual, `S30_claude_b/prediccion_2025.parquet` tiene los mismos `row_id` y ramos en el mismo orden y 558.129 de 626.639 predicciones distintas en el último bit (diferencia absoluta máxima 9,1 × 10⁻¹², relativa 1,4 × 10⁻¹⁵): son las funciones matemáticas de numpy 2.2.6 frente a 2.5.3. El CSV redondea y queda igual byte a byte."
+        },
+        {
+          "linea": 60,
+          "texto": "Mezcla real con la versión 1.1 en la máquina virtual del participante (`docs/controles/20261019T125907Z_vm_participante/mezcla_real_vm/`): con la orden estricta, los 46 archivos que enlaza el modo mezcla (43 salidas guardadas de los 20 componentes y selecciones que leen las dos mezclas, más los 3 insumos de exposición) coinciden en bytes y en contenido, `S22_claude_propio.csv` sale con el SHA-256 entregado y el paquete se detiene con código 1 en `S22_claude_propio/prediccion_2025.parquet`, que difiere en contenido por el último bit de numpy 2.2.6 (sección 1). Con `--continuar-si-difiere`, S30 y S22 salen iguales al entregado byte a byte (`fd9528e0…e3bc5` y `c21a02e1…3541b0`), los dos Parquet de 2025 quedan anotados como diferencias y el paquete termina con código 3, estado `csv_iguales_con_diferencias_intermedias`. Es la lectura correcta de ese entorno: los CSV se reproducen, la cadena intermedia no es idéntica, y el paquete ya no lo llama éxito. En el entorno de referencia la mezcla dio contenido idéntico en la sección 1, así que allí la misma orden debe terminar con código 0; no se repitió en esta sesión."
+        }
+      ]
+    },
+    {
+      "ruta": "docs/REGISTRO_IA.md",
+      "sha256": "538ccee3e3782eed8b8dd93e17e014bcb16a74ac030c0c5284aa6dafc75b557d",
+      "lineas_clave": []
+    },
+    {
+      "ruta": "docs/ADAPTACION_SEMANA2.md",
+      "sha256": "e0cd9324a94fd9f146e36a9036202b5f085fa9400abeb7bc9577ca7cef8f0a9e",
+      "lineas_clave": []
+    },
+    {
+      "ruta": "registro/estado_entrega.json",
+      "sha256": "25cbaf584e59029050e6bd40b52204bb995652eeac6058014ea63dfce0ea241c",
+      "lineas_clave": []
+    },
+    {
+      "ruta": "registro/revision_humana.json",
+      "sha256": "76d56a4cf5fef59dfd02d536f9635093173129f4452d16f439c720e00eea55b2",
+      "lineas_clave": []
+    }
+  ],
+  "busqueda_modelos": {
+    "carpetas": [
+      "Hackaton\\Semana 1\\Modelos_claude",
+      "Hackaton\\Semana 1\\Modelos_claude_b",
+      "Hackaton\\Repositorio_IAA2026\\privado"
+    ],
+    "extensiones": [
+      "pkl",
+      "joblib",
+      "cbm",
+      "pt",
+      "pth",
+      "onnx",
+      "ubj",
+      "model"
+    ],
+    "coincidencias": [],
+    "codigo_salida_rg": 1,
+    "limite": "No demuestra ausencia en otros nombres, formatos, carpetas o entorno remoto; productores inspeccionados no persisten el estimador completo."
+  },
+  "observaciones": [
+    "Normalización anual de prima F4 usa covariables de 2025; s17 usa totales predichos de 2025; sin etiquetas 2025.",
+    "shape_rate usa medias geométricas del lote: exigir referencias fijas y prueba de invariancia antes de afirmar cotización individual estable.",
+    "requirements describe reconstrucción byte a byte como cierta; la cadena completa sigue sin recibo.",
+    "El informe admite resultados equivalentes; un intervalo que incluye cero no acredita equivalencia."
+  ]
+}

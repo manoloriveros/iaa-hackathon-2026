@@ -1,127 +1,73 @@
-# Prima de riesgo para el AI Hackathon IAA 2026 (parte 1)
+# A risk premium for every policy period, built and challenged with AI
 
-Desde el 19 de octubre de 2026 esta es la carpeta común de trabajo y revisión de la semana 1, por solicitud del participante. El candidato principal es `S30_claude_b` (puntuación pública 0,12996, envío Kaggle 57371361) y el respaldo es `S22_claude_propio` (0,12988, envío 57370117). La selección final manual en Kaggle sigue pendiente. Ambos predicen el coste último esperado de cada periodo de póliza de 2025 en autos, edificios y contenidos. S30 cambia frente a S22 la severidad de autos y edificios por una con tendencia anual por peligro y los pesos de contenidos.
+IAA AI Hackathon 2026 · Part 1, established market · Manuel Rodríguez, individual team (Kaggle: manoloriveros). A Spanish copy of this page is in [README.es.md](README.es.md).
 
-Para empezar la revisión: [panel detallado](docs/panel_revision.html), [informe para revisión](docs/informe_semana1.pdf), [informe editable](docs/INFORME_SEMANA1.md), [anexo técnico](docs/ANEXO_TECNICO_SEMANA1.md), [matriz de requisitos](registro/requisitos.json) y [estado de entrega](registro/estado_entrega.json). El panel funciona como archivo HTML local, sin servicios externos. Tiene filtros de variables, pruebas y hallazgos, y notas de revisión exportables. La página es una fotografía fechada; no acredita aprobación humana.
+The model predicts, for every 2025 policy period in private motor, home buildings and home contents, the expected ultimate cost of the claims that occur in the period, net of excess and recoveries and excluding declined claims. One final model is delivered, the Per-peril blend (S30 in code and receipts). It blends Tweedie total-cost models with per-peril frequency × severity models in each line and sets the 2025 level with two out-of-sample years. AI took part in every stage, mostly to challenge positions: three independent work lines posted their hypotheses to a shared forum before computing them, and a swarm of validation agents audited the project every six hours. The data are synthetic and amounts are in a fictional currency unit (CU).
 
-El repositorio [manoloriveros/iaa-hackathon-2026](https://github.com/manoloriveros/iaa-hackathon-2026) es privado. El cierre de la parte 1 es el viernes 23 de octubre a las 11:00 a. m. Bogotá. Informe, video y código se entregan al finalizar la parte 2. Las [fuentes oficiales del 19 de octubre](docs/fuentes/reglas_kaggle_20261019.json) conservan el contrato consultado.
-
-Con una sola orden se repiten las dos mezclas a partir de los componentes guardados y se comprueba que los CSV coinciden byte a byte con los enviados. Con otra se reentrenan todos los componentes desde las matrices de variables y se compara cada artefacto intermedio con su huella original.
-
-## Qué hay en cada carpeta
-
-| Carpeta o archivo | Contenido |
+| Figure | Value |
 | --- | --- |
-| `reproducir.py` | Punto de entrada único (modos `plan`, `datos`, `componentes`, `todo`, `mezcla` y `verificar`), versión 1.2: controles de conformidad, copia de insumos en Windows, rutas absolutas antes de cambiar de directorio y serialización LF de los dos CSV finales |
-| `receta/receta.json` | Los 36 nodos que van de las variables a los dos CSV: script, argumentos exactos, dependencias, salidas, procedencia y tiempo de referencia |
-| `receta/huellas_esperadas.json` | Bytes, SHA-256 y huella de contenido de las 8 entradas, de las 184 salidas originales y de los 3 insumos de exposición del modo mezcla |
-| `receta/especificaciones/` | Configuraciones de los modelos LightGBM (`cfg_*.json`) y pesos de las dos mezclas (`spec_s22_propio.json`, `spec_s30.json`) |
-| `receta/codigo.json` | SHA-256 de cada script y su comparación con los manifiestos de corrida donde los hay; la sección `paquete` identifica la versión del orquestador y de las herramientas |
-| `src/modelos/` | Código de la línea principal de Claude, copiado sin cambios desde donde se ejecutó: variables, modelos, severidades, mezcla y la batería de validación |
-| `src/linea_b/` | Código de la línea B de Claude: severidad con tendencia por peligro, regla de nivel para sus componentes y mezcla de S30 |
-| `src/datos/` | Etapas desde los originales: productor de la capa preparada de Codex (`n62_codex/`), bases actuariales y matriz F0 |
-| `herramientas/` | `huella.py` (huellas de bytes y de contenido), `inventario.py` (huellas esperadas desde las corridas originales), `etapas_datos.py` (raíz de proyecto mínima para las etapas de datos) y `probar_controles.py` (45 casos que comprueban desde la consola que el paquete rechaza faltantes, archivos ilegibles, huellas ausentes y diferencias) |
-| `entorno/` | Entorno de referencia (versiones, núcleos, memoria) |
-| `docs/` | Verificación de la reconstrucción (`verificacion.md`), evidencia de los casos de control (`controles/`), lista de adaptación para la parte 2 e historia del desarrollo |
-| `registro/` | Estado, requisitos, fuentes por SHA, artefactos de mezcla y plantilla de revisión humana; se versionan |
-| `privado/` | Copias exactas de CSV, componentes de referencia y corridas nuevas; se excluye completo de Git |
+| Public score (Tweedie D², power 1.5) | 0.12996, first among 19 teams on the public leaderboard when checked on 19 October |
+| Out-of-sample D² on 2024 | 0.138, against 0.071 for a constant rate per line |
+| 2025 policy periods predicted | 626,639, with ten format and integrity checks |
+| Expected 2025 cost | 212.0 million CU |
 
-## Datos
+Earlier submissions appear only on the learning curve of the report, as the path that led to the final model.
 
-Los datos del concurso no están en el repositorio y no deben subirse a él: las reglas prohíben redistribuirlos. Los scripts los leen de una carpeta con la estructura de `Hackaton/Semana 1` del proyecto, que se indica con `--semana1=<carpeta>` o con la variable `IAA_SEMANA1`:
+## Final deliverables
 
-```text
-Semana 1/
-  Datos/                                   los once Parquet originales del reto (weather.parquet y sample_submission.parquet se leen aquí)
-  Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca/        matrices F0 por ramo, particiones y contrato de disponibilidad (D68)
-  Bases_actuariales_claude/runs/bases_20261017T120251Z_45443ff0/   asignación de siniestros y T0 (D67)
-  Modelos_claude/, Modelos_claude_b/       solo para el modo mezcla: corridas guardadas de los componentes
-```
+| Deliverable | File |
+| --- | --- |
+| Report, five graded pages and an appendix | [docs/entrega/report_en.pdf](docs/entrega/report_en.pdf) · Spanish copy [informe_es.pdf](docs/entrega/informe_es.pdf) |
+| Model dashboard, offline, English or Spanish | [docs/entrega/panel_modelo.html](docs/entrega/panel_modelo.html) (download and open it in a browser) |
+| Video slides and script | [docs/entrega/video/](docs/entrega/video/) |
+| How AI was used and how it was checked | [docs/entrega/AI_WORKFLOW_EN.md](docs/entrega/AI_WORKFLOW_EN.md) · [USO_DE_IA_ES.md](docs/entrega/USO_DE_IA_ES.md) |
+| The numbers behind every deliverable | [docs/entrega/datos/cifras_entregables.json](docs/entrega/datos/cifras_entregables.json), with the path and SHA-256 of each source |
+| Working record: forum and decision log | [docs/expediente/](docs/expediente/) |
+| Week 2 adaptation | Planned in the report; results will be added after Part 2 |
 
-`reproducir.py componentes` comprueba antes de empezar que las ocho entradas tienen la huella de contenido registrada, y `reproducir.py mezcla` comprueba cada componente guardado antes de mezclar.
+## How the work was organised
 
-## Cómo reproducir
+Two AI assistants, Claude and Codex, worked in three lines: modelling, creative alternatives and challenge. No line could use another line's predictions without authorisation. Hypotheses went to the forum with their acceptance criterion before they were computed, and adverse results were posted like favourable ones. Three validation agents (data, models and governance) ran on a schedule and recorded each finding with a closure criterion and the human reviewer it needs. Kaggle's rules, metadata and scores were read through a read-only MCP connection, and every submission was sent under the participant's written authorisation. The participant authorised the data rules and the submissions, approved the final model and confirmed it as definitive on 20 October, closing Part 1; the manual selection in Kaggle is still pending. AI checks are not presented as independent professional review.
 
-Los 46 insumos de mezcla y la plantilla ya están congelados por SHA en `privado/artefactos_s30_s22/` (47 archivos, unos 193 MB). Son predicciones guardadas de componentes y exposiciones, no una reproducción completa del entrenamiento. Las corridas originales se conservan como evidencia. Para repetir la mezcla desde esta carpeta común:
+![AI-assisted workflow](docs/entrega/figuras/en/flujo_ia.png)
 
-```powershell
-$env:PYTHONPATH='C:/dev/Hakaton/Preparación/.cache/parquet-reader'
-$env:PYTHONUTF8='1'
-& 'C:/dev/Hakaton/Preparación/.venv/Scripts/python.exe' reproducir.py mezcla --semana1=privado/artefactos_s30_s22 --artefactos=privado/artefactos_s30_s22 --trabajo=privado/mi_revision --continuar-si-difiere
-```
+## Reproduce
 
-La opción de continuar conserva las diferencias intermedias y devuelve 3 cuando las hay; no representa conformidad íntegra. Sin ella, la primera diferencia detiene con 1. Los CSV finales siempre requieren bytes exactos. `registro/artefactos_mezcla.json` permite volver a localizar cada original. Para recrear esas copias, `herramientas/congelar_mezcla.py --semana1=<Semana 1>` comprueba todos los SHA antes de copiar y se niega a sobrescribir una copia privada alterada.
-
-Instalar las versiones de `requirements.txt` (Python 3.13). Con otras versiones la mezcla se repite igual, pero el reentrenamiento de los componentes puede no ser byte a byte.
-
-Repetir las mezclas finales desde los componentes guardados (segundos):
+The competition data are not in this repository: the rules forbid redistributing them. The scripts read them from a folder with the structure of `Hackaton/Semana 1`, passed with `--semana1=<folder>` or the `IAA_SEMANA1` variable. Install the versions in `requirements.txt` (Python 3.13); with other versions the blend repeats exactly, but retraining may not be byte for byte.
 
 ```text
-python reproducir.py mezcla --semana1="C:\dev\Hakaton\Hackaton\Semana 1" --trabajo=trabajo_mezcla
+python reproducir.py plan --objetivo=S30
+python reproducir.py mezcla --objetivo=S30 --semana1=<folder> --trabajo=trabajo_mezcla
+python reproducir.py todo --objetivo=S30 --semana1=<folder> --trabajo=desde_cero
+python reproducir.py verificar --trabajo=desde_cero
 ```
 
-La salida termina con el SHA-256 obtenido y el esperado de cada CSV (`fd9528e0…e3bc5` para S30 y `c21a02e1…3541b0` para S22), `coincide: true` y el estado de la corrida. El código de salida es 0 solo si todo coincide: 1 si un artefacto requerido falta, no se puede leer, no tiene huella esperada o difiere, si un nodo falla o si un CSV final tiene otro SHA-256; 2 si la orden es incorrecta; 3 si se pidió `--continuar-si-difiere` y hubo diferencias de contenido en artefactos intermedios aunque los CSV coincidan. Fuera del entorno de referencia, el Parquet de 2025 a precisión completa difiere en el último bit (ver más abajo), así que la orden estricta se detiene en él con código 1 y, con `--continuar-si-difiere`, termina con código 3 y los dos CSV iguales.
+`mezcla` rebuilds the final CSV from the saved components in seconds and compares its SHA-256 with the file Kaggle received; the saved components live outside Git. `todo` starts from the eleven original files and retrains every component (30 nodes for the final model, about ten hours on two cores). The exit code is 0 for an exact match, 1 for a failure or a difference, 2 for incorrect usage and 3 when `--continuar-si-difiere` was requested and intermediate files differ while the CSV matches. Retraining the whole recipe from the originals in the reference cloud rebuilt the delivered file byte for byte, and a replay from the saved estimators, with refitting blocked, matched every output; `docs/REPRODUCCION_COMPLETA.md` holds the receipt and the kit for another operator.
 
-Reentrenar todos los componentes desde las variables (unas diez horas con dos núcleos; se puede interrumpir y relanzar con la misma orden: antes de saltar un nodo ya hecho se comprueban las huellas de sus salidas, y un nodo con salidas parciales detiene la orden salvo que se pida `--relanzar-parciales`, que las aparta sin borrarlas):
+To regenerate and check the deliverables from the same sources:
 
 ```text
-python reproducir.py plan                      # orden de los nodos y orden exacta de cada uno
-python reproducir.py componentes --semana1=<carpeta> --trabajo=reconstruccion
-python reproducir.py verificar --trabajo=reconstruccion
+python herramientas/cifras_entregables.py --raiz <workspace> --salida docs/entrega/datos/cifras_entregables.json
+python herramientas/construir_entrega.py todo
+python herramientas/verificar_entregables.py
 ```
 
-Cada nodo deja su salida en `reconstruccion/registros/<nodo>.log` y una línea en `reconstruccion/registro.jsonl` con la orden, la duración y, para cada artefacto, si coincide en bytes y en contenido con el original. La reconstrucción se detiene en el primer artefacto requerido que no coincide; `--continuar-si-difiere` la deja seguir anotando cada diferencia, pero entonces termina con código 3 y no con 0. `verificar` termina con código 1 si algo falta, es ilegible, no tiene huella esperada o difiere. `--objetivo=S30` limita el trabajo a lo que necesita S30 (S22 añade la red neuronal de contenidos y tres severidades).
+## What is in each folder
 
-Desde los once Parquet originales (unos dos minutos más):
+| Folder or file | Contents |
+| --- | --- |
+| `reproducir.py` | Single entry point (`plan`, `datos`, `componentes`, `todo`, `mezcla`, `verificar`), version 1.2 |
+| `receta/` | The frozen recipe: 36 nodes with scripts, arguments, dependencies, outputs and expected fingerprints |
+| `src/` | Data stages, features, models, severities, blend and validation code, copied unchanged from where it ran |
+| `herramientas/` | Fingerprints, inventory, the 45-case control battery, the deliverable builders and the deliverable checker |
+| `docs/entrega/` | Final deliverables: report, dashboard, slides, video script, AI guide and the data file behind them |
+| `docs/expediente/` | Working record exported with synthetic identifiers masked: shared forum and decision log |
+| `docs/controles/`, `docs/evidencia/`, `docs/fuentes/` | Control battery results, findings, replay receipts and the official rules as consulted |
+| `registro/` | Delivery status, requirements, dated human decisions and receipts |
+| `privado/` | Exact copies of CSV files, saved components and new runs; excluded from Git |
 
-```text
-python reproducir.py datos --semana1=<carpeta Semana 1> --trabajo=desde_cero     # capa preparada, bases actuariales y F0
-python reproducir.py todo --semana1=<carpeta Semana 1> --trabajo=desde_cero      # lo anterior y después todos los componentes
-```
+The [technical guide](docs/GUIA_TECNICA.md) keeps the detailed reproduction notes, the verification history and the version-control conventions.
 
-Las etapas de datos fallan si los originales, la capa, las decisiones congeladas, las bases, las tablas F0 o los bloques del contrato no coinciden con la receta. La capa preparada la produce `src/datos/n62_codex/rebuild_base.py`, el productor de Codex (N62) que aplica las ocho reglas de datos (ID01, EXP01, CAP01, CAT01, AGE01, DUP01, REN00 y PRE00) leyendo solo los originales y `rules.json`. Después corren sin cambios `src/datos/bases_actuariales.py` (D67) y `src/datos/construir_f0.py` (D68), dentro de una raíz de proyecto mínima que el orquestador arma en `--trabajo`, porque los dos localizan sus entradas subiendo hasta `RUTAS_PROYECTO.json`. F0 lee además tres listas congeladas del proyecto que solo alimentan marcas `audit_*`, excluidas de los predictores; se toman de `--decisiones` (por defecto la misma carpeta Semana 1) y se comprueban por SHA-256.
+## Limits
 
-## Qué hace el modelo
-
-La etiqueta de entrenamiento es T0: el coste incurrido neto de los siniestros aceptados asignados a cada periodo de póliza, valorado al 31 de diciembre de 2024 (D67). Los siniestros todavía no reportados no se suman a la etiqueta; entran por la exposición. Cada fila de entrenamiento lleva una exposición efectiva, la nominal multiplicada mes a mes por la completitud de reporte del peligro que sale de un chain-ladder de conteos, y los modelos usan su logaritmo como offset. Al predecir 2025 se usa la exposición nominal, de modo que la predicción queda a nivel último sin un segundo factor de IBNR (D70).
-
-La validación es temporal y tiene tres cortes. V23 entrena con 2021 y 2022, para el boosting con la mitad de calibración de 2023 y mide en la mitad de selección. V24 entrena con 2021 a 2023 con las rondas de V23 multiplicadas por 1,15 y mide en 2024. Producción entrena con 2021 a 2024 con las rondas por 1,3 y predice 2025. Ningún dato de 2025 interviene en el ajuste.
-
-S30 mezcla diez componentes, tres o cuatro por ramo:
-
-| Ramo | Componente | Peso |
-| --- | --- | ---: |
-| Autos | CatBoost Tweedie del coste total, cuatro semillas (`CAT_motor_4s`) | 0,2 |
-| Autos | CatBoost Poisson por peligro por severidad GLM gamma con nivel por tendencia anual (`B_CFST_motor_tendencia`) | 0,6 |
-| Autos | LightGBM Tweedie del total con F0 a F4 (`S04b_lgbm_F0124_F3autos`) | 0,1 |
-| Autos | LightGBM Tweedie del total con variables reducidas (`S06c_lgbm_motor_red`) | 0,1 |
-| Edificios | LightGBM Tweedie del total con siete variables de cliente (`S12h_edif_md1000`) | 0,4 |
-| Edificios | CatBoost Poisson por peligro por severidad por capital con tendencia (`B_CFST_buildings_tendencia`) | 0,3 |
-| Edificios | Frecuencia aditiva por peligro por severidad por capital con tendencia (`B_FSAST_buildings_tendencia`) | 0,3 |
-| Contenidos | LightGBM Tweedie del total (`S08h_hogar_F3s2`) | 0,3 |
-| Contenidos | Frecuencia aditiva por peligro por severidad LightGBM gamma (`FSA_contents`) | 0,3 |
-| Contenidos | Frecuencia aditiva por peligro por severidad GLM con covariables físicas (`FSAXc4_contents`) | 0,4 |
-
-La mezcla aplica después una forma sobre la tasa (en autos abre la dispersión de las tasas con exponente 1,09 y en autos y contenidos usa una elasticidad de exposición de 0,95) y fija el nivel de 2025 con la media de dos factores Tweedie óptimos, el de V23 y el de V24. Los componentes cuyo cociente entre total de 2025 y total de V24 se aparta más de un 1,5 % del de un componente ancla del ramo no entran en la referencia de nivel (regla s17): aportan forma y reparto entre peligros, no nivel. El detalle de cada decisión está en `docs/` y en el registro de decisiones del proyecto (D67 a D89).
-
-## Verificación hecha
-
-Desde los originales, la capa preparada sale con el SHA-256 de las once tablas de la capa preaudit, las bases actuariales y las matrices F0 salen iguales en contenido y las variables dan marcos de modelo idénticos a los originales (matriz de predictores con sus tipos y categorías, etiquetas, offsets y particiones). La mezcla desde los componentes guardados da los dos CSV con el SHA-256 entregado en dos máquinas: el entorno de referencia (Python 3.13, numpy 2.5.3, pandas 3.0.5, pyarrow 26.0.0) y la máquina virtual del participante (Python 3.10.12, numpy 2.2.6, pandas 2.3.3, pyarrow 25.0.1). En la segunda, el Parquet de 2025 a precisión completa difiere en el último bit (diferencia relativa máxima 1,4 × 10⁻¹⁵), que desaparece al escribir el CSV; con la versión 1.1 del orquestador esa corrida termina con código 3 (CSV iguales, artefacto intermedio distinto) y no se presenta como éxito. Los controles del paquete (versión 1.1, hallazgo GOV-007 de la validación de Codex) se comprobaron con `herramientas/probar_controles.py`: 45 casos desde la orden de consola, todos con el código de salida esperado, en el entorno de referencia y en la máquina virtual del participante (`docs/controles/`). La reconstrucción completa de componentes y su comparación artefacto por artefacto están en `docs/verificacion.md`.
-
-## Control de versiones
-
-Git se inició aquí el 19 de octubre de 2026 y ya está conectado al repositorio privado. El primer commit conserva el paquete recibido de Claude y las fuentes oficiales. La consolidación posterior añade el expediente y corrige el orquestador Windows; los scripts de modelo y sus pesos permanecen identificados por sus hashes. La historia anterior se conserva por decisiones de solo adición, foro y manifiestos; no se inventaron commits retrospectivos. Para registrar cambios revisados, desde esta carpeta:
-
-```text
-git status
-git diff
-git add <archivos_revisados>
-git commit -m "Describir el cambio y su evidencia"
-git push
-```
-
-El repositorio queda local o privado hasta que el formulario de la parte 2 indique cómo entregarlo: las reglas solo permiten compartir código públicamente en los foros o cuadernos de la competición.
-
-## Límites
-
-La verificación es propia y asistida por IA; no hay todavía revisión humana independiente. V23 y V24 se usaron para elegir pesos, formas y reglas, así que no son una validación independiente de la mezcla final. La etiqueta T0 toma las reservas de caso a su valor del 31 de diciembre de 2024 y no añade IBNER; con una sola valoración no se puede comprobar si esas reservas son suficientes. La tendencia de severidad extrapola un año el crecimiento observado, acotado a ±15 %.
+After the choice, eleven pre-registered experiments, an IBNR backtest among them, and a reserve analysis measured these limits; the report's appendix lists them, with a twelfth that did not need running. A single claims valuation (31-12-2024) means reserve adequacy cannot be proven. Reserves at ×0.75 and ×1.25 move the 2024 D² only from 0.1379 to 0.1372, but they move the 2025 level by up to 6.8%, and a 3.7% error in motor case reserves already moves it by 1%: reserves remain a material uncertainty in all three lines. The 2025 level is the weakest point: the two buildings cuts sit 3.4% from their mean, and a scenario puts motor 1.5% to 2.5% high. The final model's lead over the previous best submission is not robust: removing six customers reverses it. The 2023 and 2024 cuts were used for selection, so they are not an independent final test. Feature availability at quotation still needs confirmation from the data owner, and 149 sums insured divided by 1,000 still lack historical confirmation. Independent review has not taken place: the reproduction was run by the same workflow, and the participant declared independence and reserve adequacy as limitations of the exercise. The report lists each limit with its effect and the check that would close it.

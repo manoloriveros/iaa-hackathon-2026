@@ -1,0 +1,2706 @@
+{
+ "generado_utc": "2026-10-20T16:12:16+00:00",
+ "script": "herramientas/cifras_entregables.py",
+ "alcance": "Cifras agregadas para la entrega final. Sin datos por fila, sin entrenamiento, sin envíos.",
+ "fuentes": {
+  "registro_envios": {
+   "ruta": "Hackaton/Semana 1/Envios/registro_envios.json",
+   "sha256": "ab409cf2ca8944392a03d7cdf760d1dae4fa4b6fb857618db957ba0c48c29094",
+   "bytes": 119383
+  },
+  "entrega_s30": {
+   "ruta": "Hackaton/Semana 1/Envios/S30_claude_b_entrega_codex.json",
+   "sha256": "f4a47765d10e79762f49feae20271d580cd529e7b19c265c0ba472fc65a777a6",
+   "bytes": 26237
+  },
+  "medias_s30": {
+   "ruta": "Hackaton/Semana 1/Modelos_claude_b/experimentos/medias_por_ramo_s30.json",
+   "sha256": "e89b38e46be786b2e7d750f6c0b3f132306c2747068364a26caaba938523400c",
+   "bytes": 4086
+  },
+  "predicciones_s30": {
+   "ruta": "Hackaton/Semana 1/Modelos_claude_b/experimentos/predicciones_v23_v24_s30.parquet",
+   "sha256": "afd72dca917bf593202fb94cbee9382f5e9c35ea80c8aada81a68a2053d1131e",
+   "bytes": 13256409
+  },
+  "publico_vs_local": {
+   "ruta": "Hackaton/Semana 1/Modelos_claude_b/experimentos/publico_vs_local_b.csv",
+   "sha256": "245a65b02df97f61c78fcf0317740e9a4ddb03eb27426185f945bc98d7bebc8d",
+   "bytes": 5272
+  },
+  "bases_evidencia": {
+   "ruta": "Hackaton/Semana 1/Bases_actuariales_claude/runs/bases_20261017T120251Z_45443ff0/evidencia.json",
+   "sha256": "54e36e0b76d84f8ff059649c5c04d2d93f314015381ff5df79ace64f8a866c13",
+   "bytes": 169488
+  },
+  "ibnr_peligro": {
+   "ruta": "Hackaton/Semana 1/Bases_actuariales_claude/runs/bases_20261017T120251Z_45443ff0/tables/ibnr_2024_por_peligro.csv",
+   "sha256": "bcf2a764c073a16dff77a9c55c3bbc2b269533fefa0b22d86d5eaba7953ae51c",
+   "bytes": 2324
+  },
+  "ibnr_ramo": {
+   "ruta": "Hackaton/Semana 1/Bases_actuariales_claude/runs/bases_20261017T120251Z_45443ff0/tables/ibnr_2024_por_ramo.csv",
+   "sha256": "c3493c8304fde1dd2c3c1cc3abcf22ae963fbe88941a8fa0e594afae3304e0c4",
+   "bytes": 360
+  },
+  "prima_ultima": {
+   "ruta": "Hackaton/Semana 1/Bases_actuariales_claude/runs/bases_20261017T120251Z_45443ff0/tables/prima_riesgo_ultima_ramo_anio.csv",
+   "sha256": "33e056a0ce1e4f0081d77e3c1ba38436183ce857ec2e52c96c5eea5f19b8161e",
+   "bytes": 1240
+  },
+  "referencias_m00": {
+   "ruta": "Hackaton/Semana 1/Bases_actuariales_claude/runs/bases_20261017T120251Z_45443ff0/tables/referencias_M00.csv",
+   "sha256": "905d6ac2eb3c259a0f85a38a9cca44293d8ca218b9d6fa4e2830c0e227ab9c89",
+   "bytes": 1037
+  },
+  "reservas_ramo_anio": {
+   "ruta": "Hackaton/Semana 1/Bases_actuariales_claude/runs/bases_20261017T120251Z_45443ff0/tables/reservas_caso_ramo_anio.csv",
+   "sha256": "a137f0c4b1e5fbf9513637f447bbbe159a5932364363ba19de3d70e8d921e5a3",
+   "bytes": 1039
+  },
+  "asignacion": {
+   "ruta": "Hackaton/Semana 1/Bases_actuariales_claude/runs/bases_20261017T120251Z_45443ff0/tables/asignacion_siniestros.csv",
+   "sha256": "d90a4f6f1c405ab06e7e573003d87c6c5b0bbea4a0372b4b6efc8fbb6a263455",
+   "bytes": 677
+  },
+  "frecuencia": {
+   "ruta": "Hackaton/Semana 1/Bases_actuariales_claude/runs/bases_20261017T120251Z_45443ff0/tables/frecuencia_ramo_anio_peligro.csv",
+   "sha256": "9e72dbd97f0dce2cb4508330c488d5a79cf0b7bfeabe349e155fc0ab927c53a1",
+   "bytes": 4635
+  },
+  "foro": {
+   "ruta": "foros/FORO.md",
+   "sha256": "0094a51ee30245626818cb54c701d20ba084e8cc198494bc4d744be58cecafd6",
+   "bytes": 619222
+  },
+  "ciclo_validacion": {
+   "ruta": "Hackaton/Semana 1/Validacion_enjambre/ultimo_ciclo.json",
+   "sha256": "3ad01679ed2554c44602cbd9ad06c78490b0ba15263f2f4e3ab60035dfd6dd30",
+   "bytes": 4069
+  },
+  "hallazgos": {
+   "ruta": "Hackaton/Repositorio_IAA2026/docs/evidencia/hallazgos.json",
+   "sha256": "59bdb0517345795f625fdcbc58c6a2faa4ba8023d6ff171ca55d768fa005ac19",
+   "bytes": 32398
+  },
+  "controles_windows": {
+   "ruta": "Hackaton/Repositorio_IAA2026/docs/controles/20261019_windows_v12_lf/resultado.json",
+   "sha256": "7c6cc9ea348ad4ec064261a0260650f4c5886a6f459b49d523a9eae9197ede63",
+   "bytes": 28306
+  },
+  "controles_nube": {
+   "ruta": "Hackaton/Repositorio_IAA2026/docs/controles/20261019T125425Z_nube_referencia/resultado.json",
+   "sha256": "42b02274a2d3152f35f5023ae41df38e06a94e1b2296811524d96365a3f54b52",
+   "bytes": 27404
+  },
+  "controles_vm": {
+   "ruta": "Hackaton/Repositorio_IAA2026/docs/controles/20261019T125907Z_vm_participante/resultado.json",
+   "sha256": "287001676ef38e18880a9da286ba64e36b780e0a788de816357fd6e46213ceb2",
+   "bytes": 27386
+  },
+  "replay_windows": {
+   "ruta": "Hackaton/Repositorio_IAA2026/docs/evidencia/replay_windows.json",
+   "sha256": "392cd45a3bca02b0a1a70e58e95dfd5bda3e162231e9d87c890d1e962b32b2d8",
+   "bytes": 3097
+  },
+  "preflight": {
+   "ruta": "Hackaton/Repositorio_IAA2026/docs/evidencia/preflight.json",
+   "sha256": "a1cfdf1e95303ee1b82db8ccffbcfde8b159e514684f6bcaea61d5974fba35d1",
+   "bytes": 1945
+  },
+  "receta": {
+   "ruta": "Hackaton/Repositorio_IAA2026/receta/receta.json",
+   "sha256": "2f8cb8325b2b4183aaed53aa42bec3cea65319a68edb521351815aeb1dafa1a3",
+   "bytes": 38691
+  },
+  "spec_s30": {
+   "ruta": "Hackaton/Repositorio_IAA2026/receta/especificaciones/spec_s30.json",
+   "sha256": "e5f89356bef4865523ae2314197da46ca3b1e09588ddd0bf7798aadd2d91a8ae",
+   "bytes": 681
+  },
+  "reglas_kaggle": {
+   "ruta": "Hackaton/Repositorio_IAA2026/docs/fuentes/reglas_kaggle_20261019.json",
+   "sha256": "8dfed23536c3a9b03774dc6c1ea3f5e08514e1f1b7ce94e905664c264ccfaf22",
+   "bytes": 55007
+  },
+  "fuentes_investigacion_a": {
+   "ruta": "Hackaton/Semana 1/Modelado/Investigacion_tecnicas/fuentes.json",
+   "sha256": "8940d66d4fcf866ec45696d8b8fc00820ca0d0f11721de5f2d2fcd0c8d24a42b",
+   "bytes": 13592
+  },
+  "fuentes_investigacion_b": {
+   "ruta": "Hackaton/Semana 1/Modelado/Investigacion_tecnicas_claude/fuentes.json",
+   "sha256": "132fc58f96bbc673d0a252f7467120d3912b9b64aab34b3e0b0631495f7ddb60",
+   "bytes": 15096
+  },
+  "papers_iaa": {
+   "ruta": "Preparación/Antecedentes/IAA_IA/catalogo.json",
+   "sha256": "75e0a75b03b1cd2cf0b063e04d5e7845d0f85c16a8f4ff117c9fabff088cbbae",
+   "bytes": 4536
+  },
+  "base_n62": {
+   "ruta": "Hackaton/Repositorio_IAA2026/docs/evidencia/base_N62.json",
+   "sha256": "b5dba85880788df85785b5b0d07797b399b8e3770cf881c19d5da7f7bebb38de",
+   "bytes": 1487
+  },
+  "f0_d68": {
+   "ruta": "Hackaton/Repositorio_IAA2026/docs/evidencia/F0_D68.json",
+   "sha256": "ce1f2dae598c1ad9a05ab6c2573c9740f75bca0fdac7cd24943424c2c2b8f2e7",
+   "bytes": 1583
+  },
+  "bases_d67": {
+   "ruta": "Hackaton/Repositorio_IAA2026/docs/evidencia/bases_D67.json",
+   "sha256": "c5cc0d203c706fb9561292b064fb9546cbb4298eb68ceaf2010c06349938ab4a",
+   "bytes": 1857
+  },
+  "revision_humana": {
+   "ruta": "Hackaton/Repositorio_IAA2026/registro/revision_humana.json",
+   "sha256": "8bf6f26feb0348577229d9e1157ec124dd7f651dceb65112c04f51ed0a782b71",
+   "bytes": 2285
+  },
+  "decision_gov007": {
+   "ruta": "Hackaton/Repositorio_IAA2026/registro/decision_GOV007_20261019.json",
+   "sha256": "678a4e7d5d79bd83e9d5544b467771d9207e438499be9bd4d2e960b20ec5150f",
+   "bytes": 4341
+  },
+  "recalculo_d59": {
+   "ruta": "Hackaton/Semana 1/Validacion_ajustes_claude/current_run.json",
+   "sha256": "bbe00bf0f4fe97d804aaac53d18e9650e0ff50a0999f0e220a313ec030ce9a7f",
+   "bytes": 625
+  },
+  "capitales_149": {
+   "ruta": "Hackaton/Repositorio_IAA2026/docs/evidencia/capitales_149_prediccion.json",
+   "sha256": "a1cd0cdace3e39537a19691c43ada3099bfb252471a8a6476e37a0f34ab867d6",
+   "bytes": 1053
+  },
+  "sensibilidad": {
+   "ruta": "Hackaton/Repositorio_IAA2026/privado/corridas/sens_20261019T212700Z_b9e7aa92/resultados/cifras_sensibilidad.json",
+   "sha256": "ab3d6926f4189ee520408ea4502d5ea1d61de03d6cdfad6f4710763db582ca9f",
+   "bytes": 22653
+  },
+  "sensibilidad_informe": {
+   "ruta": "Hackaton/Repositorio_IAA2026/docs/SENSIBILIDAD_S30_S22.md",
+   "sha256": "60e54b4e0566b48b5078fb52278b4c64e7958178763d939d4f575a25f8565368",
+   "bytes": 19883
+  },
+  "sens_e04": {
+   "ruta": "Hackaton/Repositorio_IAA2026/privado/corridas/sens_20261019T212700Z_b9e7aa92/resultados/e04.json",
+   "sha256": "2a258aa08037cdc5e80d0fd879f1a3cb5204aedbd4c23ff233853dfaaf1cf937",
+   "bytes": 167
+  },
+  "sens_e09": {
+   "ruta": "Hackaton/Repositorio_IAA2026/privado/corridas/sens_20261019T212700Z_b9e7aa92/resultados/e09.json",
+   "sha256": "690f1e8647108f0ad058738e4bfbfe777b23a0b4be49c5f492f326e88845a2ad",
+   "bytes": 1813
+  },
+  "sens_e10": {
+   "ruta": "Hackaton/Repositorio_IAA2026/privado/corridas/sens_20261019T212700Z_b9e7aa92/resultados/e10_reproduccion.json",
+   "sha256": "f837eaccd8cc8dd6ea00af9a58586cc4ea9222c35672b929bc2e6a64e2ef6959",
+   "bytes": 642
+  },
+  "sens_e12": {
+   "ruta": "Hackaton/Repositorio_IAA2026/privado/corridas/sens_20261019T212700Z_b9e7aa92/resultados/e12.json",
+   "sha256": "86c0c7c8d5a08eb4942efd002689cdd9db62b755299119e125977b47536eb15e",
+   "bytes": 25455
+  },
+  "reproduccion_completa": {
+   "ruta": "Hackaton/Repositorio_IAA2026/registro/recibo_reproduccion_completa_20261020.json",
+   "sha256": "6c580a371758b3c47286ee68f41b697e7db2196a16adfbc833ea9da51e6d9ef1",
+   "bytes": 15673
+  },
+  "reproduccion_documento": {
+   "ruta": "Hackaton/Repositorio_IAA2026/docs/REPRODUCCION_COMPLETA.md",
+   "sha256": "bce2805e3cb8f811d720574c5f0eb9c779f5da0ea131e72a57e6276342250063",
+   "bytes": 27043
+  },
+  "decisiones_participante": {
+   "ruta": "Hackaton/Repositorio_IAA2026/registro/decisiones_participante_20261020.json",
+   "sha256": "145a452e1a4c1f5f4ed98d1b77cb9c7d25089192235c8b0ec9d82479eb1aa841",
+   "bytes": 5115
+  },
+  "reservas_resumen": {
+   "ruta": "Hackaton/Repositorio_IAA2026/privado/corridas/reservas_20261019T225357Z_99b45271/resultados/resumen.json",
+   "sha256": "5db16ea0950f93d13e1e45f8665a7b1a5f1ba41d7d2a0e1fdf3cd02d4ea0677a",
+   "bytes": 8177
+  },
+  "reservas_umbrales": {
+   "ruta": "Hackaton/Repositorio_IAA2026/privado/corridas/reservas_20261019T225357Z_99b45271/resultados/parte_b.json",
+   "sha256": "6b266fda32082e38e3ee688c441556005d0cce27f15ae713a8c3e7d94fb0fb0e",
+   "bytes": 24767
+  },
+  "reservas_informe": {
+   "ruta": "Hackaton/Repositorio_IAA2026/docs/RESERVAS_ACOTACION.md",
+   "sha256": "60488023796db66166b97dcfa3eb4ad56f1a9a17eda1197f91439705fca23625",
+   "bytes": 14530
+  },
+  "reservas_autorizacion": {
+   "ruta": "Hackaton/Repositorio_IAA2026/registro/autorizacion_reproduccion_reservas_20261019.json",
+   "sha256": "0d2001c4586393cb56d64290f20bf483345d4e8532fecc10bed9750a007cda5f",
+   "bytes": 4173
+  },
+  "decision_modelo_definitivo": {
+   "ruta": "Hackaton/Repositorio_IAA2026/registro/decision_modelo_definitivo_20261020.json",
+   "sha256": "327303451289f4a7f667e31f719c94a789ff2f1ad5507ef11889cd302a1f9686",
+   "bytes": 4709
+  }
+ },
+ "concurso": {
+  "cierre_parte1_utc": "2026-10-23T16:00:00Z",
+  "equipos": 19,
+  "puesto_publico_consultado": 1,
+  "consulta_utc": "2026-10-19T13:32:11.321Z",
+  "metrica": "D² Tweedie, potencia 1,5",
+  "envios_diarios": 10
+ },
+ "s30": {
+  "publico": 0.12996,
+  "envio_kaggle": 57371361,
+  "sha256_csv": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+  "filas": 626639,
+  "controles_csv": {
+   "columnas_exactas": true,
+   "filas": true,
+   "ids_unicos": true,
+   "ids_y_orden_sample": true,
+   "cobertura_tres_test": true,
+   "valores_finitos_no_negativos": true,
+   "predicciones_positivas": true,
+   "sha_entrega": true,
+   "sha_recibo": true,
+   "recibo_puntuado": true
+  },
+  "total_2025_CU": 211962091.19,
+  "por_ramo_2025_CU": {
+   "motor": 118900944.02,
+   "buildings": 74366227.96,
+   "contents": 18694919.21
+  },
+  "tasa_2025_por_anio_exposicion": {
+   "motor": 594.6,
+   "buildings": 495.0,
+   "contents": 124.5
+  },
+  "factores_nivel": {
+   "motor": {
+    "f23": 0.98641,
+    "f24": 1.00467,
+    "f": 0.99554
+   },
+   "buildings": {
+    "f23": 1.05892,
+    "f24": 1.1343,
+    "f": 1.09661
+   },
+   "contents": {
+    "f23": 1.07761,
+    "f24": 1.09236,
+    "f": 1.08498
+   }
+  },
+  "forma": "motor:1.09:0.95,contents:1:0.95",
+  "composicion": [
+   {
+    "ramo": "motor",
+    "componente": "CAT_motor_4s",
+    "peso": 0.2,
+    "tipo": "coste_total"
+   },
+   {
+    "ramo": "motor",
+    "componente": "B_CFST_motor_tendencia",
+    "peso": 0.6,
+    "tipo": "frecuencia_severidad"
+   },
+   {
+    "ramo": "motor",
+    "componente": "S04b_lgbm_F0124_F3autos",
+    "peso": 0.1,
+    "tipo": "coste_total"
+   },
+   {
+    "ramo": "motor",
+    "componente": "S06c_lgbm_motor_red",
+    "peso": 0.1,
+    "tipo": "coste_total"
+   },
+   {
+    "ramo": "buildings",
+    "componente": "S12h_edif_md1000",
+    "peso": 0.4,
+    "tipo": "coste_total"
+   },
+   {
+    "ramo": "buildings",
+    "componente": "B_CFST_buildings_tendencia",
+    "peso": 0.3,
+    "tipo": "frecuencia_severidad"
+   },
+   {
+    "ramo": "buildings",
+    "componente": "B_FSAST_buildings_tendencia",
+    "peso": 0.3,
+    "tipo": "frecuencia_severidad"
+   },
+   {
+    "ramo": "contents",
+    "componente": "S08h_hogar_F3s2",
+    "peso": 0.3,
+    "tipo": "coste_total"
+   },
+   {
+    "ramo": "contents",
+    "componente": "FSA_contents",
+    "peso": 0.3,
+    "tipo": "frecuencia_severidad"
+   },
+   {
+    "ramo": "contents",
+    "componente": "FSAXc4_contents",
+    "peso": 0.4,
+    "tipo": "frecuencia_severidad"
+   }
+  ],
+  "cuerpo_global": {
+   "V23": {
+    "d2_completo": 0.14542,
+    "sin_0_5_renivelado": 0.09492,
+    "sin_1_renivelado": 0.08429
+   },
+   "V24": {
+    "d2_completo": 0.13788,
+    "sin_0_5_renivelado": 0.09718,
+    "sin_1_renivelado": 0.08641
+   }
+  }
+ },
+ "validacion": {
+  "d2_recalculado": {
+   "V23": {
+    "agregado": 0.14542,
+    "buildings": 0.11687,
+    "contents": 0.09259,
+    "motor": 0.09441
+   },
+   "V24": {
+    "agregado": 0.13788,
+    "buildings": 0.1158,
+    "contents": 0.09665,
+    "motor": 0.09168
+   }
+  },
+  "media_por_ramo": {
+   "V23": {
+    "buildings": {
+     "observada": 351.42,
+     "predicha": 318.8,
+     "obs_entre_pred": 1.1023,
+     "filas": 92214
+    },
+    "contents": {
+     "observada": 88.26,
+     "predicha": 82.5,
+     "obs_entre_pred": 1.0698,
+     "filas": 93940
+    },
+    "motor": {
+     "observada": 422.35,
+     "predicha": 427.45,
+     "obs_entre_pred": 0.9881,
+     "filas": 127361
+    }
+   },
+   "V24": {
+    "buildings": {
+     "observada": 366.05,
+     "predicha": 333.07,
+     "obs_entre_pred": 1.099,
+     "filas": 184001
+    },
+    "contents": {
+     "observada": 93.42,
+     "predicha": 91.84,
+     "obs_entre_pred": 1.0172,
+     "filas": 187491
+    },
+    "motor": {
+     "observada": 355.98,
+     "predicha": 352.77,
+     "obs_entre_pred": 1.0091,
+     "filas": 254698
+    }
+   }
+  },
+  "d2_registrado_v24": 0.13788,
+  "referencia_m00": {
+   "V23": {
+    "agregado": 0.08672,
+    "motor": 0.04364,
+    "buildings": 0.04181,
+    "contents": 0.02393
+   },
+   "V24": {
+    "agregado": 0.07094,
+    "motor": 0.02392,
+    "buildings": 0.04156,
+    "contents": 0.03089
+   }
+  },
+  "referencia_publica_coste_medio": 0.07169,
+  "reservas": {
+   "V23": {
+    "0.75": {
+     "agregado": 0.144742,
+     "buildings": 0.117722,
+     "contents": 0.092552,
+     "motor": 0.094644
+    },
+    "1.0": {
+     "agregado": 0.145418,
+     "buildings": 0.116871,
+     "contents": 0.092594,
+     "motor": 0.094408
+    },
+    "1.25": {
+     "agregado": 0.145923,
+     "buildings": 0.115976,
+     "contents": 0.092634,
+     "motor": 0.093868
+    }
+   },
+   "V24": {
+    "0.75": {
+     "agregado": 0.137236,
+     "buildings": 0.117337,
+     "contents": 0.096003,
+     "motor": 0.092837
+    },
+    "1.0": {
+     "agregado": 0.13788,
+     "buildings": 0.115798,
+     "contents": 0.09665,
+     "motor": 0.091681
+    },
+    "1.25": {
+     "agregado": 0.137208,
+     "buildings": 0.113079,
+     "contents": 0.096928,
+     "motor": 0.088984
+    }
+   }
+  },
+  "deciles_v24": {
+   "buildings": [
+    {
+     "decil": 1,
+     "predicha": 33.62,
+     "observada": 36.29,
+     "obs_entre_pred": 1.08,
+     "filas": 18401
+    },
+    {
+     "decil": 2,
+     "predicha": 105.39,
+     "observada": 99.02,
+     "obs_entre_pred": 0.94,
+     "filas": 18400
+    },
+    {
+     "decil": 3,
+     "predicha": 157.51,
+     "observada": 145.15,
+     "obs_entre_pred": 0.922,
+     "filas": 18400
+    },
+    {
+     "decil": 4,
+     "predicha": 201.23,
+     "observada": 208.43,
+     "obs_entre_pred": 1.036,
+     "filas": 18400
+    },
+    {
+     "decil": 5,
+     "predicha": 241.01,
+     "observada": 265.43,
+     "obs_entre_pred": 1.101,
+     "filas": 18400
+    },
+    {
+     "decil": 6,
+     "predicha": 280.65,
+     "observada": 320.56,
+     "obs_entre_pred": 1.142,
+     "filas": 18400
+    },
+    {
+     "decil": 7,
+     "predicha": 326.4,
+     "observada": 309.37,
+     "obs_entre_pred": 0.948,
+     "filas": 18400
+    },
+    {
+     "decil": 8,
+     "predicha": 385.36,
+     "observada": 433.59,
+     "obs_entre_pred": 1.125,
+     "filas": 18400
+    },
+    {
+     "decil": 9,
+     "predicha": 479.86,
+     "observada": 594.38,
+     "obs_entre_pred": 1.239,
+     "filas": 18400
+    },
+    {
+     "decil": 10,
+     "predicha": 1119.67,
+     "observada": 1248.33,
+     "obs_entre_pred": 1.115,
+     "filas": 18400
+    }
+   ],
+   "contents": [
+    {
+     "decil": 1,
+     "predicha": 10.34,
+     "observada": 12.5,
+     "obs_entre_pred": 1.209,
+     "filas": 18750
+    },
+    {
+     "decil": 2,
+     "predicha": 29.86,
+     "observada": 22.08,
+     "obs_entre_pred": 0.74,
+     "filas": 18749
+    },
+    {
+     "decil": 3,
+     "predicha": 43.87,
+     "observada": 39.85,
+     "obs_entre_pred": 0.908,
+     "filas": 18749
+    },
+    {
+     "decil": 4,
+     "predicha": 55.38,
+     "observada": 58.63,
+     "obs_entre_pred": 1.059,
+     "filas": 18749
+    },
+    {
+     "decil": 5,
+     "predicha": 66.6,
+     "observada": 57.48,
+     "obs_entre_pred": 0.863,
+     "filas": 18749
+    },
+    {
+     "decil": 6,
+     "predicha": 78.77,
+     "observada": 73.01,
+     "obs_entre_pred": 0.927,
+     "filas": 18749
+    },
+    {
+     "decil": 7,
+     "predicha": 93.03,
+     "observada": 106.63,
+     "obs_entre_pred": 1.146,
+     "filas": 18749
+    },
+    {
+     "decil": 8,
+     "predicha": 111.59,
+     "observada": 119.4,
+     "obs_entre_pred": 1.07,
+     "filas": 18749
+    },
+    {
+     "decil": 9,
+     "predicha": 141.3,
+     "observada": 158.49,
+     "obs_entre_pred": 1.122,
+     "filas": 18749
+    },
+    {
+     "decil": 10,
+     "predicha": 287.71,
+     "observada": 286.17,
+     "obs_entre_pred": 0.995,
+     "filas": 18749
+    }
+   ],
+   "motor": [
+    {
+     "decil": 1,
+     "predicha": 37.33,
+     "observada": 58.8,
+     "obs_entre_pred": 1.575,
+     "filas": 25470
+    },
+    {
+     "decil": 2,
+     "predicha": 118.45,
+     "observada": 118.37,
+     "obs_entre_pred": 0.999,
+     "filas": 25470
+    },
+    {
+     "decil": 3,
+     "predicha": 177.81,
+     "observada": 177.14,
+     "obs_entre_pred": 0.996,
+     "filas": 25470
+    },
+    {
+     "decil": 4,
+     "predicha": 223.68,
+     "observada": 233.86,
+     "obs_entre_pred": 1.046,
+     "filas": 25470
+    },
+    {
+     "decil": 5,
+     "predicha": 266.03,
+     "observada": 250.29,
+     "obs_entre_pred": 0.941,
+     "filas": 25469
+    },
+    {
+     "decil": 6,
+     "predicha": 311.2,
+     "observada": 311.19,
+     "obs_entre_pred": 1.0,
+     "filas": 25470
+    },
+    {
+     "decil": 7,
+     "predicha": 364.63,
+     "observada": 379.46,
+     "obs_entre_pred": 1.041,
+     "filas": 25470
+    },
+    {
+     "decil": 8,
+     "predicha": 437.59,
+     "observada": 439.65,
+     "obs_entre_pred": 1.005,
+     "filas": 25470
+    },
+    {
+     "decil": 9,
+     "predicha": 562.57,
+     "observada": 556.49,
+     "obs_entre_pred": 0.989,
+     "filas": 25470
+    },
+    {
+     "decil": 10,
+     "predicha": 1028.41,
+     "observada": 1034.57,
+     "obs_entre_pred": 1.006,
+     "filas": 25469
+    }
+   ]
+  },
+  "concentracion_v24": {
+   "buildings": {
+    "puntos": [
+     {
+      "fraccion_periodos": 0.0,
+      "coste_observado": 0.0,
+      "coste_predicho": 0.0
+     },
+     {
+      "fraccion_periodos": 0.05,
+      "coste_observado": 0.2577,
+      "coste_predicho": 0.2364
+     },
+     {
+      "fraccion_periodos": 0.1,
+      "coste_observado": 0.341,
+      "coste_predicho": 0.3362
+     },
+     {
+      "fraccion_periodos": 0.15,
+      "coste_observado": 0.4328,
+      "coste_predicho": 0.4132
+     },
+     {
+      "fraccion_periodos": 0.2,
+      "coste_observado": 0.5034,
+      "coste_predicho": 0.4802
+     },
+     {
+      "fraccion_periodos": 0.25,
+      "coste_observado": 0.5702,
+      "coste_predicho": 0.5407
+     },
+     {
+      "fraccion_periodos": 0.3,
+      "coste_observado": 0.6218,
+      "coste_predicho": 0.5959
+     },
+     {
+      "fraccion_periodos": 0.35,
+      "coste_observado": 0.6669,
+      "coste_predicho": 0.6468
+     },
+     {
+      "fraccion_periodos": 0.4,
+      "coste_observado": 0.7064,
+      "coste_predicho": 0.6939
+     },
+     {
+      "fraccion_periodos": 0.45,
+      "coste_observado": 0.7493,
+      "coste_predicho": 0.7376
+     },
+     {
+      "fraccion_periodos": 0.5,
+      "coste_observado": 0.7939,
+      "coste_predicho": 0.7782
+     },
+     {
+      "fraccion_periodos": 0.55,
+      "coste_observado": 0.8315,
+      "coste_predicho": 0.8158
+     },
+     {
+      "fraccion_periodos": 0.6,
+      "coste_observado": 0.8664,
+      "coste_predicho": 0.8506
+     },
+     {
+      "fraccion_periodos": 0.65,
+      "coste_observado": 0.8992,
+      "coste_predicho": 0.8823
+     },
+     {
+      "fraccion_periodos": 0.7,
+      "coste_observado": 0.9234,
+      "coste_predicho": 0.911
+     },
+     {
+      "fraccion_periodos": 0.75,
+      "coste_observado": 0.9481,
+      "coste_predicho": 0.9363
+     },
+     {
+      "fraccion_periodos": 0.8,
+      "coste_observado": 0.963,
+      "coste_predicho": 0.9583
+     },
+     {
+      "fraccion_periodos": 0.85,
+      "coste_observado": 0.9791,
+      "coste_predicho": 0.9763
+     },
+     {
+      "fraccion_periodos": 0.9,
+      "coste_observado": 0.9901,
+      "coste_predicho": 0.9899
+     },
+     {
+      "fraccion_periodos": 0.95,
+      "coste_observado": 0.9989,
+      "coste_predicho": 0.9978
+     },
+     {
+      "fraccion_periodos": 1.0,
+      "coste_observado": 1.0,
+      "coste_predicho": 1.0
+     }
+    ],
+    "decil_superior_observado": 0.341,
+    "decil_superior_predicho": 0.3362
+   },
+   "contents": {
+    "puntos": [
+     {
+      "fraccion_periodos": 0.0,
+      "coste_observado": 0.0,
+      "coste_predicho": 0.0
+     },
+     {
+      "fraccion_periodos": 0.05,
+      "coste_observado": 0.2063,
+      "coste_predicho": 0.2114
+     },
+     {
+      "fraccion_periodos": 0.1,
+      "coste_observado": 0.3063,
+      "coste_predicho": 0.3133
+     },
+     {
+      "fraccion_periodos": 0.15,
+      "coste_observado": 0.4013,
+      "coste_predicho": 0.3957
+     },
+     {
+      "fraccion_periodos": 0.2,
+      "coste_observado": 0.476,
+      "coste_predicho": 0.4671
+     },
+     {
+      "fraccion_periodos": 0.25,
+      "coste_observado": 0.5423,
+      "coste_predicho": 0.5308
+     },
+     {
+      "fraccion_periodos": 0.3,
+      "coste_observado": 0.6038,
+      "coste_predicho": 0.5886
+     },
+     {
+      "fraccion_periodos": 0.35,
+      "coste_observado": 0.6657,
+      "coste_predicho": 0.6414
+     },
+     {
+      "fraccion_periodos": 0.4,
+      "coste_observado": 0.7179,
+      "coste_predicho": 0.6899
+     },
+     {
+      "fraccion_periodos": 0.45,
+      "coste_observado": 0.757,
+      "coste_predicho": 0.7345
+     },
+     {
+      "fraccion_periodos": 0.5,
+      "coste_observado": 0.796,
+      "coste_predicho": 0.7757
+     },
+     {
+      "fraccion_periodos": 0.55,
+      "coste_observado": 0.8241,
+      "coste_predicho": 0.8135
+     },
+     {
+      "fraccion_periodos": 0.6,
+      "coste_observado": 0.8576,
+      "coste_predicho": 0.8482
+     },
+     {
+      "fraccion_periodos": 0.65,
+      "coste_observado": 0.888,
+      "coste_predicho": 0.8798
+     },
+     {
+      "fraccion_periodos": 0.7,
+      "coste_observado": 0.9203,
+      "coste_predicho": 0.9085
+     },
+     {
+      "fraccion_periodos": 0.75,
+      "coste_observado": 0.9419,
+      "coste_predicho": 0.934
+     },
+     {
+      "fraccion_periodos": 0.8,
+      "coste_observado": 0.963,
+      "coste_predicho": 0.9562
+     },
+     {
+      "fraccion_periodos": 0.85,
+      "coste_observado": 0.9755,
+      "coste_predicho": 0.9747
+     },
+     {
+      "fraccion_periodos": 0.9,
+      "coste_observado": 0.9866,
+      "coste_predicho": 0.9887
+     },
+     {
+      "fraccion_periodos": 0.95,
+      "coste_observado": 0.9961,
+      "coste_predicho": 0.9972
+     },
+     {
+      "fraccion_periodos": 1.0,
+      "coste_observado": 1.0,
+      "coste_predicho": 1.0
+     }
+    ],
+    "decil_superior_observado": 0.3063,
+    "decil_superior_predicho": 0.3133
+   },
+   "motor": {
+    "puntos": [
+     {
+      "fraccion_periodos": 0.0,
+      "coste_observado": 0.0,
+      "coste_predicho": 0.0
+     },
+     {
+      "fraccion_periodos": 0.05,
+      "coste_observado": 0.1848,
+      "coste_predicho": 0.184
+     },
+     {
+      "fraccion_periodos": 0.1,
+      "coste_observado": 0.2907,
+      "coste_predicho": 0.2915
+     },
+     {
+      "fraccion_periodos": 0.15,
+      "coste_observado": 0.375,
+      "coste_predicho": 0.3774
+     },
+     {
+      "fraccion_periodos": 0.2,
+      "coste_observado": 0.4469,
+      "coste_predicho": 0.451
+     },
+     {
+      "fraccion_periodos": 0.25,
+      "coste_observado": 0.5101,
+      "coste_predicho": 0.5162
+     },
+     {
+      "fraccion_periodos": 0.3,
+      "coste_observado": 0.5705,
+      "coste_predicho": 0.575
+     },
+     {
+      "fraccion_periodos": 0.35,
+      "coste_observado": 0.6309,
+      "coste_predicho": 0.6289
+     },
+     {
+      "fraccion_periodos": 0.4,
+      "coste_observado": 0.677,
+      "coste_predicho": 0.6784
+     },
+     {
+      "fraccion_periodos": 0.45,
+      "coste_observado": 0.724,
+      "coste_predicho": 0.7242
+     },
+     {
+      "fraccion_periodos": 0.5,
+      "coste_observado": 0.7645,
+      "coste_predicho": 0.7666
+     },
+     {
+      "fraccion_periodos": 0.55,
+      "coste_observado": 0.7999,
+      "coste_predicho": 0.8058
+     },
+     {
+      "fraccion_periodos": 0.6,
+      "coste_observado": 0.8348,
+      "coste_predicho": 0.842
+     },
+     {
+      "fraccion_periodos": 0.65,
+      "coste_observado": 0.8693,
+      "coste_predicho": 0.8753
+     },
+     {
+      "fraccion_periodos": 0.7,
+      "coste_observado": 0.9005,
+      "coste_predicho": 0.9054
+     },
+     {
+      "fraccion_periodos": 0.75,
+      "coste_observado": 0.9252,
+      "coste_predicho": 0.9324
+     },
+     {
+      "fraccion_periodos": 0.8,
+      "coste_observado": 0.9502,
+      "coste_predicho": 0.9558
+     },
+     {
+      "fraccion_periodos": 0.85,
+      "coste_observado": 0.9727,
+      "coste_predicho": 0.9751
+     },
+     {
+      "fraccion_periodos": 0.9,
+      "coste_observado": 0.9835,
+      "coste_predicho": 0.9894
+     },
+     {
+      "fraccion_periodos": 0.95,
+      "coste_observado": 0.9981,
+      "coste_predicho": 0.9976
+     },
+     {
+      "fraccion_periodos": 1.0,
+      "coste_observado": 1.0,
+      "coste_predicho": 1.0
+     }
+    ],
+    "decil_superior_observado": 0.2906,
+    "decil_superior_predicho": 0.2915
+   }
+  }
+ },
+ "envios": [
+  {
+   "id": "S01",
+   "utc": "2026-10-17T17:44:11.673Z",
+   "publico": 0.07118,
+   "v24_local": 0.07094,
+   "etiqueta_es": "Tasa constante por ramo (nivel observado)",
+   "etiqueta_en": "Constant rate per line (observed level)"
+  },
+  {
+   "id": "S02",
+   "utc": "2026-10-17T17:44:33.640Z",
+   "publico": 0.07211,
+   "v24_local": 0.07057,
+   "etiqueta_es": "Tasa constante por ramo (nivel último)",
+   "etiqueta_en": "Constant rate per line (ultimate level)"
+  },
+  {
+   "id": "S03_lgbm_F0124",
+   "utc": "2026-10-17T19:28:22.793Z",
+   "publico": 0.12321,
+   "v24_local": null,
+   "etiqueta_es": "LightGBM Tweedie con variables de contrato",
+   "etiqueta_en": "LightGBM Tweedie, contract features"
+  },
+  {
+   "id": "S04_lgbm_F3autos",
+   "utc": "2026-10-17T19:42:36.523Z",
+   "publico": 0.12435,
+   "v24_local": 0.13244,
+   "etiqueta_es": "+ variables condicionadas en autos",
+   "etiqueta_en": "+ conditional features in motor"
+  },
+  {
+   "id": "S07",
+   "utc": "2026-10-17T20:44:43.490Z",
+   "publico": 0.1236,
+   "v24_local": 0.13173,
+   "etiqueta_es": "Coste total + frecuencia y severidad",
+   "etiqueta_en": "Total cost + frequency-severity"
+  },
+  {
+   "id": "S08",
+   "utc": "2026-10-18T00:38:33.447Z",
+   "publico": 0.12532,
+   "v24_local": 0.13247,
+   "etiqueta_es": "Apilado con CatBoost",
+   "etiqueta_en": "Stack with CatBoost"
+  },
+  {
+   "id": "S09b",
+   "utc": "2026-10-18T03:40:44.673Z",
+   "publico": 0.12889,
+   "v24_local": 0.13552,
+   "etiqueta_es": "Mezcla por ramo, variables de cliente en hogar",
+   "etiqueta_en": "Per-line blend, customer features in home"
+  },
+  {
+   "id": "N01_A_G",
+   "utc": "2026-10-18T04:46:12.560Z",
+   "publico": 0.12908,
+   "v24_local": 0.1361,
+   "etiqueta_es": "Combinador aditivo por peligro",
+   "etiqueta_en": "Additive per-peril combiner"
+  },
+  {
+   "id": "N01_B",
+   "utc": "2026-10-18T06:29:22.950Z",
+   "publico": 0.12855,
+   "v24_local": 0.13703,
+   "etiqueta_es": "Frecuencia por póliza completa",
+   "etiqueta_en": "Full-policy frequency"
+  },
+  {
+   "id": "N01_G",
+   "utc": "2026-10-18T07:32:27.003Z",
+   "publico": 0.12825,
+   "v24_local": 0.13751,
+   "etiqueta_es": "Frecuencia con EBM",
+   "etiqueta_en": "EBM frequency"
+  },
+  {
+   "id": "N01_H",
+   "utc": "2026-10-18T19:25:38.277Z",
+   "publico": 0.12886,
+   "v24_local": 0.13726,
+   "etiqueta_es": "Meta-mezcla geométrica",
+   "etiqueta_en": "Geometric meta-blend"
+  },
+  {
+   "id": "S21",
+   "utc": "2026-10-18T19:30:50.847Z",
+   "publico": 0.12874,
+   "v24_local": 0.13807,
+   "etiqueta_es": "Severidad GLM con covariables físicas",
+   "etiqueta_en": "GLM severity with physical covariates"
+  },
+  {
+   "id": "S22",
+   "utc": "2026-10-18T21:52:59.290Z",
+   "publico": 0.12988,
+   "v24_local": 0.13774,
+   "etiqueta_es": "Sin forma en hogar (criterio de cuerpo)",
+   "etiqueta_en": "No home shape (body criterion)"
+  },
+  {
+   "id": "S30",
+   "utc": "2026-10-18T22:52:27.650Z",
+   "publico": 0.12996,
+   "v24_local": 0.13788,
+   "etiqueta_es": "Tendencia de severidad y pesos de cuerpo",
+   "etiqueta_en": "Severity trend and body weights"
+  }
+ ],
+ "publico_vs_local": {
+  "candidatos_antes": [
+   {
+    "cand": "S04",
+    "publico": 0.12435,
+    "d2_completo_v24": 0.13244,
+    "d2_cuerpo_v24": 0.09353
+   },
+   {
+    "cand": "S08",
+    "publico": 0.12532,
+    "d2_completo_v24": 0.13247,
+    "d2_cuerpo_v24": 0.09207
+   },
+   {
+    "cand": "S09b",
+    "publico": 0.12889,
+    "d2_completo_v24": 0.13552,
+    "d2_cuerpo_v24": 0.09651
+   },
+   {
+    "cand": "A_G",
+    "publico": 0.12908,
+    "d2_completo_v24": 0.1361,
+    "d2_cuerpo_v24": 0.09624
+   },
+   {
+    "cand": "H",
+    "publico": 0.12886,
+    "d2_completo_v24": 0.13726,
+    "d2_cuerpo_v24": 0.09491
+   },
+   {
+    "cand": "S21",
+    "publico": 0.12874,
+    "d2_completo_v24": 0.13807,
+    "d2_cuerpo_v24": 0.09513
+   }
+  ],
+  "spearman_completo": 0.49,
+  "spearman_cuerpo_05": 0.83,
+  "spearman_cuerpo_1": 0.89,
+  "posteriores": [
+   {
+    "cand": "S22",
+    "publico": 0.12988,
+    "d2_completo_v24": 0.13774,
+    "d2_cuerpo_v24": 0.09686
+   },
+   {
+    "cand": "S30",
+    "publico": 0.12996,
+    "d2_completo_v24": 0.13788,
+    "d2_cuerpo_v24": 0.09718
+   }
+  ],
+  "definicion_cuerpo": "D² de 2024 sin el 0,5 % de periodos con mayor coste observado, con cada candidato renivelado por ramo"
+ },
+ "ibnr": {
+  "completitud_2024_por_peligro": [
+   {
+    "ramo": "buildings",
+    "peligro": "accidental_damage",
+    "completitud_2024": 0.9685,
+    "ibnr_coste_CU": 37134.02,
+    "T0_2024_CU": 1271952.95,
+    "factor_coste": 1.0292
+   },
+   {
+    "ramo": "buildings",
+    "peligro": "escape_of_water",
+    "completitud_2024": 0.9543,
+    "ibnr_coste_CU": 987040.74,
+    "T0_2024_CU": 16599207.97,
+    "factor_coste": 1.0595
+   },
+   {
+    "ramo": "buildings",
+    "peligro": "fire",
+    "completitud_2024": 0.9813,
+    "ibnr_coste_CU": 365536.75,
+    "T0_2024_CU": 15726140.79,
+    "factor_coste": 1.0232
+   },
+   {
+    "ramo": "buildings",
+    "peligro": "flood",
+    "completitud_2024": 0.9668,
+    "ibnr_coste_CU": 338213.54,
+    "T0_2024_CU": 18521108.0,
+    "factor_coste": 1.0183
+   },
+   {
+    "ramo": "buildings",
+    "peligro": "storm",
+    "completitud_2024": 0.9652,
+    "ibnr_coste_CU": 312487.17,
+    "T0_2024_CU": 7340867.55,
+    "factor_coste": 1.0426
+   },
+   {
+    "ramo": "buildings",
+    "peligro": "subsidence",
+    "completitud_2024": 0.6626,
+    "ibnr_coste_CU": 3319532.26,
+    "T0_2024_CU": 7894672.29,
+    "factor_coste": 1.4205
+   },
+   {
+    "ramo": "contents",
+    "peligro": "accidental_damage",
+    "completitud_2024": 0.9666,
+    "ibnr_coste_CU": 63086.67,
+    "T0_2024_CU": 1884114.42,
+    "factor_coste": 1.0335
+   },
+   {
+    "ramo": "contents",
+    "peligro": "escape_of_water",
+    "completitud_2024": 0.953,
+    "ibnr_coste_CU": 218278.59,
+    "T0_2024_CU": 3829229.63,
+    "factor_coste": 1.057
+   },
+   {
+    "ramo": "contents",
+    "peligro": "flood",
+    "completitud_2024": 0.9627,
+    "ibnr_coste_CU": 131004.09,
+    "T0_2024_CU": 3945080.62,
+    "factor_coste": 1.0332
+   },
+   {
+    "ramo": "contents",
+    "peligro": "theft",
+    "completitud_2024": 0.9818,
+    "ibnr_coste_CU": 143069.24,
+    "T0_2024_CU": 7857610.38,
+    "factor_coste": 1.0182
+   },
+   {
+    "ramo": "motor",
+    "peligro": "bodily_injury",
+    "completitud_2024": 0.5634,
+    "ibnr_coste_CU": 23482445.4,
+    "T0_2024_CU": 21002612.88,
+    "factor_coste": 2.1181
+   },
+   {
+    "ramo": "motor",
+    "peligro": "glass_hail",
+    "completitud_2024": 0.9739,
+    "ibnr_coste_CU": 114728.35,
+    "T0_2024_CU": 4786720.97,
+    "factor_coste": 1.024
+   },
+   {
+    "ramo": "motor",
+    "peligro": "own_damage",
+    "completitud_2024": 0.9683,
+    "ibnr_coste_CU": 702003.22,
+    "T0_2024_CU": 23525799.82,
+    "factor_coste": 1.0298
+   },
+   {
+    "ramo": "motor",
+    "peligro": "theft",
+    "completitud_2024": 0.981,
+    "ibnr_coste_CU": 176800.39,
+    "T0_2024_CU": 9860005.61,
+    "factor_coste": 1.0179
+   },
+   {
+    "ramo": "motor",
+    "peligro": "third_party_prop",
+    "completitud_2024": 0.9407,
+    "ibnr_coste_CU": 1607052.88,
+    "T0_2024_CU": 31491837.61,
+    "factor_coste": 1.051
+   }
+  ],
+  "factor_coste_2024": {
+   "buildings": 1.0796,
+   "contents": 1.0317,
+   "motor": 1.2877
+  },
+  "prima_riesgo_por_anio": [
+   {
+    "ramo": "motor",
+    "anio": 2021,
+    "prima_T0": 563.31,
+    "prima_T0_mas_IBNR": 564.31,
+    "factor_ibnr": 1.0018,
+    "T1_075": 558.35,
+    "T1_125": 570.27
+   },
+   {
+    "ramo": "motor",
+    "anio": 2022,
+    "prima_T0": 575.32,
+    "prima_T0_mas_IBNR": 578.38,
+    "factor_ibnr": 1.0053,
+    "T1_075": 567.84,
+    "T1_125": 588.92
+   },
+   {
+    "ramo": "motor",
+    "anio": 2023,
+    "prima_T0": 587.47,
+    "prima_T0_mas_IBNR": 605.11,
+    "factor_ibnr": 1.03,
+    "T1_075": 574.71,
+    "T1_125": 635.51
+   },
+   {
+    "ramo": "motor",
+    "anio": 2024,
+    "prima_T0": 453.82,
+    "prima_T0_mas_IBNR": 584.38,
+    "factor_ibnr": 1.2877,
+    "T1_075": 551.19,
+    "T1_125": 617.56
+   },
+   {
+    "ramo": "buildings",
+    "anio": 2021,
+    "prima_T0": 383.94,
+    "prima_T0_mas_IBNR": 384.02,
+    "factor_ibnr": 1.0002,
+    "T1_075": 383.64,
+    "T1_125": 384.41
+   },
+   {
+    "ramo": "buildings",
+    "anio": 2022,
+    "prima_T0": 403.12,
+    "prima_T0_mas_IBNR": 403.22,
+    "factor_ibnr": 1.0002,
+    "T1_075": 401.48,
+    "T1_125": 404.97
+   },
+   {
+    "ramo": "buildings",
+    "anio": 2023,
+    "prima_T0": 432.25,
+    "prima_T0_mas_IBNR": 433.68,
+    "factor_ibnr": 1.0033,
+    "T1_075": 427.63,
+    "T1_125": 439.73
+   },
+   {
+    "ramo": "buildings",
+    "anio": 2024,
+    "prima_T0": 449.27,
+    "prima_T0_mas_IBNR": 485.03,
+    "factor_ibnr": 1.0796,
+    "T1_075": 453.46,
+    "T1_125": 516.59
+   },
+   {
+    "ramo": "contents",
+    "anio": 2021,
+    "prima_T0": 105.45,
+    "prima_T0_mas_IBNR": 105.45,
+    "factor_ibnr": 1.0,
+    "T1_075": 105.45,
+    "T1_125": 105.45
+   },
+   {
+    "ramo": "contents",
+    "anio": 2022,
+    "prima_T0": 105.48,
+    "prima_T0_mas_IBNR": 105.48,
+    "factor_ibnr": 1.0,
+    "T1_075": 105.48,
+    "T1_125": 105.48
+   },
+   {
+    "ramo": "contents",
+    "anio": 2023,
+    "prima_T0": 116.95,
+    "prima_T0_mas_IBNR": 117.13,
+    "factor_ibnr": 1.0016,
+    "T1_075": 116.85,
+    "T1_125": 117.42
+   },
+   {
+    "ramo": "contents",
+    "anio": 2024,
+    "prima_T0": 116.8,
+    "prima_T0_mas_IBNR": 120.5,
+    "factor_ibnr": 1.0317,
+    "T1_075": 116.37,
+    "T1_125": 124.63
+   },
+   {
+    "ramo": "motor",
+    "anio": 2025,
+    "prediccion_S30": 594.6
+   },
+   {
+    "ramo": "buildings",
+    "anio": 2025,
+    "prediccion_S30": 495.0
+   },
+   {
+    "ramo": "contents",
+    "anio": 2025,
+    "prediccion_S30": 124.5
+   }
+  ],
+  "reserva_abiertos": [
+   {
+    "ramo": "buildings",
+    "anio": 2021,
+    "reserva_sobre_T0_pct": 0.4,
+    "abiertos": 17,
+    "aceptados": 6195
+   },
+   {
+    "ramo": "buildings",
+    "anio": 2022,
+    "reserva_sobre_T0_pct": 1.73,
+    "abiertos": 54,
+    "aceptados": 6683
+   },
+   {
+    "ramo": "buildings",
+    "anio": 2023,
+    "reserva_sobre_T0_pct": 5.6,
+    "abiertos": 198,
+    "aceptados": 6817
+   },
+   {
+    "ramo": "buildings",
+    "anio": 2024,
+    "reserva_sobre_T0_pct": 28.11,
+    "abiertos": 1620,
+    "aceptados": 6571
+   },
+   {
+    "ramo": "contents",
+    "anio": 2021,
+    "reserva_sobre_T0_pct": 0.0,
+    "abiertos": 0,
+    "aceptados": 5582
+   },
+   {
+    "ramo": "contents",
+    "anio": 2022,
+    "reserva_sobre_T0_pct": 0.0,
+    "abiertos": 0,
+    "aceptados": 5942
+   },
+   {
+    "ramo": "contents",
+    "anio": 2023,
+    "reserva_sobre_T0_pct": 0.97,
+    "abiertos": 18,
+    "aceptados": 6158
+   },
+   {
+    "ramo": "contents",
+    "anio": 2024,
+    "reserva_sobre_T0_pct": 14.14,
+    "abiertos": 791,
+    "aceptados": 5988
+   },
+   {
+    "ramo": "motor",
+    "anio": 2021,
+    "reserva_sobre_T0_pct": 4.23,
+    "abiertos": 321,
+    "aceptados": 27354
+   },
+   {
+    "ramo": "motor",
+    "anio": 2022,
+    "reserva_sobre_T0_pct": 7.33,
+    "abiertos": 596,
+    "aceptados": 29288
+   },
+   {
+    "ramo": "motor",
+    "anio": 2023,
+    "reserva_sobre_T0_pct": 20.7,
+    "abiertos": 1081,
+    "aceptados": 27990
+   },
+   {
+    "ramo": "motor",
+    "anio": 2024,
+    "reserva_sobre_T0_pct": 29.25,
+    "abiertos": 5424,
+    "aceptados": 25864
+   }
+  ],
+  "nota": "Completitud = exposición efectiva / exposición nominal de 2024 (chain-ladder de conteos por peligro). La prima de 2025 es el total predicho por S30 dividido por la exposición nominal de 2025."
+ },
+ "datos": {
+  "reglas_n62": {
+   "ID01": 123664,
+   "EXP01": 14229,
+   "CAP01": 2073,
+   "CAT01": 700210,
+   "AGE01": 2936,
+   "DUP01": 604,
+   "REN00": 12041,
+   "PRE00": 413
+  },
+  "capitales_f0": {
+   "adjusted": 1454,
+   "confirmed_by_history": 1305,
+   "unconfirmed_PRM01R": 149,
+   "adjusted_in_test": 190
+  },
+  "base_reconstruida": {
+   "tablas_identicas_en_bytes": 11,
+   "celdas_comparadas": 148424183,
+   "diferencias": 0,
+   "filas": 7826273
+  },
+  "flujo_siniestros": {
+   "originales": 163150,
+   "copias_exactas_excluidas": 604,
+   "tras_DUP01": 162546,
+   "fuera_del_historial_PRE00": 413,
+   "asignados_a_un_periodo": 162133,
+   "rechazados": 1701,
+   "aceptados_asignados": 160432,
+   "ambiguos": 0,
+   "fuera_de_ventana": 0
+  },
+  "t0": {
+   "total_CU": 741156868.43,
+   "por_ramo_CU": {
+    "motor": 428762846.58,
+    "buildings": 246656437.27,
+    "contents": 65737584.58
+   },
+   "periodos_entrenamiento": 2409311,
+   "periodos_con_coste": 146368,
+   "reserva_abiertos_CU": 90168216.94,
+   "abiertos": 10120
+  },
+  "periodos_sin_coste_pct": {
+   "motor": {
+    "2021": 88.86,
+    "2022": 89.84,
+    "2023": 90.21,
+    "2024": 90.88
+   },
+   "buildings": {
+    "2021": 96.16,
+    "2022": 96.49,
+    "2023": 96.42,
+    "2024": 96.55
+   },
+   "contents": {
+    "2021": 96.6,
+    "2022": 96.93,
+    "2023": 96.82,
+    "2024": 96.91
+   }
+  },
+  "recalculo_independiente": {
+   "controles": "41/41",
+   "pasan": 41,
+   "total": 41,
+   "modelos_entrenados": 0,
+   "revision_humana": "pending"
+  },
+  "capitales_sin_confirmar": {
+   "casos": 149,
+   "en_test": 123,
+   "prediccion_CU": 24667.97,
+   "proporcion_del_total": 0.00011638,
+   "por_ramo": {
+    "buildings": {
+     "periodos": 77,
+     "prediccion_CU": 21923.23
+    },
+    "contents": {
+     "periodos": 46,
+     "prediccion_CU": 2744.74
+    }
+   }
+  }
+ },
+ "foro": {
+  "aportes": 217,
+  "horas": 54.1,
+  "primero_utc": "2026-10-18T10:02:23+00:00",
+  "ultimo_utc": "2026-10-20T16:06:38+00:00",
+  "por_tipo": {
+   "resultado_o_coordinacion": 88,
+   "adverso": 46,
+   "validacion": 51,
+   "preinscripcion": 32
+  },
+  "titulos_con_preinscripcion": 35,
+  "titulos_con_resultado_adverso": 47,
+  "contrastes_numerados": 44,
+  "por_bloque_6h": [
+   {
+    "bloque_utc": "2026-10-18 06h",
+    "resultado_o_coordinacion": 14,
+    "adverso": 4,
+    "validacion": 22
+   },
+   {
+    "bloque_utc": "2026-10-18 12h",
+    "preinscripcion": 7,
+    "adverso": 14,
+    "resultado_o_coordinacion": 5,
+    "validacion": 5
+   },
+   {
+    "bloque_utc": "2026-10-18 18h",
+    "resultado_o_coordinacion": 29,
+    "adverso": 25,
+    "preinscripcion": 24,
+    "validacion": 5
+   },
+   {
+    "bloque_utc": "2026-10-19 00h",
+    "adverso": 3,
+    "preinscripcion": 1,
+    "resultado_o_coordinacion": 12,
+    "validacion": 5
+   },
+   {
+    "bloque_utc": "2026-10-19 12h",
+    "validacion": 6,
+    "resultado_o_coordinacion": 7
+   },
+   {
+    "bloque_utc": "2026-10-19 18h",
+    "resultado_o_coordinacion": 12,
+    "validacion": 1
+   },
+   {
+    "bloque_utc": "2026-10-20 00h",
+    "resultado_o_coordinacion": 6,
+    "validacion": 3
+   },
+   {
+    "bloque_utc": "2026-10-20 06h",
+    "validacion": 4
+   },
+   {
+    "bloque_utc": "2026-10-20 12h",
+    "resultado_o_coordinacion": 3
+   }
+  ],
+  "criterio": "Clasificación por identificador y palabras del título, sin leer cuerpos: validación (series VAL, IA, DOC, ENJ, PLAN, CIERRE), resultado adverso o descarte, preinscripción con criterio fijado antes de resultados, y el resto."
+ },
+ "validacion_ia": {
+  "ciclo": "20261020T124638Z_cambios",
+  "cerrado_utc": "2026-10-20T13:00:37.732758+00:00",
+  "por_estado_ciclo": {
+   "abierto": 15,
+   "cerrado_en_auditoria": 1,
+   "remediacion_documental_verificada": 3,
+   "control_verificado": 1,
+   "cerrado_en_alcance_de_correccion_tecnica_1_2": 1
+  },
+  "por_estado": {
+   "abierto": 12,
+   "cerrado_en_auditoria": 1,
+   "limitacion_aceptada_por_participante": 1,
+   "remediacion_documental_verificada": 3,
+   "limitacion_aceptada_por_participante_sin_reproduccion_independiente": 1,
+   "control_verificado": 1,
+   "cerrado_en_alcance_de_correccion_tecnica_1_2": 1,
+   "cerrado_en_alcance_de_correccion_tecnica_captura_1_1_2": 1
+  },
+  "lista": [
+   {
+    "id": "DATA-001",
+    "area": "datos",
+    "severidad": "alta",
+    "estado": "abierto",
+    "titulo_es": "Disponibilidad al cotizar sin acreditar en variables condicionadas y clima anual",
+    "titulo_en": "Availability at quotation not proven for conditional features and annual weather",
+    "revisor": "Actuario de tarificación y responsable de datos/dispositivos con conocimiento de las fechas de captura.",
+    "decision_humana": null
+   },
+   {
+    "id": "DATA-002",
+    "area": "datos",
+    "severidad": "alta",
+    "estado": "abierto",
+    "titulo_es": "Una sola valoración y ningún último observado limitan el contraste",
+    "titulo_en": "A single valuation and no observed ultimate limit the backtest",
+    "revisor": "Actuario de reservas/desarrollo y validador humano competente distinto del autor cuando exista autorización compatible con reglas.",
+    "decision_humana": null
+   },
+   {
+    "id": "DATA-003",
+    "area": "datos",
+    "severidad": "media",
+    "estado": "abierto",
+    "titulo_es": "La escala de capitales en la matriz conserva casos sin confirmación histórica",
+    "titulo_en": "Sum-insured scaling keeps cases without historical confirmation",
+    "revisor": "Actuario de hogar/capitales y responsable del diccionario fuente.",
+    "decision_humana": null
+   },
+   {
+    "id": "DATA-004",
+    "area": "datos",
+    "severidad": "baja",
+    "estado": "cerrado_en_auditoria",
+    "titulo_es": "El comparador inicial de asignación debía separar los siniestros previos",
+    "titulo_en": "The first assignment comparator had to separate pre-history claims",
+    "revisor": "Revisión técnica del comparador por ingeniero de datos o validador.",
+    "decision_humana": null
+   },
+   {
+    "id": "MOD-001",
+    "area": "modelos",
+    "severidad": "alta",
+    "estado": "abierto",
+    "titulo_es": "Selección hecha sobre 2023 y 2024 reutilizados",
+    "titulo_en": "Selection made on reused 2023 and 2024 data",
+    "revisor": "Participante y especialista en validacion estadistica; nadie designado ni contactado por este agente.",
+    "decision_humana": null
+   },
+   {
+    "id": "MOD-002",
+    "area": "modelos",
+    "severidad": "alta",
+    "estado": "limitacion_aceptada_por_participante",
+    "titulo_es": "Último real y suficiencia de reservas no identificados",
+    "titulo_en": "True ultimate and reserve adequacy not identified",
+    "revisor": "Actuario competente en reservas y tarificacion, bajo reglas de colaboracion; no designado ni contactado.",
+    "decision_humana": {
+     "fecha": "2026-10-20T15:21:59.556Z",
+     "alcance": "Se mantiene la acotación de docs/RESERVAS_ACOTACION.md (incertidumbre material, sin ajuste adoptado); no cambian T0, la receta ni S30."
+    }
+   },
+   {
+    "id": "MOD-003",
+    "area": "modelos",
+    "severidad": "alta",
+    "estado": "abierto",
+    "titulo_es": "Disponibilidad temporal condicional de algunas variables",
+    "titulo_en": "Conditional temporal availability of some features",
+    "revisor": "Responsable de datos y criterio actuarial del participante/especialista.",
+    "decision_humana": null
+   },
+   {
+    "id": "MOD-004",
+    "area": "modelos",
+    "severidad": "media",
+    "estado": "abierto",
+    "titulo_es": "Mejora dependiente de la cola y heterogénea",
+    "titulo_en": "Improvement depends on the tail and is heterogeneous",
+    "revisor": "Participante con revision actuarial/estadistica adecuada al uso.",
+    "decision_humana": null
+   },
+   {
+    "id": "MOD-005",
+    "area": "modelos",
+    "severidad": "media",
+    "estado": "abierto",
+    "titulo_es": "Reproducción parcial de la cadena de predicciones",
+    "titulo_en": "Partial reproduction of the prediction chain",
+    "revisor": "Revisor de reproducibilidad y participante; no afirmar independencia profesional entre IA.",
+    "decision_humana": null
+   },
+   {
+    "id": "MOD-006",
+    "area": "modelos",
+    "severidad": "alta",
+    "estado": "remediacion_documental_verificada",
+    "titulo_es": "Exclusión causal excesiva de la insuficiencia de reservas",
+    "titulo_en": "Overstated causal exclusion of reserve inadequacy",
+    "revisor": "Actuario competente en reservas; no designado ni contactado. No se cambia el informe ajeno.",
+    "decision_humana": null
+   },
+   {
+    "id": "GOV-001",
+    "area": "gobernanza",
+    "severidad": "alta",
+    "estado": "abierto",
+    "titulo_es": "Revisión humana especializada pendiente",
+    "titulo_en": "Specialist human review pending",
+    "revisor": "No especificado en la fuente; consultar el registro original.",
+    "decision_humana": null
+   },
+   {
+    "id": "GOV-002",
+    "area": "gobernanza",
+    "severidad": "media",
+    "estado": "abierto",
+    "titulo_es": "Vínculo entre conversaciones reales y decisiones no acreditado",
+    "titulo_en": "Link between real conversations and decisions not proven",
+    "revisor": "No especificado en la fuente; consultar el registro original.",
+    "decision_humana": null
+   },
+   {
+    "id": "GOV-003",
+    "area": "gobernanza",
+    "severidad": "media",
+    "estado": "limitacion_aceptada_por_participante_sin_reproduccion_independiente",
+    "titulo_es": "Reproducción por otra persona y en otra plataforma no acreditada",
+    "titulo_en": "Reproduction by another person and platform not proven",
+    "revisor": "No especificado en la fuente; consultar el registro original.",
+    "decision_humana": {
+     "fecha": "2026-10-20T15:21:59.556Z",
+     "alcance": "La reproducción queda acreditada solo como hecha por Claude en la nube de Claude; la independencia se declara como limitación."
+    }
+   },
+   {
+    "id": "GOV-004",
+    "area": "gobernanza",
+    "severidad": "media",
+    "estado": "abierto",
+    "titulo_es": "La batería cubre contratos y trazabilidad; la cobertura del modelo es parcial",
+    "titulo_en": "The test suite covers contracts and traceability; model coverage is partial",
+    "revisor": "No especificado en la fuente; consultar el registro original.",
+    "decision_humana": null
+   },
+   {
+    "id": "GOV-005",
+    "area": "gobernanza",
+    "severidad": "informativo",
+    "estado": "control_verificado",
+    "titulo_es": "Integridad y puertas locales auditadas sin modificar entradas",
+    "titulo_en": "Integrity and local gates audited without changing inputs",
+    "revisor": "No especificado en la fuente; consultar el registro original.",
+    "decision_humana": null
+   },
+   {
+    "id": "MOD-007",
+    "area": "modelos",
+    "severidad": "media",
+    "estado": "remediacion_documental_verificada",
+    "titulo_es": "Base porcentual ambigua al comparar exposición diaria y mensual",
+    "titulo_en": "Ambiguous percentage base when comparing daily and monthly exposure",
+    "revisor": "Responsable editorial y revisor técnico del cálculo presentado; nadie contactado.",
+    "decision_humana": null
+   },
+   {
+    "id": "DATA-005",
+    "area": "datos",
+    "severidad": "alta",
+    "estado": "abierto",
+    "titulo_es": "Historia y clima del año anterior incluyen información posterior al corte de cotización",
+    "titulo_en": "Prior-year history and weather include information after the quotation cut",
+    "revisor": "Actuario de tarificación y responsable de datos de avisos/meteorología, con validador temporal competente y participante para decidir el uso. Nadie designado o contactado en esta corrida.",
+    "decision_humana": null
+   },
+   {
+    "id": "MOD-008",
+    "area": "modelos",
+    "severidad": "alta",
+    "estado": "remediacion_documental_verificada",
+    "titulo_es": "Afirmación de reservas insesgadas y cambio de régimen sin identificar",
+    "titulo_en": "Claim of unbiased reserves and regime change not identified",
+    "revisor": "Actuario competente en reservas/desarrollo y validador estadístico; participante responsable de designar.",
+    "decision_humana": null
+   },
+   {
+    "id": "GOV-006",
+    "area": "gobernanza",
+    "severidad": "media",
+    "estado": "abierto",
+    "titulo_es": "Cronología interna de un aporte y su adenda pendiente de aclarar",
+    "titulo_en": "Internal timing of a post and its addendum to be clarified",
+    "revisor": "No especificado en la fuente; consultar el registro original.",
+    "decision_humana": null
+   },
+   {
+    "id": "GOV-007",
+    "area": "gobernanza",
+    "severidad": "alta",
+    "estado": "cerrado_en_alcance_de_correccion_tecnica_1_2",
+    "titulo_es": "Los controles del paquete permitían éxito con incumplimientos",
+    "titulo_en": "Package controls allowed success despite non-conformities",
+    "revisor": "Responsable técnico del paquete y revisor humano competente en reproducibilidad, por designar; revisión actuarial según el uso y sin persona ficticia.",
+    "decision_humana": {
+     "fecha": "2026-10-19T22:12:00.740Z",
+     "alcance": "Aceptación de la corrección técnica del paquete1.2 identificada por hash; se conservan abiertos reproducción completa, reservas e independencia."
+    }
+   },
+   {
+    "id": "GOV-008",
+    "area": "gobernanza",
+    "severidad": "alta",
+    "estado": "cerrado_en_alcance_de_correccion_tecnica_captura_1_1_2",
+    "titulo_es": "La clave de la captura de modelos omitía entradas posicionales",
+    "titulo_en": "The model-capture key left out positional inputs",
+    "revisor": "Ingeniero de ML/revisor competente en reproducibilidad.",
+    "decision_humana": {
+     "fecha": "2026-10-20T15:21:59.556Z",
+     "alcance": "Corrección técnica de la captura 1.1.2 (SHA 3ae39d78…32f0) y su recorrido en la réplica sin ajustes; no la revisión general ni otros hallazgos."
+    }
+   }
+  ],
+  "hallazgos": 21,
+  "abiertos": 12,
+  "limitaciones_aceptadas": 2,
+  "cerrados_o_remediados": 7,
+  "por_severidad": {
+   "alta": 11,
+   "media": 8,
+   "baja": 1,
+   "informativo": 1
+  },
+  "cambios_tecnicos": [],
+  "revision_especialista": "designated_general_review_not_performed",
+  "revision_humana_general": "decision_tecnica_especifica_registrada_revision_general_pendiente",
+  "independencia_acreditada": false
+ },
+ "controles_paquete": {
+  "baterias": [
+   {
+    "fuente": "controles_nube",
+    "utc": "2026-10-19T12:55:08+00:00",
+    "version": "1.1",
+    "python": "3.13.16",
+    "casos": 45,
+    "pasan": 45,
+    "fallan": 0
+   },
+   {
+    "fuente": "controles_vm",
+    "utc": "2026-10-19T13:00:11+00:00",
+    "version": "1.1",
+    "python": "3.10.12",
+    "casos": 45,
+    "pasan": 45,
+    "fallan": 0
+   },
+   {
+    "fuente": "controles_windows",
+    "utc": "2026-10-19T14:12:26+00:00",
+    "version": "1.2",
+    "python": "3.12.14",
+    "casos": 45,
+    "pasan": 45,
+    "fallan": 0
+   }
+  ],
+  "replay_s30": {
+   "sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+   "coincide": true,
+   "codigo_salida": 3,
+   "max_rel_parquet": 7.1839296149526e-16
+  },
+  "nodos_receta_total": 36,
+  "nodos_s30": 30,
+  "horas_referencia_s30": 10.3
+ },
+ "metodologia": {
+  "fuentes_investigacion": 51,
+  "fuentes_a": 23,
+  "fuentes_b": 28,
+  "papers_iaa": [
+   {
+    "titulo": "Professional Considerations for Actuaries Interacting with Artificial Intelligence",
+    "fecha": "2026-09"
+   },
+   {
+    "titulo": "Artificial Intelligence Governance Framework",
+    "fecha": "2025-11"
+   },
+   {
+    "titulo": "Documentation of Artificial Intelligence Models or Systems",
+    "fecha": "2025-11"
+   }
+  ]
+ },
+ "sensibilidad": {
+  "experimentos": 12,
+  "cifras_ligadas": 102,
+  "clientes_que_invierten_la_ventaja_V24": 6,
+  "clientes_V24": 373831,
+  "nivel_edificios_semidistancia": 0.03437,
+  "nivel_autos_semidistancia": 0.00917,
+  "nivel_autos_recobros": 0.00753,
+  "nivel_autos_ibnr": [
+   0.00795,
+   0.01746
+  ],
+  "nivel_autos_escenario": [
+   0.01548,
+   0.02499
+  ],
+  "capitales_multiplicador": [
+   34.78502753460434,
+   88.96865767525513
+  ],
+  "vecinos_de_pesos_probados": 40,
+  "no_ejecutados": 1,
+  "clientes_que_invierten_la_ventaja_V23": 1,
+  "nivel_contenidos_semidistancia": 0.0068,
+  "ventaja_con_reservas_V24": [
+   0.000105,
+   0.000138,
+   0.000169
+  ],
+  "piso_semillas": 3e-05,
+  "pesos_vecinos_que_mejoran": 0,
+  "tendencia_ventaja_min_V24": 5e-06,
+  "forma_rango_vecindad": [
+   0.000159,
+   0.001475
+  ],
+  "forma_puntos_que_mejoran": 0,
+  "cohortes_corr_edificios": 0.22,
+  "reproduccion": {
+   "archivos": 6,
+   "predicciones": 1111301,
+   "distintas": 0,
+   "max_rel": 0.0
+  },
+  "backtest_ibnr": {
+   "cortes": [
+    "2022-12",
+    "2023-12",
+    "2024-06"
+   ],
+   "peligros": 15,
+   "fuera_de_criterio": {
+    "2022-12": 7,
+    "2023-12": 6,
+    "2024-06": 7
+   },
+   "fuera_min": 6,
+   "fuera_max": 7,
+   "control_D67": "15/15",
+   "autos_alto_volumen_dentro": true,
+   "lesiones_ibnr_cierre": [
+    0.2008,
+    0.0786
+   ],
+   "lesiones_junio_2024": -0.0749,
+   "hundimiento_ibnr_cierre": [
+    -0.1267,
+    0.2456
+   ],
+   "celdas": [
+    {
+     "corte": "2022-12",
+     "ramo": "motor",
+     "peligro": "own_damage",
+     "largo": false,
+     "proyectado": 470.6,
+     "reportado": 450.0,
+     "error": 0.0457,
+     "limite": 0.1,
+     "cumple": true
+    },
+    {
+     "corte": "2022-12",
+     "ramo": "motor",
+     "peligro": "third_party_prop",
+     "largo": false,
+     "proyectado": 599.5,
+     "reportado": 576.0,
+     "error": 0.0408,
+     "limite": 0.1,
+     "cumple": true
+    },
+    {
+     "corte": "2022-12",
+     "ramo": "motor",
+     "peligro": "bodily_injury",
+     "largo": true,
+     "proyectado": 1277.2,
+     "reportado": 1045.0,
+     "error": 0.2222,
+     "limite": 0.2,
+     "cumple": false
+    },
+    {
+     "corte": "2022-12",
+     "ramo": "motor",
+     "peligro": "theft",
+     "largo": false,
+     "proyectado": 38.5,
+     "reportado": 29.0,
+     "error": 0.3284,
+     "limite": 0.1,
+     "cumple": false
+    },
+    {
+     "corte": "2022-12",
+     "ramo": "motor",
+     "peligro": "glass_hail",
+     "largo": false,
+     "proyectado": 118.0,
+     "reportado": 111.0,
+     "error": 0.0632,
+     "limite": 0.1,
+     "cumple": true
+    },
+    {
+     "corte": "2022-12",
+     "ramo": "buildings",
+     "peligro": "storm",
+     "largo": false,
+     "proyectado": 103.0,
+     "reportado": 125.0,
+     "error": -0.176,
+     "limite": 0.1,
+     "cumple": false
+    },
+    {
+     "corte": "2022-12",
+     "ramo": "buildings",
+     "peligro": "flood",
+     "largo": false,
+     "proyectado": 23.4,
+     "reportado": 24.0,
+     "error": -0.0246,
+     "limite": 0.1,
+     "cumple": true
+    },
+    {
+     "corte": "2022-12",
+     "ramo": "buildings",
+     "peligro": "escape_of_water",
+     "largo": false,
+     "proyectado": 175.7,
+     "reportado": 170.0,
+     "error": 0.0337,
+     "limite": 0.1,
+     "cumple": true
+    },
+    {
+     "corte": "2022-12",
+     "ramo": "buildings",
+     "peligro": "subsidence",
+     "largo": true,
+     "proyectado": 102.1,
+     "reportado": 119.0,
+     "error": -0.1421,
+     "limite": 0.2,
+     "cumple": true
+    },
+    {
+     "corte": "2022-12",
+     "ramo": "buildings",
+     "peligro": "fire",
+     "largo": false,
+     "proyectado": 6.7,
+     "reportado": 5.0,
+     "error": 0.3444,
+     "limite": 0.1,
+     "cumple": false
+    },
+    {
+     "corte": "2022-12",
+     "ramo": "buildings",
+     "peligro": "accidental_damage",
+     "largo": false,
+     "proyectado": 40.7,
+     "reportado": 31.0,
+     "error": 0.3131,
+     "limite": 0.1,
+     "cumple": false
+    },
+    {
+     "corte": "2022-12",
+     "ramo": "contents",
+     "peligro": "theft",
+     "largo": false,
+     "proyectado": 40.2,
+     "reportado": 45.0,
+     "error": -0.1069,
+     "limite": 0.1,
+     "cumple": false
+    },
+    {
+     "corte": "2022-12",
+     "ramo": "contents",
+     "peligro": "escape_of_water",
+     "largo": false,
+     "proyectado": 98.2,
+     "reportado": 95.0,
+     "error": 0.0332,
+     "limite": 0.1,
+     "cumple": true
+    },
+    {
+     "corte": "2022-12",
+     "ramo": "contents",
+     "peligro": "accidental_damage",
+     "largo": false,
+     "proyectado": 87.1,
+     "reportado": 85.0,
+     "error": 0.0244,
+     "limite": 0.1,
+     "cumple": true
+    },
+    {
+     "corte": "2022-12",
+     "ramo": "contents",
+     "peligro": "flood",
+     "largo": false,
+     "proyectado": 25.0,
+     "reportado": 13.0,
+     "error": 0.9212,
+     "limite": 0.1,
+     "cumple": false
+    },
+    {
+     "corte": "2023-12",
+     "ramo": "motor",
+     "peligro": "own_damage",
+     "largo": false,
+     "proyectado": 419.5,
+     "reportado": 403.0,
+     "error": 0.0409,
+     "limite": 0.1,
+     "cumple": true
+    },
+    {
+     "corte": "2023-12",
+     "ramo": "motor",
+     "peligro": "third_party_prop",
+     "largo": false,
+     "proyectado": 597.5,
+     "reportado": 547.0,
+     "error": 0.0922,
+     "limite": 0.1,
+     "cumple": true
+    },
+    {
+     "corte": "2023-12",
+     "ramo": "motor",
+     "peligro": "bodily_injury",
+     "largo": true,
+     "proyectado": 1012.8,
+     "reportado": 947.0,
+     "error": 0.0695,
+     "limite": 0.2,
+     "cumple": true
+    },
+    {
+     "corte": "2023-12",
+     "ramo": "motor",
+     "peligro": "theft",
+     "largo": false,
+     "proyectado": 33.8,
+     "reportado": 31.0,
+     "error": 0.0913,
+     "limite": 0.1,
+     "cumple": true
+    },
+    {
+     "corte": "2023-12",
+     "ramo": "motor",
+     "peligro": "glass_hail",
+     "largo": false,
+     "proyectado": 111.8,
+     "reportado": 146.0,
+     "error": -0.234,
+     "limite": 0.1,
+     "cumple": false
+    },
+    {
+     "corte": "2023-12",
+     "ramo": "buildings",
+     "peligro": "storm",
+     "largo": false,
+     "proyectado": 140.2,
+     "reportado": 129.0,
+     "error": 0.0871,
+     "limite": 0.1,
+     "cumple": true
+    },
+    {
+     "corte": "2023-12",
+     "ramo": "buildings",
+     "peligro": "flood",
+     "largo": false,
+     "proyectado": 20.2,
+     "reportado": 25.0,
+     "error": -0.1909,
+     "limite": 0.1,
+     "cumple": false
+    },
+    {
+     "corte": "2023-12",
+     "ramo": "buildings",
+     "peligro": "escape_of_water",
+     "largo": false,
+     "proyectado": 159.6,
+     "reportado": 175.0,
+     "error": -0.0878,
+     "limite": 0.1,
+     "cumple": true
+    },
+    {
+     "corte": "2023-12",
+     "ramo": "buildings",
+     "peligro": "subsidence",
+     "largo": true,
+     "proyectado": 145.7,
+     "reportado": 116.0,
+     "error": 0.256,
+     "limite": 0.2,
+     "cumple": false
+    },
+    {
+     "corte": "2023-12",
+     "ramo": "buildings",
+     "peligro": "fire",
+     "largo": false,
+     "proyectado": 4.6,
+     "reportado": 8.0,
+     "error": -0.4203,
+     "limite": 0.1,
+     "cumple": false
+    },
+    {
+     "corte": "2023-12",
+     "ramo": "buildings",
+     "peligro": "accidental_damage",
+     "largo": false,
+     "proyectado": 35.1,
+     "reportado": 26.0,
+     "error": 0.3505,
+     "limite": 0.1,
+     "cumple": false
+    },
+    {
+     "corte": "2023-12",
+     "ramo": "contents",
+     "peligro": "theft",
+     "largo": false,
+     "proyectado": 35.2,
+     "reportado": 32.0,
+     "error": 0.1011,
+     "limite": 0.1,
+     "cumple": false
+    },
+    {
+     "corte": "2023-12",
+     "ramo": "contents",
+     "peligro": "escape_of_water",
+     "largo": false,
+     "proyectado": 94.7,
+     "reportado": 96.0,
+     "error": -0.0133,
+     "limite": 0.1,
+     "cumple": true
+    },
+    {
+     "corte": "2023-12",
+     "ramo": "contents",
+     "peligro": "accidental_damage",
+     "largo": false,
+     "proyectado": 86.3,
+     "reportado": 79.0,
+     "error": 0.0922,
+     "limite": 0.1,
+     "cumple": true
+    },
+    {
+     "corte": "2023-12",
+     "ramo": "contents",
+     "peligro": "flood",
+     "largo": false,
+     "proyectado": 19.9,
+     "reportado": 22.0,
+     "error": -0.0968,
+     "limite": 0.1,
+     "cumple": true
+    },
+    {
+     "corte": "2024-06",
+     "ramo": "motor",
+     "peligro": "own_damage",
+     "largo": false,
+     "proyectado": 344.4,
+     "reportado": 345.0,
+     "error": -0.0018,
+     "limite": 0.1,
+     "cumple": true
+    },
+    {
+     "corte": "2024-06",
+     "ramo": "motor",
+     "peligro": "third_party_prop",
+     "largo": false,
+     "proyectado": 467.8,
+     "reportado": 481.0,
+     "error": -0.0275,
+     "limite": 0.1,
+     "cumple": true
+    },
+    {
+     "corte": "2024-06",
+     "ramo": "motor",
+     "peligro": "bodily_injury",
+     "largo": true,
+     "proyectado": 610.6,
+     "reportado": 660.0,
+     "error": -0.0749,
+     "limite": 0.2,
+     "cumple": true
+    },
+    {
+     "corte": "2024-06",
+     "ramo": "motor",
+     "peligro": "theft",
+     "largo": false,
+     "proyectado": 26.3,
+     "reportado": 23.0,
+     "error": 0.1419,
+     "limite": 0.1,
+     "cumple": false
+    },
+    {
+     "corte": "2024-06",
+     "ramo": "motor",
+     "peligro": "glass_hail",
+     "largo": false,
+     "proyectado": 92.5,
+     "reportado": 92.0,
+     "error": 0.0059,
+     "limite": 0.1,
+     "cumple": true
+    },
+    {
+     "corte": "2024-06",
+     "ramo": "buildings",
+     "peligro": "storm",
+     "largo": false,
+     "proyectado": 51.6,
+     "reportado": 47.0,
+     "error": 0.0986,
+     "limite": 0.1,
+     "cumple": true
+    },
+    {
+     "corte": "2024-06",
+     "ramo": "buildings",
+     "peligro": "flood",
+     "largo": false,
+     "proyectado": 19.0,
+     "reportado": 10.0,
+     "error": 0.902,
+     "limite": 0.1,
+     "cumple": false
+    },
+    {
+     "corte": "2024-06",
+     "ramo": "buildings",
+     "peligro": "escape_of_water",
+     "largo": false,
+     "proyectado": 107.5,
+     "reportado": 94.0,
+     "error": 0.1435,
+     "limite": 0.1,
+     "cumple": false
+    },
+    {
+     "corte": "2024-06",
+     "ramo": "buildings",
+     "peligro": "subsidence",
+     "largo": true,
+     "proyectado": 100.2,
+     "reportado": 124.0,
+     "error": -0.1915,
+     "limite": 0.2,
+     "cumple": true
+    },
+    {
+     "corte": "2024-06",
+     "ramo": "buildings",
+     "peligro": "fire",
+     "largo": false,
+     "proyectado": 4.9,
+     "reportado": 4.0,
+     "error": 0.2276,
+     "limite": 0.1,
+     "cumple": false
+    },
+    {
+     "corte": "2024-06",
+     "ramo": "buildings",
+     "peligro": "accidental_damage",
+     "largo": false,
+     "proyectado": 29.3,
+     "reportado": 30.0,
+     "error": -0.0247,
+     "limite": 0.1,
+     "cumple": true
+    },
+    {
+     "corte": "2024-06",
+     "ramo": "contents",
+     "peligro": "theft",
+     "largo": false,
+     "proyectado": 29.8,
+     "reportado": 38.0,
+     "error": -0.217,
+     "limite": 0.1,
+     "cumple": false
+    },
+    {
+     "corte": "2024-06",
+     "ramo": "contents",
+     "peligro": "escape_of_water",
+     "largo": false,
+     "proyectado": 48.3,
+     "reportado": 56.0,
+     "error": -0.1382,
+     "limite": 0.1,
+     "cumple": false
+    },
+    {
+     "corte": "2024-06",
+     "ramo": "contents",
+     "peligro": "accidental_damage",
+     "largo": false,
+     "proyectado": 74.7,
+     "reportado": 81.0,
+     "error": -0.0772,
+     "limite": 0.1,
+     "cumple": true
+    },
+    {
+     "corte": "2024-06",
+     "ramo": "contents",
+     "peligro": "flood",
+     "largo": false,
+     "proyectado": 13.2,
+     "reportado": 9.0,
+     "error": 0.4654,
+     "limite": 0.1,
+     "cumple": false
+    }
+   ]
+  }
+ },
+ "reproduccion_completa": {
+  "utc": "2026-10-20T13:37:56+00:00",
+  "nodos": 36,
+  "csv_iguales": true,
+  "huellas_verificadas": 181,
+  "huellas_iguales": 162,
+  "huellas_difieren": 19,
+  "max_dif_relativa": 3.912238606583508e-15,
+  "codigo_salida": 3,
+  "replica": {
+   "csv_iguales": true,
+   "estimadores": 436,
+   "cargas": 436,
+   "salidas": 194,
+   "identicas": 194,
+   "minutos": 34,
+   "nodos_conformes": 36
+  },
+  "independiente": false
+ },
+ "reservas_acotacion": {
+  "materialidad": 0.01,
+  "materialidad_fijada": "por el participante antes de calcular",
+  "autorizacion_utc": "2026-10-19T22:27:32.881424+00:00",
+  "por_ramo": {
+   "motor": {
+    "umbral_b": [
+     0.9629,
+     1.037
+    ],
+    "error_material": 0.037,
+    "nivel_b_075": -0.06712,
+    "nivel_b_125": 0.06783,
+    "beta": 0.851,
+    "ic90": [
+     0.6133,
+     1.106
+    ],
+    "clase": "incertidumbre_material"
+   },
+   "buildings": {
+    "umbral_b": [
+     0.9603,
+     1.0396
+    ],
+    "error_material": 0.0396,
+    "nivel_b_075": -0.06236,
+    "nivel_b_125": 0.06374,
+    "beta": 0.9845,
+    "ic90": [
+     0.873,
+     1.1089
+    ],
+    "clase": "incertidumbre_material"
+   },
+   "contents": {
+    "umbral_b": [
+     0.91,
+     1.0896
+    ],
+    "error_material": 0.0896,
+    "nivel_b_075": -0.02769,
+    "nivel_b_125": 0.02801,
+    "beta": 0.9824,
+    "ic90": [
+     0.7865,
+     1.1563
+    ],
+    "clase": "incertidumbre_material"
+   }
+  },
+  "nivel_max_con_b_075_125": 0.06783,
+  "ramos_con_incertidumbre_material": 3,
+  "lesiones_S3": {
+   "k": 0.8673,
+   "ic90_k": [
+    0.8134,
+    0.9219
+   ],
+   "nivel": -0.02219,
+   "nivel_ic90": [
+    -0.03115,
+    -0.01308
+   ]
+  },
+  "orden_agregado_sin_cambio_b": [
+   0.25,
+   2.5
+  ]
+ },
+ "modelo_definitivo": {
+  "decision": "D99",
+  "fecha_utc": "2026-10-20T15:36:03.672Z",
+  "modelo": "S30",
+  "nombre_es": "Mezcla por peligro",
+  "nombre_en": "Per-peril blend",
+  "sha256_csv": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+  "parte1_cerrada": true,
+  "seleccion_final_manual_kaggle": "pendiente_no_realizada"
+ },
+ "bases": {
+  "controles": "18/18",
+  "f0_controles": "25/25"
+ }
+}

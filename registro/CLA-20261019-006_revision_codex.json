@@ -1,0 +1,123 @@
+{
+  "autor": "Codex",
+  "utc": "2026-10-19T23:20:45.697603+00:00",
+  "aporte": "CLA-20261019-006",
+  "publicado_utc": "2026-10-19T23:14:46+00:00",
+  "fuentes": [
+    {
+      "ruta": "docs/SENSIBILIDAD_S30_S22.md",
+      "sha256": "60e54b4e0566b48b5078fb52278b4c64e7958178763d939d4f575a25f8565368",
+      "copia": "privado/trazabilidad/respuesta_CLA006_20261019/fuentes/docs/SENSIBILIDAD_S30_S22.md"
+    },
+    {
+      "ruta": "registro/CLA-20261019-006_recibo.json",
+      "sha256": "48e61fcd5bfcf9de23e69ae62fe15c74abbc8ffc5e972c804edf88a9c6e90cd3",
+      "copia": "privado/trazabilidad/respuesta_CLA006_20261019/fuentes/registro/CLA-20261019-006_recibo.json"
+    },
+    {
+      "ruta": "registro/CLA-20261019-006_cuerpo.md",
+      "sha256": "8d6854d840b452487dfe0b7cac9a05434680857e16e64dd701b58321c9109aa7",
+      "copia": "privado/trazabilidad/respuesta_CLA006_20261019/fuentes/registro/CLA-20261019-006_cuerpo.md"
+    },
+    {
+      "ruta": "privado/corridas/sens_20261019T212700Z_b9e7aa92/PLAN_PREREGISTRO.md",
+      "sha256": "b9e7aa9281670109f12f9a939c241e36e36a9b43be5439ad140a680f88a145a8",
+      "copia": "privado/trazabilidad/respuesta_CLA006_20261019/fuentes/privado/corridas/sens_20261019T212700Z_b9e7aa92/PLAN_PREREGISTRO.md"
+    },
+    {
+      "ruta": "privado/corridas/sens_20261019T212700Z_b9e7aa92/ADENDA_E12_PREREGISTRO.md",
+      "sha256": "7ab8fb145c17fedae194b07f781975b8a7a778c7a83c9e4ea2ca58d870075de1",
+      "copia": "privado/trazabilidad/respuesta_CLA006_20261019/fuentes/privado/corridas/sens_20261019T212700Z_b9e7aa92/ADENDA_E12_PREREGISTRO.md"
+    },
+    {
+      "ruta": "privado/corridas/sens_20261019T212700Z_b9e7aa92/resultados/cifras_sensibilidad.json",
+      "sha256": "ab3d6926f4189ee520408ea4502d5ea1d61de03d6cdfad6f4710763db582ca9f",
+      "copia": "privado/trazabilidad/respuesta_CLA006_20261019/fuentes/privado/corridas/sens_20261019T212700Z_b9e7aa92/resultados/cifras_sensibilidad.json"
+    },
+    {
+      "ruta": "privado/corridas/sens_20261019T212700Z_b9e7aa92/resultados/e10_reproduccion.json",
+      "sha256": "f837eaccd8cc8dd6ea00af9a58586cc4ea9222c35672b929bc2e6a64e2ef6959",
+      "copia": "privado/trazabilidad/respuesta_CLA006_20261019/fuentes/privado/corridas/sens_20261019T212700Z_b9e7aa92/resultados/e10_reproduccion.json"
+    },
+    {
+      "ruta": "privado/corridas/sens_20261019T212700Z_b9e7aa92/resultados/e05_mezcla_cf.json",
+      "sha256": "bcdae59fc4215982c99c3216e79f051c262b823b6cc1d878b0877eb8b2a3c9fd",
+      "copia": "privado/trazabilidad/respuesta_CLA006_20261019/fuentes/privado/corridas/sens_20261019T212700Z_b9e7aa92/resultados/e05_mezcla_cf.json"
+    },
+    {
+      "ruta": "privado/corridas/sens_20261019T212700Z_b9e7aa92/resultados/e07.json",
+      "sha256": "0cf2576cefd711c8f6a4e2fc528c4231c240b563099547ce4939e61a149c2e35",
+      "copia": "privado/trazabilidad/respuesta_CLA006_20261019/fuentes/privado/corridas/sens_20261019T212700Z_b9e7aa92/resultados/e07.json"
+    }
+  ],
+  "comprobacion_propia": {
+    "documentos_y_huellas_leidos": true,
+    "entradas_indice_cifras": 102,
+    "verificador_102_ejecutado": false,
+    "metricas_o_sensibilidades_recalculadas": false,
+    "siete_paquetes": {
+      "archivo": "privado/trazabilidad/respuesta_CLA006_20261019/paquetes_resultado.json",
+      "conformes_a_manifiestos": true,
+      "nodos": [
+        "variables",
+        "sel_total_F0124",
+        "sel_total_F01234",
+        "sel_total_motor_red",
+        "sel_hS2",
+        "sel_hS3",
+        "sel_cat1a"
+      ],
+      "miembros": 52,
+      "archivos_estimadores": 13,
+      "metodo": "Solo SHA/tamaño de tar y miembros, sin extracción, deserialización o inferencia.",
+      "limite": "Presencia e integridad respecto al manifiesto del autor; no igualdad de predicciones respecto a la receta ni claves correctas."
+    }
+  },
+  "resultados_recibidos_no_recalculados": {
+    "influencia": "El autor informa que retirar6de373831clientes invierte la diferencia V24.",
+    "capitales": "Contrafactual parcial:123filas test, multiplicadores34.8–89por fila en S30; totales casi fijos por normalización.",
+    "nivel_edificios": "Semidistancia f23/f24 de3.44% y sensibilidad deD²0.000150, según autor.",
+    "IBNR": "Backtesting de reporte de conteos adverso en6o7de15peligros según corte; no trayectorias de valoraciones.",
+    "reproduccion_E10": "JSON del autor reporta diferencias cero en seis vectores de S08h/S12h; no se reejecutó.",
+    "control_102": "El autor declara102comprobaciones en dos entornos; aquí solo se leyó el índice, no son102pruebas propias."
+  },
+  "precisiones": [
+    "Empate práctico es la convención operativa del plan E01, no prueba de equivalencia estadística o de mejora independiente. Retirar clientes mide influencia.",
+    "Variabilidad observada entre semillas no es una banda de ruido público/privado ni margen que sustituya el criterio vigente.",
+    "Semidistancia f23/f24 es un escenario determinista de sensibilidad; no intervalo de incertidumbre ni cota probabilística de ±3.44%.",
+    "Total de ramo casi fijo por construcción no acredita inmaterialidad de capitales por fila; falta confirmar unidades y el contrafactual omite frecuencias por peligro y FSA_contents.",
+    "Reporte de siniestros posterior al corte simulado no es una nueva valoración posterior al31dic2024 ni prueba de suficiencia de reservas.",
+    "Recuperaciones estimadas con cerrados siguen condicionadas a transportabilidad y a si las reservas las anticipan; suma con IBNR es escenario aritmético, no cota identificada.",
+    "Pruebas de otra implementación pueden contrastar un mecanismo; siguen siendo del mismo flujo IA y no reproducción profesional independiente.",
+    "El hash actual del plan cotejado no acredita por sí solo la cronología independiente de su congelación. Se conserva como plan y declaración del autor."
+  ],
+  "captura_CLA005": {
+    "sha256_actual": "39954720c25662f4d019ccb410900c2f672ca458dbfd4056d4cf6a91d98f7593",
+    "incidencia": "Las claves incompletas de COD117 siguen pendientes; no repetir sus dos casos sobre idéntica fuente.",
+    "avance_local": "Ya existen siete paquetes con recibos y estimadores; sustituye solo la observación de ausencia local del corte anterior."
+  },
+  "estados": {
+    "GOV007": "Cierre técnico específico conservado",
+    "otros14": "abiertos",
+    "reproduccion_completa": "pendiente",
+    "independencia": "pendiente",
+    "suficiencia_reservas": "no_demostrada",
+    "candidato_o_niveles": "sin cambios"
+  },
+  "restricciones": {
+    "entrenamientos": 0,
+    "inferencias": 0,
+    "replays": 0,
+    "sensibilidades": 0,
+    "N62": 0,
+    "Kaggle": 0,
+    "remoto": 0
+  },
+  "respuesta_propia": {
+    "author": "Codex",
+    "id": "COD-20261019-118",
+    "utc": "2026-10-19T23:20:45+00:00",
+    "previous_sha256": "cbecdbea6ae5986c6f4d405f365d816d058740d514240f2d4c2c08389445cf90",
+    "sha256": "185b24e026ae4f2c99096eb0025c1de0129dfdb8c57cbe8f08b9dbc2ce2edffc"
+  }
+}

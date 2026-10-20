@@ -1,0 +1,119 @@
+/* Tokens compartidos por el informe, el panel y las láminas. Paleta validada (dataviz, 3 series). */
+:root {
+  color-scheme: light;
+  --fuente: "InterWeb", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --surface-1: #fcfcfb;
+  --page: #f9f9f7;
+  --text-primary: #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted: #898781;
+  --grid: #e1e0d9;
+  --axis: #c3c2b7;
+  --border: rgba(11, 11, 11, 0.10);
+  --banda: rgba(42, 120, 214, 0.06);
+  --brand: #174f59;
+  --brand-soft: #e6eff0;
+  --s-motor: #2a78d6;
+  --s-buildings: #eb6834;
+  --s-contents: #1baf7a;
+  --s-gris: #b8b6ad;
+  --acento: #2a78d6;
+  --acento-2: #eb6834;
+  --ord-1: #86b6ef;
+  --ord-2: #2a78d6;
+  --ord-3: #184f95;
+  --st-good: #0ca30c;
+  --st-warning: #fab219;
+  --st-serious: #ec835a;
+  --st-critical: #d03b3b;
+  --ok-text: #006300;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --surface-1: #1a1a19;
+    --page: #0d0d0d;
+    --text-primary: #f0efec;
+    --text-secondary: #c3c2b7;
+    --text-muted: #898781;
+    --grid: #2c2c2a;
+    --axis: #383835;
+    --border: rgba(255, 255, 255, 0.10);
+    --banda: rgba(57, 135, 229, 0.10);
+    --brand: #7fc3cf;
+    --brand-soft: #1d3236;
+    --s-motor: #3987e5;
+    --s-buildings: #d95926;
+    --s-contents: #199e70;
+    --s-gris: #5f5e58;
+    --acento: #3987e5;
+    --acento-2: #d95926;
+    --ord-1: #184f95;
+    --ord-2: #3987e5;
+    --ord-3: #86b6ef;
+    --ok-text: #0ca30c;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface-1: #1a1a19;
+  --page: #0d0d0d;
+  --text-primary: #f0efec;
+  --text-secondary: #c3c2b7;
+  --text-muted: #898781;
+  --grid: #2c2c2a;
+  --axis: #383835;
+  --border: rgba(255, 255, 255, 0.10);
+  --banda: rgba(57, 135, 229, 0.10);
+  --brand: #7fc3cf;
+  --brand-soft: #1d3236;
+  --s-motor: #3987e5;
+  --s-buildings: #d95926;
+  --s-contents: #199e70;
+  --s-gris: #5f5e58;
+  --acento: #3987e5;
+  --acento-2: #d95926;
+  --ord-1: #184f95;
+  --ord-2: #3987e5;
+  --ord-3: #86b6ef;
+  --ok-text: #0ca30c;
+}
+
+.g-svg { display: block; max-width: 100%; height: auto; font-family: var(--fuente); overflow: visible; }
+.g-svg text { fill: var(--text-secondary); font-size: 11px; }
+.g-svg .g-tick { fill: var(--text-muted); font-size: 10.5px; font-variant-numeric: tabular-nums; }
+.g-svg .g-cat { fill: var(--text-primary); font-size: 11px; }
+.g-svg .g-val { fill: var(--text-primary); font-size: 10.5px; font-variant-numeric: tabular-nums; }
+.g-svg .g-seg { fill: #ffffff; font-size: 10px; font-weight: 600; }
+.g-svg .g-ley { fill: var(--text-secondary); font-size: 11px; }
+.g-svg .g-ytit, .g-svg .g-xtit { fill: var(--text-muted); font-size: 10.5px; }
+.g-svg .g-nota { fill: var(--text-secondary); font-size: 10.5px; }
+.g-svg .g-banda { fill: var(--text-muted); font-size: 10px; letter-spacing: .02em; }
+.g-svg .g-fuerte { fill: var(--text-primary); font-weight: 650; }
+.g-svg .g-barra:focus { outline: none; filter: brightness(1.08); }
+.g-svg .g-barra:hover { filter: brightness(1.08); }
+
+.g-tooltip { position: fixed; z-index: 50; display: none; pointer-events: none; background: var(--surface-1); color: var(--text-primary);
+  border: 1px solid var(--border); border-radius: 6px; padding: 8px 10px; font: 12px/1.45 var(--fuente);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .12); max-width: 280px; }
+.g-tip-t { color: var(--text-secondary); margin-bottom: 4px; }
+.g-tip-f { display: flex; align-items: center; gap: 7px; }
+.g-tip-k { width: 12px; height: 2.5px; border-radius: 2px; display: inline-block; }
+.g-tip-n { color: var(--text-secondary); }
+.g-tabla { border-collapse: collapse; width: 100%; font-size: 12.5px; }
+.g-tabla th, .g-tabla td { padding: 6px 9px; border-bottom: 1px solid var(--grid); text-align: left; }
+.g-tabla th { color: var(--text-secondary); font-weight: 600; }
+.g-tabla td.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* Diagramas: trazo en currentColor, un solo color con significado. */
+.d-svg { display: block; max-width: 100%; height: auto; font-family: var(--fuente); color: var(--text-primary); }
+.d-svg text { fill: currentColor; font-size: 11.5px; }
+.d-svg .d-t { font-weight: 650; font-size: 12px; }
+.d-svg .d-s { fill: var(--text-secondary); font-size: 10.5px; }
+.d-svg .d-m { fill: var(--text-muted); font-size: 10px; }
+.d-svg .d-flecha { stroke: var(--text-muted); stroke-width: 1.4; fill: none; }
+.d-svg .d-caja { fill: var(--surface-1); stroke: var(--axis); stroke-width: 1; }
+.d-svg .d-caja-acento { fill: var(--brand-soft); stroke: var(--brand); stroke-width: 1.4; }
+.d-svg .d-caja-ia { fill: rgba(42, 120, 214, .07); stroke: var(--acento); stroke-width: 1.2; }
+.d-svg .d-caja-control { fill: rgba(235, 104, 52, .07); stroke: var(--acento-2); stroke-width: 1.2; }
+.d-svg .d-etq { fill: var(--text-secondary); font-size: 10px; font-style: italic; }

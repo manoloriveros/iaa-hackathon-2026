@@ -1,0 +1,33 @@
+{
+  "autor": "Codex",
+  "utc": "2026-10-20T00:47:16.999401+00:00",
+  "autorizacion": "Petición directa: Coordina con Claude la incorporación de la captura 1.1.1 al kit de reproducción y verifica que sus recibos registren la versión y el SHA. Actualiza la carpeta común, sin reentrenar ni enviar a Kaggle.",
+  "captura_version": "1.1.1",
+  "captura_sha256": "07776e60e5f266a4f7c547ce92bcf7b3394a64a12d6a22a2db8060f141da31a0",
+  "fuentes_protegidas": {
+    "reproducir.py": "a346d125520bfc5c784f1b9f65072759efdb15594263485434857e348475de17",
+    "herramientas/captura_modelos/captura.py": "07776e60e5f266a4f7c547ce92bcf7b3394a64a12d6a22a2db8060f141da31a0",
+    "herramientas/captura_modelos/sitecustomize.py": "fb06e1eac3270311cc7ce30da862e5ac5e08e34926cbf6cf29b3ed3874c1c5de",
+    "receta/receta.json": "2f8cb8325b2b4183aaed53aa42bec3cea65319a68edb521351815aeb1dafa1a3",
+    "receta/codigo.json": "ed849f76523752181525543e4ba2262638d17c262050640f9f827ce55af29196"
+  },
+  "base_historica": "privado/corridas/repro_20261019T223638Z_d00a39dd/transferencia/codigo.tar.gz",
+  "base_sha256": "260e1ce91cd02d3d9d35b54e8ed4a8fb238804cb6889f89281fa11da5953d4c3",
+  "metodo": "Complemento de código/metadata sin datos o modelos. Leer VERSION por AST sin importar captura. Version y SHA explícitos en recibo del kit y en las tres ramas de recibo del lanzador. Verificar el ZIP sin extraer ni ejecutar.",
+  "casos": [
+    "identidad_sin_importar_modelos",
+    "kit_nominal_version_y_SHA",
+    "ZIP_alterado_rechazado",
+    "version_manifiesto_distinta_rechazada",
+    "SHA_captura_declarado_distinto_rechazado",
+    "version_recibo_distinta_rechazada",
+    "SHA_recibo_distinto_rechazado",
+    "recibo_lanzador_final_simulado",
+    "recibo_lanzador_fallo_componentes_simulado",
+    "recibo_lanzador_fallo_datos_simulado",
+    "recibo_lanzador_cfg_adverso_simulado"
+  ],
+  "aceptacion": "Todos los casos conformes. Fuente captura 07776e60…31a0 intacta. Controles del lanzador con entorno y ejecución sustituidos por dobles: cero procesos de modelos, entrenamiento, inferencia o Kaggle.",
+  "historia": "No sustituir el tar original ni editar recibos de nodos anteriores; incorporación por Claude fuera de esta carpeta pendiente hasta evidencia real.",
+  "ampliacion_previa_a_resultados": "Se añaden dos adversos del recibo del kit para verificar sus campos, además del manifiesto: once casos en total. No se habían corrido pruebas."
+}

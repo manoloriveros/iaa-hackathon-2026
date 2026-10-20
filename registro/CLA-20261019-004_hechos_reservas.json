@@ -1,0 +1,223 @@
+{
+ "autor": "Claude (línea principal)",
+ "aporte": "CLA-20261019-004",
+ "responde_a": [
+  "COD-20261019-113"
+ ],
+ "creado_utc": "2026-10-19T20:09:16+00:00",
+ "fuente": {
+  "archivo": "Hackaton/Semana 1/Datos/claims.parquet",
+  "sha256": "323adf2e0f6c5975a026479d725d4cd04f51fce3aa069f897a99f664c6e392c0",
+  "nota": "original sin limpiar; la capa preaudit (N62) deja 162.546 registros (control K07 de D67)"
+ },
+ "entorno": {
+  "python": "3.13.16",
+  "pandas": "3.0.5"
+ },
+ "herramienta_sha256": "e39da9f4bcb2851ac1f67e5e378be4ed778b3fcc99b791ac2c98a0d7add5e805",
+ "alcance": "agregados de una sola valoración; sin datos por fila; sin cambios en objetivo, T0 o modelos",
+ "estructura": {
+  "filas": 163150,
+  "claim_id_unico": true,
+  "columnas": [
+   "claim_id",
+   "policy_id",
+   "line",
+   "peril",
+   "loss_date",
+   "report_date",
+   "status",
+   "paid_to_date",
+   "incurred_to_date",
+   "recoveries",
+   "repairer_id",
+   "third_party_id"
+  ],
+  "fechas_disponibles": [
+   "loss_date",
+   "report_date"
+  ],
+  "sin_columna_de": [
+   "fecha de valoración (una sola, 31-12-2024, según el diccionario)",
+   "fecha de cierre o liquidación",
+   "reapertura o historial de estados",
+   "movimientos o valoraciones anteriores",
+   "gastos de liquidación",
+   "recuperaciones esperadas en la reserva"
+  ],
+  "loss_date": [
+   "2020-12-01",
+   "2024-12-29"
+  ],
+  "report_date": [
+   "2021-01-02",
+   "2024-12-30"
+  ],
+  "estados": {
+   "closed": 151292,
+   "open": 10147,
+   "repudiated": 1711
+  }
+ },
+ "por_estado": {
+  "closed": {
+   "n": 151292,
+   "pagado_CU": 656916934.87,
+   "incurrido_CU": 656916934.87,
+   "reserva_CU": 0.0,
+   "con_reserva_positiva": 0,
+   "con_reserva_negativa": 0,
+   "con_recuperacion": 14776,
+   "recuperaciones_CU": 27678633.34,
+   "con_pago_cero": 0
+  },
+  "open": {
+   "n": 10147,
+   "pagado_CU": 26389725.2,
+   "incurrido_CU": 116814194.23,
+   "reserva_CU": 90424469.03,
+   "con_reserva_positiva": 10084,
+   "con_reserva_negativa": 0,
+   "con_recuperacion": 0,
+   "recuperaciones_CU": 0.0,
+   "con_pago_cero": 0
+  },
+  "repudiated": {
+   "n": 1711,
+   "pagado_CU": 0.0,
+   "incurrido_CU": 0.0,
+   "reserva_CU": 0.0,
+   "con_reserva_positiva": 0,
+   "con_reserva_negativa": 0,
+   "con_recuperacion": 0,
+   "recuperaciones_CU": 0.0,
+   "con_pago_cero": 1711
+  }
+ },
+ "abiertos_por_ramo_y_anio_de_ocurrencia": {
+  "buildings/2021": {
+   "n": 17,
+   "reserva_CU": 216152.47,
+   "sin_reserva": 0
+  },
+  "buildings/2022": {
+   "n": 55,
+   "reserva_CU": 1051555.26,
+   "sin_reserva": 0
+  },
+  "buildings/2023": {
+   "n": 201,
+   "reserva_CU": 3665967.71,
+   "sin_reserva": 1
+  },
+  "buildings/2024": {
+   "n": 1620,
+   "reserva_CU": 18930911.43,
+   "sin_reserva": 8
+  },
+  "contents/2023": {
+   "n": 19,
+   "reserva_CU": 172831.21,
+   "sin_reserva": 0
+  },
+  "contents/2024": {
+   "n": 791,
+   "reserva_CU": 2477092.01,
+   "sin_reserva": 7
+  },
+  "motor/2020": {
+   "n": 2,
+   "reserva_CU": 24961.46,
+   "sin_reserva": 0
+  },
+  "motor/2021": {
+   "n": 321,
+   "reserva_CU": 4480288.34,
+   "sin_reserva": 1
+  },
+  "motor/2022": {
+   "n": 608,
+   "reserva_CU": 8535451.68,
+   "sin_reserva": 11
+  },
+  "motor/2023": {
+   "n": 1089,
+   "reserva_CU": 24351952.57,
+   "sin_reserva": 7
+  },
+  "motor/2024": {
+   "n": 5424,
+   "reserva_CU": 26517304.89,
+   "sin_reserva": 28
+  }
+ },
+ "recuperaciones_en_cerrados": {
+  "motor/own_damage": {
+   "cerrados": 46573,
+   "con_recuperacion_pct": 30.05,
+   "recuperacion_sobre_incurrido": 0.2359,
+   "por_anio": {
+    "2020": 0.2176,
+    "2021": 0.2372,
+    "2022": 0.2267,
+    "2023": 0.2383,
+    "2024": 0.2435
+   }
+  },
+  "motor/theft": {
+   "cerrados": 5914,
+   "con_recuperacion_pct": 13.17,
+   "recuperacion_sobre_incurrido": 0.0401,
+   "por_anio": {
+    "2020": 0.0421,
+    "2021": 0.035,
+    "2022": 0.045,
+    "2023": 0.0368,
+    "2024": 0.0445
+   }
+  }
+ },
+ "peligros_sin_ninguna_recuperacion": [
+  "buildings/accidental_damage",
+  "buildings/escape_of_water",
+  "buildings/fire",
+  "buildings/flood",
+  "buildings/storm",
+  "buildings/subsidence",
+  "contents/accidental_damage",
+  "contents/escape_of_water",
+  "contents/flood",
+  "contents/theft",
+  "motor/bodily_injury",
+  "motor/glass_hail",
+  "motor/third_party_prop"
+ ],
+ "sensibilidad_recuperaciones_futuras": {
+  "hipotesis": "la reserva de caso no anticipa recuperaciones y los abiertos las recibirían al cerrar en la proporción de los cerrados de su peligro",
+  "alternativa": "la reserva de caso ya es neta de recuperaciones esperadas; entonces no hay nada que corregir",
+  "identificable_con_esta_valoracion": false,
+  "por_peligro": {
+   "motor/own_damage": {
+    "abiertos": 1992,
+    "incurrido_abiertos_CU": 5486278.72,
+    "incurrido_abiertos_por_anio_CU": {
+     "2023": 38014.67,
+     "2024": 5448264.05
+    },
+    "recuperacion_hipotetica_CU": 1294298.9
+   },
+   "motor/theft": {
+    "abiertos": 244,
+    "incurrido_abiertos_CU": 1829072.52,
+    "incurrido_abiertos_por_anio_CU": {
+     "2022": 30758.13,
+     "2023": 4717.25,
+     "2024": 1793597.14
+    },
+    "recuperacion_hipotetica_CU": 73399.22
+   }
+  },
+  "total_hipotetico_CU": 1367698.12,
+  "uso": "solo diagnóstico para fijar materialidad; no se aplica a T0, a S30 ni a S22"
+ }
+}

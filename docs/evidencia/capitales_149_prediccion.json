@@ -1,0 +1,26 @@
+{
+ "utc": "2026-10-19T23:21:21+00:00",
+ "alcance": "Peso en la predicción final de 2025 de los periodos de test cuyos capitales se ajustaron sin confirmación histórica (149 casos, 123 en test). Solo agregados; no cambia capitales, predicciones ni el modelo.",
+ "metodo": "Cruce por row_id entre la hoja privada de los 149 capitales y el CSV entregado; suma de prediction de las filas de test.",
+ "entradas": {
+  "privado/subsanacion_20261019/capitales_149_revision.csv": "6177f7bb5a8fd4f4f39bf21749e2799d20696635cae57844e72f70b9edc56d8b",
+  "privado/predicciones/S30.csv": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5"
+ },
+ "casos": 149,
+ "en_test": 123,
+ "encontrados_en_csv": 123,
+ "prediccion_CU": 24667.97,
+ "total_csv_CU": 211962091.19,
+ "por_ramo": {
+  "buildings": {
+   "periodos": 77,
+   "prediccion_CU": 21923.23
+  },
+  "contents": {
+   "periodos": 46,
+   "prediccion_CU": 2744.74
+  }
+ },
+ "autor": "Claude, a petición del participante, para sustentar la cifra del informe final",
+ "proporcion_del_total": 0.00011638
+}

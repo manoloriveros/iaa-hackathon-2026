@@ -1,0 +1,571 @@
+{
+  "autor": "Codex",
+  "utc": "2026-10-19T22:03:12.774527+00:00",
+  "encargo": "Ayudar a subsanar los15pendientes; participante confirma continuar con archivos actuales.",
+  "restricciones": [
+    "sin reentrenar",
+    "sin inferencia/mezcla/replay nuevo",
+    "sin Kaggle",
+    "sin contacto terceros",
+    "sin delegación",
+    "sin alterar historia o aprobaciones ajenas"
+  ],
+  "revisor_designado": {
+    "nombre": "Manuel Ignacio Rodríguez",
+    "profesion_declarada": "Actuario",
+    "experiencia_declarada_anios": 13,
+    "experiencia_declarada_area": "actuaría y supervisión",
+    "otro_entorno_declarado": true,
+    "fuente": "Respuesta directa del participante en este chat; competencia/independencia no certificadas por IA.",
+    "revision_realizada": false,
+    "independencia_acreditada": false
+  },
+  "items": [
+    {
+      "id": "DATA-001",
+      "severidad": "alta",
+      "pendiente": "Disponibilidad prospectiva sin acreditar en canales F3 y clima anual",
+      "estado_fuente_conservado": "abierto",
+      "estado_saneamiento": "abierto_con_expediente_preparado",
+      "trabajo_realizado": "Ficha temporal preparada por columna candidata; evidencia de acceso permanece vacía.",
+      "falta_para_cierre": "Documentos fechados o aceptación humana de alcance concurso, sin certificar cotización.",
+      "criterio_original": "Revisor competente confirma por columna fecha de medición, corte de acceso y uso previsto, o limita formalmente el caso al escenario con datos suministrados y verifica una alternativa de cotización con canales disponibles.",
+      "fuente_original": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/datos/hallazgos.json",
+      "aceptacion_humana": null,
+      "cierre_tecnico_global": false
+    },
+    {
+      "id": "DATA-002",
+      "severidad": "alta",
+      "pendiente": "Una sola valoración y ausencia de último observado limitan el backtest",
+      "estado_fuente_conservado": "abierto",
+      "estado_saneamiento": "sin_evidencia_posterior_en_archivos_actuales",
+      "trabajo_realizado": "Protocolo para valoración/cohorte nueva preparado; se conserva límite de una valoración.",
+      "falta_para_cierre": "Datos posteriores de los mismos siniestros o juicio de alcance, sin fingir validación posterior.",
+      "criterio_original": "Conservar explícito el límite en cada entrega; revisor actuarial acepta el alcance y las sensibilidades o se obtiene una nueva valoración/cohorte prospectiva no consultada y se congela el diseño antes de evaluarla. Ningún nuevo reparto de etiquetas 2024 elimina su reutilización.",
+      "fuente_original": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/datos/hallazgos.json",
+      "aceptacion_humana": null,
+      "cierre_tecnico_global": false
+    },
+    {
+      "id": "DATA-003",
+      "severidad": "media",
+      "pendiente": "Transformación de capitales F0 conserva casos sin confirmación histórica",
+      "estado_fuente_conservado": "abierto",
+      "estado_saneamiento": "abierto_con_expediente_preparado",
+      "trabajo_realizado": "149 fichas extraídas a hoja privada con valores antes/después de F0; 123test.",
+      "falta_para_cierre": "Confirmación económica por caso y sensibilidad pertinente; no sustituida por suma predicha pequeña.",
+      "criterio_original": "Revisor de datos y actuario documentan unidad/capital para la cohorte pendiente o aceptan formalmente su tratamiento con sensibilidad por ramo y trazabilidad hasta el valor original.",
+      "fuente_original": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/datos/hallazgos.json",
+      "aceptacion_humana": null,
+      "cierre_tecnico_global": false
+    },
+    {
+      "id": "DATA-005",
+      "severidad": "alta",
+      "pendiente": "Historia Jan1 y clima de año anterior contienen información posterior al corte de cotización reconstruido",
+      "estado_fuente_conservado": "abierto",
+      "estado_saneamiento": "abierto_con_expediente_preparado",
+      "trabajo_realizado": "Se delimita D75/C04/C14 histórico; herramienta de expedientes rechaza fechas futuras/desconocidas.",
+      "falta_para_cierre": "Fecha real de cotización, evidencia de fuente y corrección de la rama afectada si se autoriza; no extrapolar recuentos a S30.",
+      "criterio_original": "Identificar el momento operativo real con evidencia fuente, establecer por campo el corte permitido y, si se autoriza corregir, verificar el flujo afectado con report_date anterior al corte y clima cerrado/publicado antes del acceso; conservar comparadores y revisión humana. Un uso suministrado condicionado puede ser aceptado formalmente, pero no certifica cotización prospectiva ni borra este desfase.",
+      "fuente_original": "Hackaton/Semana 1/Validacion_enjambre/runs/20261018T164615Z_periodica/datos/hallazgos.json",
+      "aceptacion_humana": null,
+      "cierre_tecnico_global": false
+    },
+    {
+      "id": "MOD-001",
+      "severidad": "alta",
+      "pendiente": "Seleccion sobre V23/V24 reutilizados",
+      "estado_fuente_conservado": "abierto",
+      "estado_saneamiento": "abierto_con_expediente_preparado",
+      "trabajo_realizado": "Interpretación limitada a desarrollo reutilizado; protocolo de cohorte futura congelado ahora.",
+      "falta_para_cierre": "Evidencia nueva no consultada; nunca una partición nueva de2024 como independencia.",
+      "criterio_original": "Evidencia futura nueva con receta congelada antes de observarla, o afirmacion limitada expresamente al desarrollo reutilizado.",
+      "fuente_original": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/modelos/hallazgos.json",
+      "aceptacion_humana": null,
+      "cierre_tecnico_global": false
+    },
+    {
+      "id": "MOD-002",
+      "severidad": "alta",
+      "pendiente": "Ultimo real y suficiencia de reservas no identificados",
+      "estado_fuente_conservado": "abierto",
+      "estado_saneamiento": "sin_evidencia_posterior_en_archivos_actuales",
+      "trabajo_realizado": "Se mantiene no identificable; protocolo separa reserva, recuperación, maduración e IBNR.",
+      "falta_para_cierre": "Desarrollo posterior adecuado y juicio actuarial; con estos archivos no se demuestra insesgadez/suficiencia.",
+      "criterio_original": "Juicio actuarial real respaldado por desarrollo/instantaneas adecuados o limitacion explicita al escenario suministrado; conservar aplicacion unica de nivel ultimo.",
+      "fuente_original": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/modelos/hallazgos.json",
+      "aceptacion_humana": null,
+      "cierre_tecnico_global": false
+    },
+    {
+      "id": "MOD-003",
+      "severidad": "alta",
+      "pendiente": "Disponibilidad temporal condicional",
+      "estado_fuente_conservado": "abierto",
+      "estado_saneamiento": "abierto_con_expediente_preparado",
+      "trabajo_realizado": "Matriz de dependencias/candidatas y normalización por cartera explicitadas.",
+      "falta_para_cierre": "Disponibilidad de predictores efectivos de todos los nodos, transformaciones, etiquetas y normalización operativa.",
+      "criterio_original": "Certificar fuente/fecha material o limitar uso y contrastar escenario prospectivo si se autoriza.",
+      "fuente_original": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/modelos/hallazgos.json",
+      "aceptacion_humana": null,
+      "cierre_tecnico_global": false
+    },
+    {
+      "id": "MOD-004",
+      "severidad": "media",
+      "pendiente": "Mejora dependiente de cola y heterogeneidad",
+      "estado_fuente_conservado": "abierto",
+      "estado_saneamiento": "abierto_con_expediente_preparado",
+      "trabajo_realizado": "Intervalos, segmentos adversos e influencia existentes se enlazan, sin repetir ni escoger un ramo favorable.",
+      "falta_para_cierre": "Decisión de tolerancia humana; evidencia externa antes de afirmar robustez futura.",
+      "criterio_original": "Decision humana de tolerancia de riesgo con IC y cola expuestos; evidencia externa nueva antes de afirmar robustez futura.",
+      "fuente_original": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/modelos/hallazgos.json",
+      "aceptacion_humana": null,
+      "cierre_tecnico_global": false
+    },
+    {
+      "id": "MOD-005",
+      "severidad": "media",
+      "pendiente": "Reproduccion parcial de cadena de predicciones",
+      "estado_fuente_conservado": "abierto",
+      "estado_saneamiento": "impedimento_modelos_no_persistidos_sin_ajuste_autorizado",
+      "trabajo_realizado": "Inventario36 y carencias CLA004 incorporados; no se repite N62 ni mezcla.",
+      "falta_para_cierre": "31nodos precisan nuevo ajuste/estimación al faltar modelos; no autorizado bajo restricción vigente.",
+      "criterio_original": "Replay del calibrador y cadena exacta desde artefactos entregados, sin entrenamiento y en futura corrida autorizada; mantener separadas recepcion y reproduccion.",
+      "fuente_original": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/modelos/hallazgos.json",
+      "aceptacion_humana": null,
+      "cierre_tecnico_global": false
+    },
+    {
+      "id": "GOV-001",
+      "severidad": "alta",
+      "pendiente": "Revisión especializada humana pendiente y competencia no acreditada",
+      "estado_fuente_conservado": "abierto",
+      "estado_saneamiento": "designado_revisor_sin_revision_realizada",
+      "trabajo_realizado": "Revisor designado por participante: Manuel Ignacio Rodríguez, actuario,13años declarados.",
+      "falta_para_cierre": "Revisión real, alcance/competencia/conflictos, evidencia y firma/fecha. Designación no es revisión.",
+      "criterio_original": "Acta con identidad real, competencia pertinente acreditada por la persona, alcance, conflictos, artefactos/hash revisados, hallazgos, decisiones y firma/fecha. Independencia evaluada por separado.",
+      "fuente_original": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/gobernanza/hallazgos.json",
+      "aceptacion_humana": null,
+      "cierre_tecnico_global": false
+    },
+    {
+      "id": "GOV-002",
+      "severidad": "media",
+      "pendiente": "Vinculación de prompts reales a decisiones no acreditada en el registro raíz",
+      "estado_fuente_conservado": "abierto",
+      "estado_saneamiento": "trazabilidad_autentica_parcial_ampliada",
+      "trabajo_realizado": "Cuatro mensajes auténticos exportados selectivamente y vinculados por SHA a artefactos.",
+      "falta_para_cierre": "Conversaciones auténticas de selección/calibración Claude A/B y decisiones pendientes; mapa es parcial.",
+      "criterio_original": "Mapa verificable decisión→conversación→artefactos/hash para el candidato, con brechas explícitas y sin secretos. Las pruebas con fixtures se rotulan sintéticas.",
+      "fuente_original": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/gobernanza/hallazgos.json",
+      "aceptacion_humana": null,
+      "cierre_tecnico_global": false
+    },
+    {
+      "id": "GOV-003",
+      "severidad": "media",
+      "pendiente": "Reproducción por otra persona y otra plataforma no acreditada",
+      "estado_fuente_conservado": "abierto",
+      "estado_saneamiento": "abierto_con_expediente_preparado",
+      "trabajo_realizado": "Preflight seguro para el otro entorno y hoja de recibo preparados.",
+      "falta_para_cierre": "Ejecución real por otra persona, entorno documentado, autoría y recorrido completo; preflight no es reproducción.",
+      "criterio_original": "Recibo de reconstrucción en entorno nuevo con versiones/runtimes completos, entradas/salidas verificadas, tolerancias justificadas y autor real; declarar partes históricas no repetibles.",
+      "fuente_original": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/gobernanza/hallazgos.json",
+      "aceptacion_humana": null,
+      "cierre_tecnico_global": false
+    },
+    {
+      "id": "GOV-004",
+      "severidad": "media",
+      "pendiente": "La suite segura cubre contratos y trazabilidad; cobertura final del modelo sigue parcial",
+      "estado_fuente_conservado": "abierto",
+      "estado_saneamiento": "abierto_con_expediente_preparado",
+      "trabajo_realizado": "Matriz de cobertura por36nodos y pruebas nuevas del verificador temporal.",
+      "falta_para_cierre": "Inferencia y fronteras del modelo final, modelos/codificadores ausentes y revisión de cobertura;45guardas no bastan.",
+      "criterio_original": "Matriz de cobertura del candidato exacto con hashes de receta/modelos/salidas, casos límite e inferencia reproducida sin ajuste; pendientes de fitting explícitos y revisión humana.",
+      "fuente_original": "Hackaton/Semana 1/Validacion_enjambre/runs/inicial_20261018/gobernanza/hallazgos.json",
+      "aceptacion_humana": null,
+      "cierre_tecnico_global": false
+    },
+    {
+      "id": "GOV-006",
+      "severidad": "media",
+      "pendiente": "Cronología interna de CLB004 y adenda D88 pendiente de aclaración",
+      "estado_fuente_conservado": "abierto",
+      "estado_saneamiento": "aclaracion_solicitada_autor",
+      "trabajo_realizado": "Cronología original conservada; se solicita aclaración al autor con hora/huso/evento.",
+      "falta_para_cierre": "Respuesta fechada de ClaudeB o declaración explícita de hora desconocida; no arreglar mtime ni retrofechar.",
+      "criterio_original": "Aclaración fechada yatribuida que identifique hora/huso/evento, preserve original yvincule snapshots/hashes. Si queda desconocido, limitar la afirmación temporal; no reconstruir retroactivamente una preinscripción.",
+      "fuente_original": "Hackaton/Semana 1/Validacion_enjambre/runs/20261019T022424Z_seguimiento_ajustes/gobernanza/hallazgos.json",
+      "aceptacion_humana": null,
+      "cierre_tecnico_global": false
+    },
+    {
+      "id": "GOV-007",
+      "severidad": "alta",
+      "pendiente": "Controles del paquete permiten éxito y reanudación con incumplimientos",
+      "estado_fuente_conservado": "abierto",
+      "estado_saneamiento": "cerrado_alcance_correccion_tecnica_1_2",
+      "trabajo_realizado": "Paquete1.2 y recibos históricos enlazados para decisión específica del revisor.",
+      "falta_para_cierre": "Decisión específica recibida; no se extiende a los otros14hallazgos o a la cadena completa.",
+      "criterio_original": "Versión aplicada identificada por hash, validación del control positivo, rechazo de todos los adversos, verificación antes de omitir, error ante faltantes/diferencias exigidas y destinos de decisiones alterados, más recibo/decisión humana fechados. Contratos de bytes/contenido explícitos.",
+      "fuente_original": "Hackaton/Semana 1/Validacion_enjambre/runs/20261019T120208Z_integral/gobernanza/hallazgos_UTF8.json",
+      "aceptacion_humana": {
+        "decision": "aceptar_correccion_tecnica_1_2",
+        "fecha": "2026-10-19T22:12:00.740Z",
+        "registro": "registro/decision_GOV007_20261019.json"
+      },
+      "cierre_tecnico_global": false,
+      "alcance_cierre": "Solo corrección técnica1.2, no cierre técnico global de modelos o aprobación general."
+    }
+  ],
+  "fuentes_congeladas": [
+    {
+      "ruta_base_workspace": "Hackaton/Repositorio_IAA2026/registro/panel_datos.json",
+      "sha256": "274a5139df4de16a4a43d0c704db9f9a2023bfb4c21622b4874a7dbb66dbb12d",
+      "bytes": 876686
+    },
+    {
+      "ruta_base_workspace": "Hackaton/Repositorio_IAA2026/registro/revision_participante_20261019.json",
+      "sha256": "0387f7a0de7d8ae4686ab599b652258674e2b0efe6a02a927435b74ef9f29f11",
+      "bytes": 11153
+    },
+    {
+      "ruta_base_workspace": "Hackaton/Repositorio_IAA2026/registro/revision_participante_20261019_estatica.json",
+      "sha256": "6054b2aa2257d4a48dab1e5552b1ace0391106e4ec8405681f18b0cf07e759ca",
+      "bytes": 8378
+    },
+    {
+      "ruta_base_workspace": "Hackaton/Repositorio_IAA2026/registro/coordinacion_reproduccion_reservas.json",
+      "sha256": "5f5b90e6a35ac6a30c519b96365277a514420e43e99f4658829b9283f1467f82",
+      "bytes": 82322
+    },
+    {
+      "ruta_base_workspace": "Hackaton/Repositorio_IAA2026/registro/CLA-20261019-004_inventario_nodos.json",
+      "sha256": "9bdae88eacaa78650e08b08c0478774b58855d70706bf967073b472698a5439f",
+      "bytes": 125859
+    },
+    {
+      "ruta_base_workspace": "Hackaton/Repositorio_IAA2026/registro/CLA-20261019-004_hechos_reservas.json",
+      "sha256": "1f80e663fe52a649429986d8074a4011a8e6f6dd6299b05513a265bf56812ebc",
+      "bytes": 5191
+    },
+    {
+      "ruta_base_workspace": "Hackaton/Repositorio_IAA2026/receta/receta.json",
+      "sha256": "2f8cb8325b2b4183aaed53aa42bec3cea65319a68edb521351815aeb1dafa1a3",
+      "bytes": 38691
+    },
+    {
+      "ruta_base_workspace": "Hackaton/Repositorio_IAA2026/receta/codigo.json",
+      "sha256": "ed849f76523752181525543e4ba2262638d17c262050640f9f827ce55af29196",
+      "bytes": 12291
+    },
+    {
+      "ruta_base_workspace": "Hackaton/Repositorio_IAA2026/registro/revision_humana.json",
+      "sha256": "76d56a4cf5fef59dfd02d536f9635093173129f4452d16f439c720e00eea55b2",
+      "bytes": 345
+    },
+    {
+      "ruta_base_workspace": "Hackaton/Repositorio_IAA2026/docs/INFORME_SEMANA1.md",
+      "sha256": "aa8b144ff43b8c3d1552403198fea16f44981a9e9b83aa4aa28e5798787d7d78",
+      "bytes": 9661
+    },
+    {
+      "ruta_base_workspace": "Hackaton/Repositorio_IAA2026/docs/informe_semana1.pdf",
+      "sha256": "6acddde8f2cbfa5ed33db7d779f85f23fe5444b9c45b4818c1950a562083dd49",
+      "bytes": 12002
+    },
+    {
+      "ruta_base_workspace": "Hackaton/Repositorio_IAA2026/registro/verificacion_pdf.json",
+      "sha256": "1decc3687dd71752a77d65c2073c658ea521631e83b6e387391a6489ee3aca2d",
+      "bytes": 700
+    },
+    {
+      "ruta_base_workspace": "Hackaton/Repositorio_IAA2026/README.md",
+      "sha256": "790feedb9058fd547ed46d67ecbe08d1a012985281935416f04c8aff30abedd2",
+      "bytes": 16342
+    },
+    {
+      "ruta_base_workspace": "Hackaton/Repositorio_IAA2026/requirements.txt",
+      "sha256": "1b956eddded600b707d2f583e41d7f97415ef8b55bf0d5cb9149ac2ab9eae4ba",
+      "bytes": 429
+    },
+    {
+      "ruta_base_workspace": "Hackaton/Semana 1/Validacion_enjambre/runs/20261018T164615Z_periodica/datos/hallazgos.json",
+      "sha256": "887dea91dd97b1c6f6ce41b1b181acffe4f5f18f78c7925143fbeb8fc86e9ec1",
+      "bytes": 11798
+    },
+    {
+      "ruta_base_workspace": "Hackaton/Semana 1/Validacion_enjambre/runs/20261019T184915Z_cambios/HALLAZGOS_PENDIENTES.md",
+      "sha256": "32a301ff39e8b462cb103f4490a4b1f3f33ac7913793a403c6a7ebd944e9f8ed",
+      "bytes": 4680
+    },
+    {
+      "ruta_base_workspace": "Hackaton/Semana 1/Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca/contrato_disponibilidad.json",
+      "sha256": "7e00fb2bb9efba56837ca3e6b04c016ae3ca1a8321ed6d7786eba11c6e2c541d",
+      "bytes": 54543
+    }
+  ],
+  "actividad": {
+    "entrenamientos": 0,
+    "inferencias": 0,
+    "mezclas": 0,
+    "replays": 0,
+    "N62": 0,
+    "Kaggle": 0
+  },
+  "mapa_prompts": "registro/mapa_prompts_20261019.json",
+  "capitales": "registro/capitales_revision_20261019.json",
+  "temporal": "registro/disponibilidad_temporal_20261019.json",
+  "cobertura": "registro/cobertura_candidato_20261019.json",
+  "protocolo_futuro": "registro/protocolo_evidencia_nueva_20261019.json",
+  "conclusiones_humanas": null,
+  "actualizado_utc": "2026-10-20T00:06:44.713851+00:00",
+  "estado": "GOV007_cerrado_alcance_tecnico_catorce_pendientes",
+  "comprobaciones_nuevas": {
+    "metadatos_temporales": {
+      "casos": 18,
+      "nominales": 2,
+      "adversos": 16,
+      "archivo": "privado/subsanacion_20261019/pruebas_apoyos.json"
+    },
+    "expediente_no_acreditado": {
+      "campos_candidatos": 276,
+      "exit_code": 1,
+      "interpretacion": "rechazo esperado; no cotizaciones reales comprobadas"
+    },
+    "preflight_local": {
+      "archivos": 51,
+      "sha_coinciden": true,
+      "autor": "Codex",
+      "otro_entorno_o_Manuel": false,
+      "archivo": "privado/subsanacion_20261019/preflight_local.json"
+    },
+    "capitales": {
+      "filas_extraidas": 149,
+      "test": 123,
+      "valores_modificados": false
+    },
+    "prompts": {
+      "autenticos_selectivos": 4,
+      "mapa_completo": false
+    },
+    "pdf": {
+      "paginas": 4,
+      "inspeccion_visual": true
+    }
+  },
+  "fuentes_apoyos": [
+    {
+      "ruta": "herramientas/validar_disponibilidad.py",
+      "sha256": "cfeea424044edfe53b8964a5236b42b50a9edce2db26262a20a669614a7b4fd4"
+    },
+    {
+      "ruta": "herramientas/verificar_traspaso.py",
+      "sha256": "98855c0b401c78291413a4ea5d55d7b412759ca1a1d46456b7e9a0fb358c5025"
+    },
+    {
+      "ruta": "registro/mapa_prompts_20261019.json",
+      "sha256": "9daa323499332a7f03114f611dc09ee75917c867ed7bf5a6675c23a481f92a76"
+    },
+    {
+      "ruta": "registro/capitales_revision_20261019.json",
+      "sha256": "a4fd03123b05bcdf05b4d33140f4d2e57d32a093caf7bb7d3572eb557061019c"
+    },
+    {
+      "ruta": "registro/cobertura_candidato_20261019.json",
+      "sha256": "6f62d2fdc5044ac774231d6574cf163d9db4c2bcce594ef597131ab0a458aa0c"
+    },
+    {
+      "ruta": "docs/SUBSANACION_PENDIENTES.md",
+      "sha256": "2f02c82bc6aba5af462f964e10256cb8634dec872d511c65751439e37f7f3c01"
+    }
+  ],
+  "correcciones_documentales": [
+    {
+      "archivo": "README.md",
+      "antes_sha256": "790feedb9058fd547ed46d67ecbe08d1a012985281935416f04c8aff30abedd2",
+      "despues_sha256": "5d15fd61b5f1c12b23b9abea62dcd3a096f98c544e002748349980756b26f190",
+      "alcance": "Aclaración documental; ningún dato/peso/modelo alterado"
+    },
+    {
+      "archivo": "requirements.txt",
+      "antes_sha256": "1b956eddded600b707d2f583e41d7f97415ef8b55bf0d5cb9149ac2ab9eae4ba",
+      "despues_sha256": "1a35614fdcb4077498ad1682f1d2689174d3d42e701e82f495196d6cab312813",
+      "alcance": "Aclaración documental; ningún dato/peso/modelo alterado"
+    },
+    {
+      "archivo": "docs/INFORME_SEMANA1.md",
+      "antes_sha256": "aa8b144ff43b8c3d1552403198fea16f44981a9e9b83aa4aa28e5798787d7d78",
+      "despues_sha256": "1aa6bc61690398f9b2cf6992bd76633d3097adf3a8f1f4355bf5a7ef90b3cb01",
+      "alcance": "Aclaración documental; ningún dato/peso/modelo alterado"
+    }
+  ],
+  "foro": {
+    "aporte": "COD-20261019-115",
+    "utc": "2026-10-19T22:08:50+00:00",
+    "respuesta": null
+  },
+  "acta": "registro/acta_subsanacion_20261019.json",
+  "pendientes_globales_abiertos": 14,
+  "cerrados_por_decision_humana": [
+    "GOV-007"
+  ],
+  "decision_GOV007": "registro/decision_GOV007_20261019.json",
+  "foro_actualizacion_GOV007": {
+    "aporte": "COD-20261019-116",
+    "utc": "2026-10-19T22:16:28+00:00",
+    "recibo": "registro/COD-20261019-116_recibo.json",
+    "respuesta_Claude_posterior": null
+  },
+  "fuentes_decision_actual": [
+    {
+      "ruta": "registro/decision_GOV007_20261019.json",
+      "sha256": "678a4e7d5d79bd83e9d5544b467771d9207e438499be9bd4d2e960b20ec5150f"
+    },
+    {
+      "ruta": "registro/acta_subsanacion_20261019.json",
+      "sha256": "a3344e1c1612aee3ff3e8889b754fd06f1130224ca00a18e20db9f6b6485d95e"
+    },
+    {
+      "ruta": "registro/revision_humana.json",
+      "sha256": "10faacb11523c39fefa854593a7d774eb417aa6067c79d788dbb21c669d6366f"
+    },
+    {
+      "ruta": "registro/COD-20261019-116_cuerpo.md",
+      "sha256": "e2b93116b44bdfacbb55e298551cb2a80bb42c44a6a37f3a50453ec257596352"
+    },
+    {
+      "ruta": "registro/COD-20261019-116_recibo.json",
+      "sha256": "596e401daa67604b23fcba068c02569064da73eaa49c83251bf6db1144a8c0f0"
+    },
+    {
+      "ruta": "docs/SUBSANACION_PENDIENTES.md",
+      "sha256": "ef45671eb43f0d51df37e952b52a07ab6c0a995ab9800b9e317001b3e67953da"
+    }
+  ],
+  "seguimiento_nuevo_CLA005": {
+    "utc": "2026-10-19T23:04:33.686752+00:00",
+    "aporte": "CLA-20261019-005",
+    "revision": "registro/CLA-20261019-005_revision_codex.json",
+    "capa_nueva_claves_incompletas": true,
+    "pruebas_sinteticas": 2,
+    "recibos_remotos_no_disponibles_localmente": true,
+    "materialidad_1porciento": "Referida por Claude para su encargo, no adoptada como incertidumbre o autorización aquí.",
+    "estado": "evidencia_recibida_con_brechas_pendientes",
+    "respuesta_propia": {
+      "id": "COD-20261019-117",
+      "utc": "2026-10-19T23:04:33+00:00",
+      "recibo": "registro/COD-20261019-117_recibo.json"
+    }
+  },
+  "seguimiento_nuevo_CLA006": {
+    "utc": "2026-10-19T23:20:45.697603+00:00",
+    "aporte": "CLA-20261019-006",
+    "revision": "registro/CLA-20261019-006_revision_codex.json",
+    "cifras102": "Recibidas, no recalculadas",
+    "paquetes_nuevos_comprobados": 7,
+    "miembros": 52,
+    "archivos_estimador": 13,
+    "interpretacion": "Integridad parcial, no replay o equivalencia",
+    "respuesta_propia": {
+      "id": "COD-20261019-118",
+      "utc": "2026-10-19T23:20:45+00:00",
+      "recibo": "registro/COD-20261019-118_recibo.json"
+    }
+  },
+  "seguimiento_CLA007": {
+    "utc": "2026-10-19T23:48:24.400740+00:00",
+    "aporte": "CLA-20261019-007",
+    "auditoria_recibida": "COD-IA-20261019T232535Z",
+    "revision": "registro/CLA-20261019-007_revision_codex.json",
+    "precisiones_de_entregables": "Pendientes de respuesta del autor; sin editar sus fuentes.",
+    "recibo_documental": "15pases/1fallo;11destinos actuales existen; no verificador nuevo",
+    "respuesta_propia": {
+      "id": "COD-20261019-119",
+      "utc": "2026-10-19T23:48:24+00:00",
+      "recibo": "registro/COD-20261019-119_recibo.json"
+    }
+  },
+  "seguimiento_CLA008": {
+    "utc": "2026-10-20T00:06:44.713851+00:00",
+    "aporte": "CLA-20261019-008",
+    "revision": "registro/CLA-20261019-008_revision_codex.json",
+    "captura_sha256": "c1cfdedd7dc670939e7fcf61f767799352ea1782724102023e68cea8fb3b5fcc",
+    "lanzador_sha256": "d934af4292b3e2e5ed2917408835b002b551e0fdd82969100afec5a1e32111e3",
+    "casos_AST": 8,
+    "conformes": 7,
+    "pendiente": "Pool preexistente sin huella",
+    "correcciones_acotadas": "DataFrame y Pool nuevo distinguen valores/categorías/pesos; cfg distinto rechazado.",
+    "reservas": "S1/S3 recibidos y condicionados; no suficiencia demostrada",
+    "respuesta_propia": {
+      "id": "COD-20261019-120",
+      "utc": "2026-10-20T00:06:44+00:00",
+      "recibo": "registro/COD-20261019-120_recibo.json"
+    }
+  },
+  "correccion_pool_previo_20261019": {
+    "utc": "2026-10-20T00:15:43.119818+00:00",
+    "autor": "Codex",
+    "hallazgo": "CLA008-CAP03",
+    "estado": "corregido_comprobado_14casos_sinteticos",
+    "version_captura": "1.1.1",
+    "captura_sha256": "07776e60e5f266a4f7c547ce92bcf7b3394a64a12d6a22a2db8060f141da31a0",
+    "registro": "registro/correccion_pool_previo_20261019.json",
+    "evidencia": "privado/trazabilidad/correccion_pool_previo_20261019",
+    "rechazos_antes_busqueda_carga": 10,
+    "controles_busqueda_simulada": 4,
+    "ajustes": 0,
+    "inferencias": 0,
+    "modelos_cargados": 0,
+    "Kaggle": 0,
+    "respuesta_propia": {
+      "author": "Codex",
+      "id": "COD-20261019-121",
+      "utc": "2026-10-20T00:14:55+00:00",
+      "previous_sha256": "5c18528828c0cdff34d6a9ca3dd7c35cceba6957af6ce566a089327cfb20c9be",
+      "sha256": "c474971e2e0542c4624c7a14d43f77c7acb90a066f038b263f2489047bdc9403"
+    },
+    "respuesta_Claude": "No se ha recibido una respuesta posterior a COD121; no se presume acuerdo.",
+    "limite": "Cierre acotado de la brecha; reproducción completa, reservas, independencia y revisión general pendientes. GOV007 no se amplía."
+  },
+  "kit_captura_1_1_1_20261019": {
+    "utc": "2026-10-20T00:53:12.585999+00:00",
+    "autor": "Codex",
+    "estado": "kit_local_incorporado_recibos_verificados_Claude_pendiente",
+    "registro": "registro/kit_captura_1_1_1_20261019.json",
+    "kit": "privado/kits/captura_1_1_1_20261019/codigo_incorporado",
+    "captura_version": "1.1.1",
+    "captura_sha256": "07776e60e5f266a4f7c547ce92bcf7b3394a64a12d6a22a2db8060f141da31a0",
+    "zip_sha256": "1007f1b04c9d3f0f44ffe2b6e16d9b93e5f00994651e5a8c9564428f249d14e3",
+    "archivos_incorporados": 85,
+    "recibos_reales": [
+      "privado/kits/captura_1_1_1_20261019/complemento/recibo_kit.json",
+      "privado/kits/captura_1_1_1_20261019/recibo_incorporacion_local.json"
+    ],
+    "pruebas_nuevas_metadata": {
+      "conformes": 11,
+      "total": 11,
+      "lanzador": "entorno/correr sustituidos por dobles"
+    },
+    "respuesta_propia": {
+      "author": "Codex",
+      "id": "COD-20261019-123",
+      "utc": "2026-10-20T00:52:10+00:00",
+      "previous_sha256": "b5429eff9eb2847ca22b7be87a6c82d0ee249a98737adf5b0ac7939a41e7a65e",
+      "sha256": "4f08a0428d4cc5770cbe120bdb8d13877288af554ef1ba14836af67c2217e608"
+    },
+    "adopcion_externa_Claude": "pendiente de respuesta auténtica y recibo localizable",
+    "actividad": {
+      "ajustes": 0,
+      "inferencias": 0,
+      "modelos_cargados": 0,
+      "replays": 0,
+      "Kaggle": 0
+    },
+    "limites": "No reproducción completa, independencia o suficiencia de reservas; GOV007 no se amplía."
+  }
+}

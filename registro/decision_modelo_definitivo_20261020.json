@@ -1,0 +1,62 @@
+{
+ "id": "decision_modelo_definitivo_20261020",
+ "decision_id": "D99",
+ "emisor": "Participante en la sesión de Claude (Cowork, sesión de entregables)",
+ "revisor_designado_por_participante": "Manuel Ignacio Rodríguez",
+ "mensaje_registrado_utc": "2026-10-20T15:36:03.672Z",
+ "registrado_utc": "2026-10-20T16:03:17+00:00",
+ "contexto": "El mensaje llegó mientras Claude incorporaba a los entregables, a pedido del participante, los experimentos de validación («incluye en estos documentos de forma breve los experimentos y backtesting que corrimos como validaciones»), después de D97 y D98.",
+ "mensaje_completo": "Tambien registra como decisión que nos quedamos con el modelo S30 como definitivos. dejalo claro tambien en el foro y agreguemosle un nombre que no sea S30",
+ "fuente_autentica": {
+  "tipo": "mensaje directo del participante en la sesión de Claude (Cowork, sesión de entregables), registro queue-operation remove (absorbed_mid_turn)",
+  "fecha_utc": "2026-10-20T15:36:03.672Z",
+  "sesion": "f1ce8240-0ad1-5bf2-8abb-728836214b4b",
+  "command_uuid": "2c16d533-4ebd-486d-86fb-cec73a809969",
+  "sha256_evento": "591f7d313fd5bec5d2d461f84f2f129cc2274e7a4b8e5d363beb812e95673099",
+  "archivo_privado": "privado/decision_modelo_definitivo_20261020/mensaje_original.jsonl",
+  "nota": "El archivo privado es la línea completa del evento de cola, idéntica en bytes a la del registro de la sesión; su SHA-256 sin el salto de línea final es sha256_evento. La fecha es la de incorporación del mensaje al turno en curso; el envío pudo ser unos segundos anterior."
+ },
+ "preguntas_presentadas": [
+  {
+   "tema": "Nombre del modelo",
+   "respuesta_elegida": "Mezcla por peligro (Recomendado)",
+   "alcance": "Nombre del modelo en los entregables; en inglés, «Per-peril blend»."
+  },
+  {
+   "tema": "Alcance de la decisión",
+   "respuesta_elegida": "Cerrar la parte 1 (Recomendado)",
+   "alcance": "S30 es el modelo definitivo de la parte 1; no se preparan más candidatos ni envíos de la parte 1; S22 queda solo como registro histórico."
+  }
+ ],
+ "fuente_respuestas": "Selección del participante en las preguntas con opciones de la misma sesión, después del mensaje. El historial de la sesión se compactó y el evento en bruto de esas respuestas no se conserva; se registran las etiquetas elegidas y el alcance que Claude les dio al presentarlas.",
+ "decision": {
+  "modelo": "S30",
+  "nombre": {
+   "es": "Mezcla por peligro",
+   "en": "Per-peril blend"
+  },
+  "identificador_tecnico": "S30 (S30_claude_b), que se mantiene en el código, las órdenes, los recibos, las huellas y el registro de envíos",
+  "archivo": "Hackaton/Semana 1/Envios/archivos/S30_claude_b.csv",
+  "sha256_csv": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+  "filas": 626639,
+  "envio_kaggle": 57371361,
+  "publico": 0.12996,
+  "parte1_cerrada": true,
+  "efecto": "No se preparan más candidatos ni envíos de la parte 1 y no cambian receta, pesos ni predicciones. Queda cerrada la excepción de D89, que admitía otro intento por un error en S30 o por un candidato que superara el ruido del público.",
+  "s22": "Deja de ser el respaldo de D89 y se conserva como registro histórico (Envios/archivos/S22_claude_propio.csv, SHA-256 c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0, envío 57370117)."
+ },
+ "motivo_respaldo": "D89 dejó S22 de respaldo por si la receta de S30 no podía reconstruirse o tenía un error. D97 reconstruyó S30 desde los once originales con el SHA entregado, y la batería de D95 no encontró errores en el archivo, aunque sí que su ventaja sobre S22 no es robusta.",
+ "seleccion_final_manual_kaggle": "pendiente_no_realizada",
+ "seleccion_kaggle_nota": "Las reglas permiten elegir una predicción final por parte y, si no se elige ninguna, usan la de mejor público, que hoy es S30 (D89). Marcarla de forma explícita antes del cierre (23 de octubre de 2026, 16:00 UTC, 11:00 de Bogotá) sigue a cargo del participante, o de Codex con su autorización expresa; Claude no entra en Kaggle.",
+ "no_acredita": [
+  "revisión actuarial general ni revisión independiente",
+  "cierre de hallazgos del enjambre (al registrar: 12 abiertos y 2 limitaciones aceptadas)",
+  "la selección final manual en Kaggle",
+  "que la ventaja de S30 sobre S22 sea robusta (D95)"
+ ],
+ "aplicacion": {
+  "entregables": "docs/entrega/ (informe EN/ES, panel, láminas, guion y guías de IA) y README: el modelo se presenta como «Per-peril blend» o «Mezcla por peligro», confirmado como definitivo el 20 de octubre, y S30 aparece solo como identificador técnico.",
+  "foro": "CLA-20261020-004",
+  "registro_decisiones": "Preparación/DECISIONES.md, D99"
+ }
+}

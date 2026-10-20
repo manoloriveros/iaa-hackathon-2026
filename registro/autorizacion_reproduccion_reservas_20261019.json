@@ -1,0 +1,49 @@
+{
+  "id": "AUT-20261019-CLA005",
+  "estado": "autorizacion_recibida_sin_resultados",
+  "emisor": "Participante (Manuel Rodríguez), respuesta directa en la sesión de Claude (Cowork, línea principal)",
+  "contexto": "El participante escribió: «Con los archivos actuales siguen sin acreditarse la suficiencia de reservas y la reproducción completa e independiente». Claude presentó tres preguntas cerradas y el participante eligió una opción en cada una.",
+  "respuesta_recibida_antes_de_utc": "2026-10-19T22:27:08Z",
+  "registrado_utc": "2026-10-19T22:27:32.881424+00:00",
+  "preguntas": [
+    {
+      "pregunta": "Para la reproducción completa hay que volver a ajustar los 31 nodos que nunca guardaron su modelo. ¿Autorizas hacerlo en la nube de Claude, que es el mismo entorno de referencia de la receta (Ubuntu 24.04, Python 3.13.16, mismas versiones, 2 núcleos)?",
+      "opcion_elegida": "Sí, los 36 nodos (Recomendado)",
+      "texto_de_la_opcion": "Desde los once originales con la receta 1.2, unas 10,5 h según sus minutos de referencia. Guardo modelos, codificadores y coeficientes sin tocar los scripts, repito la predicción desde los modelos congelados y comparo con las 184 huellas y el SHA de S30 y S22. Dejo kit y recibo para que otro operador lo repita: la independencia no la puedo dar yo."
+    },
+    {
+      "pregunta": "Con una sola valoración ningún cálculo demuestra la suficiencia de las reservas; solo una valoración posterior o documentación del generador lo haría. ¿Qué hago en reservas?",
+      "opcion_elegida": "Acotar y medir el quiebre (Recomendado)",
+      "texto_de_la_opcion": "Pruebas de consistencia con supuestos escritos (tamaño frente a demora en los cerrados, abiertos frente a cerrados por peligro y cohorte) y, sobre predicciones guardadas, el sesgo de reserva por ramo y peligro que movería el nivel 2025 más allá del umbral o cambiaría S30 frente a S22. No acredita suficiencia: dice cuánto sesgo haría falta para que importe."
+    },
+    {
+      "pregunta": "El protocolo exige fijar la materialidad antes de ver resultados. ¿Qué umbral uso para el efecto de un sesgo de reservas sobre el nivel 2025 de cada ramo?",
+      "opcion_elegida": "1 % por ramo",
+      "texto_de_la_opcion": "Umbral estricto, del orden del ruido de nivel que ya separa V23 de V24 en autos y contenidos."
+    }
+  ],
+  "materialidad": {
+    "valor": "1 % del nivel 2025 de cada ramo (autos, edificios, contenidos)",
+    "medida": "cambio relativo del total predicho de 2025 del ramo atribuible a un sesgo de la reserva de caso, a través del factor de año siguiente y, cuando se mida, de las etiquetas de entrenamiento",
+    "fijada_antes_de_resultados_nuevos": true,
+    "declaracion_de_conocimiento_previo": "Antes de fijarla, Claude ya conocía las cifras publicadas en CLA-20261019-004: la hipótesis de recuperaciones (unos 1,37 M CU, 1,5 % del T0 de autos de 2024) y las distancias f23/f24 de S30 (0,9 %, 3,4 % y 0,7 %). Las pruebas de consistencia y los umbrales de quiebre de este encargo no se habían calculado.",
+    "no_adopta": "La mitad de la distancia f23/f24 no se usa como margen (COD-20261019-114)."
+  },
+  "alcance_autorizado": [
+    "Reentrenar en la nube de Claude los 36 nodos de receta/receta.json desde los once originales con reproducir.py 1.2 y las versiones de entorno/entorno_referencia.json",
+    "Guardar modelos, codificadores y coeficientes sin modificar los scripts de la receta",
+    "Repetir la predicción desde los modelos guardados y comparar con receta/huellas_esperadas.json y con el SHA de S30 y S22",
+    "Pruebas de consistencia de reservas sobre la valoración única y umbrales de quiebre sobre predicciones guardadas"
+  ],
+  "fuera_del_alcance": [
+    "Enviar a Kaggle o marcar la selección final",
+    "Cambiar la receta, los pesos, T0 o S30",
+    "Modificar archivos o registros de Codex",
+    "Subir datos, predicciones por fila o modelos a Git o GitHub"
+  ],
+  "no_acredita": [
+    "independencia de la reproducción (requiere otro operador)",
+    "suficiencia o insesgadez de las reservas (una sola valoración)",
+    "revisión humana o aprobación del candidato"
+  ]
+}

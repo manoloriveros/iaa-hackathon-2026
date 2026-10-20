@@ -1,3 +1,5 @@
+> Borrador de trabajo de la semana 1. El informe final de la entrega está en [docs/entrega/report_en.pdf](entrega/report_en.pdf), con copia en español en [docs/entrega/informe_es.pdf](entrega/informe_es.pdf).
+
 # Una prima de riesgo para cada periodo de póliza
 
 AI Hackathon IAA 2026 · Primera semana · Borrador para revisión del participante
@@ -8,7 +10,7 @@ Estimamos el coste esperado de los siniestros de cada periodo asegurado. El enfo
 
 El trabajo empieza por reconstruir los datos y asignar cada siniestro a la cobertura que le corresponde. Después incorpora el retraso de notificación, compara alternativas en el tiempo y verifica el archivo de entrega. La IA interviene en ese recorrido con propuestas, código y revisión crítica de los resultados.
 
-La propuesta principal obtiene una mejora pequeña frente al respaldo. Conservamos ambos candidatos porque la incertidumbre de la comparación todavía admite resultados equivalentes. La elección final y la revisión humana siguen pendientes.
+La propuesta principal obtiene una mejora pequeña frente al respaldo. Conservamos ambos candidatos porque la incertidumbre de la comparación todavía impide establecer una mejora concluyente. La elección final y la revisión humana siguen pendientes.
 
 ## Preparar los datos para que el modelo aprenda lo correcto
 
@@ -97,7 +99,7 @@ Claude desarrolló las líneas predictivas de la propuesta y el respaldo. Codex 
 | Coste último y reservas | La suficiencia de reservas sigue sin demostrarse. Hace falta información posterior para contrastarla; mientras tanto se conserva el supuesto y su incertidumbre. |
 | Disponibilidad de variables | Debe aclararse cuándo existirían el historial, la información de dispositivos y los datos de clima en una cotización real. |
 | Capitales sin confirmación | Se mantienen documentados los 149 casos tratados sin referencia histórica suficiente. Su tratamiento requiere revisión y aceptación de alcance. |
-| Reproducción completa | Los archivos finales se reproducen desde componentes guardados. Sigue pendiente recuperar la evidencia completa de la cadena de entrenamiento. |
+| Reproducción completa | Los archivos finales se reproducen desde componentes guardados. La corrida completa no se pudo recuperar y faltan modelos ajustados guardados; completar la cadena requeriría nuevos ajustes. |
 | Revisión y selección | Falta registrar la decisión del participante y confirmar el candidato final en Kaggle. |
 
 Al llegar el nuevo mercado compararemos unidades, cobertura, calidad e información disponible antes de adaptar el modelo. Conservaremos una referencia de la primera semana para explicar qué cambió y qué resultado produjo cada adaptación. La segunda parte todavía no tiene resultados en este informe.

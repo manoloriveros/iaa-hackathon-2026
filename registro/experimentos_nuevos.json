@@ -14,5 +14,76 @@
     "decision_humana",
     "artefactos_privados"
   ],
-  "experimentos": []
+  "experimentos": [
+    {
+      "run_id": "sens_20261019T212700Z_b9e7aa92",
+      "autor_real": "Claude (Cowork, linea CLA, 19-10-2026)",
+      "hipotesis_previa": "Bateria E01-E12 de sensibilidad sobre S30/S22; hipotesis y criterios por experimento fijados antes de calcular en PLAN_PREREGISTRO.md",
+      "fuentes_y_sha": {
+        "plan_sha256": "b9e7aa9281670109f12f9a939c241e36e36a9b43be5439ad140a680f88a145a8",
+        "plan": "privado/corridas/sens_20261019T212700Z_b9e7aa92/PLAN_PREREGISTRO.md",
+        "verificacion_de_insumos": "cada archivo copiado a la nube se coteja por SHA-256 contra receta/huellas_esperadas.json o el manifiesto de su corrida; manifiesto en la carpeta de la corrida",
+        "adenda_E12": "privado/corridas/sens_20261019T212700Z_b9e7aa92/ADENDA_E12_PREREGISTRO.md",
+        "adenda_E12_sha256": "7ab8fb145c17fedae194b07f781975b8a7a778c7a83c9e4ea2ca58d870075de1"
+      },
+      "configuracion": "Niveles 1-3; metrica D2 Tweedie 1,5 completa y cuerpo (sin 0,1% superior renivelado); por ramo y agregado",
+      "particiones": "V23 mitad de seleccion y V24=2024 de D68; 2025 solo totales y alcance; etiqueta T0, T1 y T0' como sensibilidad declarada",
+      "criterio_aceptacion": "Por experimento en PLAN_PREREGISTRO.md; piso de ruido 0,00003 (semillas, V24 agregado) y 0,0003 (subconjuntos publico)",
+      "entorno": "Nube de Claude (Python 3.13, requirements.txt del repositorio); la VM local solo lectura y escritura de archivos",
+      "resultados_adversos": "E01, E02 (edificios), E05 (fila), E06 (inestable entre cortes), E09 (sin meseta), E12 (criterio no cumplido) rechazan su hipotesis; E02 v1 y E03 v1 contenian errores propios (base de nivel; aproximacion con duplicados) y se conservan como SUPERADA; E11 no ejecutado (cubierto por S33 y E10).",
+      "resultado": "Empate practico S30/S22: la ventaja V24 (+0,000138) se invierte quitando 6 de 373.831 clientes (1 en V23); descomposicion V24: 62 % tendencia de severidad, 34 % efecto colateral de la regla s17, 4 % contenidos; tendencia validada solo en V24. Pesos en meseta (0/40 vecinos mejoran todo); forma sin meseta pero sin punto dominante. Nivel de edificios incierto (f23 1,059 vs f24 1,134; semidistancia 3,44 %, perdida D2 0,000150). Backtesting IBNR: falla el criterio en 6-7/15 peligros por corte; lesiones sobrestimado al cierre (+20,1 % 2022, +7,9 % 2023; -7,5 % en junio 2024); nivel autos 2025 -0,80 a -1,75 % si se repite. Recuperaciones no anticipadas: T0 autos 2024 +1,50 %; nivel autos -0,75 %. Capitales sin confirmacion: x35 a x89 por fila con capital crudo, total ramo <0,02 %, resto de filas -0,3 a -2,6 %. S08h y S12h reproducidos bit a bit con modelo guardado; inestabilidad por reentrenamiento mediana 0,5 %, p99 2,7 %. Informe docs/SENSIBILIDAD_S30_S22.md; 102 cifras verificadas.",
+      "decision_humana": "Autorizacion del participante en conversacion Cowork 19-10-2026 (~21:20 UTC): niveles 1 a 3, ejecucion en nube, proposito validar seleccion e informe; sin envios a Kaggle, sin cambio de receta, sin seleccion final manual. Adopcion de conclusiones pendiente del participante. Adenda E12 (backtesting del IBNR) por instruccion del participante, 19-10-2026 ~21:40 UTC.",
+      "artefactos_privados": {
+        "carpeta": "privado/corridas/sens_20261019T212700Z_b9e7aa92/",
+        "resultados": "privado/corridas/sens_20261019T212700Z_b9e7aa92/resultados/",
+        "historico": "privado/corridas/sens_20261019T212700Z_b9e7aa92/resultados_avance1_historico/",
+        "modelos": "privado/corridas/sens_20261019T212700Z_b9e7aa92/modelos_e10.tar.gz",
+        "paquete": "privado/corridas/sens_20261019T212700Z_b9e7aa92/resultados_final.tar.gz",
+        "paquete_sha256": "ee8b23d554818964e76e9f92974a71b075b3b666126d0a317c1d4040e1628609"
+      },
+      "utc_preregistro": "2026-10-19T21:29:49.683922+00:00",
+      "utc_adenda_e12": "2026-10-19T21:47:25.881094+00:00",
+      "informe": {
+        "ruta": "docs/SENSIBILIDAD_S30_S22.md",
+        "sha256": "60e54b4e0566b48b5078fb52278b4c64e7958178763d939d4f575a25f8565368",
+        "verificador": "privado/corridas/sens_20261019T212700Z_b9e7aa92/resultados/verificar_sensibilidad.py",
+        "cifras": 102,
+        "fallos": 0
+      },
+      "materialidad_participante": "1 % del nivel 2025 por ramo (registro/autorizacion_reproduccion_reservas_20261019.json); se informa junto a los criterios del plan",
+      "utc_cierre": "2026-10-19T23:14:03.772914+00:00"
+    },
+    {
+      "run_id": "repro_20261019T223638Z_d00a39dd",
+      "autor_real": "Claude (Cowork, línea principal, 19-10-2026)",
+      "hipotesis_previa": "La receta 1.2, ejecutada desde los once originales en el entorno de referencia (mismas versiones, 2 núcleos), reproduce por contenido los 181 artefactos verificables y por bytes los CSV de S30 y S22; guardar los estimadores no cambia ningún resultado; la predicción desde los estimadores guardados, sin ajustar, reproduce lo mismo.",
+      "fuentes_y_sha": {
+        "codigo": "privado/corridas/repro_20261019T223638Z_d00a39dd/transferencia/codigo_manifiesto.json (77 archivos, cotejados en la nube)",
+        "originales_y_decisiones": "receta/huellas_esperadas.json sección datos (once originales y tres decisiones congeladas, cotejados)",
+        "cfg_total": "receta/especificaciones/cfg_total.json aca601c652ab7caed8a6db95e15349e67e35fe341c57757861329a66a2ed643d"
+      },
+      "configuracion": "reproducir.py 1.2 sin cambios: datos y componentes con --continuar-si-difiere; capa herramientas/captura_modelos (CAPTURA_MODO=guardar) por PYTHONPATH; después reproducir_capturado.py en modo reproducir sobre una carpeta nueva",
+      "particiones": "las de la receta (V23 selección, V24, producción 2025); sin particiones nuevas",
+      "criterio_aceptacion": "Igualdad de contenido con receta/huellas_esperadas.json en cada artefacto verificado (exclusiones de la receta sin cambio) y SHA-256 exacto de los dos CSV finales; en modo reproducir, cero ajustes (ningún evento distinto de cargado) e igualdad con la corrida guardar",
+      "entorno": "Nube de Claude: Ubuntu 24.04.5, Python 3.13.16, numpy 2.5.3, pandas 3.0.5, scipy 1.18.1, scikit-learn 1.9.1, LightGBM 4.7.0, CatBoost 1.2.10, pyarrow 26.0.0, torch 2.14.1+cu130 en CPU, 2 núcleos, 8 GB",
+      "resultados_adversos": "Criterio prerregistrado no cumplido en 19 de 181 huellas: los cinco nodos frecsev2 (FSA_contents, FSAP_buildings, FSAP2_buildings, FSAP_contents, FSAP2_contents) y sus consumidores FSAXc4_contents, FSAS4_buildings, B_FSAST_buildings_tendencia y el Parquet 2025 de S22 y S30 difieren de los históricos con máximo relativo 3,9e-15; reproducir.py termina con código 3 (documentada, no acreditada). Causa demostrada en FSAP_buildings/v24_accidental_damage: LightGBM elige col-wise o row-wise cronometrando ambos; force_row_wise reproduce el histórico bit a bit y force_col_wise esta corrida; 2 de 18 elecciones automáticas col-wise en reposo. La recaptura de 12 nodos repite el fenómeno en S04b y S06c (máx. 8,0e-16). Exclusiones: CFS_motor/v24 7,7e-16 y CFS_motor_4s/v24 4,4e-16; sel_CFS_motor idéntica. Desviaciones: copia de cfg_total.json; dos reinicios del contenedor con relanzamiento y un segmento manual de CFS_motor; siete duplicados .cbm solo en metadatos; 65 estimadores de la captura 1.0 reindexados con la clave 1.1.2.",
+      "resultado": "Reajuste completo: S30 fd9528e0…3bc5 y S22 c21a02e1…41b0 iguales al entregado; 162 de 181 huellas iguales en contenido; 436 estimadores guardados (209 LightGBM, 113 CatBoost, 102 GLM, 9 redes, 3 codificadores). Réplica sin ajustes desde los originales con centinela (34 min): 436 cargas exactas, cero eventos distintos de carga, centinela en los 34 procesos con nodo, 194 de 194 salidas idénticas en contenido y bytes a la corrida principal y los dos CSV con el SHA entregado. Montaje desde los paquetes del equipo idéntico al de la nube. Independencia no acreditada: el participante decidió no hacer la reproducción por otro operador. Documento docs/REPRODUCCION_COMPLETA.md; recibo registro/recibo_reproduccion_completa_20261020.json.",
+      "decision_humana": "Autorización del participante en esta sesión: registro/autorizacion_reproduccion_reservas_20261019.json. Sin envíos a Kaggle ni cambios de receta. Decisiones del participante del 20 de octubre (15:21 UTC, registro/decisiones_participante_20261020.json): no se hará la reproducción por otro operador con el kit (independencia declarada como limitación, GOV-003); no se exige coincidencia bit a bit ni se fija el modo de LightGBM en la receta de la parte 1; GOV-008 aceptado (registro/decision_GOV008_20261020.json).",
+      "artefactos_privados": "privado/corridas/repro_20261019T223638Z_d00a39dd/: nodos/ (36 paquetes con manifiesto), reindexado/ (12 paquetes e informe), replica/, diferencias/, diagnostico_lightgbm/, pruebas_captura/, registro_corrida_principal.jsonl, resumen_corrida_principal.json y evidencia_20261020.tar.gz"
+    },
+    {
+      "run_id": "reservas_20261019T225357Z_99b45271",
+      "autor_real": "Claude (Cowork, línea principal, 19-10-2026)",
+      "hipotesis_previa": "PLAN_PREREGISTRO.md de la corrida (SHA-256 52429a4f0069cac8ca6a73712ebdb3f0a65bec2153cbb9331dfd2b38db4409d4), fijado antes de calcular",
+      "fuentes_y_sha": "resultados/datos.json de la corrida (claims preaudit, asignación y T0 de D67, IBNR de D67, predicciones V23/V24 de S30 y S22, resumen de S30)",
+      "configuracion": "herramientas/reservas_consistencia.py (SHA-256 e16680ec62e90bc8c4e49865010f7d088aaef967e479fed406bc6befa5be5d78), etapas datos, a, b y resumen; 400 réplicas de bootstrap, semilla 20261019",
+      "particiones": "V23 selección y V24 de D68; totales por año de periodo 2021-2024",
+      "criterio_aceptacion": "Materialidad 1 % del nivel 2025 por ramo (decisión del participante antes de resultados); intervalo al 90 % frente al intervalo de quiebre",
+      "entorno": "Máquina virtual del participante: Python 3.10.12, numpy 2.2.6, pandas 2.3.3, pyarrow 25.0.1",
+      "resultados_adversos": "Reserva de caso: incertidumbre material en los tres ramos (beta 0,851 [0,613; 1,106], 0,985 [0,873; 1,109], 0,982 [0,787; 1,156] frente a umbrales 0,963-1,037, 0,960-1,040 y 0,910-1,090). IBNR de lesiones: k 0,867 [0,813; 0,922] bajo S3, por debajo del umbral 0,940; nivel 2025 de autos -2,2 % si S3 se cumple. Contenidos, inundación: prueba de S1 con t = 2,86.",
+      "resultado": "Ningún ramo muestra reservas cortas; la suficiencia no es acreditable con una valoración. Orden S30 > S22 en el agregado con b uniforme o solo en lesiones entre 0,25 y 2,5. Detalle en docs/RESERVAS_ACOTACION.md.",
+      "decision_humana": "Participante, 20 de octubre (15:21 UTC, registro/decisiones_participante_20261020.json): «Suficiencia de reservas: Lo dejamos así como limitación del ejercicio». La incertidumbre material de la reserva de caso queda declarada como limitación (MOD-002) y S3 sigue sin adoptarse.",
+      "artefactos_privados": "privado/corridas/reservas_20261019T225357Z_99b45271/"
+    }
+  ]
 }

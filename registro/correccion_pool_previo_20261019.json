@@ -1,0 +1,60 @@
+{
+  "autor": "Codex",
+  "utc": "2026-10-20T00:14:37.414594+00:00",
+  "hallazgo": "CLA008-CAP03",
+  "estado": "corregido_y_comprobado_en_alcance_sintetico",
+  "version_captura": "1.1.1",
+  "sha256_antes": "c1cfdedd7dc670939e7fcf61f767799352ea1782724102023e68cea8fb3b5fcc",
+  "sha256_despues": "07776e60e5f266a4f7c547ce92bcf7b3394a64a12d6a22a2db8060f141da31a0",
+  "test_sha256": "bbf919f2f89e52bbb6d07f72b3046d2908394a9e1153f1877232607eac40e1a4",
+  "plan": "registro/correccion_pool_previo_20261019_plan.json",
+  "verificacion": "privado/trazabilidad/correccion_pool_previo_20261019/verificacion.json",
+  "guia": "docs/controles/pool_sin_huella.md",
+  "casos": {
+    "rechazos_previos": 10,
+    "controles_busqueda_simulada": 4,
+    "conformes": 14,
+    "total": 14
+  },
+  "criterio_verificado": "Todos los adversos tienen cero búsqueda/carga/fit/getters/parámetros; cuatro controles llegan únicamente a una búsqueda simulada que detiene antes de leer modelos.",
+  "estatica": {
+    "funciones_AST_identicas": {
+      "_dig": true,
+      "_huella_df": true,
+      "_clave": true,
+      "_cargar_meta": true
+    },
+    "fit_cuerpo_previo_identico_tras_guarda": true,
+    "modo_guardar": "No ejecutado; la guarda nueva solo corre en reproducir y el cuerpo previo conserva su AST."
+  },
+  "incidencia": "privado/trazabilidad/correccion_pool_previo_20261019/incidencia_entorno.json",
+  "alcance": "Módulo completo, envoltorio real de CatBoost y dobles de Pool/Modelo/búsqueda. No es CLI de reproducción ni prueba con CatBoost real.",
+  "actividad": {
+    "modelos_importados": 0,
+    "modelos_cargados": 0,
+    "ajustes": 0,
+    "inferencias": 0,
+    "replays": 0,
+    "Kaggle": 0,
+    "remoto": 0
+  },
+  "limites": "No acredita uso de Pool previo en corrida real, reproducción completa, reservas, independencia o revisión humana; GOV007 mantiene aceptación previa acotada.",
+  "coordinacion_claude": "cuerpo preparado; recibo se añadirá tras publicación real",
+  "cierre_y_coordinacion": {
+    "utc": "2026-10-20T00:15:43.119818+00:00",
+    "protegidas_sin_cambios": {
+      "reproducir.py": true,
+      "herramientas/reproducir_capturado.py": true,
+      "herramientas/captura_modelos/sitecustomize.py": true,
+      "receta/receta.json": true,
+      "receta/codigo.json": true
+    },
+    "foro": {
+      "author": "Codex",
+      "id": "COD-20261019-121",
+      "utc": "2026-10-20T00:14:55+00:00",
+      "previous_sha256": "5c18528828c0cdff34d6a9ca3dd7c35cceba6957af6ce566a089327cfb20c9be",
+      "sha256": "c474971e2e0542c4624c7a14d43f77c7acb90a066f038b263f2489047bdc9403"
+    }
+  }
+}

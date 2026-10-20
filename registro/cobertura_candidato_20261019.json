@@ -1,0 +1,540 @@
+{
+  "autor": "Codex",
+  "utc": "2026-10-19T22:03:12.774527+00:00",
+  "nodos": [
+    {
+      "nodo": "variables",
+      "tipo": "transformacion",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_aplica_modelo_ajustado",
+      "salidas_declaradas": 3,
+      "salidas_verificables_contrato": 3,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "sel_total_F0124",
+      "tipo": "ajuste",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 1,
+      "salidas_verificables_contrato": 1,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "sel_total_F01234",
+      "tipo": "ajuste",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 1,
+      "salidas_verificables_contrato": 1,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "sel_total_motor_red",
+      "tipo": "ajuste",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 1,
+      "salidas_verificables_contrato": 1,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "sel_hS2",
+      "tipo": "ajuste",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 1,
+      "salidas_verificables_contrato": 1,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "sel_hS3",
+      "tipo": "ajuste",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 1,
+      "salidas_verificables_contrato": 1,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "sel_cat1a",
+      "tipo": "ajuste",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 1,
+      "salidas_verificables_contrato": 1,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "S03_lgbm_F0124",
+      "tipo": "ajuste",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 3,
+      "salidas_verificables_contrato": 3,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "S04b_lgbm_F0124_F3autos",
+      "tipo": "ajuste",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 3,
+      "salidas_verificables_contrato": 3,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "S06c_lgbm_motor_red",
+      "tipo": "ajuste",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 3,
+      "salidas_verificables_contrato": 3,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "S08h_hogar_F3s2",
+      "tipo": "ajuste",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 3,
+      "salidas_verificables_contrato": 3,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "S12h_edif_md1000",
+      "tipo": "ajuste",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 3,
+      "salidas_verificables_contrato": 3,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "CAT_motor",
+      "tipo": "ajuste",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 2,
+      "salidas_verificables_contrato": 2,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "CAT_motor_s23",
+      "tipo": "ajuste",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 2,
+      "salidas_verificables_contrato": 2,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "CAT_motor_4s",
+      "tipo": "aritmetica",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_aplica_modelo_ajustado",
+      "salidas_declaradas": 2,
+      "salidas_verificables_contrato": 2,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "CFS_motor_v23",
+      "tipo": "ajuste",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 6,
+      "salidas_verificables_contrato": 6,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "CFS_motor",
+      "tipo": "ajuste",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 18,
+      "salidas_verificables_contrato": 6,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "CFS_motor_s23",
+      "tipo": "ajuste",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 12,
+      "salidas_verificables_contrato": 12,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "CFS_buildings",
+      "tipo": "ajuste",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 21,
+      "salidas_verificables_contrato": 21,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "CFS_buildings_s23",
+      "tipo": "ajuste",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 14,
+      "salidas_verificables_contrato": 14,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "FSA_contents",
+      "tipo": "ajuste",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 3,
+      "salidas_verificables_contrato": 3,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "FSAP_buildings",
+      "tipo": "ajuste",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 21,
+      "salidas_verificables_contrato": 21,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "FSAP2_buildings",
+      "tipo": "ajuste",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 14,
+      "salidas_verificables_contrato": 14,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "FSAP_contents",
+      "tipo": "ajuste",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 15,
+      "salidas_verificables_contrato": 15,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "FSAP2_contents",
+      "tipo": "ajuste",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 10,
+      "salidas_verificables_contrato": 10,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "FSAXc4_contents",
+      "tipo": "estimacion",
+      "objetivos": [
+        "S22",
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 3,
+      "salidas_verificables_contrato": 3,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "CFS_motor_4s",
+      "tipo": "aritmetica",
+      "objetivos": [
+        "S22"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_aplica_modelo_ajustado",
+      "salidas_declaradas": 2,
+      "salidas_verificables_contrato": 1,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "CFSS_motor",
+      "tipo": "estimacion",
+      "objetivos": [
+        "S22"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 3,
+      "salidas_verificables_contrato": 3,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "CFSS4_buildings",
+      "tipo": "estimacion",
+      "objetivos": [
+        "S22"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 3,
+      "salidas_verificables_contrato": 3,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "FSAS4_buildings",
+      "tipo": "estimacion",
+      "objetivos": [
+        "S22"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 3,
+      "salidas_verificables_contrato": 3,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "MLP3_contents",
+      "tipo": "ajuste",
+      "objetivos": [
+        "S22"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 3,
+      "salidas_verificables_contrato": 3,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "B_CFST_motor_tendencia",
+      "tipo": "estimacion",
+      "objetivos": [
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 3,
+      "salidas_verificables_contrato": 3,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "B_CFST_buildings_tendencia",
+      "tipo": "estimacion",
+      "objetivos": [
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 3,
+      "salidas_verificables_contrato": 3,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "B_FSAST_buildings_tendencia",
+      "tipo": "estimacion",
+      "objetivos": [
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_persistido_segun_inventario",
+      "salidas_declaradas": 3,
+      "salidas_verificables_contrato": 3,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "S22_claude_propio",
+      "tipo": "aritmetica",
+      "objetivos": [
+        "S22"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_aplica_modelo_ajustado",
+      "salidas_declaradas": 2,
+      "salidas_verificables_contrato": 2,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    },
+    {
+      "nodo": "S30_claude_b",
+      "tipo": "aritmetica",
+      "objetivos": [
+        "S30"
+      ],
+      "fuente": "registro/CLA-20261019-004_inventario_nodos.json",
+      "evidencia_modelo": "no_aplica_modelo_ajustado",
+      "salidas_declaradas": 2,
+      "salidas_verificables_contrato": 2,
+      "prueba_inferencia_propia_nueva": false,
+      "pruebas_frontera_modelo_final": "pendientes",
+      "guardas_paquete": "Evidencia histórica de contratos sintéticos; no cobertura de este estimador."
+    }
+  ],
+  "suite45": "Histórica, sin repetir y sin modelos reales; ver docs/controles/20261019_windows_v12_lf/resultado.json.",
+  "controles310": "Evidencia recibida de revisión_participante_20261019.json, no 310 ejecuciones nuevas de este encargo.",
+  "denominadores": "194salidas declaradas,184conhuella,181verificables,177coincidentes según CLA004; sin recomputar.",
+  "GOV004_cerrado": false
+}

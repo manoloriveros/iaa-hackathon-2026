@@ -1,3 +1,5 @@
+> Borrador anterior. El guion vigente está en [docs/entrega/video/GUION_VIDEO_ES.md](entrega/video/GUION_VIDEO_ES.md), con versión en inglés en [GUION_VIDEO_EN.md](entrega/video/GUION_VIDEO_EN.md).
+
 # Guion de demostración, máximo cinco minutos
 
 Borrador para la entrega final de ambas partes. Falta grabar y completar los resultados de la semana 2. No presentar la planificación de adaptación como resultado realizado.

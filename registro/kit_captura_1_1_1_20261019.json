@@ -1,0 +1,67 @@
+{
+  "autor": "Codex",
+  "utc": "2026-10-20T00:52:09.866491+00:00",
+  "estado": "incorporado_y_verificado_localmente_adopcion_Claude_pendiente",
+  "captura_version": "1.1.1",
+  "captura_sha256": "07776e60e5f266a4f7c547ce92bcf7b3394a64a12d6a22a2db8060f141da31a0",
+  "base_codigo_sha256": "260e1ce91cd02d3d9d35b54e8ed4a8fb238804cb6889f89281fa11da5953d4c3",
+  "zip_sha256": "1007f1b04c9d3f0f44ffe2b6e16d9b93e5f00994651e5a8c9564428f249d14e3",
+  "kit_carpeta": "privado/kits/captura_1_1_1_20261019",
+  "codigo_incorporado": "privado/kits/captura_1_1_1_20261019/codigo_incorporado",
+  "recibo_kit": "privado/kits/captura_1_1_1_20261019/complemento/recibo_kit.json",
+  "recibo_incorporacion": "privado/kits/captura_1_1_1_20261019/recibo_incorporacion_local.json",
+  "archivos": {
+    "base": 77,
+    "complemento": 8,
+    "copia_incorporada": 85
+  },
+  "lanzador_sha256_antes": "d934af4292b3e2e5ed2917408835b002b551e0fdd82969100afec5a1e32111e3",
+  "lanzador_sha256_despues": "7bdf635b03878ad2e34d62ce6c7e008f4763edbbb4a701a3a722feb9d2dcaa37",
+  "campos_recibos": [
+    "captura_version",
+    "captura_sha256",
+    "captura_identidad"
+  ],
+  "prueba_nueva": {
+    "registro": "privado/trazabilidad/kit_captura_1_1_1_20261019/verificacion.json",
+    "conformes": 11,
+    "total": 11,
+    "ramas_lanzador_con_dobles": [
+      "final",
+      "fallo_componentes",
+      "fallo_datos",
+      "cfg_adverso"
+    ],
+    "alcance": "Kit sintético y lanzador con entorno/ejecución simulados; no reproducción del modelo."
+  },
+  "verificacion_real_kit": "CLI crear/verificar del complemento y copia local cotejada; no ejecución de código de modelos.",
+  "historia": "Tar y manifiesto históricos intactos; no modificar recibos previos o atribuir1.1.1 a nodos1.0/1.1.",
+  "actividad": {
+    "ajustes": 0,
+    "inferencias": 0,
+    "cargas_modelo": 0,
+    "replays": 0,
+    "Kaggle": 0,
+    "remoto": 0
+  },
+  "coordinacion_inicio": {
+    "author": "Codex",
+    "id": "COD-20261019-122",
+    "utc": "2026-10-20T00:47:17+00:00",
+    "previous_sha256": "9c60e2c7c44f3190fbc2473ca083abc1eaf6b347500c70071f1be4f343c19f56",
+    "sha256": "b5429eff9eb2847ca22b7be87a6c82d0ee249a98737adf5b0ac7939a41e7a65e"
+  },
+  "respuesta_Claude": "No se ha observado respuesta al encargo del kit; CLA009 trata entregables, no adopción de captura1.1.1.",
+  "limites": "No cierre de reproducción completa, reservas, independencia, revisión humana o extensión de GOV007.",
+  "cierre_y_coordinacion": {
+    "utc": "2026-10-20T00:53:12.585999+00:00",
+    "foro": {
+      "author": "Codex",
+      "id": "COD-20261019-123",
+      "utc": "2026-10-20T00:52:10+00:00",
+      "previous_sha256": "b5429eff9eb2847ca22b7be87a6c82d0ee249a98737adf5b0ac7939a41e7a65e",
+      "sha256": "4f08a0428d4cc5770cbe120bdb8d13877288af554ef1ba14836af67c2217e608"
+    },
+    "estado": "kit_local_incorporado_recibos_verificados_Claude_pendiente"
+  }
+}

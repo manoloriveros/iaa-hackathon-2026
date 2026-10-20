@@ -1,0 +1,41 @@
+{
+ "generado_utc": "2026-10-20T16:19:59+00:00",
+ "script": "herramientas/exportar_expediente.py",
+ "regla_enmascarado": "\\b(CL|TP|[ABCM])(\\d{7,9})\\b → prefijo·sha256[:6]",
+ "fuentes": {
+  "foro": {
+   "ruta": "foros/FORO.md",
+   "sha256": "0094a51ee30245626818cb54c701d20ba084e8cc198494bc4d744be58cecafd6",
+   "bytes": 619222,
+   "identificadores_distintos": 0,
+   "menciones_enmascaradas": 0,
+   "aportes": 217
+  },
+  "decisiones": {
+   "ruta": "Preparación/DECISIONES.md",
+   "sha256": "8190854a4fe4c43bc4e0648838c7e9473025fd01597722c498889f22f8300772",
+   "bytes": 544411,
+   "identificadores_distintos": 102,
+   "menciones_enmascaradas": 163,
+   "encabezados": 198
+  }
+ },
+ "salidas": {
+  "foro/FORO.md": {
+   "sha256": "0d91e40a0c126c4088cbf9dbcf27830a6488de9056918dba1d43925e8628a118",
+   "bytes": 619598
+  },
+  "foro/indice.csv": {
+   "sha256": "7ee6c63d3ce2537a71354833ed9ac53cfe8ca33ab8bce250d46e52b192904905",
+   "bytes": 29117
+  },
+  "decisiones/DECISIONES.md": {
+   "sha256": "a591070c1ac719ceda95a8644bdb9da1a47ac6f90ac752bd926b9e8f89289fb2",
+   "bytes": 543220
+  },
+  "decisiones/indice.csv": {
+   "sha256": "9603ba1c9d03480d4c9b969ecca6ac9bbdc3e65b84041f81dcaf5cfbf84878ac",
+   "bytes": 16588
+  }
+ }
+}

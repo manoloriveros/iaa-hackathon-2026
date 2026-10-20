@@ -1,0 +1,60 @@
+{
+  "id": "GOV-008",
+  "estado": "cerrado_en_alcance_de_correccion_tecnica_captura_1_1_2",
+  "emisor": "Participante en la sesión de Claude (Cowork, línea principal)",
+  "revisor_designado_por_participante": "Manuel Ignacio Rodríguez",
+  "texto_respuesta": "GOV-008:  aeptado",
+  "lectura": "aceptado; «aeptado» es una errata del original, que se conserva literal",
+  "fecha_declaracion_utc": "2026-10-20T15:21:59.556Z",
+  "registrado_utc": "2026-10-20T15:26:37+00:00",
+  "registrado_por": "Claude (Cowork, línea principal), por indicación del participante en la misma sesión",
+  "alcance": "Aceptación de la corrección técnica de GOV-008 en herramientas/captura_modelos/captura.py 1.1.2: la clave de CatBoost.fit incluye los argumentos posicionales con la huella de cada Pool y la de lightgbm.train los posicionales y las opciones distintas de callbacks, solo cuando existen, de modo que las llamadas de la receta conservan la clave de 1.1 y 1.1.1. El recorrido afectado quedó ejercido por la réplica sin ajustes de repro_20261019T223638Z_d00a39dd: 436 estimadores cargados por su clave 1.1.2 exacta, cero eventos distintos de carga y 194 de 194 salidas idénticas a la corrida que los guardó. Se conservan abiertos la revisión humana general y los demás hallazgos.",
+  "captura": {
+    "version": "1.1.2",
+    "sha256": "3ae39d7828fda53b8c11e06bdd9e2e1c84fdad74bc490a20f03ad6a2be2f32f0",
+    "anterior": {
+      "version": "1.1.1",
+      "autor": "Codex",
+      "sha256": "07776e60e5f266a4f7c547ce92bcf7b3394a64a12d6a22a2db8060f141da31a0"
+    },
+    "sitecustomize_sha256": "fb06e1eac3270311cc7ce30da862e5ac5e08e34926cbf6cf29b3ed3874c1c5de",
+    "pruebas": {
+      "probar_captura.py": "18 de 18 con 1.1.2 (15 de 16 con 1.1 y 1.1.1)",
+      "probar_pool_sin_huella.py (Codex)": "14 de 14 con 1.1.2",
+      "recibos": "privado/corridas/repro_20261019T223638Z_d00a39dd/pruebas_captura/"
+    }
+  },
+  "evidencia_tecnica": [
+    "registro/CLA-20261020-001_cuerpo.md",
+    "foro COD-VAL-20261020T0642-GOB (comprobación de Codex de la 1.1.2)",
+    "registro/recibo_reproduccion_completa_20261020.json",
+    "privado/corridas/repro_20261019T223638Z_d00a39dd/replica/comprobar_replay.json",
+    "docs/REPRODUCCION_COMPLETA.md"
+  ],
+  "pregunta_presentada": "Respuesta de Claude del 20 de octubre (tras CLA-20261020-002 y D97), lista de lo que quedaba abierto: independencia por otro operador; coincidencia bit a bit en un reajuste futuro (fijar el modo de LightGBM, cambio de receta no hecho); suficiencia de reservas; «GOV-008 espera tu aceptación».",
+  "mensaje_completo": "* Independencia: No lo vamos a replicar de esta forma\n* Coincidencia bit a bit en un reajuste futuro: me parece que no es necesario, qué consideras tú?\n* Suficiencia de reservas: Lo dejamos así como limitación del ejercicio\n* GOV-008:  aeptado",
+  "fuente_autentica": {
+    "tipo": "mensaje directo del participante en la sesión de Claude (Cowork, línea principal), registro queue-operation enqueue",
+    "fecha_utc": "2026-10-20T15:21:59.556Z",
+    "sesion": "9b3f8700-675e-599a-9817-2e7cae9f07e9",
+    "sha256_evento": "4a7d4a76c72fdfe9e50058d73b742417dc1960be3cbdfd0139cbf0b3d54fbb6e",
+    "evento_usuario": {
+      "uuid": "31e5e0af-abfa-4dff-9a2d-c2346f9ea281",
+      "fecha_utc": "2026-10-20T15:21:59.730Z",
+      "sha256": "beb4f813c79903d26e13e5a82f8c9ec13fd55b477eea3c2ff3f4f77735b0f842",
+      "nota": "No se copia: la línea del turno de usuario incluye bloques de contexto que la sesión añade al mensaje, ajenos a la decisión."
+    },
+    "archivo_privado": "privado/decisiones_participante_20261020/respuesta_humana_original.jsonl",
+    "nota": "El archivo privado es la línea completa del evento de cola, idéntica en bytes a la del registro de la sesión; su SHA-256 sin el salto de línea final es sha256_evento."
+  },
+  "no_acredita": [
+    "revisión actuarial general realizada",
+    "competencia profesional verificada externamente",
+    "independencia",
+    "suficiencia o insesgadez de reservas",
+    "candidato aprobado",
+    "selección final Kaggle",
+    "cierre de los otros hallazgos"
+  ],
+  "registro_historico_auditor": "El acta y el registro del auditor se conservan sin reescribir; su actualización queda para el seguimiento común de Codex."
+}

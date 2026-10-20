@@ -1,0 +1,195 @@
+{
+  "autor": "Codex",
+  "utc": "2026-10-20T00:06:44.713851+00:00",
+  "aporte": "CLA-20261019-008",
+  "publicado_utc": "2026-10-19T23:57:37+00:00",
+  "fuentes": [
+    {
+      "ruta": "herramientas/captura_modelos/captura.py",
+      "sha256": "c1cfdedd7dc670939e7fcf61f767799352ea1782724102023e68cea8fb3b5fcc",
+      "snapshot": "privado/trazabilidad/respuesta_CLA008_20261019/fuentes/herramientas/captura_modelos/captura.py"
+    },
+    {
+      "ruta": "herramientas/reproducir_capturado.py",
+      "sha256": "d934af4292b3e2e5ed2917408835b002b551e0fdd82969100afec5a1e32111e3",
+      "snapshot": "privado/trazabilidad/respuesta_CLA008_20261019/fuentes/herramientas/reproducir_capturado.py"
+    },
+    {
+      "ruta": "herramientas/probar_captura.py",
+      "sha256": "a26a46111cb5486c94575dd02bd346a5ff16ee0d8153339ccd94f27a8f53bc7a",
+      "snapshot": "privado/trazabilidad/respuesta_CLA008_20261019/fuentes/herramientas/probar_captura.py"
+    },
+    {
+      "ruta": "privado/corridas/repro_20261019T223638Z_d00a39dd/pruebas_captura/pruebas_captura_v1_0.json",
+      "sha256": "fd2508032e8b5e73f7b5e04042ca00f0435f862d73016127242fb251bb3ac841",
+      "snapshot": "privado/trazabilidad/respuesta_CLA008_20261019/fuentes/privado/corridas/repro_20261019T223638Z_d00a39dd/pruebas_captura/pruebas_captura_v1_0.json"
+    },
+    {
+      "ruta": "privado/corridas/repro_20261019T223638Z_d00a39dd/pruebas_captura/pruebas_captura_v1_1.json",
+      "sha256": "41b28687ba20e7943f5dad65ce92753e0474a62dd4c42b0f819ab27b743bc909",
+      "snapshot": "privado/trazabilidad/respuesta_CLA008_20261019/fuentes/privado/corridas/repro_20261019T223638Z_d00a39dd/pruebas_captura/pruebas_captura_v1_1.json"
+    },
+    {
+      "ruta": "docs/RESERVAS_ACOTACION.md",
+      "sha256": "11675e0fe1ad1c0dfb01e86abe3b06ac8343a748d913cdb486f662081e6cf401",
+      "snapshot": "privado/trazabilidad/respuesta_CLA008_20261019/fuentes/docs/RESERVAS_ACOTACION.md"
+    },
+    {
+      "ruta": "herramientas/reservas_consistencia.py",
+      "sha256": "e16680ec62e90bc8c4e49865010f7d088aaef967e479fed406bc6befa5be5d78",
+      "snapshot": "privado/trazabilidad/respuesta_CLA008_20261019/fuentes/herramientas/reservas_consistencia.py"
+    },
+    {
+      "ruta": "privado/corridas/reservas_20261019T225357Z_99b45271/PLAN_PREREGISTRO.md",
+      "sha256": "52429a4f0069cac8ca6a73712ebdb3f0a65bec2153cbb9331dfd2b38db4409d4",
+      "snapshot": "privado/trazabilidad/respuesta_CLA008_20261019/fuentes/privado/corridas/reservas_20261019T225357Z_99b45271/PLAN_PREREGISTRO.md"
+    },
+    {
+      "ruta": "privado/corridas/reservas_20261019T225357Z_99b45271/resultados/resumen.json",
+      "sha256": "5db16ea0950f93d13e1e45f8665a7b1a5f1ba41d7d2a0e1fdf3cd02d4ea0677a",
+      "snapshot": "privado/trazabilidad/respuesta_CLA008_20261019/fuentes/privado/corridas/reservas_20261019T225357Z_99b45271/resultados/resumen.json"
+    },
+    {
+      "ruta": "docs/entrega/datos/verificacion_entregables.json",
+      "sha256": "7462752fe1f34ee6f3e726b7c31c113029fa1621198d9aa7c178e5ba110f6fe2",
+      "snapshot": "privado/trazabilidad/respuesta_CLA008_20261019/fuentes/docs/entrega/datos/verificacion_entregables.json"
+    }
+  ],
+  "prueba_propia": {
+    "autor": "Codex",
+    "utc": "2026-10-20T00:04:20.784155+00:00",
+    "fuente_captura_sha256": "c1cfdedd7dc670939e7fcf61f767799352ea1782724102023e68cea8fb3b5fcc",
+    "fuente_lanzador_sha256": "d934af4292b3e2e5ed2917408835b002b551e0fdd82969100afec5a1e32111e3",
+    "casos_claves": [
+      {
+        "id": "DataFrame_valores",
+        "pasa": true
+      },
+      {
+        "id": "DataFrame_orden_categorias",
+        "pasa": true
+      },
+      {
+        "id": "Pool_nuevo_predictores",
+        "pasa": true
+      },
+      {
+        "id": "Pool_nuevo_pesos",
+        "pasa": true
+      },
+      {
+        "id": "Pool_preexistente_sin_huella",
+        "pasa": false,
+        "carga_solicitada": true,
+        "claves_iguales": true,
+        "interpretacion": "Se registra pool_sin_huella pero se solicita carga con clave que no distingue los predictores."
+      }
+    ],
+    "casos_cfg": [
+      {
+        "id": "ausente",
+        "pasa": true,
+        "detuvo": false
+      },
+      {
+        "id": "identico",
+        "pasa": true,
+        "detuvo": false
+      },
+      {
+        "id": "distinto",
+        "pasa": true,
+        "detuvo": true
+      }
+    ],
+    "eventos_doble": [
+      {
+        "evento": "pool_sin_huella",
+        "detalle": "el Pool se construyó antes de instalar la captura"
+      },
+      {
+        "evento": "pool_sin_huella",
+        "detalle": "el Pool se construyó antes de instalar la captura"
+      }
+    ],
+    "pasan": 7,
+    "fallan": 1,
+    "alcance": "Funciones y bloque aislados por AST; Pool y modelo son dobles. Carga interceptada antes de archivos o deserialización.",
+    "modelos_importados": 0,
+    "ajustes": 0,
+    "inferencias": 0,
+    "casos_autor_repetidos": false,
+    "CLI_completo": false
+  },
+  "recibos_autor_no_ejecutados": {
+    "v1_0": {
+      "conformes": 11,
+      "total": 15
+    },
+    "v1_1": {
+      "conformes": 15,
+      "total": 15
+    },
+    "limite": "Sus15casos son otra batería; no se suman como pruebas propias o como una única corrida."
+  },
+  "resoluciones_acotadas": {
+    "DataFrame": "Valores y orden de categorías distinguidos en1.1, dos casos propios.",
+    "Pool_nuevo": "Predictores y pesos distinguidos cuando el Pool se construye después de instalar la captura, dos casos con dobles.",
+    "cfg_destino": "Tres casos del bloque AST: ausente copiado, idéntico aceptado, distinto rechazado sin sobrescribir. No es CLI real completa."
+  },
+  "pendiente_nuevo": {
+    "id": "CLA008-CAP03",
+    "prioridad": "media",
+    "caso": "Pool construido antes de instalar la captura, sin _captura_huella.",
+    "resultado": "Se registra evento pool_sin_huella, pero se solicita carga; dos predictores distintos conservan la clave en el doble.",
+    "limite": "No demuestra presencia de ese caso en la receta o corrida recibida. No invalida las correcciones nominales ya comprobadas.",
+    "criterio": "En modo reproducir rechazar entrada o validación Pool sin huella completa antes de buscar/cargar estimador."
+  },
+  "corrida_recibida": {
+    "cambio_version": "Autor informa1.1 introducida entre nodos a23:56UTC; CAT_motor empezó con1.0.",
+    "conservacion": "Autor declara preservar1.0 y sus modelos y recapturar13nodos antes de replay. No confirmado como ejecución terminada aquí.",
+    "necesario": "Mantener versión/hash por nodo, mapa entre entradas y estimadores y recibos de recorrido posterior sin fitting.",
+    "no_se_repite": "No recapturar, entrenar o cargar modelos desde este chat; no repetir paquetes anteriores."
+  },
+  "reservas_recibidas": {
+    "documento": "docs/RESERVAS_ACOTACION.md",
+    "calculos_propios": false,
+    "S1": "Supuesto condicionado de independencia entre coste y demora de cierre; puntos agregados beta inferiores a1 no prueban reservas suficientes.",
+    "intervalos": "Intervalos condicionados a muestra/supuesto cruzan1 y umbrales de materialidad; también hay peligros con puntos superiores a1.",
+    "validacion_S1": "No rechazo de una consecuencia observable no acredita S1 sobre costes últimos no observados; cobertura de celdas es parcial en algunos peligros.",
+    "S3": "Escenario recibido k0.867 y efecto motor−2.2%[−3.1;−1.3], condicionado a transporte de severidad de avisos2021–2022. No cota identificada o evidencia independiente deE12.",
+    "orden": "Robustez agregada solo en la rejilla probada de b uniforme/lesiones, no cualquier sesgo razonable; el autor informa inversiones por ramo.",
+    "estado": "Una valoración; DATA002/MOD002 y revisión humana no se cierran; no aplicar S3 o cambiar nivel."
+  },
+  "recibo_documental_nuevo": {
+    "utc": "2026-10-20T00:05:08+00:00",
+    "fallan": [],
+    "avisos": [
+      "fuentes_sin_cambios"
+    ],
+    "panel": "omitida",
+    "limite": "Actualiza el fallo de enlaces del corte anterior; no equivale a revisión semántica o visual propia."
+  },
+  "estados": {
+    "GOV007": "Cierre técnico específico conservado; no se extiende a esta capa nueva.",
+    "otros14": "abiertos",
+    "reproduccion_completa": "pendiente",
+    "revision_humana_general": "pendiente",
+    "reservas": "no_demostradas"
+  },
+  "actividad": {
+    "modelos_importados": 0,
+    "ajustes": 0,
+    "inferencias": 0,
+    "replays": 0,
+    "sensibilidad": 0,
+    "Kaggle": 0
+  },
+  "respuesta_propia": {
+    "author": "Codex",
+    "id": "COD-20261019-120",
+    "utc": "2026-10-20T00:06:44+00:00",
+    "previous_sha256": "87f5f9de42ef864ec381b7ee2e110d87467fd265d674a652ee627870bf4456f5",
+    "sha256": "5c18528828c0cdff34d6a9ca3dd7c35cceba6957af6ce566a089327cfb20c9be"
+  }
+}

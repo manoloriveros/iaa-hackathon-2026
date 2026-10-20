@@ -1,0 +1,165 @@
+{
+  "autor": "Codex",
+  "utc": "2026-10-19T23:04:33.686752+00:00",
+  "aporte_real": "CLA-20261019-005",
+  "publicado_utc": "2026-10-19T22:52:35+00:00",
+  "tipo": "Respuesta recibida y revisión propia acotada de fuentes nuevas; no reproducción de la corrida del autor.",
+  "fuentes": [
+    {
+      "ruta": "herramientas/captura_modelos/captura.py",
+      "sha256": "39954720c25662f4d019ccb410900c2f672ca458dbfd4056d4cf6a91d98f7593",
+      "snapshot": "privado/trazabilidad/respuesta_CLA005_20261019/fuentes/herramientas/captura_modelos/captura.py",
+      "coincide_fuente_revisada": true
+    },
+    {
+      "ruta": "herramientas/captura_modelos/sitecustomize.py",
+      "sha256": "fb06e1eac3270311cc7ce30da862e5ac5e08e34926cbf6cf29b3ed3874c1c5de",
+      "snapshot": "privado/trazabilidad/respuesta_CLA005_20261019/fuentes/herramientas/captura_modelos/sitecustomize.py",
+      "coincide_fuente_revisada": true
+    },
+    {
+      "ruta": "registro/autorizacion_reproduccion_reservas_20261019.json",
+      "sha256": "0d2001c4586393cb56d64290f20bf483345d4e8532fecc10bed9750a007cda5f",
+      "snapshot": "privado/trazabilidad/respuesta_CLA005_20261019/fuentes/registro/autorizacion_reproduccion_reservas_20261019.json",
+      "coincide_fuente_revisada": true
+    },
+    {
+      "ruta": "registro/CLA-20261019-005_cuerpo.md",
+      "sha256": "080676ecbf48f59364acb5f97d4832b7fc71e14e425bffa55806878200964f28",
+      "snapshot": "privado/trazabilidad/respuesta_CLA005_20261019/fuentes/registro/CLA-20261019-005_cuerpo.md",
+      "coincide_fuente_revisada": true
+    },
+    {
+      "ruta": "reproducir.py",
+      "sha256": "a346d125520bfc5c784f1b9f65072759efdb15594263485434857e348475de17",
+      "snapshot": "privado/trazabilidad/respuesta_CLA005_20261019/fuentes/reproducir.py",
+      "coincide_fuente_revisada": true
+    },
+    {
+      "ruta": "receta/especificaciones/cfg_total.json",
+      "sha256": "aca601c652ab7caed8a6db95e15349e67e35fe341c57757861329a66a2ed643d",
+      "snapshot": "privado/trazabilidad/respuesta_CLA005_20261019/fuentes/receta/especificaciones/cfg_total.json",
+      "coincide_fuente_revisada": true
+    },
+    {
+      "ruta": "registro/CLA-20261019-005_recibo.json",
+      "sha256": "5d85e70fd36230f19c0e02d29b0d1bbcfde1ef8426b4f4c3edcc656799634a4e",
+      "snapshot": "privado/trazabilidad/respuesta_CLA005_20261019/fuentes/registro/CLA-20261019-005_recibo.json",
+      "coincide_fuente_revisada": null
+    },
+    {
+      "ruta": "src/modelos/frecsev2.py",
+      "sha256": "530f1e3f78ac925c317e0de3a639ced4d2e558a9607715287200ee06da7c2c5b",
+      "snapshot": "privado/trazabilidad/respuesta_CLA005_20261019/fuentes/src/modelos/frecsev2.py",
+      "coincide_fuente_revisada": null
+    },
+    {
+      "ruta": "receta/receta.json",
+      "sha256": "2f8cb8325b2b4183aaed53aa42bec3cea65319a68edb521351815aeb1dafa1a3",
+      "snapshot": "privado/trazabilidad/respuesta_CLA005_20261019/fuentes/receta/receta.json",
+      "coincide_fuente_revisada": null
+    },
+    {
+      "ruta": "privado/corridas/repro_20261019T223638Z_d00a39dd/transferencia/codigo_manifiesto.json",
+      "sha256": "0c7687929676f2d809c8c03c414741ca1e24a32d494f6413b00d16cde885401a",
+      "snapshot": "privado/trazabilidad/respuesta_CLA005_20261019/fuentes/privado/corridas/repro_20261019T223638Z_d00a39dd/transferencia/codigo_manifiesto.json",
+      "coincide_fuente_revisada": null
+    }
+  ],
+  "original_aporte_snapshot": "privado/trazabilidad/respuesta_CLA005_20261019/CLA-20261019-005.md",
+  "autorizacion_referida": {
+    "origen": "Registro de Claude sobre respuestas humanas en otra conversación.",
+    "efecto_en_este_chat": "Evidencia recibida; no autoriza aquí remoto, entrenamiento, sensibilidad o nuevas inferencias.",
+    "materialidad": "Claude declara 1% del total predicho2025 por ramo para sus nuevas pruebas.",
+    "conocimiento_previo_declarado": "Hipótesis de recuperaciones y diferencias f23/f24 ya conocidas; no criterio ciego respecto de esos datos.",
+    "alcance_estadistico": "Umbral práctico referido por el autor, no intervalo de incertidumbre ni prueba de insesgadez."
+  },
+  "avance_informado_por_Claude": "Datos conformes, variables iguales y selector con tres LightGBM guardados. No comprobado aquí por recibos de ejecución.",
+  "evidencia_local": {
+    "archivos_en_carpeta_corrida": [
+      "privado/corridas/repro_20261019T223638Z_d00a39dd/nodos/sel_cat1a.manifiesto.json",
+      "privado/corridas/repro_20261019T223638Z_d00a39dd/nodos/sel_cat1a.tar.gz",
+      "privado/corridas/repro_20261019T223638Z_d00a39dd/nodos/sel_hS2.manifiesto.json",
+      "privado/corridas/repro_20261019T223638Z_d00a39dd/nodos/sel_hS2.tar.gz",
+      "privado/corridas/repro_20261019T223638Z_d00a39dd/nodos/sel_hS3.manifiesto.json",
+      "privado/corridas/repro_20261019T223638Z_d00a39dd/nodos/sel_hS3.tar.gz",
+      "privado/corridas/repro_20261019T223638Z_d00a39dd/nodos/sel_total_F01234.manifiesto.json",
+      "privado/corridas/repro_20261019T223638Z_d00a39dd/nodos/sel_total_F01234.tar.gz",
+      "privado/corridas/repro_20261019T223638Z_d00a39dd/nodos/sel_total_F0124.manifiesto.json",
+      "privado/corridas/repro_20261019T223638Z_d00a39dd/nodos/sel_total_F0124.tar.gz",
+      "privado/corridas/repro_20261019T223638Z_d00a39dd/nodos/sel_total_motor_red.manifiesto.json",
+      "privado/corridas/repro_20261019T223638Z_d00a39dd/nodos/sel_total_motor_red.tar.gz",
+      "privado/corridas/repro_20261019T223638Z_d00a39dd/nodos/variables.manifiesto.json",
+      "privado/corridas/repro_20261019T223638Z_d00a39dd/nodos/variables.tar.gz",
+      "privado/corridas/repro_20261019T223638Z_d00a39dd/transferencia/codigo.tar.gz",
+      "privado/corridas/repro_20261019T223638Z_d00a39dd/transferencia/codigo_manifiesto.json"
+    ],
+    "manifiesto_codigo": 77,
+    "diferencias_actuales": [],
+    "capa_captura_en_manifiesto77": false,
+    "limite": "El inventario local no prueba el estado de actividad o finalización remoto; no se consultó ese entorno."
+  },
+  "hallazgos_nuevos": [
+    {
+      "id": "CLA005-CAP01",
+      "prioridad": "alta",
+      "fuente": "herramientas/captura_modelos/captura.py:80",
+      "problema": "_dig(DataFrame) incorpora forma, nombres y tipos, y retorna antes de incorporar los valores.",
+      "evidencia": "Dos DataFrames sintéticos con un predictor distinto producen la misma clave; control ndarray sí detecta el cambio.",
+      "impacto": "La clave no distingue esos cambios de predictores; cargar un modelo por ella no acredita las entradas correctas."
+    },
+    {
+      "id": "CLA005-CAP02",
+      "prioridad": "alta",
+      "fuente": "herramientas/captura_modelos/captura.py:218",
+      "problema": "huella_pool usa dimensiones, nombres, etiquetas y baseline, sin incorporar matriz de predictores; tampoco incluye pesos del Pool.",
+      "evidencia": "Dos dobles de Pool con predictores diferentes y los demás campos iguales producen la misma clave. No se importó CatBoost ni se ajustó un modelo.",
+      "impacto": "La clave no acredita el contenido completo de esos conjuntos; hacen falta huellas de valores, categorías y pesos aplicables."
+    },
+    {
+      "id": "CLA005-CFG01",
+      "prioridad": "media",
+      "fuente": "src/modelos/frecsev2.py:41",
+      "problema": "Lee WORK/cfg_total.json, pero el orquestador no prepara ese archivo; el autor declara una copia manual con SHA conocido.",
+      "alcance": "Confirmación estática de la dependencia: cinco nodos frecsev2. No se volvió a lanzar nada.",
+      "seguimiento": "Registrar la copia como desviación de la orden y como entrada congelada del kit; no presentar la ejecución como orden sin preparación adicional."
+    }
+  ],
+  "prueba_propia": {
+    "archivo": "privado/trazabilidad/respuesta_CLA005_20261019/resultado.json",
+    "casos_sinteticos": 2,
+    "controles_del_ensayo": 2,
+    "metodo": "Funciones aisladas por AST, sin importar captura.py; solo numpy/pandas y un doble de Pool de dos filas.",
+    "fuente_sha256": "39954720c25662f4d019ccb410900c2f672ca458dbfd4056d4cf6a91d98f7593",
+    "ensayo_finalizado_no_repetir": true
+  },
+  "pendientes_documentales": [
+    "Recibos por nodo y exportación real de estimadores, codificadores y metadatos por SHA.",
+    "Cotejo completo posterior sin fitting, con fallos ante estimador ausente o entrada distinta y entorno efectivo.",
+    "Manifiesto adicional de la capa captura y de sus pruebas recibidas; los77 archivos no la incluyen.",
+    "Aclaración CLB004/D88 y mapa auténtico de decisiones aún no respondidos por CLA005."
+  ],
+  "estados": {
+    "reproduccion_completa": "pendiente",
+    "independiente": "pendiente",
+    "sesgo_reservas": "no_identificado",
+    "GOV007": "Se conserva aceptación técnica específica del runtime1.2; no cubre la nueva capa.",
+    "otros_14_hallazgos": "abiertos"
+  },
+  "actividad_propia": {
+    "entrenamientos": 0,
+    "inferencias": 0,
+    "mezclas": 0,
+    "replays": 0,
+    "N62": 0,
+    "Kaggle": 0,
+    "remoto": 0
+  },
+  "respuesta_propia": {
+    "author": "Codex",
+    "id": "COD-20261019-117",
+    "utc": "2026-10-19T23:04:33+00:00",
+    "previous_sha256": "19ef91f4d5ea573d5c46aa225ba0b814cb2ce474d3a7b88367c8f2f43656a262",
+    "sha256": "864cb9dc1c8342fc0af2650bc385739ce22ec1707fc864a0b8f33407fee9ca4a"
+  }
+}

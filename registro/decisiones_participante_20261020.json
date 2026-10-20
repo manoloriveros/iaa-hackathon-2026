@@ -1,0 +1,68 @@
+{
+  "id": "decisiones_participante_20261020",
+  "emisor": "Participante en la sesión de Claude (Cowork, línea principal)",
+  "revisor_designado_por_participante": "Manuel Ignacio Rodríguez",
+  "fecha_declaracion_utc": "2026-10-20T15:21:59.556Z",
+  "registrado_utc": "2026-10-20T15:26:37+00:00",
+  "pregunta_presentada": "Respuesta de Claude del 20 de octubre (tras CLA-20261020-002 y D97), lista de lo que quedaba abierto: independencia por otro operador; coincidencia bit a bit en un reajuste futuro (fijar el modo de LightGBM, cambio de receta no hecho); suficiencia de reservas; «GOV-008 espera tu aceptación».",
+  "mensaje_completo": "* Independencia: No lo vamos a replicar de esta forma\n* Coincidencia bit a bit en un reajuste futuro: me parece que no es necesario, qué consideras tú?\n* Suficiencia de reservas: Lo dejamos así como limitación del ejercicio\n* GOV-008:  aeptado",
+  "fuente_autentica": {
+    "tipo": "mensaje directo del participante en la sesión de Claude (Cowork, línea principal), registro queue-operation enqueue",
+    "fecha_utc": "2026-10-20T15:21:59.556Z",
+    "sesion": "9b3f8700-675e-599a-9817-2e7cae9f07e9",
+    "sha256_evento": "4a7d4a76c72fdfe9e50058d73b742417dc1960be3cbdfd0139cbf0b3d54fbb6e",
+    "evento_usuario": {
+      "uuid": "31e5e0af-abfa-4dff-9a2d-c2346f9ea281",
+      "fecha_utc": "2026-10-20T15:21:59.730Z",
+      "sha256": "beb4f813c79903d26e13e5a82f8c9ec13fd55b477eea3c2ff3f4f77735b0f842",
+      "nota": "No se copia: la línea del turno de usuario incluye bloques de contexto que la sesión añade al mensaje, ajenos a la decisión."
+    },
+    "archivo_privado": "privado/decisiones_participante_20261020/respuesta_humana_original.jsonl",
+    "nota": "El archivo privado es la línea completa del evento de cola, idéntica en bytes a la del registro de la sesión; su SHA-256 sin el salto de línea final es sha256_evento."
+  },
+  "decisiones": [
+    {
+      "tema": "Independencia de la reproducción",
+      "texto": "Independencia: No lo vamos a replicar de esta forma",
+      "decision": "no_se_hara_reproduccion_por_otro_operador_con_el_kit",
+      "hallazgo_relacionado": "GOV-003 (Reproducción por otra persona y en otra plataforma no acreditada); vínculo hecho por Claude a partir del título del hallazgo",
+      "estado_propuesto_para_el_hallazgo": "limitacion_aceptada_por_participante_sin_reproduccion_independiente",
+      "efecto": "La reproducción queda acreditada solo como hecha por Claude en la nube de Claude; la independencia no se acredita y se declara como limitación. El kit de docs/REPRODUCCION_COMPLETA.md se conserva por si cambia la decisión."
+    },
+    {
+      "tema": "Coincidencia bit a bit en un reajuste futuro",
+      "texto": "Coincidencia bit a bit en un reajuste futuro: me parece que no es necesario, qué consideras tú?",
+      "decision": "no_se_exige_coincidencia_bit_a_bit_ni_se_fija_el_modo_de_LightGBM_en_la_receta_de_la_parte_1",
+      "opinion_de_Claude": "Coincide: las 19 diferencias son de 3,9e-15 relativo como máximo y desaparecen en el CSV de seis decimales; los CSV salen byte a byte y la réplica desde los estimadores es exacta. Fijar el modo ahora sería un cambio de receta posterior a la entrega, con huellas nuevas y once horas de cómputo, y la receta dejaría de ser el código que produjo el S30 entregado. Para la parte 2, Claude propone fijar force_row_wise=True desde el primer modelo LightGBM, donde no hay huellas históricas que conservar.",
+      "efecto": "Las 19 diferencias quedan documentadas como resultado de la reproducción; la receta no cambia. La propuesta para la parte 2 queda pendiente de que el participante la confirme."
+    },
+    {
+      "tema": "Suficiencia de reservas",
+      "texto": "Suficiencia de reservas: Lo dejamos así como limitación del ejercicio",
+      "decision": "suficiencia_de_reservas_declarada_como_limitacion_del_ejercicio",
+      "hallazgo_relacionado": "MOD-002 (Último real y suficiencia de reservas no identificados); vínculo hecho por Claude a partir del título del hallazgo",
+      "estado_propuesto_para_el_hallazgo": "limitacion_aceptada_por_participante",
+      "efecto": "Se mantiene la acotación de docs/RESERVAS_ACOTACION.md: incertidumbre material en los tres ramos con la materialidad del 1 % e indicio de sobrevaloración del IBNR de lesiones bajo S3, sin ajuste adoptado. No cambian T0, la receta ni S30."
+    },
+    {
+      "tema": "GOV-008",
+      "texto": "GOV-008:  aeptado",
+      "decision": "aceptar_correccion_tecnica_captura_1_1_2",
+      "hallazgo_relacionado": "GOV-008",
+      "estado_propuesto_para_el_hallazgo": "cerrado_en_alcance_de_correccion_tecnica_captura_1_1_2",
+      "registro": "registro/decision_GOV008_20261020.json"
+    }
+  ],
+  "no_acredita": [
+    "revisión actuarial general realizada",
+    "independencia",
+    "suficiencia o insesgadez de reservas",
+    "selección final Kaggle",
+    "cierre de hallazgos distintos de los nombrados"
+  ],
+  "sin": [
+    "envíos a Kaggle",
+    "cambios de receta, pesos, T0 o S30",
+    "cambios en el acta o el registro del auditor de Codex"
+  ]
+}

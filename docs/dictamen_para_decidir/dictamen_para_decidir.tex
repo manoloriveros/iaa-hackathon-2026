@@ -1,0 +1,800 @@
+% Dictamen para decidir: versión pedagógica que integra la revisión de Codex y la revisión cruzada de Claude
+% Compilar con XeLaTeX (dos pasadas para el índice): xelatex dictamen_para_decidir.tex
+% Fuentes usadas: TeX Gyre Pagella, Inter, DejaVu Sans Mono y Latin Modern Math. Si falta Inter, cambia \setsansfont por TeX Gyre Heros.
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[spanish,es-tabla,es-noshorthands,es-nodecimaldot]{babel}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{Inter}[Scale=0.88]
+\setmonofont{DejaVu Sans Mono}[Scale=0.80]
+\setmathfont{Latin Modern Math}
+
+\usepackage[a4paper,top=2.4cm,bottom=2.4cm,left=2.5cm,right=2.5cm,headheight=16pt]{geometry}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{booktabs,tabularx,array,multirow}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{etoolbox}
+\usepackage{needspace}
+\usepackage{float}
+\usepackage[hidelinks]{hyperref}
+
+% ---------- Colores ----------
+\definecolor{tinta}{HTML}{1F2933}
+\definecolor{gris}{HTML}{5F6B76}
+\definecolor{linea}{HTML}{D5DBE1}
+\definecolor{azul}{HTML}{1D5FA8}
+\definecolor{azulclaro}{HTML}{EAF2FB}
+\definecolor{ambar}{HTML}{B86A00}
+\definecolor{ambarclaro}{HTML}{FFF4E0}
+\definecolor{verde}{HTML}{2E7D4F}
+\definecolor{verdeclaro}{HTML}{E8F5EC}
+\definecolor{violeta}{HTML}{6A4C9C}
+\definecolor{violetaclaro}{HTML}{F1ECF8}
+\definecolor{rojo}{HTML}{B3261E}
+\definecolor{rojoclaro}{HTML}{FCEBEA}
+\color{tinta}
+
+% ---------- Títulos ----------
+\setcounter{secnumdepth}{0}
+\setcounter{tocdepth}{2}
+\titleformat{\section}{\sffamily\Large\bfseries\color{azul}}{}{0pt}{}[\vspace{2pt}{\color{linea}\titlerule[0.8pt]}]
+\titleformat{\subsection}{\sffamily\large\bfseries\color{tinta}}{}{0pt}{}
+\titleformat{\subsubsection}{\sffamily\normalsize\bfseries\color{gris}}{}{0pt}{}
+\titlespacing*{\section}{0pt}{18pt}{8pt}
+\titlespacing*{\subsection}{0pt}{14pt}{5pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\linespread{1.06}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{linea}\leaders\hrule height \headrulewidth\hfill}}
+\fancyhead[L]{\sffamily\footnotesize\color{gris} Dictamen para decidir · S30, S22 y el cierre de la parte 1}
+\fancyhead[R]{\sffamily\footnotesize\color{gris} 19 de octubre de 2026}
+\fancyfoot[C]{\sffamily\footnotesize\color{gris}\thepage}
+
+\captionsetup{font={small,sf},labelfont={bf,color=gris},textfont={color=gris},justification=raggedright,singlelinecheck=false}
+\setlist{itemsep=2pt,topsep=3pt,leftmargin=*}
+
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\renewcommand{\arraystretch}{1.22}
+
+% ---------- Recuadros ----------
+\tcbset{base/.style={enhanced,boxrule=0pt,arc=2pt,left=10pt,right=10pt,top=7pt,bottom=7pt,
+  fonttitle=\sffamily\small\bfseries,coltitle=white,before skip=8pt,after skip=10pt,
+  borderline west={3pt}{0pt}{#1}}}
+\newtcolorbox{clave}[1][]{base=azul,colback=azulclaro,colframe=azul,title={Idea clave\ifx&#1&\else: #1\fi},
+  attach boxed title to top left={xshift=8pt,yshift=-6pt},boxed title style={colback=azul,arc=2pt,boxrule=0pt}}
+\newtcolorbox{pendiente}[1][]{base=ambar,colback=ambarclaro,colframe=ambar,title={Decisión pendiente\ifx&#1&\else: #1\fi},
+  attach boxed title to top left={xshift=8pt,yshift=-6pt},boxed title style={colback=ambar,arc=2pt,boxrule=0pt}}
+\newtcolorbox{porque}[1][]{base=verde,colback=verdeclaro,colframe=verde,title={Por qué se hizo así\ifx&#1&\else: #1\fi},
+  attach boxed title to top left={xshift=8pt,yshift=-6pt},boxed title style={colback=verde,arc=2pt,boxrule=0pt}}
+\newtcolorbox{coherencia}[1][]{base=violeta,colback=violetaclaro,colframe=violeta,title={Coherencia\ifx&#1&\else: #1\fi},
+  attach boxed title to top left={xshift=8pt,yshift=-6pt},boxed title style={colback=violeta,arc=2pt,boxrule=0pt}}
+\newtcolorbox{cuidado}[1][]{base=rojo,colback=rojoclaro,colframe=rojo,title={Cuidado\ifx&#1&\else: #1\fi},
+  attach boxed title to top left={xshift=8pt,yshift=-6pt},boxed title style={colback=rojo,arc=2pt,boxrule=0pt}}
+
+% Etiquetas de veredicto para tablas
+\newcommand{\ok}{\textcolor{verde}{\sffamily\small\bfseries Coherente}}
+\newcommand{\tension}{\textcolor{ambar}{\sffamily\small\bfseries Tensión}}
+\newcommand{\corregir}{\textcolor{rojo}{\sffamily\small\bfseries Corregir}}
+\newcommand{\coincide}{\textcolor{verde}{\sffamily\small\bfseries Coinciden}}
+\newcommand{\matiz}{\textcolor{ambar}{\sffamily\small\bfseries Matiz}}
+\newcommand{\discrepa}{\textcolor{rojo}{\sffamily\small\bfseries Discrepan}}
+\newcommand{\amplia}{\textcolor{azul}{\sffamily\small\bfseries Amplía}}
+\newcommand{\fuente}[1]{\par\vspace{-2pt}{\raggedright\sffamily\footnotesize\color{gris}Fuente: #1\par}}
+\newcommand{\archivo}[1]{\texttt{\small #1}}
+
+\preto\section{\needspace{7\baselineskip}}
+\preto\subsection{\needspace{5\baselineskip}}
+\begin{document}
+
+% ================= PORTADA =================
+\begin{titlepage}
+\vspace*{1.2cm}
+{\sffamily\small\color{gris} AI Hackathon IAA 2026 · Parte 1 · Documento de trabajo para el participante}\par
+\vspace{0.6cm}
+{\sffamily\fontsize{30}{36}\selectfont\bfseries\color{azul} Dictamen para decidir}\par
+\vspace{0.3cm}
+{\sffamily\Large\color{tinta} S30, S22 y el cierre de la parte 1, explicados paso a paso}\par
+\vspace{0.9cm}
+{\color{linea}\rule{\linewidth}{0.8pt}}\par
+\vspace{0.4cm}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\sffamily\small\leavevmode\color{gris}}p{3.4cm}L@{}}
+Para & Manuel Rodríguez, participante y responsable de las decisiones \\
+Integra & La revisión de Codex del 19 de octubre (\archivo{docs/REVISION\_DESDE\_EL\_PARTICIPANTE.md}) y la revisión cruzada de Claude del mismo día (\archivo{docs/REVISION\_CRUZADA\_CLAUDE.md}) \\
+Redacta & Claude, a partir de los archivos del proyecto, el registro de decisiones y cálculos propios sobre predicciones guardadas \\
+Fecha & Lunes 19 de octubre de 2026, Bogotá \\
+Cierre parte 1 & Viernes 23 de octubre de 2026, 11:00 de Bogotá (16:00 UTC) \\
+\end{tabularx}
+\vspace{0.6cm}
+
+\begin{clave}[qué es y qué no es este documento]
+Reescribe en lenguaje llano el dictamen técnico del proyecto, explica por qué se eligió cada método, revisa si las decisiones encajan entre sí y reúne lo que te toca decidir. Es una revisión hecha por asistentes de IA. No sustituye tu aprobación, ni una revisión actuarial humana independiente, ni la firma del acta de revisión (\archivo{registro/revision\_humana.json}), que sigue en blanco.
+\end{clave}
+
+\vspace{0.3cm}
+{\sffamily\small\color{gris} Cómo leer los recuadros}\par
+\vspace{2pt}
+\begin{tabularx}{\linewidth}{@{}P{0.6cm}L@{}}
+\textcolor{azul}{\rule{0.4cm}{0.4cm}} & Idea clave: lo que conviene recordar aunque no leas el resto. \\
+\textcolor{ambar}{\rule{0.4cm}{0.4cm}} & Decisión pendiente: algo que solo tú puedes resolver. \\
+\textcolor{verde}{\rule{0.4cm}{0.4cm}} & Por qué se hizo así: la razón de un método y la evidencia que lo apoyó. \\
+\textcolor{violeta}{\rule{0.4cm}{0.4cm}} & Coherencia: si una decisión encaja con las demás o choca con alguna. \\
+\textcolor{rojo}{\rule{0.4cm}{0.4cm}} & Cuidado: una afirmación que no debe hacerse o un riesgo que no está cubierto. \\
+\end{tabularx}
+\end{titlepage}
+
+{\setlength{\parskip}{0pt}\small\tableofcontents}
+\newpage
+
+% ================= 1 =================
+\section{El dictamen en una página}
+
+Los dos candidatos finales, S30 y S22, están bien construidos para lo que pide el concurso: los archivos son correctos, las cifras se pueden recalcular y coinciden entre Codex y Claude. S30 es un poco mejor en todas las comparaciones de cartera, pero la diferencia es tan pequeña que ninguna prueba permite afirmar que lo sea de verdad. Los dos archivos, además, predicen casi lo mismo. Por eso la elección entre ellos tiene poco efecto esperado en tu puntuación.
+
+Lo que sigue sin demostrarse es otra cosa: que las reservas de los siniestros abiertos sean correctas, que todas las variables existirían al cotizar una póliza real, y que la cadena completa de entrenamiento se pueda repetir de principio a fin. Esas carencias no impiden cerrar la parte 1, que solo exige elegir un CSV. Sí importan para el informe, el código y la evaluación del jurado al final de la parte 2.
+
+\begin{clave}[las tres acciones antes del viernes]
+\begin{enumerate}
+\item Marcar S30 como predicción final en Kaggle y guardar el comprobante. Ya aprobaste esa elección el 18 de octubre (decisión D89); falta hacer el clic.
+\item Registrar en el acta de revisión la decisión, su razón y el alcance que aceptas (solo concurso).
+\item Corregir tres frases del repositorio que prometen más de lo demostrado (sección «Reproducción y documentación»).
+\end{enumerate}
+\end{clave}
+
+\begin{table}[H]
+\centering\small
+\begin{tabularx}{\linewidth}{@{}P{3.6cm}LL@{}}
+\toprule
+Asunto & Situación & Qué hace falta \\
+\midrule
+Elección S30 o S22 & S30 algo mejor en todo; diferencia no concluyente & Clic en Kaggle y acta \\
+Calidad de los archivos & Dos CSV correctos y verificados & Nada \\
+Nivel de 2025 & Mayor incertidumbre cuantitativa del modelo & Documentarla; rediseñarla en la parte 2 \\
+Reservas de caso & Sesgo no identificable con una sola valoración & Aceptar como supuesto del concurso \\
+Variables al cotizar & Algunas sin fecha de captura & Aceptar como escenario del concurso \\
+Reproducción completa & Corrida histórica no recuperable; sin modelos guardados & Decidir si autorizas una corrida nueva \\
+Documentación & Tres frases exageradas; README pensado para uso interno & Corregir antes de la parte 2 \\
+\bottomrule
+\end{tabularx}
+\caption{Resumen del estado. El detalle y las fuentes están en las secciones siguientes.}
+\end{table}
+
+% ================= 2 =================
+\section{Qué pide el concurso, en palabras simples}
+
+Kaggle pide, para cada periodo de póliza de 2025 en tres ramos (autos, edificios y contenidos del hogar), el coste esperado de todos los siniestros que ocurran en ese periodo, cuando estén completamente notificados y liquidados. El coste se mide neto de franquicia y de recobros, y sin los siniestros rechazados. Es una prima de riesgo, no la prima comercial. La moneda es ficticia (CU). Son 626.639 filas que hay que predecir.
+
+\subsection{La métrica: D² Tweedie con potencia 1,5}
+
+La métrica compara tu modelo con uno muy simple que predice lo mismo para todos. Se calcula así:
+\[
+D^2 = 1 - \frac{\text{desviación de tu modelo}}{\text{desviación del modelo simple}}.
+\]
+Un valor de 0 significa que no mejoras al modelo simple; un valor de 1 sería predecir sin error. En seguros, la mayoría de pólizas no tiene siniestros y unas pocas tienen siniestros muy caros, así que valores entre 0,10 y 0,15 ya son buenos. Tu S30 obtuvo 0,12996 en la tabla pública.
+
+La desviación Tweedie de potencia 1,5 tiene, para cada fila, una forma que ayuda a entenderla:
+\[
+d(y,\mu) = \frac{4\,\bigl(\sqrt{y}-\sqrt{\mu}\bigr)^2}{\sqrt{\mu}},
+\]
+donde $y$ es el coste observado y $\mu$ la predicción. Si la póliza no tiene siniestros ($y=0$), el error vale $4\sqrt{\mu}$: cobrar de más a quien no siniestra penaliza, pero de forma moderada. Si hay un siniestro grande, el error crece con la diferencia de raíces cuadradas, lo que amortigua el peso de los casos extremos frente a un error cuadrático. Esta potencia se sitúa entre el modelo de Poisson (potencia 1, solo conteos) y el gamma (potencia 2, solo importes), y por eso encaja con un coste que mezcla muchos ceros y pocos importes altos.
+
+\begin{cuidado}[la línea base oficial]
+La página oficial dice que la métrica se mide frente a una línea base de «tasa constante» (\emph{constant-rate baseline}). Las cifras locales del proyecto usan la de scikit-learn, cuya base es la media sin tener en cuenta la exposición. Recalculado con una base proporcional a la exposición, el D² local de S30 en 2024 baja de 0,1379 a 0,1065, pero la ventaja de S30 sobre S22 casi no cambia (0,000143 frente a 0,000138). Conclusión práctica: la elección entre candidatos no depende de esta ambigüedad; las comparaciones entre cifras locales y públicas sí.
+\fuente{\archivo{docs/fuentes/revision\_participante\_20261019.json} (página de evaluación); recálculo en \archivo{registro/revision\_cruzada\_claude\_20261019.json}.}
+\end{cuidado}
+
+\subsection{Reglas que condicionan la decisión}
+
+\begin{table}[H]
+\centering\small
+\begin{tabularx}{\linewidth}{@{}P{4.4cm}L@{}}
+\toprule
+Regla & Consecuencia para ti \\
+\midrule
+Una sola predicción final por parte & S22 no puede «acompañar» a S30 en la puntuación; solo uno cuenta \\
+Si no eliges, se usa el mejor público & Hoy sería S30; cambiaría si subieras un envío con mejor puntuación pública \\
+Diez envíos al día & Hay margen para probar, pero cada prueba basada en la tabla pública añade riesgo de sobreajuste \\
+Rúbrica: rendimiento y adaptación 40 \%, uso de IA 25 \%, confianza y controles 20 \%, comunicación 15 \% & El rendimiento combina las puntuaciones privadas de ambas partes con el juicio del jurado; la documentación pesa casi tanto como el score \\
+Informe, video y código al final de la parte 2 & La reproducción y el expediente se juzgan después; no bloquean la parte 1 \\
+Premio solo para miembros o estudiantes de una asociación miembro del IAA & La elegibilidad documental está pendiente \\
+\bottomrule
+\end{tabularx}
+\caption{Reglas oficiales relevantes.}
+\fuente{reglas específicas §2.2 y página de evaluación archivadas el 19 de octubre en \archivo{docs/fuentes/}.}
+\end{table}
+
+% ================= 3 =================
+\section{Cómo se construyó la predicción y por qué}
+
+Esta sección recorre la cadena completa en el orden en que se ejecuta. Para cada paso explica qué se hizo y por qué se eligió así, con la evidencia que lo apoyó en su momento.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  node distance=4mm and 4mm,
+  paso/.style={draw=azul,fill=azulclaro,rounded corners=2pt,font=\sffamily\scriptsize,align=center,minimum height=10mm,text width=2.45cm},
+  flecha/.style={-{Stealth[length=2mm]},draw=gris,thick}]
+\node[paso] (a) {Once tablas\\originales};
+\node[paso,right=of a] (b) {Ocho reglas\\de limpieza};
+\node[paso,right=of b] (c) {Asignación de\\siniestros y etiqueta T0};
+\node[paso,right=of c] (d) {Exposición efectiva\\(retraso de aviso)};
+\node[paso,below=9mm of d] (e) {Matriz de variables\\por bloques F0 a F4};
+\node[paso,left=of e] (f) {Diez componentes:\\coste total y\\frecuencia × severidad};
+\node[paso,left=of f] (g) {Mezcla por ramo\\y ajuste de forma};
+\node[paso,left=of g] (h) {Nivel de 2025\\y CSV final};
+\draw[flecha] (a)--(b); \draw[flecha] (b)--(c); \draw[flecha] (c)--(d);
+\draw[flecha] (d)--(e); \draw[flecha] (e)--(f); \draw[flecha] (f)--(g); \draw[flecha] (g)--(h);
+\end{tikzpicture}
+\caption{Recorrido de la receta congelada (36 pasos en \archivo{receta/receta.json}; S30 usa 30 y S22, 32).}
+\end{figure}
+
+\subsection{Limpiar los datos sin inventar información}
+
+Los datos tienen errores típicos de un sistema real: exposiciones registradas en días en lugar de años, capitales asegurados multiplicados por mil, claves de cliente con formatos distintos, 604 siniestros copiados exactamente. Ocho reglas de limpieza (ID01, EXP01, CAP01, CAT01, AGE01, DUP01, REN00 y PRE00), aplicadas por el productor de datos de Codex, corrigen solo lo demostrado y dejan marcas de auditoría en lo dudoso. Esas marcas nunca entran al modelo como variables.
+
+\begin{porque}[reglas explícitas y conservadoras]
+Una corrección sin regla escrita no se puede revisar ni repetir. Codex reconstruyó las once tablas desde los originales con igualdad byte a byte, y la revisión del 19 de octubre volvió a cotejar sus huellas. Cuando no había evidencia suficiente (por ejemplo, 149 capitales sin referencia histórica que confirme la escala), se aplicó el tratamiento documentado y se dejó la duda registrada en lugar de esconderla.
+\end{porque}
+
+\subsection{La etiqueta T0: qué coste aprende el modelo}
+
+Cada siniestro aceptado se asigna al periodo de póliza que lo cubre, usando la póliza, el ramo y la fecha de ocurrencia. La etiqueta de cada periodo, llamada T0, es el incurrido a la fecha menos los recobros. No se resta la franquicia porque los pagos ya vienen netos de ella. Los rechazados quedan fuera.
+
+\begin{table}[H]
+\centering\small
+\begin{tabularx}{\linewidth}{@{}LRRR@{}}
+\toprule
+Ramo & Siniestros aceptados asignados & T0 (CU) & Reserva de caso (CU) \\
+\midrule
+Autos & 110.496 & 428.762.846,58 & 63.698.064,13 \\
+Edificios & 26.266 & 246.656.437,27 & 23.822.203,49 \\
+Contenidos & 23.670 & 65.737.584,58 & 2.647.949,32 \\
+\midrule
+Total & 160.432 & 741.156.868,43 & 90.168.216,94 \\
+\bottomrule
+\end{tabularx}
+\caption{Etiqueta T0 valorada al 31 de diciembre de 2024. Codex la reconcilió fila a fila con una implementación alternativa sin diferencias.}
+\fuente{\archivo{registro/revision\_participante\_20261019.json}; decisión D67.}
+\end{table}
+
+\begin{porque}[asignar por póliza y fecha]
+Un mismo identificador de póliza reaparece en las renovaciones y algunas pólizas cambian a mitad de año. Un enlace que ignore las fechas de cobertura duplicaría costes o los pondría en el año equivocado. Los 413 siniestros anteriores al historial (marca PRE00) quedan sin asignar a propósito.
+\end{porque}
+
+\subsection{Siniestros que aún no se conocen: la exposición efectiva}
+
+Al 31 de diciembre de 2024 faltan siniestros por notificar, sobre todo de los últimos meses. En lesiones corporales de autos, por ejemplo, solo se había notificado el 56 \% de lo esperado para 2024. Si el modelo aprendiera de esos datos sin corregir, creería que 2024 fue más barato de lo que fue.
+
+La solución elegida estima, con un método de desarrollo de conteos (\emph{chain-ladder}) por peligro y por mes de ocurrencia, qué fracción de los siniestros ya se conoce. Esa fracción reduce la exposición de entrenamiento: si solo se conoce el 80 \% de los avisos, la póliza «cuenta» como si hubiera estado expuesta el 80 \% del tiempo. Al predecir 2025 se usa la exposición completa, y la predicción sale a nivel último sin añadir otro factor de siniestros no reportados (IBNR).
+
+\begin{porque}[corregir en la exposición y no en la etiqueta]
+Así el ajuste por retraso entra una sola vez y el modelo compara tasas en una base homogénea entre años. En 2024, la exposición efectiva quedó en el 79 \% de la nominal en autos, el 93 \% en edificios y el 97 \% en contenidos. El primer contraste público del proyecto respaldó trabajar a nivel último: la misma tasa constante obtuvo 0,07118 calibrada sobre T0 y 0,07211 calibrada sobre T0 más IBNR.
+\fuente{decisiones D67, D68 y D70 en \archivo{Preparación/DECISIONES.md}.}
+\end{porque}
+
+\begin{cuidado}[lo que este método no resuelve]
+Corrige los siniestros que faltan por avisar, pero no el desarrollo de los que ya están abiertos. Las reservas de caso de los 10.120 siniestros abiertos (90,17 millones de CU) entran tal cual. Con una sola fecha de valoración no se puede saber si esas reservas están bien, por encima o por debajo. Cualquier documento que diga que las reservas son «insesgadas» afirma más de lo que los datos permiten.
+\end{cuidado}
+
+\subsection{Qué variables puede usar el modelo: el contrato F0 a F4}
+
+Cada columna se clasificó según cuándo estaría disponible al cotizar. El código rechaza cualquier columna que no tenga bloque asignado.
+
+\begin{table}[H]
+\centering\small
+\begin{tabularx}{\linewidth}{@{}P{1.3cm}P{4.6cm}L@{}}
+\toprule
+Bloque & Contenido & Disponibilidad al cotizar \\
+\midrule
+F0 & Contrato, vehículo, inmueble, canal, franquicias, duración & Sí, al inicio del periodo \\
+F1 & Historial de avisos de la póliza hasta el 1 de enero del año & Sí, con el mismo corte en entrenamiento y en 2025 \\
+F2 & Clima de años anteriores en la dirección & Sí \\
+F3 & Datos del maestro de clientes y telemática sin fecha de captura & Condicionada: se supone que no cambian \\
+F4 & Prima escrita relativa a la media del año & Usa la media de toda la cartera del año, incluida 2025 \\
+\bottomrule
+\end{tabularx}
+\caption{Contrato de disponibilidad de variables.}
+\fuente{\archivo{src/datos/construir\_f0.py} y \archivo{src/modelos/comun.py}; decisión D68.}
+\end{table}
+
+\begin{porque}[un contrato escrito en código]
+Es la única forma verificable de garantizar que ningún predictor usa información posterior al inicio del periodo. El historial se corta el 1 de enero en entrenamiento y en 2025 por igual, lo que es conservador y coherente entre ambos.
+\end{porque}
+
+\subsection{Los modelos: dos familias que se complementan}
+
+El proyecto combina dos maneras de predecir el coste.
+
+La primera predice el coste total de la póliza de una vez, con árboles de decisión potenciados (LightGBM y CatBoost) y la misma pérdida Tweedie de la métrica. Capta bien interacciones entre variables que nadie especificó. En autos, varios componentes limitan durante el entrenamiento cada siniestro a 15.000 CU y reparten el exceso de forma uniforme como recargo, para que unos pocos siniestros enormes de lesiones no dominen el aprendizaje.
+
+La segunda separa el problema por peligro (robo, incendio, inundación, lunas, lesiones…): un modelo para cuántos siniestros se esperan y otro para cuánto cuesta cada uno. La severidad usa un modelo gamma con el capital asegurado (en hogar) o el valor del vehículo (en autos), y en S30 incorpora una tendencia anual por peligro, limitada a ±15 \%.
+
+\begin{table}[H]
+\centering\small
+\begin{tabularx}{\linewidth}{@{}P{2cm}Lr@{}}
+\toprule
+Ramo & Componente de S30 & Peso \\
+\midrule
+Autos & CatBoost Tweedie del coste total, cuatro semillas & 0,20 \\
+ & CatBoost de frecuencia por peligro × severidad GLM con tendencia & 0,60 \\
+ & LightGBM Tweedie del coste total con historial y datos de cliente & 0,10 \\
+ & LightGBM Tweedie con variables reducidas & 0,10 \\
+\midrule
+Edificios & LightGBM Tweedie con siete variables de cliente & 0,40 \\
+ & CatBoost de frecuencia por peligro × severidad por capital con tendencia & 0,30 \\
+ & Frecuencia aditiva × severidad por capital con tendencia & 0,30 \\
+\midrule
+Contenidos & LightGBM Tweedie del coste total & 0,30 \\
+ & Frecuencia aditiva × severidad LightGBM gamma & 0,30 \\
+ & Frecuencia aditiva × severidad GLM con covariables físicas & 0,40 \\
+\bottomrule
+\end{tabularx}
+\caption{Composición de S30. S22 es la misma arquitectura sin tendencia de severidad, sin la elasticidad de exposición en contenidos y con otros pesos en ese ramo (incluye una red neuronal).}
+\fuente{\archivo{README.md}, \archivo{receta/especificaciones/spec\_s30.json}; decisiones D83, D86 y D88.}
+\end{table}
+
+\begin{porque}[mezclar en lugar de elegir un solo modelo]
+Las dos familias se equivocan de forma distinta. Los árboles captan interacciones; la frecuencia por peligro permite modelar la tendencia de cada peligro y la relación con el capital, cuya elasticidad fue estable entre cortes (por ejemplo, entre 0,73 y 0,82 en incendio). La tendencia se añadió porque las severidades medias de varios peligros crecen entre un 4 \% y un 8 \% al año, y una media de 2021 a 2024 subestima los daños propios y sobrestima lesiones, que cambiaron de régimen en 2023.
+\fuente{decisiones D83 y D88.}
+\end{porque}
+
+\subsection{La mezcla: pesos, forma y nivel}
+
+La mezcla trabaja en tres pasos que conviene distinguir.
+
+\subsubsection{Primero, los pesos}
+Cada componente se reescala a un total común antes de mezclar, de modo que los pesos combinan formas de reparto del riesgo y no niveles distintos.
+
+\subsubsection{Después, la forma}
+Las predicciones salían demasiado parecidas entre pólizas: el modelo no separaba lo suficiente los riesgos buenos de los malos. Se corrigió con una transformación que «abre» las tasas alrededor de su media geométrica:
+\[
+\mu' = e\left(\frac{e}{\bar e}\right)^{b-1} g\left(\frac{r}{g}\right)^{a},\qquad r=\frac{\mu}{e},
+\]
+donde $e$ es la exposición, $r$ la tasa, y $g$ y $\bar e$ medias geométricas. Un exponente $a$ mayor que 1 separa más las tasas; un $b$ menor que 1 hace que el coste no crezca del todo en proporción a la duración del periodo. En S30, autos usa $a=1{,}09$ y $b=0{,}95$, y contenidos $a=1$ y $b=0{,}95$. Edificios no lleva forma.
+
+\begin{porque}[ajustar la forma]
+Los exponentes óptimos coincidieron en 2023 y 2024 (1,095 y 1,097 en autos) y, fijados en un año, mejoraban el otro. La forma se retiró después en hogar (S22, decisión D86) porque su ganancia dependía del 0,1 \% de siniestros más caros y el envío que la llevaba (S21) bajó en la tabla pública.
+\fuente{decisiones D81 y D86.}
+\end{porque}
+
+\subsubsection{Por último, el nivel}
+Para fijar cuánto suma la predicción de 2025 se usa un factor por ramo: el promedio de dos factores, uno calculado con 2023 (f23) y otro con 2024 (f24). Cada factor es la escala que mejor ajusta la métrica Tweedie en su año:
+\[
+f^{*} = \frac{\sum_i y_i/\sqrt{\mu_i}}{\sum_i \sqrt{\mu_i}}.
+\]
+Este factor no es el cociente monetario $\sum y/\sum\mu$: pondera cada póliza por $\sqrt{\mu}$ en lugar de por $\mu$, así que da más peso relativo a las pólizas de bajo riesgo. Por eso un modelo bien escalado para la métrica puede quedar por debajo del coste total observado.
+
+Además, una regla llamada s17 aparta de la referencia de nivel a los componentes cuyo total de 2025 frente a 2024 se mueve más de un 1,5 \% que el del componente ancla de su ramo. Esos componentes siguen aportando forma, pero no deciden cuánto suma la cartera.
+
+\begin{porque}[promediar dos años y la regla s17]
+Promediar reduce la dependencia de un único año, que puede ser atípico. La regla s17 evita que un componente con un nivel inestable entre años arrastre el total; se mide sin etiquetas de 2025. Ambas son decisiones prudentes frente al ruido; la sección de coherencia analiza su contrapartida.
+\end{porque}
+
+\subsection{Cómo se validó: cortes en el tiempo}
+
+\begin{table}[H]
+\centering\small
+\begin{tabularx}{\linewidth}{@{}P{2.6cm}P{3.6cm}L@{}}
+\toprule
+Corte & Entrena con & Para qué se usó \\
+\midrule
+V23 & 2021 y 2022 & Calibrar con la mitad de los clientes de 2023 y comparar en la otra mitad \\
+V24 & 2021 a 2023 & Contraste temporal en 2024 y diagnósticos \\
+Producción & 2021 a 2024 & Predecir 2025 (el archivo entregado) \\
+\bottomrule
+\end{tabularx}
+\caption{Validación temporal.}
+\fuente{\archivo{docs/INFORME\_SEMANA1.md}; decisión D68.}
+\end{table}
+
+\begin{porque}[validar en el tiempo y separar clientes]
+Imita la tarea real: aprender del pasado y predecir el año siguiente. Separar clientes dentro de 2023 evita evaluar con las mismas personas con las que se calibró. Los intervalos de confianza se calculan remuestreando clientes, direcciones o regiones completas, porque un mismo cliente aparece en varios ramos y años.
+\end{porque}
+
+\begin{cuidado}[los cortes ya no son una prueba independiente]
+V23 y V24 se usaron muchas veces para elegir pesos, forma y reglas. Sus resultados sirven para comparar recetas, pero el equipo ya los «conoce». Lo mismo pasa con la tabla pública, que influyó en el criterio de selección. Ninguna cifra local es una estimación sin sesgo de la puntuación privada.
+\end{cuidado}
+
+% ================= 4 =================
+\section{Qué está comprobado}
+
+Codex construyó un auditor propio que concilió 310 controles técnicos sobre la cadena vigente. Claude recalculó después, con un script distinto, las cifras que sostienen las conclusiones. Los resultados coinciden.
+
+\begin{table}[H]
+\centering\small
+\begin{tabularx}{\linewidth}{@{}P{4.3cm}LL@{}}
+\toprule
+Qué se revisó & Resultado & Qué demuestra (y qué no) \\
+\midrule
+Huellas de los once originales y once tablas activas & Coinciden con lo registrado & Los archivos no cambiaron \\
+Asignación de 162.546 siniestros & Cero diferencias con una implementación alternativa & La asignación es correcta; no dice nada del coste último \\
+T0 de 2.409.311 periodos & Diferencia máxima por fila de 0 CU & La etiqueta concilia; sigue siendo coste a fecha \\
+Separación de cortes & Ningún cliente compartido entre las mitades de 2023 & La validación está bien separada \\
+Métricas de S30 y S22 en 72 ámbitos & Error máximo de $3{,}3\times10^{-16}$ & Las métricas archivadas son reproducibles \\
+Los dos CSV finales & 626.639 filas, orden y huella correctos & Los archivos de entrega son válidos \\
+Capitales sin confirmar & 1.454 ajustes, 149 sin confirmar, 123 en 2025 (77 edificios, 46 contenidos) & El alcance del supuesto está acotado \\
+\bottomrule
+\end{tabularx}
+\caption{Comprobaciones nuevas del 19 de octubre.}
+\fuente{\archivo{registro/revision\_participante\_20261019.json} (Codex) y \archivo{registro/revision\_cruzada\_claude\_20261019.json} (Claude).}
+\end{table}
+
+\begin{clave}[310 controles no son 310 pruebas de calidad]
+Ese número cuenta cotejos de huellas, claves y cálculos. Demuestra que la cadena es íntegra y trazable, no que el modelo prediga bien. La calidad predictiva solo la miden las comparaciones de la sección siguiente.
+\end{clave}
+
+% ================= 5 =================
+\section{S30 frente a S22: qué dice la evidencia}
+
+\subsection{Las cifras}
+
+\begin{table}[H]
+\centering\small
+\begin{tabularx}{\linewidth}{@{}P{6.6cm}RRR@{}}
+\toprule
+Comparación & S22 & S30 & Diferencia \\
+\midrule
+2024 completo (V24) & 0,13774 & 0,13788 & +0,000138 \\
+2024 con reservas al −25 \% & & & +0,000105 \\
+2024 con reservas al +25 \% & & & +0,000169 \\
+2023 (V23, mitad de selección) & 0,14526 & 0,14542 & +0,000162 \\
+Tabla pública de Kaggle & 0,12988 & 0,12996 & +0,00008 \\
+\bottomrule
+\end{tabularx}
+\caption{D² Tweedie de cartera. El intervalo de confianza al 95 \% de la ganancia en 2024, remuestreando clientes, va de −0,000082 a +0,000369 e incluye el cero.}
+\fuente{\archivo{registro/revision\_participante\_20261019.json}; \archivo{registro/revision\_cruzada\_claude\_20261019.json}.}
+\end{table}
+
+{\sloppy Por ramo, en 2024 S30 gana en los tres (autos +0,000075, edificios +0,000283, contenidos +0,000032). En 2023 pierde en edificios (−0,000226) y gana mucho en contenidos (+0,001346).\par}
+
+\subsection{Los dos archivos son casi iguales}
+
+\begin{table}[H]
+\centering\small
+\begin{tabularx}{\linewidth}{@{}LRRRR@{}}
+\toprule
+Ramo & Total S22 (M CU) & Total S30 (M CU) & Correlación de logaritmos & Filas con diferencia > 5 \% \\
+\midrule
+Autos & 118,89 & 118,90 & 0,9998 & 1,2 \% \\
+Edificios & 73,93 & 74,37 & 0,9999 & 0,0 \% \\
+Contenidos & 18,86 & 18,69 & 0,9993 & 19,9 \% \\
+Cartera & 211,69 & 211,96 & 0,9997 & 6,4 \% \\
+\bottomrule
+\end{tabularx}
+\caption{Predicciones de 2025 de los dos candidatos.}
+\fuente{\archivo{privado/predicciones/S30.csv} y \archivo{S22.csv}; \archivo{registro/revision\_cruzada\_claude\_20261019.json}.}
+\end{table}
+
+\subsection{¿Depende la ventaja de unos pocos clientes?}
+
+Codex señaló que los diez clientes más favorables a S30 aportan más que toda la ganancia (0,000173 frente a 0,000138) y concluyó que el resultado depende de pocos casos. El dato es correcto, pero cuenta solo un lado. Los diez clientes más adversos restan 0,000135, y al quitar los diez de cada extremo queda el 72 \% de la ganancia.
+
+\begin{table}[H]
+\centering\small
+\begin{tabularx}{\linewidth}{@{}LR@{}}
+\toprule
+Diagnóstico sobre 2024 (373.831 clientes) & Aporte a la ganancia \\
+\midrule
+Ganancia total & +0,000138 \\
+Diez clientes más favorables & +0,000173 \\
+Diez clientes más adversos & −0,000135 \\
+Resto, sin los diez de cada extremo & +0,000100 \\
+Filas con el 1 \% de siniestros más caros & +0,000047 \\
+Demás filas & +0,000091 \\
+\bottomrule
+\end{tabularx}
+\caption{Influencia simétrica por cliente.}
+\fuente{\archivo{registro/revision\_cruzada\_claude\_20261019.json}.}
+\end{table}
+
+\begin{clave}[cómo leer la comparación]
+La ventaja de S30 está repartida en el grueso de la cartera, no concentrada en unos pocos siniestros, y apunta en la misma dirección en todos los cortes de cartera. Aun así es pequeña frente al ruido que generan las pérdidas grandes, y los cortes ya se habían usado para elegir. La lectura honesta es: S30 tiene la mejor estimación puntual, pero la diferencia no es concluyente y su efecto esperado es pequeño.
+\end{clave}
+
+\subsection{El criterio N48 y la elección final}
+
+Codex había fijado de antemano un filtro (N48) para decidir si un candidato nuevo merecía gastar un envío y sustituir al vigente. S30 no lo superó: la mejora en 2024 quedó por debajo de 0,0002 y los intervalos incluyen el cero. Codex propone por eso registrar la elección de S30 como una excepción razonada a ese criterio.
+
+Claude ve el encuadre de otra forma. N48 decidía si promover un retador; hoy los dos candidatos ya están puntuados y la pregunta es cuál tiene mayor puntuación esperada. Que S30 no supere el filtro no hace mejor a S22. Con todas las estimaciones de cartera del lado de S30 y sin un motivo concreto en su contra, elegirlo es razonable sin presentarlo como excepción.
+
+\begin{pendiente}[P1 y P2 · selección y razón registrada]
+Ya aprobaste S30 como predicción final el 18 de octubre (D89). Falta marcarlo en Kaggle antes del viernes 23 a las 11:00 y escribir en el acta la razón. Propuesta de redacción: «S30 por estimación puntual favorable en todos los cortes de cartera y en la tabla pública; diferencia no concluyente; predicciones casi idénticas a S22, por lo que el coste de equivocarse es pequeño». Si prefieres el encuadre de Codex, añade que S30 no superó el filtro N48 y que lo aceptas conociendo ese resultado.
+\end{pendiente}
+
+% ================= 6 =================
+\section{El nivel de 2025: la incertidumbre más grande}
+
+El dictamen de Codex menciona que en edificios el coste observado de 2024 fue 1,099 veces la predicción de S30, y advierte con razón que no hay que multiplicar 2025 por ese número. Ese 1,099 es el cociente monetario. El factor que maximiza la métrica en 2024 es 1,071, y el nivel de 2025 ya incorpora la mitad de él a través del promedio. Lo que importa es otra cosa: el factor de nivel subió de 2023 a 2024 en los tres ramos.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  ybar, bar width=15pt, width=0.86\linewidth, height=6.2cm,
+  ymin=0.95, ymax=1.19, ylabel={\sffamily\small factor de nivel},
+  symbolic x coords={Autos,Edificios,Contenidos}, xtick=data,
+  ticklabel style={font=\sffamily\small}, yticklabel style={/pgf/number format/.cd,fixed,precision=2,use comma},
+  legend style={font=\sffamily\scriptsize,at={(0.5,1.03)},anchor=south,draw=none,fill=none,legend columns=3,/tikz/every even column/.append style={column sep=8pt}},
+  legend cell align=left, enlarge x limits=0.22, axis line style={draw=gris}, tick style={draw=gris},
+  ymajorgrids, grid style={draw=linea},
+  nodes near coords, nodes near coords style={font=\sffamily\scriptsize,rotate=90,anchor=west,/pgf/number format/.cd,fixed,precision=3,use comma}]
+\addplot[fill=azul!45,draw=azul] coordinates {(Autos,0.9864) (Edificios,1.0589) (Contenidos,1.0776)};
+\addplot[fill=ambar!55,draw=ambar] coordinates {(Autos,1.0047) (Edificios,1.1343) (Contenidos,1.0924)};
+\addplot[fill=verde!45,draw=verde] coordinates {(Autos,0.9955) (Edificios,1.0966) (Contenidos,1.0850)};
+\legend{f23 (aprendido en 2023),f24 (aprendido en 2024),factor usado en 2025}
+\end{axis}
+\end{tikzpicture}
+\caption{Factores de nivel de S30 por ramo. De 2023 a 2024 suben un 1,9 \% en autos, un 7,1 \% en edificios y un 1,4 \% en contenidos.}
+\fuente{\archivo{Semana 1/Modelos\_claude\_b/runs/S30\_claude\_b/resumen.json}.}
+\end{figure}
+
+Promediar f23 y f24 supone que esa subida no continúa en 2025. Hay señales en ambos sentidos. A favor de que continúe, el proyecto ya documentó que la prima escrita por año expuesto crece entre 2,7 \% y 3,4 \% al año en autos y entre 5,0 \% y 5,5 \% en hogar (D67). En contra, dos cortes no bastan para distinguir una tendencia de un año malo de edificios por clima o hundimientos, y S30 ya incluye tendencia en la severidad de autos y edificios.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.78\linewidth, height=6cm,
+  xlabel={\sffamily\small escala aplicada a la predicción de 2024},
+  ylabel={\sffamily\small cambio en D² de cartera},
+  xmin=0.9, xmax=1.12, ymin=-0.0026, ymax=0.0006,
+  ticklabel style={font=\sffamily\scriptsize},
+  xticklabel style={/pgf/number format/.cd,fixed,precision=2,use comma},
+  yticklabel style={/pgf/number format/.cd,fixed,precision=4,use comma},
+  scaled y ticks=false,
+  legend style={font=\sffamily\scriptsize,at={(0.97,0.04)},anchor=south east,draw=none,fill=white,fill opacity=0.8,text opacity=1},
+  legend cell align=left, axis line style={draw=gris}, tick style={draw=gris},
+  grid=both, grid style={draw=linea}]
+\fill[ambar!25] (axis cs:0.9,0) rectangle (axis cs:1.12,0.000138);
+\addplot[azul,thick,mark=*,mark size=1.4pt] coordinates {(0.90,-0.002504)(0.92,-0.001732)(0.94,-0.001104)(0.96,-0.000612)(0.98,-0.000246)(1.00,0)(1.02,0.000133)(1.04,0.000161)(1.06,0.000088)(1.08,-0.000080)(1.10,-0.000337)(1.12,-0.000678)};
+\addplot[verde,thick,mark=square*,mark size=1.3pt] coordinates {(0.90,-0.001186)(0.92,-0.000854)(0.94,-0.000572)(0.96,-0.000337)(0.98,-0.000148)(1.00,0)(1.02,0.000108)(1.04,0.000179)(1.06,0.000214)(1.08,0.000216)(1.10,0.000186)(1.12,0.000127)};
+\legend{toda la cartera,solo edificios}
+\node[font=\sffamily\scriptsize,text=ambar!70!black,anchor=south west] at (axis cs:0.902,0.00016) {franja ámbar: ventaja completa de S30 sobre S22 (0,000138)};
+\end{axis}
+\end{tikzpicture}
+\caption{Sensibilidad del D² de 2024 al nivel de S30. Es un diagnóstico con las etiquetas de 2024, no una propuesta de escala: un error de nivel de pocos puntos cuesta tanto o más que toda la diferencia entre candidatos.}
+\fuente{cálculo de Claude sobre \archivo{aligned\_predictions.parquet} de N48; \archivo{herramientas/revision\_cruzada\_claude.py}.}
+\end{figure}
+
+\begin{clave}[por qué la curva no es simétrica en la gráfica]
+En escala logarítmica, la desviación Tweedie es simétrica alrededor del nivel óptimo: equivocarse un 3 \% por arriba o por abajo cuesta casi lo mismo. La curva parece asimétrica porque el nivel de S30 en 2024 ya estaba un 3,5 \% por debajo del óptimo de la cartera.
+\end{clave}
+
+\begin{pendiente}[P7 · nivel de 2025]
+Recomendación de Claude: no tocar el nivel para la parte 1. No hay evidencia suficiente para elegir otra regla, ya decidiste no usar pruebas de nivel en la tabla pública, y un CSV nuevo a cuatro días del cierre añadiría una decisión sin validar. Sí conviene escribir en el informe que el nivel es la principal incertidumbre cuantitativa y tratar, en la parte 2, la proyección del nivel y la tendencia hacia el periodo tarifado como primera pregunta de diseño.
+\end{pendiente}
+
+\begin{cuidado}[nivel para la métrica frente a suficiencia de la prima]
+Con el nivel aprendido en 2023, el coste observado de 2024 superó a la predicción en un 4,3 \% en la cartera y en un 9,9 \% en edificios. El escalado que maximiza la métrica no garantiza que la prima de riesgo total cubra el coste total. Una tarifa real necesitaría un paso de balance monetario aparte.
+\end{cuidado}
+
+% ================= 7 =================
+\section{¿Encajan las decisiones entre sí?}
+
+Un proyecto largo acumula decisiones tomadas en momentos distintos, por autores distintos y con la evidencia del momento. Esta sección revisa si siguen siendo compatibles. La marca \ok{} indica que encajan; \tension{} indica que conviven pero con una contrapartida que hay que explicar; \corregir{} indica una contradicción que debería resolverse en los documentos.
+
+\begin{table}[H]
+\centering\small
+\begin{tabularx}{\linewidth}{@{}P{3.4cm}LP{1.6cm}@{}}
+\toprule
+Decisiones relacionadas & Análisis & Veredicto \\
+\midrule
+Etiqueta T0, exposición efectiva y predicción con exposición nominal & El retraso de aviso entra una sola vez y la definición coincide con la oficial (neto de franquicia y recobros, sin rechazados). El contraste S01/S02 apoyó el nivel último & \ok \\
+Pérdida Tweedie al entrenar, métrica D² y factor de nivel & Todo optimiza la misma desviación de potencia 1,5 & \ok \\
+Corte del historial al 1 de enero & Mismo corte en entrenamiento y en 2025; conservador & \ok \\
+Validación temporal y selección & El diseño imita la tarea, pero los cortes y la tabla pública se usaron para elegir & \tension \\
+Tendencia de severidad en componentes y nivel por promedio de f23 y f24 & Los componentes proyectan crecimiento; el nivel asume que la subida reciente se detiene & \tension \\
+Contrato de disponibilidad y uso como tarifa & Válido para el concurso; para cotizar faltan fechas de F3, la media de prima de 2025 (F4) y medias geométricas del lote en la forma & \tension \\
+Forma adoptada por V23/V24 (D81) y retirada en hogar tras un envío (D86) & Cambio razonado y documentado, pero motivado por un único resultado público & \tension \\
+Criterios de selección: N48 (Codex), criterio de cuerpo (D88) y elección final (D89) & Tres reglas fijadas por autores y en momentos distintos; S30 pasa una y no la otra. Falta decir cuál rige la elección final & \tension \\
+S22 «de respaldo» y una sola predicción final & S22 solo actúa si decides cambiar activamente; es un plan de contingencia & \tension \\
+\bottomrule
+\end{tabularx}
+\caption{Decisiones que encajan o que conviven con una contrapartida.}
+\fuente{\archivo{Preparación/DECISIONES.md} (D67 a D94), \archivo{registro/estado\_entrega.json}, \archivo{registro/revision\_humana.json}, código en \archivo{src/}.}
+\end{table}
+
+\begin{table}[H]
+\centering\small
+\begin{tabularx}{\linewidth}{@{}P{3.4cm}LP{1.6cm}@{}}
+\toprule
+Decisiones relacionadas & Análisis & Veredicto \\
+\midrule
+Reservas: informe prudente frente a «reservas insesgadas» en D88 & Una sola valoración no permite afirmar insesgadez. El informe vigente lo dice bien; D88 es histórico y no se reescribe, pero esa frase no debe pasar al informe ni al video & \corregir \\
+Elección aprobada en D89 frente a «pendiente» en el estado y el acta & La decisión existe en el registro de conversación, pero el acta está vacía y el clic en Kaggle no se hizo & \corregir \\
+README y \archivo{requirements.txt}: reconstrucción «byte a byte» & No acreditada; la corrida completa histórica no es recuperable & \corregir \\
+README: «ningún dato de 2025 interviene en el ajuste» & F4 y la regla s17 usan covariables y predicciones de 2025 (no sus costes) & \corregir \\
+\bottomrule
+\end{tabularx}
+\caption{Contradicciones entre documentos que conviene resolver.}
+\fuente{mismas fuentes que la tabla anterior.}
+\end{table}
+
+\begin{coherencia}[lo esencial está bien alineado]
+El núcleo actuarial es consistente: qué se aprende (T0), cómo se corrige el retraso (exposición efectiva), qué se predice (coste último) y con qué se mide (Tweedie 1,5) responden a la misma definición del objetivo oficial. Las tensiones aparecen en capas posteriores (selección, nivel, uso como tarifa) y en la redacción de algunos documentos.
+\end{coherencia}
+
+\begin{coherencia}[tres criterios de selección]
+El proyecto usó reglas distintas según el momento. N48 era un filtro estricto de promoción fijado por Codex antes de recibir S30. El criterio de «cuerpo» (ganar sin el 0,5 \% de pérdidas más grandes) lo fijó la línea B de Claude antes de construir S30, pero nació de observar que seis puntuaciones públicas seguían mejor al cuerpo que al D² completo. La elección final (D89) combinó tabla pública y cortes locales. Ninguna es incorrecta por sí sola; el informe debe decir cuál justificó la elección final y reconocer que la tabla pública intervino.
+\end{coherencia}
+
+\begin{cuidado}[frases que no deben repetirse]
+«Las reservas son insesgadas.» «La reconstrucción es byte a byte.» «Ningún dato de 2025 interviene.» «S30 es mejor que S22.» Ninguna está demostrada. Las versiones correctas son: el sesgo de reservas no es identificable con una valoración; las mezclas se reproducen exactamente desde componentes guardados, pero no la cadena completa; no se usan costes de 2025, aunque sí covariables y predicciones de ese año; S30 tiene la mejor estimación puntual, con una diferencia no concluyente.
+\end{cuidado}
+
+% ================= 8 =================
+\section{Supuestos que aceptas para el concurso}
+
+\subsection{Coste último y reservas}
+El modelo supone que las reservas de caso de los siniestros abiertos son una estimación razonable de su coste final. No se puede comprobar con los datos: hay una sola fecha de valoración y ninguna columna de movimientos, cierres o reaperturas. Las sensibilidades de reservas al −25 \% y +25 \% muestran que la comparación entre candidatos no cambia de signo, pero no demuestran que las reservas sean suficientes. Claude encontró además que todos los recobros (27,68 millones de CU) están en siniestros cerrados; si las reservas de los abiertos no los anticipan, el coste neto de autos de 2024 estaría sobrestimado en torno a un 1,5 \%. Una sola valoración no distingue las dos lecturas.
+
+\begin{pendiente}[P4 · reservas]
+Codex y Claude coinciden: aceptar el supuesto de forma provisional para el concurso, declararlo con claridad en el informe y dejar abierta su validación actuarial. No añadir otro IBNR a la salida.
+\end{pendiente}
+
+\subsection{Disponibilidad de las variables}
+Varias variables del maestro de clientes, de telemática y de contactos (bloque F3) no tienen fecha de captura. Usarlas es legítimo en el concurso porque vienen en las tablas, pero no prueba que existirían al cotizar una póliza real. La prima relativa (F4) se normaliza con la media de toda la cartera del año, y la forma usa medias geométricas de todas las filas que se predicen juntas: la predicción de una póliza cambia si cambia el lote que la acompaña.
+
+\begin{pendiente}[P3 y P5 · alcance de uso]
+Aceptar que S30 es una predicción para la cartera del concurso y no una tarifa operativa. Para convertirla en tarifa harían falta, como mínimo, fijar como constantes las medias de normalización y de forma, confirmar fechas de captura de F3 y añadir un balance monetario del nivel.
+\end{pendiente}
+
+\subsection{Capitales sin confirmación}
+De 1.454 capitales reescalados por la regla de división entre mil, 149 no tienen historia que confirme la escala; 123 están en 2025 (77 de edificios y 46 de contenidos). En S30 suman 24.667,97 CU, el 0,0116 \% del total. Es una medida de alcance, no una prueba de que el riesgo sea pequeño: si la escala fuera errónea en esos casos, su predicción también lo sería, y los casos de entrenamiento influyen en otras predicciones.
+
+\begin{pendiente}[P6 · capitales]
+Aceptar el tratamiento trazable para el concurso y no trasladar automáticamente la división entre mil al mercado de la parte 2.
+\end{pendiente}
+
+% ================= 9 =================
+\section{Reproducción y documentación}
+
+\subsection{Qué se puede repetir hoy}
+Los dos CSV finales se reproducen byte a byte a partir de los componentes guardados, en Windows y en la máquina virtual (con diferencias de último decimal en archivos intermedios, que el programa declara con código 3). Lo que no se puede repetir es la cadena completa desde los datos hasta los modelos: Claude confirmó que ningún script guarda los modelos ajustados, que 31 de los 36 pasos de la receta requieren volver a ajustar (24 de aprendizaje y 7 GLM) y que la corrida completa anterior quedó en un contenedor de nube de otra sesión y no es recuperable.
+
+\begin{porque}[por qué esto no bloquea la parte 1]
+Las reglas piden al ganador, al final, código de entrenamiento e inferencia capaz de generar el envío, documentación y una descripción del entorno. No piden modelos guardados. La parte 1 solo exige el CSV.
+\end{porque}
+
+\begin{pendiente}[P8 · corrida completa nueva]
+Codex proponía recuperar los recibos de la cadena; ya se sabe que no es posible. La única forma de acreditarla es lanzar de nuevo \archivo{reproducir.py todo} (unas diez horas con dos núcleos y 8 GB de memoria, según el README), guardar su recibo y comparar con tolerancia donde la igualdad exacta no se alcance. Implica volver a entrenar, algo que la coordinación vigente excluye; autorizarlo antes del cierre de la parte 2 es decisión tuya.
+\end{pendiente}
+
+\subsection{Correcciones de texto}
+
+\begin{table}[H]
+\centering\small
+\begin{tabularx}{\linewidth}{@{}P{3.2cm}LL@{}}
+\toprule
+Archivo & Dice hoy & Propuesta \\
+\midrule
+\archivo{README.md} & «Ningún dato de 2025 interviene en el ajuste.» & «No se usan costes de 2025. La normalización de prima y la regla de nivel usan covariables y predicciones de esa cartera.» \\
+\archivo{requirements.txt} & «Con estas versiones y dos hilos la reconstrucción es byte a byte.» & «Versiones del entrenamiento de referencia. La igualdad byte a byte de la cadena completa está pendiente de acreditar.» \\
+\archivo{INFORME\_SEMANA1.md} & «La incertidumbre todavía admite resultados equivalentes.» & Correcta en sentido; Codex propone «impide establecer una mejora concluyente», más clara para un lector estadístico \\
+\archivo{README.md} (orden) & Abre con la revisión de IA dirigida a ti & Abrir con la solución y mover las revisiones a una sección de gobierno; el repositorio llegará al jurado \\
+\bottomrule
+\end{tabularx}
+\caption{Precisiones documentales propuestas por Codex y Claude.}
+\end{table}
+
+\begin{pendiente}[P9 y P10 · paquete y documentos]
+Aceptar o rechazar la versión 1.2 del paquete, que corrigió el hallazgo GOV-007 (controles que dejaban continuar con archivos incompletos o distintos), y aprobar las correcciones de texto.
+\end{pendiente}
+
+% ================= 10 =================
+\section{Dónde coinciden y dónde no Codex y Claude}
+
+\begin{table}[H]
+\centering\small
+\begin{tabularx}{\linewidth}{@{}P{3.2cm}LLP{1.9cm}@{}}
+\toprule
+Tema & Codex & Claude & Estado \\
+\midrule
+Calidad de S30 y S22 & Técnicamente consistentes & Igual; cifras recalculadas & \coincide \\
+Uso como tarifa real & No acreditado & Igual; añade el balance monetario & \coincide \\
+Papel de S22 & Respaldo & Plan de contingencia: Kaggle solo puntúa uno & \matiz \\
+Cierre de la entrega & No darla por cerrada & Separar el CSV de la parte 1 del paquete de la parte 2 & \matiz \\
+Criterio N48 & Elegir S30 sería una excepción & N48 era un filtro de promoción; no aplica a la elección final & \discrepa \\
+Influencia por cliente & Depende de pocos casos & Lectura simétrica: ganancia repartida & \discrepa \\
+Nivel de edificios & Señal para revisar; no multiplicar por 1,099 & De acuerdo; el factor sube en los tres ramos y es la mayor incertidumbre & \amplia \\
+Línea base de la métrica & El scorer oficial puede diferir & Base de tasa constante; la elección no cambia & \amplia \\
+Reproducción & Recuperar recibos y piezas & No recuperable; solo una corrida nueva & \amplia \\
+Estado de la decisión & Pendiente & Aprobada en D89; falta el clic y el acta & \amplia \\
+Frases del README y requirements & Corregir & Igual; además reordenar el README & \coincide \\
+Reservas, variables, capitales & Supuestos visibles y validación pendiente & Igual & \coincide \\
+\bottomrule
+\end{tabularx}
+\caption{Comparación de las dos revisiones de IA.}
+\end{table}
+
+% ================= 11 =================
+\section{Lista de decisiones pendientes}
+
+\begin{table}[H]
+\centering\small
+\begin{tabularx}{\linewidth}{@{}P{0.7cm}P{3.6cm}LP{2.4cm}@{}}
+\toprule
+ & Decisión & Recomendación & Plazo \\
+\midrule
+P1 & Marcar la predicción final en Kaggle & S30, guardar comprobante & Antes del vie. 23, 11:00 \\
+P2 & Firmar el acta con candidato, razón y alcance & Redacción de la sección de S30 frente a S22 & Antes del vie. 23 \\
+P3 & Alcance de uso & Solo concurso y cartera suministrada & Antes del vie. 23 \\
+P4 & Supuesto de reservas & Aceptar provisionalmente y declararlo & Informe final \\
+P5 & Disponibilidad de variables F3 y F4 & Aceptar como escenario del concurso & Informe final \\
+P6 & Capitales sin confirmación & Aceptar tratamiento trazable & Informe final \\
+P7 & Nivel de 2025 & Mantener; documentar; rediseñar en la parte 2 & Parte 2 \\
+P8 & Corrida completa nueva & Decidir si autorizas reentrenar con recibo & Antes del cierre de la parte 2 \\
+P9 & Versión 1.2 del paquete (GOV-007) & Aceptar la corrección técnica & Esta semana \\
+P10 & Correcciones de texto & Aplicar las cuatro de la tabla & Esta semana \\
+P11 & Elegibilidad, licencia y registro de prompts & Verificar membresía o condición de estudiante en una asociación miembro del IAA; elegir licencia OSI; vincular prompts reales & Antes del cierre de la parte 2 \\
+P12 & Umbral de materialidad para futuras comparaciones & Fijarlo tú con una justificación, antes de nuevos contrastes & Parte 2 \\
+\bottomrule
+\end{tabularx}
+\caption{Decisiones que solo tú puedes tomar. Ninguna revisión de IA las cierra.}
+\end{table}
+
+\begin{clave}[orden sugerido]
+Primero lo que tiene fecha fija y poco esfuerzo: P1, P2 y P3 esta semana. Después P9 y P10, que mejoran el expediente sin tocar el modelo. P8 y P11 condicionan la entrega final. P7 y P12 son preguntas de diseño para cuando lleguen los datos del nuevo mercado.
+\end{clave}
+
+% ================= ANEXOS =================
+\appendix
+\section{Anexo A. Glosario}
+
+\begin{tabularx}{\linewidth}{@{}P{3.4cm}L@{}}
+\toprule
+Término & Significado \\
+\midrule
+T0 & Coste incurrido a la fecha menos recobros de los siniestros aceptados de cada periodo, valorado al 31-12-2024 \\
+IBNR & Siniestros ocurridos pero aún no notificados \\
+IBNER & Desarrollo futuro de siniestros ya notificados (por ejemplo, reservas que suben o bajan) \\
+Chain-ladder de conteos & Método que estima qué fracción de los siniestros ya se conoce según el tiempo transcurrido desde la ocurrencia \\
+Exposición efectiva & Duración de la póliza multiplicada por la fracción de siniestros ya notificada \\
+D² Tweedie & Mejora relativa de la desviación Tweedie frente a un modelo simple; mayor es mejor \\
+V23, V24 & Cortes de validación que evalúan 2023 y 2024 entrenando con años anteriores \\
+f23, f24 & Factores de nivel que mejor ajustan la métrica en 2023 y 2024 \\
+Forma & Transformación que separa más o menos las tasas entre pólizas sin cambiar el total \\
+Regla s17 & Excluye de la referencia de nivel los componentes cuyo total 2025/2024 se aparta más de 1,5 \% del ancla \\
+N48 & Filtro de Codex para promover un candidato nuevo frente a S22 \\
+Cuerpo y cola & El cuerpo excluye el 0,5 \% (o el 0,1 \%) de pérdidas más grandes; la cola son esas pérdidas \\
+F0 a F4 & Bloques de variables según su disponibilidad al cotizar \\
+GOV-007 & Hallazgo de Codex sobre controles del paquete demasiado permisivos, corregido en la versión 1.1 y 1.2 \\
+CU & Unidad monetaria ficticia del concurso \\
+\bottomrule
+\end{tabularx}
+
+\section{Anexo B. Fuentes}
+{\raggedright\sloppy
+
+Todas las rutas son relativas a \archivo{C:\textbackslash dev\textbackslash Hakaton\textbackslash Hackaton\textbackslash Repositorio\_IAA2026} salvo indicación.
+
+\begin{itemize}
+\item Revisión de Codex: \archivo{docs/REVISION\_DESDE\_EL\_PARTICIPANTE.md} y \archivo{registro/revision\_participante\_20261019.json}.
+\item Revisión cruzada de Claude: \archivo{docs/REVISION\_CRUZADA\_CLAUDE.md}, \archivo{herramientas/revision\_cruzada\_claude.py} y \archivo{registro/revision\_cruzada\_claude\_20261019.json} (con la huella SHA-256 de cada fuente y sin datos por fila).
+\item Respuesta sobre reproducción y reservas: \archivo{registro/CLA-20261019-004\_cuerpo.md} y \archivo{docs/RESPUESTA\_CLAUDE\_REPRODUCCION\_RESERVAS.md}.
+\item Registro de decisiones: \archivo{../../Preparación/DECISIONES.md}, especialmente D67, D68, D70, D81, D83, D86, D88, D89 y D94.
+\item Reglas oficiales consultadas el 19 de octubre: \archivo{docs/fuentes/reglas\_kaggle\_20261019.json} y \archivo{docs/fuentes/revision\_participante\_20261019.json}.
+\item Estado y acta: \archivo{registro/estado\_entrega.json} y \archivo{registro/revision\_humana.json}.
+\item Código de la mezcla: \archivo{src/modelos/mezcla3.py}; variables: \archivo{src/modelos/comun.py}; contrato: \archivo{src/datos/construir\_f0.py}.
+\end{itemize}
+
+Los cálculos nuevos de este documento se hicieron sobre archivos existentes, sin entrenar, inferir, mezclar ni enviar nada a Kaggle.\par}
+
+\end{document}

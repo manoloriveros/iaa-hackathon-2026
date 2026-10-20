@@ -1,0 +1,35 @@
+{
+  "autor": "Codex",
+  "utc": "2026-10-20T00:11:48.104177+00:00",
+  "autorizacion": "Petición directa: Corrige la brecha de los Pool creados antes de activar la captura y comprueba que se rechacen antes de cargar modelos. Coordínalo con Claude y registra la evidencia en la carpeta común, sin reentrenar ni enviar a Kaggle.",
+  "fuente": "herramientas/captura_modelos/captura.py",
+  "sha256_antes": "c1cfdedd7dc670939e7fcf61f767799352ea1782724102023e68cea8fb3b5fcc",
+  "hipotesis": "En modo reproducir, todo Pool sin las tres huellas válidas X/y/resto se rechaza antes de parámetros, getters, búsqueda o carga de estimador. Se incluyen entrenamiento y validación en colecciones y argumentos posicionales.",
+  "casos_adversos": [
+    "entrenamiento_previo",
+    "validacion_previa_directa",
+    "validacion_previa_lista",
+    "validacion_previa_tupla",
+    "validacion_previa_posicional",
+    "huella_vacia",
+    "huella_parcial",
+    "huella_tipo_incorrecto",
+    "huella_digest_invalido",
+    "validacion_huella_incompleta"
+  ],
+  "controles": [
+    "entrenamiento_capturado",
+    "validacion_capturada_directa",
+    "validacion_capturada_lista",
+    "matriz_sin_pool"
+  ],
+  "aceptacion": "10 rechazos NoHayEstimador antes de _cargar_meta/load_model/fit original; los cuatro controles alcanzan solo el doble de búsqueda, que interrumpe antes de archivos o carga. Guardar conserva su flujo y no se ensaya ningún ajuste.",
+  "limites": "Sin CatBoost/LightGBM/torch reales, modelos entrenados, datos del concurso, ajuste, inferencia, replay, sensibilidad, remoto o Kaggle. No repetir baterías históricas. No prueba presencia del caso en corrida real.",
+  "fuentes_protegidas": {
+    "reproducir.py": "a346d125520bfc5c784f1b9f65072759efdb15594263485434857e348475de17",
+    "herramientas/reproducir_capturado.py": "d934af4292b3e2e5ed2917408835b002b551e0fdd82969100afec5a1e32111e3",
+    "herramientas/captura_modelos/sitecustomize.py": "fb06e1eac3270311cc7ce30da862e5ac5e08e34926cbf6cf29b3ed3874c1c5de",
+    "receta/receta.json": "2f8cb8325b2b4183aaed53aa42bec3cea65319a68edb521351815aeb1dafa1a3",
+    "receta/codigo.json": "ed849f76523752181525543e4ba2262638d17c262050640f9f827ce55af29196"
+  }
+}

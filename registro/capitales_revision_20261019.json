@@ -1,0 +1,25 @@
+{
+  "autor": "Codex",
+  "utc": "2026-10-19T22:03:12.774527+00:00",
+  "archivo_privado": "privado/subsanacion_20261019/capitales_149_revision.csv",
+  "sha256": "6177f7bb5a8fd4f4f39bf21749e2799d20696635cae57844e72f70b9edc56d8b",
+  "filas": 149,
+  "test": 123,
+  "por_ramo": {
+    "buildings": 103,
+    "contents": 46
+  },
+  "fuentes": [
+    {
+      "ruta": "Hackaton/Semana 1/Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca/tables/f0_buildings.parquet",
+      "sha256": "2def2e2433062704e3762eae63f5b000e73d8284a62a6cc1a689aa63c2842454"
+    },
+    {
+      "ruta": "Hackaton/Semana 1/Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca/tables/f0_contents.parquet",
+      "sha256": "42328ddba499a77f9cc3c814506dc97fde7c3e2adf88cfc491058c7de92c76ff"
+    }
+  ],
+  "unidad_economica_confirmada": false,
+  "sensibilidad_contrafactual_calculada": false,
+  "alcance": "Extracción nueva para revisión individual; no repetición de auditoría ni cambio de capital o inferencia."
+}

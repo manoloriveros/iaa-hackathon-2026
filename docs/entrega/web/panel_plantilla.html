@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panel del modelo final · IAA 2026</title>
+<style>
+/*__CSS__*/
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--page);color:var(--text-primary);font:15px/1.55 var(--fuente)}
+a{color:var(--brand)}
+.marco{display:grid;grid-template-columns:250px minmax(0,1fr);min-height:100vh}
+aside{position:sticky;top:0;height:100vh;overflow:auto;background:var(--surface-1);border-right:1px solid var(--border);padding:22px 18px}
+aside .kicker{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted)}
+aside h1{font-size:20px;line-height:1.25;margin:8px 0 6px;color:var(--brand)}
+aside p{font-size:12.5px;color:var(--text-secondary);margin:0 0 14px}
+nav a{display:block;padding:7px 10px;border-radius:6px;color:var(--text-primary);text-decoration:none;font-size:14px}
+nav a:hover,nav a:focus-visible{background:var(--brand-soft)}
+.conmutadores{display:flex;gap:6px;margin:16px 0 10px;flex-wrap:wrap}
+.conmutadores button{font:inherit;font-size:12.5px;border:1px solid var(--border);background:var(--surface-1);color:var(--text-primary);border-radius:6px;padding:5px 10px;cursor:pointer}
+.conmutadores button[aria-pressed="true"]{background:var(--brand);color:var(--surface-1);border-color:var(--brand)}
+main{padding:28px clamp(16px,3vw,44px) 60px;max-width:1240px}
+section{scroll-margin-top:16px;margin:0 0 34px}
+h2{font-size:24px;line-height:1.25;margin:0 0 8px;color:var(--brand)}
+h3{font-size:16px;margin:18px 0 6px}
+p{max-width:95ch;margin:6px 0 12px}
+.lead{font-size:16px;color:var(--text-secondary);max-width:90ch}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:14px 0 18px}
+.kpi{background:var(--surface-1);border:1px solid var(--border);border-top:3px solid var(--brand);border-radius:8px;padding:12px 14px}
+.kpi .v{font-size:28px;font-weight:650;line-height:1.15}
+.kpi .l{font-size:12.5px;color:var(--text-secondary);margin-top:4px}
+.tarjeta{background:var(--surface-1);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin:12px 0}
+.tarjeta figcaption{font-size:13px;color:var(--text-secondary);margin-top:8px}
+.tarjeta .cab{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:6px}
+.tarjeta .cab strong{font-size:14.5px}
+.tarjeta button.vt{font:inherit;font-size:12px;border:1px solid var(--border);background:transparent;color:var(--text-secondary);border-radius:6px;padding:3px 9px;cursor:pointer}
+.tarjeta .vista{overflow-x:auto}
+.tarjeta .tabla{display:none;margin-top:8px;overflow-x:auto}
+.tarjeta.con-tabla .tabla{display:block}
+.dos{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:14px}
+.g-par,.g-tres{display:flex;gap:10px;flex-wrap:wrap}
+.g-par>div,.g-tres>div{flex:1 1 220px;min-width:0}
+table.t{border-collapse:collapse;width:100%;font-size:13.5px;background:var(--surface-1)}
+table.t th,table.t td{border-bottom:1px solid var(--grid);padding:8px 10px;text-align:left;vertical-align:top}
+table.t th{color:var(--text-secondary);font-weight:600}
+table.t td.n,table.t th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.vista.ancha svg.g-svg,.vista.ancha svg.d-svg{width:100%;height:auto}
+.vista svg{margin:0 auto}
+.estado{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;white-space:nowrap}
+.estado i{width:9px;height:9px;border-radius:50%;display:inline-block}
+.filtros{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:6px 0 4px}
+.filtros button{font:inherit;font-size:12.5px;border:1px solid var(--border);background:var(--surface-1);color:var(--text-primary);border-radius:6px;padding:4px 10px;cursor:pointer}
+.filtros button[aria-pressed="true"]{border-color:var(--brand);box-shadow:inset 0 0 0 1px var(--brand)}
+code{font:12.5px/1.5 ui-monospace,Consolas,monospace;background:var(--brand-soft);padding:1px 5px;border-radius:4px}
+pre{font:12.5px/1.5 ui-monospace,Consolas,monospace;background:var(--surface-1);border:1px solid var(--border);border-radius:8px;padding:12px;overflow-x:auto}
+footer{color:var(--text-muted);font-size:12px;border-top:1px solid var(--border);padding-top:14px;margin-top:30px}
+@media (max-width:900px){.marco{grid-template-columns:1fr}aside{position:static;height:auto;border-right:0;border-bottom:1px solid var(--border)}nav{display:flex;flex-wrap:wrap;gap:4px}nav a{padding:5px 8px}}
+@media print{aside,.conmutadores,button.vt{display:none}.marco{display:block}main{max-width:none}.tarjeta{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="marco">
+<aside>
+  <div class="kicker" data-t="kicker"></div>
+  <h1 data-t="titulo"></h1>
+  <p data-t="subtitulo"></p>
+  <div class="conmutadores" role="group" aria-label="Idioma / Language">
+    <button type="button" data-idioma="es">Español</button>
+    <button type="button" data-idioma="en">English</button>
+  </div>
+  <div class="conmutadores" role="group" aria-label="Tema">
+    <button type="button" data-tema="light" data-t="claro"></button>
+    <button type="button" data-tema="dark" data-t="oscuro"></button>
+  </div>
+  <nav id="nav"></nav>
+</aside>
+<main id="contenido"></main>
+</div>
+<script>/*__CIFRAS__*/</script>
+<script>/*__JS__*/</script>
+<script>
+(function () {
+  'use strict';
+  var C = window.CIFRAS, lang = 'es';
+  try { var g = localStorage.getItem('panel-iaa-idioma'); if (g === 'en' || g === 'es') lang = g; } catch (e) {}
+  try { var tm = localStorage.getItem('panel-iaa-tema'); if (tm) document.documentElement.setAttribute('data-theme', tm); } catch (e) {}
+  function n(v, o) { return G.fmt(v, o || {}, lang); }
+  function pct(v, d) { return G.fmt(v, { pct: true, dec: d === undefined ? 0 : d }, lang); }
+
+  var TXT = {
+    es: {
+      kicker: 'AI Hackathon IAA 2026 · Parte 1', titulo: 'Mezcla por peligro: panel del modelo final', claro: 'Claro', oscuro: 'Oscuro',
+      subtitulo: 'Prima de riesgo por periodo de póliza en autos, edificios y contenidos. Solo cifras agregadas; sin datos por fila.',
+      tabla: 'Ver tabla', grafico: 'Ver gráfico',
+      sec: { resumen: 'Resumen', datos: 'Datos', objetivo: 'Objetivo e IBNR', modelo: 'Modelo', validacion: 'Validación', ia: 'Uso de IA', controles: 'Controles', limites: 'Límites y semana 2' },
+      resumen_lead: 'Este panel recorre el modelo entregado con los mismos números del informe. Cada gráfico tiene su tabla, y todas las cifras salen de docs/entrega/datos/cifras_entregables.json, que guarda la ruta y el SHA-256 de cada fuente.',
+      k1: 'puntuación pública del modelo final (D² Tweedie, potencia 1,5)', k2: 'D² de 2024 fuera de muestra; la tasa constante por ramo da ', k3: 'periodos de 2025 predichos en tres ramos', k4: 'aportes en el foro común de IA durante {horas} horas',
+      f_flujo: 'Flujo actuarial en seis etapas, con validación temporal y controles en cada paso.',
+      datos_lead: 'Los once Parquet originales quedan intactos; cada cambio vive en una capa derivada con bitácora por fila. La tabla resume qué se corrigió y qué se dejó como incertidumbre declarada.',
+      t_reglas: ['Problema encontrado', 'Filas', 'Tratamiento'],
+      reglas: [
+        ['Identificadores de cliente de autos sin ceros iniciales', 'ID01', 'Relleno a ocho dígitos; se recupera el cruce con el maestro'],
+        ['Exposición guardada en días o en base 360', 'EXP01', 'Días cubiertos entre 365'],
+        ['Capitales con saltos de unas mil veces (capa base)', 'CAP01', 'División entre mil con referencia histórica'],
+        ['Capitales extremos restantes (matriz de modelado)', 'F0', 'División entre mil; 149 sin confirmación histórica quedan como incertidumbre declarada'],
+        ['Mayúsculas mezcladas en categorías', 'CAT01', 'Unificación de alias'],
+        ['Edad medida en fechas distintas', 'AGE01', 'Edad al inicio del periodo (convención)'],
+        ['Siniestros duplicados salvo el identificador', 'DUP01', 'Se excluye la copia'],
+        ['Rechazo de renovación con sucesor', 'REN00', 'Solo marca de auditoría'],
+        ['Siniestros anteriores al historial de la póliza', 'PRE00', 'Solo marca; se concilian aparte']
+      ],
+      f_siniestros: 'De los registros de siniestros a la etiqueta T0: ningún siniestro queda ambiguo ni fuera de ventana.',
+      t_ceros: ['Ramo', '2021', '2022', '2023', '2024'], ceros: 'Periodos sin coste observado (%)',
+      obj_lead: 'T0 es el incurrido neto observado al 31-12-2024. Para llevarlo a nivel último, un chain-ladder de conteos por peligro estima qué parte de la exposición ya está vista; esa exposición efectiva entra como offset al entrenar y 2025 se predice con la exposición nominal, así el IBNR entra una sola vez.',
+      f_completitud: 'Parte de la exposición de 2024 cuyos siniestros ya se han reportado, por peligro.',
+      f_prima: 'Prima de riesgo por año-exposición (CU): observada (gris), con IBNR (color) y predicción 2025 (círculo hueco).',
+      t_reservas: ['Ramo', 'Año', 'Reserva de abiertos / T0', 'Abiertos', 'Aceptados'], reservas_t: 'Peso de las reservas de caso en T0',
+      mod_lead: 'El modelo final pondera, por ramo, modelos del coste total con Tweedie y modelos de frecuencia por peligro multiplicada por la severidad. El nivel de 2025 usa el factor que minimiza la desviación Tweedie, promediado entre 2023 y 2024.',
+      f_comp: 'Pesos por ramo. Azul: frecuencia × severidad. Naranja: coste total.',
+      t_comp: ['Ramo', 'Componente', 'Tipo', 'Peso'], t_nivel: ['Ramo', 'f 2023', 'f 2024', 'f usado', 'Total 2025 (CU)', 'CU por año-exposición'],
+      val_lead: 'Validación temporal: ajustar con años pasados y medir en un año completo posterior. 2023 y 2024 también se usaron para elegir, así que no son una prueba final independiente.',
+      f_vdis: 'Tres cortes: V23 desarrolla, V24 contrasta y producción predice 2025.', f_d2: 'D² por ramo frente a una tasa constante por ramo.',
+      f_dec: 'Coste medio por decil de coste predicho en 2024 (escala logarítmica). Línea: predicho. Círculos: observado.',
+      f_res: 'D² de 2024 con las reservas de caso de los abiertos × 0,75, × 1 y × 1,25. El D² apenas cambia; el nivel de 2025, sí (ver Límites).',
+      exp_t: 'Experimentos tras la elección',
+      exp_lead: 'Once experimentos se escribieron con su hipótesis y su criterio de aceptación antes de calcular, y el backtesting del IBNR se añadió a pedido del participante con su propia preinscripción; un análisis aparte acotó las reservas con la materialidad del 1 % que fijó el participante. Reutilizan los cortes de 2023 y 2024: miden estabilidad, no rendimiento independiente.',
+      t_exp: ['Experimento', 'Pregunta', 'Resultado frente al criterio fijado'],
+      exp: [
+        ['Influencia de clientes', '¿Depende la ventaja de pocos clientes?', 'Sí: quitar {kV24} de {nV24} clientes la invierte en 2024, y {kV23} en 2023. Rechazada'],
+        ['Nivel por ramo', '¿Es estable el nivel de 2025 entre los dos cortes?', 'No en edificios ({f23b} frente a {f24b}); autos dista un {semiM} y contenidos un {semiC} de su media. Rechazada en edificios'],
+        ['Reservas y recobros', '¿Resisten el orden y el nivel?', 'La ventaja se mantiene con reservas ×0,75, ×1 y ×1,25; los recobros ausentes en los abiertos de autos bajarían su nivel un {rec}'],
+        ['Pesos vecinos', '¿Hay pesos mejores cerca?', '{vec0} de {vecN} vecinos mejoran los dos cortes y los dos criterios. Meseta confirmada'],
+        ['Capitales sin confirmación', '¿Es inmaterial la división entre mil?', 'No por fila: sin dividir, esas filas son de {capMin} a {capMax} veces mayores. Rechazada'],
+        ['Cohortes y segmentos', '¿Es homogénea la ventaja?', 'Los segmentos adversos no se repiten entre cortes; el A/E regional de edificios correlaciona {corr} entre años. Rechazada en parte'],
+        ['Piso de ruido', '¿Es el piso de semillas menor que 0,0001?', 'Sí: las semillas mueven el D² como mucho {piso}. Confirmada'],
+        ['Tendencia de severidad', '¿Resiste la ventaja a otros escenarios de tendencia?', 'Sí, en todos los escenarios probados, con matices de atribución. Confirmada'],
+        ['Forma y elasticidad', '¿Están en una meseta?', 'No: el D² se mueve entre {formaMin} y {formaMax} en ±0,02, pero ningún punto mejora los cuatro criterios'],
+        ['Reproducción', '¿Se reproducen los componentes al reentrenar?', 'Dos LightGBM de hogar: {repN} predicciones guardadas, bit a bit. Confirmada'],
+        ['Semilla nueva', '¿Cuánto mueve una semilla nueva?', 'No ejecutado: ya lo cubren una corrida anterior de cinco semillas y la reproducción'],
+        ['Backtesting del IBNR', '¿Predice el chain-ladder los avisos posteriores?', 'No en varios peligros: {btMin} o {btMax} de {btP} fuera del criterio por corte. En lesiones, el IBNR del año recién cerrado se sobrestimó un {li22} (2022) y un {li23} (2023); en junio de 2024 la proyección quedó un {lij} corta. Rechazada, con efecto acotado'],
+        ['Acotación de reservas', '¿Cuánto error de reserva importaría?', 'Un {raM} en autos, un {raB} en edificios y un {raC} en contenidos mueven el nivel un 1 %; las estimaciones puntuales no sugieren reservas cortas, pero sus intervalos no las descartan. Incertidumbre material']
+      ],
+      f_bt: 'El chain-ladder de reporte se reestimó con los datos disponibles en tres cortes anteriores; cada celda compara los avisos que proyectaba recibir después del corte con los reportados hasta diciembre de 2024. Las cifras del año recién cerrado de la tabla de experimentos comparan el IBNR de ese año con su reestimación con todos los datos.',
+      t_bt: ['Peligro', 'Ramo', 'Corte', 'Proyectados', 'Reportados', 'Error', 'Criterio', '¿Dentro?'],
+      ia_lead: 'Dos asistentes de IA, Claude y Codex, trabajaron en tres líneas independientes que publicaban sus hipótesis en un foro común antes de calcularlas; un enjambre de tres agentes auditaba el proyecto cada seis horas. El participante autorizó las reglas de datos y los envíos y aprobó el modelo final; la selección manual en Kaggle sigue pendiente.',
+      f_ia: 'Organización del trabajo con IA y puntos de decisión humana.', f_foro: 'Aportes al foro por bloque de seis horas y tipo (clasificados por el título).',
+      f_curva: 'Los 14 envíos puntuados: la validación local siguió subiendo mientras la pública se estancaba.',
+      f_pl: 'Seis candidatos previos (gris) y los dos posteriores (azul): el D² sin el 0,5 % de pérdidas mayores ordena casi como el público.',
+      t_etapas: ['Etapa', 'Qué hizo la IA', 'Cómo lo verificamos'],
+      etapas: [
+        ['Datos y objetivo', 'Auditó 105 columnas; halló claves sin ceros, exposición en días, capitales ×1000 y 604 duplicados; asignó siniestros y estimó el IBNR', 'Recálculo independiente (41/41), reconstrucción byte a byte y dos algoritmos de asignación que coinciden'],
+        ['Variables', 'Contrato de disponibilidad por columna; detectó una variable que mide el siniestro del propio periodo', 'Exclusión por código con una guardia de predictores'],
+        ['Metodología', '51 fuentes primarias cotejadas con DOI y arXiv, más tres papers de la IAA', 'Afirmaciones sin respaldo descartadas, como una mejora del 17 % propuesta por otra herramienta'],
+        ['Modelado y diagnóstico', '44 contrastes numerados en la línea de contraste y preinscripciones en las otras dos', 'Intervalos por cliente, dirección y región; escenarios de reserva'],
+        ['Pruebas y gobierno', 'Orquestador de 30 nodos con huellas de 184 salidas; enjambre de validación', 'Un validador detectó controles permisivos: corregidos y probados con 36 casos adversos']
+      ],
+      t_hall: ['ID', 'Hallazgo', 'Severidad', 'Estado'], hall_t: 'Hallazgos del enjambre de validación', sev: { alta: 'alta', media: 'media', baja: 'baja', informativo: 'informativo' },
+      est: { abierto: 'abierto', cerrado_en_auditoria: 'cerrado', remediacion_documental_verificada: 'texto corregido', control_verificado: 'control verificado', remediacion_tecnica_verificada: 'corregido; falta revisión humana', cerrado_en_alcance_de_correccion_tecnica_1_2: 'cerrado por decisión del participante, solo en su alcance técnico', cerrado_en_alcance_de_correccion_tecnica_captura_1_1_2: 'cerrado por decisión del participante, solo en su alcance técnico', limitacion_aceptada_por_participante: 'limitación aceptada por el participante', limitacion_aceptada_por_participante_sin_reproduccion_independiente: 'limitación aceptada: sin reproducción independiente' },
+      todos: 'Todos',
+      ctl_lead: 'Cada capa tiene sus controles automáticos. El CSV entregado se regenera byte a byte desde los componentes guardados, y reentrenar toda la receta desde los originales lo reconstruyó con el mismo SHA-256; lo hizo el mismo flujo, sin un operador independiente.',
+      t_capas: ['Capa', 'Control', 'Resultado'],
+      capas: [
+        ['Datos originales', 'Huellas SHA-256 y reconstrucción independiente', '11 de 11 idénticos; 0 diferencias en 148 M de celdas'],
+        ['Objetivo y exposición', 'Asignación, T0, reservas y exposición', '18 de 18'],
+        ['Variables', 'Contrato por columna y particiones', '25 de 25'],
+        ['Modelo', 'D² por ramo y año, deciles, reservas, intervalos agrupados', 'Supera la referencia en cada ramo y año'],
+        ['Paquete', '9 casos nominales y 36 adversos desde la consola', '45 de 45 en tres entornos'],
+        ['Entrega', 'Columnas, filas, orden, identificadores, valores y SHA-256', '10 de 10']
+      ],
+      t_bat: ['Entorno', 'Python', 'Versión del paquete', 'Casos', 'Pasan'], env: { controles_nube: 'Nube de referencia', controles_vm: 'Máquina virtual del participante', controles_windows: 'Windows' },
+      lim_lead: 'Lo que el modelo no puede demostrar con estos datos, y cómo se adaptará al mercado nuevo de la parte 2.',
+      t_lim: ['Límite', 'Por qué importa', 'Qué hacemos'],
+      lim: [
+        ['Una sola valoración (31-12-2024)', 'No permite observar el último ni demostrar suficiencia de reservas; un error del {res_autos} en las de autos ({res_edif} en edificios) ya mueve el nivel de 2025 un 1 %', 'Incertidumbre material declarada en los tres ramos; pedir valoraciones sucesivas'],
+        ['2023 y 2024 usados para elegir', 'No son una prueba final independiente', 'Congelar la receta antes del mercado nuevo'],
+        ['Disponibilidad al cotizar', 'Historial, telemática y clima podrían no existir en la fecha de cotización', 'Contrato por columna; confirmar fechas con el responsable de los datos'],
+        ['El nivel de 2025', 'Los cortes de edificios distan un 3,4 % de su media; en autos, un escenario que repite el sesgo del IBNR de lesiones y suma los recobros ausentes en los abiertos lo sitúa alto entre un 1,5 % y un 2,5 %', 'Declarado como escenario, sin aplicarlo al archivo enviado; recalibrar es lo primero en la semana 2'],
+        ['Elección del modelo final', 'Su ventaja sobre el mejor envío anterior no es robusta: quitar 6 de 373.831 clientes la invierte', 'Se mantiene: ninguna alternativa probada lo supera en todos los criterios; no se afirma equivalencia'],
+        ['149 capitales sin confirmación', 'Pesan el 0,01 % del total predicho (24.668 CU), pero deciden sus filas: sin dividir, de 35 a 89 veces mayores', 'Mantener la división; confirmarla con un actuario de hogar'],
+        ['Reproducción independiente', 'El reentrenamiento y la réplica los hizo el mismo flujo en su nube de referencia', 'Declarada como limitación por el participante; el kit permite que otro operador la repita']
+      ],
+      t_ad: ['Qué compararemos', 'Señal de cambio', 'Respuesta prevista'],
+      ad: [
+        ['Contrato, unidades y exposición', 'Otra moneda, convención o definición del objetivo', 'Reconstruir la capa preparada sin trasladar reglas por costumbre'],
+        ['Mezcla de peligros y colas', 'Peligros nuevos o colas más pesadas', 'Reentrenar severidades; revisar criterio de cuerpo y regla de nivel'],
+        ['Desarrollo de siniestros', 'Otro patrón de reporte', 'Reestimar el chain-ladder antes de entrenar'],
+        ['Variables disponibles', 'Columnas nuevas, ausentes o con otra fecha', 'Actualizar el contrato y la guardia de predictores'],
+        ['Rendimiento del modelo congelado', 'Caída del D² o descalibración', 'Recalibrar primero; reconstruir si no basta']
+      ],
+      pie: 'Generado desde cifras_entregables.json · SHA-256 de las fuentes en el propio JSON · Archivo local: no se publica en línea porque contiene agregados de los datos del concurso.'
+    },
+    en: {
+      kicker: 'IAA AI Hackathon 2026 · Part 1', titulo: 'Per-peril blend: final model dashboard', claro: 'Light', oscuro: 'Dark',
+      subtitulo: 'Risk premium per policy period in motor, buildings and contents. Aggregated figures only; no row-level data.',
+      tabla: 'Show table', grafico: 'Show chart',
+      sec: { resumen: 'Summary', datos: 'Data', objetivo: 'Target and IBNR', modelo: 'Model', validacion: 'Validation', ia: 'Use of AI', controles: 'Controls', limites: 'Limits and week 2' },
+      resumen_lead: 'This dashboard walks through the delivered model with the same numbers as the report. Every chart has a table, and every figure comes from docs/entrega/datos/cifras_entregables.json, which stores the path and SHA-256 of each source.',
+      k1: 'public score of the final model (Tweedie D², power 1.5)', k2: 'out-of-sample D² on 2024; a constant rate per line gives ', k3: '2025 policy periods predicted across three lines', k4: 'posts in the shared AI forum over {horas} hours',
+      f_flujo: 'Six-stage actuarial pipeline, with temporal validation and controls at every step.',
+      datos_lead: 'The eleven original Parquet files stay untouched; every change lives in a derived layer with a row-level change log. The table summarises what was fixed and what was kept as declared uncertainty.',
+      t_reglas: ['Problem found', 'Rows', 'Treatment'],
+      reglas: [
+        ['Motor customer identifiers without leading zeros', 'ID01', 'Padded to eight digits; the customer-master join is restored'],
+        ['Exposure stored in days or on a 360-day basis', 'EXP01', 'Covered days divided by 365'],
+        ['Sums insured jumping about a thousandfold (base layer)', 'CAP01', 'Divided by 1,000 with historical support'],
+        ['Remaining extreme sums insured (modelling matrix)', 'F0', 'Divided by 1,000; 149 without historical confirmation remain a declared uncertainty'],
+        ['Mixed capitalisation in categories', 'CAT01', 'Aliases harmonised'],
+        ['Age measured at different dates', 'AGE01', 'Age at period start (convention)'],
+        ['Duplicate claims except for the identifier', 'DUP01', 'The copy is excluded'],
+        ['Declined renewal with a successor', 'REN00', 'Audit flag only'],
+        ['Claims before the policy history', 'PRE00', 'Flag only; reconciled separately']
+      ],
+      f_siniestros: 'From claim records to the T0 label: no claim is ambiguous or outside its window.',
+      t_ceros: ['Line', '2021', '2022', '2023', '2024'], ceros: 'Periods with no observed cost (%)',
+      obj_lead: 'T0 is the observed net incurred cost at 31-12-2024. To bring it to ultimate, a chain-ladder on claim counts by peril estimates how much of the exposure is already seen; that effective exposure is the training offset and 2025 is predicted with the nominal exposure, so IBNR enters once.',
+      f_completitud: 'Share of the 2024 exposure whose claims have already been reported, by peril.',
+      f_prima: 'Risk premium per exposure year (CU): observed (grey), with IBNR (colour) and the 2025 prediction (hollow circle).',
+      t_reservas: ['Line', 'Year', 'Open reserves / T0', 'Open', 'Accepted'], reservas_t: 'Weight of case reserves in T0',
+      mod_lead: 'In each line the final model weights Tweedie total-cost models and per-peril frequency-times-severity models. The 2025 level uses the factor that minimises the Tweedie deviance, averaged over 2023 and 2024.',
+      f_comp: 'Weights by line. Blue: frequency × severity. Orange: total cost.',
+      t_comp: ['Line', 'Component', 'Type', 'Weight'], t_nivel: ['Line', 'f 2023', 'f 2024', 'f used', '2025 total (CU)', 'CU per exposure year'],
+      val_lead: 'Temporal validation: fit on past years and score a later full year. 2023 and 2024 were also used for selection, so they are not an independent final test.',
+      f_vdis: 'Three cuts: V23 develops, V24 checks and production predicts 2025.', f_d2: 'D² by line against a constant rate per line.',
+      f_dec: 'Mean cost by decile of predicted cost in 2024 (log scale). Line: predicted. Circles: observed.',
+      f_res: '2024 D² with the case reserves of open claims × 0.75, × 1 and × 1.25. D² barely moves; the 2025 level does (see Limits).',
+      exp_t: 'Experiments after the choice',
+      exp_lead: 'Eleven experiments were written down with their hypothesis and acceptance criterion before computing, and the IBNR backtest was added at the participant\'s request with its own pre-registration; a separate analysis bounded reserves with the 1% materiality the participant fixed. They reuse the 2023 and 2024 cuts: they measure stability, not independent performance.',
+      t_exp: ['Experiment', 'Question', 'Result against the criterion set in advance'],
+      exp: [
+        ['Customer influence', 'Does the lead depend on a few customers?', 'Yes: removing {kV24} of {nV24} customers reverses it in 2024, and {kV23} in 2023. Rejected'],
+        ['Level by line', 'Is the 2025 level stable between the two cuts?', 'Not in buildings ({f23b} against {f24b}); motor sits {semiM} and contents {semiC} from their mean. Rejected in buildings'],
+        ['Reserves and recoveries', 'Do the order and the level hold?', 'The lead holds with reserves ×0.75, ×1 and ×1.25; the recoveries missing from open motor claims would lower the motor level by {rec}'],
+        ['Neighbouring weights', 'Are better weights nearby?', '{vec0} of {vecN} neighbours improve both cuts and both criteria. Plateau confirmed'],
+        ['Unconfirmed sums insured', 'Is the division by 1,000 immaterial?', 'Not per row: undivided, those rows are {capMin} to {capMax} times larger. Rejected'],
+        ['Cohorts and segments', 'Is the lead homogeneous?', 'Adverse segments do not repeat between cuts; regional A/E in buildings correlates {corr} between years. Partly rejected'],
+        ['Seed noise', 'Is the seed floor below 0.0001?', 'Yes: seeds move D² by at most {piso}. Confirmed'],
+        ['Severity trend', 'Does the lead hold under other trend scenarios?', 'Yes, in every scenario tested, with attribution caveats. Confirmed'],
+        ['Shape and elasticity', 'Do they sit on a plateau?', 'No: D² moves {formaMin} to {formaMax} within ±0.02, but no point improves all four criteria'],
+        ['Reproduction', 'Do retrained components reproduce?', 'Two home LightGBM components: {repN} saved predictions, bit for bit. Confirmed'],
+        ['New seed', 'How much does a new seed move?', 'Not run: an earlier five-seed run and the reproduction already cover it'],
+        ['IBNR backtest', 'Does the chain-ladder predict later reports?', 'Not in several perils: {btMin} or {btMax} of {btP} outside the criterion per cut. Bodily injury: the IBNR of the year just closed was over-estimated by {li22} (2022) and {li23} (2023); in June 2024 the projection fell {lij} short. Rejected, with bounded effect'],
+        ['Reserve bounding', 'How much reserve error would matter?', '{raM} in motor, {raB} in buildings and {raC} in contents move the level by 1%; point estimates do not suggest short reserves, but their intervals do not rule them out. Material uncertainty']
+      ],
+      f_bt: 'The reporting chain-ladder was re-estimated with the data available at three earlier cuts; each cell compares the claims it projected to be reported after the cut with those reported by December 2024. The year-just-closed figures in the experiments table compare that year\'s IBNR with its re-estimate on all the data.',
+      t_bt: ['Peril', 'Line', 'Cut', 'Projected', 'Reported', 'Error', 'Criterion', 'Within?'],
+      ia_lead: 'Two AI assistants, Claude and Codex, worked in three independent lines that posted their hypotheses to a shared forum before computing them; a swarm of three agents audited the project every six hours. The participant authorised the data rules and the submissions and approved the final model; the manual selection in Kaggle is still pending.',
+      f_ia: 'How the AI work was organised, and where humans decide.', f_foro: 'Forum posts by six-hour block and type (classified by title).',
+      f_curva: 'The 14 scored submissions: local validation kept rising while the public score stalled.',
+      f_pl: 'Six earlier candidates (grey) and the two later ones (blue): D² without the largest 0.5% of losses ranks almost like the public score.',
+      t_etapas: ['Stage', 'What AI did', 'How we verified it'],
+      etapas: [
+        ['Data and target', 'Audited 105 columns; found identifiers missing leading zeros, exposure in days, sums insured ×1,000 and 604 duplicates; assigned claims and estimated IBNR', 'Independent recomputation (41/41), byte-identical rebuild and two assignment algorithms that agree'],
+        ['Features', 'Per-column availability contract; flagged a variable that measures the period’s own claim', 'Excluded in code by a predictor guard'],
+        ['Methodology', '51 primary sources checked against DOI and arXiv, plus three IAA papers', 'Unsupported claims dropped, such as a 17% gain proposed by another tool'],
+        ['Modelling and diagnostics', '44 numbered tests in the challenge line, plus pre-registrations in the other two', 'Intervals clustered by customer, address and region; reserve scenarios'],
+        ['Testing and governance', '30-node orchestrator with fingerprints of 184 outputs; validation swarm', 'A validator found permissive controls: fixed and tested with 36 adverse cases']
+      ],
+      t_hall: ['ID', 'Finding', 'Severity', 'Status'], hall_t: 'Findings of the validation swarm', sev: { alta: 'high', media: 'medium', baja: 'low', informativo: 'informative' },
+      est: { abierto: 'open', cerrado_en_auditoria: 'closed', remediacion_documental_verificada: 'text corrected', control_verificado: 'control verified', remediacion_tecnica_verificada: 'fixed; human review pending', cerrado_en_alcance_de_correccion_tecnica_1_2: 'closed by the participant\'s decision, technical scope only', cerrado_en_alcance_de_correccion_tecnica_captura_1_1_2: 'closed by the participant\'s decision, technical scope only', limitacion_aceptada_por_participante: 'limitation accepted by the participant', limitacion_aceptada_por_participante_sin_reproduccion_independiente: 'limitation accepted: no independent reproduction' },
+      todos: 'All',
+      ctl_lead: 'Every layer has automated controls. The delivered CSV is regenerated byte for byte from the saved components, and retraining the whole recipe from the originals rebuilt it with the same SHA-256; the same workflow ran it, without an independent operator.',
+      t_capas: ['Layer', 'Control', 'Result'],
+      capas: [
+        ['Original data', 'SHA-256 fingerprints and an independent rebuild', '11 of 11 identical; 0 differences in 148 M cells'],
+        ['Target and exposure', 'Assignment, T0, reserves and exposure', '18 of 18'],
+        ['Features', 'Per-column contract and partitions', '25 of 25'],
+        ['Model', 'D² by line and year, deciles, reserves, clustered intervals', 'Beats the reference in every line and year'],
+        ['Package', '9 nominal and 36 adverse cases from the command line', '45 of 45 in three environments'],
+        ['Delivery', 'Columns, rows, order, identifiers, values and SHA-256', '10 of 10']
+      ],
+      t_bat: ['Environment', 'Python', 'Package version', 'Cases', 'Passed'], env: { controles_nube: 'Reference cloud', controles_vm: 'Participant virtual machine', controles_windows: 'Windows' },
+      lim_lead: 'What the model cannot prove with these data, and how it will adapt to the new market of Part 2.',
+      t_lim: ['Limitation', 'Why it matters', 'What we do'],
+      lim: [
+        ['A single valuation (31-12-2024)', 'Ultimate cannot be observed and reserve adequacy cannot be proven; a {res_autos} error in motor case reserves ({res_edif} in buildings) already moves the 2025 level by 1%', 'Declared a material uncertainty in all three lines; request successive valuations'],
+        ['2023 and 2024 used for selection', 'Not an independent final test', 'Freeze the recipe before the new market'],
+        ['Availability at quotation', 'History, telematics and weather might not exist at the quotation date', 'Per-column contract; confirm dates with the data owner'],
+        ['The 2025 level', 'The buildings cuts sit 3.4% from their mean; in motor, a scenario that repeats the bodily-injury IBNR bias and adds the recoveries missing from open claims puts it 1.5% to 2.5% high', 'Declared as a scenario, not applied to the submitted file; recalibration comes first in Week 2'],
+        ['Choice of the final model', 'Its lead over the previous best submission is not robust: removing 6 of 373,831 customers reverses it', 'Kept: no tested alternative beats it on every criterion; equivalence is not claimed'],
+        ['149 unconfirmed sums insured', 'They carry 0.01% of the predicted total (24,668 CU) yet decide their own rows: undivided, 35 to 89 times larger', 'Keep the division; confirm it with a home actuary'],
+        ['Independent reproduction', 'Retraining and replay were run by the same workflow in its reference cloud', 'Declared a limitation by the participant; the kit lets another operator repeat it']
+      ],
+      t_ad: ['What we will compare', 'Signal of change', 'Planned response'],
+      ad: [
+        ['Contract, units and exposure', 'Another currency, convention or target definition', 'Rebuild the prepared layer without carrying rules over by habit'],
+        ['Peril mix and tails', 'New perils or heavier tails', 'Refit severities; review the body criterion and the level rule'],
+        ['Claims development', 'Another reporting pattern', 'Re-estimate the chain-ladder before training'],
+        ['Available features', 'New, missing or differently dated columns', 'Update the contract and the predictor guard'],
+        ['Frozen model performance', 'Lower D² or miscalibration', 'Recalibrate first; rebuild if that is not enough']
+      ],
+      pie: 'Generated from cifras_entregables.json · source SHA-256 values are inside the JSON · Local file: not published online because it contains aggregates of the competition data.'
+    }
+  };
+
+  var SECCIONES = ['resumen', 'datos', 'objetivo', 'modelo', 'validacion', 'ia', 'controles', 'limites'];
+
+  function el(tag, attrs, hijos) {
+    var e = document.createElement(tag);
+    if (attrs) for (var k in attrs) { if (k === 'text') e.textContent = attrs[k]; else if (k === 'class') e.className = attrs[k]; else e.setAttribute(k, attrs[k]); }
+    (hijos || []).forEach(function (h) { if (h) e.appendChild(h); });
+    return e;
+  }
+  function tablaHTML(enc, filas, numericas) {
+    var t = el('table', { class: 't' }), th = el('thead'), tr = el('tr');
+    enc.forEach(function (h, i) { tr.appendChild(el('th', { text: h, class: numericas && numericas.indexOf(i) >= 0 ? 'n' : '' })); });
+    th.appendChild(tr); t.appendChild(th);
+    var tb = el('tbody');
+    filas.forEach(function (f) {
+      var r = el('tr');
+      f.forEach(function (v, i) {
+        if (v && v.nodeType) { var td = el('td'); td.appendChild(v); r.appendChild(td); }
+        else r.appendChild(el('td', { text: v, class: numericas && numericas.indexOf(i) >= 0 ? 'n' : '' }));
+      });
+      tb.appendChild(r);
+    });
+    t.appendChild(tb);
+    return t;
+  }
+  // Tarjeta con gráfico vivo y su tabla equivalente.
+  function tarjeta(titulo, figId, opts, pie, tabla) {
+    var T = TXT[lang];
+    var anchas = ['flujo', 'flujo_ia', 'siniestros', 'composicion', 'curva', 'deciles', 'prima_anual', 'validacion_diseno', 'publico_local'];
+    var vista = el('div', { class: anchas.indexOf(figId) >= 0 ? 'vista ancha' : 'vista' }), tab = el('div', { class: 'tabla' });
+    var boton = el('button', { type: 'button', class: 'vt', text: T.tabla, 'aria-expanded': 'false' });
+    var fig = el('figure', { class: 'tarjeta' }, [el('div', { class: 'cab' }, [el('strong', { text: titulo }), tabla ? boton : null]), vista, tab, el('figcaption', { text: pie })]);
+    fig.style.margin = '12px 0';
+    setTimeout(function () { F.dibujar(figId, vista, lang, Object.assign({ interactivo: true }, opts || {})); }, 0);
+    if (tabla) {
+      tab.appendChild(tabla());
+      boton.addEventListener('click', function () {
+        var on = fig.classList.toggle('con-tabla');
+        boton.textContent = on ? T.grafico : T.tabla; boton.setAttribute('aria-expanded', on ? 'true' : 'false');
+        vista.style.display = on ? 'none' : '';
+      });
+    }
+    return fig;
+  }
+  function L(k) { return F.L[lang][k]; }
+  function color(estado) {
+    return { abierto: 'var(--st-warning)', cerrado_en_auditoria: 'var(--st-good)', remediacion_documental_verificada: 'var(--st-good)', control_verificado: 'var(--st-good)', remediacion_tecnica_verificada: 'var(--st-serious)', cerrado_en_alcance_de_correccion_tecnica_1_2: 'var(--st-good)', cerrado_en_alcance_de_correccion_tecnica_captura_1_1_2: 'var(--st-good)' }[estado] || (String(estado).indexOf('limitacion_aceptada') === 0 ? 'var(--s-gris)' : 'var(--text-muted)');
+  }
+
+  function construir() {
+    var T = TXT[lang];
+    document.documentElement.lang = lang;
+    document.title = T.titulo + ' · IAA 2026';
+    document.querySelectorAll('[data-t]').forEach(function (e) { e.textContent = T[e.getAttribute('data-t')]; });
+    document.querySelectorAll('[data-idioma]').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-idioma') === lang ? 'true' : 'false'); });
+    var tema = document.documentElement.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.querySelectorAll('[data-tema]').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-tema') === tema ? 'true' : 'false'); });
+    var nav = document.getElementById('nav'); nav.textContent = '';
+    SECCIONES.forEach(function (s) { nav.appendChild(el('a', { href: '#' + s, text: T.sec[s] })); });
+    var main = document.getElementById('contenido'); main.textContent = '';
+    G.ocultarTip();
+    var s30 = C.s30, val = C.validacion;
+
+    // Resumen
+    var r = el('section', { id: 'resumen' }, [el('h2', { text: T.sec.resumen }), el('p', { class: 'lead', text: T.resumen_lead })]);
+    var k = el('div', { class: 'kpis' });
+    [[n(s30.publico, { dec: 5 }), T.k1], [n(val.d2_recalculado.V24.agregado, { dec: 3 }), T.k2 + n(val.referencia_m00.V24.agregado, { dec: 3 })],
+     [n(s30.filas), T.k3], [n(C.foro.aportes), T.k4.replace('{horas}', n(Math.round(C.foro.horas)))]].forEach(function (x) { k.appendChild(el('div', { class: 'kpi' }, [el('div', { class: 'v', text: x[0] }), el('div', { class: 'l', text: x[1] })])); });
+    r.appendChild(k);
+    r.appendChild(tarjeta(lang === 'en' ? 'Actuarial pipeline' : 'Flujo actuarial', 'flujo', {}, T.f_flujo));
+    var dosr = el('div', { class: 'dos' });
+    dosr.appendChild(tarjeta(lang === 'en' ? 'Most periods cost nothing' : 'La mayoría de los periodos no cuesta nada', 'ceros', {},
+      lang === 'en' ? 'Out of every 100 policy periods of 2024, those with a claim cost. This is why the target needs a Tweedie distribution: a mass at zero and a long positive tail.' : 'De cada 100 periodos de póliza de 2024, los que tuvieron coste. Por eso el objetivo pide una distribución Tweedie: una masa en cero y una cola positiva larga.',
+      function () {
+        var pz = C.datos.periodos_sin_coste_pct;
+        return tablaHTML([lang === 'en' ? 'Line' : 'Ramo', '2021', '2022', '2023', '2024'], ['motor', 'buildings', 'contents'].map(function (x) {
+          return [L(x)].concat(['2021', '2022', '2023', '2024'].map(function (a) { return n((100 - pz[x][a]) / 100, { pct: true, dec: 1 }); }));
+        }), [1, 2, 3, 4]);
+      }));
+    dosr.appendChild(tarjeta(lang === 'en' ? 'How to read the score' : 'Cómo leer la puntuación', 'escala_d2', {},
+      lang === 'en' ? 'Tweedie D² (power 1.5): 0 means charging everyone the average; the constant rate per line, the final model on 2024 and the public score on the same scale.' : 'D² Tweedie (potencia 1,5): 0 equivale a cobrar a todos el promedio; la tasa constante por ramo, el modelo final en 2024 y la puntuación pública en la misma escala.',
+      function () {
+        return tablaHTML([lang === 'en' ? 'Reference' : 'Referencia', 'D²'], [
+          [lang === 'en' ? 'Constant rate per line, 2024' : 'Tasa constante por ramo, 2024', n(val.referencia_m00.V24.agregado, { dec: 5 })],
+          [lang === 'en' ? 'Final model, 2024 out of sample' : 'Modelo final, 2024 fuera de muestra', n(val.d2_recalculado.V24.agregado, { dec: 5 })],
+          [lang === 'en' ? 'Public score (Kaggle)' : 'Puntuación pública (Kaggle)', n(s30.publico, { dec: 5 })]], [1]);
+      }));
+    r.appendChild(dosr);
+    main.appendChild(r);
+
+    // Datos
+    var d = el('section', { id: 'datos' }, [el('h2', { text: T.sec.datos }), el('p', { class: 'lead', text: T.datos_lead })]);
+    var rg = C.datos.reglas_n62, cf = C.datos.capitales_f0;
+    var conteos = { ID01: rg.ID01, EXP01: rg.EXP01, CAP01: rg.CAP01, F0: cf.adjusted, CAT01: rg.CAT01, AGE01: rg.AGE01, DUP01: rg.DUP01, REN00: rg.REN00, PRE00: rg.PRE00 };
+    d.appendChild(tablaHTML(T.t_reglas, T.reglas.map(function (x) { return [x[0], n(conteos[x[1]]), x[2]]; }), [1]));
+    d.appendChild(tarjeta(lang === 'en' ? 'Claims reconciliation' : 'Conciliación de siniestros', 'siniestros', {}, T.f_siniestros));
+    var ceros = C.datos.periodos_sin_coste_pct;
+    d.appendChild(el('h3', { text: T.ceros }));
+    d.appendChild(tablaHTML(T.t_ceros, ['motor', 'buildings', 'contents'].map(function (l) { return [L(l)].concat(['2021', '2022', '2023', '2024'].map(function (a) { return n(ceros[l][a], { dec: 1 }); })); }), [1, 2, 3, 4]));
+    main.appendChild(d);
+
+    // Objetivo
+    var o = el('section', { id: 'objetivo' }, [el('h2', { text: T.sec.objetivo }), el('p', { class: 'lead', text: T.obj_lead })]);
+    var dos = el('div', { class: 'dos' });
+    dos.appendChild(tarjeta(lang === 'en' ? 'Reporting completeness 2024' : 'Completitud de reporte 2024', 'completitud', {}, T.f_completitud, function () {
+      return tablaHTML([lang === 'en' ? 'Line' : 'Ramo', lang === 'en' ? 'Peril' : 'Peligro', lang === 'en' ? 'Completeness 2024' : 'Completitud 2024', lang === 'en' ? 'Cost factor' : 'Factor de coste'],
+        C.ibnr.completitud_2024_por_peligro.map(function (x) { return [L(x.ramo), F.PELIGROS[lang][x.peligro], pct(x.completitud_2024, 1), n(x.factor_coste, { dec: 3 })]; }), [2, 3]);
+    }));
+    dos.appendChild(tarjeta(lang === 'en' ? 'Risk premium by year' : 'Prima de riesgo por año', 'prima_anual', {}, T.f_prima, function () {
+      return tablaHTML([lang === 'en' ? 'Line' : 'Ramo', lang === 'en' ? 'Year' : 'Año', 'T0', lang === 'en' ? 'With IBNR' : 'Con IBNR', lang === 'en' ? 'Prediction' : 'Predicción'],
+        C.ibnr.prima_riesgo_por_anio.map(function (x) { return [L(x.ramo), String(x.anio), x.prima_T0 === undefined ? '' : n(x.prima_T0, { dec: 1 }), x.prima_T0_mas_IBNR === undefined ? '' : n(x.prima_T0_mas_IBNR, { dec: 1 }), x.prediccion_S30 === undefined ? '' : n(x.prediccion_S30, { dec: 1 })]; }), [2, 3, 4]);
+    }));
+    o.appendChild(dos);
+    o.appendChild(el('h3', { text: T.reservas_t }));
+    o.appendChild(tablaHTML(T.t_reservas, C.ibnr.reserva_abiertos.filter(function (x) { return x.anio >= 2023; }).map(function (x) { return [L(x.ramo), String(x.anio), n(x.reserva_sobre_T0_pct, { dec: 1 }) + (lang === 'en' ? '%' : ' %'), n(x.abiertos), n(x.aceptados)]; }), [2, 3, 4]));
+    main.appendChild(o);
+
+    // Modelo
+    var m = el('section', { id: 'modelo' }, [el('h2', { text: T.sec.modelo }), el('p', { class: 'lead', text: T.mod_lead })]);
+    m.appendChild(tarjeta(lang === 'en' ? 'Final model composition' : 'Composición del modelo final', 'composicion', {}, T.f_comp, function () {
+      return tablaHTML(T.t_comp, s30.composicion.map(function (x) { return [L(x.ramo), F.COMP[lang][x.componente], x.tipo === 'coste_total' ? L('ft') : L('fs'), n(x.peso, { dec: 1 })]; }), [3]);
+    }));
+    m.appendChild(tablaHTML(T.t_nivel, ['motor', 'buildings', 'contents'].map(function (l) {
+      var fz = s30.factores_nivel[l]; return [L(l), n(fz.f23, { dec: 3 }), n(fz.f24, { dec: 3 }), n(fz.f, { dec: 3 }), n(s30.por_ramo_2025_CU[l], { compacto: true, decM: 1 }), n(s30.tasa_2025_por_anio_exposicion[l], { dec: 1 })];
+    }), [1, 2, 3, 4, 5]));
+    main.appendChild(m);
+
+    // Validación
+    var v = el('section', { id: 'validacion' }, [el('h2', { text: T.sec.validacion }), el('p', { class: 'lead', text: T.val_lead })]);
+    var dosv = el('div', { class: 'dos' });
+    dosv.appendChild(tarjeta(lang === 'en' ? 'Validation design' : 'Diseño de validación', 'validacion_diseno', {}, T.f_vdis));
+    var corte = 'V24';
+    var tD2 = tarjeta('D² 2024', 'd2_ramo', { corte: 'V24' }, T.f_d2, function () {
+      return tablaHTML([lang === 'en' ? 'Line' : 'Ramo', lang === 'en' ? 'Constant rate V23' : 'Tasa constante V23', L('s30') + ' V23', lang === 'en' ? 'Constant rate V24' : 'Tasa constante V24', L('s30') + ' V24'],
+        ['motor', 'buildings', 'contents', 'agregado'].map(function (l) { return [L(l), n(val.referencia_m00.V23[l], { dec: 4 }), n(val.d2_recalculado.V23[l], { dec: 4 }), n(val.referencia_m00.V24[l], { dec: 4 }), n(val.d2_recalculado.V24[l], { dec: 4 })]; }), [1, 2, 3, 4]);
+    });
+    var filtro = el('div', { class: 'filtros' });
+    ['V23', 'V24'].forEach(function (cx) {
+      var b = el('button', { type: 'button', text: cx, 'aria-pressed': cx === corte ? 'true' : 'false' });
+      b.addEventListener('click', function () {
+        filtro.querySelectorAll('button').forEach(function (z) { z.setAttribute('aria-pressed', 'false'); }); b.setAttribute('aria-pressed', 'true');
+        tD2.querySelector('.cab strong').textContent = 'D² ' + (cx === 'V23' ? '2023' : '2024');
+        F.dibujar('d2_ramo', tD2.querySelector('.vista'), lang, { interactivo: true, corte: cx });
+      });
+      filtro.appendChild(b);
+    });
+    tD2.insertBefore(filtro, tD2.querySelector('.vista'));
+    dosv.appendChild(tD2);
+    v.appendChild(dosv);
+    v.appendChild(tarjeta(lang === 'en' ? 'Calibration by decile' : 'Calibración por decil', 'deciles', {}, T.f_dec, function () {
+      var filas = [];
+      ['motor', 'buildings', 'contents'].forEach(function (l) { val.deciles_v24[l].forEach(function (x) { filas.push([L(l), String(x.decil), n(x.predicha, { dec: 1 }), n(x.observada, { dec: 1 }), n(x.obs_entre_pred, { dec: 2 })]); }); });
+      return tablaHTML([lang === 'en' ? 'Line' : 'Ramo', lang === 'en' ? 'Decile' : 'Decil', lang === 'en' ? 'Predicted' : 'Predicho', lang === 'en' ? 'Observed' : 'Observado', 'O/P'], filas, [2, 3, 4]);
+    }));
+    v.appendChild(tarjeta(lang === 'en' ? 'Case-reserve sensitivity' : 'Sensibilidad a la reserva de caso', 'reservas', {}, T.f_res, function () {
+      var rs = val.reservas.V24;
+      return tablaHTML([lang === 'en' ? 'Line' : 'Ramo', '× 0,75'.replace(',', lang === 'en' ? '.' : ','), '× 1', '× 1,25'.replace(',', lang === 'en' ? '.' : ',')],
+        ['motor', 'buildings', 'contents', 'agregado'].map(function (l) { return [L(l), n(rs['0.75'][l], { dec: 4 }), n(rs['1.0'][l], { dec: 4 }), n(rs['1.25'][l], { dec: 4 })]; }), [1, 2, 3]);
+    }));
+    // Experimentos tras la elección: cifras del archivo de datos, nunca escritas a mano
+    var sb = C.sensibilidad, ra = C.reservas_acotacion, bt = sb.backtest_ibnr;
+    var p1 = function (x) { return n(x * 100, { dec: 1 }) + (lang === 'en' ? '%' : '\u00a0%'); };
+    var vx = { kV24: n(sb.clientes_que_invierten_la_ventaja_V24), nV24: n(sb.clientes_V24), kV23: n(sb.clientes_que_invierten_la_ventaja_V23),
+      f23b: n(s30.factores_nivel.buildings.f23, { dec: 3 }), f24b: n(s30.factores_nivel.buildings.f24, { dec: 3 }),
+      semiM: p1(sb.nivel_autos_semidistancia), semiC: p1(sb.nivel_contenidos_semidistancia),
+      rec: n(sb.nivel_autos_recobros * 100, { dec: 2 }) + (lang === 'en' ? '%' : '\u00a0%'),
+      vec0: n(sb.pesos_vecinos_que_mejoran), vecN: n(sb.vecinos_de_pesos_probados),
+      capMin: n(Math.round(sb.capitales_multiplicador[0])), capMax: n(Math.round(sb.capitales_multiplicador[1])),
+      corr: n(sb.cohortes_corr_edificios, { dec: 2 }), piso: n(sb.piso_semillas, { dec: 5 }),
+      formaMin: n(sb.forma_rango_vecindad[0], { dec: 4 }), formaMax: n(sb.forma_rango_vecindad[1], { dec: 4 }),
+      repN: n(sb.reproduccion.predicciones), btMin: n(bt.fuera_min), btMax: n(bt.fuera_max), btP: n(bt.peligros),
+      li22: p1(bt.lesiones_ibnr_cierre[0]), li23: p1(bt.lesiones_ibnr_cierre[1]), lij: p1(Math.abs(bt.lesiones_junio_2024)),
+      raM: p1(ra.por_ramo.motor.error_material), raB: p1(ra.por_ramo.buildings.error_material), raC: p1(ra.por_ramo.contents.error_material) };
+    var rellenar = function (s) { return s.replace(/\{(\w+)\}/g, function (m, k) { if (!(k in vx)) throw new Error('cifra sin fuente: ' + k); return vx[k]; }); };
+    v.appendChild(el('h3', { text: T.exp_t }));
+    v.appendChild(el('p', { class: 'lead', text: T.exp_lead }));
+    v.appendChild(tablaHTML(T.t_exp, T.exp.map(function (f) { return f.map(rellenar); })));
+    v.appendChild(tarjeta(lang === 'en' ? 'IBNR backtest by peril and cut' : 'Backtesting del IBNR por peligro y corte', 'backtest', {}, T.f_bt, function () {
+      var PG = F.PELIGROS[lang], corteTxt = { '2022-12': lang === 'en' ? 'Dec 2022' : 'dic. 2022', '2023-12': lang === 'en' ? 'Dec 2023' : 'dic. 2023', '2024-06': lang === 'en' ? 'Jun 2024' : 'jun. 2024' };
+      return tablaHTML(T.t_bt, bt.celdas.map(function (z) {
+        return [PG[z.peligro], L(z.ramo), corteTxt[z.corte], n(z.proyectado, { dec: 1 }), n(z.reportado, { dec: 0 }), (z.error > 0 ? '+' : z.error < 0 ? '−' : '') + p1(Math.abs(z.error)),
+          '±' + pct(z.limite), z.cumple ? (lang === 'en' ? 'yes' : 'sí') : (lang === 'en' ? 'no' : 'no')];
+      }), [3, 4, 5]);
+    }));
+    main.appendChild(v);
+
+    // IA
+    var ia = el('section', { id: 'ia' }, [el('h2', { text: T.sec.ia }), el('p', { class: 'lead', text: T.ia_lead })]);
+    ia.appendChild(tarjeta(lang === 'en' ? 'AI-assisted workflow' : 'Flujo de trabajo con IA', 'flujo_ia', {}, T.f_ia));
+    ia.appendChild(tablaHTML(T.t_etapas, T.etapas));
+    var dosi = el('div', { class: 'dos' });
+    dosi.appendChild(tarjeta(lang === 'en' ? 'Forum activity' : 'Actividad del foro', 'foro', {}, T.f_foro, function () {
+      return tablaHTML([lang === 'en' ? 'Block (UTC)' : 'Bloque (UTC)', lang === 'en' ? 'Pre-registration' : 'Preinscripción', lang === 'en' ? 'Adverse' : 'Adverso', lang === 'en' ? 'Validation' : 'Validación', lang === 'en' ? 'Other' : 'Otros'],
+        C.foro.por_bloque_6h.map(function (b) { return [b.bloque_utc, String(b.preinscripcion || 0), String(b.adverso || 0), String(b.validacion || 0), String(b.resultado_o_coordinacion || 0)]; }), [1, 2, 3, 4]);
+    }));
+    ia.appendChild(dosi);
+    ia.appendChild(tarjeta(lang === 'en' ? 'Path to the final model' : 'Camino hasta el modelo final', 'curva', {}, T.f_curva, function () {
+      return tablaHTML(['#', lang === 'en' ? 'Submission' : 'Envío', lang === 'en' ? 'Public' : 'Público', lang === 'en' ? 'Local 2024' : 'Local 2024'],
+        C.envios.map(function (x, i) { return [String(i + 1), lang === 'en' ? x.etiqueta_en : x.etiqueta_es, n(x.publico, { dec: 5 }), x.v24_local === null ? '' : n(x.v24_local, { dec: 5 })]; }), [2, 3]);
+    }));
+    ia.appendChild(tarjeta(lang === 'en' ? 'What the public score tracks' : 'Qué sigue la puntuación pública', 'publico_local', {}, T.f_pl, function () {
+      var pv = C.publico_vs_local;
+      return tablaHTML([lang === 'en' ? 'Candidate' : 'Candidato', lang === 'en' ? 'Public' : 'Público', lang === 'en' ? 'Local D² full' : 'D² local completo', lang === 'en' ? 'Local D² body' : 'D² local cuerpo'],
+        pv.candidatos_antes.concat(pv.posteriores).map(function (x) { return [x.cand === 'S30' ? L('s30') : x.cand, n(x.publico, { dec: 5 }), n(x.d2_completo_v24, { dec: 5 }), n(x.d2_cuerpo_v24, { dec: 5 })]; }), [1, 2, 3]);
+    }));
+    ia.appendChild(el('h3', { text: T.hall_t }));
+    ia.appendChild(tarjeta(lang === 'en' ? 'Validation swarm findings' : 'Hallazgos del enjambre de validación', 'hallazgos', {},
+      lang === 'en' ? 'Each finding states its closure criterion and the human reviewer it needs; the table below lists all of them.' : 'Cada hallazgo indica su criterio de cierre y el revisor humano que necesita; la tabla de abajo los lista todos.',
+      function () {
+        var ar = { datos: lang === 'en' ? 'Data' : 'Datos', modelos: lang === 'en' ? 'Models' : 'Modelos', gobernanza: lang === 'en' ? 'Governance' : 'Gobierno' };
+        return tablaHTML([lang === 'en' ? 'Area' : 'Área', lang === 'en' ? 'Open' : 'Abiertos', lang === 'en' ? 'Accepted limitation' : 'Limitación aceptada', lang === 'en' ? 'Closed or remediated' : 'Cerrados o remediados'], Object.keys(ar).map(function (a) {
+          var l = C.validacion_ia.lista.filter(function (h) { return h.area === a; });
+          var lim = function (h) { return h.estado.indexOf('limitacion_aceptada') === 0; };
+          return [ar[a], String(l.filter(function (h) { return h.estado === 'abierto'; }).length), String(l.filter(lim).length), String(l.filter(function (h) { return h.estado !== 'abierto' && !lim(h); }).length)];
+        }), [1, 2, 3]);
+      }));
+    var filtroH = el('div', { class: 'filtros' }), cuerpoH = el('div');
+    var areas = ['todos', 'datos', 'modelos', 'gobernanza'];
+    function pintarH(area) {
+      cuerpoH.textContent = '';
+      var lista = C.validacion_ia.lista.filter(function (h) { return area === 'todos' || h.area === area; });
+      cuerpoH.appendChild(tablaHTML(T.t_hall, lista.map(function (h) {
+        var est = el('span', { class: 'estado' }); var punto = el('i'); punto.style.background = color(h.estado); est.appendChild(punto); est.appendChild(document.createTextNode(T.est[h.estado] || h.estado));
+        return [h.id, lang === 'en' ? h.titulo_en : h.titulo_es, T.sev[h.severidad] || h.severidad, est];
+      })));
+    }
+    areas.forEach(function (a) {
+      var etq = a === 'todos' ? T.todos : (lang === 'en' ? { datos: 'Data', modelos: 'Models', gobernanza: 'Governance' } : { datos: 'Datos', modelos: 'Modelos', gobernanza: 'Gobierno' })[a];
+      var b = el('button', { type: 'button', text: etq, 'aria-pressed': a === 'todos' ? 'true' : 'false' });
+      b.addEventListener('click', function () { filtroH.querySelectorAll('button').forEach(function (z) { z.setAttribute('aria-pressed', 'false'); }); b.setAttribute('aria-pressed', 'true'); pintarH(a); });
+      filtroH.appendChild(b);
+    });
+    ia.appendChild(filtroH); ia.appendChild(cuerpoH); pintarH('todos');
+    main.appendChild(ia);
+
+    // Controles
+    var c = el('section', { id: 'controles' }, [el('h2', { text: T.sec.controles }), el('p', { class: 'lead', text: T.ctl_lead })]);
+    c.appendChild(tablaHTML(T.t_capas, T.capas));
+    c.appendChild(el('h3', { text: lang === 'en' ? 'Control battery of the reproduction package' : 'Batería de control del paquete de reproducción' }));
+    c.appendChild(tablaHTML(T.t_bat, C.controles_paquete.baterias.map(function (b) { return [T.env[b.fuente], b.python, b.version, String(b.casos), String(b.pasan)]; }), [3, 4]));
+    var pre = el('pre');
+    pre.textContent = 'python reproducir.py plan --objetivo=S30\npython reproducir.py mezcla --objetivo=S30 --semana1="<Hackaton/Semana 1>" --trabajo=privado/mezcla\npython reproducir.py todo --objetivo=S30 --semana1="<Hackaton/Semana 1>" --trabajo=privado/desde_cero';
+    c.appendChild(pre);
+    c.appendChild(el('p', { text: (lang === 'en' ? 'Final CSV SHA-256: ' : 'SHA-256 del CSV final: ') + s30.sha256_csv + (lang === 'en' ? ' · Kaggle submission ' : ' · envío Kaggle ') + s30.envio_kaggle }));
+    main.appendChild(c);
+
+    // Límites
+    var li = el('section', { id: 'limites' }, [el('h2', { text: T.sec.limites }), el('p', { class: 'lead', text: T.lim_lead })]);
+    var ra = C.reservas_acotacion.por_ramo, pc = function (x) { return n(x * 100, { dec: 1 }) + (lang === 'en' ? '%' : '\u00a0%'); };
+    li.appendChild(tablaHTML(T.t_lim, T.lim.map(function (fila) { return fila.map(function (s) { return s.replace('{res_autos}', pc(ra.motor.error_material)).replace('{res_edif}', pc(ra.buildings.error_material)); }); })));
+    li.appendChild(el('h3', { text: lang === 'en' ? 'Week 2: adaptation protocol' : 'Semana 2: protocolo de adaptación' }));
+    li.appendChild(tablaHTML(T.t_ad, T.ad));
+    main.appendChild(li);
+    main.appendChild(el('footer', { text: T.pie + ' · ' + C.generado_utc }));
+  }
+
+  document.querySelectorAll('[data-idioma]').forEach(function (b) {
+    b.addEventListener('click', function () { lang = b.getAttribute('data-idioma'); try { localStorage.setItem('panel-iaa-idioma', lang); } catch (e) {} construir(); });
+  });
+  document.querySelectorAll('[data-tema]').forEach(function (b) {
+    b.addEventListener('click', function () { var t = b.getAttribute('data-tema'); document.documentElement.setAttribute('data-theme', t); try { localStorage.setItem('panel-iaa-tema', t); } catch (e) {} construir(); });
+  });
+  // Los gráficos miden texto (leyendas): se dibuja cuando la fuente incrustada ya está cargada.
+  function arrancar() { construir(); window.LISTO = true; }
+  var fu = document.fonts;
+  if (fu && fu.load) Promise.all([fu.load('400 12px InterWeb'), fu.load('600 12px InterWeb'), fu.load('700 12px InterWeb')]).then(arrancar, arrancar);
+  else arrancar();
+})();
+</script>
+</body>
+</html>

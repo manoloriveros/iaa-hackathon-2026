@@ -1,0 +1,111 @@
+{
+  "consultado_utc": "2026-10-19T22:48:21Z",
+  "autor": "Codex",
+  "encargo": "Validar en detalle el entregable de la primera semana según las reglas vigentes.",
+  "fuentes": {
+    "captura": "docs/fuentes/entregable_semana1_20261019T224821Z.json",
+    "reglas": "https://www.kaggle.com/competitions/iaa-ai-assisted-hackathon-2026-part-1/rules",
+    "submissions": "https://www.kaggle.com/competitions/iaa-ai-assisted-hackathon-2026-part-1/overview/submissions",
+    "datos": "https://www.kaggle.com/competitions/iaa-ai-assisted-hackathon-2026-part-1/data",
+    "evaluacion": "https://www.kaggle.com/competitions/iaa-ai-assisted-hackathon-2026-part-1/overview/evaluation",
+    "metadatos": "https://www.kaggle.com/competitions/iaa-ai-assisted-hackathon-2026-part-1",
+    "captura_sha256": "7188f766a57444d015a48d336b9b915f323209bdd982cf46c5f83da3ae1d681c"
+  },
+  "entregable_semana1": {
+    "obligatorio": "Un único CSV de predicciones subido a Kaggle para todos los row_id de los tres test.",
+    "columnas": [
+      "row_id",
+      "prediction"
+    ],
+    "poblacion": [
+      "test_motor",
+      "test_buildings",
+      "test_contents"
+    ],
+    "objetivo": "Coste último esperado de todos los siniestros con fecha de ocurrencia dentro del periodo de cada fila de 2025, neto de franquicias y recuperaciones, excluidos rechazados; unidades CU.",
+    "escala": "Importe del periodo de la fila, no prima comercial ni tasa anual sin exposición.",
+    "predicciones": "Valores no negativos; preservar identificadores de texto y cobertura completa.",
+    "cierre_utc": "2026-10-23T16:00:00Z",
+    "cierre_bogota": "2026-10-23T11:00:00-05:00",
+    "max_diarios": 10,
+    "seleccion_final": {
+      "maximo": 1,
+      "manual_obligatoria": false,
+      "regla_por_defecto": "Si no se elige, se usa el envío con mejor score público.",
+      "accion_realizada": "No se ha elegido o cambiado la selección final durante esta revisión."
+    }
+  },
+  "entrega_al_final_de_parte2": {
+    "momento": "Al final de la segunda semana, por formulario cuyo enlace se publicará en la competición de parte2.",
+    "contenido": [
+      "Nombre del equipo y miembros",
+      "Predicciones de semana1, además de su envío a Kaggle",
+      "Predicciones de semana2, además de su envío a Kaggle",
+      "Video de enfoque, resultados, flujo asistido por IA y adaptación; solo primeros cinco minutos se califican",
+      "Informe de método, decisiones, IA, supuestos, límites, adaptación y controles; solo primeras cinco páginas se califican",
+      "Scripts y/o notebooks con control de versiones para entender y reproducir el desarrollo"
+    ],
+    "cubre": "Ambas partes, con el mismo equipo.",
+    "formulario_actual": "La página consultada mantiene 'link to be provided'; no se inventa un enlace o fecha/hora de parte2."
+  },
+  "evaluacion": {
+    "rendimiento_y_adaptacion": 40,
+    "uso_IA": 25,
+    "confianza_validacion_guardas": 20,
+    "comunicacion_documentacion": 15,
+    "metrica": "Tweedie D², potencia1.5, mayor es mejor.",
+    "partes": "El componente de rendimiento combina ambos scores privados con igual peso y valoración del jurado; no hay una descomposición publicada adicional entre esas piezas.",
+    "umbral_publico_013": "No se identifica un mínimo0.13 en las páginas y reglas consultadas; es una meta interna del proyecto.",
+    "restriccion_modelo": "No se exige IA dentro del estimador: puede ser actuarial, ML o combinación; el flujo sí debe demostrar asistencia de IA."
+  },
+  "codigo_y_reproduccion": {
+    "final": "Repositorio con control de versiones en la entrega final.",
+    "obligacion_ganador": "Reglas específicas2.9: código capaz de generar el envío ganador, entrenamiento, inferencia, entorno computacional y documentación; condiciones de licencia según2.6.",
+    "limite_actual": "La falta de reproducción completa sigue abierta. No se confunde el envío CSV puntuado con la prueba de toda la cadena.",
+    "no_exigencia_identificada": "Las fuentes consultadas no indican subir ahora un informe, video, repositorio público, aplicación web o acta actuarial firmada como parte del CSV de semana1. Esto no cierra las carencias de validación o gobernanza."
+  },
+  "estado_proyecto": {
+    "evidencia_recibos_y_preflight_existentes": "docs/evidencia/preflight.json, corte2026-10-19T18:09:59.419713+00:00, leído sin repetir controles.",
+    "candidato_documentado": "S30",
+    "csv": "privado/predicciones/S30.csv",
+    "filas_documentadas": 626639,
+    "score_publico_historico": 0.12996,
+    "submission_id": 57371361,
+    "sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+    "reproduccion_completa": "pendiente",
+    "revision_humana_general": "pendiente",
+    "GOV007": "Aceptado únicamente para corrección técnica del paquete1.2.",
+    "restantes_14": "Abiertos; su seguimiento no se transforma en14archivos formales de entrega esta semana."
+  },
+  "ambiguedades": [
+    {
+      "tema": "Calendario",
+      "detalle": "Reglas específicas2.3 conserva [DATE,TIME UTC]; la fecha/hora de parte1 aquí se basa en metadatos oficiales actuales."
+    },
+    {
+      "tema": "Archivo de ejemplo",
+      "detalle": "Submissions menciona sample_submission.csv, pero Data describe archivos Parquet y la descarga histórica tiene sample_submission.parquet. La entrega solicitada sí esCSV."
+    },
+    {
+      "tema": "Rúbrica y reglas genéricas",
+      "detalle": "Foundational-rules contiene texto genérico sobre ganadores por ranking privado; las específicas2.4 y Evaluation detallan la rúbrica híbrida de ambas partes. No afirmar que ranking público o privado aislado garantiza premio."
+    }
+  ],
+  "acciones": {
+    "entrenamiento": false,
+    "inferencia": false,
+    "mezcla": false,
+    "replay": false,
+    "pruebas_repetidas": false,
+    "envios_Kaggle": false,
+    "seleccion_final": false,
+    "publicacion": false
+  },
+  "comparacion_con_captura_anterior": {
+    "fuente": "docs/fuentes/reglas_kaggle_20261019.json",
+    "fecha_corte": "2026-10-19T13:32:11.321Z",
+    "paginas_con_contenido_distinto": [],
+    "novedad_normativa": false,
+    "nota": "La consulta actual vuelve a acreditar el contenido; no se presenta un requisito ya conocido como cambio de reglas."
+  }
+}

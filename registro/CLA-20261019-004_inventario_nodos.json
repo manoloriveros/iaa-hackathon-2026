@@ -1,0 +1,3447 @@
+{
+ "autor": "Claude (línea principal)",
+ "aporte": "CLA-20261019-004",
+ "responde_a": [
+  "COD-20261019-113"
+ ],
+ "creado_utc": "2026-10-19T20:08:12+00:00",
+ "alcance": "solo lectura: localizar, calcular SHA-256 y leer código; cero entrenamientos, inferencias o mezclas",
+ "receta_sha256": "2f8cb8325b2b4183aaed53aa42bec3cea65319a68edb521351815aeb1dafa1a3",
+ "huellas_esperadas_sha256": "b2452d24cb2e491bee46c97b79f08b22612053d5406716ad944b4e0a8489a8f0",
+ "herramienta_sha256": "18de7a94727d0eadd80401b4c88c1ea75e160905ae5e580ce28d47a40ad19dfc",
+ "nodos": [
+  {
+   "id": "variables",
+   "etapa": "variables",
+   "script": "src/modelos/construir_variables.py",
+   "args": [],
+   "requiere": [],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "transformacion",
+   "que_hace": "construcción determinista de variables desde F0 y bases",
+   "modelo_ajustado_persistido": null,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "feat_motor.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "1941042d83ae7ba5609627a8dd12201351871f79659b428f29f74d17410768c5",
+     "estado": "ausente_en_equipo"
+    },
+    {
+     "salida": "feat_buildings.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "f0809330d8bd828d22eec686d0ceda30d8c855be2dbd43f173406d13e0d8efd4",
+     "estado": "ausente_en_equipo"
+    },
+    {
+     "salida": "feat_contents.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "82334958a4e2d9bce76c9833d16df1a154403f8822e65dfea6f5a0f761b53a8f",
+     "estado": "ausente_en_equipo"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "0/3",
+   "parametros_y_registros_de_la_corrida": [],
+   "registros_historicos_citados": [],
+   "reconstruible_sin_ajuste": true,
+   "motivo": "transformación determinista; ya reproducida en contenido por «reproducir.py datos»"
+  },
+  {
+   "id": "sel_total_F0124",
+   "etapa": "seleccion_v23",
+   "script": "src/modelos/evaluar.py",
+   "args": [
+    "total_F0124",
+    "F0124",
+    "receta/especificaciones/cfg_total.json",
+    "total"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "ajuste",
+   "que_hace": "LightGBM Tweedie con parada temprana en la mitad de calibración de 2023 (V23)",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "sel_total_F0124.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "f5c512a4469ce73a368c4f86b1092f6c6f6888ce73bc7e25d9446177905690a3",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/selecciones_v23/sel_total_F0124.parquet",
+     "bytes": 4649229,
+     "sha256": "f5c512a4469ce73a368c4f86b1092f6c6f6888ce73bc7e25d9446177905690a3",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "1/1",
+   "parametros_y_registros_de_la_corrida": [],
+   "registros_historicos_citados": [
+    {
+     "ruta": "cola1.sh",
+     "estado": "no_encontrado"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/log_cola1.txt",
+     "bytes": 2005,
+     "sha256": "d4715dede2a5d5581b9dcfcd08f0a64923d066af3b5e720ebce4933c6237fb9f"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "entrenamiento con semilla o parada temprana; ningún modelo ajustado se guardó, solo sus predicciones"
+  },
+  {
+   "id": "sel_total_F01234",
+   "etapa": "seleccion_v23",
+   "script": "src/modelos/evaluar.py",
+   "args": [
+    "total_F01234",
+    "F01234",
+    "receta/especificaciones/cfg_total.json",
+    "total"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "ajuste",
+   "que_hace": "LightGBM Tweedie con parada temprana en la mitad de calibración de 2023 (V23)",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "sel_total_F01234.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "1fd58048eeeed3dcb7f5719ac35f2c61552254806cb71e9046c53f3d84f2b1c4",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/selecciones_v23/sel_total_F01234.parquet",
+     "bytes": 4649229,
+     "sha256": "1fd58048eeeed3dcb7f5719ac35f2c61552254806cb71e9046c53f3d84f2b1c4",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "1/1",
+   "parametros_y_registros_de_la_corrida": [],
+   "registros_historicos_citados": [
+    {
+     "ruta": "cola1.sh",
+     "estado": "no_encontrado"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/log_cola1.txt",
+     "bytes": 2005,
+     "sha256": "d4715dede2a5d5581b9dcfcd08f0a64923d066af3b5e720ebce4933c6237fb9f"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "entrenamiento con semilla o parada temprana; ningún modelo ajustado se guardó, solo sus predicciones"
+  },
+  {
+   "id": "sel_total_motor_red",
+   "etapa": "seleccion_v23",
+   "script": "src/modelos/evaluar.py",
+   "args": [
+    "total_motor_red",
+    "F01234",
+    "receta/especificaciones/cfg_total_motor_red.json",
+    "total"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "ajuste",
+   "que_hace": "LightGBM Tweedie con parada temprana en la mitad de calibración de 2023 (V23)",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "sel_total_motor_red.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "23c0cea11720a4a7f01e71ac0c78cf687bf110dc51033dd16444674a2c01f407",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/selecciones_v23/sel_total_motor_red.parquet",
+     "bytes": 4649229,
+     "sha256": "23c0cea11720a4a7f01e71ac0c78cf687bf110dc51033dd16444674a2c01f407",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "1/1",
+   "parametros_y_registros_de_la_corrida": [],
+   "registros_historicos_citados": [
+    {
+     "ruta": "cola9.sh",
+     "estado": "no_encontrado"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/log_cola9.txt",
+     "bytes": 1456,
+     "sha256": "469fa0e3d1a001af0d6c39e809089b8e8b9db3b949aca828829dfc1328e3778d"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "entrenamiento con semilla o parada temprana; ningún modelo ajustado se guardó, solo sus predicciones"
+  },
+  {
+   "id": "sel_hS2",
+   "etapa": "seleccion_v23",
+   "script": "src/modelos/evaluar.py",
+   "args": [
+    "hS2",
+    "F0124",
+    "receta/especificaciones/cfg_hogar_s2.json",
+    "total",
+    "buildings,contents"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "ajuste",
+   "que_hace": "LightGBM Tweedie con parada temprana en la mitad de calibración de 2023 (V23)",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "sel_hS2.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "e1cde41f5e1cbc88958a59d380c39206bb935865a80e24210e358057ef0f79f4",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S08h_hogar_F3s2/sel_hS2.parquet",
+     "bytes": 2893890,
+     "sha256": "e1cde41f5e1cbc88958a59d380c39206bb935865a80e24210e358057ef0f79f4",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "1/1",
+   "parametros_y_registros_de_la_corrida": [],
+   "registros_historicos_citados": [
+    {
+     "ruta": "cola19.sh",
+     "estado": "no_encontrado"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/log_hS2.txt",
+     "bytes": 219,
+     "sha256": "a8a03d6330bb5b9a6ef9e7423e60590e193672cfbdbb113813a0465df1004200"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "entrenamiento con semilla o parada temprana; ningún modelo ajustado se guardó, solo sus predicciones"
+  },
+  {
+   "id": "sel_hS3",
+   "etapa": "seleccion_v23",
+   "script": "src/modelos/evaluar.py",
+   "args": [
+    "hS3",
+    "F0124",
+    "receta/especificaciones/cfg_hogar_s3.json",
+    "total",
+    "buildings"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "ajuste",
+   "que_hace": "LightGBM Tweedie con parada temprana en la mitad de calibración de 2023 (V23)",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "sel_hS3.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "b707d8aa2336323c58cfe2b104d3694f38a5b9f48cd095cbc2ce9b2a60c199b1",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S12h_edif_md1000/sel_hS3.parquet",
+     "bytes": 1574274,
+     "sha256": "b707d8aa2336323c58cfe2b104d3694f38a5b9f48cd095cbc2ce9b2a60c199b1",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "1/1",
+   "parametros_y_registros_de_la_corrida": [],
+   "registros_historicos_citados": [
+    {
+     "ruta": "cola29.sh",
+     "estado": "no_encontrado"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/log_hS3.txt",
+     "bytes": 122,
+     "sha256": "4bd67212c85718d078a444aab4b3e4c7df26bb95dc31fae0541de43cb993383d"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "entrenamiento con semilla o parada temprana; ningún modelo ajustado se guardó, solo sus predicciones"
+  },
+  {
+   "id": "sel_cat1a",
+   "etapa": "seleccion_v23",
+   "script": "src/modelos/cat_experimento.py",
+   "args": [
+    "cat1a",
+    "motor"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "ajuste",
+   "que_hace": "CatBoost Tweedie con parada temprana (V23)",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "sel_cat1a.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "b93d1920cdb06ca2e7f3248f39bfed1fd832422a944ab22af5fc9641c8c10916",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/selecciones_v23/sel_cat1a.parquet",
+     "bytes": 2184468,
+     "sha256": "b93d1920cdb06ca2e7f3248f39bfed1fd832422a944ab22af5fc9641c8c10916",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "1/1",
+   "parametros_y_registros_de_la_corrida": [],
+   "registros_historicos_citados": [
+    {
+     "ruta": "cola7.sh",
+     "estado": "no_encontrado"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/log_cola7.txt",
+     "bytes": 81,
+     "sha256": "fcf002163fdf7c0e341d98630e4e6a97cc99913a83e6a4bea5d8d438f6f7cfff"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "entrenamiento con semilla o parada temprana; ningún modelo ajustado se guardó, solo sus predicciones"
+  },
+  {
+   "id": "S03_lgbm_F0124",
+   "etapa": "produccion",
+   "script": "src/modelos/produccion.py",
+   "args": [
+    "S03_lgbm_F0124",
+    "F0124",
+    "receta/especificaciones/cfg_s03.json",
+    "--semillas=3"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "ajuste",
+   "que_hace": "LightGBM Tweedie, rondas fijadas desde V23, V24 y 2025 con varias semillas",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "S03_lgbm_F0124/v24.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "1e7e184e95807462ab37443f397bbefba8334d737c3a7853107cce7b55fb2ac8",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S03_lgbm_F0124/v24.parquet",
+     "bytes": 8878138,
+     "sha256": "1e7e184e95807462ab37443f397bbefba8334d737c3a7853107cce7b55fb2ac8",
+     "estado": "coincide"
+    },
+    {
+     "salida": "S03_lgbm_F0124/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "53723ac0c3e49d9818b0451d3ed80b2e1ada3aecd40a3edfdd3f1b171d546556",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S03_lgbm_F0124/prediccion_2025.parquet",
+     "bytes": 8557976,
+     "sha256": "53723ac0c3e49d9818b0451d3ed80b2e1ada3aecd40a3edfdd3f1b171d546556",
+     "estado": "coincide"
+    },
+    {
+     "salida": "S03_lgbm_F0124/S03_lgbm_F0124.csv",
+     "verificada_por_receta": true,
+     "sha256_esperado": "7877e9e968dfc094df6b9450f51ff1d5f97f12fa82b4d985e2fce18d6af93217",
+     "ruta": "Hackaton/Semana 1/Envios/archivos/S03_lgbm_F0124.csv",
+     "bytes": 12995807,
+     "sha256": "7877e9e968dfc094df6b9450f51ff1d5f97f12fa82b4d985e2fce18d6af93217",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "3/3",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S03_lgbm_F0124/config.json",
+     "bytes": 621,
+     "sha256": "bfa584935e0506dedb1e8ea83fde376a5b640b767e07c0ded87547eb0b1472dc"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S03_lgbm_F0124/log.txt",
+     "bytes": 2593,
+     "sha256": "edd691701cab8e1a4acbc4d72a0aad01ebba7392cb7031e4a73e2046b9d5470a"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S03_lgbm_F0124/manifest.json",
+     "bytes": 1042,
+     "sha256": "11fc025804d34665f57ae839fc3a2a545fd4b0b618a08f06180441270a99cade"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S03_lgbm_F0124/resumen.json",
+     "bytes": 3907,
+     "sha256": "1a7ae9cc8db54fe6b39923aae6e624c843b7c089f63cdedea43e37f62ce7d1c1"
+    }
+   ],
+   "registros_historicos_citados": [],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "entrenamiento con semilla o parada temprana; ningún modelo ajustado se guardó, solo sus predicciones"
+  },
+  {
+   "id": "S04b_lgbm_F0124_F3autos",
+   "etapa": "produccion",
+   "script": "src/modelos/produccion.py",
+   "args": [
+    "S04b_lgbm_F0124_F3autos",
+    "F01234",
+    "receta/especificaciones/cfg_m595_f3.json",
+    "--semillas=3",
+    "--solo=motor",
+    "--reusar=S03_lgbm_F0124"
+   ],
+   "requiere": [
+    "S03_lgbm_F0124"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "ajuste",
+   "que_hace": "LightGBM Tweedie, rondas fijadas desde V23, V24 y 2025 con varias semillas",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "S04b_lgbm_F0124_F3autos/v24.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "acfb4eec8ac56d1f3a97d6a0a09e32f79681fd6379e0f3e86e495d9f5e30fb37",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S04b_lgbm_F0124_F3autos/v24.parquet",
+     "bytes": 8878138,
+     "sha256": "acfb4eec8ac56d1f3a97d6a0a09e32f79681fd6379e0f3e86e495d9f5e30fb37",
+     "estado": "coincide"
+    },
+    {
+     "salida": "S04b_lgbm_F0124_F3autos/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "264ce035ffdd1c07ebcb8c3227aa6f4f2563e6b759c1b7a7c45d2581eafd4564",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S04b_lgbm_F0124_F3autos/prediccion_2025.parquet",
+     "bytes": 8557976,
+     "sha256": "264ce035ffdd1c07ebcb8c3227aa6f4f2563e6b759c1b7a7c45d2581eafd4564",
+     "estado": "coincide"
+    },
+    {
+     "salida": "S04b_lgbm_F0124_F3autos/S04b_lgbm_F0124_F3autos.csv",
+     "verificada_por_receta": true,
+     "sha256_esperado": "23e09d9f27326d7a20d508c32b4da039bac43085c1726498618f668d1eaba1fe",
+     "estado": "ausente_en_equipo"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "2/3",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S04b_lgbm_F0124_F3autos/config.json",
+     "bytes": 725,
+     "sha256": "72c8c5db3baf1f20a6fd80485d7c41bc5b3b6992c78abdf97570a32da6d366e4"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S04b_lgbm_F0124_F3autos/log.txt",
+     "bytes": 2181,
+     "sha256": "17f4231fe82fe236f6dbdb89f6dff20b295943d925dc22049f73d855bc1c2cc8"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S04b_lgbm_F0124_F3autos/manifest.json",
+     "bytes": 1042,
+     "sha256": "ab65af3519501e3d279e7995d7e5d33c962299226e8a228c0352fe8ceafa3e28"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S04b_lgbm_F0124_F3autos/resumen.json",
+     "bytes": 4030,
+     "sha256": "e38c5bb2066e1226dfe8daba7555181b658c797f6e78c67ca0cf3f53c83af793"
+    }
+   ],
+   "registros_historicos_citados": [
+    {
+     "ruta": "cola2.sh",
+     "estado": "no_encontrado"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "entrenamiento con semilla o parada temprana; ningún modelo ajustado se guardó, solo sus predicciones"
+  },
+  {
+   "id": "S06c_lgbm_motor_red",
+   "etapa": "produccion",
+   "script": "src/modelos/produccion.py",
+   "args": [
+    "S06c_lgbm_motor_red",
+    "F01234",
+    "receta/especificaciones/cfg_motor_red.json",
+    "--semillas=3",
+    "--solo=motor",
+    "--reusar=S04b_lgbm_F0124_F3autos"
+   ],
+   "requiere": [
+    "S04b_lgbm_F0124_F3autos"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "ajuste",
+   "que_hace": "LightGBM Tweedie, rondas fijadas desde V23, V24 y 2025 con varias semillas",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "S06c_lgbm_motor_red/v24.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "eaba43ef4455670133e763c6dddb6648acd9f864ad7e93f4c57ce9b8432825bf",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S06c_lgbm_motor_red/v24.parquet",
+     "bytes": 8878138,
+     "sha256": "eaba43ef4455670133e763c6dddb6648acd9f864ad7e93f4c57ce9b8432825bf",
+     "estado": "coincide"
+    },
+    {
+     "salida": "S06c_lgbm_motor_red/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "4a49db207b76127f3bf91c9bcd439e2bd90fab6a0eb79529d081604efb04b7ab",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S06c_lgbm_motor_red/prediccion_2025.parquet",
+     "bytes": 8557976,
+     "sha256": "4a49db207b76127f3bf91c9bcd439e2bd90fab6a0eb79529d081604efb04b7ab",
+     "estado": "coincide"
+    },
+    {
+     "salida": "S06c_lgbm_motor_red/S06c_lgbm_motor_red.csv",
+     "verificada_por_receta": true,
+     "sha256_esperado": "8624c2331ab5d9eeed7ee6d6331528c1e7bf5c0bee2b1b02a9e421fb83d4a68e",
+     "estado": "ausente_en_equipo"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "2/3",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S06c_lgbm_motor_red/config.json",
+     "bytes": 1554,
+     "sha256": "a65666a7cd6a7b7ac8c11811d86eaa73f8c14b59d008bd1762dfad693c1a96f9"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S06c_lgbm_motor_red/resumen.json",
+     "bytes": 4905,
+     "sha256": "e6162f053320b92e7cb5117b39043d3c7c234bc4fbc246d4095c4399c028d9a8"
+    }
+   ],
+   "registros_historicos_citados": [
+    {
+     "ruta": "cola9.sh",
+     "estado": "no_encontrado"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/log_cola9.txt",
+     "bytes": 1456,
+     "sha256": "469fa0e3d1a001af0d6c39e809089b8e8b9db3b949aca828829dfc1328e3778d"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "entrenamiento con semilla o parada temprana; ningún modelo ajustado se guardó, solo sus predicciones"
+  },
+  {
+   "id": "S08h_hogar_F3s2",
+   "etapa": "produccion",
+   "script": "src/modelos/produccion.py",
+   "args": [
+    "S08h_hogar_F3s2",
+    "F0124",
+    "receta/especificaciones/cfg_hogar_s2.json",
+    "--solo=buildings,contents",
+    "--reusar=S04b_lgbm_F0124_F3autos",
+    "--semillas=3"
+   ],
+   "requiere": [
+    "S04b_lgbm_F0124_F3autos"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "ajuste",
+   "que_hace": "LightGBM Tweedie, rondas fijadas desde V23, V24 y 2025 con varias semillas",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "S08h_hogar_F3s2/v24.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "cc604c6e645e27c525528b2de2c02138ccec56ddec186d7cd566edfb6020eedb",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S08h_hogar_F3s2/v24.parquet",
+     "bytes": 8878138,
+     "sha256": "cc604c6e645e27c525528b2de2c02138ccec56ddec186d7cd566edfb6020eedb",
+     "estado": "coincide"
+    },
+    {
+     "salida": "S08h_hogar_F3s2/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "f91932f301b817308c50a48bd5bf6297dd62c711fe815f9915dd4fa3d93e2cb2",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S08h_hogar_F3s2/prediccion_2025.parquet",
+     "bytes": 8557976,
+     "sha256": "f91932f301b817308c50a48bd5bf6297dd62c711fe815f9915dd4fa3d93e2cb2",
+     "estado": "coincide"
+    },
+    {
+     "salida": "S08h_hogar_F3s2/S08h_hogar_F3s2.csv",
+     "verificada_por_receta": true,
+     "sha256_esperado": "9623c7b7585248e92a717643464a87d5610153ed77b86c4ca344087df1848ac7",
+     "estado": "ausente_en_equipo"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "2/3",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S08h_hogar_F3s2/resumen.json",
+     "bytes": 4358,
+     "sha256": "c198cf5a5ae68cf00307a849cb1486d0111dfa266726b896ca99c81e59d3ceef"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S08h_hogar_F3s2/sel_hS2.parquet",
+     "bytes": 2893890,
+     "sha256": "e1cde41f5e1cbc88958a59d380c39206bb935865a80e24210e358057ef0f79f4"
+    }
+   ],
+   "registros_historicos_citados": [
+    {
+     "ruta": "cola19.sh",
+     "estado": "no_encontrado"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/log_S08h.txt",
+     "bytes": 1857,
+     "sha256": "0fbe64d66acaa13e34c19ad8600d938e17f487007d80a76bf639d5e8fb090243"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "entrenamiento con semilla o parada temprana; ningún modelo ajustado se guardó, solo sus predicciones"
+  },
+  {
+   "id": "S12h_edif_md1000",
+   "etapa": "produccion",
+   "script": "src/modelos/produccion.py",
+   "args": [
+    "S12h_edif_md1000",
+    "F0124",
+    "receta/especificaciones/cfg_hogar_s3.json",
+    "--solo=buildings",
+    "--reusar=S08h_hogar_F3s2",
+    "--semillas=3"
+   ],
+   "requiere": [
+    "S08h_hogar_F3s2"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "ajuste",
+   "que_hace": "LightGBM Tweedie, rondas fijadas desde V23, V24 y 2025 con varias semillas",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "S12h_edif_md1000/v24.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "d535388f050b6893cd35d89ccc3c966b7f43e186a13841af3de1b885f37c4c3e",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S12h_edif_md1000/v24.parquet",
+     "bytes": 8878138,
+     "sha256": "d535388f050b6893cd35d89ccc3c966b7f43e186a13841af3de1b885f37c4c3e",
+     "estado": "coincide"
+    },
+    {
+     "salida": "S12h_edif_md1000/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "70a3b8b61c40477c9f44725350aabe6adbe83ffc5498c2ea8ef564fd2cf6e663",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S12h_edif_md1000/prediccion_2025.parquet",
+     "bytes": 8557976,
+     "sha256": "70a3b8b61c40477c9f44725350aabe6adbe83ffc5498c2ea8ef564fd2cf6e663",
+     "estado": "coincide"
+    },
+    {
+     "salida": "S12h_edif_md1000/S12h_edif_md1000.csv",
+     "verificada_por_receta": true,
+     "sha256_esperado": "2ca725c0569daf79abf56516278afc8af8ade2ed9f9116662690767a380bdc19",
+     "estado": "ausente_en_equipo"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "2/3",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S12h_edif_md1000/resumen.json",
+     "bytes": 4408,
+     "sha256": "e02851f69d8a92ecb97ba3f1e67d1a038d6855e0eebfa2f1fc2e79e020dbed25"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S12h_edif_md1000/sel_hS3.parquet",
+     "bytes": 1574274,
+     "sha256": "b707d8aa2336323c58cfe2b104d3694f38a5b9f48cd095cbc2ce9b2a60c199b1"
+    }
+   ],
+   "registros_historicos_citados": [
+    {
+     "ruta": "cola29.sh",
+     "estado": "no_encontrado"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/log_S12h.txt",
+     "bytes": 1100,
+     "sha256": "a0b7b85d38fe1cf28b264c95c7a6f258842d140624cc58a2d7bb22a0aa0cb4b1"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "entrenamiento con semilla o parada temprana; ningún modelo ajustado se guardó, solo sus predicciones"
+  },
+  {
+   "id": "CAT_motor",
+   "etapa": "produccion",
+   "script": "src/modelos/cat_produccion.py",
+   "args": [
+    "CAT_motor",
+    "motor",
+    "393",
+    "--semillas=2"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "ajuste",
+   "que_hace": "CatBoost Tweedie, iteraciones fijadas desde V23, V24 y 2025",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "CAT_motor/v24.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "ee475f23e30ac89f6410ce2f8a19424a505fca758da7a0c33271172abe9a902a",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CAT_motor/v24.parquet",
+     "bytes": 3958638,
+     "sha256": "ee475f23e30ac89f6410ce2f8a19424a505fca758da7a0c33271172abe9a902a",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CAT_motor/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "4e197e05938aa70e23c934909796d9392c7df46d5e6c045be444f59245a21cc9",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CAT_motor/prediccion_2025.parquet",
+     "bytes": 3739277,
+     "sha256": "4e197e05938aa70e23c934909796d9392c7df46d5e6c045be444f59245a21cc9",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "2/2",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CAT_motor/log.txt",
+     "bytes": 253,
+     "sha256": "a4023670eaf8dffdc47a96fa2e50fb83c1ea614874033644e46db76dcca4c763"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CAT_motor/resumen.json",
+     "bytes": 141,
+     "sha256": "29fd8306043441e08fc4b641e0bf5f9e9e9e2628602c14074d37faf2d3b1c0bb"
+    }
+   ],
+   "registros_historicos_citados": [
+    {
+     "ruta": "cola10.sh",
+     "estado": "no_encontrado"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "entrenamiento con semilla o parada temprana; ningún modelo ajustado se guardó, solo sus predicciones"
+  },
+  {
+   "id": "CAT_motor_s23",
+   "etapa": "produccion",
+   "script": "src/modelos/cat_produccion.py",
+   "args": [
+    "CAT_motor_s23",
+    "motor",
+    "393",
+    "--semillas=2",
+    "--semilla_inicial=2"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "ajuste",
+   "que_hace": "CatBoost Tweedie, iteraciones fijadas desde V23, V24 y 2025",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "CAT_motor_s23/v24.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "3895cf1b73442c532da5172401de53db6f93ec2c596e8a3a5f746e770850b6d7",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CAT_motor_s23/v24.parquet",
+     "bytes": 3958636,
+     "sha256": "3895cf1b73442c532da5172401de53db6f93ec2c596e8a3a5f746e770850b6d7",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CAT_motor_s23/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "ae5ee520b2f83d873bf9708629a536b3d1f44979ee6656a273a331d0a39470a4",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CAT_motor_s23/prediccion_2025.parquet",
+     "bytes": 3739277,
+     "sha256": "ae5ee520b2f83d873bf9708629a536b3d1f44979ee6656a273a331d0a39470a4",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "2/2",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CAT_motor_s23/resumen.json",
+     "bytes": 186,
+     "sha256": "b9dddab1e85536dce41f1d306c7024589b5f678e06d1c936194429b1572a07a3"
+    }
+   ],
+   "registros_historicos_citados": [
+    {
+     "ruta": "cola30.sh",
+     "estado": "no_encontrado"
+    },
+    {
+     "ruta": "cola31.sh",
+     "estado": "no_encontrado"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/log_cat_s23.txt",
+     "bytes": 295,
+     "sha256": "33262e638113f918fb6c54bee7cedbedd01ed8885a55e9bd1d61e5c5b9f4aa94"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "entrenamiento con semilla o parada temprana; ningún modelo ajustado se guardó, solo sus predicciones"
+  },
+  {
+   "id": "CAT_motor_4s",
+   "etapa": "produccion",
+   "script": "src/modelos/combinar_semillas.py",
+   "args": [
+    "CAT_motor_4s",
+    "CAT_motor",
+    "CAT_motor_s23"
+   ],
+   "requiere": [
+    "CAT_motor",
+    "CAT_motor_s23"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "aritmetica",
+   "que_hace": "media ponderada por semillas de predicciones guardadas",
+   "modelo_ajustado_persistido": null,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "CAT_motor_4s/v24.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "62274dd4fab69a5ebd465da88315450414fadaf585013567b8ca44d8bc44ed9c",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CAT_motor_4s/v24.parquet",
+     "bytes": 3958636,
+     "sha256": "62274dd4fab69a5ebd465da88315450414fadaf585013567b8ca44d8bc44ed9c",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CAT_motor_4s/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "85b97f8c006497cf46dca694dd24f4bc537b28154a6d3a6042568884ef923c98",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CAT_motor_4s/prediccion_2025.parquet",
+     "bytes": 3739277,
+     "sha256": "85b97f8c006497cf46dca694dd24f4bc537b28154a6d3a6042568884ef923c98",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "2/2",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CAT_motor_4s/resumen.json",
+     "bytes": 189,
+     "sha256": "0c6724bc5889e88b1aee52258bd309c8d82433ec0018535d50c9ce701e8e40b6"
+    }
+   ],
+   "registros_historicos_citados": [],
+   "reconstruible_sin_ajuste": true,
+   "motivo": "aritmética sobre predicciones guardadas; repetida con los CSV exactos («reproducir.py mezcla»)"
+  },
+  {
+   "id": "CFS_motor_v23",
+   "etapa": "partes",
+   "script": "src/modelos/cat_frecsev.py",
+   "args": [
+    "CFS_motor_v23",
+    "motor"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "ajuste",
+   "que_hace": "CatBoost Poisson por peligro por severidad media; guarda partes por peligro",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "CFS_motor_v23/v23_own_damage.npz",
+     "verificada_por_receta": true,
+     "sha256_esperado": "a86234806dee320a21ce6b6a574b913af61dc5f108fbf85e21f5f1c0491aec46",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor_v23/v23_own_damage.npz",
+     "bytes": 1019396,
+     "sha256": "a86234806dee320a21ce6b6a574b913af61dc5f108fbf85e21f5f1c0491aec46",
+     "claves_npz": [
+      "best",
+      "lam"
+     ],
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_motor_v23/v23_third_party_prop.npz",
+     "verificada_por_receta": true,
+     "sha256_esperado": "cd33ea937a6053ab457c6a17a34e0e9d6cf8726f780bd7c083ca4bb9ec2cb12a",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor_v23/v23_third_party_prop.npz",
+     "bytes": 1019396,
+     "sha256": "cd33ea937a6053ab457c6a17a34e0e9d6cf8726f780bd7c083ca4bb9ec2cb12a",
+     "claves_npz": [
+      "best",
+      "lam"
+     ],
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_motor_v23/v23_bodily_injury.npz",
+     "verificada_por_receta": true,
+     "sha256_esperado": "b90099af6169d02c3bf02424f6dc9fda942f2f87fec89a6eaeee48ea7d20de7a",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor_v23/v23_bodily_injury.npz",
+     "bytes": 1019396,
+     "sha256": "b90099af6169d02c3bf02424f6dc9fda942f2f87fec89a6eaeee48ea7d20de7a",
+     "claves_npz": [
+      "best",
+      "lam"
+     ],
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_motor_v23/v23_theft.npz",
+     "verificada_por_receta": true,
+     "sha256_esperado": "f288a47025a9895e639129d2db271b29ecd2a88e888d6012a8cfb2f693098da5",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor_v23/v23_theft.npz",
+     "bytes": 1019396,
+     "sha256": "f288a47025a9895e639129d2db271b29ecd2a88e888d6012a8cfb2f693098da5",
+     "claves_npz": [
+      "best",
+      "lam"
+     ],
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_motor_v23/v23_glass_hail.npz",
+     "verificada_por_receta": true,
+     "sha256_esperado": "411b4dadf36d4b4056a17fda53156a0b9eafe497199edaaec15107502d4a726f",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor_v23/v23_glass_hail.npz",
+     "bytes": 1019396,
+     "sha256": "411b4dadf36d4b4056a17fda53156a0b9eafe497199edaaec15107502d4a726f",
+     "claves_npz": [
+      "best",
+      "lam"
+     ],
+     "estado": "coincide"
+    },
+    {
+     "salida": "sel_CFS_motor_v23.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "900ab1601fc2ac25ae6f983ee21faa8596acf95e8c23dd4bec7d69945119fb15",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor_v23/sel_CFS_motor_v23.parquet",
+     "bytes": 2184468,
+     "sha256": "900ab1601fc2ac25ae6f983ee21faa8596acf95e8c23dd4bec7d69945119fb15",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "6/6",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor_v23/resumen.json",
+     "bytes": 579,
+     "sha256": "f9a9b30605593d7a712d52a2246c0de7e3a847dfc7469caa26ac4444e6b1e44b"
+    }
+   ],
+   "registros_historicos_citados": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/cola37.sh",
+     "bytes": 238,
+     "sha256": "e128f0095cb7d5b3e09e678c02b2e74c9fa519e0bc480aefec06ee1e984e45d1"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/log_cfs_motor_v23.txt",
+     "bytes": 502,
+     "sha256": "e624d8b5b47b2a4d3f5d1b0bc797461870e3c11f56f0b1c9efaba66bf454cef9"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "entrenamiento con semilla o parada temprana; ningún modelo ajustado se guardó, solo sus predicciones"
+  },
+  {
+   "id": "CFS_motor",
+   "etapa": "partes",
+   "script": "src/modelos/cat_frecsev.py",
+   "args": [
+    "CFS_motor",
+    "motor",
+    "--prod",
+    "--semillas=2"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "ajuste",
+   "que_hace": "CatBoost Poisson por peligro por severidad media; guarda partes por peligro",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "CFS_motor/v23_own_damage.npz",
+     "verificada_por_receta": false,
+     "sha256_esperado": null,
+     "estado": "ausente_en_equipo"
+    },
+    {
+     "salida": "CFS_motor/v23_third_party_prop.npz",
+     "verificada_por_receta": false,
+     "sha256_esperado": null,
+     "estado": "ausente_en_equipo"
+    },
+    {
+     "salida": "CFS_motor/v23_bodily_injury.npz",
+     "verificada_por_receta": false,
+     "sha256_esperado": null,
+     "estado": "ausente_en_equipo"
+    },
+    {
+     "salida": "CFS_motor/v23_theft.npz",
+     "verificada_por_receta": false,
+     "sha256_esperado": null,
+     "estado": "ausente_en_equipo"
+    },
+    {
+     "salida": "CFS_motor/v23_glass_hail.npz",
+     "verificada_por_receta": false,
+     "sha256_esperado": null,
+     "estado": "ausente_en_equipo"
+    },
+    {
+     "salida": "CFS_motor/v24_own_damage.npy",
+     "verificada_por_receta": false,
+     "sha256_esperado": null,
+     "estado": "ausente_en_equipo"
+    },
+    {
+     "salida": "CFS_motor/v24_third_party_prop.npy",
+     "verificada_por_receta": false,
+     "sha256_esperado": null,
+     "estado": "ausente_en_equipo"
+    },
+    {
+     "salida": "CFS_motor/v24_bodily_injury.npy",
+     "verificada_por_receta": false,
+     "sha256_esperado": null,
+     "estado": "ausente_en_equipo"
+    },
+    {
+     "salida": "CFS_motor/v24_theft.npy",
+     "verificada_por_receta": false,
+     "sha256_esperado": null,
+     "estado": "ausente_en_equipo"
+    },
+    {
+     "salida": "CFS_motor/v24_glass_hail.npy",
+     "verificada_por_receta": false,
+     "sha256_esperado": null,
+     "estado": "ausente_en_equipo"
+    },
+    {
+     "salida": "CFS_motor/prod_own_damage.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "a3b99f874b3d52f644c5b82da96d212bf636ee6069be651ac125004f836a2517",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor/prod_own_damage.npy",
+     "bytes": 2040016,
+     "sha256": "a3b99f874b3d52f644c5b82da96d212bf636ee6069be651ac125004f836a2517",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_motor/prod_third_party_prop.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "690a4c3bcec92d55bd861b4da095c0cbd370e227494ecbf9b5e8f4a8a8707259",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor/prod_third_party_prop.npy",
+     "bytes": 2040016,
+     "sha256": "690a4c3bcec92d55bd861b4da095c0cbd370e227494ecbf9b5e8f4a8a8707259",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_motor/prod_bodily_injury.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "67d5aa89fa68feefe1646db753380940225c7fb26fe7852d1f93f9fd16e0a1ac",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor/prod_bodily_injury.npy",
+     "bytes": 2040016,
+     "sha256": "67d5aa89fa68feefe1646db753380940225c7fb26fe7852d1f93f9fd16e0a1ac",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_motor/prod_theft.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "07f82c8865581daf90e7084b7a5876856f6404b683c9ebcdc06e8528a6dec3a8",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor/prod_theft.npy",
+     "bytes": 2040016,
+     "sha256": "07f82c8865581daf90e7084b7a5876856f6404b683c9ebcdc06e8528a6dec3a8",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_motor/prod_glass_hail.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "9387d36f3bccd89f661bde91f10859bb56e702d5d17ba4a39c2eb3acc5cc877f",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor/prod_glass_hail.npy",
+     "bytes": 2040016,
+     "sha256": "9387d36f3bccd89f661bde91f10859bb56e702d5d17ba4a39c2eb3acc5cc877f",
+     "estado": "coincide"
+    },
+    {
+     "salida": "sel_CFS_motor.parquet",
+     "verificada_por_receta": false,
+     "sha256_esperado": "900ab1601fc2ac25ae6f983ee21faa8596acf95e8c23dd4bec7d69945119fb15",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor/sel_CFS_motor.parquet",
+     "bytes": 2184468,
+     "sha256": "900ab1601fc2ac25ae6f983ee21faa8596acf95e8c23dd4bec7d69945119fb15",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_motor/v24.parquet",
+     "verificada_por_receta": false,
+     "sha256_esperado": "cba09ca9072764aa37c89429db73a4639e227eb312b914136d7deae48bad3f3e",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor/v24.parquet",
+     "bytes": 3958636,
+     "sha256": "cba09ca9072764aa37c89429db73a4639e227eb312b914136d7deae48bad3f3e",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_motor/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "4d17abc843b341c27dfc4629d93bf07a874f6e02aa88016774476e5899791ee2",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor/prediccion_2025.parquet",
+     "bytes": 3739277,
+     "sha256": "4d17abc843b341c27dfc4629d93bf07a874f6e02aa88016774476e5899791ee2",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "6/6",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor/resumen.json",
+     "bytes": 635,
+     "sha256": "6cc4072e29b5fcb3cdee8ad2f7182390a15bf2ce6e9a7435bb98af9d8edd4a24"
+    }
+   ],
+   "registros_historicos_citados": [
+    {
+     "ruta": "cola23.sh",
+     "estado": "no_encontrado"
+    },
+    {
+     "ruta": "cola25.sh",
+     "estado": "no_encontrado"
+    },
+    {
+     "ruta": "cola29.sh",
+     "estado": "no_encontrado"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/log_cfs_motor.txt",
+     "bytes": 477,
+     "sha256": "dd0e2860bb9a6442146158fac6197581b45466a93166986907d3d4a0686192fe"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/log_cfs_motor_prod.txt",
+     "bytes": 652,
+     "sha256": "bf8d9e454c584eb3a608511d7a20f16d766b85777fe7abd98cd0d22b4e9f7da8"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "entrenamiento con semilla o parada temprana; ningún modelo ajustado se guardó, solo sus predicciones"
+  },
+  {
+   "id": "CFS_motor_s23",
+   "etapa": "partes",
+   "script": "src/modelos/cat_frecsev.py",
+   "args": [
+    "CFS_motor_s23",
+    "motor",
+    "--prod",
+    "--semillas=2",
+    "--semilla_inicial=2",
+    "--desde=CFS_motor"
+   ],
+   "requiere": [
+    "CFS_motor"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "ajuste",
+   "que_hace": "CatBoost Poisson por peligro por severidad media; guarda partes por peligro",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "CFS_motor_s23/v24_own_damage.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "4d7afe91ca0b9870e42d8229a88116163ef8e97f210763df77fcad76ea93304b",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor_s23/v24_own_damage.npy",
+     "bytes": 2037712,
+     "sha256": "4d7afe91ca0b9870e42d8229a88116163ef8e97f210763df77fcad76ea93304b",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_motor_s23/v24_third_party_prop.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "3b115c00c5c4793dffa7c6c0a25c9db979c0fecd22e419011faef6123f9b5856",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor_s23/v24_third_party_prop.npy",
+     "bytes": 2037712,
+     "sha256": "3b115c00c5c4793dffa7c6c0a25c9db979c0fecd22e419011faef6123f9b5856",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_motor_s23/v24_bodily_injury.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "a9317779bb6fed4f5989329b385a533facd41b9f5bd61e7d1e886a79e5af0fdb",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor_s23/v24_bodily_injury.npy",
+     "bytes": 2037712,
+     "sha256": "a9317779bb6fed4f5989329b385a533facd41b9f5bd61e7d1e886a79e5af0fdb",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_motor_s23/v24_theft.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "fb20dd3bffd53ff99c3f51b1691072e4414d551e844b92afa146a2b2f28f73b1",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor_s23/v24_theft.npy",
+     "bytes": 2037712,
+     "sha256": "fb20dd3bffd53ff99c3f51b1691072e4414d551e844b92afa146a2b2f28f73b1",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_motor_s23/v24_glass_hail.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "ea815c321fdddc24049fd47e3bbc326b91a7585fb3baf6fc1f6464963bd80f9a",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor_s23/v24_glass_hail.npy",
+     "bytes": 2037712,
+     "sha256": "ea815c321fdddc24049fd47e3bbc326b91a7585fb3baf6fc1f6464963bd80f9a",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_motor_s23/prod_own_damage.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "81d33d4c78c5d22450fb9d636ee51dd921e67b0524dee1a1a45567811a0aa568",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor_s23/prod_own_damage.npy",
+     "bytes": 2040016,
+     "sha256": "81d33d4c78c5d22450fb9d636ee51dd921e67b0524dee1a1a45567811a0aa568",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_motor_s23/prod_third_party_prop.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "30cb12405c05c5789b0e63e2b2f425cbfc814004deb3f0b22c3a1fb9dc2d2e0f",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor_s23/prod_third_party_prop.npy",
+     "bytes": 2040016,
+     "sha256": "30cb12405c05c5789b0e63e2b2f425cbfc814004deb3f0b22c3a1fb9dc2d2e0f",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_motor_s23/prod_bodily_injury.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "15b2bea45299746e98e08ba93074913d43b8d18b5eda58a8cf4c255fb0bcdfec",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor_s23/prod_bodily_injury.npy",
+     "bytes": 2040016,
+     "sha256": "15b2bea45299746e98e08ba93074913d43b8d18b5eda58a8cf4c255fb0bcdfec",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_motor_s23/prod_theft.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "956aa7e8db64d6b56d8b3459b80ab9b92bbf67c8ffbff723bb95e8eb10a54078",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor_s23/prod_theft.npy",
+     "bytes": 2040016,
+     "sha256": "956aa7e8db64d6b56d8b3459b80ab9b92bbf67c8ffbff723bb95e8eb10a54078",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_motor_s23/prod_glass_hail.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "df52d7b2356006719b146ba0eb7a2e236b7c8d9b5ceea1f06200f99d40c6e2f4",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor_s23/prod_glass_hail.npy",
+     "bytes": 2040016,
+     "sha256": "df52d7b2356006719b146ba0eb7a2e236b7c8d9b5ceea1f06200f99d40c6e2f4",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_motor_s23/v24.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "edd218f167d18c74c7fc42f5b5cc41dabae4940adb47cc57de1df6f3e97928c6",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor_s23/v24.parquet",
+     "bytes": 3958636,
+     "sha256": "edd218f167d18c74c7fc42f5b5cc41dabae4940adb47cc57de1df6f3e97928c6",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_motor_s23/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "30a06f85fb051c40a79fc7de2b8da730715062bdc1176f6ab76b5c23df6da9f3",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor_s23/prediccion_2025.parquet",
+     "bytes": 3739277,
+     "sha256": "30a06f85fb051c40a79fc7de2b8da730715062bdc1176f6ab76b5c23df6da9f3",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "12/12",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor_s23/resumen.json",
+     "bytes": 403,
+     "sha256": "f1432facde9fe6e73ab977223044c8996a11566003db8f4188b9c78a55e05944"
+    }
+   ],
+   "registros_historicos_citados": [
+    {
+     "ruta": "cola32.sh",
+     "estado": "no_encontrado"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/log_cfs_motor_s23.txt",
+     "bytes": 1115,
+     "sha256": "d6c601ba091153bf8c25ca4cff81d5ff9186f7eb7f3ca8979e0fc7018587c69d"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "entrenamiento con semilla o parada temprana; ningún modelo ajustado se guardó, solo sus predicciones"
+  },
+  {
+   "id": "CFS_buildings",
+   "etapa": "partes",
+   "script": "src/modelos/cat_frecsev.py",
+   "args": [
+    "CFS_buildings",
+    "buildings",
+    "--prod",
+    "--semillas=2",
+    "--f3s2"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "ajuste",
+   "que_hace": "CatBoost Poisson por peligro por severidad media; guarda partes por peligro",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "CFS_buildings/v23_storm.npz",
+     "verificada_por_receta": true,
+     "sha256_esperado": "f3198f0bd2607ccc2385f67e725d10b7dfdede63ca83f50191b71159378169bf",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings/v23_storm.npz",
+     "bytes": 738220,
+     "sha256": "f3198f0bd2607ccc2385f67e725d10b7dfdede63ca83f50191b71159378169bf",
+     "claves_npz": [
+      "best",
+      "lam"
+     ],
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings/v23_flood.npz",
+     "verificada_por_receta": true,
+     "sha256_esperado": "be7902e29055327a534df8455e72458c6d2aa0ba256c110f511052fb5cf6730e",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings/v23_flood.npz",
+     "bytes": 738220,
+     "sha256": "be7902e29055327a534df8455e72458c6d2aa0ba256c110f511052fb5cf6730e",
+     "claves_npz": [
+      "best",
+      "lam"
+     ],
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings/v23_escape_of_water.npz",
+     "verificada_por_receta": true,
+     "sha256_esperado": "2122c2ce064d000f82ff5ec4bec3b0736fb84c69e148e0bfb399ef45b080719c",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings/v23_escape_of_water.npz",
+     "bytes": 738220,
+     "sha256": "2122c2ce064d000f82ff5ec4bec3b0736fb84c69e148e0bfb399ef45b080719c",
+     "claves_npz": [
+      "best",
+      "lam"
+     ],
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings/v23_subsidence.npz",
+     "verificada_por_receta": true,
+     "sha256_esperado": "533faac0e88a2c6a1b4a777e4f4a764a0c0ba6e9092d4f658f6211962d3968be",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings/v23_subsidence.npz",
+     "bytes": 738220,
+     "sha256": "533faac0e88a2c6a1b4a777e4f4a764a0c0ba6e9092d4f658f6211962d3968be",
+     "claves_npz": [
+      "best",
+      "lam"
+     ],
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings/v23_fire.npz",
+     "verificada_por_receta": true,
+     "sha256_esperado": "8663b1ffe7a7cd4b3cee0de2c57bd9e2b33bbb6cfd920d98cf44f25d15a97da2",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings/v23_fire.npz",
+     "bytes": 738220,
+     "sha256": "8663b1ffe7a7cd4b3cee0de2c57bd9e2b33bbb6cfd920d98cf44f25d15a97da2",
+     "claves_npz": [
+      "best",
+      "lam"
+     ],
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings/v23_accidental_damage.npz",
+     "verificada_por_receta": true,
+     "sha256_esperado": "768d54f01f0b736ee6d0744afda2fdfe20a7f0ee3f6859c9f1294aa11e67ac5c",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings/v23_accidental_damage.npz",
+     "bytes": 738220,
+     "sha256": "768d54f01f0b736ee6d0744afda2fdfe20a7f0ee3f6859c9f1294aa11e67ac5c",
+     "claves_npz": [
+      "best",
+      "lam"
+     ],
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings/v24_storm.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "af281fe9aad5f43c395c65ca4be2e569b01a0397af2f8d55373642724b36aca5",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings/v24_storm.npy",
+     "bytes": 1472136,
+     "sha256": "af281fe9aad5f43c395c65ca4be2e569b01a0397af2f8d55373642724b36aca5",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings/v24_flood.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "3fbf1e53eb69949cac4c60cedd74bedce084ff76b76a8a068cc983335896593a",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings/v24_flood.npy",
+     "bytes": 1472136,
+     "sha256": "3fbf1e53eb69949cac4c60cedd74bedce084ff76b76a8a068cc983335896593a",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings/v24_escape_of_water.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "1472f036e25ad90fb8aa19db0b7db55f1bc3b1bea0be0e9308870300ec7000bb",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings/v24_escape_of_water.npy",
+     "bytes": 1472136,
+     "sha256": "1472f036e25ad90fb8aa19db0b7db55f1bc3b1bea0be0e9308870300ec7000bb",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings/v24_subsidence.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "ed0068208cc4990b2b568b040f013510a695c36000323c86806ffb3fb3f96e1a",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings/v24_subsidence.npy",
+     "bytes": 1472136,
+     "sha256": "ed0068208cc4990b2b568b040f013510a695c36000323c86806ffb3fb3f96e1a",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings/v24_fire.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "f0512ea785bd8cec311736b4005ac3a4d55c8dcb9324f48b50094b8c536bd39c",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings/v24_fire.npy",
+     "bytes": 1472136,
+     "sha256": "f0512ea785bd8cec311736b4005ac3a4d55c8dcb9324f48b50094b8c536bd39c",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings/v24_accidental_damage.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "f0ae17d7bd550235dab7a9999e218c704f44ce34c77fbf81f9ae3bdbc83a9c89",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings/v24_accidental_damage.npy",
+     "bytes": 1472136,
+     "sha256": "f0ae17d7bd550235dab7a9999e218c704f44ce34c77fbf81f9ae3bdbc83a9c89",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings/prod_storm.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "081473d7a42e4240bc11153b454cf3f7a16d1f2000dd9d74bbcd871b65f86c1b",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings/prod_storm.npy",
+     "bytes": 1473368,
+     "sha256": "081473d7a42e4240bc11153b454cf3f7a16d1f2000dd9d74bbcd871b65f86c1b",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings/prod_flood.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "3dff91ac41b110db777a4ccc7f28cb2ac1994d46097f7222fbdfd5390fec2142",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings/prod_flood.npy",
+     "bytes": 1473368,
+     "sha256": "3dff91ac41b110db777a4ccc7f28cb2ac1994d46097f7222fbdfd5390fec2142",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings/prod_escape_of_water.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "c7aabb1e756189060c9d66505d2c1187bca9f32951a6a39891cc2e015e15ee29",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings/prod_escape_of_water.npy",
+     "bytes": 1473368,
+     "sha256": "c7aabb1e756189060c9d66505d2c1187bca9f32951a6a39891cc2e015e15ee29",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings/prod_subsidence.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "a09ce50a92a08d75b974a7643ab2a365d912d94648daa0670e494bc5f6921a1b",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings/prod_subsidence.npy",
+     "bytes": 1473368,
+     "sha256": "a09ce50a92a08d75b974a7643ab2a365d912d94648daa0670e494bc5f6921a1b",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings/prod_fire.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "1643fc97d5a0dece1ff9489462f024701a4264027085ec737abc7d032ce42291",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings/prod_fire.npy",
+     "bytes": 1473368,
+     "sha256": "1643fc97d5a0dece1ff9489462f024701a4264027085ec737abc7d032ce42291",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings/prod_accidental_damage.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "00935979b230f2746fc698a5766d6b3b3b9cfeaebd61c75714a01a607dc62e95",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings/prod_accidental_damage.npy",
+     "bytes": 1473368,
+     "sha256": "00935979b230f2746fc698a5766d6b3b3b9cfeaebd61c75714a01a607dc62e95",
+     "estado": "coincide"
+    },
+    {
+     "salida": "sel_CFS_buildings.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "65f62e51072a50cc359424a42b061fe13d0a9dca384e4b2956d3038f451fd22f",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings/sel_CFS_buildings.parquet",
+     "bytes": 1574274,
+     "sha256": "65f62e51072a50cc359424a42b061fe13d0a9dca384e4b2956d3038f451fd22f",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings/v24.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "27493e4077bcc877a6769b516f7c477ff39364d7dc0ee9fa725584ae54c52d22",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings/v24.parquet",
+     "bytes": 2867461,
+     "sha256": "27493e4077bcc877a6769b516f7c477ff39364d7dc0ee9fa725584ae54c52d22",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "682d515636eba93971f37e987938721185eac8700b81b14e52ac3a2b8b4f86e9",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings/prediccion_2025.parquet",
+     "bytes": 2820627,
+     "sha256": "682d515636eba93971f37e987938721185eac8700b81b14e52ac3a2b8b4f86e9",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "21/21",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings/resumen.json",
+     "bytes": 741,
+     "sha256": "2575be838e9b837896eae32e100dd17d2e78c9a2e6f5250a46b9f2e8d0b200ba"
+    }
+   ],
+   "registros_historicos_citados": [
+    {
+     "ruta": "cola31.sh",
+     "estado": "no_encontrado"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/log_cfs_buildings.txt",
+     "bytes": 1665,
+     "sha256": "c7e76eff45c252b71c11c1c7172313469972a489ec2576c3d658739fe70eeeed"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "entrenamiento con semilla o parada temprana; ningún modelo ajustado se guardó, solo sus predicciones"
+  },
+  {
+   "id": "CFS_buildings_s23",
+   "etapa": "partes",
+   "script": "src/modelos/cat_frecsev.py",
+   "args": [
+    "CFS_buildings_s23",
+    "buildings",
+    "--prod",
+    "--semillas=2",
+    "--f3s2",
+    "--desde=CFS_buildings",
+    "--semilla_inicial=2"
+   ],
+   "requiere": [
+    "CFS_buildings"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "ajuste",
+   "que_hace": "CatBoost Poisson por peligro por severidad media; guarda partes por peligro",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "CFS_buildings_s23/v24_storm.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "fd520b07ea423aaac1659688416bbd82380f1a70a732bae3c5162168440efe77",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings_s23/v24_storm.npy",
+     "bytes": 1472136,
+     "sha256": "fd520b07ea423aaac1659688416bbd82380f1a70a732bae3c5162168440efe77",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings_s23/v24_flood.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "b048655eab511d59fb15f20ff08e722f212e023ad15ff46e8ee076722fb232f7",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings_s23/v24_flood.npy",
+     "bytes": 1472136,
+     "sha256": "b048655eab511d59fb15f20ff08e722f212e023ad15ff46e8ee076722fb232f7",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings_s23/v24_escape_of_water.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "336980ef8844d6d23607ff926829ec81b1929d1425ffa2711310f95e9d777184",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings_s23/v24_escape_of_water.npy",
+     "bytes": 1472136,
+     "sha256": "336980ef8844d6d23607ff926829ec81b1929d1425ffa2711310f95e9d777184",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings_s23/v24_subsidence.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "f63610d9318c9ae267edd4697695b753afbacb62b2f22d4539b95f6ade6ac9e1",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings_s23/v24_subsidence.npy",
+     "bytes": 1472136,
+     "sha256": "f63610d9318c9ae267edd4697695b753afbacb62b2f22d4539b95f6ade6ac9e1",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings_s23/v24_fire.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "c5ddb12650fbecddf7d92d734bc87057317ba8119eab7507707a050e99639d7e",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings_s23/v24_fire.npy",
+     "bytes": 1472136,
+     "sha256": "c5ddb12650fbecddf7d92d734bc87057317ba8119eab7507707a050e99639d7e",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings_s23/v24_accidental_damage.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "2f416841812aefc2df37b2fadc3b5af5f036d275c5c284b1e4628424450f75e6",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings_s23/v24_accidental_damage.npy",
+     "bytes": 1472136,
+     "sha256": "2f416841812aefc2df37b2fadc3b5af5f036d275c5c284b1e4628424450f75e6",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings_s23/prod_storm.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "18fdd28dfb122345a3fc8364ac48e4c604f1829da21fc9fe98f9b61fe9586a8c",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings_s23/prod_storm.npy",
+     "bytes": 1473368,
+     "sha256": "18fdd28dfb122345a3fc8364ac48e4c604f1829da21fc9fe98f9b61fe9586a8c",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings_s23/prod_flood.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "3141b7e8b374e792971a0bbe5dd9e9cb74f923fd563849c3d4eeba9909ef758b",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings_s23/prod_flood.npy",
+     "bytes": 1473368,
+     "sha256": "3141b7e8b374e792971a0bbe5dd9e9cb74f923fd563849c3d4eeba9909ef758b",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings_s23/prod_escape_of_water.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "d2d911f199ac71b35bfdda30794f0344d0b71be44a90039f329c92b90fdbff2e",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings_s23/prod_escape_of_water.npy",
+     "bytes": 1473368,
+     "sha256": "d2d911f199ac71b35bfdda30794f0344d0b71be44a90039f329c92b90fdbff2e",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings_s23/prod_subsidence.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "dcd98e60b1f8a82cb7df1ac613a90f4650f70cc31fda15b805c63c0369b75975",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings_s23/prod_subsidence.npy",
+     "bytes": 1473368,
+     "sha256": "dcd98e60b1f8a82cb7df1ac613a90f4650f70cc31fda15b805c63c0369b75975",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings_s23/prod_fire.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "18402ad417833b5e4480295ccd224a29b9112a6ceb6108bc3c4130a3eab0117b",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings_s23/prod_fire.npy",
+     "bytes": 1473368,
+     "sha256": "18402ad417833b5e4480295ccd224a29b9112a6ceb6108bc3c4130a3eab0117b",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings_s23/prod_accidental_damage.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "f4f2085fa3d307d15e08b9821ba7ce835abccedb04b24c9fabf0727a9c91a255",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings_s23/prod_accidental_damage.npy",
+     "bytes": 1473368,
+     "sha256": "f4f2085fa3d307d15e08b9821ba7ce835abccedb04b24c9fabf0727a9c91a255",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings_s23/v24.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "4478cd503b550cc95a4a8b9377557b2f5b3bdf769f76b832ff9ac6a2e466c2f7",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings_s23/v24.parquet",
+     "bytes": 2867461,
+     "sha256": "4478cd503b550cc95a4a8b9377557b2f5b3bdf769f76b832ff9ac6a2e466c2f7",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_buildings_s23/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "9bad842a7c6690be04ab1be43f8710b03446cbe2f2c528c5fa7d3ab12ea1d89f",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings_s23/prediccion_2025.parquet",
+     "bytes": 2820627,
+     "sha256": "9bad842a7c6690be04ab1be43f8710b03446cbe2f2c528c5fa7d3ab12ea1d89f",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "14/14",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_buildings_s23/resumen.json",
+     "bytes": 439,
+     "sha256": "41d4f7765bd0b5bb442a80b029346882ea0d998375eb858c9baa9b990e0711df"
+    }
+   ],
+   "registros_historicos_citados": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/cola42.sh",
+     "bytes": 694,
+     "sha256": "ee3731c179a8c8bb46eac95ae3aa85142adf5b38ef18ffc50e9350c3896a530b"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/log_cfs_buildings_s23.txt",
+     "bytes": 2033,
+     "sha256": "172b4ea170172f5e0bb1bcb1d287beb2cc1a5c29202530ca481c07e0811491b9"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "entrenamiento con semilla o parada temprana; ningún modelo ajustado se guardó, solo sus predicciones"
+  },
+  {
+   "id": "FSA_contents",
+   "etapa": "produccion",
+   "script": "src/modelos/frecsev2.py",
+   "args": [
+    "FSA_contents",
+    "contents",
+    "--prod",
+    "--semillas=2",
+    "--aditivo"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "ajuste",
+   "que_hace": "LightGBM Poisson por peligro; guarda partes por peligro",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "sel_FSA_contents.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "5eb0386a57ee6ef715989e06a3b5f3fc4f767069fa2e65582c7ff87f0d91060a",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSA_contents/sel_FSA_contents.parquet",
+     "bytes": 1583200,
+     "sha256": "5eb0386a57ee6ef715989e06a3b5f3fc4f767069fa2e65582c7ff87f0d91060a",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSA_contents/v24.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "92a05c3174853240db42344dee1c233a47a1f0bf2d4be59d177a4f802e260ff8",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSA_contents/v24.parquet",
+     "bytes": 2907654,
+     "sha256": "92a05c3174853240db42344dee1c233a47a1f0bf2d4be59d177a4f802e260ff8",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSA_contents/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "f3d02e2face2cf7ae18c44f615d3ad1969b2ce4bfc12e244569d0c35f720c1c2",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSA_contents/prediccion_2025.parquet",
+     "bytes": 2846950,
+     "sha256": "f3d02e2face2cf7ae18c44f615d3ad1969b2ce4bfc12e244569d0c35f720c1c2",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "3/3",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSA_contents/resumen.json",
+     "bytes": 788,
+     "sha256": "5b278fb4581d696aa9ce99135d3425c206a986c2218488017c324825910ee76d"
+    }
+   ],
+   "registros_historicos_citados": [
+    {
+     "ruta": "cola33.sh",
+     "estado": "no_encontrado"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/log_fsa_contents.txt",
+     "bytes": 1396,
+     "sha256": "5048a883a3394c0cd1e6a38a6c9ac736b1c82759b57da563136d2fde319de6f8"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "entrenamiento con semilla o parada temprana; ningún modelo ajustado se guardó, solo sus predicciones"
+  },
+  {
+   "id": "FSAP_buildings",
+   "etapa": "partes",
+   "script": "src/modelos/frecsev2.py",
+   "args": [
+    "FSAP_buildings",
+    "buildings",
+    "--prod",
+    "--semillas=2",
+    "--aditivo",
+    "--partes"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "ajuste",
+   "que_hace": "LightGBM Poisson por peligro; guarda partes por peligro",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "FSAP_buildings/v23_storm.npz",
+     "verificada_por_receta": true,
+     "sha256_esperado": "850b3b4951cc143d9f37f8ccaad1c01d7256ab9dff8411777f811a2b97838134",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_buildings/v23_storm.npz",
+     "bytes": 738220,
+     "sha256": "850b3b4951cc143d9f37f8ccaad1c01d7256ab9dff8411777f811a2b97838134",
+     "claves_npz": [
+      "best",
+      "lam"
+     ],
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_buildings/v23_flood.npz",
+     "verificada_por_receta": true,
+     "sha256_esperado": "58e74b143eac29633154aae8af5ba88eef8a13b6832d281a3d9050a476e19156",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_buildings/v23_flood.npz",
+     "bytes": 738220,
+     "sha256": "58e74b143eac29633154aae8af5ba88eef8a13b6832d281a3d9050a476e19156",
+     "claves_npz": [
+      "best",
+      "lam"
+     ],
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_buildings/v23_escape_of_water.npz",
+     "verificada_por_receta": true,
+     "sha256_esperado": "425c10af118f637be9c71d4340150c13db4b2b4b42fce60bd81472cb925edaea",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_buildings/v23_escape_of_water.npz",
+     "bytes": 738220,
+     "sha256": "425c10af118f637be9c71d4340150c13db4b2b4b42fce60bd81472cb925edaea",
+     "claves_npz": [
+      "best",
+      "lam"
+     ],
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_buildings/v23_subsidence.npz",
+     "verificada_por_receta": true,
+     "sha256_esperado": "239ac4084751f448eccc5c2aba2c6ac9e874611ebabdb6ca325e620d6c72dc25",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_buildings/v23_subsidence.npz",
+     "bytes": 738220,
+     "sha256": "239ac4084751f448eccc5c2aba2c6ac9e874611ebabdb6ca325e620d6c72dc25",
+     "claves_npz": [
+      "best",
+      "lam"
+     ],
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_buildings/v23_fire.npz",
+     "verificada_por_receta": true,
+     "sha256_esperado": "8f23b38286754d7dea82b20d1508698e652f44f26debb17252f89bd77795510b",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_buildings/v23_fire.npz",
+     "bytes": 738220,
+     "sha256": "8f23b38286754d7dea82b20d1508698e652f44f26debb17252f89bd77795510b",
+     "claves_npz": [
+      "best",
+      "lam"
+     ],
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_buildings/v23_accidental_damage.npz",
+     "verificada_por_receta": true,
+     "sha256_esperado": "35b0ab7e6a8df8d161a0819815e382559697f127c138119471b92c06f6d80d72",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_buildings/v23_accidental_damage.npz",
+     "bytes": 738220,
+     "sha256": "35b0ab7e6a8df8d161a0819815e382559697f127c138119471b92c06f6d80d72",
+     "claves_npz": [
+      "best",
+      "lam"
+     ],
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_buildings/v24_storm.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "f187a0b5b41839749d1d462ecfd69ba2f60c3d6decaa7cdfeea9dc5c00dc2458",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_buildings/v24_storm.npy",
+     "bytes": 1472136,
+     "sha256": "f187a0b5b41839749d1d462ecfd69ba2f60c3d6decaa7cdfeea9dc5c00dc2458",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_buildings/v24_flood.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "e946ded4c829ad8d9fc1b74868db0534d347e81578ebbcd2fa8c417700a70ec1",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_buildings/v24_flood.npy",
+     "bytes": 1472136,
+     "sha256": "e946ded4c829ad8d9fc1b74868db0534d347e81578ebbcd2fa8c417700a70ec1",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_buildings/v24_escape_of_water.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "66987e0dc2c8e716aeaac725a935407c69aa28817e19bc7c8ba6fb80b2b3b8d6",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_buildings/v24_escape_of_water.npy",
+     "bytes": 1472136,
+     "sha256": "66987e0dc2c8e716aeaac725a935407c69aa28817e19bc7c8ba6fb80b2b3b8d6",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_buildings/v24_subsidence.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "9a3fe6a967a80ce3247ca10d06f9d9f24435ecd9031653b30a76073f1f539dc4",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_buildings/v24_subsidence.npy",
+     "bytes": 1472136,
+     "sha256": "9a3fe6a967a80ce3247ca10d06f9d9f24435ecd9031653b30a76073f1f539dc4",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_buildings/v24_fire.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "8b076b6b3d6a1fbd4c79d2498ef0450124587552601e0020aaed32ca9398d98c",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_buildings/v24_fire.npy",
+     "bytes": 1472136,
+     "sha256": "8b076b6b3d6a1fbd4c79d2498ef0450124587552601e0020aaed32ca9398d98c",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_buildings/v24_accidental_damage.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "37337978de4dfc4d10fd549eb3153e7a19e3240653d3c9a5c7e074058fe864d6",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_buildings/v24_accidental_damage.npy",
+     "bytes": 1472136,
+     "sha256": "37337978de4dfc4d10fd549eb3153e7a19e3240653d3c9a5c7e074058fe864d6",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_buildings/prod_storm.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "388eba379c72789e19971a36e30b4d06c2e33b90e1adf7b3db466e0ea912cd7c",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_buildings/prod_storm.npy",
+     "bytes": 1473368,
+     "sha256": "388eba379c72789e19971a36e30b4d06c2e33b90e1adf7b3db466e0ea912cd7c",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_buildings/prod_flood.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "835b8d795e217a14a8e9b90e4c858aa84460e4025e07e506d44fa4ee840b6434",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_buildings/prod_flood.npy",
+     "bytes": 1473368,
+     "sha256": "835b8d795e217a14a8e9b90e4c858aa84460e4025e07e506d44fa4ee840b6434",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_buildings/prod_escape_of_water.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "0a9bec1ecb3f5e7fba36e58a6b52aa63789b754892e307baf030961dd1d7637d",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_buildings/prod_escape_of_water.npy",
+     "bytes": 1473368,
+     "sha256": "0a9bec1ecb3f5e7fba36e58a6b52aa63789b754892e307baf030961dd1d7637d",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_buildings/prod_subsidence.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "62c9859786d37a6159cc44e91884429d259f8719d3cd485dc09cf3a51a7c8c5c",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_buildings/prod_subsidence.npy",
+     "bytes": 1473368,
+     "sha256": "62c9859786d37a6159cc44e91884429d259f8719d3cd485dc09cf3a51a7c8c5c",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_buildings/prod_fire.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "ffa156ed849afb427a6a4fd5f01dd9653f19611bbaa45c849219b5cc1704011d",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_buildings/prod_fire.npy",
+     "bytes": 1473368,
+     "sha256": "ffa156ed849afb427a6a4fd5f01dd9653f19611bbaa45c849219b5cc1704011d",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_buildings/prod_accidental_damage.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "08b9f79f33f867a1c240f15ecb6ae5943a8138fa632db09cf180378645faca1f",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_buildings/prod_accidental_damage.npy",
+     "bytes": 1473368,
+     "sha256": "08b9f79f33f867a1c240f15ecb6ae5943a8138fa632db09cf180378645faca1f",
+     "estado": "coincide"
+    },
+    {
+     "salida": "sel_FSAP_buildings.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "8651e0c38f36c7604ed7cf004c9f346b794ae600251cc89278baf0dbc08c564d",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_buildings/sel_FSAP_buildings.parquet",
+     "bytes": 1574274,
+     "sha256": "8651e0c38f36c7604ed7cf004c9f346b794ae600251cc89278baf0dbc08c564d",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_buildings/v24.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "a91de648d619bfdb1298988d25331d41bb45d296dd362c6e4faabe79af8c2348",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_buildings/v24.parquet",
+     "bytes": 2867461,
+     "sha256": "a91de648d619bfdb1298988d25331d41bb45d296dd362c6e4faabe79af8c2348",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_buildings/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "e9fac7e4119262180180acb03a8a600137b65fd1920bb5aa4a363a0684da85e5",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_buildings/prediccion_2025.parquet",
+     "bytes": 2820627,
+     "sha256": "e9fac7e4119262180180acb03a8a600137b65fd1920bb5aa4a363a0684da85e5",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "21/21",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_buildings/resumen.json",
+     "bytes": 1107,
+     "sha256": "4a93c095552cac762ef946f59e2421856cebb2455af241347c489d59739f9525"
+    }
+   ],
+   "registros_historicos_citados": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/cola39.sh",
+     "bytes": 675,
+     "sha256": "d47118d15c2e290e29f7b2f510232d2493de09545dc8bfdb9a901e57cfa9b1b3"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/log_fsap.txt",
+     "bytes": 7191,
+     "sha256": "ec246787d18b7f752dfc034c02de4b2cef898c2e41feb138065e83a29a3451e4"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "entrenamiento con semilla o parada temprana; ningún modelo ajustado se guardó, solo sus predicciones"
+  },
+  {
+   "id": "FSAP2_buildings",
+   "etapa": "partes",
+   "script": "src/modelos/frecsev2.py",
+   "args": [
+    "FSAP2_buildings",
+    "buildings",
+    "--prod",
+    "--semillas=2",
+    "--aditivo",
+    "--partes",
+    "--desde=FSAP_buildings",
+    "--semilla_inicial=2"
+   ],
+   "requiere": [
+    "FSAP_buildings"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "ajuste",
+   "que_hace": "LightGBM Poisson por peligro; guarda partes por peligro",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "FSAP2_buildings/v24_storm.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "49034731247e67e0cebdb63a12280469f33e762e69c001c20723fab2221ff562",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_buildings/v24_storm.npy",
+     "bytes": 1472136,
+     "sha256": "49034731247e67e0cebdb63a12280469f33e762e69c001c20723fab2221ff562",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP2_buildings/v24_flood.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "6cf339c36691da4e7bf026bcad8c662a0b8d7e989aa03dc2aafd236f415b92f9",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_buildings/v24_flood.npy",
+     "bytes": 1472136,
+     "sha256": "6cf339c36691da4e7bf026bcad8c662a0b8d7e989aa03dc2aafd236f415b92f9",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP2_buildings/v24_escape_of_water.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "9177427a22ca85c120e6d8835a9bcc254c8d3d74f11041440eb324f6be1426a9",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_buildings/v24_escape_of_water.npy",
+     "bytes": 1472136,
+     "sha256": "9177427a22ca85c120e6d8835a9bcc254c8d3d74f11041440eb324f6be1426a9",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP2_buildings/v24_subsidence.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "658d42f0564f47bed553a64a11039fd93027ab8783bdaa82e1dd5fd08dbeea57",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_buildings/v24_subsidence.npy",
+     "bytes": 1472136,
+     "sha256": "658d42f0564f47bed553a64a11039fd93027ab8783bdaa82e1dd5fd08dbeea57",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP2_buildings/v24_fire.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "4d07f0f0fb237a44c816a1a62af729ac25b49e2e6bf413476c123e3099da63f5",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_buildings/v24_fire.npy",
+     "bytes": 1472136,
+     "sha256": "4d07f0f0fb237a44c816a1a62af729ac25b49e2e6bf413476c123e3099da63f5",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP2_buildings/v24_accidental_damage.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "f04e2592832b7647c5e24e7e1a73f873f1f89bfbcdea710596e312fd382b77c2",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_buildings/v24_accidental_damage.npy",
+     "bytes": 1472136,
+     "sha256": "f04e2592832b7647c5e24e7e1a73f873f1f89bfbcdea710596e312fd382b77c2",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP2_buildings/prod_storm.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "aa8c63e86c531dd6793ef0319e259a373293a5ff922ea5220c7b22b5cbd5ba0c",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_buildings/prod_storm.npy",
+     "bytes": 1473368,
+     "sha256": "aa8c63e86c531dd6793ef0319e259a373293a5ff922ea5220c7b22b5cbd5ba0c",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP2_buildings/prod_flood.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "da746c66ac3ac15c45ed769c96aeb15619f63a89090a278a0ccb97e19ae8afc6",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_buildings/prod_flood.npy",
+     "bytes": 1473368,
+     "sha256": "da746c66ac3ac15c45ed769c96aeb15619f63a89090a278a0ccb97e19ae8afc6",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP2_buildings/prod_escape_of_water.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "0aa258443517200e7b48ea41ec90bd37037b9790a162f27f076d53ec63f8ba73",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_buildings/prod_escape_of_water.npy",
+     "bytes": 1473368,
+     "sha256": "0aa258443517200e7b48ea41ec90bd37037b9790a162f27f076d53ec63f8ba73",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP2_buildings/prod_subsidence.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "52e3df3859fb429f940d6d59e97c7e660be29feaa4298723dbab030e54ca996d",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_buildings/prod_subsidence.npy",
+     "bytes": 1473368,
+     "sha256": "52e3df3859fb429f940d6d59e97c7e660be29feaa4298723dbab030e54ca996d",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP2_buildings/prod_fire.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "0246bcf85c25b1ddf89a6ceed6d379150ccdd2dab9d544183d6d094a49f4eabe",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_buildings/prod_fire.npy",
+     "bytes": 1473368,
+     "sha256": "0246bcf85c25b1ddf89a6ceed6d379150ccdd2dab9d544183d6d094a49f4eabe",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP2_buildings/prod_accidental_damage.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "1afbd944543d85ec1155f30d9d3343be142d37a01b2f0e2fd63b8f52fe7d4e82",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_buildings/prod_accidental_damage.npy",
+     "bytes": 1473368,
+     "sha256": "1afbd944543d85ec1155f30d9d3343be142d37a01b2f0e2fd63b8f52fe7d4e82",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP2_buildings/v24.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "ee8c8846a5d9abbdde283b8eebdf496dc089ac8c7983cb7cc42b6ffb60fbb011",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_buildings/v24.parquet",
+     "bytes": 2867461,
+     "sha256": "ee8c8846a5d9abbdde283b8eebdf496dc089ac8c7983cb7cc42b6ffb60fbb011",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP2_buildings/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "a72c60d348bb756577ee4cd9b5c899e554c9a756b0939ac1b0c7ce66cf2139db",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_buildings/prediccion_2025.parquet",
+     "bytes": 2820627,
+     "sha256": "a72c60d348bb756577ee4cd9b5c899e554c9a756b0939ac1b0c7ce66cf2139db",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "14/14",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_buildings/resumen.json",
+     "bytes": 532,
+     "sha256": "3edba1d667a3a1c4a384ba5c7bfbe858729009a3dbc3b82e257f514ee8dbe568"
+    }
+   ],
+   "registros_historicos_citados": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/cola40.sh",
+     "bytes": 624,
+     "sha256": "3dd4e5efa8dab344e556ed7e6a5b53f99586de21c15035795b89d7d9236066a6"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/cola40b.sh",
+     "bytes": 611,
+     "sha256": "9f748ad0468be7ce5a77b7b34b5a7e57d3bf6fbcb2a1e682df3c41a4e959ff80"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/log_fsap2.txt",
+     "bytes": 2912,
+     "sha256": "84962c900a924920a7452f5f5e715415692d4a4697bdff1270e94c073df0984d"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "entrenamiento con semilla o parada temprana; ningún modelo ajustado se guardó, solo sus predicciones"
+  },
+  {
+   "id": "FSAP_contents",
+   "etapa": "partes",
+   "script": "src/modelos/frecsev2.py",
+   "args": [
+    "FSAP_contents",
+    "contents",
+    "--prod",
+    "--semillas=2",
+    "--aditivo",
+    "--partes"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "ajuste",
+   "que_hace": "LightGBM Poisson por peligro; guarda partes por peligro",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "FSAP_contents/v23_theft.npz",
+     "verificada_por_receta": true,
+     "sha256_esperado": "bbd6650303c3b940e075927cee9803413d87a9e9cffef5a2b37a2f79da0e3c4f",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_contents/v23_theft.npz",
+     "bytes": 752028,
+     "sha256": "bbd6650303c3b940e075927cee9803413d87a9e9cffef5a2b37a2f79da0e3c4f",
+     "claves_npz": [
+      "best",
+      "lam"
+     ],
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_contents/v23_escape_of_water.npz",
+     "verificada_por_receta": true,
+     "sha256_esperado": "96f944cf147439c979d9195a4064c7645ed9ee0ecd700dc0507f76155ef7140c",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_contents/v23_escape_of_water.npz",
+     "bytes": 752028,
+     "sha256": "96f944cf147439c979d9195a4064c7645ed9ee0ecd700dc0507f76155ef7140c",
+     "claves_npz": [
+      "best",
+      "lam"
+     ],
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_contents/v23_accidental_damage.npz",
+     "verificada_por_receta": true,
+     "sha256_esperado": "d9f5e0b63937d106d5dfc8c5cd9ca8c6e7811eed16ca5af8d86f983e8bfafb1d",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_contents/v23_accidental_damage.npz",
+     "bytes": 752028,
+     "sha256": "d9f5e0b63937d106d5dfc8c5cd9ca8c6e7811eed16ca5af8d86f983e8bfafb1d",
+     "claves_npz": [
+      "best",
+      "lam"
+     ],
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_contents/v23_flood.npz",
+     "verificada_por_receta": true,
+     "sha256_esperado": "25a2adf3ca65e4dabda00284e627724e269b73bf6e634a82010ac0ec76c8bb63",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_contents/v23_flood.npz",
+     "bytes": 752028,
+     "sha256": "25a2adf3ca65e4dabda00284e627724e269b73bf6e634a82010ac0ec76c8bb63",
+     "claves_npz": [
+      "best",
+      "lam"
+     ],
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_contents/v24_theft.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "cfe68a13afbbbda3335b46d7cfb01805c1bdaeec7f25938a8e194544a23cca29",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_contents/v24_theft.npy",
+     "bytes": 1500056,
+     "sha256": "cfe68a13afbbbda3335b46d7cfb01805c1bdaeec7f25938a8e194544a23cca29",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_contents/v24_escape_of_water.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "8d9c3341a4c85ac780078b1ce295e0150c34348bc92f4e8eb43a05e0981db399",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_contents/v24_escape_of_water.npy",
+     "bytes": 1500056,
+     "sha256": "8d9c3341a4c85ac780078b1ce295e0150c34348bc92f4e8eb43a05e0981db399",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_contents/v24_accidental_damage.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "e57933947da62042f91b3d4156ffcba74131d13ea7abce90a0581fc04c4f9e54",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_contents/v24_accidental_damage.npy",
+     "bytes": 1500056,
+     "sha256": "e57933947da62042f91b3d4156ffcba74131d13ea7abce90a0581fc04c4f9e54",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_contents/v24_flood.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "4aea53a01b546eab33b72268bd2c42c4f2eccf1037d1eb009fffde7c291afdda",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_contents/v24_flood.npy",
+     "bytes": 1500056,
+     "sha256": "4aea53a01b546eab33b72268bd2c42c4f2eccf1037d1eb009fffde7c291afdda",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_contents/prod_theft.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "22035d69d31c08bebfe539f8ee09296f50c36b40f9f8038de13d7963a80eb8c4",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_contents/prod_theft.npy",
+     "bytes": 1500112,
+     "sha256": "22035d69d31c08bebfe539f8ee09296f50c36b40f9f8038de13d7963a80eb8c4",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_contents/prod_escape_of_water.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "abafd8da5f6fac80251ff1a8baff4722847dacd2dfd1773007d0ef6d6a4cebec",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_contents/prod_escape_of_water.npy",
+     "bytes": 1500112,
+     "sha256": "abafd8da5f6fac80251ff1a8baff4722847dacd2dfd1773007d0ef6d6a4cebec",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_contents/prod_accidental_damage.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "26641f6003ed76e7835d5145e3b231ffb560c05c58a838304552eea38b745ca7",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_contents/prod_accidental_damage.npy",
+     "bytes": 1500112,
+     "sha256": "26641f6003ed76e7835d5145e3b231ffb560c05c58a838304552eea38b745ca7",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_contents/prod_flood.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "ccdbfe8c871e39f9267eab378e8d92c545dab44bee281ef2bc9d2374b4f0e61b",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_contents/prod_flood.npy",
+     "bytes": 1500112,
+     "sha256": "ccdbfe8c871e39f9267eab378e8d92c545dab44bee281ef2bc9d2374b4f0e61b",
+     "estado": "coincide"
+    },
+    {
+     "salida": "sel_FSAP_contents.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "5eb0386a57ee6ef715989e06a3b5f3fc4f767069fa2e65582c7ff87f0d91060a",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_contents/sel_FSAP_contents.parquet",
+     "bytes": 1583200,
+     "sha256": "5eb0386a57ee6ef715989e06a3b5f3fc4f767069fa2e65582c7ff87f0d91060a",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_contents/v24.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "b451b67b5a22020bd3ac2ba43fee68d1230a54087520433b6656e8dcfc08c161",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_contents/v24.parquet",
+     "bytes": 2907654,
+     "sha256": "b451b67b5a22020bd3ac2ba43fee68d1230a54087520433b6656e8dcfc08c161",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP_contents/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "4e2721f75b11090cc3ebad37e97ba9060c0a5f6cbaf77346afcf27f56a90eb8a",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_contents/prediccion_2025.parquet",
+     "bytes": 2846950,
+     "sha256": "4e2721f75b11090cc3ebad37e97ba9060c0a5f6cbaf77346afcf27f56a90eb8a",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "15/15",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP_contents/resumen.json",
+     "bytes": 788,
+     "sha256": "5b278fb4581d696aa9ce99135d3425c206a986c2218488017c324825910ee76d"
+    }
+   ],
+   "registros_historicos_citados": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/cola39.sh",
+     "bytes": 675,
+     "sha256": "d47118d15c2e290e29f7b2f510232d2493de09545dc8bfdb9a901e57cfa9b1b3"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/log_fsap.txt",
+     "bytes": 7191,
+     "sha256": "ec246787d18b7f752dfc034c02de4b2cef898c2e41feb138065e83a29a3451e4"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "entrenamiento con semilla o parada temprana; ningún modelo ajustado se guardó, solo sus predicciones"
+  },
+  {
+   "id": "FSAP2_contents",
+   "etapa": "partes",
+   "script": "src/modelos/frecsev2.py",
+   "args": [
+    "FSAP2_contents",
+    "contents",
+    "--prod",
+    "--semillas=2",
+    "--aditivo",
+    "--partes",
+    "--desde=FSAP_contents",
+    "--semilla_inicial=2"
+   ],
+   "requiere": [
+    "FSAP_contents"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "ajuste",
+   "que_hace": "LightGBM Poisson por peligro; guarda partes por peligro",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "FSAP2_contents/v24_theft.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "d6b330d8f55508cd5e02ff459c851cfc523af68ec9f4c0e3dbf570299dffd1e0",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_contents/v24_theft.npy",
+     "bytes": 1500056,
+     "sha256": "d6b330d8f55508cd5e02ff459c851cfc523af68ec9f4c0e3dbf570299dffd1e0",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP2_contents/v24_escape_of_water.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "6ee11df4a9fbb6f6747f7cb6c2a5579c9944285ac17b0dddb9689053df041ab3",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_contents/v24_escape_of_water.npy",
+     "bytes": 1500056,
+     "sha256": "6ee11df4a9fbb6f6747f7cb6c2a5579c9944285ac17b0dddb9689053df041ab3",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP2_contents/v24_accidental_damage.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "f276e677263db38f971491c24b246149671008da91c867f369abdd3983040ebf",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_contents/v24_accidental_damage.npy",
+     "bytes": 1500056,
+     "sha256": "f276e677263db38f971491c24b246149671008da91c867f369abdd3983040ebf",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP2_contents/v24_flood.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "690e7b5b3c497c2df855d6f6923f96b64e5689a529d9485e46523e211b2e6205",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_contents/v24_flood.npy",
+     "bytes": 1500056,
+     "sha256": "690e7b5b3c497c2df855d6f6923f96b64e5689a529d9485e46523e211b2e6205",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP2_contents/prod_theft.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "9d80e12df99f83f36c854a80dacc4c6740e072bb7b7d65dc329234bb13421af3",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_contents/prod_theft.npy",
+     "bytes": 1500112,
+     "sha256": "9d80e12df99f83f36c854a80dacc4c6740e072bb7b7d65dc329234bb13421af3",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP2_contents/prod_escape_of_water.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "7eadcd7a3e4a07457d4504c283513bbae835e79778005a97a9557d91fe8bc898",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_contents/prod_escape_of_water.npy",
+     "bytes": 1500112,
+     "sha256": "7eadcd7a3e4a07457d4504c283513bbae835e79778005a97a9557d91fe8bc898",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP2_contents/prod_accidental_damage.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "46bd228c7352a8e8f2a157ebceb28c3c1ab00446094982d9d3b2fe7273e18188",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_contents/prod_accidental_damage.npy",
+     "bytes": 1500112,
+     "sha256": "46bd228c7352a8e8f2a157ebceb28c3c1ab00446094982d9d3b2fe7273e18188",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP2_contents/prod_flood.npy",
+     "verificada_por_receta": true,
+     "sha256_esperado": "88cf7525daf6c80c83d7f34c84f987be492c2566d05ded5be9a3b85cb904bc87",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_contents/prod_flood.npy",
+     "bytes": 1500112,
+     "sha256": "88cf7525daf6c80c83d7f34c84f987be492c2566d05ded5be9a3b85cb904bc87",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP2_contents/v24.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "c170d5bb8d9f3fce5ad61a2b8d220b8a3589a423ab702f94f2a469b064538fa2",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_contents/v24.parquet",
+     "bytes": 2907654,
+     "sha256": "c170d5bb8d9f3fce5ad61a2b8d220b8a3589a423ab702f94f2a469b064538fa2",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAP2_contents/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "1bfdd92e10f76ded32d5e3b1b20e1e482105a99cfbc1f6624330064289a2d4c8",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_contents/prediccion_2025.parquet",
+     "bytes": 2846950,
+     "sha256": "1bfdd92e10f76ded32d5e3b1b20e1e482105a99cfbc1f6624330064289a2d4c8",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "10/10",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAP2_contents/resumen.json",
+     "bytes": 416,
+     "sha256": "35cc39a5bb493f4f8a3ffad4b9c1b3e7d3ed7b4931578e21e74fe79699467603"
+    }
+   ],
+   "registros_historicos_citados": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/cola40.sh",
+     "bytes": 624,
+     "sha256": "3dd4e5efa8dab344e556ed7e6a5b53f99586de21c15035795b89d7d9236066a6"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/cola40b.sh",
+     "bytes": 611,
+     "sha256": "9f748ad0468be7ce5a77b7b34b5a7e57d3bf6fbcb2a1e682df3c41a4e959ff80"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/log_fsap2.txt",
+     "bytes": 2912,
+     "sha256": "84962c900a924920a7452f5f5e715415692d4a4697bdff1270e94c073df0984d"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "entrenamiento con semilla o parada temprana; ningún modelo ajustado se guardó, solo sus predicciones"
+  },
+  {
+   "id": "FSAXc4_contents",
+   "etapa": "severidad",
+   "script": "src/modelos/severidad_cfs3.py",
+   "args": [
+    "FSAP_contents",
+    "contents",
+    "FSAXc4_contents",
+    "--v24=FSAP_contents,FSAP2_contents",
+    "--prod=FSAP_contents,FSAP2_contents"
+   ],
+   "requiere": [
+    "FSAP_contents",
+    "FSAP2_contents"
+   ],
+   "objetivos": [
+    "S22",
+    "S30"
+   ],
+   "tipo": "estimacion",
+   "que_hace": "GLM gamma con ridge por peligro (IRLS) sobre partes guardadas",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "sel_FSAXc4_contents.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "8d1bc6092d030392a8cccb718c6977a9fe5d961a66830699f3f68b6277bf6e91",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAXc4_contents/sel_FSAXc4_contents.parquet",
+     "bytes": 1583200,
+     "sha256": "8d1bc6092d030392a8cccb718c6977a9fe5d961a66830699f3f68b6277bf6e91",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAXc4_contents/v24.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "148c0fc478d5ecf6bfba4b7e49be6e092c305da96c74812e3007c1cff47e071b",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAXc4_contents/v24.parquet",
+     "bytes": 2907654,
+     "sha256": "148c0fc478d5ecf6bfba4b7e49be6e092c305da96c74812e3007c1cff47e071b",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAXc4_contents/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "7c1314c30b7dc66012acba3c31bdaf8614ba4003dfceb3c32c6d4947d5528693",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAXc4_contents/prediccion_2025.parquet",
+     "bytes": 2846950,
+     "sha256": "7c1314c30b7dc66012acba3c31bdaf8614ba4003dfceb3c32c6d4947d5528693",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "3/3",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAXc4_contents/resumen.json",
+     "bytes": 1720,
+     "sha256": "5f87d0432897c5ecbc3f994b5fd06edeaeb4c82383871cbc6b0271560de0ef26"
+    }
+   ],
+   "registros_historicos_citados": [],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "IRLS determinista: rehacerlo es estimar de nuevo; los coeficientes no se guardaron a precisión completa"
+  },
+  {
+   "id": "CFS_motor_4s",
+   "etapa": "severidad",
+   "script": "src/modelos/combinar_semillas.py",
+   "args": [
+    "CFS_motor_4s",
+    "CFS_motor",
+    "CFS_motor_s23"
+   ],
+   "requiere": [
+    "CFS_motor",
+    "CFS_motor_s23"
+   ],
+   "objetivos": [
+    "S22"
+   ],
+   "tipo": "aritmetica",
+   "que_hace": "media ponderada por semillas de predicciones guardadas",
+   "modelo_ajustado_persistido": null,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "CFS_motor_4s/v24.parquet",
+     "verificada_por_receta": false,
+     "sha256_esperado": "1056f044b2b4ad4f44e00b707a5add3c8f270eb9f9d8eba50adc876b7f993d3b",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor_4s/v24.parquet",
+     "bytes": 3958636,
+     "sha256": "1056f044b2b4ad4f44e00b707a5add3c8f270eb9f9d8eba50adc876b7f993d3b",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFS_motor_4s/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "1a561d3974c5ada13d39cbb495f5d9fe8103899800d1c787369c83d7157ad270",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor_4s/prediccion_2025.parquet",
+     "bytes": 3739277,
+     "sha256": "1a561d3974c5ada13d39cbb495f5d9fe8103899800d1c787369c83d7157ad270",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "1/1",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFS_motor_4s/resumen.json",
+     "bytes": 188,
+     "sha256": "526f8fa404af341803af42fc67d3ebe6772097c5b67755ca8d507777dce07118"
+    }
+   ],
+   "registros_historicos_citados": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/finalizar_s15.sh",
+     "bytes": 1022,
+     "sha256": "5c258dee43c824c82417bbe4315c362e61259206aa002ed5e2f535df520605e8"
+    }
+   ],
+   "reconstruible_sin_ajuste": true,
+   "motivo": "aritmética sobre predicciones guardadas; repetida con los CSV exactos («reproducir.py mezcla»)"
+  },
+  {
+   "id": "CFSS_motor",
+   "etapa": "severidad",
+   "script": "src/modelos/severidad_cfs.py",
+   "args": [
+    "CFS_motor_4s",
+    "motor",
+    "CFSS_motor",
+    "--v23=CFS_motor_v23",
+    "--v24=CFS_motor_s23",
+    "--prod=CFS_motor,CFS_motor_s23"
+   ],
+   "requiere": [
+    "CFS_motor_4s",
+    "CFS_motor_v23"
+   ],
+   "objetivos": [
+    "S22"
+   ],
+   "tipo": "estimacion",
+   "que_hace": "GLM gamma por peligro (IRLS) sobre partes de frecuencia guardadas",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "sel_CFSS_motor.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "3999126bf6a41a40e143a698c962734342576b243d86d14a100323638b27cd30",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFSS_motor/sel_CFSS_motor.parquet",
+     "bytes": 2184468,
+     "sha256": "3999126bf6a41a40e143a698c962734342576b243d86d14a100323638b27cd30",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFSS_motor/v24.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "7e7dc1ae042af79eff417300700d29ffc7ebf1470285d0b46a1cade635aa5c64",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFSS_motor/v24.parquet",
+     "bytes": 3958638,
+     "sha256": "7e7dc1ae042af79eff417300700d29ffc7ebf1470285d0b46a1cade635aa5c64",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFSS_motor/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "01879b6503846c2bcc787dffc568e2b4e54702e832a6188f8e28954a93636b0f",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFSS_motor/prediccion_2025.parquet",
+     "bytes": 3739277,
+     "sha256": "01879b6503846c2bcc787dffc568e2b4e54702e832a6188f8e28954a93636b0f",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "3/3",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFSS_motor/resumen.json",
+     "bytes": 1473,
+     "sha256": "0fa06403417961c257437e4bcdf7a676a9acb5d573afcae8f602653b5fb7a149"
+    }
+   ],
+   "registros_historicos_citados": [
+    {
+     "ruta": "cola45.sh",
+     "estado": "no_encontrado"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "IRLS determinista: rehacerlo es estimar de nuevo; los coeficientes no se guardaron a precisión completa"
+  },
+  {
+   "id": "CFSS4_buildings",
+   "etapa": "severidad",
+   "script": "src/modelos/severidad_cfs.py",
+   "args": [
+    "CFS_buildings",
+    "buildings",
+    "CFSS4_buildings",
+    "--v24=CFS_buildings,CFS_buildings_s23",
+    "--prod=CFS_buildings,CFS_buildings_s23"
+   ],
+   "requiere": [
+    "CFS_buildings_s23"
+   ],
+   "objetivos": [
+    "S22"
+   ],
+   "tipo": "estimacion",
+   "que_hace": "GLM gamma por peligro (IRLS) sobre partes de frecuencia guardadas",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "sel_CFSS4_buildings.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "24720d1605dc96e864cc854e5d4b15140f810e45f824dd7b006181a7c77234dc",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFSS4_buildings/sel_CFSS4_buildings.parquet",
+     "bytes": 1574274,
+     "sha256": "24720d1605dc96e864cc854e5d4b15140f810e45f824dd7b006181a7c77234dc",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFSS4_buildings/v24.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "5d62ca730fe58c37b2eba947cf3dd55bdbfe2f0c0d6664887aaf5e3aae985992",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFSS4_buildings/v24.parquet",
+     "bytes": 2867461,
+     "sha256": "5d62ca730fe58c37b2eba947cf3dd55bdbfe2f0c0d6664887aaf5e3aae985992",
+     "estado": "coincide"
+    },
+    {
+     "salida": "CFSS4_buildings/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "a0e9b7f325f203659ddc5d28b01b2a6d99025a4b3600a3188f6c2135f6e97287",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFSS4_buildings/prediccion_2025.parquet",
+     "bytes": 2820627,
+     "sha256": "a0e9b7f325f203659ddc5d28b01b2a6d99025a4b3600a3188f6c2135f6e97287",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "3/3",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/CFSS4_buildings/resumen.json",
+     "bytes": 1728,
+     "sha256": "95b45e0b1df3401a58a1306cc600bf3331276dd0ec148f1ea409c4e9174978ec"
+    }
+   ],
+   "registros_historicos_citados": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/cola42.sh",
+     "bytes": 694,
+     "sha256": "ee3731c179a8c8bb46eac95ae3aa85142adf5b38ef18ffc50e9350c3896a530b"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "IRLS determinista: rehacerlo es estimar de nuevo; los coeficientes no se guardaron a precisión completa"
+  },
+  {
+   "id": "FSAS4_buildings",
+   "etapa": "severidad",
+   "script": "src/modelos/severidad_cfs.py",
+   "args": [
+    "FSAP_buildings",
+    "buildings",
+    "FSAS4_buildings",
+    "--v24=FSAP_buildings,FSAP2_buildings",
+    "--prod=FSAP_buildings,FSAP2_buildings"
+   ],
+   "requiere": [
+    "FSAP_buildings",
+    "FSAP2_buildings"
+   ],
+   "objetivos": [
+    "S22"
+   ],
+   "tipo": "estimacion",
+   "que_hace": "GLM gamma por peligro (IRLS) sobre partes de frecuencia guardadas",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "sel_FSAS4_buildings.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "30fd205adbccd000ad5778e586ba50e9bfe878c7c27c5537c6050662d7d7fa0b",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAS4_buildings/sel_FSAS4_buildings.parquet",
+     "bytes": 1574274,
+     "sha256": "30fd205adbccd000ad5778e586ba50e9bfe878c7c27c5537c6050662d7d7fa0b",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAS4_buildings/v24.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "efbc789e12135c4cb664adc8a75f483f50b5b26c41382c7a3cd480a7044555d7",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAS4_buildings/v24.parquet",
+     "bytes": 2867461,
+     "sha256": "efbc789e12135c4cb664adc8a75f483f50b5b26c41382c7a3cd480a7044555d7",
+     "estado": "coincide"
+    },
+    {
+     "salida": "FSAS4_buildings/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "e4c66502dafbd11706cede41cef0bf9157aa97d8fedc3186b90206b0fc51f513",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAS4_buildings/prediccion_2025.parquet",
+     "bytes": 2820627,
+     "sha256": "e4c66502dafbd11706cede41cef0bf9157aa97d8fedc3186b90206b0fc51f513",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "3/3",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/FSAS4_buildings/resumen.json",
+     "bytes": 1729,
+     "sha256": "923c2d357b5986df4fc98164c080f5c2caabd3cc37105cc28567f3b8bdde8efc"
+    }
+   ],
+   "registros_historicos_citados": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/cola40.sh",
+     "bytes": 624,
+     "sha256": "3dd4e5efa8dab344e556ed7e6a5b53f99586de21c15035795b89d7d9236066a6"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "IRLS determinista: rehacerlo es estimar de nuevo; los coeficientes no se guardaron a precisión completa"
+  },
+  {
+   "id": "MLP3_contents",
+   "etapa": "produccion",
+   "script": "src/modelos/mlp_tweedie.py",
+   "args": [
+    "MLP3_contents",
+    "contents",
+    "--semillas=3",
+    "--v24",
+    "--prod",
+    "--wd=0.0001",
+    "--f3s2"
+   ],
+   "requiere": [
+    "variables"
+   ],
+   "objetivos": [
+    "S22"
+   ],
+   "tipo": "ajuste",
+   "que_hace": "red Tweedie en torch con QuantileTransformer ajustado en entrenamiento",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "sel_MLP3_contents.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "b0d6c5d6bd232a08fe68307a36882d2384f24100370a455d07a0e9c4999292bc",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/MLP3_contents/sel_MLP3_contents.parquet",
+     "bytes": 1583200,
+     "sha256": "b0d6c5d6bd232a08fe68307a36882d2384f24100370a455d07a0e9c4999292bc",
+     "estado": "coincide"
+    },
+    {
+     "salida": "MLP3_contents/v24.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "a32a06f39dc47a92bc4637fdf6cf7bba051f046d3395aab377d6f4b8abb60f09",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/MLP3_contents/v24.parquet",
+     "bytes": 2907654,
+     "sha256": "a32a06f39dc47a92bc4637fdf6cf7bba051f046d3395aab377d6f4b8abb60f09",
+     "estado": "coincide"
+    },
+    {
+     "salida": "MLP3_contents/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "0dc7c784cbde615726f71c0f7fce473177a583de03dca0f06e69790227041d0d",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/MLP3_contents/prediccion_2025.parquet",
+     "bytes": 2846950,
+     "sha256": "0dc7c784cbde615726f71c0f7fce473177a583de03dca0f06e69790227041d0d",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "3/3",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/MLP3_contents/resumen.json",
+     "bytes": 247,
+     "sha256": "365f8e5a98853a68f3a74645d040eafdc43cd997bd6fec43ecdfddcda1b8a289"
+    }
+   ],
+   "registros_historicos_citados": [
+    {
+     "ruta": "cola21.sh",
+     "estado": "no_encontrado"
+    },
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/log_mlp3_contents.txt",
+     "bytes": 935,
+     "sha256": "c5c7ea09d89b24eae1d15558fa14aa631f72777999bb1af40b9943e1ea805a5a"
+    }
+   ],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "entrenamiento con semilla o parada temprana; ningún modelo ajustado se guardó, solo sus predicciones"
+  },
+  {
+   "id": "B_CFST_motor_tendencia",
+   "etapa": "linea_b",
+   "script": "src/linea_b/severidad_tendencia.py",
+   "args": [
+    "motor",
+    "B_CFST_motor_tendencia",
+    "--regla=tendencia",
+    "--v23=CFS_motor_v23",
+    "--v24=CFS_motor_s23",
+    "--prod=CFS_motor,CFS_motor_s23"
+   ],
+   "requiere": [
+    "CFS_motor",
+    "CFS_motor_s23",
+    "CFS_motor_v23"
+   ],
+   "objetivos": [
+    "S30"
+   ],
+   "tipo": "estimacion",
+   "que_hace": "GLM gamma por peligro (IRLS) más factor de tendencia de severidad",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "sel_B_CFST_motor_tendencia.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "bab64358c15bc2937aebfbb52bf8614bb47030519bc895733796652ad6fa801e",
+     "ruta": "Hackaton/Semana 1/Modelos_claude_b/runs/B_CFST_motor_tendencia/sel_B_CFST_motor_tendencia.parquet",
+     "bytes": 2184468,
+     "sha256": "bab64358c15bc2937aebfbb52bf8614bb47030519bc895733796652ad6fa801e",
+     "estado": "coincide"
+    },
+    {
+     "salida": "B_CFST_motor_tendencia/v24.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "7c964a8afbff304b89badc17fd359f64bbd2937f3605573280cf794c719c883a",
+     "ruta": "Hackaton/Semana 1/Modelos_claude_b/runs/B_CFST_motor_tendencia/v24.parquet",
+     "bytes": 3958636,
+     "sha256": "7c964a8afbff304b89badc17fd359f64bbd2937f3605573280cf794c719c883a",
+     "estado": "coincide"
+    },
+    {
+     "salida": "B_CFST_motor_tendencia/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "ce175b1f8bcf03869df82cbdc72bcb7576fbd0946b5ecd7a37eca3690c7cbd14",
+     "ruta": "Hackaton/Semana 1/Modelos_claude_b/runs/B_CFST_motor_tendencia/prediccion_2025.parquet",
+     "bytes": 3739277,
+     "sha256": "ce175b1f8bcf03869df82cbdc72bcb7576fbd0946b5ecd7a37eca3690c7cbd14",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "3/3",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude_b/runs/B_CFST_motor_tendencia/resumen.json",
+     "bytes": 4103,
+     "sha256": "05085ac37b02fbe37ad65acf041fbd4cc4b047d425f1975ba335b689b4da6dce"
+    }
+   ],
+   "registros_historicos_citados": [],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "IRLS determinista: rehacerlo es estimar de nuevo; los coeficientes no se guardaron a precisión completa"
+  },
+  {
+   "id": "B_CFST_buildings_tendencia",
+   "etapa": "linea_b",
+   "script": "src/linea_b/severidad_tendencia.py",
+   "args": [
+    "buildings",
+    "B_CFST_buildings_tendencia",
+    "--regla=tendencia",
+    "--v23=CFS_buildings",
+    "--v24=CFS_buildings,CFS_buildings_s23",
+    "--prod=CFS_buildings,CFS_buildings_s23"
+   ],
+   "requiere": [
+    "CFS_buildings",
+    "CFS_buildings_s23"
+   ],
+   "objetivos": [
+    "S30"
+   ],
+   "tipo": "estimacion",
+   "que_hace": "GLM gamma por peligro (IRLS) más factor de tendencia de severidad",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "sel_B_CFST_buildings_tendencia.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "b4ca50868d4f646fd99a2723e52cbc907f392e7d39985e9ded229a0aa48e6903",
+     "ruta": "Hackaton/Semana 1/Modelos_claude_b/runs/B_CFST_buildings_tendencia/sel_B_CFST_buildings_tendencia.parquet",
+     "bytes": 1574274,
+     "sha256": "b4ca50868d4f646fd99a2723e52cbc907f392e7d39985e9ded229a0aa48e6903",
+     "estado": "coincide"
+    },
+    {
+     "salida": "B_CFST_buildings_tendencia/v24.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "548b3870f8e77e57d7134703845a59d53d83cd7c4142451e12f1494bb207f88d",
+     "ruta": "Hackaton/Semana 1/Modelos_claude_b/runs/B_CFST_buildings_tendencia/v24.parquet",
+     "bytes": 2867461,
+     "sha256": "548b3870f8e77e57d7134703845a59d53d83cd7c4142451e12f1494bb207f88d",
+     "estado": "coincide"
+    },
+    {
+     "salida": "B_CFST_buildings_tendencia/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "d07de2fdf5237cd391ba7304d36d3b1b343bd42a562e9ea048b3dc73194cc724",
+     "ruta": "Hackaton/Semana 1/Modelos_claude_b/runs/B_CFST_buildings_tendencia/prediccion_2025.parquet",
+     "bytes": 2820627,
+     "sha256": "d07de2fdf5237cd391ba7304d36d3b1b343bd42a562e9ea048b3dc73194cc724",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "3/3",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude_b/runs/B_CFST_buildings_tendencia/resumen.json",
+     "bytes": 4932,
+     "sha256": "fb7bf15fdf96f582577ab557603717a1d811c7e214ae1051e83264f187c2576d"
+    }
+   ],
+   "registros_historicos_citados": [],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "IRLS determinista: rehacerlo es estimar de nuevo; los coeficientes no se guardaron a precisión completa"
+  },
+  {
+   "id": "B_FSAST_buildings_tendencia",
+   "etapa": "linea_b",
+   "script": "src/linea_b/severidad_tendencia.py",
+   "args": [
+    "buildings",
+    "B_FSAST_buildings_tendencia",
+    "--regla=tendencia",
+    "--v23=FSAP_buildings",
+    "--v24=FSAP_buildings,FSAP2_buildings",
+    "--prod=FSAP_buildings,FSAP2_buildings"
+   ],
+   "requiere": [
+    "FSAP2_buildings",
+    "FSAP_buildings"
+   ],
+   "objetivos": [
+    "S30"
+   ],
+   "tipo": "estimacion",
+   "que_hace": "GLM gamma por peligro (IRLS) más factor de tendencia de severidad",
+   "modelo_ajustado_persistido": false,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "sel_B_FSAST_buildings_tendencia.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "849c9710b1370ce397096291cc7816283dce9ab06cd2027b3336aa81ffa270b3",
+     "ruta": "Hackaton/Semana 1/Modelos_claude_b/runs/B_FSAST_buildings_tendencia/sel_B_FSAST_buildings_tendencia.parquet",
+     "bytes": 1574274,
+     "sha256": "849c9710b1370ce397096291cc7816283dce9ab06cd2027b3336aa81ffa270b3",
+     "estado": "coincide"
+    },
+    {
+     "salida": "B_FSAST_buildings_tendencia/v24.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "b5eedbdfacf43bb4867863bc8bb2f69009dd9204d51abec087034ffd295013c4",
+     "ruta": "Hackaton/Semana 1/Modelos_claude_b/runs/B_FSAST_buildings_tendencia/v24.parquet",
+     "bytes": 2867461,
+     "sha256": "b5eedbdfacf43bb4867863bc8bb2f69009dd9204d51abec087034ffd295013c4",
+     "estado": "coincide"
+    },
+    {
+     "salida": "B_FSAST_buildings_tendencia/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "38e947a6be4ae6856a9d54608ec033e3bf036e472b5427c4930d94fb6430e9dc",
+     "ruta": "Hackaton/Semana 1/Modelos_claude_b/runs/B_FSAST_buildings_tendencia/prediccion_2025.parquet",
+     "bytes": 2820627,
+     "sha256": "38e947a6be4ae6856a9d54608ec033e3bf036e472b5427c4930d94fb6430e9dc",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "3/3",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude_b/runs/B_FSAST_buildings_tendencia/resumen.json",
+     "bytes": 4932,
+     "sha256": "315da8ab0be8f816f2fa0a3db405ac6784a4b82838f754121fcccd451569f65e"
+    }
+   ],
+   "registros_historicos_citados": [],
+   "reconstruible_sin_ajuste": false,
+   "motivo": "IRLS determinista: rehacerlo es estimar de nuevo; los coeficientes no se guardaron a precisión completa"
+  },
+  {
+   "id": "S22_claude_propio",
+   "etapa": "mezcla",
+   "script": "src/modelos/mezcla3.py",
+   "args": [
+    "S22_claude_propio",
+    "receta/especificaciones/spec_s22_propio.json",
+    "--forma=motor:1.09:0.95",
+    "--nivel=s17",
+    "--escribir"
+   ],
+   "requiere": [
+    "sel_total_F0124",
+    "S04b_lgbm_F0124_F3autos",
+    "CAT_motor_4s",
+    "sel_cat1a",
+    "CFSS_motor",
+    "sel_total_F01234",
+    "S06c_lgbm_motor_red",
+    "sel_total_motor_red",
+    "S12h_edif_md1000",
+    "sel_hS3",
+    "CFSS4_buildings",
+    "FSAS4_buildings",
+    "S08h_hogar_F3s2",
+    "sel_hS2",
+    "MLP3_contents",
+    "FSA_contents",
+    "FSAXc4_contents"
+   ],
+   "objetivos": [
+    "S22"
+   ],
+   "tipo": "aritmetica",
+   "que_hace": "mezcla, forma y factor de año siguiente calculados sobre predicciones guardadas",
+   "modelo_ajustado_persistido": null,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "S22_claude_propio/S22_claude_propio.csv",
+     "verificada_por_receta": true,
+     "sha256_esperado": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0",
+     "ruta": "Hackaton/Semana 1/Envios/archivos/S22_claude_propio.csv",
+     "bytes": 13012725,
+     "sha256": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0",
+     "estado": "coincide"
+    },
+    {
+     "salida": "S22_claude_propio/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "35ffd557f43a32ad9a379a1df22386fc671e1f02f799c24f24e39c59da4719cf",
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S22_claude_propio/prediccion_2025.parquet",
+     "bytes": 8557978,
+     "sha256": "35ffd557f43a32ad9a379a1df22386fc671e1f02f799c24f24e39c59da4719cf",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "2/2",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/runs/S22_claude_propio/resumen.json",
+     "bytes": 1561,
+     "sha256": "3eba2b6e22272b4a4721266d7916a546e59d1bf5f2b9692c7689da2702e32abd"
+    }
+   ],
+   "registros_historicos_citados": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude/experimentos/finalizar_s22.sh",
+     "bytes": 1437,
+     "sha256": "5560b797a5d270be3629dc94d74da6fa7b857b0cc1762686537a579cb6fa28fb"
+    }
+   ],
+   "reconstruible_sin_ajuste": true,
+   "motivo": "aritmética sobre predicciones guardadas; repetida con los CSV exactos («reproducir.py mezcla»)"
+  },
+  {
+   "id": "S30_claude_b",
+   "etapa": "mezcla",
+   "script": "src/linea_b/mezcla3_b.py",
+   "args": [
+    "S30_claude_b",
+    "receta/especificaciones/spec_s30.json",
+    "--forma=motor:1.09:0.95,contents:1:0.95",
+    "--nivel=s17",
+    "--escribir"
+   ],
+   "requiere": [
+    "sel_total_F0124",
+    "S04b_lgbm_F0124_F3autos",
+    "CAT_motor_4s",
+    "sel_cat1a",
+    "B_CFST_motor_tendencia",
+    "sel_total_F01234",
+    "S06c_lgbm_motor_red",
+    "sel_total_motor_red",
+    "S12h_edif_md1000",
+    "sel_hS3",
+    "B_CFST_buildings_tendencia",
+    "B_FSAST_buildings_tendencia",
+    "S08h_hogar_F3s2",
+    "sel_hS2",
+    "FSA_contents",
+    "FSAXc4_contents"
+   ],
+   "objetivos": [
+    "S30"
+   ],
+   "tipo": "aritmetica",
+   "que_hace": "mezcla3 con la regla de nivel s17 extendida a las corridas B",
+   "modelo_ajustado_persistido": null,
+   "llamadas_que_persisten_modelo_en_codigo": [],
+   "salidas": [
+    {
+     "salida": "S30_claude_b/S30_claude_b.csv",
+     "verificada_por_receta": true,
+     "sha256_esperado": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+     "ruta": "Hackaton/Semana 1/Modelos_claude_b/runs/S30_claude_b/S30_claude_b.csv",
+     "bytes": 13012442,
+     "sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+     "estado": "coincide"
+    },
+    {
+     "salida": "S30_claude_b/prediccion_2025.parquet",
+     "verificada_por_receta": true,
+     "sha256_esperado": "231c6d174fa28fb73da432d4bae1dfb2287e7ec8bf9f07fa37f7bad772543e13",
+     "ruta": "Hackaton/Semana 1/Modelos_claude_b/runs/S30_claude_b/prediccion_2025.parquet",
+     "bytes": 8557976,
+     "sha256": "231c6d174fa28fb73da432d4bae1dfb2287e7ec8bf9f07fa37f7bad772543e13",
+     "estado": "coincide"
+    }
+   ],
+   "verificadas_presentes_y_coinciden": "2/2",
+   "parametros_y_registros_de_la_corrida": [
+    {
+     "ruta": "Hackaton/Semana 1/Modelos_claude_b/runs/S30_claude_b/resumen.json",
+     "bytes": 1598,
+     "sha256": "c3b2b0be4fd7c0e16638f1ebd83ada2b95faf991347f3a35fd648f56d9ff5992"
+    }
+   ],
+   "registros_historicos_citados": [],
+   "reconstruible_sin_ajuste": true,
+   "motivo": "aritmética sobre predicciones guardadas; repetida con los CSV exactos («reproducir.py mezcla»)"
+  }
+ ],
+ "resumen": {
+  "nodos": 36,
+  "por_tipo": {
+   "transformacion": 1,
+   "ajuste": 24,
+   "estimacion": 7,
+   "aritmetica": 4
+  },
+  "salidas_declaradas": 194,
+  "salidas_con_huella_esperada": 184,
+  "salidas_verificadas_por_receta": 181,
+  "presentes_y_coinciden": 177,
+  "ausentes_en_equipo": [
+   "feat_motor.parquet",
+   "feat_buildings.parquet",
+   "feat_contents.parquet",
+   "S04b_lgbm_F0124_F3autos/S04b_lgbm_F0124_F3autos.csv",
+   "S06c_lgbm_motor_red/S06c_lgbm_motor_red.csv",
+   "S08h_hogar_F3s2/S08h_hogar_F3s2.csv",
+   "S12h_edif_md1000/S12h_edif_md1000.csv",
+   "CFS_motor/v23_own_damage.npz",
+   "CFS_motor/v23_third_party_prop.npz",
+   "CFS_motor/v23_bodily_injury.npz",
+   "CFS_motor/v23_theft.npz",
+   "CFS_motor/v23_glass_hail.npz",
+   "CFS_motor/v24_own_damage.npy",
+   "CFS_motor/v24_third_party_prop.npy",
+   "CFS_motor/v24_bodily_injury.npy",
+   "CFS_motor/v24_theft.npy",
+   "CFS_motor/v24_glass_hail.npy"
+  ],
+  "difieren": [],
+  "modelos_ajustados_persistidos": 0,
+  "nodos_reconstruibles_sin_ajuste": [
+   "variables",
+   "CAT_motor_4s",
+   "CFS_motor_4s",
+   "S22_claude_propio",
+   "S30_claude_b"
+  ]
+ }
+}

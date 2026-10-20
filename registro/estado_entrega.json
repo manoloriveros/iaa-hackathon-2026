@@ -96,5 +96,206 @@
     "Fecha de disponibilidad de predictores",
     "149 capitales sin confirmación",
     "Elegibilidad para premio pendiente"
-  ]
+  ],
+  "revision_perspectiva_participante": {
+    "utc": "2026-10-19T20:04:16.185760+00:00",
+    "autor": "Codex",
+    "informe": "docs/REVISION_DESDE_EL_PARTICIPANTE.md",
+    "registro": "registro/revision_participante_20261019.json",
+    "estado": "comprobaciones_tecnicas_conciliadas_decisiones_humanas_pendientes",
+    "revision_humana": false
+  },
+  "subsanacion_pendientes": {
+    "utc": "2026-10-19T22:18:17.577027+00:00",
+    "registro": "registro/subsanacion_20261019.json",
+    "guia": "docs/SUBSANACION_PENDIENTES.md",
+    "revisor_designado": "Manuel Ignacio Rodríguez",
+    "revision_realizada": false,
+    "cerrados": 1,
+    "abiertos": 14,
+    "decision_GOV007": "registro/decision_GOV007_20261019.json",
+    "ultimo_aporte": "COD-20261019-116",
+    "decision_humana_alcance": "Solo corrección técnica de la versión1.2 en GOV-007; revisión actuarial general pendiente."
+  },
+  "seguimiento_reproduccion_CLA005": {
+    "utc": "2026-10-19T23:04:33.686752+00:00",
+    "aporte": "CLA-20261019-005",
+    "revision": "registro/CLA-20261019-005_revision_codex.json",
+    "capa_nueva_claves_incompletas": true,
+    "pruebas_sinteticas": 2,
+    "recibos_remotos_no_disponibles_localmente": true,
+    "materialidad_1porciento": "Referida por Claude para su encargo, no adoptada como incertidumbre o autorización aquí.",
+    "estado": "evidencia_recibida_con_brechas_pendientes",
+    "respuesta_propia": {
+      "id": "COD-20261019-117",
+      "utc": "2026-10-19T23:04:33+00:00",
+      "recibo": "registro/COD-20261019-117_recibo.json"
+    }
+  },
+  "seguimiento_CLA006": {
+    "utc": "2026-10-19T23:20:45.697603+00:00",
+    "aporte": "CLA-20261019-006",
+    "revision": "registro/CLA-20261019-006_revision_codex.json",
+    "cifras102": "Recibidas, no recalculadas",
+    "paquetes_nuevos_comprobados": 7,
+    "miembros": 52,
+    "archivos_estimador": 13,
+    "interpretacion": "Integridad parcial, no replay o equivalencia",
+    "respuesta_propia": {
+      "id": "COD-20261019-118",
+      "utc": "2026-10-19T23:20:45+00:00",
+      "recibo": "registro/COD-20261019-118_recibo.json"
+    }
+  },
+  "entregables_finales": {
+    "utc": "2026-10-19T23:34:40+00:00",
+    "decision": "D96",
+    "carpeta": "docs/entrega",
+    "modelo_entregado": "S30",
+    "informe": [
+      "docs/entrega/report_en.pdf",
+      "docs/entrega/informe_es.pdf"
+    ],
+    "panel": "docs/entrega/panel_modelo.html",
+    "video": "docs/entrega/video/",
+    "uso_de_ia": [
+      "docs/entrega/AI_WORKFLOW_EN.md",
+      "docs/entrega/USO_DE_IA_ES.md"
+    ],
+    "expediente": "docs/expediente/",
+    "cifras_sha256": "aaad4a2ae19f76cb3ddedead581589894b4ed7093f519aa39694b2a07f4ffc17",
+    "verificacion": "docs/entrega/datos/verificacion_entregables.json",
+    "nota": "Un solo modelo entregado (S30); los envíos anteriores solo aparecen en la curva de aprendizaje. La selección final manual en Kaggle sigue a cargo del participante y no se ha realizado.",
+    "revisiones": [
+      {
+        "utc": "2026-10-20T00:13:29+00:00",
+        "motivo": "Precisiones ENT-CLA007-01..05 de COD-20261019-119 y acotación de reservas de CLA-20261019-008 (con las precisiones de COD-20261019-120) declarada como límite",
+        "aporte": "CLA-20261019-009",
+        "copias_previas": [
+          "privado/trazabilidad/precisiones_CLA007_20261020/",
+          "privado/trazabilidad/reservas_entregables_20261020/"
+        ],
+        "verificacion_sha256": "8148161ef9e478f432b6c22c89e718d4c7848a3152bca7c3b150bdb1827b33f9"
+      },
+      {
+        "utc": "2026-10-20T16:20:18+00:00",
+        "motivo": "Experimentos de validación y backtesting del IBNR (D95), reproducción completa (D97) y decisiones del participante (D98) en los entregables; nombre del modelo definitivo (D99)",
+        "aporte": "CLA-20261020-004",
+        "copias_previas": [
+          "privado/trazabilidad/experimentos_nombre_20261020/"
+        ],
+        "cifras_sha256": "1c0b604a52e3f30fa0db571c9244c0ce934b4065d8ed5a7b33a3d67cb3441caf",
+        "verificacion_sha256": "20a29ba62f9a353ceff1dc43ccef5fb95ee98e9da180250eee4fcc74914bfcde"
+      }
+    ],
+    "nombre_modelo": {
+      "es": "Mezcla por peligro",
+      "en": "Per-peril blend"
+    }
+  },
+  "seguimiento_CLA007": {
+    "utc": "2026-10-19T23:48:24.400740+00:00",
+    "aporte": "CLA-20261019-007",
+    "auditoria_recibida": "COD-IA-20261019T232535Z",
+    "revision": "registro/CLA-20261019-007_revision_codex.json",
+    "precisiones_de_entregables": "Pendientes de respuesta del autor; sin editar sus fuentes.",
+    "recibo_documental": "15pases/1fallo;11destinos actuales existen; no verificador nuevo",
+    "respuesta_propia": {
+      "id": "COD-20261019-119",
+      "utc": "2026-10-19T23:48:24+00:00",
+      "recibo": "registro/COD-20261019-119_recibo.json"
+    }
+  },
+  "seguimiento_CLA008": {
+    "utc": "2026-10-20T00:06:44.713851+00:00",
+    "aporte": "CLA-20261019-008",
+    "revision": "registro/CLA-20261019-008_revision_codex.json",
+    "captura_sha256": "c1cfdedd7dc670939e7fcf61f767799352ea1782724102023e68cea8fb3b5fcc",
+    "lanzador_sha256": "d934af4292b3e2e5ed2917408835b002b551e0fdd82969100afec5a1e32111e3",
+    "casos_AST": 8,
+    "conformes": 7,
+    "pendiente": "Pool preexistente sin huella",
+    "correcciones_acotadas": "DataFrame y Pool nuevo distinguen valores/categorías/pesos; cfg distinto rechazado.",
+    "reservas": "S1/S3 recibidos y condicionados; no suficiencia demostrada",
+    "respuesta_propia": {
+      "id": "COD-20261019-120",
+      "utc": "2026-10-20T00:06:44+00:00",
+      "recibo": "registro/COD-20261019-120_recibo.json"
+    }
+  },
+  "correccion_pool_previo_20261019": {
+    "utc": "2026-10-20T00:15:43.119818+00:00",
+    "autor": "Codex",
+    "hallazgo": "CLA008-CAP03",
+    "estado": "corregido_comprobado_14casos_sinteticos",
+    "version_captura": "1.1.1",
+    "captura_sha256": "07776e60e5f266a4f7c547ce92bcf7b3394a64a12d6a22a2db8060f141da31a0",
+    "registro": "registro/correccion_pool_previo_20261019.json",
+    "evidencia": "privado/trazabilidad/correccion_pool_previo_20261019",
+    "rechazos_antes_busqueda_carga": 10,
+    "controles_busqueda_simulada": 4,
+    "ajustes": 0,
+    "inferencias": 0,
+    "modelos_cargados": 0,
+    "Kaggle": 0,
+    "respuesta_propia": {
+      "author": "Codex",
+      "id": "COD-20261019-121",
+      "utc": "2026-10-20T00:14:55+00:00",
+      "previous_sha256": "5c18528828c0cdff34d6a9ca3dd7c35cceba6957af6ce566a089327cfb20c9be",
+      "sha256": "c474971e2e0542c4624c7a14d43f77c7acb90a066f038b263f2489047bdc9403"
+    },
+    "respuesta_Claude": "No se ha recibido una respuesta posterior a COD121; no se presume acuerdo.",
+    "limite": "Cierre acotado de la brecha; reproducción completa, reservas, independencia y revisión general pendientes. GOV007 no se amplía."
+  },
+  "kit_captura_1_1_1_20261019": {
+    "utc": "2026-10-20T00:53:12.585999+00:00",
+    "autor": "Codex",
+    "estado": "kit_local_incorporado_recibos_verificados_Claude_pendiente",
+    "registro": "registro/kit_captura_1_1_1_20261019.json",
+    "kit": "privado/kits/captura_1_1_1_20261019/codigo_incorporado",
+    "captura_version": "1.1.1",
+    "captura_sha256": "07776e60e5f266a4f7c547ce92bcf7b3394a64a12d6a22a2db8060f141da31a0",
+    "zip_sha256": "1007f1b04c9d3f0f44ffe2b6e16d9b93e5f00994651e5a8c9564428f249d14e3",
+    "archivos_incorporados": 85,
+    "recibos_reales": [
+      "privado/kits/captura_1_1_1_20261019/complemento/recibo_kit.json",
+      "privado/kits/captura_1_1_1_20261019/recibo_incorporacion_local.json"
+    ],
+    "pruebas_nuevas_metadata": {
+      "conformes": 11,
+      "total": 11,
+      "lanzador": "entorno/correr sustituidos por dobles"
+    },
+    "respuesta_propia": {
+      "author": "Codex",
+      "id": "COD-20261019-123",
+      "utc": "2026-10-20T00:52:10+00:00",
+      "previous_sha256": "b5429eff9eb2847ca22b7be87a6c82d0ee249a98737adf5b0ac7939a41e7a65e",
+      "sha256": "4f08a0428d4cc5770cbe120bdb8d13877288af554ef1ba14836af67c2217e608"
+    },
+    "adopcion_externa_Claude": "pendiente de respuesta auténtica y recibo localizable",
+    "actividad": {
+      "ajustes": 0,
+      "inferencias": 0,
+      "modelos_cargados": 0,
+      "replays": 0,
+      "Kaggle": 0
+    },
+    "limites": "No reproducción completa, independencia o suficiencia de reservas; GOV007 no se amplía."
+  },
+  "modelo_definitivo": {
+    "utc": "2026-10-20T16:20:18+00:00",
+    "decision": "D99",
+    "modelo": "S30",
+    "nombre": {
+      "es": "Mezcla por peligro",
+      "en": "Per-peril blend"
+    },
+    "parte1_cerrada": true,
+    "S22": "registro histórico; deja de ser respaldo (D99). El campo «respaldo» se conserva porque lo reescribe herramientas/actualizar_revision.py",
+    "seleccion_final_manual_kaggle": "pendiente_no_realizada",
+    "registro": "registro/decision_modelo_definitivo_20261020.json",
+    "aporte": "CLA-20261020-004"
+  }
 }

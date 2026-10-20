@@ -1,0 +1,32 @@
+{
+  "utc": "2026-10-19T17:51:53.569910+00:00",
+  "autor": "Codex",
+  "procedencia": "Aclaración directa del participante en este chat, 19 de octubre de 2026; revisión documental local.",
+  "reproduccion_completa": {
+    "estado": "pendiente",
+    "alcance_pendiente": "Cadena completa desde originales hasta componentes y predicciones, con procedencia y comprobación por etapa. La reconstrucción N62 y el replay desde componentes guardados conservan su alcance parcial.",
+    "fuentes": [
+      "registro/estado_entrega.json",
+      "docs/INFORME_SEMANA1.md",
+      "docs/verificacion.md"
+    ]
+  },
+  "insesgadez_reservas": {
+    "estado": "no_demostrada",
+    "alcance": "La valoración única y las comparaciones abierto/cerrado no identifican insesgadez, suficiencia o mecanismo causal. La remediación documental de MOD-008 no acredita esa afirmación actuarial. No implica añadir IBNER automáticamente.",
+    "fuentes": [
+      "registro/panel_datos.json:MOD-008",
+      "docs/INFORME_SEMANA1.md:3"
+    ]
+  },
+  "revision_humana": "pendiente",
+  "entrega_cerrada": false,
+  "fuentes_sha256": {
+    "registro/estado_entrega.json": "509bd8340e768968319307b39d1fd8049816622fdc91c136547ecc5b090bf9f6",
+    "registro/panel_datos.json": "4e328d8353bad2773dc49653839392a23f52e10309ddb7ccd87769bdeb946ce2",
+    "docs/INFORME_SEMANA1.md": "841f1ed578eefc892d48fef5437769bf194a63cc25b985360a838dfa9b0e1d76",
+    "README.md": "9b7d66f53acd8e892107cd9d68b6446139f1ef43eb5779451e0f8b7cd195610e"
+  },
+  "acciones": "Solo lectura y registro del alcance pendiente; sin reconstrucción, entrenamiento, replay, nuevas pruebas o llamadas Kaggle.",
+  "organizacion_vigente": "Trabajo nuevo en Hackaton/Repositorio_IAA2026; se conservan autoría, linaje y corridas históricas."
+}

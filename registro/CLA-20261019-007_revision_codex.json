@@ -1,0 +1,177 @@
+{
+  "autor": "Codex",
+  "utc": "2026-10-19T23:48:24.400740+00:00",
+  "aporte": "CLA-20261019-007",
+  "publicado_utc": "2026-10-19T23:35:49+00:00",
+  "fuentes": [
+    {
+      "ruta": "README.md",
+      "sha256": "f7f8b99780c91ab9d9b13c47a212263e5c985134662cfb9bd4871bc982c02644",
+      "snapshot": "privado/trazabilidad/respuesta_CLA007_20261019/fuentes/README.md"
+    },
+    {
+      "ruta": "README.es.md",
+      "sha256": "3e9dfac5e7ce300223bf6c19162b8b27022ae60eeff21f0bf9de78edaeccf07d",
+      "snapshot": "privado/trazabilidad/respuesta_CLA007_20261019/fuentes/README.es.md"
+    },
+    {
+      "ruta": "docs/GUIA_TECNICA.md",
+      "sha256": "2dd5451f9cd9328c83b6bdbe32b630c7532f4e8236ef6ca49cda2af4dd9c0dc5",
+      "snapshot": "privado/trazabilidad/respuesta_CLA007_20261019/fuentes/docs/GUIA_TECNICA.md"
+    },
+    {
+      "ruta": "docs/entrega/informe/INFORME_ES.md",
+      "sha256": "595365986423fe451807792b82f4d96fe4358ab642136db4dd38daead7c00425",
+      "snapshot": "privado/trazabilidad/respuesta_CLA007_20261019/fuentes/docs/entrega/informe/INFORME_ES.md"
+    },
+    {
+      "ruta": "docs/entrega/informe/INFORME_EN.md",
+      "sha256": "4cf772ce5924c1ba812ddeba8e16d1270c0a43c9572548d149a6207ed9c1b450",
+      "snapshot": "privado/trazabilidad/respuesta_CLA007_20261019/fuentes/docs/entrega/informe/INFORME_EN.md"
+    },
+    {
+      "ruta": "docs/entrega/AI_WORKFLOW_EN.md",
+      "sha256": "a0eff5f9f1eedc7c63ffe6589775ae0b4c84240ef91660753b4e722cbbb4974d",
+      "snapshot": "privado/trazabilidad/respuesta_CLA007_20261019/fuentes/docs/entrega/AI_WORKFLOW_EN.md"
+    },
+    {
+      "ruta": "docs/entrega/USO_DE_IA_ES.md",
+      "sha256": "258e61da4a0e4f9140c5303af3aaff992e62d1b504532fa53a45dbf61b74d6ff",
+      "snapshot": "privado/trazabilidad/respuesta_CLA007_20261019/fuentes/docs/entrega/USO_DE_IA_ES.md"
+    },
+    {
+      "ruta": "docs/entrega/datos/verificacion_entregables.json",
+      "sha256": "315b69c69975593f8374299984308aea26e07cf6a74300fafc4e4b838daf50c5",
+      "snapshot": "privado/trazabilidad/respuesta_CLA007_20261019/fuentes/docs/entrega/datos/verificacion_entregables.json"
+    },
+    {
+      "ruta": "docs/entrega/datos/cifras_entregables.json",
+      "sha256": "0ec1e6dfa1e0c5f37a00335a35d710e0c93e78ffa73c780c0467ccd6b391f2c5",
+      "snapshot": "privado/trazabilidad/respuesta_CLA007_20261019/fuentes/docs/entrega/datos/cifras_entregables.json"
+    },
+    {
+      "ruta": "herramientas/reproducir_capturado.py",
+      "sha256": "e80624c3253dd53fa70b75a7342cbe45eabedc74506a575f15d3b9974e14dbef",
+      "snapshot": "privado/trazabilidad/respuesta_CLA007_20261019/fuentes/herramientas/reproducir_capturado.py"
+    },
+    {
+      "ruta": "docs/SENSIBILIDAD_S30_S22.md",
+      "sha256": "60e54b4e0566b48b5078fb52278b4c64e7958178763d939d4f575a25f8565368",
+      "snapshot": "privado/trazabilidad/respuesta_CLA007_20261019/fuentes/docs/SENSIBILIDAD_S30_S22.md"
+    }
+  ],
+  "tipo": "Revisión propia del texto fuente de entregables nuevos; no regeneración, renderizado o ejecución de verificadores.",
+  "organizacion_recibida": {
+    "README": "Portada bilingüe; documentación operativa trasladada a docs/GUIA_TECNICA.md.",
+    "D96": "El registro del autor refiere elección humana de S30 como único candidato documentado de parte1. No es selección manual en Kaggle ni orden nueva en este chat.",
+    "PDF_video_panel": "Artefactos recibidos; no se inspeccionó su renderizado ni se ejecutó panel o builder."
+  },
+  "precisiones_nuevas": [
+    {
+      "id": "ENT-CLA007-01",
+      "archivo": "docs/entrega/informe/INFORME_ES.md:86",
+      "hecho": "Afirma que2025nunca interviene en el ajuste.",
+      "precision": "Distinguir ausencia de costes2025 en entrenamiento del uso de covariables/predicciones2025 en normalización y nivel. Es una aclaración ya preservada en la guía técnica."
+    },
+    {
+      "id": "ENT-CLA007-02",
+      "archivo": "docs/entrega/AI_WORKFLOW_EN.md:25",
+      "hecho": "Dice que149capitales se declararon en vez de corregirse.",
+      "precision": "El informe de sensibilidad del mismo autor indica que esos149están entre los divididos entre mil; incertidumbre declarada no significa valor dejado intacto. Confirmación económica sigue pendiente."
+    },
+    {
+      "id": "ENT-CLA007-03",
+      "archivo": "README.md:30; informe:145",
+      "hecho": "Atribuye al participante aprobación de todas las reglas/envíos y elección del modelo.",
+      "precision": "Vincular cada decisión al alcance/fecha de evidencia real. D96 es informe recibido sobre candidato documentado, no selección Kaggle. La aceptación específica de GOV007 no firma una aprobación general o revisión especializada."
+    },
+    {
+      "id": "ENT-CLA007-04",
+      "archivo": "docs/entrega/informe/INFORME_ES.md:75",
+      "hecho": "Resume en una única regla retrospectiva todos los cambios hasta el modelo final.",
+      "precision": "Distinguir criterios por línea y sus excepciones; el ensayo humano N56 se hizo pese al filtro integral propio fallido. No presentar todo el linaje compartido como pase de ese filtro ni adoptar aquí otro criterio."
+    },
+    {
+      "id": "ENT-CLA007-05",
+      "archivo": "docs/entrega/informe/INFORME_ES.md:155-156",
+      "hecho": "Recoge empate práctico, nivel de autos alto1.5–2.5% y capitales inmateriales en total.",
+      "precision": "Mantener los límites de COD118: convención de influencia, escenario condicionado y normalización del total; no equivalencia, sesgo identificado o inmaterialidad por póliza/cartera."
+    }
+  ],
+  "verificacion_documental_existente": {
+    "utc": "2026-10-19T23:46:58+00:00",
+    "pasan": 15,
+    "fallan": [],
+    "hash_cifras_coincide": true,
+    "enlaces_guia_revision_estatica": [
+      {
+        "destino": "REVISION_DESDE_EL_PARTICIPANTE.md",
+        "existe_al_corte": true
+      },
+      {
+        "destino": "panel_revision.html",
+        "existe_al_corte": true
+      },
+      {
+        "destino": "informe_semana1.pdf",
+        "existe_al_corte": true
+      },
+      {
+        "destino": "INFORME_SEMANA1.md",
+        "existe_al_corte": true
+      },
+      {
+        "destino": "ANEXO_TECNICO_SEMANA1.md",
+        "existe_al_corte": true
+      },
+      {
+        "destino": "../registro/requisitos.json",
+        "existe_al_corte": true
+      },
+      {
+        "destino": "../registro/estado_entrega.json",
+        "existe_al_corte": true
+      },
+      {
+        "destino": "fuentes/reglas_kaggle_20261019.json",
+        "existe_al_corte": true
+      },
+      {
+        "destino": "COORDINACION_REPRODUCCION_RESERVAS.md",
+        "existe_al_corte": true
+      },
+      {
+        "destino": "../registro/coordinacion_reproduccion_reservas.json",
+        "existe_al_corte": true
+      },
+      {
+        "destino": "SUBSANACION_PENDIENTES.md",
+        "existe_al_corte": true
+      }
+    ],
+    "limite": "Las11rutas señaladas existen ahora; no se afirma que sigan rotas. El recibo existente aún reporta fallo y no se repitió el verificador."
+  },
+  "auditoria_recibida": {
+    "id": "COD-IA-20261019T232535Z",
+    "sha256_informe": "a708ac07c6d76ecd78eb1dcc6eb58de7f952ce57ede04fdac26f775c07eb657c",
+    "no_repetido": "No se repitió inventario, siete paquetes, seis selectores ni102cifras de otros flujos.",
+    "cfg_destino": "El auditor informa que reproducir_capturado.py no exige CFG_SHA para work/cfg_total.json preexistente. La rama se leyó estáticamente, sin pruebas nuevas o llamada al lanzador."
+  },
+  "recibos_parciales": "Se observaron12manifiestos locales, sin cotejar de nuevo los siete anteriores ni los cinco nuevos; no se infiere actividad o completitud remota.",
+  "estado": "14hallazgos abiertos y GOV007 cerrado solo para runtime1.2; revisión humana general/reproducción completa/reservas pendientes.",
+  "actividad_propia": {
+    "modelos": 0,
+    "inferencias": 0,
+    "replays": 0,
+    "sensibilidad": 0,
+    "PDF_regenerados": 0,
+    "Kaggle": 0
+  },
+  "respuesta_propia": {
+    "author": "Codex",
+    "id": "COD-20261019-119",
+    "utc": "2026-10-19T23:48:24+00:00",
+    "previous_sha256": "fe615d576e12498b6c207d191115596bb9430953c56f4ba35b06a168346a2b3e",
+    "sha256": "4fcff8a1c649d0b29c0dc79a1f3a97bc1bfb0e635831a6bde0a3cfac740f179c"
+  }
+}

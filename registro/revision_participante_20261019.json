@@ -1,0 +1,336 @@
+{
+  "id": "D94",
+  "autor": "Codex",
+  "utc": "2026-10-19T20:04:16.185760+00:00",
+  "encargo": "Revisión integral desde la posición del participante solicitada en el chat",
+  "dictamen": "Candidatos técnicamente consistentes con T0 y archivos; entrega condicionada; uso de tarificación real no acreditado. S30 provisional, S22 respaldo.",
+  "revision_humana": false,
+  "validacion_profesional_independiente": false,
+  "seleccion_final_manual": false,
+  "reproduccion_completa": false,
+  "informe": "docs/REVISION_DESDE_EL_PARTICIPANTE.md",
+  "controles": {
+    "distintos": 310,
+    "conformes_tras_seguimiento": 310,
+    "corrida_principal": {
+      "conformes": 307,
+      "pendientes": 3
+    },
+    "seguimiento": {
+      "controles_conciliados": 3,
+      "causa": "StringDtype con marcadores de nulo diferentes; valores e índices idénticos. No se suman como controles nuevos."
+    },
+    "intentos_previos": "Primer intento falló al buscar portfolio como global; segundo fue interrumpido al detectar diagnóstico incorrecto; ambos preservados. Son incidentes del auditor."
+  },
+  "fuentes_estables_corrida_principal": 163,
+  "resultado_tecnico_no_es_aprobacion": true,
+  "conciliacion": [
+    {
+      "ramo": "motor",
+      "periodos": 979968,
+      "aceptados": 110496,
+      "sin_periodo": 296,
+      "T0": 428762846.58,
+      "reserva": 63698064.13000001,
+      "max_error": {
+        "T0": 0.0,
+        "reserve": 0.0,
+        "n_accepted": 0.0
+      }
+    },
+    {
+      "ramo": "buildings",
+      "periodos": 707726,
+      "aceptados": 26266,
+      "sin_periodo": 67,
+      "T0": 246656437.26999998,
+      "reserva": 23822203.490000002,
+      "max_error": {
+        "T0": 0.0,
+        "reserve": 0.0,
+        "n_accepted": 0.0
+      }
+    },
+    {
+      "ramo": "contents",
+      "periodos": 721617,
+      "aceptados": 23670,
+      "sin_periodo": 50,
+      "T0": 65737584.58,
+      "reserva": 2647949.32,
+      "max_error": {
+        "T0": 0.0,
+        "reserve": 0.0,
+        "n_accepted": 0.0
+      }
+    }
+  ],
+  "comparacion": {
+    "metricas": [
+      {
+        "corte": "V23",
+        "ramo": "motor",
+        "semestre": "all",
+        "escenario": "nominal",
+        "filas": 127361,
+        "S22": 0.09439132120059857,
+        "S30": 0.09440779737401517,
+        "ganancia": 1.6476173416601902e-05,
+        "observado_sobre_S30": 0.9880696446532415
+      },
+      {
+        "corte": "V23",
+        "ramo": "buildings",
+        "semestre": "all",
+        "escenario": "nominal",
+        "filas": 92214,
+        "S22": 0.11709652132410509,
+        "S30": 0.11687078776091842,
+        "ganancia": -0.0002257335631866697,
+        "observado_sobre_S30": 1.1023409915293874
+      },
+      {
+        "corte": "V23",
+        "ramo": "contents",
+        "semestre": "all",
+        "escenario": "nominal",
+        "filas": 93940,
+        "S22": 0.09124864386314113,
+        "S30": 0.09259433691719188,
+        "ganancia": 0.001345693054050745,
+        "observado_sobre_S30": 1.0698179294590233
+      },
+      {
+        "corte": "V23",
+        "ramo": "portfolio",
+        "semestre": "all",
+        "escenario": "nominal",
+        "filas": 313515,
+        "S22": 0.14525656575567125,
+        "S30": 0.14541814890490412,
+        "ganancia": 0.00016158314923286898,
+        "observado_sobre_S30": 1.0316657580189992
+      },
+      {
+        "corte": "V24",
+        "ramo": "motor",
+        "semestre": "all",
+        "escenario": "nominal",
+        "filas": 254698,
+        "S22": 0.09160529106411586,
+        "S30": 0.09168058453051608,
+        "ganancia": 7.529346640022805e-05,
+        "observado_sobre_S30": 1.0091022150154345
+      },
+      {
+        "corte": "V24",
+        "ramo": "buildings",
+        "semestre": "all",
+        "escenario": "nominal",
+        "filas": 184001,
+        "S22": 0.11551438494253052,
+        "S30": 0.11579786637265488,
+        "ganancia": 0.0002834814301243549,
+        "observado_sobre_S30": 1.0990311640494983
+      },
+      {
+        "corte": "V24",
+        "ramo": "contents",
+        "semestre": "all",
+        "escenario": "nominal",
+        "filas": 187491,
+        "S22": 0.09661800115872654,
+        "S30": 0.09665027178817631,
+        "ganancia": 3.227062944977099e-05,
+        "observado_sobre_S30": 1.017201606430191
+      },
+      {
+        "corte": "V24",
+        "ramo": "portfolio",
+        "semestre": "all",
+        "escenario": "nominal",
+        "filas": 626190,
+        "S22": 0.13774159346508574,
+        "S30": 0.13787963465217712,
+        "ganancia": 0.00013804118709137558,
+        "observado_sobre_S30": 1.0426669508454394
+      }
+    ],
+    "influencia": {
+      "ganancia": 0.00013804118709142524,
+      "diez_clientes_mas_favorables": 0.00017279534000406646,
+      "diez_mas_adversos": -0.00013468770577493004,
+      "sin_ids": true
+    },
+    "criterio_historico": {
+      "pasa": false,
+      "componentes": {
+        "all_line_semester_reserve_points_nonnegative": false,
+        "material_V24_nominal_0002": false,
+        "customer_address_lower95_positive_nominal_and_plus25": false,
+        "exact_region_nonnegative": false
+      },
+      "region": {
+        "performed": false,
+        "reason": "Earlier frozen gate fails; extra exact region cannot reverse it."
+      },
+      "intervalos_recibidos": [
+        {
+          "cut": "V24",
+          "scope": "portfolio",
+          "semester": "all",
+          "scenario": "nominal",
+          "rows": 626190,
+          "D2": {
+            "S22": 0.13774159346508574,
+            "candidate": 0.137879634652177
+          },
+          "gain": 0.00013804118709126456,
+          "means": {
+            "target": 280.3253988246379,
+            "S22": 268.33390216746216,
+            "candidate": 268.85420948399485
+          },
+          "observed_over_candidate": 1.0426669508454391,
+          "exposure": 499669.9325,
+          "conditional_CI95": {
+            "customer_id": [
+              -8.236111242738524e-05,
+              0.000369479295883567
+            ],
+            "address_id": [
+              -7.807012092126526e-05,
+              0.0003891139513401963
+            ],
+            "region": [
+              -8.706036718248293e-05,
+              0.00032907947014062204
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "capitales": {
+    "total_sin_confirmacion": 149,
+    "test_sin_confirmacion": 123,
+    "predicciones_test": {
+      "S30": {
+        "filas": 123,
+        "total_predicho": 24667.970418999997,
+        "fraccion_total": 0.00011637916138799878
+      },
+      "S22": {
+        "filas": 123,
+        "total_predicho": 24560.778883,
+        "fraccion_total": 0.00011602253098791752
+      }
+    }
+  },
+  "fuentes_panel_con_cambios": [
+    {
+      "nombre": "Último ciclo de validación recibido",
+      "ruta": "Hackaton/Semana 1/Validacion_enjambre/ultimo_ciclo.json",
+      "antes": "cf827e6f1809e1cb63c94b93ac0bb64d3a7ea76c3e7d2854464e16875d7545b1",
+      "actual": "69777aa639555892cbf14adf7c08c93320d2aed6b827b3097b8c2ee1b40e5a6c"
+    }
+  ],
+  "recomendaciones_IA_no_aceptadas_por_humano": [
+    {
+      "id": "RP01",
+      "asunto": "Alcance",
+      "propuesta": "Concurso con datos suministrados; no presentar cotización real como validada.",
+      "estado": "pendiente_decision_humana"
+    },
+    {
+      "id": "RP02",
+      "asunto": "Selección",
+      "propuesta": "S30 provisional y S22 respaldo; registrar excepción razonada al criterio N48 no superado si se elige S30.",
+      "estado": "pendiente_decision_humana"
+    },
+    {
+      "id": "RP03",
+      "asunto": "Reservas y disponibilidad",
+      "propuesta": "Mantener limitaciones y necesidad de evidencia longitudinal y fechas fuente.",
+      "estado": "pendiente_decision_humana"
+    },
+    {
+      "id": "RP04",
+      "asunto": "Capitales",
+      "propuesta": "Confirmar o aceptar tratamiento trazable; no inferir sensibilidad nula del pequeño total predicho.",
+      "estado": "pendiente_decision_humana"
+    },
+    {
+      "id": "RP05",
+      "asunto": "Reproducción",
+      "propuesta": "Recuperar recibos, modelos y transformaciones por nodo; no prometer cadena completa ni ausencia de fitting.",
+      "estado": "pendiente_evidencia"
+    },
+    {
+      "id": "RP06",
+      "asunto": "GOV-007",
+      "propuesta": "Aceptar o rechazar la versión técnicamente remediada, conservando pendientes globales.",
+      "estado": "pendiente_decision_humana"
+    }
+  ],
+  "precisiones_documentales_propuestas": [
+    {
+      "archivo": "README.md",
+      "antes": "Ningún dato de 2025 interviene en el ajuste.",
+      "propuesta": "No se usan costes observados de 2025. La normalización anual de prima y la regla de nivel sí usan covariables y predicciones de esa cartera."
+    },
+    {
+      "archivo": "requirements.txt",
+      "antes": "Con estas versiones y dos hilos la reconstrucción es byte a byte.",
+      "propuesta": "Versiones declaradas del entrenamiento de referencia. La reconstrucción completa y su igualdad byte a byte siguen pendientes de acreditación."
+    },
+    {
+      "archivo": "docs/INFORME_SEMANA1.md",
+      "antes": "la incertidumbre de la comparación todavía admite resultados equivalentes",
+      "propuesta": "la incertidumbre de la comparación todavía impide establecer una mejora concluyente"
+    }
+  ],
+  "actividad": {
+    "entrenamientos": 0,
+    "inferencias": 0,
+    "mezclas": 0,
+    "envios": 0,
+    "publicaciones": 0,
+    "delegaciones": 0,
+    "automatizaciones_nuevas": 0
+  },
+  "evidencia": [
+    {
+      "ruta": "registro/revision_participante_20261019_plan.json",
+      "sha256": "69b37efc59ff830a1717da2c25f21c8dd5f519ea7b1b7998a72cb64bfe0b4ec4"
+    },
+    {
+      "ruta": "privado/revision_participante_20261019_r3/resultado.json",
+      "sha256": "63409931190c3672235130aa310ab9a350a50b8893affbbb4edbb56a25bea11f"
+    },
+    {
+      "ruta": "privado/revision_participante_20261019_asignacion/resultado.json",
+      "sha256": "0cf0b5de3024cf62ddfb6948a074e8fbf2e7e7b3d0996e106bf945033436f27c"
+    },
+    {
+      "ruta": "registro/revision_participante_20261019_estatica.json",
+      "sha256": "6054b2aa2257d4a48dab1e5552b1ace0391106e4ec8405681f18b0cf07e759ca"
+    },
+    {
+      "ruta": "herramientas/auditar_revision_participante.py",
+      "sha256": "9a416aa5163f3273a8c5103867e11cc87aebf85a5092f7025720f37095de9f49"
+    },
+    {
+      "ruta": "herramientas/conciliar_asignacion_revision_participante.py",
+      "sha256": "cc0ce9ae5f85e4996dd78cba6f25ac927445517c71514faccc06bf4b063849b3"
+    },
+    {
+      "ruta": "docs/REVISION_DESDE_EL_PARTICIPANTE.md",
+      "sha256": "6f54e405c477f5f53fd014695afceb1cc9313e4cf3de78fef3b707726ae8c801"
+    },
+    {
+      "ruta": "docs/fuentes/revision_participante_20261019.json",
+      "sha256": "6ef1144dc78272682b19990a2e80a0510324c360dd4b5d063cace09db832b6ba"
+    }
+  ]
+}

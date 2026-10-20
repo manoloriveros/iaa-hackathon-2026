@@ -1,9 +1,42 @@
 {
-  "estado": "pendiente",
-  "revisor": null,
+  "estado": "decision_tecnica_especifica_registrada_revision_general_pendiente",
+  "revisor": "Manuel Ignacio Rodríguez",
   "fecha": null,
   "candidato": "S30",
   "decision": null,
   "observaciones": [],
-  "nota": "Plantilla sin aprobar. El participante registra aquí sus decisiones reales con fecha, alcance y evidencia. Las revisiones IA y las anotaciones locales del panel no completan esta acta automáticamente."
+  "nota": "Plantilla sin aprobar. El participante registra aquí sus decisiones reales con fecha, alcance y evidencia. Las revisiones IA y las anotaciones locales del panel no completan esta acta automáticamente.",
+  "competencia_declarada": "Actuario;13años de experiencia en actuaría y supervisión, declarado por el participante.",
+  "otro_entorno_declarado": true,
+  "fuente_designacion": "Respuesta directa del participante en este chat,19oct2026.",
+  "acta_detallada": "registro/acta_subsanacion_20261019.json",
+  "independencia_acreditada": false,
+  "decisiones_especificas": {
+    "GOV-007": {
+      "decision": "aceptar_correccion_tecnica_1_2",
+      "fecha": "2026-10-19T22:12:00.740Z",
+      "registro": "registro/decision_GOV007_20261019.json"
+    },
+    "GOV-008": {
+      "decision": "aceptar_correccion_tecnica_captura_1_1_2",
+      "estado": "cerrado_en_alcance_de_correccion_tecnica_captura_1_1_2",
+      "alcance": "Corrección técnica de la captura 1.1.2 (SHA 3ae39d78…32f0) y su recorrido en la réplica sin ajustes; no la revisión general ni otros hallazgos.",
+      "fecha": "2026-10-20T15:21:59.556Z",
+      "registro": "registro/decision_GOV008_20261020.json"
+    },
+    "GOV-003": {
+      "decision": "no_se_hara_reproduccion_por_otro_operador_con_el_kit",
+      "estado": "limitacion_aceptada_por_participante_sin_reproduccion_independiente",
+      "alcance": "La reproducción queda acreditada solo como hecha por Claude en la nube de Claude; la independencia se declara como limitación.",
+      "fecha": "2026-10-20T15:21:59.556Z",
+      "registro": "registro/decisiones_participante_20261020.json"
+    },
+    "MOD-002": {
+      "decision": "suficiencia_de_reservas_declarada_como_limitacion_del_ejercicio",
+      "estado": "limitacion_aceptada_por_participante",
+      "alcance": "Se mantiene la acotación de docs/RESERVAS_ACOTACION.md (incertidumbre material, sin ajuste adoptado); no cambian T0, la receta ni S30.",
+      "fecha": "2026-10-20T15:21:59.556Z",
+      "registro": "registro/decisiones_participante_20261020.json"
+    }
+  }
 }

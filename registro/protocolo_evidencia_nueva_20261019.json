@@ -1,0 +1,52 @@
+{
+  "autor": "Codex",
+  "congelado_utc": "2026-10-19T22:03:12.774527+00:00",
+  "estado": "diseño_preparado_sin_muestra_nueva",
+  "no_es_preinscripcion_historica": true,
+  "candidato": {
+    "S30": {
+      "nodo": "S30_claude_b",
+      "csv": "S30_claude_b/S30_claude_b.csv",
+      "sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5"
+    },
+    "S22": {
+      "nodo": "S22_claude_propio",
+      "csv": "S22_claude_propio/S22_claude_propio.csv",
+      "sha256": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0"
+    }
+  },
+  "fuente_actual": "V23/V24 ya reutilizados; no se crean nuevas particiones para llamarlas independientes.",
+  "estudios": [
+    {
+      "id": "reservas",
+      "unidad": "cohortes reportadas al corte inicial, incluidos reserva cero y rechazados; no solo futuros cerrados",
+      "requisitos": [
+        "claves estables entre valoraciones",
+        "pagos/reservas/incurridos y recuperaciones sobre igual base",
+        "cierre/reaperturas y obligaciones pendientes",
+        "maduración y censura",
+        "decisión humana del estimando y materialidad antes de resultados"
+      ],
+      "contraste": "Reserva(t0) menos pagos posteriores comparables; error a horizonte finito si no hay último maduro.",
+      "datos_posteriores_disponibles": false,
+      "umbral_materialidad": null,
+      "margen_f23_f24_adoptado": false
+    },
+    {
+      "id": "validacion_futura",
+      "unidad": "cohorte futura no consultada, fuente/fechas y selección documentadas",
+      "metrica": "D2 Tweedie1.5 en objetivo completo, con denominador fijo y receta congelada",
+      "incertidumbre": "Dependencia por cliente/dirección y segmentos prefijados; V23/V24 no proporcionan nueva independencia.",
+      "metodo_final_y_potencia": "por fijar con revisor antes de recibir resultados",
+      "muestra_disponible": false
+    }
+  ],
+  "controles": [
+    "No añadir otro IBNR automáticamente",
+    "No excluir colas del objetivo principal",
+    "No interpretar IC que contiene cero como equivalencia",
+    "No transferir automáticamente ratios de recuperación de cerrados a abiertos",
+    "No usar etiquetas ocultas de pólizas2025 como seguimiento del mismo siniestro"
+  ],
+  "resultados_nuevos": null
+}
