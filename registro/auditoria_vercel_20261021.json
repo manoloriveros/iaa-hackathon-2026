@@ -1,0 +1,111 @@
+{
+  "id": "VERCEL-AUD-20261021",
+  "autor": "Codex",
+  "corte_evidencia_utc": "2026-10-21T14:46:09.764431+00:00",
+  "tipo": "Auditoría estática de riesgos de despliegue; no certificación ni prueba de un despliegue",
+  "path_base": "workspace_root",
+  "repositorio": "Hackaton/Repositorio_IAA2026",
+  "remoto_identificado": "https://github.com/manoloriveros/iaa-hackathon-2026",
+  "commit_local": "0ade351476b52fb2bafd68c8acc37458416c33b4",
+  "conclusion": "Preparar una salida estática delimitada antes de desplegar; la carpeta actual mezcla entregables web, seguimiento interno y artefactos restringidos locales.",
+  "hallazgos": [
+    {
+      "id": "VERCEL-01",
+      "prioridad": "P1",
+      "titulo": "La exclusión de Git no protege los artefactos de una subida por CLI",
+      "condicion": "Desplegar desde la carpeta local con Vercel CLI sin una exclusión específica o un paquete de salida aislado.",
+      "evidencia": [
+        {"archivo": ".gitignore", "linea": 19, "hecho": "privado/ queda fuera de Git."},
+        {"archivo": "README.md", "linea": 70, "hecho": "privado/ contiene copias de CSV, componentes y corridas."},
+        {"archivo": "privado/auditoria_vercel_20261021/inspeccion.json", "hecho": "No existen .vercelignore, public/, dist/ ni configuración local de Vercel. El inventario por extensión confirma CSV, Parquet y paquetes en privado/, sin leer su contenido."}
+      ],
+      "impacto": "La CLI puede subir archivos que Git excluye. Si se sirve la raíz con el preset Other, también se expone material interno incluido en la salida estática. El riesgo de privado/ corresponde a una subida local, no a un clon Git que no lo contiene.",
+      "fundamento_plataforma": "El cliente de Vercel aplica sus exclusiones predeterminadas y .vercelignore/.nowignore; no lee las reglas de .gitignore. Other sirve public/ si existe, o la raíz en caso contrario.",
+      "remediacion_propuesta": "Crear una carpeta de salida con una lista explícita de entregables aprobados, fijar Output Directory y restringir la subida con .vercelignore. Comprobar el manifiesto antes de cualquier subida. No copiar privado/ ni publicar toda la raíz o todo docs/ por defecto.",
+      "fuentes": ["https://vercel.com/docs/deployments/vercel-ignore", "https://vercel.com/docs/builds/configure-a-build", "https://raw.githubusercontent.com/vercel/vercel/main/packages/client/src/utils/index.ts"],
+      "estado": "abierto_sin_cambios_de_configuracion"
+    },
+    {
+      "id": "VERCEL-02",
+      "prioridad": "P2",
+      "titulo": "La regeneración documental no es un build autónomo desde el repositorio",
+      "condicion": "Configurar como Build Command los comandos de regeneración del README en un clon de este remoto.",
+      "evidencia": [
+        {"archivo": "README.md", "linea": 53, "hecho": "La regeneración comienza con cifras_entregables.py --raiz <workspace>."},
+        {"archivo": "herramientas/cifras_entregables.py", "linea": 472, "hecho": "Resuelve la raíz externa; las líneas 476–479 abortan si faltan las fuentes."},
+        {"archivo": "herramientas/actualizar_revision.py", "linea": 136, "hecho": "Lee RUTAS_PROYECTO.json y corridas de Semana 1 fuera del repositorio."},
+        {"archivo": "herramientas/construir_entrega.py", "linea": 75, "hecho": "Importa Playwright y arranca Chromium; también importa markdown en la línea 151."},
+        {"archivo": "requirements.txt", "linea": 3, "hecho": "El archivo fija dependencias de modelado; no declara markdown, Playwright ni la instalación de Chromium."}
+      ],
+      "impacto": "La receta documental necesita el espacio de trabajo y datos que el clon Git no aporta. Instalar requirements.txt tampoco prepara todos los requisitos del generador visual. No se ejecutó ese build para demostrarlo: se inspeccionaron las rutas, las comprobaciones previas y las importaciones.",
+      "comprobacion_adicional": "El JSON de cifras ya generado registra 19 fuentes fuera del repositorio y 7 fuentes internas bajo privado/ ausentes de HEAD. Son fuentes de ese snapshot, no un conteo exhaustivo del diccionario actual de FUENTES.",
+      "remediacion_propuesta": "Para alojar el panel existente, omitir el build y desplegar los HTML/PDF ya generados y revisados. Si se necesita regeneración en CI, separar un paso documental que use solo insumos agregados permitidos y declarar sus dependencias y navegador. No subir las fuentes restringidas para hacer pasar el build.",
+      "fuentes": ["https://vercel.com/docs/builds/configure-a-build"],
+      "estado": "riesgo_condicional_no_aplica_si_se_publican_estaticos_existentes"
+    },
+    {
+      "id": "VERCEL-03",
+      "prioridad": "P2",
+      "titulo": "La URL de entrada no tiene página ni ruta definidas",
+      "condicion": "Servir como salida la raíz, docs/ o docs/entrega/ sin añadir una página de entrada o una ruta explícita.",
+      "evidencia": [
+        {"archivo": "privado/auditoria_vercel_20261021/inspeccion.json", "hecho": "No hay index.html en ninguna de esas tres carpetas, ni vercel.json/vercel.ts con una redirección o rewrite."},
+        {"archivo": "README.md", "linea": 25, "hecho": "El panel final se llama docs/entrega/panel_modelo.html y se documenta para abrirlo localmente."}
+      ],
+      "impacto": "Visitar / no abre el panel: se espera 404 con listado desactivado, o un listado si se habilita. No se afirma haber observado una respuesta HTTP de Vercel.",
+      "remediacion_propuesta": "Dar al panel aprobado una entrada index.html en la salida aislada, o definir una ruta exacta desde /. Mantener desactivado el listado de directorios.",
+      "fuentes": ["https://vercel.com/docs/directory-listing", "https://vercel.com/kb/guide/how-to-debug-404-errors"],
+      "estado": "abierto_sin_pagina_de_entrada"
+    },
+    {
+      "id": "VERCEL-04",
+      "prioridad": "P2",
+      "titulo": "Un despliegue Git no recoge la revisión que existe en la copia local",
+      "condicion": "Desplegar el commit local auditado como si contuviera el seguimiento humano actual, o versionar solo el HTML actualizado sin sus documentos vinculados.",
+      "evidencia": [
+        {"archivo": "docs/REVISION_PENDIENTE_PARTICIPANTE.md", "linea": 7, "hecho": "La guía local refleja R01–R05 registradas; el archivo no está en HEAD."},
+        {"archivo": "registro/decision_R05_20261020.json", "hecho": "El recibo local, como los de R01–R04, aún no está versionado."},
+        {"archivo": "privado/auditoria_vercel_20261021/inspeccion.json", "hecho": "Al abrir la auditoría había 15 archivos modificados y 13 sin seguimiento. El payload de revisión humana de HEAD tiene cero decisiones específicas; el local tiene nueve. Nueve destinos enlazados por el panel local no están en HEAD."}
+      ],
+      "impacto": "El sitio generado desde ese commit mostraría una fotografía anterior. Publicar solo el panel local actualizado dejaría enlaces a documentos aún ausentes del commit. No se ha consultado la punta remota ni se equipara HEAD con producción.",
+      "remediacion_propuesta": "Revisar el conjunto destinado a publicación y versionarlo de forma coherente. Identificar el SHA que se despliega y comprobar enlaces contra ese commit. Conservar fuera del paquete público la revisión interna que no se haya autorizado divulgar.",
+      "fuentes": ["https://vercel.com/docs/git"],
+      "estado": "abierto_snapshot_local_distinto_de_HEAD"
+    }
+  ],
+  "comprobaciones": {
+    "archivos_no_ignorados_al_abrir": 833,
+    "enlaces_del_panel_revision": 82,
+    "enlaces_ausentes_en_copia_local": 0,
+    "diferencias_de_mayusculas_en_destinos": 0,
+    "destinos_unicos_del_panel_local_ausentes_en_HEAD": 9,
+    "javascript_incrustado_sintaxis": {"piezas": 4, "fallos": 0, "metodo": "node --check, sin ejecutar scripts"},
+    "panel_modelo_referencias_locales_externas": 0,
+    "nota_experimentos": "Las 199 rutas de experimentos se muestran como texto de procedencia; no se contabilizan como enlaces rotos.",
+    "web_backend": "No se encontraron entradas ASGI/WSGI, api/ ni una aplicación web Python en la inspección. No se extrapolan límites de Functions a los scripts de entrenamiento offline."
+  },
+  "conexion_vercel": {
+    "herramienta": "Vercel.list_projects",
+    "filtro": {"repoUrl": "https://github.com/manoloriveros/iaa-hackathon-2026", "limit": "20"},
+    "proyectos_devuelto": 0,
+    "alcance": "Ámbito accesible de la conexión, sin recorrer otros equipos. No prueba ausencia global de proyectos.",
+    "configuracion_remota_logs_proteccion_dominios": "no_verificados_sin_proyecto_asociado"
+  },
+  "evidencia_local": {
+    "directorio": "Hackaton/Repositorio_IAA2026/privado/auditoria_vercel_20261021",
+    "archivos_sha256": {
+      "inspeccionar.py": "68da88fe314e7dd7618cc7e57490ad782f588f30f6f501ccbe22e66ff46a81c8",
+      "inspeccion.json": "6fb7b32fc4ab617e3d848036464059751c63e1e49b7fae8ab2850e671ed5ce14",
+      "manifest_antes.json": "cdaf62eff66392814bc355ef5c2fb6afb7bb6c06911c313fedfb81c281963e9a"
+    },
+    "incidencia_del_auditor": "El primer intento de pasar JavaScript a node --check falló por la codificación cp1252 del proceso de Python en Windows. Se fijó encoding=utf-8 y se completaron las cuatro comprobaciones. No se atribuye el fallo al repositorio ni a Vercel. El manifiesto previo se conservó y se cotejó al reanudar."
+  },
+  "limites": [
+    "No hubo instalación, build, prueba de navegador, despliegue ni petición HTTP al sitio en Vercel.",
+    "No se analizaron CVE de las dependencias ni se certificó ausencia de secretos.",
+    "No se leyeron datos por fila ni se cargaron modelos para esta auditoría.",
+    "No se cambiaron código, configuración de despliegue, receta, predicciones o decisiones humanas.",
+    "La consulta de documentación pública y la lectura de metadatos mediante el plugin no subieron archivos del proyecto."
+  ],
+  "siguiente_paso_propuesto": "Preparar una salida estática revisable y su manifiesto, con la página de entrada, exclusiones y SHA de origen definidos; comprobar las rutas y la selección de archivos antes de pedir publicar. Esta auditoría no implementa ni autoriza esa publicación."
+}
