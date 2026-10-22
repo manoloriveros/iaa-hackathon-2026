@@ -4,6 +4,8 @@
 *.npz
 *.csv
 !receta/**/*.csv
+# Índices del expediente (autor, identificador, hora y asunto de cada aporte o decisión; sin datos del concurso)
+!docs/expediente/*/indice.csv
 trabajo/
 reconstruccion/
 work/
