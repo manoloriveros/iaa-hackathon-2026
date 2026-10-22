@@ -53,7 +53,7 @@
           [['Objetivo e IBNR'], ['1 siniestro → 1 periodo', 'exposición efectiva']],
           [['Variables F0–F4'], ['con fecha de acceso', 'guardia contra fugas']],
           [['10 componentes'], ['Tweedie del total y', 'frecuencia × severidad']],
-          [['Mezcla y entrega'], ['nivel 2025 por ramo', 'CSV con 10 controles']]
+          [['Mezcla y nivel 2025'], ['cortes 2023–24 y sondas', 'CSV con 10 controles']]
         ],
         val: 'Validación temporal fuera de muestra: entrenar 2021–22 → medir 2023 · entrenar 2021–23 → medir 2024',
         ctl: 'Controles automáticos y huellas SHA-256 de entradas y salidas en cada etapa (orquestador de 30 nodos para el modelo final)'
@@ -66,7 +66,7 @@
         mitades: ['C', 'S']
       },
       ia: {
-        aria: 'Flujo de trabajo asistido por IA: tres líneas independientes publican en un foro común, un enjambre de validación audita cada seis horas y el participante decide y autoriza',
+        aria: 'Flujo de trabajo asistido por IA: tres líneas publican en un foro común, un enjambre de validación audita cada seis horas y el participante decide y autoriza',
         lit: [['Literatura'], ['51 fuentes primarias', '3 papers de la IAA']],
         mcp: [['Kaggle por MCP'], ['reglas, metadatos y', 'puntuaciones (lectura)']],
         datos: [['Datos del concurso'], ['11 Parquet con SHA-256', 'auditoría con 116 gráficos']],
@@ -93,7 +93,7 @@
           [['Target and IBNR'], ['1 claim → 1 period', 'effective exposure']],
           [['F0–F4 features'], ['with access date', 'leakage guard']],
           [['10 components'], ['Tweedie total cost and', 'frequency × severity']],
-          [['Blend and delivery'], ['2025 level per line', 'CSV with 10 checks']]
+          [['Blend and 2025 level'], ['2023–24 cuts and probes', 'CSV with 10 checks']]
         ],
         val: 'Out-of-sample temporal validation: train 2021–22 → score 2023 · train 2021–23 → score 2024',
         ctl: 'Automated controls and SHA-256 fingerprints of inputs and outputs at every stage (30-node orchestrator for the final model)'
@@ -106,7 +106,7 @@
         mitades: ['C', 'S']
       },
       ia: {
-        aria: 'AI-assisted workflow: three independent lines post to a shared forum, a validation swarm audits every six hours and the participant decides and authorises',
+        aria: 'AI-assisted workflow: three lines post to a shared forum, a validation swarm audits every six hours and the participant decides and authorises',
         lit: [['Literature'], ['51 primary sources', '3 IAA papers']],
         mcp: [['Kaggle via MCP'], ['rules, metadata and', 'scores (read-only)']],
         datos: [['Competition data'], ['11 Parquet with SHA-256', 'audit with 116 charts']],

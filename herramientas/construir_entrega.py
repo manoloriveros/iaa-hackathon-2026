@@ -26,7 +26,7 @@ IDIOMAS = tuple(x for x in ("en", "es") if not [a for a in sys.argv if a.startsw
 # Tamaño natural (px CSS) del contenedor de cada figura en PNG.
 TAMANOS = {"flujo": 700, "flujo_ia": 770, "siniestros": 700, "validacion_diseno": 450, "curva": 710, "publico_local": 700,
            "completitud": 390, "prima_anual": 730, "composicion": 710, "d2_ramo": 390, "deciles": 730,
-           "reservas": 430, "foro": 530, "ceros": 610, "escala_d2": 610, "hallazgos": 430, "backtest": 660}
+           "reservas": 430, "foro": 530, "ceros": 610, "escala_d2": 610, "hallazgos": 430, "backtest": 660, "calibracion": 710}
 OPCIONES = {"flujo": {"filas": 2}}
 
 
@@ -144,6 +144,7 @@ a { color: var(--brand); text-decoration: none; }
 ul { margin: 0 0 2mm 4.5mm; padding: 0; } li { margin: 0 0 .8mm; }
 .marca { color: var(--text-muted); font-size: 7.6pt; }
 figure.estrecha { width: 80%; margin-left: auto; margin-right: auto; }
+p.formula { text-align: center; font-size: 9.6pt; margin: 0.4mm 0 1.6mm; }
 """
 
 
@@ -257,7 +258,7 @@ def laminas():
     with navegador() as p:
         b = p.chromium.launch()
         for lang in IDIOMAS:
-            capturas = {"panel": captura_panel(b, lang)}
+            capturas = {}  # La lámina 15 ya no muestra la captura del panel (desde S42 explica la calibración del nivel).
             pg = b.new_page(viewport={"width": 1920, "height": 1080}, device_scale_factor=1)
             errores = []
             pg.on("pageerror", lambda e: errores.append(str(e)))
