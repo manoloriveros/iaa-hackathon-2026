@@ -1,0 +1,116 @@
+{
+ "autor": "Claude (Cowork, línea principal)",
+ "id": "recibo_reproduccion_s43_20261023",
+ "utc": "2026-10-23T14:31:11+00:00",
+ "corrida": "privado/corridas/repro_s43_20261023T141352Z_fbf66589",
+ "peticion": "Participante, 23-10-2026, en esta sesión: «Actualiza el modelo a S43»; en dos preguntas con opciones eligió el alcance (reproducción y reservas, como con S42; docs/entrega sigue con la sesión de entregables) y la materialidad de la forma (0,00003 de D², el piso de semillas).",
+ "plan": {
+  "ruta": "privado/corridas/repro_s43_20261023T141352Z_fbf66589/PLAN_PREREGISTRO.md",
+  "sha256": "fbf66589f6e306c5d54a1bb919badb216e35d1f21651891dcb21191452e20c7d",
+  "utc": "2026-10-23T14:15:16+00:00",
+  "registro_experimentos": "registro/experimentos_nuevos.json (run_id repro_s43_20261023T141352Z_fbf66589)"
+ },
+ "documentos": {
+  "docs/REPRODUCCION_COMPLETA.md": {
+   "antes": "f0bb800542d74e5cebba1fce313f02ee1e5544e926045ee27bcfaeeb2779530f",
+   "despues": "338e7d9cfb3d5623a978b88ce29e31385a226c2a6f4512b8c85b17f8cac0e35a"
+  },
+  "docs/RESERVAS_ACOTACION.md": {
+   "antes": "5ce5c7056153a6b1864305c2d9d79f8ca27274d0212310c3ca71181d60dd8197",
+   "despues": "2283b5ac420f8069e26e83b463daa51e29f76985294f6c7c5d24df05688ca2bb"
+  },
+  "copia_previa": "privado/trazabilidad/reproduccion_s43_20261023/ (con MANIFIESTO_previo.sha256)",
+  "aplicacion": {
+   "privado/corridas/repro_s43_20261023T141352Z_fbf66589/aplicacion/parche_docs.py": "9c3066e64b6ebce9da1b523bc8b222c60e01f3121e98365924050f488f0814c0"
+  }
+ },
+ "codigo": {
+  "herramientas/sonda_forma.py (sin cambios)": "ed4f26ea28db402d2ef598d08d6bf47b9e1d26d8884e69a6dc5eaece23782082",
+  "herramientas/reservas_consistencia.py (sin cambios; se importan Nivel, ftw, LARGOS y PERILS)": "e16680ec62e90bc8c4e49865010f7d088aaef967e479fed406bc6befa5be5d78",
+  "herramientas/reservas_s43.py (nuevo)": "874f92268f9aaca6f180233302c96d08bd7db5d8f6fcd961007d69907db5cc8b",
+  "privado/corridas/repro_s43_20261023T141352Z_fbf66589/scripts/comparar_notas_forma.py": "dd031658fc587684efec2aa60c0f0de7c0e504d099be8d4f9d5c9abd898fab14",
+  "privado/corridas/repro_s43_20261023T141352Z_fbf66589/scripts/correr_forma.sh": "4bc4c3a3f0db64a543853084900509cdec469e61790c14f3911e606267519d67"
+ },
+ "entorno": {
+  "lugar": "nube de Claude",
+  "python": "3.13",
+  "numpy": "2.5.3",
+  "pandas": "3.0.5",
+  "pyarrow": "26.0.0",
+  "plataforma": "Linux x86_64"
+ },
+ "parte1_paso_de_forma": {
+  "raices": {
+   "R0": "S42 regenerado y parquet histórico (afd72dca…)",
+   "R1": "S42 y parquet del reajuste (4e80bde3…)",
+   "R2": "S42 y parquet de la réplica congelada (4e80bde3…)"
+  },
+  "S43": {
+   "sha256": "a8010a6917e213dc65f4855142c7db850ed575a2b5a80135f68862caaee5e4b5",
+   "igual_en": [
+    "R0",
+    "R1",
+    "R2"
+   ]
+  },
+  "sondas_S50_iguales": "5 de 6 en las tres raíces",
+  "sonda_distinta": {
+   "archivo": "S50_sonda_forma_buildings_a110.csv",
+   "registrado": "f6adcf3aa649f0271d3002e0adeec9d79e6b51a968b2cc6a6f728f9122f23960",
+   "obtenido": "5001ac007457d2eeb3b6a8fa524b31c0ed770593c78230527c2a5b936aa93c3b",
+   "filas_distintas": 1,
+   "row_id": "B02832587",
+   "valores": "441.622945 registrado, 441.622946 aquí; sin redondear 441.6229455000002 (punto medio del sexto decimal)"
+  },
+  "notas": "σ, Z, a* y a_Z idénticos; preinscripción 70 de 143 campos idénticos y 14 por encima de 1e-12 relativo, todos en la curva D²(a) − D²(1) de 2024 (máx. absoluto 2,7e-16); resolución 61 de 67 idénticos, máx. 3,7e-13 (K de 2024)",
+  "clase_preinscrita": "no reproducido (una sonda y 14 campos de la curva)",
+  "lectura_posterior_declarada": "S43 byte a byte desde el reajuste y la réplica, con todos los números que lo determinan idénticos",
+  "totales_y_orden": "totales por ramo de S43 iguales a S42 salvo el redondeo del CSV (máx. 0,00015 CU); pendiente del log de la tasa = a_Z (0,95486 / 0,99486 / 0,99617)"
+ },
+ "parte2_reservas": {
+  "nivel": "el de S42; su acotación vale sin cambios",
+  "materialidad_forma": "K_2024·Δa_Z² >= 0,00003 (Δa 0,033 / 0,032 / 0,050)",
+  "cota": "edificios y contenidos inmateriales para cualquier cambio de Z (coste máx. 2,7e-6 y 5,2e-7); autos necesitaría |ΔZ| >= 0,41",
+  "mayor_cambio_en_ic_beta": {
+   "motor": "-0,0065 (lesiones ×0,55), 1,2e-6",
+   "buildings": "-0,0001 (hundimiento ×0,85), 2,7e-10",
+   "contents": "+0,0001 (todos ×0,79), 8,7e-11"
+  },
+  "S3": "Δa_Z autos <= 0,0004",
+  "interaccion_nivel": "nivel ±2,5 % mueve el vértice 0,011-0,014 y a_Z 0,006-0,008 (coste <= 1,1e-6)",
+  "clase": {
+   "motor": "inmaterial",
+   "buildings": "inmaterial",
+   "contents": "inmaterial"
+  }
+ },
+ "evidencia": {
+  "tar": {
+   "ruta": "privado/corridas/repro_s43_20261023T141352Z_fbf66589/corrida_s43_fbf66589.tar.gz",
+   "sha256": "b927807d788a73b2257730667ba2f2c22fbd763f16db0fce25f74efbc8456426",
+   "archivos": 24,
+   "manifiesto": "MANIFIESTO.sha256"
+  },
+  "resultados": {
+   "parte1_notas_y_sha.json": "dae36ba63eb551a3710288c5877370ce31ea2b8f2b94761cdaaf15995a98cba5",
+   "parte1_resumen.json": "6ab143a7e32500aee5891ea7cfc9853f2c6f6cd55c98653d797bfbe94dccd1ad",
+   "parte2_reservas_s43.json": "fe2cd1803c904173ee1eb70c1df6c5fe1443f5baf23a2a9546ce2034def18d7c",
+   "parte2_resumen.json": "7b4b367754cf96832c2cfa90d06fb5fe8cef42299acb54862ce1f2a4e776d318",
+   "parte2a_totales_y_orden.json": "b31306949b98998d98d4d0eba3689169509af2079fd704cc70cf441581e7d5c5"
+  }
+ },
+ "limites": [
+  "Reproducción hecha por Claude en la nube de Claude; sin repetición por otro operador (D98, GOV-003).",
+  "Las puntuaciones públicas de las sondas y de S43 son hechos de Kaggle con recibo; no se reproducen.",
+  "La sonda de edificios a = 1,10 y la curva de 2024 no cumplen el criterio preinscrito; la lectura de que no afectan a S43 es posterior y se declara así.",
+  "S3 se trata como cambio de nivel del año: el parquet no separa las predicciones por peligro.",
+  "La acotación no acredita la suficiencia de reservas (MOD-002); solo mide si moverían la forma aplicada.",
+  "Nada de esto es revisión humana."
+ ],
+ "sin": [
+  "envíos a Kaggle",
+  "cambios de receta, T0, S30, S42, S43 o la marca final",
+  "cambios en archivos de Codex",
+  "cambios en docs/entrega"
+ ]
+}

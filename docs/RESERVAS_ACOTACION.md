@@ -2,11 +2,13 @@
 
 Claude (línea principal), 19 de octubre de 2026. Encargo del participante en esta sesión, con la materialidad fijada en el 1 % del nivel 2025 de cada ramo antes de calcular nada ([autorización](../registro/autorizacion_reproduccion_reservas_20261019.json); plan pre-registrado en la corrida privada `reservas_20261019T225357Z_99b45271`). No se cambió T0, la receta ni ninguna predicción, y nada de esto es revisión humana.
 
+Actualización del 23 de octubre. La entrega final es S41: la Mezcla por peligro (S30 en el código) con un factor de nivel por ramo que mueve el nivel de 2025 una fracción fija hacia el óptimo del marcador público (D100). Las secciones que siguen miden el nivel de la mezcla, que es la base de S41. «Qué cambia con S41» traslada los umbrales y la clasificación a la entrega final con la misma materialidad. El plan se registró antes de calcular, en la corrida privada `repro_s41_20261023T145808Z_c8055dfc`. Qué es S41, con qué hipótesis y por qué es adecuada está en [`REPRODUCCION_COMPLETA.md`](REPRODUCCION_COMPLETA.md) y en [`MODELO_FINAL_S41.md`](MODELO_FINAL_S41.md).
+
 ## Por qué ningún cálculo con estos archivos demuestra la suficiencia
 
 Una reserva de caso es una previsión de lo que falta por pagar en un siniestro abierto. Para saber si era suficiente hay que ver esos pagos, y eso exige una valoración posterior de los mismos siniestros. El archivo `claims` es una sola fotografía al 31 de diciembre de 2024, con una fila por siniestro y sin movimientos, así que la suficiencia no se puede demostrar con él. Codex lo dejó dicho en COD-20261019-114 y el protocolo de evidencia nueva lo mantiene.
 
-Lo que sí se puede hacer es más modesto y útil para decidir. Primero, medir cuánto sesgo de reservas haría falta para que el resultado cambie de verdad: mover el nivel 2025 de un ramo más del 1 % o cambiar el orden entre S30 y S22. Segundo, estimar el sesgo bajo un supuesto escrito y comprobar las consecuencias de ese supuesto que sí se ven en los datos. Si el sesgo plausible queda por debajo del umbral de quiebre, la incertidumbre de reservas no es material; si lo cruza, hay que declararla y decidirla.
+Lo que sí se puede hacer es más modesto y útil para decidir. Primero, medir cuánto sesgo de reservas haría falta para que el resultado cambie de verdad: mover el nivel 2025 de un ramo más del 1 % o cambiar lo que concluye la evaluación de 2023 y 2024. Segundo, estimar el sesgo bajo un supuesto escrito y comprobar las consecuencias de ese supuesto que sí se ven en los datos. Si el sesgo plausible queda por debajo del umbral de quiebre, la incertidumbre de reservas no es material; si lo cruza, hay que declararla y decidirla.
 
 ## Cuánto sesgo haría falta para que importe
 
@@ -56,30 +58,57 @@ En lesiones corporales el intervalo entero queda por debajo del umbral. D67 elig
 
 Es un indicio, no un cambio adoptado: la severidad de D67 es una elección conservadora y documentada, y cambiarla le toca al revisor humano. Si se aceptara S3, la corrección iría en la exposición efectiva de lesiones, sin tocar T0.
 
-## La elección entre S30 y S22 no depende de las reservas
+## La evaluación del modelo apenas depende de las reservas
 
-Con las etiquetas modificadas por cualquier b uniforme entre 0,25 y 2,5, y también con b aplicado solo a lesiones corporales, S30 sigue por delante de S22 en el agregado de los tres ramos, en V24 y en V23. La batería de sensibilidad de la otra sesión de Claude (E03) lo había medido con 0,75 y 1,25; aquí se extiende a toda la rejilla. Por ramo hay inversiones que no llegan al agregado: en autos, V24 cambia de signo si la reserva de lesiones fuera un 50 % corta o si la del resto de peligros fuera holgada en más de un 25 %; en contenidos, si la reserva fuera holgada en más de un 10 %.
+Con la reserva de caso de los abiertos multiplicada por 0,75 o por 1,25, el D² de 2024 de la mezcla solo pasa de 0,1379 a 0,1372 (batería de sensibilidad de D95, E03). La acotación del 19 de octubre extendió la prueba a toda la rejilla de b entre 0,25 y 2,5, y a b aplicado solo a lesiones corporales: en todos los casos la mezcla conserva, en 2023 y en 2024 y en el agregado de los tres ramos, la ventaja con la que se eligió frente a la candidata anterior. Por ramo hay inversiones que no llegan al agregado; el detalle está en la versión de este documento conservada en `privado/trazabilidad/reproduccion_s41_20261023/`. Un error de reservas mueve sobre todo el nivel de las etiquetas y poco el orden entre periodos, que es lo que S41 hereda de la mezcla sin cambios. Donde las reservas sí pesan es en el nivel de 2025.
 
 ## Lo que cuesta un punto de nivel en la métrica
 
-| Ramo | D² V24 de S30 | Nivel −1 % | Nivel +1 % |
+| Ramo | D² V24 de la mezcla | Nivel −1 % | Nivel +1 % |
 | --- | ---: | ---: | ---: |
 | Autos | 0,09168 | −0,00007 | +0,00004 |
 | Edificios | 0,11580 | −0,00019 | +0,00017 |
 | Contenidos | 0,09665 | −0,00005 | +0,00002 |
 | Agregado | 0,13788 | −0,00011 | +0,00008 |
 
-Un 1 % de nivel vale en el agregado alrededor de una diezmilésima de D², del mismo orden que la ventaja de S30 sobre S22 en V24 (0,00014). Las cifras se miden contra T0, que no es el último, así que dicen cuánto pesa el nivel en la métrica y no qué nivel es el correcto.
+Un 1 % de nivel vale en el agregado alrededor de una diezmilésima de D² de 2024. Las cifras se miden contra T0, que no es el último, así que dicen cuánto pesa el nivel en la métrica y no qué nivel es el correcto. En el D² del público, con la forma cerrada y los S₁/N y S₂/N de D100, bajar un 1 % el nivel de S41 en los tres ramos restaría 0,000065 y subirlo sumaría 0,000037. La asimetría se debe a que S41 queda en cada ramo entre la mezcla y el óptimo del público, que en hogar está por encima.
 
 ## Abiertos sin reserva y rechazados
 
-Hay 61 abiertos aceptados con reserva cero. Si cada uno se cerrara con la media de los cerrados de su celda, añadirían unos 0,21 M CU en autos repartidos en cuatro años y menos de 0,05 M en hogar, muy por debajo del 0,1 % del coste de cualquier año. Los 1.701 rechazados tienen todos los importes en cero (no hay ninguno en edificios). Si se pagaran todos con la severidad media de su peligro, el nivel 2025 subiría un 1,07 % en autos y un 1,24 % en contenidos; para llegar a la materialidad habría que reabrir y pagar el 93 % de los rechazados de autos o el 81 % de los de contenidos.
+Hay 61 abiertos aceptados con reserva cero. Si cada uno se cerrara con la media de los cerrados de su celda, añadirían unos 0,21 M CU en autos repartidos en cuatro años y menos de 0,05 M en hogar, muy por debajo del 0,1 % del coste de cualquier año. Los 1.701 rechazados tienen todos los importes en cero (no hay ninguno en edificios). Si se pagaran todos con la severidad media de su peligro, el nivel 2025 subiría un 1,07 % en autos y un 1,24 % en contenidos; para llegar a la materialidad habría que reabrir y pagar el 93 % de los rechazados de autos o el 81 % de los de contenidos. Con la regla de S41 serían en torno a un 0,9 % y un 1,0 %: en autos, ni pagando todos los rechazados se llegaría a la materialidad.
+
+## Qué cambia con S41
+
+S41, la entrega final, toma de la mezcla la mayor parte de su nivel de 2025. Su regla mueve cada ramo solo una fracción fija Z hacia el óptimo del marcador público: 0,166 en autos, 0,346 en edificios y 0,150 en contenidos. El público se puntúa con las etiquetas de los organizadores, y un error en nuestras reservas no las cambia; solo mueve la parte del nivel que viene de la mezcla.
+
+Para medirlo con la misma materialidad del 1 %, cada escenario b o k se pasó por la regla de D100 ([plan](../privado/corridas/repro_s41_20261023T145808Z_c8055dfc/PLAN_PREREGISTRO.md)):
+
+- Se supone que el óptimo del público en nivel absoluto queda fijo. El óptimo relativo del ramo pasa a c*/ρ, donde ρ es el nivel de la mezcla en el escenario, y el factor es 1 + Z·(c*/ρ − 1).
+- Como Z es fija, un ramo no influye en los otros. En primera aproximación, el nivel de S41 se mueve (1 − Z)/c veces lo que el de la mezcla, con c el factor de S41: 0,84 en autos, 0,64 en edificios y 0,84 en contenidos.
+- Como control, sin escenario la regla devuelve exactamente los factores de S41, y los umbrales de la mezcla recalculados coinciden con los de arriba a cuatro decimales.
+
+| Ramo | b que mueve el nivel un 1 %, mezcla | Lo mismo con S41 | Nivel de S41 con b = 0,75 y 1,25 (mezcla) | β, intervalo al 90 % | Clase con S41 |
+| --- | --- | --- | --- | --- | --- |
+| Autos | 0,963 a 1,037 | 0,956 a 1,044 | −5,6 % y +5,7 % (−6,7 % y +6,8 %) | 0,613 a 1,106 | incertidumbre material |
+| Edificios | 0,960 a 1,040 | 0,938 a 1,062 | −4,0 % y +4,1 % (−6,2 % y +6,4 %) | 0,873 a 1,109 | incertidumbre material |
+| Contenidos | 0,910 a 1,090 | 0,893 a 1,107 | −2,3 % y +2,4 % (−2,8 % y +2,8 %) | 0,787 a 1,156 | incertidumbre material |
+
+Los márgenes se ensanchan, pero no lo bastante: en los tres ramos el intervalo de β sigue cruzando el umbral, y la reserva de caso sigue siendo incertidumbre material. Con la β puntual (0,851), el nivel de autos de S41 quedaría un 3,4 % por debajo, frente al 4,0 % de la mezcla. Por peligro largo, la reserva de lesiones corporales tendría que errar más de un 7 % para mover el nivel un 1 % (umbral de 0,930 a 1,070, β de 0,550 a 1,154), y sigue siendo material. El hundimiento queda acotado (umbral de 0,793 a 1,206, β de 0,829 a 1,202), pero por un margen que la segunda comprobación siguiente borra.
+
+Las dos comprobaciones secundarias del plan no cambian la clase de ningún ramo:
+
+- Con σ recalculada con las etiquetas de cada escenario, Z cambia poco y los umbrales se mueven como mucho 0,006; los de contenidos pasan a 0,887 y 1,111.
+- Con σ ampliada a σ/√0,67, la corrección del ruido del público que confirmó la batería de sensibilidad (L03), Z baja a 0,117, 0,262 y 0,106. Los umbrales quedan en 0,958 a 1,042, 0,945 a 1,055 y 0,898 a 1,101, y los tres ramos siguen con incertidumbre material. El hundimiento deja de estar acotado (umbral de 0,818 a 1,181).
+
+El indicio del IBNR de lesiones sigue siendo material. Con el k de S3 (0,867), el nivel de autos de S41 quedaría alto un 1,86 % (de 1,10 % a 2,61 % con el intervalo de k), frente al 2,2 % de la mezcla. El umbral de k para S41 va de 0,929 a 1,071 y el intervalo de S3 queda entero por debajo: indicio de desvío material si S3. Es coherente con lo que se ve desde el marcador: el óptimo del público en autos salió un 2,3 % por debajo de la mezcla, y S41 solo baja autos un 0,4 %. S3 sigue sin adoptarse. En edificios, el k del hundimiento (1,129) mueve el nivel un 0,3 % y queda acotado.
+
+Nada de esto acredita la suficiencia de las reservas. Dice que la entrega final depende de ellas casi tanto como la mezcla, porque la regla de S41 confía poco en el marcador; es la otra cara de su prudencia frente al ruido del público. La limitación decidida el 20 de octubre sigue igual ([resumen](../privado/corridas/repro_s41_20261023T145808Z_c8055dfc/resultados/parte2_resumen.json), [detalle](../privado/corridas/repro_s41_20261023T145808Z_c8055dfc/resultados/parte2_reservas_s41.json)).
 
 ## Qué quedó para la revisión humana y cómo se decidió
 
-La suficiencia de la reserva de caso sigue sin acreditarse y, con la materialidad del 1 %, es una incertidumbre material en los tres ramos. Los datos no muestran reservas cortas; muestran que no alcanzan para descartar errores de cuatro puntos. El IBNR de lesiones corporales tiene un indicio de sobrevaloración material bajo S3, que bajaría el nivel de autos en torno a un 2 %. La elección de S30 frente a S22 es robusta a cualquier sesgo de reservas razonable. Lo que resolvería la cuestión es una valoración posterior de los mismos siniestros con `claim_id` estable, o documentación del generador de los organizadores.
+La suficiencia de la reserva de caso sigue sin acreditarse y, con la materialidad del 1 %, es una incertidumbre material en los tres ramos, también con la regla de S41. Los datos no muestran reservas cortas; muestran que no alcanzan para descartar errores de cuatro puntos en autos o de seis en edificios. El IBNR de lesiones corporales tiene un indicio de sobrevaloración material bajo S3, que bajaría el nivel de autos de S41 en torno a un 1,9 %. Lo que resolvería la cuestión es una valoración posterior de los mismos siniestros con `claim_id` estable, o documentación del generador de los organizadores.
 
-El participante lo decidió el 20 de octubre a las 15:21 UTC: «Suficiencia de reservas: Lo dejamos así como limitación del ejercicio» ([registro](../registro/decisiones_participante_20261020.json)). La incertidumbre material de la reserva de caso queda declarada como limitación (hallazgo MOD-002 del enjambre), el supuesto S3 no se adopta y no cambian T0, la receta ni S30.
+El participante lo decidió el 20 de octubre a las 15:21 UTC: «Suficiencia de reservas: Lo dejamos así como limitación del ejercicio» ([registro](../registro/decisiones_participante_20261020.json)). La incertidumbre material de la reserva de caso queda declarada como limitación (hallazgo MOD-002 del enjambre), el supuesto S3 no se adopta y no cambian T0, la receta ni la mezcla de la que sale S41. El 23 de octubre, después de que Codex pidiera una valoración expresa para S41 (COD-VAL-20261023T1523-S41-RESERVAS), el participante mantuvo esa decisión para la entrega final ([registro](../registro/decision_reservas_S41_20261023.json)).
 
 ## Cómo repetirlo
 
@@ -93,6 +122,12 @@ python herramientas/reservas_consistencia.py privado/corridas/<corrida> resumen
 ```
 
 La corrida debe contener `PLAN_PREREGISTRO.md`; los resultados quedan en `resultados/`. La parte a admite un ramo como tercer argumento para repartir el tiempo de cálculo.
+
+La actualización para S41 usa la misma corrida de reservas y las notas de D100; tarda unos dos minutos en la nube de referencia:
+
+```text
+python herramientas/reservas_s41.py . privado/corridas/reservas_20261019T225357Z_99b45271 registro "../Semana 1/Modelos_claude_b/experimentos/predicciones_v23_v24_s30.parquet" privado/corridas/<corrida>/resultados/parte2_reservas_s41.json
+```
 
 ## Anexo: archivos y huellas
 
@@ -113,5 +148,11 @@ La corrida debe contener `PLAN_PREREGISTRO.md`; los resultados quedan en `result
 | `Semana 1/Modelos_claude_b/experimentos/predicciones_v23_v24_s30.parquet` | `afd72dca917bf593202fb94cbee9382f5e9c35ea80c8aada81a68a2053d1131e` |
 | `Semana 1/Modelos_claude/experimentos/predicciones_v23_v24_s22.parquet` | `22c816319a17e386b04d3901ac87615d3fd1e415a5b3431e55cd5bc093259d7c` |
 | `Semana 1/Modelos_claude_b/runs/S30_claude_b/resumen.json` | `c3b2b0be4fd7c0e16638f1ebd83ada2b95faf991347f3a35fd648f56d9ff5992` |
+| `privado/corridas/repro_s41_20261023T145808Z_c8055dfc/PLAN_PREREGISTRO.md` | `c8055dfc72dac0c8f2aa46b62de129ff5d53a5abd6483cfe1cc67786197181e3` |
+| `herramientas/reservas_s41.py` | `7e7fac03250ac4504b8acc7b49ebedf760e8796473bd98c86930d717d89333aa` |
+| `privado/corridas/repro_s41_20261023T145808Z_c8055dfc/resultados/parte2_reservas_s41.json` | `46a8555e180b33480cd32d5e68c6f33e9cac73629a9e11b78160bff1646b3940` |
+| `privado/corridas/repro_s41_20261023T145808Z_c8055dfc/resultados/parte2_resumen.json` | `587cebf41c570f39018d39de83dc1e68bcaec653130a0f9d92815e4a72d1e308` |
+| `registro/sonda_nivel_D100_preinscripcion.json` | `a4c0e5042585b22534455ee1465fb81244063255cb5f8b26afc8530cfebee9c7` |
+| `registro/sonda_nivel_D100_resolucion.json` | `aa9c438b425781430ce8d012e4a7d69f057ceb1a7e2d21045bf7116a355d81a7` |
 
-Controles de la etapa de datos: 160.432 aceptados con asignación única, la reserva por fila coincide con la de T0 en todas las filas (diferencia máxima 0), ningún cerrado tiene reserva y los 1.701 rechazados únicos tienen todos los importes en cero. Entorno: máquina virtual del participante, Python 3.10.12, numpy 2.2.6, pandas 2.3.3 y pyarrow 25.0.1. Una comprobación se añadió después de ver la parte A y está marcada así en `resumen.json`: el k de lesiones y de hundimiento por año de ocurrencia.
+Controles de la etapa de datos: 160.432 aceptados con asignación única, la reserva por fila coincide con la de T0 en todas las filas (diferencia máxima 0), ningún cerrado tiene reserva y los 1.701 rechazados únicos tienen todos los importes en cero. Entorno: máquina virtual del participante, Python 3.10.12, numpy 2.2.6, pandas 2.3.3 y pyarrow 25.0.1. Una comprobación se añadió después de ver la parte A y está marcada así en `resumen.json`: el k de lesiones y de hundimiento por año de ocurrencia. La actualización para S41 corrió en la nube de Claude (Python 3.13, numpy 2.5.3, pandas 3.0.5 y pyarrow 26.0.0); repetida, da el mismo resultado salvo la hora. Las versiones anteriores de este documento, que también trataban candidatos que no se eligieron, se conservan: la del 20 de octubre en Git (commit `0ade351`), la del 22 en `privado/trazabilidad/reproduccion_s43_20261023/` y la de la mañana del 23 en `privado/trazabilidad/reproduccion_s41_20261023/`.

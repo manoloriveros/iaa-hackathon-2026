@@ -1,0 +1,53 @@
+{
+  "utc_registro": "2026-10-23T16:55:20.508275+00:00",
+  "autor": "Codex",
+  "competition": "iaa-ai-assisted-hackathon-2026-part-1",
+  "fuente": "Captura de la pestaña Submissions de Kaggle aportada por el participante en este chat; lectura visual de cinco decimales. IDs vinculados con recibos históricos locales.",
+  "consulta_viva_api_exitosa": false,
+  "intento_api": "No se obtuvo respuesta: fallo de resolución DNS (gaierror); no se atribuyen estos scores a una consulta API.",
+  "captura": "privado/resultados_privados_parte1_20261023/captura_submissions.png",
+  "sha256_captura": "7169dc90c0792a1a011ccf0902e6f91f76a5f29744b8495b06bdfef2f053ddb4",
+  "scores": [
+    {
+      "modelo": "S30",
+      "kaggle_submission_id": 57371361,
+      "public_score_text": "0.12996",
+      "private_score_text": "0.13863",
+      "ventaja_S41_text": "0.00001",
+      "selected": false
+    },
+    {
+      "modelo": "S41",
+      "kaggle_submission_id": 57531719,
+      "public_score_text": "0.13016",
+      "private_score_text": "0.13864",
+      "ventaja_S41_text": "0.00000",
+      "selected": true
+    },
+    {
+      "modelo": "S42",
+      "kaggle_submission_id": 57531744,
+      "public_score_text": "0.13033",
+      "private_score_text": "0.13863",
+      "ventaja_S41_text": "0.00001",
+      "selected": false
+    },
+    {
+      "modelo": "S43",
+      "kaggle_submission_id": 57547764,
+      "public_score_text": "0.13048",
+      "private_score_text": "0.13860",
+      "ventaja_S41_text": "0.00004",
+      "selected": false
+    }
+  ],
+  "conclusion": "S41 es el mejor privado de los cuatro candidatos a la precisión mostrada: +0,00001 frente a S30 y S42 y +0,00004 frente a S43. La elección ayudó ligeramente; no explica la desventaja de 0,00059 frente al líder.",
+  "limites": [
+    "Diferencias calculadas con scores mostrados a cinco decimales; no precisión interna.",
+    "Una realización privada no valida todas las probabilidades o hipótesis de las baterías previas ni demuestra significación estadística.",
+    "El empate visible de S30/S42 no implica igualdad interna.",
+    "Sin inferencia de puestos contrafactuales de otros candidatos."
+  ],
+  "seleccion_final": "S41 visible marcada en la captura; coincide con decisión confirmada del participante.",
+  "acciones": "Registro local; sin envíos, cambios de selección, entrenamiento, publicación ni terceros."
+}

@@ -1,0 +1,141 @@
+{
+  "id": "REV-SELECCION-S22-S30-20261023",
+  "utc": "2026-10-23T17:06:05.868869+00:00",
+  "autor": "Codex",
+  "peticion_literal": "Revisa por qué descartamos S22 y elegimos S30. Quiero saber qué falló en nuestro criterio de selección y qué debemos cambiar para la segunda semana.",
+  "tipo": "revision_documental_y_aritmetica_sin_entrenamiento",
+  "informe": "docs/REVISION_SELECCION_S22_S30.md",
+  "protocolo_propuesto": "docs/semana2/PROTOCOLO_SELECCION.md",
+  "causa_decision_registrada": "D89/D99: mejor punto local y público, con incertidumbre reconocida; respaldo S22 restringido a error o reproducción y retirado al reproducir S30.",
+  "hechos_anteriores_al_privado": {
+    "S30_no_pasa_N48": true,
+    "N48_region_exacta_no_ejecutada": true,
+    "ganancias_nominales_portfolio": {
+      "V23": 0.00016158314923275796,
+      "V24": 0.00013804118709126456
+    },
+    "IC95_V24_cliente_condicional": [
+      -8.236111242738524e-05,
+      0.000369479295883567
+    ],
+    "k_inversion_V24": 6,
+    "k_inversion_V23": 1,
+    "D95_tendencia_solo_evaluable_V24": true,
+    "D95_mecanismos_adicionales": "Aproximadamente62%tendencia/34%ancla_s17/4%contenidos de la ventaja V24; atribución recibida, no reestimada.",
+    "D99_reproduccion_no_acredita_superioridad": true
+  },
+  "aritmetica_privada_cinco_decimales": {
+    "S30_menos_S22": "-0.00013",
+    "S41_menos_S30": "0.00001",
+    "S41_menos_S22": "-0.00012"
+  },
+  "fallos_concluidos": [
+    "No había una única regla operativa de promoción ante conflicto D88/N48; el ensayo se convirtió en principal sin superar el filtro de mejora clara.",
+    "La incertidumbre se declaró pero no gobernó el desempate ni la conservación del candidato de referencia.",
+    "V23/V24 y el público se usaron de manera adaptativa; bootstrap condicional y prerregistro parcial no eliminan selección previa.",
+    "El cambio de severidad modificó también el ancla de nivel y su efecto no tenía dos cortes independientes de confirmación.",
+    "Reproducción resuelta cerró el respaldo técnico S22 sin resolver el riesgo predictivo."
+  ],
+  "no_demostrado": [
+    "Causa exacta y reparto de la pérdida privada entre tendencia, nivel y pesos.",
+    "Superioridad poblacional de S22 o significación de diferencias privadas.",
+    "Que otro protocolo habría garantizado el segundo puesto o hallado S40_01 antes del cierre."
+  ],
+  "semana2": {
+    "estado": "propuesta_documentada_parametros_cuantitativos_pendientes_antes_de_candidatos",
+    "cambios": [
+      "referencia_vigente_y_regla_comun_de_promocion",
+      "desarrollo2023_y_lista_corta_congelada_antes_de_confirmacion2024",
+      "registro_de_consultas_y_seleccion_adaptativa",
+      "contraste_poblacion_nueva_sin_doble_contar_independencia",
+      "ancla_fija_y_cambios_atomicos",
+      "publico_separado_de_confirmacion",
+      "acta_final_con_todas_alternativas_vigentes"
+    ],
+    "pendientes": [
+      "delta2",
+      "intervalo_y_remuestreo",
+      "tolerancias_de_deterioro",
+      "regla_para_poblacion_nueva",
+      "presupuesto_de_aperturas2024"
+    ],
+    "folds_modificados": false,
+    "modelos_ajustados": 0,
+    "factores_semana1_transferidos": false
+  },
+  "fuentes_locales": [
+    {
+      "path_workspace_relative": "Hackaton/Semana 1/Modelos_claude_b/foro/D88_DECISIONES.md",
+      "sha256": "99f32958aff427d6c4cd9e1368ce42a4cd8de6e6a9075adaa5a80d444e71ba0a"
+    },
+    {
+      "path_workspace_relative": "Hackaton/Semana 1/Modelos_claude_b/README.md",
+      "sha256": "97727e32e97d67452bb9d5f441b8a23a1eb23dafc272be72f13014365bbdac44"
+    },
+    {
+      "path_workspace_relative": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/S30_S31_review_N48/plan.json",
+      "sha256": "3dabe3d945be10c9df95fcc73b033ec3aeda0b8568a6c539373a62f7ad0f95a9"
+    },
+    {
+      "path_workspace_relative": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/S30_S31_review_N48/S30/result.json",
+      "sha256": "ea5e1d64c8b841a432cd6f78bed0b288e45b9f5cf16028ff7b99d00590390b25"
+    },
+    {
+      "path_workspace_relative": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/verification/N56_human_authorization.md",
+      "sha256": "50cd4a408cbf965a08f39152ecdf6d20440922d929a656bd973d333515b00e68"
+    },
+    {
+      "path_workspace_relative": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/S30_trial_N56/forum_result.md",
+      "sha256": "c1af5f55b9684966a7b9a039ddfa22e9b14c43b9148a26d442f7541113dc28a6"
+    },
+    {
+      "path_workspace_relative": "Hackaton/Repositorio_IAA2026/docs/SENSIBILIDAD_S30_S22.md",
+      "sha256": "60e54b4e0566b48b5078fb52278b4c64e7958178763d939d4f575a25f8565368"
+    },
+    {
+      "path_workspace_relative": "Hackaton/Repositorio_IAA2026/privado/corridas/sens_20261019T212700Z_b9e7aa92/resultados/e01.json",
+      "sha256": "64fc5f13fe2617fb0cbe97d94e584dfe723951a7d53e5ebf0fdd68be48f9d39e"
+    },
+    {
+      "path_workspace_relative": "Hackaton/Repositorio_IAA2026/privado/corridas/sens_20261019T212700Z_b9e7aa92/resultados/e08.json",
+      "sha256": "3dc9dcd7cdbb0cc8221f4fc9f1fb0ec972d1b3ff5b75cd62fb68114766e4bf2a"
+    },
+    {
+      "path_workspace_relative": "Hackaton/Repositorio_IAA2026/registro/decision_modelo_definitivo_20261020.json",
+      "sha256": "327303451289f4a7f667e31f719c94a789ff2f1ad5507ef11889cd302a1f9686"
+    },
+    {
+      "path_workspace_relative": "Hackaton/Repositorio_IAA2026/registro/auditoria_29_envios_privados_20261023.json",
+      "sha256": "743620cfd34fc0c60f55cc64e08885c9fd938b6923a554f0398eb767fed9b96e"
+    },
+    {
+      "path_workspace_relative": "Hackaton/Repositorio_IAA2026/registro/semana2_preparacion_plan.json",
+      "sha256": "50b11fad4837d25311fc2be7d6a3436936bde73af064df2a3b6651348a617613"
+    },
+    {
+      "path_workspace_relative": "Hackaton/Repositorio_IAA2026/docs/semana2/PREPARACION_BASE.md",
+      "sha256": "d90f24aa001e796313ed488514f3c9585281737860a90eb3fbb16295bc91b5c9"
+    },
+    {
+      "path_workspace_relative": "Preparación/Antecedentes/IAA_IA/PRACTICAS_PRIORITARIAS.md",
+      "sha256": "b4d9e55cc396afc8f7ab4f501489513b6aba71c5fb0450215e4359c1ea1a3298"
+    }
+  ],
+  "fuentes_metodologicas": [
+    {
+      "url": "https://www.jmlr.org/papers/v11/cawley10a.html",
+      "titulo": "Cawley y Talbot (2010), On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation"
+    },
+    {
+      "url": "https://scikit-learn.org/stable/auto_examples/model_selection/plot_nested_cross_validation_iris.html",
+      "titulo": "Nested versus non-nested cross-validation"
+    }
+  ],
+  "practicas_IAA": [
+    "Consideraciones profesionales3.3",
+    "Gobernanza2.8,3.4-3.6",
+    "Documentacion3"
+  ],
+  "verificacion": "Lectura de fuentes primarias archivadas, contraste de flags y cifras del comparador, control de aritmética Decimal y preservación por SHA; no repetición de evaluaciones desde filas.",
+  "acciones_excluidas": "Sin entrenamiento, inferencia, bootstrap nuevo, envíos, cambio de marca, publicaciones, foro, mensajes a terceros, automatizaciones o delegación."
+}

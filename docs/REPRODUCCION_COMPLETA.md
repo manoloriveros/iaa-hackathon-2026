@@ -1,14 +1,62 @@
-# Reproducción completa de S30 y S22 con estimadores guardados
+# Reproducción completa de la entrega final, S41, desde los datos originales
 
-Claude (línea principal), 19 y 20 de octubre de 2026. Encargo del participante en esta sesión ([autorización](../registro/autorizacion_reproduccion_reservas_20261019.json)): volver a ajustar en la nube de Claude los 36 nodos de la receta desde los once originales, guardar cada estimador y repetir después la predicción desde los estimadores guardados, sin ajustar. Es una reproducción hecha por Claude en el entorno de referencia. La independencia exigiría que otra persona la repitiera en su propio entorno, y el participante decidió no hacerlo (sección «Qué decidió el participante y qué queda abierto»).
+Claude (línea principal), 19 a 23 de octubre de 2026. La entrega final de la parte 1 es S41, que el participante marcó en Kaggle el 23 de octubre (CIE-D103-20261023, [registro](../registro/decision_marca_final_S41_20261023.json)). Este documento explica en qué consiste, con qué hipótesis se construyó y por qué es adecuada. También muestra que se puede rehacer desde los once Parquet originales de dos maneras: reajustando todo y repitiendo la predicción sin ajustar nada. La reproducción la hizo Claude en el entorno de referencia ([autorización](../registro/autorizacion_reproduccion_reservas_20261019.json)). La independencia exigiría que otra persona la repitiera en su propio entorno, y el participante decidió no hacerlo (sección «Qué decidió el participante y qué queda abierto»).
 
-El reajuste completo, de los once Parquet originales a los dos CSV, devolvió S30 y S22 con el SHA-256 entregado. De las 181 huellas que la receta verifica nodo a nodo coinciden 162. Las otras 19 difieren en los últimos bits, con una diferencia relativa máxima de 3,9e-15, y todas salen de los cinco nodos frecsev2 o de nodos que leen sus salidas. La causa está identificada: LightGBM elige cronometrando entre dos maneras de construir sus histogramas, y las dos suman en distinto orden. La réplica desde los estimadores guardados, con un centinela que hace fallar cualquier entrenamiento, cargó exactamente los 436 estimadores, no ajustó nada y repitió bit a bit las 194 salidas declaradas de la corrida y los dos CSV en 34 minutos.
+S41 se obtiene en dos pasos. El primero es la receta de 36 nodos que produce la Mezcla por peligro (S30 en el código): datos, variables, diez componentes y la mezcla. El reajuste completo, de los originales al CSV, devolvió el SHA-256 registrado. De las 181 huellas que la receta verifica nodo a nodo coinciden 162; las otras 19 difieren en los últimos bits, como mucho 3,9e-15 relativo, por una elección interna de LightGBM que explica la sección «El reajuste completo». La réplica desde los 436 estimadores guardados, con un centinela que hace fallar cualquier entrenamiento, no ajustó nada y repitió bit a bit todas sus salidas en 34 minutos. El segundo paso multiplica las predicciones de cada ramo por un factor fijo. Repetido con el script registrado sobre los productos de las dos corridas, da S41 con su SHA-256 y las notas de sus parámetros iguales salvo en el último bit.
+
+## Qué es S41, con qué hipótesis y por qué es adecuada
+
+### En qué consiste
+
+S41 es la Mezcla por peligro con el nivel de 2025 de cada ramo ajustado por un factor fijo: 0,9962 en autos, 1,0260 en edificios y 1,0126 en contenidos. En total prevé 213,7 millones de CU para los 626.639 periodos de 2025: 118,5 millones en autos, 76,3 en edificios y 18,9 en contenidos.
+
+La Mezcla por peligro predice el coste último de cada periodo. En cada ramo combina modelos del coste total con distribución Tweedie (LightGBM y CatBoost) con modelos de frecuencia por peligro multiplicada por la severidad. Aprende del coste observado al cierre de 2024 con una exposición efectiva que descuenta lo que aún falta por reportar, de modo que el IBNR entra una sola vez. Fija el nivel de 2025 con el factor de año siguiente, f = Σ(y/√μ)/Σ√μ, promediado entre los cortes de 2023 y 2024. La cadena completa, de los datos a la predicción, está en [`MODELO_FINAL_S41.md`](MODELO_FINAL_S41.md); los componentes, los pesos y su evaluación, en el informe (`docs/entrega/`) y en [`GUIA_TECNICA.md`](GUIA_TECNICA.md).
+
+El factor de nivel sale de una regla escrita el 22 de octubre, antes de mirar ningún resultado (D100, [preinscripción](../registro/sonda_nivel_D100_preinscripcion.json)). Tiene dos partes:
+
+1. Seis envíos de sonda permiten despejar en cada ramo el factor que prefiere el tablero público, c*. Cada sonda es la mezcla con un solo ramo multiplicado por 0,90 o por 1,10. Para la desviación Tweedie de potencia 1,5, el D² del público en función de un factor c aplicado a un ramo tiene forma cerrada, con dos incógnitas por ramo: D²(c) − D²(1) = −4·[S₁·(c^−½ − 1) + S₂·(c^½ − 1)]/N, con S₁ = Σ y/√μ y S₂ = Σ √μ sobre las filas públicas del ramo y N la desviación nula del público. Las dos sondas de un ramo y la puntuación de la mezcla bastan para despejar S₁/N y S₂/N, y el óptimo es c* = S₁/S₂. Las sondas eran diagnósticas y la regla las excluía de la selección.
+2. El factor c* lleva el ruido de un tercio de las filas, así que solo se aplica su parte creíble: c = 1 + Z·(c* − 1), con Z = τ²/(τ² + σ²). La τ es cuánto se esperaba, sin mirar el tablero, que el nivel de 2025 se apartara del de la mezcla: 1,5 % en autos y en contenidos y 3,5 % en edificios. En edificios es la mitad de la distancia entre los factores de 2023 y 2024; en los otros dos ramos esa media distancia se amplió con lo que D95 encontró sobre el IBNR y las recuperaciones. La σ es el ruido del óptimo de una submuestra del 33 %, medido con 300 submuestras de 2024.
+
+| Ramo | Público con ×0,90 / ×1,10 | c*, óptimo del público | σ | τ | Z | Factor de S41 |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| Autos | 0,12954 / 0,12906 | 0,9774 | 3,37 % | 1,5 % | 0,166 | 0,9962 |
+| Edificios | 0,12873 / 0,13018 | 1,0751 | 4,81 % | 3,5 % | 0,346 | 1,0260 |
+| Contenidos | 0,12929 / 0,13011 | 1,0840 | 3,57 % | 1,5 % | 0,150 | 1,0126 |
+
+Con la mezcla en 0,12996, la forma cerrada predijo para S41 un público de 0,13015759, y Kaggle devolvió 0,13016 (envío 57531719; [resolución](../registro/sonda_nivel_D100_resolucion.json)).
+
+Dentro de cada ramo S41 es la mezcla multiplicada por su factor. El orden de los riesgos, las relatividades entre pólizas y la forma de la tasa son los de la mezcla. Por eso lo que miden 2023 y 2024 sobre el orden y las relatividades vale igual para S41: el factor solo actúa sobre el nivel de 2025.
+
+### Con qué hipótesis
+
+- El tablero calcula el D² Tweedie de potencia 1,5 fila a fila y suma los ramos sin interacción. Esto es lo que permite despejar c* con dos sondas por ramo. El acierto al quinto decimal lo respalda, aunque no identifica el evaluador de forma única (COD-IA-20261022T172751Z).
+- El público es una submuestra de un tercio de las filas sin relación con el riesgo, y el ruido de su óptimo se parece al que se mide en 2024. La batería de sensibilidad posterior (L03 de [`SENSIBILIDAD_S43.md`](SENSIBILIDAD_S43.md)) mostró que, frente al 67 % que no se ve, la varianza de ese ruido es 1/0,67 veces la que usó la regla. Con el ruido corregido, σ/√0,67, Z habría sido 0,117, 0,262 y 0,106, y los factores 0,9973, 1,0197 y 1,0089, más cerca aún de la mezcla.
+- El error de nivel de 2025 es común a todas las pólizas de un ramo. El orden y las relatividades aprendidos en 2021-2024 siguen valiendo en 2025.
+- La previa τ es razonable. Es una elección de juicio, fijada antes de mirar.
+- Valen las hipótesis de la propia mezcla: el coste observado al 31 de diciembre de 2024 como base, con el IBNR estimado por chain-ladder; las reservas de caso a su valor contable; y la disponibilidad de las variables al cotizar. Su sensibilidad a las reservas está en [`RESERVAS_ACOTACION.md`](RESERVAS_ACOTACION.md).
+
+### Por qué es adecuada
+
+Sale sin cambios de la regla escrita antes de mirar: los tres factores no se retocaron después de ver ninguna puntuación. Del tablero toma lo mínimo, tres parámetros de nivel y solo una fracción de su óptimo (Z de 0,15 a 0,35). Lo demás es la mezcla, evaluada en los cortes temporales de 2023 y 2024; esos cortes también sirvieron para elegir sus pesos y su forma, así que no son una validación independiente.
+
+La batería de sensibilidad posterior ([`SENSIBILIDAD_S43.md`](SENSIBILIDAD_S43.md), N05) estimó, con el ruido corregido, la ganancia esperada de S41 en el privado frente a la mezcla. Es positiva bajo los tres pares de previas que probó: +0,000019 con la previa de la propia regla de D100, +0,000062 con Bayes empírico corregido y +0,000083 con previas que no usan el tablero. Con la previa de D100, su desviación típica es 0,000118.
+
+Fuera del tablero hay tres señales sobre hacia dónde debería moverse el nivel de 2025: el factor del último año, los efectos de etiqueta que midió D95 y la siniestralidad de 2024 (L05 de la misma batería). En hogar, S41 sube el nivel en el sentido de al menos dos de ellas y sin pasarse de su tamaño: con la regla de L05, aplicada a S41 sin preinscribir, edificios y contenidos quedan apoyados. En autos solo la señal de D95 acompaña la bajada de S41 (−0,38 %) y el ramo queda parcial; la bajada es pequeña porque la regla confía poco en el marcador. La señal de siniestralidad usa la prima escrita, cuya periodicidad el diccionario no confirma (DATA-006); sin ella, edificios quedaría parcial.
+
+Por último, se reproduce desde los datos originales por dos caminos, como muestra este documento.
+
+### Con qué límites
+
+- La ventaja esperada es pequeña frente al ruido, y nada garantiza el resultado en el privado.
+- S41 toma de la mezcla la mayor parte de su nivel, así que hereda su sensibilidad a las reservas. La reserva de caso es una incertidumbre material en los tres ramos. Bajo el supuesto S3 sobre el IBNR de lesiones, el nivel de autos quedaría alto en torno a un 1,9 % ([`RESERVAS_ACOTACION.md`](RESERVAS_ACOTACION.md), «Qué cambia con S41»).
+- El tablero público, calculado con un tercio de las etiquetas de 2025, entra en tres parámetros a través de siete puntuaciones. Por eso el público de S41 es optimista por construcción.
+- Ninguna persona ha revisado todavía la reproducción ni la batería de sensibilidad; las dos son trabajo de IA.
 
 ## Qué faltaba
 
 Hasta el 19 de octubre la cadena tenía dos huecos. La reconstrucción lanzada la noche del 18 se perdió con su contenedor sin dejar recibos por nodo, y ningún script de la receta guardaba el modelo que ajustaba, así que no había forma de predecir sin volver a ajustar ([CLA-20261019-004](RESPUESTA_CLAUDE_REPRODUCCION_RESERVAS.md), COD-20261019-114). Con los archivos de ese momento solo se podía repetir la mezcla final a partir de los componentes guardados.
 
-Este encargo cubre las dos cosas con dos recorridos. El primero va de los once Parquet originales a los dos CSV entregados, reajustando todo, con recibo por nodo y con cada estimador guardado al terminar de ajustarse. El segundo repite el mismo camino sin ajustar nada: cada ajuste se sustituye por la carga del estimador guardado, y si alguno falta o sus entradas no son las mismas, se detiene.
+Este encargo cubre las dos cosas con dos recorridos. El primero va de los once Parquet originales a los dos CSV de la receta, reajustando todo, con recibo por nodo y con cada estimador guardado al terminar de ajustarse. El segundo repite el mismo camino sin ajustar nada: cada ajuste se sustituye por la carga del estimador guardado, y si alguno falta o sus entradas no son las mismas, se detiene.
 
 ## Cómo se guardan los estimadores sin tocar la receta
 
@@ -33,7 +81,7 @@ La captura sustituye los ajustes que conoce, pero un entrenamiento que no pasara
 
 La corrida `repro_20261019T223638Z_d00a39dd` ejecutó `reproducir.py` 1.2 sin cambios, primero en modo `datos` desde los once originales y las tres decisiones congeladas y después en modo `componentes` con `--continuar-si-difiere`, con la captura en modo guardar. La etapa de datos (capa preparada, bases actuariales y F0) terminó conforme en dos minutos y dieciséis segundos. Los 36 nodos sumaron 10,6 horas de cómputo registrado entre las 22:48 UTC del 19 y las 11:06 UTC del 20. El entorno fue el de referencia (Ubuntu 24.04, Python 3.13.16, las versiones de [`entorno/entorno_referencia.json`](../entorno/entorno_referencia.json), dos núcleos), aunque en otra instancia de la nube: la de esta sesión es un Xeon a 2,80 GHz y los componentes se entrenaron en su día en uno de 2,10 GHz.
 
-Los dos CSV finales salieron con el SHA-256 entregado, S30 `fd9528e0…3bc5` y S22 `c21a02e1…41b0`. Por tipo de nodo, las 181 huellas verificadas quedaron así:
+Los dos CSV de la receta salieron con el SHA-256 registrado: el de la mezcla, S30 `fd9528e0…3bc5`, y el de S22, `c21a02e1…41b0`. S22 es una mezcla anterior que la receta conserva como registro histórico: no forma parte de la entrega y se reproduce porque sale de la misma cadena. Por tipo de nodo, las 181 huellas verificadas quedaron así:
 
 | Tipo | Nodos | Huellas verificadas | Iguales en contenido |
 | --- | ---: | ---: | ---: |
@@ -93,15 +141,46 @@ La réplica corrió `reproducir_capturado.py reproducir` desde los once original
 
 Frente a las huellas históricas la réplica da lo mismo que el reajuste, 26 nodos iguales y los mismos 10 con las mismas 19 diferencias, como corresponde a estimadores que son los de esa corrida; `reproducir.py` vuelve a terminar con código 3 por ellas. Los paquetes guardados en el equipo del participante montan exactamente lo mismo: en la máquina virtual local salen los mismos 443 archivos de estimador (los 436 y los 7 duplicados que no se cargan) y los mismos 886 archivos, fuera de los registros de eventos, que en el montaje de la nube ([verificación](../privado/corridas/repro_20261019T223638Z_d00a39dd/replica/verificacion_montaje_dispositivo.json)).
 
+## S41: el paso de nivel desde el reajuste
+
+Reproducir el paso de nivel exige tres insumos:
+
+- el CSV de la mezcla, que el reajuste ya devolvió con su SHA registrado;
+- las seis puntuaciones públicas de las sondas, que son hechos de Kaggle con recibo ([recibos](../registro/sonda_nivel_D100_recibos.json)) y se usan tal como se registraron;
+- las predicciones de 2024 de la mezcla, `predicciones_v23_v24_s30.parquet`, de donde sale el ruido σ.
+
+Ese archivo no es salida de la receta y había que regenerarlo. Lo hizo la corrida `repro_s42_20261022T170245Z_c9ea2fc3`, preinscrita el 22 de octubre, que repitió todo el paso de nivel ([plan](../privado/corridas/repro_s42_20261022T170245Z_c9ea2fc3/PLAN_PREREGISTRO.md)).
+
+Las predicciones de 2024 se regeneraron con `exportar_predicciones.py`, lanzado como en la línea B (`ejecutar_b.py`, con la regla de nivel s17 extendida), en dos carpetas de trabajo: la del reajuste completo y la de la réplica congelada. Los dos archivos salen idénticos byte a byte. Frente al histórico tienen las mismas 939.705 filas en el mismo orden y la etiqueta T0 y la reserva de caso idénticas. Hay 22.944 predicciones con diferencias en el último bit (22.912 de contenidos y 32 de edificios, en 2024; como máximo 7,9e-16 relativo), herencia de las 19 diferencias de LightGBM descritas arriba.
+
+Después `sonda_nivel.py`, sin cambios, corrió en tres raíces mínimas con las puntuaciones registradas: con el archivo histórico como control, con el regenerado del reajuste y con el de la réplica. Lo que corresponde a S41 se extrajo en la corrida `repro_s41_20261023T145808Z_c8055dfc`, sin correr nada nuevo ([plan](../privado/corridas/repro_s41_20261023T145808Z_c8055dfc/PLAN_PREREGISTRO.md), [resultado](../privado/corridas/repro_s41_20261023T145808Z_c8055dfc/resultados/parte1_s41.json)).
+
+| Corrida | Predicciones de 2024 | S41 con su SHA | Campos numéricos idénticos en las dos notas de D100 | Diferencia relativa máxima |
+| --- | --- | --- | ---: | ---: |
+| Control | históricas | sí | 125 de 142 | 2,1e-13 |
+| Reajuste | regeneradas | sí | 118 de 142 | 6,3e-13 |
+| Réplica congelada | regeneradas | sí | 118 de 142 | 6,3e-13 |
+
+En el control los tres factores de S41 coinciden bit a bit. Con las predicciones regeneradas, el de contenidos difiere en la última cifra binaria (2,2e-16 relativo), sin que cambie ningún valor del CSV. Lo demás que difiere son cantidades que salen del bootstrap y de la forma cerrada (σ, Z, el público esperado y las ganancias esperadas); las mayores diferencias relativas están en las ganancias, que son restas entre números muy próximos. Con el criterio preinscrito, las tres corridas quedan como «reproducido con diferencias de último bit». Una hipótesis no se cumplió: con el archivo histórico, el control tampoco repite σ y Z bit a bit. Eso apunta al entorno numérico, es decir, a la versión o al procesador por el orden de las sumas, y no a los datos.
+
+También se comprobó la herencia:
+
+- Dentro de cada ramo, S41 es la mezcla por su factor, con una diferencia máxima de 5e-7 CU por fila, que es el redondeo a seis decimales del CSV.
+- El orden de los periodos por coste predicho es idéntico y no aparecen empates nuevos.
+- Por tasa por año expuesto solo se invierten pares cuyas tasas en la mezcla difieren menos que una unidad de redondeo.
+- Los totales por ramo coinciden con los de la resolución.
+
 ## Qué decidió el participante y qué queda abierto
+
+El 23 de octubre, antes del cierre, el participante marcó S41 en Kaggle como entrega final (CIE-D103-20261023, [registro](../registro/decision_marca_final_S41_20261023.json)). Lo hizo después del aviso de la batería de sensibilidad, cuya regla de alarma, fijada antes de calcular, se cumplió a favor de S41 ([`SENSIBILIDAD_S43.md`](SENSIBILIDAD_S43.md), N05). Las decisiones del 20 de octubre sobre esta reproducción no cambian.
 
 El 20 de octubre a las 15:21 UTC el participante resolvió los cuatro puntos que esta reproducción dejaba en sus manos ([registro](../registro/decisiones_participante_20261020.json)).
 
 La independencia no se va a acreditar: no habrá una repetición por otro operador con el kit de la sección siguiente. La reproducción queda como hecha por Claude en la nube de Claude, y así se declara; corresponde al hallazgo GOV-003 del enjambre. El kit se conserva por si esa decisión cambia.
 
-Tampoco se exige que un reajuste futuro coincida bit a bit. La receta no tiene un error: LightGBM elige un modo de cálculo según un cronómetro y la receta no lo fija. Fijar `force_row_wise=True` quitaría esa dependencia, pero en la parte 1 sería un cambio de receta posterior a la entrega: habría que regenerar huellas y volver a correr unas once horas, y la receta dejaría de ser el código que produjo el S30 entregado. Como las diferencias no pasan de 3,9e-15 relativo y desaparecen en el CSV, coincido con el participante en que no compensa. Para la parte 2, donde no hay huellas históricas que conservar, propongo fijar el modo desde el primer modelo LightGBM; está pendiente de que el participante lo confirme.
+Tampoco se exige que un reajuste futuro coincida bit a bit. La receta no tiene un error: LightGBM elige un modo de cálculo según un cronómetro y la receta no lo fija. Fijar `force_row_wise=True` quitaría esa dependencia, pero en la parte 1 sería un cambio de receta posterior a la entrega: habría que regenerar huellas y volver a correr unas once horas, y la receta dejaría de ser el código que produjo la mezcla de la que sale S41. Como las diferencias no pasan de 3,9e-15 relativo y desaparecen en el CSV, coincido con el participante en que no compensa. Para la parte 2, donde no hay huellas históricas que conservar, propongo fijar el modo desde el primer modelo LightGBM; está pendiente de que el participante lo confirme.
 
-La suficiencia de reservas queda como limitación del ejercicio, que es el hallazgo MOD-002: sigue valiendo la acotación de [`RESERVAS_ACOTACION.md`](RESERVAS_ACOTACION.md), con incertidumbre material en los tres ramos y el supuesto S3 sin adoptar.
+La suficiencia de reservas queda como limitación del ejercicio, que es el hallazgo MOD-002: sigue valiendo la acotación de [`RESERVAS_ACOTACION.md`](RESERVAS_ACOTACION.md), con incertidumbre material en los tres ramos y el supuesto S3 sin adoptar. El 23 de octubre, después de que Codex pidiera una valoración expresa para S41 (COD-VAL-20261023T1523-S41-RESERVAS), el participante mantuvo esa decisión para la entrega final ([registro](../registro/decision_reservas_S41_20261023.json)).
 
 GOV-008 quedó aceptado en el alcance de la corrección técnica de la captura 1.1.2, que Codex había comprobado en COD-VAL-20261020T0642-GOB. El recorrido afectado es la réplica de este documento, con sus 436 cargas por clave exacta ([decisión](../registro/decision_GOV008_20261020.json)).
 
@@ -135,6 +214,21 @@ python herramientas/comprobar_replay.py --trabajo=<carpeta de la réplica> --cap
 
 Para que cuente como independiente, quien la haga debería devolver `recibo_reproducir_capturado.json`, `registro.jsonl` y, en la réplica, la salida de `comprobar_replay.py`, con su sistema operativo, procesador y versiones.
 
+El paso de nivel de S41 se repite después de cualquiera de los dos recorridos, con la carpeta de trabajo que dejó. Primero las predicciones de 2024, en una copia de esa carpeta porque la orden escribe en `work/` (en la nube se usaron enlaces y una copia de `nivel_inestable_b.json`):
+
+```
+HAKATON_SEMANA1="<trabajo>/proyecto/Hackaton/Semana 1" MODELOS_WORK=<copia>/work MODELOS_CLAUDE=src/modelos PYTHONHASHSEED=0 python "<Semana 1>/Modelos_claude_b/ejecutar_b.py" exportar_predicciones s30 "S30=receta/especificaciones/spec_s30.json@motor:1.09:0.95,contents:1:0.95@s17"
+```
+
+Después se arma una raíz mínima con `RUTAS_PROYECTO.json`, una copia de `herramientas/sonda_nivel.py` en `Hackaton/Repositorio_IAA2026/herramientas/`, los tres `test_*.parquet` en `Hackaton/Semana 1/Datos/`, el CSV de S30 en `Hackaton/Semana 1/Envios/archivos/` y el parquet regenerado en `Hackaton/Semana 1/Modelos_claude_b/experimentos/`. El script se copia y no se enlaza, porque localiza la raíz subiendo desde su propia ruta:
+
+```
+python <raíz>/Hackaton/Repositorio_IAA2026/herramientas/sonda_nivel.py generar
+python <raíz>/Hackaton/Repositorio_IAA2026/herramientas/sonda_nivel.py resolver --s30 0.12996 --motor 0.12954 0.12906 --buildings 0.12873 0.13018 --contents 0.12929 0.13011
+```
+
+`resolver` escribe `S41_nivel_credibilidad.csv` en `Hackaton/Semana 1/Envios/archivos/` de la raíz mínima, y su nota en `Hackaton/Semana 1/Envios/`. Los comparadores con el registro (`comparar_parquet.py` y `comparar_notas.py`) y las órdenes usadas en la nube (`regenerar.sh` y `montar_y_correr_sondas.sh`, cuya última orden, `revisar`, no interviene en S41) están en `scripts/` de la corrida `privado/corridas/repro_s42_20261022T170245Z_c9ea2fc3/`. La extracción de lo que corresponde a S41 (`parte1_s41.py`) está en `scripts/` de `privado/corridas/repro_s41_20261023T145808Z_c8055dfc/`.
+
 ## Archivos y huellas
 
 | Archivo | SHA-256 |
@@ -148,5 +242,15 @@ Para que cuente como independiente, quien la haga debería devolver `recibo_repr
 | `herramientas/inventario_estimadores.py` | `8b525789…2f2d` |
 | `herramientas/probar_centinela.py` | `de58f0be…49a9` |
 | `privado/corridas/repro_20261019T223638Z_d00a39dd/evidencia_20261020.tar.gz` (198 archivos, con manifiesto) | `05b2f22f…e663` |
+| `herramientas/sonda_nivel.py` (sin cambios) | `d6cfe805…a7a7` |
+| `Semana 1/Modelos_claude_b/ejecutar_b.py` (sin cambios) | `e70f5a08…c893` |
+| `src/modelos/exportar_predicciones.py` (sin cambios) | `3f758d6d…262d` |
+| `privado/corridas/repro_s42_20261022T170245Z_c9ea2fc3/PLAN_PREREGISTRO.md` | `c9ea2fc3…13ff` |
+| `…/regenerado/predicciones_v23_v24_s30.parquet` (reajuste y réplica) | `4e80bde3…3d80` |
+| `…/corrida_s42_c9ea2fc3.tar.gz` (41 archivos, con manifiesto) | `b7721c7d…30e8` |
+| `privado/corridas/repro_s41_20261023T145808Z_c8055dfc/PLAN_PREREGISTRO.md` | `c8055dfc…81e3` |
+| `…/corrida_s41_c8055dfc.tar.gz` (6 archivos, con manifiesto) | `73397bc9…547d` |
+| `registro/sonda_nivel_D100_preinscripcion.json` | `a4c0e504…e9c7` |
+| `registro/sonda_nivel_D100_resolucion.json` | `aa9c438b…81a7` |
 
-En la carpeta de la corrida, fuera de Git, están además los 36 paquetes por nodo con sus manifiestos (`nodos/`), los 12 de estimadores reindexados con su informe (`reindexado/`), la réplica (`replica/`), la medida de las diferencias (`diferencias/`), el diagnóstico de LightGBM (`diagnostico_lightgbm/`), las pruebas de la captura y del centinela (`pruebas_captura/`), el registro completo de la corrida principal y su resumen por nodo. El recibo con todas las huellas es [`registro/recibo_reproduccion_completa_20261020.json`](../registro/recibo_reproduccion_completa_20261020.json); se refiere a la versión de este documento anterior a las decisiones del participante (SHA `fa0c2a8a…cc11`). Las decisiones están en [`registro/decisiones_participante_20261020.json`](../registro/decisiones_participante_20261020.json) y [`registro/decision_GOV008_20261020.json`](../registro/decision_GOV008_20261020.json), con el evento original en `privado/decisiones_participante_20261020/`.
+En la carpeta de la corrida, fuera de Git, están además los 36 paquetes por nodo con sus manifiestos (`nodos/`), los 12 de estimadores reindexados con su informe (`reindexado/`), la réplica (`replica/`), la medida de las diferencias (`diferencias/`), el diagnóstico de LightGBM (`diagnostico_lightgbm/`), las pruebas de la captura y del centinela (`pruebas_captura/`), el registro completo de la corrida principal y su resumen por nodo. El recibo con todas las huellas es [`registro/recibo_reproduccion_completa_20261020.json`](../registro/recibo_reproduccion_completa_20261020.json); se refiere a la versión de este documento anterior a las decisiones del participante (SHA `fa0c2a8a…cc11`). Las decisiones están en [`registro/decisiones_participante_20261020.json`](../registro/decisiones_participante_20261020.json) y [`registro/decision_GOV008_20261020.json`](../registro/decision_GOV008_20261020.json), con el evento original en `privado/decisiones_participante_20261020/`. La reproducción del paso de nivel de S41 tiene su recibo, [`registro/recibo_reproduccion_s41_20261023.json`](../registro/recibo_reproduccion_s41_20261023.json). Este documento se reescribió el 23 de octubre en torno a la entrega final. Sus versiones anteriores, que también trataban candidatos que no se eligieron, se conservan: la del 20 de octubre en Git (commit `0ade351`), la del 22 en `privado/trazabilidad/reproduccion_s43_20261023/` y la de la mañana del 23 en `privado/trazabilidad/reproduccion_s41_20261023/`. Los recibos `registro/recibo_reproduccion_s42_20261022.json` y `registro/recibo_reproduccion_s43_20261023.json` registran sus huellas.

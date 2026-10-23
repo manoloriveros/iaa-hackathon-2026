@@ -1,0 +1,118 @@
+{
+ "id": "CIE-D103-20261023",
+ "tipo": "cierre de D103: decisión del participante sobre la marca final de la parte 1 tras la regla de alarma de sens43",
+ "utc": "2026-10-23T14:51:25+00:00",
+ "hora_bogota": "09:51",
+ "path_base": "workspace_root",
+ "autor_registro": "Claude (Cowork, sesión de la batería de sensibilidad)",
+ "decision_humana": {
+  "participante": "Manuel Rodríguez",
+  "pregunta_previa_literal": "si te entiendo bien tu recomendación es que mejor nos quedemos con S41?",
+  "mensaje_literal": "acepto tu recomendación, me parece consistente",
+  "recomendacion_aceptada": "Marcar S41 en lugar de S43 por robustez, no por una ganancia segura: con el ruido corregido S41 tiene más esperanza en el privado bajo los tres pares de previas, no queda por debajo de S30 bajo ninguno, tiene menos de la mitad de la dispersión, y la forma de autos de S43 no tiene apoyo fuera del marcador",
+  "hora_aproximada_bogota": "09:45 a 09:49 del 23 de octubre de 2026"
+ },
+ "accion_kaggle": {
+  "autor": "participante, en la interfaz web de Kaggle; Claude no accede a Kaggle",
+  "marcada": {
+   "archivo_kaggle": "S41_riesgo_ultimo.csv",
+   "kaggle_submission_id": 57531719,
+   "public_score_text": "0.13016"
+  },
+  "retirada": {
+   "archivo_kaggle": "S43_riesgo_ultimo.csv",
+   "kaggle_submission_id": 57547764,
+   "public_score_text": "0.13048"
+  },
+  "limite_de_seleccion": "una predicción por parte (Hackaton/REGLAS_2026.md; la página muestra «Select up to 1 submissions» y el contador 1/1)",
+  "S43_sin_marca_confirmado": true,
+  "capturas": [
+   {
+    "ruta": "Hackaton/Repositorio_IAA2026/privado/seleccion_S41_20261023/seleccion_final_S41_captura_participante_20261023.png",
+    "muestra": "S41_riesgo_ultimo.csv (0.13016) con marca; S42 (0.13033), S50-01 (0.13050) y S50-02 (0.12957) sin marca",
+    "sha256_original": "eab9a8e553bb3699fc7b88a04f35b9fb946b441200a5971c318c003cccce9c46",
+    "sha256_en_equipo": "494d23cb95224fdc54d10cc0cd18acaf28a4904d0cae6188703bed12f5ad8315"
+   },
+   {
+    "ruta": "Hackaton/Repositorio_IAA2026/privado/seleccion_S41_20261023/S43_sin_marca_contador_1de1_captura_participante_20261023.png",
+    "muestra": "cabecera «Select up to 1 submissions» con el contador 1/1; S43_riesgo_ultimo.csv (0.13048) y S50-03 a S50-06 sin marca",
+    "sha256_original": "7beb8014bdedb031a9f86f60764ed06aaa89d7546c3ba962b837998767bddf9b",
+    "sha256_en_equipo": "cffc95db05c9ba8b3dc40dabbbd9c8539a0623485c71081db56eaf60a2c0911d"
+   }
+  ],
+  "nota_capturas": "Las copias en el equipo llevan un bloque caBX (C2PA) que añade la entrega de archivos de Claude; sin ese bloque coinciden byte a byte con el original"
+ },
+ "entrega_final_parte1": {
+  "id": "S41_nivel_credibilidad",
+  "archivo": "Hackaton/Semana 1/Envios/archivos/S41_nivel_credibilidad.csv",
+  "copia_enviada": "Hackaton/Repositorio_IAA2026/privado/envios_S41_S42_20261022/S41_riesgo_ultimo.csv",
+  "sha256": "d8661c2874e9112bd3dd62ea4470a465ee309832dee53fd9dcaa4144dac643a5",
+  "sha256_comprobado_en": "2026-10-23T14:51:25+00:00",
+  "kaggle_submission_id": 57531719,
+  "public_score": 0.13016,
+  "descripcion": "Mezcla por peligro (S30) con el nivel por ramo 0,9962 / 1,0260 / 1,0126 de la regla de D100 fijada antes de puntuar las sondas (Z 0,166 / 0,346 / 0,150); sin la revisión de D101 ni la forma de D102",
+  "total_CU": 213685158.19
+ },
+ "sustituye_a": {
+  "id": "S43_forma_credibilidad",
+  "kaggle_submission_id": 57547764,
+  "public_score": 0.13048,
+  "sha256": "a8010a6917e213dc65f4855142c7db850ed575a2b5a80135f68862caaee5e4b5",
+  "cierre": "CIE-D102"
+ },
+ "fundamento": {
+  "decision": "D103",
+  "plan_preinscrito": "Hackaton/Repositorio_IAA2026/privado/corridas/sens43_20261023T035154Z_aece6462/PLAN_PREREGISTRO.md",
+  "plan_sha256": "aece6462d2d0c799c46d4297ba74c555100b4c459d65c3da5470c83727751a44",
+  "informe": "Hackaton/Repositorio_IAA2026/docs/SENSIBILIDAD_S43.md",
+  "informe_sha256": "912e906d4982c63aded9347c2835353b615f9739acd19aa43d07cef2f21820d3",
+  "regla_de_alarma": "N03 confirma la corrección del ruido; un candidato ya enviado supera a S43 en esperanza bajo al menos dos de los tres pares de previas, con media de la diferencia >= 0,00003 y sin perder frente a S30 bajo ninguno; si se cumple, se avisa y se recomienda valorar la marca",
+  "S41_menos_S43": {
+   "reglas_D100_D102": 4.2e-05,
+   "bayes_empirico_corregido": 4.9e-05,
+   "previas_sin_marcador": 2.2e-05,
+   "media": 3.76e-05
+  },
+  "esperanza_frente_a_S30": {
+   "S41": {
+    "reglas_D100_D102": 1.9e-05,
+    "bayes_empirico_corregido": 6.2e-05,
+    "previas_sin_marcador": 8.3e-05
+   },
+   "S43": {
+    "reglas_D100_D102": -2.3e-05,
+    "bayes_empirico_corregido": 1.4e-05,
+    "previas_sin_marcador": 6.1e-05
+   }
+  },
+  "desviacion_tipica_reglas_D100_D102": {
+   "S41": 0.000118,
+   "S43": 0.000267
+  },
+  "P_S43_mejor_que_S41": {
+   "reglas_D100_D102": 0.41,
+   "bayes_empirico_corregido": 0.39,
+   "previas_sin_marcador": 0.45
+  },
+  "sin_corregir_el_ruido": "S43 por delante de S41 en 0,0000128 (no cumple la alarma)"
+ },
+ "limites": [
+  "La ventaja esperada es pequeña frente a su dispersión; S43 gana a S41 en el privado con probabilidad 0,39 a 0,45",
+  "El veredicto depende de la corrección del ruido (L03, N03); el ruido se mide en 2024 como sustituto de 2025",
+  "Las previas son una muestra de las razonables y la media de los tres pares es una convención fijada en el plan",
+  "El tablero público no cambia con la marca: muestra la mejor puntuación de todos los envíos",
+  "Trabajo de IA; sin revisión humana independiente de la batería"
+ ],
+ "no_cambia": "receta de S30, T0 y los CSV S41, S42 y S43; sin envíos nuevos (quedan tres intentos sin usar)",
+ "registros": [
+  "Preparación/DECISIONES.md (CIE-D103-20261023)",
+  "Hackaton/Semana 1/Envios/registro_envios.json (S41 selected_final verdadero; S43 falso)",
+  "Preparación/ESTADO_PROYECTO.json (seleccion_final_CIE_D103_20261023)",
+  "foros/FORO.md (CLA-20261023-002)"
+ ],
+ "pendientes": [
+  "docs/entrega/: la entrega final pasa a S41 (sesión de entregables, CLA-20261022-012, avisada en el foro)",
+  "registro/estado_entrega.json por la herramienta habitual",
+  "docs/SENSIBILIDAD_S43.md conserva su estado de las 04:17 UTC porque está ligado a su plantilla y a su verificador; la decisión se lee en CIE-D103"
+ ]
+}

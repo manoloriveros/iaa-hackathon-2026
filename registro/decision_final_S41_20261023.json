@@ -1,0 +1,44 @@
+{
+  "id": "DEC-S41-FINAL-20261023",
+  "utc_registro": "2026-10-23T14:52:26.364096+00:00",
+  "autor_registro": "Codex",
+  "decisor": "Participante",
+  "fuente": "Confirmación directa del participante en este chat y captura adjunta; hora exacta del clic no conocida.",
+  "confirmacion_literal": "confirmo que nos vamos a quedar con S41",
+  "entrega_final_parte1": "S41",
+  "modelo_base": "S30",
+  "linaje": "S30 con calibración de nivel por ramo según D100; sin la revisión D101 ni la calibración de forma D102.",
+  "archivo_kaggle": "S41_riesgo_ultimo.csv",
+  "kaggle_submission_id": 57531719,
+  "public_score": 0.13016,
+  "sha256_csv": "d8661c2874e9112bd3dd62ea4470a465ee309832dee53fd9dcaa4144dac643a5",
+  "csv_copia_local": "Hackaton/Repositorio_IAA2026/privado/envios_S41_S42_20261022/S41_riesgo_ultimo.csv",
+  "sha_csv_comprobado_ahora": true,
+  "seleccion": "realizada_por_participante_visible_en_captura",
+  "verificacion_viva_kaggle": false,
+  "captura": "privado/seleccion_final_S41_20261023/captura_participante.png",
+  "sha256_captura": "c7d22082079ce001f14a128b325ab96d398ee602b184a4f52d2e94ad69c93b31",
+  "sustituye": "S43 como elección final; se conservan recibos y decisiones históricas de S42/S43.",
+  "fundamento": "D103; docs/SENSIBILIDAD_S43.md; regla de alarma fijada antes de las baterías y regla de nivel D100.",
+  "argumentos_confirmados": {
+    "ganancias_esperadas_S41_vs_S30_tres_previas": [
+      1.9e-05,
+      6.2e-05,
+      8.3e-05
+    ],
+    "dispersion_bajo_reglas_D100_D102": {
+      "S41": 0.000118,
+      "S43": 0.000267
+    },
+    "forma_autos_S43": "Sin apoyo en V23/V24; óptimos +2,3 %/+1,7 % sobre S30 frente a -4,5 % de S43; efecto D² -0,000111/-0,000127 respectivamente.",
+    "probabilidad_condicional_S43_supera_S41": [
+      0.39,
+      0.45
+    ],
+    "interpretacion": "Resultados condicionados a las previas y al modelo de ruido evaluados, no garantías ni probabilidades observadas del privado. Menor dispersión no garantiza menor pérdida en cada realización."
+  },
+  "alcance_rubrica": "La decisión documenta validación y controles; no acredita puntos concedidos por el jurado.",
+  "revision_general_aprobada": false,
+  "pendiente": "Alinear informe, video, README, cifras y panel de entrega con S41. Las versiones actuales que describen S42/S43 no acreditan la nueva elección.",
+  "acciones": "Registro local y conservación de captura; sin nuevo envío, cambio de selección por Codex, entrenamiento, publicación, foro ni mensajes a terceros."
+}

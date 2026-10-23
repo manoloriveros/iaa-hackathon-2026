@@ -1,0 +1,48 @@
+{
+ "id": "DEC-RESERVAS-S41-20261023",
+ "autor_registro": "Claude (Cowork, línea principal)",
+ "utc_registro": "2026-10-23T15:33:06+00:00",
+ "decisor": "Participante",
+ "contexto": "COD-VAL-20261023T1523-S41-RESERVAS y el «Anexo de evidencia recibida después del corte VAL20» de DECISIONES.md piden una valoración expresa para S41 de la limitación de reservas, porque la aceptación de MOD-002 del 20-10-2026 quedó con alcance S30. La acotación con la regla de S41 mantiene la reserva de caso como incertidumbre material en los tres ramos y, bajo S3, un nivel de autos alto en torno a un 1,9 %.",
+ "canal": "pregunta con opciones de Claude en esta sesión de Cowork, respondida el 23-10-2026 poco antes de las 15:33 UTC",
+ "pregunta_literal": "Codex pide que valores expresamente la limitación de reservas para S41. El 20 de octubre decidiste dejar la suficiencia de reservas como limitación del ejercicio, pero esa aceptación (MOD-002) quedó registrada con alcance S30. Con S41 la reserva de caso sigue siendo incertidumbre material en los tres ramos y, bajo el supuesto S3, el nivel de autos quedaría alto en torno a un 1,9 %. ¿Qué registro?",
+ "opciones": [
+  {
+   "etiqueta": "Mantenerla para S41 (Recomendado)",
+   "descripcion": "Registro que la decisión del 20 de octubre se extiende a S41: la suficiencia de reservas queda como limitación declarada y S3 sigue sin adoptarse. Lo anoto en DECISIONES, en un JSON de registro y en el foro."
+  },
+  {
+   "etiqueta": "Dejarla abierta",
+   "descripcion": "No registro ninguna decisión. Ajusto los documentos para que digan que la valoración de esta limitación para S41 está pendiente de tu decisión."
+  }
+ ],
+ "respuesta_literal": "Mantenerla para S41 (Recomendado)",
+ "decision": "La decisión del 20 de octubre («Suficiencia de reservas: Lo dejamos así como limitación del ejercicio», registro/decisiones_participante_20261020.json) se extiende a S41, la entrega final de la parte 1: la suficiencia de la reserva de caso queda como limitación declarada y el supuesto S3 no se adopta.",
+ "alcance": "Decisión del participante sobre cómo declarar la limitación. No acredita la suficiencia de reservas, no es una valoración actuarial independiente ni cierra la revisión humana general (R06/R07). No cambia T0, la receta, la mezcla, S41 ni la marca de Kaggle. La recomendación de la opción la hizo Claude.",
+ "evidencia": {
+  "recibo_reproduccion_s41": [
+   "registro/recibo_reproduccion_s41_20261023.json",
+   "8b5ff502c568b8a82ed7377d7e69536cc595c95dac32b6a762d3039d4f376ff7"
+  ],
+  "resumen_acotacion": [
+   "privado/corridas/repro_s41_20261023T145808Z_c8055dfc/resultados/parte2_resumen.json",
+   "587cebf41c570f39018d39de83dc1e68bcaec653130a0f9d92815e4a72d1e308"
+  ],
+  "decision_20261020": [
+   "registro/decisiones_participante_20261020.json",
+   "145a452e1a4c1f5f4ed98d1b77cb9c7d25089192235c8b0ec9d82479eb1aa841"
+  ]
+ },
+ "documentos": {
+  "docs/REPRODUCCION_COMPLETA.md": {
+   "antes": "e43c0a02f63b81dd29bef08f08bd9d3407a2608dc5a46a46120be452ff6b4dff",
+   "despues": "4dc3535e664d4863ff5473e0750c59f02c84c5d9218e169f943901812b08b282",
+   "cambio": "una frase al final del párrafo de reservas en «Qué decidió el participante y qué queda abierto»"
+  },
+  "docs/RESERVAS_ACOTACION.md": {
+   "antes": "cab1b5008c646330b6f3e5ca44f5fbd5531083d733e37b18daffdc3df4e94f6e",
+   "despues": "ba61097233d596bad64df720c2518fb39751a2ea19a9c70d6c9457686105cd47",
+   "cambio": "una frase al final de «Qué quedó para la revisión humana y cómo se decidió»"
+  }
+ }
+}

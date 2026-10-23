@@ -1,0 +1,128 @@
+{
+ "autor": "Claude (Cowork, línea principal)",
+ "id": "recibo_reproduccion_s41_20261023",
+ "utc": "2026-10-23T15:26:24+00:00",
+ "corrida": "privado/corridas/repro_s41_20261023T145808Z_c8055dfc",
+ "peticion": "Participante, 23-10-2026, en esta sesión: «Tomé la decisión de que nos vamos a quedar con S41, por favor actualiza todo trabajo de este chat a S41, pero no con los otros modelos de referencia, sino con este como modelo único, porqué es adecuado, en qué consiste, cuáles son las hipotesis, etc.»",
+ "plan": {
+  "ruta": "privado/corridas/repro_s41_20261023T145808Z_c8055dfc/PLAN_PREREGISTRO.md",
+  "sha256": "c8055dfc72dac0c8f2aa46b62de129ff5d53a5abd6483cfe1cc67786197181e3",
+  "utc": "2026-10-23T14:59:17+00:00",
+  "registro_experimentos": "registro/experimentos_nuevos.json (run_id repro_s41_20261023T145808Z_c8055dfc)"
+ },
+ "documentos": {
+  "docs/REPRODUCCION_COMPLETA.md": {
+   "antes": "338e7d9cfb3d5623a978b88ce29e31385a226c2a6f4512b8c85b17f8cac0e35a",
+   "despues": "e43c0a02f63b81dd29bef08f08bd9d3407a2608dc5a46a46120be452ff6b4dff"
+  },
+  "docs/RESERVAS_ACOTACION.md": {
+   "antes": "63306a4e5adf8208c5666aa48cde4904770412f2332d9f6ebcae48b0b1869027",
+   "despues": "cab1b5008c646330b6f3e5ca44f5fbd5531083d733e37b18daffdc3df4e94f6e"
+  },
+  "enfoque": "S41 como modelo único: en qué consiste, con qué hipótesis, por qué es adecuada y con qué límites; se retiran las secciones de S42 y S43, que siguen en las versiones conservadas",
+  "copia_previa": "privado/trazabilidad/reproduccion_s41_20261023/ (con MANIFIESTO_previo.sha256; incluye copias previas de CLAUDE.md, DECISIONES.md, MEMORIA_PROYECTO.md, ESTADO_PROYECTO.json y registro/experimentos_nuevos.json)",
+  "versiones_anteriores": {
+   "20 de octubre": "Git, commit 0ade351 (bce2805e… y 60488023…)",
+   "22 de octubre": "privado/trazabilidad/reproduccion_s43_20261023/ (f0bb8005… y 5ce5c705…)",
+   "23 de octubre, mañana": "privado/trazabilidad/reproduccion_s41_20261023/ (338e7d9c… y 63306a4e…)"
+  },
+  "aplicacion": {
+   "privado/corridas/repro_s41_20261023T145808Z_c8055dfc/aplicacion/parche_docs_s41.py": "2024376f3599757c867bb94ff6d93eaf727deeb93ba5f45b9d6dee109fd79792",
+   "privado/corridas/repro_s41_20261023T145808Z_c8055dfc/aplicacion/textos.py": "50328cf99f817f5ec25c350043bfae1c16baebace4f8f55be372aefb358c6f83"
+  }
+ },
+ "codigo": {
+  "herramientas/sonda_nivel.py (sin cambios)": "d6cfe8055ee846d6214bac40d703f5e9c58ef289162e27a61a484ee52462a7a7",
+  "herramientas/reservas_consistencia.py (sin cambios; se importa Nivel)": "e16680ec62e90bc8c4e49865010f7d088aaef967e479fed406bc6befa5be5d78",
+  "herramientas/reservas_s41.py (nuevo)": "7e7fac03250ac4504b8acc7b49ebedf760e8796473bd98c86930d717d89333aa",
+  "privado/corridas/repro_s41_20261023T145808Z_c8055dfc/scripts/parte1_s41.py": "90ef271da32bc1a0a986f024914d3a8ed30fbc2e5464420b08053bbe0111f6e6"
+ },
+ "entorno": {
+  "lugar": "nube de Claude",
+  "python": "3.13",
+  "numpy": "2.5.3",
+  "pandas": "3.0.5",
+  "pyarrow": "26.0.0",
+  "plataforma": "Linux x86_64",
+  "repeticion": "reservas_s41.py repetido el 23-10-2026 en la misma nube: salida idéntica salvo el campo utc, en 122 s"
+ },
+ "parte1_paso_de_nivel": {
+  "fuente": "raíces R0, R1 y R2 de repro_s42_20261022T170245Z_c9ea2fc3 (sonda_nivel.py sin cambios, con las puntuaciones registradas); no se corrió nada nuevo",
+  "raices": {
+   "R0": "parquet histórico (afd72dca…)",
+   "R1": "parquet del reajuste (4e80bde3…)",
+   "R2": "parquet de la réplica congelada (4e80bde3…)"
+  },
+  "S41": {
+   "sha256": "d8661c2874e9112bd3dd62ea4470a465ee309832dee53fd9dcaa4144dac643a5",
+   "igual_en": [
+    "R0",
+    "R1",
+    "R2"
+   ]
+  },
+  "notas_D100": {
+   "R0": "125 de 142 campos idénticos, máx. 2,1e-13 relativo",
+   "R1": "118 de 142, máx. 6,3e-13",
+   "R2": "118 de 142, máx. 6,3e-13"
+  },
+  "factores": "idénticos en R0; en R1 y R2 el de contenidos difiere 2,2e-16 relativo, sin cambio en el CSV",
+  "clase_preinscrita": "reproducido con diferencias de último bit, en las tres raíces",
+  "herencia": "S41 entre la mezcla igual al factor salvo el redondeo (máx. 5e-7 CU por fila); orden por coste idéntico y sin empates nuevos; por tasa solo se invierten pares a menos de una unidad de redondeo (49, 26 y 98 pares contiguos; máx. 0,48, 0,36 y 0,64 unidades); totales 118.454.953,29, 76.299.719,11 y 18.930.485,79 CU, iguales a la resolución",
+  "publico": "forma cerrada 0,13015759; Kaggle 0,13016 (envío 57531719)"
+ },
+ "parte2_reservas": {
+  "regla": "c = 1 + Z·(c*/ρ − 1) con Z fija (0,166, 0,346 y 0,150); nivel relativo de S41 ρ·c(escenario)/c(registrado); sensibilidad de primer orden (1 − Z)/c = 0,84, 0,64 y 0,84",
+  "control": "factores de S41 con diferencia 0; umbrales de la mezcla iguales a cuatro decimales",
+  "umbral_b_1pct": {
+   "motor": "0,956 a 1,044 (mezcla 0,963 a 1,037)",
+   "buildings": "0,938 a 1,062 (0,960 a 1,040)",
+   "contents": "0,893 a 1,107 (0,910 a 1,090)"
+  },
+  "clase": {
+   "motor": "incertidumbre material",
+   "buildings": "incertidumbre material",
+   "contents": "incertidumbre material"
+  },
+  "peligros_largos": {
+   "bodily_injury": "umbral 0,930 a 1,070; β 0,550 a 1,154; incertidumbre material",
+   "subsidence": "umbral 0,793 a 1,206; β 0,829 a 1,202; acotado, pero no con σ/√0,67 (0,818 a 1,181)"
+  },
+  "S3": {
+   "bodily_injury": "nivel de autos de S41 alto un 1,86 % (1,10 % a 2,61 %); umbral de k 0,929 a 1,071; indicio de desvío material si S3",
+   "subsidence": "+0,3 %; acotado"
+  },
+  "variante_sigma_con_etiquetas": "umbrales movidos como mucho 0,006 (contenidos 0,887 a 1,111); sin cambio de clase",
+  "variante_sigma_ampliada": "Z 0,117, 0,262 y 0,106; factores 0,9973, 1,0197 y 1,0089; umbrales 0,958 a 1,042, 0,945 a 1,055 y 0,898 a 1,101; sin cambio de clase",
+  "coste_D2_publico_1pct_tres_ramos": "−0,000065 bajando y +0,000037 subiendo",
+  "rechazados": "pagarlos todos movería el nivel de S41 en torno a un 0,9 % en autos y un 1,0 % en contenidos (primer orden)"
+ },
+ "evidencia": {
+  "tar": {
+   "ruta": "privado/corridas/repro_s41_20261023T145808Z_c8055dfc/corrida_s41_c8055dfc.tar.gz",
+   "sha256": "73397bc9411e6ab1a502dd0f06351bea5c33faf43885c036b1c0df4f9537547d",
+   "archivos": 6,
+   "manifiesto": "MANIFIESTO.sha256"
+  },
+  "resultados": {
+   "parte1_s41.json": "c8a7574b539d91c16112a43a84d78b72515d9569853cbdb3eee28ac9fa5006a0",
+   "parte2_reservas_s41.json": "46a8555e180b33480cd32d5e68c6f33e9cac73629a9e11b78160bff1646b3940",
+   "parte2_resumen.json": "587cebf41c570f39018d39de83dc1e68bcaec653130a0f9d92815e4a72d1e308"
+  }
+ },
+ "limites": [
+  "Reproducción hecha por Claude en la nube de Claude; sin repetición por otro operador (D98, GOV-003).",
+  "La parte 1 extrae lo que corresponde a S41 de las raíces de repro_s42; no se corrió nada nuevo.",
+  "Las puntuaciones públicas de las sondas y de S41 son hechos de Kaggle con recibo; no se reproducen.",
+  "La clasificación L05 de S41 que citan los documentos es un cálculo no preinscrito de la batería sens43.",
+  "S3 se trata como cambio de nivel del año: el parquet no separa las predicciones por peligro.",
+  "La acotación no acredita la suficiencia de reservas (MOD-002).",
+  "Nada de esto es revisión humana."
+ ],
+ "sin": [
+  "envíos a Kaggle",
+  "cambios de receta, T0, la mezcla (S30), S41 o la marca final",
+  "cambios en archivos de Codex",
+  "cambios en docs/entrega ni en docs/MODELO_FINAL_S41.md"
+ ]
+}
