@@ -1,0 +1,118 @@
+{
+ "id": "S43_forma_credibilidad",
+ "autor": "Claude (sesión Cowork del 22 de octubre)",
+ "linaje": "S42 con el exponente de forma a_Z por ramo (sonda de forma con credibilidad, D102); totales por ramo iguales a S42",
+ "base": {
+  "archivo": "Hackaton/Semana 1/Envios/archivos/S42_nivel_credibilidad_revisada.csv",
+  "sha256": "a2fdcccd9661abff6265b9fd6fc383ef155de87dd3b075b53327641154de62f7",
+  "publico": 0.13033
+ },
+ "resolucion": {
+  "s42_publico": 0.13033,
+  "fecha_utc": "2026-10-23T03:33:07+00:00",
+  "ramos": {
+   "motor": {
+    "modo": "parabola_tres_puntos",
+    "publico_a090": 0.1305,
+    "publico_a110": 0.12957,
+    "c1": 0.054350000000000634,
+    "c2": -0.029500000000000352,
+    "K_publico": 0.029500000000000352,
+    "K_2024": 0.028196343069501393,
+    "aplicable": true,
+    "a_optimo_publico": 0.9211864406779658,
+    "ganancia_publico_en_a_optimo": 0.0001832415254237321,
+    "Z": 0.5727061971392177,
+    "a_Z": 0.9548629861576716,
+    "ganancia_publico_esperada_en_a_Z": 0.00014978528881805534,
+    "privado_esperado_si_2025_igual_2024": -6.010182554877575e-05,
+    "privado_esperado_si_tau_previa": 6.010182554877561e-05
+   },
+   "buildings": {
+    "modo": "parabola_tres_puntos",
+    "publico_a090": 0.13012,
+    "publico_a110": 0.13002,
+    "c1": 0.05149999999999918,
+    "c2": -0.02599999999999963,
+    "K_publico": 0.02599999999999963,
+    "K_2024": 0.029573675965440173,
+    "aplicable": true,
+    "a_optimo_publico": 0.9903846153846136,
+    "ganancia_publico_en_a_optimo": 2.403846153847724e-06,
+    "Z": 0.5341983072324038,
+    "a_Z": 0.9948634778150721,
+    "ganancia_publico_esperada_en_a_Z": 1.882280728400629e-06,
+    "privado_esperado_si_2025_igual_2024": -6.859803640626544e-07,
+    "privado_esperado_si_tau_previa": 6.859803640626562e-07
+   },
+   "contents": {
+    "modo": "parabola_tres_puntos",
+    "publico_a090": 0.13023,
+    "publico_a110": 0.1302,
+    "c1": 0.022849999999998007,
+    "c2": -0.01149999999999901,
+    "K_publico": 0.01149999999999901,
+    "K_2024": 0.012114888326511326,
+    "aplicable": true,
+    "a_optimo_publico": 0.9934782608695641,
+    "ganancia_publico_en_a_optimo": 4.891304347830118e-07,
+    "Z": 0.5865804471620063,
+    "a_Z": 0.996174475344595,
+    "ganancia_publico_esperada_en_a_Z": 4.055303510865408e-07,
+    "privado_esperado_si_2025_igual_2024": -1.6829834722476623e-07,
+    "privado_esperado_si_tau_previa": 1.6829834722476983e-07
+   }
+  },
+  "D2_publico_esperado_S43": 0.13048207309989754,
+  "privado_esperado_S43": {
+   "si_2025_igual_2024": -6.095610426006317e-05,
+   "si_tau_previa": 6.095610426006303e-05
+  },
+  "S43": {
+   "archivo": "Hackaton/Semana 1/Envios/archivos/S43_forma_credibilidad.csv",
+   "sha256": "a8010a6917e213dc65f4855142c7db850ed575a2b5a80135f68862caaee5e4b5",
+   "filas": 626639,
+   "total_CU": 214195879.19,
+   "por_ramo_CU": {
+    "motor": 116978988.8,
+    "buildings": 77439071.71,
+    "contents": 19777818.68
+   },
+   "factores_a_aplicados": {
+    "motor": 0.9548629861576716,
+    "buildings": 0.9948634778150721,
+    "contents": 0.996174475344595
+   }
+  }
+ },
+ "preinscrito": {
+  "tau_previa": {
+   "motor": 0.05,
+   "buildings": 0.05,
+   "contents": 0.05
+  },
+  "sigma_ruido_33pct_bootstrap_2024": {
+   "motor": 0.043188424375056836,
+   "buildings": 0.04668950631565944,
+   "contents": 0.041976064608297926
+  },
+  "Z_credibilidad": {
+   "motor": 0.5727061971392177,
+   "buildings": 0.5341983072324038,
+   "contents": 0.5865804471620063
+  },
+  "K_2024": {
+   "motor": 0.028196343069501393,
+   "buildings": 0.029573675965440173,
+   "contents": 0.012114888326511326
+  },
+  "a_optimo_2024_relativo_a_S30": {
+   "motor": 1.02,
+   "buildings": 1.02,
+   "contents": 1.06
+  },
+  "regla": "a* = vértice de la parábola por los tres puntos del ramo (si la parábola no es cóncava o a* sale de [0,80; 1,20], el ramo no se aplica); a_Z = 1 + Z (a* − 1); S43 = S42 con a_Z por ramo y totales intactos; con un solo punto en un ramo se usa K_2024 como curvatura conocida. Selección final manual: S43 si su público >= el de S42, si no S42; nunca una sonda.",
+  "esperanza_calculada_antes": "público +0,00026 aproximado; privado entre −0,00004 (si el óptimo de 2025 coincide con el de 2024) y +0,00010 (si difiere como la previa)"
+ },
+ "recomendacion": "Seleccionar S43 como final si su público es mayor o igual que el de S42 (0.13033); esperado 0.13048. Nunca seleccionar una sonda."
+}

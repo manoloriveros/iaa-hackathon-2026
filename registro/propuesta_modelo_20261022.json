@@ -1,0 +1,190 @@
+{
+  "id": "PROP-20261022-SEVCOMP",
+  "autor": "Codex",
+  "utc": "2026-10-22T15:40:29.937751+00:00",
+  "estado": "propuesta_no_ejecutada",
+  "nombre": "Frecuencia conservada y severidad compartida",
+  "peticion": "Con todo el análisis del ejercicio, ayudar a plantear un modelo para intentar recuperar el primer lugar.",
+  "alcance_autorizado_interpretado": "Investigación, diseño y documentación. No entrenamiento, producción, envío o selección final.",
+  "guia": "docs/PROPUESTA_MODELO_20261022.md",
+  "contexto": {
+    "captura_participante": {
+      "lider": 0.13003,
+      "S30": 0.12996,
+      "diferencia_redondeada": 7e-05,
+      "alcance": "Cifras de captura, no score privado ni contraste estadístico."
+    },
+    "metadatos_Kaggle_leidos": {
+      "rango": 2,
+      "cierre_UTC": "2026-10-23T16:00:00Z",
+      "cierre_Bogota": "2026-10-23T11:00:00-05:00"
+    },
+    "D99": "S30 sigue definitivo y su receta/CSV intactos; la petición nueva abre diseño, no acredita sustitución."
+  },
+  "evidencia_estatica": [
+    {
+      "fuente": "src/modelos/cat_frecsev.py",
+      "hallazgo": "Frecuencia por peligro por severidad media."
+    },
+    {
+      "fuente": "src/modelos/severidad_cfs.py:84",
+      "hallazgo": "Lesiones y daños a terceros sin covariables de severidad en ese componente; no en todo S30."
+    },
+    {
+      "fuente": "src/modelos/frecsev2.py:29",
+      "hallazgo": "Umbral de1500filas positivas para modelar severidad; por debajo media constante."
+    }
+  ],
+  "hipotesis": "Cabezas de severidad compartidas entre peligros de cada ramo pueden reducir error de media frente a severidad constante o estimación aislada. No demostrado en estos datos.",
+  "modelo": {
+    "frecuencias": "Congeladas de la receta; no ajustar de nuevo.",
+    "anclas_propuestas": {
+      "motor": "CFS_motor_4s",
+      "buildings": "CFS_buildings",
+      "contents": "frecuencia de FSA_contents"
+    },
+    "cabezas_por_ramo": [
+      "LightGBM binary: probabilidad de coste positivo dado siniestro aceptado",
+      "LightGBM gamma: importe positivo relativo a media positiva del peligro"
+    ],
+    "agrupacion": "Todos los peligros, peril categórico y árboles compartidos dentro de cada ramo.",
+    "credibilidad": {
+      "formula": "N_p/(N_p+K)",
+      "K": 1000,
+      "ajuste": "Fijado como propuesta, no optimizado ni probado."
+    },
+    "ceros": "Separar no-siniestro de siniestro aceptado de coste cero; no duplicar su ocurrencia.",
+    "colas": "Media completa sin winsorizar etiquetas, sin seleccionar clientes favorables.",
+    "nivel": "Componente escalado a total predicho por S30 por ramo y cartera; sin cambiar además nivel/calibración.",
+    "combinacion": {
+      "formula": "(1-alfa)*S30 + alfa*componente",
+      "alfa_global": true,
+      "limites": [
+        0,
+        0.25
+      ],
+      "ajuste": "Solo mitad de calibración2023 preexistente; si faltan predicciones auditables no usar2024/público como reemplazo."
+    }
+  },
+  "parametros_propuestos": {
+    "num_boost_round": 500,
+    "num_leaves": 7,
+    "max_depth": 3,
+    "learning_rate": 0.03,
+    "min_data_in_leaf": 500,
+    "lambda_l2": 20,
+    "feature_fraction": 1,
+    "bagging_fraction": 1,
+    "bagging_freq": 0,
+    "seed": 20261022,
+    "deterministic": true,
+    "force_row_wise": true,
+    "device_type": "cpu"
+  },
+  "particiones": {
+    "corte1": "train2021-2022; calibración2023 para alfa, selección2023 para contraste",
+    "corte2": "train2021-2023; evaluar2024 sin reajustar alfa por sus resultados",
+    "independencia": false,
+    "nota": "V23/V24 y S30 seleccionados previamente; contrastes condicionales, no nuevo test independiente."
+  },
+  "volumen_propuesto": {
+    "cabezas_evaluacion_maximo": 12,
+    "peso_combinacion": 1,
+    "cabezas_produccion_solo_si_aprobado_maximo": 6,
+    "ajustes_frecuencias": 0,
+    "horas_estimadas": null
+  },
+  "aceptacion_propuesta": {
+    "metrica": "D2 Tweedie1.5, objetivo completo y denominador fijo",
+    "delta_global_V24_nominal_minimo": 0.0002,
+    "sin_retrocesos": "Ramo/cartera/semestre/cortes y escenarios75/100/125 según protocolo heredado.",
+    "inferiores95_cliente_direccion": "Mayores de cero en nominal/+25%",
+    "bootstrap": {
+      "replicas": 1000,
+      "semilla": 281001
+    },
+    "region_exacta": "N35 solo si pasa lo previo; inferior no negativo.",
+    "publico": "No sirve para elegir hipótesis, alfa, semilla, escala o peligro; no se predice score esperado."
+  },
+  "viabilidad_pendiente_antes_de_entrenar": [
+    "Conciliar costes por siniestro, ceros, n_p/y_p/T0 y exposición sin duplicar IBNR o restar franquicias otra vez.",
+    "Verificar insumos/orden por peligro; FSA_contents no declara --partes y no se presume que exporte frecuencias.",
+    "Verificar recuperación de frecuencias por inferencia desde modelos guardados si hiciera falta, sin refit.",
+    "Verificar predicciones de S30 en calibración2023; no inventar una validación disponible.",
+    "Fijar lista exacta de campos y sus límites temporales; excluir IDs, primas y variables posteriores del siniestro.",
+    "Medir tiempo de ejecución local antes de comprometer cierre; sin permiso remoto implícito."
+  ],
+  "diferencias_historicas": {
+    "C27": "Gamma aisladas por peligro en edificios; esta propuesta comparte árboles/ceros y no repite su receta.",
+    "C34": "Ajustó frecuencias nuevas, con peso cero; aquí se conservan.",
+    "cerrados": "No reabrir C18-C34/A01-A10 por reloj, liderazgo o rescatar subconjuntos."
+  },
+  "riesgos": [
+    "Transferencia negativa entre peligros",
+    "Cola Gamma insuficiente",
+    "Valoración única no identifica reservas/último verdadero",
+    "Selección muy reutilizada",
+    "Disponibilidad temporal y capitales siguen sin confirmar",
+    "El público no garantiza clasificación privada o premio"
+  ],
+  "fuentes_locales": [
+    {
+      "ruta": "receta/especificaciones/spec_s30.json",
+      "sha256": "e5f89356bef4865523ae2314197da46ca3b1e09588ddd0bf7798aadd2d91a8ae"
+    },
+    {
+      "ruta": "receta/receta.json",
+      "sha256": "2f8cb8325b2b4183aaed53aa42bec3cea65319a68edb521351815aeb1dafa1a3"
+    },
+    {
+      "ruta": "src/modelos/cat_frecsev.py",
+      "sha256": "77e153419bedcbaaefb9ec02af15d52d095d4631f9692bf55be3d34c26a6c423"
+    },
+    {
+      "ruta": "src/modelos/frecsev2.py",
+      "sha256": "530f1e3f78ac925c317e0de3a639ced4d2e558a9607715287200ee06da7c2c5b"
+    },
+    {
+      "ruta": "src/modelos/severidad_cfs.py",
+      "sha256": "0967e3e5a43d1f25f4fae9f34948e4198dede9205e9d482b787d3bbf057fc584"
+    },
+    {
+      "ruta": "src/modelos/severidad_cfs3.py",
+      "sha256": "d6262f44f603b79b9dabe8d2e1b6c46ab2b6ba590630c0f5c5536028df50eec3"
+    },
+    {
+      "ruta": "src/modelos/mezcla3.py",
+      "sha256": "b190d24a8725f14d77ef857079570199900dfd0654b03a7ef605a0b3b35f605c"
+    },
+    {
+      "ruta": "src/linea_b/severidad_tendencia.py",
+      "sha256": "d4adbc26f9225d647f44447ae909aba946600ae5a5e45d2dfb35bd38becddbb0"
+    },
+    {
+      "ruta": "registro/decision_modelo_definitivo_20261020.json",
+      "sha256": "327303451289f4a7f667e31f719c94a789ff2f1ad5507ef11889cd302a1f9686"
+    },
+    {
+      "ruta": "registro/decision_R03_20261020.json",
+      "sha256": "2981232a5c6dc8285c08759b9e957a658dffaecc19e8d764ec6602a69058562c"
+    },
+    {
+      "ruta": "clasificacion_aportada.png",
+      "sha256": "c325890ee7ecbad75cf9f864a8851c7cf5124651184ac54c9a349d43079aef3d",
+      "fuente": "captura aportada por participante; no lectura viva del leaderboard"
+    }
+  ],
+  "fuentes_publicas": "privado/propuestas/severidad_compartida_20261022/fuentes_publicas.json",
+  "revision_y_aceptacion": "Diseño propuesto por IA; no aceptado todavía como candidato ejecutado o sustituto de S30.",
+  "actividad": {
+    "entrenamientos": 0,
+    "inferencias": 0,
+    "modelos_cargados": 0,
+    "bootstrap": 0,
+    "replays": 0,
+    "submissions": 0,
+    "Kaggle": "Solo lectura pública",
+    "remoto": 0,
+    "agentes_nuevos": 0
+  }
+}

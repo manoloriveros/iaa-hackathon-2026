@@ -1,0 +1,310 @@
+{
+ "autor": "Claude (Cowork, línea principal)",
+ "id": "recibo_reproduccion_s42_20261022",
+ "utc": "2026-10-22T17:30:13+00:00",
+ "corrida": "privado/corridas/repro_s42_20261022T170245Z_c9ea2fc3",
+ "peticion": "Participante, 22-10-2026, en esta sesión: «actualiza este ejercicio para S42»; después, dos condiciones para el informe: contar el procedimiento completo y presentar S42 como calibración del nivel con tres parámetros apoyada en evidencia actuarial independiente, no como un modelo nuevo.",
+ "plan": {
+  "ruta": "privado/corridas/repro_s42_20261022T170245Z_c9ea2fc3/PLAN_PREREGISTRO.md",
+  "sha256": "c9ea2fc328a8290252f062f7ae45ab60f198f3f79a6a36d49277533cf8cf13ff",
+  "utc": "2026-10-22T17:02:45+00:00",
+  "registro_experimentos": "registro/experimentos_nuevos.json (run_id repro_s42_20261022T170245Z_c9ea2fc3)"
+ },
+ "documentos": {
+  "docs/REPRODUCCION_COMPLETA.md": {
+   "antes": "bce2805e3cb8f811d720574c5f0eb9c779f5da0ea131e72a57e6276342250063",
+   "despues": "f0bb800542d74e5cebba1fce313f02ee1e5544e926045ee27bcfaeeb2779530f"
+  },
+  "docs/RESERVAS_ACOTACION.md": {
+   "antes": "60488023796db66166b97dcfa3eb4ad56f1a9a17eda1197f91439705fca23625",
+   "despues": "5ce5c7056153a6b1864305c2d9d79f8ca27274d0212310c3ca71181d60dd8197"
+  }
+ },
+ "codigo": {
+  "herramientas/sonda_nivel.py (sin cambios)": "d6cfe8055ee846d6214bac40d703f5e9c58ef289162e27a61a484ee52462a7a7",
+  "Semana 1/Modelos_claude_b/ejecutar_b.py (sin cambios)": "e70f5a08b4d512f5392a8e93dd1d49ab70c7772f417fc3ac753fde0fb34cc893",
+  "src/linea_b/nivel_b.py (sin cambios; idéntico al de Modelos_claude_b)": "21772f1b5ed829ec4f94b89237214f7b4829427637f3f9d651711e8c1ec31356",
+  "src/modelos/exportar_predicciones.py (sin cambios)": "3f758d6d4af10c4800351c7fe9cbbaab1624870b3b7729747da43dc984b7262d",
+  "receta/especificaciones/spec_s30.json (idéntico a Modelos_claude_b/experimentos/spec_s30.json)": "e5f89356bef4865523ae2314197da46ca3b1e09588ddd0bf7798aadd2d91a8ae",
+  "herramientas/reservas_consistencia.py (sin cambios)": "e16680ec62e90bc8c4e49865010f7d088aaef967e479fed406bc6befa5be5d78",
+  "herramientas/reservas_s42.py (nuevo)": "3c883f5689fe9e7c8fdc1bd0a230ba50ed29c3d845fcf3ae8bde7c4f2d422e1a",
+  "corrida/scripts/reservas_s42_v1_biseccion.py": "60bbcfec6b0935cd919123328e42f18caa21f115735f77440485b78275f6fc52",
+  "corrida/scripts/comparar_parquet.py": "0e94441448ca5367687656a011fcbacaf96bf11980446e3564505294f8f00f4e",
+  "corrida/scripts/comparar_notas.py": "68fe2e08e37dd50a7584912a59467bc6c6b537e069c6ebc8c3accc857bc63605",
+  "corrida/scripts/regenerar.sh": "3ca9a3bf1372ae199b8a30f6a86f960d72f8cffef3fcca328ca7fcd8a72e35b9",
+  "corrida/scripts/montar_y_correr_sondas.sh": "72d1b97282a76061ad93b805ca0cac65b042c6bde6d1f8615a19ea6b7e53395a"
+ },
+ "entorno": {
+  "lugar": "nube de Claude",
+  "python": "3.13.16",
+  "numpy": "2.5.3",
+  "pandas": "3.0.5",
+  "pyarrow": "26.0.0",
+  "plataforma": "Linux-6.18.44-fc-v140-x86_64-with-glibc2.39"
+ },
+ "parte1_paso_de_nivel": {
+  "clase_preinscrita": {
+   "R0": "reproducido_con_diferencias_de_ultimo_bit",
+   "R1": "reproducido_con_diferencias_de_ultimo_bit",
+   "R2": "reproducido_con_diferencias_de_ultimo_bit"
+  },
+  "corridas": {
+   "R0": "S30 del reajuste + predicciones 2024 históricas (control)",
+   "R1": "S30 del reajuste + predicciones regeneradas desde el reajuste",
+   "R2": "S30 de la réplica congelada + predicciones regeneradas desde la réplica"
+  },
+  "ocho_csv": {
+   "S40_sonda_motor_x090": "e46ea4ef0d1a2da3393af587c509bce470dd628e2552efc0d652b3aea492007d",
+   "S40_sonda_motor_x110": "e82bc9a4b16deef3fed2d05b6bcb78616123f7d5347fd38c9b982c24cf1e70db",
+   "S40_sonda_buildings_x090": "ef137bdd53512b217dfc8969b1df05a85f4ef2140e58af75ab7c93c647da2641",
+   "S40_sonda_buildings_x110": "37c85705fa11b260e98a9864d9a2c384b10d0751688913a3570a7687b9e409f4",
+   "S40_sonda_contents_x090": "3ca5a42f477f3f7af312fe3dea3a0d76b81b8e875f95228567bc4e2b42d1486b",
+   "S40_sonda_contents_x110": "1366da09792992bf26b91a641714d5f8b77365291a26b6160415d588f8897e2d",
+   "S41_nivel_credibilidad": "d8661c2874e9112bd3dd62ea4470a465ee309832dee53fd9dcaa4144dac643a5",
+   "S42_nivel_credibilidad_revisada": "a2fdcccd9661abff6265b9fd6fc383ef155de87dd3b075b53327641154de62f7",
+   "iguales_en_R0_R1_R2": true
+  },
+  "notas": {
+   "R0": {
+    "campos_numericos_identicos": "166 de 196",
+    "dif_relativa_max": 2.0697213610414026e-13,
+    "factores_S42": {
+     "motor": 0.9838356605652485,
+     "buildings": 1.0413204195996892,
+     "contents": 1.0579248010121836
+    },
+    "tau_revisada": 0.05319930930713396
+   },
+   "R1": {
+    "campos_numericos_identicos": "154 de 196",
+    "dif_relativa_max": 6.250072812160748e-13,
+    "factores_S42": {
+     "motor": 0.9838356605652485,
+     "buildings": 1.0413204195996892,
+     "contents": 1.0579248010121836
+    },
+    "tau_revisada": 0.05319930930713396
+   },
+   "R2": {
+    "campos_numericos_identicos": "154 de 196",
+    "dif_relativa_max": 6.250072812160748e-13,
+    "factores_S42": {
+     "motor": 0.9838356605652485,
+     "buildings": 1.0413204195996892,
+     "contents": 1.0579248010121836
+    },
+    "tau_revisada": 0.05319930930713396
+   }
+  },
+  "predicciones_2024": {
+   "historico": "afd72dca917bf593202fb94cbee9382f5e9c35ea80c8aada81a68a2053d1131e",
+   "regenerado_reajuste_y_replica": "4e80bde3339e4c4c4ab8c0880ad1f5f11cd80321fa021ef0ed26cb7674ba3d80",
+   "replica_igual_al_reajuste_en_bytes": true,
+   "filas": 939705,
+   "y_T0_identica": true,
+   "reserva_caso_identica": true,
+   "prediction_filas_distintas": 22944,
+   "prediction_dif_relativa_max": 7.900983020288687e-16,
+   "medias_por_ramo_identicas": true,
+   "carpetas_del_reajuste_sin_cambios": true
+  },
+  "forma_cerrada_frente_a_kaggle": {
+   "S41": {
+    "esperado_forma_cerrada": 0.13015759074253894,
+    "kaggle": 0.13016,
+    "diferencia": 2.4092574610612427e-06,
+    "coincide_al_quinto_decimal": true,
+    "kaggle_id": 57531719
+   },
+   "S42": {
+    "esperado_forma_cerrada": 0.13033007253662957,
+    "kaggle": 0.13033,
+    "diferencia": -7.253662956396845e-08,
+    "coincide_al_quinto_decimal": true,
+    "kaggle_id": 57531744
+   }
+  },
+  "hipotesis_no_cumplida": "R0 exacto: con el parquet histórico, σ, Z y las ganancias difieren en el último bit (entorno numérico); ningún CSV cambia."
+ },
+ "parte2_reservas": {
+  "regla": "nivel de S42 = ρ·c(escenario)/c(registrado), con c*/ρ en el ramo del escenario y τ reestimada por Bayes empírico (D101) en cada escenario",
+  "controles": {
+   "regla_D101_dif_relativa_max": 0.0,
+   "umbrales_S30_coinciden_4_decimales": true
+  },
+  "desviacion_del_plan": "La bisección preinscrita (misma que la acotación de S30) supone un nivel monótono en b; con τ reestimada no lo es, y en autos devolvió b = 9,56 como umbral superior cuando b = 1,25 ya mueve el nivel un 1,03 %. Se conserva esa salida (parte2_biseccion_literal.json, script reservas_s42_v1_biseccion.py) y se sustituye por el primer cruce desde b = 1 (umbral propio, criterio preinscrito) y se añade el umbral del sistema (cualquier ramo), porque τ acopla los tres ramos.",
+  "reserva_de_caso": {
+   "motor": {
+    "umbral_b_S30": [
+     0.9629,
+     1.037
+    ],
+    "umbral_b_S42_cualquier_ramo": [
+     0.873504,
+     1.233484
+    ],
+    "umbral_b_S42_propio": [
+     0.873504,
+     1.233484
+    ],
+    "ramo_que_cruza": [
+     "motor",
+     "motor"
+    ],
+    "beta_ic90": [
+     0.6133,
+     1.106
+    ],
+    "clase_S30": "incertidumbre_material",
+    "clase_S42": "incertidumbre_material",
+    "clase_S42_Z_fija": "incertidumbre_material",
+    "clase_S42_sigma_ampliada": "incertidumbre_material"
+   },
+   "buildings": {
+    "umbral_b_S30": [
+     0.9603,
+     1.0396
+    ],
+    "umbral_b_S42_cualquier_ramo": [
+     0.845228,
+     1.110991
+    ],
+    "umbral_b_S42_propio": [
+     0.526853,
+     1.148847
+    ],
+    "ramo_que_cruza": [
+     "contents",
+     "contents"
+    ],
+    "beta_ic90": [
+     0.873,
+     1.1089
+    ],
+    "clase_S30": "incertidumbre_material",
+    "clase_S42": "acotado_bajo_materialidad_si_S1",
+    "clase_S42_Z_fija": "incertidumbre_material",
+    "clase_S42_sigma_ampliada": "incertidumbre_material"
+   },
+   "contents": {
+    "umbral_b_S30": [
+     0.91,
+     1.0896
+    ],
+    "umbral_b_S42_cualquier_ramo": [
+     0.724932,
+     1.215251
+    ],
+    "umbral_b_S42_propio": [
+     0.138456,
+     1.538515
+    ],
+    "ramo_que_cruza": [
+     "buildings",
+     "buildings"
+    ],
+    "beta_ic90": [
+     0.7865,
+     1.1563
+    ],
+    "clase_S30": "incertidumbre_material",
+    "clase_S42": "acotado_bajo_materialidad_si_S1",
+    "clase_S42_Z_fija": "acotado_bajo_materialidad_si_S1",
+    "clase_S42_sigma_ampliada": "incertidumbre_material"
+   }
+  },
+  "ibnr_lesiones_S3": {
+   "S30": {
+    "nivel_autos": -0.02219,
+    "ic": [
+     -0.03115,
+     -0.01308
+    ],
+    "umbral_k": [
+     0.9403,
+     1.0594
+    ],
+    "clase": "indicio_de_desvio_material_si_S3"
+   },
+   "principal": {
+    "nivel_autos": -0.006441,
+    "ic": [
+     -0.009143972059376893,
+     -0.0036995492750141468
+    ],
+    "umbral_k": [
+     0.795912,
+     1.37276
+    ],
+    "clase": "acotado_bajo_materialidad_si_S3"
+   },
+   "variante_Z_fija": {
+    "nivel_autos": -0.006447,
+    "ic": [
+     -0.009049993555306668,
+     -0.0038008181502512395
+    ],
+    "umbral_k": [
+     0.793683,
+     1.203679
+    ],
+    "clase": "acotado_bajo_materialidad_si_S3"
+   },
+   "variante_sigma_ampliada": {
+    "nivel_autos": -0.010132,
+    "ic": [
+     -0.014393293072434199,
+     -0.005810162267599006
+    ],
+    "umbral_k": [
+     0.868954,
+     1.179507
+    ],
+    "clase": "incertidumbre_material"
+   }
+  },
+  "coste_D2_publico_1pct_tres_ramos": {
+   "S42_menos_1pct": -4.658816154122893e-05,
+   "S42_mas_1pct": 1.8787519783446897e-05,
+   "S30_menos_1pct": -8.961236735709324e-05,
+   "S30_mas_1pct": 6.137440721293552e-05
+  }
+ },
+ "evidencia": {
+  "tar": {
+   "ruta": "privado/corridas/repro_s42_20261022T170245Z_c9ea2fc3/corrida_s42_c9ea2fc3.tar.gz",
+   "sha256": "b7721c7d6d65bb9e9f84f0bcfd671fb6ca2a28a7d1a2b29171ffc204416e30e8",
+   "archivos": 41,
+   "manifiesto": "MANIFIESTO.sha256"
+  },
+  "resultados": {
+   "parte1_resumen.json": "07c2a2fbb8141fc10ae734d2d1e23efd404c352302d64bd135f56f5df0fdc0bf",
+   "parte2_resumen.json": "8dde4a55fede5e873d14a726058ce5a585dc037d28ac8a9de765f0bc548774a1",
+   "parte2_reservas_s42.json": "c9029727002435dba0b766d287c936fd7c76f1f95dd74eef6b3330dabfccd79a",
+   "parte2_biseccion_literal.json": "792edab2e0f68db79e05581c993cfcfe3b3416331816b6996cc54517db606ba2",
+   "parquet_A_frente_historico.json": "e5d603ae24430f0f3427e4f9e8a2f4000f235a465a639fd1d3964329807aa213",
+   "parquet_B_frente_historico.json": "c399c10f0e1b0eb89234ccdb26b4e8807887cb48f1257a5889f7c7fda2b46cdd",
+   "notas_R0_frente_registro.json": "c10c93ed70b9d6b66dc66b72448047cf8ddc78318ba92db89009a667cf01a2ce",
+   "notas_R1_frente_registro.json": "c0cd0d1f39859a9cedd1a4a860067e67ffcd50bd16bd49c640556d69eab161da",
+   "notas_R2_frente_registro.json": "f704e2ad6ee44b03cd89cb1cee19999ca83052365e493e7fc11419835fa67f97"
+  },
+  "registros_leidos": {
+   "registro/sonda_nivel_D100_preinscripcion.json": "a4c0e5042585b22534455ee1465fb81244063255cb5f8b26afc8530cfebee9c7",
+   "registro/sonda_nivel_D100_recibos.json": "c5dc1c51ad7f263001fb19dbc26c0ac4070809014d5ffb4356405b213cb86f2b",
+   "registro/sonda_nivel_D100_resolucion.json": "aa9c438b425781430ce8d012e4a7d69f057ceb1a7e2d21045bf7116a355d81a7",
+   "registro/sonda_nivel_D101_revision.json": "5d543e9ea1dbb544eb6b16f185084cb961f50ff23e45de15e6c372e965b17d4a",
+   "registro/envios_S41_S42_20261022_recibos.json": "dd9a312ab47e990605a68ea2c7208d40d40dd104f820aa2e34dd2035ab8317f1"
+  }
+ },
+ "limites": [
+  "Reproducción hecha por Claude en la nube de Claude; sin repetición por otro operador (D98, GOV-003).",
+  "Las seis puntuaciones públicas son hechos de Kaggle con recibo; no se reproducen.",
+  "La acotación no acredita la suficiencia de reservas (MOD-002, limitación decidida el 20-10); la clasificación de edificios y contenidos depende de la variante.",
+  "Nada de esto es revisión humana."
+ ],
+ "sin": [
+  "envíos a Kaggle",
+  "cambios de receta, T0, S30, S42 o la marca final",
+  "cambios en archivos de Codex"
+ ]
+}

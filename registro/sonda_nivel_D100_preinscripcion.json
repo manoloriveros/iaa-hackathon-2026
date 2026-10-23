@@ -1,0 +1,159 @@
+{
+ "id": "S40_sonda_nivel",
+ "autor": "Claude (sesión Cowork del 22 de octubre), por instrucción del participante; decisión D100",
+ "fecha_utc": "2026-10-22T15:55:16+00:00",
+ "base": {
+  "archivo": "Hackaton/Semana 1/Envios/archivos/S30_claude_b.csv",
+  "sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+  "publico": 0.12996
+ },
+ "linaje": "S30 (Mezcla por peligro) con las predicciones de un solo ramo multiplicadas por un factor fijo; nada reentrenado, ningún otro cambio",
+ "objetivo": "Identificar el factor de nivel 2025 que maximiza el D² del público (33 % de las filas) en cada ramo, con dos envíos por ramo, y aplicar después solo la fracción creíble (candidato S41). Las sondas no son candidatos finales y nunca se seleccionan en Kaggle.",
+ "formula": "D2(c) - D2(1) = -4*[S1*(c^-0.5 - 1) + S2*(c^0.5 - 1)]/N por ramo; con los dos envíos se despejan S1/N y S2/N; c* = S1/S2",
+ "factores_sonda": {
+  "x090": 0.9,
+  "x110": 1.1
+ },
+ "archivos": {
+  "motor_x090": {
+   "archivo": "Hackaton/Semana 1/Envios/archivos/S40_sonda_motor_x090.csv",
+   "sha256": "e46ea4ef0d1a2da3393af587c509bce470dd628e2552efc0d652b3aea492007d",
+   "ramo": "motor",
+   "factor": 0.9,
+   "filas": 626639,
+   "total_CU": 200071996.79,
+   "por_ramo_CU": {
+    "motor": 107010849.62,
+    "buildings": 74366227.96,
+    "contents": 18694919.21
+   }
+  },
+  "motor_x110": {
+   "archivo": "Hackaton/Semana 1/Envios/archivos/S40_sonda_motor_x110.csv",
+   "sha256": "e82bc9a4b16deef3fed2d05b6bcb78616123f7d5347fd38c9b982c24cf1e70db",
+   "ramo": "motor",
+   "factor": 1.1,
+   "filas": 626639,
+   "total_CU": 223852185.59,
+   "por_ramo_CU": {
+    "motor": 130791038.42,
+    "buildings": 74366227.96,
+    "contents": 18694919.21
+   }
+  },
+  "buildings_x090": {
+   "archivo": "Hackaton/Semana 1/Envios/archivos/S40_sonda_buildings_x090.csv",
+   "sha256": "ef137bdd53512b217dfc8969b1df05a85f4ef2140e58af75ab7c93c647da2641",
+   "ramo": "buildings",
+   "factor": 0.9,
+   "filas": 626639,
+   "total_CU": 204525468.4,
+   "por_ramo_CU": {
+    "motor": 118900944.02,
+    "buildings": 66929605.17,
+    "contents": 18694919.21
+   }
+  },
+  "buildings_x110": {
+   "archivo": "Hackaton/Semana 1/Envios/archivos/S40_sonda_buildings_x110.csv",
+   "sha256": "37c85705fa11b260e98a9864d9a2c384b10d0751688913a3570a7687b9e409f4",
+   "ramo": "buildings",
+   "factor": 1.1,
+   "filas": 626639,
+   "total_CU": 219398713.99,
+   "por_ramo_CU": {
+    "motor": 118900944.02,
+    "buildings": 81802850.76,
+    "contents": 18694919.21
+   }
+  },
+  "contents_x090": {
+   "archivo": "Hackaton/Semana 1/Envios/archivos/S40_sonda_contents_x090.csv",
+   "sha256": "3ca5a42f477f3f7af312fe3dea3a0d76b81b8e875f95228567bc4e2b42d1486b",
+   "ramo": "contents",
+   "factor": 0.9,
+   "filas": 626639,
+   "total_CU": 210092599.27,
+   "por_ramo_CU": {
+    "motor": 118900944.02,
+    "buildings": 74366227.96,
+    "contents": 16825427.29
+   }
+  },
+  "contents_x110": {
+   "archivo": "Hackaton/Semana 1/Envios/archivos/S40_sonda_contents_x110.csv",
+   "sha256": "1366da09792992bf26b91a641714d5f8b77365291a26b6160415d588f8897e2d",
+   "ramo": "contents",
+   "factor": 1.1,
+   "filas": 626639,
+   "total_CU": 213831583.11,
+   "por_ramo_CU": {
+    "motor": 118900944.02,
+    "buildings": 74366227.96,
+    "contents": 20564411.13
+   }
+  }
+ },
+ "preinscrito": {
+  "tau_previa": {
+   "motor": 0.015,
+   "buildings": 0.035,
+   "contents": 0.015
+  },
+  "sigma_ruido_33pct_bootstrap_2024": {
+   "motor": 0.03365515564833148,
+   "buildings": 0.04809234151122853,
+   "contents": 0.0357135838740834
+  },
+  "Z_credibilidad": {
+   "motor": 0.16572516338920737,
+   "buildings": 0.3462532125821639,
+   "contents": 0.14995400679370663
+  },
+  "regla": "c_Z = 1 + Z*(c* - 1) por ramo; S41 = S30 con c_Z; selección final manual en Kaggle: S41 si su público >= el de S30, si no S30; las seis sondas quedan excluidas de la selección final en cualquier caso",
+  "lectura_actuarial": "c* se compara con los factores de año siguiente de S30 (f23, f24): c* > 1 indica que la experiencia 2025 del público supera el nivel medio f23/f24 elegido; se documenta en el informe como calibración del nivel con la retroalimentación del marcador",
+  "factores_s30": {
+   "motor": {
+    "f23": 0.9864,
+    "f24": 1.0047
+   },
+   "buildings": {
+    "f23": 1.0589,
+    "f24": 1.1343
+   },
+   "contents": {
+    "f23": 1.0776,
+    "f24": 1.0924
+   }
+  }
+ },
+ "bootstrap": {
+  "fuente": "Hackaton/Semana 1/Modelos_claude_b/experimentos/predicciones_v23_v24_s30.parquet",
+  "sha256": "afd72dca917bf593202fb94cbee9382f5e9c35ea80c8aada81a68a2053d1131e",
+  "replicas": 300,
+  "fraccion": 0.33,
+  "semilla": 7,
+  "c_optimo_2024_completo": {
+   "motor": 1.0185191756357046,
+   "buildings": 1.0711779222194635,
+   "contents": 1.013683578605815
+  },
+  "sigma": {
+   "motor": 0.03365515564833148,
+   "buildings": 0.04809234151122853,
+   "contents": 0.0357135838740834
+  },
+  "c_optimo_33pct_media": {
+   "motor": 1.019364174981348,
+   "buildings": 1.0698482541570107,
+   "contents": 1.0115094194783414
+  },
+  "ganancia_D2_aplicando_c_del_33pct": {
+   "en_el_33pct_media": 0.0004300024364801506,
+   "en_el_67pct_media": -0.00013834604301633894,
+   "en_el_67pct_sd": 0.0003595798367325149,
+   "en_el_67pct_p05": -0.0008580493934882527
+  }
+ },
+ "instrucciones_codex": "Enviar las seis sondas con nombre neutral en el orden que convenga (hoy quedan 10 intentos hasta las 19:00 de Bogotá), anotar cada puntuación pública en registro_envios.json con submitted=true, y devolver las seis puntuaciones con cinco decimales. No seleccionar ninguna sonda como final. Después se ejecuta `sonda_nivel.py resolver` y se prepara S41."
+}

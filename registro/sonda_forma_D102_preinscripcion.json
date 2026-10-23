@@ -1,0 +1,236 @@
+{
+ "id": "S50_sonda_forma",
+ "autor": "Claude (sesión Cowork del 22 de octubre), por instrucción del participante; decisión D102",
+ "fecha_utc": "2026-10-23T02:43:39+00:00",
+ "base": {
+  "archivo": "Hackaton/Semana 1/Envios/archivos/S42_nivel_credibilidad_revisada.csv",
+  "sha256": "a2fdcccd9661abff6265b9fd6fc383ef155de87dd3b075b53327641154de62f7",
+  "publico": 0.13033,
+  "sd_log_tasa_S42": {
+   "motor": 0.5790070683510842,
+   "buildings": 0.5873716978736432,
+   "contents": 0.5825772078059411
+  }
+ },
+ "linaje": "S42 (Mezcla por peligro con nivel calibrado) con las relatividades de un solo ramo comprimidas (a = 0,90) o ampliadas (a = 1,10) alrededor de la tasa media del ramo; total por ramo idéntico a S42; nada reentrenado",
+ "transformacion": "r' = g (r/g)^a con r = mu/e y g = sum(mu)/sum(e) del ramo; mu' = e r'; renivelado al total del ramo",
+ "objetivo": "Estimar por parábola (D² en a = 0,90, 1,00 y 1,10) el exponente óptimo del público por ramo y aplicar solo la fracción creíble (S43). Las sondas no son candidatos finales y nunca se seleccionan.",
+ "archivos": {
+  "motor_a090": {
+   "archivo": "Hackaton/Semana 1/Envios/archivos/S50_sonda_forma_motor_a090.csv",
+   "sha256": "bf31a8219a29b3e6c3bcea129bd7bbac41e3ab84191bc7a06a368f9705400e0d",
+   "ramo": "motor",
+   "a": 0.9,
+   "filas": 626639,
+   "total_CU": 214195879.19,
+   "por_ramo_CU": {
+    "motor": 116978988.8,
+    "buildings": 77439071.71,
+    "contents": 19777818.68
+   },
+   "sd_log_tasa_ramo": 0.521106361522485
+  },
+  "motor_a110": {
+   "archivo": "Hackaton/Semana 1/Envios/archivos/S50_sonda_forma_motor_a110.csv",
+   "sha256": "7b3c766e7e9c8ed0493d1ed525ed9643202f09be318b1c0ce531f9c33dd01846",
+   "ramo": "motor",
+   "a": 1.1,
+   "filas": 626639,
+   "total_CU": 214195879.19,
+   "por_ramo_CU": {
+    "motor": 116978988.8,
+    "buildings": 77439071.71,
+    "contents": 19777818.68
+   },
+   "sd_log_tasa_ramo": 0.6369077751780919
+  },
+  "buildings_a090": {
+   "archivo": "Hackaton/Semana 1/Envios/archivos/S50_sonda_forma_buildings_a090.csv",
+   "sha256": "92db452a35c5eef451710b691db0f581816d3908ab7e58f8fde8e9e690c536da",
+   "ramo": "buildings",
+   "a": 0.9,
+   "filas": 626639,
+   "total_CU": 214195879.19,
+   "por_ramo_CU": {
+    "motor": 116978988.8,
+    "buildings": 77439071.71,
+    "contents": 19777818.68
+   },
+   "sd_log_tasa_ramo": 0.5286345279994451
+  },
+  "buildings_a110": {
+   "archivo": "Hackaton/Semana 1/Envios/archivos/S50_sonda_forma_buildings_a110.csv",
+   "sha256": "f6adcf3aa649f0271d3002e0adeec9d79e6b51a968b2cc6a6f728f9122f23960",
+   "ramo": "buildings",
+   "a": 1.1,
+   "filas": 626639,
+   "total_CU": 214195879.19,
+   "por_ramo_CU": {
+    "motor": 116978988.8,
+    "buildings": 77439071.71,
+    "contents": 19777818.68
+   },
+   "sd_log_tasa_ramo": 0.646108867635295
+  },
+  "contents_a090": {
+   "archivo": "Hackaton/Semana 1/Envios/archivos/S50_sonda_forma_contents_a090.csv",
+   "sha256": "008fa14366cad2ef4b7a8a42b2f4e4cb5cf4e029d67afe1713bffb3dd9d3892f",
+   "ramo": "contents",
+   "a": 0.9,
+   "filas": 626639,
+   "total_CU": 214195879.19,
+   "por_ramo_CU": {
+    "motor": 116978988.8,
+    "buildings": 77439071.71,
+    "contents": 19777818.68
+   },
+   "sd_log_tasa_ramo": 0.5243194870205247
+  },
+  "contents_a110": {
+   "archivo": "Hackaton/Semana 1/Envios/archivos/S50_sonda_forma_contents_a110.csv",
+   "sha256": "940c22f00ac51b18ac31bacd9303ff4e3a7f61728e371164fd3c52cf448d7fa6",
+   "ramo": "contents",
+   "a": 1.1,
+   "filas": 626639,
+   "total_CU": 214195879.19,
+   "por_ramo_CU": {
+    "motor": 116978988.8,
+    "buildings": 77439071.71,
+    "contents": 19777818.68
+   },
+   "sd_log_tasa_ramo": 0.6408349284525771
+  }
+ },
+ "preinscrito": {
+  "tau_previa": {
+   "motor": 0.05,
+   "buildings": 0.05,
+   "contents": 0.05
+  },
+  "sigma_ruido_33pct_bootstrap_2024": {
+   "motor": 0.043188424375056836,
+   "buildings": 0.04668950631565944,
+   "contents": 0.041976064608297926
+  },
+  "Z_credibilidad": {
+   "motor": 0.5727061971392177,
+   "buildings": 0.5341983072324038,
+   "contents": 0.5865804471620063
+  },
+  "K_2024": {
+   "motor": 0.028196343069501393,
+   "buildings": 0.029573675965440173,
+   "contents": 0.012114888326511326
+  },
+  "a_optimo_2024_relativo_a_S30": {
+   "motor": 1.02,
+   "buildings": 1.02,
+   "contents": 1.06
+  },
+  "regla": "a* = vértice de la parábola por los tres puntos del ramo (si la parábola no es cóncava o a* sale de [0,80; 1,20], el ramo no se aplica); a_Z = 1 + Z (a* − 1); S43 = S42 con a_Z por ramo y totales intactos; con un solo punto en un ramo se usa K_2024 como curvatura conocida. Selección final manual: S43 si su público >= el de S42, si no S42; nunca una sonda.",
+  "esperanza_calculada_antes": "público +0,00026 aproximado; privado entre −0,00004 (si el óptimo de 2025 coincide con el de 2024) y +0,00010 (si difiere como la previa)"
+ },
+ "calibracion_2024": {
+  "motor": {
+   "curva_D2_vs_S30_2024": {
+    "0.80": -0.0012915412083875039,
+    "0.82": -0.0010656846005290964,
+    "0.84": -0.0008610451534675771,
+    "0.86": -0.0006776918576085746,
+    "0.88": -0.0005157127799214366,
+    "0.90": -0.0003752148645839398,
+    "0.92": -0.00025632382727208897,
+    "0.94": -0.00015918412764730664,
+    "0.96": -8.395900767438969e-05,
+    "0.98": -3.0830585918635964e-05,
+    "1.00": 5.4454286434264294e-17,
+    "1.02": 8.312408955100484e-06,
+    "1.04": -6.133125320443247e-06,
+    "1.06": -4.359604933223364e-05,
+    "1.08": -0.00010435577556904192,
+    "1.10": -0.00018871199680597925,
+    "1.12": -0.00029698502748920036,
+    "1.14": -0.00042951617121711596,
+    "1.16": -0.0005866681137535866,
+    "1.18": -0.0007688253413565871,
+    "1.20": -0.0009763945844997772
+   },
+   "a_optimo_2024": 1.02,
+   "K_2024": 0.028196343069501393,
+   "sigma_33pct": 0.043188424375056836,
+   "a_33pct_media": 1.0174
+  },
+  "buildings": {
+   "curva_D2_vs_S30_2024": {
+    "0.80": -0.0012631411843626991,
+    "0.82": -0.001040035920194107,
+    "0.84": -0.0008378493265752941,
+    "0.86": -0.0006567468229295448,
+    "0.88": -0.0004969252684311911,
+    "0.90": -0.0003586133382442184,
+    "0.92": -0.0002420720208664955,
+    "0.94": -0.00014759522199203485,
+    "0.96": -7.551046285432552e-05,
+    "0.98": -2.6179663105154277e-05,
+    "1.00": -0.0,
+    "1.02": 2.5951629315407823e-06,
+    "1.04": -1.8864716607001147e-05,
+    "1.06": -6.488841127836559e-05,
+    "1.08": -0.00013602403088916256,
+    "1.10": -0.00023286018106458508,
+    "1.12": -0.00035602717108178337,
+    "1.14": -0.0005061982685743852,
+    "1.16": -0.0006840909992114101,
+    "1.18": -0.0008904684897859971,
+    "1.20": -0.0011261408534472312
+   },
+   "a_optimo_2024": 1.02,
+   "K_2024": 0.029573675965440173,
+   "sigma_33pct": 0.04668950631565944,
+   "a_33pct_media": 1.0097
+  },
+  "contents": {
+   "curva_D2_vs_S30_2024": {
+    "0.80": -0.0007458948412889687,
+    "0.82": -0.000630893524168968,
+    "0.84": -0.0005246853056626572,
+    "0.86": -0.0004273205404123146,
+    "0.88": -0.00033886072845472825,
+    "0.90": -0.0002593786587487277,
+    "0.92": -0.00018895860197907984,
+    "0.94": -0.00012769654618222838,
+    "0.96": -7.570047013055377e-05,
+    "0.98": -3.309065053195559e-05,
+    "1.00": -0.0,
+    "1.02": 2.3425566526426828e-05,
+    "1.04": 3.702673865693231e-05,
+    "1.06": 4.063039199221744e-05,
+    "1.08": 3.404914504141909e-05,
+    "1.10": 1.7080892218501147e-05,
+    "1.12": -1.0491686714494168e-05,
+    "1.14": -4.8901640583788825e-05,
+    "1.16": -9.839828409835049e-05,
+    "1.18": -0.00015924775860771872,
+    "1.20": -0.00023173361652950282
+   },
+   "a_optimo_2024": 1.06,
+   "K_2024": 0.012114888326511326,
+   "sigma_33pct": 0.041976064608297926,
+   "a_33pct_media": 1.0599
+  },
+  "_bootstrap": {
+   "fuente": "Hackaton/Semana 1/Modelos_claude_b/experimentos/predicciones_v23_v24_s30.parquet",
+   "sha256": "afd72dca917bf593202fb94cbee9382f5e9c35ea80c8aada81a68a2053d1131e",
+   "replicas": 200,
+   "fraccion": 0.33,
+   "semilla": 3,
+   "aplicar_a_del_33pct_entero": {
+    "en_el_33pct_media": 0.00019158308120904545,
+    "en_el_67pct_media": -0.00022454368749462252,
+    "en_el_67pct_sd": 0.00023589784048556932,
+    "en_el_67pct_p05": -0.0007271143113357656
+   }
+  }
+ },
+ "instrucciones_codex": "Hoy (22 de octubre, dos intentos hasta las 19:00 de Bogotá): enviar S50_sonda_forma_motor_a090 y S50_sonda_forma_buildings_a090. Mañana a primera hora: motor_a110, buildings_a110, contents_a090, contents_a110. Anotar cada público con cinco decimales en registro_envios.json y devolverlos. Después `sonda_forma.py resolver` escribe S43."
+}

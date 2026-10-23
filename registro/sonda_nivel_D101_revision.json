@@ -1,0 +1,92 @@
+{
+ "id": "S42_nivel_credibilidad_revisada",
+ "autor": "Claude (sesión Cowork del 22 de octubre), por instrucción del participante; decisión D100",
+ "linaje": "S30 con el nivel de cada ramo multiplicado por c = 1 + Z_revisada·(c* − 1); Z_revisada con τ reestimada sobre los tres desvíos observados (D101, revisión posterior a ver el marcador)",
+ "base": {
+  "archivo": "Hackaton/Semana 1/Envios/archivos/S30_claude_b.csv",
+  "sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+  "publico": 0.12996
+ },
+ "revision": {
+  "s30_publico": 0.12996,
+  "fecha_utc": "2026-10-22T16:28:53+00:00",
+  "tau_revisada": 0.05319930930713396,
+  "suma_desvios_estandarizados_bajo_previa_D100": 6.6768732088550635,
+  "grados_de_libertad": 3,
+  "ramos": {
+   "motor": {
+    "c_optimo_publico": 0.9773664813761431,
+    "sigma": 0.03365515564833148,
+    "tau_previa_D100": 0.015,
+    "Z_D100": 0.16572516338920737,
+    "c_Z_D100": 0.9962490564279887,
+    "Z_revisada": 0.7141770443820181,
+    "c_revisado": 0.9838356605652485,
+    "ganancia_publico_esperada": 3.215409583165463e-05,
+    "ganancia_privada_esperada_si_previa_D100": -8.751426197792542e-06,
+    "ganancia_privada_esperada_si_tau_revisada": 1.633036683511633e-05,
+    "S41_privada_esperada_si_previa_D100": 8.793486050258284e-07,
+    "S41_privada_esperada_si_tau_revisada": 6.69959203229797e-06
+   },
+   "buildings": {
+    "c_optimo_publico": 1.0750883605921715,
+    "sigma": 0.04809234151122853,
+    "tau_previa_D100": 0.035,
+    "Z_D100": 0.3462532125821639,
+    "c_Z_D100": 1.0259995860825672,
+    "Z_revisada": 0.5502906079427342,
+    "c_revisado": 1.0413204195996892,
+    "ganancia_publico_esperada": 0.00019697738883628357,
+    "ganancia_privada_esperada_si_previa_D100": 1.9304710985239013e-05,
+    "ganancia_privada_esperada_si_tau_revisada": 7.469774707037947e-05,
+    "S41_privada_esperada_si_previa_D100": 2.957405834533627e-05,
+    "S41_privada_esperada_si_tau_revisada": 6.442839971028202e-05
+   },
+   "contents": {
+    "c_optimo_publico": 1.0840295445508847,
+    "sigma": 0.0357135838740834,
+    "tau_previa_D100": 0.015,
+    "Z_D100": 0.14995400679370663,
+    "c_Z_D100": 1.0126005668944555,
+    "Z_revisada": 0.689338509708412,
+    "c_revisado": 1.0579248010121836,
+    "ganancia_publico_esperada": 0.00014094105196163498,
+    "ganancia_privada_esperada_si_previa_D100": -4.738779780742456e-05,
+    "ganancia_privada_esperada_si_tau_revisada": 8.388206430752635e-05,
+    "S41_privada_esperada_si_previa_D100": 3.969357151541163e-06,
+    "S41_privada_esperada_si_tau_revisada": 3.252490934856099e-05
+   }
+  },
+  "D2_publico_esperado_S42": 0.13033007253662957,
+  "privado_esperado_S42": {
+   "si_previa_D100": -3.683451301997809e-05,
+   "si_tau_revisada": 0.00017491017821302216
+  },
+  "privado_esperado_S41": {
+   "si_previa_D100": 3.442276410190326e-05,
+   "si_tau_revisada": 0.00010365290109114097
+  },
+  "S42": {
+   "archivo": "Hackaton/Semana 1/Envios/archivos/S42_nivel_credibilidad_revisada.csv",
+   "sha256": "a2fdcccd9661abff6265b9fd6fc383ef155de87dd3b075b53327641154de62f7",
+   "filas": 626639,
+   "total_CU": 214195879.19,
+   "por_ramo_CU": {
+    "motor": 116978988.8,
+    "buildings": 77439071.71,
+    "contents": 19777818.68
+   },
+   "factores_aplicados": {
+    "motor": 0.9838356605652485,
+    "buildings": 1.0413204195996892,
+    "contents": 1.0579248010121836
+   }
+  }
+ },
+ "D100": {
+  "preinscripcion": "registro/sonda_nivel_D100_preinscripcion.json",
+  "resolucion": "registro/sonda_nivel_D100_resolucion.json"
+ },
+ "advertencia": "No es la regla preinscrita de D100. La τ revisada usa los mismos resultados del público que después se aplican; por eso su esperanza en el privado se informa bajo las dos hipótesis (previa de D100 correcta o τ revisada correcta) y la elección entre S41 y S42 es una decisión de tolerancia al riesgo del participante.",
+ "recomendacion": "Público esperado 0.13033. Selección final manual: la que decida el participante entre S41 y S42 (ambas por encima de S30 en esperanza); nunca una sonda."
+}

@@ -1,0 +1,69 @@
+{
+  "competition": "iaa-ai-assisted-hackathon-2026-part-1",
+  "utc": "2026-10-22T16:35:04.744358+00:00",
+  "receipts": [
+    {
+      "id": "S41_nivel_credibilidad",
+      "code": "S41",
+      "csv": "Hackaton/Semana 1/Envios/archivos/S41_nivel_credibilidad.csv",
+      "upload_file": "Hackaton/Repositorio_IAA2026/privado/envios_S41_S42_20261022/S41_riesgo_ultimo.csv",
+      "sha256": "d8661c2874e9112bd3dd62ea4470a465ee309832dee53fd9dcaa4144dac643a5",
+      "rows": 626639,
+      "kaggle_submission_id": 57531719,
+      "kaggle_status": "COMPLETE",
+      "public_score": 0.13016,
+      "public_score_text": "0.13016",
+      "submitted_utc": "2026-10-22T16:33:34.073Z",
+      "retrieved_utc": "2026-10-22T16:35:04.742352+00:00",
+      "message": "S41 ultimate risk estimate; credibility level calibration",
+      "expected_public_score": 0.13015759074253894,
+      "author_submission": "Codex",
+      "author_preparation": "Claude (Cowork)",
+      "no_manual_final_selection": true,
+      "delta_S30": 0.00020000000000000573,
+      "delta_expected_public_score": 2.4092574610612427e-06,
+      "expected_discrepancy_gt_000005": false,
+      "local_validation_limit": "Calibración derivada del marcador público; no validación independiente, nuevo backtest ni prueba de mejora privada."
+    },
+    {
+      "id": "S42_nivel_credibilidad_revisada",
+      "code": "S42",
+      "csv": "Hackaton/Semana 1/Envios/archivos/S42_nivel_credibilidad_revisada.csv",
+      "upload_file": "Hackaton/Repositorio_IAA2026/privado/envios_S41_S42_20261022/S42_riesgo_ultimo.csv",
+      "sha256": "a2fdcccd9661abff6265b9fd6fc383ef155de87dd3b075b53327641154de62f7",
+      "rows": 626639,
+      "kaggle_submission_id": 57531744,
+      "kaggle_status": "COMPLETE",
+      "public_score": 0.13033,
+      "public_score_text": "0.13033",
+      "submitted_utc": "2026-10-22T16:34:34.157Z",
+      "retrieved_utc": "2026-10-22T16:35:04.742352+00:00",
+      "message": "S42 ultimate risk estimate; credibility level calibration",
+      "expected_public_score": 0.13033007253662957,
+      "author_submission": "Codex",
+      "author_preparation": "Claude (Cowork)",
+      "no_manual_final_selection": true,
+      "delta_S30": 0.0003700000000000092,
+      "delta_expected_public_score": -7.253662956396845e-08,
+      "expected_discrepancy_gt_000005": false,
+      "local_validation_limit": "Calibración derivada del marcador público; no validación independiente, nuevo backtest ni prueba de mejora privada."
+    }
+  ],
+  "author": "Codex",
+  "authorization": [
+    "Por favor envío S41 a kaggle, ya está preparado",
+    "tambien envía S42"
+  ],
+  "quota": {
+    "today": 8,
+    "daily_limit": 10,
+    "left": 2,
+    "source": "kaggle-cli",
+    "lifetime": 22
+  },
+  "quota_checked_utc": "2026-10-22T16:35:07Z",
+  "reset_Bogota": "2026-10-22T19:00:00-05:00",
+  "no_manual_final_selection": true,
+  "raw_evidence": "Hackaton/Repositorio_IAA2026/privado/envios_S41_S42_20261022",
+  "checks": "SHA preinscrito, sample/test y orden, esquema, filas, predicciones positivas y finitas, factores por ramo sobre S30, totales por ramo y copias exactas"
+}

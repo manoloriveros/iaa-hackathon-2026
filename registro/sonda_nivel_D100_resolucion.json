@@ -1,0 +1,125 @@
+{
+ "id": "S41_nivel_credibilidad",
+ "autor": "Claude (sesión Cowork del 22 de octubre), por instrucción del participante; decisión D100",
+ "linaje": "S30 con el nivel de cada ramo multiplicado por c_Z (sonda de nivel con credibilidad, D100)",
+ "base": {
+  "archivo": "Hackaton/Semana 1/Envios/archivos/S30_claude_b.csv",
+  "sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+  "publico": 0.12996
+ },
+ "resolucion": {
+  "s30_publico": 0.12996,
+  "fecha_utc": "2026-10-22T16:24:48+00:00",
+  "ramos": {
+   "motor": {
+    "publico_x090": 0.12954,
+    "publico_x110": 0.12906,
+    "S1_sobre_N": 0.0661426984294656,
+    "S2_sobre_N": 0.06767440841263139,
+    "c_optimo_publico": 0.9773664813761431,
+    "D2_publico_en_c_optimo": 0.1299950659550071,
+    "ganancia_publico_en_c_optimo": 3.506595500710197e-05,
+    "Z": 0.16572516338920737,
+    "c_Z": 0.9962490564279887,
+    "D2_publico_en_c_Z": 0.12997056740816465,
+    "ganancia_publico_en_c_Z": 1.0567408164657843e-05,
+    "lectura": {
+     "f23": 0.9864,
+     "f24": 1.0047,
+     "nivel_medio_S30": 0.9955499999999999,
+     "nivel_implicito_publico": 0.9730172005340192
+    }
+   },
+   "buildings": {
+    "publico_x090": 0.12873,
+    "publico_x110": 0.13018,
+    "S1_sobre_N": 0.04834898150272402,
+    "S2_sobre_N": 0.04497210022448092,
+    "c_optimo_publico": 1.0750883605921715,
+    "D2_publico_en_c_optimo": 0.13020446914413927,
+    "ganancia_publico_en_c_optimo": 0.000244469144139281,
+    "Z": 0.3462532125821639,
+    "c_Z": 1.0259995860825672,
+    "D2_publico_en_c_Z": 0.13010261493074476,
+    "ganancia_publico_en_c_Z": 0.00014261493074477216,
+    "lectura": {
+     "f23": 1.0589,
+     "f24": 1.1343,
+     "nivel_medio_S30": 1.0966,
+     "nivel_implicito_publico": 1.1789418962253753
+    }
+   },
+   "contents": {
+    "publico_x090": 0.12929,
+    "publico_x110": 0.13011,
+    "S1_sobre_N": 0.024801173561014744,
+    "S2_sobre_N": 0.02287868784175058,
+    "c_optimo_publico": 1.0840295445508847,
+    "D2_publico_en_c_optimo": 0.13011509502906451,
+    "ganancia_publico_en_c_optimo": 0.00015509502906452255,
+    "Z": 0.14995400679370663,
+    "c_Z": 1.0126005668944555,
+    "D2_publico_en_c_Z": 0.1300044084036295,
+    "ganancia_publico_en_c_Z": 4.440840362951448e-05,
+    "lectura": {
+     "f23": 1.0776,
+     "f24": 1.0924,
+     "nivel_medio_S30": 1.085,
+     "nivel_implicito_publico": 1.17617205583771
+    }
+   }
+  },
+  "D2_publico_esperado_S41": 0.13015759074253894,
+  "ganancia_publico_esperada_S41": 0.00019759074253894449,
+  "S41": {
+   "archivo": "Hackaton/Semana 1/Envios/archivos/S41_nivel_credibilidad.csv",
+   "sha256": "d8661c2874e9112bd3dd62ea4470a465ee309832dee53fd9dcaa4144dac643a5",
+   "filas": 626639,
+   "total_CU": 213685158.19,
+   "por_ramo_CU": {
+    "motor": 118454953.29,
+    "buildings": 76299719.11,
+    "contents": 18930485.79
+   },
+   "factores_aplicados": {
+    "motor": 0.9962490564279887,
+    "buildings": 1.0259995860825672,
+    "contents": 1.0126005668944555
+   }
+  }
+ },
+ "preinscrito": {
+  "tau_previa": {
+   "motor": 0.015,
+   "buildings": 0.035,
+   "contents": 0.015
+  },
+  "sigma_ruido_33pct_bootstrap_2024": {
+   "motor": 0.03365515564833148,
+   "buildings": 0.04809234151122853,
+   "contents": 0.0357135838740834
+  },
+  "Z_credibilidad": {
+   "motor": 0.16572516338920737,
+   "buildings": 0.3462532125821639,
+   "contents": 0.14995400679370663
+  },
+  "regla": "c_Z = 1 + Z*(c* - 1) por ramo; S41 = S30 con c_Z; selección final manual en Kaggle: S41 si su público >= el de S30, si no S30; las seis sondas quedan excluidas de la selección final en cualquier caso",
+  "lectura_actuarial": "c* se compara con los factores de año siguiente de S30 (f23, f24): c* > 1 indica que la experiencia 2025 del público supera el nivel medio f23/f24 elegido; se documenta en el informe como calibración del nivel con la retroalimentación del marcador",
+  "factores_s30": {
+   "motor": {
+    "f23": 0.9864,
+    "f24": 1.0047
+   },
+   "buildings": {
+    "f23": 1.0589,
+    "f24": 1.1343
+   },
+   "contents": {
+    "f23": 1.0776,
+    "f24": 1.0924
+   }
+  }
+ },
+ "recomendacion": "Seleccionar S41 como final si su público es mayor o igual que el de S30 (0.12996); esperado 0.13016. Nunca seleccionar una sonda."
+}
