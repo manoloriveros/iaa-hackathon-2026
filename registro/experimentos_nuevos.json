@@ -84,6 +84,179 @@
       "resultado": "Ningún ramo muestra reservas cortas; la suficiencia no es acreditable con una valoración. Orden S30 > S22 en el agregado con b uniforme o solo en lesiones entre 0,25 y 2,5. Detalle en docs/RESERVAS_ACOTACION.md.",
       "decision_humana": "Participante, 20 de octubre (15:21 UTC, registro/decisiones_participante_20261020.json): «Suficiencia de reservas: Lo dejamos así como limitación del ejercicio». La incertidumbre material de la reserva de caso queda declarada como limitación (MOD-002) y S3 sigue sin adoptarse.",
       "artefactos_privados": "privado/corridas/reservas_20261019T225357Z_99b45271/"
+    },
+    {
+      "id": "SEVCOMP-20261022",
+      "autor_real": "Codex",
+      "utc": "2026-10-22T16:20:45.578795+00:00",
+      "estado": "completo_retenido_peso_cero",
+      "propuesta": "PROP-20261022-SEVCOMP",
+      "autorizacion": "Petición humana directa de comprobar insumos, entrenar si viable y comparar con S30; conservar el modelo actual y no enviar a Kaggle hasta revisar resultados. Transcripción privada en la corrida.",
+      "hipotesis_previa": "Severidad compartida entre peligros por ramo puede mejorar el patrón de riesgo de S30 conservando sus frecuencias.",
+      "enmienda_antes_fit": "F0.n_p cuenta positivos. Se elimina cabeza binaria para no duplicar positividad; se entrenan seis Gamma positivas en lugar de hasta doce cabezas.",
+      "registro_propuesta_original": "registro/propuesta_modelo_20261022.json",
+      "guia": "docs/RESULTADO_SEVERIDAD_COMPARTIDA_20261022.md",
+      "artefactos_privados": "privado/corridas/sevcomp_20261022T155621Z",
+      "fuentes_y_sha": "auditoria_etiquetas.json, montaje_selectivo.json y barrera_insumos_pre_fit.json en la corrida",
+      "configuracion": "campos_y_parametros_previos.json; Gamma de500rondas,7hojas,profundidad3; K1000; máximo alfa global0.25. Sin búsqueda de parámetros.",
+      "particiones": "train<=2022→2023; train<=2023→2024; alfa solo CAL23 original; contraste V23 selección y V24",
+      "criterio_aceptacion": "72 puntos sin retrocesos, ganancia V24 nominal>=0.0002, inferiores95 cliente/dirección positivos nominal/+25, región exacta después de filtros previos.",
+      "entorno": {
+        "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+        "numpy": "2.3.5",
+        "pandas": "3.0.1",
+        "lightgbm": "4.6.0",
+        "scipy": "1.16.3",
+        "sklearn": "1.7.2"
+      },
+      "resultado": "Seis cabezas guardadas; alfa0. Combinación idéntica a S30, sin mejora y sin cumplir filtro.",
+      "resultados_adversos": "La calibración elige peso cero; el extremo ya evaluado alfa0.25 aumenta pérdida cal0.2315%. No materialidad ni inferiores positivos. Incidencias técnicas previas conservadas en la corrida.",
+      "decision_humana": "Autoriza este ensayo local; resultados todavía no aprobados por el participante. No se solicita cambiar S30 por este resultado.",
+      "alpha": 0,
+      "entrenamientos_nuevos": 6,
+      "ajustes_frecuencias": 0,
+      "inferencias_base": "Estimadores persistidos; diez componentes y anclas V23/V24 cotejados. No reproducción binaria del ajuste histórico.",
+      "bootstrap_remuestreos_ejecutados": 0,
+      "intervalos": "[0,0] por identidad exacta de vectores, no simulación de1000réplicas",
+      "region_exacta_ejecutada": false,
+      "criterios_superados": false,
+      "produccion_2025": false,
+      "envios": 0,
+      "S30_modificado": false,
+      "score_publico_nuevo": null,
+      "cierre_sha256": "28656d161bbd1af0dcb544b420009cd833e3d80946242b4cd65a747ec835b5f9",
+      "resultado_sha256": "61c2d2bb991189d1f2e8967ae7a4cd687218d47f3ded4acb94b86ee420985ffa",
+      "run_id": "sevcomp_20261022T155621Z",
+      "propuesta_historica": [
+        {
+          "id": "PROP-20261022-SEVCOMP",
+          "utc": "2026-10-22T15:40:29.937751+00:00",
+          "autor": "Codex",
+          "estado": "propuesta_no_ejecutada",
+          "registro": "registro/propuesta_modelo_20261022.json",
+          "guia": "docs/PROPUESTA_MODELO_20261022.md",
+          "S30_modificado": false,
+          "entrenamientos": 0,
+          "envios": 0,
+          "novedad": "Severidad compartida con ceros, sobre frecuencias congeladas; viabilidad aún pendiente.",
+          "rango_vivo": 2,
+          "gap_captura": 7e-05,
+          "score_nuevo": null
+        }
+      ]
+    },
+    {
+      "run_id": "sens42_20261022T165934Z_6ec8f1fe",
+      "autor_real": "Claude (Cowork, 22-10-2026)",
+      "hipotesis_previa": "Bateria L01-L08 para S42; hipotesis y criterios en PLAN_PREREGISTRO.md, incluida la regla de alarma sobre la marca final",
+      "fuentes_y_sha": {
+        "plan": "privado/corridas/sens42_20261022T165934Z_6ec8f1fe/PLAN_PREREGISTRO.md",
+        "plan_sha256": "6ec8f1fe6b6ad40d802774281c77167ec3830dc160a68bfcb76f6a0f45b37347"
+      },
+      "configuracion": "Recalculo de D100/D101 con codigo propio; remuestreo 33/67 sobre V24 de S30; forma cerrada Tweedie 1,5 para el privado; tres previas",
+      "particiones": "V24 (2024) de D68 como sustituto de 2025 para el ruido; publico 33 % segun la pagina del concurso",
+      "criterio_aceptacion": "Por experimento en el plan; alarma si S41 supera a S42 bajo 2 de 3 previas con diferencia media >= 0,00003 y S41 >= S30 bajo las tres",
+      "entorno": "Nube de Claude (Python 3.13, numpy 2.5.3, pandas 3.0.5); escritura en la maquina del participante",
+      "resultados_adversos": "L02: el redondeo del marcador deja el factor de S42 de edificios y contenidos a ±0,27 % y ±0,41 %, por encima del ±0,2 % fijado (efecto en D² acotado). Diseño de D100: sigma medida frente al total que contiene la muestra. Margen de la alarma estrecho: 80 % de las extracciones de redondeo (no preinscrito); sin corrección del ruido no habría alarma.",
+      "resultado": "L01 reproduce factores, públicos esperados y SHA de S41 y S42 con código propio. L03 confirma que el ruido del óptimo público estaba subestimado: cociente 33-67 frente a 33-total 1,4925-1,4926 (teoría 1/0,67). L04 con ruido corregido: S41 supera a S42 en esperanza bajo P1 y P3 (media 0,0000325 >= 0,00003) y S41 >= S30 bajo las tres previas: regla de alarma cumplida, aviso al participante el 22-10. L05: edificios apoyado, autos y contenidos parcial. L06 herencia exacta salvo redondeo; L07 123 filas 25.732,84 CU en S42. Informe integrado en docs/SENSIBILIDAD_S43.md (SENSIBILIDAD_S42.md no se publicó aparte).",
+      "decision_humana": "Peticion del participante 22-10-2026: actualizar la bateria para S42, respaldar y documentar; condicion de narrativa para el informe. Sin cambio de marca salvo decision suya.",
+      "artefactos_privados": "privado/corridas/sens42_20261022T165934Z_6ec8f1fe/",
+      "utc_preregistro": "2026-10-22T16:59:34.768762+00:00",
+      "evidencia": "privado/corridas/sens42_20261022T165934Z_6ec8f1fe/resultados/ (MANIFIESTO.json); verificador en la corrida sens43"
+    },
+    {
+      "run_id": "repro_s42_20261022T170245Z_c9ea2fc3",
+      "autor_real": "Claude (Cowork, línea principal, 22-10-2026)",
+      "hipotesis_previa": "El paso de nivel de S42 (seis sondas, S41 y S42) se reproduce con sonda_nivel.py sin cambios sobre los productos del reajuste completo: los ocho SHA y los campos numéricos de las notas D100/D101 iguales (o con diferencias relativas <= 1e-12). La acotación de reservas se rehace con la regla de nivel de S42 y la materialidad del 1 % fijada el 19-10.",
+      "fuentes_y_sha": {
+        "plan": "privado/corridas/repro_s42_20261022T170245Z_c9ea2fc3/PLAN_PREREGISTRO.md",
+        "plan_sha256": "c9ea2fc328a8290252f062f7ae45ab60f198f3f79a6a36d49277533cf8cf13ff",
+        "sonda_nivel_py": "d6cfe8055ee846d6214bac40d703f5e9c58ef289162e27a61a484ee52462a7a7",
+        "reservas_consistencia_py": "e16680ec62e90bc8c4e49865010f7d088aaef967e479fed406bc6befa5be5d78",
+        "predicciones_v23_v24_s30_historico": "afd72dca917bf593202fb94cbee9382f5e9c35ea80c8aada81a68a2053d1131e",
+        "recibo": "registro/recibo_reproduccion_s42_20261022.json",
+        "recibo_sha256": "fa4f0df7d9da321c3ff04d41655bcdc3017e6fdb94198298f4fa6869f1d1496a",
+        "evidencia_tar_sha256": "b7721c7d6d65bb9e9f84f0bcfd671fb6ca2a28a7d1a2b29171ffc204416e30e8"
+      },
+      "configuracion": "R0 control (S30 del reajuste + parquet histórico), R1 (parquet regenerado desde el reajuste), R2 (desde la réplica congelada); reservas: Nivel de reservas_consistencia.py con c*/ρ y τ reestimada por Bayes empírico en cada escenario; variantes Z fija y σ/√0,67",
+      "particiones": "Las de la receta (V23 selección y V24) y el 33 % público del concurso; sin particiones nuevas",
+      "criterio_aceptacion": "Exacto: ocho SHA y campos numéricos iguales; último bit: SHA iguales y diferencias relativas <= 1e-12; si no, no reproducido. Reservas: misma regla de clasificación que S30 con umbrales del 1 % del nivel de S42",
+      "entorno": "Nube de Claude (Python 3.13, numpy 2.5.3, pandas 3.0.5, pyarrow 26.0.0); escritura en la máquina del participante",
+      "resultados_adversos": "Hipótesis R0 exacto no cumplida (σ, Z y ganancias cambian en el último bit con el parquet histórico: entorno numérico). La bisección preinscrita para las reservas falla porque con τ reestimada el nivel no es monótono en b (autos devolvía 9,56 con b = 1,25 ya en +1,03 %); se conserva la salida literal y se sustituye por el primer cruce. La clase de edificios y contenidos no resiste las variantes: con Z fija edificios vuelve a incertidumbre material; con σ/√0,67 los tres ramos quedan con incertidumbre material; con σ recalculada con las etiquetas del escenario el umbral de edificios cae a 1,104, bajo el extremo de β (1,109). Acoplamiento entre ramos vía τ.",
+      "resultado": "Paso de nivel: los ocho CSV (seis sondas, S41 y S42) salen con el SHA registrado en las tres corridas (control con predicciones históricas, reajuste y réplica congelada); notas con diferencias de último bit (máx. 6,3e-13 relativo; factores de S42 y τ idénticos): «reproducido con diferencias de último bit». Predicciones 2024 regeneradas idénticas entre reajuste y réplica; frente al histórico 22.944 filas con último bit distinto (máx. 7,9e-16). Reservas con la regla de S42: umbral de b en cualquier ramo 0,874-1,233 (autos), 0,845-1,111 (edificios, lo marca contenidos), 0,725-1,215 (contenidos, lo marca edificios); autos sigue con incertidumbre material, edificios acotado por dos milésimas y contenidos acotado con la regla aplicada; S3 en autos −0,64 % (S30 −2,2 %), acotado.",
+      "decision_humana": "Petición del participante 22-10-2026: «actualiza este ejercicio para S42»; condición añadida para el informe: procedimiento completo y S42 como calibración del nivel con tres parámetros. Sin envíos ni cambio de marca.",
+      "artefactos_privados": "privado/corridas/repro_s42_20261022T170245Z_c9ea2fc3/",
+      "utc_preregistro": "2026-10-22T17:02:45+00:00"
+    },
+    {
+      "run_id": "sens43_20261023T035154Z_aece6462",
+      "autor_real": "Claude (Cowork, 23-10-2026)",
+      "hipotesis_previa": "Batería N01-N10 para S43 (forma de D102 sobre S42); hipótesis, criterios y regla de alarma sobre la marca final en PLAN_PREREGISTRO.md",
+      "fuentes_y_sha": {
+        "plan": "privado/corridas/sens43_20261023T035154Z_aece6462/PLAN_PREREGISTRO.md",
+        "plan_sha256": "aece6462d2d0c799c46d4297ba74c555100b4c459d65c3da5470c83727751a44"
+      },
+      "configuracion": "Recálculo de D102 con código propio; remuestreo 33/67 del vértice de forma sobre V24 de S30; parábola de la forma para el privado con tres pares de previas de nivel y forma",
+      "particiones": "V23 y V24 (D68) como sustituto de 2025 para el ruido y la retroprueba; público 33 % según la página del concurso",
+      "criterio_aceptacion": "Por experimento en el plan; alarma si S41 o S42 supera a S43 bajo 2 de 3 pares de previas con diferencia media >= 0,00003 y no pierde frente a S30 bajo ninguno",
+      "entorno": "Nube de Claude (Python 3.13, numpy 2.5.3, pandas 3.0.5); escritura en la máquina del participante",
+      "resultados_adversos": "La forma de S43 no tiene apoyo fuera del marcador en autos y empeora V23 y V24. Diseño de D102 con el mismo error de ruido que D100. La alarma depende de la corrección del ruido (sin ella S43 superaría a S41 por 0,0000128); resiste redondeo (99,9 %), semillas, curvatura 2024 y posterior conjunta (no preinscritos).",
+      "resultado": "N01 reproduce exponentes, público esperado (0,1304821) y SHA de S43. N03: el ruido del vértice de forma también estaba subestimado (cociente 1,4913-1,5000); Z de forma 0,475/0,393/0,449 frente a 0,573/0,534/0,587 de D102. N04 parábola adecuada. N05: S41 supera a S43 en esperanza bajo los tres pares de previas (+0,000042/+0,000049/+0,000022; media 0,0000376 >= 0,00003) y S41 >= S30 bajo todos: regla de alarma cumplida a favor de S41; S42 no la cumple. Aviso al participante el 23-10 a las 04:0x UTC. N06 forma de autos sin apoyo fuera del marcador (V24 +1,7 %, V23 +2,3 %, S43 −4,5 %); hogar parcial. N07: la forma de S43 resta 0,000127 (V23) y 0,000111 (V24). N08 orden de tasas y totales conservados; N09 123 filas 25.708,75 CU. Informe docs/SENSIBILIDAD_S43.md con 342 cifras verificadas y autoprueba de 8 casos, en la nube y en la máquina del participante.",
+      "decision_humana": "Petición del participante 23-10-2026 (22:5x de Bogotá del 22): «Actualiza el modelo a S43»; interpretada como la de S42: respaldar y documentar, con las dos condiciones del informe. Sin cambio de marca salvo decisión suya.",
+      "artefactos_privados": "privado/corridas/sens43_20261023T035154Z_aece6462/",
+      "utc_preregistro": "2026-10-23T03:51:54+00:00",
+      "evidencia": "privado/corridas/sens43_20261023T035154Z_aece6462/resultados/ (MANIFIESTO.json, cifras_s43.json, verificar_sensibilidad_s43.py); foro CLA-20261022-013"
+    },
+    {
+      "run_id": "repro_s43_20261023T141352Z_fbf66589",
+      "autor_real": "Claude (Cowork, línea principal, 23-10-2026)",
+      "hipotesis_previa": "El paso de forma de S43 (seis sondas S50 y S43) se reproduce con sonda_forma.py sin cambios sobre los productos del reajuste completo y de la réplica congelada: los siete SHA iguales y los campos numéricos de las notas de D102 iguales o con diferencias relativas <= 1e-12. Con la regla de S43, un error de reservas no mueve la forma de forma material (0,00003 de D², materialidad elegida por el participante); el nivel es el de S42.",
+      "fuentes_y_sha": {
+        "plan": "privado/corridas/repro_s43_20261023T141352Z_fbf66589/PLAN_PREREGISTRO.md",
+        "plan_sha256": "fbf66589f6e306c5d54a1bb919badb216e35d1f21651891dcb21191452e20c7d",
+        "sonda_forma_py": "ed4f26ea28db402d2ef598d08d6bf47b9e1d26d8884e69a6dc5eaece23782082",
+        "reservas_consistencia_py": "e16680ec62e90bc8c4e49865010f7d088aaef967e479fed406bc6befa5be5d78",
+        "S43_sha256": "a8010a6917e213dc65f4855142c7db850ed575a2b5a80135f68862caaee5e4b5"
+      },
+      "configuracion": "Raíces R0 (parquet histórico), R1 (reajuste) y R2 (réplica congelada) de repro_s42_20261022T170245Z_c9ea2fc3, con sonda_forma.py y los policies_*.parquet originales; reservas: σ, K, Z y a_Z de la forma bajo reserva de caso ×b, S3 e interacción con el nivel",
+      "particiones": "V23 selección y V24 de la receta; 33 % público del concurso; sin particiones nuevas",
+      "criterio_aceptacion": "Exacto: siete SHA y campos numéricos iguales; último bit: SHA iguales y diferencias relativas <= 1e-12; si no, no reproducido. Reservas: material si K_2024·Δa_Z² >= 0,00003 en algún escenario dentro del intervalo al 90 % de β, en S3 o en la interacción con el nivel",
+      "entorno": "Nube de Claude (Python 3.13, numpy 2.5.3, pandas 3.0.5, pyarrow 26.0.0); escritura en la máquina del participante",
+      "resultados_adversos": "Clase preinscrita «no reproducido»: la sonda S50 de edificios a = 1,10 difiere del registro en una fila (B02832587: 441,622945 frente a 441,622946; sin redondear 441,6229455000002, punto medio del sexto decimal), igual en las tres raíces y en el entorno de Codex; 14 de 143 campos de la nota de preinscripción superan 1e-12 relativo, todos en la curva D²(a) − D²(1) de 2024 (máx. absoluto 2,7e-16; en a = 1 la curva vale 0 y el registro guarda 5,4e-17). Las hipótesis de sondas iguales al registro y de notas con diferencias de último bit no se cumplen a la letra.",
+      "resultado": "S43 sale con su SHA (a8010a69…e5b5) en las tres raíces (parquet histórico, reajuste y réplica congelada); σ, Z, a* y a_Z idénticos al registro; K de 2024 con 3,7e-13 relativo; resolución 61 de 67 campos idénticos. Totales por ramo iguales a S42 salvo redondeo (máx. 0,00015 CU) y pendiente del log de la tasa igual a a_Z. Reservas con la regla de forma de S43 y materialidad 0,00003 de D²: inmaterial en los tres ramos. Cota analítica: edificios y contenidos no pueden ser materiales por ningún cambio de Z; autos necesitaría |ΔZ| >= 0,41. Mayor cambio dentro del intervalo de β: autos −0,0065 (lesiones ×0,55, coste 1,2e-6); S3 <= 0,0004; nivel ±2,5 % mueve a_Z 0,006–0,008 (<= 1,1e-6). El nivel es el de S42 y su acotación vale sin cambios.",
+      "decision_humana": "Petición del participante 23-10-2026: «Actualiza el modelo a S43»; eligió el alcance (reproducción y reservas) y la materialidad de la forma (0,00003 de D²). Sin envíos ni cambio de marca.",
+      "artefactos_privados": "privado/corridas/repro_s43_20261023T141352Z_fbf66589/",
+      "utc_preregistro": "2026-10-23T14:15:16+00:00",
+      "evidencia": "privado/corridas/repro_s43_20261023T141352Z_fbf66589/ (corrida_s43_fbf66589.tar.gz, 24 archivos con MANIFIESTO.sha256); registro/recibo_reproduccion_s43_20261023.json; docs/REPRODUCCION_COMPLETA.md («S43: el paso de forma desde el reajuste») y docs/RESERVAS_ACOTACION.md («Qué cambia con S43»)"
+    },
+    {
+      "run_id": "repro_s41_20261023T145808Z_c8055dfc",
+      "autor_real": "Claude (Cowork, línea principal, 23-10-2026)",
+      "hipotesis_previa": "S41 queda reproducido desde el reajuste y la réplica congelada (CSV con su SHA y notas de D100 iguales o con diferencias relativas <= 1e-12). Con la regla de D100 (Z fija, sin acoplar ramos), el nivel 2025 de S41 se mueve con las reservas algo menos que el de S30, en proporción (1 − Z); se espera que la reserva de caso siga como incertidumbre material.",
+      "fuentes_y_sha": {
+        "plan": "privado/corridas/repro_s41_20261023T145808Z_c8055dfc/PLAN_PREREGISTRO.md",
+        "plan_sha256": "c8055dfc72dac0c8f2aa46b62de129ff5d53a5abd6483cfe1cc67786197181e3",
+        "S41_sha256": "d8661c2874e9112bd3dd62ea4470a465ee309832dee53fd9dcaa4144dac643a5",
+        "reservas_consistencia_py": "e16680ec62e90bc8c4e49865010f7d088aaef967e479fed406bc6befa5be5d78",
+        "sonda_nivel_D100_preinscripcion": "a4c0e5042585b22534455ee1465fb81244063255cb5f8b26afc8530cfebee9c7",
+        "sonda_nivel_D100_resolucion": "aa9c438b425781430ce8d012e4a7d69f057ceb1a7e2d21045bf7116a355d81a7"
+      },
+      "configuracion": "Parte 1: extracción de S41 de las raíces R0/R1/R2 de repro_s42 (sin correr nada nuevo). Parte 2: Nivel de reservas_consistencia.py con la regla de D100 (Z fija), umbrales por primer cruce, clasificación de S30, S3, variantes σ con etiquetas del escenario y σ/√0,67, coste en el D² público",
+      "particiones": "V23 selección y V24 de la receta; 33 % público; sin particiones nuevas",
+      "criterio_aceptacion": "Reproducción: exacto / último bit (<= 1e-12) / no reproducido. Reservas: materialidad del 1 % del nivel 2025 por ramo y la regla de clasificación de S30",
+      "entorno": "Nube de Claude; escritura en la máquina del participante",
+      "resultados_adversos": "La clase es «último bit», no «exacto»: ni el control con el parquet histórico repite σ y Z bit a bit (máx. 2,1e-13 relativo en la nota de preinscripción), y con las predicciones regeneradas el factor de contenidos difiere 2,2e-16 relativo (sin cambio en el CSV). Reservas con la regla de S41: la reserva de caso sigue siendo incertidumbre material en los tres ramos; bajo S3 el nivel de autos de S41 quedaría alto un 1,86 % (1,10 % a 2,61 %), indicio de desvío material; el hundimiento, acotado con la regla aplicada, deja de estarlo con σ/√0,67 (umbral 0,818 a 1,181).",
+      "resultado": "S41 (d8661c28…43a5) sale con su SHA en las tres raíces de repro_s42 (parquet histórico, reajuste y réplica congelada); notas de D100 con 125, 118 y 118 de 142 campos idénticos y diferencia relativa máxima 2,1e-13, 6,3e-13 y 6,3e-13: reproducido con diferencias de último bit. Herencia: S41 entre la mezcla es el factor salvo redondeo (máx. 5e-7 CU), orden por coste idéntico y totales iguales a la resolución. Reservas con la regla de D100 (Z fija; sensibilidad (1 − Z)/c = 0,84, 0,64 y 0,84): b que mueve el nivel de S41 un 1 % de 0,956 a 1,044 en autos, de 0,938 a 1,062 en edificios y de 0,893 a 1,107 en contenidos; incertidumbre material en los tres; σ con etiquetas y σ/√0,67 no cambian la clase. Coste en el D² público de ±1 % de nivel alrededor de S41: −0,000065 y +0,000037. Documentos reescritos con S41 como modelo único (REPRODUCCION_COMPLETA e43c0a02…4dff, RESERVAS_ACOTACION cab1b500…6f6e); recibo registro/recibo_reproduccion_s41_20261023.json.",
+      "decision_humana": "Marca final S41 (CIE-D103-20261023). Petición en esta sesión, 23-10-2026: actualizar el trabajo de este chat a S41 como modelo único, con en qué consiste, por qué es adecuado y sus hipótesis.",
+      "artefactos_privados": "privado/corridas/repro_s41_20261023T145808Z_c8055dfc/",
+      "utc_preregistro": "2026-10-23T14:59:17+00:00",
+      "evidencia": {
+        "tar": "privado/corridas/repro_s41_20261023T145808Z_c8055dfc/corrida_s41_c8055dfc.tar.gz",
+        "tar_sha256": "73397bc9411e6ab1a502dd0f06351bea5c33faf43885c036b1c0df4f9537547d",
+        "recibo": "registro/recibo_reproduccion_s41_20261023.json",
+        "recibo_sha256": "8b5ff502c568b8a82ed7377d7e69536cc595c95dac32b6a762d3039d4f376ff7"
+      }
     }
-  ]
+  ],
+  "propuestas_no_ejecutadas": []
 }

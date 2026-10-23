@@ -1,0 +1,10 @@
+{
+ "id": "errata_RESERVAS_ACOTACION_20261023",
+ "utc": "2026-10-23T14:37:26+00:00",
+ "autor": "Claude (Cowork, línea principal)",
+ "documento": "docs/RESERVAS_ACOTACION.md",
+ "antes": "2283b5ac420f8069e26e83b463daa51e29f76985294f6c7c5d24df05688ca2bb",
+ "despues": "63306a4e5adf8208c5666aa48cde4904770412f2332d9f6ebcae48b0b1869027",
+ "cambio": "Tabla de «Qué cambia con S43», fila de edificios: el mayor cambio del exponente con b entre 0,5 y 2 es +0,0003, no +0,0004 (valor exacto 0.000346 en parte2_reservas_s43.json; error de redondeo al escribir la tabla).",
+ "afecta_a": "Las referencias al SHA anterior (2283b5ac…a2bb) en registro/recibo_reproduccion_s43_20261023.json, DECISIONES.md y el foro CLA-20261023-001 describen la versión previa a esta corrección."
+}

@@ -1,13 +1,65 @@
 {
-  "utc": "2026-10-19T18:09:59.419713+00:00",
+
+  "semana2_seleccion_v1_aplicada_20261023": {
+    "utc": "2026-10-23T17:20:16.252384+00:00",
+    "policy_id": "S2-SELECCION-ACTUAL",
+    "policy": "registro/semana2_politica_seleccion_v1.json",
+    "index": "registro/semana2_seleccion_actual.json",
+    "document": "docs/semana2/PROTOCOLO_SELECCION.md",
+    "status": "adoptada_y_puerta_verificada_antes_de_comparar",
+    "delta_min": 0.0005,
+    "confidence_rule": "lower primary Bonferroni interval >0.0005; max6pairs,10000pairedgroupbootstrap,seed2026102301",
+    "confirmation_batches": 1,
+    "max_challengers": 3,
+    "confirmation_events": [],
+    "tests_passed": 25,
+    "model_training_runs_this_task": 0,
+    "model_scores_consulted_this_task": false,
+    "producer_pending": "Implement and verify metric/bootstrap producer before opening; decision gate already enforces supplied evidence and hashes."
+  },
+
+  "revision_seleccion_S22_S30_20261023": {
+    "utc": "2026-10-23T17:06:05.868869+00:00",
+    "registro": "registro/revision_seleccion_S22_S30_20261023.json",
+    "informe": "docs/REVISION_SELECCION_S22_S30.md",
+    "protocolo_propuesto": "docs/semana2/PROTOCOLO_SELECCION.md",
+    "conclusion": "S30 se promovió por puntos local/público pese a superioridad no acreditada; controles y respaldo no gobernaron el riesgo predictivo.",
+    "estado_semana2": "propuesta_documentada; faltan parámetros cuantitativos previos a candidatos; sin cambio de folds o modelos"
+  },
+
+  "auditoria_29_envios_privados_20261023": {
+    "utc": "2026-10-23T16:59:23.041713+00:00",
+    "registro": "registro/auditoria_29_envios_privados_20261023.json",
+    "documento": "docs/RESULTADOS_PRIVADOS_SEMANA1.md",
+    "envios": 29,
+    "mejor": "S40_01",
+    "privado": "0.13878",
+    "puesto_contrafactual": 2,
+    "S22_privado": "0.13876",
+    "S22_puesto_contrafactual": 2,
+    "fuente": "Consulta viva Kaggle MCP, ya disponible tras habilitar salida de red para lectura."
+  },
+
+  "comparacion_privada_parte1_20261023": {
+    "utc": "2026-10-23T16:55:20.508275+00:00",
+    "registro": "registro/comparacion_privada_S30_S41_S42_S43_20261023.json",
+    "resultado": "S41 mejor de S30/S41/S42/S43 en privado a cinco decimales; ventaja pequeña.",
+    "fuente": "Captura del participante, no respuesta API."
+  },
+
+  "entrega_final_parte1_vigente": "S41",
+  "decision_final_vigente": "registro/decision_final_S41_20261023.json",
+  "confirmacion_final_utc": "2026-10-23T14:52:26.364096+00:00",
+  "documentacion_entrega_alineada_S41": false,
+  "utc": "2026-10-20T23:44:42.077610+00:00",
   "carpeta_activa": "Hackaton/Repositorio_IAA2026",
   "principal": "S30",
-  "respaldo": "S22",
-  "seleccion_final_manual_kaggle": "pendiente_no_realizada",
+  "respaldo": null,
+  "seleccion_final_manual_kaggle": "realizada_por_participante_S41_confirmada_con_captura_20261023",
   "integridad_originales": true,
   "preflight_csv": true,
-  "reproduccion_completa": "pendiente",
-  "revision_humana": "pendiente",
+  "reproduccion_completa": "reconstruida_csv_exacto_con_diferencias_intermedias",
+  "revision_humana": "revision_general_pendiente_con_decisiones_especificas_registradas",
   "entrega_cerrada": false,
   "replay_windows": {
     "utc": "2026-10-19T14:13:41.271027+00:00",
@@ -86,8 +138,8 @@
     "wrapper_LF_sha256": "0d4e555d122d1efb2d8efa90bf45b16f3ba429f72d53efe4f5e1b794499284cf",
     "alcance": "Reanudación y cotejo de mezcla real desde componentes guardados en carpeta común; no entrenamiento completo. Código de subprocess, no del envoltorio PowerShell."
   },
-  "pruebas_activas": "No acreditado en esta sesión: la consulta de procesos del sistema fue denegada. Los archivos y planes no prueban actividad en vivo.",
-  "corte_validacion_recibida": "20261019T124539Z_cambios",
+  "pruebas_activas": "No inspeccionadas en esta actualización; los registros no acreditan actividad de procesos en vivo.",
+  "corte_validacion_recibida": "20261020T193644Z_cambios",
   "github": "https://github.com/manoloriveros/iaa-hackathon-2026",
   "visibilidad": "private",
   "limites": [
@@ -151,7 +203,7 @@
     "utc": "2026-10-19T23:34:40+00:00",
     "decision": "D96",
     "carpeta": "docs/entrega",
-    "modelo_entregado": "S30",
+    "modelo_entregado": "S41",
     "informe": [
       "docs/entrega/report_en.pdf",
       "docs/entrega/informe_es.pdf"
@@ -163,9 +215,9 @@
       "docs/entrega/USO_DE_IA_ES.md"
     ],
     "expediente": "docs/expediente/",
-    "cifras_sha256": "aaad4a2ae19f76cb3ddedead581589894b4ed7093f519aa39694b2a07f4ffc17",
+    "cifras_sha256": "86cadf34422a0755a1e893958c33f90c067ecc945494b64197839474c812fb4b",
     "verificacion": "docs/entrega/datos/verificacion_entregables.json",
-    "nota": "Un solo modelo entregado (S30); los envíos anteriores solo aparecen en la curva de aprendizaje. La selección final manual en Kaggle sigue a cargo del participante y no se ha realizado.",
+    "nota": "Un solo modelo entregado, la Mezcla por peligro; la entrega final S41 solo calibra su nivel 2025 con los tres factores de la regla de D100, y el informe lo cuenta en la página 4 como modelo único (en qué consiste, hipótesis, por qué es adecuado según D103 y límites), con la evidencia sin el tablero leída con el criterio de L05 aplicado a posteriori (autos parcial; edificios y contenidos apoyados; DATA-006 abierto). S42 (D101) y S43 (D102) aparecen solo como calibraciones probadas y no elegidas; las sondas, solo en la curva de aprendizaje. La selección manual de S41 en Kaggle la hizo el participante (CIE-D103-20261023).",
     "revisiones": [
       {
         "utc": "2026-10-20T00:13:29+00:00",
@@ -186,11 +238,65 @@
         ],
         "cifras_sha256": "1c0b604a52e3f30fa0db571c9244c0ce934b4065d8ed5a7b33a3d67cb3441caf",
         "verificacion_sha256": "20a29ba62f9a353ceff1dc43ccef5fb95ee98e9da180250eee4fcc74914bfcde"
+      },
+      {
+        "utc": "2026-10-22T20:20:24+00:00",
+        "motivo": "Entrega final S42 (D100, D101, CIE-D101): procedimiento completo de la calibración del nivel en los entregables; reproducción y reservas de S42 (CLA-20261022-005); rangos de c* por redondeo y precisiones de COD-IA-20261022T172751Z; lectura de la evidencia de CLA-20261022-007; DATA-006 (COD-VAL-20261022T1947-DATA006) y 22 hallazgos; cifras del foro con corte en CLA-20261022-004",
+        "aporte": "CLA-20261022-008",
+        "copias_previas": [
+          "privado/trazabilidad/entrega_S42_20261022/"
+        ],
+        "cifras_sha256": "d312b1412ba2c2342489dfe036aabf8baa06ca7fcb7e9cec12f928623e242b2a",
+        "verificacion_sha256": "ec41299b46198fd0f7b94a428038fa175b214d04256ee1abba155586b79ca54e",
+        "verificacion": "En el equipo, con --sin-navegador: todas pasan y el panel queda omitido por falta de Chromium; en la nube, el panel pasa en Chromium (privado/trazabilidad/entrega_S42_20261022/verificacion_nube_con_chromium.json)."
+      },
+      {
+        "utc": "2026-10-23T16:08:00+00:00",
+        "motivo": "Entrega final S41 como modelo único (CIE-D103-20261023), a pedido del participante; reservas con la regla de S41 (CLA-20261023-005) y limitación mantenida para S41 (DEC-RESERVAS-S41-20261023); matiz sobre el evaluador de COD-VAL-20261023T1446-S41; herramienta regenerar_s41.py; cifras del foro con corte en CLA-20261023-002",
+        "aporte": [
+          "CLA-20261023-003",
+          "CLA-20261023-007"
+        ],
+        "copias_previas": [
+          "privado/trazabilidad/entrega_S41_20261023/"
+        ],
+        "cifras_sha256": "86cadf34422a0755a1e893958c33f90c067ecc945494b64197839474c812fb4b",
+        "verificacion_sha256": "1d509614706816924e433457b9fb02dd3a60456f20a08d85feab286096ec156b",
+        "verificacion": "En el equipo, con --sin-navegador: todas pasan y el panel queda omitido por falta de Chromium; en la nube, el panel pasa en Chromium (privado/trazabilidad/entrega_S41_20261023/verificacion_nube_con_chromium.json)."
       }
     ],
     "nombre_modelo": {
       "es": "Mezcla por peligro",
       "en": "Per-peril blend"
+    },
+    "entrega_final": {
+      "archivo": "S41_nivel_credibilidad.csv",
+      "sha256": "d8661c2874e9112bd3dd62ea4470a465ee309832dee53fd9dcaa4144dac643a5",
+      "envio_kaggle": 57531719,
+      "publico": "0.13016",
+      "descripcion": "Mezcla por peligro (S30, sin reentrenar) con el nivel 2025 calibrado por ramo con la regla de D100: 0,9962 / 1,0260 / 1,0126",
+      "regeneracion": "herramientas/regenerar_s41.py (recibo docs/evidencia/entrega_final_S41.json)",
+      "decisiones": [
+        "D100",
+        "CIE-D103-20261023",
+        "DEC-RESERVAS-S41-20261023"
+      ],
+      "no_elegidas": {
+        "S42": "D101, CIE-D101 (marca retirada)",
+        "S43": "D102, CIE-D102 (marca retirada)"
+      }
+    },
+    "entrega_final_anterior": {
+      "archivo": "S42_nivel_credibilidad_revisada.csv",
+      "sha256": "a2fdcccd9661abff6265b9fd6fc383ef155de87dd3b075b53327641154de62f7",
+      "envio_kaggle": 57531744,
+      "publico": "0.13033",
+      "descripcion": "Mezcla por peligro (S30, sin reentrenar) con el nivel 2025 calibrado por ramo: 0,9838 / 1,0413 / 1,0579",
+      "decisiones": [
+        "D100",
+        "D101",
+        "CIE-D101-20261022"
+      ]
     }
   },
   "seguimiento_CLA007": {
@@ -293,9 +399,244 @@
       "en": "Per-peril blend"
     },
     "parte1_cerrada": true,
-    "S22": "registro histórico; deja de ser respaldo (D99). El campo «respaldo» se conserva porque lo reescribe herramientas/actualizar_revision.py",
+    "S22": "Registro histórico; no es respaldo operativo.",
     "seleccion_final_manual_kaggle": "pendiente_no_realizada",
     "registro": "registro/decision_modelo_definitivo_20261020.json",
     "aporte": "CLA-20261020-004"
+  },
+  "principal_definitivo": true,
+  "candidatos_historicos": [
+    "S22"
+  ],
+  "nombre_modelo": {
+    "es": "Mezcla por peligro",
+    "en": "Per-peril blend"
+  },
+  "reproduccion": {
+    "registro": "registro/recibo_reproduccion_completa_20261020.json",
+    "documento": "docs/REPRODUCCION_COMPLETA.md",
+    "csv_S30_exacto": true,
+    "huellas_iguales": 162,
+    "huellas_verificadas": 181,
+    "huellas_diferentes": 19,
+    "codigo_salida": 3,
+    "conformidad_integra_historica": false,
+    "independiente": false,
+    "replay": "194/194 salidas según recibo del autor; VAL12 cotejó 191 salidas principales locales. No es un replay nuevo.",
+    "limite": "Recuperación de estimadores con recálculos actuariales; no igualdad de todos los intermedios ni bloqueo de cualquier ajuste posible."
+  },
+  "seguimiento_vigente": {
+    "hallazgos": 21,
+    "abiertos": 12,
+    "limitaciones_aceptadas": 2,
+    "otros_estados_acotados": 7,
+    "revision_general_realizada": false,
+    "decisiones_especificas": {
+      "GOV-007": {
+        "decision": "aceptar_correccion_tecnica_1_2",
+        "fecha": "2026-10-19T22:12:00.740Z",
+        "registro": "registro/decision_GOV007_20261019.json"
+      },
+      "GOV-008": {
+        "decision": "aceptar_correccion_tecnica_captura_1_1_2",
+        "estado": "cerrado_en_alcance_de_correccion_tecnica_captura_1_1_2",
+        "alcance": "Corrección técnica de la captura 1.1.2 (SHA 3ae39d78…32f0) y su recorrido en la réplica sin ajustes; no la revisión general ni otros hallazgos.",
+        "fecha": "2026-10-20T15:21:59.556Z",
+        "registro": "registro/decision_GOV008_20261020.json"
+      },
+      "GOV-003": {
+        "decision": "no_se_hara_reproduccion_por_otro_operador_con_el_kit",
+        "estado": "limitacion_aceptada_por_participante_sin_reproduccion_independiente",
+        "alcance": "La reproducción queda acreditada solo como hecha por Claude en la nube de Claude; la independencia se declara como limitación.",
+        "fecha": "2026-10-20T15:21:59.556Z",
+        "registro": "registro/decisiones_participante_20261020.json"
+      },
+      "MOD-002": {
+        "decision": "suficiencia_de_reservas_declarada_como_limitacion_del_ejercicio",
+        "estado": "limitacion_aceptada_por_participante",
+        "alcance": "Se mantiene la acotación de docs/RESERVAS_ACOTACION.md (incertidumbre material, sin ajuste adoptado); no cambian T0, la receta ni S30.",
+        "fecha": "2026-10-20T15:21:59.556Z",
+        "registro": "registro/decisiones_participante_20261020.json"
+      },
+      "R01": {
+        "decision": "aceptar_alcance_concurso_con_hipotesis_de_consistencia",
+        "estado": "alcance_concurso_aceptado_fechas_no_acreditadas",
+        "fecha": "2026-10-20T22:49:20.404005+00:00",
+        "alcance": "Uso de S30 para el concurso con los datos suministrados; la consistencia con las bases se registra como hipótesis y criterio del participante para el ejercicio.",
+        "texto_literal": "Acepto S30 para el concurso con los datos suministrados. Reconozco que la disponibilidad temporal de sus predictores para una cotización real no está completamente acreditada pero corresponde a una hipótesis consistente con las bases de datos proporcionadas para el ejercicio. Esta aceptación no autoriza su uso operativo ni confirma las fechas que faltan.",
+        "registro": "registro/decision_R01_20261020.json"
+      },
+      "R02": {
+        "decision": "aceptar_tratamiento_capitales_division_1000_como_hipotesis",
+        "estado": "supuesto_capitales_aceptado_unidad_no_confirmada",
+        "fecha": "2026-10-20T22:54:46.091924+00:00",
+        "alcance": "Mantener para el concurso la división entre mil de los 149 capitales como hipótesis coherente con la prima; el participante reconoce el efecto material por póliza y que la unidad original sigue sin confirmarse.",
+        "texto_literal": "Acepto R02: mantener para el concurso la división entre mil de los 149 capitales como hipótesis coherente con la prima, reconociendo su efecto material por póliza y que la unidad original sigue sin confirmarse.",
+        "registro": "registro/decision_R02_20261020.json"
+      },
+      "R03": {
+        "decision": "aceptar_presentacion_validacion_reutilizada_e_incertidumbre_material",
+        "estado": "presentacion_aceptada_con_limites_validacion_y_nivel",
+        "fecha": "2026-10-20T23:06:42.175649+00:00",
+        "alcance": "Aceptación de la presentación de resultados: cortes reutilizados, pruebas de estabilidad, ventaja sin superioridad robusta ni equivalencia acreditadas, coste último no observado e incertidumbre material del nivel. Las sensibilidades no prueban por sí solas intervalos de confianza o sesgos confirmados.",
+        "texto_literal": "Acepto R03 con la redacción propuesta. Reconozco los límites de la validación reutilizada y la incertidumbre material del nivel. Regístralo y pasemos a R04, sin cambiar S30 ni reentrenar.",
+        "redaccion_aprobada": "Considero adecuada la presentación de V23 y V24 como cortes reutilizados y de los experimentos posteriores como pruebas de estabilidad. Reconozco que la ventaja de S30 no acredita superioridad robusta ni equivalencia estadística, que no observamos el coste último y que persiste incertidumbre material en el nivel previsto. Los escenarios de sensibilidad no constituyen por sí solos intervalos de confianza ni sesgos confirmados.",
+        "registro": "registro/decision_R03_20261020.json"
+      },
+      "R04": {
+        "decision": "aceptar_presentacion_reconstruccion_y_controles_con_limites",
+        "estado": "presentacion_aceptada_con_limites_reconstruccion_y_cobertura",
+        "alcance": "Aceptación de la presentación de la reconstrucción y los controles: CSV exacto, 19 intermedios distintos y código 3, distinto alcance del replay del autor y del cotejo local, y cobertura no universal. No acredita independencia ni cierre técnico de MOD-005 o GOV-004.",
+        "texto_literal": "Acepto R04 con la redacción propuesta y los límites indicados. Regístralo y pasemos a R05, sin cambiar S30 ni reentrenar.",
+        "redaccion_aprobada": "Considero adecuada la presentación de la reconstrucción: el CSV de S30 se reproduce exactamente, aunque persisten 19 diferencias intermedias y el resultado conserva el código 3. Reconozco que el replay del autor y el cotejo local tienen alcances distintos, y que los controles no cubren universalmente todos los cálculos. Esta aceptación no acredita validación independiente ni cierra por sí sola MOD-005 o GOV-004.",
+        "fecha": "2026-10-20T23:10:11.363394+00:00",
+        "registro": "registro/decision_R04_20261020.json"
+      },
+      "R05": {
+        "decision": "conservar_explicitamente_carencias_trazabilidad_y_cronologia",
+        "estado": "carencias_declaradas_para_concurso_sin_cierre_tecnico",
+        "alcance": "Conservar expresamente las carencias de trazabilidad de selección y calibración y la discrepancia temporal CLB004/D88 para el concurso. No se acredita una cadena completa, la causa u hora correcta de ese episodio ni su preinscripción; GOV-002 y GOV-006 conservan sus estados técnicos.",
+        "texto_literal": "Acepto R05 con la redacción propuesta. Conservemos explícitas las carencias de trazabilidad y cronología. Regístralo y pasemos a R06, sin cambiar S30 ni reentrenar.",
+        "redaccion_aprobada": "Reconozco que la trazabilidad disponible es selectiva y no acredita una cadena completa de selección y calibración. Mantengo declarada la discrepancia temporal CLB004/D88, sin afirmar su causa ni una preinscripción acreditada para ese episodio. Conservo estas carencias expresamente para el concurso, sin reconstruir mensajes ausentes ni dar por cerrados GOV-002 o GOV-006.",
+        "fecha": "2026-10-20T23:44:42.025606+00:00",
+        "registro": "registro/decision_R05_20261020.json"
+      }
+    },
+    "revision_preparada": "registro/revision_preparada_20261020.json",
+    "guia": "docs/REVISION_PENDIENTE_PARTICIPANTE.md"
+  },
+  "propuesta_modelo_20261022": {
+    "id": "PROP-20261022-SEVCOMP",
+    "utc": "2026-10-22T15:40:29.937751+00:00",
+    "autor": "Codex",
+    "estado": "propuesta_no_ejecutada",
+    "registro": "registro/propuesta_modelo_20261022.json",
+    "guia": "docs/PROPUESTA_MODELO_20261022.md",
+    "S30_modificado": false,
+    "entrenamientos": 0,
+    "envios": 0,
+    "novedad": "Severidad compartida con ceros, sobre frecuencias congeladas; viabilidad aún pendiente.",
+    "rango_vivo": 2,
+    "gap_captura": 7e-05,
+    "score_nuevo": null,
+    "seguimiento_actual": {
+      "id": "SEVCOMP-20261022",
+      "utc": "2026-10-22T16:20:45.578795+00:00",
+      "autor": "Codex",
+      "estado": "completo_retenido_peso_cero",
+      "registro": "registro/ensayo_severidad_compartida_20261022.json",
+      "guia": "docs/RESULTADO_SEVERIDAD_COMPARTIDA_20261022.md",
+      "base": "Hackaton/Repositorio_IAA2026",
+      "S30_modificado": false,
+      "entrenamientos": 6,
+      "alfa": 0,
+      "ganancia_V24": 0,
+      "criterios_superados": false,
+      "envios": 0,
+      "score_nuevo": null,
+      "accion": "Retenido; no cambiar S30 ni preparar producción de este ensayo."
+    }
+  },
+  "ensayo_severidad_compartida_20261022": {
+    "id": "SEVCOMP-20261022",
+    "utc": "2026-10-22T16:20:45.578795+00:00",
+    "autor": "Codex",
+    "estado": "completo_retenido_peso_cero",
+    "registro": "registro/ensayo_severidad_compartida_20261022.json",
+    "guia": "docs/RESULTADO_SEVERIDAD_COMPARTIDA_20261022.md",
+    "base": "Hackaton/Repositorio_IAA2026",
+    "S30_modificado": false,
+    "entrenamientos": 6,
+    "alfa": 0,
+    "ganancia_V24": 0,
+    "criterios_superados": false,
+    "envios": 0,
+    "score_nuevo": null,
+    "accion": "Retenido; no cambiar S30 ni preparar producción de este ensayo."
+  },
+  "limite_envios_ensayo_severidad_20261022": {
+    "fuente": "Última petición humana directa de este chat",
+    "limite": "No enviar a Kaggle hasta revisión de resultados. Otros planes o informes de conversaciones no son nueva autorización de este ensayo.",
+    "utc": "2026-10-22T16:20:45.578795+00:00"
+  },
+  "sonda_nivel_D100_ejecucion": {
+    "estado": "seis_sondas_enviadas_y_puntuadas",
+    "utc": "2026-10-22T16:21:07.773441+00:00",
+    "autor_envio": "Codex",
+    "recibo": "Hackaton/Repositorio_IAA2026/registro/sonda_nivel_D100_recibos.json",
+    "path_base": "workspace_root",
+    "public_scores": {
+      "S40_sonda_motor_x090": "0.12954",
+      "S40_sonda_motor_x110": "0.12906",
+      "S40_sonda_buildings_x090": "0.12873",
+      "S40_sonda_buildings_x110": "0.13018",
+      "S40_sonda_contents_x090": "0.12929",
+      "S40_sonda_contents_x110": "0.13011"
+    },
+    "intentos_consumidos": 6,
+    "intentos_restantes": 2,
+    "reinicio_Bogota": "2026-10-22T19:00:00-05:00",
+    "S41_generado": true,
+    "S41_enviado": true,
+    "seleccion_final_manual_realizada": false,
+    "S42_generado": true,
+    "S42_enviado": true
+  },
+  "envios_S41_S42_20261022": {
+    "utc": "2026-10-22T16:35:15.846875+00:00",
+    "autor_envio": "Codex",
+    "estado": "S41_y_S42_enviados_y_puntuados",
+    "path_base": "workspace_root",
+    "recibo": "Hackaton/Repositorio_IAA2026/registro/envios_S41_S42_20261022_recibos.json",
+    "scores": {
+      "S41": "0.13016",
+      "S42": "0.13033"
+    },
+    "intentos_consumidos_en_operacion": 2,
+    "intentos_restantes": 2,
+    "S41_generado": true,
+    "S41_enviado": true,
+    "S42_generado": true,
+    "S42_enviado": true,
+    "seleccion_final_manual_realizada": false,
+    "S30_receta_modificada": false
+  },
+  "sonda_forma_D102_ejecucion": {
+    "estado": "S43_enviado_y_puntuado",
+    "utc": "2026-10-23T03:38:30.771480+00:00",
+    "autor_envio": "Codex",
+    "recibo": "Hackaton/Repositorio_IAA2026/registro/envio_S43_20261022_recibo.json",
+    "path_base": "workspace_root",
+    "public_scores": {
+      "S50_sonda_forma_motor_a090": "0.13050",
+      "S50_sonda_forma_motor_a110": "0.12957",
+      "S50_sonda_forma_buildings_a090": "0.13012",
+      "S50_sonda_forma_buildings_a110": "0.13002",
+      "S50_sonda_forma_contents_a090": "0.13023",
+      "S50_sonda_forma_contents_a110": "0.13020"
+    },
+    "intentos_consumidos": 6,
+    "intentos_restantes": 3,
+    "reinicio_Bogota": "2026-10-23T19:00:00-05:00",
+    "S43_generado": true,
+    "S43_enviado": true,
+    "seleccion_final_manual_realizada": false,
+    "public_score": 0.13048,
+    "public_score_text": "0.13048",
+    "kaggle_submission_id": 57547764
+  },
+  "envio_S43_20261022": {
+    "utc": "2026-10-23T03:38:30.771480+00:00",
+    "autor_envio": "Codex",
+    "estado": "S43_enviado_y_puntuado",
+    "path_base": "workspace_root",
+    "recibo": "Hackaton/Repositorio_IAA2026/registro/envio_S43_20261022_recibo.json",
+    "public_score": 0.13048,
+    "public_score_text": "0.13048",
+    "kaggle_submission_id": 57547764,
+    "S43_generado": true,
+    "S43_enviado": true,
+    "intentos_restantes": 3,
+    "seleccion_final_manual_realizada": false
   }
 }
