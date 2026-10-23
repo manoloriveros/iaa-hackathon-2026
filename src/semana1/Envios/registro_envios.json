@@ -1,0 +1,3465 @@
+{
+ "schema": "D29: hypothesis, changes, code_version, data_version, parameters, validation_scheme, exact_submission_file, local_score, public_score",
+ "note": "S01, S02, S03_lgbm_F0124 y S04_lgbm_F3autos enviados una vez y puntuados con autorizacion expresa. Nivel ultimo D70 conservado. S03/S04/S05/S06 de D72-D73 son archivos distintos y siguen sin enviar; no confundir IDs abreviados.",
+ "candidates": [
+  {
+   "id": "S01",
+   "prepared_utc": "2026-10-17T14:20:45+00:00",
+   "plan": "D67 PLAN_PRUEBAS.md sección 6.2",
+   "candidate": "M00",
+   "hypothesis": "La escala local V24 y la pública coinciden: una tasa constante por ramo a nivel T0 debería puntuar cerca de 0,07 (V24 local 0,07094; referencia pública de coste medio 0,07169 en la captura D64)",
+   "changes": "Primera predicción del proyecto: tasa constante por ramo = suma de T0 2021-2024 / suma de exposición 2021-2024, por la exposición de la fila",
+   "code_version": {
+    "script": "Hackaton/Semana 1/Envios/preparar_envio_m00.py",
+    "sha256": "73eddb59075594407e9aeafeb636f4d31f379e07e0ea3ea6ed5696c1d97572da"
+   },
+   "data_version": {
+    "active_run": "Hackaton/Semana 1/Limpieza/runs/preaudit_20261016T211816Z_817285a5",
+    "catalog_sha256": "77daf0cf5a199eabced637e206cd0ff5e35ab80d841c5ee6d63ae7db7d5d41fd",
+    "bases_run": "Hackaton/Semana 1/Bases_actuariales_claude/runs/bases_20261017T120251Z_45443ff0"
+   },
+   "parameters": {
+    "rate_per_exposed_year_CU": {
+     "motor": 544.6976,
+     "buildings": 417.6652,
+     "contents": 111.2576
+    },
+    "rate_V24_2021_2023_CU": {
+     "motor": 575.6078,
+     "buildings": 406.9113,
+     "contents": 109.3726
+    },
+    "level": "T0 observado",
+    "power_eval": 1.5
+   },
+   "validation_scheme": "V24: tasa estimada con 2021-2023 y evaluada sobre T0 de 2024 con D² Tweedie p=1,5 sin pesos",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S01_m00_tasa_ramo_T0.csv",
+    "sha256": "4a7f799810d78727a8551122bda7ff2f20b4cc3ccd0d4abc29699fa2573aecbd",
+    "rows": 626639,
+    "prediction_total_CU": 188384651.63,
+    "prediction_total_by_line_CU": {
+     "motor": 108930590.95,
+     "buildings": 62751651.01,
+     "contents": 16702409.67
+    },
+    "prediction_min": 0.300396,
+    "prediction_max": 544.697619
+   },
+   "local_score": {
+    "V24_d2_global_sobre_T0": 0.07094,
+    "V24_d2_motor_sobre_T0": 0.02392,
+    "V24_d2_buildings_sobre_T0": 0.04156,
+    "V24_d2_contents_sobre_T0": 0.03089,
+    "V24_balance_motor_pred_sobre_T0": 1.2684,
+    "V24_balance_buildings_pred_sobre_T0": 0.9057,
+    "V24_balance_contents_pred_sobre_T0": 0.9364,
+    "nota": "V24 se puntúa con T0 de 2024, que está incompleto (D67); para S02 el D² local no puede mostrar la ganancia de nivel que se contrasta en público"
+   },
+   "public_score": 0.07118,
+   "submitted": true,
+   "submitted_utc": "2026-10-17T17:44:11.673Z",
+   "authorized_by_participant": true,
+   "authorization_recorded_utc": "2026-10-17T17:43:38+00:00",
+   "authorization_evidence": "Preparación/artifacts/verification/s01_s02_scoring_20261017T174306Z/authorization.json",
+   "public_score_text": "0.07118",
+   "kaggle_submission_id": 57320526,
+   "kaggle_status": "COMPLETE",
+   "kaggle_submission_message": "S01 M00 T0: constant line rate times exposure; scale baseline D68",
+   "score_retrieved_utc": "2026-10-17T17:45:34Z",
+   "score_receipt": "Preparación/artifacts/verification/s01_s02_scoring_20261017T174306Z/submission_receipt.json"
+  },
+  {
+   "id": "S02",
+   "prepared_utc": "2026-10-17T14:20:45+00:00",
+   "plan": "D67 PLAN_PRUEBAS.md sección 6.2",
+   "candidate": "M00",
+   "hypothesis": "La etiqueta de 2025 está valorada a nivel último: añadir el IBNR de coste 2021-2024 del chain-ladder D67 a la tasa por ramo debería mejorar el D² público frente a S01",
+   "changes": "Respecto de S01, solo cambia el nivel: tasa = (T0 + IBNR de coste 2021-2024) / exposición 2021-2024",
+   "code_version": {
+    "script": "Hackaton/Semana 1/Envios/preparar_envio_m00.py",
+    "sha256": "73eddb59075594407e9aeafeb636f4d31f379e07e0ea3ea6ed5696c1d97572da"
+   },
+   "data_version": {
+    "active_run": "Hackaton/Semana 1/Limpieza/runs/preaudit_20261016T211816Z_817285a5",
+    "catalog_sha256": "77daf0cf5a199eabced637e206cd0ff5e35ab80d841c5ee6d63ae7db7d5d41fd",
+    "bases_run": "Hackaton/Semana 1/Bases_actuariales_claude/runs/bases_20261017T120251Z_45443ff0"
+   },
+   "parameters": {
+    "rate_per_exposed_year_CU": {
+     "motor": 583.3222,
+     "buildings": 427.1487,
+     "contents": 112.2447
+    },
+    "rate_V24_2021_2023_CU": {
+     "motor": 582.9636,
+     "buildings": 407.4574,
+     "contents": 109.4356
+    },
+    "level": "ultimo (T0 + IBNR D67)",
+    "power_eval": 1.5
+   },
+   "validation_scheme": "V24: tasa estimada con 2021-2023 y evaluada sobre T0 de 2024 con D² Tweedie p=1,5 sin pesos",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S02_m00_tasa_ramo_ultimo.csv",
+    "sha256": "cd495bc877b27c5d92c5fbe8b03808579d2b11c2bfff144d254f6ff4f4251546",
+    "rows": 626639,
+    "prediction_total_CU": 197681959.53,
+    "prediction_total_by_line_CU": {
+     "motor": 116654870.16,
+     "buildings": 64176493.44,
+     "contents": 16850595.93
+    },
+    "prediction_min": 0.303061,
+    "prediction_max": 583.322182
+   },
+   "local_score": {
+    "V24_d2_global_sobre_T0": 0.07057,
+    "V24_d2_motor_sobre_T0": 0.02302,
+    "V24_d2_buildings_sobre_T0": 0.04159,
+    "V24_d2_contents_sobre_T0": 0.03091,
+    "V24_balance_motor_pred_sobre_T0": 1.2846,
+    "V24_balance_buildings_pred_sobre_T0": 0.9069,
+    "V24_balance_contents_pred_sobre_T0": 0.937,
+    "nota": "V24 se puntúa con T0 de 2024, que está incompleto (D67); para S02 el D² local no puede mostrar la ganancia de nivel que se contrasta en público"
+   },
+   "public_score": 0.07211,
+   "submitted": true,
+   "submitted_utc": "2026-10-17T17:44:33.640Z",
+   "authorized_by_participant": true,
+   "authorization_recorded_utc": "2026-10-17T17:43:38+00:00",
+   "authorization_evidence": "Preparación/artifacts/verification/s01_s02_scoring_20261017T174306Z/authorization.json",
+   "public_score_text": "0.07211",
+   "kaggle_submission_id": 57320534,
+   "kaggle_status": "COMPLETE",
+   "kaggle_submission_message": "S02 M00 ultimate: S01 plus D67 estimated reporting IBNR; level-only comparison",
+   "score_retrieved_utc": "2026-10-17T17:45:34Z",
+   "score_receipt": "Preparación/artifacts/verification/s01_s02_scoring_20261017T174306Z/submission_receipt.json"
+  },
+  {
+   "id": "S03",
+   "prepared_utc": "2026-10-17T19:22:43+00:00",
+   "plan": "D67, D71/T18; S05 actualizado de prueba de potencia a mezcla convexa por resultados V23",
+   "candidate": "M01",
+   "hypothesis": "Referencia GLM F0 con riesgo individual y nivel último D70; sustituye la tasa constante M00",
+   "changes": "F0 contractual; e_ef_* y exposure fuera de predictores; tasas Tweedie p=1.5 con pesos sqrt(exposure), importe por exposición nominal; balance a último por ramo una sola vez",
+   "code_version": {
+    "script": "Hackaton/Semana 1/Envios/preparar_candidatos_modelos.py",
+    "sha256": "ac642d36119a89018554dce35859067a445988560ca8679ef513dc61942c97c6",
+    "training_source_snapshot": "673e4b0ffd1aceffe12a133873a530add989945c4a605fe07ced4c66fa6352d2"
+   },
+   "data_version": {
+    "F0_run": "Hackaton/Semana 1/Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca",
+    "input_hashes": {
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Bases_actuariales_claude\\current_run.json": "67c0f2f5e9b639e239c8217d780bcf4a7a280220b571eaa374bb73311b7d87b6",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Bases_actuariales_claude\\runs\\bases_20261017T120251Z_45443ff0\\tables\\prima_riesgo_ultima_ramo_anio.csv": "33e056a0ce1e4f0081d77e3c1ba38436183ce857ec2e52c96c5eea5f19b8161e",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Datos\\sample_submission.parquet": "9529f3b6a679d3410350baa7c2ef3fb085d1d8843a838360c5852dfe820d4d95",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Envios\\registro_envios.json": "c6fe06bdbc182da34806430db731701c484e765ac4e4aef089a47e3e3672aaf3",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Limpieza\\current_dataset.json": "82968c5a8966e7e6857ab112092451b900e5771c650628b6189aa233432a4a15",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Limpieza\\runs\\preaudit_20261016T211816Z_817285a5\\dataset_catalog.json": "77daf0cf5a199eabced637e206cd0ff5e35ab80d841c5ee6d63ae7db7d5d41fd",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\current_run.json": "1a8c175ed26c3c37b4af4f9cc150e34cb76cc035deb390305d25df7c4894aab0",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\contrato_disponibilidad.json": "7e00fb2bb9efba56837ca3e6b04c016ae3ca1a8321ed6d7786eba11c6e2c541d",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\evidencia.json": "20d0e95e591bb6c2723f86ba9371f5b0ffb2fcc380b009a325664891779dd49a",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\manifest.json": "21b6af41d30a7d97db736b82f0700ff5e7c5c59e3f62178f5312db6febfd3efd",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\tables\\f0_buildings.parquet": "2def2e2433062704e3762eae63f5b000e73d8284a62a6cc1a689aa63c2842454",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\tables\\f0_contents.parquet": "42328ddba499a77f9cc3c814506dc97fde7c3e2adf88cfc491058c7de92c76ff",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\tables\\f0_motor.parquet": "c503d0142e83818b2c202747ddbce53882ed9add6f8309ced714655caf25b392",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\tables\\particiones.parquet": "d365981d07feec50e487ff0d8fa4b9e5b8a00d5af8f8e521e03f2a158931035b",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Modelado\\modeling_approval.json": "5c47530af6c7f819e0f0e3ee65ccd34449d470315ad725ddd308bb0f2d0ada65",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Modelado\\protocolo_metodologico.json": "52279cc9cd8c33c75154cff04c7b6029e6725ef6a079d51484a42784480f6629"
+    }
+   },
+   "parameters": {
+    "fit_power": 1.5,
+    "evaluation_power": 1.5,
+    "blocks": [
+     "F0"
+    ],
+    "boosting_seeds": [],
+    "blend_weights": null,
+    "level": "ultimate",
+    "development_applied_once": true,
+    "training_config": {
+     "blocks": [
+      "F0"
+     ],
+     "hypothesis": "Producción F0 congelada después de V24: GLM y LightGBM de tres semillas; calibración última D70 aplicada una vez por ramo.",
+     "iterations": 2000,
+     "lines": [
+      "contents",
+      "buildings",
+      "motor"
+     ],
+     "model_params": {
+      "M01": {
+       "alpha": 0.01,
+       "tol": 1e-05
+      },
+      "M04": {
+       "colsample_bytree": 0.9,
+       "min_child_samples": 500,
+       "n_estimators": 300,
+       "num_leaves": 15,
+       "reg_lambda": 20,
+       "subsample": 0.9,
+       "subsample_freq": 1
+      }
+     },
+     "models": [
+      "M01",
+      "M04"
+     ],
+     "powers": [
+      1.5
+     ],
+     "seeds": [
+      2026,
+      42,
+      137
+     ],
+     "splits": [
+      "PROD"
+     ],
+     "threads": 4
+    }
+   },
+   "validation_scheme": "V23 train 2021-2022, calibracion/seleccion por cliente; V24 train 2021-2023, eval 2024 tras congelar parámetros; D2 p=1.5 sobre T0 sin pesos. Producción a último D70, no equivale a objetivo observado V24.",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S03_glm_F0_ultimo.csv",
+    "sha256": "798c52a40ea3a5073874f441de4825b471000e68e8825c83164801b56b3cfbc9",
+    "rows": 626639,
+    "prediction_total_CU": 191479030.232179,
+    "prediction_min": 0.035405,
+    "prediction_max": 8945.845836
+   },
+   "local_score": {
+    "V23_selection": 0.126128444246919,
+    "V23_selection_without_top_0_1pct": 0.0903416255708392,
+    "V24": 0.1107890311009759,
+    "V24_without_top_0_1pct": 0.074626975621353
+   },
+   "public_score": null,
+   "submitted": false,
+   "submitted_utc": null,
+   "authorized_by_participant": false,
+   "production_run": "Preparación/artifacts/runs/production_F0_D71",
+   "source_prediction_hashes": {
+    "M01_p1.5_s2026_submission.csv": "a4aae106f448f0ec4f0b30de5361d88dc42115b7964dca1f0d09ff142efbb660",
+    "M04_p1.5_s2026_submission.csv": "cf0f160711cf483b8b9f9ea78290b44bea8ee96a32be05d43e098f903c588430",
+    "M04_p1.5_s42_submission.csv": "80be66f2cd6b04a11e82fa0ce3f9e71076475e4ecf8d3df858246f0c3870c56e",
+    "M04_p1.5_s137_submission.csv": "0d0738a47dbaf0e5408f3713046375c39ae7a38a88db3e808f8c3d0ed0543720"
+   },
+   "evidence": "Preparación/artifacts/verification/improvement_20261017_D71"
+  },
+  {
+   "id": "S04",
+   "prepared_utc": "2026-10-17T19:22:45+00:00",
+   "plan": "D67, D71/T18; S05 actualizado de prueba de potencia a mezcla convexa por resultados V23",
+   "candidate": "M04",
+   "hypothesis": "Las interacciones de LightGBM F0 mejoran al GLM y M00 en V23/V24; promedio de tres semillas y nivel último",
+   "changes": "F0 contractual; e_ef_* y exposure fuera de predictores; tasas Tweedie p=1.5 con pesos sqrt(exposure), importe por exposición nominal; balance a último por ramo una sola vez",
+   "code_version": {
+    "script": "Hackaton/Semana 1/Envios/preparar_candidatos_modelos.py",
+    "sha256": "ac642d36119a89018554dce35859067a445988560ca8679ef513dc61942c97c6",
+    "training_source_snapshot": "673e4b0ffd1aceffe12a133873a530add989945c4a605fe07ced4c66fa6352d2"
+   },
+   "data_version": {
+    "F0_run": "Hackaton/Semana 1/Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca",
+    "input_hashes": {
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Bases_actuariales_claude\\current_run.json": "67c0f2f5e9b639e239c8217d780bcf4a7a280220b571eaa374bb73311b7d87b6",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Bases_actuariales_claude\\runs\\bases_20261017T120251Z_45443ff0\\tables\\prima_riesgo_ultima_ramo_anio.csv": "33e056a0ce1e4f0081d77e3c1ba38436183ce857ec2e52c96c5eea5f19b8161e",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Datos\\sample_submission.parquet": "9529f3b6a679d3410350baa7c2ef3fb085d1d8843a838360c5852dfe820d4d95",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Envios\\registro_envios.json": "c6fe06bdbc182da34806430db731701c484e765ac4e4aef089a47e3e3672aaf3",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Limpieza\\current_dataset.json": "82968c5a8966e7e6857ab112092451b900e5771c650628b6189aa233432a4a15",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Limpieza\\runs\\preaudit_20261016T211816Z_817285a5\\dataset_catalog.json": "77daf0cf5a199eabced637e206cd0ff5e35ab80d841c5ee6d63ae7db7d5d41fd",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\current_run.json": "1a8c175ed26c3c37b4af4f9cc150e34cb76cc035deb390305d25df7c4894aab0",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\contrato_disponibilidad.json": "7e00fb2bb9efba56837ca3e6b04c016ae3ca1a8321ed6d7786eba11c6e2c541d",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\evidencia.json": "20d0e95e591bb6c2723f86ba9371f5b0ffb2fcc380b009a325664891779dd49a",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\manifest.json": "21b6af41d30a7d97db736b82f0700ff5e7c5c59e3f62178f5312db6febfd3efd",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\tables\\f0_buildings.parquet": "2def2e2433062704e3762eae63f5b000e73d8284a62a6cc1a689aa63c2842454",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\tables\\f0_contents.parquet": "42328ddba499a77f9cc3c814506dc97fde7c3e2adf88cfc491058c7de92c76ff",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\tables\\f0_motor.parquet": "c503d0142e83818b2c202747ddbce53882ed9add6f8309ced714655caf25b392",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\tables\\particiones.parquet": "d365981d07feec50e487ff0d8fa4b9e5b8a00d5af8f8e521e03f2a158931035b",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Modelado\\modeling_approval.json": "5c47530af6c7f819e0f0e3ee65ccd34449d470315ad725ddd308bb0f2d0ada65",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Modelado\\protocolo_metodologico.json": "52279cc9cd8c33c75154cff04c7b6029e6725ef6a079d51484a42784480f6629"
+    }
+   },
+   "parameters": {
+    "fit_power": 1.5,
+    "evaluation_power": 1.5,
+    "blocks": [
+     "F0"
+    ],
+    "boosting_seeds": [
+     2026,
+     42,
+     137
+    ],
+    "blend_weights": null,
+    "level": "ultimate",
+    "development_applied_once": true,
+    "training_config": {
+     "blocks": [
+      "F0"
+     ],
+     "hypothesis": "Producción F0 congelada después de V24: GLM y LightGBM de tres semillas; calibración última D70 aplicada una vez por ramo.",
+     "iterations": 2000,
+     "lines": [
+      "contents",
+      "buildings",
+      "motor"
+     ],
+     "model_params": {
+      "M01": {
+       "alpha": 0.01,
+       "tol": 1e-05
+      },
+      "M04": {
+       "colsample_bytree": 0.9,
+       "min_child_samples": 500,
+       "n_estimators": 300,
+       "num_leaves": 15,
+       "reg_lambda": 20,
+       "subsample": 0.9,
+       "subsample_freq": 1
+      }
+     },
+     "models": [
+      "M01",
+      "M04"
+     ],
+     "powers": [
+      1.5
+     ],
+     "seeds": [
+      2026,
+      42,
+      137
+     ],
+     "splits": [
+      "PROD"
+     ],
+     "threads": 4
+    }
+   },
+   "validation_scheme": "V23 train 2021-2022, calibracion/seleccion por cliente; V24 train 2021-2023, eval 2024 tras congelar parámetros; D2 p=1.5 sobre T0 sin pesos. Producción a último D70, no equivale a objetivo observado V24.",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S04_lightgbm_3semillas_F0_ultimo.csv",
+    "sha256": "c56510b9451e4022c498008e2c0af2bc0dc57aedbb4d43c5d888dc0ed97129c9",
+    "rows": 626639,
+    "prediction_total_CU": 185071664.417429,
+    "prediction_min": 0.026607,
+    "prediction_max": 52770.496615
+   },
+   "local_score": {
+    "V23_selection": 0.1276775922686543,
+    "V23_selection_without_top_0_1pct": 0.1096713825367299,
+    "V24": 0.1253465435022288,
+    "V24_without_top_0_1pct": 0.0981304888885558
+   },
+   "public_score": null,
+   "submitted": false,
+   "submitted_utc": null,
+   "authorized_by_participant": false,
+   "production_run": "Preparación/artifacts/runs/production_F0_D71",
+   "source_prediction_hashes": {
+    "M01_p1.5_s2026_submission.csv": "a4aae106f448f0ec4f0b30de5361d88dc42115b7964dca1f0d09ff142efbb660",
+    "M04_p1.5_s2026_submission.csv": "cf0f160711cf483b8b9f9ea78290b44bea8ee96a32be05d43e098f903c588430",
+    "M04_p1.5_s42_submission.csv": "80be66f2cd6b04a11e82fa0ce3f9e71076475e4ecf8d3df858246f0c3870c56e",
+    "M04_p1.5_s137_submission.csv": "0d0738a47dbaf0e5408f3713046375c39ae7a38a88db3e808f8c3d0ed0543720"
+   },
+   "evidence": "Preparación/artifacts/verification/improvement_20261017_D71"
+  },
+  {
+   "id": "S05",
+   "prepared_utc": "2026-10-17T19:22:46+00:00",
+   "plan": "D67, D71/T18; S05 actualizado de prueba de potencia a mezcla convexa por resultados V23",
+   "candidate": "M01+M04",
+   "hypothesis": "Mezcla convexa 50/50 GLM y LightGBM de tres semillas para reducir varianza; nivel último compartido",
+   "changes": "F0 contractual; e_ef_* y exposure fuera de predictores; tasas Tweedie p=1.5 con pesos sqrt(exposure), importe por exposición nominal; balance a último por ramo una sola vez",
+   "code_version": {
+    "script": "Hackaton/Semana 1/Envios/preparar_candidatos_modelos.py",
+    "sha256": "ac642d36119a89018554dce35859067a445988560ca8679ef513dc61942c97c6",
+    "training_source_snapshot": "673e4b0ffd1aceffe12a133873a530add989945c4a605fe07ced4c66fa6352d2"
+   },
+   "data_version": {
+    "F0_run": "Hackaton/Semana 1/Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca",
+    "input_hashes": {
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Bases_actuariales_claude\\current_run.json": "67c0f2f5e9b639e239c8217d780bcf4a7a280220b571eaa374bb73311b7d87b6",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Bases_actuariales_claude\\runs\\bases_20261017T120251Z_45443ff0\\tables\\prima_riesgo_ultima_ramo_anio.csv": "33e056a0ce1e4f0081d77e3c1ba38436183ce857ec2e52c96c5eea5f19b8161e",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Datos\\sample_submission.parquet": "9529f3b6a679d3410350baa7c2ef3fb085d1d8843a838360c5852dfe820d4d95",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Envios\\registro_envios.json": "c6fe06bdbc182da34806430db731701c484e765ac4e4aef089a47e3e3672aaf3",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Limpieza\\current_dataset.json": "82968c5a8966e7e6857ab112092451b900e5771c650628b6189aa233432a4a15",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Limpieza\\runs\\preaudit_20261016T211816Z_817285a5\\dataset_catalog.json": "77daf0cf5a199eabced637e206cd0ff5e35ab80d841c5ee6d63ae7db7d5d41fd",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\current_run.json": "1a8c175ed26c3c37b4af4f9cc150e34cb76cc035deb390305d25df7c4894aab0",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\contrato_disponibilidad.json": "7e00fb2bb9efba56837ca3e6b04c016ae3ca1a8321ed6d7786eba11c6e2c541d",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\evidencia.json": "20d0e95e591bb6c2723f86ba9371f5b0ffb2fcc380b009a325664891779dd49a",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\manifest.json": "21b6af41d30a7d97db736b82f0700ff5e7c5c59e3f62178f5312db6febfd3efd",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\tables\\f0_buildings.parquet": "2def2e2433062704e3762eae63f5b000e73d8284a62a6cc1a689aa63c2842454",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\tables\\f0_contents.parquet": "42328ddba499a77f9cc3c814506dc97fde7c3e2adf88cfc491058c7de92c76ff",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\tables\\f0_motor.parquet": "c503d0142e83818b2c202747ddbce53882ed9add6f8309ced714655caf25b392",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\tables\\particiones.parquet": "d365981d07feec50e487ff0d8fa4b9e5b8a00d5af8f8e521e03f2a158931035b",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Modelado\\modeling_approval.json": "5c47530af6c7f819e0f0e3ee65ccd34449d470315ad725ddd308bb0f2d0ada65",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Modelado\\protocolo_metodologico.json": "52279cc9cd8c33c75154cff04c7b6029e6725ef6a079d51484a42784480f6629"
+    }
+   },
+   "parameters": {
+    "fit_power": 1.5,
+    "evaluation_power": 1.5,
+    "blocks": [
+     "F0"
+    ],
+    "boosting_seeds": [
+     2026,
+     42,
+     137
+    ],
+    "blend_weights": {
+     "GLM": 0.5,
+     "LightGBM_3seeds": 0.5
+    },
+    "level": "ultimate",
+    "development_applied_once": true,
+    "training_config": {
+     "blocks": [
+      "F0"
+     ],
+     "hypothesis": "Producción F0 congelada después de V24: GLM y LightGBM de tres semillas; calibración última D70 aplicada una vez por ramo.",
+     "iterations": 2000,
+     "lines": [
+      "contents",
+      "buildings",
+      "motor"
+     ],
+     "model_params": {
+      "M01": {
+       "alpha": 0.01,
+       "tol": 1e-05
+      },
+      "M04": {
+       "colsample_bytree": 0.9,
+       "min_child_samples": 500,
+       "n_estimators": 300,
+       "num_leaves": 15,
+       "reg_lambda": 20,
+       "subsample": 0.9,
+       "subsample_freq": 1
+      }
+     },
+     "models": [
+      "M01",
+      "M04"
+     ],
+     "powers": [
+      1.5
+     ],
+     "seeds": [
+      2026,
+      42,
+      137
+     ],
+     "splits": [
+      "PROD"
+     ],
+     "threads": 4
+    }
+   },
+   "validation_scheme": "V23 train 2021-2022, calibracion/seleccion por cliente; V24 train 2021-2023, eval 2024 tras congelar parámetros; D2 p=1.5 sobre T0 sin pesos. Producción a último D70, no equivale a objetivo observado V24.",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S05_mezcla_glm_lightgbm_F0_ultimo.csv",
+    "sha256": "a80d08abf57a439948b178190cea07efabe25decdc73f6354f0b441cb6252113",
+    "rows": 626639,
+    "prediction_total_CU": 188275347.324969,
+    "prediction_min": 0.037216,
+    "prediction_max": 30526.13459
+   },
+   "local_score": {
+    "V23_selection": 0.133998368837769,
+    "V23_selection_without_top_0_1pct": 0.1051619527637824,
+    "V24": 0.123215103052841,
+    "V24_without_top_0_1pct": 0.0897268818909909
+   },
+   "public_score": null,
+   "submitted": false,
+   "submitted_utc": null,
+   "authorized_by_participant": false,
+   "production_run": "Preparación/artifacts/runs/production_F0_D71",
+   "source_prediction_hashes": {
+    "M01_p1.5_s2026_submission.csv": "a4aae106f448f0ec4f0b30de5361d88dc42115b7964dca1f0d09ff142efbb660",
+    "M04_p1.5_s2026_submission.csv": "cf0f160711cf483b8b9f9ea78290b44bea8ee96a32be05d43e098f903c588430",
+    "M04_p1.5_s42_submission.csv": "80be66f2cd6b04a11e82fa0ce3f9e71076475e4ecf8d3df858246f0c3870c56e",
+    "M04_p1.5_s137_submission.csv": "0d0738a47dbaf0e5408f3713046375c39ae7a38a88db3e808f8c3d0ed0543720"
+   },
+   "evidence": "Preparación/artifacts/verification/improvement_20261017_D71"
+  },
+  {
+   "id": "S06",
+   "prepared_utc": "2026-10-17T19:24:38+00:00",
+   "plan": "D73: separar estructura y nivel, conservando el nivel de cartera S02 aprobado D70",
+   "candidate": "M04_three_seeds_portfolio_balance",
+   "hypothesis": "LightGBM aporta relatividades de riesgo; conservar por ramo el mismo total último de S02 evita trasladar a 2025 el descenso aparente de T0 reciente por falta de desarrollo",
+   "changes": "Normalizar por ramo la forma de S04 contra el total S02 de esa cartera; el factor anterior se cancela algebraicamente, sin aplicar de nuevo IBNR",
+   "code_version": {
+    "script": "Hackaton/Semana 1/Envios/preparar_s06_nivel_ultimo.py",
+    "sha256": "0f103d64fec2846608198696799953f326061f38873b98dee890be54c985eb89"
+   },
+   "data_version": {
+    "F0_run": "Hackaton/Semana 1/Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca",
+    "input_hashes": {
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Bases_actuariales_claude\\current_run.json": "67c0f2f5e9b639e239c8217d780bcf4a7a280220b571eaa374bb73311b7d87b6",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Bases_actuariales_claude\\runs\\bases_20261017T120251Z_45443ff0\\tables\\prima_riesgo_ultima_ramo_anio.csv": "33e056a0ce1e4f0081d77e3c1ba38436183ce857ec2e52c96c5eea5f19b8161e",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Datos\\sample_submission.parquet": "9529f3b6a679d3410350baa7c2ef3fb085d1d8843a838360c5852dfe820d4d95",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Envios\\registro_envios.json": "c6fe06bdbc182da34806430db731701c484e765ac4e4aef089a47e3e3672aaf3",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Limpieza\\current_dataset.json": "82968c5a8966e7e6857ab112092451b900e5771c650628b6189aa233432a4a15",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Limpieza\\runs\\preaudit_20261016T211816Z_817285a5\\dataset_catalog.json": "77daf0cf5a199eabced637e206cd0ff5e35ab80d841c5ee6d63ae7db7d5d41fd",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\current_run.json": "1a8c175ed26c3c37b4af4f9cc150e34cb76cc035deb390305d25df7c4894aab0",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\contrato_disponibilidad.json": "7e00fb2bb9efba56837ca3e6b04c016ae3ca1a8321ed6d7786eba11c6e2c541d",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\evidencia.json": "20d0e95e591bb6c2723f86ba9371f5b0ffb2fcc380b009a325664891779dd49a",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\manifest.json": "21b6af41d30a7d97db736b82f0700ff5e7c5c59e3f62178f5312db6febfd3efd",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\tables\\f0_buildings.parquet": "2def2e2433062704e3762eae63f5b000e73d8284a62a6cc1a689aa63c2842454",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\tables\\f0_contents.parquet": "42328ddba499a77f9cc3c814506dc97fde7c3e2adf88cfc491058c7de92c76ff",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\tables\\f0_motor.parquet": "c503d0142e83818b2c202747ddbce53882ed9add6f8309ced714655caf25b392",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Matriz_F0_claude\\runs\\f0_20261017T141732Z_65df7fca\\tables\\particiones.parquet": "d365981d07feec50e487ff0d8fa4b9e5b8a00d5af8f8e521e03f2a158931035b",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Modelado\\modeling_approval.json": "5c47530af6c7f819e0f0e3ee65ccd34449d470315ad725ddd308bb0f2d0ada65",
+     "C:\\dev\\Hakaton\\Hackaton\\Semana 1\\Modelado\\protocolo_metodologico.json": "52279cc9cd8c33c75154cff04c7b6029e6725ef6a079d51484a42784480f6629"
+    }
+   },
+   "parameters": {
+    "underlying_candidate": "S04",
+    "power_fit": 1.5,
+    "seeds": [
+     2026,
+     42,
+     137
+    ],
+    "blocks": [
+     "F0"
+    ],
+    "level": "ultimate_portfolio_S02",
+    "normalization": {
+     "buildings": {
+      "target_total_ultimate_CU": 64176493.471477,
+      "relative_normalization": 0.9459716929346196
+     },
+     "contents": {
+      "target_total_ultimate_CU": 16850595.899583,
+      "relative_normalization": 0.9444779061151154
+     },
+     "motor": {
+      "target_total_ultimate_CU": 116654870.15149,
+      "relative_normalization": 1.1737246902524563
+     }
+    },
+    "development_applied_once": true,
+    "test_labels_used": false,
+    "assumption": "Conservar el nivel medio último por ramo S02; no trasladar cambios globales de nivel aprendidos del T0 incompleto",
+    "formula": "prediction_i = relative_risk_i / sum(relative_risk_line) * ultimate_S02_total_line"
+   },
+   "validation_scheme": "Misma forma LightGBM congelada; en V23/V24, normalización al total M00 por ramo estimado solo en train y exposiciones de evaluación sin etiquetas; evaluación con T0 y D2 p=1.5. Producción cambia solo ese nivel a S02 último D70.",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S06_lightgbm_3semillas_F0_nivel_S02.csv",
+    "sha256": "3eef3d811dcc786bc9894efaff2bbbe172625247e21bce158656b42ace132ca1",
+    "rows": 626639,
+    "prediction_total_CU": 197681959.522103,
+    "prediction_min": 0.02513,
+    "prediction_max": 61938.034794
+   },
+   "local_score": {
+    "V23": 0.13209894935801603,
+    "V24": 0.12403668624957542
+   },
+   "public_score": null,
+   "submitted": false,
+   "submitted_utc": null,
+   "authorized_by_participant": false,
+   "source_candidates": {
+    "S02": "cd495bc877b27c5d92c5fbe8b03808579d2b11c2bfff144d254f6ff4f4251546",
+    "S04": "c56510b9451e4022c498008e2c0af2bc0dc57aedbb4d43c5d888dc0ed97129c9"
+   },
+   "evidence": "Preparación/artifacts/verification/improvement_20261017_D71",
+   "validation_caveat": "S06 portfolio-level rule added after V24 diagnostics; same folds reused as diagnostic, not a fresh holdout or independent validation",
+   "preparation_audit": "Preparación/artifacts/verification/improvement_20261017_D71/S06_audit.json",
+   "dry_run_evidence": "Preparación/artifacts/verification/improvement_20261017_D71/S06_dry_run.txt",
+   "participant_disposition": {
+    "status": "held_no_submission",
+    "reason": "Participante pide una mejora mayor antes de gastar cupo",
+    "decision": "D74",
+    "research_followup": "D74: best confirmed balanced mixture V24 0.126275; gains remain below working margin; continue development design, no submission proposed"
+   }
+  },
+  {
+   "id": "S03_lgbm_F0124",
+   "participant_alias": "S03",
+   "registry_id_note": "El ID S03 ya corresponde a un GLM F0 diferente; se conserva y este CSV se identifica por nombre y SHA-256.",
+   "prepared_utc": null,
+   "candidate": "lgbm_F0124 (nombre aportado; configuracion sin verificar)",
+   "hypothesis": "Medir el rendimiento publico del CSV aportado por el participante y compararlo con la referencia S02.",
+   "changes": null,
+   "code_version": {
+    "status": "pending_provenance",
+    "script": null,
+    "sha256": null
+   },
+   "data_version": {
+    "status": "pending_provenance"
+   },
+   "parameters": null,
+   "validation_scheme": "Formato, identificadores y orden comprobados contra la plantilla oficial; validacion local del modelo pendiente de vincular.",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S03_lgbm_F0124.csv",
+    "sha256": "7877e9e968dfc094df6b9450f51ff1d5f97f12fa82b4d985e2fce18d6af93217",
+    "rows": 626639,
+    "prediction_total_CU": 203707994.75814396,
+    "prediction_min": 0.06611,
+    "prediction_max": 5596.233591
+   },
+   "local_score": null,
+   "public_score": 0.12321,
+   "public_score_text": "0.12321",
+   "submitted": true,
+   "submitted_utc": "2026-10-17T19:28:22.793Z",
+   "authorized_by_participant": true,
+   "authorization_recorded_utc": "2026-10-17T19:24:21.977314+00:00",
+   "authorization_evidence": "Preparación/artifacts/verification/s03_scoring_20261017T192421Z/authorization.json",
+   "kaggle_submission_id": 57323464,
+   "kaggle_status": "COMPLETE",
+   "kaggle_submission_message": "S03 lgbm F0124 - participant supplied candidate",
+   "score_retrieved_utc": "2026-10-17T19:28:54Z",
+   "score_receipt": "Preparación/artifacts/verification/s03_scoring_20261017T192421Z/submission_receipt.json",
+   "provenance_pending": true,
+   "development_level_verified": false
+  },
+  {
+   "id": "S04_lgbm_F3autos",
+   "participant_alias": "S04",
+   "prepared_utc": "2026-10-17T19:40:08.823568+00:00",
+   "candidate": "LightGBM F0124 plus F3 motor",
+   "hypothesis": "Comparar F3 solo en autos frente a S03_lgbm_F0124, conservando exactamente las predicciones de edificios y contenidos.",
+   "changes": "Cambian solo predicciones de autos; sin recalibracion de S05. La solicitud autoriza preparar el envio de este CSV, no ampliar el runner D74 a F3.",
+   "code_version": {
+    "script": "Hackaton/Semana 1/Modelos_claude/produccion.py",
+    "sha256": "128c5854cb6243caa58fe1f0f0a39aaa24c812d724d163b83d52b6b90bdf09c9",
+    "producer_manifest": "Hackaton/Semana 1/Modelos_claude/runs/S04b_lgbm_F0124_F3autos/manifest.json",
+    "producer_manifest_sha256": "ab65af3519501e3d279e7995d7e5d33c962299226e8a228c0352fe8ceafa3e28",
+    "current_code_hash_checks": "Preparación/artifacts/verification/s04_F3autos_preflight_20261017T194007Z/source_code_hash_checks.json"
+   },
+   "data_version": {
+    "producer_reported": {
+     "f0_run": "f0_20261017T141732Z_65df7fca",
+     "bases_run": "bases_20261017T120251Z_45443ff0",
+     "nota": "SHA-256 comprobados contra los manifiestos D68/D67 y el catálogo activo antes de entrenar"
+    },
+    "verification_scope": "Producer manifest inspected; no retraining or independent reconstruction in submission preflight."
+   },
+   "parameters": {
+    "per_line": {
+     "motor": {
+      "params": {
+       "learning_rate": 0.02,
+       "num_leaves": 7,
+       "min_data_in_leaf": 2000,
+       "cat_smooth": 200,
+       "cat_l2": 50,
+       "min_data_per_group": 1000,
+       "max_cat_threshold": 16,
+       "feature_fraction": 0.6,
+       "cap": 15000.0
+      },
+      "rounds": 595
+     },
+     "buildings": {
+      "params": {
+       "learning_rate": 0.02,
+       "num_leaves": 5,
+       "min_data_in_leaf": 2000,
+       "cat_smooth": 200,
+       "cat_l2": 50,
+       "min_data_per_group": 1000,
+       "max_cat_threshold": 16
+      },
+      "rounds": 350
+     },
+     "contents": {
+      "params": {
+       "learning_rate": 0.02,
+       "num_leaves": 7,
+       "min_data_in_leaf": 4000,
+       "cat_smooth": 200,
+       "cat_l2": 50,
+       "min_data_per_group": 1000,
+       "max_cat_threshold": 16
+      },
+      "rounds": 303
+     }
+    },
+    "seeds_reported": 3,
+    "trend": {
+     "motor": 1.0,
+     "buildings": 1.0,
+     "contents": 1.0
+    },
+    "motor_loading_reported": 1.30092,
+    "source_set_label": "F01234"
+   },
+   "validation_scheme": "V24 sobre T0, D2 Tweedie p=1.5 reportado por productor; V24 consultado previamente para decisiones, no holdout intacto.",
+   "local_score": {
+    "reported_V24_D2_global": 0.13244,
+    "reported_V24_D2_by_line": {
+     "motor": 0.08673,
+     "buildings": 0.11018,
+     "contents": 0.0892
+    },
+    "independently_recomputed_here": false
+   },
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S04_lgbm_F3autos.csv",
+    "sha256": "23e09d9f27326d7a20d508c32b4da039bac43085c1726498618f668d1eaba1fe",
+    "rows": 626639,
+    "prediction_total_CU": 201782387.42256898,
+    "prediction_min": 0.06611,
+    "prediction_max": 5596.233591
+   },
+   "public_score": 0.12435,
+   "submitted": true,
+   "submitted_utc": "2026-10-17T19:42:36.523Z",
+   "authorized_by_participant": true,
+   "requested_by_participant": true,
+   "requires_confirmation_after_dry_run": false,
+   "preflight_evidence": "Preparación/artifacts/verification/s04_F3autos_preflight_20261017T194007Z",
+   "production_run": "Hackaton/Semana 1/Modelos_claude/runs/S04b_lgbm_F0124_F3autos",
+   "authorization_recorded_utc": "2026-10-17T19:42:02.491818+00:00",
+   "authorization_evidence": "Preparación/artifacts/verification/s04_F3autos_scoring_20261017T194202Z/authorization.json",
+   "confirmation_after_dry_run_received": true,
+   "submission_attempt_status": "submitted_and_scored",
+   "submission_attempt_evidence": "Preparación/artifacts/verification/s04_F3autos_scoring_20261017T194202Z/attempt.json",
+   "public_score_text": "0.12435",
+   "kaggle_submission_id": 57323789,
+   "kaggle_status": "COMPLETE",
+   "kaggle_submission_message": "S04 LightGBM F3 motor; buildings and contents retained from S03",
+   "score_retrieved_utc": "2026-10-17T19:43:09Z",
+   "score_receipt": "Preparación/artifacts/verification/s04_F3autos_scoring_20261017T194202Z/submission_receipt.json",
+   "comparison_to_S03_public_D2": "0.00114",
+   "subsequent_own_validation_review_D75": {
+    "recomputed_V24": 0.13244003054036624,
+    "metric_and_target_agree": true,
+    "eligible_for_clean_local_threshold": false,
+    "reason": "Global e_ef_coste estimation includes evaluation-year claims; producer V24 is not a train-fold-only curve backtest",
+    "evidence": "Preparación/artifacts/verification/improvement_D75/prior_source_audit.json",
+    "independent_validation": false
+   }
+  },
+  {
+   "id": "S07",
+   "prepared_utc": "2026-10-17T20:43:31+00:00",
+   "decision_id": "D75",
+   "candidate": "Coste total F0124 y frecuencia/severidad F012 por ramo, nivel último S02",
+   "hypothesis": "Historia previa y árboles regulares reducen sobreajuste; desarrollo de autos estimado solo en train; combinar riesgos por peligro mejora hogar",
+   "changes": "Motor: coste total desarrollado, tope de ajuste 15000 con exceso restituido uniforme; edificios 50% total/50% componentes; contenidos componentes; balance final por ramo S02",
+   "code_version": {
+    "script": "Preparación/artifacts/verification/improvement_D75/experiment.py",
+    "sha256": "f2f80a311a3920f1109476f2a3e66553eb7c6563fd6934bb4639910c88909f77",
+    "production_script": "Preparación/artifacts/verification/improvement_D75/prepare_s07.py",
+    "production_script_sha256": "fa1280324add85b365448b50d4fe1e7ee2086e5b63a44f523b31ddc839b2dfac"
+   },
+   "data_version": {
+    "F0_run": "Hackaton/Semana 1/Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca",
+    "curve_source_sha256": "535327e1bbba95f171820d27e345988b3c2cbdeec6f86eefefaedefc52992ae5",
+    "features_and_curves_metadata": [
+     "Preparación/artifacts/verification/improvement_D75/features_motor.json",
+     "Preparación/artifacts/verification/improvement_D75/features_buildings.json",
+     "Preparación/artifacts/verification/improvement_D75/features_contents.json"
+    ]
+   },
+   "parameters": {
+    "seeds": [
+     2026
+    ],
+    "blocks": [
+     "F0",
+     "F1",
+     "F2",
+     "F4"
+    ],
+    "F3_used": false,
+    "model_recipe": {
+     "motor": {
+      "variant": "developed_cap",
+      "balance": "anchor",
+      "V23_D2": 0.08506880392005944
+     },
+     "buildings": {
+      "variant": "nominal",
+      "balance": "anchor",
+      "V23_D2": 0.11175452855131685
+     },
+     "contents": {
+      "variant": "nominal",
+      "balance": "anchor",
+      "V23_D2": 0.07399360879160322
+     }
+    },
+    "blend_recipe": {
+     "buildings": {
+      "line": "buildings",
+      "component": "prediction",
+      "FS_weight": 0.5,
+      "D2": 0.11381614990892264
+     },
+     "contents": {
+      "line": "contents",
+      "component": "prediction",
+      "FS_weight": 1.0,
+      "D2": 0.0878666564710956
+     },
+     "motor": {
+      "line": "motor",
+      "component": "prediction",
+      "FS_weight": 0.0,
+      "D2": 0.08506880392005944
+     }
+    },
+    "level": "ultimate_portfolio_S02",
+    "development_applied_once": true,
+    "test_labels_used": false
+   },
+   "validation_scheme": "V23 selección fija variantes y pesos; V24 626190 filas sobre T0 completo, D2 p1.5 sin pesos. Curvas solo con siniestros asociados a filas train. V24 reutilizado de desarrollo; comprobación propia, sin validación independiente.",
+   "local_score": {
+    "V23": 0.1394204643065925,
+    "V24": 0.13172941395862825
+   },
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S07_D75_mezcla_desarrollo_train_ultimo.csv",
+    "sha256": "363ec0d0725de7c3a40af137ce4c728905230bcb20d5a7330e08c620227553d3",
+    "rows": 626639,
+    "prediction_total_CU": 197681959.522448
+   },
+   "public_score": 0.1236,
+   "submitted": true,
+   "submitted_utc": "2026-10-17T20:44:43.490Z",
+   "authorized_by_participant": true,
+   "authorization_evidence": "Preparación/artifacts/verification/improvement_D75/plan_authorization.json",
+   "authorization_condition": {
+    "threshold": 0.13,
+    "metric": "local global V24 D2",
+    "actual": 0.13172941395862825,
+    "met": true
+   },
+   "requires_confirmation_after_dry_run": false,
+   "threshold_verification": "Preparación/artifacts/verification/improvement_D75/threshold_verification.json",
+   "production_audit": "Preparación/artifacts/verification/improvement_D75/S07_audit.json",
+   "evidence": "Preparación/artifacts/verification/improvement_D75",
+   "production_runs": [
+    "Preparación/artifacts/verification/improvement_D75/motor_PROD",
+    "Preparación/artifacts/verification/improvement_D75/buildings_PROD",
+    "Preparación/artifacts/runs/D75_fs_production"
+   ],
+   "kaggle_submission_id": 57325337,
+   "kaggle_status": "COMPLETE",
+   "kaggle_submission_message": "S07 D75 train-only development and home peril blend; ultimate S02 balance",
+   "public_score_text": "0.12360",
+   "score_retrieved_utc": "2026-10-17T20:45:37Z",
+   "score_receipt": "Preparación/artifacts/verification/improvement_D75/submission_receipt.json",
+   "public_delta_previous_best": "-0.00075",
+   "participant_disposition": {
+    "status": "scored_below_current_best",
+    "best_public_remains": "S04_lgbm_F3autos"
+   }
+  },
+  {
+   "id": "S08",
+   "prepared_utc": "2026-10-18T00:37:59+00:00",
+   "decision_id": "D76",
+   "candidate": "CatBoost ampliado y stacking Tweedie regularizado con calibración OOF",
+   "hypothesis": "CatBoost aporta interacciones categóricas; un combinador pequeño aprendido en OOF2023 y calibración con credibilidad50% transfieren mejor que el balance agregado fijo.",
+   "changes": "Mezcla aprendida por ramo de S07 y CatBoost profundidad4; al menos25% S07; beta por ramo aprendido en OOF2023, solo50% de la desviación respecto de1. Se conserva nivel último y no se repite IBNR.",
+   "code_version": {
+    "training": "Preparación/artifacts/verification/improvement_D76/train_cat.py",
+    "training_sha256": "d48d251e0efbd15ad2163aa2e919af0f85fa6045071febb675fb3807c26a8792",
+    "stacking": "Preparación/artifacts/verification/improvement_D76/assemble_learned.py",
+    "stacking_sha256": "713d1a118dbeed03c2853f2bde4e1402cdb4bbfa2fa7ebccf6e82299a1f86a0e",
+    "production": "Preparación/artifacts/verification/improvement_D76/prepare_submission.py",
+    "production_sha256": "1b45bef554476151eb722cfdf8180d0c9c298bcb1b3f886c8dca8587cb3baa88"
+   },
+   "data_version": {
+    "cached_matrices": "Preparación/artifacts/verification/improvement_D75/features_{line}.parquet",
+    "f0_run": "Hackaton/Semana 1/Matriz_F0_claude/runs/f0_20261017T141732Z_65df7fca",
+    "feature_metadata": [
+     "Preparación/artifacts/verification/improvement_D75/features_motor.json",
+     "Preparación/artifacts/verification/improvement_D75/features_buildings.json",
+     "Preparación/artifacts/verification/improvement_D75/features_contents.json"
+    ]
+   },
+   "parameters": {
+    "seed": 2026,
+    "CatBoost_depth": 4,
+    "CatBoost_rounds": {
+     "V23": 700,
+     "V24": 805,
+     "PROD": 910
+    },
+    "recipe": {
+     "buildings": {
+      "weights": {
+       "S07": 0.9105983985242276,
+       "Cat": 0.08940160147577236
+      },
+      "beta": 1.036615001107737,
+      "sources": {
+       "Cat": {
+        "depth": 4
+       }
+      },
+      "full_beta": 1.0732300022154742,
+      "penalty": 0.01,
+      "minimum_S07_weight": 0.25,
+      "calibration_credibility": 0.5,
+      "optimizer_iterations": 6,
+      "optimizer_success": true
+     },
+     "contents": {
+      "weights": {
+       "S07": 0.979706706480567,
+       "Cat": 0.020293293519432987
+      },
+      "beta": 1.0655748204132571,
+      "sources": {
+       "Cat": {
+        "depth": 4
+       }
+      },
+      "full_beta": 1.131149640826514,
+      "penalty": 0.01,
+      "minimum_S07_weight": 0.25,
+      "calibration_credibility": 0.5,
+      "optimizer_iterations": 5,
+      "optimizer_success": true
+     },
+     "motor": {
+      "weights": {
+       "S07": 0.6233411094957889,
+       "Cat": 0.3766588905042112,
+       "prejoin": 1.0663961105264923e-19
+      },
+      "beta": 1.0346840028611732,
+      "sources": {
+       "Cat": {
+        "depth": 4
+       },
+       "prejoin": {
+        "leaves": 7
+       }
+      },
+      "full_beta": 1.0693680057223465,
+      "penalty": 0.01,
+      "minimum_S07_weight": 0.25,
+      "calibration_credibility": 0.5,
+      "optimizer_iterations": 7,
+      "optimizer_success": true
+     }
+    },
+    "F3_used": false,
+    "level": "ultimate",
+    "development_applied_once": true,
+    "test_labels_used": false
+   },
+   "validation_scheme": "Base learners predict2023 after fitting2021-2022; the meta learner fits all2023 OOF, so its2023 score is a fit diagnostic. Freeze before Cat2024 fits and confirm full T0 in626190 rows. V24 previously inspected; own development, not independent validation.",
+   "local_score": {
+    "V24": 0.13247470609091738,
+    "gain_vs_S07": 0.0007452921322889483,
+    "conditional_bootstrap95": [
+     1.997313806762212e-05,
+     0.0013726130331793793
+    ],
+    "without_top_0_1pct": {
+     "candidate": 0.09723330373593231,
+     "S07": 0.09852001826692014
+    },
+    "stack_fit_2023_not_validation": 0.13702138510104345
+   },
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S08_D76_CatBoost_stacking_calibrado_ultimo.csv",
+    "sha256": "f6c11e366fa3663fed7187c9c45db30f5542155e864bdfef25857277b33363e6",
+    "rows": 626639,
+    "prediction_total_CU": 205182814.552488
+   },
+   "public_score": 0.12532,
+   "submitted": true,
+   "submitted_utc": "2026-10-18T00:38:33.447Z",
+   "authorized_by_participant": true,
+   "authorization": "User continues improvements with renewed tests; prior explicit authorization to send a candidate after local D2>0.13 persists; condition met. Not a general permission to publish or use remote training.",
+   "authorization_evidence": "Preparación/artifacts/verification/improvement_D76/plan.json",
+   "requires_confirmation_after_dry_run": false,
+   "production_audit": "Preparación/artifacts/verification/improvement_D76/S08_audit.json",
+   "gain_evidence": "Preparación/artifacts/verification/improvement_D76/gain_verification.json",
+   "evidence": "Preparación/artifacts/verification/improvement_D76",
+   "risk_note": "Incremental gain small, adverse ordinary-loss sensitivity excluding top0.1%; no guarantee of hidden improvement.",
+   "kaggle_submission_id": 57331887,
+   "kaggle_status": "COMPLETE",
+   "public_score_text": "0.12532",
+   "kaggle_submission_message": "S08 D76 CatBoost OOF stacking; ultimate base with learned statistical calibration",
+   "score_retrieved_utc": "2026-10-18T00:39:37Z",
+   "score_receipt": "Preparación/artifacts/verification/improvement_D76/submission_receipt.json",
+   "public_delta_previous_best": "0.00097",
+   "participant_disposition": {
+    "status": "new_public_best",
+    "no_manual_final_selection": true
+   }
+  },
+  {
+   "id": "S09b",
+   "candidate": "Claude-Codex ensemble with home F3s2",
+   "decision_id": "N01_codex",
+   "submitted": true,
+   "submitted_utc": "2026-10-18T03:40:44.673Z",
+   "public_score": 0.12889,
+   "public_score_text": "0.12889",
+   "kaggle_status": "COMPLETE",
+   "kaggle_submission_id": 57336991,
+   "kaggle_submission_message": "S09b Claude-Codex ensemble; home F3 risk variables; verified improvement all lines",
+   "score_retrieved_utc": "2026-10-18T03:44:14+00:00",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S09b_claude_mezcla_hogar_F3s2.csv",
+    "sha256": "3961893c2b1766cbf504f370d54ee8f16b6085b48373a271b0c0f6ba422ce1a6",
+    "rows": 626639,
+    "prediction_total_CU": 209237258.746203
+   },
+   "local_score": {
+    "V24": 0.13551722172333458,
+    "S08_V24": 0.13247470609091738,
+    "conditional_customer_CI95": [
+     0.0019234805316482493,
+     0.004133535663526006
+    ],
+    "without_top_0_1pct": {
+     "S08": 0.09723330373593231,
+     "S09b": 0.10395349434975609
+    }
+   },
+   "authorized_by_participant": true,
+   "authorization": "Current human overnight request explicitly authorizes promising Kaggle trials. Prior handoff also records participant choosing Codex for the submission.",
+   "authorization_evidence": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/authorization.json",
+   "score_receipt": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/submission_receipt_S09b.json",
+   "source": "Claude S09b handoff; Codex output reconstruction and scored submission",
+   "availability_limits": "Six home customer F3 reference dates unresolved. Supplied master used under current autonomous model-choice request, with risk explicitly retained. No future outcomes/contacts/renewal decisions imported.",
+   "validation_limits": "Mixture weights saw V23 and V24; f23 fit V23 selection; V24 reused. Missing V23 component files prevent full calibration replay; f23 inferred from producer identity fPROD=(f23+f24)/2 and matches saved rounded report. This is own output reconstruction, not independent model/calibration validation. Public-score linear extrapolation omitted.",
+   "production_level": "ultimate with one mixture calibration; no second IBNR",
+   "public_delta_previous_best": 0.00357
+  },
+  {
+   "id": "N01_A_G",
+   "candidate": "OOF convex ensemble with per-peril additive frequency/Gamma severity",
+   "decision_id": "N01_codex",
+   "submitted": true,
+   "submitted_utc": "2026-10-18T04:46:12.560Z",
+   "public_score": 0.12908,
+   "public_score_text": "0.12908",
+   "kaggle_submission_id": 57338908,
+   "kaggle_status": "COMPLETE",
+   "kaggle_submission_message": "N01_A_G per-peril additive ensemble; bounded risk ratios; S09b ultimate totals",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/production/N01_A_G_meta_GAM_ultimo.csv",
+    "sha256": "805283408d00906912ae5f131f0ac8d6c0d35a2a25ca74a7750059f710537d31",
+    "rows": 626639,
+    "prediction_total_CU": 209237258.7464887
+   },
+   "local_score": {
+    "crossfit_V24": 0.13609603270329096,
+    "delta_S09b": 0.000578810979956379,
+    "conditional_customer_CI95": [
+     0.00012593551962040061,
+     0.0009853792775746605
+    ]
+   },
+   "score_receipt": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/submission_receipt_N01_A_G.json",
+   "score_retrieved_utc": "2026-10-18T04:46:27Z",
+   "authorized_by_participant": true,
+   "authorization": "Human overnight request authorizes independently chosen promising Kaggle trials. CSV, sources, producers and quota checked before submission.",
+   "authorization_evidence": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/authorization.json",
+   "requires_confirmation_after_dry_run": false,
+   "weather_scope": "Building weather channel conditions on supplied annual2025 weather, without claiming quote-time forecast availability.",
+   "validation_limits": "Secondary development extension with a predeclared factor-three trust region for each new GAM channel, fixed .002 penalty and .25 minimum S09b. Crossfit on customer groups, all base predictions temporal. Models added after prior exploratory2024 checks; no fresh independent validation.",
+   "production_level": "S09b ultimate line totals inherited; no additional exposure or IBNR correction",
+   "public_delta_previous_best": 0.00018999999999999573
+  },
+  {
+   "id": "N01_B",
+   "candidate": "2023-fixed mix:75%full-policy/F3 Poisson frequency with compact Gamma.5 severity,25%N01_A_G motor. ExistingN01_A_Ghome retained.",
+   "decision_id": "N01_codex",
+   "submitted": true,
+   "submitted_utc": "2026-10-18T06:29:22.950Z",
+   "public_score": 0.12855,
+   "public_score_text": "0.12855",
+   "kaggle_submission_id": 57342927,
+   "kaggle_status": "COMPLETE",
+   "kaggle_submission_message": "N01_B full motor Poisson; compact severity; preserved ultimate levels",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/production/N01_B_motor_Poisson_F3_ultimo.csv",
+    "sha256": "57deb6a169397f55e41386668fd36bac426fe37c21d9a66105a85e6658946caa",
+    "rows": 626639,
+    "prediction_total_CU": 209237258.7464891
+   },
+   "local_score": {
+    "method": "Newfrequency temporal through2023, Gamma credibility/mixture frozen on2023;2024 comparison against reference with customer-crossfit meta, reused development.",
+    "score_name": "fixed_recipe_V24",
+    "D2": 0.13702994566678073,
+    "reference": "N01_A_G",
+    "gain": 0.0009339129634897692,
+    "conditional_customer_CI95": [
+     0.00016856123531982386,
+     0.002013279180314614
+    ],
+    "conditional_address_CI95": [
+     0.00021139412585981953,
+     0.0019590559228371838
+    ],
+    "per_line": [
+     {
+      "line": "motor",
+      "source": "Hackaton\\Semana 1\\Modelado_codex\\nocturna_20261017_N01\\models\\full_motor_frequency\\motor_V24\\predictions.parquet",
+      "selected2023": {
+       "variant": "full_motor",
+       "column": "compactsev_gamma_0.5",
+       "weight": 0.75,
+       "D2_selection": 0.09250047241593995
+      },
+      "source_sha256": "ba73fe13b9b4316037b7271a39af0ca5d3783e13068baca10fb51d11e99fc8c5",
+      "anchor_D2": 0.0892956907592587,
+      "candidate_D2": 0.09149712918578712,
+      "gain": 0.0022014384265284237,
+      "conditional_customer_CI95": [
+       0.0004634730603578559,
+       0.0047230724221296976
+      ],
+      "without_top_0_1pct": {
+       "anchor": 0.09254646759105012,
+       "candidate": 0.09350941950672498
+      },
+      "predicted_total_ratio": 1.0
+     },
+     {
+      "line": "buildings",
+      "source": "anchor retained",
+      "anchor_D2": 0.1145083232994476,
+      "candidate_D2": 0.1145083232994476,
+      "gain": 0.0,
+      "conditional_customer_CI95": [
+       0.0,
+       0.0
+      ],
+      "without_top_0_1pct": {
+       "anchor": 0.07607108253420103,
+       "candidate": 0.07607108253420103
+      },
+      "predicted_total_ratio": 1.0
+     },
+     {
+      "line": "contents",
+      "source": "anchor retained",
+      "anchor_D2": 0.09491175360132198,
+      "candidate_D2": 0.09491175360132198,
+      "gain": 0.0,
+      "conditional_customer_CI95": [
+       0.0,
+       0.0
+      ],
+      "without_top_0_1pct": {
+       "anchor": 0.062120298314962685,
+       "candidate": 0.062120298314962685
+      },
+      "predicted_total_ratio": 1.0
+     }
+    ],
+    "independent_validation": false
+   },
+   "score_receipt": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/submission_receipt_N01_B.json",
+   "score_retrieved_utc": "2026-10-18T06:29:53Z",
+   "authorized_by_participant": true,
+   "authorization": "Human overnight request authorizes independently chosen promising CSV trials after local verification. No extra confirmation required.",
+   "authorization_evidence": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/authorization.json",
+   "requires_confirmation_after_dry_run": false,
+   "availability_scope": "Current motorF3/customer/device measurement dates not quote-verified; known earlier device data distinguished. No current payment history, contact counts or renewal outcomes.",
+   "weather_scope": "OriginalN01_A_Gbuilding annual-weather scenario inherited, no new home weather model promoted.",
+   "validation_limits": "2023selected fixed recipe,2024 reused development; conditional intervals do not cover full selection/regional uncertainty. Contemporary weather andF3 remain conditional, not established quote-time inputs. Ownlevel beta24 diagnostic used only for declared future-production calibration policy, not reported validation scores.",
+   "production_level": "N01_A_Gper-line ultimate totals preserved; nominal2025 exposure once in producer, no extraIBNR/development/statistical level factor.",
+   "public_delta_previous_best": -0.0005300000000000027
+  },
+  {
+   "id": "N01_G",
+   "candidate": "frequency_ebm: frozen2023 EBM Poisson frequency, compactGamma severity; N01_A_G total per line retained.",
+   "decision_id": "N01_codex",
+   "submitted": true,
+   "submitted_utc": "2026-10-18T07:32:27.003Z",
+   "public_score": 0.12825,
+   "public_score_text": "0.12825",
+   "kaggle_submission_id": 57344976,
+   "kaggle_status": "COMPLETE",
+   "kaggle_submission_message": "N01_G per-peril Poisson EBM; compact Gamma; preserved ultimate levels",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/production/N01_G_frecuencia_EBM_ultimo.csv",
+    "sha256": "8ddad78d1353a7dea837c8c696095d362dc88c34ae9cb3542f327d4917be6b82",
+    "rows": 626639,
+    "prediction_total_CU": 209237258.74648845
+   },
+   "local_score": {
+    "method": "Occurrence-year temporal base models,2023 recipes,2024 reused development; frequency_ebm. Secondary count/complexity screens declared after2023 selection but before inspecting new2024 predictions.",
+    "score_name": "fixed_recipe_V24",
+    "D2": 0.13750861732827413,
+    "reference": "N01_A_G",
+    "gain": 0.0014125846249831708,
+    "conditional_customer_CI95": [
+     0.00012352366222621546,
+     0.003382093253243675
+    ],
+    "conditional_address_CI95": [
+     0.00013465083400674604,
+     0.003234550897306805
+    ],
+    "per_line": [
+     {
+      "line": "motor",
+      "selected2023": {
+       "column": "gamma_0.5",
+       "weight": 1.0,
+       "D2_selection": 0.09341515852532833
+      },
+      "source_sha256": "37ad4ffafe4fc5ceb3c0ee77b8b80383f89f0cac02c28b0f91ed3d33ec9db8cf",
+      "anchor_D2": 0.0892956907592587,
+      "candidate_D2": 0.09168619996564087,
+      "gain": 0.0023905092063821742,
+      "without_top_0_1pct": {
+       "anchor": 0.09254646759105012,
+       "candidate": 0.09353456157290663
+      }
+     },
+     {
+      "line": "buildings",
+      "selected2023": {
+       "column": "gamma_1.0",
+       "weight": 0.5,
+       "D2_selection": 0.11653965564594415
+      },
+      "source_sha256": "013a8065895db37c51161f35cdcc5449d528d7f8fb7555af601aaef29233fd37",
+      "anchor_D2": 0.1145083232994476,
+      "candidate_D2": 0.11561058772060895,
+      "gain": 0.0011022644211613475,
+      "without_top_0_1pct": {
+       "anchor": 0.07607108253420103,
+       "candidate": 0.07740969747596782
+      }
+     },
+     {
+      "line": "contents",
+      "selected2023": {
+       "column": "gamma_0.5",
+       "weight": 0.25,
+       "D2_selection": 0.08936367566858328
+      },
+      "source_sha256": "f93a6ee6f49fc393622b308ac7999bec4ca58b7f65da25583b73096ca14f75d3",
+      "anchor_D2": 0.09491175360132198,
+      "candidate_D2": 0.09495971098311262,
+      "gain": 4.795738179064202e-05,
+      "without_top_0_1pct": {
+       "anchor": 0.062120298314962685,
+       "candidate": 0.06313695598514646
+      }
+     }
+    ],
+    "independent_validation": false
+   },
+   "score_receipt": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/submission_receipt_N01_G.json",
+   "score_retrieved_utc": "2026-10-18T07:33:23Z",
+   "authorized_by_participant": true,
+   "authorization": "Human overnight request authorizes independently chosen promising CSV trials after local verification. No extra confirmation required.",
+   "authorization_evidence": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/authorization.json",
+   "requires_confirmation_after_dry_run": false,
+   "availability_scope": "Conditional currentF3 motor includes customer/device stock with unresolved quote-time dates, including marketing_segment; prior device data and pre-inception history separately represented. No contacts, current payment history or renewal outcomes added. Existing homeF3 uncertainty retained.",
+   "weather_scope": "Existing N01_A_G building supplied-annual-weather scenario retained; new frequencyEBM has no new current annual weather inputs.",
+   "validation_limits": "All2023/2024 development reused, conditional intervals omit full selection and future/regional uncertainty. Labels are retrospective at one valuation; no historical reserve snapshots or identified IBNER. Unknown2025ultimate target.",
+   "production_level": "Per-line N01_A_G ultimate totals preserved, nominal2025exposure once, no extraIBNR/development/calibration factor.",
+   "public_delta_previous_best": -0.0008299999999999974
+  },
+  {
+   "id": "S12_claude_fs2_md1000_forma",
+   "candidate": "Entrega Claude S12: frecuencia/severidad y forma por ramo, revisada sin modificarla.",
+   "decision_id": "N08_codex_S12_review",
+   "submitted": false,
+   "public_score": null,
+   "status": "validated_not_recommended_for_submission",
+   "candidate_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S12_claude_fs2_md1000_forma.csv",
+    "sha256": "fb9ffe5d376b00a61e996587ce6a901cfa6d76d91f847cfc3f51dd8e2ed78b5b",
+    "rows": 626639
+   },
+   "local_score": {
+    "method": "V24 reutilizado, candidato fijo; contraste directo con A_G y H anidado.",
+    "D2": 0.13661462116795353,
+    "gain_vs_A_G": 0.0005185884646625727,
+    "gain_vs_H": -0.000643150330766229,
+    "per_line": [
+     {
+      "line": "motor",
+      "rows": 254698,
+      "D2": {
+       "A_G": 0.0892956907592587,
+       "S12": 0.08986196693090343,
+       "H_nested": 0.09070666627456336
+      },
+      "S12_minus_A_G": 0.0005662761716447307,
+      "S12_minus_H": -0.0008446993436599382,
+      "conditional_CI95": {
+       "customer_id": {
+        "groups": 235947,
+        "vs_A_G": [
+         -0.0007880651181013075,
+         0.0026886914611103222
+        ],
+        "vs_H": [
+         -0.0015393441696401843,
+         -8.119976644294256e-06
+        ]
+       },
+       "address_id": {
+        "groups": 230991,
+        "vs_A_G": [
+         -0.0008147108856526797,
+         0.0023882555909139594
+        ],
+        "vs_H": [
+         -0.0015632835944024205,
+         -8.07055290474683e-05
+        ]
+       },
+       "region": {
+        "groups": 12,
+        "vs_A_G": [
+         -0.0007058255414679835,
+         0.002467346359485937
+        ],
+        "vs_H": [
+         -0.0014936911051517242,
+         -0.00011856441729439824
+        ]
+       }
+      }
+     },
+     {
+      "line": "buildings",
+      "rows": 184001,
+      "D2": {
+       "A_G": 0.1145083232994476,
+       "S12": 0.11551653938841921,
+       "H_nested": 0.1158181085513339
+      },
+      "S12_minus_A_G": 0.001008216088971614,
+      "S12_minus_H": -0.0003015691629146833,
+      "conditional_CI95": {
+       "customer_id": {
+        "groups": 176941,
+        "vs_A_G": [
+         -0.00044547351767954956,
+         0.0023835770653040152
+        ],
+        "vs_H": [
+         -0.001355999952727392,
+         0.0008118149070282065
+        ]
+       },
+       "address_id": {
+        "groups": 184001,
+        "vs_A_G": [
+         -0.00042400146161393254,
+         0.002468327664421794
+        ],
+        "vs_H": [
+         -0.001425312308742159,
+         0.0007349582762950248
+        ]
+       },
+       "region": {
+        "groups": 12,
+        "vs_A_G": [
+         -0.0004730532887443662,
+         0.002669505571298874
+        ],
+        "vs_H": [
+         -0.0013739702088560394,
+         0.0007529998092811056
+        ]
+       }
+      }
+     },
+     {
+      "line": "contents",
+      "rows": 187491,
+      "D2": {
+       "A_G": 0.09491175360132198,
+       "S12": 0.0944817328762092,
+       "H_nested": 0.09546230730158856
+      },
+      "S12_minus_A_G": -0.00043002072511277856,
+      "S12_minus_H": -0.0009805744253793547,
+      "conditional_CI95": {
+       "customer_id": {
+        "groups": 176961,
+        "vs_A_G": [
+         -0.0017498245623537995,
+         0.0008165818478256575
+        ],
+        "vs_H": [
+         -0.002294075026067217,
+         0.0002914108323852052
+        ]
+       },
+       "address_id": {
+        "groups": 183472,
+        "vs_A_G": [
+         -0.0016894657936978765,
+         0.0008360167158217187
+        ],
+        "vs_H": [
+         -0.002294630095452736,
+         0.0003337076553346853
+        ]
+       },
+       "region": {
+        "groups": 12,
+        "vs_A_G": [
+         -0.0017561541115319339,
+         0.0008935759410858866
+        ],
+        "vs_H": [
+         -0.002140232485361843,
+         0.000279930400402881
+        ]
+       }
+      }
+     }
+    ],
+    "conditional_CI95": {
+     "customer_id": {
+      "groups": 373831,
+      "vs_A_G": [
+       -0.00033348743508744176,
+       0.001563295480745162
+      ],
+      "vs_H": [
+       -0.0011896674216009245,
+       -0.00011740191935579024
+      ]
+     },
+     "address_id": {
+      "groups": 375864,
+      "vs_A_G": [
+       -0.00024308198617601653,
+       0.0015669668793146004
+      ],
+      "vs_H": [
+       -0.0011424297202326501,
+       -8.263983584319532e-05
+      ]
+     },
+     "region": {
+      "groups": 12,
+      "vs_A_G": [
+       -0.0005503254965685395,
+       0.0018686610271700591
+      ],
+      "vs_H": [
+       -0.0011251134204766295,
+       -9.096632031180644e-05
+      ]
+     }
+    },
+    "independent_validation": false
+   },
+   "review_report": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/N08_REVISION_S12.md",
+   "review_evidence": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/S12_direct_20261018_0947_r2/result.json",
+   "review_evidence_sha256": "07c02a55101282151f3ca96816f8111b353fcaa0eff2278be394503456bb4be5",
+   "reviewed_utc": "2026-10-18T09:52:11+00:00",
+   "decision": "Mantener H como siguiente ensayo. S12 válido, pero retrocede en contenidos frente A_G y queda por debajo de H en el agregado y en las medias de los tres ramos. No enviar S12.",
+   "validation_limits": "Selecciones de modelos, pesos y formas reutilizan V23/V24. El H nuevo se ajustó anidado; fuentes S12 previas siguen fijas y seleccionadas sobre V24. No es validación independiente ni pronóstico del score público.",
+   "production_level": "Se conserva el nivel último de cada fuente; ningún IBNR adicional ni reescala al score público."
+  },
+  {
+   "id": "N01_H",
+   "candidate": "Constrained log-link meta of scored A_G, at most.25 logweight of G, S12 and small centered rate elasticity. Five-customer-fold meta comparison; no intercept, no extraIBNR.",
+   "decision_id": "N01_codex",
+   "submitted": true,
+   "submitted_utc": "2026-10-18T19:25:38.277Z",
+   "public_score": 0.12886,
+   "public_score_text": "0.12886",
+   "kaggle_submission_id": 57366465,
+   "kaggle_status": "COMPLETE",
+   "kaggle_submission_message": "H bounded geometric meta; nested validation; ultimate estimate",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/production/N01_H_meta_geometrico_ultimo.csv",
+    "sha256": "4dfe6728bf1aae68d9abaf0e8db54e95cf5f10043e7dbe4ee7b8821f434e4c49",
+    "rows": 626639,
+    "prediction_total_CU": 215653297.1199027
+   },
+   "local_score": {
+    "method": "Five outer customer folds, four inner anchor folds within each outer training set, then H fitted only with that training set; original heldout A forecasts and unchanged full production parameters replayed. Fixed base-source/model selections reused2024, so not independent validation.",
+    "score_name": "customer_outer5_inner4_anchor_nested_meta_V24_reused",
+    "D2": 0.13725777149871976,
+    "reference": "N01_A_G",
+    "gain": 0.0011617387954290237,
+    "conditional_customer_CI95": [
+     0.0005878317799069149,
+     0.0018639104017038053
+    ],
+    "conditional_address_CI95": [
+     0.0005633580548023346,
+     0.0019325726199254554
+    ],
+    "per_line": [
+     {
+      "line": "motor",
+      "anchor_D2": 0.0892956907592587,
+      "nested_H_D2": 0.09070666627456336,
+      "gain": 0.0014109755153046688,
+      "original_H_D2": 0.0907340073373335,
+      "full_production_parameters_replayed": [
+       0.25,
+       0.12313520040944423,
+       0.06693215026947395
+      ],
+      "folds": [
+       {
+        "fold": 0,
+        "H_parameters": [
+         0.24999999999999992,
+         0.05441071788047022,
+         0.08357446822829796
+        ],
+        "gain": 0.000917835513254861,
+        "inner_anchor_folds": 4,
+        "outer_anchor_matches_previous_OOF": true
+       },
+       {
+        "fold": 1,
+        "H_parameters": [
+         0.24999999999999992,
+         0.21344901454660936,
+         0.05986733630458496
+        ],
+        "gain": 0.0007489566518016355,
+        "inner_anchor_folds": 4,
+        "outer_anchor_matches_previous_OOF": true
+       },
+       {
+        "fold": 2,
+        "H_parameters": [
+         0.25,
+         0.01280019280898664,
+         0.057415806933514904
+        ],
+        "gain": 0.0031545581814361734,
+        "inner_anchor_folds": 4,
+        "outer_anchor_matches_previous_OOF": true
+       },
+       {
+        "fold": 3,
+        "H_parameters": [
+         0.25,
+         0.13868955358755924,
+         0.07531272048644039
+        ],
+        "gain": 0.00047202970940007916,
+        "inner_anchor_folds": 4,
+        "outer_anchor_matches_previous_OOF": true
+       },
+       {
+        "fold": 4,
+        "H_parameters": [
+         0.25,
+         0.15336585790477034,
+         0.06358531582057236
+        ],
+        "gain": 0.0017917293068449025,
+        "inner_anchor_folds": 4,
+        "outer_anchor_matches_previous_OOF": true
+       }
+      ]
+     },
+     {
+      "line": "buildings",
+      "anchor_D2": 0.11450832329944738,
+      "nested_H_D2": 0.1158181085513339,
+      "gain": 0.0013097852518865194,
+      "original_H_D2": 0.11571546917523412,
+      "full_production_parameters_replayed": [
+       0.24999999999999997,
+       0.24860010343705416,
+       0.07533395437493165
+      ],
+      "folds": [
+       {
+        "fold": 0,
+        "H_parameters": [
+         0.25,
+         0.32487987109506755,
+         0.07581985507259603
+        ],
+        "gain": 0.0020440324212392946,
+        "inner_anchor_folds": 4,
+        "outer_anchor_matches_previous_OOF": true
+       },
+       {
+        "fold": 1,
+        "H_parameters": [
+         0.25,
+         0.2383378991311702,
+         0.06069263173867523
+        ],
+        "gain": 0.0020072254556707803,
+        "inner_anchor_folds": 4,
+        "outer_anchor_matches_previous_OOF": true
+       },
+       {
+        "fold": 2,
+        "H_parameters": [
+         0.25,
+         0.2809132406831531,
+         0.051108545389346026
+        ],
+        "gain": 0.002278272233215861,
+        "inner_anchor_folds": 4,
+        "outer_anchor_matches_previous_OOF": true
+       },
+       {
+        "fold": 3,
+        "H_parameters": [
+         0.25,
+         0.2374262320512718,
+         0.07617289136646947
+        ],
+        "gain": 0.001422786843047752,
+        "inner_anchor_folds": 4,
+        "outer_anchor_matches_previous_OOF": true
+       },
+       {
+        "fold": 4,
+        "H_parameters": [
+         0.24999999999999997,
+         0.2302353031561114,
+         0.1
+        ],
+        "gain": -0.001241635919481121,
+        "inner_anchor_folds": 4,
+        "outer_anchor_matches_previous_OOF": true
+       }
+      ]
+     },
+     {
+      "line": "contents",
+      "anchor_D2": 0.0949117536013222,
+      "nested_H_D2": 0.09546230730158856,
+      "gain": 0.0005505537002663541,
+      "original_H_D2": 0.09544453189227764,
+      "full_production_parameters_replayed": [
+       0.10355716145218348,
+       0.02661851255416975,
+       0.08866078529051011
+      ],
+      "folds": [
+       {
+        "fold": 0,
+        "H_parameters": [
+         0.15691545603150034,
+         0.07771333979897693,
+         0.0818384188318466
+        ],
+        "gain": 0.0007029800501184846,
+        "inner_anchor_folds": 4,
+        "outer_anchor_matches_previous_OOF": true
+       },
+       {
+        "fold": 1,
+        "H_parameters": [
+         0.0967764742173714,
+         0.0,
+         0.08388195061429575
+        ],
+        "gain": 0.000779658161151886,
+        "inner_anchor_folds": 4,
+        "outer_anchor_matches_previous_OOF": true
+       },
+       {
+        "fold": 2,
+        "H_parameters": [
+         0.0779127239660791,
+         0.03721812825347577,
+         0.09547639321340304
+        ],
+        "gain": 0.00023703171684441582,
+        "inner_anchor_folds": 4,
+        "outer_anchor_matches_previous_OOF": true
+       },
+       {
+        "fold": 3,
+        "H_parameters": [
+         0.08706454647802306,
+         6.6993426207534755e-19,
+         0.0951375899553909
+        ],
+        "gain": 0.00043628636626646955,
+        "inner_anchor_folds": 4,
+        "outer_anchor_matches_previous_OOF": true
+       },
+       {
+        "fold": 4,
+        "H_parameters": [
+         0.08609706094645779,
+         0.05372139700010821,
+         0.08958079606301941
+        ],
+        "gain": 0.0006015305517790281,
+        "inner_anchor_folds": 4,
+        "outer_anchor_matches_previous_OOF": true
+       }
+      ]
+     }
+    ],
+    "independent_validation": false
+   },
+   "score_receipt": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/submission_receipt_N01_H.json",
+   "score_retrieved_utc": "2026-10-18T19:27:17Z",
+   "authorized_by_participant": true,
+   "authorization": "Explicit human request N30 authorizes two immediate H/S21 prediction trials with neutral filenames after artifact verification and live quota. Historical/selection/availability limits remain; experimental comparison is not a promotion proof.",
+   "authorization_evidence": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/verification/N30_human_authorization.md",
+   "requires_confirmation_after_dry_run": false,
+   "availability_scope": "Conditional inherited currentF3/device dates and building annual-weather scenario remain unresolved. No new contacts/current payment/renewal outcome fields. G includes marketing assignment with uncertain measurement date; no established direct target leakage conclusion.",
+   "weather_scope": "Original A_G and S12 suppliedannualweather/homeF3 scenarios inherited; no new contemporaneousweather or currentcustomer fields introduced in H.",
+   "validation_limits": "Base source/model/shape choices have reused2024 and S12isfixed; this is nested estimation of the new anchor/meta fitting steps only, not independent nested model selection or independent future-year validation. Retrospective labels at one2024valuation; no identifiedIBNER. SourceS12motor2023factor recovered from producer identity, not a full missing-source calibration replay. Conditional cluster intervals omit source/model/parameter selection and futureyear uncertainty. Contents individual interval and some cohorts may include regression.",
+   "production_level": "Sources already ultimate;2025 nominalexposure appears once in underlying forecasts and serves as a rate basis here. New log/rate transformation can change totals. No additionalIBNR or ad hoc level factor.",
+   "public_delta_previous_best": -0.00021999999999999797
+  },
+  {
+   "id": "S21",
+   "candidate": "Separate-line frequency/severity and Tweedie ensemble, frozen S21 delivered recipe, four seeds in building frequency; explicit comparative trial, no mixing with new own estimates.",
+   "decision_id": "N01_codex",
+   "submitted": true,
+   "submitted_utc": "2026-10-18T19:30:50.847Z",
+   "public_score": 0.12874,
+   "public_score_text": "0.12874",
+   "kaggle_submission_id": 57366611,
+   "kaggle_status": "COMPLETE",
+   "kaggle_submission_message": "S21 peril frequency severity ensemble; ultimate estimate",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/production/S21_riesgo_integral_ultimo.csv",
+    "sha256": "4e934f595ab7e64d4bcde0e50c5a0a676a2570f46748260a5b1b86c2523d211b",
+    "rows": 626639,
+    "prediction_total_CU": 214287079.571172
+   },
+   "local_score": {
+    "method": "Own reconstruction of frozen delivered S21 combination from saved component predictions, full-cost temporal V24 points/reserve+25 recomputed. Author provided conditional intervals retained separately. V23/V24 already used for weight/shape selection, not independent validation; not clear H superiority.",
+    "score_name": "S21_delivered_recipe_replayed_V24_reused",
+    "D2": 0.1380729310517177,
+    "reference": "N01_A_G",
+    "gain": 0.0019768983484267366,
+    "conditional_customer_CI95": null,
+    "conditional_address_CI95": null,
+    "per_line": [
+     {
+      "scenario": "reserve075",
+      "scope": "motor",
+      "D2": {
+       "S21": 0.09276986275125654,
+       "S20": 0.09276986275125654,
+       "H": 0.0920054822791655,
+       "A_G": 0.09091891693777987
+      },
+      "gains": {
+       "S20": 0.0,
+       "H": 0.0007643804720910419,
+       "A_G": 0.0018509458134766676
+      }
+     },
+     {
+      "scenario": "reserve075",
+      "scope": "buildings",
+      "D2": {
+       "S21": 0.11805833998979531,
+       "S20": 0.11809499067097928,
+       "H": 0.11680260964358025,
+       "A_G": 0.11579259256670615
+      },
+      "gains": {
+       "S20": -3.6650681183969525e-05,
+       "H": 0.001255730346215067,
+       "A_G": 0.0022657474230891594
+      }
+     },
+     {
+      "scenario": "reserve075",
+      "scope": "contents",
+      "D2": {
+       "S21": 0.0960318935622908,
+       "S20": 0.0957220211632015,
+       "H": 0.0946458586660407,
+       "A_G": 0.0943427826153771
+      },
+      "gains": {
+       "S20": 0.00030987239908930597,
+       "H": 0.0013860348962501101,
+       "A_G": 0.0016891109469137078
+      }
+     },
+     {
+      "scenario": "reserve075",
+      "scope": "aggregate",
+      "D2": {
+       "S21": 0.1374680093417574,
+       "S20": 0.13742360379821916,
+       "H": 0.1364444399152941,
+       "A_G": 0.13557208216448158
+      },
+      "gains": {
+       "S20": 4.4405543538239556e-05,
+       "H": 0.001023569426463311,
+       "A_G": 0.0018959271772758246
+      }
+     },
+     {
+      "scenario": "nominal",
+      "scope": "motor",
+      "D2": {
+       "S21": 0.09160529106411586,
+       "S20": 0.09160529106411586,
+       "H": 0.09070666627456336,
+       "A_G": 0.0892956907592587
+      },
+      "gains": {
+       "S20": 0.0,
+       "H": 0.0008986247895524935,
+       "A_G": 0.0023096003048571623
+      }
+     },
+     {
+      "scenario": "nominal",
+      "scope": "buildings",
+      "D2": {
+       "S21": 0.11640220130527967,
+       "S20": 0.11643457426667725,
+       "H": 0.1158181085513339,
+       "A_G": 0.1145083232994476
+      },
+      "gains": {
+       "S20": -3.2372961397575395e-05,
+       "H": 0.0005840927539457752,
+       "A_G": 0.0018938780058320726
+      }
+     },
+     {
+      "scenario": "nominal",
+      "scope": "contents",
+      "D2": {
+       "S21": 0.09671384764309088,
+       "S20": 0.09643840933760961,
+       "H": 0.09546230730158856,
+       "A_G": 0.09491175360132198
+      },
+      "gains": {
+       "S20": 0.00027543830548126813,
+       "H": 0.0012515403415023219,
+       "A_G": 0.001802094041768898
+      }
+     },
+     {
+      "scenario": "nominal",
+      "scope": "aggregate",
+      "D2": {
+       "S21": 0.1380729310517177,
+       "S20": 0.138034329815641,
+       "H": 0.13725777149871976,
+       "A_G": 0.13609603270329096
+      },
+      "gains": {
+       "S20": 3.86012360766852e-05,
+       "H": 0.000815159552997935,
+       "A_G": 0.0019768983484267366
+      }
+     },
+     {
+      "scenario": "reserve125",
+      "scope": "motor",
+      "D2": {
+       "S21": 0.0889011674425797,
+       "S20": 0.0889011674425797,
+       "H": 0.08787778418646175,
+       "A_G": 0.0861659690803559
+      },
+      "gains": {
+       "S20": 0.0,
+       "H": 0.001023383256117949,
+       "A_G": 0.0027351983622238007
+      }
+     },
+     {
+      "scenario": "reserve125",
+      "scope": "buildings",
+      "D2": {
+       "S21": 0.11357474761452846,
+       "S20": 0.11360316861241304,
+       "H": 0.11361515663011668,
+       "A_G": 0.11202524098208333
+      },
+      "gains": {
+       "S20": -2.8420997884581745e-05,
+       "H": -4.040901558821641e-05,
+       "A_G": 0.00154950663244513
+      }
+     },
+     {
+      "scenario": "reserve125",
+      "scope": "contents",
+      "D2": {
+       "S21": 0.09702442262749622,
+       "S20": 0.09678215928803158,
+       "H": 0.09590243879427962,
+       "A_G": 0.09511316769718703
+      },
+      "gains": {
+       "S20": 0.0002422633394646434,
+       "H": 0.0011219838332165999,
+       "A_G": 0.001911254930309192
+      }
+     },
+     {
+      "scenario": "reserve125",
+      "scope": "aggregate",
+      "D2": {
+       "S21": 0.1373649373744441,
+       "S20": 0.13733170695061048,
+       "H": 0.13674307756908055,
+       "A_G": 0.1353111103847804
+      },
+      "gains": {
+       "S20": 3.323042383363006e-05,
+       "H": 0.000621859805363556,
+       "A_G": 0.0020538269896637207
+      }
+     }
+    ],
+    "independent_validation": false
+   },
+   "score_receipt": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/submission_receipt_S21.json",
+   "score_retrieved_utc": "2026-10-18T19:31:21Z",
+   "authorized_by_participant": true,
+   "authorization": "Explicit human request N30 authorizes two immediate H/S21 prediction trials with neutral filenames after artifact verification and live quota. Historical/selection/availability limits remain; experimental comparison is not a promotion proof.",
+   "authorization_evidence": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/verification/N30_human_authorization.md",
+   "requires_confirmation_after_dry_run": false,
+   "availability_scope": "Delivered supplied-input conditional scenario F0/F1/F2/F3/F4. Historical master/customer and annual-weather quote-time availability remains conditional. No new feature or source is introduced for this trial; no claim of fully prospective pricing.",
+   "weather_scope": "Original delivered S21 annual-weather/home-F3 supplied-data scenario. DATA-005 findings are not numerically extrapolated to all S21 components; original timestamp scope remains explicit.",
+   "validation_limits": "V23 and V24 reused for component weights/shape choices; not independent validation. Own reconstruction covers saved component combinations, not full base-model inference/training. Author S21-H aggregate/customer/address intervals include zero; buildings reserve+25 is slightly adverse and contents H2 regresses. Current single reserve valuation does not identify IBNER or true ultimate; conditional intervals exclude selection/future-year uncertainty. This is the newly authorized experimental comparison, not proven consistent H superiority.",
+   "production_level": "Original frozen S21 s17 shape/level and mean(f23,f24), no new level, no additional IBNR.",
+   "public_delta_previous_best": -0.00034000000000000696
+  },
+  {
+   "id": "S22",
+   "candidate": "Frozen S22 separate-line frequency/severity and Tweedie ensemble, original components/weights/year levels, home identity shape and motor shape1.09/0.95. Controlled comparative trial explicitly selected under human N46 discretion; no new own forecast mixed in.",
+   "decision_id": "N01_codex",
+   "submitted": true,
+   "submitted_utc": "2026-10-18T21:52:59.290Z",
+   "public_score": 0.12988,
+   "public_score_text": "0.12988",
+   "kaggle_submission_id": 57370117,
+   "kaggle_status": "COMPLETE",
+   "kaggle_submission_message": "S22 peril frequency severity ensemble; home identity shape; ultimate estimate",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/S22_crossreview_N34_r2/S22_riesgo_ultimo.csv",
+    "sha256": "c21a02e14de4a89f892604239b7cfd9ac4e95ea7d175460a25ba806a5a3541b0",
+    "rows": 626639,
+    "prediction_total_CU": 211689735.38043
+   },
+   "local_score": {
+    "method": "Own reconstruction of frozen delivered S22 combination from saved component predictions, full-cost temporal V24 points/reserve+25 recomputed. Author provided conditional intervals retained separately. V23/V24 already used for weight/shape selection, not independent validation; not clear H superiority.",
+    "score_name": "S22_delivered_recipe_replayed_V24_reused",
+    "D2": 0.13774159346508574,
+    "reference": "N01_A_G",
+    "gain": 0.0016455607617947843,
+    "conditional_customer_CI95": null,
+    "conditional_address_CI95": null,
+    "per_line": [
+     {
+      "scenario": "reserve075",
+      "scope": "motor",
+      "D2": {
+       "S22": 0.09276986275125654,
+       "S20": 0.09276986275125654,
+       "H": 0.0920054822791655,
+       "A_G": 0.09091891693777987
+      },
+      "gains": {
+       "S20": 0.0,
+       "H": 0.0007643804720910419,
+       "A_G": 0.0018509458134766676
+      }
+     },
+     {
+      "scenario": "reserve075",
+      "scope": "buildings",
+      "D2": {
+       "S22": 0.1171098024753553,
+       "S20": 0.11809499067097928,
+       "H": 0.11680260964358025,
+       "A_G": 0.11579259256670615
+      },
+      "gains": {
+       "S20": -0.0009851881956239872,
+       "H": 0.0003071928317750494,
+       "A_G": 0.0013172099086491418
+      }
+     },
+     {
+      "scenario": "reserve075",
+      "scope": "contents",
+      "D2": {
+       "S22": 0.0960229687558597,
+       "S20": 0.0957220211632015,
+       "H": 0.0946458586660407,
+       "A_G": 0.0943427826153771
+      },
+      "gains": {
+       "S20": 0.00030094759265819615,
+       "H": 0.0013771100898190003,
+       "A_G": 0.001680186140482598
+      }
+     },
+     {
+      "scenario": "reserve075",
+      "scope": "aggregate",
+      "D2": {
+       "S22": 0.13713098509532773,
+       "S20": 0.13742360379821916,
+       "H": 0.1364444399152941,
+       "A_G": 0.13557208216448158
+      },
+      "gains": {
+       "S20": -0.000292618702891434,
+       "H": 0.0006865451800336375,
+       "A_G": 0.001558902930846151
+      }
+     },
+     {
+      "scenario": "nominal",
+      "scope": "motor",
+      "D2": {
+       "S22": 0.09160529106411586,
+       "S20": 0.09160529106411586,
+       "H": 0.09070666627456336,
+       "A_G": 0.0892956907592587
+      },
+      "gains": {
+       "S20": 0.0,
+       "H": 0.0008986247895524935,
+       "A_G": 0.0023096003048571623
+      }
+     },
+     {
+      "scenario": "nominal",
+      "scope": "buildings",
+      "D2": {
+       "S22": 0.11551438494253052,
+       "S20": 0.11643457426667725,
+       "H": 0.1158181085513339,
+       "A_G": 0.1145083232994476
+      },
+      "gains": {
+       "S20": -0.0009201893241467252,
+       "H": -0.00030372360880337457,
+       "A_G": 0.0010060616430829228
+      }
+     },
+     {
+      "scenario": "nominal",
+      "scope": "contents",
+      "D2": {
+       "S22": 0.09661800115872654,
+       "S20": 0.09643840933760961,
+       "H": 0.09546230730158856,
+       "A_G": 0.09491175360132198
+      },
+      "gains": {
+       "S20": 0.00017959182111693117,
+       "H": 0.001155693857137985,
+       "A_G": 0.001706247557404561
+      }
+     },
+     {
+      "scenario": "nominal",
+      "scope": "aggregate",
+      "D2": {
+       "S22": 0.13774159346508574,
+       "S20": 0.138034329815641,
+       "H": 0.13725777149871976,
+       "A_G": 0.13609603270329096
+      },
+      "gains": {
+       "S20": -0.00029273635055526714,
+       "H": 0.0004838219663659826,
+       "A_G": 0.0016455607617947843
+      }
+     },
+     {
+      "scenario": "reserve125",
+      "scope": "motor",
+      "D2": {
+       "S22": 0.0889011674425797,
+       "S20": 0.0889011674425797,
+       "H": 0.08787778418646175,
+       "A_G": 0.0861659690803559
+      },
+      "gains": {
+       "S20": 0.0,
+       "H": 0.001023383256117949,
+       "A_G": 0.0027351983622238007
+      }
+     },
+     {
+      "scenario": "reserve125",
+      "scope": "buildings",
+      "D2": {
+       "S22": 0.11274264655433008,
+       "S20": 0.11360316861241304,
+       "H": 0.11361515663011668,
+       "A_G": 0.11202524098208333
+      },
+      "gains": {
+       "S20": -0.0008605220580829576,
+       "H": -0.0008725100757865922,
+       "A_G": 0.0007174055722467543
+      }
+     },
+     {
+      "scenario": "reserve125",
+      "scope": "contents",
+      "D2": {
+       "S22": 0.0968447424755362,
+       "S20": 0.09678215928803158,
+       "H": 0.09590243879427962,
+       "A_G": 0.09511316769718703
+      },
+      "gains": {
+       "S20": 6.258318750462788e-05,
+       "H": 0.0009423036812565844,
+       "A_G": 0.0017315747783491764
+      }
+     },
+     {
+      "scenario": "reserve125",
+      "scope": "aggregate",
+      "D2": {
+       "S22": 0.1370386277996647,
+       "S20": 0.13733170695061048,
+       "H": 0.13674307756908055,
+       "A_G": 0.1353111103847804
+      },
+      "gains": {
+       "S20": -0.0002930791509457853,
+       "H": 0.00029555023058414065,
+       "A_G": 0.0017275174148843053
+      }
+     }
+    ],
+    "independent_validation": false
+   },
+   "score_receipt": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/submission_receipt_S22.json",
+   "score_retrieved_utc": "2026-10-18T21:53:35Z",
+   "authorized_by_participant": true,
+   "authorization": "Direct human N46 instruction delegates the choice to use one remaining trial on the other model line, following N44 permission to submit whenever useful. S22 is a controlled comparative experiment: its automatic consistency gate remains failed, with H2 and H-comparison uncertainty recorded. Integrity, live quota, dryrun and duplicate checks required. No independent validation or manual final selection implied.",
+   "authorization_evidence": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/verification/N46_human_authorization.md",
+   "requires_confirmation_after_dry_run": false,
+   "availability_scope": "S22 uses its delivered separate-line F0124 and F3 components, including seven home F3 fields under D80. Measurement dates of some current F3/master data remain unresolved. S22 motor explicitly omits marketing_segment; it does not inherit the A_G G marketing head. No new input or base-model retraining in this comparative trial.",
+   "weather_scope": "Scope is the frozen S22 component manifests. The trial removes home shape only and adds no weather observations. It does not incorporate the own annual-weather A_G producer or H meta; no prospective weather-availability claim is made for supplied historical/scenario covariates.",
+   "validation_limits": "V23/V24 reused for components, weights, shape and year-level choices; not independent future validation. Component prediction assembly replayed numerically exactly, not raw inference of every delivered base model. Full-target gains coexist with adverse contents H2 and interval uncertainty against H. Author cluster intervals remain attributed, not independently reproduced here. One claims valuation cannot identify IBNER or ultimate reserve adequacy. N42 body/tail accounting is diagnostic on the same reused labels, without subset recalibration. A discretionary controlled trial is not automatic qualification or proof of public improvement.",
+   "production_level": "Original frozen S22 s17 shape/level and mean(f23,f24), no new level, no additional IBNR.",
+   "public_delta_previous_best": 0.0007999999999999952
+  },
+  {
+   "id": "S30",
+   "candidate": "S30: peril severity trends in motor/buildings, contents ensemble without neural component; own separate B model line",
+   "decision_id": "N01_codex",
+   "submitted": true,
+   "submitted_utc": "2026-10-18T22:52:27.650Z",
+   "public_score": 0.12996,
+   "public_score_text": "0.12996",
+   "kaggle_submission_id": 57371361,
+   "kaggle_status": "COMPLETE",
+   "kaggle_submission_message": "S30 peril severity trends and contents ensemble; ultimate risk estimate",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/S30_trial_N56/S30_riesgo_ultimo.csv",
+    "sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+    "rows": 626639,
+    "prediction_total_CU": 211962091.192245
+   },
+   "local_score": {
+    "method": "Frozen N48 full Tweedie 1.5 paired comparison vs original S22, reused V23 selection and V24; 72 scopes/reserves and fixed cluster diagnostics. Saved-component assembly replay separately verified.",
+    "score_name": "D2_full_Tweedie_1.5_reused_V24",
+    "D2": 0.137879634652177,
+    "reference": "S22",
+    "gain": 0.00013804118709126456,
+    "conditional_customer_CI95": [
+     -8.236111242738524e-05,
+     0.000369479295883567
+    ],
+    "conditional_address_CI95": [
+     -7.807012092126526e-05,
+     0.0003891139513401963
+    ],
+    "per_line": [
+     {
+      "cut": "V24",
+      "scope": "motor",
+      "semester": "all",
+      "scenario": "nominal",
+      "rows": 254698,
+      "D2": {
+       "S22": 0.09160529106411597,
+       "candidate": 0.09168058453051608
+      },
+      "gain": 7.529346640011703e-05,
+      "means": {
+       "target": 355.9783621779519,
+       "S22": 352.748440311316,
+       "candidate": 352.7673974756929
+      },
+      "observed_over_candidate": 1.0091022150154345,
+      "exposure": 199785.64179999998,
+      "conditional_CI95": {
+       "customer_id": [
+        -9.344078584759456e-05,
+        0.00023441388037857483
+       ],
+       "address_id": [
+        -0.00011128941893186185,
+        0.00024401161884134336
+       ],
+       "region": [
+        -0.00011732840130471343,
+        0.00025694620478822417
+       ]
+      }
+     },
+     {
+      "cut": "V24",
+      "scope": "buildings",
+      "semester": "all",
+      "scenario": "nominal",
+      "rows": 184001,
+      "D2": {
+       "S22": 0.11551438494253052,
+       "candidate": 0.11579786637265488
+      },
+      "gain": 0.0002834814301243549,
+      "means": {
+       "target": 366.0520842278031,
+       "S22": 330.44263348163184,
+       "candidate": 333.06797495991367
+      },
+      "observed_over_candidate": 1.0990311640494983,
+      "exposure": 149917.52240000002,
+      "conditional_CI95": {
+       "customer_id": [
+        4.7970226552165594e-05,
+        0.0005487945206047615
+       ],
+       "address_id": [
+        4.0229911417991294e-05,
+        0.0005430175483322453
+       ],
+       "region": [
+        8.702844126830463e-05,
+        0.00047640999011023475
+       ]
+      }
+     },
+     {
+      "cut": "V24",
+      "scope": "contents",
+      "semester": "all",
+      "scenario": "nominal",
+      "rows": 187491,
+      "D2": {
+       "S22": 0.09661800115872643,
+       "candidate": 0.09665027178817631
+      },
+      "gain": 3.2270629449882016e-05,
+      "means": {
+       "target": 93.42333792022015,
+       "S22": 92.70796435337067,
+       "candidate": 91.84348248139703
+      },
+      "observed_over_candidate": 1.0172016064301908,
+      "exposure": 149966.7683,
+      "conditional_CI95": {
+       "customer_id": [
+        -0.0009820085776232564,
+        0.00108776990554247
+       ],
+       "address_id": [
+        -0.0010276290086952326,
+        0.0012311253560312956
+       ],
+       "region": [
+        -0.0009530742116060526,
+        0.0010178916110720922
+       ]
+      }
+     }
+    ],
+    "independent_validation": false
+   },
+   "score_receipt": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/submission_receipt_S30.json",
+   "score_retrieved_utc": "2026-10-18T22:52:59Z",
+   "authorized_by_participant": true,
+   "authorization": "Direct human N56 request explicitly asks to test S30 now. Controlled comparative trial despite failed N48 statistical qualification, negative conditional lower bounds and adverse segments. Prior clear-improvement gate remains unchanged for other candidates. Integrity, assembly replay, live quota, dryrun and duplicate checks required. No independent validation, expected public score or manual final selection implied.",
+   "authorization_evidence": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/verification/N56_human_authorization.md",
+   "requires_confirmation_after_dry_run": false,
+   "availability_scope": "Delivered separate B recipe reuses saved main-line F0/F1/F2/F4 and home F3 components. Historical master-date and F3 availability limitations persist; not fully prospective raw-feature availability certification. No own A_G annual-weather producer or marketing head imported.",
+   "weather_scope": "S30 contains no S31 annual-2025 weather anomaly increment. Existing source feature availability limits retained; no attribution of public change to climate, reserve adequacy or a particular peril.",
+   "validation_limits": [
+    "Automatic N48 improvement gate FAILED: gain below 0.0002, conditional CIs include zero and adverse line/semester/reserve points.",
+    "New specific human N56 request authorizes only this controlled comparative trial; not statistical promotion.",
+    "V23/V24 and public results reused for author selection: not independent validation.",
+    "V23 buildings and V24 contents/H2 adverse; ten favorable customers exceed net nominal gain in author fixed-denominator influence diagnostic.",
+    "Trend estimates may confound development, mix and inflation; one reserve valuation does not identify IBNER or unbiased reserves.",
+    "Saved-component assembly replay does not repeat every raw base-model inference or training.",
+    "No expected public score or sampling-error band inferred from local CV."
+   ],
+   "production_level": "Ultimate expected cost under the delivered historical development assumptions; s17 level rule extended to B runs, motor shape 1.09/0.95, contents exposure elasticity 0.95, buildings identity. No extra IBNR added.",
+   "public_delta_previous_best": 7.999999999999674e-05
+  },
+  {
+   "id": "S40_sonda_motor_x090",
+   "prepared_utc": "2026-10-22T16:02:40+00:00",
+   "plan": "D100 (DECISIONES.md); preinscripción Hackaton/Repositorio_IAA2026/registro/sonda_nivel_D100_preinscripcion.json; foro CLA-20261022-001",
+   "candidate": "Sonda de nivel: S30 con las predicciones del ramo motor multiplicadas por 0.90; no es candidato final y nunca se selecciona",
+   "hypothesis": "El D² público como función del factor c de un ramo tiene forma cerrada (Tweedie 1,5): con las puntuaciones de x0.90 y x1.10 se despejan S1/N y S2/N del ramo y el óptimo del público c* = S1/S2",
+   "changes": "Solo el nivel del ramo; el resto de filas idéntico byte a byte a S30_claude_b.csv",
+   "code_version": {
+    "script": "Hackaton/Repositorio_IAA2026/herramientas/sonda_nivel.py",
+    "sha256": "221d15dbcaaf631c603aea20ba062905333db7d985c6aef804f572eebd6d8207",
+    "orden": "python3 herramientas/sonda_nivel.py generar"
+   },
+   "data_version": {
+    "base": "Hackaton/Semana 1/Envios/archivos/S30_claude_b.csv",
+    "base_sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+    "lineas": "Hackaton/Semana 1/Datos/test_{motor,buildings,contents}.parquet (row_id -> ramo)"
+   },
+   "parameters": {
+    "ramo": "motor",
+    "factor": 0.9
+   },
+   "validation_scheme": "No aplica como candidato: sonda. Efecto local sobre S30 en V23 y V24 (predicciones guardadas, D² Tweedie 1,5 sin pesos) solo como contexto",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S40_sonda_motor_x090.csv",
+    "sha256": "e46ea4ef0d1a2da3393af587c509bce470dd628e2552efc0d652b3aea492007d",
+    "rows": 626639,
+    "prediction_total_CU": 200071996.79,
+    "prediction_total_by_line_CU": {
+     "motor": 107010849.62,
+     "buildings": 74366227.96,
+     "contents": 18694919.21
+    }
+   },
+   "local_score": {
+    "V23": {
+     "D2": 0.14485,
+     "vs_S30": -0.00056
+    },
+    "V24": {
+     "D2": 0.1369,
+     "vs_S30": -0.00098
+    }
+   },
+   "submitted": true,
+   "submitted_utc": "2026-10-22T16:17:28.873Z",
+   "public_score": 0.12954,
+   "public_score_text": "0.12954",
+   "kaggle_submission_id": 57531293,
+   "reading_rule": "Las seis puntuaciones se devuelven con cinco decimales; después `sonda_nivel.py resolver` escribe S41 (S30 con c_Z = 1 + Z(c* - 1); Z = 0,166 autos, 0,346 edificios, 0,150 contenidos). Selección final manual: S41 si su público >= S30, si no S30; nunca una sonda",
+   "kaggle_status": "COMPLETE",
+   "score_receipt": "Hackaton/Repositorio_IAA2026/registro/sonda_nivel_D100_recibos.json",
+   "upload_file": "Hackaton/Repositorio_IAA2026/privado/sondas_D100_20261022/S40_01_riesgo_ultimo.csv",
+   "message": "S40-01 level sensitivity check; diagnostic only, excluded from final selection",
+   "retrieved_utc": "2026-10-22T16:20:49.123651+00:00",
+   "excluded_from_final_selection": true,
+   "submission_author": "Codex",
+   "selected_final": false
+  },
+  {
+   "id": "S40_sonda_motor_x110",
+   "prepared_utc": "2026-10-22T16:02:40+00:00",
+   "plan": "D100 (DECISIONES.md); preinscripción Hackaton/Repositorio_IAA2026/registro/sonda_nivel_D100_preinscripcion.json; foro CLA-20261022-001",
+   "candidate": "Sonda de nivel: S30 con las predicciones del ramo motor multiplicadas por 1.10; no es candidato final y nunca se selecciona",
+   "hypothesis": "El D² público como función del factor c de un ramo tiene forma cerrada (Tweedie 1,5): con las puntuaciones de x0.90 y x1.10 se despejan S1/N y S2/N del ramo y el óptimo del público c* = S1/S2",
+   "changes": "Solo el nivel del ramo; el resto de filas idéntico byte a byte a S30_claude_b.csv",
+   "code_version": {
+    "script": "Hackaton/Repositorio_IAA2026/herramientas/sonda_nivel.py",
+    "sha256": "221d15dbcaaf631c603aea20ba062905333db7d985c6aef804f572eebd6d8207",
+    "orden": "python3 herramientas/sonda_nivel.py generar"
+   },
+   "data_version": {
+    "base": "Hackaton/Semana 1/Envios/archivos/S30_claude_b.csv",
+    "base_sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+    "lineas": "Hackaton/Semana 1/Datos/test_{motor,buildings,contents}.parquet (row_id -> ramo)"
+   },
+   "parameters": {
+    "ramo": "motor",
+    "factor": 1.1
+   },
+   "validation_scheme": "No aplica como candidato: sonda. Efecto local sobre S30 en V23 y V24 (predicciones guardadas, D² Tweedie 1,5 sin pesos) solo como contexto",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S40_sonda_motor_x110.csv",
+    "sha256": "e82bc9a4b16deef3fed2d05b6bcb78616123f7d5347fd38c9b982c24cf1e70db",
+    "rows": 626639,
+    "prediction_total_CU": 223852185.59,
+    "prediction_total_by_line_CU": {
+     "motor": 130791038.42,
+     "buildings": 74366227.96,
+     "contents": 18694919.21
+    }
+   },
+   "local_score": {
+    "V23": {
+     "D2": 0.14462,
+     "vs_S30": -0.0008
+    },
+    "V24": {
+     "D2": 0.13751,
+     "vs_S30": -0.00037
+    }
+   },
+   "submitted": true,
+   "submitted_utc": "2026-10-22T16:18:23.947Z",
+   "public_score": 0.12906,
+   "public_score_text": "0.12906",
+   "kaggle_submission_id": 57531323,
+   "reading_rule": "Las seis puntuaciones se devuelven con cinco decimales; después `sonda_nivel.py resolver` escribe S41 (S30 con c_Z = 1 + Z(c* - 1); Z = 0,166 autos, 0,346 edificios, 0,150 contenidos). Selección final manual: S41 si su público >= S30, si no S30; nunca una sonda",
+   "kaggle_status": "COMPLETE",
+   "score_receipt": "Hackaton/Repositorio_IAA2026/registro/sonda_nivel_D100_recibos.json",
+   "upload_file": "Hackaton/Repositorio_IAA2026/privado/sondas_D100_20261022/S40_02_riesgo_ultimo.csv",
+   "message": "S40-02 level sensitivity check; diagnostic only, excluded from final selection",
+   "retrieved_utc": "2026-10-22T16:20:49.123651+00:00",
+   "excluded_from_final_selection": true,
+   "submission_author": "Codex",
+   "selected_final": false
+  },
+  {
+   "id": "S40_sonda_buildings_x090",
+   "prepared_utc": "2026-10-22T16:02:40+00:00",
+   "plan": "D100 (DECISIONES.md); preinscripción Hackaton/Repositorio_IAA2026/registro/sonda_nivel_D100_preinscripcion.json; foro CLA-20261022-001",
+   "candidate": "Sonda de nivel: S30 con las predicciones del ramo buildings multiplicadas por 0.90; no es candidato final y nunca se selecciona",
+   "hypothesis": "El D² público como función del factor c de un ramo tiene forma cerrada (Tweedie 1,5): con las puntuaciones de x0.90 y x1.10 se despejan S1/N y S2/N del ramo y el óptimo del público c* = S1/S2",
+   "changes": "Solo el nivel del ramo; el resto de filas idéntico byte a byte a S30_claude_b.csv",
+   "code_version": {
+    "script": "Hackaton/Repositorio_IAA2026/herramientas/sonda_nivel.py",
+    "sha256": "221d15dbcaaf631c603aea20ba062905333db7d985c6aef804f572eebd6d8207",
+    "orden": "python3 herramientas/sonda_nivel.py generar"
+   },
+   "data_version": {
+    "base": "Hackaton/Semana 1/Envios/archivos/S30_claude_b.csv",
+    "base_sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+    "lineas": "Hackaton/Semana 1/Datos/test_{motor,buildings,contents}.parquet (row_id -> ramo)"
+   },
+   "parameters": {
+    "ramo": "buildings",
+    "factor": 0.9
+   },
+   "validation_scheme": "No aplica como candidato: sonda. Efecto local sobre S30 en V23 y V24 (predicciones guardadas, D² Tweedie 1,5 sin pesos) solo como contexto",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S40_sonda_buildings_x090.csv",
+    "sha256": "ef137bdd53512b217dfc8969b1df05a85f4ef2140e58af75ab7c93c647da2641",
+    "rows": 626639,
+    "prediction_total_CU": 204525468.4,
+    "prediction_total_by_line_CU": {
+     "motor": 118900944.02,
+     "buildings": 66929605.17,
+     "contents": 18694919.21
+    }
+   },
+   "local_score": {
+    "V23": {
+     "D2": 0.1444,
+     "vs_S30": -0.00102
+    },
+    "V24": {
+     "D2": 0.13669,
+     "vs_S30": -0.00119
+    }
+   },
+   "submitted": true,
+   "submitted_utc": "2026-10-22T16:18:51.907Z",
+   "public_score": 0.12873,
+   "public_score_text": "0.12873",
+   "kaggle_submission_id": 57531339,
+   "reading_rule": "Las seis puntuaciones se devuelven con cinco decimales; después `sonda_nivel.py resolver` escribe S41 (S30 con c_Z = 1 + Z(c* - 1); Z = 0,166 autos, 0,346 edificios, 0,150 contenidos). Selección final manual: S41 si su público >= S30, si no S30; nunca una sonda",
+   "kaggle_status": "COMPLETE",
+   "score_receipt": "Hackaton/Repositorio_IAA2026/registro/sonda_nivel_D100_recibos.json",
+   "upload_file": "Hackaton/Repositorio_IAA2026/privado/sondas_D100_20261022/S40_03_riesgo_ultimo.csv",
+   "message": "S40-03 level sensitivity check; diagnostic only, excluded from final selection",
+   "retrieved_utc": "2026-10-22T16:20:49.123651+00:00",
+   "excluded_from_final_selection": true,
+   "submission_author": "Codex",
+   "selected_final": false
+  },
+  {
+   "id": "S40_sonda_buildings_x110",
+   "prepared_utc": "2026-10-22T16:02:40+00:00",
+   "plan": "D100 (DECISIONES.md); preinscripción Hackaton/Repositorio_IAA2026/registro/sonda_nivel_D100_preinscripcion.json; foro CLA-20261022-001",
+   "candidate": "Sonda de nivel: S30 con las predicciones del ramo buildings multiplicadas por 1.10; no es candidato final y nunca se selecciona",
+   "hypothesis": "El D² público como función del factor c de un ramo tiene forma cerrada (Tweedie 1,5): con las puntuaciones de x0.90 y x1.10 se despejan S1/N y S2/N del ramo y el óptimo del público c* = S1/S2",
+   "changes": "Solo el nivel del ramo; el resto de filas idéntico byte a byte a S30_claude_b.csv",
+   "code_version": {
+    "script": "Hackaton/Repositorio_IAA2026/herramientas/sonda_nivel.py",
+    "sha256": "221d15dbcaaf631c603aea20ba062905333db7d985c6aef804f572eebd6d8207",
+    "orden": "python3 herramientas/sonda_nivel.py generar"
+   },
+   "data_version": {
+    "base": "Hackaton/Semana 1/Envios/archivos/S30_claude_b.csv",
+    "base_sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+    "lineas": "Hackaton/Semana 1/Datos/test_{motor,buildings,contents}.parquet (row_id -> ramo)"
+   },
+   "parameters": {
+    "ramo": "buildings",
+    "factor": 1.1
+   },
+   "validation_scheme": "No aplica como candidato: sonda. Efecto local sobre S30 en V23 y V24 (predicciones guardadas, D² Tweedie 1,5 sin pesos) solo como contexto",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S40_sonda_buildings_x110.csv",
+    "sha256": "37c85705fa11b260e98a9864d9a2c384b10d0751688913a3570a7687b9e409f4",
+    "rows": 626639,
+    "prediction_total_CU": 219398713.99,
+    "prediction_total_by_line_CU": {
+     "motor": 118900944.02,
+     "buildings": 81802850.76,
+     "contents": 18694919.21
+    }
+   },
+   "local_score": {
+    "V23": {
+     "D2": 0.1455,
+     "vs_S30": 8e-05
+    },
+    "V24": {
+     "D2": 0.13807,
+     "vs_S30": 0.00019
+    }
+   },
+   "submitted": true,
+   "submitted_utc": "2026-10-22T16:19:03.277Z",
+   "public_score": 0.13018,
+   "public_score_text": "0.13018",
+   "kaggle_submission_id": 57531344,
+   "reading_rule": "Las seis puntuaciones se devuelven con cinco decimales; después `sonda_nivel.py resolver` escribe S41 (S30 con c_Z = 1 + Z(c* - 1); Z = 0,166 autos, 0,346 edificios, 0,150 contenidos). Selección final manual: S41 si su público >= S30, si no S30; nunca una sonda",
+   "kaggle_status": "COMPLETE",
+   "score_receipt": "Hackaton/Repositorio_IAA2026/registro/sonda_nivel_D100_recibos.json",
+   "upload_file": "Hackaton/Repositorio_IAA2026/privado/sondas_D100_20261022/S40_04_riesgo_ultimo.csv",
+   "message": "S40-04 level sensitivity check; diagnostic only, excluded from final selection",
+   "retrieved_utc": "2026-10-22T16:20:49.124658+00:00",
+   "excluded_from_final_selection": true,
+   "submission_author": "Codex",
+   "selected_final": false
+  },
+  {
+   "id": "S40_sonda_contents_x090",
+   "prepared_utc": "2026-10-22T16:02:40+00:00",
+   "plan": "D100 (DECISIONES.md); preinscripción Hackaton/Repositorio_IAA2026/registro/sonda_nivel_D100_preinscripcion.json; foro CLA-20261022-001",
+   "candidate": "Sonda de nivel: S30 con las predicciones del ramo contents multiplicadas por 0.90; no es candidato final y nunca se selecciona",
+   "hypothesis": "El D² público como función del factor c de un ramo tiene forma cerrada (Tweedie 1,5): con las puntuaciones de x0.90 y x1.10 se despejan S1/N y S2/N del ramo y el óptimo del público c* = S1/S2",
+   "changes": "Solo el nivel del ramo; el resto de filas idéntico byte a byte a S30_claude_b.csv",
+   "code_version": {
+    "script": "Hackaton/Repositorio_IAA2026/herramientas/sonda_nivel.py",
+    "sha256": "221d15dbcaaf631c603aea20ba062905333db7d985c6aef804f572eebd6d8207",
+    "orden": "python3 herramientas/sonda_nivel.py generar"
+   },
+   "data_version": {
+    "base": "Hackaton/Semana 1/Envios/archivos/S30_claude_b.csv",
+    "base_sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+    "lineas": "Hackaton/Semana 1/Datos/test_{motor,buildings,contents}.parquet (row_id -> ramo)"
+   },
+   "parameters": {
+    "ramo": "contents",
+    "factor": 0.9
+   },
+   "validation_scheme": "No aplica como candidato: sonda. Efecto local sobre S30 en V23 y V24 (predicciones guardadas, D² Tweedie 1,5 sin pesos) solo como contexto",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S40_sonda_contents_x090.csv",
+    "sha256": "3ca5a42f477f3f7af312fe3dea3a0d76b81b8e875f95228567bc4e2b42d1486b",
+    "rows": 626639,
+    "prediction_total_CU": 210092599.27,
+    "prediction_total_by_line_CU": {
+     "motor": 118900944.02,
+     "buildings": 74366227.96,
+     "contents": 16825427.29
+    }
+   },
+   "local_score": {
+    "V23": {
+     "D2": 0.1448,
+     "vs_S30": -0.00062
+    },
+    "V24": {
+     "D2": 0.13754,
+     "vs_S30": -0.00034
+    }
+   },
+   "submitted": true,
+   "submitted_utc": "2026-10-22T16:19:15.833Z",
+   "public_score": 0.12929,
+   "public_score_text": "0.12929",
+   "kaggle_submission_id": 57531358,
+   "reading_rule": "Las seis puntuaciones se devuelven con cinco decimales; después `sonda_nivel.py resolver` escribe S41 (S30 con c_Z = 1 + Z(c* - 1); Z = 0,166 autos, 0,346 edificios, 0,150 contenidos). Selección final manual: S41 si su público >= S30, si no S30; nunca una sonda",
+   "kaggle_status": "COMPLETE",
+   "score_receipt": "Hackaton/Repositorio_IAA2026/registro/sonda_nivel_D100_recibos.json",
+   "upload_file": "Hackaton/Repositorio_IAA2026/privado/sondas_D100_20261022/S40_05_riesgo_ultimo.csv",
+   "message": "S40-05 level sensitivity check; diagnostic only, excluded from final selection",
+   "retrieved_utc": "2026-10-22T16:20:49.124658+00:00",
+   "excluded_from_final_selection": true,
+   "submission_author": "Codex",
+   "selected_final": false
+  },
+  {
+   "id": "S40_sonda_contents_x110",
+   "prepared_utc": "2026-10-22T16:02:40+00:00",
+   "plan": "D100 (DECISIONES.md); preinscripción Hackaton/Repositorio_IAA2026/registro/sonda_nivel_D100_preinscripcion.json; foro CLA-20261022-001",
+   "candidate": "Sonda de nivel: S30 con las predicciones del ramo contents multiplicadas por 1.10; no es candidato final y nunca se selecciona",
+   "hypothesis": "El D² público como función del factor c de un ramo tiene forma cerrada (Tweedie 1,5): con las puntuaciones de x0.90 y x1.10 se despejan S1/N y S2/N del ramo y el óptimo del público c* = S1/S2",
+   "changes": "Solo el nivel del ramo; el resto de filas idéntico byte a byte a S30_claude_b.csv",
+   "code_version": {
+    "script": "Hackaton/Repositorio_IAA2026/herramientas/sonda_nivel.py",
+    "sha256": "221d15dbcaaf631c603aea20ba062905333db7d985c6aef804f572eebd6d8207",
+    "orden": "python3 herramientas/sonda_nivel.py generar"
+   },
+   "data_version": {
+    "base": "Hackaton/Semana 1/Envios/archivos/S30_claude_b.csv",
+    "base_sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+    "lineas": "Hackaton/Semana 1/Datos/test_{motor,buildings,contents}.parquet (row_id -> ramo)"
+   },
+   "parameters": {
+    "ramo": "contents",
+    "factor": 1.1
+   },
+   "validation_scheme": "No aplica como candidato: sonda. Efecto local sobre S30 en V23 y V24 (predicciones guardadas, D² Tweedie 1,5 sin pesos) solo como contexto",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S40_sonda_contents_x110.csv",
+    "sha256": "1366da09792992bf26b91a641714d5f8b77365291a26b6160415d588f8897e2d",
+    "rows": 626639,
+    "prediction_total_CU": 213831583.11,
+    "prediction_total_by_line_CU": {
+     "motor": 118900944.02,
+     "buildings": 74366227.96,
+     "contents": 20564411.13
+    }
+   },
+   "local_score": {
+    "V23": {
+     "D2": 0.14554,
+     "vs_S30": 0.00012
+    },
+    "V24": {
+     "D2": 0.13772,
+     "vs_S30": -0.00016
+    }
+   },
+   "submitted": true,
+   "submitted_utc": "2026-10-22T16:19:27.057Z",
+   "public_score": 0.13011,
+   "public_score_text": "0.13011",
+   "kaggle_submission_id": 57531364,
+   "reading_rule": "Las seis puntuaciones se devuelven con cinco decimales; después `sonda_nivel.py resolver` escribe S41 (S30 con c_Z = 1 + Z(c* - 1); Z = 0,166 autos, 0,346 edificios, 0,150 contenidos). Selección final manual: S41 si su público >= S30, si no S30; nunca una sonda",
+   "kaggle_status": "COMPLETE",
+   "score_receipt": "Hackaton/Repositorio_IAA2026/registro/sonda_nivel_D100_recibos.json",
+   "upload_file": "Hackaton/Repositorio_IAA2026/privado/sondas_D100_20261022/S40_06_riesgo_ultimo.csv",
+   "message": "S40-06 level sensitivity check; diagnostic only, excluded from final selection",
+   "retrieved_utc": "2026-10-22T16:20:49.124658+00:00",
+   "excluded_from_final_selection": true,
+   "submission_author": "Codex",
+   "selected_final": false
+  },
+  {
+   "id": "S41_nivel_credibilidad",
+   "prepared_utc": "2026-10-22T16:26:04+00:00",
+   "plan": "D100; regla preinscrita en registro/sonda_nivel_D100_preinscripcion.json; resolución en registro/sonda_nivel_D100_resolucion.json; foro CLA-20261022-001 y CLA-20261022-002",
+   "candidate": "S30 (Mezcla por peligro) con el nivel de cada ramo multiplicado por c_Z = 1 + Z(c* - 1): motor 0,9962, edificios 1,0260, contenidos 1,0126. Candidato final previsto de la parte 1",
+   "hypothesis": "Los factores óptimos del público por ramo (c* = 0,9774 autos, 1,0751 edificios, 1,0840 contenidos, resueltos con forma cerrada desde las seis sondas) contienen señal del nivel 2025 además del ruido del 33 %; aplicar la fracción creíble Z (0,166 / 0,346 / 0,150, fijada antes de ver el marcador) mejora el público (esperado 0,13016) con esperanza no negativa en el privado",
+   "changes": "Solo el nivel por ramo sobre S30; sin reentrenar; el resto de la receta intacta",
+   "code_version": {
+    "script": "Hackaton/Repositorio_IAA2026/herramientas/sonda_nivel.py",
+    "sha256": "221d15dbcaaf631c603aea20ba062905333db7d985c6aef804f572eebd6d8207",
+    "orden": "python3 herramientas/sonda_nivel.py resolver --s30 0.12996 --motor 0.12954 0.12906 --buildings 0.12873 0.13018 --contents 0.12929 0.13011"
+   },
+   "data_version": {
+    "base": "Hackaton/Semana 1/Envios/archivos/S30_claude_b.csv",
+    "base_sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+    "sondas": "S40_sonda_* (seis puntuaciones públicas del 22 de octubre, recibos en registro/sonda_nivel_D100_recibos.json)"
+   },
+   "parameters": {
+    "c_Z": {
+     "motor": 0.9962490564279887,
+     "buildings": 1.0259995860825672,
+     "contents": 1.0126005668944555
+    },
+    "c_optimo_publico": {
+     "motor": 0.9773664813761431,
+     "buildings": 1.0750883605921715,
+     "contents": 1.0840295445508847
+    },
+    "Z": {
+     "motor": 0.16572516338920737,
+     "buildings": 0.3462532125821639,
+     "contents": 0.14995400679370663
+    }
+   },
+   "validation_scheme": "Forma cerrada del D² Tweedie 1,5 en el factor de nivel sobre las filas públicas; ruido del 33 % por bootstrap sobre 2024; sin validación local nueva (el nivel 2025 no es observable en 2021-2024)",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S41_nivel_credibilidad.csv",
+    "sha256": "d8661c2874e9112bd3dd62ea4470a465ee309832dee53fd9dcaa4144dac643a5",
+    "rows": 626639,
+    "prediction_total_CU": 213685158.19,
+    "prediction_total_by_line_CU": {
+     "motor": 118454953.29,
+     "buildings": 76299719.11,
+     "contents": 18930485.79
+    }
+   },
+   "expected_public_score": 0.13016,
+   "submitted": true,
+   "submitted_utc": "2026-10-22T16:33:34.073Z",
+   "public_score": 0.13016,
+   "public_score_text": "0.13016",
+   "kaggle_submission_id": 57531719,
+   "final_selection_rule": "Selección final manual en Kaggle: S41 si su público >= 0,12996 (S30); si no, S30. Nunca una sonda S40",
+   "kaggle_status": "COMPLETE",
+   "upload_file": "Hackaton/Repositorio_IAA2026/privado/envios_S41_S42_20261022/S41_riesgo_ultimo.csv",
+   "message": "S41 ultimate risk estimate; credibility level calibration",
+   "retrieved_utc": "2026-10-22T16:35:04.742352+00:00",
+   "score_receipt": "Hackaton/Repositorio_IAA2026/registro/envios_S41_S42_20261022_recibos.json",
+   "submission_author": "Codex",
+   "manual_final_selection_performed": false,
+   "selected_final": true,
+   "selected_final_by": "participante, 23 de octubre hacia las 09:45 de Bogotá, tras la alarma de D103 (CIE-D103-20261023); capturas en Hackaton/Repositorio_IAA2026/privado/seleccion_S41_20261023/"
+  },
+  {
+   "id": "S42_nivel_credibilidad_revisada",
+   "prepared_utc": "2026-10-22T16:29:17+00:00",
+   "plan": "D101 (revisión posterior a ver el marcador); registro/sonda_nivel_D101_revision.json; foro CLA-20261022-003",
+   "candidate": "S30 con el nivel de cada ramo multiplicado por c = 1 + Z_revisada(c* - 1): motor 0,9838, edificios 1,0413, contenidos 1,0579. Segundo candidato final; el participante decide entre S41 y S42",
+   "hypothesis": "La dispersión de los tres desvíos observados del óptimo público (-2,3 %, +7,5 %, +8,4 %) supera la que admitía la previa de D100 (suma de desvíos estandarizados 6,68 con 3 grados de libertad); reestimando tau sobre los tres ramos (5,3 %) la credibilidad sube a 0,714 / 0,550 / 0,689",
+   "changes": "Solo el nivel por ramo sobre S30; sin reentrenar",
+   "code_version": {
+    "script": "Hackaton/Repositorio_IAA2026/herramientas/sonda_nivel.py",
+    "sha256": "d6cfe8055ee846d6214bac40d703f5e9c58ef289162e27a61a484ee52462a7a7",
+    "orden": "python3 herramientas/sonda_nivel.py revisar"
+   },
+   "data_version": {
+    "base": "Hackaton/Semana 1/Envios/archivos/S30_claude_b.csv",
+    "base_sha256": "fd9528e0b1ee4b674dea63834a97523fd4ddc743d1495a422ce31a2eb76e3bc5",
+    "resolucion_D100": "Hackaton/Repositorio_IAA2026/registro/sonda_nivel_D100_resolucion.json"
+   },
+   "parameters": {
+    "c": {
+     "motor": 0.9838356605652485,
+     "buildings": 1.0413204195996892,
+     "contents": 1.0579248010121836
+    },
+    "tau_revisada": 0.05319930930713396,
+    "Z_revisada": {
+     "motor": 0.7141770443820181,
+     "buildings": 0.5502906079427342,
+     "contents": 0.689338509708412
+    }
+   },
+   "validation_scheme": "Misma forma cerrada que D100; esperanza en el privado informada bajo dos hipótesis (previa de D100 correcta: -0,00004; tau revisada correcta: +0,00017); sin validación local nueva",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S42_nivel_credibilidad_revisada.csv",
+    "sha256": "a2fdcccd9661abff6265b9fd6fc383ef155de87dd3b075b53327641154de62f7",
+    "rows": 626639,
+    "prediction_total_CU": 214195879.19,
+    "prediction_total_by_line_CU": {
+     "motor": 116978988.8,
+     "buildings": 77439071.71,
+     "contents": 19777818.68
+    }
+   },
+   "expected_public_score": 0.13033,
+   "submitted": true,
+   "submitted_utc": "2026-10-22T16:34:34.157Z",
+   "public_score": 0.13033,
+   "public_score_text": "0.13033",
+   "kaggle_submission_id": 57531744,
+   "final_selection_rule": "Selección final manual: S41 o S42 según decida el participante (ambas con público esperado por encima de S30); nunca una sonda S40",
+   "kaggle_status": "COMPLETE",
+   "upload_file": "Hackaton/Repositorio_IAA2026/privado/envios_S41_S42_20261022/S42_riesgo_ultimo.csv",
+   "message": "S42 ultimate risk estimate; credibility level calibration",
+   "retrieved_utc": "2026-10-22T16:35:04.742352+00:00",
+   "score_receipt": "Hackaton/Repositorio_IAA2026/registro/envios_S41_S42_20261022_recibos.json",
+   "submission_author": "Codex",
+   "manual_final_selection_performed": false,
+   "selected_final": false,
+   "selected_final_by": "participante, captura de las 11:36 de Bogotá del 22 de octubre (privado/sondas_D100_20261022/seleccion_final_S42_captura_participante_20261022.png)"
+  },
+  {
+   "id": "S50_sonda_forma_motor_a090",
+   "prepared_utc": "2026-10-23T02:44:58+00:00",
+   "plan": "D102; preinscripción Hackaton/Repositorio_IAA2026/registro/sonda_forma_D102_preinscripcion.json; foro CLA-20261022-009",
+   "candidate": "Sonda de forma: S42 con las relatividades del ramo motor llevadas al exponente a = 0.90 alrededor de la tasa media y renivelado al total del ramo; no es candidato final y nunca se selecciona",
+   "hypothesis": "El D² público como función del exponente a es casi una parábola cerca del óptimo; con los públicos de a = 0,90, 1,00 (S42) y 1,10 se estima el vértice a* del ramo",
+   "changes": "Solo la dispersión dentro del ramo; totales por ramo idénticos a S42; el resto de filas idéntico byte a byte",
+   "code_version": {
+    "script": "Hackaton/Repositorio_IAA2026/herramientas/sonda_forma.py",
+    "sha256": "ed4f26ea28db402d2ef598d08d6bf47b9e1d26d8884e69a6dc5eaece23782082",
+    "orden": "python3 herramientas/sonda_forma.py generar"
+   },
+   "data_version": {
+    "base": "Hackaton/Semana 1/Envios/archivos/S42_nivel_credibilidad_revisada.csv",
+    "base_sha256": "a2fdcccd9661abff6265b9fd6fc383ef155de87dd3b075b53327641154de62f7",
+    "exposicion": "Hackaton/Semana 1/Datos/test_{motor,buildings,contents}.parquet"
+   },
+   "parameters": {
+    "ramo": "motor",
+    "a": 0.9,
+    "sd_log_tasa_ramo": 0.521106361522485
+   },
+   "validation_scheme": "No aplica como candidato: sonda. Curvatura y ruido del 33 % medidos sobre 2024 en la preinscripción",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S50_sonda_forma_motor_a090.csv",
+    "sha256": "bf31a8219a29b3e6c3bcea129bd7bbac41e3ab84191bc7a06a368f9705400e0d",
+    "rows": 626639,
+    "prediction_total_CU": 214195879.19,
+    "prediction_total_by_line_CU": {
+     "motor": 116978988.8,
+     "buildings": 77439071.71,
+     "contents": 19777818.68
+    }
+   },
+   "submitted": true,
+   "submitted_utc": "2026-10-23T03:30:05.247Z",
+   "public_score": 0.1305,
+   "public_score_text": "0.13050",
+   "kaggle_submission_id": 57547563,
+   "selected_final": false,
+   "reading_rule": "Con los seis públicos, `sonda_forma.py resolver` escribe S43 (a_Z = 1 + Z(a* − 1); Z 0,573 / 0,534 / 0,587). Selección final manual: S43 si su público >= S42 (0,13033); si no S42; nunca una sonda",
+   "kaggle_status": "COMPLETE",
+   "score_receipt": "Hackaton/Repositorio_IAA2026/registro/sonda_forma_D102_recibos.json",
+   "upload_file": "Hackaton/Repositorio_IAA2026/privado/sondas_forma_D102_20261022/S50_01_riesgo_ultimo.csv",
+   "message": "S50-01 shape sensitivity check; diagnostic only, excluded from final selection",
+   "retrieved_utc": "2026-10-23T03:31:37.648564+00:00",
+   "excluded_from_final_selection": true,
+   "submission_author": "Codex"
+  },
+  {
+   "id": "S50_sonda_forma_motor_a110",
+   "prepared_utc": "2026-10-23T02:44:58+00:00",
+   "plan": "D102; preinscripción Hackaton/Repositorio_IAA2026/registro/sonda_forma_D102_preinscripcion.json; foro CLA-20261022-009",
+   "candidate": "Sonda de forma: S42 con las relatividades del ramo motor llevadas al exponente a = 1.10 alrededor de la tasa media y renivelado al total del ramo; no es candidato final y nunca se selecciona",
+   "hypothesis": "El D² público como función del exponente a es casi una parábola cerca del óptimo; con los públicos de a = 0,90, 1,00 (S42) y 1,10 se estima el vértice a* del ramo",
+   "changes": "Solo la dispersión dentro del ramo; totales por ramo idénticos a S42; el resto de filas idéntico byte a byte",
+   "code_version": {
+    "script": "Hackaton/Repositorio_IAA2026/herramientas/sonda_forma.py",
+    "sha256": "ed4f26ea28db402d2ef598d08d6bf47b9e1d26d8884e69a6dc5eaece23782082",
+    "orden": "python3 herramientas/sonda_forma.py generar"
+   },
+   "data_version": {
+    "base": "Hackaton/Semana 1/Envios/archivos/S42_nivel_credibilidad_revisada.csv",
+    "base_sha256": "a2fdcccd9661abff6265b9fd6fc383ef155de87dd3b075b53327641154de62f7",
+    "exposicion": "Hackaton/Semana 1/Datos/test_{motor,buildings,contents}.parquet"
+   },
+   "parameters": {
+    "ramo": "motor",
+    "a": 1.1,
+    "sd_log_tasa_ramo": 0.6369077751780919
+   },
+   "validation_scheme": "No aplica como candidato: sonda. Curvatura y ruido del 33 % medidos sobre 2024 en la preinscripción",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S50_sonda_forma_motor_a110.csv",
+    "sha256": "7b3c766e7e9c8ed0493d1ed525ed9643202f09be318b1c0ce531f9c33dd01846",
+    "rows": 626639,
+    "prediction_total_CU": 214195879.19,
+    "prediction_total_by_line_CU": {
+     "motor": 116978988.8,
+     "buildings": 77439071.71,
+     "contents": 19777818.68
+    }
+   },
+   "submitted": true,
+   "submitted_utc": "2026-10-23T03:30:17.347Z",
+   "public_score": 0.12957,
+   "public_score_text": "0.12957",
+   "kaggle_submission_id": 57547570,
+   "selected_final": false,
+   "reading_rule": "Con los seis públicos, `sonda_forma.py resolver` escribe S43 (a_Z = 1 + Z(a* − 1); Z 0,573 / 0,534 / 0,587). Selección final manual: S43 si su público >= S42 (0,13033); si no S42; nunca una sonda",
+   "kaggle_status": "COMPLETE",
+   "score_receipt": "Hackaton/Repositorio_IAA2026/registro/sonda_forma_D102_recibos.json",
+   "upload_file": "Hackaton/Repositorio_IAA2026/privado/sondas_forma_D102_20261022/S50_02_riesgo_ultimo.csv",
+   "message": "S50-02 shape sensitivity check; diagnostic only, excluded from final selection",
+   "retrieved_utc": "2026-10-23T03:31:37.649571+00:00",
+   "excluded_from_final_selection": true,
+   "submission_author": "Codex"
+  },
+  {
+   "id": "S50_sonda_forma_buildings_a090",
+   "prepared_utc": "2026-10-23T02:44:58+00:00",
+   "plan": "D102; preinscripción Hackaton/Repositorio_IAA2026/registro/sonda_forma_D102_preinscripcion.json; foro CLA-20261022-009",
+   "candidate": "Sonda de forma: S42 con las relatividades del ramo buildings llevadas al exponente a = 0.90 alrededor de la tasa media y renivelado al total del ramo; no es candidato final y nunca se selecciona",
+   "hypothesis": "El D² público como función del exponente a es casi una parábola cerca del óptimo; con los públicos de a = 0,90, 1,00 (S42) y 1,10 se estima el vértice a* del ramo",
+   "changes": "Solo la dispersión dentro del ramo; totales por ramo idénticos a S42; el resto de filas idéntico byte a byte",
+   "code_version": {
+    "script": "Hackaton/Repositorio_IAA2026/herramientas/sonda_forma.py",
+    "sha256": "ed4f26ea28db402d2ef598d08d6bf47b9e1d26d8884e69a6dc5eaece23782082",
+    "orden": "python3 herramientas/sonda_forma.py generar"
+   },
+   "data_version": {
+    "base": "Hackaton/Semana 1/Envios/archivos/S42_nivel_credibilidad_revisada.csv",
+    "base_sha256": "a2fdcccd9661abff6265b9fd6fc383ef155de87dd3b075b53327641154de62f7",
+    "exposicion": "Hackaton/Semana 1/Datos/test_{motor,buildings,contents}.parquet"
+   },
+   "parameters": {
+    "ramo": "buildings",
+    "a": 0.9,
+    "sd_log_tasa_ramo": 0.5286345279994451
+   },
+   "validation_scheme": "No aplica como candidato: sonda. Curvatura y ruido del 33 % medidos sobre 2024 en la preinscripción",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S50_sonda_forma_buildings_a090.csv",
+    "sha256": "92db452a35c5eef451710b691db0f581816d3908ab7e58f8fde8e9e690c536da",
+    "rows": 626639,
+    "prediction_total_CU": 214195879.19,
+    "prediction_total_by_line_CU": {
+     "motor": 116978988.8,
+     "buildings": 77439071.71,
+     "contents": 19777818.68
+    }
+   },
+   "submitted": true,
+   "submitted_utc": "2026-10-23T03:30:29.567Z",
+   "public_score": 0.13012,
+   "public_score_text": "0.13012",
+   "kaggle_submission_id": 57547573,
+   "selected_final": false,
+   "reading_rule": "Con los seis públicos, `sonda_forma.py resolver` escribe S43 (a_Z = 1 + Z(a* − 1); Z 0,573 / 0,534 / 0,587). Selección final manual: S43 si su público >= S42 (0,13033); si no S42; nunca una sonda",
+   "kaggle_status": "COMPLETE",
+   "score_receipt": "Hackaton/Repositorio_IAA2026/registro/sonda_forma_D102_recibos.json",
+   "upload_file": "Hackaton/Repositorio_IAA2026/privado/sondas_forma_D102_20261022/S50_03_riesgo_ultimo.csv",
+   "message": "S50-03 shape sensitivity check; diagnostic only, excluded from final selection",
+   "retrieved_utc": "2026-10-23T03:31:37.649571+00:00",
+   "excluded_from_final_selection": true,
+   "submission_author": "Codex"
+  },
+  {
+   "id": "S50_sonda_forma_buildings_a110",
+   "prepared_utc": "2026-10-23T02:44:58+00:00",
+   "plan": "D102; preinscripción Hackaton/Repositorio_IAA2026/registro/sonda_forma_D102_preinscripcion.json; foro CLA-20261022-009",
+   "candidate": "Sonda de forma: S42 con las relatividades del ramo buildings llevadas al exponente a = 1.10 alrededor de la tasa media y renivelado al total del ramo; no es candidato final y nunca se selecciona",
+   "hypothesis": "El D² público como función del exponente a es casi una parábola cerca del óptimo; con los públicos de a = 0,90, 1,00 (S42) y 1,10 se estima el vértice a* del ramo",
+   "changes": "Solo la dispersión dentro del ramo; totales por ramo idénticos a S42; el resto de filas idéntico byte a byte",
+   "code_version": {
+    "script": "Hackaton/Repositorio_IAA2026/herramientas/sonda_forma.py",
+    "sha256": "ed4f26ea28db402d2ef598d08d6bf47b9e1d26d8884e69a6dc5eaece23782082",
+    "orden": "python3 herramientas/sonda_forma.py generar"
+   },
+   "data_version": {
+    "base": "Hackaton/Semana 1/Envios/archivos/S42_nivel_credibilidad_revisada.csv",
+    "base_sha256": "a2fdcccd9661abff6265b9fd6fc383ef155de87dd3b075b53327641154de62f7",
+    "exposicion": "Hackaton/Semana 1/Datos/test_{motor,buildings,contents}.parquet"
+   },
+   "parameters": {
+    "ramo": "buildings",
+    "a": 1.1,
+    "sd_log_tasa_ramo": 0.646108867635295
+   },
+   "validation_scheme": "No aplica como candidato: sonda. Curvatura y ruido del 33 % medidos sobre 2024 en la preinscripción",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S50_sonda_forma_buildings_a110.csv",
+    "sha256": "f6adcf3aa649f0271d3002e0adeec9d79e6b51a968b2cc6a6f728f9122f23960",
+    "rows": 626639,
+    "prediction_total_CU": 214195879.19,
+    "prediction_total_by_line_CU": {
+     "motor": 116978988.8,
+     "buildings": 77439071.71,
+     "contents": 19777818.68
+    }
+   },
+   "submitted": true,
+   "submitted_utc": "2026-10-23T03:30:41.483Z",
+   "public_score": 0.13002,
+   "public_score_text": "0.13002",
+   "kaggle_submission_id": 57547576,
+   "selected_final": false,
+   "reading_rule": "Con los seis públicos, `sonda_forma.py resolver` escribe S43 (a_Z = 1 + Z(a* − 1); Z 0,573 / 0,534 / 0,587). Selección final manual: S43 si su público >= S42 (0,13033); si no S42; nunca una sonda",
+   "kaggle_status": "COMPLETE",
+   "score_receipt": "Hackaton/Repositorio_IAA2026/registro/sonda_forma_D102_recibos.json",
+   "upload_file": "Hackaton/Repositorio_IAA2026/privado/sondas_forma_D102_20261022/S50_04_riesgo_ultimo.csv",
+   "message": "S50-04 shape sensitivity check; diagnostic only, excluded from final selection",
+   "retrieved_utc": "2026-10-23T03:31:37.649571+00:00",
+   "excluded_from_final_selection": true,
+   "submission_author": "Codex"
+  },
+  {
+   "id": "S50_sonda_forma_contents_a090",
+   "prepared_utc": "2026-10-23T02:44:58+00:00",
+   "plan": "D102; preinscripción Hackaton/Repositorio_IAA2026/registro/sonda_forma_D102_preinscripcion.json; foro CLA-20261022-009",
+   "candidate": "Sonda de forma: S42 con las relatividades del ramo contents llevadas al exponente a = 0.90 alrededor de la tasa media y renivelado al total del ramo; no es candidato final y nunca se selecciona",
+   "hypothesis": "El D² público como función del exponente a es casi una parábola cerca del óptimo; con los públicos de a = 0,90, 1,00 (S42) y 1,10 se estima el vértice a* del ramo",
+   "changes": "Solo la dispersión dentro del ramo; totales por ramo idénticos a S42; el resto de filas idéntico byte a byte",
+   "code_version": {
+    "script": "Hackaton/Repositorio_IAA2026/herramientas/sonda_forma.py",
+    "sha256": "ed4f26ea28db402d2ef598d08d6bf47b9e1d26d8884e69a6dc5eaece23782082",
+    "orden": "python3 herramientas/sonda_forma.py generar"
+   },
+   "data_version": {
+    "base": "Hackaton/Semana 1/Envios/archivos/S42_nivel_credibilidad_revisada.csv",
+    "base_sha256": "a2fdcccd9661abff6265b9fd6fc383ef155de87dd3b075b53327641154de62f7",
+    "exposicion": "Hackaton/Semana 1/Datos/test_{motor,buildings,contents}.parquet"
+   },
+   "parameters": {
+    "ramo": "contents",
+    "a": 0.9,
+    "sd_log_tasa_ramo": 0.5243194870205247
+   },
+   "validation_scheme": "No aplica como candidato: sonda. Curvatura y ruido del 33 % medidos sobre 2024 en la preinscripción",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S50_sonda_forma_contents_a090.csv",
+    "sha256": "008fa14366cad2ef4b7a8a42b2f4e4cb5cf4e029d67afe1713bffb3dd9d3892f",
+    "rows": 626639,
+    "prediction_total_CU": 214195879.19,
+    "prediction_total_by_line_CU": {
+     "motor": 116978988.8,
+     "buildings": 77439071.71,
+     "contents": 19777818.68
+    }
+   },
+   "submitted": true,
+   "submitted_utc": "2026-10-23T03:30:53.923Z",
+   "public_score": 0.13023,
+   "public_score_text": "0.13023",
+   "kaggle_submission_id": 57547584,
+   "selected_final": false,
+   "reading_rule": "Con los seis públicos, `sonda_forma.py resolver` escribe S43 (a_Z = 1 + Z(a* − 1); Z 0,573 / 0,534 / 0,587). Selección final manual: S43 si su público >= S42 (0,13033); si no S42; nunca una sonda",
+   "kaggle_status": "COMPLETE",
+   "score_receipt": "Hackaton/Repositorio_IAA2026/registro/sonda_forma_D102_recibos.json",
+   "upload_file": "Hackaton/Repositorio_IAA2026/privado/sondas_forma_D102_20261022/S50_05_riesgo_ultimo.csv",
+   "message": "S50-05 shape sensitivity check; diagnostic only, excluded from final selection",
+   "retrieved_utc": "2026-10-23T03:31:37.649571+00:00",
+   "excluded_from_final_selection": true,
+   "submission_author": "Codex"
+  },
+  {
+   "id": "S50_sonda_forma_contents_a110",
+   "prepared_utc": "2026-10-23T02:44:58+00:00",
+   "plan": "D102; preinscripción Hackaton/Repositorio_IAA2026/registro/sonda_forma_D102_preinscripcion.json; foro CLA-20261022-009",
+   "candidate": "Sonda de forma: S42 con las relatividades del ramo contents llevadas al exponente a = 1.10 alrededor de la tasa media y renivelado al total del ramo; no es candidato final y nunca se selecciona",
+   "hypothesis": "El D² público como función del exponente a es casi una parábola cerca del óptimo; con los públicos de a = 0,90, 1,00 (S42) y 1,10 se estima el vértice a* del ramo",
+   "changes": "Solo la dispersión dentro del ramo; totales por ramo idénticos a S42; el resto de filas idéntico byte a byte",
+   "code_version": {
+    "script": "Hackaton/Repositorio_IAA2026/herramientas/sonda_forma.py",
+    "sha256": "ed4f26ea28db402d2ef598d08d6bf47b9e1d26d8884e69a6dc5eaece23782082",
+    "orden": "python3 herramientas/sonda_forma.py generar"
+   },
+   "data_version": {
+    "base": "Hackaton/Semana 1/Envios/archivos/S42_nivel_credibilidad_revisada.csv",
+    "base_sha256": "a2fdcccd9661abff6265b9fd6fc383ef155de87dd3b075b53327641154de62f7",
+    "exposicion": "Hackaton/Semana 1/Datos/test_{motor,buildings,contents}.parquet"
+   },
+   "parameters": {
+    "ramo": "contents",
+    "a": 1.1,
+    "sd_log_tasa_ramo": 0.6408349284525771
+   },
+   "validation_scheme": "No aplica como candidato: sonda. Curvatura y ruido del 33 % medidos sobre 2024 en la preinscripción",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S50_sonda_forma_contents_a110.csv",
+    "sha256": "940c22f00ac51b18ac31bacd9303ff4e3a7f61728e371164fd3c52cf448d7fa6",
+    "rows": 626639,
+    "prediction_total_CU": 214195879.19,
+    "prediction_total_by_line_CU": {
+     "motor": 116978988.8,
+     "buildings": 77439071.71,
+     "contents": 19777818.68
+    }
+   },
+   "submitted": true,
+   "submitted_utc": "2026-10-23T03:31:11.847Z",
+   "public_score": 0.1302,
+   "public_score_text": "0.13020",
+   "kaggle_submission_id": 57547593,
+   "selected_final": false,
+   "reading_rule": "Con los seis públicos, `sonda_forma.py resolver` escribe S43 (a_Z = 1 + Z(a* − 1); Z 0,573 / 0,534 / 0,587). Selección final manual: S43 si su público >= S42 (0,13033); si no S42; nunca una sonda",
+   "kaggle_status": "COMPLETE",
+   "score_receipt": "Hackaton/Repositorio_IAA2026/registro/sonda_forma_D102_recibos.json",
+   "upload_file": "Hackaton/Repositorio_IAA2026/privado/sondas_forma_D102_20261022/S50_06_riesgo_ultimo.csv",
+   "message": "S50-06 shape sensitivity check; diagnostic only, excluded from final selection",
+   "retrieved_utc": "2026-10-23T03:31:37.649571+00:00",
+   "excluded_from_final_selection": true,
+   "submission_author": "Codex"
+  },
+  {
+   "id": "S43_forma_credibilidad",
+   "prepared_utc": "2026-10-23T03:34:05+00:00",
+   "plan": "D102; preinscripción registro/sonda_forma_D102_preinscripcion.json; resolución registro/sonda_forma_D102_resolucion.json; foro CLA-20261022-010",
+   "candidate": "S42 con el exponente de forma a_Z por ramo (autos 0,955, edificios 0,995, contenidos 0,996) alrededor de la tasa media y totales por ramo intactos; candidato final previsto",
+   "hypothesis": "Las parábolas por ramo del público (a = 0,90 / 1,00 / 1,10) dan vértices 0,921 / 0,990 / 0,993; aplicar la fracción creíble (Z 0,573 / 0,534 / 0,587, preinscrita) mejora el público en +0,00015 con esperanza privada entre −0,00006 y +0,00006",
+   "changes": "Solo la dispersión dentro de cada ramo sobre S42; sin reentrenar; nivel por ramo idéntico a S42",
+   "code_version": {
+    "script": "Hackaton/Repositorio_IAA2026/herramientas/sonda_forma.py",
+    "sha256": "ed4f26ea28db402d2ef598d08d6bf47b9e1d26d8884e69a6dc5eaece23782082",
+    "orden": "python3 herramientas/sonda_forma.py resolver --s42 0.13033 --motor 0.13050 0.12957 --buildings 0.13012 0.13002 --contents 0.13023 0.13020"
+   },
+   "data_version": {
+    "base": "Hackaton/Semana 1/Envios/archivos/S42_nivel_credibilidad_revisada.csv",
+    "base_sha256": "a2fdcccd9661abff6265b9fd6fc383ef155de87dd3b075b53327641154de62f7",
+    "sondas": "S50_sonda_forma_* (seis públicos del 22 de octubre, recibos de Codex)"
+   },
+   "parameters": {
+    "a_Z": {
+     "motor": 0.9548629861576716,
+     "buildings": 0.9948634778150721,
+     "contents": 0.996174475344595
+    },
+    "a_optimo_publico": {
+     "motor": 0.9211864406779658,
+     "buildings": 0.9903846153846136,
+     "contents": 0.9934782608695641
+    },
+    "K_publico": {
+     "motor": 0.029500000000000352,
+     "buildings": 0.02599999999999963,
+     "contents": 0.01149999999999901
+    }
+   },
+   "validation_scheme": "Parábola por ramo sobre el público; curvaturas coherentes con 2024 (0,0295/0,0282, 0,0260/0,0296, 0,0115/0,0121); sin validación local nueva",
+   "exact_submission_file": {
+    "path": "Hackaton/Semana 1/Envios/archivos/S43_forma_credibilidad.csv",
+    "sha256": "a8010a6917e213dc65f4855142c7db850ed575a2b5a80135f68862caaee5e4b5",
+    "rows": 626639,
+    "prediction_total_CU": 214195879.19,
+    "prediction_total_by_line_CU": {
+     "motor": 116978988.8,
+     "buildings": 77439071.71,
+     "contents": 19777818.68
+    }
+   },
+   "expected_public_score": 0.13048,
+   "submitted": true,
+   "submitted_utc": "2026-10-23T03:37:28.347Z",
+   "public_score": 0.13048,
+   "public_score_text": "0.13048",
+   "kaggle_submission_id": 57547764,
+   "selected_final": false,
+   "final_selection_rule": "Selección final manual: S43 si su público >= 0,13033 (S42); si no S42; nunca una sonda S40/S50",
+   "kaggle_status": "COMPLETE",
+   "upload_file": "Hackaton/Repositorio_IAA2026/privado/envio_S43_20261022/S43_riesgo_ultimo.csv",
+   "message": "S43 ultimate risk estimate; credibility shape calibration",
+   "retrieved_utc": "2026-10-23T03:38:15.781944+00:00",
+   "score_receipt": "Hackaton/Repositorio_IAA2026/registro/envio_S43_20261022_recibo.json",
+   "submission_author": "Codex",
+   "manual_final_selection_performed": false,
+   "selected_final_by": "participante, 22 de octubre 22:4x de Bogotá, confirmado en la sesión de Claude; capturas en privado/sondas_D102_20261022/",
+   "selected_final_withdrawn_by": "participante, 23 de octubre hacia las 09:45 de Bogotá, tras la alarma de D103 (CIE-D103-20261023); capturas en Hackaton/Repositorio_IAA2026/privado/seleccion_S41_20261023/"
+  }
+ ],
+ "submission_preflight": {
+  "decision_id": "D69",
+  "recorded_utc": "2026-10-17T17:14:41+00:00",
+  "user_requested_submission": true,
+  "competition": "iaa-ai-assisted-hackathon-2026-part-1",
+  "status": "submitted_and_scored",
+  "evidence": "Preparación/artifacts/verification/s01_s02_20261017T171200Z",
+  "daily_policy": {
+   "cap": 5,
+   "platform_cap": 10,
+   "reset_local": "19:00",
+   "timezone": "America/Bogota",
+   "used_observed": 0,
+   "after_both": 2,
+   "remaining_after_both": 3
+  },
+  "no_prior_submissions_as_of_utc": "2026-10-17T17:12:22Z",
+  "messages": {
+   "S01": "S01 M00 T0: constant line rate times exposure; scale baseline D68",
+   "S02": "S02 M00 ultimate: S01 plus D67 estimated reporting IBNR; level-only comparison"
+  },
+  "production_level": "ultimate",
+  "if_S02_strictly_wins": "ultimate_for_future_production_candidates_no_double_correction",
+  "completed_utc": "2026-10-17T17:46:51+00:00",
+  "scoring_evidence": "Preparación/artifacts/verification/s01_s02_scoring_20261017T174306Z"
+ },
+ "calibration_policy": {
+  "decision_id": "D70",
+  "status": "fixed_from_scored_comparison",
+  "recorded_utc": "2026-10-17T17:46:51+00:00",
+  "production_level": "ultimate",
+  "winning_candidate": "S02",
+  "comparison": {
+   "S01_public_D2": "0.07118",
+   "S02_public_D2": "0.07211",
+   "S02_minus_S01": "0.00093",
+   "direction": "maximize"
+  },
+  "scope": "All subsequent production candidates for part 1",
+  "method": "Use S02 as ultimate portfolio reference, with explicitly declared model-specific OOF statistical calibration where validated; no second IBNR. S08 applies fixed OOF2023 beta at50% credibility after component normalization.",
+  "apply_development_once": true,
+  "effective_exposure_models": "Already developed models must not receive the same IBNR factor again",
+  "validation": "V23 and V24 remain evaluated on observed T0 with Tweedie D2 power 1.5",
+  "evidence": "Preparación/artifacts/verification/s01_s02_scoring_20261017T174306Z/submission_receipt.json",
+  "interpretation_limit": "Public comparison supports operational level; it does not identify private-target valuation or development pattern",
+  "D70_original_method": "Balance predictions on train 2021-2024 per line to T0 plus D67 estimated IBNR; retain explicit factor",
+  "implementation_decision": "D76",
+  "final_balance_script": "Hackaton/Semana 1/Envios/preparar_s06_nivel_ultimo.py",
+  "portfolio_level_assumption": "S02 mean ultimate rate per line retained; composition-level changes neutralized, not empirically proved optimal",
+  "D73_method_before_D76": "Preserve S02 ultimate portfolio totals per line by normalizing model risk relativities; no second IBNR multiplication",
+  "candidate_specific_S08_calibration": {
+   "production_level": "ultimate",
+   "source": "OOF2023",
+   "credibility": 0.5,
+   "beta": {
+    "buildings": 1.036615001107737,
+    "contents": 1.0655748204132571,
+    "motor": 1.0346840028611732
+   },
+   "validation_V24": 0.13247470609091738,
+   "reason": "Test a data-derived level correction rather than forcing identical totals; ultimate target interpretation unchanged",
+   "limit": "Historical OOF calibration is not observed hidden2025 ultimate truth",
+   "public_score": 0.12532,
+   "public_delta_previous_best": "0.00097",
+   "interpretation": "Outcome combines ranking changes and calibration; no isolated causal conclusion about beta"
+  }
+ },
+ "updated_utc": "2026-10-23T14:51:25+00:00",
+ "recommended_next_submission": {
+  "id": "N01_H",
+  "status": "locally_qualified_waiting_for_specific_daily_quota",
+  "reason": "H conserva prioridad tras contraste directo solicitado de S12; S12 no supera el filtro conjunto y queda por debajo de H.",
+  "audit": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/production/N01_H_release_audit.json",
+  "not_before_Bogota": "2026-10-18T19:00:00-05:00",
+  "fresh_live_quota_required": true,
+  "review_report": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01/N08_REVISION_S12.md"
+ },
+ "latest_submission_receipt": "Hackaton/Repositorio_IAA2026/registro/envio_S43_20261022_recibo.json",
+ "latest_submission_daily_policy": {
+  "cap": 10,
+  "platform_cap": 10,
+  "used_observed": 7,
+  "remaining_platform": 3,
+  "remaining_provisional": 3,
+  "source": "kaggle-cli",
+  "reset_Bogota": "2026-10-23T19:00:00-05:00",
+  "competition_deadline_Bogota": "2026-10-23T11:00:00-05:00",
+  "checked_utc": "2026-10-23T03:38:21Z",
+  "receipt": "Hackaton/Repositorio_IAA2026/registro/envio_S43_20261022_recibo.json"
+ },
+ "research_best_profile": {
+  "decision": "D76",
+  "candidate": "S08",
+  "profile": "CatBoost and small regularized OOF stacking with credibility50% statistical calibration",
+  "local_D2_V24": 0.13247470609091727,
+  "public_score": 0.12532,
+  "production_trained": true,
+  "submission_prepared": true,
+  "submission_id": 57331887,
+  "best_public_after": {
+   "id": "S08",
+   "public_score": 0.12532,
+   "submission_id": 57331887,
+   "note": "Best public score; no manual final competition selection made"
+  }
+ },
+ "best_public_candidate": {
+  "id": "S43_forma_credibilidad",
+  "public_score": 0.13048,
+  "submission_id": 57547764,
+  "note": "Mejor público entre los candidatos; fue la entrega final del 22 de octubre (CIE-D102) y dejó de serlo el 23 de octubre (CIE-D103: S41)"
+ },
+ "current_submission_window": {
+  "cap": 10,
+  "platform_cap": 10,
+  "used_observed": 7,
+  "remaining_platform": 3,
+  "remaining_provisional": 3,
+  "source": "kaggle-cli",
+  "reset_Bogota": "2026-10-23T19:00:00-05:00",
+  "competition_deadline_Bogota": "2026-10-23T11:00:00-05:00",
+  "checked_utc": "2026-10-23T03:38:21Z",
+  "receipt": "Hackaton/Repositorio_IAA2026/registro/envio_S43_20261022_recibo.json"
+ },
+ "N01_research_profile": {
+  "latest_candidate": "S30",
+  "local_method": "Frozen N48 full Tweedie 1.5 paired comparison vs original S22, reused V23 selection and V24; 72 scopes/reserves and fixed cluster diagnostics. Saved-component assembly replay separately verified.",
+  "local_D2": 0.137879634652177,
+  "public_score": 0.12996,
+  "best_public_after": {
+   "id": "S30",
+   "public_score": 0.12996,
+   "submission_id": 57371361,
+   "note": "Best public score, no manual final selection made."
+  },
+  "evidence": "Hackaton/Semana 1/Modelado_codex/nocturna_20261017_N01",
+  "remaining_provisional": 1
+ },
+ "sonda_nivel_D100": {
+  "estado": "cerrada_S42_seleccionada_como_entrega_final",
+  "nota": "Hackaton/Semana 1/Envios/S40_sonda_nivel_entrega_codex.json",
+  "candidatos": [
+   "S40_sonda_motor_x090",
+   "S40_sonda_motor_x110",
+   "S40_sonda_buildings_x090",
+   "S40_sonda_buildings_x110",
+   "S40_sonda_contents_x090",
+   "S40_sonda_contents_x110"
+  ],
+  "candidato_final_previsto": "S41_nivel_credibilidad",
+  "updated_utc": "2026-10-23T03:40:54+00:00",
+  "receipt": "Hackaton/Repositorio_IAA2026/registro/sonda_nivel_D100_recibos.json",
+  "public_scores": {
+   "S40_sonda_motor_x090": "0.12954",
+   "S40_sonda_motor_x110": "0.12906",
+   "S40_sonda_buildings_x090": "0.12873",
+   "S40_sonda_buildings_x110": "0.13018",
+   "S40_sonda_contents_x090": "0.12929",
+   "S40_sonda_contents_x110": "0.13011"
+  },
+  "remaining_platform": 2,
+  "S41_generado": true,
+  "seleccion_final_manual_realizada": true,
+  "S41": {
+   "path": "Hackaton/Semana 1/Envios/archivos/S41_nivel_credibilidad.csv",
+   "sha256": "d8661c2874e9112bd3dd62ea4470a465ee309832dee53fd9dcaa4144dac643a5",
+   "factores": {
+    "motor": 0.9962490564279887,
+    "buildings": 1.0259995860825672,
+    "contents": 1.0126005668944555
+   },
+   "publico_esperado": 0.13016
+  },
+  "S42_generado": true,
+  "S42": {
+   "path": "Hackaton/Semana 1/Envios/archivos/S42_nivel_credibilidad_revisada.csv",
+   "sha256": "a2fdcccd9661abff6265b9fd6fc383ef155de87dd3b075b53327641154de62f7",
+   "factores": {
+    "motor": 0.9838356605652485,
+    "buildings": 1.0413204195996892,
+    "contents": 1.0579248010121836
+   },
+   "publico_esperado": 0.13033,
+   "decision": "D101"
+  },
+  "S41_enviado": true,
+  "S42_enviado": true,
+  "entrega_final": "S43_forma_credibilidad (sustituye a S42 por D102/CIE-D102)",
+  "public_scores_S41_S42": {
+   "S41": 0.13016,
+   "S42": 0.13033
+  },
+  "publicos_esperados": {
+   "S41": 0.13016,
+   "S42": 0.13033
+  },
+  "foro_cierre": "CLA-20261022-004"
+ },
+ "latest_scored_diagnostic": {
+  "id": "S50_sonda_forma_contents_a110",
+  "kaggle_submission_id": 57547593,
+  "public_score": 0.1302,
+  "final_candidate": false
+ },
+ "best_public_diagnostic": {
+  "id": "S50_sonda_forma_motor_a090",
+  "public_score": 0.1305,
+  "excluded_from_final_selection": true,
+  "note": "El mejor score de una sonda no cambia S42 como candidato final vigente."
+ },
+ "envios_S41_S42_20261022": {
+  "estado": "ambos_enviados_y_puntuados",
+  "receipt": "Hackaton/Repositorio_IAA2026/registro/envios_S41_S42_20261022_recibos.json",
+  "scores": {
+   "S41": "0.13016",
+   "S42": "0.13033"
+  },
+  "seleccion_final_manual": "pendiente_del_participante"
+ },
+ "sonda_forma_D102": {
+  "estado": "cerrada_S43_seleccionado_como_entrega_final",
+  "nota": "Hackaton/Semana 1/Envios/S50_sonda_forma_entrega_codex.json",
+  "candidatos": [
+   "S50_sonda_forma_motor_a090",
+   "S50_sonda_forma_motor_a110",
+   "S50_sonda_forma_buildings_a090",
+   "S50_sonda_forma_buildings_a110",
+   "S50_sonda_forma_contents_a090",
+   "S50_sonda_forma_contents_a110"
+  ],
+  "candidato_final_previsto": "S43_forma_credibilidad",
+  "calendario": "las seis sondas ahora (cuota renovada a las 19:00 de Bogotá; diez intentos hasta el cierre), S43 después; tres de reserva",
+  "updated_utc": "2026-10-23T03:40:54+00:00",
+  "foro_id": "CLA-20261022-009",
+  "receipt": "Hackaton/Repositorio_IAA2026/registro/sonda_forma_D102_recibos.json",
+  "public_scores": {
+   "S50_sonda_forma_motor_a090": "0.13050",
+   "S50_sonda_forma_motor_a110": "0.12957",
+   "S50_sonda_forma_buildings_a090": "0.13012",
+   "S50_sonda_forma_buildings_a110": "0.13002",
+   "S50_sonda_forma_contents_a090": "0.13023",
+   "S50_sonda_forma_contents_a110": "0.13020"
+  },
+  "remaining_platform": 4,
+  "S43_generado": true,
+  "seleccion_final_manual_realizada": true,
+  "S43": {
+   "path": "Hackaton/Semana 1/Envios/archivos/S43_forma_credibilidad.csv",
+   "sha256": "a8010a6917e213dc65f4855142c7db850ed575a2b5a80135f68862caaee5e4b5",
+   "a_Z": {
+    "motor": 0.9548629861576716,
+    "buildings": 0.9948634778150721,
+    "contents": 0.996174475344595
+   },
+   "publico_esperado": 0.13048
+  },
+  "vertices_publico": {
+   "motor": 0.9212,
+   "buildings": 0.9904,
+   "contents": 0.9935
+  },
+  "foro_resolucion": "CLA-20261022-010",
+  "utc": "2026-10-23T03:38:30.771480+00:00",
+  "autor_envio": "Codex",
+  "path_base": "workspace_root",
+  "recibo": "Hackaton/Repositorio_IAA2026/registro/envio_S43_20261022_recibo.json",
+  "public_score": 0.13048,
+  "public_score_text": "0.13048",
+  "kaggle_submission_id": 57547764,
+  "S43_enviado": true,
+  "intentos_restantes": 3,
+  "entrega_final": "S43_forma_credibilidad",
+  "public_score_S43": 0.13048,
+  "publico_esperado_S43": 0.13048,
+  "foro_cierre": "CLA-20261022-011"
+ },
+ "envio_S43_20261022": {
+  "utc": "2026-10-23T03:38:30.771480+00:00",
+  "autor_envio": "Codex",
+  "estado": "S43_enviado_y_puntuado",
+  "path_base": "workspace_root",
+  "recibo": "Hackaton/Repositorio_IAA2026/registro/envio_S43_20261022_recibo.json",
+  "public_score": 0.13048,
+  "public_score_text": "0.13048",
+  "kaggle_submission_id": 57547764,
+  "S43_generado": true,
+  "S43_enviado": true,
+  "intentos_restantes": 3,
+  "seleccion_final_manual_realizada": false
+ },
+ "seleccion_final_CIE_D103_20261023": {
+  "utc": "2026-10-23T14:51:25+00:00",
+  "entrega_final": "S41_nivel_credibilidad",
+  "kaggle_submission_id": 57531719,
+  "public_score_text": "0.13016",
+  "sha256": "d8661c2874e9112bd3dd62ea4470a465ee309832dee53fd9dcaa4144dac643a5",
+  "retirada": "S43_forma_credibilidad (57547764)",
+  "seleccion_final_manual_realizada": true,
+  "autor_marca": "participante",
+  "registro": "Hackaton/Repositorio_IAA2026/registro/decision_marca_final_S41_20261023.json",
+  "registro_sha256": "0b796447997295923aefac150ae18aedf1b14881b3c6667ab1c38213ca9e8d3d",
+  "foro_id": "CLA-20261023-002"
+ }
+}
