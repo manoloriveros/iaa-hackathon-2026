@@ -42,27 +42,141 @@
     siniestros: function (cont, lang) { cont.innerHTML = D.siniestros(lang); },
 
     curva: function (cont, lang, o) {
-      var e = CIFRAS.envios, l = L[lang];
+      var e = CIFRAS.envios, l = L[lang], en = lang === 'en';
       var etiquetas = e.map(function (_, i) { return String(i + 1); });
-      var det = e.map(function (x, i) { return (i + 1) + '. ' + (lang === 'en' ? x.etiqueta_en : x.etiqueta_es); });
-      var ult = e.length - 1;
+      var det = e.map(function (x, i) { return (i + 1) + '. ' + (en ? x.etiqueta_en : x.etiqueta_es); });
+      var ult = e.length - 1, iMod = -1, iS0 = -1, iS1 = -1, iF0 = -1, iF1 = -1, iFin = ult;
+      e.forEach(function (x, i) {
+        if (x.tipo === 'modelo') iMod = i;
+        if (x.tipo === 'sonda') { if (iS0 < 0) iS0 = i; iS1 = i; }
+        if (x.tipo === 'sonda_forma') { if (iF0 < 0) iF0 = i; iF1 = i; }
+        if (x.seleccion_final) iFin = i;
+      });
+      function serie(tipo, campo) { return e.map(function (x, i) { return { i: i, y: x.tipo === tipo ? x[campo] : null, destacar: i === iFin }; }); }
+      var bandas = [{ desde: 8, hasta: 11, texto: '', margen: 11 }, { desde: iS0, hasta: iS1, texto: '', margen: 9 }];
+      if (iF0 >= 0) bandas.push({ desde: iF0, hasta: iF1, texto: '', margen: 9 });
       return G.lineas(cont, Object.assign({
-        ancho: 700, alto: 270, lang: lang, interactivo: !!(o && o.interactivo), margen: { t: 40, r: 120, b: 44, l: 50 },
-        aria: lang === 'en' ? 'Public score and local 2024 validation for the 14 scored submissions' : 'Puntuación pública y validación local de 2024 de los 14 envíos puntuados',
-        x: { etiquetas: etiquetas, detalle: det, titulo: lang === 'en' ? 'Scored submissions, in order (17–18 Oct)' : 'Envíos puntuados, en orden (17 y 18 de octubre)' },
-        y: { dominio: [0.06, 0.145], valores: [0.06, 0.08, 0.10, 0.12, 0.14], formato: function (v) { return f(v, 2, lang); }, titulo: 'D² Tweedie (p = 1,5)'.replace(',', lang === 'en' ? '.' : ',') },
-        bandas: [{ desde: 8, hasta: 11, texto: '', margen: 14 }],
+        ancho: 700, alto: 270, lang: lang, interactivo: !!(o && o.interactivo), margen: { t: 40, r: 104, b: 44, l: 50 },
+        aria: en ? 'Public score and local 2024 validation for the ' + e.length + ' scored submissions, with the level and shape probes and the three calibrated candidates'
+          : 'Puntuación pública y validación local de 2024 de los ' + e.length + ' envíos puntuados, con las sondas de nivel y de forma y los tres candidatos calibrados',
+        x: { etiquetas: etiquetas, detalle: det, titulo: en ? 'Scored submissions, in order (17–22 Oct)' : 'Envíos puntuados, en orden (del 17 al 22 de octubre)' },
+        y: { dominio: [0.06, 0.145], valores: [0.06, 0.08, 0.10, 0.12, 0.14], formato: function (v) { return f(v, 2, lang); }, titulo: 'D² Tweedie (p = 1,5)'.replace(',', en ? '.' : ',') },
+        bandas: bandas,
         series: [
-          { id: 'local', nombre: l.local, color: 'var(--acento-2)', puntos: e.map(function (x, i) { return { i: i, y: x.v24_local }; }), radio: 3.5 },
-          { id: 'pub', nombre: l.publico, color: 'var(--acento)', puntos: e.map(function (x, i) { return { i: i, y: x.publico, destacar: i === ult }; }) }
+          { id: 'local', nombre: l.local, color: 'var(--acento-2)', puntos: serie('modelo', 'v24_local'), radio: 3.5 },
+          { id: 'pub', nombre: l.publico, color: 'var(--acento)', puntos: serie('modelo', 'publico'), radio: 3.5 },
+          { id: 'sonda', nombre: en ? 'Probe' : 'Sonda', color: 'var(--s-gris)', grosor: 0.001, radio: 3.5,
+            tipoLeyenda: 'punto', huecoLeyenda: true, puntos: e.map(function (x, i) { return { i: i, y: (x.tipo === 'sonda' || x.tipo === 'sonda_forma') ? x.publico : null, hueco: true }; }) },
+          { id: 'cal', nombre: en ? 'Calibrated file' : 'Archivo calibrado', color: 'var(--acento)', grosor: 0.001, tipoLeyenda: 'punto',
+            puntos: serie('calibracion', 'publico') }
         ],
         notas: [
-          { i: 1.15, y: 0.0665, dx: 0, dy: 0, texto: lang === 'en' ? '← constant rate per line' : '← tasa constante por ramo', ancla: 'start' },
-          { i: 9.5, y: 0.1005, dx: 0, dy: 0, texto: lang === 'en' ? 'better local score,\nworse public score' : 'mejor puntuación local,\npeor puntuación pública', ancla: 'middle' },
-          { i: ult, y: e[ult].publico, dx: 10, dy: 4, ancla: 'start', fuerte: true, texto: (lang === 'en' ? 'Final: ' : 'Final: ') + f(e[ult].publico, 5, lang) },
-          { i: ult, y: e[ult].v24_local, dx: 10, dy: -2, ancla: 'start', texto: f(e[ult].v24_local, 5, lang) }
+          { i: 1.15, y: 0.0665, dx: 0, dy: 0, texto: en ? '← constant rate per line' : '← tasa constante por ramo', ancla: 'start' },
+          { i: 9.5, y: 0.1005, dx: 0, dy: 0, texto: en ? 'better local score,\nworse public score' : 'mejor puntuación local,\npeor puntuación pública', ancla: 'middle' },
+          { i: (iS0 + iS1) / 2, y: 0.1005, dx: 0, dy: 0, texto: en ? 'level\nprobes' : 'sondas\nde nivel', ancla: 'middle' },
+          { i: (iF0 + iF1) / 2, y: 0.1005, dx: 0, dy: 0, texto: en ? 'shape\nprobes' : 'sondas\nde forma', ancla: 'middle' },
+          { i: iMod, y: e[iMod].v24_local, dx: 0, dy: -10, ancla: 'middle', texto: f(e[iMod].v24_local, 5, lang) },
+          { i: iFin, y: e[iFin].publico, dx: 10, dy: iFin === ult ? 4 : -12, ancla: 'start', fuerte: true, texto: 'Final: ' + f(e[iFin].publico, 5, lang) }
         ]
       }, (o && o.cfg) || {}));
+    },
+
+    calibracion: function (cont, lang, o) {
+      // Sondas por ramo frente al marcador público. Fila de nivel: puntuación según el factor sobre el nivel 2025 de un ramo
+      // (forma cerrada por las dos sondas y el modelo). Fila de forma: puntuación según el exponente que comprime o amplía
+      // las diferencias de tasa del ramo (parábola por las dos sondas y S42). En las dos, el óptimo del público queda hueco y
+      // la entrega final recorre solo la parte creíble del camino.
+      var cal = CIFRAS.calibracion_nivel, fo = CIFRAS.calibracion_forma, ef = CIFRAS.entrega_final, en = lang === 'en', l = L[lang];
+      var final = ef.codigo;
+      // S43 lleva nivel y forma; S41 y S42 solo calibran el nivel, así que la figura queda en una fila.
+      var filas = (o && o.filas) || (final === 'S43' ? ['nivel', 'forma'] : ['nivel']);
+      var solo = filas.length === 1;
+      var A = (o && o.ancho) || 700, H = (o && o.alto) || (filas.length > 1 ? 420 : 238), gap = 14, wP = (A - 2 * gap) / 3;
+      var hLey = solo ? 0 : 24, hFila = (H - hLey) / filas.length;
+      cont.textContent = '';
+      var svg = G.el('svg', { viewBox: '0 0 ' + A + ' ' + H, width: A, height: H, role: 'img', class: 'g-svg',
+        'aria-label': solo ? (en ? 'Public score as a function of the factor applied to one line\'s 2025 level: two probes and the model trace the curve; its peak is the public optimum and the final submission moves only part of the way'
+          : 'Puntuación pública según el factor aplicado al nivel 2025 de un ramo: dos sondas y el modelo trazan la curva; su máximo es el óptimo del público y la entrega final recorre solo parte del camino')
+          : (en ? 'Public score against the 2025 level factor (top) and the shape exponent (bottom) of each line: the probes and the model trace each curve; its peak is the public optimum and the final submission moves only part of the way'
+          : 'Puntuación pública según el factor de nivel 2025 (arriba) y el exponente de forma (abajo) de cada ramo: las sondas y el modelo trazan cada curva; su máximo es el óptimo del público y la entrega final recorre solo parte del camino') }, cont);
+      function fx(v) { return v.toFixed(2).replace('.', en ? '.' : ','); }
+      function fila(tipo, y0) {
+        var nivel = tipo === 'nivel';
+        var m = { l: 42, r: 46, t: 40, b: solo ? 40 : 30 }, dom = nivel ? (solo ? [0.1284, 0.1304] : [0.1284, 0.1306]) : [0.1293, 0.1309], cx0 = nivel ? 0.88 : 0.86, cx1 = nivel ? 1.12 : 1.14;
+        RAMOS.forEach(function (r, k) {
+          var x0 = k * (wP + gap), z = nivel ? cal.ramos[r] : fo.ramos[r];
+          var X = function (c) { return x0 + m.l + (c - cx0) / (cx1 - cx0) * (wP - m.l - m.r); };
+          var Y = function (v) { return y0 + m.t + (dom[1] - v) / (dom[1] - dom[0]) * (hFila - m.t - m.b); };
+          var d2 = nivel ? function (c) { return cal.publico_modelo - 4 * (z.S1_sobre_N * (Math.pow(c, -0.5) - 1) + z.S2_sobre_N * (Math.pow(c, 0.5) - 1)); }
+            : function (a) { return fo.publico_S42 + z.alfa * (a - 1) + z.beta * (a - 1) * (a - 1); };
+          var opt = nivel ? z.c_optimo : z.a_optimo, apl = nivel ? z.c_S42 : z.a_Z;
+          var etiq = final;
+          if (nivel && final === 'S41') apl = z.c_S41;
+          G.texto(svg, x0 + m.l, y0 + (solo ? 14 : 12), l[r] + (solo ? '' : nivel ? (en ? ' · level' : ' · nivel') : (en ? ' · shape' : ' · forma')), { class: 'g-cat g-fuerte' });
+          G.texto(svg, x0 + m.l, y0 + (solo ? 29 : 26), (en ? 'optimum ' : 'óptimo ') + (nivel ? '×' : 'a = ') + G.fmt(opt, { dec: 3 }, lang) + ' · ' + etiq + (nivel ? ' ×' : ' a = ') + G.fmt(apl, { dec: 3 }, lang), { class: 'g-nota' });
+          var ticksY = nivel ? [0.129, 0.1295, 0.130] : [0.1295, 0.130, 0.1305];
+          ticksY.forEach(function (v) {
+            G.el('line', { x1: x0 + m.l, x2: x0 + wP - m.r, y1: Y(v), y2: Y(v), style: 'stroke: var(--grid); stroke-width: 1' }, svg);
+            G.texto(svg, x0 + m.l - 5, Y(v) + 3.5, G.fmt(v, { dec: 4 }, lang), { 'text-anchor': 'end', class: 'g-tick' });
+          });
+          G.el('line', { x1: x0 + m.l, x2: x0 + wP - m.r, y1: y0 + hFila - m.b, y2: y0 + hFila - m.b, style: 'stroke: var(--axis); stroke-width: 1' }, svg);
+          [0.90, 1.00, 1.10].forEach(function (c) {
+            G.el('line', { x1: X(c), x2: X(c), y1: y0 + hFila - m.b, y2: y0 + hFila - m.b + 4, style: 'stroke: var(--axis); stroke-width: 1' }, svg);
+            G.texto(svg, X(c), y0 + hFila - m.b + (solo ? 15 : 14), (nivel ? '×' : 'a ') + fx(c), { 'text-anchor': 'middle', class: 'g-tick' });
+          });
+          var dpath = '', abierto = false;
+          for (var q = 0; q <= 96; q++) {
+            var c = cx0 + q * (cx1 - cx0) / 96, v = d2(c);
+            if (v < dom[0] || v > dom[1]) { abierto = false; continue; }
+            dpath += (abierto ? 'L' : 'M') + X(c).toFixed(1) + ' ' + Y(v).toFixed(1); abierto = true;
+          }
+          G.el('path', { d: dpath, style: 'fill: none; stroke:' + C(r) + '; stroke-width: 2' }, svg);
+          if (!nivel) {
+            // Óptimo de 2024 en términos relativos a S30 (sin marcador): triángulo gris sobre el eje.
+            var a24 = z.a_optimo_2024_relativo_S30, ya = y0 + hFila - m.b;
+            G.el('path', { d: 'M' + (X(a24) - 4.5).toFixed(1) + ' ' + (ya - 0.5) + 'L' + (X(a24) + 4.5).toFixed(1) + ' ' + (ya - 0.5) + 'L' + X(a24).toFixed(1) + ' ' + (ya - 8.5) + 'Z',
+              style: 'fill: var(--text-muted); stroke: var(--surface-1); stroke-width: 1' }, svg);
+          }
+          var cerca = Math.abs(opt - apl) < 0.02, izq = apl < opt;
+          G.el('line', { x1: X(apl), x2: X(apl), y1: Y(d2(apl)) + 6, y2: y0 + hFila - m.b, style: 'stroke: var(--acento); stroke-width: 1; stroke-dasharray: 3 3' }, svg);
+          G.el('circle', { cx: X(opt), cy: Y(d2(opt)), r: 4.5, style: 'fill: var(--surface-1); stroke: var(--text-primary); stroke-width: 1.8' }, svg);
+          G.el('circle', { cx: X(apl), cy: Y(d2(apl)), r: 4.5, style: 'fill: var(--acento); stroke: var(--surface-1); stroke-width: 1.5' }, svg);
+          G.texto(svg, X(apl) + (cerca ? (izq ? -7 : 7) : 0), Y(d2(apl)) - 9, etiq, { 'text-anchor': cerca ? (izq ? 'end' : 'start') : 'middle', class: 'g-val g-fuerte' });
+          var pts = nivel ? [[0.90, z.publico_x090], [1.00, cal.publico_modelo], [1.10, z.publico_x110]] : [[0.90, z.publico_a090], [1.00, fo.publico_S42], [1.10, z.publico_a110]];
+          pts.forEach(function (p, j) {
+            G.el('circle', { cx: X(p[0]), cy: Y(p[1]), r: 3.4, style: 'fill: var(--text-primary); stroke: var(--surface-1); stroke-width: 1.5' }, svg);
+            if (j === 0) G.texto(svg, X(p[0]) + 5, Y(p[1]) + 14, G.fmt(p[1], { dec: 5 }, lang), { 'text-anchor': 'start', class: 'g-val' });
+            if (j === 2) G.texto(svg, X(p[0]) + 6, Y(p[1]) + (Y(p[1]) < y0 + m.t + 30 ? 16 : 4), G.fmt(p[1], { dec: 5 }, lang), { 'text-anchor': 'start', class: 'g-val' });
+          });
+          // La entrega final se dibuja encima de los puntos medidos: en autos queda junto al modelo (×1,00) y no debe taparse.
+          G.el('circle', { cx: X(apl), cy: Y(d2(apl)), r: 4.5, style: 'fill: var(--acento); stroke: var(--surface-1); stroke-width: 1.5' }, svg);
+        });
+      }
+      filas.forEach(function (t, i) { fila(t, i * hFila); });
+      var yl = H - 6;
+      G.el('circle', { cx: 6, cy: yl - 4, r: 3.4, style: 'fill: var(--text-primary)' }, svg);
+      if (solo) {
+        // Una fila: la leyenda del análisis de nivel tal como se presentó con S42, con el factor de la entrega final.
+        G.texto(svg, 14, yl, en ? 'Public score returned by Kaggle (probes ×0.90 and ×1.10; the model at ×1.00)' : 'Puntuación pública devuelta por Kaggle (sondas ×0,90 y ×1,10; el modelo en ×1,00)', { class: 'g-ley' });
+        var xs = en ? 448 : 456;
+        G.el('circle', { cx: xs, cy: yl - 4, r: 4, style: 'fill: var(--surface-1); stroke: var(--text-primary); stroke-width: 1.8' }, svg);
+        G.texto(svg, xs + 8, yl, en ? 'public optimum' : 'óptimo del público', { class: 'g-ley' });
+        G.el('circle', { cx: xs + 112, cy: yl - 4, r: 4, style: 'fill: var(--acento)' }, svg);
+        G.texto(svg, xs + 120, yl, en ? final + ' factor' : 'factor de ' + final, { class: 'g-ley' });
+        return svg;
+      }
+      G.texto(svg, 14, yl, en ? "Kaggle's public score (probes and model)" : 'Puntuación pública de Kaggle (sondas y modelo)', { class: 'g-ley' });
+      var xb = en ? 262 : 290;
+      G.el('circle', { cx: xb, cy: yl - 4, r: 4, style: 'fill: var(--surface-1); stroke: var(--text-primary); stroke-width: 1.8' }, svg);
+      G.texto(svg, xb + 8, yl, en ? 'public optimum' : 'óptimo del público', { class: 'g-ley' });
+      G.el('circle', { cx: xb + (en ? 112 : 128), cy: yl - 4, r: 4, style: 'fill: var(--acento)' }, svg);
+      G.texto(svg, xb + (en ? 120 : 136), yl, en ? 'final submission' : 'entrega final', { class: 'g-ley' });
+      if (filas.indexOf('forma') >= 0) {
+        var xt = xb + (en ? 232 : 232);
+        G.el('path', { d: 'M' + (xt - 4.5) + ' ' + (yl - 0.5) + 'L' + (xt + 4.5) + ' ' + (yl - 0.5) + 'L' + xt + ' ' + (yl - 8.5) + 'Z', style: 'fill: var(--text-muted)' }, svg);
+        G.texto(svg, xt + 8, yl, en ? '2024 shape optimum' : 'óptimo de forma de 2024', { class: 'g-ley' });
+      }
+      return svg;
     },
 
     publico_local: function (cont, lang, o) {
@@ -101,7 +215,7 @@
     prima_anual: function (cont, lang, o) {
       var p = CIFRAS.ibnr.prima_riesgo_por_anio, l = L[lang];
       var wrap = document.createElement('div'); wrap.className = 'g-tres'; cont.textContent = ''; cont.appendChild(wrap);
-      var dominios = { motor: [400, 650], buildings: [350, 520], contents: [95, 130] };
+      var dominios = { motor: [400, 650], buildings: [350, 530], contents: [95, 135] };
       RAMOS.forEach(function (r) {
         var d = document.createElement('div'); wrap.appendChild(d);
         var filas = p.filter(function (x) { return x.ramo === r; });
@@ -115,12 +229,12 @@
           y: { dominio: dominios[r], ticks: 4, formato: function (v) { return f(v, 0, lang); } },
           series: [
             { id: 't0', nombre: l.t0, color: 'var(--s-gris)', puntos: hist.map(function (x, i) { return { i: i, y: x.prima_T0 }; }), radio: 3 },
-            { id: 'ult', nombre: l.t0ibnr, color: C(r), puntos: hist.map(function (x, i) { return { i: i, y: x.prima_T0_mas_IBNR }; }).concat([{ i: i25, y: pr.prediccion_S30, hueco: true }]) }
+            { id: 'ult', nombre: l.t0ibnr, color: C(r), puntos: hist.map(function (x, i) { return { i: i, y: x.prima_T0_mas_IBNR }; }).concat([{ i: i25, y: pr.prediccion_final, hueco: true }]) }
           ],
           notas: [
             { i: 3, y: hist[3].prima_T0, dx: 0, dy: 16, texto: f(hist[3].prima_T0, 0, lang) },
             { i: 3, y: hist[3].prima_T0_mas_IBNR, dx: 0, dy: -10, texto: f(hist[3].prima_T0_mas_IBNR, 0, lang) },
-            { i: i25, y: pr.prediccion_S30, dx: -2, dy: -11, ancla: 'end', fuerte: true, texto: f(pr.prediccion_S30, 0, lang) }
+            { i: i25, y: pr.prediccion_final, dx: -2, dy: -11, ancla: 'end', fuerte: true, texto: f(pr.prediccion_final, 0, lang) }
           ]
         });
         var svgEl = d.querySelector('svg');
@@ -235,7 +349,7 @@
     escala_d2: function (cont, lang, o) {
       // Dónde caen las referencias en la escala del D² Tweedie.
       var v = CIFRAS.validacion, en = lang === 'en';
-      var ref = v.referencia_m00.V24.agregado, mod = v.d2_recalculado.V24.agregado, pub = CIFRAS.s30.publico;
+      var ref = v.referencia_m00.V24.agregado, mod = v.d2_recalculado.V24.agregado, pub = CIFRAS.entrega_final.publico;
       var A = (o && o.ancho) || 600, H = 262, x0 = 14, x1 = A - 14, d1 = 0.16, yT = 150;
       function x(t) { return x0 + t / d1 * (x1 - x0); }
       cont.textContent = '';
@@ -260,7 +374,7 @@
       G.texto(svg, x(0), yT - 8, en ? 'the average' : 'el promedio', { 'text-anchor': 'start', class: 'g-nota' });
       marca(ref, 'var(--s-gris)', false, false, G.fmt(ref, { dec: 3 }, lang), en ? 'constant rate per line' : 'tasa constante por ramo', 'end');
       marca(mod, 'var(--acento)', false, true, G.fmt(mod, { dec: 3 }, lang), en ? 'final model, 2024 out of sample' : 'modelo final, 2024 fuera de muestra', 'end');
-      marca(pub, 'var(--acento)', true, false, G.fmt(pub, { dec: 5 }, lang), en ? 'public score (Kaggle)' : 'puntuación pública (Kaggle)', 'end');
+      marca(pub, 'var(--acento)', true, false, G.fmt(pub, { dec: 5 }, lang), en ? 'public score of the final submission' : 'puntuación pública de la entrega final', 'end');
       G.texto(svg, x0, H - 4, en ? 'The scale reaches 1 only if every period\'s cost were predicted exactly.' : 'La escala llega a 1 solo si se acertara el coste exacto de cada periodo.', { class: 'g-nota' });
       return svg;
     },
@@ -285,7 +399,7 @@
           { id: 'li', nombre: en ? 'Accepted as a declared limitation' : 'Aceptados como limitación declarada', color: 'var(--s-gris)' },
           { id: 'at', nombre: en ? 'Closed or remediated' : 'Cerrados o remediados', color: 'var(--st-good)' }],
         valores: vals, etiquetasSegmento: segs, dominio: [0, 8], etiquetas: false, grosor: 26, ticks: 4,
-        interactivo: !!(o && o.interactivo), formato: function (v) { return G.fmt(v, {}, lang); }, margen: { t: 40, r: 16, b: 24, l: 92 },
+        interactivo: !!(o && o.interactivo), formato: function (v) { return G.fmt(v, {}, lang); }, margen: { t: 60, r: 16, b: 24, l: 92 },
         aria: en ? 'Validation swarm findings by area and state' : 'Hallazgos del enjambre de validación por área y estado'
       }, (o && o.cfg) || {}));
     },

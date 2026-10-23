@@ -49,6 +49,12 @@ def pct(v, dec, lang):
     return fmt(v * 100, dec, lang) + ("%" if lang == "en" else " %")
 
 
+def signo(v, dec, lang, porcentaje=False):
+    """Número con signo explícito, + o el menos tipográfico (U+2212) que usan los textos."""
+    s = pct(abs(v), dec, lang) if porcentaje else fmt(abs(v), dec, lang)
+    return ("+" if v >= 0 else "\u2212") + s
+
+
 def normalizar(t: str) -> str:
     return re.sub(r"\s+", " ", t.replace("\u00a0", " ").replace("\u202f", " ").replace("\u00ad", ""))
 
@@ -62,6 +68,9 @@ def esperadas(c, lang):
     """Cifras que deben aparecer, tal como se escriben en cada idioma, y en qué entregable."""
     en = lang == "en"
     v, s30, ib, d = c["validacion"], c["s30"], c["ibnr"], c["datos"]
+    ef, cal = c["entrega_final"], c["calibracion_nivel"]
+    r41 = cal["evidencia"]["reservas_S41"]
+    R = ("motor", "buildings", "contents")
     bi = next(x for x in ib["completitud_2024_por_peligro"] if x["ramo"] == "motor" and x["peligro"] == "bodily_injury")
     sub = next(x for x in ib["completitud_2024_por_peligro"] if x["ramo"] == "buildings" and x["peligro"] == "subsidence")
     pm = {x["anio"]: x for x in ib["prima_riesgo_por_anio"] if x["ramo"] == "motor"}
@@ -69,24 +78,49 @@ def esperadas(c, lang):
     top = [v["concentracion_v24"][r]["decil_superior_observado"] for r in ("motor", "buildings", "contents")]
     bat = c["controles_paquete"]["baterias"]
     casos = bat[0]["casos"] if all(b["pasan"] == b["casos"] == bat[0]["casos"] for b in bat) else None
-    ok_csv = sum(1 for x in s30["controles_csv"].values() if x)
+    ok_csv = sum(1 for x in ef["controles_csv"].values() if x)
+    fo, sf = c["calibracion_forma"], c["sensibilidad_final"]
     de = " of " if en else " de "
     e = {
-        "puntuación pública": fmt(s30["publico"], 5, lang),
+        "puntuación pública": fmt(ef["publico"], 5, lang),
+        "puntuación pública del modelo": fmt(s30["publico"], 5, lang),
+        "puntuación pública de S41": fmt(ef["S41"]["publico"], 5, lang),
+        "puntuación pública de la credibilidad revisada": fmt(ef["S42"]["publico"], 5, lang),
+        "puntuación pública de la calibración de forma": fmt(fo["S43"]["kaggle"], 5, lang),
         "D² 2024 del modelo": fmt(v["d2_recalculado"]["V24"]["agregado"], 3, lang),
         "D² 2024 de la tasa constante": fmt(v["referencia_m00"]["V24"]["agregado"], 3, lang),
-        "periodos de 2025": fmt(s30["filas"], 0, lang),
-        "equipos": f"{c['concurso']['equipos']} " + ("teams" if en else "equipos"),
+        "periodos de 2025": fmt(ef["filas"], 0, lang),
+        "equipos": f"{ef['equipos']} " + ("teams" if en else "equipos"),
         "aportes del foro": f"{c['foro']['aportes']} " + ("posts" if en else "aportes"),
         "horas del foro": f"{round(c['foro']['horas'])} " + ("hours" if en else "horas"),
         "hallazgos abiertos": f"{c['validacion_ia']['abiertos']} " + ("open findings" if en else "hallazgos abiertos"),
         "total de 2025": fmt(s30["total_2025_CU"] / 1e6, 1, lang) + (" million CU" if en else " millones de CU"),
         "tasa de autos 2025": fmt(s30["tasa_2025_por_anio_exposicion"]["motor"], 1, lang) + " CU",
+        "total de la entrega final": fmt(ef["total_2025_CU"] / 1e6, 1, lang) + (" million CU" if en else " millones de CU"),
+        "puntuación esperada de S41": fmt(cal["S41"]["esperado"], 6, lang),
+
+        "ruido del óptimo (edificios)": pct(cal["ramos"]["buildings"]["sigma_ruido"], 1, lang),
+        "τ previa de edificios": pct(cal["ramos"]["buildings"]["tau_previa"], 1, lang),
+        "τ revisada": pct(cal["tau_revisada"], 1, lang),
+        "chi-cuadrado": fmt(cal["chi2"], 2, lang),
+        "ganancia en el tercio usado": fmt(cal["bootstrap"]["ganancia_33"], 5, lang),
+        "pérdida media en los otros dos tercios": fmt(abs(cal["bootstrap"]["ganancia_67_media"]), 5, lang),
+        "prima escrita de edificios": signo(cal["ramos"]["buildings"]["prima_escrita_2024_2025"], 2, lang, True),
+        "prima escrita de contenidos": signo(cal["ramos"]["contents"]["prima_escrita_2024_2025"], 2, lang, True),
+        "tasa de autos sobre el último de 2024": signo(cal["ramos"]["motor"]["crecimiento_2025_S41"], 2, lang, True),
+        "tasa de edificios sobre el último de 2024": signo(cal["ramos"]["buildings"]["crecimiento_2025_S41"], 2, lang, True),
+        "tasa de contenidos sobre el último de 2024": signo(cal["ramos"]["contents"]["crecimiento_2025_S41"], 2, lang, True),
+        "S3 de autos con la mezcla": pct(abs(cal["evidencia"]["reservas_S42"]["ibnr_lesiones_S3"]["S30"]), 1, lang),
+        # Reservas con la regla de S41 (repro_s41, CLA-20261023-005) y la limitación mantenida para S41 (CLA-20261023-006)
+        "S3 de autos con S41": pct(abs(r41["S3_autos"]["nivel"]), 2, lang),
+        "intervalo de S3 con S41": pct(abs(r41["S3_autos"]["nivel_ic90"][1]), 2, lang) + (" to " if en else " a ")
+                                   + pct(abs(r41["S3_autos"]["nivel_ic90"][0]), 2, lang),
+        "error de reserva que mueve S41 en autos": pct(r41["error_material_S41"]["motor"], 1, lang),
         "completitud de lesiones": pct(round(bi["completitud_2024"], 2), 0, lang),
         "completitud de hundimiento": pct(round(sub["completitud_2024"], 2), 0, lang),
         "prima de autos observada 2024": fmt(pm[2024]["prima_T0"], 0, lang),
         "prima de autos con IBNR 2024": fmt(pm[2024]["prima_T0_mas_IBNR"], 0, lang),
-        "predicción de autos 2025": fmt(pm[2025]["prediccion_S30"], 0, lang),
+        "predicción de autos 2025": fmt(pm[2025]["prediccion_final"], 0, lang),
         "correlación del cuerpo": fmt(c["publico_vs_local"]["spearman_cuerpo_05"], 2, lang),
         "correlación completa": fmt(c["publico_vs_local"]["spearman_completo"], 2, lang),
         "D² con reserva × 1": fmt(round(res["1.0"]["agregado"], 4), 4, lang),
@@ -122,15 +156,62 @@ def esperadas(c, lang):
         "pesos vecinos": f"{c['sensibilidad']['pesos_vecinos_que_mejoran']}{de}{c['sensibilidad']['vecinos_de_pesos_probados']}",
         "predicciones reproducidas": fmt(c["sensibilidad"]["reproduccion"]["predicciones"], 0, lang),
         "nombre del modelo definitivo": c["modelo_definitivo"]["nombre_en" if en else "nombre_es"],
+        # Batería de sensibilidad de la entrega final (D103): ruido corregido, esperanzas en el privado y alarma
+        "ruido 1,5 veces mayor": "1.5 times" if en else "1,5 veces",
+        "umbral de la alarma": fmt(sf["alarma_S41_frente_S43"]["umbral"], 5, lang),
+        "alarma de S41 frente a S43": fmt(sf["alarma_S41_frente_S43"]["media"], 7, lang),
+        "alarma sin corregir el ruido": fmt(abs(sf["alarma_S41_frente_S43"]["sin_corregir_ruido"]), 7, lang),
+        "alarma con posterior conjunta": fmt(sf["alarma_S41_frente_S43"]["posterior_conjunta"], 7, lang),
+        "alarma con el redondeo": pct(sf["alarma_S41_frente_S43"]["redondeo_fraccion"], 1, lang),
+        "alarma del nivel frente a S42": fmt(sf["alarma_S41_frente_S42"]["media"], 7, lang),
+        "probabilidad de que S43 supere a S41": fmt(min(q["S43_menos_S41"]["P_S43_mejor"] for q in sf["esperanza_privado"]), 2, lang)
+                                                + (" to " if en else " a ") + fmt(max(q["S43_menos_S41"]["P_S43_mejor"] for q in sf["esperanza_privado"]), 2, lang),
+        "retroprueba de la forma en 2023": fmt(abs(sf["retroprueba_forma_N07"]["V23"]), 6, lang),
+        "retroprueba de la forma en 2024": fmt(abs(sf["retroprueba_forma_N07"]["V24"]), 6, lang),
+        "exponente de forma de autos probado": fmt(fo["ramos"]["motor"]["a_Z"], 3, lang),
     }
+    for q in sf["esperanza_privado"]:
+        for cand in ("S41", "S42", "S43"):
+            e[f"esperanza de {cand} ({q['par']})"] = signo(q[cand]["media"], 6, lang)
+
+    clases = {"apoyado": ("Supported", "Apoyado"), "parcial": ("Partial", "Parcial"), "sin_apoyo": ("Unsupported", "Sin apoyo"),
+              "sin apoyo": ("Unsupported", "Sin apoyo")}
+    for r in R:
+        z, ev = cal["ramos"][r], cal["evidencia"]["ramos"][r]
+        assert ev["clase"] == ev["clase_con_prima_anual"].replace("sin apoyo", "sin_apoyo"), r  # la lectura no depende de la unidad de la prima (DATA-006)
+        e[f"lectura de la evidencia para S41 ({r})"] = clases[ev["clase_S41"]][0 if en else 1]
+        e[f"corte de 2024 ({r})"] = signo(ev["indicadores"]["ultimo_anio"], 2, lang, True)
+        e[f"efectos de etiqueta ({r})"] = signo(ev["indicadores"]["etiqueta_D95"], 2, lang, True)
+        e[f"siniestralidad de 2024 ({r})"] = signo(ev["indicadores"]["siniestralidad_2024"], 2, lang, True)
+        e[f"siniestralidad de 2024 con prima anual ({r})"] = signo(ev["siniestralidad_2024_prima_anual"], 2, lang, True)
+        e[f"tope de tamaño ({r})"] = pct(ev["tope_tamano_S41"], 2, lang)
+        e[f"ajuste de S41 ({r})"] = signo(ev["ajuste_S41"], 2, lang, True)
+        e[f"credibilidad con el ruido corregido ({r})"] = fmt(c["sensibilidad_final"]["ruido"]["Z_nivel_D100_corregida"][r], 3, lang)
+        e[f"parte del error de reserva que conserva S41 ({r})"] = pct(round(r41["sensibilidad_1_menos_Z_sobre_c"][r], 2), 0, lang)
+        e[f"umbral de reservas de S41 ({r})"] = (" to " if en else " a ").join(fmt(x, 3, lang) for x in r41["umbral_b_S41"][r])
+        e[f"siniestralidad de 2025 con S41 ({r})"] = fmt(ev["siniestralidad_2025"]["S41"], 3, lang)
+        e[f"umbral de reservas de la mezcla ({r})"] = " to ".join(fmt(x, 3, lang) for x in cal["evidencia"]["reservas_S42"]["umbral_b_S30"][r]) if en else \
+            " a ".join(fmt(x, 3, lang) for x in cal["evidencia"]["reservas_S42"]["umbral_b_S30"][r])
+        e[f"factor de la entrega final ({r})"] = fmt(ef["factores_calibracion"][r], 4, lang)
+        e[f"óptimo del público ({r})"] = fmt(z["c_optimo"], 3, lang)
+        e[f"factor de S41 ({r})"] = fmt(z["c_S41"], 3, lang)
+    if cal["evidencia"].get("condicion_prima"):
+        e["hallazgo sobre la periodicidad de la prima"] = cal["evidencia"]["condicion_prima"]["hallazgo"]
     apendice = {
         "SHA-256 del CSV": s30["sha256_csv"], "envío de Kaggle": str(s30["envio_kaggle"]),
+        "SHA-256 de la entrega final": ef["sha256_csv"], "envío de Kaggle de la entrega final": str(ef["envio_kaggle"]),
+        "envío de Kaggle de S41": str(ef["S41"]["envio_kaggle"]),
+        "tasa de autos de la entrega final": fmt(ef["tasa_2025_por_anio_exposicion"]["motor"], 1, lang),
         "D² V23": fmt(v["d2_recalculado"]["V23"]["agregado"], 5, lang), "D² V24": fmt(v["d2_recalculado"]["V24"]["agregado"], 5, lang),
     }
     for r in ("motor", "buildings", "contents"):
         f = s30["factores_nivel"][r]
         apendice[f"factores de nivel ({r})"] = " / ".join(fmt(f[k], 3, lang) for k in ("f23", "f24", "f"))
         apendice[f"D² V24 {r}"] = fmt(v["d2_recalculado"]["V24"][r], 5, lang)
+        z = cal["ramos"][r]
+        apendice[f"sondas ({r})"] = fmt(z["publico_x090"], 5, lang) + " / " + fmt(z["publico_x110"], 5, lang)
+        apendice[f"factor final f × c ({r})"] = fmt(z["f_final_S41"], 4, lang)
+        apendice[f"tasa de 2025 de la mezcla y de S41 ({r})"] = fmt(z["tasa_2025_modelo"], 1, lang) + " · " + fmt(z["tasa_2025_S41"], 1, lang)
     return e, apendice
 
 
@@ -165,7 +246,8 @@ def main():
         anotar(f"informe_{lang}_anexo", not comprobar_texto(anexo, ap_), comprobar_texto(anexo, ap_))
         pre, adv, tot = c["foro"]["por_tipo"].get("preinscripcion", 0), c["foro"]["por_tipo"].get("adverso", 0), c["foro"]["aportes"]
         # La frase del informe debe corresponder a la proporción real de preinscripciones y resultados adversos.
-        bandas = [("two in five", "dos de cada cinco", 0.38, 0.45), ("more than a third", "más de un tercio", 1 / 3, 0.38)]
+        bandas = [("two in five", "dos de cada cinco", 0.38, 0.45), ("more than a third", "más de un tercio", 1 / 3, 0.38),
+                  ("nearly a third", "casi un tercio", 0.30, 1 / 3)]
         prop = (pre + adv) / tot
         esperada = next((x[0] if lang == "en" else x[1] for x in bandas if x[2] <= prop < x[3]), None)
         otras = [x[0] if lang == "en" else x[1] for x in bandas if (x[0] if lang == "en" else x[1]) != esperada]
@@ -207,6 +289,13 @@ def main():
     anotar("sin_identificadores_de_datos", not malos_id, malos_id[:20])
     anotar("sin_atribucion_de_autoria", not malos_aut, malos_aut[:20])
     anotar("estilo_editorial", not malos_est, malos_est[:20])
+
+    # 3b. Las guías de IA citan el número vigente de hallazgos del enjambre y de abiertos
+    vi = c["validacion_ia"]
+    guias = {"docs/entrega/AI_WORKFLOW_EN.md": f"Of the {vi['hallazgos']} swarm findings, {vi['abiertos']} remain open",
+             "docs/entrega/USO_DE_IA_ES.md": f"De los {vi['hallazgos']} hallazgos del enjambre, {vi['abiertos']} siguen abiertos"}
+    malos_g = [f"{rel}: falta «{frase}»" for rel, frase in guias.items() if frase not in (REPO / rel).read_text(encoding="utf-8")]
+    anotar("guias_ia_hallazgos", not malos_g, malos_g)
 
     # 4. Enlaces relativos de los textos en Markdown
     rotos = []
@@ -262,8 +351,13 @@ def main():
             if not p.exists():
                 cambiadas.append(f"{k}: falta {f['ruta']}")
                 continue
-            h = hashlib.sha256(p.read_bytes()).hexdigest()
-            if h != f["sha256"]:
+            datos = p.read_bytes()
+            corte = c["foro"].get("corte") if k == "foro" else None
+            if corte:  # el foro crece por el final: basta con que no cambie la parte contada
+                if hashlib.sha256(datos[:corte["bytes"]]).hexdigest() != corte["sha256"]:
+                    cambiadas.append(f"{k}: {f['ruta']} cambió antes de {corte['hasta_aporte']}")
+                continue
+            if hashlib.sha256(datos).hexdigest() != f["sha256"]:
                 cambiadas.append(f"{k}: {f['ruta']} cambió")
         anotar("fuentes_sin_cambios", not cambiadas, cambiadas, aviso=True)
 

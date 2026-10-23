@@ -141,7 +141,12 @@ function construirLaminas() {
     padre.appendChild(u); return u;
   }
 
-  var V = C.validacion, v24 = V.d2_recalculado.V24, ref24 = V.referencia_m00.V24, s30 = C.s30;
+  var V = C.validacion, v24 = V.d2_recalculado.V24, ref24 = V.referencia_m00.V24, s30 = C.s30, ef = C.entrega_final, cal = C.calibracion_nivel;
+  var fo = C.calibracion_forma, sf = C.sensibilidad_final;
+  var pr = [Math.min.apply(null, sf.esperanza_privado.map(function (q) { return q.S43_menos_S41.P_S43_mejor; })),
+            Math.max.apply(null, sf.esperanza_privado.map(function (q) { return q.S43_menos_S41.P_S43_mejor; }))].map(function (x) { return n(x, { dec: 2 }); });
+  var sg = function (x, d) { return (x >= 0 ? '+' : '\u2212') + n(Math.abs(x), { dec: d }); };
+  var p1 = function (x) { return n(x * 100, { dec: 1 }) + (EN ? '%' : '\u00a0%'); };
   var bi = C.ibnr.completitud_2024_por_peligro.filter(function (x) { return x.ramo === 'motor' && x.peligro === 'bodily_injury'; })[0];
   var sub = C.ibnr.completitud_2024_por_peligro.filter(function (x) { return x.ramo === 'buildings' && x.peligro === 'subsidence'; })[0];
   var pm = C.ibnr.prima_riesgo_por_anio.filter(function (x) { return x.ramo === 'motor'; });
@@ -152,14 +157,14 @@ function construirLaminas() {
   var c = lamina(T('A risk premium for every policy period, built and challenged with AI', 'Una prima de riesgo para cada periodo de póliza, construida y contrastada con IA'),
     T('The Per-peril blend · Manuel Rodríguez · individual team · Part 1, established market', 'La Mezcla por peligro · Manuel Rodríguez · equipo individual · Parte 1, mercado establecido'),
     { clase: 'portada', pie: T('Five-page report · offline model dashboard · reproducible code · record of the AI forum and decisions', 'Informe de cinco páginas · panel del modelo sin conexión · código reproducible · expediente del foro de IA y de las decisiones') });
-  kpis(caja(c), [[n(s30.publico, { dec: 5 }), T('public score, first among 19 teams on the public leaderboard (19 Oct)', 'puntuación pública, primer puesto entre 19 equipos en la tabla pública (19 de octubre)')],
+  kpis(caja(c), [[n(ef.publico, { dec: 5 }), T('public score of the final submission, first of ' + n(ef.equipos) + ' teams on the public leaderboard (22 Oct)', 'puntuación pública de la entrega final, primer puesto entre ' + n(ef.equipos) + ' equipos en la tabla pública (22 de octubre)')],
     [n(v24.agregado, { dec: 3 }), T('out-of-sample D² on 2024, against ', 'D² de 2024 fuera de muestra, frente a ') + n(ref24.agregado, { dec: 3 }) + T(' for a constant rate per line', ' de una tasa constante por ramo')],
     [n(C.foro.aportes), T('posts by three AI work lines in a shared forum, in ', 'aportes de tres líneas de trabajo con IA en un foro común, en ') + n(Math.round(C.foro.horas)) + T(' hours', ' horas')]]);
 
   // 2 · La tarea y la métrica
   c = lamina(T('The task: expected ultimate cost per policy period', 'La tarea: el coste último esperado de cada periodo'),
-    T(n(s30.filas) + ' periods in motor, buildings and contents, learned from ' + n(C.datos.t0.periodos_entrenamiento) + ' periods of 2021–2024. Net of excess and recoveries; declined claims excluded.',
-      n(s30.filas) + ' periodos de autos, edificios y contenidos, aprendidos de ' + n(C.datos.t0.periodos_entrenamiento) + ' periodos de 2021–2024. Neto de franquicia y recobros; sin siniestros rechazados.'),
+    T(n(ef.filas) + ' periods in motor, buildings and contents, learned from ' + n(C.datos.t0.periodos_entrenamiento) + ' periods of 2021–2024. Net of excess and recoveries; declined claims excluded.',
+      n(ef.filas) + ' periodos de autos, edificios y contenidos, aprendidos de ' + n(C.datos.t0.periodos_entrenamiento) + ' periodos de 2021–2024. Neto de franquicia y recobros; sin siniestros rechazados.'),
     { columnas: '1fr 1fr' });
   figura(caja(c, T('Most periods cost nothing', 'La mayoría de los periodos no cuesta nada')), 'ceros', { ancho: 440 });
   figura(caja(c, T('How it is scored: Tweedie D², power 1.5', 'Cómo se mide: D² Tweedie, potencia 1,5')), 'escala_d2', { ancho: 440 });
@@ -201,18 +206,18 @@ function construirLaminas() {
 
   // 6 · Prima por año
   c = lamina(T('With IBNR, 2024 is no longer an outlier', 'Con el IBNR, 2024 deja de ser una anomalía'),
-    T('Motor risk premium per exposure year: ' + n(pm24.prima_T0, { dec: 0 }) + ' CU observed in 2024, ' + n(pm24.prima_T0_mas_IBNR, { dec: 0 }) + ' with the estimated IBNR, and ' + n(pm25.prediccion_S30, { dec: 0 }) + ' predicted for 2025.',
-      'Prima de riesgo de autos por año-exposición: ' + n(pm24.prima_T0, { dec: 0 }) + ' CU observados en 2024, ' + n(pm24.prima_T0_mas_IBNR, { dec: 0 }) + ' con el IBNR estimado y ' + n(pm25.prediccion_S30, { dec: 0 }) + ' previstos para 2025.'));
+    T('Motor risk premium per exposure year: ' + n(pm24.prima_T0, { dec: 0 }) + ' CU observed in 2024, ' + n(pm24.prima_T0_mas_IBNR, { dec: 0 }) + ' with the estimated IBNR, and ' + n(pm25.prediccion_final, { dec: 0 }) + ' in the final 2025 prediction.',
+      'Prima de riesgo de autos por año-exposición: ' + n(pm24.prima_T0, { dec: 0 }) + ' CU observados en 2024, ' + n(pm24.prima_T0_mas_IBNR, { dec: 0 }) + ' con el IBNR estimado y ' + n(pm25.prediccion_final, { dec: 0 }) + ' en la predicción final de 2025.'));
   cj = caja(c);
   leyenda(cj, [{ color: 'var(--s-gris)', nombre: T('Observed cost (T0)', 'Coste observado (T0)') }, { color: 'var(--s-motor)', nombre: T('With estimated IBNR (colour of each line)', 'Con IBNR estimado (color de cada ramo)') },
-    { color: 'var(--text-primary)', punto: true, nombre: T('Final model prediction for 2025', 'Predicción del modelo final para 2025') }]);
+    { color: 'var(--text-primary)', punto: true, nombre: T('Final submission\'s prediction for 2025', 'Predicción de la entrega final para 2025') }]);
   figura(cj, 'prima_anual', { ancho: 250, alto: 232 });
 
   // 7 · Modelo
   c = lamina(T('The Per-peril blend: one model, ten components', 'La Mezcla por peligro: un modelo, diez componentes'),
     T('Each line blends Tweedie total-cost models with per-peril frequency × severity. Changes were judged on 2023 and 2024, with all losses and without the most extreme ones, under criteria written before computing.',
       'Cada ramo mezcla modelos Tweedie del coste total con frecuencia × severidad por peligro. Los cambios se juzgaron en 2023 y 2024, con todas las pérdidas y sin las más extremas, según criterios escritos antes de calcular.'),
-    { pie: T('2025 level per line: f = Σ(y/√μ) / Σ√μ, the factor that minimises the Tweedie deviance, averaged over the 2023 and 2024 cuts.', 'Nivel 2025 por ramo: f = Σ(y/√μ) / Σ√μ, el factor que minimiza la desviación Tweedie, promediado entre los cortes de 2023 y 2024.') });
+    { pie: T('2025 level per line: f = Σ(y/√μ) / Σ√μ, the factor that minimises the Tweedie deviance, averaged over the 2023 and 2024 cuts; the final submission recalibrates it (slide 15).', 'Nivel 2025 por ramo: f = Σ(y/√μ) / Σ√μ, el factor que minimiza la desviación Tweedie, promediado entre los cortes de 2023 y 2024; la entrega final lo recalibra (lámina 15).') });
   cj = caja(c); cj.style.gap = '30px';
   figura(cj, 'composicion', { cfg: { ancho: 700, alto: 150 } });
   var tj = el('div', 'tarjetas'); tj.style.gridTemplateColumns = 'repeat(3, 1fr)'; cj.appendChild(tj);
@@ -223,6 +228,7 @@ function construirLaminas() {
     t.appendChild(el('div', 'l', F.L[lang][r] + T(': mean 2025 risk premium per exposure year', ': prima de riesgo media 2025 por año-exposición')));
     t.appendChild(el('div', 's', T('Level factor ', 'Factor de nivel ') + n(fl.f, { dec: 3 }) + ' (2023: ' + n(fl.f23, { dec: 3 }) + ' · 2024: ' + n(fl.f24, { dec: 3 }) + ')'));
     t.appendChild(el('div', 's', r === 'contents' ? T('No severity trend', 'Sin tendencia de severidad') : T('Severity trend per peril, capped at ±15%', 'Tendencia de severidad por peligro, acotada a ±15 %')));
+    t.appendChild(el('div', 's', T('Final submission: ×', 'Entrega final: ×') + n(ef.factores_calibracion[r], { dec: 3 }) + ' → ' + n(ef.tasa_2025_por_anio_exposicion[r], { dec: 1 }) + ' CU'));
     tj.appendChild(t);
   });
 
@@ -243,9 +249,9 @@ function construirLaminas() {
   figura(cj, 'deciles', { ancho: 250, alto: 236, sinLeyenda: true });
 
   // 10 · Organización de la IA
-  c = lamina(T('AI was organised so that it never validated itself', 'La IA se organizó para no validarse a sí misma'),
-    T('Two assistants, Claude and Codex, across three independent lines. Hypotheses were posted with their acceptance criterion before computing, and adverse results were published too.',
-      'Dos asistentes, Claude y Codex, en tres líneas independientes. Las hipótesis se publicaban con su criterio de aceptación antes de calcular, y los resultados adversos también.'));
+  c = lamina(T('AI was organised so that one line challenged another', 'La IA se organizó para que una línea contrastara a otra'),
+    T('Two assistants, Claude and Codex, across three lines. Hypotheses were posted with their acceptance criterion before computing, and adverse results were published too.',
+      'Dos asistentes, Claude y Codex, en tres líneas. Las hipótesis se publicaban con su criterio de aceptación antes de calcular, y los resultados adversos también.'));
   figura(caja(c), 'flujo_ia', {});
 
   // 11 · Qué hizo la IA en cada etapa
@@ -257,21 +263,22 @@ function construirLaminas() {
     [T('Methodology', 'Metodología'), T('Two literature searches: 51 primary sources checked against DOI and arXiv, plus three IAA papers', 'Dos búsquedas: 51 fuentes primarias cotejadas con DOI y arXiv, más tres papers de la IAA'), T('Unsupported claims dropped, such as a 17% gain proposed by another AI tool', 'Se descartaron afirmaciones sin soporte, como una mejora del 17 % propuesta por otra herramienta de IA')],
     [T('Competition context', 'Contexto del concurso'), T('Rules, metadata and scores read from Kaggle through an MCP connection, read-only', 'Reglas, metadatos y puntuaciones leídos de Kaggle por una conexión MCP, solo lectura'), T('Every submission receipt kept with its CSV fingerprint', 'Cada recibo de envío guardado con la huella de su CSV')],
     [T('Modelling', 'Modelado'), T('44 numbered contrasts in the challenge line and pre-registrations in the other two', '44 contrastes numerados en la línea de contraste y preinscripciones en las otras dos'), T('Intervals clustered by customer, address and region; reserve scenarios', 'Intervalos por grupos de cliente, dirección y región; escenarios de reserva')],
+    [T('Level calibration', 'Calibración del nivel'), T('Closed form of the public score in the level factor, its noise by bootstrap and a credibility rule written before the probes', 'Forma cerrada de la puntuación pública en el factor de nivel, su ruido por bootstrap y una regla de credibilidad escrita antes de las sondas'), T('Kaggle returned the predicted score to the fifth decimal; a later battery favoured the rule\'s file', 'Kaggle devolvió la puntuación prevista hasta el quinto decimal; una batería posterior favoreció el archivo de la regla')],
     [T('Testing and governance', 'Pruebas y gobierno'), T('30-node orchestrator with fingerprints of 184 outputs; validation swarm', 'Orquestador de 30 nodos con huellas de 184 salidas; enjambre de validación'), T('A validator found the package could report success with missing files: fixed and tested with 36 adverse cases', 'Un validador vio que el paquete podía declarar éxito con archivos faltantes: se corrigió y se probó con 36 casos adversos')]
-  ]);
+  ], null, 'compacta');
 
   // 12 · Curva de aprendizaje
   c = lamina(T('Local gains that the public score did not confirm', 'Lo que mejoraba en local no mejoraba en público'),
-    T('The 14 scored submissions in order. In the shaded zone the local 2024 score kept rising while the public score fell; the forum set out to explain why.',
-      'Los 14 envíos puntuados, en orden. En la zona sombreada la puntuación local de 2024 seguía subiendo mientras la pública bajaba; el foro se propuso explicar por qué.'));
+    T('The ' + C.envios.length + ' scored submissions in order. In the first shaded zone the local 2024 score kept rising while the public score fell, and the forum set out to explain why; the second holds the six level probes, then S41 and later calibrations that were tested and not selected.',
+      'Los ' + C.envios.length + ' envíos puntuados, en orden. En la primera zona sombreada la puntuación local de 2024 seguía subiendo mientras la pública bajaba, y el foro se propuso explicar por qué; la segunda reúne las seis sondas de nivel, y después vienen S41 y calibraciones posteriores que se probaron y no se eligieron.'));
   figura(caja(c), 'curva', {});
 
   // 13 · Criterio del cuerpo
   c = lamina(T('The forum\'s answer: judge the body, keep the tail', 'El foro propuso juzgar el cuerpo sin sacar la cola'),
-    T('A few extreme claims drove the local score. Without the costliest 0.5% of periods, local D² ranks candidates like the public score (rank correlation ' + n(C.publico_vs_local.spearman_cuerpo_05, { dec: 2 }) + ' against ' + n(C.publico_vs_local.spearman_completo, { dec: 2 }) + '). The two submissions that followed set the public maximum.',
-      'Unos pocos siniestros extremos movían la puntuación local. Sin el 0,5 % de periodos más costosos, el D² local ordena como la puntuación pública (correlación de rangos ' + n(C.publico_vs_local.spearman_cuerpo_05, { dec: 2 }) + ' frente a ' + n(C.publico_vs_local.spearman_completo, { dec: 2 }) + '). Los dos envíos que siguieron marcaron el máximo público.'));
+    T('A few extreme claims drove the local score. Without the costliest 0.5% of periods, local D² ranks candidates like the public score (rank correlation ' + n(C.publico_vs_local.spearman_cuerpo_05, { dec: 2 }) + ' against ' + n(C.publico_vs_local.spearman_completo, { dec: 2 }) + '). The two submissions that followed set the public maximum of the model search.',
+      'Unos pocos siniestros extremos movían la puntuación local. Sin el 0,5 % de periodos más costosos, el D² local ordena como la puntuación pública (correlación de rangos ' + n(C.publico_vs_local.spearman_cuerpo_05, { dec: 2 }) + ' frente a ' + n(C.publico_vs_local.spearman_completo, { dec: 2 }) + '). Los dos envíos que siguieron marcaron el máximo público de la búsqueda de modelos.'));
   cj = caja(c);
-  leyenda(cj, [{ color: 'var(--s-gris)', disco: true, nombre: T('Candidates before the criterion', 'Candidatos antes del criterio') }, { color: 'var(--acento)', disco: true, nombre: T('The two submissions after it; the second is the final model', 'Los dos envíos posteriores; el segundo es el modelo final') }]);
+  leyenda(cj, [{ color: 'var(--s-gris)', disco: true, nombre: T('Candidates before the criterion', 'Candidatos antes del criterio') }, { color: 'var(--acento)', disco: true, nombre: T('The two submissions after it; the second is the Per-peril blend', 'Los dos envíos posteriores; el segundo es la Mezcla por peligro') }]);
   figura(cj, 'publico_local', {});
 
   // 14 · Enjambre de validación
@@ -294,48 +301,57 @@ function construirLaminas() {
     d.appendChild(cab); d.appendChild(el('div', 'ti', EN ? h.titulo_en : h.titulo_es)); d.appendChild(el('div', 'tx', x[3])); cs.appendChild(d);
   });
 
-  // 15 · Panel
-  c = lamina(T('A dashboard to check the numbers without reading code', 'Un panel para revisar las cifras sin leer código'),
-    T('An offline HTML file built from the same data file as the report, which records the path and SHA-256 of its ' + Object.keys(C.fuentes).length + ' sources.', 'Un archivo HTML sin conexión construido con el mismo archivo de datos que el informe, que registra la ruta y el SHA-256 de sus ' + Object.keys(C.fuentes).length + ' fuentes.'),
-    { columnas: '1.75fr 1fr' });
-  var mc = caja(c), marco = el('div', 'marco'), barra = el('div', 'barra');
-  barra.appendChild(el('i')); barra.appendChild(el('i')); barra.appendChild(el('i')); barra.appendChild(el('span', '', 'docs/entrega/panel_modelo.html'));
-  marco.appendChild(barra);
-  if (CAP.panel) { var im = el('img'); im.src = CAP.panel; im.alt = T('Validation section of the dashboard', 'Sección de validación del panel'); marco.appendChild(im); }
-  mc.appendChild(marco);
-  lista(caja(c), [
-    ['', T('Eight sections, from data and target to validation, AI use, controls and limits.', 'Ocho secciones, desde los datos y el objetivo hasta la validación, el uso de IA, los controles y los límites.')],
-    ['', T('Every chart switches to the table behind it; the swarm\'s findings filter by area.', 'Cada gráfico cambia a la tabla que lo sostiene; los hallazgos del enjambre se filtran por área.')],
-    ['', T('English or Spanish, in light or dark mode.', 'Español o inglés, en modo claro u oscuro.')],
-    ['', T('Kept local and not published online, because it holds aggregates of competition data.', 'Se usa en local y no se publica en internet, porque contiene agregados de los datos del concurso.')]
-  ]);
+  // 15 · Nivel 2025: calibración con tres parámetros y una regla fijada antes de mirar (S41)
+  var g41 = sf.esperanza_privado.map(function (q) { return sg(q.S41.media, 6); });
+  c = lamina(T('The 2025 level: three factors read from the public score', 'El nivel de 2025: tres factores leídos del tablero público'),
+    T('Two probes per line traced the public score in closed form. A credibility rule fixed before looking gave S41, the final submission, which scored as predicted to the fifth decimal; nothing was retrained.',
+      'Dos sondas por ramo trazaron la puntuación pública en forma cerrada. Una regla de credibilidad fijada antes de mirar dio S41, la entrega final, que puntuó lo previsto hasta el quinto decimal; no se reentrenó nada.'),
+    { pie: T('Expected private-set gain over the blend with the noise corrected, under three pairs of priors: ' + g41.join(', ') + '; S41 is the only calibrated file ahead of the blend under all three. The evidence criterion was written before computing; it shares the project\'s data and is no professional validation.',
+      'Ganancia esperada en el privado frente a la mezcla con el ruido corregido, bajo tres pares de previas: ' + g41.join(', ') + '; S41 es el único archivo calibrado que supera a la mezcla con los tres. El criterio de evidencia se escribió antes de calcular; comparte los datos del proyecto y no es validación profesional.') });
+  cj = caja(c); cj.style.gap = '26px';
+  figura(cj, 'calibracion', { alto: 220 });
+  var CL = { apoyado: T('Supported', 'Apoyado'), parcial: T('Partial', 'Parcial'), sin_apoyo: T('Unsupported', 'Sin apoyo') };
+  var p2 = function (x) { return sg(x * 100, 2) + (EN ? '%' : '\u00a0%'); };
+  tabla(cj, [T('Line', 'Ramo'), T('Public optimum', 'Óptimo público'), T('Credibility Z, rule fixed before', 'Credibilidad Z, regla fijada antes'), T('S41 factor', 'Factor de S41'), T('Evidence without the leaderboard', 'Evidencia sin el tablero'), T('Reading', 'Lectura')],
+    ['motor', 'buildings', 'contents'].map(function (r) {
+      var z = cal.ramos[r], ev = cal.evidencia.ramos[r], ind = ev.indicadores;
+      var tx = { motor: T('Label effects ' + p2(ind.etiqueta_D95) + ' agree; last year ' + p2(ind.ultimo_anio) + ' and 2024 loss ratio ' + p2(ind.siniestralidad_2024) + ' do not', 'Coinciden los efectos de etiqueta (' + p2(ind.etiqueta_D95) + '); no el último año (' + p2(ind.ultimo_anio) + ') ni la siniestralidad de 2024 (' + p2(ind.siniestralidad_2024) + ')'),
+        buildings: T('Last year ' + p2(ind.ultimo_anio) + ' and 2024 loss ratio ' + p2(ind.siniestralidad_2024) + ' agree, size within', 'Coinciden el último año (' + p2(ind.ultimo_anio) + ') y la siniestralidad de 2024 (' + p2(ind.siniestralidad_2024) + '), tamaño dentro'),
+        contents: T('All three agree (' + [ind.ultimo_anio, ind.etiqueta_D95, ind.siniestralidad_2024].map(p2).join(', ') + '), size within', 'Coinciden los tres (' + [ind.ultimo_anio, ind.etiqueta_D95, ind.siniestralidad_2024].map(p2).join(', ') + '), tamaño dentro') }[r];
+      return [F.L[lang][r], '×' + n(z.c_optimo, { dec: 3 }), n(z.Z_previa, { dec: 2 }), '×' + n(z.c_S41, { dec: 3 }), tx,
+        ev.parcial_por_tamano_S41 ? T('Partial, by size', 'Parcial, por tamaño') : CL[ev.clase_S41]];
+    }), [1, 2, 3], 'compacta');
 
   // 16 · Controles y reproducción
-  c = lamina(T('The delivered file can be rebuilt and checked', 'El archivo entregado se puede regenerar y comprobar'),
-    T('45 of 45 control cases pass in the cloud, on a virtual machine and on Windows. The final CSV is rebuilt from saved components with the SHA-256 that Kaggle received.',
-      '45 de 45 casos de control pasan en la nube, en una máquina virtual y en Windows. El CSV final se reconstruye desde componentes guardados con el SHA-256 que recibió Kaggle.'),
-    { columnas: '1.12fr 1fr' });
+  c = lamina(T('The delivered files can be rebuilt and checked', 'Los archivos entregados se pueden regenerar y comprobar'),
+    T('45 of 45 control cases pass in the cloud, on a virtual machine and on Windows. The blend\'s CSV is rebuilt from saved components with the SHA-256 that Kaggle received, and S41 from it with the three factors.',
+      '45 de 45 casos de control pasan en la nube, en una máquina virtual y en Windows. El CSV de la mezcla se reconstruye desde componentes guardados con el SHA-256 que recibió Kaggle, y S41 a partir de él con los tres factores.'),
+    { columnas: '1.12fr 1fr', pie: T('An offline dashboard, docs/entrega/panel_modelo.html, shows every number with the table behind it, in English or Spanish.', 'Un panel sin conexión, docs/entrega/panel_modelo.html, muestra cada cifra con la tabla que la sostiene, en español o inglés.') });
   tabla(caja(c), [T('Layer', 'Capa'), T('Result', 'Resultado')], [
     [T('Original data and rebuild', 'Datos originales y reconstrucción'), T('11 of 11 identical; 0 differences in 148 M cells', '11 de 11 idénticos; 0 diferencias en 148 M de celdas')],
     [T('Target and exposure', 'Objetivo y exposición'), T('18 of 18 checks', '18 de 18 controles')],
     [T('Features', 'Variables'), T('25 of 25 checks', '25 de 25 controles')],
     [T('Package: 9 nominal and 36 adverse cases', 'Paquete: 9 casos nominales y 36 adversos'), T('45 of 45 in three environments', '45 de 45 en tres entornos')],
-    [T('Delivered CSV', 'CSV entregado'), T('10 of 10 checks', '10 de 10 controles')]
+    [T('Delivered CSVs: the blend and S41', 'CSV entregados: la mezcla y S41'), T('10 of 10 checks in each', '10 de 10 controles en cada uno')]
   ]);
   var rp = C.controles_paquete.replay_s30, rc = el('div', 'recibo'), cr = caja(c); cr.appendChild(rc);
   function linea(k, v, cls) { var d = el('div'); if (k) d.appendChild(el('span', 'k', k + '  ')); d.appendChild(el('span', cls || '', v)); rc.appendChild(d); }
   rc.appendChild(el('div', 'cmd', '$ python reproducir.py mezcla --objetivo=S30'));
   linea(T('receipt', 'recibo'), T('Windows · 19 Oct 2026', 'Windows · 19 oct 2026'));
-  linea(T('final CSV', 'CSV final'), T('same SHA-256 as the file Kaggle received', 'mismo SHA-256 que el archivo que recibió Kaggle'), 'ok');
+  linea(T('final CSV', 'CSV final'), T('same SHA-256 that Kaggle received', 'mismo SHA-256 que recibió Kaggle'), 'ok');
   linea(T('intermediate', 'intermedios'), T('max relative difference ', 'diferencia relativa máx. ') + rp.max_rel_parquet.toExponential(1).replace('.', EN ? '.' : ','));
-  linea(T('exit code', 'código de salida'), String(rp.codigo_salida) + T(' = CSV identical, tolerated intermediate differences', ' = CSV idéntico, diferencias intermedias toleradas'));
+  linea(T('exit code', 'código de salida'), String(rp.codigo_salida) + T(' = identical CSV, tolerated intermediates', ' = CSV idéntico, intermedios tolerados'));
   rc.appendChild(el('div', 'sep'));
   rc.appendChild(el('div', 'cmd', '$ python reproducir.py todo --objetivo=S30'));
   var rx = C.reproduccion_completa;
   linea(T('receipt', 'recibo'), T('reference cloud · 20 Oct 2026 · ' + rx.nodos + ' nodes', 'nube de referencia · 20 oct 2026 · ' + rx.nodos + ' nodos'));
-  linea(T('final CSV', 'CSV final'), T('same SHA-256 as the file Kaggle received', 'mismo SHA-256 que el archivo que recibió Kaggle'), 'ok');
+  linea(T('final CSV', 'CSV final'), T('same SHA-256 that Kaggle received', 'mismo SHA-256 que recibió Kaggle'), 'ok');
   linea(T('intermediate', 'intermedios'), rx.huellas_iguales + T(' of ', ' de ') + rx.huellas_verificadas + T(' equal; max. ', ' iguales; máx. ') + rx.max_dif_relativa.toExponential(1).replace('.', EN ? '.' : ','));
-  linea(T('replay', 'réplica'), T(rx.replica.estimadores + ' estimators, no refit: ' + rx.replica.identicas + ' of ' + rx.replica.salidas + ' outputs identical', rx.replica.estimadores + ' estimadores, sin reajuste: ' + rx.replica.identicas + ' de ' + rx.replica.salidas + ' salidas idénticas'), 'ok');
+  linea(T('replay', 'réplica'), T(rx.replica.estimadores + ' estimators, no refit: ' + rx.replica.identicas + ' of ' + rx.replica.salidas + ' identical', rx.replica.estimadores + ' estimadores sin reajuste: ' + rx.replica.identicas + ' de ' + rx.replica.salidas + ' idénticas'), 'ok');
+  rc.appendChild(el('div', 'sep'));
+  rc.appendChild(el('div', 'cmd', '$ python herramientas/regenerar_s41.py'));
+  linea(T('S41 CSV', 'CSV de S41'), T('same SHA-256 that Kaggle received', 'mismo SHA-256 que recibió Kaggle'), 'ok');
+  linea(T('checks', 'controles'), Object.keys(ef.controles_csv).filter(function (k) { return ef.controles_csv[k]; }).length + T(' of ', ' de ') + Object.keys(ef.controles_csv).length + T(' delivery checks', ' controles de entrega'), 'ok');
 
   // 17 · Límites, semana 2 y cierre
   c = lamina(T('What we cannot prove yet, and how Week 2 will test it', 'Lo que aún no podemos demostrar y cómo lo probaremos'),
@@ -343,9 +359,9 @@ function construirLaminas() {
     { clase: 'grande', columnas: '1fr 1.05fr', pie: T('In the repository: docs/entrega/ (report, dashboard, slides) · reproducir.py · docs/expediente/ (forum, decisions and receipts)', 'En el repositorio: docs/entrega/ (informe, panel, láminas) · reproducir.py · docs/expediente/ (foro, decisiones y recibos)') });
   var sb = C.sensibilidad, esc = sb.nivel_autos_escenario;
   lista(caja(c, T('Limits we declare', 'Límites que declaramos')), [
-    ['', T('With one claims valuation, reserve adequacy cannot be proven: a ' + n(C.reservas_acotacion.por_ramo.motor.error_material * 100, { dec: 1 }) + '% error in motor reserves already moves the level 1%.', 'Con una sola valoración no se puede demostrar la suficiencia de las reservas: un error del ' + n(C.reservas_acotacion.por_ramo.motor.error_material * 100, { dec: 1 }) + '\u00a0% en las de autos ya mueve el nivel un 1\u00a0%.')],
-    ['', T('The 2025 level is the weak point: ±' + n(sb.nivel_edificios_semidistancia * 100, { dec: 1 }) + '% in buildings, and one scenario puts motor ' + n(esc[0] * 100, { dec: 1 }) + '% to ' + n(esc[1] * 100, { dec: 1 }) + '% high.',
-      'El nivel de 2025 es el punto débil: ±' + n(sb.nivel_edificios_semidistancia * 100, { dec: 1 }) + '\u00a0% en edificios, y un escenario sitúa autos alto entre un ' + n(esc[0] * 100, { dec: 1 }) + '\u00a0% y un ' + n(esc[1] * 100, { dec: 1 }) + '\u00a0%.')],
+    ['', T('With one claims valuation, reserve adequacy cannot be proven: a ' + n(cal.evidencia.reservas_S41.error_material_S41.motor * 100, { dec: 1 }) + '% error in motor reserves already moves S41\'s level by 1%.', 'Con una sola valoración no se puede demostrar la suficiencia de las reservas: un error del ' + n(cal.evidencia.reservas_S41.error_material_S41.motor * 100, { dec: 1 }) + '\u00a0% en las de autos ya mueve el nivel de S41 un 1\u00a0%.')],
+    ['', T('The 2025 level was calibrated on a third of the test; without the leaderboard the evidence supports buildings and contents, and motor only in part.',
+      'El nivel de 2025 se calibró con un tercio del test; sin el tablero, la evidencia apoya edificios y contenidos, y autos solo en parte.')],
     ['', T('2023 and 2024 chose the model, and its lead over the previous best submission is not robust.', '2023 y 2024 eligieron el modelo, y su ventaja sobre el mejor envío anterior no es robusta.')],
     ['', T('Feature dates at quotation still need the data owner\'s confirmation.', 'Las fechas de las variables al cotizar aún necesitan la confirmación del dueño de los datos.')],
     ['', T('149 divided sums insured weigh ' + n(C.datos.capitales_sin_confirmar.proporcion_del_total * 100, { dec: 2 }) + '% of the total but decide their own rows.', '149 capitales divididos pesan el ' + n(C.datos.capitales_sin_confirmar.proporcion_del_total * 100, { dec: 2 }) + '\u00a0% del total, pero deciden sus propias filas.')],
@@ -356,7 +372,7 @@ function construirLaminas() {
     [T('Peril mix and tails', 'Mezcla de peligros y colas'), T('Refit severities; review the body criterion', 'Reajustar severidades; revisar el criterio del cuerpo')],
     [T('Claims development', 'Desarrollo de siniestros'), T('Re-estimate the chain-ladder', 'Reestimar el chain-ladder')],
     [T('Available features', 'Variables disponibles'), T('Update the contract and the predictor guard', 'Actualizar el contrato y la guardia de predictores')],
-    [T('Frozen model performance', 'Rendimiento del modelo congelado'), T('Recalibrate first; rebuild only if needed', 'Recalibrar primero; reconstruir solo si hace falta')]
+    [T('Frozen model performance', 'Rendimiento del modelo congelado'), T('Recalibrate the level first, with probes, a prior fixed in advance and noise measured on the unseen part; rebuild only if needed', 'Recalibrar primero el nivel, con sondas, una previa fijada antes y el ruido medido en la parte no vista; reconstruir solo si hace falta')]
   ], null, 'compacta');
 
   if (num !== TOTAL) throw new Error('Láminas: ' + num + ' de ' + TOTAL);
