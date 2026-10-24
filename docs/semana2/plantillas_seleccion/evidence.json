@@ -1,0 +1,75 @@
+{
+  "template_only": true,
+  "policy_id": "S2-SELECCION-v1-20261023",
+  "generated_utc": null,
+  "freeze_sha256": null,
+  "opened_sha256": null,
+  "metric_scope": "2024_temporal_full_unweighted_observed_T0",
+  "checks": {
+    "same_rows_targets_and_weights": false,
+    "metrics_from_frozen_predictions": false,
+    "same_bootstrap_draws_across_pairs": false,
+    "scenarios_and_cold_start_complete": false,
+    "no_test_labels": false,
+    "all_plausible_alternatives_listed": false
+  },
+  "comparisons": [
+    {
+      "a": "W2-B01",
+      "b": "W2-B00",
+      "metric_receipt": {
+        "path": "REEMPLAZAR/pair_metric_receipt.json",
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "warnings": [],
+      "primary": {
+        "delta": null,
+        "lower": null,
+        "upper": null,
+        "bootstrap": {
+          "bootstrap_replicates": 10000,
+          "bootstrap_seed": 2026102301,
+          "bootstrap_method": "ordinary_paired_cluster_customer_address_components",
+          "bonferroni_family_size_fixed": 6,
+          "lower_quantile": 0.004166666666666667
+        }
+      },
+      "cold_start": {
+        "delta": null,
+        "lower95": null
+      },
+      "scenarios": {
+        "reserve075": null,
+        "reserve125": null,
+        "late_cost05": null,
+        "late_cost10": null
+      },
+      "segments": {
+        "motor": null,
+        "buildings": null,
+        "contents": null,
+        "new_customer": null,
+        "renewal": null
+      },
+      "influence": {
+        "n_groups": null,
+        "removed": null,
+        "delta_without_top": null
+      },
+      "level_changes": {
+        "motor": {
+          "relative_change": null,
+          "explained_and_validated_in_development": false
+        },
+        "buildings": {
+          "relative_change": null,
+          "explained_and_validated_in_development": false
+        },
+        "contents": {
+          "relative_change": null,
+          "explained_and_validated_in_development": false
+        }
+      }
+    }
+  ]
+}

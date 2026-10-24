@@ -1,0 +1,101 @@
+{
+  "template_only": true,
+  "policy_id": "S2-SELECCION-v1-20261023",
+  "no_2024_model_score_seen": false,
+  "common": {
+    "target": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3/target_T0_and_stresses.parquet",
+      "sha256": "114dd8ae8048a04530855c7be8f8e718ebd9fe969f491c4513fc1fadbd0bcca6"
+    },
+    "partitions": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3/partitions.parquet",
+      "sha256": "a6aca273c7657feb5bddf4fa602658f731decfab5c6eb6528fcd626f12be408b"
+    },
+    "features": {
+      "path": "REEMPLAZAR/features.json",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "observation_link": {
+      "path": "REEMPLAZAR/observation_link.json",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "scorer": {
+      "path": "REEMPLAZAR/scorer.json",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  },
+  "alternatives_register": {
+    "path": "REEMPLAZAR/alternatives_register.json",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "models": [
+    {
+      "id": "W2-B00",
+      "priority": 0,
+      "checks": {
+        "exact_schema_and_rows": false,
+        "positive_finite_predictions": false,
+        "admissible_features": false,
+        "no_target_or_temporal_leakage": false,
+        "objective_and_observation_link_registered": false,
+        "fit_scopes_exclude_2024_labels": false,
+        "lineage_and_reproduction_verified": false,
+        "level_anchor_explicit": false,
+        "frozen_artifacts_unchanged": false
+      },
+      "warnings": [],
+      "artifacts": {
+        "recipe": {
+          "path": "REEMPLAZAR/W2-B00_recipe.json",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "temporal_predictions": {
+          "path": "REEMPLAZAR/W2-B00_temporal_predictions.json",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "cold_start_predictions": {
+          "path": "REEMPLAZAR/W2-B00_cold_start_predictions.json",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "technical_receipt": {
+          "path": "REEMPLAZAR/W2-B00_technical_receipt.json",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      }
+    },
+    {
+      "id": "W2-B01",
+      "priority": 1,
+      "checks": {
+        "exact_schema_and_rows": false,
+        "positive_finite_predictions": false,
+        "admissible_features": false,
+        "no_target_or_temporal_leakage": false,
+        "objective_and_observation_link_registered": false,
+        "fit_scopes_exclude_2024_labels": false,
+        "lineage_and_reproduction_verified": false,
+        "level_anchor_explicit": false,
+        "frozen_artifacts_unchanged": false
+      },
+      "warnings": [],
+      "artifacts": {
+        "recipe": {
+          "path": "REEMPLAZAR/W2-B01_recipe.json",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "temporal_predictions": {
+          "path": "REEMPLAZAR/W2-B01_temporal_predictions.json",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "cold_start_predictions": {
+          "path": "REEMPLAZAR/W2-B01_cold_start_predictions.json",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "technical_receipt": {
+          "path": "REEMPLAZAR/W2-B01_technical_receipt.json",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      }
+    }
+  ]
+}
