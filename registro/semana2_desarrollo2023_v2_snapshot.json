@@ -1,0 +1,185 @@
+{
+  "id": "S2-DEV2023-v2-20261023",
+  "author": "Codex",
+  "as_of_utc": "2026-10-23T18:06:45.438912+00:00",
+  "path_base": "workspace_root",
+  "status": "two_2023_development_batches_verified_reference_retained_no_promotion",
+  "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev2_20261023T180127Z_46d18106",
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev2_20261023T180127Z_46d18106/report.json",
+  "report_sha256": "3e9719c5abd0bf133609fe25a1e97841439b35f8f4d46438c6b0b6bd6f77bc25",
+  "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/DESARROLLO_2023_TANDA2.md",
+  "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_plan_v2.json",
+  "plan_sha256": "f0d0f7b32351ad0c4c5281fa52c559ac331dc752ac7c47660ad91d8abb03157d",
+  "producer": "Hackaton/Repositorio_IAA2026/src/semana2/entrenar_desarrollo2023_v2.py",
+  "producer_sha256": "352ed8c7f5597437c5e68cd0c036ab4d60ae0aaaed2b4515eadd8d339cc67b9c",
+  "oof": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev2_20261023T180127Z_46d18106/oof_2023.parquet",
+  "oof_sha256": "4d283c1d3d26b84f791df1d64bb034c2f351d97a4357452daf6715a2ba079fb3",
+  "manifest": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev2_20261023T180127Z_46d18106/manifest.json",
+  "manifest_sha256": "78d9cae9dcace676fc149b9e4f7533c5ce7d76fa116291aed490b4030e5d9c91",
+  "verification": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev2_20261023T180127Z_46d18106/verifications/20261023T180338Z_52cc32bc.json",
+    "sha256": "5b1c3eaf39467225874b9be17737fc048226f1920d7f82a44717d2fb6f21cce6",
+    "passed": 1279,
+    "failed": 0
+  },
+  "assessment": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev2_20261023T180127Z_46d18106/assessment.json",
+  "assessment_sha256": "88b64d5d4d5003923a8d42e2862ca6aa82bd24e5fa8958cc5238728c31db125c",
+  "training_years": [
+    2023
+  ],
+  "scored_years": [
+    2023
+  ],
+  "rows_per_model": 50094,
+  "groups": 30869,
+  "folds": 5,
+  "new_estimator_fits_this_batch": 20,
+  "cumulative_estimator_fits": 50,
+  "cumulative_closed_form_constants": 15,
+  "GLM_bundle_reuses_this_batch": 10,
+  "prefix_exports_this_batch": 15,
+  "models_consulted": [
+    "W2-B00",
+    "W2-B01",
+    "W2-B02",
+    "W2-B03",
+    "W2-B04",
+    "W2-B05"
+  ],
+  "summary": [
+    {
+      "model_id": "W2-B00",
+      "technical_complete": true,
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 15614394.394606076,
+      "actual_over_expected": 0.9796796118640577,
+      "deviance_sum": 5160891.515933607,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.06858168733600944
+    },
+    {
+      "model_id": "W2-B01",
+      "technical_complete": true,
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 14552011.495134693,
+      "actual_over_expected": 1.0512020173372196,
+      "deviance_sum": 5171545.277172904,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.06665893653096044
+    },
+    {
+      "model_id": "W2-B02",
+      "technical_complete": true,
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 7558637.5700367,
+      "actual_over_expected": 2.0237911526065835,
+      "deviance_sum": 7056489.915591724,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": -0.27352879056244483
+    },
+    {
+      "model_id": "W2-B03",
+      "technical_complete": true,
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 14320114.142914398,
+      "actual_over_expected": 1.0682249936931556,
+      "deviance_sum": 5060364.132567781,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.08672449183055142
+    },
+    {
+      "model_id": "W2-B04",
+      "technical_complete": true,
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 12633749.135502394,
+      "actual_over_expected": 1.2108126951019829,
+      "deviance_sum": 5134105.633827085,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.07341590271097842
+    },
+    {
+      "model_id": "W2-B05",
+      "technical_complete": true,
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 14113479.759711083,
+      "actual_over_expected": 1.0838647945397377,
+      "deviance_sum": 5098408.392860789,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.07985840665529409
+    }
+  ],
+  "reference_pairs": [
+    {
+      "candidate": "W2-B03",
+      "reference": "W2-B00",
+      "delta_D2": 0.018142804494541937,
+      "exploratory_lower95": -0.002297096852320438,
+      "exploratory_upper95": 0.03744815391778443,
+      "groups": 30869,
+      "removed_favorable_groups": 31,
+      "delta_after_removal": -0.007909889177930984,
+      "largest_favorable_group_delta": 0.0034538223623619543,
+      "interpretation": "Exploratory 2023 only; no simultaneous confirmation or promotion"
+    },
+    {
+      "candidate": "W2-B04",
+      "reference": "W2-B00",
+      "delta_D2": 0.00483421537496906,
+      "exploratory_lower95": -0.012023764055904494,
+      "exploratory_upper95": 0.02017173988249127,
+      "groups": 30869,
+      "removed_favorable_groups": 31,
+      "delta_after_removal": -0.006645978570057552,
+      "largest_favorable_group_delta": 0.0012586575960622255,
+      "interpretation": "Exploratory 2023 only; no simultaneous confirmation or promotion"
+    },
+    {
+      "candidate": "W2-B05",
+      "reference": "W2-B00",
+      "delta_D2": 0.011276719319284676,
+      "exploratory_lower95": -0.0030404757920620834,
+      "exploratory_upper95": 0.0227963991686733,
+      "groups": 30869,
+      "removed_favorable_groups": 31,
+      "delta_after_removal": -0.003576351831894046,
+      "largest_favorable_group_delta": 0.0013032591120339509,
+      "interpretation": "Exploratory 2023 only; no simultaneous confirmation or promotion"
+    }
+  ],
+  "reference": "W2-B00",
+  "alternatives_preserved": [
+    "W2-B01",
+    "W2-B02",
+    "W2-B03",
+    "W2-B04",
+    "W2-B05"
+  ],
+  "promotion": false,
+  "confirmation_2024_open": false,
+  "confirmation_closed_by_current_user_instruction": true,
+  "final_confirmation_roster_frozen": false,
+  "history": [
+    {
+      "id": "S2-DEV2023-v1-20261023",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev_20261023T173828Z_7efe46fc",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/DESARROLLO_2023.md",
+      "index_snapshot": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_v1_snapshot.json",
+      "index_sha256": "ba36fa4aed4f0d7bf7335525086a50a5443632c1fffedd16889240b0deba4933"
+    },
+    {
+      "id": "S2-DEV2023-v2-20261023",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev2_20261023T180127Z_46d18106",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/DESARROLLO_2023_TANDA2.md"
+    }
+  ],
+  "forum_prior": "COD-S2-20261023-010",
+  "forum_result": "COD-S2-20261023-011",
+  "submissions": 0,
+  "professional_independent_validation": false
+}

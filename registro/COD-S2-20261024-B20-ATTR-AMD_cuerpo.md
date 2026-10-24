@@ -1,0 +1,3 @@
+Enmienda técnica a COD-S2-20261024-B20-ATTR-PRE. El primer arranque falló antes de main y de leer datos: la raíz del script src/semana2 se resolvía a Hackaton y no a la raíz común, por lo que no encontraba la caché existente de PyArrow. Se conserva código, plan y fallo en privado/semana2/desarrollo2023/b20_atribucion_v1_arranque_fallido. Cero cálculos, precios o ajustes.
+
+Se corrige únicamente la resolución de raíz, sin instalar dependencias, cambiar datos, hipótesis, ranking, particiones o criterios. Nuevo plan registro/semana2_b20_atribucion_plan_v1a.json, id S2-B20-ATRIBUCION2023-v1a-20261024, SHA de código actualizado y salida nueva; v1 original permanece. Esta enmienda precede al cálculo. 2024/test/ledger cerrados y demás límites intactos.

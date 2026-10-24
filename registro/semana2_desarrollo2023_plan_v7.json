@@ -1,0 +1,98 @@
+{
+  "selection_policy": "Hackaton/Repositorio_IAA2026/registro/semana2_politica_seleccion_v1.json",
+  "selection_policy_sha256": "8de4043120b600813c44870d015569bac53c0ddb1d289970c071d1f152281139",
+  "objective": {
+    "response": "T0 / effective_cost_exposure_C0",
+    "sample_weight": "sqrt(effective_cost_exposure_C0)",
+    "power": 1.5,
+    "prediction_observed": "effective_cost_exposure_C0 * fitted_annual_rate",
+    "calibration": "No fitting/calibration; frozen GLM effects with prespecified coefficient/factor algebra only.",
+    "primary_development_metric": "Pooled unweighted total-unit D2 Tweedie 1.5 on all 50094 OOF rows of 2023; global null is arithmetic mean of observed T0; do not average line D2 scores",
+    "positivity": "Fail on nonfinite or nonpositive rate/prediction; no silent clipping or removal"
+  },
+  "observation_link": "Each development fold k uses frozen exclude_foldk/e_cost_mix_1.0, fitted only on other 2023 groups; all three model families use exactly the same link and T0 response.",
+  "id": "S2-DEV2023-v7-20261024",
+  "author": "Codex",
+  "registered_utc": "2026-10-23T23:59:19.734657+00:00",
+  "authorization_literal": "Dale, revisa los cambios de capital por fila y el deterioro de la credibilidad en autos nuevos. Registra la siguiente prueba solo en 2023 con modelos estándar, conserva B00, deja los resultados en el foro y mantén 2024 cerrado.",
+  "parent_run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b",
+  "parent_manifest_sha256": "ea6ed41581288338ef842a7d27d9c5221d8931f10bbc268b8cc8e3d1fd1203a9",
+  "parent_oof_sha256": "e04abf1e86c2e8510ebcc68a32cc5021b960f18b32bb89624cb132eaff4dec00",
+  "diagnostic_review": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/revision_filas_20261023T235757Z_cafaba7d/report.json",
+  "diagnostic_sha256": "ca4429ecffc62eb2450df394302717ce7d113d89320946e1571ccdaed5040346",
+  "code": "Hackaton/Repositorio_IAA2026/src/semana2/desarrollo2023_v7_componentes.py",
+  "code_sha256": "3a012612750e486192030f19962cf6a78ab3d1f9fefdc622b077ef31a5d64848",
+  "comparators_reused_without_refit": [
+    "W2-B00",
+    "W2-B01",
+    "W2-B02",
+    "W2-B03",
+    "W2-B04",
+    "W2-B05",
+    "W2-B06",
+    "W2-B07",
+    "W2-B08",
+    "W2-B09",
+    "W2-B10",
+    "W2-B11",
+    "W2-B12",
+    "W2-B13",
+    "W2-B14",
+    "W2-B15"
+  ],
+  "models": [
+    {
+      "id": "W2-B16",
+      "family": "Frozen Tweedie GLM, frequency-only credibility",
+      "factor": "exp((1-Z_f)*(theta_f_dev-theta_f_em))"
+    },
+    {
+      "id": "W2-B17",
+      "family": "Frozen Tweedie GLM, severity-only credibility",
+      "factor": "exp((1-Z_s)*(theta_s_dev-theta_s_em))"
+    },
+    {
+      "id": "W2-B18",
+      "family": "Frozen Tweedie GLM, coefficient replacement",
+      "factor": "exp(theta_cred-theta_price)"
+    }
+  ],
+  "hypothesis": "Separate frequency and severity correction from the mismatch between the auxiliary and pricing new-business coefficient. Replacement tests that mismatch; it is not presumed to improve performance.",
+  "application": "All three start from B14. Multiply only motor/new-business rows in each own heldout fold; home and motor renewals exact B14. B18 replaces the raw-scale business coefficient keeping the intercept and all other effects fixed; it does not recalibrate the portfolio.",
+  "factor_scope": "Frozen v6 emerging outer-training2023 auxiliaries and conditional developed prior, never heldout outcomes or other-fold OOF calibration. No refits, no new prior, no selected blend, no A/E correction.",
+  "capital_decision": "Keep all56 row-level private records and the B13/B14 counterfactual decomposition. Corrected values are within ordinary training support; representation explains shifts. No new capital tweak or global F0 change without economic scale evidence. B13 and B14 both retained.",
+  "features": "Exact B14 six-feature standard GLMs; no additional feature, weather, premium or audit indicator. Own fold/line only route frozen artifacts; not predictors.",
+  "diagnostics": {
+    "development_uncertainty": {
+      "replicates": 2000,
+      "seed": 2026102302,
+      "unit": "paired customer-address component",
+      "interval": "95% percentile, conditional exploratory diagnostic; NOT the 2024 Bonferroni confirmation interval",
+      "pairs": "171 total,120 inherited exact and51 new, including3 new/new. Same2000 paired draws, no rerun of120 old pair distributions."
+    },
+    "readout": "Global and motor-new D2/A-E, fold and outcome loss decomposition, influence/removal of own31 favorable groups, fixed-rate reserve/late-cost scenarios; comparisons against B14, B15 motor segment and B00.",
+    "primary_contrasts": [
+      "B16/B14",
+      "B17/B14",
+      "B18/B14"
+    ],
+    "no_selection": "No promotion, deletion, equivalence, optimized combination or final2024 roster from exploratory scores."
+  },
+  "technical_acceptance": [
+    "Only2023,50094 unique rows per model, saved5folds and30869components; sameT0/C0",
+    "16 inherited OOF exact; B00 retained",
+    "30 home bundles exact copies ofB14; motor renewal rates exact",
+    "15 positive factors reconstructed from frozen own-fold sources; raw-scale coefficient accounts for StandardScaler",
+    "Independent checker imports no producer, blocks fit; manual GLM exponential prediction and external metric formula",
+    "51 new paired distributions and own31 influence reconstructed separately; old120 never recomputed as new evidence",
+    "No2024/test predictions, labels for new work, ledger, submissions, remote, delegation"
+  ],
+  "resources": "Local CPU two threads. Zero new price/auxiliary fits; fifteen algebraic motor factors and thirty exact home copies. Cumulative pricefits90 and closed-formconstants60 unchanged.",
+  "search_disclosure": "Seventh adaptive2023 wave,19 pricing recipes and171 exploratory pair contrasts. No search/multiplicity correction or temporal confirmation.",
+  "scope": "Emerging2023 only. Developed2021-2023 prior reused as received artifact with uncertainty/reproduction conditions intact.",
+  "forum_preregistration": "COD-S2-20261024-020",
+  "reference_retained": "W2-B00",
+  "confirmation_2024_open": false,
+  "promotion": false,
+  "final_confirmation_roster_frozen": false
+}

@@ -1,0 +1,71 @@
+{
+  "utc": "2026-10-23T17:38:11.015753+00:00",
+  "scope": "Synthetic known-answer and temporal guard cases only",
+  "source": "Hackaton/Repositorio_IAA2026/src/semana2/entrenar_desarrollo2023.py",
+  "source_sha256": "57c2f4311a3a81b9c5e3ab9c1318ce1e0b7fd64b6ea994f9f105715ecff47b40",
+  "checks": [
+    {
+      "name": "Known-answer p1.5 unit deviance",
+      "pass": true
+    },
+    {
+      "name": "Separate sklearn metric",
+      "pass": true
+    },
+    {
+      "name": "Total-rate loss identity",
+      "pass": true
+    },
+    {
+      "name": "Nonpositive predictions rejected",
+      "pass": true
+    },
+    {
+      "name": "Negative response rejected",
+      "pass": true
+    },
+    {
+      "name": "Constant equals total-loss optimum",
+      "pass": true
+    },
+    {
+      "name": "Constant differs from actuarial ratio",
+      "pass": true
+    },
+    {
+      "name": "Constant beats both local perturbations",
+      "pass": true
+    },
+    {
+      "name": "Reject 2024 before fit constant_line_rate",
+      "pass": true
+    },
+    {
+      "name": "Reject 2024 before fit TweedieRegressor",
+      "pass": true
+    },
+    {
+      "name": "Reject 2024 before fit LGBMRegressor",
+      "pass": true
+    },
+    {
+      "name": "Reject 2024 before prediction",
+      "pass": true
+    },
+    {
+      "name": "Reject test marked as 2023",
+      "pass": true
+    },
+    {
+      "name": "Duplicate row keys rejected",
+      "pass": true
+    },
+    {
+      "name": "Loader year predicate ignores poisoned other year",
+      "pass": true
+    }
+  ],
+  "passed": 15,
+  "failed": 0,
+  "real_pricing_models_fitted": 0
+}

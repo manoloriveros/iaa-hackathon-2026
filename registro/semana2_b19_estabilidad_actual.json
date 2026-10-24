@@ -1,0 +1,96 @@
+{
+  "id": "S2-B19-ESTABILIDAD2023-v1-20261024",
+  "author": "Codex",
+  "utc": "2026-10-24T01:55:38.449816+00:00",
+  "path_base": "workspace_root",
+  "status": "B19_saved_artifacts_stability_verified_influence_conditional_no_model_change",
+  "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/estabilidad_b19_20261024T014815Z_9b2b1803",
+  "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/ESTABILIDAD_E_INFLUENCIA_B19_2023.md",
+  "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_b19_estabilidad2023_plan_v1.json",
+  "b19_run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214",
+  "audited_policy_years": [
+    2023
+  ],
+  "new_fits": 0,
+  "new_models": 0,
+  "new_bootstrap": 0,
+  "reference": "W2-B00",
+  "all_alternatives_preserved": true,
+  "forum_prior": "COD-S2-20261024-036",
+  "forum_result": "COD-S2-20261024-037",
+  "warnings": [
+    {
+      "id": "B19-STABILITY-FOLDS",
+      "status": "open",
+      "effect": "Coverage coefficients vary on common original scale;5overlappingfits are not independent CI. Numerical Hessian conditioning does not establish generalization."
+    },
+    {
+      "id": "B19-GROUP-MOTOR",
+      "status": "open",
+      "effect": "OneTPOnly bodilyinjury component accounts for56.1%gross adverse motornewloss; evaluation deletion flipssegmentcontrast but not wholeportfolio. No record removal or promotion."
+    },
+    {
+      "id": "B19-GROUP-BUILDINGS",
+      "status": "open",
+      "effect": "No individualgroup deletion removes building loss; top5adversegroups arefire. AD effect associates with totalcost/perils, not contract-only accidental risk."
+    },
+    {
+      "id": "B19-LOCAL-APPROX",
+      "status": "open",
+      "effect": "H^-1G localdeletion uses fullH/frozenC0, not refit; highleverage and largecomponents make exact deletion uncertain. No changedcoefficient price or score."
+    },
+    {
+      "id": "B19-SOURCE-TRACE",
+      "status": "open",
+      "effect": "Validate payment/reserve/recovery/status/date lineage of highlighted heavyclaims before another recipe; never delete a valid expensive claim to improve score."
+    }
+  ],
+  "ledger_read": false,
+  "prior_external2024_subject_exposure_disclosed": true,
+  "professional_independent_validation": false,
+  "report": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/estabilidad_b19_20261024T014815Z_9b2b1803/report.json",
+    "sha256": "57eab13509b7df9506a2d3144ed15eec4f4117bba7759f48c742a32c9c2f1eaf"
+  },
+  "verification": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/estabilidad_b19_20261024T014815Z_9b2b1803/verification.json",
+    "sha256": "f120f015324e561b3c4c3f6d082ff196904f9815f076a466f9f0ce98047d53c2"
+  },
+  "readout": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/estabilidad_b19_20261024T014815Z_9b2b1803/readout.json",
+    "sha256": "89001b0604e478677cf8a1e1b20a7efea11910b6be315a5e6bdda442492213db"
+  },
+  "readout_reconciliation": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/estabilidad_b19_20261024T014815Z_9b2b1803/readout_reconciliation.json",
+    "sha256": "9c085752d835aad869f6a6c72cda938e778704a02f04d4047f3a0c522d67df68"
+  },
+  "assessment": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/estabilidad_b19_20261024T014815Z_9b2b1803/assessment.json",
+    "sha256": "b33f198f096a509736d8a54ed8c540d42152918177d4ef02a38983668702294f"
+  },
+  "decision_journal": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/estabilidad_b19_20261024T014815Z_9b2b1803/decision_journal.json",
+    "sha256": "1e30aa5f02b03d8af2253a750261a2819c1feb4da62860876d161ba28d9bfb05"
+  },
+  "manifest": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/estabilidad_b19_20261024T014815Z_9b2b1803/manifest.json",
+    "sha256": "9a2aa562ea0d3bb9f060ff2ab4a24d49e8a7c3514553d2b0743bf8b7e720ecdd"
+  },
+  "as_of_registration_utc": "2026-10-24T01:59:47.301715+00:00",
+  "documentation_sha256": "d21428cfbfa6af3dfe2245d2209058a57ac6cea764f707388c7540c7429c5c8d",
+  "unrelated_indices_and_counters_cut": {
+    "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_actual.json": "27a605b6a575ef5ea588f252c814669ccff2de3d79d061f201767acecf5c3d51",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_contadores_propios_actual.json": "716b1f947cdce852b08588bca3a39530f533694a15ff24c81f7d703892c130b4",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_sensibilidad_observacion_actual.json": "f10de74e0013ecf86ba179637ea0d164e45f621d646061c9682fcb7908d7417c",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_soporte_calendario2023_actual.json": "5e856e26e6112d87c9327d1c6ed3c4f2a94a962892b18e6820cc17d4760a90fb",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_coberturas_peril2023_actual.json": "be450dea3e19b9182c4bf2deb42048cacd859ca6588177559349bd526d9aba37",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_glm_ridge_actual.json": "27a605b6a575ef5ea588f252c814669ccff2de3d79d061f201767acecf5c3d51"
+  },
+  "counter_values_at_registration": {
+    "cumulative_price_base_fits": 195,
+    "cumulative_closed_form_constants": 285
+  },
+  "this_unit_counter_increment": 0,
+  "this_unit_catalog_mutations": 0,
+  "concurrent_research_is_not_this_audit": true
+}

@@ -1,0 +1,92 @@
+{
+  "id": "S2-SELECCION-v1-20261023",
+  "version": 1,
+  "autor": "Codex",
+  "estado": "adoptada_por_instruccion_directa_antes_de_comparaciones",
+  "autorizacion_literal": "Aplica este protocolo a la segunda semana y fija los criterios de selección antes de comparar modelos. Quiero que las advertencias tengan consecuencias y que no volvamos a descartar una alternativa sin una mejora clara.",
+  "scope": "emerging_part2",
+  "reference_id": "W2-B00",
+  "metric": {
+    "name": "D2_Tweedie",
+    "power": 1.5,
+    "direction": "higher_is_better",
+    "primary": "2024_temporal_full_unweighted_observed_T0",
+    "observation_link": "fixed scoped link fitted on 2023 only, identical for all compared pricing models; predict observed T0 for evaluation, nominal exposure for ultimate test prediction",
+    "delta_min": 0.0005,
+    "delta_rule": "primary lower simultaneous confidence bound must be strictly greater than delta_min",
+    "rationale": "Project risk tolerance chosen before candidate scores: 0.05% of full null deviance, equivalent to 50 units of a five-decimal score. Not a Kaggle requirement, fitted optimum or estimated power."
+  },
+  "confirmation": {
+    "max_challengers": 3,
+    "max_models": 4,
+    "batches": 1,
+    "max_pairwise_contrasts": 6,
+    "two_sided_family_alpha": 0.05,
+    "bonferroni_family_size_fixed": 6,
+    "two_sided_interval_coverage": 0.9916666666666667,
+    "bootstrap_lower_quantile": 0.004166666666666667,
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 2026102301,
+    "bootstrap_method": "ordinary_paired_cluster_customer_address_components",
+    "same_draws_across_pairs": true,
+    "denominator": "full untrimmed null deviance recomputed within each resampled portfolio; common rows, weights and targets per pair",
+    "priority": "reference first, then challenger priorities 1..n fixed before opening 2024; promote sequentially only after a clear pairwise gain over current incumbent",
+    "coverage_limit": "Bonferroni allocation with approximate conditional bootstrap intervals; no exact coverage guarantee, selection-before-freeze correction or independent future-year validation"
+  },
+  "safeguards": {
+    "cold_start_nominal_delta_min": 0.0,
+    "cold_start_lower95_min": -0.001,
+    "scenario_temporal_delta_min": 0.0,
+    "scenarios": ["reserve075", "reserve125", "late_cost05", "late_cost10"],
+    "scenario_definition": "fixed reserve factors .75/1.25 on case reserve only, and 5%/10% unobserved cost-tail designs for bodily_injury/subsidence; common scenario and 2023-fitted observation link for both models, no validation-target fitting",
+    "segment_delta_min": -0.001,
+    "segments": ["motor", "buildings", "contents", "new_customer", "renewal"],
+    "influence_remove_groups": "min(n_groups-1, max(5, ceil(0.001*n_groups)))",
+    "influence_temporal_delta_min_after_removal": 0.0,
+    "unexplained_absolute_level_change_max": 0.05,
+    "lines": ["motor", "buildings", "contents"],
+    "interpretation": "Cold-start lower95 is a diagnostic non-inferiority safeguard, not an additional familywise confidence claim. Segment and stress limits are predeclared pointwise risk vetos, not tests that every segment must improve significantly."
+  },
+  "hard_checks": [
+    "exact_schema_and_rows",
+    "positive_finite_predictions",
+    "admissible_features",
+    "no_target_or_temporal_leakage",
+    "objective_and_observation_link_registered",
+    "fit_scopes_exclude_2024_labels",
+    "lineage_and_reproduction_verified",
+    "level_anchor_explicit",
+    "frozen_artifacts_unchanged"
+  ],
+  "comparison_checks": [
+    "same_rows_targets_and_weights",
+    "metrics_from_frozen_predictions",
+    "same_bootstrap_draws_across_pairs",
+    "scenarios_and_cold_start_complete",
+    "no_test_labels",
+    "all_plausible_alternatives_listed"
+  ],
+  "common_artifact_roles": ["target", "partitions", "features", "observation_link", "scorer"],
+  "model_artifact_roles": ["recipe", "temporal_predictions", "cold_start_predictions", "technical_receipt"],
+  "warning_policy": {
+    "block": "Only resolved with hashed evidence can pass; acknowledgement or accepted limitation does not clear a blocker.",
+    "condition": "Condition must be true and supported by hashed evidence; unresolved or unknown condition blocks promotion.",
+    "inform": "Retained in act; does not create approval or remove other gates.",
+    "unknown_or_missing_classification": "block_promotion"
+  },
+  "on_failure": "keep_current_incumbent_and_preserve_alternative; no inferred equivalence",
+  "retirement": "Only the incumbent actually replaced by a passing comparison is marked superseded; every other technically viable model remains preserved as an alternative.",
+  "public_score": "Not an input to promotion, tie-breaking or retirement. Public-driven hypotheses remain exploratory without confirmation outside that same feedback.",
+  "changes_after_opening": "No new batch, model, seed, margin or recipe under v1. A later explicit human amendment is versioned, preserves v1 and its failed results, and cannot restore an intact 2024 holdout.",
+  "base_manifest": {
+    "target": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3/target_T0_and_stresses.parquet",
+      "sha256": "114dd8ae8048a04530855c7be8f8e718ebd9fe969f491c4513fc1fadbd0bcca6"
+    },
+    "partitions": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3/partitions.parquet",
+      "sha256": "a6aca273c7657feb5bddf4fa602658f731decfab5c6eb6528fcd626f12be408b"
+    }
+  },
+  "training_or_submission_authorized_by_this_policy": false
+}

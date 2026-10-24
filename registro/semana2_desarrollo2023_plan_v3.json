@@ -1,0 +1,119 @@
+{
+  "id": "S2-DEV2023-v3-20261023",
+  "author": "Codex",
+  "registered_utc": "2026-10-23T18:13:02.490472+00:00",
+  "authorization_literal": "Dale, revisa el nivel agregado y la influencia de pocos grupos en B03 y B05. Registra la siguiente prueba solo en 2023, conserva B00, deja los resultados en el foro y mantén 2024 cerrado.",
+  "parent_run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev2_20261023T180127Z_46d18106",
+  "reference_model_run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev_20261023T173828Z_7efe46fc",
+  "parent_manifest_sha256": "78d9cae9dcace676fc149b9e4f7533c5ce7d76fa116291aed490b4030e5d9c91",
+  "parent_oof_sha256": "4d283c1d3d26b84f791df1d64bb034c2f351d97a4357452daf6715a2ba079fb3",
+  "diagnostic_review": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/revision_nivel_20261023T181136Z_82668c37/report.json",
+  "diagnostic_sha256": "f2641fd00fd15303f23269af06d7043728d3734b47807c84c85b39d6cf7a9dc0",
+  "selection_policy": "Hackaton/Repositorio_IAA2026/registro/semana2_politica_seleccion_v1.json",
+  "selection_policy_sha256": "8de4043120b600813c44870d015569bac53c0ddb1d289970c071d1f152281139",
+  "objective": {
+    "response": "T0 / effective_cost_exposure_C0",
+    "sample_weight": "sqrt(effective_cost_exposure_C0)",
+    "power": 1.5,
+    "prediction_observed": "effective_cost_exposure_C0 * fitted_annual_rate",
+    "calibration": "Explicit B00 training-level anchor and fixed contraction, exactly as level_rule; no held-out or public calibration",
+    "primary_development_metric": "Pooled unweighted total-unit D2 Tweedie 1.5 on all 50094 OOF rows of 2023; global null is arithmetic mean of observed T0; do not average line D2 scores",
+    "positivity": "Fail on nonfinite or nonpositive rate/prediction; no silent clipping or removal"
+  },
+  "observation_link": "Each development fold k uses frozen exclude_foldk/e_cost_mix_1.0, fitted only on other 2023 groups; all three model families use exactly the same link and T0 response.",
+  "features": "Exact availability_contract.blocks[line].all whitelist, no annual weather or optional profiles; metadata excluded. Numeric and categorical training transforms are fitted inside the training rows only.",
+  "models": [
+    {
+      "id": "W2-B06",
+      "parent_model": "W2-B03",
+      "shape_weight": 1.0
+    },
+    {
+      "id": "W2-B07",
+      "parent_model": "W2-B05",
+      "shape_weight": 1.0
+    },
+    {
+      "id": "W2-B08",
+      "parent_model": "W2-B03",
+      "shape_weight": 0.5
+    },
+    {
+      "id": "W2-B09",
+      "parent_model": "W2-B05",
+      "shape_weight": 0.5
+    }
+  ],
+  "comparators_reused_without_refit": [
+    "W2-B00",
+    "W2-B01",
+    "W2-B02",
+    "W2-B03",
+    "W2-B04",
+    "W2-B05"
+  ],
+  "level_rule": {
+    "scope": "For each parent, line and outer fold, use exactly the saved outer-training rows and corresponding frozen C0 exposure. No held-out labels/features/distribution for fitting the factor.",
+    "factor": "s = sum_fit(e * c0) / sum_fit(e * r_parent); c0 is the saved B00 annual constant for the same fold/line",
+    "prediction": "r_new = (1-w)*c0 + w*s*r_parent; observed prediction = e*C0_adjusted_rate, w in {1,0.5} fixed above",
+    "anchor": "B00 fitted-model level, not observed sum(Y), not OOF totals and not a private/public score",
+    "shared_factors": "Two parents * three lines * five folds = 30 positive factors, each shared between weights 1 and .5",
+    "moment": "For every outer-training fold/line, sum(e*r_new)=sum(e*c0). This is a training moment only; no held-out equality or A/E=1 guarantee.",
+    "limits": [
+      "Uses fitted in-sample risk predictions for normalization; not independent or inner-OOF calibration",
+      "B00 anchor itself depends on training claims and may be influenced by severe events",
+      "Positive scaling and fixed mixing preserve within-fold/line annual-rate ordering; this does not prove sound risk shape or ultimate level"
+    ]
+  },
+  "diagnostics": {
+    "groups": [
+      "line",
+      "fold",
+      "new_business",
+      "renewal"
+    ],
+    "measures": [
+      "total-unit deviance and pooled D2",
+      "A/E and predicted/observed totals",
+      "fold dispersion",
+      "unseen categories",
+      "rare/extreme losses and group influence",
+      "fit convergence and serialized-model replay"
+    ],
+    "development_uncertainty": {
+      "replicates": 2000,
+      "seed": 2026102302,
+      "unit": "paired customer-address component",
+      "interval": "95% percentile, conditional exploratory diagnostic; NOT the 2024 Bonferroni confirmation interval",
+      "pairs": "All 45 pairs of ten recipes; common 2000 exploratory component draws, no multiplicity or search correction"
+    },
+    "observation_sensitivity": "At fixed fitted OOF rates, recompute predictions and response for reserve075, reserve125, late_cost05, late_cost10 using saved scoped links. This is an observation-only diagnostic, not a refit or the complete confirmation safeguards.",
+    "no_selection": "Keep B00 and every alternative; no promotion, retirement, equivalence or final confirmation roster here."
+  },
+  "readout_before_testing": {
+    "level": "First check exact fit moment and unchanged comparators; then report whether held-out totals move closer to B00 and observed A/E, by line/fold and business. No forcing held-out totals.",
+    "influence": "Recompute each new-vs-B00 top31 removal and bootstrap. Also remove the frozen top31 favorable groups from its parent review, using the identical set across parent/anchored/shrunk variants. No removal in fit, primary score or level factor.",
+    "contraction": "With w=.5, annual-rate deviation from B00 is exactly half that of the anchored parent in each fit scope. Check whether evaluation influence is reduced; no guarantee of half deviance contribution.",
+    "uncertainty": "All point/interval/scenario/segment results remain exploratory after adaptive 2023 search. Retain B00 regardless of this batch readout."
+  },
+  "technical_acceptance": [
+    "Only 2023 materialized and supplied to fit-factor/predict/score",
+    "Exact parent-model, target, fold, C0 and F0 hashes",
+    "Factor rejects held-out training rows, invalid exposure/rates, or another year",
+    "30 training-only factors and 60 adapter bundles; zero new GLM/tree fits",
+    "Exact training aggregate anchor and fixed w=.5 contraction",
+    "No held-out outcomes used for scales or weights",
+    "Scales/models/OOF replay with base fit functions blocked; independent scale and metric reconstruction",
+    "All six previous OOF tables including B00 unchanged",
+    "No 2024/test prices, scores, ledger opening or final confirmation roster"
+  ],
+  "scope": "Local only, same 2023 five customer-address folds; no row trimming, cap, extra weights, seeds, optimization of mixing, new features, prices or test predictions.",
+  "resources": "CPU, two threads; reuse 60 parent/reference bundles to learn 30 scalar factors, save 60 new adapters, reuse six OOF comparators. Expected minutes, no base-estimator retraining or remote compute.",
+  "search_disclosure": "Motivated by all earlier 2023 results; four recipes fixed before their factors/predictions. No tuning on this batch; intervals do not correct adaptive search or 45 pairwise comparisons.",
+  "code": "Hackaton/Repositorio_IAA2026/src/semana2/entrenar_desarrollo2023_v3.py",
+  "forum_preregistration": "COD-S2-20261023-012",
+  "reference_retained": "W2-B00",
+  "confirmation_2024_open": false,
+  "promotion": false,
+  "final_confirmation_roster_frozen": false
+}

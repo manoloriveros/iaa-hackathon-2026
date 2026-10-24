@@ -1,0 +1,59 @@
+{
+  "id": "S2-F0-ULT-20261023",
+  "author": "Codex",
+  "authorization_literal": "Dale, sigue con las variables admisibles y el paso de incurrido a último. Revisa el clima de 2025, los reportes tardíos y las reservas, deja las decisiones en el foro y dime cuándo estamos listos para entrenar.",
+  "status": "preregistered_before_reporting_estimation_and_feature_materialization",
+  "base_index": "Hackaton/Repositorio_IAA2026/registro/semana2_preparacion_actual.json",
+  "diagnostic": "Hackaton/Repositorio_IAA2026/privado/semana2/ultimo/diagnostico_20261023T165916Z_2eca187b/diagnostic.json",
+  "pricing_training_authorized_in_this_step": false,
+  "features": {
+    "default": "contractual period and physical address attributes under explicit stable-master assumption, plus policy tenure; no target-learned encoding or imputation",
+    "excluded": [
+      "all identifiers as predictors",
+      "claim outcomes, target, fold, group, audit columns",
+      "customer_service_contacts",
+      "renewal_decision",
+      "written_premium",
+      "discount_applied",
+      "contemporaneous annual weather including 2025"
+    ],
+    "conditional_profile": "undated customer attributes, missed payments and gender kept outside default matrix",
+    "weather_variant": "last complete calendar year before inferred quote_date = period_start - days_quote_to_inception; no fallback to current/future year; no 2025 weather cells used",
+    "capital_screen": {
+      "buildings": 10000000,
+      "contents": 1000000,
+      "action": "derived log capital missing above screen; no divide by 1000; source retained; uncertainty flag excluded from predictors",
+      "evidence": "separate clusters: buildings <=894000 vs >=60000000; contents <=283200 vs >=7600000; screening is a quality assumption, not an official cover cap"
+    }
+  },
+  "reporting": {
+    "estimator": "reverse product-limit for right-truncated delays, separately by line/peril",
+    "risk_set": "M(d)=count(D_i<=d<=R_i), R_i=2024-12-31-loss_date",
+    "cdf": "F(d_j)=product over d_k>d_j of (1-n_k/M_k); conditional observed-support model",
+    "cost_mark_adjustment": "mass_j times mean observed net incurred at delay_j, normalized; accounts observed delay-cost association under stationarity and independent truncation; not observed ultimate",
+    "scopes": [
+      "all_2023 temporal",
+      "2023 excluding group fold k, k=0..4; reused for development and cold-start",
+      "production all_2023_2024"
+    ],
+    "forbidden": "no validation claim IDs, amounts or test labels in scope fitting",
+    "small_samples": "report counts/influence; fail if a peril has fewer than five observations, no leakage fallback",
+    "tail": "base assumes no additional delay/cost mass beyond fitted support; unidentified tail disclosed; design sensitivity adds 5% or 10% unobserved cost mass to long-tail perils bodily_injury/subsidence",
+    "development": "case reserve already included in T0; base b=1 is a conditional adequacy assumption; stress b=.75/1.25 modifies only reserve before cost-mark curves",
+    "offsets": "days-weighted mean of fitted reporting CDF over period times nominal exposure; cost mixture uses fit-only truncation-adjusted peril cost shares; 2025 prediction uses nominal exposure once, with no additional IBNR multiplier",
+    "evaluation": "2024 scored against observed T0 through matching observation link, plus reserve/tail sensitivity; no ultimate validation claim"
+  },
+  "acceptance": [
+    "Original/base/fold hashes unchanged",
+    "Every raw field assigned availability role",
+    "Default feature set exact and free of outcome/ID/operational/circular/weather columns",
+    "2025 weather poisoning leaves default and past-weather features unchanged",
+    "CDFs monotone in [0,1], event mass sums to 1, same tied delay handling; no division by zero",
+    "Reporting fitted IDs subset scope training, disjoint validation by saved split",
+    "Cost marks recomputed under reserve stresses, no double reserve or IBNR",
+    "Offsets finite, nonnegative and <=nominal; mixture positive for observed periods; test offsets nominal",
+    "Raw T0 and case reserves preserved; no fabricated ultimate truth",
+    "Reproducible pure tests and consumer verification"
+  ],
+  "readiness": "first pricing baselines only after default matrices and scoped observation link pass checks; ultimate interpretation remains conditional on stated case/tail/stationarity assumptions; no pricing model trained here"
+}

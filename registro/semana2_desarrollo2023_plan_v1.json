@@ -1,0 +1,61 @@
+{
+  "id": "S2-DEV2023-v1-20261023",
+  "author": "Codex",
+  "authorization_literal": "Dale, empieza con la referencia y los primeros modelos en 2023, deja los resultados en el foro y mantén 2024 cerrado hasta corregir el selector y congelar las recetas.",
+  "scope": "Local development only; 2023 five persisted customer-address folds; no 2024 pricing fit, prediction or score; no test predictions or submissions",
+  "hypothesis": "Admissible F0 risk factors may improve group-held-out 2023 observed-T0 prediction relative to a constant line rate under exactly the same scoped C0 observation link. Additive and limited interaction models are compared without tuning this first batch.",
+  "readiness_index": "Hackaton/Repositorio_IAA2026/registro/semana2_listo_entrenar.json",
+  "selection_policy": "Hackaton/Repositorio_IAA2026/registro/semana2_politica_seleccion_v1.json",
+  "selection_policy_sha256": "8de4043120b600813c44870d015569bac53c0ddb1d289970c071d1f152281139",
+  "base_target_sha256": "114dd8ae8048a04530855c7be8f8e718ebd9fe969f491c4513fc1fadbd0bcca6",
+  "partitions_sha256": "a6aca273c7657feb5bddf4fa602658f731decfab5c6eb6528fcd626f12be408b",
+  "observation_link": "Each development fold k uses frozen exclude_foldk/e_cost_mix_1.0, fitted only on other 2023 groups; all three model families use exactly the same link and T0 response.",
+  "features": "Exact availability_contract.blocks[line].all whitelist, no annual weather or optional profiles; metadata excluded. Numeric and categorical training transforms are fitted inside the training rows only.",
+  "objective": {
+    "response": "T0 / effective_cost_exposure_C0",
+    "sample_weight": "sqrt(effective_cost_exposure_C0)",
+    "power": 1.5,
+    "prediction_observed": "effective_cost_exposure_C0 * fitted_annual_rate",
+    "calibration": "none; no OOF level rescaling or post-hoc blend",
+    "primary_development_metric": "Pooled unweighted total-unit D2 Tweedie 1.5 on all 50094 OOF rows of 2023; global null is arithmetic mean of observed T0; do not average line D2 scores",
+    "positivity": "Fail on nonfinite or nonpositive rate/prediction; no silent clipping or removal"
+  },
+  "models": [
+    {
+      "id": "W2-B00",
+      "family": "constant_line_rate",
+      "recipe": "Per fold and line, r=sum(Y/sqrt(e))/sum(sqrt(e)), the positive constant minimizer for the declared total-unit Tweedie loss; actuarial sum(Y)/sum(e) retained only as diagnostic."
+    },
+    {
+      "id": "W2-B01",
+      "family": "TweedieRegressor",
+      "params": {"power": 1.5, "alpha": 1.0, "fit_intercept": true, "link": "log", "solver": "lbfgs", "max_iter": 2000, "tol": 0.000001, "warm_start": false},
+      "numeric_transform": "SimpleImputer(strategy=median,keep_empty_features=True), StandardScaler; fitted inside training fold only",
+      "categorical_transform": "OneHotEncoder(handle_unknown=ignore,min_frequency=50,max_categories=40,sparse_output=True), fitted inside training fold only; unknown-level counts recorded",
+      "penalty": "alpha fixed in the solver's normalized weighted objective; no alpha search"
+    },
+    {
+      "id": "W2-B02",
+      "family": "LGBMRegressor",
+      "params": {"objective": "tweedie", "tweedie_variance_power": 1.5, "n_estimators": 300, "learning_rate": 0.03, "num_leaves": 15, "max_depth": 4, "min_child_samples": 200, "reg_lambda": 10.0, "reg_alpha": 0.0, "subsample": 1.0, "subsample_freq": 0, "colsample_bytree": 1.0, "max_bin": 127, "cat_smooth": 20.0, "min_data_per_group": 50, "deterministic": true, "force_col_wise": true, "random_state": 2026102302, "n_jobs": 2, "verbosity": -1},
+      "numeric_transform": "Native missing values; no learned scaling",
+      "categorical_transform": "Native categoricals with categories learned only from training fold; unseen levels become missing and are counted",
+      "stopping": "Fixed 300 rounds, no validation set or early stopping; no parameter search"
+    }
+  ],
+  "diagnostics": {
+    "groups": ["line", "fold", "new_business", "renewal"],
+    "measures": ["total-unit deviance and pooled D2", "A/E and predicted/observed totals", "fold dispersion", "unseen categories", "rare/extreme losses and group influence", "fit convergence and serialized-model replay"],
+    "development_uncertainty": {"replicates": 2000, "seed": 2026102302, "unit": "paired customer-address component", "interval": "95% percentile, conditional exploratory diagnostic; NOT the 2024 Bonferroni confirmation interval", "pairs": "All three pairs, shared draws; null deviance recomputed within each draw"},
+    "observation_sensitivity": "At fixed fitted OOF rates, recompute predictions and response for reserve075, reserve125, late_cost05, late_cost10 using saved scoped links. This is an observation-only diagnostic, not a refit or the complete confirmation safeguards.",
+    "no_selection": "Retain all three recipes and artifacts. A better 2023 point score or interval does not promote, retire or freeze a final 2024 roster. No blend, feature tuning or additional seed in this batch."
+  },
+  "technical_acceptance": ["Exactly one OOF record for each 2023 row/model", "No other year materialized for fitting/prediction/scoring", "Training groups/customers/addresses disjoint from held-out fold", "All encoders/scalers/medians/category lists fit only training rows", "Finite strictly positive rates and totals", "GLM convergence checked; failures retained and no candidate declared valid when unresolved", "Scorer cross-checked against separate formula", "Saved-model replay without fitting matches OOF", "Originals/T0/folds/features/link hashes preserved", "2024 ledger remains unopened and selector finding remains open"],
+  "artifacts": ["source and recipe snapshots", "2023-only joined inputs and fold fit/validation row lists", "models and preprocessors", "OOF annual rates, totals and unit loss", "metrics, pairwise diagnostics, scenario diagnostics", "warnings, full stdout log, environment and artifact hashes", "separate verification and forum result"],
+  "resources": "Local CPU, two numerical threads; 45 fold-line-family fits including 15 closed-form constants. Expected minutes, no remote job or hard participant time cap.",
+  "code": "Hackaton/Repositorio_IAA2026/src/semana2/entrenar_desarrollo2023.py",
+  "forum_preregistration": "COD-S2-20261023-008",
+  "promotion_authorized_by_this_plan": false,
+  "confirmation_2024_open": false,
+  "selector_finding": "S2-AUD-METRIC-BINDING remains open; no selector modification in this training batch"
+}

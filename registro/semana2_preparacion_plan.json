@@ -1,0 +1,93 @@
+{
+  "id": "S2-BASE-20261023",
+  "author": "Codex",
+  "status": "preregistered_before_materialization_and_training",
+  "authorization_literal": "Dale, empieza por conciliar la exposición y revisar los 36 siniestros sin periodo. Prepara el objetivo y las particiones de validación, y deja las decisiones en el foro antes de entrenar.",
+  "input_manifest_workspace_relative": "Hackaton/Semana 2/Codex/fuentes/download_manifest.json",
+  "diagnostic_workspace_relative": "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/diagnostico_20261023T163608Z_cd285aad/diagnostico.json",
+  "market": "emerging",
+  "lines": [
+    "motor",
+    "buildings",
+    "contents"
+  ],
+  "valuation_date": "2024-12-31",
+  "exposure": {
+    "id": "S2-EXP01",
+    "basis": "inclusive actual covered days / 365, rounded to 4 decimals",
+    "derived_column": "exposure",
+    "raw_column": "exposure_original",
+    "dates_modified": false,
+    "expected_train_changes": 609,
+    "expected_days_unit": 114,
+    "expected_basis360": 495,
+    "expected_test_changes": 0,
+    "other_changes_allowed": 0
+  },
+  "claims": {
+    "id": "S2-PRE01",
+    "assignment_keys": [
+      "market",
+      "line",
+      "policy_id"
+    ],
+    "period_rule": "period_start <= loss_date <= period_end",
+    "precoverage_rule": "loss_date < minimum available period_start for same market,line,policy_id",
+    "expected_precoverage": 36,
+    "expected_other_unassigned": 0,
+    "declined_status": "repudiated",
+    "duplicates_allowed": 0,
+    "ambiguous_allowed": 0,
+    "unmatched_handling": "retain all in audit; precoverage excluded from current-period target, not forcibly reassigned"
+  },
+  "target": {
+    "id": "S2-T0",
+    "meaning": "observed net incurred for accepted uniquely assigned claims as at 2024-12-31, not observed ultimate",
+    "formula": "sum(incurred_to_date - recoveries)",
+    "money_calculation": "integer cents; no repeat deduction of policy excess",
+    "components": [
+      "paid",
+      "incurred",
+      "recoveries",
+      "reserve",
+      "n_accepted",
+      "n_positive",
+      "n_open"
+    ],
+    "reserve_stresses": {
+      "factors": [
+        0.75,
+        1.25
+      ],
+      "type": "design sensitivity only, not fitted reserve development"
+    },
+    "test_targets": "null, never zero labels",
+    "ultimate_adjustment": "not estimated in this preparation; reporting and reserve uncertainty remain explicit"
+  },
+  "validation": {
+    "id": "S2-V01",
+    "seed": "IAA2026-S2-GROUPS-v1",
+    "folds": 5,
+    "group_definition": "connected components of customer-address edges from emerging training periods 2023-2024, shared across all lines; no targets and no test-2025 edges",
+    "group_id": "SHA256 of lexicographic smallest namespaced node in component",
+    "fold_assignment": "SHA256(seed + | + group_id), first 8 bytes big-endian mod 5",
+    "development": "5 group folds within 2023; calibration uses cross-fitted development predictions only",
+    "temporal": "fit 2023, evaluate 2024 once candidate choices frozen; repeated entities allowed and tagged as realistic renewals",
+    "cold_start": "for k=0..4 fit 2023 groups with fold != k; evaluate 2024 groups with fold == k, no shared customer/address",
+    "production": "all labeled 2023-2024 after final choice; 2025 remains unlabelled",
+    "selection_note": "2024 labels inspected for data reconciliation; no model or score consulted; not a fully prospective historical backtest because valuation is shared"
+  },
+  "acceptance": [
+    "Input SHA256 unchanged before and after",
+    "Every exposure equals calendar rule; only declared 609 changes",
+    "Every raw claim accounted once; no ambiguity; all 36 excluded claims before first available coverage",
+    "Integer-cent reconciliation accepted = assigned + precoverage for every monetary component",
+    "Row-complete target: one per training row; no target in test",
+    "Group membership independent of target; no entity overlap in inner and cold folds",
+    "All folds contain rows and positive target cases for each line; report balance without reseeding on labels",
+    "No estimator fitting, calibration, model inference, submissions or remote jobs"
+  ],
+  "source_code_location": "Hackaton/Repositorio_IAA2026/src/semana2/",
+  "restricted_outputs": "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/",
+  "week1_recipe_changes": false
+}

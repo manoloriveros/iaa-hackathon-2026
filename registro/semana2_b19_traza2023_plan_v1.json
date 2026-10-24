@@ -1,0 +1,117 @@
+{
+  "id": "S2-B19-TRAZA2023-v1-20261024",
+  "author": "Codex",
+  "registered_utc": "2026-10-24T02:10:09.115492+00:00",
+  "path_base": "workspace_root",
+  "hypothesis": "The influential B19 components may reflect valid paid losses, open reserves or reporting delays; verify source lineage before proposing another model. No financial adjustment is assumed.",
+  "selection": "Union of top5 strictly adverse OOF groups in buildings and motor_new from saved contribution tables, plus top1 absolute local coverage influence in each of10 saved motor/building fits. Stable tie break group_id. At most20 groups. Keep full2023 component acrosslines, accepted and declined original records; no data deletion or new ranking of models.",
+  "criteria": "Exact original-versus-saved claim fields and cents, unique loss-date interval within2023, saved group/fold, admitted/repudiated inclusion and per-period T0/reserve identities. Flag closed reserves, late reports>365days, recoveries>paid or missing source; do not repair silently or certify adequacy.",
+  "cash_identity": "Reserve=incurred-paid; T0=incurred-recoveries=(paid-recoveries)+reserve, no second subtraction of excess. Money in integer cents. Quarter-cent units for reserve075/125 design calculations, no model scoring or new adopted targets.",
+  "time_scope": "Policy/loss year2023 only. Original claims query by selected policy_ids and loss_date in2023; original policy metadata by selected IDs and period_start/end2023. Report dates through fixed valuation2024-12-31 allowed for those2023 losses, not2024 pricing. No other-year prices, test, SEL01 or ledger.",
+  "verification": "Independent Decimal cents and Python datetime/dictionary assignment, savedfold/cash conservation, selection reconstructed by a separate loop, expected invalid cache year/identity/date adversaries and one actual CLI tampered-cents source that fails closed. No repeated prior GLM suites/bootstrap.",
+  "resources": "One local finite unit up to45min, no fitting/model import/predictions/scores/bootstrap, no remote/submission/delegation/other automation changes.",
+  "code": "Hackaton/Repositorio_IAA2026/src/semana2/trazar_siniestros_b19_2023.py",
+  "claims_2023": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mezcla_20261024T004833Z_e8ff18e0/inputs_2023/claims_2023.parquet",
+  "raw_claims": "Hackaton/Semana 2/Datos/emerging/claims.parquet",
+  "contributions": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/estabilidad_b19_20261024T014815Z_9b2b1803/oof_group_contributions.parquet",
+  "influence": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/estabilidad_b19_20261024T014815Z_9b2b1803/training_group_local_influence.parquet",
+  "saved_periods": [
+    "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/inputs_2023/motor.parquet",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/inputs_2023/buildings.parquet",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/inputs_2023/contents.parquet"
+  ],
+  "raw_policies": {
+    "motor": "Hackaton/Semana 2/Datos/emerging/policies_motor.parquet",
+    "buildings": "Hackaton/Semana 2/Datos/emerging/policies_buildings.parquet",
+    "contents": "Hackaton/Semana 2/Datos/emerging/policies_contents.parquet"
+  },
+  "valuation_date": "2024-12-31",
+  "reference": "W2-B00",
+  "all_alternatives_preserved": true,
+  "new_fits": 0,
+  "new_scores": 0,
+  "new_bootstrap": 0,
+  "forum_prior": "COD-S2-20261024-038",
+  "forum_result": "COD-S2-20261024-039",
+  "continuity_registration_mode": "current_unit",
+  "completed_units_at_start": 11,
+  "concurrent_unit_at_start": null,
+  "prior_external2024_subject_exposure_disclosed": true,
+  "complete_blindness_claim_allowed": false,
+  "ledger_read": false,
+  "professional_independent_validation": false,
+  "frozen_sources": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b19_estabilidad_actual.json",
+      "sha256": "61cf279490a40b329a8c9c20c65b2e878ade81ce9617ad729ca6d061b6f4b2cb"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/estabilidad_b19_20261024T014815Z_9b2b1803/report.json",
+      "sha256": "57eab13509b7df9506a2d3144ed15eec4f4117bba7759f48c742a32c9c2f1eaf"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/estabilidad_b19_20261024T014815Z_9b2b1803/verification.json",
+      "sha256": "f120f015324e561b3c4c3f6d082ff196904f9815f076a466f9f0ce98047d53c2"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/estabilidad_b19_20261024T014815Z_9b2b1803/oof_group_contributions.parquet",
+      "sha256": "41955fee4d825f1686865604a7ec7de4f2e2ab9414f65a697807048affb30307"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/estabilidad_b19_20261024T014815Z_9b2b1803/training_group_local_influence.parquet",
+      "sha256": "ccee0e5cf7e76189caa65b7201ee26e143ab4231e62efcc0828467093f373c26"
+    },
+    {
+      "path": "Hackaton/Semana 2/Datos/emerging/claims.parquet",
+      "sha256": "1a2fce8a26cb1e05de1f53fe4e39bde772a1898e845755487625355fec4cc0e9"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mezcla_20261024T004833Z_e8ff18e0/inputs_2023/claims_2023.parquet",
+      "sha256": "918509815bb935af58b13b0b5308dbde23562b701c354a0d468d1e2d18ee1009"
+    },
+    {
+      "path": "Hackaton/Semana 2/Codex/fuentes_variables_ultimo/data_description_response.json",
+      "sha256": "59e2f64112515cfcdbc5691d3f22929c150b2fdc8aa301c1917f1a2b68892001"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/preparar_base.py",
+      "sha256": "aaa0be38f70386e85351b6c4670151cffb95e6b76e65b17cd24c8860ba228d35"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/trazar_siniestros_b19_2023.py",
+      "sha256": "f957f7488a2f139537432ded2cb0c9e136e7cbe483efa091032495358d620894"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/inputs_2023/motor.parquet",
+      "sha256": "44937a7cbedee882e31892d165cc4528310fa188727932ac6821e8190de07003"
+    },
+    {
+      "path": "Hackaton/Semana 2/Datos/emerging/policies_motor.parquet",
+      "sha256": "7c5dbb5e5b46629ebf01a66c991183d20b8585393b589bc2644fcbd6653a3ec1"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/inputs_2023/buildings.parquet",
+      "sha256": "b7b4202cc3e305c2a304d8e7a6aa54ae4548853a0807d45da623c497f9c6f6fd"
+    },
+    {
+      "path": "Hackaton/Semana 2/Datos/emerging/policies_buildings.parquet",
+      "sha256": "ccc948fafc11e623d5cb010c2b494f6813f6048719eae7bcde28794467598319"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/inputs_2023/contents.parquet",
+      "sha256": "5ebb2bfe03ef15066fa382938bbbfbb93a335d187c8ae8a1880e26997930dbc0"
+    },
+    {
+      "path": "Hackaton/Semana 2/Datos/emerging/policies_contents.parquet",
+      "sha256": "84d7f48d03933b018bec8fdc2f4bbd96df184cca7ae1971c38d3acc955720f8e"
+    },
+    {
+      "path": "Hackaton/Semana 2/Codex/catalogo_antes_traza_b19.json",
+      "sha256": "27a605b6a575ef5ea588f252c814669ccff2de3d79d061f201767acecf5c3d51"
+    },
+    {
+      "path": "Hackaton/Semana 2/Codex/contadores_antes_traza_b19.json",
+      "sha256": "716b1f947cdce852b08588bca3a39530f533694a15ff24c81f7d703892c130b4"
+    }
+  ]
+}

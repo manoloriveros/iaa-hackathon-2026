@@ -1,0 +1,96 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-23T18:16:00.985726+00:00",
+  "source_sha256": "90ab0644109f941298fdfe57609e38b487ce7e8246bc2314e5a4a417f629bcb1",
+  "checks": [
+    {
+      "name": "Known scale 8/9",
+      "pass": true
+    },
+    {
+      "name": "Training total anchored",
+      "pass": true
+    },
+    {
+      "name": "Contraction keeps training total",
+      "pass": true
+    },
+    {
+      "name": "Contraction halves deviations",
+      "pass": true
+    },
+    {
+      "name": "Annual-rate ordering retained",
+      "pass": true
+    },
+    {
+      "name": "Zero exposure rejected",
+      "pass": true
+    },
+    {
+      "name": "Nonpositive rate rejected",
+      "pass": true
+    },
+    {
+      "name": "Nonfinite rate rejected",
+      "pass": true
+    },
+    {
+      "name": "Mismatched rows rejected",
+      "pass": true
+    },
+    {
+      "name": "Training factor from predictions only",
+      "pass": true
+    },
+    {
+      "name": "Response poisoning leaves factor unchanged",
+      "pass": true
+    },
+    {
+      "name": "No outcome column required",
+      "pass": true
+    },
+    {
+      "name": "Held-out row rejected before factor",
+      "pass": true
+    },
+    {
+      "name": "2024 factor rejected",
+      "pass": true
+    },
+    {
+      "name": "Invalid reference rejected",
+      "pass": true
+    },
+    {
+      "name": "Synthetic adapter known rate",
+      "pass": true
+    },
+    {
+      "name": "2024 adapter prediction rejected",
+      "pass": true
+    },
+    {
+      "name": "Test adapter prediction rejected",
+      "pass": true
+    },
+    {
+      "name": "Undeclared mixing weight rejected",
+      "pass": true
+    },
+    {
+      "name": "Adapter serialization exact",
+      "pass": true
+    },
+    {
+      "name": "Base fit spy rejects attempted fit",
+      "pass": true
+    }
+  ],
+  "passed": 21,
+  "failed": 0,
+  "actual_base_estimator_fits": 0,
+  "synthetic_base_fit_attempts_blocked": 1,
+  "real_data_calibrations_or_scores": 0
+}

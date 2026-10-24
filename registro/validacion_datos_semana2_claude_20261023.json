@@ -1,0 +1,194 @@
+{
+ "id": "S2-VALDAT-CLAUDE-20261023",
+ "tipo": "validacion_de_datos",
+ "registrado_por": "Claude (Cowork), sesión del Proyecto IAA",
+ "canal": "Conversación del participante con Claude (Cowork), 23 de octubre de 2026",
+ "mensaje_literal": "continua con las validaciones de datos de forma exhaustiva, no quiero que pasemos nada por alto",
+ "path_base": "workspace_root",
+ "alcance": "Trece Parquet emergentes, siete del desarrollado y las capas de Codex de la semana 2 (corrida base b3e6c2a3, F0 82038766, OOF dev3 24c943a3) y las tablas de las decisiones del participante; revisión de IA sobre copias con huella comprobada, sin entrenamiento, sin abrir 2024, sin envíos ni contacto externo; no modifica datos ni archivos de Codex",
+ "catalogo": {
+  "controles": 74,
+  "numeracion": "VE01–VE75, VE71 sin usar",
+  "por_resultado": {
+   "pasa": 41,
+   "informativo": 16,
+   "hallazgo": 12,
+   "limite": 5
+  },
+  "severidades_de_hallazgos": {
+   "P0": 2,
+   "P1": 3,
+   "P2": 7
+  },
+  "mapa_semana_1": "columna vd_semana1 (VD01–VD58)",
+  "corrida_utc": "2026-10-24T00:13:53+00:00",
+  "segundos": 117
+ },
+ "hallazgos": [
+  {
+   "id": "VE05",
+   "severidad": "P2",
+   "titulo": "Columnas de texto con espacios, cadenas vacías o variantes de mayúsculas"
+  },
+  {
+   "id": "VE16",
+   "severidad": "P0",
+   "titulo": "Convención de exposición por fila: días/365 (normal), días/360 y número de días; ninguna sin explicar; test todo días/365"
+  },
+  {
+   "id": "VE21",
+   "severidad": "P2",
+   "titulo": "Ocupación: texto libre con variantes de escritura y prefijo «self-employed»; vocabulario frente al desarrollado"
+  },
+  {
+   "id": "VE30",
+   "severidad": "P2",
+   "titulo": "Dominios de autos (bandas, carrocería, combustible, cobertura, uso, aparcamiento, franquicias, canal, pago); make_model coherente; eléctricos con cilindrada"
+  },
+  {
+   "id": "VE75",
+   "severidad": "P1",
+   "titulo": "make_model: 300 códigos que no describen el vehículo (cada uno con varias carrocerías y combustibles); sobredispersión de la frecuencia por código en los dos mercados, pero las frecuencias por código no se correlacionan entre mercados"
+  },
+  {
+   "id": "VE31",
+   "severidad": "P2",
+   "titulo": "Coherencia: edad implícita al obtener el carnet, NCB frente a años de carnet, conductor joven nombrado frente a banda del titular"
+  },
+  {
+   "id": "VE36",
+   "severidad": "P1",
+   "titulo": "Capital asegurado: dos nubes separadas por un hueco, prueba de prima por mil en la nube extrema (CAPS2-01), capital frente a dormitorios"
+  },
+  {
+   "id": "VE38",
+   "severidad": "P0",
+   "titulo": "customer_service_contacts mide el siniestro del propio periodo y cambia en el test; impagos coherentes con el método de pago"
+  },
+  {
+   "id": "VE42",
+   "severidad": "P1",
+   "titulo": "Peligro frente a cobertura: daños propios/robo/lunas sin cobertura completa; daño accidental sin la cobertura opcional; neto mayor que el capital"
+  },
+  {
+   "id": "VE46",
+   "severidad": "P2",
+   "titulo": "renewal_decision frente a la existencia de un periodo posterior: declined_by_insurer con sucesor, lapsed y cancelled sin él"
+  },
+  {
+   "id": "VE52",
+   "severidad": "P2",
+   "titulo": "Tabla de gastos: ocho ítems, unidades, comisión de comparison_site vacía aunque el canal tiene alrededor del 5 % de las filas"
+  },
+  {
+   "id": "VE59",
+   "severidad": "P2",
+   "titulo": "Matrices F0: cada predictor igual a su columna de origen (pólizas y direcciones), derivados correctos (antigüedad, mes, edad de la vivienda, log del capital con la máscara), sin columnas excluidas, contrato = columnas; predictores constantes o duplicados"
+  }
+ ],
+ "limites": [
+  {
+   "id": "VE62",
+   "titulo": "Maestros sin fecha de versión: la copia actual se asume estable (customer_since_year 2025 en todo el nuevo negocio del test; previous_insurer y campaña sin fecha)"
+  },
+  {
+   "id": "VE63",
+   "titulo": "El clima de 2025 está en el archivo aunque la página anuncia 2023–2024: no es información conocida al cotizar; queda como escenario (CLIMA-S2-01)"
+  },
+  {
+   "id": "VE64",
+   "titulo": "Contactos, impagos y desocupación no tienen anclaje temporal: contactos fuera (VE38); impagos y desocupación con frecuencia por nivel para decidir"
+  },
+  {
+   "id": "VE68",
+   "titulo": "Una sola valoración al 31-12-2024: reserva de caso dentro de T0, abiertos por año, sin triángulo; el último no está identificado"
+  },
+  {
+   "id": "VE74",
+   "titulo": "Alcance: controles propios de IA sobre copias con huella; no son revisión profesional independiente ni aprobación de la base"
+  }
+ ],
+ "nuevo_frente_a_lo_conocido": [
+  "VE75 make_model: 300 códigos sin coherencia física, sobredispersión 1,595 (p 2,6e-10) y correlación 0,028 entre las frecuencias por código de los dos mercados",
+  "VE59 F0: x_compulsory_excess constante en los tres ramos y x_renewal_count idéntico a x_customer_tenure_years",
+  "VE42: 23 de 122 y 47 de 335 siniestros de daño accidental sin la cobertura opcional; 3 incendios y 1 inundación por encima del capital",
+  "VE05/VE21 ocupación: 80 → 40 → 20 valores; prefijo self-employed en 11.975 clientes",
+  "VE30: edad mínima del vehículo 3 (desarrollado 0); compulsory_excess constante por ramo (250 autos, 350 hogar)",
+  "VE22/VE62: customer_since_year desde 2008; los 27.433 clientes anteriores a 2023 son exactamente los que no tienen campaign_code",
+  "VE12: los 47.283 row_id del entrenamiento de autos existen en el desarrollado; 298/129/194 policy_id y 19 claim_id colisionan; ningún cruce entre mercados usa esas claves"
+ ],
+ "capas_de_codex_confirmadas": [
+  "VE53 huellas",
+  "VE54 periodos y 609 cambios de exposición",
+  "VE55 T0 al centavo en 109.296 filas",
+  "VE56 36 precobertura y 9.102 incluidos",
+  "VE57 36.398 grupos por union-find y banderas de entidad vista",
+  "VE58 doce splits",
+  "VE59 valores de F0",
+  "VE60 OOF dev3 prediction = tasa × C0",
+  "VE61 tablas de las decisiones"
+ ],
+ "concordancia_val04": {
+  "DAT-007": "VE31 27.807",
+  "DAT-008": "VE15 47.122 (20.097 + 12.103 + 14.922)",
+  "DAT-009": "VE46 348 (213 + 108 + 27)",
+  "colisiones_de_identificadores": "VE12",
+  "DAT-003_clima": "VE28: con 2023–2024 solo pasarían cuatro variables; con los dos pares, tres; el aviso de dependencia de 2025 es correcto",
+  "DAT-004_capital": "VE61: las 349 son el mismo conjunto que la auditoría de Codex"
+ },
+ "correccion_propia": "La primera corrida de VE15 contaba 20.110 huecos de un día en autos por una alineación de índices entre train y test; al cotejar con DAT-008 se corrigió a 20.097 (parche parche_20261024.py aplicado antes de publicar; las figuras y los demás controles no cambiaron)",
+ "archivos": {
+  "carpeta": "Hackaton/Semana 2/Claude/validacion_datos_20261023",
+  "sha256": {
+   "validar_datos_s2.py": "27f27523e0ba15a0d2bac10be7c2f5c973724f2a98fc920430246ae7f518d8c0",
+   "figuras_validacion.py": "43d0b72bb32e876aa90f803464c71a2389b0a7a9b85d44b970222ebd01f0e85a",
+   "evidencia_validacion.json": "32f3af75f0cbdc66802d474b528b828669ae8c5c886d1c56b29163aa09cfa345",
+   "tablas/controles.csv": "941b17a0d8443c7b4d2f94b89ce2604985da23e0c70264949c2792c229766612",
+   "INFORME.md": "8390ea04a0d0251e887c656de697271915d79844e038ad04bda7aa00ccb57d3b",
+   "aporte_CLA-S2-20261023-004.md": "13f90660786f8ce21098b7409ac5582975367a5e2e4f9f0b6d16a9f5f18fffb0",
+   "cifras_informe.json": "8fda4670562adb247457f60ece69f0ba874e51f8136267d2a25104731f1c2bda",
+   "verificar_informe.py": "a38e9a58b48cd9dc4205a7af0b87566a3a3b005986c5883cb2f074ba3ad1eca0",
+   "verificacion_informe.json": "68e8271e382474a0bf25c7d918cb9d375db505e2444b3c70a785b2392b610e89",
+   "tablero.html": "3eccf5d08753a87ee173666bac1bbdb3f4eb696717e82f5424fe23ff4c907728",
+   "construir_tablero.py": "20153c66b1c365979274e8b381e473cbc7b1c299dabfb34d055336d459e2ae9b",
+   "completar_manifiesto.py": "e6f66946a7a44417f33e89a54d8a09232fc28aabacbe4231047c383ba67a2614",
+   "manifiesto.json": "6a0311553f9be4d738fcf28b1d450e01994ad6217dc1bd7f01403792592cf7f9"
+  },
+  "figuras_sha256_sin_caBX": {
+   "fig1_controles.png": "0e7c4bbe8c3204c0a2c9414f30b13927d90521075cbc6c43b24950a421f3a432",
+   "fig2_calendario.png": "b3d36e191521b20553376051d254df5fe57bfe6f835041fe3a58067ce7aac180",
+   "fig3_nulos.png": "bf336e391b714aa07389450db4da2771b5f175e1b580738fed952487a347726d",
+   "fig4_make_model.png": "62b5854d10ef877324287cbd71a49c1829a0d8957ef52b50e48c5007b7ef4f36",
+   "fig5_test.png": "d7d8a6f45ee490aaaed4c3947f68955593bdf5c4549bade493d305feecb1e0a7",
+   "fig6_siniestros.png": "6d99323b53c489266dbaaaa2f68304b178416dc271a43bbe7f619cb5f5792ea7"
+  },
+  "privado": "Hackaton/Repositorio_IAA2026/privado/semana2/validacion_datos_claude_20261023",
+  "privado_sha256": {
+   "casos_VE13.parquet": "f6dbac668ce297e6e0d0a973be46bd54c2a09243251a390da46275122ee3851e",
+   "casos_VE16.parquet": "53487e354f8f837a6d4660b5509b2f67e3e2842da1e384fae91164a98f41a4e9",
+   "casos_VE19.parquet": "4ce76e2bfb1019ec776c15aeeb4e53ceb0104179c99317fda2d580df73b3ae5b",
+   "casos_VE31.parquet": "d97faeb4078a7cedfdf6367faebc928bf2b3450c46e1a3e0f9f050165aa8e074",
+   "casos_VE35.parquet": "916d434bce8b94ebb87abecd402a79cdb8a1b6d42c2a775e84586888056e6def",
+   "casos_VE41.parquet": "be9be0d096d53be0526e779e277744a1618b284effa118ab003794748e194448",
+   "casos_VE42.parquet": "66c057bd86241b06555c9a4065b862cdd402592a52c14bc041b27c7e53a46785",
+   "casos_VE43.parquet": "f02d5d715c7ba25de49b424a9669ac6c91444ecb9ec848ea3ec4176f4d20c853"
+  },
+  "verificacion": "378 cifras del informe y del aporte comprobadas contra la evidencia, 0 fallos (también en el equipo del participante, Python 3.10)"
+ },
+ "foro": {
+  "id": "CLA-S2-20261023-004",
+  "utc": "2026-10-24T00:25:42+00:00",
+  "foro_sha256": "0929633b3a759de6ef1bd06950f143d98a73a3bd43f49e660a6f06cd2568565a",
+  "previo_sha256": "9cedd3bc2ef3fb36ca81e42089ed24db9bee4842e4b4ff011729ed03c3c62bf0",
+  "corte_de_lectura": "COD-S2-20261024-024"
+ },
+ "tablero": "tablero.html sin conexión; se queda en el repositorio y no se publica en línea",
+ "siguiente_accion": [
+  "Retirar x_compulsory_excess y uno de x_renewal_count / x_customer_tenure_years en la siguiente F0 (flujo de Codex, decisión del participante)",
+  "Tratar make_model como factor de alta cardinalidad con contracción fuerte o dejarlo fuera del bloque base; no trasladar su efecto desde el desarrollado",
+  "Conservar el coste de los daños accidentales sin cobertura y de los cuatro netos sobre el capital; documentarlos en el informe final",
+  "Si se repite CLIMA-S2-01, elegir las variables solo con la correlación 2023–2024 y declararla como escenario",
+  "Declarar los cinco límites en el informe final"
+ ],
+ "estado": "validación cerrada y publicada; sin entrenamiento de precios, sin apertura de 2024, sin envíos; integración de los hallazgos pendiente del participante"
+}

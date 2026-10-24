@@ -1,0 +1,170 @@
+{
+  "id": "S2-B20-EVIDENCIA-MECANISMO-SOPORTE2023-v1-20261024",
+  "author": "Codex",
+  "utc": "2026-10-24T03:25:30.001301+00:00",
+  "scope": "Existing named2023 aggregate artifacts only; not an exhaustive claim over every possible dataset/source.",
+  "mechanism": "plausible_not_established",
+  "support": "measured_failed_for_existing_slope_design",
+  "new_direct_evidence": "Completed fold-support audit resolves what was unknown about heldout tails: the gate fails; it does not make the design eligible.",
+  "source_error_or_additional_2023_information_established": false,
+  "sufficient_evidence_to_resolve_G1_G2": false,
+  "current_slope_design_can_execute": false,
+  "original_gate_statuses": {
+    "G1": "not_established",
+    "G2": "insufficient",
+    "G3": "not_justified",
+    "G4": "not_from_this_work",
+    "G5": "not_evaluated_here",
+    "G6": "conditional"
+  },
+  "gates_closed": [],
+  "g2_refinement": "heldout support no longer unknown; measured fail. Internal support remains unknown. No global model-invalidity inference.",
+  "necessary_next_evidence": [
+    "For mechanism: a pertinent new2023 fact that distinguishes or materially strengthens the residual dispersion hypothesis against level, concentration and maturation explanations. Unique causal proof is not required, but current descriptive association is insufficient for this design.",
+    "For current support: legitimate additional2023 information or an evidenced material source correction that actually changes information under a versioned proposal. No such correction is established; changing thresholds, grouping bands or deleting costly claims does not supply evidence.",
+    "Only after those requirements: strict2023 inner-scope preparation and complete resource/ancestor inventory. Engineering controls cannot erase the heldout screen failure."
+  ],
+  "reference": "W2-B00",
+  "all_alternatives_preserved": true,
+  "2024_test_closed": true,
+  "promotion": false,
+  "new_fits": 0,
+  "new_inference": 0,
+  "model_loads": 0,
+  "new_scores": 0,
+  "new_bootstrap": 0,
+  "new_numerical_diagnostics": 0,
+  "new_recipes": 0,
+  "professional_independent_validation": false,
+  "prior_external2024_header_exposure_disclosed": true,
+  "status": "evidence_review_complete_mechanism_open_support_failed_no_execution",
+  "path_base": "workspace_root",
+  "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/evidencia_mecanismo_soporte_b20_20261024_v1",
+  "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/EVIDENCIA_DISPONIBLE_MECANISMO_SOPORTE_B20_2023.md",
+  "documentation_sha256": "7b01ce06865a1d92f660c4a6844584486eccae018d996a06f9ed2e2cb04f0dfc",
+  "forum_result": "COD-S2-20261024-048",
+  "sources": [
+    {
+      "label": "support",
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_soporte_folds_actual.json",
+      "sha256": "17658ec222f5f1492c6217aaf6a713df135eed792b116f4a303ecd4aa1a8db84",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/evidencia_mecanismo_soporte_b20_20261024_v1/sources/00_semana2_b20_soporte_folds_actual.json"
+    },
+    {
+      "label": "design",
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_contraste_minimo_actual.json",
+      "sha256": "ad498c8bf8e270f1e4fb88e56e1f2650a4fc493669d3cf5832d4f9c49faf9a11",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/evidencia_mecanismo_soporte_b20_20261024_v1/sources/01_semana2_b20_contraste_minimo_actual.json"
+    },
+    {
+      "label": "priorities",
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_prioridades_actual.json",
+      "sha256": "ab108feec1f5e0b5aab1c949f48ad2007321da417346b3b2600c8c6afc00ff82",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/evidencia_mecanismo_soporte_b20_20261024_v1/sources/02_semana2_b20_prioridades_actual.json"
+    },
+    {
+      "label": "bands",
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_bandas_calibracion_actual.json",
+      "sha256": "1127a18ce7bd4c39f741d9049954efedd7ed158bfeea92cb17bf0f56261346b8",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/evidencia_mecanismo_soporte_b20_20261024_v1/sources/03_semana2_b20_bandas_calibracion_actual.json"
+    },
+    {
+      "label": "attribution",
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_atribucion_actual.json",
+      "sha256": "499aaa04b54347dd1b4903ba6192e3a70ebeca8d359008da7197b6d833e7b8a4",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/evidencia_mecanismo_soporte_b20_20261024_v1/sources/04_semana2_b20_atribucion_actual.json"
+    },
+    {
+      "label": "fire_AD",
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_incendio_AD_actual.json",
+      "sha256": "f472ccede1e6720aaa2dacfd9161c0f6a65a1d5ed24ffeb77ed14832ab4f8a5a",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/evidencia_mecanismo_soporte_b20_20261024_v1/sources/05_semana2_b20_incendio_AD_actual.json"
+    },
+    {
+      "label": "trace",
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b19_traza_actual.json",
+      "sha256": "622525df9afffbe829b9756152708684a7eff5568ea76e6df965347e50535e00",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/evidencia_mecanismo_soporte_b20_20261024_v1/sources/06_semana2_b19_traza_actual.json"
+    },
+    {
+      "label": "reserve",
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_sensibilidad_observacion_c0_reservas_v1_snapshot.json",
+      "sha256": "7ca32aa2a5d5d2efb1eef5398f1d26254aec27143cc2d26d71309a6528305750",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/evidencia_mecanismo_soporte_b20_20261024_v1/sources/07_semana2_sensibilidad_observacion_c0_reservas_v1_snapshot.json"
+    },
+    {
+      "label": "mixture",
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_sensibilidad_observacion_actual.json",
+      "sha256": "f10de74e0013ecf86ba179637ea0d164e45f621d646061c9682fcb7908d7417c",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/evidencia_mecanismo_soporte_b20_20261024_v1/sources/08_semana2_sensibilidad_observacion_actual.json"
+    },
+    {
+      "label": "calendar",
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_soporte_calendario2023_actual.json",
+      "sha256": "5e856e26e6112d87c9327d1c6ed3c4f2a94a962892b18e6820cc17d4760a90fb",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/evidencia_mecanismo_soporte_b20_20261024_v1/sources/09_semana2_soporte_calendario2023_actual.json"
+    },
+    {
+      "label": "coverage",
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_coberturas_peril2023_actual.json",
+      "sha256": "be450dea3e19b9182c4bf2deb42048cacd859ca6588177559349bd526d9aba37",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/evidencia_mecanismo_soporte_b20_20261024_v1/sources/10_semana2_coberturas_peril2023_actual.json"
+    },
+    {
+      "label": "development",
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_actual.json",
+      "sha256": "27a605b6a575ef5ea588f252c814669ccff2de3d79d061f201767acecf5c3d51",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/evidencia_mecanismo_soporte_b20_20261024_v1/sources/11_semana2_desarrollo2023_actual.json"
+    },
+    {
+      "label": "counters",
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_contadores_propios_actual.json",
+      "sha256": "716b1f947cdce852b08588bca3a39530f533694a15ff24c81f7d703892c130b4",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/evidencia_mecanismo_soporte_b20_20261024_v1/sources/12_semana2_contadores_propios_actual.json"
+    },
+    {
+      "label": "support_documentation",
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/SOPORTE_B20_POR_FOLD_2023.md",
+      "sha256": "ae194f0a13a027de50a2101ffb25b76cfedf56b0c0c1a52688e56f8fc2af8316",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/evidencia_mecanismo_soporte_b20_20261024_v1/sources/13_SOPORTE_B20_POR_FOLD_2023.md"
+    },
+    {
+      "label": "design_documentation",
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/DISENO_CONTRASTE_MINIMO_B20_2023.md",
+      "sha256": "b3cea7bf8dd93f2aa39762a7f67776ad285c6899666c23f21dae62e1a1e340ab",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/evidencia_mecanismo_soporte_b20_20261024_v1/sources/14_DISENO_CONTRASTE_MINIMO_B20_2023.md"
+    },
+    {
+      "label": "support_evidence_gaps",
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_soporte_folds_20261024_v1/evidence_gaps.json",
+      "sha256": "6b060a16a6eb551eb2a1dde675a612835176e63678c9d87f48988871cf9c5e68",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/evidencia_mecanismo_soporte_b20_20261024_v1/sources/15_evidence_gaps.json"
+    },
+    {
+      "label": "support_fold_cells",
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_soporte_folds_20261024_v1/fold_cell_audit.json",
+      "sha256": "84639971460bfa43505173cec9d3cdeae88c6c8d06354100e3d5e295d768b04b",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/evidencia_mecanismo_soporte_b20_20261024_v1/sources/16_fold_cell_audit.json"
+    },
+    {
+      "label": "support_outer_training_proxy",
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_soporte_folds_20261024_v1/outer_training_proxy.json",
+      "sha256": "34e40cee118dff12a403087aa68e55072110ae65239e04e4ab831eb9979aba24",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/evidencia_mecanismo_soporte_b20_20261024_v1/sources/17_outer_training_proxy.json"
+    },
+    {
+      "label": "design_readiness",
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/current_readiness.json",
+      "sha256": "2641ccef8de4c05b45d4f4a3e6907bd107363d9e0ab1c1bb2081c60c4dd946e0",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/evidencia_mecanismo_soporte_b20_20261024_v1/sources/18_current_readiness.json"
+    }
+  ],
+  "evidence_ledger": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/evidencia_mecanismo_soporte_b20_20261024_v1/evidence_ledger.json",
+    "sha256": "76d0ea05540fff16742ded22e7ccda39f6b07c0b58555378c0118557083bd756"
+  },
+  "decision_journal": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/evidencia_mecanismo_soporte_b20_20261024_v1/decision_journal.json",
+    "sha256": "851f7175601b40142ba3a80ec5f48f317fc9c13a7bc4afd24584d41b2cb82536"
+  }
+}

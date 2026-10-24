@@ -1,0 +1,99 @@
+{
+  "id": "S2-CONTINUIDAD-INCIDENCIA2023-v1-20261024",
+  "author": "Codex",
+  "utc": "2026-10-24T03:14:17.388097+00:00",
+  "scope": "incremental document reconciliation only",
+  "old_synthesis": "S2-B20-SINTESIS2023-v1-20261024",
+  "new_saved_diagnostic": "S2-B20-INCENDIO-AD2023-v1-20261024",
+  "gates": [
+    {
+      "gate": "G1",
+      "original_status": "not_established",
+      "status_after_new_cut": "not_established",
+      "closure": false,
+      "incremental_evidence": "Concentración y composición AD descriptivas; no mecanismo causal exclusivo."
+    },
+    {
+      "gate": "G2",
+      "original_status": "insufficient",
+      "status_after_new_cut": "insufficient",
+      "closure": false,
+      "incremental_evidence": "No nueva evidencia prospectiva o soporte para factores por banda."
+    },
+    {
+      "gate": "G3",
+      "original_status": "not_justified",
+      "status_after_new_cut": "not_justified",
+      "closure": false,
+      "incremental_evidence": "AD cruza uno aun con ridge; cambiar capacidad no queda justificado."
+    },
+    {
+      "gate": "G4",
+      "original_status": "not_from_this_work",
+      "status_after_new_cut": "not_from_this_work",
+      "closure": false,
+      "incremental_evidence": "Omitir un incendio en evaluación no crea validación nueva; advertencia31grupos intacta."
+    },
+    {
+      "gate": "G5",
+      "original_status": "not_evaluated_here",
+      "status_after_new_cut": "not_evaluated_here",
+      "closure": false,
+      "incremental_evidence": "No promoción, retiros, roster o acta evaluados."
+    },
+    {
+      "gate": "G6",
+      "original_status": "conditional",
+      "status_after_new_cut": "conditional",
+      "closure": false,
+      "incremental_evidence": "Traza confirma siniestros válidos, no último o suficiencia de reservas."
+    }
+  ],
+  "host_announcement": {
+    "topic": 752144,
+    "id": 3543798,
+    "utc": "2026-10-24T02:57:36.893Z",
+    "role": "HOST",
+    "announces_fix": true,
+    "source": "Hackaton/Repositorio_IAA2026/docs/fuentes/kaggle_discusion_752144_20261024T0307Z.json",
+    "source_sha256": "3646b61eaad7054d2b68b3ad08e22de4ce40eeddba6a257f5d3bfec9e71be3ce"
+  },
+  "platform_fix_verified": false,
+  "own_submission_attempt": false,
+  "acceptance_scoring_verified": false,
+  "new_fits": 0,
+  "model_loads": 0,
+  "new_predictions": 0,
+  "new_scores": 0,
+  "new_bootstrap": 0,
+  "new_recipes": 0,
+  "reference": "W2-B00",
+  "all_alternatives_preserved": true,
+  "2024_test_closed": true,
+  "promotion": false,
+  "professional_independent_validation": false,
+  "prior_external2024_header_exposure_disclosed": true,
+  "path_base": "workspace_root",
+  "status": "incremental_cuts_reconciled_gates_open_host_fix_announced_not_scoring_verified",
+  "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/continuidad_20261024T0310Z_v1",
+  "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/VIGENCIA_B20_E_INCIDENCIA_20261024.md",
+  "documentation_sha256": "62f01f4adb0cd5c0535e2318a3be815b75d2af5f5011e390ff676650a9f2e201",
+  "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_conciliacion_nocturna_plan_v1.json",
+  "plan_sha256": "59530d30a1e01a88bb048a87b593ced2fdafbbe58bfba7887725b62a9d23210b",
+  "forum_prior": "COD-S2-20261024-045",
+  "forum_result": "COD-S2-20261024-046",
+  "decision_journal": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/continuidad_20261024T0310Z_v1/decision_journal.json",
+    "sha256": "ca9988af595d96360ab72e485ad987ab028fd1f929ff0a858211ff3f9b1ecf26"
+  },
+  "report": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/continuidad_20261024T0310Z_v1/report.json",
+    "sha256": "2f3592b587a01bf2c7b9dc73f2c5fbefb21bb457f4776293bd0417a26f0202a9"
+  },
+  "verification": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/continuidad_20261024T0310Z_v1/verification.json",
+    "sha256": "3437fcc9a484afec5993df13bafdafe714dec51373e971428d695592103ea4b5",
+    "passed": 28,
+    "failed": 0
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "id": "S2-DEV2023-v1-20261023",
+  "author": "Codex",
+  "as_of_utc": "2026-10-23T17:44:59.735846+00:00",
+  "path_base": "workspace_root",
+  "status": "development_2023_verified_no_promotion",
+  "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev_20261023T173828Z_7efe46fc",
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev_20261023T173828Z_7efe46fc/report.json",
+  "report_sha256": "044cb61ff1a7d23d3f26ecc959ab77bf3268de3f479bdbc13dbc8c44a2bc8603",
+  "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/DESARROLLO_2023.md",
+  "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_plan_v1.json",
+  "plan_sha256": "c12d7212ac58e8104df948fbf8f9e64ebb53feb80a98b0ec9820486d017b0aaf",
+  "producer": "Hackaton/Repositorio_IAA2026/src/semana2/entrenar_desarrollo2023.py",
+  "producer_sha256": "57c2f4311a3a81b9c5e3ab9c1318ce1e0b7fd64b6ea994f9f105715ecff47b40",
+  "oof": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev_20261023T173828Z_7efe46fc/oof_2023.parquet",
+  "oof_sha256": "a119f6a277aa56a63412ecf4ab1d29f74bf42faa15143b4bc55b0a697719b57c",
+  "manifest": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev_20261023T173828Z_7efe46fc/manifest.json",
+  "manifest_sha256": "f7d2f1e4f56603e7ed3e1153a7a5804fa4751a301b4ecab67d1094ea3536107c",
+  "verification": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev_20261023T173828Z_7efe46fc/verifications/20261023T174057Z_33a474bd.json",
+    "sha256": "5b83a851f1b1f98a8fac07561f8a92559829781aac7985621d5139eb35fc6bd7",
+    "passed": 937,
+    "failed": 0
+  },
+  "assessment": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev_20261023T173828Z_7efe46fc/assessment.json",
+  "assessment_sha256": "f74d1c1d18f71956d76981ff8b256f885e2b7e5a87e6b76580b4cc952c83f898",
+  "training_years": [
+    2023
+  ],
+  "scored_years": [
+    2023
+  ],
+  "rows_per_model": 50094,
+  "groups": 30869,
+  "folds": 5,
+  "price_estimators_fitted": 30,
+  "closed_form_constants_fitted": 15,
+  "fit_nodes": 45,
+  "summary": [
+    {
+      "model_id": "W2-B00",
+      "technical_complete": true,
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 15614394.394606076,
+      "actual_over_expected": 0.9796796118640577,
+      "deviance_sum": 5160891.515933607,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.06858168733600944
+    },
+    {
+      "model_id": "W2-B01",
+      "technical_complete": true,
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 14552011.495134693,
+      "actual_over_expected": 1.0512020173372196,
+      "deviance_sum": 5171545.277172904,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.06665893653096044
+    },
+    {
+      "model_id": "W2-B02",
+      "technical_complete": true,
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 7558637.5700367,
+      "actual_over_expected": 2.0237911526065835,
+      "deviance_sum": 7056489.915591724,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": -0.27352879056244483
+    }
+  ],
+  "pairs": [
+    {
+      "candidate": "W2-B01",
+      "reference": "W2-B00",
+      "delta_D2": -0.0019227508050490153,
+      "exploratory_lower95": -0.03810681210727341,
+      "exploratory_upper95": 0.02869310497350309,
+      "groups": 30869,
+      "removed_favorable_groups": 31,
+      "delta_after_removal": -0.03415206701555904,
+      "largest_favorable_group_delta": 0.00455211521672344,
+      "interpretation": "Exploratory 2023 only; no simultaneous confirmation or promotion"
+    },
+    {
+      "candidate": "W2-B02",
+      "reference": "W2-B00",
+      "delta_D2": -0.3421104778984543,
+      "exploratory_lower95": -0.5331907356538861,
+      "exploratory_upper95": -0.21631338863578092,
+      "groups": 30869,
+      "removed_favorable_groups": 31,
+      "delta_after_removal": -0.36614782995929285,
+      "largest_favorable_group_delta": 0.001611646724793505,
+      "interpretation": "Exploratory 2023 only; no simultaneous confirmation or promotion"
+    },
+    {
+      "candidate": "W2-B02",
+      "reference": "W2-B01",
+      "delta_D2": -0.3401877270934053,
+      "exploratory_lower95": -0.5334513677111973,
+      "exploratory_upper95": -0.21874302230116752,
+      "groups": 30869,
+      "removed_favorable_groups": 31,
+      "delta_after_removal": -0.3583408744131313,
+      "largest_favorable_group_delta": 0.001165536128155854,
+      "interpretation": "Exploratory 2023 only; no simultaneous confirmation or promotion"
+    }
+  ],
+  "development_recipes_frozen": true,
+  "final_confirmation_roster_frozen": false,
+  "reference": "W2-B00",
+  "alternatives_preserved": [
+    "W2-B01",
+    "W2-B02"
+  ],
+  "promotion": false,
+  "confirmation_2024_open": false,
+  "selector_finding": "S2-AUD-METRIC-BINDING open; operational owner closure required",
+  "forum_prior": "COD-S2-20261023-008",
+  "forum_result": "COD-S2-20261023-009",
+  "professional_independent_validation": false,
+  "human_review": "pending",
+  "submissions": 0
+}

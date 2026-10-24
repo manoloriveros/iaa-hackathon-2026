@@ -1,0 +1,96 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-23T18:01:19.223521+00:00",
+  "source_sha256": "352ed8c7f5597437c5e68cd0c036ab4d60ae0aaaed2b4515eadd8d339cc67b9c",
+  "checks": [
+    {
+      "name": "B03 route motor",
+      "pass": true
+    },
+    {
+      "name": "B04 route motor",
+      "pass": true
+    },
+    {
+      "name": "B05 route motor",
+      "pass": true
+    },
+    {
+      "name": "B03 route buildings",
+      "pass": true
+    },
+    {
+      "name": "B04 route buildings",
+      "pass": true
+    },
+    {
+      "name": "B05 route buildings",
+      "pass": true
+    },
+    {
+      "name": "B03 route contents",
+      "pass": true
+    },
+    {
+      "name": "B04 route contents",
+      "pass": true
+    },
+    {
+      "name": "B05 route contents",
+      "pass": true
+    },
+    {
+      "name": "Unknown model rejected",
+      "pass": true
+    },
+    {
+      "name": "Unknown line rejected",
+      "pass": true
+    },
+    {
+      "name": "Invalid prefix 0",
+      "pass": true
+    },
+    {
+      "name": "Invalid prefix -1",
+      "pass": true
+    },
+    {
+      "name": "Invalid prefix 301",
+      "pass": true
+    },
+    {
+      "name": "Invalid prefix 1.5",
+      "pass": true
+    },
+    {
+      "name": "Exactly 25 exported trees",
+      "pass": true
+    },
+    {
+      "name": "Saved prefix equals parent prefix",
+      "pass": true
+    },
+    {
+      "name": "Prefix 2024 prediction rejected",
+      "pass": true
+    },
+    {
+      "name": "Prefix test prediction rejected",
+      "pass": true
+    },
+    {
+      "name": "Prefix serialization exact",
+      "pass": true
+    },
+    {
+      "name": "Parent still has 300 trees",
+      "pass": true
+    }
+  ],
+  "passed": 21,
+  "failed": 0,
+  "fit_calls": 0,
+  "real_model_scores_computed": 0,
+  "note": "Uses eight 2023 feature rows for native-prefix equivalence only, no outcome metric"
+}

@@ -1,0 +1,160 @@
+{
+  "id": "S2-DEV2023-v2-20261023",
+  "author": "Codex",
+  "registered_utc": "2026-10-23T17:58:58.354846+00:00",
+  "authorization_literal": "Dale, revisa el GLM en edificios y la brecha de LightGBM entre ajuste y validación. Registra las recetas antes de probar otra tanda solo en 2023, conserva la referencia y deja los resultados en el foro. Mantén 2024 cerrado.",
+  "parent_run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev_20261023T173828Z_7efe46fc",
+  "parent_manifest_sha256": "f7d2f1e4f56603e7ed3e1153a7a5804fa4751a301b4ecab67d1094ea3536107c",
+  "parent_oof_sha256": "a119f6a277aa56a63412ecf4ab1d29f74bf42faa15143b4bc55b0a697719b57c",
+  "parent_recipe_sha256": "c12d7212ac58e8104df948fbf8f9e64ebb53feb80a98b0ec9820486d017b0aaf",
+  "diagnostic_review": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/revision_20261023T175646Z_4924665e/report.json",
+  "diagnostic_sha256": "2b936ef2215fd4c5ef1ea94aba124814ec7be31e66fddba1ec59fb5ff39fbeff",
+  "selection_policy": "Hackaton/Repositorio_IAA2026/registro/semana2_politica_seleccion_v1.json",
+  "selection_policy_sha256": "8de4043120b600813c44870d015569bac53c0ddb1d289970c071d1f152281139",
+  "objective": {
+    "response": "T0 / effective_cost_exposure_C0",
+    "sample_weight": "sqrt(effective_cost_exposure_C0)",
+    "power": 1.5,
+    "prediction_observed": "effective_cost_exposure_C0 * fitted_annual_rate",
+    "calibration": "none; no OOF level rescaling or post-hoc blend",
+    "primary_development_metric": "Pooled unweighted total-unit D2 Tweedie 1.5 on all 50094 OOF rows of 2023; global null is arithmetic mean of observed T0; do not average line D2 scores",
+    "positivity": "Fail on nonfinite or nonpositive rate/prediction; no silent clipping or removal"
+  },
+  "observation_link": "Each development fold k uses frozen exclude_foldk/e_cost_mix_1.0, fitted only on other 2023 groups; all three model families use exactly the same link and T0 response.",
+  "features": "Exact availability_contract.blocks[line].all whitelist, no annual weather or optional profiles; metadata excluded. Numeric and categorical training transforms are fitted inside the training rows only.",
+  "models": [
+    {
+      "id": "W2-B03",
+      "family": "TweedieRegressor",
+      "params": {
+        "power": 1.5,
+        "alpha": 10.0,
+        "fit_intercept": true,
+        "link": "log",
+        "solver": "lbfgs",
+        "max_iter": 2000,
+        "tol": 1e-06,
+        "warm_start": false
+      },
+      "numeric_transform": "SimpleImputer(strategy=median,keep_empty_features=True), StandardScaler; fitted inside training fold only",
+      "categorical_transform": "OneHotEncoder(handle_unknown=ignore,min_frequency=50,max_categories=40,sparse_output=True), fitted inside training fold only; unknown-level counts recorded",
+      "penalty": "alpha fixed in the solver's normalized weighted objective; no alpha search",
+      "routing": {
+        "buildings": "new_fit",
+        "motor": "reuse_W2-B01",
+        "contents": "reuse_W2-B01"
+      },
+      "hypothesis": "Stronger ridge in buildings reduces coefficient variance and improves buildings OOF relative to B01; other lines unchanged. No trimming, capital change or intercept recalibration."
+    },
+    {
+      "id": "W2-B04",
+      "family": "LGBMBoosterPrefix",
+      "parent_model": "W2-B02",
+      "prefix_trees": 25,
+      "recipe": "Save exactly the first 25 trees from each frozen B02 fold model; identical data, categories, weights and tree path; no further training or stage search.",
+      "hypothesis": "A fixed shorter path reduces the 300-tree generalization gap; 25 is declared before any prefix metric is computed, not chosen from a scored curve."
+    },
+    {
+      "id": "W2-B05",
+      "family": "LGBMRegressor",
+      "params": {
+        "objective": "tweedie",
+        "tweedie_variance_power": 1.5,
+        "n_estimators": 80,
+        "learning_rate": 0.03,
+        "num_leaves": 2,
+        "max_depth": 1,
+        "min_child_samples": 1000,
+        "reg_lambda": 100.0,
+        "reg_alpha": 0.0,
+        "subsample": 1.0,
+        "subsample_freq": 0,
+        "colsample_bytree": 1.0,
+        "max_bin": 127,
+        "cat_smooth": 20.0,
+        "min_data_per_group": 50,
+        "deterministic": true,
+        "force_col_wise": true,
+        "random_state": 2026102302,
+        "n_jobs": 2,
+        "verbosity": -1
+      },
+      "numeric_transform": "Native missing values; no learned scaling",
+      "categorical_transform": "Native categoricals with categories learned only from training fold; unseen levels become missing and are counted",
+      "stopping": "Fixed 80 rounds, no validation set, early stopping or parameter search",
+      "hypothesis": "Joint capacity/regularization reduction narrows the generalization gap relative to B02; individual parameter causality is not identified."
+    }
+  ],
+  "comparators_reused_without_refit": [
+    "W2-B00",
+    "W2-B01",
+    "W2-B02"
+  ],
+  "readout_before_testing": {
+    "B03": "Buildings OOF D2 improvement and reduced train-vs-OOF gap relative to B01, other-line predictions identical",
+    "B04": "Global OOF improvement and smaller generalization gap relative to B02; all lines/folds reported",
+    "B05": "Global OOF improvement and smaller generalization gap relative to B02; aggregate level and subgroup risks reported",
+    "all": "Also compare each against unchanged B00. No point score or exploratory interval promotes, retires or declares equivalence."
+  },
+  "diagnostics": {
+    "groups": [
+      "line",
+      "fold",
+      "new_business",
+      "renewal"
+    ],
+    "measures": [
+      "total-unit deviance and pooled D2",
+      "A/E and predicted/observed totals",
+      "fold dispersion",
+      "unseen categories",
+      "rare/extreme losses and group influence",
+      "fit convergence and serialized-model replay"
+    ],
+    "development_uncertainty": {
+      "replicates": 2000,
+      "seed": 2026102302,
+      "unit": "paired customer-address component",
+      "interval": "95% percentile, conditional exploratory diagnostic; NOT the 2024 Bonferroni confirmation interval",
+      "pairs": "All fifteen pairs of six recipes, shared draws; exploratory without multiplicity/selection correction"
+    },
+    "observation_sensitivity": "At fixed fitted OOF rates, recompute predictions and response for reserve075, reserve125, late_cost05, late_cost10 using saved scoped links. This is an observation-only diagnostic, not a refit or the complete confirmation safeguards.",
+    "no_selection": "Retain all six recipes and artifacts; no promotion, retirement, equivalence or final confirmation roster frozen in this batch."
+  },
+  "technical_acceptance": [
+    "Exactly one OOF record for each 2023 row/model",
+    "No other year materialized for fitting/prediction/scoring",
+    "Training groups/customers/addresses disjoint from held-out fold",
+    "All encoders/scalers/medians/category lists fit only training rows",
+    "Finite strictly positive rates and totals",
+    "GLM convergence checked; failures retained and no candidate declared valid when unresolved",
+    "Scorer cross-checked against separate formula",
+    "Saved-model replay without fitting matches OOF",
+    "Originals/T0/folds/features/link hashes preserved",
+    "2024 remains unopened even if a separate task repairs the selector"
+  ],
+  "scope": "Only 2023 frozen inputs and five persisted customer-address folds. No new split, label trimming, weather, target calibration, blends, extra seeds, scans or 2024/test predictions/scores.",
+  "resources": "Local CPU, two threads, 20 new estimator fits (5 buildings GLM + 15 shallow boosting), 10 GLM bundle reuses, 15 prefix extractions, three comparator OOF tables reused. Expected minutes; no remote compute.",
+  "technical_controls_extra": [
+    "B00/B01/B02 OOF floats unchanged",
+    "B03 other-line bundles/predictions unchanged from B01",
+    "B04 exactly 25 parent trees and identical categories/outputs to parent num_iteration=25",
+    "All coefficients, encoders and category lists from training rows only",
+    "Saved-model replay with fit disabled",
+    "Original v1 source and artifacts remain unchanged"
+  ],
+  "search_disclosure": "This batch is adaptively motivated by 2023 v1 results and diagnostic review. Exploratory CV intervals do not correct this prior selection or all fifteen six-model comparisons.",
+  "reference_retained": "W2-B00",
+  "all_alternatives_preserved": [
+    "W2-B01",
+    "W2-B02",
+    "W2-B03",
+    "W2-B04",
+    "W2-B05"
+  ],
+  "code": "Hackaton/Repositorio_IAA2026/src/semana2/entrenar_desarrollo2023_v2.py",
+  "forum_preregistration": "COD-S2-20261023-010",
+  "confirmation_2024_open": false,
+  "promotion": false,
+  "final_confirmation_roster_frozen": false
+}

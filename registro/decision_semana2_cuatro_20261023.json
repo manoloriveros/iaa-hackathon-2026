@@ -1,0 +1,72 @@
+{
+  "id": "S2-DEC-PARTICIPANTE-20261023",
+  "tipo": "decision_del_participante",
+  "registrado_por": "Claude (Cowork), sesión del Proyecto IAA",
+  "canal": "Conversación del participante con Claude (Cowork), 23 de octubre de 2026, antes de las 19:53 UTC",
+  "pregunta": "Las cuatro decisiones del participante que dejó abiertas CLA-S2-20261023-001 (capital de escala dudosa, política de clima, nivel del nuevo negocio y reparto del gasto fijo)",
+  "mensaje_literal": "en las cuatro recomendaciones realiza tus sugerencias, dividir los valores con criterio, clima como indicas, nivel de nuevos negocios con credibilidad, gasto fijo de la primas según exposición pero en este caso dame tu opinión",
+  "path_base": "workspace_root",
+  "preinscripcion": {
+    "id": "CLA-S2-DEC-20261023",
+    "ruta": "Hackaton/Semana 2/Claude/decisiones_20261023/preinscripcion_decisiones_20261023.json",
+    "sha256": "2978406fe37a7601cf08b7450a6d46765c5acae23b696a87c93e843ba6a55b51",
+    "escrita_en_el_equipo_utc": "2026-10-23T20:09:35Z"
+  },
+  "decisiones": [
+    {
+      "regla": "CAPS2-01",
+      "tema": "Capital de escala dudosa en edificios y contenidos",
+      "elegida": "Dividir entre mil solo las filas que pasan la prueba de prima por mil de D66, fila a fila",
+      "alternativa_descartada": "Máscara de F0 (capital desconocido)",
+      "resultado": "349 filas divididas (110 de entrenamiento y 239 de test), ninguna fuera; 163 confirmadas además por la historia de la póliza",
+      "estado": "decidida y aplicada en una tabla privada; integración en F0 pendiente"
+    },
+    {
+      "regla": "CLIMA-S2-01",
+      "tema": "Política de clima",
+      "elegida": "Base sin clima del año de cobertura; variante con el clima de la dirección medido en otro año (viento, índice forestal y lluvia, las únicas con correlación interanual de 0,80 o más); clima de 2025 solo como escenario declarado",
+      "alternativa_descartada": "Clima contemporáneo o media que incluya el propio año",
+      "estado": "decidida; bloque construido en una tabla privada; contraste en la política de selección pendiente"
+    },
+    {
+      "regla": "NB-CRED-01",
+      "tema": "Nivel del nuevo negocio de 2025",
+      "elegida": "Relatividad del nuevo negocio con credibilidad frente al desarrollado: Z = tau^2 / (tau^2 + SE^2), tau medido en las otras categorías",
+      "alternativas_descartadas": [
+        "Solo emergente",
+        "Evidencia del tablero público"
+      ],
+      "resultado": "Relatividades creíbles 1,160 (autos), 1,113 (edificios) y 1,065 (contenidos); factores c 0,713, 0,946 y 1,132 sobre el nivel emergente",
+      "estado": "decidida; factores calculados; aplicación a la receta candidata pendiente"
+    },
+    {
+      "regla": "GASTO-F-01",
+      "tema": "Reparto del gasto fijo de 85 CU en la prima comercial",
+      "elegida": "F × exposición",
+      "alternativas_descartadas": [
+        "F entero por póliza y año",
+        "F entero en cada fila"
+      ],
+      "opinion_pedida_a_Claude": "Coincide con F × exposición como base y propone declarar una sensibilidad con F entero por póliza y año en las dos pólizas nuevas cortas (M00129413 y B00250679)",
+      "estado": "decidida; prima comercial pendiente del R del candidato final"
+    }
+  ],
+  "evidencia": {
+    "carpeta": "Hackaton/Semana 2/Claude/decisiones_20261023",
+    "evidencia": "Hackaton/Semana 2/Claude/decisiones_20261023/evidencia_decisiones.json",
+    "verificacion": "Hackaton/Semana 2/Claude/decisiones_20261023/verificacion_aporte.json",
+    "privado": "Hackaton/Repositorio_IAA2026/privado/semana2/decisiones_participante_20261023",
+    "aporte_foro": "CLA-S2-20261023-003"
+  },
+  "no_hace": [
+    "No ajusta ni selecciona modelos de precios",
+    "No abre 2024 ni consulta el tablero",
+    "No modifica F0, recetas, selector ni archivos de Codex"
+  ],
+  "siguiente_accion": [
+    "F0 v2 con CAPS2-01 y una variante con CLIMA-S2-01, por el flujo que mantiene F0",
+    "NB-CRED-01 aplicado a la receta candidata con factor_nuevo_negocio.py, y tres variantes de nivel congeladas antes de abrir 2024",
+    "Primas comerciales de las veinte referencias con GASTO-F-01 cuando exista el R del candidato final"
+  ],
+  "revision_humana": "Decisión del participante; la evidencia es revisión de IA sin revisión profesional independiente"
+}

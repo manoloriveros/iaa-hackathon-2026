@@ -1,0 +1,123 @@
+{
+  "id": "S2-B20-INCENDIO-AD2023-v1-20261024",
+  "author": "Codex",
+  "registered_utc": "2026-10-24T02:50:07.865731+00:00",
+  "path_base": "workspace_root",
+  "authorization_literal": "Revisar concentración de la mejora de B20 en ese incendio y la inestabilidad de AD en edificios; solo artefactos2023 sin reentrenar, conservarB00, decisiones enforo y2024cerrado.",
+  "hypothesis": "The93.9% is a share of a selected net gain, not global or gross improvement. Distinguish the fixed fire row and its fullcomponent, then inspect AD training composition and stored coefficients without assigning causality or refitting.",
+  "fixed_cases": "Primary=priorB19rank1adversebuilding component, secondary=priorB19rank2adversebuilding component, from the same frozen selection. No reselection by B20 gains, new group ranking or changed31group analysis.",
+  "concentration": "Compute explicit net/gross positive denominators by rows and completecomponents globally and in fixed12groups20periods. Two prespecified evaluation exclusions: fixed fire row or fullcomponent; reuse savedpredictions and gain, recalculate common null only for those descriptive exclusions. No physical deletion, newcandidate score, CI/bootstrap or promotion.",
+  "AD_diagnostic": "Reuse originalscale AD coefficients of B19/B20 across5overlappingfolds. Tabulate12580building rows and acceptedclaim cashcosts by ADno/yes/missing, business, peril and fit/heldout view in eachfold. Nominal and fixed effectiveC0 exposure are denominators, not fitted rates or adopted prices. Retain zero/missing cells and allperils; no flagmask.",
+  "influence_limits": "Check fixedfire membership in eachfit and reuse existing B19local H^-1G values only for those two components. No newHessian/modelprediction, no B20localinfluence inference, no combineddeletionbeta estimate. Heldoutfire cannot directly affect its ownfit; fold differences omit many components, notjust thisfire.",
+  "verification": "Dictionary/mathfsum/Decimal money-conservation for AD/peril cells, sklearn generaldeviance for exactly the declared fixedrow/component exclusions, explicit sign/null and zero-net ratio guards. Adverse year/key/cost/ADflag and one real CLI syntheticyear source failure before outputs. Do not repeat prior suites/resampling or training.",
+  "code": "Hackaton/Repositorio_IAA2026/src/semana2/diagnosticar_incendio_AD_b20_2023.py",
+  "row_attribution": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_atribucion_20261024_v1a/row_attribution_2023.parquet",
+  "group_attribution": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_atribucion_20261024_v1a/group_attribution_2023.parquet",
+  "coefficients": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/coefficients_original_scale.parquet",
+  "selection_reasons": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/traza_b19_20261024T021036Z_fe5038de/selection_reasons.parquet",
+  "B19_local_influence": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/estabilidad_b19_20261024T014815Z_9b2b1803/training_group_local_influence.parquet",
+  "claims_2023": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mezcla_20261024T004833Z_e8ff18e0/inputs_2023/claims_2023.parquet",
+  "building_frames": [
+    "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold0.parquet",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold1.parquet",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold2.parquet",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold3.parquet",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold4.parquet"
+  ],
+  "resources": "One finite localunit up to45min;0fits/model loads/newpricepredictions/bootstrap/newrecipes; no2024/test/SEL01/actas/ledger/remote/submissions/delegation/otherautomationchanges.",
+  "reference": "W2-B00",
+  "all_alternatives_preserved": true,
+  "new_fits": 0,
+  "new_price_predictions": 0,
+  "new_bootstrap": 0,
+  "forum_prior": "COD-S2-20261024-043",
+  "forum_result": "COD-S2-20261024-044",
+  "concurrent_current_unit_cut": null,
+  "registration_mode": "current_unit",
+  "complete_blindness_claim_allowed": false,
+  "prior_external2024_subject_exposure_disclosed": true,
+  "professional_independent_validation": false,
+  "ledger_read": false,
+  "frozen_sources": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/preinscripcion_incendio_AD_20261024/semana2_b20_contraccion_actual.json",
+      "sha256": "a790444b65aed44d53e533386e286f4e116fd32a7f82993482cf3c36957bed20"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/preinscripcion_incendio_AD_20261024/semana2_b20_atribucion_actual.json",
+      "sha256": "499aaa04b54347dd1b4903ba6192e3a70ebeca8d359008da7197b6d833e7b8a4"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/preinscripcion_incendio_AD_20261024/semana2_desarrollo2023_actual.json",
+      "sha256": "27a605b6a575ef5ea588f252c814669ccff2de3d79d061f201767acecf5c3d51"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/preinscripcion_incendio_AD_20261024/semana2_contadores_propios_actual.json",
+      "sha256": "716b1f947cdce852b08588bca3a39530f533694a15ff24c81f7d703892c130b4"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/diagnosticar_incendio_AD_b20_2023.py",
+      "sha256": "f4bb0caa1abcb956b985086f1f73824b224d5a5a655d8c7e9f2734ec7558c2c7"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_atribucion_20261024_v1a/row_attribution_2023.parquet",
+      "sha256": "78b44b9d872a7c1e24a582802d69873168a5262f423dadf6856778cfb7120783"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_atribucion_20261024_v1a/group_attribution_2023.parquet",
+      "sha256": "d981e8f1c0532ccec6fb5942705e061200b7cc91adf9c3425e84c9e8c2fe54f6"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_atribucion_20261024_v1a/report.json",
+      "sha256": "418ef62541f33883dc6a19179659cc6176d8635d8872505b517ae2253950eb0d"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_atribucion_20261024_v1a/verification_corrected.json",
+      "sha256": "9511888ad30d1e53d375915113da3ecea9719d5173d14b748eb7f37d1b171398"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/coefficients_original_scale.parquet",
+      "sha256": "0d1c1abfc5e1fb9f225448345f8c137d7fd932b68bd2c41ef7c4ad4f47125b47"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/focused_interpretation_receipt.json",
+      "sha256": "ebe40408dc79892eb6ec759948b1724efae53069364069d46ca39a925a5816fb"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/verification.json",
+      "sha256": "1a6a7051eb5e0c14172b686c0c77afc7863e3d616adb420f048cad3da47e9707"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/traza_b19_20261024T021036Z_fe5038de/selection_reasons.parquet",
+      "sha256": "5962bb96613893b19af50f4438c1c43ba2b89751f375ea2115f8ebc599a3df9f"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/estabilidad_b19_20261024T014815Z_9b2b1803/training_group_local_influence.parquet",
+      "sha256": "ccee0e5cf7e76189caa65b7201ee26e143ab4231e62efcc0828467093f373c26"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mezcla_20261024T004833Z_e8ff18e0/inputs_2023/claims_2023.parquet",
+      "sha256": "918509815bb935af58b13b0b5308dbde23562b701c354a0d468d1e2d18ee1009"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold0.parquet",
+      "sha256": "e7a230e9256610c75d017c09ce26952d32aa79fd29c0b81ee3f8579c9a2a6126"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold1.parquet",
+      "sha256": "78a3b3a7c7d662b6ad6533808989334f48d77665d601124fbbddbb2591b89f9a"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold2.parquet",
+      "sha256": "1d342f21384ae5bb85be042bd4943acb75746e70146a5f9a271be4f031d5b206"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold3.parquet",
+      "sha256": "b065d9ecd0c8be3b18411be89b719856d08faf4c7ef70b45e33fd4c69f9efa9d"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold4.parquet",
+      "sha256": "cf7bb6b579ada600613dc14b4e76d7b8c0492c6b7086e871b7f12be11d187de3"
+    }
+  ]
+}

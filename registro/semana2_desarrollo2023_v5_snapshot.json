@@ -1,0 +1,319 @@
+{
+  "id": "S2-DEV2023-v5-20261023",
+  "author": "Codex",
+  "as_of_utc": "2026-10-23T23:29:44.532810+00:00",
+  "path_base": "workspace_root",
+  "status": "five_2023_trials_verified_standard_models_first_reference_retained",
+  "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev5_20261023T232328Z_69df9ead",
+  "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/DESARROLLO_2023_MODELOS_ESTANDAR.md",
+  "training_years": [
+    2023
+  ],
+  "scored_years": [
+    2023
+  ],
+  "rows_per_model": 50094,
+  "groups": 30869,
+  "folds": 5,
+  "new_base_estimator_fits": 15,
+  "new_closed_form_constants": 30,
+  "new_postfit_factors": 0,
+  "cumulative_base_estimator_fits": 80,
+  "cumulative_closed_form_constants": 60,
+  "cumulative_candidate_level_factors": 90,
+  "models_consulted": [
+    "W2-B00",
+    "W2-B01",
+    "W2-B02",
+    "W2-B03",
+    "W2-B04",
+    "W2-B05",
+    "W2-B06",
+    "W2-B07",
+    "W2-B08",
+    "W2-B09",
+    "W2-B10",
+    "W2-B11",
+    "W2-B12",
+    "W2-B13"
+  ],
+  "summary": [
+    {
+      "model_id": "W2-B00",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 15614394.394606076,
+      "actual_over_expected": 0.9796796118640577,
+      "deviance_sum": 5160891.515933607,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.06858168733600944
+    },
+    {
+      "model_id": "W2-B01",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 14552011.495134693,
+      "actual_over_expected": 1.0512020173372196,
+      "deviance_sum": 5171545.277172904,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.06665893653096044
+    },
+    {
+      "model_id": "W2-B02",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 7558637.5700367,
+      "actual_over_expected": 2.0237911526065835,
+      "deviance_sum": 7056489.915591724,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": -0.27352879056244483
+    },
+    {
+      "model_id": "W2-B03",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 14320114.142914398,
+      "actual_over_expected": 1.0682249936931556,
+      "deviance_sum": 5060364.132567781,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.08672449183055142
+    },
+    {
+      "model_id": "W2-B04",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 12633749.135502394,
+      "actual_over_expected": 1.2108126951019829,
+      "deviance_sum": 5134105.633827085,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.07341590271097842
+    },
+    {
+      "model_id": "W2-B05",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 14113479.759711083,
+      "actual_over_expected": 1.0838647945397377,
+      "deviance_sum": 5098408.392860789,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.07985840665529409
+    },
+    {
+      "model_id": "W2-B06",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 15584470.336515393,
+      "actual_over_expected": 0.9815607145889279,
+      "deviance_sum": 5047538.852061821,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.08903915027501252
+    },
+    {
+      "model_id": "W2-B07",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 15622080.073219894,
+      "actual_over_expected": 0.9791976336251801,
+      "deviance_sum": 5087992.153827707,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.08173829034487445
+    },
+    {
+      "model_id": "W2-B08",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 15599432.365560735,
+      "actual_over_expected": 0.9806192611066931,
+      "deviance_sum": 5024599.920003215,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.09317908255732787
+    },
+    {
+      "model_id": "W2-B09",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 15618237.233912986,
+      "actual_over_expected": 0.9794385634496775,
+      "deviance_sum": 5093374.697941925,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.08076686900396346
+    },
+    {
+      "model_id": "W2-B10",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 14161094.795832934,
+      "actual_over_expected": 1.0802204250833312,
+      "deviance_sum": 5018701.077436858,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.0942436835032815
+    },
+    {
+      "model_id": "W2-B11",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 14318752.63823979,
+      "actual_over_expected": 1.0683265663202686,
+      "deviance_sum": 5061116.496614024,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.08658870799392215
+    },
+    {
+      "model_id": "W2-B12",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 15367499.066693304,
+      "actual_over_expected": 0.9954192138624641,
+      "deviance_sum": 5125797.837725138,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.07491526254122116
+    },
+    {
+      "model_id": "W2-B13",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 15430285.109681413,
+      "actual_over_expected": 0.9913688393484155,
+      "deviance_sum": 5060434.971442784,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.0867117070965141
+    }
+  ],
+  "primary_contrasts": [
+    {
+      "candidate": "W2-B12",
+      "reference": "W2-B00",
+      "delta_D2": 0.0063335752052117375,
+      "exploratory_lower95": -0.002051373707541042,
+      "exploratory_upper95": 0.018427412524875123,
+      "groups": 30869,
+      "removed_favorable_groups": 31,
+      "delta_after_removal": -0.007392364678154792,
+      "largest_favorable_group_delta": 0.004314200258320992,
+      "interpretation": "Exploratory 2023 only; no simultaneous confirmation or promotion"
+    },
+    {
+      "candidate": "W2-B13",
+      "reference": "W2-B00",
+      "delta_D2": 0.018130019760504712,
+      "exploratory_lower95": -0.0062047617106208,
+      "exploratory_upper95": 0.042657638670275104,
+      "groups": 30869,
+      "removed_favorable_groups": 31,
+      "delta_after_removal": -0.012507859322130806,
+      "largest_favorable_group_delta": 0.00633655842466611,
+      "interpretation": "Exploratory 2023 only; no simultaneous confirmation or promotion"
+    },
+    {
+      "candidate": "W2-B13",
+      "reference": "W2-B08",
+      "delta_D2": -0.006467375460813845,
+      "exploratory_lower95": -0.02446345965895212,
+      "exploratory_upper95": 0.012888706695344802,
+      "groups": 30869,
+      "removed_favorable_groups": 31,
+      "delta_after_removal": -0.027977169782499235,
+      "largest_favorable_group_delta": 0.005821430677368062,
+      "interpretation": "Exploratory 2023 only; no simultaneous confirmation or promotion"
+    },
+    {
+      "candidate": "W2-B13",
+      "reference": "W2-B12",
+      "delta_D2": 0.011796444555292971,
+      "exploratory_lower95": -0.009704503004582013,
+      "exploratory_upper95": 0.03170110621378786,
+      "groups": 30869,
+      "removed_favorable_groups": 31,
+      "delta_after_removal": -0.012856017601604966,
+      "largest_favorable_group_delta": 0.004018654105637825,
+      "interpretation": "Exploratory 2023 only; no simultaneous confirmation or promotion"
+    }
+  ],
+  "reference": "W2-B00",
+  "alternatives_preserved": [
+    "W2-B01",
+    "W2-B02",
+    "W2-B03",
+    "W2-B04",
+    "W2-B05",
+    "W2-B06",
+    "W2-B07",
+    "W2-B08",
+    "W2-B09",
+    "W2-B10",
+    "W2-B11",
+    "W2-B12",
+    "W2-B13"
+  ],
+  "promotion": false,
+  "confirmation_2024_open": false,
+  "confirmation_closed_by_current_user_instruction": true,
+  "final_confirmation_roster_frozen": false,
+  "history": [
+    {
+      "id": "S2-DEV2023-v1-20261023",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev_20261023T173828Z_7efe46fc",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/DESARROLLO_2023.md",
+      "index_snapshot": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_v1_snapshot.json",
+      "index_sha256": "ba36fa4aed4f0d7bf7335525086a50a5443632c1fffedd16889240b0deba4933"
+    },
+    {
+      "id": "S2-DEV2023-v2-20261023",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev2_20261023T180127Z_46d18106",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/DESARROLLO_2023_TANDA2.md",
+      "index_snapshot": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_v2_snapshot.json",
+      "index_sha256": "c2ec073fe3c06526c244cc273fdfb5a5e1736f0facda598169a6db6f7e8725ce"
+    },
+    {
+      "id": "S2-DEV2023-v3-20261023",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev3_20261023T181613Z_24c943a3",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/DESARROLLO_2023_NIVEL_INFLUENCIA.md",
+      "index_snapshot": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_v3_snapshot.json",
+      "index_sha256": "80eb7f16cecdd49810b48d095b1e4ebd53b9791183a271951d36ce5742075e9a"
+    },
+    {
+      "id": "S2-DEV2023-v4-20261023",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev4_20261023T204811Z_4adcedec",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/DESARROLLO_2023_ESTABILIDAD_NEGOCIO.md",
+      "index_snapshot": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_v4_snapshot.json",
+      "index_sha256": "45d8d340fd199034000fb28826eaedcf2e371a82356534950924d2fe15aaf4b0"
+    },
+    {
+      "id": "S2-DEV2023-v5-20261023",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev5_20261023T232328Z_69df9ead",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/DESARROLLO_2023_MODELOS_ESTANDAR.md"
+    }
+  ],
+  "forum_prior": "COD-S2-20261023-016",
+  "forum_result": "COD-S2-20261023-017",
+  "submissions": 0,
+  "professional_independent_validation": false,
+  "selector_status_not_assessed_here": true,
+  "night_continuation_index": "Hackaton/Repositorio_IAA2026/registro/semana2_continuidad_nocturna.json",
+  "verification": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev5_20261023T232328Z_69df9ead/verifications/20261023T232550Z_bf02f31b.json",
+    "sha256": "f027c9eb179dda5742ff53d64ba3429f62f79bc6b8116d7f188ac24f3087428a",
+    "passed": 712,
+    "failed": 0
+  },
+  "fixtures": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev5_20261023T232328Z_69df9ead/fixture_checks.json",
+    "sha256": "7599705a58fee1b0c511f659dec01bde711144d0eea299e838f0dceae36333e0",
+    "passed": 22,
+    "failed": 0
+  },
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev5_20261023T232328Z_69df9ead/report.json",
+  "report_sha256": "99b821495fa24be81c612c29b3b3baf621d24a4f7c971cf5800bc139b0ee2212",
+  "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_plan_v5.json",
+  "plan_sha256": "51b47e70bb70de9b2fda069cd2f32af4df2800ab694ddab1cacbf1d92bb64863",
+  "producer": "Hackaton/Repositorio_IAA2026/src/semana2/entrenar_desarrollo2023_v5.py",
+  "producer_sha256": "185cce18639483a6df4716f2bd5b203d885dfa053f0282fa4eaf70631b72d7be",
+  "oof": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev5_20261023T232328Z_69df9ead/oof_2023.parquet",
+  "oof_sha256": "9a1dc46cf4c2a12ada99538d72c48cf7478ce1fde53e3b86446a22eb7a8dfff0",
+  "manifest": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev5_20261023T232328Z_69df9ead/manifest.json",
+  "manifest_sha256": "6e0ddd51b85388e590a9fbb2dba67b8478c08f8d782a91b079179e076c9ef3bf",
+  "assessment": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev5_20261023T232328Z_69df9ead/assessment.json",
+  "assessment_sha256": "a68fdf32f3ac449b0d5bfd4f2e08fab7c6eb93e19a7edd376a88614f94e46752",
+  "decision_journal": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev5_20261023T232328Z_69df9ead/decision_journal.json",
+  "decision_journal_sha256": "498f84d97efda216bfe118cbfffee01108de3289c9d42091a75750f6a782e197"
+}

@@ -1,0 +1,256 @@
+{
+  "id": "S2-B20-SINTESIS2023-v1-20261024",
+  "author": "Codex",
+  "utc": "2026-10-24T02:53:05.780142+00:00",
+  "path_base": "workspace_root",
+  "purpose": "Consolidar atribución, contracción y bandas B20 existentes y delimitar evidencia pendiente.",
+  "scope": "2023 saved aggregate JSON/Markdown only; no OOF/model/raw-data file reads.",
+  "indices": {
+    "ridge": "Hackaton/Repositorio_IAA2026/registro/semana2_glm_ridge_actual.json",
+    "attribution": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_atribucion_actual.json",
+    "contraction": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_contraccion_actual.json",
+    "calibration": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_bandas_calibracion_actual.json"
+  },
+  "frozen_sources": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_glm_ridge_actual.json",
+      "sha256": "27a605b6a575ef5ea588f252c814669ccff2de3d79d061f201767acecf5c3d51",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/00_semana2_glm_ridge_actual.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/GLM_RIDGE_COBERTURAS_2023.md",
+      "sha256": "7848ffb9249add26bf699a4baa54e9cb23df48d9627dea93f1e9a1620c127d43",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/01_GLM_RIDGE_COBERTURAS_2023.md"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_glm_ridge_coberturas_plan_v1.json",
+      "sha256": "4fdee1366df2b330fe455506de63a25f74ecb79c64cba6a82a9e2e8c25eac623",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/02_semana2_glm_ridge_coberturas_plan_v1.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/report.json",
+      "sha256": "81e1d869e2822a54c81007c674d0e03f8fd7f3947a73cb13e951a8b683c105e2",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/03_report.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/verification.json",
+      "sha256": "607979397dde62eaa3b13249ef17e38ea0f9d42c2894108f8b0f6b21f03b6692",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/04_verification.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/fixture_checks.json",
+      "sha256": "acdd77a901209313e994beef76b2408fbbf6892beaf5ca7747145b801862e31f",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/05_fixture_checks.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/decision_journal.json",
+      "sha256": "b9832e1ffcce334611374274cfd39844fa8d12d5b9ffa69baa574da0f4795851",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/06_decision_journal.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/manifest.json",
+      "sha256": "217d2958733da98e8044323d0c228e18f7008df4b5b075d57b5cfa35c4f2c645",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/07_manifest.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_atribucion_actual.json",
+      "sha256": "499aaa04b54347dd1b4903ba6192e3a70ebeca8d359008da7197b6d833e7b8a4",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/08_semana2_b20_atribucion_actual.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/ATRIBUCION_GRUPOS_Y_SEGMENTOS_B20_2023.md",
+      "sha256": "d8e07956f9b0c6b52f93ada9ba7a0b91debfbebd5e9d8a0bb42f0a9f6c740410",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/09_ATRIBUCION_GRUPOS_Y_SEGMENTOS_B20_2023.md"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_atribucion_plan_v1a.json",
+      "sha256": "d22716930c91a492bfec36acd93755edd1dd4cd30bd956bc38f224ff3d259abf",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/10_semana2_b20_atribucion_plan_v1a.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_atribucion_20261024_v1a/report.json",
+      "sha256": "418ef62541f33883dc6a19179659cc6176d8635d8872505b517ae2253950eb0d",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/11_report.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_atribucion_20261024_v1a/verification_corrected.json",
+      "sha256": "9511888ad30d1e53d375915113da3ecea9719d5173d14b748eb7f37d1b171398",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/12_verification_corrected.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_atribucion_20261024_v1a/fixture_checks.json",
+      "sha256": "75cf75fe49b7edc0e9693401f4571fbe957826c526b6bbbd90b2df35683a4412",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/13_fixture_checks.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_atribucion_20261024_v1a/decision_journal.json",
+      "sha256": "c6ade1c4b97dc02dec83f5f1f07f1bd27778ca2aad1a2ae994f90a8e55d6baaf",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/14_decision_journal.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_atribucion_20261024_v1a/manifest.json",
+      "sha256": "982b5d1b61b44c6285a0fccb72b8a53c3b2fcd787464ef680e8901026a7dca54",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/15_manifest.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_atribucion_20261024_v1a/closure_verification.json",
+      "sha256": "a30ad58d1d0c7f732b4bde16bdc1aca106ac1bae7864e0e746c2e447a6d31c3f",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/16_closure_verification.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_contraccion_actual.json",
+      "sha256": "a790444b65aed44d53e533386e286f4e116fd32a7f82993482cf3c36957bed20",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/17_semana2_b20_contraccion_actual.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/CONTRACCION_Y_NIVEL_B20_VS_B19_2023.md",
+      "sha256": "cbacb331159858ace5547a549516c2d84cd19a8058f03096f8e5d4ccbb709b2b",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/18_CONTRACCION_Y_NIVEL_B20_VS_B19_2023.md"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_contraccion2023_plan_v2.json",
+      "sha256": "d8259a15fcf638927b8eb231cb23e194c8019037db6f85707bfeaa4c7695d56c",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/19_semana2_b20_contraccion2023_plan_v2.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/report.json",
+      "sha256": "3b609be515f9e932c6a7feb95d4cfe928e0c0794879eccb802c2bc05132ec583",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/20_report.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/verification.json",
+      "sha256": "1a6a7051eb5e0c14172b686c0c77afc7863e3d616adb420f048cad3da47e9707",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/21_verification.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/decision_journal.json",
+      "sha256": "abb7e0b08b03902ceeba85f2e1c6824622dce87c91056a98dbcf72a99478e867",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/22_decision_journal.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/manifest.json",
+      "sha256": "f581dfbb542285201327168ab6beaac222c92b15f28bfcd8cfda4b2a95880d75",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/23_manifest.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/readout.json",
+      "sha256": "7a1037108e17d1bfd9e79c3964a814171e9715546ab0f787d459b310aececc1a",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/24_readout.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/assessment.json",
+      "sha256": "0f6f6f34c16aceaf064b16fd3591db423a70866bf47cf96dca59422101459dd3",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/25_assessment.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/readout_reconciliation.json",
+      "sha256": "48b424752a6e0c7f200aa4084ebfa1a9c3f1593375115d09124be18bdd74c56f",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/26_readout_reconciliation.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/focused_interpretation_receipt.json",
+      "sha256": "ebe40408dc79892eb6ec759948b1724efae53069364069d46ca39a925a5816fb",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/27_focused_interpretation_receipt.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/closure_verification.json",
+      "sha256": "20a9469d4437a743d5a1df1c5baa1c7deeaa82c9e16bb4143209c08eff034bfc",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/28_closure_verification.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_bandas_calibracion_actual.json",
+      "sha256": "1127a18ce7bd4c39f741d9049954efedd7ed158bfeea92cb17bf0f56261346b8",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/29_semana2_b20_bandas_calibracion_actual.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/CALIBRACION_B20_BANDAS_AJUSTE_2023.md",
+      "sha256": "6c190d4c91f640d8cd649b24a7dc5c6c3579a33b28601a0890336f9333b66b04",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/30_CALIBRACION_B20_BANDAS_AJUSTE_2023.md"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_bandas_calibracion_plan_v1.json",
+      "sha256": "f7230c6da741340fc52e3ebc529f6600679e87fb5fc34c21d53b8efbba9c9eef",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/31_semana2_b20_bandas_calibracion_plan_v1.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_bandas_calibracion_20261024_v1/report.json",
+      "sha256": "adab9c16865d9d964f87c705fce5785e651e02843f95ba15d9d78292f651762a",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/32_report.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_bandas_calibracion_20261024_v1/verification.json",
+      "sha256": "aa30098d17e3853f6738d2b539221eff6877191c59ff20b178fcb96658806389",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/33_verification.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_bandas_calibracion_20261024_v1/fixture_checks.json",
+      "sha256": "076dcd09a0a2b8d68b76c6e60d2675c67666f4c6b2c2c4cd1c3dac904a9b9441",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/34_fixture_checks.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_bandas_calibracion_20261024_v1/decision_journal.json",
+      "sha256": "530cc3e89b5ce29e8d95a87d293d52ae99b3b9e87d87c1688ba8d85277935e75",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/35_decision_journal.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_bandas_calibracion_20261024_v1/manifest.json",
+      "sha256": "ea78e0b15948c0118badc82f900d66a06b8533db0bbd19e7099b9b3e7fc15f7d",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/36_manifest.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_bandas_calibracion_20261024_v1/readout.json",
+      "sha256": "535879edf37e793dececeb68a6d227deb293e41346002e2b0d14323c2b5a252f",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/37_readout.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_bandas_calibracion_20261024_v1/closure_verification.json",
+      "sha256": "211bb8a65bafc12ae25454727d9736c3d916f592e24eff8f3ede98d42c6f3308",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/38_closure_verification.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_contadores_propios_actual.json",
+      "sha256": "716b1f947cdce852b08588bca3a39530f533694a15ff24c81f7d703892c130b4",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/39_semana2_contadores_propios_actual.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_actual.json",
+      "sha256": "27a605b6a575ef5ea588f252c814669ccff2de3d79d061f201767acecf5c3d51",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/40_semana2_desarrollo2023_actual.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_politica_seleccion_v1.json",
+      "sha256": "8de4043120b600813c44870d015569bac53c0ddb1d289970c071d1f152281139",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/41_semana2_politica_seleccion_v1.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/PROTOCOLO_SELECCION.md",
+      "sha256": "13471fadbe56bd6415fab555df5b3fba0651545dc94d348c561f8ac332cf7fc3",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/42_PROTOCOLO_SELECCION.md"
+    },
+    {
+      "path": "Preparación/Antecedentes/IAA_IA/PRACTICAS_PRIORITARIAS.md",
+      "sha256": "b4d9e55cc396afc8f7ab4f501489513b6aba71c5fb0450215e4359c1ea1a3298",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/sources/43_PRACTICAS_PRIORITARIAS.md"
+    }
+  ],
+  "method": "Conciliar SHA/recibos finales y magnitudes compartidas; ninguna nueva estimación o remuestreo.",
+  "acceptance": [
+    "SHA de fuentes y snapshots exactos",
+    "Recibos finales sin fallos",
+    "Coherencia de costes, poblaciones y ganancias entre diagnósticos",
+    "Separar validez técnica, diagnóstico descriptivo y promoción predictiva",
+    "Preservar B00, alternativas, contadores y unidad concurrente"
+  ],
+  "new_fits": 0,
+  "new_inference": 0,
+  "new_bootstrap": 0,
+  "new_recipes": 0,
+  "2024_test_closed": true,
+  "ledger_read": false,
+  "prior_external2024_header_exposure_disclosed": true,
+  "complete_blindness_claim_allowed": false,
+  "professional_independent_validation": false,
+  "forum_prior": "COD-S2-20261024-B20-SYNTH-PRE",
+  "forum_result": "COD-S2-20261024-B20-SYNTH-RESULT",
+  "no_next_model_authorized_or_selected": true
+}

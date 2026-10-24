@@ -1,0 +1,266 @@
+{
+  "id": "S2-DEV2023-v4-20261023",
+  "author": "Codex",
+  "as_of_utc": "2026-10-23T20:54:18.166186+00:00",
+  "path_base": "workspace_root",
+  "status": "four_2023_trials_verified_reference_retained_no_promotion",
+  "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev4_20261023T204811Z_4adcedec",
+  "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/DESARROLLO_2023_ESTABILIDAD_NEGOCIO.md",
+  "training_years": [
+    2023
+  ],
+  "scored_years": [
+    2023
+  ],
+  "rows_per_model": 50094,
+  "groups": 30869,
+  "folds": 5,
+  "new_candidate_base_estimator_fits": 0,
+  "new_level_factors": 60,
+  "new_adapter_bundles": 30,
+  "stress_base_estimator_fits": 15,
+  "stress_constants": 15,
+  "cumulative_base_estimator_fits": 65,
+  "cumulative_closed_form_constants": 30,
+  "cumulative_level_factors": 90,
+  "cumulative_candidate_adapters": 90,
+  "models_consulted": [
+    "W2-B00",
+    "W2-B01",
+    "W2-B02",
+    "W2-B03",
+    "W2-B04",
+    "W2-B05",
+    "W2-B06",
+    "W2-B07",
+    "W2-B08",
+    "W2-B09",
+    "W2-B10",
+    "W2-B11"
+  ],
+  "summary": [
+    {
+      "model_id": "W2-B00",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 15614394.394606076,
+      "actual_over_expected": 0.9796796118640577,
+      "deviance_sum": 5160891.515933607,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.06858168733600944
+    },
+    {
+      "model_id": "W2-B01",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 14552011.495134693,
+      "actual_over_expected": 1.0512020173372196,
+      "deviance_sum": 5171545.277172904,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.06665893653096044
+    },
+    {
+      "model_id": "W2-B02",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 7558637.5700367,
+      "actual_over_expected": 2.0237911526065835,
+      "deviance_sum": 7056489.915591724,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": -0.27352879056244483
+    },
+    {
+      "model_id": "W2-B03",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 14320114.142914398,
+      "actual_over_expected": 1.0682249936931556,
+      "deviance_sum": 5060364.132567781,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.08672449183055142
+    },
+    {
+      "model_id": "W2-B04",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 12633749.135502394,
+      "actual_over_expected": 1.2108126951019829,
+      "deviance_sum": 5134105.633827085,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.07341590271097842
+    },
+    {
+      "model_id": "W2-B05",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 14113479.759711083,
+      "actual_over_expected": 1.0838647945397377,
+      "deviance_sum": 5098408.392860789,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.07985840665529409
+    },
+    {
+      "model_id": "W2-B06",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 15584470.336515393,
+      "actual_over_expected": 0.9815607145889279,
+      "deviance_sum": 5047538.852061821,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.08903915027501252
+    },
+    {
+      "model_id": "W2-B07",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 15622080.073219894,
+      "actual_over_expected": 0.9791976336251801,
+      "deviance_sum": 5087992.153827707,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.08173829034487445
+    },
+    {
+      "model_id": "W2-B08",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 15599432.365560735,
+      "actual_over_expected": 0.9806192611066931,
+      "deviance_sum": 5024599.920003215,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.09317908255732787
+    },
+    {
+      "model_id": "W2-B09",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 15618237.233912986,
+      "actual_over_expected": 0.9794385634496775,
+      "deviance_sum": 5093374.697941925,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.08076686900396346
+    },
+    {
+      "model_id": "W2-B10",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 14161094.795832934,
+      "actual_over_expected": 1.0802204250833312,
+      "deviance_sum": 5018701.077436858,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.0942436835032815
+    },
+    {
+      "model_id": "W2-B11",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 14318752.63823979,
+      "actual_over_expected": 1.0683265663202686,
+      "deviance_sum": 5061116.496614024,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.08658870799392215
+    }
+  ],
+  "reference_pairs": [
+    {
+      "candidate": "W2-B10",
+      "reference": "W2-B00",
+      "delta_D2": 0.02566199616727195,
+      "exploratory_lower95": 0.013577602681581738,
+      "exploratory_upper95": 0.03766139358088541,
+      "groups": 30869,
+      "removed_favorable_groups": 31,
+      "delta_after_removal": 0.006913914282392002,
+      "largest_favorable_group_delta": 0.0022646178857249847,
+      "interpretation": "Exploratory 2023 only; no simultaneous confirmation or promotion"
+    },
+    {
+      "candidate": "W2-B11",
+      "reference": "W2-B00",
+      "delta_D2": 0.018007020657912733,
+      "exploratory_lower95": 0.009551701944777067,
+      "exploratory_upper95": 0.02744534162577597,
+      "groups": 30869,
+      "removed_favorable_groups": 31,
+      "delta_after_removal": 0.003461599730283411,
+      "largest_favorable_group_delta": 0.002511509723136672,
+      "interpretation": "Exploratory 2023 only; no simultaneous confirmation or promotion"
+    }
+  ],
+  "reference": "W2-B00",
+  "alternatives_preserved": [
+    "W2-B01",
+    "W2-B02",
+    "W2-B03",
+    "W2-B04",
+    "W2-B05",
+    "W2-B06",
+    "W2-B07",
+    "W2-B08",
+    "W2-B09",
+    "W2-B10",
+    "W2-B11"
+  ],
+  "promotion": false,
+  "confirmation_2024_open": false,
+  "confirmation_closed_by_current_user_instruction": true,
+  "final_confirmation_roster_frozen": false,
+  "history": [
+    {
+      "id": "S2-DEV2023-v1-20261023",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev_20261023T173828Z_7efe46fc",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/DESARROLLO_2023.md",
+      "index_snapshot": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_v1_snapshot.json",
+      "index_sha256": "ba36fa4aed4f0d7bf7335525086a50a5443632c1fffedd16889240b0deba4933"
+    },
+    {
+      "id": "S2-DEV2023-v2-20261023",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev2_20261023T180127Z_46d18106",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/DESARROLLO_2023_TANDA2.md",
+      "index_snapshot": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_v2_snapshot.json",
+      "index_sha256": "c2ec073fe3c06526c244cc273fdfb5a5e1736f0facda598169a6db6f7e8725ce"
+    },
+    {
+      "id": "S2-DEV2023-v3-20261023",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev3_20261023T181613Z_24c943a3",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/DESARROLLO_2023_NIVEL_INFLUENCIA.md",
+      "index_snapshot": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_v3_snapshot.json",
+      "index_sha256": "80eb7f16cecdd49810b48d095b1e4ebd53b9791183a271951d36ce5742075e9a"
+    },
+    {
+      "id": "S2-DEV2023-v4-20261023",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev4_20261023T204811Z_4adcedec",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/DESARROLLO_2023_ESTABILIDAD_NEGOCIO.md"
+    }
+  ],
+  "forum_prior": "COD-S2-20261023-014",
+  "forum_result": "COD-S2-20261023-015",
+  "submissions": 0,
+  "selector_status_not_assessed_here": true,
+  "professional_independent_validation": false,
+  "verification": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev4_20261023T204811Z_4adcedec/verifications/20261023T205329Z_a8ab6abc.json",
+    "sha256": "4c37f3f98e48e699ae5c58dd3f26273251aa3e372624e1fadbeb328ac36c8271",
+    "passed": 1178,
+    "failed": 0
+  },
+  "fixtures": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev4_20261023T204811Z_4adcedec/fixture_checks.json",
+    "sha256": "f709a9d4da270274d773ba0dafc998e4cb0f11c8438a0f3d5cd0eaa876cd2183",
+    "passed": 21,
+    "failed": 0
+  },
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev4_20261023T204811Z_4adcedec/report.json",
+  "report_sha256": "4630da1e57643acd3a19f4f52ff69c387b4b01faf06548371bd9f232ddc2d0f9",
+  "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_plan_v4.json",
+  "plan_sha256": "de0cf0e4402062cb2f03cf84b217f6b6fc794bef7c9d00fc8ccb1c7c93aac949",
+  "producer": "Hackaton/Repositorio_IAA2026/src/semana2/entrenar_desarrollo2023_v4.py",
+  "producer_sha256": "551c1ec0d859cdeb0525231940548462b5ea02f9b615126a52b03837f7451255",
+  "oof": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev4_20261023T204811Z_4adcedec/oof_2023.parquet",
+  "oof_sha256": "69f172d3a59a2cb262af85f69b87dafaa6879f91bd38a719ef3ccf4ab36f9238",
+  "manifest": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev4_20261023T204811Z_4adcedec/manifest.json",
+  "manifest_sha256": "75e734178028d2615b9837f60bcd2926a659256873fe73acb63f37ba9b920124",
+  "assessment": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev4_20261023T204811Z_4adcedec/assessment.json",
+  "assessment_sha256": "ec813722b54bcf4cbbc4512a9500e86d930874f97d82f7ff785ffbb1051a5171",
+  "stress_oof": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev4_20261023T204811Z_4adcedec/stress_oof_2023.parquet",
+  "stress_oof_sha256": "9b1d27569ee6cd9e1a0f52f50cd30b88ae9aa3c02887fd3ee9ec83141d5926fb"
+}

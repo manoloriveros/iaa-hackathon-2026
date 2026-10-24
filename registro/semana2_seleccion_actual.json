@@ -1,0 +1,48 @@
+{
+  "id": "S2-SELECCION-ACTUAL",
+  "utc": "2026-10-23T17:16:06.818476+00:00",
+  "autor": "Codex",
+  "policy": {
+    "path": "Hackaton/Repositorio_IAA2026/registro/semana2_politica_seleccion_v1.json",
+    "sha256": "8de4043120b600813c44870d015569bac53c0ddb1d289970c071d1f152281139"
+  },
+  "gate_workspace_relative": "Hackaton/Repositorio_IAA2026/herramientas/seleccionar_semana2.py",
+  "gate_sha256": "f08156784ef35c8958392a62d794b9f47c8cd1805647ed77a23c97e7174c43fc",
+  "ledger_workspace_relative": "Hackaton/Repositorio_IAA2026/privado/semana2/seleccion/confirmacion_v1",
+  "status_at_registration": "policy_fixed_no_roster_frozen_no_confirmation_opened",
+  "registration_evidence_workspace_relative": "Hackaton/Repositorio_IAA2026/privado/semana2/seleccion/registro_v1_20261023",
+  "reference_designated": "W2-B00",
+  "reference_pricing_model_fitted_by_this_task": false,
+  "model_scores_consulted_in_this_task": false,
+  "authorization_literal": "Aplica este protocolo a la segunda semana y fija los criterios de selección antes de comparar modelos. Quiero que las advertencias tengan consecuencias y que no volvamos a descartar una alternativa sin una mejora clara.",
+  "operational_consequence": "Only frozen gate decision may promote or supersede an incumbent. Any inconclusive or blocked candidate remains preserved.",
+  "limitations": "Recomputes frozen metric receipts, including repeated decision validation, and checks pinned software review; no producer honesty, actuarial adequacy, professional independence or real2024 batch results certified. Synthetic review does not authorize opening.",
+  "metric_binding_release": {
+    "review": {
+      "path": "foros/validacion_ia_periodica/runs/20261023T173430Z_metric_binding/post_install_GOV005/REVISION_INDEPENDIENTE_PREAPERTURA_V2.json",
+      "sha256": "427e9f948ecd28b2197ca48b09b37383f7ad30ac68d1e41dc7e79323a51750b4"
+    },
+    "bindings": {
+      "selector": {
+        "path": "foros/validacion_ia_periodica/runs/20261023T173430Z_metric_binding/post_install_GOV005/seleccionar_semana2.py",
+        "sha256": "f08156784ef35c8958392a62d794b9f47c8cd1805647ed77a23c97e7174c43fc"
+      },
+      "metric_engine": {
+        "path": "foros/validacion_ia_periodica/runs/20261023T173430Z_metric_binding/post_install_GOV005/metric_binding.py",
+        "sha256": "e210fc126d48b977901762ee0efbb5611629f9b47d39f6ed782d7763b8ede541"
+      },
+      "independent_checker": {
+        "path": "foros/validacion_ia_periodica/runs/20261023T173430Z_metric_binding/post_install_GOV005/oraculo_independiente.py",
+        "sha256": "2a3d04923235994238c670f1766c5818cf6a97f4eff77071faffd78facec8433"
+      },
+      "test_suite": {
+        "path": "foros/validacion_ia_periodica/runs/20261023T173430Z_metric_binding/post_install_GOV005/cache_independiente.py",
+        "sha256": "e4cd58c930bf1f15cb03d5a515d3459444d4a2f89c79e119d871ca2b210780b6"
+      },
+      "policy": {
+        "path": "Hackaton/Repositorio_IAA2026/registro/semana2_politica_seleccion_v1.json",
+        "sha256": "8de4043120b600813c44870d015569bac53c0ddb1d289970c071d1f152281139"
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "id": "S2-CONTINUIDAD-INCIDENCIA2023-v1-20261024",
+  "author": "Codex",
+  "utc": "2026-10-24T03:13:03.925393+00:00",
+  "purpose": "Conciliar la síntesis anterior con incendio/AD ya terminado y registrar el anuncio HOST nuevo; corregir la cola obsoleta sin repetir diagnósticos.",
+  "scope": "JSON/Markdown agregados2023 y discusión pública752144; ninguna lectura de OOF, modelos, originales,2024,test,ledger,SEL01 o actas.",
+  "hypothesis": "El nuevo corte de incendio/AD acota la concentración sin cerrar los seis requisitos pendientes; un anuncio HOST de arreglo no prueba recepción/scoring propio.",
+  "acceptance": [
+    "Cortes y SHA íntegros; el corte anterior excluía incendio/AD",
+    "Cotejar solo recibos y conclusiones nuevas, sin repetir matemática ya verificada",
+    "HOST, fecha y mensaje nuevos cotejados contra archivo previo",
+    "No cerrar G1-G6 ni certificar scoring por anuncio",
+    "Preservar catálogo, contadores, fuentes históricas y trabajo concurrente"
+  ],
+  "frozen_sources": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_sintesis_actual.json",
+      "sha256": "4c5ac9e8b23be24147beb9ef0eb210bbc63b0a0a34cdd0f023d4c3d60019b63a",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/continuidad_20261024T0310Z_v1/sources/00_semana2_b20_sintesis_actual.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_incendio_AD_actual.json",
+      "sha256": "f472ccede1e6720aaa2dacfd9161c0f6a65a1d5ed24ffeb77ed14832ab4f8a5a",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/continuidad_20261024T0310Z_v1/sources/01_semana2_b20_incendio_AD_actual.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_incidencia_kaggle_752144.json",
+      "sha256": "4985f9e4cffa82daf9ce205169819c074ae68c412cba80d787b63c0998e4c4bb",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/continuidad_20261024T0310Z_v1/sources/02_semana2_incidencia_kaggle_752144.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_actual.json",
+      "sha256": "27a605b6a575ef5ea588f252c814669ccff2de3d79d061f201767acecf5c3d51",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/continuidad_20261024T0310Z_v1/sources/03_semana2_desarrollo2023_actual.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_contadores_propios_actual.json",
+      "sha256": "716b1f947cdce852b08588bca3a39530f533694a15ff24c81f7d703892c130b4",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/continuidad_20261024T0310Z_v1/sources/04_semana2_contadores_propios_actual.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/evidence_gaps.json",
+      "sha256": "f9637a34cf3e022887cc98debe7a8f245f983a4479054dcfa56a5713ade7619f",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/continuidad_20261024T0310Z_v1/sources/05_evidence_gaps.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/report.json",
+      "sha256": "a278edb433051a682ea0445bbe56515e70ac1ef519b4cb56b9ee718953ec9555",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/continuidad_20261024T0310Z_v1/sources/06_report.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/incendio_AD_b20_20261024T025027Z_87782526/report.json",
+      "sha256": "b6677a80b5984bca499f4c5cc6277ca27618ffff69020c92830c16e35f0b5034",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/continuidad_20261024T0310Z_v1/sources/07_report.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/incendio_AD_b20_20261024T025027Z_87782526/verification.json",
+      "sha256": "374e076f4866f678b477451a7127165520ee1fc85920b01d9fcb2ddb1e6c3fa2",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/continuidad_20261024T0310Z_v1/sources/08_verification.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/fuentes/kaggle_discusion_752144_20261024T0307Z.json",
+      "sha256": "3646b61eaad7054d2b68b3ad08e22de4ce40eeddba6a257f5d3bfec9e71be3ce",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/continuidad_20261024T0310Z_v1/sources/09_kaggle_discusion_752144_20261024T0307Z.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/SINTESIS_B20_Y_SIGUIENTE_PASO_2023.md",
+      "sha256": "53d96bac9c0192668b3bb336ffca0cd3e4dfac9f55abac0beaa5cd8decdf36f3",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/continuidad_20261024T0310Z_v1/sources/10_SINTESIS_B20_Y_SIGUIENTE_PASO_2023.md"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/INCENDIO_Y_AD_B20_2023.md",
+      "sha256": "aa770c8c10418c7b04d3b641cd6194636d7e3e03e87c5a68dd1ce532359b162d",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/continuidad_20261024T0310Z_v1/sources/11_INCENDIO_Y_AD_B20_2023.md"
+    }
+  ],
+  "new_fits": 0,
+  "model_loads": 0,
+  "new_predictions": 0,
+  "new_scores": 0,
+  "new_bootstrap": 0,
+  "new_recipes": 0,
+  "reference": "W2-B00",
+  "all_alternatives_preserved": true,
+  "2024_test_closed": true,
+  "promotion": false,
+  "forum_prior": "COD-S2-20261024-045",
+  "forum_result": "COD-S2-20261024-046",
+  "stop": "Una conciliación documental finita; no seleccionar B21, alpha o calibrador."
+}

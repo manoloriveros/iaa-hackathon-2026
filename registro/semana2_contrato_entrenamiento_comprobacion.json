@@ -1,0 +1,79 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-23T17:17:32.424255+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\dev\\Hakaton\\Preparación\\.venv\\Scripts\\python.exe",
+  "modules": {
+    "numpy": {
+      "version": "2.3.5",
+      "path": "C:\\dev\\Hakaton\\Preparación\\.venv\\Lib\\site-packages\\numpy\\__init__.py"
+    },
+    "pandas": {
+      "version": "3.0.1",
+      "path": "C:\\dev\\Hakaton\\Preparación\\.venv\\Lib\\site-packages\\pandas\\__init__.py"
+    },
+    "pyarrow": {
+      "version": "26.0.0",
+      "path": "C:\\dev\\Hakaton\\Preparación\\.cache\\parquet-reader\\pyarrow\\__init__.py"
+    },
+    "scipy": {
+      "version": "1.16.3",
+      "path": "C:\\dev\\Hakaton\\Preparación\\.venv\\Lib\\site-packages\\scipy\\__init__.py"
+    },
+    "sklearn": {
+      "version": "1.7.2",
+      "path": "C:\\dev\\Hakaton\\Preparación\\.venv\\Lib\\site-packages\\sklearn\\__init__.py"
+    },
+    "lightgbm": {
+      "version": "4.6.0",
+      "path": "C:\\dev\\Hakaton\\Preparación\\.venv\\Lib\\site-packages\\lightgbm\\__init__.py"
+    },
+    "catboost": {
+      "version": "1.2.8",
+      "path": "C:\\dev\\Hakaton\\Preparación\\.venv\\Lib\\site-packages\\catboost\\__init__.py"
+    }
+  },
+  "checks": [
+    {
+      "name": "Unit Tweedie1.5 total loss equals sqrt exposure weighted rate loss",
+      "pass": true
+    },
+    {
+      "name": "Zero target allowed with strictly positive predicted total",
+      "pass": true
+    },
+    {
+      "name": "Import numpy",
+      "pass": true
+    },
+    {
+      "name": "Import pandas",
+      "pass": true
+    },
+    {
+      "name": "Import pyarrow",
+      "pass": true
+    },
+    {
+      "name": "Import scipy",
+      "pass": true
+    },
+    {
+      "name": "Import sklearn",
+      "pass": true
+    },
+    {
+      "name": "Import lightgbm",
+      "pass": true
+    },
+    {
+      "name": "Import catboost",
+      "pass": true
+    }
+  ],
+  "passed": 9,
+  "failed": 0,
+  "pricing_models_trained": 0,
+  "source_sha256": "d89f7350c9584fd479461938b2a789b90214e8e785db0989d8c0ebd45ec9cee4",
+  "loss_contract": "Observed response / effective exposure, weight effective exposure**(2-power), power1.5 for unweighted total-unit deviance proxy; raw-T0 baseline uses nominal exposure; conditional branch uses scoped effective cost exposure."
+}

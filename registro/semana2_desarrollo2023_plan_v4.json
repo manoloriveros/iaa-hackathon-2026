@@ -1,0 +1,120 @@
+{
+  "id": "S2-DEV2023-v4-20261023",
+  "author": "Codex",
+  "registered_utc": "2026-10-23T20:45:38.314188+00:00",
+  "authorization_literal": "Dale, revisa la estabilidad de B08 y el deterioro de B09 en nuevo negocio. Registra la siguiente prueba solo en 2023, conserva B00, deja los resultados en el foro y mantén 2024 cerrado.",
+  "parent_run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev3_20261023T181613Z_24c943a3",
+  "reference_model_run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev_20261023T173828Z_7efe46fc",
+  "parent_manifest_sha256": "703f251e9c94db99e8f77613e1e0fbbb1ce9f0ce188b999e25ef33fd262f667d",
+  "parent_oof_sha256": "f74fb722982c66afaf728ee011f9dd8632b028d43d378692f114634015ff4801",
+  "diagnostic_review": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/revision_estabilidad_20261023T204359Z_e4efa1cd/report.json",
+  "diagnostic_sha256": "28ffbf0b8ec29ebe41bbb4342da65bbc2fe35e6d7d1013d22da81ae1fb3ca617",
+  "selection_policy": "Hackaton/Repositorio_IAA2026/registro/semana2_politica_seleccion_v1.json",
+  "selection_policy_sha256": "8de4043120b600813c44870d015569bac53c0ddb1d289970c071d1f152281139",
+  "objective": {
+    "response": "T0 / effective_cost_exposure_C0",
+    "sample_weight": "sqrt(effective_cost_exposure_C0)",
+    "power": 1.5,
+    "prediction_observed": "effective_cost_exposure_C0 * fitted_annual_rate",
+    "calibration": "Training-only Tweedie-optimal scalar per business/line/fold for B10/B11; in-sample, explicitly distinct from prior B00-level anchor.",
+    "primary_development_metric": "Pooled unweighted total-unit D2 Tweedie 1.5 on all 50094 OOF rows of 2023; global null is arithmetic mean of observed T0; do not average line D2 scores",
+    "positivity": "Fail on nonfinite or nonpositive rate/prediction; no silent clipping or removal"
+  },
+  "observation_link": "Each development fold k uses frozen exclude_foldk/e_cost_mix_1.0, fitted only on other 2023 groups; all three model families use exactly the same link and T0 response.",
+  "features": "Exact availability_contract.blocks[line].all whitelist, no annual weather or optional profiles; metadata excluded. Numeric and categorical training transforms are fitted inside the training rows only.",
+  "models": [
+    {
+      "id": "W2-B10",
+      "parent_model": "W2-B08"
+    },
+    {
+      "id": "W2-B11",
+      "parent_model": "W2-B09"
+    }
+  ],
+  "comparators_reused_without_refit": [
+    "W2-B00",
+    "W2-B01",
+    "W2-B02",
+    "W2-B03",
+    "W2-B04",
+    "W2-B05",
+    "W2-B06",
+    "W2-B07",
+    "W2-B08",
+    "W2-B09"
+  ],
+  "level_rule": {
+    "scope": "One scalar per parent, line, held-out fold and x_new_business in {0,1}; use only outer-training rows.",
+    "factor": "mu=e*r_parent; q=sum_fit(Y/sqrt(mu))/sum_fit(sqrt(mu)) within each business segment; r_new=q*r_parent.",
+    "objective": "Exact positive scalar minimizer of total-unit Tweedie p1.5 for the frozen parent shape within the training segment; no weights or clipping.",
+    "parameters": "Two recipes, 30 factors each, no grid, smoothing, OOF calibration or new native estimator fits for B10/B11.",
+    "anchor": "Explicitly replaces the B00 training aggregate anchor for the new variants; B00 and B08/B09 remain unchanged comparators.",
+    "limits": [
+      "In-sample calibration, not independent or inner-cross-fitted calibration.",
+      "Does not force training/validation A/E=1; Tweedie objective is not observed aggregate balancing.",
+      "Strictly positive fit segment loss required; zero numerator fails the recipe, no fallback.",
+      "Preserves ordering within fold/line/business only; sparse claims may destabilize factors."
+    ]
+  },
+  "diagnostics": {
+    "groups": [
+      "line",
+      "fold",
+      "new_business",
+      "renewal"
+    ],
+    "measures": [
+      "total-unit deviance and pooled D2",
+      "A/E and predicted/observed totals",
+      "fold dispersion",
+      "unseen categories",
+      "rare/extreme losses and group influence",
+      "fit convergence and serialized-model replay"
+    ],
+    "development_uncertainty": {
+      "replicates": 2000,
+      "seed": 2026102302,
+      "unit": "paired customer-address component",
+      "interval": "95% percentile, conditional exploratory diagnostic; NOT the 2024 Bonferroni confirmation interval",
+      "pairs": "All 66 pairs of twelve candidate recipes, common 2000 exploratory draws. Stress is separate and not a selection alternative."
+    },
+    "observation_sensitivity": "At fixed fitted OOF rates, recompute predictions and response for reserve075, reserve125, late_cost05, late_cost10 using saved scoped links. This is an observation-only diagnostic, not a refit or the complete confirmation safeguards.",
+    "no_selection": "Keep B00 and every alternative; no promotion, retirement, equivalence or final confirmation roster here."
+  },
+  "readout_before_testing": {
+    "technical": "Exact previous OOF, all guards/replay, train-only q derivative and no 2024/test rows.",
+    "level": "Report overall, line, fold, business and line x business D2/A/E. Compare new variants to their own parents as well as B00; adverse results retained.",
+    "stability": "Report fold delta signs, top31 removal of each candidate and fixed B08/B09 group lists. Stress compares unchanged validation rows after full training-group deletion; no claim of temporal stability.",
+    "interpretation": "Any negative segment/unstable scale or adverse stress remains visible; no threshold-based promotion in this development. B00 retained regardless."
+  },
+  "technical_acceptance": [
+    "Only 2023 fit/predict/score, no held-out row in q or stress fitting",
+    "Exactly 60 positive scalar factors and 30 adapters for B10/B11",
+    "15 stress GLM fits and 15 stress constants with own preprocessing and convergence",
+    "Deleted groups selected exclusively from training T0, disjoint from validation; complete components removed",
+    "C0 fixed in stress, limitation disclosed",
+    "Saved-model replay and independent scalar/metric/removal checks",
+    "B00 through B09 OOF exact, original code/recipes immutable",
+    "No 2024 ledger, scores, test predictions, promotion or final roster"
+  ],
+  "scope": "2023 only, saved five group folds, exact F0 and C0. No cap/filter in primary fits or scoring, no recipe tuning, no future-year materialization.",
+  "resources": "Local CPU two threads; 60 scalar factors, 30 segment adapters; separate 15 GLMs and 15 constants for stress. Expected minutes, no remote compute.",
+  "search_disclosure": "Fourth adaptive 2023 batch after ten recipes. Two candidate recipes and one fixed stress preregistered before factors/refits; intervals unadjusted for search/66 comparisons. No promotion.",
+  "code": "Hackaton/Repositorio_IAA2026/src/semana2/entrenar_desarrollo2023_v4.py",
+  "forum_preregistration": "COD-S2-20261023-014",
+  "reference_retained": "W2-B00",
+  "confirmation_2024_open": false,
+  "promotion": false,
+  "final_confirmation_roster_frozen": false,
+  "hypothesis": "Training-only business-specific level factors may address level imbalance, but sparse positive claims and in-sample parent fits may worsen generalization. Independently assess conditional B08 refitting sensitivity to severe training groups.",
+  "stability_stress": {
+    "id": "S08-training-tail-stress",
+    "not_a_candidate": true,
+    "deletion": "For each outer fold, pool the saved outer-training rows of all lines, aggregate T0 by customer-address group; rank descending T0, then ascending string group_id; remove ceil(.001 * number_of_training_groups) complete groups in every line.",
+    "refit": "Relearn F0 preprocessing and B03 GLM (alpha10 buildings, alpha1 motor/contents), B00 constant and B08 level anchor on remaining rows. Fixed B08 mixing .5, original solver parameters, no tuning.",
+    "observation_link": "Frozen outer-fold C0, excludes validation groups but still reflects deleted training groups. Conditional price/preprocessing stress, NOT end-to-end refit of reporting or a full jackknife.",
+    "evaluation": "Unchanged outer-validation rows. Save S08 and S00 separately from candidate OOF; report S08 vs original B08, original B00 and stress S00, folds/segments and paired rate changes. No deletion from validation or main fits.",
+    "fits": "15 GLMs and 15 closed-form constants, no tree fits, no seed changes."
+  }
+}

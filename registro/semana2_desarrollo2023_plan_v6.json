@@ -1,0 +1,236 @@
+{
+  "id": "S2-DEV2023-v6-20261023",
+  "author": "Codex",
+  "registered_utc": "2026-10-23T23:40:24.902003+00:00",
+  "authorization_literal": "Dale, revisa capital, clima y credibilidad antes de integrarlos. Prueba los cambios solo en 2023 con modelos estándar, conserva B00, deja las decisiones y resultados en el foro y mantén 2024 cerrado.",
+  "parent_run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev5_20261023T232328Z_69df9ead",
+  "reference_model_run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev_20261023T173828Z_7efe46fc",
+  "parent_manifest_sha256": "6e0ddd51b85388e590a9fbb2dba67b8478c08f8d782a91b079179e076c9ef3bf",
+  "parent_oof_sha256": "9a1dc46cf4c2a12ada99538d72c48cf7478ce1fde53e3b86446a22eb7a8dfff0",
+  "diagnostic_review": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/revision_integracion_20261023T233806Z_0bd51230/report.json",
+  "diagnostic_sha256": "11c59cf962d0e0ef41b31204aadf171f4d31d3e4f57520a5bc7d733787398519",
+  "selection_policy": "Hackaton/Repositorio_IAA2026/registro/semana2_politica_seleccion_v1.json",
+  "selection_policy_sha256": "8de4043120b600813c44870d015569bac53c0ddb1d289970c071d1f152281139",
+  "objective": {
+    "response": "T0 / effective_cost_exposure_C0",
+    "sample_weight": "sqrt(effective_cost_exposure_C0)",
+    "power": 1.5,
+    "prediction_observed": "effective_cost_exposure_C0 * fitted_annual_rate",
+    "calibration": "No new calibration beyond B14 standard GLM; B15 conditional fold credibility c only on new business, without A/E correction.",
+    "primary_development_metric": "Pooled unweighted total-unit D2 Tweedie 1.5 on all 50094 OOF rows of 2023; global null is arithmetic mean of observed T0; do not average line D2 scores",
+    "positivity": "Fail on nonfinite or nonpositive rate/prediction; no silent clipping or removal"
+  },
+  "observation_link": "Each development fold k uses frozen exclude_foldk/e_cost_mix_1.0, fitted only on other 2023 groups; all three model families use exactly the same link and T0 response.",
+  "features": "B14 same exact six-feature core as B13; only x_log_sum_insured quality value changes. B15 no added feature. No climate, premium, raw IDs or audit flags as price predictors.",
+  "models": [
+    {
+      "id": "W2-B14",
+      "family": "TweedieRegressor",
+      "parent": "W2-B13",
+      "change": "Fold-trained capital quality rule only; same six-feature GLM and parameters. Motor exact reuse."
+    },
+    {
+      "id": "W2-B15",
+      "family": "CredibilityRate",
+      "parent": "W2-B14",
+      "change": "Multiply new-business annual rate by c from own outer-training emerging coefficients and frozen developed prior. Renewal unchanged; no extra A/E balancing."
+    }
+  ],
+  "comparators_reused_without_refit": [
+    "W2-B00",
+    "W2-B01",
+    "W2-B02",
+    "W2-B03",
+    "W2-B04",
+    "W2-B05",
+    "W2-B06",
+    "W2-B07",
+    "W2-B08",
+    "W2-B09",
+    "W2-B10",
+    "W2-B11",
+    "W2-B12",
+    "W2-B13"
+  ],
+  "diagnostics": {
+    "groups": [
+      "line",
+      "fold",
+      "new_business",
+      "renewal"
+    ],
+    "measures": [
+      "total-unit deviance and pooled D2",
+      "A/E and predicted/observed totals",
+      "fold dispersion",
+      "unseen categories",
+      "rare/extreme losses and group influence",
+      "fit convergence and serialized-model replay"
+    ],
+    "development_uncertainty": {
+      "replicates": 2000,
+      "seed": 2026102302,
+      "unit": "paired customer-address component",
+      "interval": "95% percentile, conditional exploratory diagnostic; NOT the 2024 Bonferroni confirmation interval",
+      "pairs": "All120 pairs of16 recipes, shared2000 exploratory draws; independent numerical replay of29 new pairs only, prior OOF exact."
+    },
+    "observation_sensitivity": "At fixed fitted OOF rates, recompute predictions and response for reserve075, reserve125, late_cost05, late_cost10 using saved scoped links. This is an observation-only diagnostic, not a refit or the complete confirmation safeguards.",
+    "no_selection": "Keep B00 and every alternative; no promotion, retirement, equivalence or final confirmation roster here."
+  },
+  "readout_before_testing": {
+    "capital": "Compare B14 vsB13 on same target/link/rows; report number of restored cells per fold and effect in changed cells separately from other rows. All56 suspicious2023 rows have T0=0; metric cannot economically confirm their scale.",
+    "credibility": "Compare B15 vsB14 and B00, c/Z/tau/fold dispersion and new-business line cells, plus aggregate level and own top31 influence. Never substitute a good A/E for deviance.",
+    "climate": "Report rejected variants with reason and next admissible source needed; no score with inadmissible weather.",
+    "decision": "Keep B00 and all alternatives regardless of point; no promotion, retirement or final roster."
+  },
+  "technical_acceptance": [
+    "Only2023 emerging materialized for fit/predict/score; no2024/test prices or ledger",
+    "Capital bounds learned in outer training, own-row formula and unchanged non-capital predictors",
+    "Exact B13 core/parameters and motor reuse",
+    "30 auxiliary training-only GLMs, cluster robust SE and score checks; frozen prior identified separately",
+    "No held-out targets in c/tau/calibration and no full2023 c reused",
+    "Blocked-fit replay, independent formulas, influence/new-pair bootstrap and temporal guards",
+    "All14 previous OOF exact and B00 retained"
+  ],
+  "scope": "Only emerging2023 price experiments with frozen developed prior artifact. No newly fitted or scored other year, no global F0 rewrite.",
+  "resources": "Local CPU two threads; ten price GLM fits plus five exact motor reuses, thirty auxiliary Poisson/Gamma GLMs, fifteen c factors/adapters. No grid, remote or reseed.",
+  "search_disclosure": "Sixth adaptive2023 trial,16 recipes after this wave. Two changes isolated as B14/B13 capital and B15/B14 credibility. No multiple-tuning or confirmation claim.",
+  "code": "Hackaton/Repositorio_IAA2026/src/semana2/entrenar_desarrollo2023_v6.py",
+  "forum_preregistration": "COD-S2-20261023-018",
+  "reference_retained": "W2-B00",
+  "confirmation_2024_open": false,
+  "promotion": false,
+  "final_confirmation_roster_frozen": false,
+  "hypothesis": "A business-segment constant and a small unpenalized main-effect GLM can clarify whether business level requires elaborate correction. Six prespecified technical features per line; no variable selection based on new scores.",
+  "core_recipe": {
+    "id": "W2-B13",
+    "family": "TweedieRegressor",
+    "params": {
+      "power": 1.5,
+      "alpha": 0.0,
+      "fit_intercept": true,
+      "link": "log",
+      "solver": "lbfgs",
+      "max_iter": 2000,
+      "tol": 1e-06,
+      "warm_start": false
+    },
+    "features_by_line": {
+      "motor": {
+        "numeric": [
+          "x_new_business",
+          "x_ncb_years",
+          "x_vehicle_age",
+          "x_vehicle_value_group"
+        ],
+        "categorical": [
+          "x_driver_age_band",
+          "x_region"
+        ],
+        "all": [
+          "x_new_business",
+          "x_ncb_years",
+          "x_vehicle_age",
+          "x_vehicle_value_group",
+          "x_driver_age_band",
+          "x_region"
+        ]
+      },
+      "buildings": {
+        "numeric": [
+          "x_new_business",
+          "x_log_sum_insured",
+          "x_property_age",
+          "x_flood_zone"
+        ],
+        "categorical": [
+          "x_property_type",
+          "x_region"
+        ],
+        "all": [
+          "x_new_business",
+          "x_log_sum_insured",
+          "x_property_age",
+          "x_flood_zone",
+          "x_property_type",
+          "x_region"
+        ]
+      },
+      "contents": {
+        "numeric": [
+          "x_new_business",
+          "x_log_sum_insured",
+          "x_bedrooms",
+          "x_high_value_items"
+        ],
+        "categorical": [
+          "x_property_type",
+          "x_region"
+        ],
+        "all": [
+          "x_new_business",
+          "x_log_sum_insured",
+          "x_bedrooms",
+          "x_high_value_items",
+          "x_property_type",
+          "x_region"
+        ]
+      }
+    },
+    "numeric": "median keep_empty_features then StandardScaler, fit-only",
+    "categorical": "OneHotEncoder drop=first, min_frequency=50, max_categories=40, handle_unknown=ignore, fit-only"
+  },
+  "auxiliary_code": "Hackaton/Repositorio_IAA2026/src/semana2/credibilidad2023.py",
+  "capital_rule": {
+    "thresholds": {
+      "buildings": 5000000.0,
+      "contents": 2000000.0
+    },
+    "fit_bounds": "For each line/fold, normal rows are outer-training2023 capital>0 and <=threshold; learn minimum/maximum of 1000*written_premium/capital there only.",
+    "row_test": "For own suspicious row capital>threshold, divide by1000 iff raw ppm<fit minimum and divided ppm lies within fit min/max. Failure remains NaN. Ordinary rows keep previous F0 value.",
+    "information": "Own quoted written premium used solely as a scale audit, never a model predictor; no validation distribution, 2024 or test thresholds. It is a tariff-based scale assumption, not economic confirmation.",
+    "scope": "2023 only; private CLA table audited arithmetically, not blindly copied for future rows. No original/global F0 edit."
+  },
+  "credibility_rule": {
+    "reference": "NB-CRED-01 proposed by Claude, adapted to audited training scope; conditional prototype, not a production decision.",
+    "developed_prior": "Frozen beta_dev/se_dev from coeficientes_glm_nb.csv and developed seasonal/reference categories from evidencia_decisiones.json (original developed2021-2023 fits). No developed refit or other-year pricing fit in this trial; prior raw fit not independently reproduced here.",
+    "emerging_fit": "Recompute Poisson frequency and Gamma positive severity GLMs for each line/outer fold with canonical2023 assigned claims only and original fixed COVS. Capital from this trial, fit-only logcapital median/center and region reference. Fixed developed seasonality. Cluster SE by saved customer-address component.",
+    "tau": "As original rule: max(0,mean((betaE-betaD)^2-SE_E^2-SE_D^2)) across matched non-region categorical coefficients with >=100 positive training claims; computed separately frequency/severity, across three training lines only.",
+    "Z": "tau2/(tau2+SE_E_newbusiness^2); theta=zF*thetaEF+(1-zF)*thetaDF+zS*thetaES+(1-zS)*thetaDS; c=exp(theta-thetaEF-thetaES).",
+    "price_application": "B15=B14*c for new business, B15=B14 for renewal, each line/fold. No ordinary OOF A/E balancing and no full2023 c. B14 unpenalized GLM already has business main effect; c shifts its training-relative level.",
+    "technical": "30 auxiliary fits, numerical ridge1e-8, original IRLS max100/tol1e-10, finite positive mean, converged flag and independent mean score <=1e-4. Store coefficients/SE/training data; no silent clipping in pricing.",
+    "limits": [
+      "Prior coefficient/seasonality uncertainty conditioned on frozen source; Z does not include estimated-prior uncertainty.",
+      "Tau uses correlated coefficients and few positives; no calibrated credibility interval or ultimate truth.",
+      "Frequency/severity auxiliary objective and cost-mark reporting differ from final Tweedie price objective; common pricing C0 stays fixed.",
+      "Ordinary OOF rows from other folds depend on the retained fold, so they are not nested calibration inputs."
+    ]
+  },
+  "climate_rule": {
+    "decision": "No prospective price candidate for CLIMA-S2-01: it uses2024 values for2023 and2025 in variable selection.",
+    "tests": "Own temporal-availability guards reject source>=quote year, future-dependent selectors and no-history rows. Verify received adversarial evidence hash; do not repeat its permutation over unchanged source.",
+    "no_fake_model": "Keep no-climate B00/B13/B14 as references; no identical missing-weather model or leaked-score comparator."
+  },
+  "frozen_received_sources": [
+    {
+      "path": "Hackaton/Semana 2/Claude/decisiones_20261023/aplicar_decisiones.py",
+      "sha256": "a06ec95ff92254dcf2d9a7ff391bf06c61a06230be9bdbd9f22fa1528cbda493"
+    },
+    {
+      "path": "Hackaton/Semana 2/Claude/decisiones_20261023/glm_robusto.py",
+      "sha256": "fc3f48678fa53cdd82955f67ddbab4dfae207fd1e7b9206fa868d177174a6e9e"
+    },
+    {
+      "path": "Hackaton/Semana 2/Claude/decisiones_20261023/evidencia_decisiones.json",
+      "sha256": "1bdaaca2b5df37ca1d70a31772e242b8e8cc3da329c7efca0fc0b0dfbd30dd72"
+    },
+    {
+      "path": "Hackaton/Semana 2/Claude/decisiones_20261023/tablas/coeficientes_glm_nb.csv",
+      "sha256": "733c9eda42bc367242eec4752ac896ccb08a35de5290e6325310ea7c02e9199d"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/decision_semana2_cuatro_20261023.json",
+      "sha256": "d3fd1409c4d0dc27940ae88d5c249a098f65c86996835baa746c4df3fb2b232c"
+    }
+  ]
+}

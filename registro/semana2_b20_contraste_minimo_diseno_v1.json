@@ -1,0 +1,512 @@
+{
+  "id": "S2-B20-DISENO-CONTRASTE2023-v1-20261024",
+  "author": "Codex",
+  "utc": "2026-10-24T03:11:02.891367+00:00",
+  "path_base": "workspace_root",
+  "authorization_literal": "Continúa con el diseño previo de un contraste estándar mínimo para B20: identifica el mecanismo residual que lo justificaría y fija soporte y criterios de aceptación. Registra las decisiones, sin reentrenar ni abrir 2024 o test.",
+  "status": "conditional_design_only_support_failed_no_execution",
+  "source_indices": {
+    "synthesis": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_sintesis_actual.json",
+    "calibration": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_bandas_calibracion_actual.json",
+    "attribution": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_atribucion_actual.json",
+    "contraction": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_contraccion_actual.json",
+    "fire_AD": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_incendio_AD_actual.json",
+    "ridge": "Hackaton/Repositorio_IAA2026/registro/semana2_glm_ridge_actual.json"
+  },
+  "frozen_sources": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_sintesis_actual.json",
+      "sha256": "4c5ac9e8b23be24147beb9ef0eb210bbc63b0a0a34cdd0f023d4c3d60019b63a",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/00_semana2_b20_sintesis_actual.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/SINTESIS_B20_Y_SIGUIENTE_PASO_2023.md",
+      "sha256": "53d96bac9c0192668b3bb336ffca0cd3e4dfac9f55abac0beaa5cd8decdf36f3",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/01_SINTESIS_B20_Y_SIGUIENTE_PASO_2023.md"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/report.json",
+      "sha256": "a278edb433051a682ea0445bbe56515e70ac1ef519b4cb56b9ee718953ec9555",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/02_report.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/verification.json",
+      "sha256": "f78dee55f48b9b11fd72dc87928331f379155192f9d946201fff1ae97feb1206",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/03_verification.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/closure_verification.json",
+      "sha256": "aba7ecf57d1848daa4b1c68c2ff3ced2995e7a08dd2ce5c6f120939595104e7c",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/04_closure_verification.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/decision_journal.json",
+      "sha256": "01fe0b7b89fd5e8a94cd030fb8a09ba203c8c4ad0359111b3ed9c6d399269497",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/05_decision_journal.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_bandas_calibracion_actual.json",
+      "sha256": "1127a18ce7bd4c39f741d9049954efedd7ed158bfeea92cb17bf0f56261346b8",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/06_semana2_b20_bandas_calibracion_actual.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/CALIBRACION_B20_BANDAS_AJUSTE_2023.md",
+      "sha256": "6c190d4c91f640d8cd649b24a7dc5c6c3579a33b28601a0890336f9333b66b04",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/07_CALIBRACION_B20_BANDAS_AJUSTE_2023.md"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_bandas_calibracion_20261024_v1/report.json",
+      "sha256": "adab9c16865d9d964f87c705fce5785e651e02843f95ba15d9d78292f651762a",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/08_report.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_bandas_calibracion_20261024_v1/verification.json",
+      "sha256": "aa30098d17e3853f6738d2b539221eff6877191c59ff20b178fcb96658806389",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/09_verification.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_bandas_calibracion_20261024_v1/readout.json",
+      "sha256": "535879edf37e793dececeb68a6d227deb293e41346002e2b0d14323c2b5a252f",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/10_readout.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_bandas_calibracion_20261024_v1/decision_journal.json",
+      "sha256": "530cc3e89b5ce29e8d95a87d293d52ae99b3b9e87d87c1688ba8d85277935e75",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/11_decision_journal.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_atribucion_actual.json",
+      "sha256": "499aaa04b54347dd1b4903ba6192e3a70ebeca8d359008da7197b6d833e7b8a4",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/12_semana2_b20_atribucion_actual.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/ATRIBUCION_GRUPOS_Y_SEGMENTOS_B20_2023.md",
+      "sha256": "d8e07956f9b0c6b52f93ada9ba7a0b91debfbebd5e9d8a0bb42f0a9f6c740410",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/13_ATRIBUCION_GRUPOS_Y_SEGMENTOS_B20_2023.md"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_atribucion_20261024_v1a/report.json",
+      "sha256": "418ef62541f33883dc6a19179659cc6176d8635d8872505b517ae2253950eb0d",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/14_report.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_atribucion_20261024_v1a/verification_corrected.json",
+      "sha256": "9511888ad30d1e53d375915113da3ecea9719d5173d14b748eb7f37d1b171398",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/15_verification_corrected.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_atribucion_20261024_v1a/decision_journal.json",
+      "sha256": "c6ade1c4b97dc02dec83f5f1f07f1bd27778ca2aad1a2ae994f90a8e55d6baaf",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/16_decision_journal.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_contraccion_actual.json",
+      "sha256": "a790444b65aed44d53e533386e286f4e116fd32a7f82993482cf3c36957bed20",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/17_semana2_b20_contraccion_actual.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/CONTRACCION_Y_NIVEL_B20_VS_B19_2023.md",
+      "sha256": "cbacb331159858ace5547a549516c2d84cd19a8058f03096f8e5d4ccbb709b2b",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/18_CONTRACCION_Y_NIVEL_B20_VS_B19_2023.md"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/report.json",
+      "sha256": "3b609be515f9e932c6a7feb95d4cfe928e0c0794879eccb802c2bc05132ec583",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/19_report.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/verification.json",
+      "sha256": "1a6a7051eb5e0c14172b686c0c77afc7863e3d616adb420f048cad3da47e9707",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/20_verification.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/readout.json",
+      "sha256": "7a1037108e17d1bfd9e79c3964a814171e9715546ab0f787d459b310aececc1a",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/21_readout.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/decision_journal.json",
+      "sha256": "abb7e0b08b03902ceeba85f2e1c6824622dce87c91056a98dbcf72a99478e867",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/22_decision_journal.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_incendio_AD_actual.json",
+      "sha256": "f472ccede1e6720aaa2dacfd9161c0f6a65a1d5ed24ffeb77ed14832ab4f8a5a",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/23_semana2_b20_incendio_AD_actual.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/INCENDIO_Y_AD_B20_2023.md",
+      "sha256": "aa770c8c10418c7b04d3b641cd6194636d7e3e03e87c5a68dd1ce532359b162d",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/24_INCENDIO_Y_AD_B20_2023.md"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/incendio_AD_b20_20261024T025027Z_87782526/report.json",
+      "sha256": "b6677a80b5984bca499f4c5cc6277ca27618ffff69020c92830c16e35f0b5034",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/25_report.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/incendio_AD_b20_20261024T025027Z_87782526/verification.json",
+      "sha256": "374e076f4866f678b477451a7127165520ee1fc85920b01d9fcb2ddb1e6c3fa2",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/26_verification.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/incendio_AD_b20_20261024T025027Z_87782526/readout.json",
+      "sha256": "08be1b5cc3181444f8d43fafbfdaefdd0de32dfb9b15c1fc4051d53430825090",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/27_readout.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/incendio_AD_b20_20261024T025027Z_87782526/decision_journal.json",
+      "sha256": "f5b7c03bbd9b72bb27e116f806a5314041c480947dde021e383648b2d03fef3c",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/28_decision_journal.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_glm_ridge_actual.json",
+      "sha256": "27a605b6a575ef5ea588f252c814669ccff2de3d79d061f201767acecf5c3d51",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/29_semana2_glm_ridge_actual.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/GLM_RIDGE_COBERTURAS_2023.md",
+      "sha256": "7848ffb9249add26bf699a4baa54e9cb23df48d9627dea93f1e9a1620c127d43",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/30_GLM_RIDGE_COBERTURAS_2023.md"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/report.json",
+      "sha256": "81e1d869e2822a54c81007c674d0e03f8fd7f3947a73cb13e951a8b683c105e2",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/31_report.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/verification.json",
+      "sha256": "607979397dde62eaa3b13249ef17e38ea0f9d42c2894108f8b0f6b21f03b6692",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/32_verification.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/decision_journal.json",
+      "sha256": "b9832e1ffcce334611374274cfd39844fa8d12d5b9ffa69baa574da0f4795851",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/33_decision_journal.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_politica_seleccion_v1.json",
+      "sha256": "8de4043120b600813c44870d015569bac53c0ddb1d289970c071d1f152281139",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/34_semana2_politica_seleccion_v1.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_contrato_entrenamiento.json",
+      "sha256": "d8af6f437ce7eed0f69c39b8339522d1610ae3f533e629efdd6ca400dbe1d21a",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/35_semana2_contrato_entrenamiento.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_glm_ridge_coberturas_plan_v1.json",
+      "sha256": "4fdee1366df2b330fe455506de63a25f74ecb79c64cba6a82a9e2e8c25eac623",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/36_semana2_glm_ridge_coberturas_plan_v1.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_contadores_propios_actual.json",
+      "sha256": "716b1f947cdce852b08588bca3a39530f533694a15ff24c81f7d703892c130b4",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/37_semana2_contadores_propios_actual.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_actual.json",
+      "sha256": "27a605b6a575ef5ea588f252c814669ccff2de3d79d061f201767acecf5c3d51",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/38_semana2_desarrollo2023_actual.json"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_bandas_calibracion_plan_v1.json",
+      "sha256": "f7230c6da741340fc52e3ebc529f6600679e87fb5fc34c21d53b8efbba9c9eef",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/39_semana2_b20_bandas_calibracion_plan_v1.json"
+    },
+    {
+      "path": "Preparación/Antecedentes/IAA_IA/PRACTICAS_PRIORITARIAS.md",
+      "sha256": "b4d9e55cc396afc8f7ab4f501489513b6aba71c5fb0450215e4359c1ea1a3298",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/sources/40_PRACTICAS_PRIORITARIAS.md"
+    }
+  ],
+  "mechanism": {
+    "id": "M20-BUILDING-SPREAD",
+    "hypothesis": "Relatividades de riesgo de edificios demasiado dispersas, una vez separado el nivel global.",
+    "evidence": "A/E B20 edificios 1.966/1.563/.856/1.198/.714 por bandas de ajuste; extremos compatibles con pendiente de calibración menor que uno.",
+    "not_established": [
+      "No monotonía estricta en bandas intermedias",
+      "Rangos de folds cruzan uno",
+      "Costes concentrados",
+      "C0/maduración y mezcla de perils pueden producir el patrón"
+    ],
+    "fire_AD_role": "Composición/incendios y AD inestable son explicación rival; no justifican interacción, máscara, exclusión o efecto causal."
+  },
+  "contrast": {
+    "line": "buildings",
+    "family": "Tweedie power1.5 log-rate calibration",
+    "raw_anchor": "B20 unchanged",
+    "control_L": {
+      "b": 1.0,
+      "a": "estimated on inner cross-fitted training predictions"
+    },
+    "candidate_S": {
+      "b_bounds": [
+        0.0,
+        1.0
+      ],
+      "a": "profiled separately under same objective"
+    },
+    "additional_free_parameters_vs_L": 1,
+    "one_candidate_only": true,
+    "primary_comparison": "S_minus_L",
+    "raw_guard": "S_minus_rawB20",
+    "formula": "z_i=log(r_i)-m; r_star=exp(m); h_i(b)=C0_i*r_star*exp(b*z_i); mu_i=exp(a)*h_i(b)",
+    "centering": "m=sum(C0_i*log(r_i))/sum(C0_i) from inner-OOF training rows only",
+    "objective": "unweighted sum d_1.5(T0_i,mu_i); no penalty on a,b, no per-band parameters",
+    "profile_intercept": "a(b)=log(sum(T0_i/sqrt(h_i(b)))/sum(sqrt(h_i(b))))",
+    "no_forced_AE_one": true,
+    "scope_fixed": [
+      "B20 alpha1 and seven original features",
+      "All perils T0 and C0 family unchanged",
+      "All buildings rows; same transformation for new and renewal",
+      "motor and contents exact rawB20 predictions"
+    ],
+    "excluded": [
+      "other alpha",
+      "per-band factors",
+      "isotonic",
+      "business slopes",
+      "AD interaction",
+      "hard coverage masks",
+      "row routing",
+      "claim deletion",
+      "target winsorization",
+      "new seeds"
+    ]
+  },
+  "support": {
+    "status": "failed_on_existing_screen_no_fit_eligible",
+    "origin": "Project prudential design choices fixed now after existing2023 diagnostics; not Kaggle/IAA requirements, power estimates or confirmatory thresholds.",
+    "screen_population": "Existing building OOF tails: original fixed training-defined bands1 and5; do not rebin.",
+    "pooled_tail": {
+      "positive_groups_min": 50,
+      "largest_cost_group_share_max": 0.2,
+      "cost_concentration_equivalent_groups_min": 10.0
+    },
+    "fold_tail": {
+      "positive_groups_min": 10,
+      "largest_cost_group_share_max": 0.5,
+      "cost_concentration_equivalent_groups_min": 3.0
+    },
+    "inner_calibration_each_outer_scope": {
+      "positive_groups_total_min": 100,
+      "tail_support": "same pooled_tail rules on inner-OOF fit-only bands1/5",
+      "log_rate_p80_minus_p20_min": 0.22314355131420976,
+      "strict_positive_finite_C0_and_rates": true,
+      "unique_complete_groups_and_2023_only": true
+    },
+    "concentration_equivalent_count_is_not_inferential_sample_size": true,
+    "all_five_scopes_must_pass": true,
+    "no_fold_or_cell_deletion_to_pass": true,
+    "known_screen": [
+      {
+        "cell": "buildings pooled band1",
+        "positive_groups": 69,
+        "largest_cost_group_share": 0.3165190285652545,
+        "cost_concentration_equivalent_groups": 6.091867231595157,
+        "result": "fail concentration and equivalent-count rules"
+      },
+      {
+        "cell": "buildings pooled band5",
+        "positive_groups": 124,
+        "largest_cost_group_share": 0.19024732159082064,
+        "cost_concentration_equivalent_groups": 14.157133853009933,
+        "result": "pass three pooled-tail rules, not overall readiness"
+      },
+      {
+        "cell": "buildings band1 most concentrated fold",
+        "largest_cost_group_share_rounded": 0.9182,
+        "result": "fail fold share rule"
+      }
+    ],
+    "unknown": [
+      "Remaining fold support",
+      "Inner-OOF calibration-scope support",
+      "Log-rate spread"
+    ],
+    "failure_consequence": "Stop before any future fit. No automatic threshold relaxation, regrouping or additional complexity; a revision needs distinct evidence and a version preserving this failure."
+  },
+  "validation_design": {
+    "years": [
+      2023
+    ],
+    "outer_folds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "reuse_original_component_assignment": true,
+    "outer_eval": "F_k",
+    "outer_train": "all2023 minus F_k",
+    "inner_eval": "F_j with j!=k",
+    "inner_train": "all2023 minus (F_k union F_j)",
+    "inner_learned_objects_exclude_both": [
+      "B20 buildings GLM",
+      "imputer",
+      "scaler",
+      "OHE",
+      "reporting curves",
+      "frequency/severity mixture weights",
+      "all learned C0 parameters"
+    ],
+    "calibration_fit": "Inner-OOF rates and matching inner-OOF C0 on outer_train; labels of F_k absent from every ancestor.",
+    "outer_prediction": "Saved B20 buildings outer model and its matching saved outer C0; a_k,b_k,m_k frozen before applying to F_k.",
+    "common_rows_targets_weights_denominator": true,
+    "no_global_OOF_calibrator_then_same_row_scoring": true,
+    "do_not_reuse_inner_models_that_saw_outer_eval": true,
+    "inner_training_fold_sets": [
+      [
+        2,
+        3,
+        4
+      ],
+      [
+        1,
+        3,
+        4
+      ],
+      [
+        1,
+        2,
+        4
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        3,
+        4
+      ],
+      [
+        0,
+        2,
+        4
+      ],
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        0,
+        1,
+        4
+      ],
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "no_refit_in_current_task": true,
+    "existing_all_years_producers_not_invoked": true,
+    "future_adapter_required": "Strict2023 scoped adapter plus provenance guard, pure functions and graph audit before execution. Do not call existing all-years run()."
+  },
+  "acceptance": {
+    "role": "Exploratory development eligibility only, never automatic promotion or independent confirmation.",
+    "all_conditions_conjunctive": true,
+    "preconditions": [
+      "All support gates pass",
+      "Separate authorization for fitting",
+      "Frozen scoped implementation/resources, source SHA and forum preregistration",
+      "No unresolved technical blockers"
+    ],
+    "primary_global_delta_D2_S_minus_L_min": 0.0005,
+    "global_delta_D2_S_minus_rawB20_min": 0.0,
+    "nonnegative_outer_fold_deltas_S_minus_L_min_count": 4,
+    "worst_outer_fold_delta_D2_S_minus_L_min": -0.001,
+    "strict_0_lt_b_lt_1_min_outer_scopes": 4,
+    "b_at_zero_in_any_scope_reject": true,
+    "tail_gap": {
+      "definition": "G=log(AE_band1)-log(AE_band5), same original B20 memberships for L/S",
+      "G_L_must_be_positive": true,
+      "G_S_min": 0.0,
+      "G_S_over_G_L_max": 0.8
+    },
+    "segment_delta_D2_S_minus_rawB20_min": -0.001,
+    "segments": [
+      "motor",
+      "buildings",
+      "contents",
+      "new_customer",
+      "renewal",
+      "buildings_new",
+      "buildings_renewal"
+    ],
+    "unchanged_motor_contents_absolute_tolerance": 0.0,
+    "influence": {
+      "remove": "max(5,ceil(.001*G)) capped atG-1; favorable groups selected separately per comparison",
+      "comparisons": [
+        "S_minus_L",
+        "S_minus_rawB20"
+      ],
+      "delta_D2_remaining_min": 0.0,
+      "evaluation_sensitivity_only_not_refit_or_cleanup": true
+    },
+    "absolute_buildings_nominal2023_total_change_vs_raw_max": 0.05,
+    "no_new_CI_or_bootstrap_in_this_trial": true,
+    "stop_if_any_fail_or_unknown": true,
+    "negative_result": "Keep raw B20 and B00/all alternatives; publish failure, no automatic next alpha/cut/seed/recipe.",
+    "positive_result": "Only evidence for further review. Adaptive2023 choice and parameter/first-stage uncertainty remain; common selection policy unchanged."
+  },
+  "technical_preflight_future": [
+    "exact2023 row/group scope",
+    "positive finite rates/C0",
+    "a profile matches direct observed-unit deviance and KKT",
+    "rate weights if used are sqrt(C0), not C0",
+    "normalized projected KKT residual<=1e-6",
+    "duplicate/source mutation fail before fit",
+    "outer label poisoning cannot change any trained ancestor or calibration",
+    "boundaries b0/b1, ties, empty tails and undefined A/E preserved as failures/undefined",
+    "serialized inference and manual exp(Xbeta) agree",
+    "no optimizer restart or tuning after failure"
+  ],
+  "resources": {
+    "current": {
+      "new_price_fits": 0,
+      "new_calibration_fits": 0,
+      "new_constants": 0,
+      "new_inference": 0,
+      "new_bootstrap": 0,
+      "new_catalog_recipes": 0
+    },
+    "future_only_if_gates_pass": {
+      "unique_inner_B20_buildings_fits": 10,
+      "ordered_inner_holdout_predictions": 20,
+      "saved_outer_B20_buildings_models_reused": 5,
+      "new_outer_B20_fits": 0,
+      "slope_calibration_fits": 5,
+      "level_only_constants": 5,
+      "C0_training_workflows": 10,
+      "C0_detail": "10 times the frozen original building-peril C0 workflow, including reporting and frequency/severity composition; separate first-stage counts must be enumerated in implementation preflight.",
+      "all_scenarios_and_challenger_search": 0,
+      "full_procedure_bootstrap": 0,
+      "CPU_threads": 2,
+      "remote_or_test_or_submission": false,
+      "resource_enumeration_incomplete_blocks_execution": true
+    }
+  },
+  "current_conclusion": "A concrete falsifiable hypothesis and minimal contrast are specified, but present support screen fails. Mechanism and calibration parameters not estimated; no trial or model is executable under this design-only authorization.",
+  "2024_test_closed": true,
+  "ledger_read": false,
+  "promotion": false,
+  "reference": "W2-B00",
+  "all_alternatives_preserved": true,
+  "prior_external2024_header_exposure_disclosed": true,
+  "complete_blindness_claim_allowed": false,
+  "professional_independent_validation": false,
+  "forum_prior": "COD-S2-20261024-B20-DESIGN-PRE",
+  "forum_result": "COD-S2-20261024-B20-DESIGN-RESULT",
+  "IAA": "Purpose/limits ProfessionalConsiderations3.1; segment differences3.3; Governance2.8; Documentation3. Prudential numbers are project choices, no certification."
+}

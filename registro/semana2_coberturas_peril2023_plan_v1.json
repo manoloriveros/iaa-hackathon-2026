@@ -1,0 +1,161 @@
+{
+  "id": "S2-COBERTURAS-PERIL2023-v1-20261024",
+  "author": "Codex",
+  "registered_utc": "2026-10-24T01:19:25.355919+00:00",
+  "authorization_literal": "Dale, revisa las coberturas y los denominadores de exposición por peril. Registra cualquier prueba solo en 2023 con modelos estándar, conserva B00, deja las decisiones y resultados en el foro y mantén 2024 cerrado.",
+  "hypothesis": "Broad line/business exposure is an approximation for peril denominators. Test plausible coverage masks against observed claims before treating coverage labels as structural zeros or shrinking denominators.",
+  "period_input_run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b",
+  "mixture_run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mezcla_20261024T004833Z_e8ff18e0",
+  "observation_run": "Hackaton/Repositorio_IAA2026/privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766",
+  "code": "Hackaton/Repositorio_IAA2026/src/semana2/auditar_coberturas_peril2023.py",
+  "code_sha256": "01b07acdb4d665302dc5fc5428318741b11ac7e8a7368d8e1f4ad0db15e36ce5",
+  "forum_prior": "COD-S2-20261024-032",
+  "frozen_sources": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/inputs_2023/buildings.parquet",
+      "sha256": "b7b4202cc3e305c2a304d8e7a6aa54ae4548853a0807d45da623c497f9c6f6fd"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/inputs_2023/contents.parquet",
+      "sha256": "5ebb2bfe03ef15066fa382938bbbfbb93a335d187c8ae8a1880e26997930dbc0"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/inputs_2023/motor.parquet",
+      "sha256": "44937a7cbedee882e31892d165cc4528310fa188727932ac6821e8190de07003"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/inputs_2023/raw_buildings.parquet",
+      "sha256": "bd0f0fc85c45fd876c6c844d25fc0316e8761769fb6b742a1546d0fc726586b6"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/inputs_2023/raw_contents.parquet",
+      "sha256": "0e00d59bfa1af5c8bd82970ff9c7aedf6a7b22e843dbef7b36208dd35e4d1463"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/inputs_2023/raw_motor.parquet",
+      "sha256": "1f62f990791adfb50f5fa30c495898d27d3934b012ed5ff6c95225f552d48673"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mezcla_20261024T004833Z_e8ff18e0/inputs_2023/claims_2023.parquet",
+      "sha256": "918509815bb935af58b13b0b5308dbde23562b701c354a0d468d1e2d18ee1009"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/exclude_fold0/observation_link_buildings.parquet",
+      "sha256": "025f84571468ca964e368f47cafd1e7c9d024eeb22c2a92117cb408453be7250"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/exclude_fold0/observation_link_contents.parquet",
+      "sha256": "988eaebfaaffd8ccfda360f77e45deb84fd111554bbdb70379572ca947392bbf"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/exclude_fold0/observation_link_motor.parquet",
+      "sha256": "1df7cdc30d79886acfbe4a8dd446e385f2e6f37dd5b206639ccd243aecc9b899"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/exclude_fold1/observation_link_buildings.parquet",
+      "sha256": "f050ab46754d82e1b259e9a1c0b967cf1aaea24dd8a8fa1df3f4f9096ac79249"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/exclude_fold1/observation_link_contents.parquet",
+      "sha256": "1e6e3eea1651f3aa5c4366e94df220eef4034849756180bd0de67e4fc3119c1c"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/exclude_fold1/observation_link_motor.parquet",
+      "sha256": "242543549e1edbce44b5aa29453a5a03f9d20e60c635ec254e77d0a56f69f8d7"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/exclude_fold2/observation_link_buildings.parquet",
+      "sha256": "ad773fdc7b77b9ea8fca5ae57e1a667d63f9bf23cece0bb01da0828edf36ceff"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/exclude_fold2/observation_link_contents.parquet",
+      "sha256": "b60b85b09a49b552ab417cffdcd7a6d293a24ec1128cb5a9ae1fdccc8e20bd55"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/exclude_fold2/observation_link_motor.parquet",
+      "sha256": "fa6e1547cff14e4a2249de2c111e12e0e38ad968e3e07625641d9a8599d9cfd4"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/exclude_fold3/observation_link_buildings.parquet",
+      "sha256": "6e1f5b4961beec43e23b6b8683673e33d01142e121874299d77094f3242a08f5"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/exclude_fold3/observation_link_contents.parquet",
+      "sha256": "3880c597a7ba2573fbd1103c1bf1611989697c9ca5af5b02612d05da66937227"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/exclude_fold3/observation_link_motor.parquet",
+      "sha256": "05f9c325a82d0850b58508055b6aa7c9335d3625b304140c7393829cf11864ab"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/exclude_fold4/observation_link_buildings.parquet",
+      "sha256": "5e406c303fe5665dfba16e71834f97db4ed9effea51f281071dc990b10d07af6"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/exclude_fold4/observation_link_contents.parquet",
+      "sha256": "f072575af004ce5d0c72f066beea9f755258ba87b8b61c15174ce73035686386"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/exclude_fold4/observation_link_motor.parquet",
+      "sha256": "aca2f132ae74c4f6f8f074e3f597d8ff5fe369a2817383a87ae67a7739891b34"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_contadores_propios_actual.json",
+      "sha256": "6a640c8d0a08aa11da1c1be89520af5a31187b7377f21ef5d20de40ea22a460e"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_actual.json",
+      "sha256": "10a821c226df2f3476802ce7c92dede147fd7d1f5e7707ad1e1c465bf849bf25"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_sensibilidad_observacion_actual.json",
+      "sha256": "f10de74e0013ecf86ba179637ea0d164e45f621d646061c9682fcb7908d7417c"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_soporte_calendario2023_actual.json",
+      "sha256": "5e856e26e6112d87c9327d1c6ed3c4f2a94a962892b18e6820cc17d4760a90fb"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/auditar_coberturas_peril2023.py",
+      "sha256": "01b07acdb4d665302dc5fc5428318741b11ac7e8a7368d8e1f4ad0db15e36ce5"
+    },
+    {
+      "path": "Hackaton/Semana 2/Codex/fuentes_variables_ultimo/data_description_response.json",
+      "sha256": "59e2f64112515cfcdbc5691d3f22929c150b2fdc8aa301c1917f1a2b68892001"
+    }
+  ],
+  "evidence_scope": "Archived official dictionary lists motor cover categories, optional accidental damage and optional bicycle. It gives no complete policy wording or coverage-peril crosswalk. Label interpretations are candidate hypotheses, not authoritative exclusions.",
+  "candidate_masks": {
+    "motor": {
+      "own_damage": "comprehensive only, conventional hypothesis",
+      "glass_hail": "comprehensive only, composite-peril conventional hypothesis",
+      "theft": "comprehensive or third_party_fire_theft, conventional hypothesis",
+      "third_party_prop": "all",
+      "bodily_injury": "all"
+    },
+    "buildings": {
+      "accidental_damage": "accidental_damage_cover=True, plausible optional-cover match",
+      "other_perils": "all"
+    },
+    "contents": {
+      "accidental_damage": "accidental_damage_cover=True, plausible optional-cover match",
+      "other_perils": "all",
+      "bicycle": "Category audit only. Never map bicycle_cover to all theft or all accidental_damage."
+    }
+  },
+  "denominators": "For each owntraining fold/line/business/peril, D_all=sum(exposure*qN_peril); D_candidate=sum(mask*exposure*qN_peril). Also nominal and cost-completion exposure partitions. No frequency fitted: D_all/D_candidate is only an exposure ratio, not a new risk rate or price. Use corrected F0 nominalexposure, not raw exposure or count of rows.",
+  "numerator": "Keep canonical included2023claims and netcents unchanged. Count inside/outside candidate, positive and zero-cost claims, status/positive-status, grouped denominator categories. Retainedfold claims never enter training views. Full-cohort report descriptive only, not new fit.",
+  "criterion": "No candidate adopted in this diagnostic. Any positive netcost outside a mask refutes its compatibility with current target; zero outside-cost is only necessary, not proof of contract or future no risk. Reject denominator-only shrink with unchanged mismatched numerator. Do not drop/relable claims, statuses or covers. Unknown/missing cover fails closed. Preserve all sparse/empty cells and alternatives.",
+  "verification": "Separate dictionary-loop and math.fsum implementation of joins, conditional nominal/count/cost sums and claim partitions; fixed curves, year/group scope and source hashes. Real native guard fixtures for year and missing cover. Technical algebra fixtures for all-ones mask, additive partitions, empty masks and no inferred bicycle/theft mapping. No prior suite or bootstrap repetition.",
+  "resources": "Local<=45min; zero price/curve/auxiliary fitting, zero scores/bootstrap. Ownpricecounters165/285 unchanged, other stages separate.",
+  "limits": [
+    "No contract matrix inferred from zero counts or names alone",
+    "No row-specific true coverage proof from an exposure ratio",
+    "Known truncated claims and data semantics can conflict; report apparent mismatch, not fraud or automatic data deletion",
+    "Header exposure to external2024 outcomes already disclosed; no complete blindness claim, no external outcome used"
+  ],
+  "reference": "W2-B00",
+  "confirmation_opened_by_this_task": false,
+  "ledger_read": false,
+  "professional_independent_validation": false
+}

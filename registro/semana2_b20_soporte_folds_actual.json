@@ -1,0 +1,84 @@
+{
+  "id": "S2-B20-SOPORTE-FOLDS2023-v1-20261024",
+  "author": "Codex",
+  "utc": "2026-10-24T03:21:59.314936+00:00",
+  "path_base": "workspace_root",
+  "status": "saved_fold_support_verified_five_cells_failed_four_folds_no_execution",
+  "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_soporte_folds_20261024_v1",
+  "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/SOPORTE_B20_POR_FOLD_2023.md",
+  "documentation_sha256": "ae194f0a13a027de50a2101ffb25b76cfedf56b0c0c1a52688e56f8fc2af8316",
+  "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_soporte_folds_plan_v1.json",
+  "plan_sha256": "69955874781bd37e6d5622de7a66f9ea8d06f8603c6417aea747bf35dd997828",
+  "report": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_soporte_folds_20261024_v1/report.json",
+    "sha256": "ff54890c4f3040ef734830a1eb6e86f386d93e812e614bbadc242ee1f4693f81"
+  },
+  "verification": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_soporte_folds_20261024_v1/verification.json",
+    "sha256": "2861781f0b160736cc060ef6a4d1e4bbd4c2808d1e8d3ead5bc2039a6a63b41a",
+    "passed": 911,
+    "failed": 0
+  },
+  "fold_cells": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_soporte_folds_20261024_v1/fold_cell_audit.json",
+    "sha256": "84639971460bfa43505173cec9d3cdeae88c6c8d06354100e3d5e295d768b04b"
+  },
+  "pooled_cells": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_soporte_folds_20261024_v1/pooled_cell_audit.json",
+    "sha256": "26d75a7798c699acac039c26de5141bd1766fb389ce4ae33166e8fb2682f29d9"
+  },
+  "outer_training_proxy": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_soporte_folds_20261024_v1/outer_training_proxy.json",
+    "sha256": "34e40cee118dff12a403087aa68e55072110ae65239e04e4ab831eb9979aba24"
+  },
+  "decision_journal": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_soporte_folds_20261024_v1/decision_journal.json",
+    "sha256": "333eda4f9fad3e484073faf268955410be1800ce92e60b0aa221018922e7e6e0"
+  },
+  "evidence_gaps": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_soporte_folds_20261024_v1/evidence_gaps.json",
+    "sha256": "6b060a16a6eb551eb2a1dde675a612835176e63678c9d87f48988871cf9c5e68"
+  },
+  "manifest": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_soporte_folds_20261024_v1/manifest.json",
+    "sha256": "1019c338045cb99c2bbb42f3f5ec60ec65785f7a42ddbb73606eb9c228dd8e61"
+  },
+  "fold_gate_cells": 10,
+  "fold_gate_passed": 5,
+  "fold_gate_failed": 5,
+  "failed_folds": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "source_count": 24,
+  "support_gate": "failed",
+  "inner_oof_support_established": false,
+  "fit_authorized": false,
+  "can_execute": false,
+  "new_fits": 0,
+  "new_inference": 0,
+  "parameters_estimated": 0,
+  "new_bootstrap": 0,
+  "new_recipes": 0,
+  "claims_or_groups_excluded": 0,
+  "thresholds_relaxed": false,
+  "reference": "W2-B00",
+  "promotion": false,
+  "all_alternatives_preserved": true,
+  "2024_test_closed": true,
+  "ledger_read": false,
+  "prior_external2024_header_exposure_disclosed": true,
+  "complete_blindness_claim_allowed": false,
+  "professional_independent_validation": false,
+  "forum_prior": "COD-S2-20261024-B20-SUPPORT-PRE",
+  "forum_result": "COD-S2-20261024-B20-SUPPORT-RESULT",
+  "next_step": "Reuse saved failed support receipt. No training or threshold relaxation; inner evidence and strict scoped preflight remain missing and cannot erase observed heldout failure.",
+  "closure_verification": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_soporte_folds_20261024_v1/closure_verification.json",
+    "sha256": "ae2d1df2c734694cc74d81e3405ae0393a165403d4d4c86e2c70f1c5d71ccd2a",
+    "passed": 35,
+    "failed": 0
+  }
+}

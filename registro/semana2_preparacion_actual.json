@@ -1,0 +1,124 @@
+{
+  "id": "S2-BASE-20261023",
+  "author": "Codex",
+  "as_of_utc": "2026-10-23T16:51:10.679140+00:00",
+  "path_base": "workspace_root",
+  "status": "observed_T0_and_partitions_prepared_verified_no_training",
+  "scope_authorized_literal": "Dale, empieza por conciliar la exposición y revisar los 36 siniestros sin periodo. Prepara el objetivo y las particiones de validación, y deja las decisiones en el foro antes de entrenar.",
+  "run": "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3",
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3/report.json",
+  "report_sha256": "69154fbf69bf800dc8a8acd86be1b5d1cf27b29b81351962a90b9d841349783d",
+  "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_preparacion_plan.json",
+  "plan_sha256": "50b11fad4837d25311fc2be7d6a3436936bde73af064df2a3b6651348a617613",
+  "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/PREPARACION_BASE.md",
+  "producer": "Hackaton/Repositorio_IAA2026/src/semana2/preparar_base.py",
+  "producer_sha256": "aaa0be38f70386e85351b6c4670151cffb95e6b76e65b17cd24c8860ba228d35",
+  "target": "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3/target_T0_and_stresses.parquet",
+  "target_sha256": "114dd8ae8048a04530855c7be8f8e718ebd9fe969f491c4513fc1fadbd0bcca6",
+  "partitions": "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3/partitions.parquet",
+  "partitions_sha256": "a6aca273c7657feb5bddf4fa602658f731decfab5c6eb6528fcd626f12be408b",
+  "splits_directory": "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3/splits",
+  "group_membership": "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3/group_membership_training_only.parquet",
+  "claim_audit": "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3/claim_assignment_audit.parquet",
+  "precoverage_claims": "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3/precoverage_claims_36.parquet",
+  "exposure_changes": 609,
+  "days_unit": 114,
+  "basis360": 495,
+  "test_exposure_changes": 0,
+  "exposure_rule": "Inclusive covered days / 365, round 4 decimals; no date-value changes; original preserved",
+  "training_exposure_before": 127105.449,
+  "training_exposure_after": 91494.5253,
+  "claims": {
+    "raw": 9258,
+    "precoverage": 36,
+    "assigned_including_declined": 9222,
+    "accepted_assigned": 9102,
+    "declined": 120,
+    "open_assigned": 1055,
+    "positive_assigned": 9102
+  },
+  "money_reconciliation_cents": {
+    "paid": {
+      "accepted_raw": 2399821723,
+      "assigned": 2390220628,
+      "excluded_precoverage": 9601095,
+      "row_target": 2390220628
+    },
+    "incurred": {
+      "accepted_raw": 2899510317,
+      "assigned": 2889800392,
+      "excluded_precoverage": 9709925,
+      "row_target": 2889800392
+    },
+    "recoveries": {
+      "accepted_raw": 90484434,
+      "assigned": 90001235,
+      "excluded_precoverage": 483199,
+      "row_target": 90001235
+    },
+    "reserve": {
+      "accepted_raw": 499688594,
+      "assigned": 499579764,
+      "excluded_precoverage": 108830,
+      "row_target": 499579764
+    },
+    "T0": {
+      "accepted_raw": 2809025883,
+      "assigned": 2799799157,
+      "excluded_precoverage": 9226726,
+      "row_target": 2799799157
+    }
+  },
+  "target_type": "Observed net incurred as at 2024-12-31, not observed ultimate",
+  "train_rows": 109296,
+  "test_rows_with_null_labels": 209063,
+  "groups": {
+    "components": 36398,
+    "largest_component_rows": 12,
+    "membership_nodes": 74750,
+    "test_edges_used": 0
+  },
+  "temporal_split": {
+    "fit_2023_rows": 50094,
+    "evaluate_2024_rows": 59202
+  },
+  "development_group_folds": 5,
+  "cold_2024_group_folds": 5,
+  "seed": "IAA2026-S2-GROUPS-v1",
+  "target_and_group_ids_not_predictors": true,
+  "producer_checks": 78,
+  "separate_checker": {
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3/verifications/20261023T164607Z_90a4bf51.json",
+    "sha256": "fc235624e83cedea4370d47bc152d901de55ae507554bb3d9074ff1b8f1b9c1a",
+    "passed": 106,
+    "failed": 0,
+    "professional_independent_validation": false
+  },
+  "adversarial_cases": {
+    "report": "Hackaton/Repositorio_IAA2026/registro/semana2_pruebas_casos.json",
+    "passed": 19,
+    "failed": 0,
+    "source_sha256": "953dcc5f33c9d10b0199d8cd310306ee4c7871fc72c3dd657e38d12df4bfd3a4"
+  },
+  "first_checker_issue": {
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3/verification.json",
+    "passed": 100,
+    "failed": 6,
+    "cause": "Checker compared date text with timestamps; final checker normalizes representation, without temporal tolerance; prepared layer unchanged"
+  },
+  "forum_prior_decision": "COD-S2-20261023-002",
+  "forum_result": "COD-S2-20261023-003",
+  "training_performed": false,
+  "model_inference_performed": false,
+  "reporting_completion_fitted": false,
+  "reserve_development_fitted": false,
+  "feature_matrix_prepared": false,
+  "ultimate_target_observed": false,
+  "week1_recipe_modified": false,
+  "pending": [
+    "feature availability contract including 2025 weather",
+    "reporting completeness and reserve uncertainty before interpreting performance on ultimate",
+    "human review"
+  ],
+  "historical_note": "Previous diagnostic and opening manifests retain their original cuts; 452 above-one flags are replaced by 609 reconciled exposure changes for the active derived layer."
+}

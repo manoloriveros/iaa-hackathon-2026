@@ -1,0 +1,88 @@
+{
+  "id": "S2-COBERTURAS-PERIL2023-v1-20261024",
+  "author": "Codex",
+  "utc": "2026-10-24T01:22:57.474479+00:00",
+  "path_base": "workspace_root",
+  "status": "coverage_audit_verified_home_structural_mask_rejected_no_change_adopted",
+  "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9",
+  "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/COBERTURAS_Y_DENOMINADORES_PERIL_2023.md",
+  "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_coberturas_peril2023_plan_v1.json",
+  "audited_policy_years": [
+    2023
+  ],
+  "new_fits": 0,
+  "new_scores": 0,
+  "new_bootstrap": 0,
+  "reference": "W2-B00",
+  "all_alternatives_preserved": true,
+  "forum_prior": "COD-S2-20261024-032",
+  "forum_result": "COD-S2-20261024-033",
+  "warnings": [
+    {
+      "id": "COV-HOME-POSITIVE-OUTSIDE",
+      "status": "open",
+      "effect": "30closed positive accidental_damage claims and29045.06CU outside flag-based home mask. Do not exclude exposure/claims or enforce structuralzero under currentT0."
+    },
+    {
+      "id": "COV-MOTOR-CONTRACT",
+      "status": "open",
+      "effect": "No observed motor claim outside conventional mask in2023 is necessary compatibility only, not complete contract mapping or future no-risk proof."
+    },
+    {
+      "id": "COV-NUMERATOR-DENOMINATOR",
+      "status": "open",
+      "effect": "Changing denominator alone with broad numerator is incoherent for home candidate; row-specific cost composition is not achieved by aggregate rate shrink/normalization."
+    },
+    {
+      "id": "COV-BICYCLE",
+      "status": "open",
+      "effect": "Optional bicycle cover is not a mask for all theft. No crosswalk or structuralzero inferred."
+    }
+  ],
+  "home_outside_positive_claims": 30,
+  "home_outside_net_CU": 29045.06,
+  "ledger_read": false,
+  "external2024_subject_exposure_previously_disclosed": true,
+  "professional_independent_validation": false,
+  "future_standard_GLM_coverage_effect_not_yet_preregistered_or_executed": true,
+  "report": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/report.json",
+    "sha256": "0320f6b9c2818f185c9b6fe17bf025a44a0ddb0d028b19d8236108fff0612c6f"
+  },
+  "verification": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/verification.json",
+    "sha256": "c85c3cdabab130ef535da7967695ec1b02c209b63e0e4b54d452a134ca64c315"
+  },
+  "readout": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/readout.json",
+    "sha256": "870dd079ce72a279c56bc7d27e2177915e93d67ff2ea1225e196e12324888a54"
+  },
+  "readout_reconciliation": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/readout_reconciliation.json",
+    "sha256": "408a3b927728e09fcf8d4ac8c2f245677b928f44784042009cf2fceeecd703b0"
+  },
+  "assessment": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/assessment.json",
+    "sha256": "00e0690098f568c04f8c82f5356632f5b34260a0bdac1e5ea680e19a109e2de7"
+  },
+  "decision_journal": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/decision_journal.json",
+    "sha256": "c5854f5ed31239ff7e2d723de8cd48367dee1d276c50d3381284a6b0796bc125"
+  },
+  "manifest": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/manifest.json",
+    "sha256": "5e97f837f33cb25f802123c19f8539fe8d3ef03758a12840ff91ae56f8678ea6"
+  },
+  "dictionary_scope_evidence": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/dictionary_scope_evidence.json",
+    "sha256": "2ab07534ee453036c602fa42c6bee89e4a509472f2b8957bf7cf38628235c74c"
+  },
+  "as_of_registration_utc": "2026-10-24T01:24:24.463800+00:00",
+  "indices_and_counters_preserved": {
+    "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_actual.json": "10a821c226df2f3476802ce7c92dede147fd7d1f5e7707ad1e1c465bf849bf25",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_sensibilidad_observacion_actual.json": "f10de74e0013ecf86ba179637ea0d164e45f621d646061c9682fcb7908d7417c",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_soporte_calendario2023_actual.json": "5e856e26e6112d87c9327d1c6ed3c4f2a94a962892b18e6820cc17d4760a90fb",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_contadores_propios_actual.json": "6a640c8d0a08aa11da1c1be89520af5a31187b7377f21ef5d20de40ea22a460e"
+  },
+  "documentation_sha256": "00e52a51d81e965eb366517a2a4c95ed0baa43222486519c789a2afe49cbaf86"
+}

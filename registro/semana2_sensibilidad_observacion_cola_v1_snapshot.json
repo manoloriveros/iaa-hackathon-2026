@@ -1,0 +1,174 @@
+{
+  "id": "S2-COLA2023-v1-20261024",
+  "author": "Codex",
+  "as_of_utc": "2026-10-24T00:19:54.968051+00:00",
+  "path_base": "workspace_root",
+  "status": "tail_sensitivity_verified_ultimate_scale_unidentified",
+  "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/cola_20261024T001114Z_e5d1c211",
+  "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/SENSIBILIDAD_COLA_Y_NIVEL_2023.md",
+  "main_model_index_preserved": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_actual.json",
+  "main_model_index_sha256": "10a821c226df2f3476802ce7c92dede147fd7d1f5e7707ad1e1c465bf849bf25",
+  "training_years": [
+    2023
+  ],
+  "scored_years": [
+    2023
+  ],
+  "rows_per_stress": 50094,
+  "groups": 30869,
+  "folds": 5,
+  "new_price_GLM_fits": 10,
+  "new_closed_form_constants": 30,
+  "cumulative_price_base_fits": 100,
+  "cumulative_closed_form_constants": 90,
+  "prior_auxiliary_fits_not_recounted": 30,
+  "stress_configurations": [
+    "T10F_W2-B00",
+    "T10F_W2-B12",
+    "T10F_W2-B14",
+    "T10R_W2-B00",
+    "T10R_W2-B12",
+    "T10R_W2-B14"
+  ],
+  "summary": [
+    {
+      "stress_id": "T10F_W2-B00",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 15613272.06105655,
+      "actual_over_expected": 0.9797500344693824,
+      "deviance_sum": 5160709.694908956,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.06861450171148398,
+      "conditional_nominal_2023": 16147502.9932289,
+      "parent_conditional_nominal_2023": 15787289.090802278
+    },
+    {
+      "stress_id": "T10F_W2-B12",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 15366944.013282236,
+      "actual_over_expected": 0.9954551683651695,
+      "deviance_sum": 5125732.676990572,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.07492702250580363,
+      "conditional_nominal_2023": 15895483.455560874,
+      "parent_conditional_nominal_2023": 15544086.723438136
+    },
+    {
+      "stress_id": "T10F_W2-B14",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 15429144.41385911,
+      "actual_over_expected": 0.9914421324788103,
+      "deviance_sum": 5060389.072761571,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.08671999071807002,
+      "conditional_nominal_2023": 15958225.191781856,
+      "parent_conditional_nominal_2023": 15606084.086153384
+    },
+    {
+      "stress_id": "T10R_W2-B00",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 15614394.39460608,
+      "actual_over_expected": 0.9796796118640575,
+      "deviance_sum": 5160891.515933607,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.06858168733600944,
+      "conditional_nominal_2023": 16188549.910616498,
+      "parent_conditional_nominal_2023": 15787289.090802278
+    },
+    {
+      "stress_id": "T10R_W2-B12",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 15367499.066693304,
+      "actual_over_expected": 0.9954192138624641,
+      "deviance_sum": 5125797.837725138,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.07491526254122116,
+      "conditional_nominal_2023": 15935565.125404676,
+      "parent_conditional_nominal_2023": 15544086.723438136
+    },
+    {
+      "stress_id": "T10R_W2-B14",
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 15429695.381603062,
+      "actual_over_expected": 0.9914067297944746,
+      "deviance_sum": 5060443.99560084,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.0867100784503696,
+      "conditional_nominal_2023": 15998345.080129558,
+      "parent_conditional_nominal_2023": 15606084.086153384
+    }
+  ],
+  "new_exploratory_pairs": 6,
+  "main_catalog_candidates": 19,
+  "main_catalog_pairs_preserved": 171,
+  "reference": "W2-B00",
+  "all_alternatives_preserved": true,
+  "promotion": false,
+  "confirmation_2024_open": false,
+  "test_predictions": 0,
+  "professional_independent_validation": false,
+  "forum_prior": [
+    "COD-S2-20261024-022",
+    "COD-S2-20261024-023"
+  ],
+  "forum_result": "COD-S2-20261024-024",
+  "warnings": [
+    {
+      "id": "TAIL-UNIDENTIFIED",
+      "status": "open",
+      "effect": "Renormalized tail shifts conditional nominal2023 totals about2.5% with observed predictions identical. Observed D2 cannot identify unseen cost mass or ultimate scale."
+    },
+    {
+      "id": "TAIL-INTERPRETATION",
+      "status": "open",
+      "effect": "Fixedshare and renormalized mixtures are different declared assumptions. Neither establishes true tailmass/severity/stationarity; row-peril mix is approximate."
+    },
+    {
+      "id": "TAIL-RESERVES",
+      "status": "open",
+      "effect": "Reserve.75/1.25 refit remains pending, not completed by this tail-only unit."
+    },
+    {
+      "id": "TAIL-SEARCH",
+      "status": "open",
+      "effect": "Six observation-stress configurations and6new unadjusted exploratory pairs after19 adaptive pricing recipes. No common-link candidate promotion, equivalence or final roster."
+    },
+    {
+      "id": "TAIL-2024-CLOSED",
+      "status": "open",
+      "effect": "Explicit participant restriction, regardless of corrected selector. No2024/test prices or predictions, ledger absent."
+    }
+  ],
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/cola_20261024T001114Z_e5d1c211/report.json",
+  "report_sha256": "a390ce3ec9c90a1354b19f4b9aa92a41b0ebd02ecd0b086c64cb3b87205205fc",
+  "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_cola2023_plan_v1a.json",
+  "plan_sha256": "93329e947e7b60feb115a5552493e1bdb2dde996ecdb3316adf7cbb05283f4bb",
+  "producer": "Hackaton/Repositorio_IAA2026/src/semana2/sensibilidad_cola2023.py",
+  "producer_sha256": "5ebf2c458f0af158ea68d0f2632427f1316a31d57f8df1f42aa2a2e98d643b73",
+  "oof": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/cola_20261024T001114Z_e5d1c211/stress_oof_2023.parquet",
+  "oof_sha256": "d54b0d98dd511a0e3ce1b7d19c2f54a79c615f8a4cbf8115fb62aded46ed5780",
+  "manifest": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/cola_20261024T001114Z_e5d1c211/manifest.json",
+  "manifest_sha256": "83898023ed09c0d1e17b219948e326a6dab866d97e0faf9e7f670805e8dca802",
+  "assessment": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/cola_20261024T001114Z_e5d1c211/assessment.json",
+  "assessment_sha256": "945697243ab9eb913a7cb2654dfd760f63370daeadfeb581eb90cdd61aac1fc7",
+  "decision_journal": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/cola_20261024T001114Z_e5d1c211/decision_journal.json",
+  "decision_journal_sha256": "1e7b1dfd3c80d4652e4955e73a8f15dcb87857d1ffd5d81a76b602ba872d12fc",
+  "verification": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/cola_20261024T001114Z_e5d1c211/verifications/cola_20261024T001611Z_2ed4b58a.json",
+    "sha256": "1f25087bef2015e23c1cac65f218a2b552f0b522a65dfb205c9551a82fcac20a",
+    "passed": 715,
+    "failed": 0
+  },
+  "fixtures": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/cola_20261024T001114Z_e5d1c211/fixture_checks.json",
+    "sha256": "ee8e8403c28f81b106fd4e29f0f8dbb05f9183de8682c109308662d048bacbdb",
+    "passed": 34,
+    "failed": 0
+  }
+}

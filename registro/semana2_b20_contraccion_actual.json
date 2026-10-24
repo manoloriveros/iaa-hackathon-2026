@@ -1,0 +1,108 @@
+{
+  "id": "S2-B20-CONTRACCION2023-v2-20261024",
+  "author": "Codex",
+  "utc": "2026-10-24T02:35:58.693876+00:00",
+  "path_base": "workspace_root",
+  "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db",
+  "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/CONTRACCION_Y_NIVEL_B20_VS_B19_2023.md",
+  "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_contraccion2023_plan_v2.json",
+  "status": "saved_B20_coefficient_and_level_audit_verified_no_promotion",
+  "policy_years": [
+    2023
+  ],
+  "fixed_groups": 12,
+  "fixed_periods": 20,
+  "warnings": [
+    {
+      "id": "B20-CONTRACTION-COORDINATES",
+      "status": "open",
+      "effect": "Jointnorm contraction does not contract everycoordinate; rawscale units/common references required. Fiveoverlappingfolds are not independent CI."
+    },
+    {
+      "id": "B20-LEVEL-CODING",
+      "status": "open",
+      "effect": "Intercept/coverage/business/other decomposition depends on shared centering/reference and all effects change. No coverage-only causal effect or adopted calibration."
+    },
+    {
+      "id": "B20-FIXED-GROUPS",
+      "status": "open",
+      "effect": "The12groups were selected by priorB19 loss/influence. Their gain fraction of netportfolio gain can exceed100%; no freshvalidation, groupdeletion or model promotion."
+    }
+  ],
+  "reference": "W2-B00",
+  "all_alternatives_preserved": true,
+  "new_fits": 0,
+  "new_models": 0,
+  "new_price_predictions": 0,
+  "new_bootstrap": 0,
+  "new_global_D2_or_CI": false,
+  "concurrent_attribution_reused": false,
+  "professional_independent_validation": false,
+  "ledger_read": false,
+  "complete_blindness_claim_allowed": false,
+  "forum_prior": "COD-S2-20261024-040",
+  "forum_result": "COD-S2-20261024-041",
+  "next_artifact_diagnostic": "Consolidate the existing2023 risk matrix for B00/B12/B14/B19/B20 by line/business, level, uncertainty and influence using completed receipts. Both B20 attributionv1a and contractionv2 are reconciled; do not rerun either suite, resampling or fitting. Keep B00/all alternatives, unresolved ultimate/reporting/capital warnings and own2024/test closed.",
+  "report": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/report.json",
+    "sha256": "3b609be515f9e932c6a7feb95d4cfe928e0c0794879eccb802c2bc05132ec583"
+  },
+  "verification": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/verification.json",
+    "sha256": "1a6a7051eb5e0c14172b686c0c77afc7863e3d616adb420f048cad3da47e9707"
+  },
+  "readout": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/readout.json",
+    "sha256": "7a1037108e17d1bfd9e79c3964a814171e9715546ab0f787d459b310aececc1a"
+  },
+  "readout_reconciliation": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/readout_reconciliation.json",
+    "sha256": "48b424752a6e0c7f200aa4084ebfa1a9c3f1593375115d09124be18bdd74c56f"
+  },
+  "assessment": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/assessment.json",
+    "sha256": "0f6f6f34c16aceaf064b16fd3591db423a70866bf47cf96dca59422101459dd3"
+  },
+  "decision_journal": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/decision_journal.json",
+    "sha256": "abb7e0b08b03902ceeba85f2e1c6824622dce87c91056a98dbcf72a99478e867"
+  },
+  "manifest": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/manifest.json",
+    "sha256": "f581dfbb542285201327168ab6beaac222c92b15f28bfcd8cfda4b2a95880d75"
+  },
+  "incident_check": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/incident_check.json",
+    "sha256": "4bcf4ddaf71cc6d2d7f528306412db8d5273171a31ecf7d201b9bec2a5015a53"
+  },
+  "as_of_registration_utc": "2026-10-24T02:38:41.274803+00:00",
+  "documentation_sha256": "cbacb331159858ace5547a549516c2d84cd19a8058f03096f8e5d4ccbb709b2b",
+  "forum_followup": "COD-S2-20261024-042",
+  "focused_interpretation_receipt": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/focused_interpretation_receipt.json",
+    "sha256": "ebe40408dc79892eb6ec759948b1724efae53069364069d46ca39a925a5816fb"
+  },
+  "preregistration_completion_receipt": {
+    "path": "Hackaton/Semana 2/Codex/contraccion_b20_v2_preparation_receipt.json",
+    "sha256": "fa366bcec6a6f0485ee5675bb22753caaeaefa3fb3391e4a35ae677f895eb5fd"
+  },
+  "unrelated_indices_and_counters_cut": {
+    "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_actual.json": "27a605b6a575ef5ea588f252c814669ccff2de3d79d061f201767acecf5c3d51",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_glm_ridge_actual.json": "27a605b6a575ef5ea588f252c814669ccff2de3d79d061f201767acecf5c3d51",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_contadores_propios_actual.json": "716b1f947cdce852b08588bca3a39530f533694a15ff24c81f7d703892c130b4",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_b19_estabilidad_actual.json": "61cf279490a40b329a8c9c20c65b2e878ade81ce9617ad729ca6d061b6f4b2cb",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_b19_traza_actual.json": "622525df9afffbe829b9756152708684a7eff5568ea76e6df965347e50535e00",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_sensibilidad_observacion_actual.json": "f10de74e0013ecf86ba179637ea0d164e45f621d646061c9682fcb7908d7417c"
+  },
+  "counter_values_cut": {
+    "cumulative_price_base_fits": 195,
+    "cumulative_closed_form_constants": 285
+  },
+  "this_unit_counter_increment": 0,
+  "this_unit_active_catalog_mutations": 0,
+  "concurrent_v1a_reconciliation": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/concurrent_v1a_reconciliation.json",
+    "sha256": "d5cf5828c87882aa31a0751f27f424224b1f2dfd1c57d0460064df8dc8f5c834"
+  },
+  "closing_mode_correction": "Actual current-unit completion, not assumed parallel entry; no registration mutations replayed"
+}

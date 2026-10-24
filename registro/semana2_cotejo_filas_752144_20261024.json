@@ -1,0 +1,89 @@
+{
+  "id": "S2-INCIDENTE-752144-20261024",
+  "author": "Codex",
+  "utc": "2026-10-24T01:30:41.546041+00:00",
+  "scope": "Read-only raw Parquet row_id and metadata audit; no predictions, outcomes, fits or submissions",
+  "line_rows": {
+    "motor": 90521,
+    "buildings": 52295,
+    "contents": 66247
+  },
+  "emerging_rows": 209063,
+  "developed_rows": 626639,
+  "passed": 10,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "motor: unique nonnull IDs",
+      "pass": true
+    },
+    {
+      "name": "buildings: unique nonnull IDs",
+      "pass": true
+    },
+    {
+      "name": "contents: unique nonnull IDs",
+      "pass": true
+    },
+    {
+      "name": "Emerging sample 209063 rows",
+      "pass": true
+    },
+    {
+      "name": "Emerging concatenated unique nonnull IDs",
+      "pass": true
+    },
+    {
+      "name": "Emerging template unique nonnull IDs",
+      "pass": true
+    },
+    {
+      "name": "Emerging template exact ID set",
+      "pass": true
+    },
+    {
+      "name": "Emerging template exact concatenation order",
+      "pass": true
+    },
+    {
+      "name": "Developed template 626639 rows",
+      "pass": true
+    },
+    {
+      "name": "Reported expected count equals developed count",
+      "pass": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "Hackaton/Semana 2/Datos/emerging/sample_submission.parquet",
+      "rows": 209063,
+      "sha256": "160fc59043f1012337605c8d8446c0efbf81458e046cf02df9186d6f909d59ef"
+    },
+    {
+      "path": "Hackaton/Semana 2/Datos/emerging/test_motor.parquet",
+      "rows": 90521,
+      "sha256": "108d5c68e9bab5ccd90ee5502bc3543aa515a5aa07fda44a3b227cf070a28aa5"
+    },
+    {
+      "path": "Hackaton/Semana 2/Datos/emerging/test_buildings.parquet",
+      "rows": 52295,
+      "sha256": "21f91aaa66a1b9efd216ad0e04ff12a507dbeb721084330d9b9f06c99edd0ca6"
+    },
+    {
+      "path": "Hackaton/Semana 2/Datos/emerging/test_contents.parquet",
+      "rows": 66247,
+      "sha256": "af5ef2553e35a2d563ca091b173500daac55acc4969d1d3a96fa6b4ec3c6a012"
+    },
+    {
+      "path": "Hackaton/Semana 1/Datos/sample_submission.parquet",
+      "rows": 626639,
+      "sha256": "9529f3b6a679d3410350baa7c2ef3fb085d1d8843a838360c5852dfe820d4d95"
+    }
+  ],
+  "causation": "Matching counts support the reported mismatch; the scorer configuration and root cause were not inspected.",
+  "own_failed_submission": false,
+  "platform_fix_verified": false,
+  "next_action": "Keep 209063 emerging IDs; monitor host response. No padding, developed rows or diagnostic submission.",
+  "professional_independent_validation": false
+}

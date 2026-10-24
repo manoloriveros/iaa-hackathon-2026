@@ -1,0 +1,90 @@
+{
+  "id": "S2-SOPORTE-CALENDARIO2023-v1-20261024",
+  "author": "Codex",
+  "utc": "2026-10-24T01:10:52.055248+00:00",
+  "path_base": "workspace_root",
+  "status": "descriptive_support_verified_no_curve_or_price_adoption",
+  "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/soporte_20261024T010555Z_c4428b52",
+  "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/SOPORTE_CALENDARIO_REPORTE_2023.md",
+  "partial_balance": "Hackaton/Repositorio_IAA2026/docs/semana2/BALANCE_NOCTURNO_PARCIAL_20261024.md",
+  "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_soporte_calendario2023_plan_v1.json",
+  "reference": "W2-B00",
+  "training_years": [],
+  "audited_policy_years": [
+    2023
+  ],
+  "new_fits": 0,
+  "new_scores": 0,
+  "new_bootstrap": 0,
+  "forum_prior": "COD-S2-20261024-030",
+  "forum_result": "COD-S2-20261024-031",
+  "warnings": [
+    {
+      "id": "SUPPORT-CALENDAR",
+      "status": "open",
+      "effect": "Newbusiness has less mature exposure at long delays; calendar differences do not identify causal price-model failure."
+    },
+    {
+      "id": "SUPPORT-TAIL",
+      "status": "open",
+      "effect": "Observed delay support and tiny newbusiness reverse risk near pooled endpoints do not identify unseen tail or justify separate business curves."
+    },
+    {
+      "id": "SUPPORT-COVERAGE",
+      "status": "open",
+      "effect": "Peril denominators still use broad line/business exposure. Review admissible technical coverage masks before more complexity; no structural zero inferred."
+    },
+    {
+      "id": "SUPPORT-EXPOSURE-2024",
+      "status": "open",
+      "effect": "External forum subject exposed2024 outcome metrics; no complete-blindness claim. Safe reader emits only author/id/UTC; no external outcome used in this data-only audit."
+    }
+  ],
+  "external2024_subject_exposure_recorded": true,
+  "ledger_read": false,
+  "professional_independent_validation": false,
+  "report": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/soporte_20261024T010555Z_c4428b52/report.json",
+    "sha256": "317ecfd34a5b58a54ed5a4030f70a189a867343de2a0cb8fa9302e8f08f1e8bd"
+  },
+  "verification": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/soporte_20261024T010555Z_c4428b52/verification.json",
+    "sha256": "a14e6377a373146a81d57649f10dc2812658b669a8258fae7bdf87d2a3f0f324"
+  },
+  "readout": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/soporte_20261024T010555Z_c4428b52/readout.json",
+    "sha256": "39431d96d14bed762dac9e475e5d843875e0309a3a768b0f973f5b6658fcdcfc"
+  },
+  "readout_reconciliation": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/soporte_20261024T010555Z_c4428b52/readout_reconciliation.json",
+    "sha256": "1dd3ce1fc91b4f64d661106a125d783933cd5046fda5ffb9e36f244d15799954"
+  },
+  "assessment": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/soporte_20261024T010555Z_c4428b52/assessment.json",
+    "sha256": "4cf9db77dfc7f9a77ceb801c614bf5efd3286fbc958a9da9d20b84ff3e2cd461"
+  },
+  "decision_journal": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/soporte_20261024T010555Z_c4428b52/decision_journal.json",
+    "sha256": "89522d20b8644a524acc451bca1bef6007ce5b535ec1e628dfbc8a0d8d48704d"
+  },
+  "manifest": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/soporte_20261024T010555Z_c4428b52/manifest.json",
+    "sha256": "f8d4aa68204c1c05cb645d7e6749d13afc7a5a49140eaf3a8a9c51f925b13047"
+  },
+  "forum_reading_guard": "Only emit author, ID and UTC from forum inventory via herramientas/leer_foro_semana2_seguro.py. Never emit external subjects/titles, bodies, actas, predictions, scores or SEL01 artifacts. Do not dump whole shared memory/state: select own current branches and own dated sections. An external subject already exposed2024 outcome metrics; do not claim complete blindness or use those outcomes for2023 choices. No ledger reading or second batch.",
+  "confirmation_header_exposure": {
+    "utc": "2026-10-24T01:05:48.339085+00:00",
+    "source": "CLA-S2-20261024-006 header only",
+    "cause": "Header-only inventory displayed an external2024 subject containing outcome metrics. No body, acta, prediction file or ledger opened. Cannot claim complete blindness after this exposure.",
+    "metrics_repeated_in_this_record": false,
+    "use_for_2023_choices": false,
+    "consequence": "No fitting, scoring or adaptive recipe selection this unit. Continue only pre-existing data-support diagnostic; future result claims must disclose header exposure. Safe inventory now exposes author/id/UTC only, never any subject.",
+    "scope": "External2024 metrics seen in one forum subject only; no body, acta, prediction or ledger opened. This is a disclosed information exposure, not a valid confirmation of this line.",
+    "subsequent_2023_fit_or_score_in_this_unit": false,
+    "safe_reader": "Hackaton/Repositorio_IAA2026/herramientas/leer_foro_semana2_seguro.py",
+    "verification": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/soporte_20261024T010555Z_c4428b52/verification.json"
+  },
+  "main_catalog_sha256_preserved": "10a821c226df2f3476802ce7c92dede147fd7d1f5e7707ad1e1c465bf849bf25",
+  "sensitivity_index_sha256_preserved": "f10de74e0013ecf86ba179637ea0d164e45f621d646061c9682fcb7908d7417c",
+  "own_counters_sha256_preserved": "6a640c8d0a08aa11da1c1be89520af5a31187b7377f21ef5d20de40ea22a460e"
+}

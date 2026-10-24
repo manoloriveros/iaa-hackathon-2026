@@ -1,0 +1,102 @@
+{
+  "id": "S2-TRAIN-CONTRACT-v1",
+  "author": "Codex",
+  "status": "prepared_for_first_price_baselines_not_executed",
+  "path_base": "workspace_root",
+  "data_run": "Hackaton/Repositorio_IAA2026/privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766",
+  "base_index": "Hackaton/Repositorio_IAA2026/registro/semana2_preparacion_actual.json",
+  "feature_contract_file": "availability_contract.json",
+  "features": "Use exact blocks[line].all whitelist only. Metadata in feature files is never automatically admitted.",
+  "pricing_models_trained": 0,
+  "first_comparisons": [
+    {
+      "id": "W2-B00",
+      "role": "reference constant line rate under common C0 observation link",
+      "target": "T0 observed response; annual rate uses common C0 effective exposure",
+      "denominator": "C0 scoped effective cost exposure, identical observation link to primary challengers",
+      "training_rows": "2023 inner group folds; temporal candidates frozen before 2024"
+    },
+    {
+      "id": "W2-B01",
+      "role": "regularized GLM on F0",
+      "target": "T0 or reserve stress response divided by chosen exposure",
+      "fit_encoders": "inside saved fit rows only"
+    },
+    {
+      "id": "W2-B02",
+      "role": "limited-capacity boosting on F0",
+      "target": "same observation and feature contract",
+      "fit_encoders": "inside saved fit rows only"
+    }
+  ],
+  "observation_branches": {
+    "observed_baseline": {
+      "response": "T0",
+      "training_exposure": "nominal exposure",
+      "validation_prediction": "nominal exposure * fitted rate",
+      "claim": "prediction of observed incurred, not ultimate",
+      "id": "W2-D00-OBS",
+      "role": "separate mechanism diagnostic; not a primary-confirmation comparator with a different observation link"
+    },
+    "conditional_ultimate": {
+      "response": "T0 for b=1; T0+(b-1)*reserve for b=.75/1.25",
+      "training_exposure": "scope/observation_link_line.e_cost_mix_b",
+      "ultimate_prediction": "nominal exposure * fitted rate",
+      "validation_observed_prediction": "matching effective cost exposure * fitted rate",
+      "test_prediction": "nominal exposure only; no extra IBNR or reserve addition",
+      "scope_for_temporal": "temporal_2024",
+      "scope_for_development_and_cold_fold_k": "exclude_foldk",
+      "scope_for_final_refit": "production_2025",
+      "qualifier": "Direct line-level observation mixture approximates row peril composition; per-peril links retained for later comparison",
+      "tail_stresses": "only long-tail cost beyond maximum 730-day historical window, 5% or 10%; design sensitivity"
+    }
+  },
+  "tweedie_loss": {
+    "power": 1.5,
+    "metric": "local unweighted total-unit Tweedie D2 proxy; official scorer code not identified",
+    "rate_target": "response / chosen exposure",
+    "sample_weight": "chosen exposure**(2-power) = sqrt(chosen exposure)",
+    "identity": "d_p(Y,e*r)=e**(2-p)*d_p(Y/e,r)",
+    "requirement": "Strictly positive predictions; verify solver weight normalization and regularization. Poisson count-peril models use n/eN with weight eN."
+  },
+  "validation": {
+    "folds": "Use existing persisted partitions; do not reseed or resplit by observed loss",
+    "encoders_calibration": "fit inside development folds, use cross-fitted development predictions; no held-out 2024 labels for target encoders, calibration, reporting or cost-share estimation",
+    "first_run_success": "complete finite positive totals, retained OOF predictions, matching observation link, line/global metrics and artifact manifest",
+    "selection": "Mandatory S2 selection v1 policy. W2-B00 and up to three challengers, common frozen observation link, single registered 2024 batch. No alternative thresholds or public tie-break.",
+    "ultimate_truth": "Unavailable; compare observed proxy and sensitivity, no independent ultimate accuracy claim",
+    "confirmation_2024": "Closed until roster/recipes/common artifacts and statistical producer are frozen and gate opening registered; no model scores consulted here. Also requires documented closure of S2-AUD-METRIC-BINDING; hash identity alone is insufficient.",
+    "selection_gate_finding": {
+      "id": "S2-AUD-METRIC-BINDING",
+      "status": "open",
+      "evidence": "foros/validacion_ia_periodica/runs/20261023T170351Z_semana2/gate_adversarial_review.json",
+      "evidence_sha256": "9d2b31f4af8bf119680fb2c08a966c043333ab92ec12cfa57257790a077cea7c",
+      "forum": "COD-S2-IA-20261023-GATE",
+      "consequence": "No verified promotion; close semantic binding and independent metrics reconstruction before 2024 confirmation opening",
+      "closed_by_this_task": false
+    }
+  },
+  "excluded_default": [
+    "all annual weather including 2025",
+    "unreviewed customer profiles/gender",
+    "current tariff and discount",
+    "contacts and renewal decision",
+    "raw or audit identifiers, fold, group",
+    "uncertain high raw capital without quality mask"
+  ],
+  "assumptions": [
+    "undated physical fields stable",
+    "supplied period exposure conditions challenge target; not a forecast of cancellation",
+    "report delay and marks stationary within peril and independent of truncation calendar",
+    "b=1 case reserve and current recoveries are conditional proxies; sufficiency/development unproved",
+    "base zero mass beyond reporting support; unobserved tail sensitivities separate",
+    "not a fully prospective historical backtest"
+  ],
+  "ready_for_initial_training_after_checker": "2023 development only; 2024 confirmation remains gated",
+  "human_independent_review": false,
+  "no_submission_authorized_by_this_contract": true,
+  "selection_policy": {
+    "path": "Hackaton/Repositorio_IAA2026/registro/semana2_politica_seleccion_v1.json",
+    "sha256": "8de4043120b600813c44870d015569bac53c0ddb1d289970c071d1f152281139"
+  }
+}

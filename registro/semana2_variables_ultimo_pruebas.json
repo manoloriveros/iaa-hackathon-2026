@@ -1,0 +1,91 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-23T17:10:47.310959+00:00",
+  "passed": 20,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Untruncated product-limit equals empirical CDF",
+      "pass": true
+    },
+    {
+      "name": "Constant marks preserve count CDF",
+      "pass": true
+    },
+    {
+      "name": "Probability weights normalized",
+      "pass": true
+    },
+    {
+      "name": "Right truncation corrects empirical two-thirds to one-half",
+      "pass": true
+    },
+    {
+      "name": "Cost-delay dependence gives cost CDF one-quarter",
+      "pass": true
+    },
+    {
+      "name": "Reserve075 changes marks once",
+      "pass": true
+    },
+    {
+      "name": "Reserve125 changes marks once",
+      "pass": true
+    },
+    {
+      "name": "Ties have same probability weight",
+      "pass": true
+    },
+    {
+      "name": "Invalid truncation rejects",
+      "pass": true
+    },
+    {
+      "name": "Negative reserve stress rejects",
+      "pass": true
+    },
+    {
+      "name": "No data leakage fallback for tiny group",
+      "pass": true
+    },
+    {
+      "name": "Inclusive daily count completion",
+      "pass": true
+    },
+    {
+      "name": "Inclusive daily cost completion",
+      "pass": true
+    },
+    {
+      "name": "Tail stress affects observed link only, not nominal prediction",
+      "pass": true
+    },
+    {
+      "name": "Quote in December uses 2023, quote in January uses 2024",
+      "pass": true
+    },
+    {
+      "name": "Missing prior year remains missing",
+      "pass": true
+    },
+    {
+      "name": "Future weather values cannot alter past block",
+      "pass": true
+    },
+    {
+      "name": "Uncertain high capital masked without dividing raw",
+      "pass": true
+    },
+    {
+      "name": "Excluded price, outcome and profile changes cannot affect F0",
+      "pass": true
+    },
+    {
+      "name": "Feature names exactly match frozen x whitelist",
+      "pass": true
+    }
+  ],
+  "source_sha256": "5fd4cb24b4942180af2e016f90e68f3bbea4bbfc6b0b10643b65192e6d2c4a04",
+  "pricing_models_trained": 0,
+  "scope": "Known-answer and metamorphic tests, not professional independent validation"
+}
