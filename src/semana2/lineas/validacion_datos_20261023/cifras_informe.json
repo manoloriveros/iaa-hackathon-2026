@@ -1,0 +1,6067 @@
+{
+ "autor": "Claude",
+ "fuente": "evidencia_validacion.json",
+ "documentos": {
+  "informe": "INFORME.md",
+  "aporte": "aporte_CLA-S2-20261023-004.md"
+ },
+ "descripcion": "Cada cifra de INFORME.md y del aporte CLA-S2-20261023-004 con su ruta en evidencia_validacion.json y el fragmento literal donde aparece.",
+ "cifras": [
+  {
+   "id": "in-001",
+   "en": "informe",
+   "contexto": "Son 74 controles",
+   "ruta": [
+    "resumen",
+    "controles"
+   ],
+   "formato": "int",
+   "valor": "74"
+  },
+  {
+   "id": "ap-002",
+   "en": "aporte",
+   "contexto": "Son 74 controles",
+   "ruta": [
+    "resumen",
+    "controles"
+   ],
+   "formato": "int",
+   "valor": "74"
+  },
+  {
+   "id": "in-003",
+   "en": "informe",
+   "contexto": "| Pasa | La propiedad esperada se cumple en todas las filas | 41 |",
+   "calculo": "controles_por_resultado",
+   "args": [
+    "pasa"
+   ],
+   "formato": "int",
+   "valor": "41"
+  },
+  {
+   "id": "ap-004",
+   "en": "aporte",
+   "contexto": "41 pasan",
+   "calculo": "controles_por_resultado",
+   "args": [
+    "pasa"
+   ],
+   "formato": "int",
+   "valor": "41"
+  },
+  {
+   "id": "in-005",
+   "en": "informe",
+   "contexto": "lleva severidad P0, P1 o P2 | 12 |",
+   "calculo": "hallazgos",
+   "args": [],
+   "formato": "int",
+   "valor": "12"
+  },
+  {
+   "id": "ap-006",
+   "en": "aporte",
+   "contexto": "12 hallazgos",
+   "calculo": "hallazgos",
+   "args": [],
+   "formato": "int",
+   "valor": "12"
+  },
+  {
+   "id": "in-007",
+   "en": "informe",
+   "contexto": "| Límite | Algo que estos archivos no permiten resolver y hay que declarar | 5 |",
+   "calculo": "controles_por_resultado",
+   "args": [
+    "limite"
+   ],
+   "formato": "int",
+   "valor": "5"
+  },
+  {
+   "id": "ap-008",
+   "en": "aporte",
+   "contexto": "5 límites",
+   "calculo": "controles_por_resultado",
+   "args": [
+    "limite"
+   ],
+   "formato": "int",
+   "valor": "5"
+  },
+  {
+   "id": "in-009",
+   "en": "informe",
+   "contexto": "| Informativo | Una descripción útil que no exige acción | 16 |",
+   "calculo": "controles_por_resultado",
+   "args": [
+    "informativo"
+   ],
+   "formato": "int",
+   "valor": "16"
+  },
+  {
+   "id": "ap-010",
+   "en": "aporte",
+   "contexto": "16 informativos",
+   "calculo": "controles_por_resultado",
+   "args": [
+    "informativo"
+   ],
+   "formato": "int",
+   "valor": "16"
+  },
+  {
+   "id": "ap-011",
+   "en": "aporte",
+   "contexto": "2 P0, 3 P1, 7 P2",
+   "calculo": "severidad",
+   "args": [
+    "P0"
+   ],
+   "formato": "int",
+   "valor": "2"
+  },
+  {
+   "id": "ap-012",
+   "en": "aporte",
+   "contexto": "3 P1, 7 P2",
+   "calculo": "severidad",
+   "args": [
+    "P1"
+   ],
+   "formato": "int",
+   "valor": "3"
+  },
+  {
+   "id": "ap-013",
+   "en": "aporte",
+   "contexto": "7 P2",
+   "calculo": "severidad",
+   "args": [
+    "P2"
+   ],
+   "formato": "int",
+   "valor": "7"
+  },
+  {
+   "id": "in-014",
+   "en": "informe",
+   "contexto": "Cuatro ya estaban en la mesa y la base de Codex los trata o los conoce; ocho aportan algo nuevo",
+   "calculo": "hallazgos",
+   "args": [],
+   "igual": 12
+  },
+  {
+   "id": "in-015",
+   "en": "informe",
+   "contexto": "609 filas de entrenamiento no están en días / 365: 495 guardadas como días / 360 y 114 como número de días",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE16",
+     "motor_train",
+     "convencion",
+     "ACT360"
+    ],
+    [
+     "detalle",
+     "VE16",
+     "motor_train",
+     "convencion",
+     "DIAS"
+    ],
+    [
+     "detalle",
+     "VE16",
+     "buildings_train",
+     "convencion",
+     "ACT360"
+    ],
+    [
+     "detalle",
+     "VE16",
+     "buildings_train",
+     "convencion",
+     "DIAS"
+    ],
+    [
+     "detalle",
+     "VE16",
+     "contents_train",
+     "convencion",
+     "ACT360"
+    ],
+    [
+     "detalle",
+     "VE16",
+     "contents_train",
+     "convencion",
+     "DIAS"
+    ]
+   ],
+   "formato": "int",
+   "valor": "609"
+  },
+  {
+   "id": "ap-016",
+   "en": "aporte",
+   "contexto": "609 filas fuera de días/365 (495 en días/360 y 114 en días",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE16",
+     "motor_train",
+     "convencion",
+     "ACT360"
+    ],
+    [
+     "detalle",
+     "VE16",
+     "motor_train",
+     "convencion",
+     "DIAS"
+    ],
+    [
+     "detalle",
+     "VE16",
+     "buildings_train",
+     "convencion",
+     "ACT360"
+    ],
+    [
+     "detalle",
+     "VE16",
+     "buildings_train",
+     "convencion",
+     "DIAS"
+    ],
+    [
+     "detalle",
+     "VE16",
+     "contents_train",
+     "convencion",
+     "ACT360"
+    ],
+    [
+     "detalle",
+     "VE16",
+     "contents_train",
+     "convencion",
+     "DIAS"
+    ]
+   ],
+   "formato": "int",
+   "valor": "609"
+  },
+  {
+   "id": "in-017",
+   "en": "informe",
+   "contexto": "495 guardadas como días / 360",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE16",
+     "motor_train",
+     "convencion",
+     "ACT360"
+    ],
+    [
+     "detalle",
+     "VE16",
+     "buildings_train",
+     "convencion",
+     "ACT360"
+    ],
+    [
+     "detalle",
+     "VE16",
+     "contents_train",
+     "convencion",
+     "ACT360"
+    ]
+   ],
+   "formato": "int",
+   "valor": "495"
+  },
+  {
+   "id": "ap-018",
+   "en": "aporte",
+   "contexto": "495 en días/360",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE16",
+     "motor_train",
+     "convencion",
+     "ACT360"
+    ],
+    [
+     "detalle",
+     "VE16",
+     "buildings_train",
+     "convencion",
+     "ACT360"
+    ],
+    [
+     "detalle",
+     "VE16",
+     "contents_train",
+     "convencion",
+     "ACT360"
+    ]
+   ],
+   "formato": "int",
+   "valor": "495"
+  },
+  {
+   "id": "in-019",
+   "en": "informe",
+   "contexto": "114 como número de días",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE16",
+     "motor_train",
+     "convencion",
+     "DIAS"
+    ],
+    [
+     "detalle",
+     "VE16",
+     "buildings_train",
+     "convencion",
+     "DIAS"
+    ],
+    [
+     "detalle",
+     "VE16",
+     "contents_train",
+     "convencion",
+     "DIAS"
+    ]
+   ],
+   "formato": "int",
+   "valor": "114"
+  },
+  {
+   "id": "ap-020",
+   "en": "aporte",
+   "contexto": "114 en días",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE16",
+     "motor_train",
+     "convencion",
+     "DIAS"
+    ],
+    [
+     "detalle",
+     "VE16",
+     "buildings_train",
+     "convencion",
+     "DIAS"
+    ],
+    [
+     "detalle",
+     "VE16",
+     "contents_train",
+     "convencion",
+     "DIAS"
+    ]
+   ],
+   "formato": "int",
+   "valor": "114"
+  },
+  {
+   "id": "in-021",
+   "en": "informe",
+   "contexto": "207 y 47 en autos",
+   "ruta": [
+    "detalle",
+    "VE16",
+    "motor_train",
+    "convencion",
+    "ACT360"
+   ],
+   "formato": "int",
+   "valor": "207"
+  },
+  {
+   "id": "in-022",
+   "en": "informe",
+   "contexto": "207 y 47 en autos",
+   "ruta": [
+    "detalle",
+    "VE16",
+    "motor_train",
+    "convencion",
+    "DIAS"
+   ],
+   "formato": "int",
+   "valor": "47"
+  },
+  {
+   "id": "in-023",
+   "en": "informe",
+   "contexto": "122 y 33 en edificios",
+   "ruta": [
+    "detalle",
+    "VE16",
+    "buildings_train",
+    "convencion",
+    "ACT360"
+   ],
+   "formato": "int",
+   "valor": "122"
+  },
+  {
+   "id": "in-024",
+   "en": "informe",
+   "contexto": "122 y 33 en edificios",
+   "ruta": [
+    "detalle",
+    "VE16",
+    "buildings_train",
+    "convencion",
+    "DIAS"
+   ],
+   "formato": "int",
+   "valor": "33"
+  },
+  {
+   "id": "in-025",
+   "en": "informe",
+   "contexto": "166 y 34 en contenidos",
+   "ruta": [
+    "detalle",
+    "VE16",
+    "contents_train",
+    "convencion",
+    "ACT360"
+   ],
+   "formato": "int",
+   "valor": "166"
+  },
+  {
+   "id": "in-026",
+   "en": "informe",
+   "contexto": "166 y 34 en contenidos",
+   "ruta": [
+    "detalle",
+    "VE16",
+    "contents_train",
+    "convencion",
+    "DIAS"
+   ],
+   "formato": "int",
+   "valor": "34"
+  },
+  {
+   "id": "in-027",
+   "en": "informe",
+   "contexto": "Ninguna fila queda sin explicar",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE16",
+     "motor_train",
+     "ambiguas"
+    ],
+    [
+     "detalle",
+     "VE16",
+     "buildings_train",
+     "ambiguas"
+    ],
+    [
+     "detalle",
+     "VE16",
+     "contents_train",
+     "ambiguas"
+    ]
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-028",
+   "en": "informe",
+   "contexto": "todo el test está en días / 365",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE16",
+     "motor_test",
+     "convencion",
+     "ACT365"
+    ],
+    [
+     "detalle",
+     "VE16",
+     "buildings_test",
+     "convencion",
+     "ACT365"
+    ],
+    [
+     "detalle",
+     "VE16",
+     "contents_test",
+     "convencion",
+     "ACT365"
+    ]
+   ],
+   "igual": 209063
+  },
+  {
+   "id": "in-029",
+   "en": "informe",
+   "contexto": "en autos la frecuencia es 0,0002 con cero contactos y 1,125 con tres o más",
+   "ruta": [
+    "detalle",
+    "VE38",
+    "motor",
+    "frecuencia_por_contactos",
+    "0"
+   ],
+   "formato": "dec4",
+   "valor": "0,0002"
+  },
+  {
+   "id": "ap-030",
+   "en": "aporte",
+   "contexto": "frecuencia 1,125 con tres o más frente a 0,0002 con cero",
+   "ruta": [
+    "detalle",
+    "VE38",
+    "motor",
+    "frecuencia_por_contactos",
+    "0"
+   ],
+   "formato": "dec4",
+   "valor": "0,0002"
+  },
+  {
+   "id": "in-031",
+   "en": "informe",
+   "contexto": "1,125 con tres o más",
+   "ruta": [
+    "detalle",
+    "VE38",
+    "motor",
+    "frecuencia_por_contactos",
+    "3"
+   ],
+   "formato": "dec3",
+   "valor": "1,125"
+  },
+  {
+   "id": "ap-032",
+   "en": "aporte",
+   "contexto": "1,125 con tres o más",
+   "ruta": [
+    "detalle",
+    "VE38",
+    "motor",
+    "frecuencia_por_contactos",
+    "3"
+   ],
+   "formato": "dec3",
+   "valor": "1,125"
+  },
+  {
+   "id": "in-033",
+   "en": "informe",
+   "contexto": "el 9,5 % del entrenamiento tiene tres o más frente al 0,8 % del test",
+   "ruta": [
+    "detalle",
+    "VE38",
+    "motor",
+    "cuota_3_o_mas_train"
+   ],
+   "formato": "pct1",
+   "valor": "9,5"
+  },
+  {
+   "id": "in-034",
+   "en": "informe",
+   "contexto": "frente al 0,8 % del test",
+   "ruta": [
+    "detalle",
+    "VE38",
+    "motor",
+    "cuota_3_o_mas_test"
+   ],
+   "formato": "pct1",
+   "valor": "0,8"
+  },
+  {
+   "id": "in-035",
+   "en": "informe",
+   "contexto": "Es un código de 300 niveles",
+   "ruta": [
+    "detalle",
+    "VE75",
+    "niveles_emergente"
+   ],
+   "formato": "int",
+   "valor": "300"
+  },
+  {
+   "id": "ap-036",
+   "en": "aporte",
+   "contexto": "300 códigos que no describen el vehículo",
+   "ruta": [
+    "detalle",
+    "VE75",
+    "niveles_emergente"
+   ],
+   "formato": "int",
+   "valor": "300"
+  },
+  {
+   "id": "in-037",
+   "en": "informe",
+   "contexto": "los 300 códigos mezclan varias carrocerías",
+   "ruta": [
+    "detalle",
+    "VE75",
+    "codigos_con_varias_carrocerias_emergente"
+   ],
+   "formato": "int",
+   "valor": "300"
+  },
+  {
+   "id": "ap-038",
+   "en": "aporte",
+   "contexto": "300 códigos",
+   "ruta": [
+    "detalle",
+    "VE75",
+    "codigos_con_varias_carrocerias_emergente"
+   ],
+   "formato": "int",
+   "valor": "300"
+  },
+  {
+   "id": "in-039",
+   "en": "informe",
+   "contexto": "con entre 386 y 542 filas por código",
+   "ruta": [
+    "detalle",
+    "VE75",
+    "filas_por_codigo_emergente",
+    "min"
+   ],
+   "formato": "int",
+   "valor": "386"
+  },
+  {
+   "id": "ap-040",
+   "en": "aporte",
+   "contexto": "con entre 386 y 542 filas por código",
+   "ruta": [
+    "detalle",
+    "VE75",
+    "filas_por_codigo_emergente",
+    "min"
+   ],
+   "formato": "int",
+   "valor": "386"
+  },
+  {
+   "id": "in-041",
+   "en": "informe",
+   "contexto": "386 y 542 filas",
+   "ruta": [
+    "detalle",
+    "VE75",
+    "filas_por_codigo_emergente",
+    "max"
+   ],
+   "formato": "int",
+   "valor": "542"
+  },
+  {
+   "id": "ap-042",
+   "en": "aporte",
+   "contexto": "386 y 542 filas",
+   "ruta": [
+    "detalle",
+    "VE75",
+    "filas_por_codigo_emergente",
+    "max"
+   ],
+   "formato": "int",
+   "valor": "542"
+  },
+  {
+   "id": "in-043",
+   "en": "informe",
+   "contexto": "(razón 1,595, p 2,6e-10)",
+   "ruta": [
+    "detalle",
+    "VE75",
+    "dispersion_frecuencia_por_codigo_emergente",
+    "dispersion"
+   ],
+   "formato": "dec3",
+   "valor": "1,595"
+  },
+  {
+   "id": "ap-044",
+   "en": "aporte",
+   "contexto": "(razón 1,595, p 2,6e-10; 1,654 en el desarrollado)",
+   "ruta": [
+    "detalle",
+    "VE75",
+    "dispersion_frecuencia_por_codigo_emergente",
+    "dispersion"
+   ],
+   "formato": "dec3",
+   "valor": "1,595"
+  },
+  {
+   "id": "in-045",
+   "en": "informe",
+   "contexto": "p 2,6e-10",
+   "ruta": [
+    "detalle",
+    "VE75",
+    "dispersion_frecuencia_por_codigo_emergente",
+    "p"
+   ],
+   "formato": "sci1",
+   "valor": "2,6e-10"
+  },
+  {
+   "id": "ap-046",
+   "en": "aporte",
+   "contexto": "p 2,6e-10",
+   "ruta": [
+    "detalle",
+    "VE75",
+    "dispersion_frecuencia_por_codigo_emergente",
+    "p"
+   ],
+   "formato": "sci1",
+   "valor": "2,6e-10"
+  },
+  {
+   "id": "in-047",
+   "en": "informe",
+   "contexto": "también en el desarrollado (1,654)",
+   "ruta": [
+    "detalle",
+    "VE75",
+    "dispersion_frecuencia_por_codigo_desarrollado",
+    "dispersion"
+   ],
+   "formato": "dec3",
+   "valor": "1,654"
+  },
+  {
+   "id": "ap-048",
+   "en": "aporte",
+   "contexto": "1,654 en el desarrollado",
+   "ruta": [
+    "detalle",
+    "VE75",
+    "dispersion_frecuencia_por_codigo_desarrollado",
+    "dispersion"
+   ],
+   "formato": "dec3",
+   "valor": "1,654"
+  },
+  {
+   "id": "in-049",
+   "en": "informe",
+   "contexto": "0,028 sobre los 300 códigos comunes",
+   "ruta": [
+    "detalle",
+    "VE75",
+    "correlacion_frecuencia_por_codigo_con_desarrollado"
+   ],
+   "formato": "dec3",
+   "valor": "0,028"
+  },
+  {
+   "id": "ap-050",
+   "en": "aporte",
+   "contexto": "0,028 sobre los 300 códigos comunes",
+   "ruta": [
+    "detalle",
+    "VE75",
+    "correlacion_frecuencia_por_codigo_con_desarrollado"
+   ],
+   "formato": "dec3",
+   "valor": "0,028"
+  },
+  {
+   "id": "in-051",
+   "en": "informe",
+   "contexto": "sobre los 300 códigos comunes",
+   "ruta": [
+    "detalle",
+    "VE75",
+    "codigos_comunes"
+   ],
+   "formato": "int",
+   "valor": "300"
+  },
+  {
+   "id": "ap-052",
+   "en": "aporte",
+   "contexto": "sobre los 300 códigos comunes",
+   "ruta": [
+    "detalle",
+    "VE75",
+    "codigos_comunes"
+   ],
+   "formato": "int",
+   "valor": "300"
+  },
+  {
+   "id": "in-053",
+   "en": "informe",
+   "contexto": "349 filas de hogar (157 de edificios y 192 de contenidos)",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE36",
+     "buildings",
+     "filas_sobre_umbral"
+    ],
+    [
+     "detalle",
+     "VE36",
+     "contents",
+     "filas_sobre_umbral"
+    ]
+   ],
+   "formato": "int",
+   "valor": "349"
+  },
+  {
+   "id": "ap-054",
+   "en": "aporte",
+   "contexto": "las 349 filas de capital ×1000",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE36",
+     "buildings",
+     "filas_sobre_umbral"
+    ],
+    [
+     "detalle",
+     "VE36",
+     "contents",
+     "filas_sobre_umbral"
+    ]
+   ],
+   "formato": "int",
+   "valor": "349"
+  },
+  {
+   "id": "in-055",
+   "en": "informe",
+   "contexto": "157 de edificios y 192 de contenidos",
+   "ruta": [
+    "detalle",
+    "VE36",
+    "buildings",
+    "filas_sobre_umbral"
+   ],
+   "formato": "int",
+   "valor": "157"
+  },
+  {
+   "id": "in-056",
+   "en": "informe",
+   "contexto": "192 de contenidos",
+   "ruta": [
+    "detalle",
+    "VE36",
+    "contents",
+    "filas_sobre_umbral"
+   ],
+   "formato": "int",
+   "valor": "192"
+  },
+  {
+   "id": "in-057",
+   "en": "informe",
+   "contexto": "con huecos de 67 y 27 veces entre nubes",
+   "ruta": [
+    "detalle",
+    "VE36",
+    "buildings",
+    "hueco_veces"
+   ],
+   "formato": "int",
+   "valor": "67"
+  },
+  {
+   "id": "in-058",
+   "en": "informe",
+   "contexto": "67 y 27 veces",
+   "ruta": [
+    "detalle",
+    "VE36",
+    "contents",
+    "hueco_veces"
+   ],
+   "formato": "int",
+   "valor": "27"
+  },
+  {
+   "id": "in-059",
+   "en": "informe",
+   "contexto": "23 siniestros aceptados de daño accidental en edificios (de 122) y 47 en contenidos (de 335)",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "buildings_accidental_damage_sin_cobertura"
+   ],
+   "formato": "int",
+   "valor": "23"
+  },
+  {
+   "id": "ap-060",
+   "en": "aporte",
+   "contexto": "23 de 122 siniestros aceptados de daño accidental en edificios y 47 de 335 en contenidos",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "buildings_accidental_damage_sin_cobertura"
+   ],
+   "formato": "int",
+   "valor": "23"
+  },
+  {
+   "id": "in-061",
+   "en": "informe",
+   "contexto": "(de 122)",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "buildings_accidental_damage_total"
+   ],
+   "formato": "int",
+   "valor": "122"
+  },
+  {
+   "id": "ap-062",
+   "en": "aporte",
+   "contexto": "23 de 122",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "buildings_accidental_damage_total"
+   ],
+   "formato": "int",
+   "valor": "122"
+  },
+  {
+   "id": "in-063",
+   "en": "informe",
+   "contexto": "47 en contenidos (de 335)",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "contents_accidental_damage_sin_cobertura"
+   ],
+   "formato": "int",
+   "valor": "47"
+  },
+  {
+   "id": "ap-064",
+   "en": "aporte",
+   "contexto": "47 de 335 en contenidos",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "contents_accidental_damage_sin_cobertura"
+   ],
+   "formato": "int",
+   "valor": "47"
+  },
+  {
+   "id": "in-065",
+   "en": "informe",
+   "contexto": "(de 335)",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "contents_accidental_damage_total"
+   ],
+   "formato": "int",
+   "valor": "335"
+  },
+  {
+   "id": "ap-066",
+   "en": "aporte",
+   "contexto": "47 de 335",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "contents_accidental_damage_total"
+   ],
+   "formato": "int",
+   "valor": "335"
+  },
+  {
+   "id": "in-067",
+   "en": "informe",
+   "contexto": "3 siniestros de incendio en edificios y 1 de inundación en contenidos superan el capital",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "buildings_neto_mayor_que_capital"
+   ],
+   "formato": "int",
+   "valor": "3"
+  },
+  {
+   "id": "ap-068",
+   "en": "aporte",
+   "contexto": "3 incendios cerrados en edificios y 1 inundación abierta en contenidos superan el capital",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "buildings_neto_mayor_que_capital"
+   ],
+   "formato": "int",
+   "valor": "3"
+  },
+  {
+   "id": "in-069",
+   "en": "informe",
+   "contexto": "1 de inundación en contenidos",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "contents_neto_mayor_que_capital"
+   ],
+   "formato": "int",
+   "valor": "1"
+  },
+  {
+   "id": "ap-070",
+   "en": "aporte",
+   "contexto": "1 inundación abierta en contenidos",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "contents_neto_mayor_que_capital"
+   ],
+   "formato": "int",
+   "valor": "1"
+  },
+  {
+   "id": "in-071",
+   "en": "informe",
+   "contexto": "los tres incendios están cerrados",
+   "todos": [
+    [
+     "detalle",
+     "VE42",
+     "buildings_netos_sobre_el_capital",
+     0,
+     "peligro"
+    ],
+    [
+     "detalle",
+     "VE42",
+     "buildings_netos_sobre_el_capital",
+     1,
+     "peligro"
+    ],
+    [
+     "detalle",
+     "VE42",
+     "buildings_netos_sobre_el_capital",
+     2,
+     "peligro"
+    ]
+   ],
+   "igual": "fire"
+  },
+  {
+   "id": "in-072",
+   "en": "informe",
+   "contexto": "los tres incendios están cerrados",
+   "todos": [
+    [
+     "detalle",
+     "VE42",
+     "buildings_netos_sobre_el_capital",
+     0,
+     "estado"
+    ],
+    [
+     "detalle",
+     "VE42",
+     "buildings_netos_sobre_el_capital",
+     1,
+     "estado"
+    ],
+    [
+     "detalle",
+     "VE42",
+     "buildings_netos_sobre_el_capital",
+     2,
+     "estado"
+    ]
+   ],
+   "igual": "closed"
+  },
+  {
+   "id": "in-073",
+   "en": "informe",
+   "contexto": "(304.128 CU frente a 304.000, 286.093 frente a 286.000 y 181.064 frente a 181.000",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "buildings_netos_sobre_el_capital",
+    0,
+    "neto"
+   ],
+   "formato": "int",
+   "valor": "304.128"
+  },
+  {
+   "id": "ap-074",
+   "en": "aporte",
+   "contexto": "(304.128 CU frente a 304.000, por ejemplo)",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "buildings_netos_sobre_el_capital",
+    0,
+    "neto"
+   ],
+   "formato": "int",
+   "valor": "304.128"
+  },
+  {
+   "id": "in-075",
+   "en": "informe",
+   "contexto": "304.128 CU frente a 304.000",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "buildings_netos_sobre_el_capital",
+    0,
+    "capital"
+   ],
+   "formato": "int",
+   "valor": "304.000"
+  },
+  {
+   "id": "ap-076",
+   "en": "aporte",
+   "contexto": "304.128 CU frente a 304.000",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "buildings_netos_sobre_el_capital",
+    0,
+    "capital"
+   ],
+   "formato": "int",
+   "valor": "304.000"
+  },
+  {
+   "id": "in-077",
+   "en": "informe",
+   "contexto": "286.093 frente a 286.000",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "buildings_netos_sobre_el_capital",
+    1,
+    "neto"
+   ],
+   "formato": "int",
+   "valor": "286.093"
+  },
+  {
+   "id": "in-078",
+   "en": "informe",
+   "contexto": "286.093 frente a 286.000",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "buildings_netos_sobre_el_capital",
+    1,
+    "capital"
+   ],
+   "formato": "int",
+   "valor": "286.000"
+  },
+  {
+   "id": "in-079",
+   "en": "informe",
+   "contexto": "181.064 frente a 181.000",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "buildings_netos_sobre_el_capital",
+    2,
+    "neto"
+   ],
+   "formato": "int",
+   "valor": "181.064"
+  },
+  {
+   "id": "in-080",
+   "en": "informe",
+   "contexto": "181.064 frente a 181.000",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "buildings_netos_sobre_el_capital",
+    2,
+    "capital"
+   ],
+   "formato": "int",
+   "valor": "181.000"
+  },
+  {
+   "id": "in-081",
+   "en": "informe",
+   "contexto": "la inundación sigue abierta (50.885 frente a 47.400)",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "contents_netos_sobre_el_capital",
+    0,
+    "neto"
+   ],
+   "formato": "int",
+   "valor": "50.885"
+  },
+  {
+   "id": "in-082",
+   "en": "informe",
+   "contexto": "50.885 frente a 47.400",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "contents_netos_sobre_el_capital",
+    0,
+    "capital"
+   ],
+   "formato": "int",
+   "valor": "47.400"
+  },
+  {
+   "id": "in-083",
+   "en": "informe",
+   "contexto": "la inundación sigue abierta",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "contents_netos_sobre_el_capital",
+    0,
+    "estado"
+   ],
+   "igual": "open"
+  },
+  {
+   "id": "in-084",
+   "en": "informe",
+   "contexto": "la inundación sigue abierta",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "contents_netos_sobre_el_capital",
+    0,
+    "peligro"
+   ],
+   "igual": "flood"
+  },
+  {
+   "id": "in-085",
+   "en": "informe",
+   "contexto": "En autos no hay ningún siniestro fuera de su cobertura",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "autos_peligro_fuera_de_cobertura"
+   ],
+   "igual": 0
+  },
+  {
+   "id": "ap-086",
+   "en": "aporte",
+   "contexto": "En autos no hay ninguno fuera de cobertura",
+   "ruta": [
+    "detalle",
+    "VE42",
+    "autos_peligro_fuera_de_cobertura"
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-087",
+   "en": "informe",
+   "contexto": "80 valores crudos, 40 al normalizar espacios y mayúsculas y 20 al quitar el prefijo",
+   "ruta": [
+    "detalle",
+    "VE21",
+    "valores_crudos"
+   ],
+   "formato": "int",
+   "valor": "80"
+  },
+  {
+   "id": "ap-088",
+   "en": "aporte",
+   "contexto": "80 valores crudos, 40 al normalizar y 20 al quitar el prefijo",
+   "ruta": [
+    "detalle",
+    "VE21",
+    "valores_crudos"
+   ],
+   "formato": "int",
+   "valor": "80"
+  },
+  {
+   "id": "in-089",
+   "en": "informe",
+   "contexto": "40 al normalizar espacios",
+   "ruta": [
+    "detalle",
+    "VE21",
+    "tras_normalizar_espacios_y_mayusculas"
+   ],
+   "formato": "int",
+   "valor": "40"
+  },
+  {
+   "id": "ap-090",
+   "en": "aporte",
+   "contexto": "40 al normalizar",
+   "ruta": [
+    "detalle",
+    "VE21",
+    "tras_normalizar_espacios_y_mayusculas"
+   ],
+   "formato": "int",
+   "valor": "40"
+  },
+  {
+   "id": "in-091",
+   "en": "informe",
+   "contexto": "20 al quitar el prefijo",
+   "ruta": [
+    "detalle",
+    "VE21",
+    "tras_quitar_prefijo_self_employed"
+   ],
+   "formato": "int",
+   "valor": "20"
+  },
+  {
+   "id": "ap-092",
+   "en": "aporte",
+   "contexto": "20 al quitar el prefijo",
+   "ruta": [
+    "detalle",
+    "VE21",
+    "tras_quitar_prefijo_self_employed"
+   ],
+   "formato": "int",
+   "valor": "20"
+  },
+  {
+   "id": "in-093",
+   "en": "informe",
+   "contexto": "que llevan 11.975 clientes, incluidos 1.819 «self-employed retired»",
+   "ruta": [
+    "detalle",
+    "VE21",
+    "con_prefijo_self_employed"
+   ],
+   "formato": "int",
+   "valor": "11.975"
+  },
+  {
+   "id": "ap-094",
+   "en": "aporte",
+   "contexto": "(11.975 clientes, 1.819 «self-employed retired»)",
+   "ruta": [
+    "detalle",
+    "VE21",
+    "con_prefijo_self_employed"
+   ],
+   "formato": "int",
+   "valor": "11.975"
+  },
+  {
+   "id": "in-095",
+   "en": "informe",
+   "contexto": "1.819 «self-employed retired»",
+   "ruta": [
+    "detalle",
+    "VE21",
+    "self_employed_retired"
+   ],
+   "formato": "int",
+   "valor": "1.819"
+  },
+  {
+   "id": "ap-096",
+   "en": "aporte",
+   "contexto": "1.819 «self-employed retired»",
+   "ruta": [
+    "detalle",
+    "VE21",
+    "self_employed_retired"
+   ],
+   "formato": "int",
+   "valor": "1.819"
+  },
+  {
+   "id": "in-097",
+   "en": "informe",
+   "contexto": "Los 20 coinciden con el vocabulario del desarrollado",
+   "ruta": [
+    "detalle",
+    "VE21",
+    "coinciden_con_desarrollado"
+   ],
+   "formato": "int",
+   "valor": "20"
+  },
+  {
+   "id": "ap-098",
+   "en": "aporte",
+   "contexto": "los 20 coinciden con el vocabulario del desarrollado",
+   "ruta": [
+    "detalle",
+    "VE21",
+    "coinciden_con_desarrollado"
+   ],
+   "formato": "int",
+   "valor": "20"
+  },
+  {
+   "id": "in-099",
+   "en": "informe",
+   "contexto": "Es la única columna de texto con variantes",
+   "ruta": [
+    "controles",
+    4,
+    "observado"
+   ],
+   "igual": "1 columnas con variantes"
+  },
+  {
+   "id": "in-100",
+   "en": "informe",
+   "contexto": "2.465 eléctricos con cilindrada informada (327 sin ella)",
+   "ruta": [
+    "detalle",
+    "VE30",
+    "electricos_con_cilindrada"
+   ],
+   "formato": "int",
+   "valor": "2.465"
+  },
+  {
+   "id": "ap-101",
+   "en": "aporte",
+   "contexto": "2.465 eléctricos con cilindrada",
+   "ruta": [
+    "detalle",
+    "VE30",
+    "electricos_con_cilindrada"
+   ],
+   "formato": "int",
+   "valor": "2.465"
+  },
+  {
+   "id": "in-102",
+   "en": "informe",
+   "contexto": "(327 sin ella)",
+   "ruta": [
+    "detalle",
+    "VE30",
+    "electricos_sin_cilindrada"
+   ],
+   "formato": "int",
+   "valor": "327"
+  },
+  {
+   "id": "in-103",
+   "en": "informe",
+   "contexto": "La edad mínima del vehículo es 3 años (en el desarrollado, 0)",
+   "ruta": [
+    "detalle",
+    "VE30",
+    "vehicle_age_min"
+   ],
+   "formato": "int",
+   "valor": "3"
+  },
+  {
+   "id": "ap-104",
+   "en": "aporte",
+   "contexto": "la edad mínima del vehículo es 3 años (0 en el desarrollado)",
+   "ruta": [
+    "detalle",
+    "VE30",
+    "vehicle_age_min"
+   ],
+   "formato": "int",
+   "valor": "3"
+  },
+  {
+   "id": "in-105",
+   "en": "informe",
+   "contexto": "(en el desarrollado, 0)",
+   "ruta": [
+    "detalle",
+    "VE30",
+    "vehicle_age_min_desarrollado"
+   ],
+   "formato": "int",
+   "valor": "0"
+  },
+  {
+   "id": "ap-106",
+   "en": "aporte",
+   "contexto": "(0 en el desarrollado)",
+   "ruta": [
+    "detalle",
+    "VE30",
+    "vehicle_age_min_desarrollado"
+   ],
+   "formato": "int",
+   "valor": "0"
+  },
+  {
+   "id": "in-107",
+   "en": "informe",
+   "contexto": "(250 en autos, 350 en edificios y en contenidos)",
+   "ruta": [
+    "detalle",
+    "VE30",
+    "compulsory_excess_valor_por_ramo",
+    "motor",
+    0
+   ],
+   "formato": "int",
+   "valor": "250"
+  },
+  {
+   "id": "ap-108",
+   "en": "aporte",
+   "contexto": "(250 en autos, 350 en hogar, también en el desarrollado)",
+   "ruta": [
+    "detalle",
+    "VE30",
+    "compulsory_excess_valor_por_ramo",
+    "motor",
+    0
+   ],
+   "formato": "int",
+   "valor": "250"
+  },
+  {
+   "id": "in-109",
+   "en": "informe",
+   "contexto": "350 en edificios y en contenidos",
+   "ruta": [
+    "detalle",
+    "VE30",
+    "compulsory_excess_valor_por_ramo",
+    "buildings",
+    0
+   ],
+   "formato": "int",
+   "valor": "350"
+  },
+  {
+   "id": "ap-110",
+   "en": "aporte",
+   "contexto": "350 en hogar",
+   "ruta": [
+    "detalle",
+    "VE30",
+    "compulsory_excess_valor_por_ramo",
+    "buildings",
+    0
+   ],
+   "formato": "int",
+   "valor": "350"
+  },
+  {
+   "id": "in-111",
+   "en": "informe",
+   "contexto": "350 en edificios y en contenidos",
+   "ruta": [
+    "detalle",
+    "VE30",
+    "compulsory_excess_valor_por_ramo",
+    "contents",
+    0
+   ],
+   "formato": "int",
+   "valor": "350"
+  },
+  {
+   "id": "ap-112",
+   "en": "aporte",
+   "contexto": "350 en hogar",
+   "ruta": [
+    "detalle",
+    "VE30",
+    "compulsory_excess_valor_por_ramo",
+    "contents",
+    0
+   ],
+   "formato": "int",
+   "valor": "350"
+  },
+  {
+   "id": "in-113",
+   "en": "informe",
+   "contexto": "también en los autos del desarrollado (250)",
+   "ruta": [
+    "detalle",
+    "VE30",
+    "compulsory_excess_valor_desarrollado_autos",
+    0
+   ],
+   "formato": "int",
+   "valor": "250"
+  },
+  {
+   "id": "in-114",
+   "en": "informe",
+   "contexto": "es constante dentro de cada ramo",
+   "calculo": "longitud",
+   "args": [
+    [
+     "detalle",
+     "VE30",
+     "compulsory_excess_valor_por_ramo",
+     "motor"
+    ]
+   ],
+   "igual": 1
+  },
+  {
+   "id": "in-115",
+   "en": "informe",
+   "contexto": "es constante dentro de cada ramo",
+   "calculo": "longitud",
+   "args": [
+    [
+     "detalle",
+     "VE30",
+     "compulsory_excess_valor_por_ramo",
+     "buildings"
+    ]
+   ],
+   "igual": 1
+  },
+  {
+   "id": "in-116",
+   "en": "informe",
+   "contexto": "es constante dentro de cada ramo",
+   "calculo": "longitud",
+   "args": [
+    [
+     "detalle",
+     "VE30",
+     "compulsory_excess_valor_por_ramo",
+     "contents"
+    ]
+   ],
+   "igual": 1
+  },
+  {
+   "id": "in-117",
+   "en": "informe",
+   "contexto": "27.807 filas de autos tienen más años de bonificación que de carnet",
+   "ruta": [
+    "detalle",
+    "VE31",
+    "ncb_mayor_que_carnet"
+   ],
+   "formato": "int",
+   "valor": "27.807"
+  },
+  {
+   "id": "ap-118",
+   "en": "aporte",
+   "contexto": "27.807 NCB mayores que el carnet",
+   "ruta": [
+    "detalle",
+    "VE31",
+    "ncb_mayor_que_carnet"
+   ],
+   "formato": "int",
+   "valor": "27.807"
+  },
+  {
+   "id": "in-119",
+   "en": "informe",
+   "contexto": "(el 20,2 % de las filas; en los autos del desarrollado, el 13,0 %)",
+   "ruta": [
+    "detalle",
+    "VE31",
+    "ncb_mayor_que_carnet_cuota"
+   ],
+   "formato": "pct1",
+   "valor": "20,2"
+  },
+  {
+   "id": "in-120",
+   "en": "informe",
+   "contexto": "en los autos del desarrollado, el 13,0 %",
+   "ruta": [
+    "detalle",
+    "VE31",
+    "ncb_mayor_que_carnet_desarrollado_cuota"
+   ],
+   "formato": "pct1",
+   "valor": "13,0"
+  },
+  {
+   "id": "in-121",
+   "en": "informe",
+   "contexto": "Ninguna banda de edad implica un carnet antes de los 16 años",
+   "ruta": [
+    "detalle",
+    "VE31",
+    "carnet_antes_de_los_16"
+   ],
+   "igual": 0
+  },
+  {
+   "id": "ap-122",
+   "en": "aporte",
+   "contexto": "DAT-007 (27.807) es VE31",
+   "ruta": [
+    "detalle",
+    "VE31",
+    "ncb_mayor_que_carnet"
+   ],
+   "formato": "int",
+   "valor": "27.807"
+  },
+  {
+   "id": "in-123",
+   "en": "informe",
+   "contexto": "tiene un periodo posterior en el 97,3 % de los casos de autos (95,6 % en edificios)",
+   "ruta": [
+    "detalle",
+    "VE46",
+    "motor",
+    "declined_by_insurer",
+    "con_periodo_posterior"
+   ],
+   "formato": "pct1",
+   "valor": "97,3"
+  },
+  {
+   "id": "ap-124",
+   "en": "aporte",
+   "contexto": "`declined_by_insurer` con sucesor en el 97,3 %",
+   "ruta": [
+    "detalle",
+    "VE46",
+    "motor",
+    "declined_by_insurer",
+    "con_periodo_posterior"
+   ],
+   "formato": "pct1",
+   "valor": "97,3"
+  },
+  {
+   "id": "in-125",
+   "en": "informe",
+   "contexto": "(95,6 % en edificios)",
+   "ruta": [
+    "detalle",
+    "VE46",
+    "buildings",
+    "declined_by_insurer",
+    "con_periodo_posterior"
+   ],
+   "formato": "pct1",
+   "valor": "95,6"
+  },
+  {
+   "id": "in-126",
+   "en": "informe",
+   "contexto": "mientras `lapsed_by_customer` y `cancelled` no lo tienen nunca",
+   "calculo": "maximo",
+   "args": [
+    [
+     "detalle",
+     "VE46",
+     "motor",
+     "lapsed_by_customer",
+     "con_periodo_posterior"
+    ],
+    [
+     "detalle",
+     "VE46",
+     "motor",
+     "cancelled",
+     "con_periodo_posterior"
+    ],
+    [
+     "detalle",
+     "VE46",
+     "buildings",
+     "lapsed_by_customer",
+     "con_periodo_posterior"
+    ],
+    [
+     "detalle",
+     "VE46",
+     "buildings",
+     "cancelled",
+     "con_periodo_posterior"
+    ],
+    [
+     "detalle",
+     "VE46",
+     "contents",
+     "lapsed_by_customer",
+     "con_periodo_posterior"
+    ],
+    [
+     "detalle",
+     "VE46",
+     "contents",
+     "cancelled",
+     "con_periodo_posterior"
+    ]
+   ],
+   "igual": 0.0
+  },
+  {
+   "id": "in-127",
+   "en": "informe",
+   "contexto": "ese canal tiene el 5,0 % de las filas de entrenamiento y el 5,0 % del test",
+   "ruta": [
+    "detalle",
+    "VE52",
+    "comparison_site_cuota_train"
+   ],
+   "formato": "pct1",
+   "valor": "5,0"
+  },
+  {
+   "id": "ap-128",
+   "en": "aporte",
+   "contexto": "la comisión de `comparison_site` vacía con el 5,0 % de las filas en ese canal",
+   "ruta": [
+    "detalle",
+    "VE52",
+    "comparison_site_cuota_train"
+   ],
+   "formato": "pct1",
+   "valor": "5,0"
+  },
+  {
+   "id": "in-129",
+   "en": "informe",
+   "contexto": "y el 5,0 % del test",
+   "ruta": [
+    "detalle",
+    "VE52",
+    "comparison_site_cuota_test"
+   ],
+   "formato": "pct1",
+   "valor": "5,0"
+  },
+  {
+   "id": "in-130",
+   "en": "informe",
+   "contexto": "No afecta a las veinte referencias (17 broker y 3 directas)",
+   "ruta": [
+    "detalle",
+    "VE51",
+    "canal",
+    "broker"
+   ],
+   "formato": "int",
+   "valor": "17"
+  },
+  {
+   "id": "in-131",
+   "en": "informe",
+   "contexto": "17 broker y 3 directas",
+   "ruta": [
+    "detalle",
+    "VE51",
+    "canal",
+    "direct"
+   ],
+   "formato": "int",
+   "valor": "3"
+  },
+  {
+   "id": "in-132",
+   "en": "informe",
+   "contexto": "No afecta a las veinte referencias",
+   "ruta": [
+    "detalle",
+    "VE52",
+    "comparison_site_en_referencias"
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-133",
+   "en": "informe",
+   "contexto": "llevan un predictor constante, `x_compulsory_excess`, en los tres ramos",
+   "todos": [
+    [
+     "detalle",
+     "VE59",
+     "motor",
+     "predictores_constantes"
+    ],
+    [
+     "detalle",
+     "VE59",
+     "buildings",
+     "predictores_constantes"
+    ],
+    [
+     "detalle",
+     "VE59",
+     "contents",
+     "predictores_constantes"
+    ]
+   ],
+   "igual": [
+    "x_compulsory_excess"
+   ]
+  },
+  {
+   "id": "ap-134",
+   "en": "aporte",
+   "contexto": "`x_compulsory_excess` es constante en los tres ramos",
+   "todos": [
+    [
+     "detalle",
+     "VE59",
+     "motor",
+     "predictores_constantes"
+    ],
+    [
+     "detalle",
+     "VE59",
+     "buildings",
+     "predictores_constantes"
+    ],
+    [
+     "detalle",
+     "VE59",
+     "contents",
+     "predictores_constantes"
+    ]
+   ],
+   "igual": [
+    "x_compulsory_excess"
+   ]
+  },
+  {
+   "id": "in-135",
+   "en": "informe",
+   "contexto": "`x_renewal_count` es idéntico a `x_customer_tenure_years` en el 100 % de las filas",
+   "calculo": "minimo",
+   "args": [
+    [
+     "detalle",
+     "VE59",
+     "motor",
+     "renewal_count_igual_tenure"
+    ],
+    [
+     "detalle",
+     "VE59",
+     "buildings",
+     "renewal_count_igual_tenure"
+    ],
+    [
+     "detalle",
+     "VE59",
+     "contents",
+     "renewal_count_igual_tenure"
+    ]
+   ],
+   "formato": "pct0",
+   "valor": "100"
+  },
+  {
+   "id": "ap-136",
+   "en": "aporte",
+   "contexto": "`x_renewal_count` es idéntico a `x_customer_tenure_years` en el 100 % de las filas",
+   "calculo": "minimo",
+   "args": [
+    [
+     "detalle",
+     "VE59",
+     "motor",
+     "renewal_count_igual_tenure"
+    ],
+    [
+     "detalle",
+     "VE59",
+     "buildings",
+     "renewal_count_igual_tenure"
+    ],
+    [
+     "detalle",
+     "VE59",
+     "contents",
+     "renewal_count_igual_tenure"
+    ]
+   ],
+   "formato": "pct0",
+   "valor": "100"
+  },
+  {
+   "id": "in-137",
+   "en": "informe",
+   "contexto": "Las matrices reproducen sus columnas de origen sin ninguna discrepancia de valores",
+   "todos": [
+    [
+     "detalle",
+     "VE59",
+     "motor",
+     "filas_coinciden"
+    ],
+    [
+     "detalle",
+     "VE59",
+     "buildings",
+     "filas_coinciden"
+    ],
+    [
+     "detalle",
+     "VE59",
+     "contents",
+     "filas_coinciden"
+    ]
+   ],
+   "igual": true
+  },
+  {
+   "id": "ap-138",
+   "en": "aporte",
+   "contexto": "los valores reproducen sus columnas de origen sin discrepancias",
+   "todos": [
+    [
+     "detalle",
+     "VE59",
+     "motor",
+     "filas_coinciden"
+    ],
+    [
+     "detalle",
+     "VE59",
+     "buildings",
+     "filas_coinciden"
+    ],
+    [
+     "detalle",
+     "VE59",
+     "contents",
+     "filas_coinciden"
+    ]
+   ],
+   "igual": true
+  },
+  {
+   "id": "in-139",
+   "en": "informe",
+   "contexto": "Los trece archivos coinciden con el manifiesto de descarga de Codex",
+   "ruta": [
+    "controles",
+    0,
+    "observado"
+   ],
+   "igual": "13 de 13 coinciden"
+  },
+  {
+   "id": "in-140",
+   "en": "informe",
+   "contexto": "El clima tiene cada una de las 136.914 direcciones exactamente una vez en 2023, 2024 y 2025",
+   "ruta": [
+    "detalle",
+    "VE09",
+    "direcciones_maestro"
+   ],
+   "formato": "int",
+   "valor": "136.914"
+  },
+  {
+   "id": "in-141",
+   "en": "informe",
+   "contexto": "exactamente una vez en 2023, 2024 y 2025",
+   "ruta": [
+    "detalle",
+    "VE09",
+    "completo"
+   ],
+   "igual": true
+  },
+  {
+   "id": "in-142",
+   "en": "informe",
+   "contexto": "13.490 clientes conservan sus ceros iniciales",
+   "ruta": [
+    "detalle",
+    "VE10",
+    "customer_id_numericos_con_ceros_iniciales"
+   ],
+   "formato": "int",
+   "valor": "13.490"
+  },
+  {
+   "id": "in-143",
+   "en": "informe",
+   "contexto": "Ningún `policy_id` aparece en dos ramos",
+   "ruta": [
+    "detalle",
+    "VE10",
+    "policy_id_en_dos_ramos"
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-144",
+   "en": "informe",
+   "contexto": "Los 752 clientes y 8.046 direcciones que comparten identificador",
+   "ruta": [
+    "detalle",
+    "VE12",
+    "clientes_compartidos"
+   ],
+   "formato": "int",
+   "valor": "752"
+  },
+  {
+   "id": "in-145",
+   "en": "informe",
+   "contexto": "8.046 direcciones que comparten identificador",
+   "ruta": [
+    "detalle",
+    "VE12",
+    "direcciones_compartidas"
+   ],
+   "formato": "int",
+   "valor": "8.046"
+  },
+  {
+   "id": "in-146",
+   "en": "informe",
+   "contexto": "el apellido coincide en el 0,5 % y el tipo de vivienda en el 25,6 %",
+   "ruta": [
+    "detalle",
+    "VE12",
+    "clientes_atributos_iguales",
+    "surname"
+   ],
+   "formato": "pct1",
+   "valor": "0,5"
+  },
+  {
+   "id": "in-147",
+   "en": "informe",
+   "contexto": "el tipo de vivienda en el 25,6 %",
+   "ruta": [
+    "detalle",
+    "VE12",
+    "direcciones_atributos_iguales",
+    "property_type"
+   ],
+   "formato": "pct1",
+   "valor": "25,6"
+  },
+  {
+   "id": "in-148",
+   "en": "informe",
+   "contexto": "los 47.283 `row_id` del entrenamiento de autos emergente existen en el desarrollado",
+   "ruta": [
+    "detalle",
+    "VE12",
+    "colisiones_de_identificadores_entre_mercados",
+    "motor",
+    "row_id_entrenamiento"
+   ],
+   "formato": "int",
+   "valor": "47.283"
+  },
+  {
+   "id": "ap-149",
+   "en": "aporte",
+   "contexto": "los 47.283 `row_id` del entrenamiento de autos existen en el desarrollado",
+   "ruta": [
+    "detalle",
+    "VE12",
+    "colisiones_de_identificadores_entre_mercados",
+    "motor",
+    "row_id_entrenamiento"
+   ],
+   "formato": "int",
+   "valor": "47.283"
+  },
+  {
+   "id": "in-150",
+   "en": "informe",
+   "contexto": "(ninguno del test ni de los ramos de hogar)",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE12",
+     "colisiones_de_identificadores_entre_mercados",
+     "motor",
+     "row_id_test"
+    ],
+    [
+     "detalle",
+     "VE12",
+     "colisiones_de_identificadores_entre_mercados",
+     "buildings",
+     "row_id_test"
+    ],
+    [
+     "detalle",
+     "VE12",
+     "colisiones_de_identificadores_entre_mercados",
+     "contents",
+     "row_id_test"
+    ],
+    [
+     "detalle",
+     "VE12",
+     "colisiones_de_identificadores_entre_mercados",
+     "buildings",
+     "row_id_entrenamiento"
+    ],
+    [
+     "detalle",
+     "VE12",
+     "colisiones_de_identificadores_entre_mercados",
+     "contents",
+     "row_id_entrenamiento"
+    ]
+   ],
+   "igual": 0
+  },
+  {
+   "id": "ap-151",
+   "en": "aporte",
+   "contexto": "ninguno del test ni de hogar",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE12",
+     "colisiones_de_identificadores_entre_mercados",
+     "motor",
+     "row_id_test"
+    ],
+    [
+     "detalle",
+     "VE12",
+     "colisiones_de_identificadores_entre_mercados",
+     "buildings",
+     "row_id_test"
+    ],
+    [
+     "detalle",
+     "VE12",
+     "colisiones_de_identificadores_entre_mercados",
+     "contents",
+     "row_id_test"
+    ],
+    [
+     "detalle",
+     "VE12",
+     "colisiones_de_identificadores_entre_mercados",
+     "buildings",
+     "row_id_entrenamiento"
+    ],
+    [
+     "detalle",
+     "VE12",
+     "colisiones_de_identificadores_entre_mercados",
+     "contents",
+     "row_id_entrenamiento"
+    ]
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-152",
+   "en": "informe",
+   "contexto": "coinciden 298, 129 y 194 `policy_id` por ramo y 19 `claim_id`",
+   "ruta": [
+    "detalle",
+    "VE12",
+    "colisiones_de_identificadores_entre_mercados",
+    "motor",
+    "policy_id"
+   ],
+   "formato": "int",
+   "valor": "298"
+  },
+  {
+   "id": "ap-153",
+   "en": "aporte",
+   "contexto": "298, 129 y 194 `policy_id`; 19 `claim_id`",
+   "ruta": [
+    "detalle",
+    "VE12",
+    "colisiones_de_identificadores_entre_mercados",
+    "motor",
+    "policy_id"
+   ],
+   "formato": "int",
+   "valor": "298"
+  },
+  {
+   "id": "in-154",
+   "en": "informe",
+   "contexto": "298, 129 y 194 `policy_id`",
+   "ruta": [
+    "detalle",
+    "VE12",
+    "colisiones_de_identificadores_entre_mercados",
+    "buildings",
+    "policy_id"
+   ],
+   "formato": "int",
+   "valor": "129"
+  },
+  {
+   "id": "ap-155",
+   "en": "aporte",
+   "contexto": "298, 129 y 194 `policy_id`",
+   "ruta": [
+    "detalle",
+    "VE12",
+    "colisiones_de_identificadores_entre_mercados",
+    "buildings",
+    "policy_id"
+   ],
+   "formato": "int",
+   "valor": "129"
+  },
+  {
+   "id": "in-156",
+   "en": "informe",
+   "contexto": "129 y 194 `policy_id`",
+   "ruta": [
+    "detalle",
+    "VE12",
+    "colisiones_de_identificadores_entre_mercados",
+    "contents",
+    "policy_id"
+   ],
+   "formato": "int",
+   "valor": "194"
+  },
+  {
+   "id": "ap-157",
+   "en": "aporte",
+   "contexto": "129 y 194 `policy_id`",
+   "ruta": [
+    "detalle",
+    "VE12",
+    "colisiones_de_identificadores_entre_mercados",
+    "contents",
+    "policy_id"
+   ],
+   "formato": "int",
+   "valor": "194"
+  },
+  {
+   "id": "in-158",
+   "en": "informe",
+   "contexto": "19 `claim_id`",
+   "ruta": [
+    "detalle",
+    "VE12",
+    "colisiones_de_identificadores_entre_mercados",
+    "claim_id"
+   ],
+   "formato": "int",
+   "valor": "19"
+  },
+  {
+   "id": "ap-159",
+   "en": "aporte",
+   "contexto": "19 `claim_id`",
+   "ruta": [
+    "detalle",
+    "VE12",
+    "colisiones_de_identificadores_entre_mercados",
+    "claim_id"
+   ],
+   "formato": "int",
+   "valor": "19"
+  },
+  {
+   "id": "in-160",
+   "en": "informe",
+   "contexto": "En los 56.915 hogares con edificios y contenidos el mismo año",
+   "ruta": [
+    "detalle",
+    "VE13",
+    "hogares_con_edificios_y_contenidos_mismo_anio"
+   ],
+   "formato": "int",
+   "valor": "56.915"
+  },
+  {
+   "id": "in-161",
+   "en": "informe",
+   "contexto": "canal e inicio coinciden salvo en 991 inicios",
+   "ruta": [
+    "detalle",
+    "VE13",
+    "inicio_distinto_entre_ramos"
+   ],
+   "formato": "int",
+   "valor": "991"
+  },
+  {
+   "id": "in-162",
+   "en": "informe",
+   "contexto": "canal e inicio coinciden salvo en 991 inicios",
+   "ruta": [
+    "detalle",
+    "VE13",
+    "canal_distinto_entre_ramos"
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-163",
+   "en": "informe",
+   "contexto": "las 31 bandas de edad distintas se explican todas por un cumpleaños entre dos inicios distintos",
+   "ruta": [
+    "detalle",
+    "VE13",
+    "banda_distinta_total"
+   ],
+   "formato": "int",
+   "valor": "31"
+  },
+  {
+   "id": "in-164",
+   "en": "informe",
+   "contexto": "se explican todas por un cumpleaños entre dos inicios distintos",
+   "ruta": [
+    "detalle",
+    "VE13",
+    "banda_sube_con_inicio_posterior"
+   ],
+   "igual": 31
+  },
+  {
+   "id": "in-165",
+   "en": "informe",
+   "contexto": "ningún inquilino tiene póliza de edificios",
+   "ruta": [
+    "detalle",
+    "VE13",
+    "inquilino_con_poliza_de_edificios"
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-166",
+   "en": "informe",
+   "contexto": "2024 termina el 30 de diciembre en todas las pólizas",
+   "todos": [
+    [
+     "detalle",
+     "VE14",
+     "motor_train",
+     "fin_max"
+    ],
+    [
+     "detalle",
+     "VE14",
+     "buildings_train",
+     "fin_max"
+    ],
+    [
+     "detalle",
+     "VE14",
+     "contents_train",
+     "fin_max"
+    ]
+   ],
+   "igual": "2024-12-30"
+  },
+  {
+   "id": "in-167",
+   "en": "informe",
+   "contexto": "ningún periodo ni siniestro cubre el 31-12-2024",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE14",
+     "motor_train",
+     "cubren_31_12_2024"
+    ],
+    [
+     "detalle",
+     "VE14",
+     "buildings_train",
+     "cubren_31_12_2024"
+    ],
+    [
+     "detalle",
+     "VE14",
+     "contents_train",
+     "cubren_31_12_2024"
+    ],
+    [
+     "detalle",
+     "VE41",
+     "siniestros_el_31_12_2024"
+    ]
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-168",
+   "en": "informe",
+   "contexto": "no hay solapes dentro de una póliza",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE15",
+     "motor",
+     "solapes"
+    ],
+    [
+     "detalle",
+     "VE15",
+     "buildings",
+     "solapes"
+    ],
+    [
+     "detalle",
+     "VE15",
+     "contents",
+     "solapes"
+    ]
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-169",
+   "en": "informe",
+   "contexto": "los únicos huecos son los de un día en la transición a 2025 (20.097, 12.103 y 14.922; 47.122 en total",
+   "ruta": [
+    "detalle",
+    "VE15",
+    "motor",
+    "hueco_1_en_2024_2025"
+   ],
+   "formato": "int",
+   "valor": "20.097"
+  },
+  {
+   "id": "ap-170",
+   "en": "aporte",
+   "contexto": "se corrigió a 20.097 (12.103 y 14.922 en hogar)",
+   "ruta": [
+    "detalle",
+    "VE15",
+    "motor",
+    "hueco_1_en_2024_2025"
+   ],
+   "formato": "int",
+   "valor": "20.097"
+  },
+  {
+   "id": "in-171",
+   "en": "informe",
+   "contexto": "(20.097, 12.103 y 14.922; 47.122 en total",
+   "ruta": [
+    "detalle",
+    "VE15",
+    "buildings",
+    "hueco_1_en_2024_2025"
+   ],
+   "formato": "int",
+   "valor": "12.103"
+  },
+  {
+   "id": "ap-172",
+   "en": "aporte",
+   "contexto": "(12.103 y 14.922 en hogar)",
+   "ruta": [
+    "detalle",
+    "VE15",
+    "buildings",
+    "hueco_1_en_2024_2025"
+   ],
+   "formato": "int",
+   "valor": "12.103"
+  },
+  {
+   "id": "in-173",
+   "en": "informe",
+   "contexto": "12.103 y 14.922; 47.122 en total",
+   "ruta": [
+    "detalle",
+    "VE15",
+    "contents",
+    "hueco_1_en_2024_2025"
+   ],
+   "formato": "int",
+   "valor": "14.922"
+  },
+  {
+   "id": "ap-174",
+   "en": "aporte",
+   "contexto": "12.103 y 14.922 en hogar",
+   "ruta": [
+    "detalle",
+    "VE15",
+    "contents",
+    "hueco_1_en_2024_2025"
+   ],
+   "formato": "int",
+   "valor": "14.922"
+  },
+  {
+   "id": "in-175",
+   "en": "informe",
+   "contexto": "47.122 en total, la misma cifra que DAT-008 de Codex",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE15",
+     "motor",
+     "hueco_1_en_2024_2025"
+    ],
+    [
+     "detalle",
+     "VE15",
+     "buildings",
+     "hueco_1_en_2024_2025"
+    ],
+    [
+     "detalle",
+     "VE15",
+     "contents",
+     "hueco_1_en_2024_2025"
+    ]
+   ],
+   "formato": "int",
+   "valor": "47.122"
+  },
+  {
+   "id": "ap-176",
+   "en": "aporte",
+   "contexto": "DAT-008 (47.122 huecos del 31-12-2024) es VE15",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE15",
+     "motor",
+     "hueco_1_en_2024_2025"
+    ],
+    [
+     "detalle",
+     "VE15",
+     "buildings",
+     "hueco_1_en_2024_2025"
+    ],
+    [
+     "detalle",
+     "VE15",
+     "contents",
+     "hueco_1_en_2024_2025"
+    ]
+   ],
+   "formato": "int",
+   "valor": "47.122"
+  },
+  {
+   "id": "in-177",
+   "en": "informe",
+   "contexto": "los únicos huecos son los de un día",
+   "calculo": "maximo",
+   "args": [
+    [
+     "detalle",
+     "VE15",
+     "motor",
+     "hueco_max"
+    ],
+    [
+     "detalle",
+     "VE15",
+     "buildings",
+     "hueco_max"
+    ],
+    [
+     "detalle",
+     "VE15",
+     "contents",
+     "hueco_max"
+    ]
+   ],
+   "igual": 1
+  },
+  {
+   "id": "in-178",
+   "en": "informe",
+   "contexto": "| VE15: 20.097 + 12.103 + 14.922 = 47.122 |",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE15",
+     "motor",
+     "hueco_1_en_2024_2025"
+    ],
+    [
+     "detalle",
+     "VE15",
+     "buildings",
+     "hueco_1_en_2024_2025"
+    ],
+    [
+     "detalle",
+     "VE15",
+     "contents",
+     "hueco_1_en_2024_2025"
+    ]
+   ],
+   "formato": "int",
+   "valor": "47.122"
+  },
+  {
+   "id": "in-179",
+   "en": "informe",
+   "contexto": "`new_business` equivale a `renewal_count = 0` sin excepción",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE17",
+     "motor",
+     "nb_sin_renewal_0"
+    ],
+    [
+     "detalle",
+     "VE17",
+     "motor",
+     "renewal_0_sin_nb"
+    ],
+    [
+     "detalle",
+     "VE17",
+     "buildings",
+     "nb_sin_renewal_0"
+    ],
+    [
+     "detalle",
+     "VE17",
+     "buildings",
+     "renewal_0_sin_nb"
+    ],
+    [
+     "detalle",
+     "VE17",
+     "contents",
+     "nb_sin_renewal_0"
+    ],
+    [
+     "detalle",
+     "VE17",
+     "contents",
+     "renewal_0_sin_nb"
+    ]
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-180",
+   "en": "informe",
+   "contexto": "`renewal_count` es exactamente el año menos `customer_since_year` en el 100 % de las filas",
+   "calculo": "minimo",
+   "args": [
+    [
+     "detalle",
+     "VE17",
+     "motor",
+     "renewal_igual_anio_menos_since"
+    ],
+    [
+     "detalle",
+     "VE17",
+     "buildings",
+     "renewal_igual_anio_menos_since"
+    ],
+    [
+     "detalle",
+     "VE17",
+     "contents",
+     "renewal_igual_anio_menos_since"
+    ]
+   ],
+   "formato": "pct0",
+   "valor": "100"
+  },
+  {
+   "id": "in-181",
+   "en": "informe",
+   "contexto": "el nuevo negocio solo aparece en el primer año de cada póliza",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE17",
+     "motor",
+     "nb_en_anio_posterior_al_primero_de_la_poliza"
+    ],
+    [
+     "detalle",
+     "VE17",
+     "buildings",
+     "nb_en_anio_posterior_al_primero_de_la_poliza"
+    ],
+    [
+     "detalle",
+     "VE17",
+     "contents",
+     "nb_en_anio_posterior_al_primero_de_la_poliza"
+    ]
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-182",
+   "en": "informe",
+   "contexto": "Los días entre cotización e inicio van de 0 a 30, con mediana 13 en todos los segmentos",
+   "ruta": [
+    "detalle",
+    "VE18",
+    "motor",
+    "train",
+    "min"
+   ],
+   "formato": "int",
+   "valor": "0"
+  },
+  {
+   "id": "in-183",
+   "en": "informe",
+   "contexto": "van de 0 a 30",
+   "calculo": "maximo",
+   "args": [
+    [
+     "detalle",
+     "VE18",
+     "motor",
+     "train",
+     "max"
+    ],
+    [
+     "detalle",
+     "VE18",
+     "motor",
+     "test",
+     "max"
+    ],
+    [
+     "detalle",
+     "VE18",
+     "buildings",
+     "train",
+     "max"
+    ],
+    [
+     "detalle",
+     "VE18",
+     "buildings",
+     "test",
+     "max"
+    ],
+    [
+     "detalle",
+     "VE18",
+     "contents",
+     "train",
+     "max"
+    ],
+    [
+     "detalle",
+     "VE18",
+     "contents",
+     "test",
+     "max"
+    ]
+   ],
+   "formato": "int",
+   "valor": "30"
+  },
+  {
+   "id": "in-184",
+   "en": "informe",
+   "contexto": "con mediana 13 en todos los segmentos",
+   "todos": [
+    [
+     "detalle",
+     "VE18",
+     "motor",
+     "train",
+     "mediana"
+    ],
+    [
+     "detalle",
+     "VE18",
+     "motor",
+     "train",
+     "nb_mediana"
+    ],
+    [
+     "detalle",
+     "VE18",
+     "motor",
+     "train",
+     "ren_mediana"
+    ],
+    [
+     "detalle",
+     "VE18",
+     "motor",
+     "test",
+     "mediana"
+    ],
+    [
+     "detalle",
+     "VE18",
+     "motor",
+     "test",
+     "nb_mediana"
+    ],
+    [
+     "detalle",
+     "VE18",
+     "buildings",
+     "train",
+     "mediana"
+    ],
+    [
+     "detalle",
+     "VE18",
+     "buildings",
+     "train",
+     "nb_mediana"
+    ],
+    [
+     "detalle",
+     "VE18",
+     "buildings",
+     "train",
+     "ren_mediana"
+    ],
+    [
+     "detalle",
+     "VE18",
+     "buildings",
+     "test",
+     "mediana"
+    ],
+    [
+     "detalle",
+     "VE18",
+     "buildings",
+     "test",
+     "nb_mediana"
+    ],
+    [
+     "detalle",
+     "VE18",
+     "contents",
+     "train",
+     "mediana"
+    ],
+    [
+     "detalle",
+     "VE18",
+     "contents",
+     "train",
+     "nb_mediana"
+    ],
+    [
+     "detalle",
+     "VE18",
+     "contents",
+     "train",
+     "ren_mediana"
+    ],
+    [
+     "detalle",
+     "VE18",
+     "contents",
+     "test",
+     "mediana"
+    ],
+    [
+     "detalle",
+     "VE18",
+     "contents",
+     "test",
+     "nb_mediana"
+    ]
+   ],
+   "igual": 13.0
+  },
+  {
+   "id": "in-185",
+   "en": "informe",
+   "contexto": "`customer_since_year` va de 2008 a 2025",
+   "ruta": [
+    "detalle",
+    "VE07",
+    "perfil",
+    "customers.customer_since_year",
+    "min"
+   ],
+   "formato": "anio",
+   "valor": "2008"
+  },
+  {
+   "id": "ap-186",
+   "en": "aporte",
+   "contexto": "`customer_since_year` va de 2008 a 2025",
+   "ruta": [
+    "detalle",
+    "VE07",
+    "perfil",
+    "customers.customer_since_year",
+    "min"
+   ],
+   "formato": "anio",
+   "valor": "2008"
+  },
+  {
+   "id": "in-187",
+   "en": "informe",
+   "contexto": "va de 2008 a 2025",
+   "ruta": [
+    "detalle",
+    "VE07",
+    "perfil",
+    "customers.customer_since_year",
+    "max"
+   ],
+   "formato": "anio",
+   "valor": "2025"
+  },
+  {
+   "id": "ap-188",
+   "en": "aporte",
+   "contexto": "va de 2008 a 2025",
+   "ruta": [
+    "detalle",
+    "VE07",
+    "perfil",
+    "customers.customer_since_year",
+    "max"
+   ],
+   "formato": "anio",
+   "valor": "2025"
+  },
+  {
+   "id": "in-189",
+   "en": "informe",
+   "contexto": "3.727 en 2023, 5.608 en 2024 y 99.088 en 2025",
+   "ruta": [
+    "detalle",
+    "VE22",
+    "distribucion_since",
+    "2023"
+   ],
+   "formato": "int",
+   "valor": "3.727"
+  },
+  {
+   "id": "in-190",
+   "en": "informe",
+   "contexto": "5.608 en 2024 y 99.088 en 2025",
+   "ruta": [
+    "detalle",
+    "VE22",
+    "distribucion_since",
+    "2024"
+   ],
+   "formato": "int",
+   "valor": "5.608"
+  },
+  {
+   "id": "in-191",
+   "en": "informe",
+   "contexto": "99.088 en 2025",
+   "ruta": [
+    "detalle",
+    "VE22",
+    "distribucion_since",
+    "2025"
+   ],
+   "formato": "int",
+   "valor": "99.088"
+  },
+  {
+   "id": "in-192",
+   "en": "informe",
+   "contexto": "con unos 1.800 clientes por año hasta 2022",
+   "calculo": "maximo",
+   "args": [
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2008"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2009"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2010"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2011"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2012"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2013"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2014"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2015"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2016"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2017"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2018"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2019"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2020"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2021"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2022"
+    ]
+   ],
+   "menor": 1900
+  },
+  {
+   "id": "in-193",
+   "en": "informe",
+   "contexto": "con unos 1.800 clientes por año hasta 2022",
+   "calculo": "minimo",
+   "args": [
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2008"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2009"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2010"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2011"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2012"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2013"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2014"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2015"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2016"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2017"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2018"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2019"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2020"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2021"
+    ],
+    [
+     "detalle",
+     "VE22",
+     "distribucion_since",
+     "2022"
+    ]
+   ],
+   "menor": 1800
+  },
+  {
+   "id": "in-194",
+   "en": "informe",
+   "contexto": "27.433 clientes de entrenamiento ingresaron antes de que la aseguradora entrara al mercado",
+   "ruta": [
+    "detalle",
+    "VE22",
+    "since_menor_que_2023_en_clientes_de_train"
+   ],
+   "formato": "int",
+   "valor": "27.433"
+  },
+  {
+   "id": "ap-195",
+   "en": "aporte",
+   "contexto": "27.433 clientes de entrenamiento ingresaron antes de 2023",
+   "ruta": [
+    "detalle",
+    "VE22",
+    "since_menor_que_2023_en_clientes_de_train"
+   ],
+   "formato": "int",
+   "valor": "27.433"
+  },
+  {
+   "id": "in-196",
+   "en": "informe",
+   "contexto": "son exactamente los 27.433 sin `campaign_code`",
+   "ruta": [
+    "detalle",
+    "VE20",
+    "campaign_code",
+    "nulos"
+   ],
+   "formato": "int",
+   "valor": "27.433"
+  },
+  {
+   "id": "ap-197",
+   "en": "aporte",
+   "contexto": "son exactamente los 27.433 sin `campaign_code`",
+   "ruta": [
+    "detalle",
+    "VE20",
+    "campaign_code",
+    "nulos"
+   ],
+   "formato": "int",
+   "valor": "27.433"
+  },
+  {
+   "id": "in-198",
+   "en": "informe",
+   "contexto": "Los años en la dirección nunca superan la edad máxima de la banda",
+   "ruta": [
+    "detalle",
+    "VE22",
+    "years_at_address_mayor_que_edad_maxima_banda"
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-199",
+   "en": "informe",
+   "contexto": "(en autos, 0,93 veces la media con cero y 1,76 con cuatro)",
+   "ruta": [
+    "detalle",
+    "VE23",
+    "motor",
+    "frecuencia_relativa_por_prior_claims",
+    "0"
+   ],
+   "formato": "dec2",
+   "valor": "0,93"
+  },
+  {
+   "id": "in-200",
+   "en": "informe",
+   "contexto": "1,76 con cuatro",
+   "ruta": [
+    "detalle",
+    "VE23",
+    "motor",
+    "frecuencia_relativa_por_prior_claims",
+    "4"
+   ],
+   "formato": "dec2",
+   "valor": "1,76"
+  },
+  {
+   "id": "in-201",
+   "en": "informe",
+   "contexto": "la distancia al río baja con la zona de inundación",
+   "ruta": [
+    "detalle",
+    "VE26",
+    "distancia_decrece_con_la_zona"
+   ],
+   "igual": true
+  },
+  {
+   "id": "in-202",
+   "en": "informe",
+   "contexto": "sin elevaciones ni distancias negativas",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE26",
+     "elevacion_negativa"
+    ],
+    [
+     "detalle",
+     "VE26",
+     "distancia_negativa"
+    ]
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-203",
+   "en": "informe",
+   "contexto": "ninguna vivienda construida después de su primer periodo (año de construcción entre 1862 y 2021)",
+   "ruta": [
+    "detalle",
+    "VE26",
+    "construida_despues_del_primer_periodo"
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-204",
+   "en": "informe",
+   "contexto": "entre 1862 y 2021",
+   "ruta": [
+    "detalle",
+    "VE26",
+    "year_built_min"
+   ],
+   "formato": "anio",
+   "valor": "1862"
+  },
+  {
+   "id": "in-205",
+   "en": "informe",
+   "contexto": "1862 y 2021",
+   "ruta": [
+    "detalle",
+    "VE26",
+    "year_built_max"
+   ],
+   "formato": "anio",
+   "valor": "2021"
+  },
+  {
+   "id": "in-206",
+   "en": "informe",
+   "contexto": "la cuota de edificios protegidos es la misma en todos los tramos de construcción (3 %)",
+   "calculo": "listed_todos_3pct",
+   "args": [],
+   "igual": true
+  },
+  {
+   "id": "in-207",
+   "en": "informe",
+   "contexto": "El clima de 2025 no copia el de 2024 en ninguna dirección",
+   "ruta": [
+    "detalle",
+    "VE28",
+    "filas_identicas_2024_2025"
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-208",
+   "en": "informe",
+   "contexto": "(correlación −0,886)",
+   "ruta": [
+    "detalle",
+    "VE28",
+    "helada_vs_temperatura_corr"
+   ],
+   "igual": -0.886
+  },
+  {
+   "id": "in-209",
+   "en": "informe",
+   "contexto": "apenas se relaciona con la lluvia anual (0,277)",
+   "ruta": [
+    "detalle",
+    "VE28",
+    "sequia_vs_lluvia_corr"
+   ],
+   "formato": "dec3",
+   "valor": "0,277"
+  },
+  {
+   "id": "in-210",
+   "en": "informe",
+   "contexto": "pasarían cuatro variables (exposición al viento, índice forestal, lluvia y temperatura media)",
+   "ruta": [
+    "detalle",
+    "VE28",
+    "variables_con_r_2023_2024_de_0_80_o_mas"
+   ],
+   "igual": [
+    "wind_exposure_index",
+    "wildfire_index",
+    "rainfall_mm",
+    "mean_temperature_c"
+   ]
+  },
+  {
+   "id": "ap-211",
+   "en": "aporte",
+   "contexto": "pasarían cuatro variables (viento, índice forestal, lluvia y temperatura media)",
+   "ruta": [
+    "detalle",
+    "VE28",
+    "variables_con_r_2023_2024_de_0_80_o_mas"
+   ],
+   "igual": [
+    "wind_exposure_index",
+    "wildfire_index",
+    "rainfall_mm",
+    "mean_temperature_c"
+   ]
+  },
+  {
+   "id": "in-212",
+   "en": "informe",
+   "contexto": "como hizo la variante, deja tres",
+   "ruta": [
+    "detalle",
+    "VE28",
+    "variables_con_r_en_los_dos_pares_de_0_80_o_mas"
+   ],
+   "igual": [
+    "wind_exposure_index",
+    "wildfire_index",
+    "rainfall_mm"
+   ]
+  },
+  {
+   "id": "ap-213",
+   "en": "aporte",
+   "contexto": "con los dos pares, tres",
+   "ruta": [
+    "detalle",
+    "VE28",
+    "variables_con_r_en_los_dos_pares_de_0_80_o_mas"
+   ],
+   "igual": [
+    "wind_exposure_index",
+    "wildfire_index",
+    "rainfall_mm"
+   ]
+  },
+  {
+   "id": "in-214",
+   "en": "informe",
+   "contexto": "15,5 días de granizo frente a 6,5",
+   "ruta": [
+    "detalle",
+    "VE29",
+    "hail_days",
+    "media_emergente"
+   ],
+   "formato": "dec1",
+   "valor": "15,5"
+  },
+  {
+   "id": "in-215",
+   "en": "informe",
+   "contexto": "granizo frente a 6,5",
+   "ruta": [
+    "detalle",
+    "VE29",
+    "hail_days",
+    "media_desarrollado"
+   ],
+   "formato": "dec1",
+   "valor": "6,5"
+  },
+  {
+   "id": "in-216",
+   "en": "informe",
+   "contexto": "índice forestal 0,53 frente a 0,14",
+   "ruta": [
+    "detalle",
+    "VE29",
+    "wildfire_index",
+    "media_emergente"
+   ],
+   "formato": "dec2",
+   "valor": "0,53"
+  },
+  {
+   "id": "in-217",
+   "en": "informe",
+   "contexto": "0,53 frente a 0,14",
+   "ruta": [
+    "detalle",
+    "VE29",
+    "wildfire_index",
+    "media_desarrollado"
+   ],
+   "formato": "dec2",
+   "valor": "0,14"
+  },
+  {
+   "id": "in-218",
+   "en": "informe",
+   "contexto": "1.378 mm de lluvia frente a 1.009",
+   "ruta": [
+    "detalle",
+    "VE29",
+    "rainfall_mm",
+    "media_emergente"
+   ],
+   "formato": "int",
+   "valor": "1.378"
+  },
+  {
+   "id": "in-219",
+   "en": "informe",
+   "contexto": "lluvia frente a 1.009",
+   "ruta": [
+    "detalle",
+    "VE29",
+    "rainfall_mm",
+    "media_desarrollado"
+   ],
+   "formato": "int",
+   "valor": "1.009"
+  },
+  {
+   "id": "in-220",
+   "en": "informe",
+   "contexto": "57.237 direcciones-año con un índice forestal fuera del rango",
+   "ruta": [
+    "detalle",
+    "VE29",
+    "wildfire_index",
+    "emergente_fuera_del_rango_desarrollado"
+   ],
+   "formato": "int",
+   "valor": "57.237"
+  },
+  {
+   "id": "in-221",
+   "en": "informe",
+   "contexto": "los códigos de construcción son BRK, STN, WOD y MIX y F0 los traduce a brick, stone, timber y mixed_or_nonstandard",
+   "ruta": [
+    "detalle",
+    "VE59",
+    "buildings",
+    "construction_type_mapa"
+   ],
+   "igual": {
+    "BRK": "brick",
+    "STN": "stone",
+    "WOD": "timber",
+    "MIX": "mixed_or_nonstandard"
+   }
+  },
+  {
+   "id": "in-222",
+   "en": "informe",
+   "contexto": "el carnet sube un año en los 40.181 pares de autos",
+   "ruta": [
+    "detalle",
+    "VE32",
+    "pares_anio_siguiente"
+   ],
+   "formato": "int",
+   "valor": "40.181"
+  },
+  {
+   "id": "in-223",
+   "en": "informe",
+   "contexto": "el carnet sube un año",
+   "ruta": [
+    "detalle",
+    "VE32",
+    "carnet_no_sube_1"
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-224",
+   "en": "informe",
+   "contexto": "la banda de edad nunca retrocede, el cliente no cambia",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE32",
+     "banda_retrocede"
+    ],
+    [
+     "detalle",
+     "VE32",
+     "cambio_de_cliente"
+    ],
+    [
+     "detalle",
+     "VE35",
+     "buildings",
+     "banda_retrocede"
+    ],
+    [
+     "detalle",
+     "VE35",
+     "buildings",
+     "cambio_de_cliente"
+    ],
+    [
+     "detalle",
+     "VE35",
+     "contents",
+     "banda_retrocede"
+    ],
+    [
+     "detalle",
+     "VE35",
+     "contents",
+     "cambio_de_cliente"
+    ]
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-225",
+   "en": "informe",
+   "contexto": "se indexa un 3,0 % en edificios y un 2,0 % en contenidos",
+   "ruta": [
+    "detalle",
+    "VE35",
+    "buildings",
+    "ratio_mediana"
+   ],
+   "formato": "ipct1",
+   "valor": "3,0"
+  },
+  {
+   "id": "in-226",
+   "en": "informe",
+   "contexto": "un 2,0 % en contenidos",
+   "ruta": [
+    "detalle",
+    "VE35",
+    "contents",
+    "ratio_mediana"
+   ],
+   "formato": "ipct1",
+   "valor": "2,0"
+  },
+  {
+   "id": "in-227",
+   "en": "informe",
+   "contexto": "percentiles 10 y 90 entre 1,027 y 1,033 y entre 1,018 y 1,022",
+   "ruta": [
+    "detalle",
+    "VE35",
+    "buildings",
+    "ratio_p10"
+   ],
+   "formato": "dec3",
+   "valor": "1,027"
+  },
+  {
+   "id": "in-228",
+   "en": "informe",
+   "contexto": "entre 1,027 y 1,033",
+   "ruta": [
+    "detalle",
+    "VE35",
+    "buildings",
+    "ratio_p90"
+   ],
+   "formato": "dec3",
+   "valor": "1,033"
+  },
+  {
+   "id": "in-229",
+   "en": "informe",
+   "contexto": "entre 1,018 y 1,022",
+   "ruta": [
+    "detalle",
+    "VE35",
+    "contents",
+    "ratio_p10"
+   ],
+   "formato": "dec3",
+   "valor": "1,018"
+  },
+  {
+   "id": "in-230",
+   "en": "informe",
+   "contexto": "1,018 y 1,022",
+   "ruta": [
+    "detalle",
+    "VE35",
+    "contents",
+    "ratio_p90"
+   ],
+   "formato": "dec3",
+   "valor": "1,022"
+  },
+  {
+   "id": "in-231",
+   "en": "informe",
+   "contexto": "salvo los 96 saltos ×1000 y 93 caídas",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE35",
+     "buildings",
+     "saltos_x1000"
+    ],
+    [
+     "detalle",
+     "VE35",
+     "contents",
+     "saltos_x1000"
+    ]
+   ],
+   "formato": "int",
+   "valor": "96"
+  },
+  {
+   "id": "in-232",
+   "en": "informe",
+   "contexto": "93 caídas",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE35",
+     "buildings",
+     "caidas_x1000"
+    ],
+    [
+     "detalle",
+     "VE35",
+     "contents",
+     "caidas_x1000"
+    ]
+   ],
+   "formato": "int",
+   "valor": "93"
+  },
+  {
+   "id": "in-233",
+   "en": "informe",
+   "contexto": "(en autos, entre 513 y 546 CU en todos los tramos)",
+   "calculo": "minimo",
+   "args": [
+    [
+     "detalle",
+     "VE37",
+     "motor",
+     "mediana_por_tramo_de_exposicion",
+     "≤0,25"
+    ],
+    [
+     "detalle",
+     "VE37",
+     "motor",
+     "mediana_por_tramo_de_exposicion",
+     "0,25–0,5"
+    ],
+    [
+     "detalle",
+     "VE37",
+     "motor",
+     "mediana_por_tramo_de_exposicion",
+     "0,5–0,75"
+    ],
+    [
+     "detalle",
+     "VE37",
+     "motor",
+     "mediana_por_tramo_de_exposicion",
+     "0,75–0,99"
+    ],
+    [
+     "detalle",
+     "VE37",
+     "motor",
+     "mediana_por_tramo_de_exposicion",
+     "≈1"
+    ]
+   ],
+   "formato": "int",
+   "valor": "513"
+  },
+  {
+   "id": "in-234",
+   "en": "informe",
+   "contexto": "entre 513 y 546 CU",
+   "calculo": "maximo",
+   "args": [
+    [
+     "detalle",
+     "VE37",
+     "motor",
+     "mediana_por_tramo_de_exposicion",
+     "≤0,25"
+    ],
+    [
+     "detalle",
+     "VE37",
+     "motor",
+     "mediana_por_tramo_de_exposicion",
+     "0,25–0,5"
+    ],
+    [
+     "detalle",
+     "VE37",
+     "motor",
+     "mediana_por_tramo_de_exposicion",
+     "0,5–0,75"
+    ],
+    [
+     "detalle",
+     "VE37",
+     "motor",
+     "mediana_por_tramo_de_exposicion",
+     "0,75–0,99"
+    ],
+    [
+     "detalle",
+     "VE37",
+     "motor",
+     "mediana_por_tramo_de_exposicion",
+     "≈1"
+    ]
+   ],
+   "formato": "int",
+   "valor": "546"
+  },
+  {
+   "id": "in-235",
+   "en": "informe",
+   "contexto": "sube de un año al siguiente (498, 505 y 540 CU en autos)",
+   "ruta": [
+    "detalle",
+    "VE37",
+    "motor",
+    "mediana_por_anio",
+    "2023"
+   ],
+   "formato": "int",
+   "valor": "498"
+  },
+  {
+   "id": "in-236",
+   "en": "informe",
+   "contexto": "(498, 505 y 540 CU en autos)",
+   "ruta": [
+    "detalle",
+    "VE37",
+    "motor",
+    "mediana_por_anio",
+    "2024"
+   ],
+   "formato": "int",
+   "valor": "505"
+  },
+  {
+   "id": "in-237",
+   "en": "informe",
+   "contexto": "505 y 540 CU en autos",
+   "ruta": [
+    "detalle",
+    "VE37",
+    "motor",
+    "mediana_por_anio",
+    "2025"
+   ],
+   "formato": "int",
+   "valor": "540"
+  },
+  {
+   "id": "in-238",
+   "en": "informe",
+   "contexto": "El descuento toma tres valores: 0, 5 % y 10 %",
+   "ruta": [
+    "detalle",
+    "VE37",
+    "motor",
+    "descuento_valores"
+   ],
+   "igual": {
+    "0.0": 99527,
+    "0.05": 34477,
+    "0.1": 3800
+   }
+  },
+  {
+   "id": "in-239",
+   "en": "informe",
+   "contexto": "ocurrencias del 27-10-2021 al 29-12-2024",
+   "ruta": [
+    "detalle",
+    "VE39",
+    "loss_min"
+   ],
+   "formato": "fecha",
+   "valor": "27-10-2021"
+  },
+  {
+   "id": "in-240",
+   "en": "informe",
+   "contexto": "al 29-12-2024, reportes",
+   "ruta": [
+    "detalle",
+    "VE39",
+    "loss_max"
+   ],
+   "formato": "fecha",
+   "valor": "29-12-2024"
+  },
+  {
+   "id": "in-241",
+   "en": "informe",
+   "contexto": "reportes del 02-01-2023 al 30-12-2024",
+   "ruta": [
+    "detalle",
+    "VE39",
+    "report_min"
+   ],
+   "formato": "fecha",
+   "valor": "02-01-2023"
+  },
+  {
+   "id": "in-242",
+   "en": "informe",
+   "contexto": "al 30-12-2024, ninguno después del corte",
+   "ruta": [
+    "detalle",
+    "VE39",
+    "report_max"
+   ],
+   "formato": "fecha",
+   "valor": "30-12-2024"
+  },
+  {
+   "id": "in-243",
+   "en": "informe",
+   "contexto": "ninguno después del corte ni antes de la ocurrencia",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE39",
+     "report_antes_de_loss"
+    ],
+    [
+     "detalle",
+     "VE39",
+     "report_despues_del_corte"
+    ],
+    [
+     "detalle",
+     "VE39",
+     "loss_despues_del_corte"
+    ]
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-244",
+   "en": "informe",
+   "contexto": "pagado ≤ incurrido, recuperaciones entre 0 y el incurrido, netos no negativos, cerrados sin reserva, rechazados sin pago",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE40",
+     "pagado_mayor_que_incurrido"
+    ],
+    [
+     "detalle",
+     "VE40",
+     "recuperaciones_negativas"
+    ],
+    [
+     "detalle",
+     "VE40",
+     "recuperaciones_mayores_que_incurrido"
+    ],
+    [
+     "detalle",
+     "VE40",
+     "neto_negativo"
+    ],
+    [
+     "detalle",
+     "VE40",
+     "cerrados_con_reserva"
+    ],
+    [
+     "detalle",
+     "VE40",
+     "repudiados_con_pago"
+    ]
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-245",
+   "en": "informe",
+   "contexto": "las recuperaciones solo aparecen en siniestros cerrados",
+   "ruta": [
+    "detalle",
+    "VE40",
+    "abiertos_con_recuperacion"
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-246",
+   "en": "informe",
+   "contexto": "(el 24 % del incurrido de daños propios y el 2,3 % de robo)",
+   "ruta": [
+    "detalle",
+    "VE40",
+    "recuperacion_cuota_por_peligro",
+    "own_damage"
+   ],
+   "formato": "pct0",
+   "valor": "24"
+  },
+  {
+   "id": "in-247",
+   "en": "informe",
+   "contexto": "el 2,3 % de robo",
+   "ruta": [
+    "detalle",
+    "VE40",
+    "recuperacion_cuota_por_peligro",
+    "theft"
+   ],
+   "formato": "pct1",
+   "valor": "2,3"
+  },
+  {
+   "id": "in-248",
+   "en": "informe",
+   "contexto": "La asignación por póliza y fecha da 9.222 únicos y 36 sin periodo",
+   "ruta": [
+    "detalle",
+    "VE41",
+    "un_periodo"
+   ],
+   "formato": "int",
+   "valor": "9.222"
+  },
+  {
+   "id": "in-249",
+   "en": "informe",
+   "contexto": "36 sin periodo",
+   "ruta": [
+    "detalle",
+    "VE41",
+    "ninguno"
+   ],
+   "formato": "int",
+   "valor": "36"
+  },
+  {
+   "id": "in-250",
+   "en": "informe",
+   "contexto": "todos anteriores al primer inicio de su póliza (entre 14 y 431 días)",
+   "ruta": [
+    "detalle",
+    "VE41",
+    "no_asignados_antes_del_primer_inicio"
+   ],
+   "igual": 36
+  },
+  {
+   "id": "in-251",
+   "en": "informe",
+   "contexto": "(entre 14 y 431 días)",
+   "ruta": [
+    "detalle",
+    "VE41",
+    "dias_antes_min"
+   ],
+   "formato": "int",
+   "valor": "14"
+  },
+  {
+   "id": "in-252",
+   "en": "informe",
+   "contexto": "14 y 431 días",
+   "ruta": [
+    "detalle",
+    "VE41",
+    "dias_antes_max"
+   ],
+   "formato": "int",
+   "valor": "431"
+  },
+  {
+   "id": "in-253",
+   "en": "informe",
+   "contexto": "35 de ellos reportados dentro de un periodo observado",
+   "ruta": [
+    "detalle",
+    "VE41",
+    "reporte_dentro_de_un_periodo_observado"
+   ],
+   "formato": "int",
+   "valor": "35"
+  },
+  {
+   "id": "in-254",
+   "en": "informe",
+   "contexto": "no hay ambiguos ni siniestros en los huecos de un día",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE41",
+     "ambiguos"
+    ],
+    [
+     "detalle",
+     "VE41",
+     "no_asignados_en_hueco"
+    ]
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-255",
+   "en": "informe",
+   "contexto": "No hay duplicados de ninguna clase (ni iguales salvo `claim_id`, ni misma póliza-peligro-fecha)",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE43",
+     "iguales_salvo_claim_id"
+    ],
+    [
+     "detalle",
+     "VE43",
+     "misma_poliza_peligro_fecha"
+    ]
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-256",
+   "en": "informe",
+   "contexto": "El retraso de reporte tiene mediana de 9 días en autos y 99 en lesiones corporales",
+   "ruta": [
+    "detalle",
+    "VE44",
+    "motor",
+    "retraso_mediana"
+   ],
+   "formato": "int",
+   "valor": "9"
+  },
+  {
+   "id": "in-257",
+   "en": "informe",
+   "contexto": "99 en lesiones corporales",
+   "ruta": [
+    "detalle",
+    "VE44",
+    "motor",
+    "por_peligro",
+    "bodily_injury",
+    "mediana"
+   ],
+   "formato": "int",
+   "valor": "99"
+  },
+  {
+   "id": "in-258",
+   "en": "informe",
+   "contexto": "con 31 siniestros de autos reportados después de un año (316.442 CU)",
+   "ruta": [
+    "detalle",
+    "VE44",
+    "motor",
+    "mas_de_365"
+   ],
+   "formato": "int",
+   "valor": "31"
+  },
+  {
+   "id": "in-259",
+   "en": "informe",
+   "contexto": "(316.442 CU)",
+   "ruta": [
+    "detalle",
+    "VE44",
+    "motor",
+    "mas_de_365_neto"
+   ],
+   "formato": "int",
+   "valor": "316.442"
+  },
+  {
+   "id": "in-260",
+   "en": "informe",
+   "contexto": "los diez mayores siniestros son el 5,7 % del coste en autos y el 25,6 % en edificios",
+   "ruta": [
+    "detalle",
+    "VE45",
+    "motor",
+    "top10"
+   ],
+   "formato": "pct1",
+   "valor": "5,7"
+  },
+  {
+   "id": "in-261",
+   "en": "informe",
+   "contexto": "el 25,6 % en edificios",
+   "ruta": [
+    "detalle",
+    "VE45",
+    "buildings",
+    "top10"
+   ],
+   "formato": "pct1",
+   "valor": "25,6"
+  },
+  {
+   "id": "in-262",
+   "en": "informe",
+   "contexto": "El test tiene las mismas columnas que el entrenamiento salvo `renewal_decision`",
+   "todos": [
+    [
+     "detalle",
+     "VE47",
+     "motor",
+     "columnas_solo_train"
+    ],
+    [
+     "detalle",
+     "VE47",
+     "buildings",
+     "columnas_solo_train"
+    ],
+    [
+     "detalle",
+     "VE47",
+     "contents",
+     "columnas_solo_train"
+    ]
+   ],
+   "igual": [
+    "renewal_decision"
+   ]
+  },
+  {
+   "id": "in-263",
+   "en": "informe",
+   "contexto": "(993 filas con `renewal_count` 17, una renovación más; 116 vehículos de 27 años; 49 carnets de 74 años)",
+   "ruta": [
+    "detalle",
+    "VE47",
+    "motor",
+    "fuera_de_soporte",
+    "renewal_count",
+    "filas"
+   ],
+   "formato": "int",
+   "valor": "993"
+  },
+  {
+   "id": "in-264",
+   "en": "informe",
+   "contexto": "`renewal_count` 17",
+   "ruta": [
+    "detalle",
+    "VE47",
+    "motor",
+    "fuera_de_soporte",
+    "renewal_count",
+    "max_test"
+   ],
+   "formato": "int",
+   "valor": "17"
+  },
+  {
+   "id": "in-265",
+   "en": "informe",
+   "contexto": "116 vehículos de 27 años",
+   "ruta": [
+    "detalle",
+    "VE47",
+    "motor",
+    "fuera_de_soporte",
+    "vehicle_age",
+    "filas"
+   ],
+   "formato": "int",
+   "valor": "116"
+  },
+  {
+   "id": "in-266",
+   "en": "informe",
+   "contexto": "vehículos de 27 años",
+   "ruta": [
+    "detalle",
+    "VE47",
+    "motor",
+    "fuera_de_soporte",
+    "vehicle_age",
+    "max_test"
+   ],
+   "formato": "int",
+   "valor": "27"
+  },
+  {
+   "id": "in-267",
+   "en": "informe",
+   "contexto": "49 carnets de 74 años",
+   "ruta": [
+    "detalle",
+    "VE47",
+    "motor",
+    "fuera_de_soporte",
+    "years_licensed",
+    "filas"
+   ],
+   "formato": "int",
+   "valor": "49"
+  },
+  {
+   "id": "in-268",
+   "en": "informe",
+   "contexto": "carnets de 74 años",
+   "ruta": [
+    "detalle",
+    "VE47",
+    "motor",
+    "fuera_de_soporte",
+    "years_licensed",
+    "max_test"
+   ],
+   "formato": "int",
+   "valor": "74"
+  },
+  {
+   "id": "in-269",
+   "en": "informe",
+   "contexto": "El 76 % de las filas de 2025 son nuevo negocio, el 88–91 % de él empieza en enero",
+   "ruta": [
+    "detalle",
+    "VE49",
+    "motor",
+    "nb_filas"
+   ],
+   "formato": "pct0",
+   "valor": "76"
+  },
+  {
+   "id": "ap-270",
+   "en": "aporte",
+   "contexto": "el 76 % de las filas de 2025 es nuevo negocio y el 88–91 % de él empieza en enero",
+   "ruta": [
+    "detalle",
+    "VE49",
+    "motor",
+    "nb_filas"
+   ],
+   "formato": "pct0",
+   "valor": "76"
+  },
+  {
+   "id": "in-271",
+   "en": "informe",
+   "contexto": "El 76 % de las filas de 2025",
+   "ruta": [
+    "detalle",
+    "VE49",
+    "buildings",
+    "nb_filas"
+   ],
+   "formato": "pct0",
+   "valor": "76"
+  },
+  {
+   "id": "ap-272",
+   "en": "aporte",
+   "contexto": "el 76 % de las filas de 2025",
+   "ruta": [
+    "detalle",
+    "VE49",
+    "buildings",
+    "nb_filas"
+   ],
+   "formato": "pct0",
+   "valor": "76"
+  },
+  {
+   "id": "in-273",
+   "en": "informe",
+   "contexto": "El 76 % de las filas de 2025",
+   "ruta": [
+    "detalle",
+    "VE49",
+    "contents",
+    "nb_filas"
+   ],
+   "formato": "pct0",
+   "valor": "76"
+  },
+  {
+   "id": "ap-274",
+   "en": "aporte",
+   "contexto": "el 76 % de las filas de 2025",
+   "ruta": [
+    "detalle",
+    "VE49",
+    "contents",
+    "nb_filas"
+   ],
+   "formato": "pct0",
+   "valor": "76"
+  },
+  {
+   "id": "in-275",
+   "en": "informe",
+   "contexto": "el 88–91 % de él empieza en enero",
+   "calculo": "minimo",
+   "args": [
+    [
+     "detalle",
+     "VE49",
+     "motor",
+     "nb_enero"
+    ],
+    [
+     "detalle",
+     "VE49",
+     "buildings",
+     "nb_enero"
+    ],
+    [
+     "detalle",
+     "VE49",
+     "contents",
+     "nb_enero"
+    ]
+   ],
+   "formato": "pct0",
+   "valor": "88"
+  },
+  {
+   "id": "ap-276",
+   "en": "aporte",
+   "contexto": "el 88–91 % de él empieza en enero",
+   "calculo": "minimo",
+   "args": [
+    [
+     "detalle",
+     "VE49",
+     "motor",
+     "nb_enero"
+    ],
+    [
+     "detalle",
+     "VE49",
+     "buildings",
+     "nb_enero"
+    ],
+    [
+     "detalle",
+     "VE49",
+     "contents",
+     "nb_enero"
+    ]
+   ],
+   "formato": "pct0",
+   "valor": "88"
+  },
+  {
+   "id": "in-277",
+   "en": "informe",
+   "contexto": "88–91 %",
+   "calculo": "maximo",
+   "args": [
+    [
+     "detalle",
+     "VE49",
+     "motor",
+     "nb_enero"
+    ],
+    [
+     "detalle",
+     "VE49",
+     "buildings",
+     "nb_enero"
+    ],
+    [
+     "detalle",
+     "VE49",
+     "contents",
+     "nb_enero"
+    ]
+   ],
+   "formato": "pct0",
+   "valor": "91"
+  },
+  {
+   "id": "ap-278",
+   "en": "aporte",
+   "contexto": "88–91 %",
+   "calculo": "maximo",
+   "args": [
+    [
+     "detalle",
+     "VE49",
+     "motor",
+     "nb_enero"
+    ],
+    [
+     "detalle",
+     "VE49",
+     "buildings",
+     "nb_enero"
+    ],
+    [
+     "detalle",
+     "VE49",
+     "contents",
+     "nb_enero"
+    ]
+   ],
+   "formato": "pct0",
+   "valor": "91"
+  },
+  {
+   "id": "in-279",
+   "en": "informe",
+   "contexto": "ninguna renovación del test carece de fila en 2024",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE49",
+     "motor",
+     "renovaciones_test_sin_fila_en_2024"
+    ],
+    [
+     "detalle",
+     "VE49",
+     "buildings",
+     "renovaciones_test_sin_fila_en_2024"
+    ],
+    [
+     "detalle",
+     "VE49",
+     "contents",
+     "renovaciones_test_sin_fila_en_2024"
+    ]
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-280",
+   "en": "informe",
+   "contexto": "(70 % broker, 25 % directo, 5 % comparador)",
+   "ruta": [
+    "detalle",
+    "VE49",
+    "motor",
+    "canal_nb_2025",
+    "broker"
+   ],
+   "formato": "pct0",
+   "valor": "70"
+  },
+  {
+   "id": "in-281",
+   "en": "informe",
+   "contexto": "25 % directo",
+   "ruta": [
+    "detalle",
+    "VE49",
+    "motor",
+    "canal_nb_2025",
+    "direct"
+   ],
+   "formato": "pct0",
+   "valor": "25"
+  },
+  {
+   "id": "in-282",
+   "en": "informe",
+   "contexto": "5 % comparador",
+   "ruta": [
+    "detalle",
+    "VE49",
+    "motor",
+    "canal_nb_2025",
+    "comparison_site"
+   ],
+   "formato": "pct0",
+   "valor": "5"
+  },
+  {
+   "id": "in-283",
+   "en": "informe",
+   "contexto": "la mezcla por región, densidad y zona de inundación no cambia (PSI menor que 0,001)",
+   "calculo": "psi_geo_max",
+   "args": [],
+   "menor": 0.001
+  },
+  {
+   "id": "in-284",
+   "en": "informe",
+   "contexto": "La plantilla tiene las 209.063 filas en el orden de los tres test concatenados y todas sus predicciones son cero",
+   "ruta": [
+    "detalle",
+    "VE50",
+    "filas"
+   ],
+   "formato": "int",
+   "valor": "209.063"
+  },
+  {
+   "id": "in-285",
+   "en": "informe",
+   "contexto": "todas sus predicciones son cero",
+   "ruta": [
+    "detalle",
+    "VE50",
+    "prediccion_valores",
+    "max"
+   ],
+   "igual": 0.0
+  },
+  {
+   "id": "in-286",
+   "en": "informe",
+   "contexto": "en el orden de los tres test concatenados",
+   "ruta": [
+    "detalle",
+    "VE50",
+    "mismo_orden"
+   ],
+   "igual": true
+  },
+  {
+   "id": "in-287",
+   "en": "informe",
+   "contexto": "Las veinte referencias son filas del test con exactamente los mismos valores en todas las columnas",
+   "ruta": [
+    "detalle",
+    "VE51",
+    "en_test"
+   ],
+   "igual": 20
+  },
+  {
+   "id": "in-288",
+   "en": "informe",
+   "contexto": "19 cubren menos de un año y 15 menos de 0,99",
+   "ruta": [
+    "detalle",
+    "VE51",
+    "menores_de_1"
+   ],
+   "formato": "int",
+   "valor": "19"
+  },
+  {
+   "id": "in-289",
+   "en": "informe",
+   "contexto": "15 menos de 0,99",
+   "ruta": [
+    "detalle",
+    "VE51",
+    "menores_de_0_99"
+   ],
+   "formato": "int",
+   "valor": "15"
+  },
+  {
+   "id": "in-290",
+   "en": "informe",
+   "contexto": "dos son tramos de pólizas con otra fila en 2025",
+   "calculo": "longitud",
+   "args": [
+    [
+     "detalle",
+     "VE51",
+     "polizas_con_otra_fila_en_2025"
+    ]
+   ],
+   "igual": 2
+  },
+  {
+   "id": "in-291",
+   "en": "informe",
+   "contexto": "sus 609 cambios son exactamente mis filas fuera de días / 365",
+   "calculo": "cambios_exposicion_total",
+   "args": [],
+   "formato": "int",
+   "valor": "609"
+  },
+  {
+   "id": "ap-292",
+   "en": "aporte",
+   "contexto": "sus 609 cambios son mis filas",
+   "calculo": "cambios_exposicion_total",
+   "args": [],
+   "formato": "int",
+   "valor": "609"
+  },
+  {
+   "id": "in-293",
+   "en": "informe",
+   "contexto": "T0 coincide en las 109.296 filas al centavo (27.997.991,57 CU; 8.071 filas con coste positivo)",
+   "ruta": [
+    "detalle",
+    "VE55",
+    "T0_cents_iguales"
+   ],
+   "formato": "int",
+   "valor": "109.296"
+  },
+  {
+   "id": "ap-294",
+   "en": "aporte",
+   "contexto": "T0 coincide en las 109.296 filas al centavo (27.997.991,57 CU; 8.071 positivas)",
+   "ruta": [
+    "detalle",
+    "VE55",
+    "T0_cents_iguales"
+   ],
+   "formato": "int",
+   "valor": "109.296"
+  },
+  {
+   "id": "in-295",
+   "en": "informe",
+   "contexto": "(27.997.991,57 CU",
+   "ruta": [
+    "detalle",
+    "VE55",
+    "T0_total"
+   ],
+   "formato": "dec2",
+   "valor": "27.997.991,57"
+  },
+  {
+   "id": "ap-296",
+   "en": "aporte",
+   "contexto": "(27.997.991,57 CU",
+   "ruta": [
+    "detalle",
+    "VE55",
+    "T0_total"
+   ],
+   "formato": "dec2",
+   "valor": "27.997.991,57"
+  },
+  {
+   "id": "in-297",
+   "en": "informe",
+   "contexto": "8.071 filas con coste positivo",
+   "ruta": [
+    "detalle",
+    "VE55",
+    "filas_con_T0_positivo"
+   ],
+   "formato": "int",
+   "valor": "8.071"
+  },
+  {
+   "id": "ap-298",
+   "en": "aporte",
+   "contexto": "8.071 positivas",
+   "ruta": [
+    "detalle",
+    "VE55",
+    "filas_con_T0_positivo"
+   ],
+   "formato": "int",
+   "valor": "8.071"
+  },
+  {
+   "id": "in-299",
+   "en": "informe",
+   "contexto": "las fórmulas de T1 y el test sin etiquetas",
+   "todos": [
+    [
+     "detalle",
+     "VE55",
+     "T1_075_formula"
+    ],
+    [
+     "detalle",
+     "VE55",
+     "T1_125_formula"
+    ],
+    [
+     "detalle",
+     "VE55",
+     "test_T0_nulo"
+    ]
+   ],
+   "igual": true
+  },
+  {
+   "id": "in-300",
+   "en": "informe",
+   "contexto": "Los 36 siniestros anteriores a la cobertura son los míos y los 9.102 incluidos en T0 caen en el mismo periodo",
+   "ruta": [
+    "detalle",
+    "VE56",
+    "n_codex"
+   ],
+   "formato": "int",
+   "valor": "36"
+  },
+  {
+   "id": "ap-301",
+   "en": "aporte",
+   "contexto": "los 36 siniestros anteriores a la cobertura y los 9.102 incluidos son los mismos",
+   "ruta": [
+    "detalle",
+    "VE56",
+    "n_codex"
+   ],
+   "formato": "int",
+   "valor": "36"
+  },
+  {
+   "id": "in-302",
+   "en": "informe",
+   "contexto": "los 9.102 incluidos en T0",
+   "ruta": [
+    "detalle",
+    "VE56",
+    "incluidos_en_T0"
+   ],
+   "formato": "int",
+   "valor": "9.102"
+  },
+  {
+   "id": "ap-303",
+   "en": "aporte",
+   "contexto": "los 9.102 incluidos",
+   "ruta": [
+    "detalle",
+    "VE56",
+    "incluidos_en_T0"
+   ],
+   "formato": "int",
+   "valor": "9.102"
+  },
+  {
+   "id": "in-304",
+   "en": "informe",
+   "contexto": "son los míos",
+   "ruta": [
+    "detalle",
+    "VE56",
+    "precobertura_coincide"
+   ],
+   "igual": true
+  },
+  {
+   "id": "in-305",
+   "en": "informe",
+   "contexto": "Los 36.398 grupos de las particiones son exactamente los componentes conexos",
+   "ruta": [
+    "detalle",
+    "VE57",
+    "grupos_codex"
+   ],
+   "formato": "int",
+   "valor": "36.398"
+  },
+  {
+   "id": "ap-306",
+   "en": "aporte",
+   "contexto": "los 36.398 grupos son los componentes conexos cliente–dirección",
+   "ruta": [
+    "detalle",
+    "VE57",
+    "grupos_codex"
+   ],
+   "formato": "int",
+   "valor": "36.398"
+  },
+  {
+   "id": "in-307",
+   "en": "informe",
+   "contexto": "son exactamente los componentes conexos de cliente y dirección que yo recalculo con union-find",
+   "ruta": [
+    "detalle",
+    "VE57",
+    "particion_equivalente"
+   ],
+   "igual": true
+  },
+  {
+   "id": "ap-308",
+   "en": "aporte",
+   "contexto": "que recalculo con union-find",
+   "ruta": [
+    "detalle",
+    "VE57",
+    "particion_equivalente"
+   ],
+   "igual": true
+  },
+  {
+   "id": "in-309",
+   "en": "informe",
+   "contexto": "ningún cliente ni dirección aparece en dos folds",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE57",
+     "cliente_en_varios_folds"
+    ],
+    [
+     "detalle",
+     "VE57",
+     "direccion_en_varios_folds"
+    ]
+   ],
+   "igual": 0
+  },
+  {
+   "id": "ap-310",
+   "en": "aporte",
+   "contexto": "sin cliente ni dirección en dos folds",
+   "calculo": "suma",
+   "args": [
+    [
+     "detalle",
+     "VE57",
+     "cliente_en_varios_folds"
+    ],
+    [
+     "detalle",
+     "VE57",
+     "direccion_en_varios_folds"
+    ]
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-311",
+   "en": "informe",
+   "contexto": "el test no tiene fold",
+   "ruta": [
+    "detalle",
+    "VE57",
+    "test_con_fold"
+   ],
+   "igual": 0
+  },
+  {
+   "id": "in-312",
+   "en": "informe",
+   "contexto": "las banderas de entidad vista coinciden al 100 % con la lectura «vista en cualquier año anterior»",
+   "calculo": "minimo",
+   "args": [
+    [
+     "detalle",
+     "VE57",
+     "banderas_vistas_coinciden_con_cualquier_anio_anterior",
+     "customer_seen_prior_year_same_line"
+    ],
+    [
+     "detalle",
+     "VE57",
+     "banderas_vistas_coinciden_con_cualquier_anio_anterior",
+     "address_seen_prior_year_same_line"
+    ],
+    [
+     "detalle",
+     "VE57",
+     "banderas_vistas_coinciden_con_cualquier_anio_anterior",
+     "customer_seen_prior_year_any_line"
+    ],
+    [
+     "detalle",
+     "VE57",
+     "banderas_vistas_coinciden_con_cualquier_anio_anterior",
+     "address_seen_prior_year_any_line"
+    ]
+   ],
+   "formato": "pct0",
+   "valor": "100"
+  },
+  {
+   "id": "in-313",
+   "en": "informe",
+   "contexto": "fallan 12 direcciones de 318.359",
+   "calculo": "uno_menos_por",
+   "args": [
+    [
+     "detalle",
+     "VE57",
+     "banderas_vistas_coinciden_con_el_anio_inmediatamente_anterior",
+     "address_seen_prior_year_same_line"
+    ],
+    318359
+   ],
+   "formato": "int",
+   "valor": "12"
+  },
+  {
+   "id": "in-314",
+   "en": "informe",
+   "contexto": "12 direcciones de 318.359",
+   "ruta": [
+    "detalle",
+    "VE58",
+    "production",
+    "filas"
+   ],
+   "formato": "int",
+   "valor": "318.359"
+  },
+  {
+   "id": "in-315",
+   "en": "informe",
+   "contexto": "cada fila de 2023 y de 2024 se evalúa exactamente una vez",
+   "todos": [
+    [
+     "detalle",
+     "VE58",
+     "desarrollo_cada_fila_2023_una_vez_en_evaluacion"
+    ],
+    [
+     "detalle",
+     "VE58",
+     "poblacion_nueva_cada_fila_2024_una_vez_en_evaluacion"
+    ]
+   ],
+   "igual": true
+  },
+  {
+   "id": "ap-316",
+   "en": "aporte",
+   "contexto": "los diez splits evalúan cada fila de 2023 y de 2024 exactamente una vez",
+   "todos": [
+    [
+     "detalle",
+     "VE58",
+     "desarrollo_cada_fila_2023_una_vez_en_evaluacion"
+    ],
+    [
+     "detalle",
+     "VE58",
+     "poblacion_nueva_cada_fila_2024_una_vez_en_evaluacion"
+    ]
+   ],
+   "igual": true
+  },
+  {
+   "id": "in-317",
+   "en": "informe",
+   "contexto": "`prediction = tasa × C0` en el 100 % de las filas y C0/e entre 0,932 y 1",
+   "ruta": [
+    "detalle",
+    "VE60",
+    "prediccion_igual_tasa_por_e_cost"
+   ],
+   "formato": "pct0",
+   "valor": "100"
+  },
+  {
+   "id": "ap-318",
+   "en": "aporte",
+   "contexto": "`prediction = tasa × C0` en todas las filas con C0/e entre 0,932 y 1",
+   "ruta": [
+    "detalle",
+    "VE60",
+    "prediccion_igual_tasa_por_e_cost"
+   ],
+   "igual": 1.0
+  },
+  {
+   "id": "in-319",
+   "en": "informe",
+   "contexto": "C0/e entre 0,932 y 1",
+   "ruta": [
+    "detalle",
+    "VE60",
+    "e_cost_mix_1_sobre_e_min"
+   ],
+   "formato": "dec3",
+   "valor": "0,932"
+  },
+  {
+   "id": "ap-320",
+   "en": "aporte",
+   "contexto": "C0/e entre 0,932 y 1",
+   "ruta": [
+    "detalle",
+    "VE60",
+    "e_cost_mix_1_sobre_e_min"
+   ],
+   "formato": "dec3",
+   "valor": "0,932"
+  },
+  {
+   "id": "in-321",
+   "en": "informe",
+   "contexto": "Las tablas de las decisiones del participante (349 capitales, que son los mismos de la auditoría de Codex",
+   "ruta": [
+    "detalle",
+    "VE61",
+    "capital_filas"
+   ],
+   "formato": "int",
+   "valor": "349"
+  },
+  {
+   "id": "in-322",
+   "en": "informe",
+   "contexto": "que son los mismos de la auditoría de Codex",
+   "ruta": [
+    "detalle",
+    "VE61",
+    "capital_mismo_conjunto_que_codex"
+   ],
+   "igual": true
+  },
+  {
+   "id": "in-323",
+   "en": "informe",
+   "contexto": "todo el nuevo negocio del test tiene `customer_since_year` 2025",
+   "ruta": [
+    "detalle",
+    "VE62",
+    "nb_test_since_2025"
+   ],
+   "igual": 1.0
+  },
+  {
+   "id": "ap-324",
+   "en": "aporte",
+   "contexto": "todo el nuevo negocio del test ingresa en 2025",
+   "ruta": [
+    "detalle",
+    "VE62",
+    "nb_test_since_2025"
+   ],
+   "igual": 1.0
+  },
+  {
+   "id": "in-325",
+   "en": "informe",
+   "contexto": "(los impagos ordenan la frecuencia, 0,044 con cero y 0,123 con tres en edificios",
+   "ruta": [
+    "detalle",
+    "VE64",
+    "buildings",
+    "frecuencia_por_impagos",
+    "0"
+   ],
+   "formato": "dec3",
+   "valor": "0,044"
+  },
+  {
+   "id": "in-326",
+   "en": "informe",
+   "contexto": "0,123 con tres en edificios",
+   "ruta": [
+    "detalle",
+    "VE64",
+    "buildings",
+    "frecuencia_por_impagos",
+    "3"
+   ],
+   "formato": "dec3",
+   "valor": "0,123"
+  },
+  {
+   "id": "in-327",
+   "en": "informe",
+   "contexto": "con 1.055 abiertos dentro de T0 y una reserva de caso del 17,8 % de T0",
+   "ruta": [
+    "detalle",
+    "VE68",
+    "abiertos_en_T0"
+   ],
+   "formato": "int",
+   "valor": "1.055"
+  },
+  {
+   "id": "ap-328",
+   "en": "aporte",
+   "contexto": "con 1.055 abiertos dentro de T0 y una reserva de caso del 17,8 % de T0",
+   "ruta": [
+    "detalle",
+    "VE68",
+    "abiertos_en_T0"
+   ],
+   "formato": "int",
+   "valor": "1.055"
+  },
+  {
+   "id": "in-329",
+   "en": "informe",
+   "contexto": "una reserva de caso del 17,8 % de T0",
+   "ruta": [
+    "detalle",
+    "VE68",
+    "cuota_reserva_sobre_T0"
+   ],
+   "formato": "pct1",
+   "valor": "17,8"
+  },
+  {
+   "id": "ap-330",
+   "en": "aporte",
+   "contexto": "una reserva de caso del 17,8 % de T0",
+   "ruta": [
+    "detalle",
+    "VE68",
+    "cuota_reserva_sobre_T0"
+   ],
+   "formato": "pct1",
+   "valor": "17,8"
+  },
+  {
+   "id": "in-331",
+   "en": "informe",
+   "contexto": "el 41,7 % de las direcciones tiene algún nulo",
+   "ruta": [
+    "detalle",
+    "VE72",
+    "direcciones_filas_con_algun_nulo"
+   ],
+   "formato": "pct1",
+   "valor": "41,7"
+  },
+  {
+   "id": "in-332",
+   "en": "informe",
+   "contexto": "(la mayor diferencia entre la cartera nueva y 2024 es 0,005)",
+   "ruta": [
+    "detalle",
+    "VE72",
+    "max_diferencia_nb_2025_frente_a_2024"
+   ],
+   "formato": "dec3",
+   "valor": "0,005"
+  },
+  {
+   "id": "in-333",
+   "en": "informe",
+   "contexto": "las ausencias no se correlacionan entre columnas (todas por debajo de 0,005)",
+   "calculo": "nulos_max_corr_abs",
+   "args": [],
+   "menor": 0.005
+  },
+  {
+   "id": "in-334",
+   "en": "informe",
+   "contexto": "en autos, 10.062 de los 10.091 cambios de vehículo (`make_model`)",
+   "ruta": [
+    "detalle",
+    "VE19",
+    "motor",
+    "atributos_que_cambian",
+    "make_model"
+   ],
+   "formato": "int",
+   "valor": "10.062"
+  },
+  {
+   "id": "ap-335",
+   "en": "aporte",
+   "contexto": "(10.062 de 10.091 cambios de vehículo",
+   "ruta": [
+    "detalle",
+    "VE19",
+    "motor",
+    "atributos_que_cambian",
+    "make_model"
+   ],
+   "formato": "int",
+   "valor": "10.062"
+  },
+  {
+   "id": "in-336",
+   "en": "informe",
+   "contexto": "de los 10.091 cambios",
+   "ruta": [
+    "detalle",
+    "VE19",
+    "motor",
+    "polizas_anio_con_varios_periodos"
+   ],
+   "formato": "int",
+   "valor": "10.091"
+  },
+  {
+   "id": "ap-337",
+   "en": "aporte",
+   "contexto": "de 10.091 cambios",
+   "ruta": [
+    "detalle",
+    "VE19",
+    "motor",
+    "polizas_anio_con_varios_periodos"
+   ],
+   "formato": "int",
+   "valor": "10.091"
+  },
+  {
+   "id": "in-338",
+   "en": "informe",
+   "contexto": "en edificios, los 3.036 son mudanzas (cambia la dirección) con nuevo capital",
+   "ruta": [
+    "detalle",
+    "VE19",
+    "buildings",
+    "atributos_que_cambian",
+    "address_id"
+   ],
+   "formato": "int",
+   "valor": "3.036"
+  },
+  {
+   "id": "ap-339",
+   "en": "aporte",
+   "contexto": "3.036 mudanzas en edificios",
+   "ruta": [
+    "detalle",
+    "VE19",
+    "buildings",
+    "atributos_que_cambian",
+    "address_id"
+   ],
+   "formato": "int",
+   "valor": "3.036"
+  },
+  {
+   "id": "in-340",
+   "en": "informe",
+   "contexto": "los 3.036 son mudanzas",
+   "ruta": [
+    "detalle",
+    "VE19",
+    "buildings",
+    "polizas_anio_con_varios_periodos"
+   ],
+   "igual": 3036
+  },
+  {
+   "id": "in-341",
+   "en": "informe",
+   "contexto": "en contenidos, 3.717 mudanzas y 1.799 cambios de capital",
+   "ruta": [
+    "detalle",
+    "VE19",
+    "contents",
+    "atributos_que_cambian",
+    "address_id"
+   ],
+   "formato": "int",
+   "valor": "3.717"
+  },
+  {
+   "id": "in-342",
+   "en": "informe",
+   "contexto": "1.799 cambios de capital",
+   "ruta": [
+    "detalle",
+    "VE19",
+    "contents",
+    "atributos_que_cambian",
+    "sum_insured"
+   ],
+   "formato": "int",
+   "valor": "1.799"
+  },
+  {
+   "id": "in-343",
+   "en": "informe",
+   "contexto": "81.089 clientes con un ramo, 39.959 con dos y 14.808 con tres",
+   "ruta": [
+    "detalle",
+    "VE13",
+    "clientes_por_numero_de_ramos",
+    "1"
+   ],
+   "formato": "int",
+   "valor": "81.089"
+  },
+  {
+   "id": "in-344",
+   "en": "informe",
+   "contexto": "39.959 con dos y 14.808 con tres",
+   "ruta": [
+    "detalle",
+    "VE13",
+    "clientes_por_numero_de_ramos",
+    "2"
+   ],
+   "formato": "int",
+   "valor": "39.959"
+  },
+  {
+   "id": "in-345",
+   "en": "informe",
+   "contexto": "14.808 con tres",
+   "ruta": [
+    "detalle",
+    "VE13",
+    "clientes_por_numero_de_ramos",
+    "3"
+   ],
+   "formato": "int",
+   "valor": "14.808"
+  },
+  {
+   "id": "in-346",
+   "en": "informe",
+   "contexto": "2.235 direcciones con más de un cliente, hasta 8",
+   "ruta": [
+    "detalle",
+    "VE13",
+    "direcciones_con_varios_clientes"
+   ],
+   "formato": "int",
+   "valor": "2.235"
+  },
+  {
+   "id": "in-347",
+   "en": "informe",
+   "contexto": "hasta 8",
+   "ruta": [
+    "detalle",
+    "VE13",
+    "max_clientes_por_direccion"
+   ],
+   "formato": "int",
+   "valor": "8"
+  },
+  {
+   "id": "in-348",
+   "en": "informe",
+   "contexto": "la frecuencia de 2024 es 0,148 sin siniestro en 2023 y 0,310 con él en autos",
+   "ruta": [
+    "detalle",
+    "VE67",
+    "motor",
+    "frecuencia_sin_siniestro_previo"
+   ],
+   "formato": "dec3",
+   "valor": "0,148"
+  },
+  {
+   "id": "ap-349",
+   "en": "aporte",
+   "contexto": "frecuencia de 2024 en autos 0,148 sin siniestro en 2023 y 0,310 con él",
+   "ruta": [
+    "detalle",
+    "VE67",
+    "motor",
+    "frecuencia_sin_siniestro_previo"
+   ],
+   "formato": "dec3",
+   "valor": "0,148"
+  },
+  {
+   "id": "in-350",
+   "en": "informe",
+   "contexto": "0,310 con él en autos",
+   "ruta": [
+    "detalle",
+    "VE67",
+    "motor",
+    "frecuencia_con_siniestro_previo"
+   ],
+   "formato": "dec3",
+   "valor": "0,310"
+  },
+  {
+   "id": "ap-351",
+   "en": "aporte",
+   "contexto": "0,310 con él",
+   "ruta": [
+    "detalle",
+    "VE67",
+    "motor",
+    "frecuencia_con_siniestro_previo"
+   ],
+   "formato": "dec3",
+   "valor": "0,310"
+  },
+  {
+   "id": "in-352",
+   "en": "informe",
+   "contexto": "(0,044 frente a 0,085 en edificios)",
+   "ruta": [
+    "detalle",
+    "VE67",
+    "buildings",
+    "frecuencia_sin_siniestro_previo"
+   ],
+   "formato": "dec3",
+   "valor": "0,044"
+  },
+  {
+   "id": "in-353",
+   "en": "informe",
+   "contexto": "0,085 en edificios",
+   "ruta": [
+    "detalle",
+    "VE67",
+    "buildings",
+    "frecuencia_con_siniestro_previo"
+   ],
+   "formato": "dec3",
+   "valor": "0,085"
+  },
+  {
+   "id": "in-354",
+   "en": "informe",
+   "contexto": "son 0,71 y 0,63 en autos, 1,49 y 0,83 en edificios y 0,73 y 0,66 en contenidos",
+   "ruta": [
+    "detalle",
+    "VE66",
+    "motor",
+    "siniestralidad_sobre_prima_anualizada_por_exposicion",
+    "2023"
+   ],
+   "formato": "dec2",
+   "valor": "0,71"
+  },
+  {
+   "id": "in-355",
+   "en": "informe",
+   "contexto": "0,71 y 0,63 en autos",
+   "ruta": [
+    "detalle",
+    "VE66",
+    "motor",
+    "siniestralidad_sobre_prima_anualizada_por_exposicion",
+    "2024"
+   ],
+   "formato": "dec2",
+   "valor": "0,63"
+  },
+  {
+   "id": "in-356",
+   "en": "informe",
+   "contexto": "1,49 y 0,83 en edificios",
+   "ruta": [
+    "detalle",
+    "VE66",
+    "buildings",
+    "siniestralidad_sobre_prima_anualizada_por_exposicion",
+    "2023"
+   ],
+   "formato": "dec2",
+   "valor": "1,49"
+  },
+  {
+   "id": "ap-357",
+   "en": "aporte",
+   "contexto": "fue 1,49 en edificios en 2023",
+   "ruta": [
+    "detalle",
+    "VE66",
+    "buildings",
+    "siniestralidad_sobre_prima_anualizada_por_exposicion",
+    "2023"
+   ],
+   "formato": "dec2",
+   "valor": "1,49"
+  },
+  {
+   "id": "in-358",
+   "en": "informe",
+   "contexto": "1,49 y 0,83 en edificios",
+   "ruta": [
+    "detalle",
+    "VE66",
+    "buildings",
+    "siniestralidad_sobre_prima_anualizada_por_exposicion",
+    "2024"
+   ],
+   "formato": "dec2",
+   "valor": "0,83"
+  },
+  {
+   "id": "in-359",
+   "en": "informe",
+   "contexto": "0,73 y 0,66 en contenidos",
+   "ruta": [
+    "detalle",
+    "VE66",
+    "contents",
+    "siniestralidad_sobre_prima_anualizada_por_exposicion",
+    "2023"
+   ],
+   "formato": "dec2",
+   "valor": "0,73"
+  },
+  {
+   "id": "in-360",
+   "en": "informe",
+   "contexto": "0,73 y 0,66 en contenidos",
+   "ruta": [
+    "detalle",
+    "VE66",
+    "contents",
+    "siniestralidad_sobre_prima_anualizada_por_exposicion",
+    "2024"
+   ],
+   "formato": "dec2",
+   "valor": "0,66"
+  },
+  {
+   "id": "in-361",
+   "en": "informe",
+   "contexto": "| VE46: 213, 108 y 27 (el 97,3 %, 95,6 % y 90,0 % de 219, 113 y 30) | Sí, suma 348 |",
+   "calculo": "declined_sucesores",
+   "args": [],
+   "formato": "int",
+   "valor": "348"
+  },
+  {
+   "id": "ap-362",
+   "en": "aporte",
+   "contexto": "DAT-009 (348 periodos tras `declined_by_insurer`) es VE46 (213, 108 y 27)",
+   "calculo": "declined_sucesores",
+   "args": [],
+   "formato": "int",
+   "valor": "348"
+  },
+  {
+   "id": "in-363",
+   "en": "informe",
+   "contexto": "VE46: 213, 108 y 27",
+   "calculo": "producto_redondeado",
+   "args": [
+    [
+     "detalle",
+     "VE46",
+     "motor",
+     "declined_by_insurer",
+     "filas"
+    ],
+    [
+     "detalle",
+     "VE46",
+     "motor",
+     "declined_by_insurer",
+     "con_periodo_posterior"
+    ]
+   ],
+   "formato": "int",
+   "valor": "213"
+  },
+  {
+   "id": "ap-364",
+   "en": "aporte",
+   "contexto": "es VE46 (213, 108 y 27)",
+   "calculo": "producto_redondeado",
+   "args": [
+    [
+     "detalle",
+     "VE46",
+     "motor",
+     "declined_by_insurer",
+     "filas"
+    ],
+    [
+     "detalle",
+     "VE46",
+     "motor",
+     "declined_by_insurer",
+     "con_periodo_posterior"
+    ]
+   ],
+   "formato": "int",
+   "valor": "213"
+  },
+  {
+   "id": "in-365",
+   "en": "informe",
+   "contexto": "213, 108 y 27",
+   "calculo": "producto_redondeado",
+   "args": [
+    [
+     "detalle",
+     "VE46",
+     "buildings",
+     "declined_by_insurer",
+     "filas"
+    ],
+    [
+     "detalle",
+     "VE46",
+     "buildings",
+     "declined_by_insurer",
+     "con_periodo_posterior"
+    ]
+   ],
+   "formato": "int",
+   "valor": "108"
+  },
+  {
+   "id": "ap-366",
+   "en": "aporte",
+   "contexto": "213, 108 y 27",
+   "calculo": "producto_redondeado",
+   "args": [
+    [
+     "detalle",
+     "VE46",
+     "buildings",
+     "declined_by_insurer",
+     "filas"
+    ],
+    [
+     "detalle",
+     "VE46",
+     "buildings",
+     "declined_by_insurer",
+     "con_periodo_posterior"
+    ]
+   ],
+   "formato": "int",
+   "valor": "108"
+  },
+  {
+   "id": "in-367",
+   "en": "informe",
+   "contexto": "108 y 27",
+   "calculo": "producto_redondeado",
+   "args": [
+    [
+     "detalle",
+     "VE46",
+     "contents",
+     "declined_by_insurer",
+     "filas"
+    ],
+    [
+     "detalle",
+     "VE46",
+     "contents",
+     "declined_by_insurer",
+     "con_periodo_posterior"
+    ]
+   ],
+   "formato": "int",
+   "valor": "27"
+  },
+  {
+   "id": "ap-368",
+   "en": "aporte",
+   "contexto": "108 y 27",
+   "calculo": "producto_redondeado",
+   "args": [
+    [
+     "detalle",
+     "VE46",
+     "contents",
+     "declined_by_insurer",
+     "filas"
+    ],
+    [
+     "detalle",
+     "VE46",
+     "contents",
+     "declined_by_insurer",
+     "con_periodo_posterior"
+    ]
+   ],
+   "formato": "int",
+   "valor": "27"
+  },
+  {
+   "id": "in-369",
+   "en": "informe",
+   "contexto": "(el 97,3 %, 95,6 % y 90,0 % de 219, 113 y 30)",
+   "ruta": [
+    "detalle",
+    "VE46",
+    "contents",
+    "declined_by_insurer",
+    "con_periodo_posterior"
+   ],
+   "formato": "pct1",
+   "valor": "90,0"
+  },
+  {
+   "id": "in-370",
+   "en": "informe",
+   "contexto": "de 219, 113 y 30)",
+   "ruta": [
+    "detalle",
+    "VE46",
+    "motor",
+    "declined_by_insurer",
+    "filas"
+   ],
+   "formato": "int",
+   "valor": "219"
+  },
+  {
+   "id": "in-371",
+   "en": "informe",
+   "contexto": "219, 113 y 30)",
+   "ruta": [
+    "detalle",
+    "VE46",
+    "buildings",
+    "declined_by_insurer",
+    "filas"
+   ],
+   "formato": "int",
+   "valor": "113"
+  },
+  {
+   "id": "in-372",
+   "en": "informe",
+   "contexto": "113 y 30)",
+   "ruta": [
+    "detalle",
+    "VE46",
+    "contents",
+    "declined_by_insurer",
+    "filas"
+   ],
+   "formato": "int",
+   "valor": "30"
+  },
+  {
+   "id": "ap-373",
+   "en": "aporte",
+   "contexto": "la primera corrida contaba 20.110 en autos",
+   "ruta": [
+    "detalle",
+    "VE15",
+    "motor",
+    "hueco_1"
+   ],
+   "igual": 20097
+  },
+  {
+   "id": "in-374",
+   "en": "informe",
+   "contexto": "Python 3.13",
+   "calculo": "entorno",
+   "args": [
+    "python"
+   ],
+   "prefijo": "3.13"
+  },
+  {
+   "id": "in-375",
+   "en": "informe",
+   "contexto": "pandas 3.0",
+   "calculo": "entorno",
+   "args": [
+    "pandas"
+   ],
+   "prefijo": "3.0"
+  },
+  {
+   "id": "in-376",
+   "en": "informe",
+   "contexto": "numpy 2.5",
+   "calculo": "entorno",
+   "args": [
+    "numpy"
+   ],
+   "prefijo": "2.5"
+  },
+  {
+   "id": "in-377",
+   "en": "informe",
+   "contexto": "pyarrow 26",
+   "calculo": "entorno",
+   "args": [
+    "pyarrow"
+   ],
+   "prefijo": "26"
+  },
+  {
+   "id": "in-378",
+   "en": "informe",
+   "contexto": "scipy 1.18",
+   "calculo": "entorno",
+   "args": [
+    "scipy"
+   ],
+   "prefijo": "1.18"
+  }
+ ]
+}

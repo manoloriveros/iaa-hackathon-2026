@@ -1,0 +1,217 @@
+{
+ "abierta_utc": "2026-10-24T00:55:37.193080+00:00",
+ "filas": 59202,
+ "componentes": 36408,
+ "cliente_nuevo_filas": 9063,
+ "D2": {
+  "R0": 0.072848,
+  "A1": 0.121439,
+  "A2": 0.117463
+ },
+ "D2_por_ramo": {
+  "R0": {
+   "motor": 0.049915,
+   "buildings": -0.021287,
+   "contents": 0.045223
+  },
+  "A1": {
+   "motor": 0.080331,
+   "buildings": 0.064944,
+   "contents": 0.092036
+  },
+  "A2": {
+   "motor": 0.080451,
+   "buildings": 0.052024,
+   "contents": 0.090823
+  }
+ },
+ "AE": {
+  "R0": {
+   "motor": 1.052,
+   "buildings": 0.6251,
+   "contents": 0.9727
+  },
+  "A1": {
+   "motor": 1.1051,
+   "buildings": 0.6148,
+   "contents": 0.9574
+  },
+  "A2": {
+   "motor": 1.105,
+   "buildings": 0.6156,
+   "contents": 0.9582
+  }
+ },
+ "pares": {
+  "A1-R0": {
+   "diff": 0.048591,
+   "lower": 0.026514,
+   "upper": 0.073324,
+   "P_gt0": 1.0
+  },
+  "A2-R0": {
+   "diff": 0.044615,
+   "lower": 0.023886,
+   "upper": 0.067825,
+   "P_gt0": 1.0
+  },
+  "A2-A1": {
+   "diff": -0.003976,
+   "lower": -0.010405,
+   "upper": 0.002493,
+   "P_gt0": 0.0513
+  }
+ },
+ "actas": [
+  {
+   "aspirante": "A1",
+   "titular": "R0",
+   "par": {
+    "diff": 0.048591,
+    "lower": 0.026514,
+    "upper": 0.073324,
+    "P_gt0": 1.0
+   },
+   "salvaguardas": {
+    "cliente_nuevo": {
+     "diff": 0.013062,
+     "lower95": -0.010535,
+     "pasa": false
+    },
+    "escenarios": {
+     "reserve075": {
+      "diff": 0.047692,
+      "pasa": true
+     },
+     "reserve125": {
+      "diff": 0.049467,
+      "pasa": true
+     },
+     "late_cost05": {
+      "diff": 0.048313,
+      "pasa": true
+     },
+     "late_cost10": {
+      "diff": 0.048037,
+      "pasa": true
+     }
+    },
+    "segmentos": {
+     "motor": {
+      "diff": 0.030416,
+      "pasa": true
+     },
+     "buildings": {
+      "diff": 0.086231,
+      "pasa": true
+     },
+     "contents": {
+      "diff": 0.046813,
+      "pasa": true
+     },
+     "new_customer": {
+      "diff": 0.013062,
+      "pasa": true
+     },
+     "renewal": {
+      "diff": 0.053947,
+      "pasa": true
+     }
+    },
+    "influencia": {
+     "grupos_retirados": 37,
+     "diff": 0.019359,
+     "pasa": true
+    },
+    "pasa_todas": false
+   },
+   "nivel_2025": {
+    "cambio_frente_a_R0": {
+     "motor": 1.1149,
+     "buildings": 1.0399,
+     "contents": 1.0509
+    },
+    "atribucion": "mezcla por relatividades (g medio 2023 \u2192 2025: autos 1,092 \u2192 1,218; edificios 1,028 \u2192 1,069; contenidos 0,966 \u2192 1,015), con el nuevo negocio de 2025 al 77 % de la exposici\u00f3n",
+    "validacion": "T1 frente a L0 en desarrollo 2023: +0,0498 [+0,0367; +0,0630], tambi\u00e9n sin el 0,1 % superior; frecuencia del nuevo negocio igual en los dos mercados",
+    "condicion_cumplida": true
+   },
+   "promueve": false
+  },
+  {
+   "aspirante": "A2",
+   "titular": "R0",
+   "par": {
+    "diff": 0.044615,
+    "lower": 0.023886,
+    "upper": 0.067825,
+    "P_gt0": 1.0
+   },
+   "salvaguardas": {
+    "cliente_nuevo": {
+     "diff": 0.011124,
+     "lower95": -0.013177,
+     "pasa": false
+    },
+    "escenarios": {
+     "reserve075": {
+      "diff": 0.044029,
+      "pasa": true
+     },
+     "reserve125": {
+      "diff": 0.045197,
+      "pasa": true
+     },
+     "late_cost05": {
+      "diff": 0.044344,
+      "pasa": true
+     },
+     "late_cost10": {
+      "diff": 0.044075,
+      "pasa": true
+     }
+    },
+    "segmentos": {
+     "motor": {
+      "diff": 0.030537,
+      "pasa": true
+     },
+     "buildings": {
+      "diff": 0.073311,
+      "pasa": true
+     },
+     "contents": {
+      "diff": 0.0456,
+      "pasa": true
+     },
+     "new_customer": {
+      "diff": 0.011124,
+      "pasa": true
+     },
+     "renewal": {
+      "diff": 0.049657,
+      "pasa": true
+     }
+    },
+    "influencia": {
+     "grupos_retirados": 37,
+     "diff": 0.016893,
+     "pasa": true
+    },
+    "pasa_todas": false
+   },
+   "nivel_2025": {
+    "cambio_frente_a_R0": {
+     "motor": 1.115,
+     "buildings": 1.0371,
+     "contents": 1.0497
+    },
+    "atribucion": "la de A1 m\u00e1s la regi\u00f3n",
+    "validacion": "la de A1",
+    "condicion_cumplida": true
+   },
+   "promueve": false
+  }
+ ],
+ "titular_final": "R0",
+ "segundos": 5.9
+}

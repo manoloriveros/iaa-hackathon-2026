@@ -1,0 +1,57 @@
+{
+  "author": "Codex",
+  "as_of_utc": "2026-10-24T01:00:51.118783+00:00",
+  "scope": "Own pricing/development lineage only; not all project fits or other authors. Historical main catalog retains its dated counter.",
+  "cumulative_price_base_fits": 165,
+  "cumulative_closed_form_constants": 285,
+  "auxiliary_Poisson_Gamma_fits_separate": 30,
+  "baseline": {
+    "index": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_actual.json",
+    "sha256": "10a821c226df2f3476802ce7c92dede147fd7d1f5e7707ad1e1c465bf849bf25",
+    "price_base_fits": 90,
+    "constants": 60,
+    "auxiliary_fits": 30
+  },
+  "increments": [
+    {
+      "id": "S2-COLA2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/cola_20261024T001114Z_e5d1c211",
+      "price_GLM_fits": 10,
+      "constant_values": 30,
+      "auxiliary_fits": 0,
+      "reporting_fits": 0,
+      "constants_before_receipt_failure": 3,
+      "constants_after_resume": 27,
+      "cached_bundles_reused": 2,
+      "analytic_adapters_not_fits": 45,
+      "exact_content_reuses_not_fits": 15
+    },
+    {
+      "id": "S2-C0-RESERVAS2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mecanismo_20261024T002849Z_c8f124bf",
+      "price_GLM_fits": 35,
+      "constant_values": 105,
+      "auxiliary_fits": 0,
+      "reporting_fits": 75,
+      "exact_reuses_not_fits": 30
+    },
+    {
+      "id": "S2-C0-MEZCLA-NEGOCIO2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mezcla_20261024T004833Z_e8ff18e0",
+      "price_GLM_fits": 30,
+      "constant_values": 90,
+      "auxiliary_fits": 0,
+      "reporting_fits": 0,
+      "exact_reuses_not_fits": 0,
+      "mixture_frequency_constants_separate": 150,
+      "mixture_positive_severity_means_separate": 145
+    }
+  ],
+  "latest_sensitivity_index": "Hackaton/Repositorio_IAA2026/registro/semana2_sensibilidad_observacion_actual.json",
+  "next_unit_must_read_this_counter": true,
+  "supplementary_reporting_peril_fits_since_counter_start": 75,
+  "reporting_counter_notice": "75 new reporting-peril fits in C0 sensitivity, separate from historical preparation105 and from pricing/credibility. Counts do not cover other authors.",
+  "mixture_frequency_constants_since_counter_start_separate": 150,
+  "mixture_positive_severity_means_since_counter_start_separate": 145,
+  "mixture_counter_notice": "First-stage mixture estimates shared between MIXF/MIXFS; separate from pricing constants, historical reporting curves and native credibility auxiliary fits."
+}

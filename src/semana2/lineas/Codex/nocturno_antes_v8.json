@@ -1,0 +1,421 @@
+{
+  "id": "S2-NOCHE-20261023",
+  "author": "Codex",
+  "path_base": "workspace_root",
+  "status": "scheduled_eight_units_verified_home_coverage_mask_rejected_conditions_open",
+  "plan": "Hackaton/Repositorio_IAA2026/docs/semana2/PLAN_NOCTURNO_20261023.md",
+  "timezone": "America/Bogota",
+  "window_start": "2026-10-23T19:00:00-05:00",
+  "window_end": "2026-10-24T07:00:00-05:00",
+  "frequency": "hourly_at_minute_zero",
+  "automation_id": "iaa-semana-2-modelos-est-ndar-y-validaci-n-nocturna",
+  "automation_kind": "heartbeat",
+  "automation_target_thread": "01a16986-60ad-7532-b2f5-2461a74fdcd7",
+  "automation_status_verified": "ACTIVE",
+  "same_chat": true,
+  "other_automations_changed": false,
+  "latest_completed_unit": {
+    "id": "S2-COBERTURAS-PERIL2023-v1-20261024",
+    "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9",
+    "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/COBERTURAS_Y_DENOMINADORES_PERIL_2023.md",
+    "verification": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/verification.json",
+      "sha256": "c85c3cdabab130ef535da7967695ec1b02c209b63e0e4b54d452a134ca64c315"
+    },
+    "decision_journal": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/decision_journal.json",
+      "sha256": "c5854f5ed31239ff7e2d723de8cd48367dee1d276c50d3381284a6b0796bc125"
+    },
+    "forum_result": "COD-S2-20261024-033",
+    "index": "Hackaton/Repositorio_IAA2026/registro/semana2_coberturas_peril2023_actual.json"
+  },
+  "current_unit": null,
+  "queue": [
+    "Preregister standard GLM coverage main effects only if addressing documented omitted effects in reducedB14; no structural masks for home",
+    "Keep motor coverage/peril mapping conditional despite no outside observed claims; numerator/denominator/row-composition coherence required for any future mask stress",
+    "Preserve current balance and source lineage; no unchanged suite or bootstrap repetition; final honest balance at07:00Bogota"
+  ],
+  "reference": "W2-B00",
+  "confirmation_2024_open": false,
+  "test_predictions_authorized": false,
+  "remote_training_authorized": false,
+  "submissions_authorized": false,
+  "delegation_authorized": false,
+  "professional_independent_validation": false,
+  "updated_utc": "2026-10-24T01:24:24.463800+00:00",
+  "next_unit": "If continuing model work, preregister a standard GLM main-effect coverage test against frozen B14, with cover_type for motor and accidental_damage_cover for home. SameT0/C0/folds, no structuralzeros, no interactions or trees, preserveB00/all alternatives. Not yet preregistered or run. Read own counters165/285; keep external2024 subjects/artifacts quarantined and disclose prior header exposure.",
+  "no_retraining_or_suite_repetition_for_completed_v5": true,
+  "method_priority": "Standard models first; added complexity requires a documented residual failure and a preregistered test",
+  "completed_units": [
+    {
+      "id": "S2-DEV2023-v5-20261023",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev5_20261023T232328Z_69df9ead",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/DESARROLLO_2023_MODELOS_ESTANDAR.md",
+      "decision_journal": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev5_20261023T232328Z_69df9ead/decision_journal.json",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev5_20261023T232328Z_69df9ead/verifications/20261023T232550Z_bf02f31b.json",
+        "sha256": "f027c9eb179dda5742ff53d64ba3429f62f79bc6b8116d7f188ac24f3087428a",
+        "passed": 712,
+        "failed": 0
+      },
+      "fixtures": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev5_20261023T232328Z_69df9ead/fixture_checks.json",
+        "sha256": "7599705a58fee1b0c511f659dec01bde711144d0eea299e838f0dceae36333e0",
+        "passed": 22,
+        "failed": 0
+      },
+      "forum_result": "COD-S2-20261023-017"
+    },
+    {
+      "id": "S2-DEV2023-v6-20261023",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/CAPITAL_CLIMA_CREDIBILIDAD_2023.md",
+      "decision_journal": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/decision_journal.json",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/verifications/20261023T234646Z_f84baa76.json",
+        "sha256": "7062a5ef18392f867966e941a82d5fd0d71055785c67dd5fc07dc92a3d81314e",
+        "passed": 832,
+        "failed": 0
+      },
+      "fixtures": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/fixture_checks.json",
+        "sha256": "d06674b251c493b7cfd0915182710ea7be7085ec9ff59d3a4a779952eb26ee8f",
+        "passed": 26,
+        "failed": 0
+      },
+      "forum_result": "COD-S2-20261023-019"
+    },
+    {
+      "id": "S2-DEV2023-v7-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev7_20261023T235935Z_55507793",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/CAPITAL_POR_FILA_Y_AUTOS_NUEVOS_2023.md",
+      "decision_journal": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev7_20261023T235935Z_55507793/decision_journal.json",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev7_20261023T235935Z_55507793/verifications/v7_20261024T000045Z_9a6648a0.json",
+        "sha256": "e58769689ef3f9b9476d02051f5949dc7b6c095d47d7623b678b5c60cf8a37f0",
+        "passed": 622,
+        "failed": 0
+      },
+      "fixtures": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev7_20261023T235935Z_55507793/fixture_checks.json",
+        "sha256": "541a76b36d8d8f6294384a146716d7f089bdbce7b75d996431f7d65078340341",
+        "passed": 31,
+        "failed": 0
+      },
+      "forum_result": "COD-S2-20261024-021"
+    },
+    {
+      "id": "S2-COLA2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/cola_20261024T001114Z_e5d1c211",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_sensibilidad_observacion_cola_v1_snapshot.json",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/SENSIBILIDAD_COLA_Y_NIVEL_2023.md",
+      "decision_journal": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/cola_20261024T001114Z_e5d1c211/decision_journal.json",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/cola_20261024T001114Z_e5d1c211/verifications/cola_20261024T001611Z_2ed4b58a.json",
+        "sha256": "1f25087bef2015e23c1cac65f218a2b552f0b522a65dfb205c9551a82fcac20a",
+        "passed": 715,
+        "failed": 0
+      },
+      "fixtures": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/cola_20261024T001114Z_e5d1c211/fixture_checks.json",
+        "sha256": "ee8e8403c28f81b106fd4e29f0f8dbb05f9183de8682c109308662d048bacbdb",
+        "passed": 34,
+        "failed": 0
+      },
+      "forum_result": "COD-S2-20261024-024",
+      "index_at_original_registration": "Hackaton/Repositorio_IAA2026/registro/semana2_sensibilidad_observacion_actual.json",
+      "index_sha256": "39f4b30bb7a928cbc339ef93ef896352d52414fb667107b670e8aa89376d07d5"
+    },
+    {
+      "id": "S2-C0-RESERVAS2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mecanismo_20261024T002849Z_c8f124bf",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_sensibilidad_observacion_c0_reservas_v1_snapshot.json",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/NIVEL_C0_REPORTES_Y_RESERVAS_2023.md",
+      "decision_journal": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mecanismo_20261024T002849Z_c8f124bf/decision_journal.json",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mecanismo_20261024T002849Z_c8f124bf/verifications/c0_20261024T003122Z_eb2e940d.json",
+        "sha256": "dbcc7571b9e60e817a617a327a4008863ce4047c38bdc6d82a078ae627ffd326",
+        "passed": 1477,
+        "failed": 0
+      },
+      "fixtures": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mecanismo_20261024T002849Z_c8f124bf/fixture_checks.json",
+        "sha256": "698fb55ce9028761afd08144cde3e70294345eec53d63d6c3f9b1e6aa165bc35",
+        "passed": 48,
+        "failed": 0
+      },
+      "forum_result": "COD-S2-20261024-026",
+      "index_at_original_registration": "Hackaton/Repositorio_IAA2026/registro/semana2_sensibilidad_observacion_actual.json",
+      "index_sha256": "7ca32aa2a5d5d2efb1eef5398f1d26254aec27143cc2d26d71309a6528305750"
+    },
+    {
+      "id": "S2-C0-MEZCLA-NEGOCIO2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mezcla_20261024T004833Z_e8ff18e0",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/MEZCLA_C0_PERIL_Y_NEGOCIO_2023.md",
+      "decision_journal": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mezcla_20261024T004833Z_e8ff18e0/decision_journal.json",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mezcla_20261024T004833Z_e8ff18e0/verifications/mix_20261024T005106Z_bdcdc17e.json",
+        "sha256": "0fbe284e17420ccdbb6a1b30611ab977dabeaab084cc09b2cca3cfae39459efe",
+        "passed": 1570,
+        "failed": 0
+      },
+      "fixtures": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mezcla_20261024T004833Z_e8ff18e0/fixture_checks.json",
+        "sha256": "b1588dc4c78296c58c92ec9f6cc00009a496a78fdfa0021cd5ff034324329695",
+        "passed": 47,
+        "failed": 0
+      },
+      "forum_result": "COD-S2-20261024-028",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_sensibilidad_observacion_actual.json"
+    },
+    {
+      "id": "S2-SOPORTE-CALENDARIO2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/soporte_20261024T010555Z_c4428b52",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/SOPORTE_CALENDARIO_REPORTE_2023.md",
+      "decision_journal": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/soporte_20261024T010555Z_c4428b52/decision_journal.json",
+        "sha256": "89522d20b8644a524acc451bca1bef6007ce5b535ec1e628dfbc8a0d8d48704d"
+      },
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/soporte_20261024T010555Z_c4428b52/verification.json",
+        "sha256": "a14e6377a373146a81d57649f10dc2812658b669a8258fae7bdf87d2a3f0f324"
+      },
+      "forum_result": "COD-S2-20261024-031",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_soporte_calendario2023_actual.json"
+    },
+    {
+      "id": "S2-COBERTURAS-PERIL2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/COBERTURAS_Y_DENOMINADORES_PERIL_2023.md",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/verification.json",
+        "sha256": "c85c3cdabab130ef535da7967695ec1b02c209b63e0e4b54d452a134ca64c315"
+      },
+      "decision_journal": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/decision_journal.json",
+        "sha256": "c5854f5ed31239ff7e2d723de8cd48367dee1d276c50d3381284a6b0796bc125"
+      },
+      "forum_result": "COD-S2-20261024-033",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_coberturas_peril2023_actual.json"
+    }
+  ],
+  "integration_decisions": {
+    "capital": "56-row representation/refit decomposition verified; no economic scale proof; B13/B14 retained without new score-driven capital rule",
+    "climate": "Not admitted prospectively; availability conditions unchanged",
+    "credibility": "B15 and motor-only B16/B17/B18 conditional alternatives; none establishes improvement over B14; no optimized weight",
+    "tail": "T10F standard refit andT10R mixture normalization verified conditionally; observedD2 fails to identify nominal ultimate scale. No adopted mass or mixture.",
+    "reserves_and_late_reports": "Matched reserve-mark/target/C0 verified; B14 nominal about±2.48%; lateC0component stress−0.658% and point gains reverse under own31 influence. No adopted factor or exclusion.",
+    "business_peril_mixture": "MIXF and MIXFS estimated only ownfold2023; no point gain, sparse concentrated severity, verified completion bound. No business mixture adopted; B00/all alternatives retained.",
+    "calendar_support": "Direct daily exposure audit verified; newbusiness has less mature exposure at long delays and sparse reverse-risk support. No business timing curve adopted, no new price model or score.",
+    "coverage_denominators": "Home hardaccidental_damage mask conflicts with30closed positive claims/29045.06CU; not adopted. Motor conventional masks observedcompatible only. No bicycle-to-alltheft mask. Broad current denominator remains conditional; no fits/scores this unit."
+  },
+  "open_conditions": [
+    {
+      "id": "TAIL-UNIDENTIFIED",
+      "status": "open",
+      "effect": "Renormalized tail shifts conditional nominal2023 totals about2.5% with observed predictions identical. Observed D2 cannot identify unseen cost mass or ultimate scale."
+    },
+    {
+      "id": "TAIL-INTERPRETATION",
+      "status": "open",
+      "effect": "Fixedshare and renormalized mixtures are different declared assumptions. Neither establishes true tailmass/severity/stationarity; row-peril mix is approximate."
+    },
+    {
+      "id": "TAIL-RESERVES",
+      "status": "open",
+      "effect": "Reserve.75/1.25 refit remains pending, not completed by this tail-only unit."
+    },
+    {
+      "id": "TAIL-SEARCH",
+      "status": "open",
+      "effect": "Six observation-stress configurations and6new unadjusted exploratory pairs after19 adaptive pricing recipes. No common-link candidate promotion, equivalence or final roster."
+    },
+    {
+      "id": "TAIL-2024-CLOSED",
+      "status": "open",
+      "effect": "Explicit participant restriction, regardless of corrected selector. No2024/test prices or predictions, ledger absent."
+    },
+    {
+      "id": "DEV7-CAPITAL-UNIT",
+      "status": "open",
+      "effect": "56 corrected2023 records have no positive T0. Values within training support and formula replay cannot confirm economic scale; B13/B14 and private row detail retained."
+    },
+    {
+      "id": "DEV7-MOTOR-CRED",
+      "status": "open",
+      "effect": "All3 prespecified motor-only corrections worsen point D2 againstB14; CIs include0. No choice of weight or substitution established; keep B15 and ablations without promotion."
+    },
+    {
+      "id": "DEV7-PRIOR-OBJECTIVE",
+      "status": "open",
+      "effect": "Received developed2021-2023 prior/seasonality not raw-reproduced here; prior uncertainty omitted in Z; tau uses correlated effects. Auxiliary count/severity and price Tweedie objectives/observation differ."
+    },
+    {
+      "id": "DEV7-SEARCH",
+      "status": "open",
+      "effect": "19 adaptive recipes,171 unadjusted exploratory contrasts; no temporal confirmation, equivalence or final roster."
+    },
+    {
+      "id": "DEV7-ULTIMATE",
+      "status": "open",
+      "effect": "Reporting, late-cost and reserves remain conditional; fixed-rate stresses are not full refits or final2025 ultimate validation."
+    },
+    {
+      "id": "DEV7-2024-CLOSED",
+      "status": "open",
+      "effect": "Explicit participant instruction: keep2024/test unpriced, unpredicted and unscored, ledger absent."
+    },
+    {
+      "id": "C0R-RESERVE-TRUTH",
+      "status": "open",
+      "effect": "Reserve.75/1.25 are design stresses, not adequacy estimates or statistical bounds. Target changes; cross-target D2 is not a superiority contrast."
+    },
+    {
+      "id": "C0R-LATE-INFLUENCE",
+      "status": "open",
+      "effect": "L1 is a reporting-estimator-only component removal stress. Small positive observed-score gains reverse after own31 favorable groups; do not discard costly claims or adopt altered C0."
+    },
+    {
+      "id": "C0R-TAIL-UNIDENTIFIED",
+      "status": "open",
+      "effect": "Previous tail normalization preserves observedD2 while nominal2023 rises~2.5%; no identification of mass/severity beyond support. No new joint tail/reserve scenario fitted here."
+    },
+    {
+      "id": "C0R-MIXTURE",
+      "status": "open",
+      "effect": "Line-level peril mixture may differ by row/business; report/cost dependence, censoring and stationarity unresolved. Groups2023 at2024cutoff are not prospective at beginning2023."
+    },
+    {
+      "id": "C0R-SEARCH",
+      "status": "open",
+      "effect": "19 main recipes and successive conditional observation stresses;12new unadjusted exploratory contrasts, no temporal confirmation or final roster."
+    },
+    {
+      "id": "C0R-2024-CLOSED",
+      "status": "open",
+      "effect": "Participant keeps2024/test prices/predictions/scores closed and ledger absent, regardless of selector state."
+    },
+    {
+      "id": "MIX-SPARSE",
+      "status": "open",
+      "effect": "Business/peril positive severity has small weighted effective samples and concentrated costs. Five zerofoldcells represent one observed absence of newbusiness buildingfire, not no future risk."
+    },
+    {
+      "id": "MIX-REPRO-NOT-GAIN",
+      "status": "open",
+      "effect": "All MIXF pointD2 belowownbase; all MIXFS belowMIXF. No adopted business mixture, selected smoothing, equivalence or promotion."
+    },
+    {
+      "id": "MIX-COMPLETION",
+      "status": "open",
+      "effect": "Differences in mixture shares can have little impact when peril cost-completion curves are similar. Verified TV*spread bound only2023; not2025 or ultimate accuracy."
+    },
+    {
+      "id": "MIX-POOLED-CURVES",
+      "status": "open",
+      "effect": "Count/cost timing and truncation weights remain pooledbyperil; no business-specific curve, independent cost-report timing proof or individual coverage masks."
+    },
+    {
+      "id": "MIX-SEARCH",
+      "status": "open",
+      "effect": "Six further observation-stress configurations and12new unadjusted conditional bootstrap contrasts after adaptive research. Fixedfit OOF intervals omit first-stage parameter-refit uncertainty."
+    },
+    {
+      "id": "MIX-2024-CLOSED",
+      "status": "open",
+      "effect": "Direct participant instruction. MainB00 and19catalog retained; no2024/test prices/predictions/scores or ledger."
+    },
+    {
+      "id": "MIX-EXTERNAL-2024-SCOPE",
+      "status": "open",
+      "owner": "Codex",
+      "effect": "Claude announced another-chat authorization and an opening of 2024. This task retains its direct 2023-only restriction, quarantines external confirmation outputs and opens no additional batch; global state requires separate reconciliation."
+    },
+    {
+      "id": "SUPPORT-CALENDAR",
+      "status": "open",
+      "effect": "Newbusiness has less mature exposure at long delays; calendar differences do not identify causal price-model failure."
+    },
+    {
+      "id": "SUPPORT-TAIL",
+      "status": "open",
+      "effect": "Observed delay support and tiny newbusiness reverse risk near pooled endpoints do not identify unseen tail or justify separate business curves."
+    },
+    {
+      "id": "SUPPORT-COVERAGE",
+      "status": "open",
+      "effect": "Peril denominators still use broad line/business exposure. Review admissible technical coverage masks before more complexity; no structural zero inferred."
+    },
+    {
+      "id": "SUPPORT-EXPOSURE-2024",
+      "status": "open",
+      "effect": "External forum subject exposed2024 outcome metrics; no complete-blindness claim. Safe reader emits only author/id/UTC; no external outcome used in this data-only audit."
+    },
+    {
+      "id": "COV-HOME-POSITIVE-OUTSIDE",
+      "status": "open",
+      "effect": "30closed positive accidental_damage claims and29045.06CU outside flag-based home mask. Do not exclude exposure/claims or enforce structuralzero under currentT0."
+    },
+    {
+      "id": "COV-MOTOR-CONTRACT",
+      "status": "open",
+      "effect": "No observed motor claim outside conventional mask in2023 is necessary compatibility only, not complete contract mapping or future no-risk proof."
+    },
+    {
+      "id": "COV-NUMERATOR-DENOMINATOR",
+      "status": "open",
+      "effect": "Changing denominator alone with broad numerator is incoherent for home candidate; row-specific cost composition is not achieved by aggregate rate shrink/normalization."
+    },
+    {
+      "id": "COV-BICYCLE",
+      "status": "open",
+      "effect": "Optional bicycle cover is not a mask for all theft. No crosswalk or structuralzero inferred."
+    }
+  ],
+  "no_retraining_or_suite_repetition_for_completed_v6": true,
+  "no_retraining_or_suite_repetition_for_completed_v7": true,
+  "current_global_fit_counter_index": "Hackaton/Repositorio_IAA2026/registro/semana2_contadores_propios_actual.json",
+  "latest_observation_sensitivity_index": "Hackaton/Repositorio_IAA2026/registro/semana2_sensibilidad_observacion_actual.json",
+  "no_retraining_or_suite_repetition_for_completed_tail": true,
+  "no_retraining_or_suite_repetition_for_completed_c0_reserves": true,
+  "forum_reading_guard": "Only emit author, ID and UTC from forum inventory via herramientas/leer_foro_semana2_seguro.py. Never emit external subjects/titles, bodies, actas, predictions, scores or SEL01 artifacts. Do not dump whole shared memory/state: select own current branches and own dated sections. An external subject already exposed2024 outcome metrics; do not claim complete blindness or use those outcomes for2023 choices. No ledger reading or second batch.",
+  "confirmation_scope_conflict": {
+    "source_forum_id": "CLA-S2-20261024-005",
+    "notice": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mezcla_20261024T004833Z_e8ff18e0/confirmation_scope_notice.json",
+    "notice_sha256": "a2eb8ac3a67fcb852f0472de555d655838da06b3c5b1f2945048eda319cdbf41",
+    "own_participant_scope": "2023 only; 2024 closed",
+    "external_authorization_claim_verified": false,
+    "external_authorization_invalidated": false,
+    "external_2024_predictions_or_scores_read": false,
+    "confirmation_opened_by_this_task": false,
+    "forum_notice": "COD-S2-20261024-029",
+    "next_action": "Keep external confirmation quarantined. Disclose subject exposure; do not use it for2023 choices. No additional confirmation batch.",
+    "header_metric_exposure_recorded": true,
+    "external_2024_metrics_seen_in_subject": true,
+    "external_2024_prediction_files_or_acta_read": false,
+    "complete_blindness_claim_allowed": false
+  },
+  "no_retraining_or_suite_repetition_for_completed_business_mixture": true,
+  "condition_progress_without_auto_closure": {
+    "TAIL-RESERVES": "Reserve refits completed in prior unit, but reserve adequacy and ultimate identification remain open.",
+    "C0R-MIXTURE": "This unit diagnoses business weights; timing curves, row coverage masks and stationarity remain conditional.",
+    "SUPPORT-COVERAGE": "Coverage audit complete: hardhome mask incompatible, motor mapping conditional, optionalbicycle not alltheft. Actual contractual crosswalk and row-specific composition still open."
+  },
+  "confirmation_header_exposure": {
+    "utc": "2026-10-24T01:05:48.339085+00:00",
+    "source": "CLA-S2-20261024-006 header only",
+    "cause": "Header-only inventory displayed an external2024 subject containing outcome metrics. No body, acta, prediction file or ledger opened. Cannot claim complete blindness after this exposure.",
+    "metrics_repeated_in_this_record": false,
+    "use_for_2023_choices": false,
+    "consequence": "No fitting, scoring or adaptive recipe selection this unit. Continue only pre-existing data-support diagnostic; future result claims must disclose header exposure. Safe inventory now exposes author/id/UTC only, never any subject.",
+    "scope": "External2024 metrics seen in one forum subject only; no body, acta, prediction or ledger opened. This is a disclosed information exposure, not a valid confirmation of this line.",
+    "subsequent_2023_fit_or_score_in_this_unit": false,
+    "safe_reader": "Hackaton/Repositorio_IAA2026/herramientas/leer_foro_semana2_seguro.py",
+    "verification": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/soporte_20261024T010555Z_c4428b52/verification.json"
+  },
+  "latest_data_support_audit_index": "Hackaton/Repositorio_IAA2026/registro/semana2_soporte_calendario2023_actual.json",
+  "partial_night_balance": "Hackaton/Repositorio_IAA2026/docs/semana2/BALANCE_NOCTURNO_PARCIAL_20261024.md",
+  "no_retraining_or_suite_repetition_for_completed_calendar_support": true,
+  "latest_coverage_exposure_audit_index": "Hackaton/Repositorio_IAA2026/registro/semana2_coberturas_peril2023_actual.json",
+  "no_retraining_or_suite_repetition_for_completed_coverage_audit": true
+}

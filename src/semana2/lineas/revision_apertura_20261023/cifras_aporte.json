@@ -1,0 +1,3381 @@
+{
+ "autor": "Claude",
+ "aporte": "aporte_CLA-S2-20261023-001.md",
+ "fuentes": {
+  "evidencia": "evidencia.json",
+  "desarrollo": "desarrollo2023_diagnostico.json"
+ },
+ "descripcion": "Cada cifra del aporte con su ruta en evidencia.json y el formato con que se escribe; contexto es el texto literal que debe aparecer en el aporte.",
+ "formatos": {
+  "int": "entero con punto de miles",
+  "decN": "N decimales con coma",
+  "sdecN": "con signo",
+  "pctN": "porcentaje con N decimales, sin el signo %",
+  "dpctN": "(valor - 1) en porcentaje con signo",
+  "adpctN": "|valor - 1| en porcentaje",
+  "spctN": "valor en porcentaje con signo"
+ },
+ "cifras": [
+  {
+   "id": "int-01",
+   "contexto": "(20 de 20)",
+   "ruta": [
+    "integridad",
+    "archivos_coinciden"
+   ],
+   "formato": "int",
+   "valor": "20"
+  },
+  {
+   "id": "int-02",
+   "contexto": "(20 de 20)",
+   "ruta": [
+    "integridad",
+    "archivos_comprobados"
+   ],
+   "formato": "int",
+   "valor": "20"
+  },
+  {
+   "id": "rep-01",
+   "contexto": "109.296 filas de entrenamiento",
+   "ruta": [
+    "escala",
+    "filas_train_total"
+   ],
+   "formato": "int",
+   "valor": "109.296"
+  },
+  {
+   "id": "rep-02",
+   "contexto": "209.063 de test",
+   "ruta": [
+    "escala",
+    "filas_test_total"
+   ],
+   "formato": "int",
+   "valor": "209.063"
+  },
+  {
+   "id": "rep-03",
+   "contexto": "plantilla en el orden autos, edificios y contenidos",
+   "ruta": [
+    "escala",
+    "plantilla_mismo_orden_motor_buildings_contents"
+   ],
+   "igual": true
+  },
+  {
+   "id": "rep-04",
+   "contexto": "9.258 siniestros",
+   "ruta": [
+    "siniestros",
+    "filas"
+   ],
+   "formato": "int",
+   "valor": "9.258"
+  },
+  {
+   "id": "rep-05",
+   "contexto": "8.082 cerrados",
+   "ruta": [
+    "siniestros",
+    "estado",
+    "closed"
+   ],
+   "formato": "int",
+   "valor": "8.082"
+  },
+  {
+   "id": "rep-06",
+   "contexto": "1.056 abiertos",
+   "ruta": [
+    "siniestros",
+    "estado",
+    "open"
+   ],
+   "formato": "int",
+   "valor": "1.056"
+  },
+  {
+   "id": "rep-07",
+   "contexto": "120 rechazados",
+   "ruta": [
+    "siniestros",
+    "estado",
+    "repudiated"
+   ],
+   "formato": "int",
+   "valor": "120"
+  },
+  {
+   "id": "rep-08",
+   "contexto": "452 exposiciones mayores que uno",
+   "ruta": [
+    "exposicion",
+    "total_mayores_que_uno"
+   ],
+   "formato": "int",
+   "valor": "452"
+  },
+  {
+   "id": "rep-09",
+   "contexto": "36 siniestros sin periodo con 92.267,26 CU netos",
+   "ruta": [
+    "siniestros",
+    "sin_periodo",
+    "total"
+   ],
+   "formato": "int",
+   "valor": "36"
+  },
+  {
+   "id": "rep-10",
+   "contexto": "36 siniestros sin periodo con 92.267,26 CU netos",
+   "ruta": [
+    "siniestros",
+    "sin_periodo",
+    "neto_todos"
+   ],
+   "formato": "dec2",
+   "valor": "92.267,26"
+  },
+  {
+   "id": "rep-11-motor",
+   "contexto": "76,03 %, 75,95 % y 76,14 %",
+   "ruta": [
+    "nuevo_negocio",
+    "motor",
+    "test_cliente_nuevo_en_ramo"
+   ],
+   "formato": "pct2",
+   "valor": "76,03"
+  },
+  {
+   "id": "rep-11-buildings",
+   "contexto": "76,03 %, 75,95 % y 76,14 %",
+   "ruta": [
+    "nuevo_negocio",
+    "buildings",
+    "test_cliente_nuevo_en_ramo"
+   ],
+   "formato": "pct2",
+   "valor": "75,95"
+  },
+  {
+   "id": "rep-11-contents",
+   "contexto": "76,03 %, 75,95 % y 76,14 %",
+   "ruta": [
+    "nuevo_negocio",
+    "contents",
+    "test_cliente_nuevo_en_ramo"
+   ],
+   "formato": "pct2",
+   "valor": "76,14"
+  },
+  {
+   "id": "rep-12",
+   "contexto": "752 clientes y 8.046 direcciones",
+   "ruta": [
+    "escala",
+    "ids_coincidentes_entre_mercados",
+    "clientes"
+   ],
+   "formato": "int",
+   "valor": "752"
+  },
+  {
+   "id": "rep-13",
+   "contexto": "752 clientes y 8.046 direcciones",
+   "ruta": [
+    "escala",
+    "ids_coincidentes_entre_mercados",
+    "direcciones"
+   ],
+   "formato": "int",
+   "valor": "8.046"
+  },
+  {
+   "id": "rep-14-2023",
+   "contexto": "clima completo de 2023 a 2025",
+   "ruta": [
+    "clima",
+    "anios_emergente",
+    "2023"
+   ],
+   "igual": 136914
+  },
+  {
+   "id": "rep-14-2024",
+   "contexto": "clima completo de 2023 a 2025",
+   "ruta": [
+    "clima",
+    "anios_emergente",
+    "2024"
+   ],
+   "igual": 136914
+  },
+  {
+   "id": "rep-14-2025",
+   "contexto": "clima completo de 2023 a 2025",
+   "ruta": [
+    "clima",
+    "anios_emergente",
+    "2025"
+   ],
+   "igual": 136914
+  },
+  {
+   "id": "rep-15",
+   "contexto": "veinte referencias con 17 broker y 3 directas, de las que 15 cubren menos de 0,99 años y 19 menos del año completo",
+   "ruta": [
+    "prima_comercial",
+    "referencias",
+    "canal",
+    "broker"
+   ],
+   "formato": "int",
+   "valor": "17"
+  },
+  {
+   "id": "rep-16",
+   "contexto": "veinte referencias con 17 broker y 3 directas, de las que 15 cubren menos de 0,99 años y 19 menos del año completo",
+   "ruta": [
+    "prima_comercial",
+    "referencias",
+    "canal",
+    "direct"
+   ],
+   "formato": "int",
+   "valor": "3"
+  },
+  {
+   "id": "rep-17",
+   "contexto": "veinte referencias con 17 broker y 3 directas, de las que 15 cubren menos de 0,99 años y 19 menos del año completo",
+   "ruta": [
+    "prima_comercial",
+    "referencias",
+    "parciales_menos_0_99"
+   ],
+   "formato": "int",
+   "valor": "15"
+  },
+  {
+   "id": "rep-17b",
+   "contexto": "veinte referencias con 17 broker y 3 directas, de las que 15 cubren menos de 0,99 años y 19 menos del año completo",
+   "ruta": [
+    "prima_comercial",
+    "referencias",
+    "parciales_menos_de_1"
+   ],
+   "formato": "int",
+   "valor": "19"
+  },
+  {
+   "id": "rep-17c",
+   "contexto": "veinte referencias con 17 broker y 3 directas, de las que 15 cubren menos de 0,99 años y 19 menos del año completo",
+   "ruta": [
+    "prima_comercial",
+    "referencias",
+    "filas"
+   ],
+   "igual": 20
+  },
+  {
+   "id": "rep-18",
+   "contexto": "Tampoco hay siniestros duplicados si se ignora `claim_id`",
+   "ruta": [
+    "siniestros",
+    "duplicados_exactos_salvo_claim_id"
+   ],
+   "igual": 0
+  },
+  {
+   "id": "c01-01",
+   "contexto": "días inclusivos / 365 en 108.687 filas",
+   "ruta": [
+    "exposicion",
+    "total_convenciones",
+    "ACT365"
+   ],
+   "formato": "int",
+   "valor": "108.687"
+  },
+  {
+   "id": "c01-02",
+   "contexto": "días / 360 en 495",
+   "ruta": [
+    "exposicion",
+    "total_convenciones",
+    "ACT360"
+   ],
+   "formato": "int",
+   "valor": "495"
+  },
+  {
+   "id": "c01-03",
+   "contexto": "número de días en 114",
+   "ruta": [
+    "exposicion",
+    "total_convenciones",
+    "DIAS"
+   ],
+   "formato": "int",
+   "valor": "114"
+  },
+  {
+   "id": "c01-04",
+   "contexto": "ninguna queda sin explicar",
+   "ruta": [
+    "exposicion",
+    "total_convenciones",
+    "OTRA"
+   ],
+   "igual": 0
+  },
+  {
+   "id": "c01-05",
+   "contexto": "ni admite dos lecturas",
+   "suma": [
+    [
+     "exposicion",
+     "motor",
+     "ambiguas"
+    ],
+    [
+     "exposicion",
+     "buildings",
+     "ambiguas"
+    ],
+    [
+     "exposicion",
+     "contents",
+     "ambiguas"
+    ]
+   ],
+   "igual": 0
+  },
+  {
+   "id": "c01-08-motor",
+   "contexto": "y todo el test usa días / 365",
+   "ruta": [
+    "exposicion",
+    "motor",
+    "test",
+    "act365"
+   ],
+   "igual": 90521
+  },
+  {
+   "id": "c01-08-buildings",
+   "contexto": "y todo el test usa días / 365",
+   "ruta": [
+    "exposicion",
+    "buildings",
+    "test",
+    "act365"
+   ],
+   "igual": 52295
+  },
+  {
+   "id": "c01-08-contents",
+   "contexto": "y todo el test usa días / 365",
+   "ruta": [
+    "exposicion",
+    "contents",
+    "test",
+    "act365"
+   ],
+   "igual": 66247
+  },
+  {
+   "id": "c01-09",
+   "contexto": "Son las 609 correcciones de Codex",
+   "suma": [
+    [
+     "exposicion",
+     "motor",
+     "filas_que_cambian_con_dias_365"
+    ],
+    [
+     "exposicion",
+     "buildings",
+     "filas_que_cambian_con_dias_365"
+    ],
+    [
+     "exposicion",
+     "contents",
+     "filas_que_cambian_con_dias_365"
+    ]
+   ],
+   "formato": "int",
+   "valor": "609"
+  },
+  {
+   "id": "c01-11",
+   "contexto": "la exposición queda en 91.494,52 años",
+   "ruta": [
+    "exposicion",
+    "total",
+    "dias_365"
+   ],
+   "formato": "dec2",
+   "valor": "91.494,52"
+  },
+  {
+   "id": "c02-01",
+   "contexto": "ocurren entre 14 y 431 días antes del primer periodo de su póliza",
+   "ruta": [
+    "siniestros",
+    "sin_periodo",
+    "dias_antes_min"
+   ],
+   "formato": "int",
+   "valor": "14"
+  },
+  {
+   "id": "c02-02",
+   "contexto": "ocurren entre 14 y 431 días antes del primer periodo de su póliza",
+   "ruta": [
+    "siniestros",
+    "sin_periodo",
+    "dias_antes_max"
+   ],
+   "formato": "int",
+   "valor": "431"
+  },
+  {
+   "id": "c02-03",
+   "contexto": "(los dos de 2023, 166 y 175 días antes)",
+   "ruta": [
+    "siniestros",
+    "sin_periodo",
+    "de_2023",
+    0,
+    "dias_antes"
+   ],
+   "formato": "int",
+   "valor": "166"
+  },
+  {
+   "id": "c02-04",
+   "contexto": "(los dos de 2023, 166 y 175 días antes)",
+   "ruta": [
+    "siniestros",
+    "sin_periodo",
+    "de_2023",
+    1,
+    "dias_antes"
+   ],
+   "formato": "int",
+   "valor": "175"
+  },
+  {
+   "id": "c02-05",
+   "contexto": "35 se reportaron dentro de un periodo observado",
+   "ruta": [
+    "siniestros",
+    "sin_periodo",
+    "reportados_dentro_de_un_periodo_observado"
+   ],
+   "formato": "int",
+   "valor": "35"
+  },
+  {
+   "id": "c02-06",
+   "contexto": "ocurren entre 14 y 431 días antes del primer periodo de su póliza",
+   "ruta": [
+    "siniestros",
+    "sin_periodo",
+    "todos_antes_del_primer_periodo"
+   ],
+   "igual": true
+  },
+  {
+   "id": "c03-01",
+   "contexto": "F0 deja ausente el logaritmo del capital en 349 filas",
+   "ruta": [
+    "capital",
+    "total_extremas"
+   ],
+   "formato": "int",
+   "valor": "349"
+  },
+  {
+   "id": "c03-02-buildings-train",
+   "contexto": "53 de train y 104 de test en edificios, 57 y 135 en contenidos",
+   "ruta": [
+    "capital",
+    "buildings",
+    "train",
+    "extremas"
+   ],
+   "formato": "int",
+   "valor": "53"
+  },
+  {
+   "id": "c03-02-buildings-test",
+   "contexto": "53 de train y 104 de test en edificios, 57 y 135 en contenidos",
+   "ruta": [
+    "capital",
+    "buildings",
+    "test",
+    "extremas"
+   ],
+   "formato": "int",
+   "valor": "104"
+  },
+  {
+   "id": "c03-02-contents-train",
+   "contexto": "53 de train y 104 de test en edificios, 57 y 135 en contenidos",
+   "ruta": [
+    "capital",
+    "contents",
+    "train",
+    "extremas"
+   ],
+   "formato": "int",
+   "valor": "57"
+  },
+  {
+   "id": "c03-02-contents-test",
+   "contexto": "53 de train y 104 de test en edificios, 57 y 135 en contenidos",
+   "ruta": [
+    "capital",
+    "contents",
+    "test",
+    "extremas"
+   ],
+   "formato": "int",
+   "valor": "135"
+  },
+  {
+   "id": "c03-03",
+   "contexto": "Un hueco de 67 a 90 veces en edificios y de 32 veces en contenidos",
+   "min": [
+    [
+     "capital",
+     "buildings",
+     "train",
+     "hueco_razon"
+    ],
+    [
+     "capital",
+     "buildings",
+     "test",
+     "hueco_razon"
+    ]
+   ],
+   "formato": "int",
+   "valor": "67"
+  },
+  {
+   "id": "c03-04",
+   "contexto": "Un hueco de 67 a 90 veces en edificios y de 32 veces en contenidos",
+   "max": [
+    [
+     "capital",
+     "buildings",
+     "train",
+     "hueco_razon"
+    ],
+    [
+     "capital",
+     "buildings",
+     "test",
+     "hueco_razon"
+    ]
+   ],
+   "formato": "int",
+   "valor": "90"
+  },
+  {
+   "id": "c03-05",
+   "contexto": "Un hueco de 67 a 90 veces en edificios y de 32 veces en contenidos",
+   "min": [
+    [
+     "capital",
+     "contents",
+     "train",
+     "hueco_razon"
+    ],
+    [
+     "capital",
+     "contents",
+     "test",
+     "hueco_razon"
+    ]
+   ],
+   "formato": "int",
+   "valor": "32"
+  },
+  {
+   "id": "c03-06",
+   "contexto": "Un hueco de 67 a 90 veces en edificios y de 32 veces en contenidos",
+   "max": [
+    [
+     "capital",
+     "contents",
+     "train",
+     "hueco_razon"
+    ],
+    [
+     "capital",
+     "contents",
+     "test",
+     "hueco_razon"
+    ]
+   ],
+   "formato": "int",
+   "valor": "32"
+  },
+  {
+   "id": "c03-07",
+   "contexto": "mediana 0,0010 frente a 1,03 en edificios y 0,0032 frente a 3,32 en contenidos",
+   "ruta": [
+    "capital",
+    "buildings",
+    "train",
+    "prima_por_mil_extremas_mediana"
+   ],
+   "formato": "dec4",
+   "valor": "0,0010"
+  },
+  {
+   "id": "c03-08",
+   "contexto": "mediana 0,0010 frente a 1,03 en edificios y 0,0032 frente a 3,32 en contenidos",
+   "ruta": [
+    "capital",
+    "buildings",
+    "train",
+    "prima_por_mil_normal_mediana"
+   ],
+   "formato": "dec2",
+   "valor": "1,03"
+  },
+  {
+   "id": "c03-09",
+   "contexto": "mediana 0,0010 frente a 1,03 en edificios y 0,0032 frente a 3,32 en contenidos",
+   "ruta": [
+    "capital",
+    "contents",
+    "train",
+    "prima_por_mil_extremas_mediana"
+   ],
+   "formato": "dec4",
+   "valor": "0,0032"
+  },
+  {
+   "id": "c03-10",
+   "contexto": "mediana 0,0010 frente a 1,03 en edificios y 0,0032 frente a 3,32 en contenidos",
+   "ruta": [
+    "capital",
+    "contents",
+    "train",
+    "prima_por_mil_normal_mediana"
+   ],
+   "formato": "dec2",
+   "valor": "3,32"
+  },
+  {
+   "id": "c03-11",
+   "contexto": "vuelve a 1,03 y 3,17",
+   "ruta": [
+    "capital",
+    "buildings",
+    "train",
+    "prima_por_mil_extremas_entre_mil_mediana"
+   ],
+   "formato": "dec2",
+   "valor": "1,03"
+  },
+  {
+   "id": "c03-12",
+   "contexto": "vuelve a 1,03 y 3,17",
+   "ruta": [
+    "capital",
+    "contents",
+    "train",
+    "prima_por_mil_extremas_entre_mil_mediana"
+   ],
+   "formato": "dec2",
+   "valor": "3,17"
+  },
+  {
+   "id": "c03-13",
+   "contexto": "la máscara deja sin capital a 239 filas del test",
+   "ruta": [
+    "capital",
+    "total_extremas_test"
+   ],
+   "formato": "int",
+   "valor": "239"
+  },
+  {
+   "id": "c04-01",
+   "contexto": "la frecuencia es 0,0002 con cero contactos y 1,13 con tres o más",
+   "ruta": [
+    "peculiaridades",
+    "contactos",
+    "motor",
+    "frecuencia",
+    "0"
+   ],
+   "formato": "dec4",
+   "valor": "0,0002"
+  },
+  {
+   "id": "c04-02",
+   "contexto": "la frecuencia es 0,0002 con cero contactos y 1,13 con tres o más",
+   "ruta": [
+    "peculiaridades",
+    "contactos",
+    "motor",
+    "frecuencia",
+    "3"
+   ],
+   "formato": "dec2",
+   "valor": "1,13"
+  },
+  {
+   "id": "c04-03",
+   "contexto": "el 9,5 % del train tiene tres o más frente al 0,8 % del test",
+   "ruta": [
+    "peculiaridades",
+    "contactos",
+    "motor",
+    "cuota_train",
+    "3"
+   ],
+   "formato": "pct1",
+   "valor": "9,5"
+  },
+  {
+   "id": "c04-04",
+   "contexto": "el 9,5 % del train tiene tres o más frente al 0,8 % del test",
+   "ruta": [
+    "peculiaridades",
+    "contactos",
+    "motor",
+    "cuota_test",
+    "3"
+   ],
+   "formato": "pct1",
+   "valor": "0,8"
+  },
+  {
+   "id": "c04-05",
+   "contexto": "en el 90–97 % de los casos",
+   "min": [
+    [
+     "peculiaridades",
+     "declinadas_con_sucesor",
+     "motor",
+     "declined_by_insurer",
+     "con_sucesor"
+    ],
+    [
+     "peculiaridades",
+     "declinadas_con_sucesor",
+     "buildings",
+     "declined_by_insurer",
+     "con_sucesor"
+    ],
+    [
+     "peculiaridades",
+     "declinadas_con_sucesor",
+     "contents",
+     "declined_by_insurer",
+     "con_sucesor"
+    ]
+   ],
+   "formato": "pct0",
+   "valor": "90"
+  },
+  {
+   "id": "c04-06",
+   "contexto": "en el 90–97 % de los casos",
+   "max": [
+    [
+     "peculiaridades",
+     "declinadas_con_sucesor",
+     "motor",
+     "declined_by_insurer",
+     "con_sucesor"
+    ],
+    [
+     "peculiaridades",
+     "declinadas_con_sucesor",
+     "buildings",
+     "declined_by_insurer",
+     "con_sucesor"
+    ],
+    [
+     "peculiaridades",
+     "declinadas_con_sucesor",
+     "contents",
+     "declined_by_insurer",
+     "con_sucesor"
+    ]
+   ],
+   "formato": "pct0",
+   "valor": "97"
+  },
+  {
+   "id": "c04-07",
+   "contexto": "frente al 0 % de lapsed y cancelled",
+   "max": [
+    [
+     "peculiaridades",
+     "declinadas_con_sucesor",
+     "motor",
+     "lapsed_by_customer",
+     "con_sucesor"
+    ],
+    [
+     "peculiaridades",
+     "declinadas_con_sucesor",
+     "motor",
+     "cancelled",
+     "con_sucesor"
+    ],
+    [
+     "peculiaridades",
+     "declinadas_con_sucesor",
+     "buildings",
+     "lapsed_by_customer",
+     "con_sucesor"
+    ],
+    [
+     "peculiaridades",
+     "declinadas_con_sucesor",
+     "buildings",
+     "cancelled",
+     "con_sucesor"
+    ],
+    [
+     "peculiaridades",
+     "declinadas_con_sucesor",
+     "contents",
+     "lapsed_by_customer",
+     "con_sucesor"
+    ],
+    [
+     "peculiaridades",
+     "declinadas_con_sucesor",
+     "contents",
+     "cancelled",
+     "con_sucesor"
+    ]
+   ],
+   "igual": 0
+  },
+  {
+   "id": "c04-08",
+   "contexto": "Los periodos de 2024 terminan el 30-12 y ninguno cubre el 31-12",
+   "suma": [
+    [
+     "exposicion",
+     "motor",
+     "fin_31_12_2024"
+    ],
+    [
+     "exposicion",
+     "buildings",
+     "fin_31_12_2024"
+    ],
+    [
+     "exposicion",
+     "contents",
+     "fin_31_12_2024"
+    ]
+   ],
+   "igual": 0
+  },
+  {
+   "id": "c04-09",
+   "contexto": "Los periodos de 2024 terminan el 30-12 y ninguno cubre el 31-12",
+   "suma": [
+    [
+     "exposicion",
+     "motor",
+     "filas_que_cubren_31_12_2024"
+    ],
+    [
+     "exposicion",
+     "buildings",
+     "filas_que_cubren_31_12_2024"
+    ],
+    [
+     "exposicion",
+     "contents",
+     "filas_que_cubren_31_12_2024"
+    ]
+   ],
+   "igual": 0
+  },
+  {
+   "id": "c04-10",
+   "contexto": "Hay 23 y 47 daños accidentales aceptados sin esa cobertura",
+   "ruta": [
+    "peculiaridades",
+    "danos_accidentales_sin_cobertura",
+    "buildings",
+    "sin_cobertura"
+   ],
+   "formato": "int",
+   "valor": "23"
+  },
+  {
+   "id": "c04-11",
+   "contexto": "Hay 23 y 47 daños accidentales aceptados sin esa cobertura",
+   "ruta": [
+    "peculiaridades",
+    "danos_accidentales_sin_cobertura",
+    "contents",
+    "sin_cobertura"
+   ],
+   "formato": "int",
+   "valor": "47"
+  },
+  {
+   "id": "c04-12",
+   "contexto": "7.756 y 20.051 filas con NCB mayor que los años de carnet",
+   "ruta": [
+    "peculiaridades",
+    "ncb_mayor_que_anios_carnet",
+    "train"
+   ],
+   "formato": "int",
+   "valor": "7.756"
+  },
+  {
+   "id": "c04-13",
+   "contexto": "7.756 y 20.051 filas con NCB mayor que los años de carnet",
+   "ruta": [
+    "peculiaridades",
+    "ncb_mayor_que_anios_carnet",
+    "test"
+   ],
+   "formato": "int",
+   "valor": "20.051"
+  },
+  {
+   "id": "c05-01",
+   "contexto": "Los 80 valores de ocupación quedan en 40",
+   "ruta": [
+    "peculiaridades",
+    "ocupacion",
+    "distintos_crudos"
+   ],
+   "formato": "int",
+   "valor": "80"
+  },
+  {
+   "id": "c05-02",
+   "contexto": "Los 80 valores de ocupación quedan en 40",
+   "ruta": [
+    "peculiaridades",
+    "ocupacion",
+    "distintos_tras_espacios_y_mayusculas"
+   ],
+   "formato": "int",
+   "valor": "40"
+  },
+  {
+   "id": "c05-03",
+   "contexto": "y en 20 al quitar el prefijo",
+   "ruta": [
+    "peculiaridades",
+    "ocupacion",
+    "distintos_base_sin_self_employed"
+   ],
+   "formato": "int",
+   "valor": "20"
+  },
+  {
+   "id": "c05-04",
+   "contexto": "el 10 % de los no nulos",
+   "ruta": [
+    "peculiaridades",
+    "ocupacion",
+    "cuota_self_employed"
+   ],
+   "formato": "pct0",
+   "valor": "10"
+  },
+  {
+   "id": "c05-05",
+   "contexto": "(1.819 veces)",
+   "ruta": [
+    "peculiaridades",
+    "ocupacion",
+    "self_employed_incoherentes",
+    "retired"
+   ],
+   "formato": "int",
+   "valor": "1.819"
+  },
+  {
+   "id": "c05-06",
+   "contexto": "Esos 20 son exactamente el vocabulario del desarrollado",
+   "ruta": [
+    "peculiaridades",
+    "ocupacion",
+    "base_igual_vocabulario_desarrollado"
+   ],
+   "igual": true
+  },
+  {
+   "id": "c06-01",
+   "contexto": "el 88 % de las filas de 2023 son renovaciones",
+   "min": [
+    [
+     "historia",
+     "motor",
+     "cuota_renovaciones_2023"
+    ],
+    [
+     "historia",
+     "buildings",
+     "cuota_renovaciones_2023"
+    ],
+    [
+     "historia",
+     "contents",
+     "cuota_renovaciones_2023"
+    ]
+   ],
+   "formato": "pct0",
+   "valor": "88"
+  },
+  {
+   "id": "c06-02",
+   "contexto": "el 88 % de las filas de 2023 son renovaciones",
+   "max": [
+    [
+     "historia",
+     "motor",
+     "cuota_renovaciones_2023"
+    ],
+    [
+     "historia",
+     "buildings",
+     "cuota_renovaciones_2023"
+    ],
+    [
+     "historia",
+     "contents",
+     "cuota_renovaciones_2023"
+    ]
+   ],
+   "formato": "pct0",
+   "valor": "88"
+  },
+  {
+   "id": "c06-03",
+   "contexto": "con entre 1 y 15 renovaciones previas",
+   "min": [
+    [
+     "historia",
+     "motor",
+     "renewal_count_2023_min"
+    ],
+    [
+     "historia",
+     "buildings",
+     "renewal_count_2023_min"
+    ],
+    [
+     "historia",
+     "contents",
+     "renewal_count_2023_min"
+    ]
+   ],
+   "formato": "int",
+   "valor": "1"
+  },
+  {
+   "id": "c06-04",
+   "contexto": "con entre 1 y 15 renovaciones previas",
+   "max": [
+    [
+     "historia",
+     "motor",
+     "renewal_count_2023_max"
+    ],
+    [
+     "historia",
+     "buildings",
+     "renewal_count_2023_max"
+    ],
+    [
+     "historia",
+     "contents",
+     "renewal_count_2023_max"
+    ]
+   ],
+   "formato": "int",
+   "valor": "15"
+  },
+  {
+   "id": "c06-05",
+   "contexto": "`renewal_count` es exactamente el año menos `customer_since_year`",
+   "todos": [
+    [
+     "historia",
+     "motor",
+     "renewal_count_igual_anio_menos_customer_since"
+    ],
+    [
+     "historia",
+     "buildings",
+     "renewal_count_igual_anio_menos_customer_since"
+    ],
+    [
+     "historia",
+     "contents",
+     "renewal_count_igual_anio_menos_customer_since"
+    ]
+   ],
+   "igual": 1.0
+  },
+  {
+   "id": "c06-06",
+   "contexto": "que vale 2025 en todo el nuevo negocio del test",
+   "todos": [
+    [
+     "nuevo_negocio",
+     "motor",
+     "nb_2025_con_customer_since_2025"
+    ],
+    [
+     "nuevo_negocio",
+     "buildings",
+     "nb_2025_con_customer_since_2025"
+    ],
+    [
+     "nuevo_negocio",
+     "contents",
+     "nb_2025_con_customer_since_2025"
+    ]
+   ],
+   "igual": 1.0
+  },
+  {
+   "id": "c06-07",
+   "contexto": "queda fuera del rango de entrenamiento",
+   "max": [
+    [
+     "nuevo_negocio",
+     "motor",
+     "customer_since_year_max_train"
+    ],
+    [
+     "nuevo_negocio",
+     "buildings",
+     "customer_since_year_max_train"
+    ],
+    [
+     "nuevo_negocio",
+     "contents",
+     "customer_since_year_max_train"
+    ]
+   ],
+   "igual": 2024
+  },
+  {
+   "id": "nb-01",
+   "contexto": "el 76 %, son exactamente las de `new_business = True`",
+   "min": [
+    [
+     "nuevo_negocio",
+     "motor",
+     "test_cliente_nuevo_en_ramo"
+    ],
+    [
+     "nuevo_negocio",
+     "buildings",
+     "test_cliente_nuevo_en_ramo"
+    ],
+    [
+     "nuevo_negocio",
+     "contents",
+     "test_cliente_nuevo_en_ramo"
+    ]
+   ],
+   "formato": "pct0",
+   "valor": "76"
+  },
+  {
+   "id": "nb-02",
+   "contexto": "el 76 %, son exactamente las de `new_business = True`",
+   "max": [
+    [
+     "nuevo_negocio",
+     "motor",
+     "test_cliente_nuevo_en_ramo"
+    ],
+    [
+     "nuevo_negocio",
+     "buildings",
+     "test_cliente_nuevo_en_ramo"
+    ],
+    [
+     "nuevo_negocio",
+     "contents",
+     "test_cliente_nuevo_en_ramo"
+    ]
+   ],
+   "formato": "pct0",
+   "valor": "76"
+  },
+  {
+   "id": "nb-03",
+   "contexto": "el 76 %, son exactamente las de `new_business = True`",
+   "todos": [
+    [
+     "nuevo_negocio",
+     "motor",
+     "cliente_nuevo_igual_new_business"
+    ],
+    [
+     "nuevo_negocio",
+     "buildings",
+     "cliente_nuevo_igual_new_business"
+    ],
+    [
+     "nuevo_negocio",
+     "contents",
+     "cliente_nuevo_igual_new_business"
+    ]
+   ],
+   "igual": true
+  },
+  {
+   "id": "nb-04",
+   "contexto": "clientes que no aparecen en ningún ramo del entrenamiento",
+   "suma": [
+    [
+     "nuevo_negocio",
+     "motor",
+     "clientes_nuevos_con_otro_ramo_en_train"
+    ],
+    [
+     "nuevo_negocio",
+     "buildings",
+     "clientes_nuevos_con_otro_ramo_en_train"
+    ],
+    [
+     "nuevo_negocio",
+     "contents",
+     "clientes_nuevos_con_otro_ramo_en_train"
+    ]
+   ],
+   "igual": 0
+  },
+  {
+   "id": "nb-05",
+   "contexto": "Entre el 88 % y el 91 % de ese nuevo negocio empieza en enero",
+   "min": [
+    [
+     "nuevo_negocio",
+     "motor",
+     "nb_inicio_en_enero",
+     "2025"
+    ],
+    [
+     "nuevo_negocio",
+     "buildings",
+     "nb_inicio_en_enero",
+     "2025"
+    ],
+    [
+     "nuevo_negocio",
+     "contents",
+     "nb_inicio_en_enero",
+     "2025"
+    ]
+   ],
+   "formato": "pct0",
+   "valor": "88"
+  },
+  {
+   "id": "nb-06",
+   "contexto": "Entre el 88 % y el 91 % de ese nuevo negocio empieza en enero",
+   "max": [
+    [
+     "nuevo_negocio",
+     "motor",
+     "nb_inicio_en_enero",
+     "2025"
+    ],
+    [
+     "nuevo_negocio",
+     "buildings",
+     "nb_inicio_en_enero",
+     "2025"
+    ],
+    [
+     "nuevo_negocio",
+     "contents",
+     "nb_inicio_en_enero",
+     "2025"
+    ]
+   ],
+   "formato": "pct0",
+   "valor": "91"
+  },
+  {
+   "id": "nb-07",
+   "contexto": "entre el 7 % y el 8 %",
+   "min": [
+    [
+     "nuevo_negocio",
+     "motor",
+     "nb_inicio_en_enero",
+     "2023"
+    ],
+    [
+     "nuevo_negocio",
+     "motor",
+     "nb_inicio_en_enero",
+     "2024"
+    ],
+    [
+     "nuevo_negocio",
+     "buildings",
+     "nb_inicio_en_enero",
+     "2023"
+    ],
+    [
+     "nuevo_negocio",
+     "buildings",
+     "nb_inicio_en_enero",
+     "2024"
+    ],
+    [
+     "nuevo_negocio",
+     "contents",
+     "nb_inicio_en_enero",
+     "2023"
+    ],
+    [
+     "nuevo_negocio",
+     "contents",
+     "nb_inicio_en_enero",
+     "2024"
+    ]
+   ],
+   "formato": "pct0",
+   "valor": "7"
+  },
+  {
+   "id": "nb-08",
+   "contexto": "entre el 7 % y el 8 %",
+   "max": [
+    [
+     "nuevo_negocio",
+     "motor",
+     "nb_inicio_en_enero",
+     "2023"
+    ],
+    [
+     "nuevo_negocio",
+     "motor",
+     "nb_inicio_en_enero",
+     "2024"
+    ],
+    [
+     "nuevo_negocio",
+     "buildings",
+     "nb_inicio_en_enero",
+     "2023"
+    ],
+    [
+     "nuevo_negocio",
+     "buildings",
+     "nb_inicio_en_enero",
+     "2024"
+    ],
+    [
+     "nuevo_negocio",
+     "contents",
+     "nb_inicio_en_enero",
+     "2023"
+    ],
+    [
+     "nuevo_negocio",
+     "contents",
+     "nb_inicio_en_enero",
+     "2024"
+    ]
+   ],
+   "formato": "pct0",
+   "valor": "8"
+  },
+  {
+   "id": "nb-09",
+   "contexto": "el PSI máximo es 0,05",
+   "max": [
+    [
+     "nuevo_negocio",
+     "motor",
+     "psi_max_nb_sin_antiguedad_exposicion_ni_contactos"
+    ],
+    [
+     "nuevo_negocio",
+     "buildings",
+     "psi_max_nb_sin_antiguedad_exposicion_ni_contactos"
+    ],
+    [
+     "nuevo_negocio",
+     "contents",
+     "psi_max_nb_sin_antiguedad_exposicion_ni_contactos"
+    ]
+   ],
+   "formato": "dec2",
+   "valor": "0,05"
+  },
+  {
+   "id": "nb-10-broker-motor",
+   "contexto": "70 % broker, 25 % directo y 5 % comparador",
+   "ruta": [
+    "nuevo_negocio",
+    "motor",
+    "canal_por_grupo",
+    "NB_2025",
+    "broker"
+   ],
+   "formato": "pct0",
+   "valor": "70"
+  },
+  {
+   "id": "nb-10-broker-buildings",
+   "contexto": "70 % broker, 25 % directo y 5 % comparador",
+   "ruta": [
+    "nuevo_negocio",
+    "buildings",
+    "canal_por_grupo",
+    "NB_2025",
+    "broker"
+   ],
+   "formato": "pct0",
+   "valor": "70"
+  },
+  {
+   "id": "nb-10-broker-contents",
+   "contexto": "70 % broker, 25 % directo y 5 % comparador",
+   "ruta": [
+    "nuevo_negocio",
+    "contents",
+    "canal_por_grupo",
+    "NB_2025",
+    "broker"
+   ],
+   "formato": "pct0",
+   "valor": "70"
+  },
+  {
+   "id": "nb-10-direct-motor",
+   "contexto": "70 % broker, 25 % directo y 5 % comparador",
+   "ruta": [
+    "nuevo_negocio",
+    "motor",
+    "canal_por_grupo",
+    "NB_2025",
+    "direct"
+   ],
+   "formato": "pct0",
+   "valor": "25"
+  },
+  {
+   "id": "nb-10-direct-buildings",
+   "contexto": "70 % broker, 25 % directo y 5 % comparador",
+   "ruta": [
+    "nuevo_negocio",
+    "buildings",
+    "canal_por_grupo",
+    "NB_2025",
+    "direct"
+   ],
+   "formato": "pct0",
+   "valor": "25"
+  },
+  {
+   "id": "nb-10-direct-contents",
+   "contexto": "70 % broker, 25 % directo y 5 % comparador",
+   "ruta": [
+    "nuevo_negocio",
+    "contents",
+    "canal_por_grupo",
+    "NB_2025",
+    "direct"
+   ],
+   "formato": "pct0",
+   "valor": "25"
+  },
+  {
+   "id": "nb-10-comparison_site-motor",
+   "contexto": "70 % broker, 25 % directo y 5 % comparador",
+   "ruta": [
+    "nuevo_negocio",
+    "motor",
+    "canal_por_grupo",
+    "NB_2025",
+    "comparison_site"
+   ],
+   "formato": "pct0",
+   "valor": "5"
+  },
+  {
+   "id": "nb-10-comparison_site-buildings",
+   "contexto": "70 % broker, 25 % directo y 5 % comparador",
+   "ruta": [
+    "nuevo_negocio",
+    "buildings",
+    "canal_por_grupo",
+    "NB_2025",
+    "comparison_site"
+   ],
+   "formato": "pct0",
+   "valor": "5"
+  },
+  {
+   "id": "nb-10-comparison_site-contents",
+   "contexto": "70 % broker, 25 % directo y 5 % comparador",
+   "ruta": [
+    "nuevo_negocio",
+    "contents",
+    "canal_por_grupo",
+    "NB_2025",
+    "comparison_site"
+   ],
+   "formato": "pct0",
+   "valor": "5"
+  },
+  {
+   "id": "nb-11-motor",
+   "contexto": "del 9 % de la exposición en 2024 al 77 % en 2025",
+   "ruta": [
+    "nuevo_negocio",
+    "motor",
+    "cuota_nb_exposicion_2024"
+   ],
+   "formato": "pct0",
+   "valor": "9"
+  },
+  {
+   "id": "nb-12-motor",
+   "contexto": "del 9 % de la exposición en 2024 al 77 % en 2025",
+   "ruta": [
+    "nuevo_negocio",
+    "motor",
+    "cuota_nb_exposicion_2025"
+   ],
+   "formato": "pct0",
+   "valor": "77"
+  },
+  {
+   "id": "nb-11-buildings",
+   "contexto": "del 9 % de la exposición en 2024 al 77 % en 2025",
+   "ruta": [
+    "nuevo_negocio",
+    "buildings",
+    "cuota_nb_exposicion_2024"
+   ],
+   "formato": "pct0",
+   "valor": "9"
+  },
+  {
+   "id": "nb-12-buildings",
+   "contexto": "del 9 % de la exposición en 2024 al 77 % en 2025",
+   "ruta": [
+    "nuevo_negocio",
+    "buildings",
+    "cuota_nb_exposicion_2025"
+   ],
+   "formato": "pct0",
+   "valor": "77"
+  },
+  {
+   "id": "nb-11-contents",
+   "contexto": "del 9 % de la exposición en 2024 al 77 % en 2025",
+   "ruta": [
+    "nuevo_negocio",
+    "contents",
+    "cuota_nb_exposicion_2024"
+   ],
+   "formato": "pct0",
+   "valor": "9"
+  },
+  {
+   "id": "nb-12-contents",
+   "contexto": "del 9 % de la exposición en 2024 al 77 % en 2025",
+   "ruta": [
+    "nuevo_negocio",
+    "contents",
+    "cuota_nb_exposicion_2025"
+   ],
+   "formato": "pct0",
+   "valor": "77"
+  },
+  {
+   "id": "nb-13",
+   "contexto": "es 1,30 en el emergente (697 siniestros) y 1,39 en el desarrollado (6.570)",
+   "ruta": [
+    "nuevo_negocio",
+    "motor",
+    "rel_nb_emerging",
+    "frecuencia"
+   ],
+   "formato": "dec2",
+   "valor": "1,30"
+  },
+  {
+   "id": "nb-14",
+   "contexto": "es 1,30 en el emergente (697 siniestros) y 1,39 en el desarrollado (6.570)",
+   "ruta": [
+    "nuevo_negocio",
+    "motor",
+    "rel_nb_emerging",
+    "siniestros_nb"
+   ],
+   "formato": "int",
+   "valor": "697"
+  },
+  {
+   "id": "nb-15",
+   "contexto": "es 1,30 en el emergente (697 siniestros) y 1,39 en el desarrollado (6.570)",
+   "ruta": [
+    "nuevo_negocio",
+    "motor",
+    "rel_nb_developed",
+    "frecuencia"
+   ],
+   "formato": "dec2",
+   "valor": "1,39"
+  },
+  {
+   "id": "nb-16",
+   "contexto": "es 1,30 en el emergente (697 siniestros) y 1,39 en el desarrollado (6.570)",
+   "ruta": [
+    "nuevo_negocio",
+    "motor",
+    "rel_nb_developed",
+    "siniestros_nb"
+   ],
+   "formato": "int",
+   "valor": "6.570"
+  },
+  {
+   "id": "nb-17",
+   "contexto": "queda un 20 % por encima de la mezcla de 2024",
+   "ruta": [
+    "nuevo_negocio",
+    "motor",
+    "efecto_mezcla_2025_sobre_2024",
+    "1.297"
+   ],
+   "formato": "adpct0",
+   "valor": "20"
+  },
+  {
+   "id": "nb-18",
+   "contexto": "con la segunda, un 26 %",
+   "ruta": [
+    "nuevo_negocio",
+    "motor",
+    "efecto_mezcla_2025_sobre_2024",
+    "1.395"
+   ],
+   "formato": "adpct0",
+   "valor": "26"
+  },
+  {
+   "id": "nb-19",
+   "contexto": "77 siniestros de nuevo negocio en edificios y 102 en contenidos",
+   "ruta": [
+    "nuevo_negocio",
+    "buildings",
+    "rel_nb_emerging",
+    "siniestros_nb"
+   ],
+   "formato": "int",
+   "valor": "77"
+  },
+  {
+   "id": "nb-20",
+   "contexto": "77 siniestros de nuevo negocio en edificios y 102 en contenidos",
+   "ruta": [
+    "nuevo_negocio",
+    "contents",
+    "rel_nb_emerging",
+    "siniestros_nb"
+   ],
+   "formato": "int",
+   "valor": "102"
+  },
+  {
+   "id": "nb-21",
+   "contexto": "relatividades de 0,94 y 1,37 frente a 1,05 y 1,16 en el desarrollado",
+   "ruta": [
+    "nuevo_negocio",
+    "buildings",
+    "rel_nb_emerging",
+    "frecuencia"
+   ],
+   "formato": "dec2",
+   "valor": "0,94"
+  },
+  {
+   "id": "nb-22",
+   "contexto": "relatividades de 0,94 y 1,37 frente a 1,05 y 1,16 en el desarrollado",
+   "ruta": [
+    "nuevo_negocio",
+    "contents",
+    "rel_nb_emerging",
+    "frecuencia"
+   ],
+   "formato": "dec2",
+   "valor": "1,37"
+  },
+  {
+   "id": "nb-23",
+   "contexto": "relatividades de 0,94 y 1,37 frente a 1,05 y 1,16 en el desarrollado",
+   "ruta": [
+    "nuevo_negocio",
+    "buildings",
+    "rel_nb_developed",
+    "frecuencia"
+   ],
+   "formato": "dec2",
+   "valor": "1,05"
+  },
+  {
+   "id": "nb-24",
+   "contexto": "relatividades de 0,94 y 1,37 frente a 1,05 y 1,16 en el desarrollado",
+   "ruta": [
+    "nuevo_negocio",
+    "contents",
+    "rel_nb_developed",
+    "frecuencia"
+   ],
+   "formato": "dec2",
+   "valor": "1,16"
+  },
+  {
+   "id": "tr-01",
+   "contexto": "Lunas y granizo tiene 1,55 veces la frecuencia del desarrollado y 0,63 veces su severidad",
+   "ruta": [
+    "mercados",
+    "razon_frecuencia_2023",
+    "motor/glass_hail"
+   ],
+   "formato": "dec2",
+   "valor": "1,55"
+  },
+  {
+   "id": "tr-02",
+   "contexto": "Lunas y granizo tiene 1,55 veces la frecuencia del desarrollado y 0,63 veces su severidad",
+   "ruta": [
+    "mercados",
+    "razon_severidad_2023",
+    "motor/glass_hail"
+   ],
+   "formato": "dec2",
+   "valor": "0,63"
+  },
+  {
+   "id": "tr-03",
+   "contexto": "lesiones corporales, 1,37 y 0,45",
+   "ruta": [
+    "mercados",
+    "razon_frecuencia_2023",
+    "motor/bodily_injury"
+   ],
+   "formato": "dec2",
+   "valor": "1,37"
+  },
+  {
+   "id": "tr-04",
+   "contexto": "lesiones corporales, 1,37 y 0,45",
+   "ruta": [
+    "mercados",
+    "razon_severidad_2023",
+    "motor/bodily_injury"
+   ],
+   "formato": "dec2",
+   "valor": "0,45"
+  },
+  {
+   "id": "tr-05",
+   "contexto": "escape de agua en edificios, 0,69 y 0,65",
+   "ruta": [
+    "mercados",
+    "razon_frecuencia_2023",
+    "buildings/escape_of_water"
+   ],
+   "formato": "dec2",
+   "valor": "0,69"
+  },
+  {
+   "id": "tr-06",
+   "contexto": "escape de agua en edificios, 0,69 y 0,65",
+   "ruta": [
+    "mercados",
+    "razon_severidad_2023",
+    "buildings/escape_of_water"
+   ],
+   "formato": "dec2",
+   "valor": "0,65"
+  },
+  {
+   "id": "tr-07",
+   "contexto": "incendio, 2,32 y 1,30 con solo 49 siniestros",
+   "ruta": [
+    "mercados",
+    "razon_frecuencia_2023",
+    "buildings/fire"
+   ],
+   "formato": "dec2",
+   "valor": "2,32"
+  },
+  {
+   "id": "tr-08",
+   "contexto": "incendio, 2,32 y 1,30 con solo 49 siniestros",
+   "ruta": [
+    "mercados",
+    "razon_severidad_2023",
+    "buildings/fire"
+   ],
+   "formato": "dec2",
+   "valor": "1,30"
+  },
+  {
+   "id": "tr-09",
+   "contexto": "incendio, 2,32 y 1,30 con solo 49 siniestros",
+   "ruta": [
+    "mercados",
+    "siniestros_emergentes_2023",
+    "buildings/fire"
+   ],
+   "formato": "int",
+   "valor": "49"
+  },
+  {
+   "id": "tr-10",
+   "contexto": "15,5 días de granizo frente a 6,5",
+   "ruta": [
+    "clima",
+    "medias_2023_2024",
+    "emerging",
+    "hail_days"
+   ],
+   "formato": "dec1",
+   "valor": "15,5"
+  },
+  {
+   "id": "tr-11",
+   "contexto": "15,5 días de granizo frente a 6,5",
+   "ruta": [
+    "clima",
+    "medias_2023_2024",
+    "developed",
+    "hail_days"
+   ],
+   "formato": "dec1",
+   "valor": "6,5"
+  },
+  {
+   "id": "tr-12",
+   "contexto": "un índice de incendio forestal de 0,53 frente a 0,14",
+   "ruta": [
+    "clima",
+    "medias_2023_2024",
+    "emerging",
+    "wildfire_index"
+   ],
+   "formato": "dec2",
+   "valor": "0,53"
+  },
+  {
+   "id": "tr-13",
+   "contexto": "un índice de incendio forestal de 0,53 frente a 0,14",
+   "ruta": [
+    "clima",
+    "medias_2023_2024",
+    "developed",
+    "wildfire_index"
+   ],
+   "formato": "dec2",
+   "valor": "0,14"
+  },
+  {
+   "id": "tr-14",
+   "contexto": "19,3 días de helada frente a 37,1",
+   "ruta": [
+    "clima",
+    "medias_2023_2024",
+    "emerging",
+    "freezing_days"
+   ],
+   "formato": "dec1",
+   "valor": "19,3"
+  },
+  {
+   "id": "tr-15",
+   "contexto": "19,3 días de helada frente a 37,1",
+   "ruta": [
+    "clima",
+    "medias_2023_2024",
+    "developed",
+    "freezing_days"
+   ],
+   "formato": "dec1",
+   "valor": "37,1"
+  },
+  {
+   "id": "tr-16",
+   "contexto": "En los cinco tramos de días de granizo con al menos 50 siniestros",
+   "longitud": [
+    "clima",
+    "lunas_por_granizo_tramos_con_50_siniestros_en_ambos"
+   ],
+   "igual": 5
+  },
+  {
+   "id": "tr-17",
+   "contexto": "va de 0,88 a 1,26 veces la desarrollada",
+   "min": [
+    [
+     "clima",
+     "lunas_por_granizo_tramos_con_50_siniestros_en_ambos",
+     0,
+     "razon"
+    ],
+    [
+     "clima",
+     "lunas_por_granizo_tramos_con_50_siniestros_en_ambos",
+     1,
+     "razon"
+    ],
+    [
+     "clima",
+     "lunas_por_granizo_tramos_con_50_siniestros_en_ambos",
+     2,
+     "razon"
+    ],
+    [
+     "clima",
+     "lunas_por_granizo_tramos_con_50_siniestros_en_ambos",
+     3,
+     "razon"
+    ],
+    [
+     "clima",
+     "lunas_por_granizo_tramos_con_50_siniestros_en_ambos",
+     4,
+     "razon"
+    ]
+   ],
+   "formato": "dec2",
+   "valor": "0,88"
+  },
+  {
+   "id": "tr-18",
+   "contexto": "va de 0,88 a 1,26 veces la desarrollada",
+   "max": [
+    [
+     "clima",
+     "lunas_por_granizo_tramos_con_50_siniestros_en_ambos",
+     0,
+     "razon"
+    ],
+    [
+     "clima",
+     "lunas_por_granizo_tramos_con_50_siniestros_en_ambos",
+     1,
+     "razon"
+    ],
+    [
+     "clima",
+     "lunas_por_granizo_tramos_con_50_siniestros_en_ambos",
+     2,
+     "razon"
+    ],
+    [
+     "clima",
+     "lunas_por_granizo_tramos_con_50_siniestros_en_ambos",
+     3,
+     "razon"
+    ],
+    [
+     "clima",
+     "lunas_por_granizo_tramos_con_50_siniestros_en_ambos",
+     4,
+     "razon"
+    ]
+   ],
+   "formato": "dec2",
+   "valor": "1,26"
+  },
+  {
+   "id": "tr-19",
+   "contexto": "1.389 años-exposición de autos con 30 o más días de granizo y 3.096 de edificios",
+   "ruta": [
+    "clima",
+    "exposicion_2023_fuera_de_soporte",
+    "motor_hail_days_desde_30",
+    "emerging"
+   ],
+   "formato": "int",
+   "valor": "1.389"
+  },
+  {
+   "id": "tr-20",
+   "contexto": "1.389 años-exposición de autos con 30 o más días de granizo y 3.096 de edificios",
+   "ruta": [
+    "clima",
+    "exposicion_2023_fuera_de_soporte",
+    "buildings_wildfire_index_desde_0.6",
+    "emerging"
+   ],
+   "formato": "int",
+   "valor": "3.096"
+  },
+  {
+   "id": "tr-21",
+   "contexto": "frente a 8 y 1 en el desarrollado",
+   "ruta": [
+    "clima",
+    "exposicion_2023_fuera_de_soporte",
+    "motor_hail_days_desde_30",
+    "developed"
+   ],
+   "formato": "int",
+   "valor": "8"
+  },
+  {
+   "id": "tr-22",
+   "contexto": "frente a 8 y 1 en el desarrollado",
+   "ruta": [
+    "clima",
+    "exposicion_2023_fuera_de_soporte",
+    "buildings_wildfire_index_desde_0.6",
+    "developed"
+   ],
+   "formato": "int",
+   "valor": "1"
+  },
+  {
+   "id": "tr-23",
+   "contexto": "En 58 niveles con al menos 100 siniestros emergentes, fuera del NCB",
+   "ruta": [
+    "relatividades",
+    "niveles_con_100_siniestros_sin_ncb"
+   ],
+   "formato": "int",
+   "valor": "58"
+  },
+  {
+   "id": "tr-24",
+   "contexto": "una mediana del 1,8 % y un 11 % en el percentil 90",
+   "ruta": [
+    "relatividades",
+    "mediana_abs_dif_relativa_sin_ncb"
+   ],
+   "formato": "pct1",
+   "valor": "1,8"
+  },
+  {
+   "id": "tr-25",
+   "contexto": "una mediana del 1,8 % y un 11 % en el percentil 90",
+   "ruta": [
+    "relatividades",
+    "p90_abs_dif_relativa_sin_ncb"
+   ],
+   "formato": "pct0",
+   "valor": "11"
+  },
+  {
+   "id": "tr-26",
+   "contexto": "el emergente da 1,73 y el desarrollado 2,56",
+   "buscar": {
+    "lista": [
+     "relatividades",
+     "ncb"
+    ],
+    "campos": {
+     "nivel": "0"
+    },
+    "clave": "relatividad_emerging"
+   },
+   "formato": "dec2",
+   "valor": "1,73"
+  },
+  {
+   "id": "tr-27",
+   "contexto": "el emergente da 1,73 y el desarrollado 2,56",
+   "buscar": {
+    "lista": [
+     "relatividades",
+     "ncb"
+    ],
+    "campos": {
+     "nivel": "0"
+    },
+    "clave": "relatividad_developed"
+   },
+   "formato": "dec2",
+   "valor": "2,56"
+  },
+  {
+   "id": "tr-28",
+   "contexto": "ninguno de los 15 peligros (p mínimo 0,13)",
+   "ruta": [
+    "mercados",
+    "retrasos",
+    "peligros"
+   ],
+   "formato": "int",
+   "valor": "15"
+  },
+  {
+   "id": "tr-29",
+   "contexto": "ninguno de los 15 peligros (p mínimo 0,13)",
+   "ruta": [
+    "mercados",
+    "retrasos",
+    "p_valor_min"
+   ],
+   "formato": "dec2",
+   "valor": "0,13"
+  },
+  {
+   "id": "cl-01",
+   "contexto": "11,4 días de granizo frente a 17,1 en 2024",
+   "buscar": {
+    "lista": [
+     "clima",
+     "sensibilidad_2025"
+    ],
+    "campos": {
+     "ramo": "motor",
+     "peligro": "glass_hail"
+    },
+    "clave": "media_2025"
+   },
+   "formato": "dec1",
+   "valor": "11,4"
+  },
+  {
+   "id": "cl-02",
+   "contexto": "11,4 días de granizo frente a 17,1 en 2024",
+   "buscar": {
+    "lista": [
+     "clima",
+     "sensibilidad_2025"
+    ],
+    "campos": {
+     "ramo": "motor",
+     "peligro": "glass_hail"
+    },
+    "clave": "media_2024"
+   },
+   "formato": "dec1",
+   "valor": "17,1"
+  },
+  {
+   "id": "cl-03",
+   "contexto": "28,9 días de helada frente a 17,5",
+   "buscar": {
+    "lista": [
+     "clima",
+     "sensibilidad_2025"
+    ],
+    "campos": {
+     "ramo": "buildings",
+     "peligro": "escape_of_water"
+    },
+    "clave": "media_2025"
+   },
+   "formato": "dec1",
+   "valor": "28,9"
+  },
+  {
+   "id": "cl-04",
+   "contexto": "28,9 días de helada frente a 17,5",
+   "buscar": {
+    "lista": [
+     "clima",
+     "sensibilidad_2025"
+    ],
+    "campos": {
+     "ramo": "buildings",
+     "peligro": "escape_of_water"
+    },
+    "clave": "media_2024"
+   },
+   "formato": "dec1",
+   "valor": "17,5"
+  },
+  {
+   "id": "cl-05",
+   "contexto": "sequía estival de 0,60 frente a 0,71",
+   "buscar": {
+    "lista": [
+     "clima",
+     "sensibilidad_2025"
+    ],
+    "campos": {
+     "ramo": "buildings",
+     "peligro": "subsidence"
+    },
+    "clave": "media_2025"
+   },
+   "formato": "dec2",
+   "valor": "0,60"
+  },
+  {
+   "id": "cl-06",
+   "contexto": "sequía estival de 0,60 frente a 0,71",
+   "buscar": {
+    "lista": [
+     "clima",
+     "sensibilidad_2025"
+    ],
+    "campos": {
+     "ramo": "buildings",
+     "peligro": "subsidence"
+    },
+    "clave": "media_2024"
+   },
+   "formato": "dec2",
+   "valor": "0,71"
+  },
+  {
+   "id": "cl-07",
+   "contexto": "correlación de 0,23 y de −0,24 entre 2024 y 2025",
+   "ruta": [
+    "clima",
+    "correlacion_entre_anios",
+    "hail_days",
+    "2024_2025"
+   ],
+   "formato": "dec2",
+   "valor": "0,23"
+  },
+  {
+   "id": "cl-08",
+   "contexto": "correlación de 0,23 y de −0,24 entre 2024 y 2025",
+   "ruta": [
+    "clima",
+    "correlacion_entre_anios",
+    "dry_summer_index",
+    "2024_2025"
+   ],
+   "formato": "sdec2",
+   "valor": "−0,24"
+  },
+  {
+   "id": "cl-17",
+   "contexto": "con correlación interanual de 0,87 a 0,95",
+   "min": [
+    [
+     "clima",
+     "correlacion_entre_anios",
+     "wind_exposure_index",
+     "2023_2024"
+    ],
+    [
+     "clima",
+     "correlacion_entre_anios",
+     "wind_exposure_index",
+     "2024_2025"
+    ],
+    [
+     "clima",
+     "correlacion_entre_anios",
+     "rainfall_mm",
+     "2023_2024"
+    ],
+    [
+     "clima",
+     "correlacion_entre_anios",
+     "rainfall_mm",
+     "2024_2025"
+    ],
+    [
+     "clima",
+     "correlacion_entre_anios",
+     "wildfire_index",
+     "2023_2024"
+    ],
+    [
+     "clima",
+     "correlacion_entre_anios",
+     "wildfire_index",
+     "2024_2025"
+    ]
+   ],
+   "formato": "dec2",
+   "valor": "0,87"
+  },
+  {
+   "id": "cl-18",
+   "contexto": "con correlación interanual de 0,87 a 0,95",
+   "max": [
+    [
+     "clima",
+     "correlacion_entre_anios",
+     "wind_exposure_index",
+     "2023_2024"
+    ],
+    [
+     "clima",
+     "correlacion_entre_anios",
+     "wind_exposure_index",
+     "2024_2025"
+    ],
+    [
+     "clima",
+     "correlacion_entre_anios",
+     "rainfall_mm",
+     "2023_2024"
+    ],
+    [
+     "clima",
+     "correlacion_entre_anios",
+     "rainfall_mm",
+     "2024_2025"
+    ],
+    [
+     "clima",
+     "correlacion_entre_anios",
+     "wildfire_index",
+     "2023_2024"
+    ],
+    [
+     "clima",
+     "correlacion_entre_anios",
+     "wildfire_index",
+     "2024_2025"
+    ]
+   ],
+   "formato": "dec2",
+   "valor": "0,95"
+  },
+  {
+   "id": "cl-09",
+   "contexto": "lunas −24 %",
+   "buscar": {
+    "lista": [
+     "clima",
+     "sensibilidad_2025"
+    ],
+    "campos": {
+     "ramo": "motor",
+     "peligro": "glass_hail"
+    },
+    "clave": "razon"
+   },
+   "formato": "dpct0",
+   "valor": "−24"
+  },
+  {
+   "id": "cl-10",
+   "contexto": "escape de agua +12 % en edificios y +19 % en contenidos",
+   "buscar": {
+    "lista": [
+     "clima",
+     "sensibilidad_2025"
+    ],
+    "campos": {
+     "ramo": "buildings",
+     "peligro": "escape_of_water"
+    },
+    "clave": "razon"
+   },
+   "formato": "dpct0",
+   "valor": "+12"
+  },
+  {
+   "id": "cl-11",
+   "contexto": "escape de agua +12 % en edificios y +19 % en contenidos",
+   "buscar": {
+    "lista": [
+     "clima",
+     "sensibilidad_2025"
+    ],
+    "campos": {
+     "ramo": "contents",
+     "peligro": "escape_of_water"
+    },
+    "clave": "razon"
+   },
+   "formato": "dpct0",
+   "valor": "+19"
+  },
+  {
+   "id": "cl-12",
+   "contexto": "hundimiento −25 % con solo 52 siniestros",
+   "buscar": {
+    "lista": [
+     "clima",
+     "sensibilidad_2025"
+    ],
+    "campos": {
+     "ramo": "buildings",
+     "peligro": "subsidence"
+    },
+    "clave": "razon"
+   },
+   "formato": "dpct0",
+   "valor": "−25"
+  },
+  {
+   "id": "cl-13",
+   "contexto": "hundimiento −25 % con solo 52 siniestros",
+   "buscar": {
+    "lista": [
+     "clima",
+     "sensibilidad_2025"
+    ],
+    "campos": {
+     "ramo": "buildings",
+     "peligro": "subsidence"
+    },
+    "clave": "siniestros_2023_2024"
+   },
+   "formato": "int",
+   "valor": "52"
+  },
+  {
+   "id": "cl-14",
+   "contexto": "tormenta −4 %",
+   "buscar": {
+    "lista": [
+     "clima",
+     "sensibilidad_2025"
+    ],
+    "campos": {
+     "ramo": "buildings",
+     "peligro": "storm"
+    },
+    "clave": "razon"
+   },
+   "formato": "dpct0",
+   "valor": "−4"
+  },
+  {
+   "id": "cl-15",
+   "contexto": "−1,5 % en autos y +2,6 % en contenidos",
+   "buscar": {
+    "lista": [
+     "clima",
+     "sensibilidad_2025"
+    ],
+    "campos": {
+     "ramo": "motor",
+     "peligro": "glass_hail"
+    },
+    "clave": "efecto_aprox_en_coste_del_ramo"
+   },
+   "formato": "spct1",
+   "valor": "−1,5"
+  },
+  {
+   "id": "cl-16",
+   "contexto": "−1,5 % en autos y +2,6 % en contenidos",
+   "buscar": {
+    "lista": [
+     "clima",
+     "sensibilidad_2025"
+    ],
+    "campos": {
+     "ramo": "contents",
+     "peligro": "escape_of_water"
+    },
+    "clave": "efecto_aprox_en_coste_del_ramo"
+   },
+   "formato": "spct1",
+   "valor": "+2,6"
+  },
+  {
+   "id": "pc-01",
+   "contexto": "con sus denominadores, 0,69 y 0,49",
+   "ruta": [
+    "prima_comercial",
+    "denominadores",
+    "direct"
+   ],
+   "formato": "dec2",
+   "valor": "0,69"
+  },
+  {
+   "id": "pc-02",
+   "contexto": "con sus denominadores, 0,69 y 0,49",
+   "ruta": [
+    "prima_comercial",
+    "denominadores",
+    "broker"
+   ],
+   "formato": "dec2",
+   "valor": "0,49"
+  },
+  {
+   "id": "pc-03",
+   "contexto": "su mediana va de 499 a 515 CU en todos los tramos",
+   "min": [
+    [
+     "prima_comercial",
+     "prima_escrita_mediana_por_tramo_exposicion",
+     "motor",
+     "(0.0, 0.25]"
+    ],
+    [
+     "prima_comercial",
+     "prima_escrita_mediana_por_tramo_exposicion",
+     "motor",
+     "(0.25, 0.5]"
+    ],
+    [
+     "prima_comercial",
+     "prima_escrita_mediana_por_tramo_exposicion",
+     "motor",
+     "(0.5, 0.75]"
+    ],
+    [
+     "prima_comercial",
+     "prima_escrita_mediana_por_tramo_exposicion",
+     "motor",
+     "(0.75, 0.99]"
+    ],
+    [
+     "prima_comercial",
+     "prima_escrita_mediana_por_tramo_exposicion",
+     "motor",
+     "(0.99, 1.01]"
+    ]
+   ],
+   "formato": "int",
+   "valor": "499"
+  },
+  {
+   "id": "pc-04",
+   "contexto": "su mediana va de 499 a 515 CU en todos los tramos",
+   "max": [
+    [
+     "prima_comercial",
+     "prima_escrita_mediana_por_tramo_exposicion",
+     "motor",
+     "(0.0, 0.25]"
+    ],
+    [
+     "prima_comercial",
+     "prima_escrita_mediana_por_tramo_exposicion",
+     "motor",
+     "(0.25, 0.5]"
+    ],
+    [
+     "prima_comercial",
+     "prima_escrita_mediana_por_tramo_exposicion",
+     "motor",
+     "(0.5, 0.75]"
+    ],
+    [
+     "prima_comercial",
+     "prima_escrita_mediana_por_tramo_exposicion",
+     "motor",
+     "(0.75, 0.99]"
+    ],
+    [
+     "prima_comercial",
+     "prima_escrita_mediana_por_tramo_exposicion",
+     "motor",
+     "(0.99, 1.01]"
+    ]
+   ],
+   "formato": "int",
+   "valor": "515"
+  },
+  {
+   "id": "pc-05",
+   "contexto": "B00250679 sigue a B00213756, que va del 15 al 21 de noviembre",
+   "ruta": [
+    "prima_comercial",
+    "referencias",
+    "polizas_con_otra_fila_2025",
+    0,
+    "referencia"
+   ],
+   "igual": "B00250679"
+  },
+  {
+   "id": "pc-06",
+   "contexto": "B00250679 sigue a B00213756, que va del 15 al 21 de noviembre",
+   "ruta": [
+    "prima_comercial",
+    "referencias",
+    "polizas_con_otra_fila_2025",
+    0,
+    "filas",
+    0,
+    "row_id"
+   ],
+   "igual": "B00213756"
+  },
+  {
+   "id": "pc-07",
+   "contexto": "B00250679 sigue a B00213756, que va del 15 al 21 de noviembre",
+   "ruta": [
+    "prima_comercial",
+    "referencias",
+    "polizas_con_otra_fila_2025",
+    0,
+    "filas",
+    0,
+    "period_start"
+   ],
+   "igual": "2025-11-15"
+  },
+  {
+   "id": "pc-08",
+   "contexto": "B00250679 sigue a B00213756, que va del 15 al 21 de noviembre",
+   "ruta": [
+    "prima_comercial",
+    "referencias",
+    "polizas_con_otra_fila_2025",
+    0,
+    "filas",
+    0,
+    "period_end"
+   ],
+   "igual": "2025-11-21"
+  },
+  {
+   "id": "pc-09",
+   "contexto": "B00250679 sigue a B00213756, que va del 15 al 21 de noviembre",
+   "ruta": [
+    "prima_comercial",
+    "referencias",
+    "polizas_con_otra_fila_2025",
+    0,
+    "filas",
+    1,
+    "row_id"
+   ],
+   "igual": "B00250679"
+  },
+  {
+   "id": "pc-10",
+   "contexto": "C00314425 precede a C00318346, del 7 de febrero al 31 de diciembre",
+   "ruta": [
+    "prima_comercial",
+    "referencias",
+    "polizas_con_otra_fila_2025",
+    1,
+    "filas",
+    0,
+    "row_id"
+   ],
+   "igual": "C00314425"
+  },
+  {
+   "id": "pc-11",
+   "contexto": "C00314425 precede a C00318346, del 7 de febrero al 31 de diciembre",
+   "ruta": [
+    "prima_comercial",
+    "referencias",
+    "polizas_con_otra_fila_2025",
+    1,
+    "filas",
+    1,
+    "row_id"
+   ],
+   "igual": "C00318346"
+  },
+  {
+   "id": "pc-12",
+   "contexto": "C00314425 precede a C00318346, del 7 de febrero al 31 de diciembre",
+   "ruta": [
+    "prima_comercial",
+    "referencias",
+    "polizas_con_otra_fila_2025",
+    1,
+    "filas",
+    1,
+    "period_start"
+   ],
+   "igual": "2025-02-07"
+  },
+  {
+   "id": "pc-13",
+   "contexto": "C00314425 precede a C00318346, del 7 de febrero al 31 de diciembre",
+   "ruta": [
+    "prima_comercial",
+    "referencias",
+    "polizas_con_otra_fila_2025",
+    1,
+    "filas",
+    1,
+    "period_end"
+   ],
+   "igual": "2025-12-31"
+  },
+  {
+   "id": "pc-14",
+   "contexto": "dos referencias son tramos de una póliza con otra fila en 2025",
+   "longitud": [
+    "prima_comercial",
+    "referencias",
+    "polizas_con_otra_fila_2025"
+   ],
+   "igual": 2
+  },
+  {
+   "id": "pc-15",
+   "contexto": "entre 1,2 y 3,1 veces la prima escrita media",
+   "min": [
+    [
+     "prima_comercial",
+     "orden_de_magnitud_con_coste_observado",
+     "motor",
+     "razon_directa_sobre_prima_escrita"
+    ],
+    [
+     "prima_comercial",
+     "orden_de_magnitud_con_coste_observado",
+     "motor",
+     "razon_broker_sobre_prima_escrita"
+    ],
+    [
+     "prima_comercial",
+     "orden_de_magnitud_con_coste_observado",
+     "buildings",
+     "razon_directa_sobre_prima_escrita"
+    ],
+    [
+     "prima_comercial",
+     "orden_de_magnitud_con_coste_observado",
+     "buildings",
+     "razon_broker_sobre_prima_escrita"
+    ],
+    [
+     "prima_comercial",
+     "orden_de_magnitud_con_coste_observado",
+     "contents",
+     "razon_directa_sobre_prima_escrita"
+    ],
+    [
+     "prima_comercial",
+     "orden_de_magnitud_con_coste_observado",
+     "contents",
+     "razon_broker_sobre_prima_escrita"
+    ]
+   ],
+   "formato": "dec1",
+   "valor": "1,2"
+  },
+  {
+   "id": "pc-16",
+   "contexto": "entre 1,2 y 3,1 veces la prima escrita media",
+   "max": [
+    [
+     "prima_comercial",
+     "orden_de_magnitud_con_coste_observado",
+     "motor",
+     "razon_directa_sobre_prima_escrita"
+    ],
+    [
+     "prima_comercial",
+     "orden_de_magnitud_con_coste_observado",
+     "motor",
+     "razon_broker_sobre_prima_escrita"
+    ],
+    [
+     "prima_comercial",
+     "orden_de_magnitud_con_coste_observado",
+     "buildings",
+     "razon_directa_sobre_prima_escrita"
+    ],
+    [
+     "prima_comercial",
+     "orden_de_magnitud_con_coste_observado",
+     "buildings",
+     "razon_broker_sobre_prima_escrita"
+    ],
+    [
+     "prima_comercial",
+     "orden_de_magnitud_con_coste_observado",
+     "contents",
+     "razon_directa_sobre_prima_escrita"
+    ],
+    [
+     "prima_comercial",
+     "orden_de_magnitud_con_coste_observado",
+     "contents",
+     "razon_broker_sobre_prima_escrita"
+    ]
+   ],
+   "formato": "dec1",
+   "valor": "3,1"
+  },
+  {
+   "id": "pc-17",
+   "contexto": "la siniestralidad observada de edificios fue 1,49 en 2023",
+   "buscar": {
+    "lista": [
+     "mercados",
+     "ramo_anio"
+    ],
+    "campos": {
+     "mercado": "emerging",
+     "ramo": "buildings",
+     "anio": 2023
+    },
+    "clave": "siniestralidad_prima_escrita"
+   },
+   "formato": "dec2",
+   "valor": "1,49"
+  },
+  {
+   "id": "pc-18-motor",
+   "contexto": "aunque el 5 % de las filas usa ese canal",
+   "ruta": [
+    "prima_comercial",
+    "canal_comparison_site_cuota_filas",
+    "motor"
+   ],
+   "formato": "pct0",
+   "valor": "5"
+  },
+  {
+   "id": "pc-18-buildings",
+   "contexto": "aunque el 5 % de las filas usa ese canal",
+   "ruta": [
+    "prima_comercial",
+    "canal_comparison_site_cuota_filas",
+    "buildings"
+   ],
+   "formato": "pct0",
+   "valor": "5"
+  },
+  {
+   "id": "pc-18-contents",
+   "contexto": "aunque el 5 % de las filas usa ese canal",
+   "ruta": [
+    "prima_comercial",
+    "canal_comparison_site_cuota_filas",
+    "contents"
+   ],
+   "formato": "pct0",
+   "valor": "5"
+  },
+  {
+   "id": "pc-19",
+   "contexto": "define el vacío como «not applicable»",
+   "buscar": {
+    "lista": [
+     "prima_comercial",
+     "gastos"
+    ],
+    "campos": {
+     "item": "commission_comparison_site"
+    },
+    "clave": "emerging"
+   },
+   "igual": null
+  },
+  {
+   "id": "va-01",
+   "contexto": "suman el 26 % del coste de 2023–2024 (el 2,9 % en el desarrollado)",
+   "ruta": [
+    "mercados",
+    "concentracion_top10",
+    "emerging",
+    "buildings"
+   ],
+   "formato": "pct0",
+   "valor": "26"
+  },
+  {
+   "id": "va-02",
+   "contexto": "suman el 26 % del coste de 2023–2024 (el 2,9 % en el desarrollado)",
+   "ruta": [
+    "mercados",
+    "concentracion_top10",
+    "developed",
+    "buildings"
+   ],
+   "formato": "pct1",
+   "valor": "2,9"
+  },
+  {
+   "id": "tr-34",
+   "contexto": "el 2,1 % del coste de lesiones corporales se reportó después de 730 días, y nada del de hundimiento",
+   "ruta": [
+    "mercados",
+    "cola_reporte",
+    "motor/bodily_injury/developed/2021",
+    "cuota_coste_mas_de_730"
+   ],
+   "formato": "pct1",
+   "valor": "2,1"
+  },
+  {
+   "id": "tr-35",
+   "contexto": "el 2,1 % del coste de lesiones corporales se reportó después de 730 días, y nada del de hundimiento",
+   "ruta": [
+    "mercados",
+    "cola_reporte",
+    "buildings/subsidence/developed/2021",
+    "cuota_coste_mas_de_730"
+   ],
+   "igual": 0.0
+  },
+  {
+   "id": "dv-01",
+   "contexto": "reproduzco los D² fuera de muestra de COD-S2-20261023-009: 0,06858, 0,06666 y −0,27353",
+   "ruta": [
+    "modelos",
+    "W2-B00",
+    "D2"
+   ],
+   "formato": "dec5",
+   "valor": "0,06858",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-02",
+   "contexto": "reproduzco los D² fuera de muestra de COD-S2-20261023-009: 0,06858, 0,06666 y −0,27353",
+   "ruta": [
+    "modelos",
+    "W2-B01",
+    "D2"
+   ],
+   "formato": "dec5",
+   "valor": "0,06666",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-03",
+   "contexto": "reproduzco los D² fuera de muestra de COD-S2-20261023-009: 0,06858, 0,06666 y −0,27353",
+   "ruta": [
+    "modelos",
+    "W2-B02",
+    "D2"
+   ],
+   "formato": "sdec5",
+   "valor": "−0,27353",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-04",
+   "contexto": "tiene un A/E de 1,55 en las 5.974 filas de nuevo negocio, mientras el GLM queda en 0,98",
+   "ruta": [
+    "modelos",
+    "W2-B00",
+    "por_negocio",
+    "NB",
+    "AE"
+   ],
+   "formato": "dec2",
+   "valor": "1,55",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-05",
+   "contexto": "tiene un A/E de 1,55 en las 5.974 filas de nuevo negocio, mientras el GLM queda en 0,98",
+   "ruta": [
+    "modelos",
+    "W2-B00",
+    "por_negocio",
+    "NB",
+    "filas"
+   ],
+   "formato": "int",
+   "valor": "5.974",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-06",
+   "contexto": "tiene un A/E de 1,55 en las 5.974 filas de nuevo negocio, mientras el GLM queda en 0,98",
+   "ruta": [
+    "modelos",
+    "W2-B01",
+    "por_negocio",
+    "NB",
+    "AE"
+   ],
+   "formato": "dec2",
+   "valor": "0,98",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-07-motor",
+   "contexto": "(77 % de exposición de nuevo negocio)",
+   "ruta": [
+    "cuota_nb_exposicion_test_2025",
+    "motor"
+   ],
+   "formato": "pct0",
+   "valor": "77",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-07-buildings",
+   "contexto": "(77 % de exposición de nuevo negocio)",
+   "ruta": [
+    "cuota_nb_exposicion_test_2025",
+    "buildings"
+   ],
+   "formato": "pct0",
+   "valor": "77",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-07-contents",
+   "contexto": "(77 % de exposición de nuevo negocio)",
+   "ruta": [
+    "cuota_nb_exposicion_test_2025",
+    "contents"
+   ],
+   "formato": "pct0",
+   "valor": "77",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-08",
+   "contexto": "multiplicar W2-B00 por 1,4 sube su D² de 0,054 a 0,080",
+   "ruta": [
+    "modelos",
+    "W2-B00",
+    "mezcla_2025",
+    "D2_por_factor",
+    "1.0"
+   ],
+   "formato": "dec3",
+   "valor": "0,054",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-09",
+   "contexto": "multiplicar W2-B00 por 1,4 sube su D² de 0,054 a 0,080",
+   "ruta": [
+    "modelos",
+    "W2-B00",
+    "mezcla_2025",
+    "D2_por_factor",
+    "1.4"
+   ],
+   "formato": "dec3",
+   "valor": "0,080",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-10",
+   "contexto": "corregir ese nivel vale 0,025 de D²",
+   "ruta": [
+    "valor_del_nivel_en_mezcla_2025_B00"
+   ],
+   "formato": "dec3",
+   "valor": "0,025",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-11",
+   "contexto": "unas cincuenta veces el margen de 0,0005 de SEL01",
+   "ruta": [
+    "valor_del_nivel_en_mezcla_2025_B00"
+   ],
+   "entre": [
+    0.0225,
+    0.0275
+   ],
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-12",
+   "contexto": "donde el nuevo negocio es el 12 % de las filas",
+   "min": [
+    [
+     "nuevo_negocio",
+     "motor",
+     "cuota_nb_filas",
+     "2023"
+    ],
+    [
+     "nuevo_negocio",
+     "buildings",
+     "cuota_nb_filas",
+     "2023"
+    ],
+    [
+     "nuevo_negocio",
+     "contents",
+     "cuota_nb_filas",
+     "2023"
+    ]
+   ],
+   "formato": "pct0",
+   "valor": "12"
+  },
+  {
+   "id": "dv-13",
+   "contexto": "donde el nuevo negocio es el 12 % de las filas",
+   "max": [
+    [
+     "nuevo_negocio",
+     "motor",
+     "cuota_nb_filas",
+     "2023"
+    ],
+    [
+     "nuevo_negocio",
+     "buildings",
+     "cuota_nb_filas",
+     "2023"
+    ],
+    [
+     "nuevo_negocio",
+     "contents",
+     "cuota_nb_filas",
+     "2023"
+    ]
+   ],
+   "formato": "pct0",
+   "valor": "12"
+  },
+  {
+   "id": "dv-13b",
+   "contexto": "subir W2-B00 un 20 % baja su D² de 0,069 a 0,064",
+   "ruta": [
+    "modelos",
+    "W2-B00",
+    "mezcla_2023",
+    "D2_por_factor",
+    "1.0"
+   ],
+   "formato": "dec3",
+   "valor": "0,069",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-13c",
+   "contexto": "subir W2-B00 un 20 % baja su D² de 0,069 a 0,064",
+   "ruta": [
+    "modelos",
+    "W2-B00",
+    "mezcla_2023",
+    "D2_por_factor",
+    "1.2"
+   ],
+   "formato": "dec3",
+   "valor": "0,064",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-14",
+   "contexto": "W2-B00 pasa de 0,06858 a 0,06887 y W2-B01 de 0,06666 a 0,07054",
+   "ruta": [
+    "modelos",
+    "W2-B00",
+    "D2"
+   ],
+   "formato": "dec5",
+   "valor": "0,06858",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-15",
+   "contexto": "W2-B00 pasa de 0,06858 a 0,06887 y W2-B01 de 0,06666 a 0,07054",
+   "ruta": [
+    "modelos",
+    "W2-B00",
+    "D2_balance_ajuste"
+   ],
+   "formato": "dec5",
+   "valor": "0,06887",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-16",
+   "contexto": "W2-B00 pasa de 0,06858 a 0,06887 y W2-B01 de 0,06666 a 0,07054",
+   "ruta": [
+    "modelos",
+    "W2-B01",
+    "D2"
+   ],
+   "formato": "dec5",
+   "valor": "0,06666",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-17",
+   "contexto": "W2-B00 pasa de 0,06858 a 0,06887 y W2-B01 de 0,06666 a 0,07054",
+   "ruta": [
+    "modelos",
+    "W2-B01",
+    "D2_balance_ajuste"
+   ],
+   "formato": "dec5",
+   "valor": "0,07054",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-18",
+   "contexto": "cambia de −0,0019 a +0,0017",
+   "ruta": [
+    "diferencia_B01_menos_B00",
+    "sin_balance"
+   ],
+   "formato": "sdec4",
+   "valor": "−0,0019",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-19",
+   "contexto": "cambia de −0,0019 a +0,0017",
+   "ruta": [
+    "diferencia_B01_menos_B00",
+    "con_balance_ajuste"
+   ],
+   "formato": "sdec4",
+   "valor": "+0,0017",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-20",
+   "contexto": "LightGBM queda en −0,083 con esa corrección (−0,057 incluso con el nivel observado de cada ramo)",
+   "ruta": [
+    "modelos",
+    "W2-B02",
+    "D2_balance_ajuste"
+   ],
+   "formato": "sdec3",
+   "valor": "−0,083",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-21",
+   "contexto": "LightGBM queda en −0,083 con esa corrección (−0,057 incluso con el nivel observado de cada ramo)",
+   "ruta": [
+    "modelos",
+    "W2-B02",
+    "D2_oraculo_nivel_por_ramo"
+   ],
+   "formato": "sdec3",
+   "valor": "−0,057",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-22",
+   "contexto": "coinciden en el 100 % de las filas de los tres ramos",
+   "todos": [
+    [
+     "F0",
+     "motor",
+     "renewal_count_igual_tenure"
+    ],
+    [
+     "F0",
+     "buildings",
+     "renewal_count_igual_tenure"
+    ],
+    [
+     "F0",
+     "contents",
+     "renewal_count_igual_tenure"
+    ]
+   ],
+   "igual": 1.0,
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-23",
+   "contexto": "forma entre el 67 % y el 69 % del test",
+   "min": [
+    [
+     "F0",
+     "motor",
+     "cuota_test_nb_enero"
+    ],
+    [
+     "F0",
+     "buildings",
+     "cuota_test_nb_enero"
+    ],
+    [
+     "F0",
+     "contents",
+     "cuota_test_nb_enero"
+    ]
+   ],
+   "formato": "pct0",
+   "valor": "67",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-24",
+   "contexto": "forma entre el 67 % y el 69 % del test",
+   "max": [
+    [
+     "F0",
+     "motor",
+     "cuota_test_nb_enero"
+    ],
+    [
+     "F0",
+     "buildings",
+     "cuota_test_nb_enero"
+    ],
+    [
+     "F0",
+     "contents",
+     "cuota_test_nb_enero"
+    ]
+   ],
+   "formato": "pct0",
+   "valor": "69",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-25-motor",
+   "contexto": "solo tiene 493, 290 y 346 filas en el entrenamiento de autos, edificios y contenidos",
+   "ruta": [
+    "F0",
+    "motor",
+    "nb_enero_filas_train"
+   ],
+   "formato": "int",
+   "valor": "493",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-25-buildings",
+   "contexto": "solo tiene 493, 290 y 346 filas en el entrenamiento de autos, edificios y contenidos",
+   "ruta": [
+    "F0",
+    "buildings",
+    "nb_enero_filas_train"
+   ],
+   "formato": "int",
+   "valor": "290",
+   "fuente": "desarrollo"
+  },
+  {
+   "id": "dv-25-contents",
+   "contexto": "solo tiene 493, 290 y 346 filas en el entrenamiento de autos, edificios y contenidos",
+   "ruta": [
+    "F0",
+    "contents",
+    "nb_enero_filas_train"
+   ],
+   "formato": "int",
+   "valor": "346",
+   "fuente": "desarrollo"
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+{
+ "motor": {
+  "L_R0": 456.2853,
+  "L_A1": 427.7921,
+  "filas": 90521,
+  "exposicion": 79006.9,
+  "total_R0": 36049690.39,
+  "total_A1": 41166995.38,
+  "tasa_A1": 521.06,
+  "tasa_A1_nb": 559.31,
+  "tasa_A1_ren": 394.06,
+  "g_p01_p50_p99": [
+   0.328,
+   0.98,
+   3.425
+  ]
+ },
+ "buildings": {
+  "L_R0": 418.8423,
+  "L_A1": 403.8608,
+  "filas": 52295,
+  "exposicion": 47376.32,
+  "total_R0": 19843203.9,
+  "total_A1": 20450749.58,
+  "tasa_A1": 431.67,
+  "tasa_A1_nb": 431.88,
+  "tasa_A1_ren": 430.97,
+  "g_p01_p50_p99": [
+   0.341,
+   0.843,
+   5.385
+  ]
+ },
+ "contents": {
+  "L_R0": 89.9762,
+  "L_A1": 92.4176,
+  "filas": 66247,
+  "exposicion": 59016.38,
+  "total_R0": 5310068.81,
+  "total_A1": 5535177.46,
+  "tasa_A1": 93.79,
+  "tasa_A1_nb": 94.32,
+  "tasa_A1_ren": 92.0,
+  "g_p01_p50_p99": [
+   0.332,
+   0.824,
+   4.563
+  ]
+ },
+ "R0_sha256": "928865e531bd603a0f5534407a6ec9ca418ede85e7b8d3c5dc834d81b996cb3e",
+ "R0_total": 61202963.11,
+ "A1_sha256": "4a9f7fc04f9a8e4ffa22ce80e17de4b9f4cba5f55f3e5e8ba01b125756f715f9",
+ "A1_total": 67152922.42,
+ "A1T": {
+  "descripcion": "A1 \u00d7 factor de tendencia del desarrollado (log-lineal 2021-2024 con relatividades fijas) por 1,5 a\u00f1os",
+  "factores": {
+   "M": 1.0722,
+   "B": 1.0966,
+   "C": 1.0541
+  },
+  "sha256": "4ba0cc3427de7d32ee94370a084c45e78e6cc5a162adeb19555ed6d9dc85aca5",
+  "total": 72400175.0,
+  "totales_por_ramo": {
+   "B": 22426291.99,
+   "C": 5834630.56,
+   "M": 44139252.45
+  }
+ }
+}

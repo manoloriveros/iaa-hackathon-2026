@@ -1,0 +1,123 @@
+{
+  "autor": "Codex",
+  "utc": "2026-10-23T16:19:28.785935+00:00",
+  "exposure": {
+    "motor": {
+      "nonpositive": 0,
+      "above_one": 189,
+      "quantiles": {
+        "0.0": 0.0027,
+        "0.5": 1.0,
+        "0.95": 1.0,
+        "0.99": 1.0,
+        "1.0": 365.0
+      },
+      "calendar_exposure_sum_365_25": 38941.86173853525,
+      "stored_sum": 54429.4651,
+      "discrepancies_above_0_01": 206,
+      "sum_exposure_for_above_one": 15644.9627,
+      "max_period_days": 365,
+      "common_above_one_values": {
+        "1.0139": 141,
+        "365.0": 38,
+        "301.0": 1,
+        "90.0": 1,
+        "1.0028": 1,
+        "300.0": 1,
+        "35.0": 1,
+        "53.0": 1,
+        "267.0": 1,
+        "273.0": 1,
+        "25.0": 1,
+        "287.0": 1
+      }
+    },
+    "buildings": {
+      "nonpositive": 0,
+      "above_one": 117,
+      "quantiles": {
+        "0.0": 0.0027,
+        "0.5": 1.0,
+        "0.95": 1.0,
+        "0.99": 1.0,
+        "1.0": 365.0
+      },
+      "calendar_exposure_sum_365_25": 23451.942505133466,
+      "stored_sum": 33783.083,
+      "discrepancies_above_0_01": 128,
+      "sum_exposure_for_above_one": 10427.167599999999,
+      "max_period_days": 365,
+      "common_above_one_values": {
+        "1.0139": 84,
+        "365.0": 24,
+        "284.0": 1,
+        "171.0": 1,
+        "81.0": 1,
+        "51.0": 1,
+        "361.0": 1,
+        "290.0": 1,
+        "20.0": 1,
+        "318.0": 1,
+        "6.0": 1
+      }
+    },
+    "contents": {
+      "nonpositive": 0,
+      "above_one": 146,
+      "quantiles": {
+        "0.0": 0.0027,
+        "0.5": 1.0,
+        "0.95": 1.0,
+        "0.99": 1.0,
+        "1.0": 365.0
+      },
+      "calendar_exposure_sum_365_25": 29038.09171800137,
+      "stored_sum": 38892.9009,
+      "discrepancies_above_0_01": 165,
+      "sum_exposure_for_above_one": 9973.556799999998,
+      "max_period_days": 365,
+      "common_above_one_values": {
+        "1.0139": 112,
+        "365.0": 21,
+        "186.0": 1,
+        "188.0": 1,
+        "96.0": 1,
+        "156.0": 1,
+        "313.0": 1,
+        "266.0": 1,
+        "84.0": 1,
+        "33.0": 1,
+        "178.0": 1,
+        "39.0": 1
+      }
+    }
+  },
+  "unmatched_claims": {
+    "rows": 36,
+    "loss_year_counts": {
+      "2022": 28,
+      "2021": 6,
+      "2023": 2
+    },
+    "policy_key_not_in_training": 0,
+    "loss_date_min": "2021-10-27",
+    "loss_date_max": "2023-07-04",
+    "line": {
+      "motor": 28,
+      "contents": 5,
+      "buildings": 3
+    },
+    "net_incurred_raw": 92267.26000000001
+  },
+  "fixed_expense_questions": {
+    "reference_channels": {
+      "broker": 17,
+      "direct": 3
+    },
+    "reference_repeated_policy_ids": 0,
+    "reference_exposure_min": 0.0685,
+    "reference_exposure_max": 1.0,
+    "reference_partial_periods": 15
+  },
+  "data_modified": false
+}

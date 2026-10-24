@@ -1,0 +1,75 @@
+{
+ "id": "CLA-S2-NOCHE-PRE-20261024",
+ "autor": "Claude, sesión de validación nocturna (Cowork)",
+ "fecha_utc": "2026-10-24T00:55:07+00:00",
+ "autorizacion": "Respuesta del participante a las 18:20 de Bogotá del 23-10-2026: «Abrir una vez, con SEL01» (descripción de la opción: desarrollo solo con folds de 2023; congelar referencia y hasta tres aspirantes con preinscripción y abrir 2024 una sola vez, registrando la apertura).",
+ "politica": "S2-SELECCION-v1-20261023 (números de Codex adoptados por el participante); implementación independiente en codigo/puerta_2024.py",
+ "referencia": "R0: tasa emergente por ramo y exposición (Σ T0 2023 / Σ e_ef 2023), implementación propia análoga a W2-B00; no es el artefacto de Codex",
+ "orden": [
+  "R0",
+  "A1",
+  "A2"
+ ],
+ "aspirantes": {
+  "A1": "Relatividades de un LightGBM Tweedie 1,5 por ramo entrenado solo con el desarrollado 2021-2023 (esquema común, sin make_model, con mes de inicio y exposición, lr 0,02) × nivel emergente por ramo de 2023 (balance). Tres parámetros emergentes.",
+  "A2": "A1 + factor de región emergente (GLM Tweedie con offset, ridge 1), reescalado al total de 2023."
+ },
+ "excluidos_antes_de_abrir": {
+  "A3_tendencia": "A1 con tendencia anual del desarrollado 2021-2023 (7,7 %, 4,7 %, 4,0 %). Excluido: en el desarrollado 2023 la tendencia 2021-2022 baja el D² (autos 0,17983 a 0,17857, edificios 0,15838 a 0,15763, contenidos sin cambio), salidas/conf/validacion_tendencia_desarrollado.json; su condición de nivel no podría cumplirse.",
+  "nivel_Tweedie": "A1 con el nivel que minimiza la desviación en el entrenamiento: +0,0006 en desarrollo (P 0,83), por debajo de la materialidad; no se incluye.",
+  "NB_emergente": "A1 + factor de nuevo negocio emergente: mejora el completo y empeora el cuerpo en desarrollo; la frecuencia del nuevo negocio es igual en los dos mercados (salidas/nb_frecuencia.json).",
+  "Codex_B01_B19": "Línea de Codex. No tiene predicciones de 2024 (2024 cerrado en su línea) y la regla del foro impide incorporar artefactos de otra línea sin decisión del participante. No se declaran inferiores."
+ },
+ "predicciones_sha256": "e4f55f69677bad6ed0820190e76b7f617e39b526bc6dbd368e2402890e3a7eb7",
+ "predicciones_reproducidas": "conf_predicciones.py ejecutado dos veces con el mismo SHA",
+ "codigo_sha256": {
+  "codigo/s2_base.py": "cf7a7422a521d966cbbd48559945a3e477130d5be54827ffbb5de03487929f49",
+  "codigo/base_mercado.py": "cf7f858234255cb8711c7a09fc09d3b6a0710f0ca94d77124aae048c19d53ba4",
+  "codigo/reporte.py": "60521bb30b00f707d9a98df7151f4e40202a55141b3e2a864fda19f7cc1033a2",
+  "codigo/exposicion_efectiva.py": "98d35f9e173c4460fc90e3fd479c91891aae082bc8cf5f3b8948cd3909b75303",
+  "codigo/s2_ultimo.py": "630e39149afa837e8ed0d98f71e965ac460c8d480e7fc8e25e090cf0b670163e",
+  "codigo/ultimo_mercado.py": "70b1a716f58ce94622c9537f8cbd8eb3adc77733d6f4b8a298a3f9221a53a044",
+  "codigo/variables.py": "0f07fc707c4f6b75ba987038fc5e6fa11b01d9be826ea678d1bb637d7d60b6fa",
+  "codigo/marco.py": "aafd4591ee23fe0717e691aaa2d2874957581a25b088c93750be725c9de75774",
+  "codigo/desarrollado_gbm.py": "f5c11d3bb749d7535dc5a34036197eb3290ec966df9c8baf8fd8d390dfb97b66",
+  "codigo/conf_insumos.py": "f4fe84e982a28f41d51fb8cd62d5ebd9f8d2d7f838e70eb0d5c35d23727f7b12",
+  "codigo/conf_predicciones.py": "6009fecfaff6942f0a5c65a4297dadc1552ba28231fc9da5055535e20df99174",
+  "codigo/puerta_2024.py": "1a33c2a2309318ca6894430c27bf9b25c61d1dbaa990f4dfe470460fca16985b",
+  "codigo/s2_escalera.py": "16bdbadf54994e53fd6d2610f376af7074e513c8eb4cd7f76acc07d41c0121d4",
+  "codigo/comparar.py": "27460f4f1ab4589d2325c541fff3796c14c406de4d432c18bd0b8c8e45b0cf21"
+ },
+ "metrica": "D² Tweedie 1,5 global sin pesos, 59.202 filas emergentes de 2024, T0 observado; vínculo de observación e_ef_coste con completitud estimada con ocurrencias <= 2023 (salidas/conf/reporte_F_conf.json)",
+ "semilla": 2026102301,
+ "replicas": 10000,
+ "cuantil_inferior": 0.004166666666666667,
+ "delta_min": 0.0005,
+ "salvaguardas": "cliente nuevo (cliente sin filas emergentes en 2023): diferencia >= 0 y límite 95 % >= -0,001; reserva ×0,75 y ×1,25 sobre la reserva de caso; masa tardía +5 % y +10 % en lesiones corporales y hundimiento; segmentos autos, edificios, contenidos, cliente nuevo y renovación >= -0,001; influencia: retirar max(5, ceil(0,001·K)) componentes más favorables y diferencia >= 0",
+ "nivel_2025": {
+  "A1": {
+   "cambio_frente_a_R0": {
+    "motor": 1.1149,
+    "buildings": 1.0399,
+    "contents": 1.0509
+   },
+   "atribucion": "mezcla por relatividades (g medio 2023 → 2025: autos 1,092 → 1,218; edificios 1,028 → 1,069; contenidos 0,966 → 1,015), con el nuevo negocio de 2025 al 77 % de la exposición",
+   "validacion": "T1 frente a L0 en desarrollo 2023: +0,0498 [+0,0367; +0,0630], también sin el 0,1 % superior; frecuencia del nuevo negocio igual en los dos mercados",
+   "condicion_cumplida": true
+  },
+  "A2": {
+   "cambio_frente_a_R0": {
+    "motor": 1.115,
+    "buildings": 1.0371,
+    "contents": 1.0497
+   },
+   "atribucion": "la de A1 más la región",
+   "validacion": "la de A1",
+   "condicion_cumplida": true
+  }
+ },
+ "produccion": {
+  "R0": "tasa por ramo 2023-2024 (Σ T0 / Σ e_ef) × exposición 2025",
+  "A1": "relatividades del GBM desarrollado 2021-2024 (lg_v2) × nivel por ramo 2023-2024 (balance) × exposición 2025",
+  "A2": "A1 + región ajustada con 2023-2024"
+ },
+ "lectura": "Titular final = modelo de producción propuesto al participante. Si ningún aspirante promueve se conserva R0 y A1/A2 quedan como alternativas. El público no interviene. Esta apertura consume la única tanda de confirmación de 2024 de la política v1 para el proyecto."
+}

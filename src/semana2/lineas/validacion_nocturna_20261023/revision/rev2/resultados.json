@@ -1,0 +1,744 @@
+{
+ "revision": "rev2, independiente",
+ "entradas": {
+  "predicciones_2024.parquet": "e4f55f69677bad6ed0820190e76b7f617e39b526bc6dbd368e2402890e3a7eb7",
+  "politica_SEL01.json": "8de4043120b600813c44870d015569bac53c0ddb1d289970c071d1f152281139",
+  "preinscripcion_definiciones.json": "10626a7657361957a03e5679a442977aafe642e5082e423c16b39a7271431292",
+  "datos_s2": {
+   "addresses.parquet": "4e9bf9d2a1777896e84fd4ee471096ff075aaefefd544f91b731324b25425632",
+   "claims.parquet": "1a2fce8a26cb1e05de1f53fe4e39bde772a1898e845755487625355fec4cc0e9",
+   "customers.parquet": "c00a0095d5fb7b2b65cd9647216add49afb3703d863d5c358b1441f0fab1fb62",
+   "expenses.parquet": "9033f666a5a45f0b44501d57e40ab1cc571c51c384f23a62942b75db323b1cdf",
+   "policies_buildings.parquet": "ccc948fafc11e623d5cb010c2b494f6813f6048719eae7bcde28794467598319",
+   "policies_contents.parquet": "84d7f48d03933b018bec8fdc2f4bbd96df184cca7ae1971c38d3acc955720f8e",
+   "policies_motor.parquet": "7c5dbb5e5b46629ebf01a66c991183d20b8585393b589bc2644fcbd6653a3ec1",
+   "reference_policies.parquet": "6d4c2839e87d092fccd4b3c3ddc16a2a4c4993c35e18481e322462cd382dd8f4",
+   "sample_submission.parquet": "160fc59043f1012337605c8d8446c0efbf81458e046cf02df9186d6f909d59ef",
+   "test_buildings.parquet": "21f91aaa66a1b9efd216ad0e04ff12a507dbeb721084330d9b9f06c99edd0ca6",
+   "test_contents.parquet": "af5ef2553e35a2d563ca091b173500daac55acc4969d1d3a96fa6b4ec3c6a012",
+   "test_motor.parquet": "108d5c68e9bab5ccd90ee5502bc3543aa515a5aa07fda44a3b227cf070a28aa5",
+   "weather.parquet": "645067069f68de8c4746d1ba48a454ff00155e1aa6fbbf64cdee48ae7269cbbd"
+  }
+ },
+ "objetivo": {
+  "controles": {
+   "hash_datos_iguales_manifiesto": true,
+   "claim_id_unico": true,
+   "siniestros_ambiguos": 0,
+   "siniestros_sin_fila": 36,
+   "siniestros_sin_fila_netos_aceptados": 92267.26000000001,
+   "siniestros_sin_fila_por_anio_perdida": {
+    "2021": 6,
+    "2022": 28,
+    "2023": 2
+   },
+   "aceptados_neto_negativo": 0,
+   "aceptados_neto_cero": 0,
+   "aceptados_res075_negativo": 0,
+   "aceptados_res125_negativo": 0,
+   "aceptados_abiertos_con_recuperaciones": 0,
+   "filas_periodo_cruza_anio": 0
+  },
+  "resumen_por_anio_y_ramo": {
+   "2023": {
+    "motor": {
+     "filas": 21680,
+     "exposicion": 26535.7663,
+     "T0": 8162761.209999999,
+     "paid": 7521319.8100000005,
+     "incurred": 8658723.780000001,
+     "recoveries": 495962.57,
+     "reserve": 1137403.97,
+     "T0_bodily_injury": 2790597.3,
+     "T0_subsidence": 0.0,
+     "siniestros_aceptados": 3557,
+     "abiertos": 130,
+     "filas_con_coste_positivo": 3027
+    },
+    "buildings": {
+     "filas": 12580,
+     "exposicion": 18743.0605,
+     "T0": 5848688.1,
+     "paid": 5558177.220000001,
+     "incurred": 5848688.1,
+     "recoveries": 0.0,
+     "reserve": 290510.87999999995,
+     "T0_bodily_injury": 0.0,
+     "T0_subsidence": 515347.04,
+     "siniestros_aceptados": 519,
+     "abiertos": 21,
+     "filas_con_coste_positivo": 497
+    },
+    "contents": {
+     "filas": 15834,
+     "exposicion": 18372.9192,
+     "T0": 1285654.53,
+     "paid": 1285654.53,
+     "incurred": 1285654.53,
+     "recoveries": 0.0,
+     "reserve": 0.0,
+     "T0_bodily_injury": 0.0,
+     "T0_subsidence": 0.0,
+     "siniestros_aceptados": 491,
+     "abiertos": 0,
+     "filas_con_coste_positivo": 482
+    }
+   },
+   "2024": {
+    "motor": {
+     "filas": 25603,
+     "exposicion": 27893.6988,
+     "T0": 7693126.75,
+     "paid": 5733188.71,
+     "incurred": 8097176.53,
+     "recoveries": 404049.78,
+     "reserve": 2363987.8200000003,
+     "T0_bodily_injury": 2014762.3099999998,
+     "T0_subsidence": 0.0,
+     "siniestros_aceptados": 3491,
+     "abiertos": 709,
+     "filas_con_coste_positivo": 3064
+    },
+    "buildings": {
+     "filas": 14867,
+     "exposicion": 15040.0225,
+     "T0": 3710061.21,
+     "paid": 2699873.13,
+     "incurred": 3710061.21,
+     "recoveries": 0.0,
+     "reserve": 1010188.0800000001,
+     "T0_bodily_injury": 0.0,
+     "T0_subsidence": 215362.37,
+     "siniestros_aceptados": 537,
+     "abiertos": 136,
+     "filas_con_coste_positivo": 514
+    },
+    "contents": {
+     "filas": 18732,
+     "exposicion": 20519.9817,
+     "T0": 1297699.77,
+     "paid": 1103992.88,
+     "incurred": 1297699.77,
+     "recoveries": 0.0,
+     "reserve": 193706.88999999996,
+     "T0_bodily_injury": 0.0,
+     "T0_subsidence": 0.0,
+     "siniestros_aceptados": 507,
+     "abiertos": 59,
+     "filas_con_coste_positivo": 487
+    }
+   }
+  }
+ },
+ "compuerta": {
+  "controles": {
+   "sha_predicciones": "e4f55f69677bad6ed0820190e76b7f617e39b526bc6dbd368e2402890e3a7eb7",
+   "sha_predicciones_igual_esperado": true,
+   "sha_politica": "8de4043120b600813c44870d015569bac53c0ddb1d289970c071d1f152281139",
+   "sha_preinscripcion": "10626a7657361957a03e5679a442977aafe642e5082e423c16b39a7271431292",
+   "sha_objetivo": "2ecd7e2591962b4384e95fab5258b6a886734970da405fd3aa12b24fa1116ecc",
+   "filas_predicciones": 59202,
+   "row_id_unico": true,
+   "cubre_exactamente_filas_2024": true,
+   "columnas_predicciones": [
+    "row_id",
+    "line",
+    "customer_id",
+    "address_id",
+    "new_business",
+    "R0",
+    "A1",
+    "A2",
+    "A3"
+   ],
+   "columnas_no_preinscritas": [
+    "A3"
+   ],
+   "coincide_line": true,
+   "coincide_customer_id": true,
+   "coincide_address_id": true,
+   "coincide_new_business": true,
+   "R0_positivo_finito": true,
+   "A1_positivo_finito": true,
+   "A2_positivo_finito": true,
+   "filas_cliente_nuevo": 9063,
+   "cliente_nuevo_igual_new_business": true,
+   "componentes_K": 36408,
+   "componente_max_filas": 7,
+   "componentes_una_fila": 19815,
+   "componentes_cliente_nuevo_restringidas": 5602,
+   "componentes_cliente_nuevo_reconstruidas": 5602
+  },
+  "d2_puntual": {
+   "global": {
+    "R0": 0.0728477454433385,
+    "A1": 0.12143931587605039,
+    "A2": 0.11746343353888156
+   },
+   "motor": {
+    "R0": 0.04991454459189948,
+    "A1": 0.08033051839331751,
+    "A2": 0.08045126755685061
+   },
+   "buildings": {
+    "R0": -0.021287112837649724,
+    "A1": 0.064943619577012,
+    "A2": 0.05202372768042918
+   },
+   "contents": {
+    "R0": 0.04522257284551845,
+    "A1": 0.09203584399859555,
+    "A2": 0.09082297614826806
+   },
+   "cliente_nuevo": {
+    "R0": 0.10926908734411689,
+    "A1": 0.12233134582959826,
+    "A2": 0.12039297263526871
+   },
+   "renovacion": {
+    "R0": 0.06258635913871458,
+    "A1": 0.11653307712005245,
+    "A2": 0.11224362322939796
+   }
+  },
+  "ae": {
+   "motor": {
+    "R0": 1.0519662322842054,
+    "A1": 1.1050540264169488,
+    "A2": 1.105023256610401
+   },
+   "buildings": {
+    "R0": 0.6250502737689815,
+    "A1": 0.6147790239430153,
+    "A2": 0.615572041124488
+   },
+   "contents": {
+    "R0": 0.9727197482983417,
+    "A1": 0.9573892979599695,
+    "A2": 0.9582242043591949
+   },
+   "global": {
+    "R0": 0.8709494167827639,
+    "A1": 0.8849553149022894,
+    "A2": 0.8854958880385483
+   },
+   "cliente_nuevo": {
+    "R0": 0.9719796048279793,
+    "A1": 0.8712490492377436,
+    "A2": 0.8731674387184537
+   },
+   "renovacion": {
+    "R0": 0.8614352588005181,
+    "A1": 0.886437076881521,
+    "A2": 0.8868263523142238
+   }
+  },
+  "totales_2024": {
+   "motor": {
+    "y": 7693126.75,
+    "R0": 7313092.867339852,
+    "A1": 6961765.276711728,
+    "A2": 6961959.129799901,
+    "filas": 25603
+   },
+   "buildings": {
+    "y": 3710061.21,
+    "R0": 5935620.48637905,
+    "A1": 6034788.217406536,
+    "A2": 6027013.837767379,
+    "filas": 14867
+   },
+   "contents": {
+    "y": 1297699.77,
+    "R0": 1334094.1954454738,
+    "A1": 1355456.7329770378,
+    "A2": 1354275.7155334298,
+    "filas": 18732
+   }
+  },
+  "nulo_global": {
+   "global": 5527856.1549342
+  },
+  "bootstrap": {
+   "replicas": 10000,
+   "semilla": 2026102301,
+   "q_inf": 0.004166666666666667,
+   "q_sup": 0.9958333333333333,
+   "pares": {
+    "A1-R0": {
+     "punto": 0.048591570432711895,
+     "q_inf": 0.027204576770190614,
+     "q_sup": 0.07349749601420417,
+     "media_boot": 0.048839666170482916,
+     "de_boot": 0.008711140834062521,
+     "q05": 0.03491547625593181,
+     "q95": 0.06366223310575346,
+     "prop_menor_o_igual_cero": 0.0,
+     "prop_mayor_delta_min": 1.0,
+     "cumple_delta_min": true
+    },
+    "A2-R0": {
+     "punto": 0.04461568809554306,
+     "q_inf": 0.02415469707700158,
+     "q_sup": 0.06678974984593576,
+     "media_boot": 0.0448454636476516,
+     "de_boot": 0.008076587964054359,
+     "q05": 0.03168459624159548,
+     "q95": 0.058403963260573226,
+     "prop_menor_o_igual_cero": 0.0,
+     "prop_mayor_delta_min": 1.0,
+     "cumple_delta_min": true
+    },
+    "A2-A1": {
+     "punto": -0.0039758823371688345,
+     "q_inf": -0.010613287127127703,
+     "q_sup": 0.0024627340504480215,
+     "media_boot": -0.003994202522831314,
+     "de_boot": 0.002441081081141557,
+     "q05": -0.008038231686946468,
+     "q95": 2.5389815488367667e-05,
+     "prop_menor_o_igual_cero": 0.9485,
+     "prop_mayor_delta_min": 0.0329,
+     "cumple_delta_min": false
+    }
+   },
+   "modelos": {
+    "R0": {
+     "q_inf": 0.04026090262432541,
+     "q_sup": 0.09870233720538794,
+     "de": 0.011093099084120466
+    },
+    "A1": {
+     "q_inf": 0.09195518045901864,
+     "q_sup": 0.14942036557412483,
+     "de": 0.010999456313846691
+    },
+    "A2": {
+     "q_inf": 0.08672439912150615,
+     "q_sup": 0.14737787681567405,
+     "de": 0.011544735754144284
+    }
+   }
+  },
+  "salvaguardas": {
+   "A1-R0": {
+    "cliente_nuevo": {
+     "dif": 0.01306225848548137,
+     "lim95_inf": -0.010353391244140668,
+     "de_boot": 0.014046962009592802,
+     "lim95_inf_grafo_reconstruido": -0.010145577868470762,
+     "de_boot_grafo_reconstruido": 0.014029818876216925,
+     "replicas": 10000,
+     "componentes": 5602,
+     "pasa": false,
+     "mejora_necesaria_empirica": 0.02241564972962204,
+     "mejora_necesaria_normal": 0.022105196030541955
+    },
+    "escenarios": {
+     "reserve075": {
+      "dif": 0.04769188041064121,
+      "d2_aspirante": 0.11698636439076804,
+      "d2_titular": 0.06929448398012683,
+      "pasa": true
+     },
+     "reserve125": {
+      "dif": 0.04946697273112777,
+      "d2_aspirante": 0.12417818964634475,
+      "d2_titular": 0.07471121691521698,
+      "pasa": true
+     },
+     "late_cost05": {
+      "dif": 0.04831270240001795,
+      "d2_aspirante": 0.12193085744636134,
+      "d2_titular": 0.07361815504634339,
+      "pasa": true
+     },
+     "late_cost10": {
+      "dif": 0.048036962589649845,
+      "d2_aspirante": 0.12239515993583094,
+      "d2_titular": 0.0743581973461811,
+      "pasa": true
+     }
+    },
+    "segmentos": {
+     "motor": {
+      "dif": 0.030415973801418028,
+      "filas": 25603,
+      "pasa": true
+     },
+     "buildings": {
+      "dif": 0.08623073241466173,
+      "filas": 14867,
+      "pasa": true
+     },
+     "contents": {
+      "dif": 0.046813271153077096,
+      "filas": 18732,
+      "pasa": true
+     },
+     "new_customer": {
+      "dif": 0.01306225848548137,
+      "filas": 9063,
+      "pasa": true
+     },
+     "renewal": {
+      "dif": 0.05394671798133788,
+      "filas": 50139,
+      "pasa": true
+     }
+    },
+    "influencia": {
+     "componentes_quitados": 37,
+     "filas_quitadas": 80,
+     "contribucion_quitada": 168775.44948427018,
+     "contribucion_total": 268607.2116943843,
+     "dif_tras_quitar": 0.019359316834529627,
+     "pasa": true,
+     "dif_tras_quitar_por_agregados": 0.01935931683452943,
+     "componentes_para_anular_o_invertir": 191
+    },
+    "todas_pasan": false
+   },
+   "A2-R0": {
+    "cliente_nuevo": {
+     "dif": 0.011123885291151825,
+     "lim95_inf": -0.01404669947025824,
+     "de_boot": 0.014956318138638984,
+     "lim95_inf_grafo_reconstruido": -0.013897502919567612,
+     "de_boot_grafo_reconstruido": 0.014892377850686138,
+     "replicas": 10000,
+     "componentes": 5602,
+     "pasa": false,
+     "mejora_necesaria_empirica": 0.024170584761410062,
+     "mejora_necesaria_normal": 0.02360095373308563
+    },
+    "escenarios": {
+     "reserve075": {
+      "dif": 0.044029172961359886,
+      "d2_aspirante": 0.11332365694148672,
+      "d2_titular": 0.06929448398012683,
+      "pasa": true
+     },
+     "reserve125": {
+      "dif": 0.04519715954418957,
+      "d2_aspirante": 0.11990837645940655,
+      "d2_titular": 0.07471121691521698,
+      "pasa": true
+     },
+     "late_cost05": {
+      "dif": 0.04434392096630657,
+      "d2_aspirante": 0.11796207601264996,
+      "d2_titular": 0.07361815504634339,
+      "pasa": true
+     },
+     "late_cost10": {
+      "dif": 0.044075177111209896,
+      "d2_aspirante": 0.118433374457391,
+      "d2_titular": 0.0743581973461811,
+      "pasa": true
+     }
+    },
+    "segmentos": {
+     "motor": {
+      "dif": 0.030536722964951135,
+      "filas": 25603,
+      "pasa": true
+     },
+     "buildings": {
+      "dif": 0.0733108405180789,
+      "filas": 14867,
+      "pasa": true
+     },
+     "contents": {
+      "dif": 0.045600403302749615,
+      "filas": 18732,
+      "pasa": true
+     },
+     "new_customer": {
+      "dif": 0.011123885291151825,
+      "filas": 9063,
+      "pasa": true
+     },
+     "renewal": {
+      "dif": 0.049657264090683384,
+      "filas": 50139,
+      "pasa": true
+     }
+    },
+    "influencia": {
+     "componentes_quitados": 37,
+     "filas_quitadas": 79,
+     "contribucion_quitada": 161220.86731304124,
+     "contribucion_total": 246629.10604557133,
+     "dif_tras_quitar": 0.01689323003744847,
+     "pasa": true,
+     "dif_tras_quitar_por_agregados": 0.01689323003744836,
+     "componentes_para_anular_o_invertir": 153
+    },
+    "todas_pasan": false
+   },
+   "A2-A1": {
+    "cliente_nuevo": {
+     "dif": -0.0019383731943295457,
+     "lim95_inf": -0.009642353282626703,
+     "de_boot": 0.0045717537625424775,
+     "lim95_inf_grafo_reconstruido": -0.009540607356570885,
+     "de_boot_grafo_reconstruido": 0.004488242226076976,
+     "replicas": 10000,
+     "componentes": 5602,
+     "pasa": false,
+     "mejora_necesaria_empirica": 0.006703980088297157,
+     "mejora_necesaria_normal": 0.00651986563463154
+    },
+    "escenarios": {
+     "reserve075": {
+      "dif": -0.0036627074492813216,
+      "d2_aspirante": 0.11332365694148672,
+      "d2_titular": 0.11698636439076804,
+      "pasa": false
+     },
+     "reserve125": {
+      "dif": -0.004269813186938198,
+      "d2_aspirante": 0.11990837645940655,
+      "d2_titular": 0.12417818964634475,
+      "pasa": false
+     },
+     "late_cost05": {
+      "dif": -0.003968781433711377,
+      "d2_aspirante": 0.11796207601264996,
+      "d2_titular": 0.12193085744636134,
+      "pasa": false
+     },
+     "late_cost10": {
+      "dif": -0.00396178547843995,
+      "d2_aspirante": 0.118433374457391,
+      "d2_titular": 0.12239515993583094,
+      "pasa": false
+     }
+    },
+    "segmentos": {
+     "motor": {
+      "dif": 0.00012074916353310705,
+      "filas": 25603,
+      "pasa": true
+     },
+     "buildings": {
+      "dif": -0.012919891896582825,
+      "filas": 14867,
+      "pasa": false
+     },
+     "contents": {
+      "dif": -0.0012128678503274815,
+      "filas": 18732,
+      "pasa": false
+     },
+     "new_customer": {
+      "dif": -0.0019383731943295457,
+      "filas": 9063,
+      "pasa": false
+     },
+     "renewal": {
+      "dif": -0.004289453890654493,
+      "filas": 50139,
+      "pasa": false
+     }
+    },
+    "influencia": {
+     "componentes_quitados": 37,
+     "filas_quitadas": 75,
+     "contribucion_quitada": 27476.240526722682,
+     "contribucion_total": -21978.105648812965,
+     "dif_tras_quitar": -0.009558069706602335,
+     "pasa": false,
+     "dif_tras_quitar_por_agregados": -0.009558069706602413,
+     "componentes_para_anular_o_invertir": 1
+    },
+    "todas_pasan": false
+   }
+  },
+  "regla_secuencial": {
+   "pasos": [
+    {
+     "aspirante": "A1",
+     "titular": "R0",
+     "par": "A1-R0",
+     "q_inf": 0.027204576770190614,
+     "supera_delta_min": true,
+     "salvaguardas": false,
+     "nivel": true,
+     "promueve": false,
+     "salvaguardas_fallidas": [
+      "cliente_nuevo"
+     ]
+    },
+    {
+     "aspirante": "A2",
+     "titular": "R0",
+     "par": "A2-R0",
+     "q_inf": 0.02415469707700158,
+     "supera_delta_min": true,
+     "salvaguardas": false,
+     "nivel": true,
+     "promueve": false,
+     "salvaguardas_fallidas": [
+      "cliente_nuevo"
+     ]
+    }
+   ],
+   "titular_final": "R0"
+  },
+  "potencia": {
+   "A1-R0": {
+    "de_boot_global": 0.008711140834062521,
+    "dif_necesaria_aprox_global": 0.023481731748423742,
+    "dif_necesaria_empirica_global": 0.02188699366252128
+   },
+   "A2-R0": {
+    "de_boot_global": 0.008076587964054359,
+    "dif_necesaria_aprox_global": 0.02180765436676821,
+    "dif_necesaria_empirica_global": 0.02096099101854148
+   },
+   "A2-A1": {
+    "de_boot_global": 0.002441081081141557,
+    "dif_necesaria_aprox_global": 0.006940060108267655,
+    "dif_necesaria_empirica_global": 0.007137404789958869
+   }
+  }
+ },
+ "potencia_salvaguarda_cliente_nuevo": {
+  "A1-R0": {
+   "dif_observada": 0.01306225848548137,
+   "de_boot": 0.014046962009592802,
+   "mejora_necesaria_normal": 0.02210519640912826,
+   "mejora_necesaria_empirica": 0.02241564972962204,
+   "prop_boot_dif_menor_o_igual_cero": 0.1786,
+   "prob_pasar_si_efecto_real_igual_al_observado": 0.2598640220795315,
+   "prob_pasar_si_efecto_real_cero": 0.05778259095682285,
+   "filas_nuevas_para_pasar_con_efecto_observado_50pct": 24467.024450953864,
+   "filas_nuevas_para_80pct_potencia_con_efecto_observado": 55910.68172875656,
+   "margen_no_inferioridad_en_desviaciones_tipicas": 0.07118977038003596
+  },
+  "A2-R0": {
+   "dif_observada": 0.011123885291151825,
+   "de_boot": 0.014956318138638984,
+   "mejora_necesaria_normal": 0.02360095413618042,
+   "mejora_necesaria_empirica": 0.024170584761410062,
+   "prop_boot_dif_menor_o_igual_cero": 0.233,
+   "prob_pasar_si_efecto_real_igual_al_observado": 0.20207457254793176,
+   "prob_pasar_si_efecto_real_cero": 0.057283694935327374,
+   "filas_nuevas_para_pasar_con_efecto_observado_50pct": 37315.756054895224,
+   "filas_nuevas_para_80pct_potencia_con_efecto_observado": 85271.88765578845,
+   "margen_no_inferioridad_en_desviaciones_tipicas": 0.06686137528838361
+  },
+  "A2-A1": {
+   "dif_observada": -0.0019383731943295457,
+   "de_boot": 0.0045717537625424775,
+   "mejora_necesaria_normal": 0.006519865757847034,
+   "mejora_necesaria_empirica": 0.006703980088297157,
+   "prop_boot_dif_menor_o_igual_cero": 0.6587,
+   "prob_pasar_si_efecto_real_igual_al_observado": null,
+   "prob_pasar_si_efecto_real_cero": 0.07691697067274869,
+   "filas_nuevas_para_pasar_con_efecto_observado_50pct": null,
+   "filas_nuevas_para_80pct_potencia_con_efecto_observado": null,
+   "margen_no_inferioridad_en_desviaciones_tipicas": 0.21873444020394323
+  }
+ },
+ "ae_ramo_por_cliente_nuevo": {
+  "buildings|renovacion": {
+   "filas": 12588,
+   "y": 3453089.09,
+   "AE_R0": 0.6378239281361379,
+   "AE_A1": 0.6269483347051522,
+   "AE_A2": 0.6275706624720586
+  },
+  "buildings|nuevo": {
+   "filas": 2279,
+   "y": 256972.12,
+   "AE_R0": 0.49250920203331705,
+   "AE_A1": 0.48759902131292154,
+   "AE_A2": 0.4897481077367523
+  },
+  "contents|renovacion": {
+   "filas": 15863,
+   "y": 1130133.77,
+   "AE_R0": 0.9305364064534135,
+   "AE_A1": 0.917163656260221,
+   "AE_A2": 0.9173308270944898
+  },
+  "contents|nuevo": {
+   "filas": 2869,
+   "y": 167566.0,
+   "AE_R0": 1.4010875746545546,
+   "AE_A1": 1.3595442767181194,
+   "AE_A2": 1.3701772160442804
+  },
+  "motor|renovacion": {
+   "filas": 21688,
+   "y": 6897742.71,
+   "AE_R0": 1.029612076575765,
+   "AE_A1": 1.110419858193052,
+   "AE_A2": 1.110419666835436
+  },
+  "motor|nuevo": {
+   "filas": 3915,
+   "y": 795384.04,
+   "AE_R0": 1.2959791216736003,
+   "AE_A1": 1.0606078123633094,
+   "AE_A2": 1.0603352354962376
+  }
+ },
+ "columna_no_preinscrita_A3": {
+  "presente": true,
+  "correlacion_con_A1": 0.9998310306185104,
+  "cociente_totales_A3_A1_por_ramo": {
+   "motor": 1.0772737898599385,
+   "buildings": 1.0473147041817994,
+   "contents": 1.039792427415646
+  },
+  "nota": "No figura en el orden preinscrito (R0, A1, A2); no se puntuó contra 2024."
+ },
+ "titular_final": "R0",
+ "manifiesto": {
+  "objetivo_por_fila.parquet": "2ecd7e2591962b4384e95fab5258b6a886734970da405fd3aa12b24fa1116ecc",
+  "objetivo_resumen.json": "3cb95606dceb458223aff13423086b449eed8b1a2b0217c3c041df4aabac8b1f",
+  "resultados_compuerta.json": "e66f44283afe354e008d26538b468f7e3a68e0198a8da5233964850d88683e80",
+  "bootstrap_difs.npz": "4263e236e914c0286c43db7f443eb7e49d77fc38f754f791b0dadf9c154c00c6",
+  "codigo/objetivo.py": "f5ac34786bd612b0757a77a85e145f0ed5ed1a4676e4bd35d102e1282669a79c",
+  "codigo/compuerta.py": "afee2eccab1ce1fdb6e23607db1c299f70981bef859c37c991c1b6d0b41529fe",
+  "codigo/ensamblar.py": "eb54a431ad8c08f6d57ce7aa6eca14d42f7bf14304acfd27c9b002b694ebb0a9"
+ },
+ "estabilidad_monte_carlo": {
+  "nota": "tres semillas adicionales (11, 22, 33), 10.000 réplicas cada una",
+  "cliente_nuevo_q05_A1-R0": [
+   -0.00958,
+   -0.01036,
+   -0.01062
+  ],
+  "cliente_nuevo_q05_A2-R0": [
+   -0.01342,
+   -0.01417,
+   -0.01418
+  ],
+  "global_q_inf_A1-R0": [
+   0.02672,
+   0.02717,
+   0.02636
+  ],
+  "global_q_inf_A2-R0": [
+   0.02319,
+   0.0244,
+   0.02363
+  ],
+  "global_q_inf_A2-A1": [
+   -0.01044,
+   -0.01028,
+   -0.01055
+  ]
+ },
+ "observaciones": [
+  "El archivo de predicciones trae una columna A3 que no está en el orden preinscrito (R0, A1, A2); no se puntuó.",
+  "La condición de nivel se tomó como satisfecha por instrucción; la preinscripción no trae huella de la evidencia que la apoya y la política dice que una condición sin evidencia con huella bloquea.",
+  "Con margen -0,001 y desviación típica 0,014, la salvaguarda de cliente nuevo funciona como una prueba de superioridad unilateral al 5 %, no como no inferioridad.",
+  "Todos los modelos sobrestiman edificios 2024 (A/E 0,61-0,63), por la siniestralidad de incendio de 2023."
+ ]
+}

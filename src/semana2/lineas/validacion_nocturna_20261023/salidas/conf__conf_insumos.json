@@ -1,0 +1,83 @@
+{
+ "s2_motor": {
+  "shares": {
+   "own_damage": 0.1784,
+   "third_party_prop": 0.3249,
+   "bodily_injury": 0.3581,
+   "theft": 0.0871,
+   "glass_hail": 0.0515
+  },
+  "comp_by_year": {
+   "2023": 0.9733,
+   "2024": 0.8183
+  }
+ },
+ "s2_buildings": {
+  "shares": {
+   "storm": 0.0882,
+   "flood": 0.1778,
+   "escape_of_water": 0.0864,
+   "subsidence": 0.089,
+   "fire": 0.5507,
+   "accidental_damage": 0.008
+  },
+  "comp_by_year": {
+   "2023": 0.9966,
+   "2024": 0.9509
+  }
+ },
+ "s2_contents": {
+  "shares": {
+   "theft": 0.4292,
+   "escape_of_water": 0.1504,
+   "accidental_damage": 0.0842,
+   "flood": 0.3362
+  },
+  "comp_by_year": {
+   "2023": 0.9984,
+   "2024": 0.9776
+  }
+ },
+ "s1_motor": {
+  "shares": {
+   "own_damage": 0.193,
+   "third_party_prop": 0.2627,
+   "bodily_injury": 0.4248,
+   "theft": 0.0838,
+   "glass_hail": 0.0357
+  },
+  "comp_by_year": {
+   "2021": 0.998,
+   "2022": 0.9944,
+   "2023": 0.9694
+  }
+ },
+ "s1_buildings": {
+  "shares": {
+   "storm": 0.1086,
+   "flood": 0.284,
+   "escape_of_water": 0.2291,
+   "subsidence": 0.1276,
+   "fire": 0.2319,
+   "accidental_damage": 0.0189
+  },
+  "comp_by_year": {
+   "2021": 1.0,
+   "2022": 1.0,
+   "2023": 0.9965
+  }
+ },
+ "s1_contents": {
+  "shares": {
+   "theft": 0.4144,
+   "escape_of_water": 0.2254,
+   "accidental_damage": 0.1079,
+   "flood": 0.2524
+  },
+  "comp_by_year": {
+   "2021": 1.0,
+   "2022": 1.0,
+   "2023": 0.9984
+  }
+ }
+}

@@ -1,0 +1,4406 @@
+{
+ "autor": "Claude",
+ "fuente": "evidencia_decisiones.json",
+ "documentos": {
+  "aporte": "aporte_CLA-S2-20261023-003.md",
+  "readme": "README.md"
+ },
+ "descripcion": "Cada cifra del aporte y del README con su ruta en la evidencia; verificar_aporte.py la recalcula.",
+ "cifras": [
+  {
+   "id": "ap-001",
+   "en": "aporte",
+   "contexto": "2978406f…5b51",
+   "ruta": [
+    "preinscripcion",
+    "sha256"
+   ],
+   "formato": "sha",
+   "valor": "2978406f…5b51"
+  },
+  {
+   "id": "ap-002",
+   "en": "aporte",
+   "contexto": "110 de entrenamiento y 239 de test",
+   "ruta": [
+    "capital",
+    "total_divididas_train"
+   ],
+   "formato": "int",
+   "valor": "110"
+  },
+  {
+   "id": "ap-003",
+   "en": "aporte",
+   "contexto": "110 de entrenamiento y 239 de test",
+   "ruta": [
+    "capital",
+    "total_divididas_test"
+   ],
+   "formato": "int",
+   "valor": "239"
+  },
+  {
+   "id": "ap-004",
+   "en": "aporte",
+   "contexto": "Las 349 filas",
+   "ruta": [
+    "capital",
+    "total_divididas"
+   ],
+   "formato": "int",
+   "valor": "349"
+  },
+  {
+   "id": "ap-005",
+   "en": "aporte",
+   "contexto": "como mucho 0,011",
+   "ruta": [
+    "capital",
+    "buildings",
+    "ppm_bruta_max"
+   ],
+   "formato": "dec3",
+   "valor": "0,011"
+  },
+  {
+   "id": "ap-006",
+   "en": "aporte",
+   "contexto": "0,0070",
+   "ruta": [
+    "capital",
+    "contents",
+    "ppm_bruta_max"
+   ],
+   "formato": "dec4",
+   "valor": "0,0070"
+  },
+  {
+   "id": "ap-007",
+   "en": "aporte",
+   "contexto": "entre 0,60 y 11,0 en edificios",
+   "ruta": [
+    "capital",
+    "buildings",
+    "ppm_dividida_min"
+   ],
+   "formato": "dec2",
+   "valor": "0,60"
+  },
+  {
+   "id": "ap-008",
+   "en": "aporte",
+   "contexto": "entre 0,60 y 11,0 en edificios",
+   "ruta": [
+    "capital",
+    "buildings",
+    "ppm_dividida_max"
+   ],
+   "formato": "dec1",
+   "valor": "11,0"
+  },
+  {
+   "id": "ap-009",
+   "en": "aporte",
+   "contexto": "entre 2,09 y 6,95 en contenidos",
+   "ruta": [
+    "capital",
+    "contents",
+    "ppm_dividida_min"
+   ],
+   "formato": "dec2",
+   "valor": "2,09"
+  },
+  {
+   "id": "ap-010",
+   "en": "aporte",
+   "contexto": "entre 2,09 y 6,95 en contenidos",
+   "ruta": [
+    "capital",
+    "contents",
+    "ppm_dividida_max"
+   ],
+   "formato": "dec2",
+   "valor": "6,95"
+  },
+  {
+   "id": "ap-011",
+   "en": "aporte",
+   "contexto": "ninguna queda fuera",
+   "ruta": [
+    "capital",
+    "total_no_pasan"
+   ],
+   "igual": 0
+  },
+  {
+   "id": "ap-012",
+   "en": "aporte",
+   "contexto": "964cab97…61bb",
+   "ruta": [
+    "capital",
+    "lista_sha256"
+   ],
+   "formato": "sha",
+   "valor": "964cab97…61bb"
+  },
+  {
+   "id": "ap-013",
+   "en": "aporte",
+   "contexto": "exposición al viento",
+   "ruta": [
+    "clima",
+    "variables_bloque"
+   ],
+   "igual": [
+    "wind_exposure_index",
+    "wildfire_index",
+    "rainfall_mm"
+   ]
+  },
+  {
+   "id": "ap-014",
+   "en": "aporte",
+   "contexto": "lunas −24 %",
+   "buscar": {
+    "lista": [
+     "clima",
+     "escenario_2025"
+    ],
+    "campos": {
+     "ramo": "motor",
+     "peligro": "glass_hail"
+    },
+    "clave": "razon"
+   },
+   "formato": "dpct0",
+   "valor": "−24"
+  },
+  {
+   "id": "ap-015",
+   "en": "aporte",
+   "contexto": "escape de agua +12 %",
+   "buscar": {
+    "lista": [
+     "clima",
+     "escenario_2025"
+    ],
+    "campos": {
+     "ramo": "buildings",
+     "peligro": "escape_of_water"
+    },
+    "clave": "razon"
+   },
+   "formato": "dpct0",
+   "valor": "+12"
+  },
+  {
+   "id": "ap-016",
+   "en": "aporte",
+   "contexto": "+19 %",
+   "buscar": {
+    "lista": [
+     "clima",
+     "escenario_2025"
+    ],
+    "campos": {
+     "ramo": "contents",
+     "peligro": "escape_of_water"
+    },
+    "clave": "razon"
+   },
+   "formato": "dpct0",
+   "valor": "+19"
+  },
+  {
+   "id": "ap-017",
+   "en": "aporte",
+   "contexto": "hundimiento −25 %",
+   "buscar": {
+    "lista": [
+     "clima",
+     "escenario_2025"
+    ],
+    "campos": {
+     "ramo": "buildings",
+     "peligro": "subsidence"
+    },
+    "clave": "razon"
+   },
+   "formato": "dpct0",
+   "valor": "−25"
+  },
+  {
+   "id": "ap-018",
+   "en": "aporte",
+   "contexto": "tormenta −4 %",
+   "buscar": {
+    "lista": [
+     "clima",
+     "escenario_2025"
+    ],
+    "campos": {
+     "ramo": "buildings",
+     "peligro": "storm"
+    },
+    "clave": "razon"
+   },
+   "formato": "dpct0",
+   "valor": "−4"
+  },
+  {
+   "id": "ap-019",
+   "en": "aporte",
+   "contexto": "las otras 75 categorías",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "niveles_tau_f"
+   ],
+   "formato": "int",
+   "valor": "75"
+  },
+  {
+   "id": "ap-020",
+   "en": "aporte",
+   "contexto": "las otras 75 categorías",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "niveles_tau_s"
+   ],
+   "formato": "int",
+   "valor": "75"
+  },
+  {
+   "id": "ap-021",
+   "en": "aporte",
+   "contexto": "τ sale cero",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "tau_s"
+   ],
+   "igual": 0.0
+  },
+  {
+   "id": "ap-022",
+   "en": "aporte",
+   "contexto": "| Autos | 1,23 | 1,16 | 0,36 | 1,32 | 0,98 | 0,00 | 1,16 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "motor",
+    "rel_f_em"
+   ],
+   "formato": "dec2",
+   "valor": "1,23"
+  },
+  {
+   "id": "ap-023",
+   "en": "aporte",
+   "contexto": "| Autos | 1,23 | 1,16 | 0,36 | 1,32 | 0,98 | 0,00 | 1,16 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "motor",
+    "rel_f_dev"
+   ],
+   "formato": "dec2",
+   "valor": "1,16"
+  },
+  {
+   "id": "ap-024",
+   "en": "aporte",
+   "contexto": "| Autos | 1,23 | 1,16 | 0,36 | 1,32 | 0,98 | 0,00 | 1,16 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "motor",
+    "Z_f"
+   ],
+   "formato": "dec2",
+   "valor": "0,36"
+  },
+  {
+   "id": "ap-025",
+   "en": "aporte",
+   "contexto": "| Autos | 1,23 | 1,16 | 0,36 | 1,32 | 0,98 | 0,00 | 1,16 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "motor",
+    "rel_s_em"
+   ],
+   "formato": "dec2",
+   "valor": "1,32"
+  },
+  {
+   "id": "ap-026",
+   "en": "aporte",
+   "contexto": "| Autos | 1,23 | 1,16 | 0,36 | 1,32 | 0,98 | 0,00 | 1,16 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "motor",
+    "rel_s_dev"
+   ],
+   "formato": "dec2",
+   "valor": "0,98"
+  },
+  {
+   "id": "ap-027",
+   "en": "aporte",
+   "contexto": "| Autos | 1,23 | 1,16 | 0,36 | 1,32 | 0,98 | 0,00 | 1,16 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "motor",
+    "Z_s"
+   ],
+   "formato": "dec2",
+   "valor": "0,00"
+  },
+  {
+   "id": "ap-028",
+   "en": "aporte",
+   "contexto": "| Autos | 1,23 | 1,16 | 0,36 | 1,32 | 0,98 | 0,00 | 1,16 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "motor",
+    "rel_cred"
+   ],
+   "formato": "dec2",
+   "valor": "1,16"
+  },
+  {
+   "id": "ap-029",
+   "en": "aporte",
+   "contexto": "| Edificios | 1,21 | 1,13 | 0,08 | 0,97 | 0,98 | 0,00 | 1,11 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "buildings",
+    "rel_f_em"
+   ],
+   "formato": "dec2",
+   "valor": "1,21"
+  },
+  {
+   "id": "ap-030",
+   "en": "aporte",
+   "contexto": "| Edificios | 1,21 | 1,13 | 0,08 | 0,97 | 0,98 | 0,00 | 1,11 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "buildings",
+    "rel_f_dev"
+   ],
+   "formato": "dec2",
+   "valor": "1,13"
+  },
+  {
+   "id": "ap-031",
+   "en": "aporte",
+   "contexto": "| Edificios | 1,21 | 1,13 | 0,08 | 0,97 | 0,98 | 0,00 | 1,11 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "buildings",
+    "Z_f"
+   ],
+   "formato": "dec2",
+   "valor": "0,08"
+  },
+  {
+   "id": "ap-032",
+   "en": "aporte",
+   "contexto": "| Edificios | 1,21 | 1,13 | 0,08 | 0,97 | 0,98 | 0,00 | 1,11 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "buildings",
+    "rel_s_em"
+   ],
+   "formato": "dec2",
+   "valor": "0,97"
+  },
+  {
+   "id": "ap-033",
+   "en": "aporte",
+   "contexto": "| Edificios | 1,21 | 1,13 | 0,08 | 0,97 | 0,98 | 0,00 | 1,11 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "buildings",
+    "rel_s_dev"
+   ],
+   "formato": "dec2",
+   "valor": "0,98"
+  },
+  {
+   "id": "ap-034",
+   "en": "aporte",
+   "contexto": "| Edificios | 1,21 | 1,13 | 0,08 | 0,97 | 0,98 | 0,00 | 1,11 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "buildings",
+    "Z_s"
+   ],
+   "formato": "dec2",
+   "valor": "0,00"
+  },
+  {
+   "id": "ap-035",
+   "en": "aporte",
+   "contexto": "| Edificios | 1,21 | 1,13 | 0,08 | 0,97 | 0,98 | 0,00 | 1,11 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "buildings",
+    "rel_cred"
+   ],
+   "formato": "dec2",
+   "valor": "1,11"
+  },
+  {
+   "id": "ap-036",
+   "en": "aporte",
+   "contexto": "| Contenidos | 1,18 | 1,15 | 0,07 | 0,80 | 0,93 | 0,00 | 1,07 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "contents",
+    "rel_f_em"
+   ],
+   "formato": "dec2",
+   "valor": "1,18"
+  },
+  {
+   "id": "ap-037",
+   "en": "aporte",
+   "contexto": "| Contenidos | 1,18 | 1,15 | 0,07 | 0,80 | 0,93 | 0,00 | 1,07 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "contents",
+    "rel_f_dev"
+   ],
+   "formato": "dec2",
+   "valor": "1,15"
+  },
+  {
+   "id": "ap-038",
+   "en": "aporte",
+   "contexto": "| Contenidos | 1,18 | 1,15 | 0,07 | 0,80 | 0,93 | 0,00 | 1,07 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "contents",
+    "Z_f"
+   ],
+   "formato": "dec2",
+   "valor": "0,07"
+  },
+  {
+   "id": "ap-039",
+   "en": "aporte",
+   "contexto": "| Contenidos | 1,18 | 1,15 | 0,07 | 0,80 | 0,93 | 0,00 | 1,07 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "contents",
+    "rel_s_em"
+   ],
+   "formato": "dec2",
+   "valor": "0,80"
+  },
+  {
+   "id": "ap-040",
+   "en": "aporte",
+   "contexto": "| Contenidos | 1,18 | 1,15 | 0,07 | 0,80 | 0,93 | 0,00 | 1,07 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "contents",
+    "rel_s_dev"
+   ],
+   "formato": "dec2",
+   "valor": "0,93"
+  },
+  {
+   "id": "ap-041",
+   "en": "aporte",
+   "contexto": "| Contenidos | 1,18 | 1,15 | 0,07 | 0,80 | 0,93 | 0,00 | 1,07 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "contents",
+    "Z_s"
+   ],
+   "formato": "dec2",
+   "valor": "0,00"
+  },
+  {
+   "id": "ap-042",
+   "en": "aporte",
+   "contexto": "| Contenidos | 1,18 | 1,15 | 0,07 | 0,80 | 0,93 | 0,00 | 1,07 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "contents",
+    "rel_cred"
+   ],
+   "formato": "dec2",
+   "valor": "1,07"
+  },
+  {
+   "id": "ap-043",
+   "en": "aporte",
+   "contexto": "suman el 38 %",
+   "ruta": [
+    "nuevo_negocio",
+    "concentracion_severidad",
+    "motor",
+    "emergente",
+    "NB",
+    "cuota_5_mayores"
+   ],
+   "formato": "pct0",
+   "valor": "38"
+  },
+  {
+   "id": "ap-044",
+   "en": "aporte",
+   "contexto": "la media queda en 2.170 CU en el nuevo negocio y en 2.095 en la renovación",
+   "ruta": [
+    "nuevo_negocio",
+    "concentracion_severidad",
+    "motor",
+    "emergente",
+    "NB",
+    "media_sin_5_mayores"
+   ],
+   "formato": "int",
+   "valor": "2.170"
+  },
+  {
+   "id": "ap-045",
+   "en": "aporte",
+   "contexto": "la media queda en 2.170 CU en el nuevo negocio y en 2.095 en la renovación",
+   "ruta": [
+    "nuevo_negocio",
+    "concentracion_severidad",
+    "motor",
+    "emergente",
+    "REN",
+    "media_sin_5_mayores"
+   ],
+   "formato": "int",
+   "valor": "2.095"
+  },
+  {
+   "id": "ap-046",
+   "en": "aporte",
+   "contexto": "0,713 en autos, 0,946 en edificios y 1,132 en contenidos",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "motor",
+    "c"
+   ],
+   "formato": "dec3",
+   "valor": "0,713"
+  },
+  {
+   "id": "ap-047",
+   "en": "aporte",
+   "contexto": "0,713 en autos, 0,946 en edificios y 1,132 en contenidos",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "buildings",
+    "c"
+   ],
+   "formato": "dec3",
+   "valor": "0,946"
+  },
+  {
+   "id": "ap-048",
+   "en": "aporte",
+   "contexto": "0,713 en autos, 0,946 en edificios y 1,132 en contenidos",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "contents",
+    "c"
+   ],
+   "formato": "dec3",
+   "valor": "1,132"
+  },
+  {
+   "id": "ap-049",
+   "en": "aporte",
+   "contexto": "va de 1,16 a 1,17 en autos",
+   "min": [
+    [
+     "nuevo_negocio",
+     "credibilidad",
+     "principal",
+     "ramos",
+     "motor",
+     "rel_cred"
+    ],
+    [
+     "nuevo_negocio",
+     "credibilidad",
+     "sin_estacionalidad",
+     "ramos",
+     "motor",
+     "rel_cred"
+    ],
+    [
+     "nuevo_negocio",
+     "credibilidad",
+     "estacional_emergente",
+     "ramos",
+     "motor",
+     "rel_cred"
+    ],
+    [
+     "nuevo_negocio",
+     "credibilidad",
+     "principal_sin_ncb_en_tau",
+     "ramos",
+     "motor",
+     "rel_cred"
+    ]
+   ],
+   "formato": "dec2",
+   "valor": "1,16"
+  },
+  {
+   "id": "ap-050",
+   "en": "aporte",
+   "contexto": "va de 1,16 a 1,17 en autos",
+   "max": [
+    [
+     "nuevo_negocio",
+     "credibilidad",
+     "principal",
+     "ramos",
+     "motor",
+     "rel_cred"
+    ],
+    [
+     "nuevo_negocio",
+     "credibilidad",
+     "sin_estacionalidad",
+     "ramos",
+     "motor",
+     "rel_cred"
+    ],
+    [
+     "nuevo_negocio",
+     "credibilidad",
+     "estacional_emergente",
+     "ramos",
+     "motor",
+     "rel_cred"
+    ],
+    [
+     "nuevo_negocio",
+     "credibilidad",
+     "principal_sin_ncb_en_tau",
+     "ramos",
+     "motor",
+     "rel_cred"
+    ]
+   ],
+   "formato": "dec2",
+   "valor": "1,17"
+  },
+  {
+   "id": "ap-051",
+   "en": "aporte",
+   "contexto": "de 1,08 a 1,11 en edificios",
+   "min": [
+    [
+     "nuevo_negocio",
+     "credibilidad",
+     "principal",
+     "ramos",
+     "buildings",
+     "rel_cred"
+    ],
+    [
+     "nuevo_negocio",
+     "credibilidad",
+     "sin_estacionalidad",
+     "ramos",
+     "buildings",
+     "rel_cred"
+    ],
+    [
+     "nuevo_negocio",
+     "credibilidad",
+     "estacional_emergente",
+     "ramos",
+     "buildings",
+     "rel_cred"
+    ],
+    [
+     "nuevo_negocio",
+     "credibilidad",
+     "principal_sin_ncb_en_tau",
+     "ramos",
+     "buildings",
+     "rel_cred"
+    ]
+   ],
+   "formato": "dec2",
+   "valor": "1,08"
+  },
+  {
+   "id": "ap-052",
+   "en": "aporte",
+   "contexto": "de 1,08 a 1,11 en edificios",
+   "max": [
+    [
+     "nuevo_negocio",
+     "credibilidad",
+     "principal",
+     "ramos",
+     "buildings",
+     "rel_cred"
+    ],
+    [
+     "nuevo_negocio",
+     "credibilidad",
+     "sin_estacionalidad",
+     "ramos",
+     "buildings",
+     "rel_cred"
+    ],
+    [
+     "nuevo_negocio",
+     "credibilidad",
+     "estacional_emergente",
+     "ramos",
+     "buildings",
+     "rel_cred"
+    ],
+    [
+     "nuevo_negocio",
+     "credibilidad",
+     "principal_sin_ncb_en_tau",
+     "ramos",
+     "buildings",
+     "rel_cred"
+    ]
+   ],
+   "formato": "dec2",
+   "valor": "1,11"
+  },
+  {
+   "id": "ap-053",
+   "en": "aporte",
+   "contexto": "de 1,03 a 1,07 en contenidos",
+   "min": [
+    [
+     "nuevo_negocio",
+     "credibilidad",
+     "principal",
+     "ramos",
+     "contents",
+     "rel_cred"
+    ],
+    [
+     "nuevo_negocio",
+     "credibilidad",
+     "sin_estacionalidad",
+     "ramos",
+     "contents",
+     "rel_cred"
+    ],
+    [
+     "nuevo_negocio",
+     "credibilidad",
+     "estacional_emergente",
+     "ramos",
+     "contents",
+     "rel_cred"
+    ],
+    [
+     "nuevo_negocio",
+     "credibilidad",
+     "principal_sin_ncb_en_tau",
+     "ramos",
+     "contents",
+     "rel_cred"
+    ]
+   ],
+   "formato": "dec2",
+   "valor": "1,03"
+  },
+  {
+   "id": "ap-054",
+   "en": "aporte",
+   "contexto": "de 1,03 a 1,07 en contenidos",
+   "max": [
+    [
+     "nuevo_negocio",
+     "credibilidad",
+     "principal",
+     "ramos",
+     "contents",
+     "rel_cred"
+    ],
+    [
+     "nuevo_negocio",
+     "credibilidad",
+     "sin_estacionalidad",
+     "ramos",
+     "contents",
+     "rel_cred"
+    ],
+    [
+     "nuevo_negocio",
+     "credibilidad",
+     "estacional_emergente",
+     "ramos",
+     "contents",
+     "rel_cred"
+    ],
+    [
+     "nuevo_negocio",
+     "credibilidad",
+     "principal_sin_ncb_en_tau",
+     "ramos",
+     "contents",
+     "rel_cred"
+    ]
+   ],
+   "formato": "dec2",
+   "valor": "1,07"
+  },
+  {
+   "id": "ap-055",
+   "en": "aporte",
+   "contexto": "W2-B08 recibiría 1,016, 0,854 y 1,275",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B08",
+    "g_todo_2023",
+    "motor",
+    "g_NB"
+   ],
+   "formato": "dec3",
+   "valor": "1,016"
+  },
+  {
+   "id": "ap-056",
+   "en": "aporte",
+   "contexto": "W2-B08 recibiría 1,016, 0,854 y 1,275",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B08",
+    "g_todo_2023",
+    "buildings",
+    "g_NB"
+   ],
+   "formato": "dec3",
+   "valor": "0,854"
+  },
+  {
+   "id": "ap-057",
+   "en": "aporte",
+   "contexto": "W2-B08 recibiría 1,016, 0,854 y 1,275",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B08",
+    "g_todo_2023",
+    "contents",
+    "g_NB"
+   ],
+   "formato": "dec3",
+   "valor": "1,275"
+  },
+  {
+   "id": "ap-058",
+   "en": "aporte",
+   "contexto": "W2-B00 1,621, 0,904 y 1,234",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B00",
+    "g_todo_2023",
+    "motor",
+    "g_NB"
+   ],
+   "formato": "dec3",
+   "valor": "1,621"
+  },
+  {
+   "id": "ap-059",
+   "en": "aporte",
+   "contexto": "W2-B00 1,621, 0,904 y 1,234",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B00",
+    "g_todo_2023",
+    "buildings",
+    "g_NB"
+   ],
+   "formato": "dec3",
+   "valor": "0,904"
+  },
+  {
+   "id": "ap-060",
+   "en": "aporte",
+   "contexto": "W2-B00 1,621, 0,904 y 1,234",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B00",
+    "g_todo_2023",
+    "contents",
+    "g_NB"
+   ],
+   "formato": "dec3",
+   "valor": "1,234"
+  },
+  {
+   "id": "ap-061",
+   "en": "aporte",
+   "contexto": "pasa de 0,054 a 0,091 con el nivel creíble y a 0,093 con el solo emergente",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B00",
+    "guardada",
+    "D2_mezcla_2025"
+   ],
+   "formato": "dec3",
+   "valor": "0,054"
+  },
+  {
+   "id": "ap-062",
+   "en": "aporte",
+   "contexto": "a 0,091 con el nivel creíble",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B00",
+    "credibilidad",
+    "D2_mezcla_2025"
+   ],
+   "formato": "dec3",
+   "valor": "0,091"
+  },
+  {
+   "id": "ap-063",
+   "en": "aporte",
+   "contexto": "a 0,093 con el solo emergente",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B00",
+    "emergente",
+    "D2_mezcla_2025"
+   ],
+   "formato": "dec3",
+   "valor": "0,093"
+  },
+  {
+   "id": "ap-064",
+   "en": "aporte",
+   "contexto": "W2-B06 baja de 0,068 a 0,032",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B06",
+    "guardada",
+    "D2_mezcla_2025"
+   ],
+   "formato": "dec3",
+   "valor": "0,068"
+  },
+  {
+   "id": "ap-065",
+   "en": "aporte",
+   "contexto": "W2-B06 baja de 0,068 a 0,032",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B06",
+    "credibilidad",
+    "D2_mezcla_2025"
+   ],
+   "formato": "dec3",
+   "valor": "0,032"
+  },
+  {
+   "id": "ap-066",
+   "en": "aporte",
+   "contexto": "W2-B08 de 0,079 a 0,069",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B08",
+    "guardada",
+    "D2_mezcla_2025"
+   ],
+   "formato": "dec3",
+   "valor": "0,079"
+  },
+  {
+   "id": "ap-067",
+   "en": "aporte",
+   "contexto": "W2-B08 de 0,079 a 0,069",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B08",
+    "credibilidad",
+    "D2_mezcla_2025"
+   ],
+   "formato": "dec3",
+   "valor": "0,069"
+  },
+  {
+   "id": "ap-068",
+   "en": "aporte",
+   "contexto": "el nivel creíble nunca es el mejor",
+   "calculo": "creible_mejor_todas",
+   "igual": 0
+  },
+  {
+   "id": "ap-069",
+   "en": "aporte",
+   "contexto": "gana la receta guardada o el nivel solo emergente",
+   "calculo": "mejor_todas_guardada_o_emergente",
+   "igual": 10
+  },
+  {
+   "id": "ap-070",
+   "en": "aporte",
+   "contexto": "Sin las 51 filas más caras",
+   "ruta": [
+    "diagnostico_oof",
+    "filas_excluidas_sin_01"
+   ],
+   "formato": "int",
+   "valor": "51"
+  },
+  {
+   "id": "ap-071",
+   "en": "aporte",
+   "contexto": "el creíble supera al solo emergente en nueve de las diez recetas",
+   "calculo": "creible_supera_emergente_cuerpo",
+   "igual": 9
+  },
+  {
+   "id": "ap-072",
+   "en": "aporte",
+   "contexto": "la receta guardada sigue por delante en nueve de diez",
+   "calculo": "guardada_mejor_cuerpo",
+   "igual": 9
+  },
+  {
+   "id": "ap-073",
+   "en": "aporte",
+   "contexto": "nueve de las diez recetas",
+   "calculo": "recetas",
+   "igual": 10
+  },
+  {
+   "id": "ap-074",
+   "en": "aporte",
+   "contexto": "−24 % en autos, −4 % en edificios y +10 % en contenidos",
+   "ruta": [
+    "escenario_bloque_transferido",
+    "motor",
+    "cambio_nivel_creible_frente_a_solo_emergente"
+   ],
+   "formato": "spct0",
+   "valor": "−24"
+  },
+  {
+   "id": "ap-075",
+   "en": "aporte",
+   "contexto": "−24 % en autos, −4 % en edificios y +10 % en contenidos",
+   "ruta": [
+    "escenario_bloque_transferido",
+    "buildings",
+    "cambio_nivel_creible_frente_a_solo_emergente"
+   ],
+   "formato": "spct0",
+   "valor": "−4"
+  },
+  {
+   "id": "ap-076",
+   "en": "aporte",
+   "contexto": "−24 % en autos, −4 % en edificios y +10 % en contenidos",
+   "ruta": [
+    "escenario_bloque_transferido",
+    "contents",
+    "cambio_nivel_creible_frente_a_solo_emergente"
+   ],
+   "formato": "spct0",
+   "valor": "+10"
+  },
+  {
+   "id": "ap-077",
+   "en": "aporte",
+   "contexto": "baja otro 10 %, 8 % y 5 %",
+   "ruta": [
+    "escenario_bloque_transferido",
+    "motor",
+    "cambio_nivel_si_bloque_como_renovacion"
+   ],
+   "formato": "apct0",
+   "valor": "10"
+  },
+  {
+   "id": "ap-078",
+   "en": "aporte",
+   "contexto": "baja otro 10 %, 8 % y 5 %",
+   "ruta": [
+    "escenario_bloque_transferido",
+    "buildings",
+    "cambio_nivel_si_bloque_como_renovacion"
+   ],
+   "formato": "apct0",
+   "valor": "8"
+  },
+  {
+   "id": "ap-079",
+   "en": "aporte",
+   "contexto": "baja otro 10 %, 8 % y 5 %",
+   "ruta": [
+    "escenario_bloque_transferido",
+    "contents",
+    "cambio_nivel_si_bloque_como_renovacion"
+   ],
+   "formato": "apct0",
+   "valor": "5"
+  },
+  {
+   "id": "ap-080",
+   "en": "aporte",
+   "contexto": "0,69 en directo y 0,49 en broker",
+   "ruta": [
+    "gasto_fijo",
+    "denominadores",
+    "direct"
+   ],
+   "formato": "dec2",
+   "valor": "0,69"
+  },
+  {
+   "id": "ap-081",
+   "en": "aporte",
+   "contexto": "0,69 en directo y 0,49 en broker",
+   "ruta": [
+    "gasto_fijo",
+    "denominadores",
+    "broker"
+   ],
+   "formato": "dec2",
+   "valor": "0,49"
+  },
+  {
+   "id": "ap-082",
+   "en": "aporte",
+   "contexto": "En 17 de las 20 referencias",
+   "calculo": "gasto_referencias_resto",
+   "igual": 17
+  },
+  {
+   "id": "ap-083",
+   "en": "aporte",
+   "contexto": "cambia en menos de 8 CU",
+   "calculo": "gasto_max_diferencia_resto",
+   "menor": 8
+  },
+  {
+   "id": "ap-084",
+   "en": "aporte",
+   "contexto": "con exposición 0,33",
+   "buscar": {
+    "lista": [
+     "gasto_fijo",
+     "referencias"
+    ],
+    "campos": {
+     "row_id": "M00129413"
+    },
+    "clave": "exposure"
+   },
+   "formato": "dec2",
+   "valor": "0,33"
+  },
+  {
+   "id": "ap-085",
+   "en": "aporte",
+   "contexto": "M00129413 recupera solo 28 CU de gasto fijo y B00250679, 9",
+   "buscar": {
+    "lista": [
+     "gasto_fijo",
+     "referencias"
+    ],
+    "campos": {
+     "row_id": "M00129413"
+    },
+    "clave": "F_por_exposicion_F"
+   },
+   "formato": "int",
+   "valor": "28"
+  },
+  {
+   "id": "ap-086",
+   "en": "aporte",
+   "contexto": "M00129413 recupera solo 28 CU de gasto fijo y B00250679, 9",
+   "buscar": {
+    "lista": [
+     "gasto_fijo",
+     "referencias"
+    ],
+    "campos": {
+     "row_id": "B00250679"
+    },
+    "clave": "F_por_exposicion_F"
+   },
+   "formato": "int",
+   "valor": "9"
+  },
+  {
+   "id": "ap-087",
+   "en": "aporte",
+   "contexto": "sube su prima comercial en 116 y 129 CU",
+   "calculo": "subida_poliza_anio_M00129413",
+   "formato": "int",
+   "valor": "116"
+  },
+  {
+   "id": "ap-088",
+   "en": "aporte",
+   "contexto": "sube su prima comercial en 116 y 129 CU",
+   "calculo": "subida_poliza_anio_B00250679",
+   "formato": "int",
+   "valor": "129"
+  },
+  {
+   "id": "ap-089",
+   "en": "aporte",
+   "contexto": "un mínimo de 0,451 en edificios",
+   "ruta": [
+    "capital",
+    "buildings",
+    "ppm_normal_min"
+   ],
+   "formato": "dec3",
+   "valor": "0,451"
+  },
+  {
+   "id": "ap-090",
+   "en": "aporte",
+   "contexto": "frente a 1,61 en contenidos",
+   "ruta": [
+    "capital",
+    "contents",
+    "ppm_normal_min"
+   ],
+   "formato": "dec2",
+   "valor": "1,61"
+  },
+  {
+   "id": "ap-091",
+   "en": "aporte",
+   "contexto": "163 de las 349",
+   "calculo": "confirmadas_total",
+   "formato": "int",
+   "valor": "163"
+  },
+  {
+   "id": "ap-092",
+   "en": "aporte",
+   "contexto": "escrita en el equipo a las 20:09 UTC",
+   "ruta": [
+    "preinscripcion",
+    "utc"
+   ],
+   "formato": "hora",
+   "valor": "20:09"
+  },
+  {
+   "id": "ap-093",
+   "en": "aporte",
+   "contexto": "correlación de 0,80 o más",
+   "ruta": [
+    "clima",
+    "umbral"
+   ],
+   "formato": "dec2",
+   "valor": "0,80"
+  },
+  {
+   "id": "ap-094",
+   "en": "aporte",
+   "contexto": "cambia 1,53 veces con el viento de los otros años y 1,60 con el del propio año",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "developed",
+     "ramo": "buildings",
+     "peligro": "storm"
+    },
+    "clave": "razon_alto_bajo_bloque"
+   },
+   "formato": "dec2",
+   "valor": "1,53"
+  },
+  {
+   "id": "ap-095",
+   "en": "aporte",
+   "contexto": "cambia 1,53 veces con el viento de los otros años y 1,60 con el del propio año",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "developed",
+     "ramo": "buildings",
+     "peligro": "storm"
+    },
+    "clave": "razon_alto_bajo_propio"
+   },
+   "formato": "dec2",
+   "valor": "1,60"
+  },
+  {
+   "id": "ap-096",
+   "en": "aporte",
+   "contexto": "la de incendio, 1,43 frente a 1,41",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "developed",
+     "ramo": "buildings",
+     "peligro": "fire"
+    },
+    "clave": "razon_alto_bajo_bloque"
+   },
+   "formato": "dec2",
+   "valor": "1,43"
+  },
+  {
+   "id": "ap-097",
+   "en": "aporte",
+   "contexto": "la de incendio, 1,43 frente a 1,41",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "developed",
+     "ramo": "buildings",
+     "peligro": "fire"
+    },
+    "clave": "razon_alto_bajo_propio"
+   },
+   "formato": "dec2",
+   "valor": "1,41"
+  },
+  {
+   "id": "ap-098",
+   "en": "aporte",
+   "contexto": "la de inundación en edificios, 2,27 frente a 2,07",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "developed",
+     "ramo": "buildings",
+     "peligro": "flood"
+    },
+    "clave": "razon_alto_bajo_bloque"
+   },
+   "formato": "dec2",
+   "valor": "2,27"
+  },
+  {
+   "id": "ap-099",
+   "en": "aporte",
+   "contexto": "la de inundación en edificios, 2,27 frente a 2,07",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "developed",
+     "ramo": "buildings",
+     "peligro": "flood"
+    },
+    "clave": "razon_alto_bajo_propio"
+   },
+   "formato": "dec2",
+   "valor": "2,07"
+  },
+  {
+   "id": "ap-100",
+   "en": "aporte",
+   "contexto": "entre 1,27 y 1,45 veces la frecuencia media",
+   "ruta": [
+    "nuevo_negocio",
+    "indice_estacional_desarrollado",
+    "buildings",
+    0
+   ],
+   "formato": "dec2",
+   "valor": "1,27"
+  },
+  {
+   "id": "ap-101",
+   "en": "aporte",
+   "contexto": "entre 1,27 y 1,45 veces la frecuencia media",
+   "ruta": [
+    "nuevo_negocio",
+    "indice_estacional_desarrollado",
+    "buildings",
+    11
+   ],
+   "formato": "dec2",
+   "valor": "1,45"
+  },
+  {
+   "id": "ap-102",
+   "en": "aporte",
+   "contexto": "La severidad emergente de autos, 1,32",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "motor",
+    "rel_s_em"
+   ],
+   "formato": "dec2",
+   "valor": "1,32"
+  },
+  {
+   "id": "ap-103",
+   "en": "aporte",
+   "contexto": "son 1,16, 1,11 y 1,07",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "motor",
+    "rel_cred"
+   ],
+   "formato": "dec2",
+   "valor": "1,16"
+  },
+  {
+   "id": "ap-104",
+   "en": "aporte",
+   "contexto": "son 1,16, 1,11 y 1,07",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "buildings",
+    "rel_cred"
+   ],
+   "formato": "dec2",
+   "valor": "1,11"
+  },
+  {
+   "id": "ap-105",
+   "en": "aporte",
+   "contexto": "son 1,16, 1,11 y 1,07",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "contents",
+    "rel_cred"
+   ],
+   "formato": "dec2",
+   "valor": "1,07"
+  },
+  {
+   "id": "re-106",
+   "en": "readme",
+   "contexto": "2978406fe37a7601cf08b7450a6d46765c5acae23b696a87c93e843ba6a55b51",
+   "ruta": [
+    "preinscripcion",
+    "sha256"
+   ],
+   "formato": "raw",
+   "valor": "2978406fe37a7601cf08b7450a6d46765c5acae23b696a87c93e843ba6a55b51"
+  },
+  {
+   "id": "re-107",
+   "en": "readme",
+   "contexto": "110 de entrenamiento y 239 de test",
+   "ruta": [
+    "capital",
+    "total_divididas_train"
+   ],
+   "formato": "int",
+   "valor": "110"
+  },
+  {
+   "id": "re-108",
+   "en": "readme",
+   "contexto": "110 de entrenamiento y 239 de test",
+   "ruta": [
+    "capital",
+    "total_divididas_test"
+   ],
+   "formato": "int",
+   "valor": "239"
+  },
+  {
+   "id": "re-109",
+   "en": "readme",
+   "contexto": "Las 349 filas",
+   "ruta": [
+    "capital",
+    "total_divididas"
+   ],
+   "formato": "int",
+   "valor": "349"
+  },
+  {
+   "id": "re-110",
+   "en": "readme",
+   "contexto": "como mucho 0,011",
+   "ruta": [
+    "capital",
+    "buildings",
+    "ppm_bruta_max"
+   ],
+   "formato": "dec3",
+   "valor": "0,011"
+  },
+  {
+   "id": "re-111",
+   "en": "readme",
+   "contexto": "0,0070",
+   "ruta": [
+    "capital",
+    "contents",
+    "ppm_bruta_max"
+   ],
+   "formato": "dec4",
+   "valor": "0,0070"
+  },
+  {
+   "id": "re-112",
+   "en": "readme",
+   "contexto": "entre 0,60 y 11,0 en edificios",
+   "ruta": [
+    "capital",
+    "buildings",
+    "ppm_dividida_min"
+   ],
+   "formato": "dec2",
+   "valor": "0,60"
+  },
+  {
+   "id": "re-113",
+   "en": "readme",
+   "contexto": "entre 0,60 y 11,0 en edificios",
+   "ruta": [
+    "capital",
+    "buildings",
+    "ppm_dividida_max"
+   ],
+   "formato": "dec1",
+   "valor": "11,0"
+  },
+  {
+   "id": "re-114",
+   "en": "readme",
+   "contexto": "entre 2,09 y 6,95 en contenidos",
+   "ruta": [
+    "capital",
+    "contents",
+    "ppm_dividida_min"
+   ],
+   "formato": "dec2",
+   "valor": "2,09"
+  },
+  {
+   "id": "re-115",
+   "en": "readme",
+   "contexto": "entre 2,09 y 6,95 en contenidos",
+   "ruta": [
+    "capital",
+    "contents",
+    "ppm_dividida_max"
+   ],
+   "formato": "dec2",
+   "valor": "6,95"
+  },
+  {
+   "id": "re-116",
+   "en": "readme",
+   "contexto": "ninguna queda fuera",
+   "ruta": [
+    "capital",
+    "total_no_pasan"
+   ],
+   "igual": 0
+  },
+  {
+   "id": "re-117",
+   "en": "readme",
+   "contexto": "964cab97d1fcb2b559c744374581be9a9d21fd92836bef991db29f8878d161bb",
+   "ruta": [
+    "capital",
+    "lista_sha256"
+   ],
+   "formato": "raw",
+   "valor": "964cab97d1fcb2b559c744374581be9a9d21fd92836bef991db29f8878d161bb"
+  },
+  {
+   "id": "re-118",
+   "en": "readme",
+   "contexto": "la exposición al viento (0,87 y 0,91)",
+   "ruta": [
+    "clima",
+    "variables_bloque"
+   ],
+   "igual": [
+    "wind_exposure_index",
+    "wildfire_index",
+    "rainfall_mm"
+   ]
+  },
+  {
+   "id": "re-119",
+   "en": "readme",
+   "contexto": "lunas −24 %",
+   "buscar": {
+    "lista": [
+     "clima",
+     "escenario_2025"
+    ],
+    "campos": {
+     "ramo": "motor",
+     "peligro": "glass_hail"
+    },
+    "clave": "razon"
+   },
+   "formato": "dpct0",
+   "valor": "−24"
+  },
+  {
+   "id": "re-120",
+   "en": "readme",
+   "contexto": "escape de agua +12 %",
+   "buscar": {
+    "lista": [
+     "clima",
+     "escenario_2025"
+    ],
+    "campos": {
+     "ramo": "buildings",
+     "peligro": "escape_of_water"
+    },
+    "clave": "razon"
+   },
+   "formato": "dpct0",
+   "valor": "+12"
+  },
+  {
+   "id": "re-121",
+   "en": "readme",
+   "contexto": "+19 %",
+   "buscar": {
+    "lista": [
+     "clima",
+     "escenario_2025"
+    ],
+    "campos": {
+     "ramo": "contents",
+     "peligro": "escape_of_water"
+    },
+    "clave": "razon"
+   },
+   "formato": "dpct0",
+   "valor": "+19"
+  },
+  {
+   "id": "re-122",
+   "en": "readme",
+   "contexto": "hundimiento −25 %",
+   "buscar": {
+    "lista": [
+     "clima",
+     "escenario_2025"
+    ],
+    "campos": {
+     "ramo": "buildings",
+     "peligro": "subsidence"
+    },
+    "clave": "razon"
+   },
+   "formato": "dpct0",
+   "valor": "−25"
+  },
+  {
+   "id": "re-123",
+   "en": "readme",
+   "contexto": "tormenta −4 %",
+   "buscar": {
+    "lista": [
+     "clima",
+     "escenario_2025"
+    ],
+    "campos": {
+     "ramo": "buildings",
+     "peligro": "storm"
+    },
+    "clave": "razon"
+   },
+   "formato": "dpct0",
+   "valor": "−4"
+  },
+  {
+   "id": "re-124",
+   "en": "readme",
+   "contexto": "las otras 75 categorías",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "niveles_tau_f"
+   ],
+   "formato": "int",
+   "valor": "75"
+  },
+  {
+   "id": "re-125",
+   "en": "readme",
+   "contexto": "las otras 75 categorías",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "niveles_tau_s"
+   ],
+   "formato": "int",
+   "valor": "75"
+  },
+  {
+   "id": "re-126",
+   "en": "readme",
+   "contexto": "En severidad τ es cero",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "tau_s"
+   ],
+   "igual": 0.0
+  },
+  {
+   "id": "re-127",
+   "en": "readme",
+   "contexto": "| Autos | 1,23 | 1,16 | 0,36 | 1,32 | 0,98 | 0,00 | 1,16 | 0,713 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "motor",
+    "rel_f_em"
+   ],
+   "formato": "dec2",
+   "valor": "1,23"
+  },
+  {
+   "id": "re-128",
+   "en": "readme",
+   "contexto": "| Autos | 1,23 | 1,16 | 0,36 | 1,32 | 0,98 | 0,00 | 1,16 | 0,713 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "motor",
+    "rel_f_dev"
+   ],
+   "formato": "dec2",
+   "valor": "1,16"
+  },
+  {
+   "id": "re-129",
+   "en": "readme",
+   "contexto": "| Autos | 1,23 | 1,16 | 0,36 | 1,32 | 0,98 | 0,00 | 1,16 | 0,713 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "motor",
+    "Z_f"
+   ],
+   "formato": "dec2",
+   "valor": "0,36"
+  },
+  {
+   "id": "re-130",
+   "en": "readme",
+   "contexto": "| Autos | 1,23 | 1,16 | 0,36 | 1,32 | 0,98 | 0,00 | 1,16 | 0,713 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "motor",
+    "rel_s_em"
+   ],
+   "formato": "dec2",
+   "valor": "1,32"
+  },
+  {
+   "id": "re-131",
+   "en": "readme",
+   "contexto": "| Autos | 1,23 | 1,16 | 0,36 | 1,32 | 0,98 | 0,00 | 1,16 | 0,713 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "motor",
+    "rel_s_dev"
+   ],
+   "formato": "dec2",
+   "valor": "0,98"
+  },
+  {
+   "id": "re-132",
+   "en": "readme",
+   "contexto": "| Autos | 1,23 | 1,16 | 0,36 | 1,32 | 0,98 | 0,00 | 1,16 | 0,713 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "motor",
+    "Z_s"
+   ],
+   "formato": "dec2",
+   "valor": "0,00"
+  },
+  {
+   "id": "re-133",
+   "en": "readme",
+   "contexto": "| Autos | 1,23 | 1,16 | 0,36 | 1,32 | 0,98 | 0,00 | 1,16 | 0,713 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "motor",
+    "rel_cred"
+   ],
+   "formato": "dec2",
+   "valor": "1,16"
+  },
+  {
+   "id": "re-134",
+   "en": "readme",
+   "contexto": "| Autos | 1,23 | 1,16 | 0,36 | 1,32 | 0,98 | 0,00 | 1,16 | 0,713 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "motor",
+    "c"
+   ],
+   "formato": "dec3",
+   "valor": "0,713"
+  },
+  {
+   "id": "re-135",
+   "en": "readme",
+   "contexto": "| Edificios | 1,21 | 1,13 | 0,08 | 0,97 | 0,98 | 0,00 | 1,11 | 0,946 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "buildings",
+    "rel_f_em"
+   ],
+   "formato": "dec2",
+   "valor": "1,21"
+  },
+  {
+   "id": "re-136",
+   "en": "readme",
+   "contexto": "| Edificios | 1,21 | 1,13 | 0,08 | 0,97 | 0,98 | 0,00 | 1,11 | 0,946 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "buildings",
+    "rel_f_dev"
+   ],
+   "formato": "dec2",
+   "valor": "1,13"
+  },
+  {
+   "id": "re-137",
+   "en": "readme",
+   "contexto": "| Edificios | 1,21 | 1,13 | 0,08 | 0,97 | 0,98 | 0,00 | 1,11 | 0,946 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "buildings",
+    "Z_f"
+   ],
+   "formato": "dec2",
+   "valor": "0,08"
+  },
+  {
+   "id": "re-138",
+   "en": "readme",
+   "contexto": "| Edificios | 1,21 | 1,13 | 0,08 | 0,97 | 0,98 | 0,00 | 1,11 | 0,946 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "buildings",
+    "rel_s_em"
+   ],
+   "formato": "dec2",
+   "valor": "0,97"
+  },
+  {
+   "id": "re-139",
+   "en": "readme",
+   "contexto": "| Edificios | 1,21 | 1,13 | 0,08 | 0,97 | 0,98 | 0,00 | 1,11 | 0,946 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "buildings",
+    "rel_s_dev"
+   ],
+   "formato": "dec2",
+   "valor": "0,98"
+  },
+  {
+   "id": "re-140",
+   "en": "readme",
+   "contexto": "| Edificios | 1,21 | 1,13 | 0,08 | 0,97 | 0,98 | 0,00 | 1,11 | 0,946 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "buildings",
+    "Z_s"
+   ],
+   "formato": "dec2",
+   "valor": "0,00"
+  },
+  {
+   "id": "re-141",
+   "en": "readme",
+   "contexto": "| Edificios | 1,21 | 1,13 | 0,08 | 0,97 | 0,98 | 0,00 | 1,11 | 0,946 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "buildings",
+    "rel_cred"
+   ],
+   "formato": "dec2",
+   "valor": "1,11"
+  },
+  {
+   "id": "re-142",
+   "en": "readme",
+   "contexto": "| Edificios | 1,21 | 1,13 | 0,08 | 0,97 | 0,98 | 0,00 | 1,11 | 0,946 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "buildings",
+    "c"
+   ],
+   "formato": "dec3",
+   "valor": "0,946"
+  },
+  {
+   "id": "re-143",
+   "en": "readme",
+   "contexto": "| Contenidos | 1,18 | 1,15 | 0,07 | 0,80 | 0,93 | 0,00 | 1,07 | 1,132 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "contents",
+    "rel_f_em"
+   ],
+   "formato": "dec2",
+   "valor": "1,18"
+  },
+  {
+   "id": "re-144",
+   "en": "readme",
+   "contexto": "| Contenidos | 1,18 | 1,15 | 0,07 | 0,80 | 0,93 | 0,00 | 1,07 | 1,132 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "contents",
+    "rel_f_dev"
+   ],
+   "formato": "dec2",
+   "valor": "1,15"
+  },
+  {
+   "id": "re-145",
+   "en": "readme",
+   "contexto": "| Contenidos | 1,18 | 1,15 | 0,07 | 0,80 | 0,93 | 0,00 | 1,07 | 1,132 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "contents",
+    "Z_f"
+   ],
+   "formato": "dec2",
+   "valor": "0,07"
+  },
+  {
+   "id": "re-146",
+   "en": "readme",
+   "contexto": "| Contenidos | 1,18 | 1,15 | 0,07 | 0,80 | 0,93 | 0,00 | 1,07 | 1,132 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "contents",
+    "rel_s_em"
+   ],
+   "formato": "dec2",
+   "valor": "0,80"
+  },
+  {
+   "id": "re-147",
+   "en": "readme",
+   "contexto": "| Contenidos | 1,18 | 1,15 | 0,07 | 0,80 | 0,93 | 0,00 | 1,07 | 1,132 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "contents",
+    "rel_s_dev"
+   ],
+   "formato": "dec2",
+   "valor": "0,93"
+  },
+  {
+   "id": "re-148",
+   "en": "readme",
+   "contexto": "| Contenidos | 1,18 | 1,15 | 0,07 | 0,80 | 0,93 | 0,00 | 1,07 | 1,132 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "contents",
+    "Z_s"
+   ],
+   "formato": "dec2",
+   "valor": "0,00"
+  },
+  {
+   "id": "re-149",
+   "en": "readme",
+   "contexto": "| Contenidos | 1,18 | 1,15 | 0,07 | 0,80 | 0,93 | 0,00 | 1,07 | 1,132 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "contents",
+    "rel_cred"
+   ],
+   "formato": "dec2",
+   "valor": "1,07"
+  },
+  {
+   "id": "re-150",
+   "en": "readme",
+   "contexto": "| Contenidos | 1,18 | 1,15 | 0,07 | 0,80 | 0,93 | 0,00 | 1,07 | 1,132 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "contents",
+    "c"
+   ],
+   "formato": "dec3",
+   "valor": "1,132"
+  },
+  {
+   "id": "re-151",
+   "en": "readme",
+   "contexto": "los cinco mayores suman el 38 %",
+   "ruta": [
+    "nuevo_negocio",
+    "concentracion_severidad",
+    "motor",
+    "emergente",
+    "NB",
+    "cuota_5_mayores"
+   ],
+   "formato": "pct0",
+   "valor": "38"
+  },
+  {
+   "id": "re-152",
+   "en": "readme",
+   "contexto": "la media queda en 2.170 CU en el nuevo negocio y en 2.095 en la renovación",
+   "ruta": [
+    "nuevo_negocio",
+    "concentracion_severidad",
+    "motor",
+    "emergente",
+    "NB",
+    "media_sin_5_mayores"
+   ],
+   "formato": "int",
+   "valor": "2.170"
+  },
+  {
+   "id": "re-153",
+   "en": "readme",
+   "contexto": "la media queda en 2.170 CU en el nuevo negocio y en 2.095 en la renovación",
+   "ruta": [
+    "nuevo_negocio",
+    "concentracion_severidad",
+    "motor",
+    "emergente",
+    "REN",
+    "media_sin_5_mayores"
+   ],
+   "formato": "int",
+   "valor": "2.095"
+  },
+  {
+   "id": "re-154",
+   "en": "readme",
+   "contexto": "| W2-B00 (tasa constante por ramo) | 1,621 | 0,904 | 1,234 |",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B00",
+    "g_todo_2023",
+    "motor",
+    "g_NB"
+   ],
+   "formato": "dec3",
+   "valor": "1,621"
+  },
+  {
+   "id": "re-155",
+   "en": "readme",
+   "contexto": "| W2-B00 (tasa constante por ramo) | 1,621 | 0,904 | 1,234 |",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B00",
+    "g_todo_2023",
+    "buildings",
+    "g_NB"
+   ],
+   "formato": "dec3",
+   "valor": "0,904"
+  },
+  {
+   "id": "re-156",
+   "en": "readme",
+   "contexto": "| W2-B00 (tasa constante por ramo) | 1,621 | 0,904 | 1,234 |",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B00",
+    "g_todo_2023",
+    "contents",
+    "g_NB"
+   ],
+   "formato": "dec3",
+   "valor": "1,234"
+  },
+  {
+   "id": "re-157",
+   "en": "readme",
+   "contexto": "| W2-B06 (GLM con el nivel de B00) | 0,724 | 0,810 | 1,319 |",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B06",
+    "g_todo_2023",
+    "motor",
+    "g_NB"
+   ],
+   "formato": "dec3",
+   "valor": "0,724"
+  },
+  {
+   "id": "re-158",
+   "en": "readme",
+   "contexto": "| W2-B06 (GLM con el nivel de B00) | 0,724 | 0,810 | 1,319 |",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B06",
+    "g_todo_2023",
+    "buildings",
+    "g_NB"
+   ],
+   "formato": "dec3",
+   "valor": "0,810"
+  },
+  {
+   "id": "re-159",
+   "en": "readme",
+   "contexto": "| W2-B06 (GLM con el nivel de B00) | 0,724 | 0,810 | 1,319 |",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B06",
+    "g_todo_2023",
+    "contents",
+    "g_NB"
+   ],
+   "formato": "dec3",
+   "valor": "1,319"
+  },
+  {
+   "id": "re-160",
+   "en": "readme",
+   "contexto": "| W2-B08 (mitad B00, mitad B06) | 1,016 | 0,854 | 1,275 |",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B08",
+    "g_todo_2023",
+    "motor",
+    "g_NB"
+   ],
+   "formato": "dec3",
+   "valor": "1,016"
+  },
+  {
+   "id": "re-161",
+   "en": "readme",
+   "contexto": "| W2-B08 (mitad B00, mitad B06) | 1,016 | 0,854 | 1,275 |",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B08",
+    "g_todo_2023",
+    "buildings",
+    "g_NB"
+   ],
+   "formato": "dec3",
+   "valor": "0,854"
+  },
+  {
+   "id": "re-162",
+   "en": "readme",
+   "contexto": "| W2-B08 (mitad B00, mitad B06) | 1,016 | 0,854 | 1,275 |",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B08",
+    "g_todo_2023",
+    "contents",
+    "g_NB"
+   ],
+   "formato": "dec3",
+   "valor": "1,275"
+  },
+  {
+   "id": "re-163",
+   "en": "readme",
+   "contexto": "pasa de un D² de 0,054 a 0,091 con el nivel creíble y a 0,093 con el solo emergente",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B00",
+    "guardada",
+    "D2_mezcla_2025"
+   ],
+   "formato": "dec3",
+   "valor": "0,054"
+  },
+  {
+   "id": "re-164",
+   "en": "readme",
+   "contexto": "a 0,091 con el nivel creíble",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B00",
+    "credibilidad",
+    "D2_mezcla_2025"
+   ],
+   "formato": "dec3",
+   "valor": "0,091"
+  },
+  {
+   "id": "re-165",
+   "en": "readme",
+   "contexto": "a 0,093 con el solo emergente",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B00",
+    "emergente",
+    "D2_mezcla_2025"
+   ],
+   "formato": "dec3",
+   "valor": "0,093"
+  },
+  {
+   "id": "re-166",
+   "en": "readme",
+   "contexto": "W2-B06 baja de 0,068 a 0,032",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B06",
+    "guardada",
+    "D2_mezcla_2025"
+   ],
+   "formato": "dec3",
+   "valor": "0,068"
+  },
+  {
+   "id": "re-167",
+   "en": "readme",
+   "contexto": "W2-B06 baja de 0,068 a 0,032",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B06",
+    "credibilidad",
+    "D2_mezcla_2025"
+   ],
+   "formato": "dec3",
+   "valor": "0,032"
+  },
+  {
+   "id": "re-168",
+   "en": "readme",
+   "contexto": "W2-B08 de 0,079 a 0,069",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B08",
+    "guardada",
+    "D2_mezcla_2025"
+   ],
+   "formato": "dec3",
+   "valor": "0,079"
+  },
+  {
+   "id": "re-169",
+   "en": "readme",
+   "contexto": "W2-B08 de 0,079 a 0,069",
+   "ruta": [
+    "diagnostico_oof",
+    "recetas",
+    "W2-B08",
+    "credibilidad",
+    "D2_mezcla_2025"
+   ],
+   "formato": "dec3",
+   "valor": "0,069"
+  },
+  {
+   "id": "re-170",
+   "en": "readme",
+   "contexto": "el nivel creíble nunca es el mejor",
+   "calculo": "creible_mejor_todas",
+   "igual": 0
+  },
+  {
+   "id": "re-171",
+   "en": "readme",
+   "contexto": "gana la receta guardada o el nivel solo emergente",
+   "calculo": "mejor_todas_guardada_o_emergente",
+   "igual": 10
+  },
+  {
+   "id": "re-172",
+   "en": "readme",
+   "contexto": "Sin las 51 filas más caras (el 0,1 %)",
+   "ruta": [
+    "diagnostico_oof",
+    "filas_excluidas_sin_01"
+   ],
+   "formato": "int",
+   "valor": "51"
+  },
+  {
+   "id": "re-173",
+   "en": "readme",
+   "contexto": "el creíble supera al solo emergente en nueve de las diez recetas",
+   "calculo": "creible_supera_emergente_cuerpo",
+   "igual": 9
+  },
+  {
+   "id": "re-174",
+   "en": "readme",
+   "contexto": "la receta guardada sigue por delante en nueve de diez",
+   "calculo": "guardada_mejor_cuerpo",
+   "igual": 9
+  },
+  {
+   "id": "re-175",
+   "en": "readme",
+   "contexto": "nueve de las diez recetas",
+   "calculo": "recetas",
+   "igual": 10
+  },
+  {
+   "id": "re-176",
+   "en": "readme",
+   "contexto": "−24 % en autos, −4 % en edificios y +10 % en contenidos",
+   "ruta": [
+    "escenario_bloque_transferido",
+    "motor",
+    "cambio_nivel_creible_frente_a_solo_emergente"
+   ],
+   "formato": "spct0",
+   "valor": "−24"
+  },
+  {
+   "id": "re-177",
+   "en": "readme",
+   "contexto": "−24 % en autos, −4 % en edificios y +10 % en contenidos",
+   "ruta": [
+    "escenario_bloque_transferido",
+    "buildings",
+    "cambio_nivel_creible_frente_a_solo_emergente"
+   ],
+   "formato": "spct0",
+   "valor": "−4"
+  },
+  {
+   "id": "re-178",
+   "en": "readme",
+   "contexto": "−24 % en autos, −4 % en edificios y +10 % en contenidos",
+   "ruta": [
+    "escenario_bloque_transferido",
+    "contents",
+    "cambio_nivel_creible_frente_a_solo_emergente"
+   ],
+   "formato": "spct0",
+   "valor": "+10"
+  },
+  {
+   "id": "re-179",
+   "en": "readme",
+   "contexto": "bajaría otro 10 % en autos, 8 % en edificios y 5 % en contenidos",
+   "ruta": [
+    "escenario_bloque_transferido",
+    "motor",
+    "cambio_nivel_si_bloque_como_renovacion"
+   ],
+   "formato": "apct0",
+   "valor": "10"
+  },
+  {
+   "id": "re-180",
+   "en": "readme",
+   "contexto": "bajaría otro 10 % en autos, 8 % en edificios y 5 % en contenidos",
+   "ruta": [
+    "escenario_bloque_transferido",
+    "buildings",
+    "cambio_nivel_si_bloque_como_renovacion"
+   ],
+   "formato": "apct0",
+   "valor": "8"
+  },
+  {
+   "id": "re-181",
+   "en": "readme",
+   "contexto": "bajaría otro 10 % en autos, 8 % en edificios y 5 % en contenidos",
+   "ruta": [
+    "escenario_bloque_transferido",
+    "contents",
+    "cambio_nivel_si_bloque_como_renovacion"
+   ],
+   "formato": "apct0",
+   "valor": "5"
+  },
+  {
+   "id": "re-182",
+   "en": "readme",
+   "contexto": "0,69 en directo y 0,49 en broker",
+   "ruta": [
+    "gasto_fijo",
+    "denominadores",
+    "direct"
+   ],
+   "formato": "dec2",
+   "valor": "0,69"
+  },
+  {
+   "id": "re-183",
+   "en": "readme",
+   "contexto": "0,69 en directo y 0,49 en broker",
+   "ruta": [
+    "gasto_fijo",
+    "denominadores",
+    "broker"
+   ],
+   "formato": "dec2",
+   "valor": "0,49"
+  },
+  {
+   "id": "re-184",
+   "en": "readme",
+   "contexto": "En 17 de las 20 referencias",
+   "calculo": "gasto_referencias_resto",
+   "igual": 17
+  },
+  {
+   "id": "re-185",
+   "en": "readme",
+   "contexto": "cambia en menos de 8 CU",
+   "calculo": "gasto_max_diferencia_resto",
+   "menor": 8
+  },
+  {
+   "id": "re-186",
+   "en": "readme",
+   "contexto": "en M00129413 (recupera 28 CU) y en B00250679 (9 CU)",
+   "buscar": {
+    "lista": [
+     "gasto_fijo",
+     "referencias"
+    ],
+    "campos": {
+     "row_id": "M00129413"
+    },
+    "clave": "F_por_exposicion_F"
+   },
+   "formato": "int",
+   "valor": "28"
+  },
+  {
+   "id": "re-187",
+   "en": "readme",
+   "contexto": "en M00129413 (recupera 28 CU) y en B00250679 (9 CU)",
+   "buscar": {
+    "lista": [
+     "gasto_fijo",
+     "referencias"
+    ],
+    "campos": {
+     "row_id": "B00250679"
+    },
+    "clave": "F_por_exposicion_F"
+   },
+   "formato": "int",
+   "valor": "9"
+  },
+  {
+   "id": "re-188",
+   "en": "readme",
+   "contexto": "sube su prima comercial en 116 y 129 CU",
+   "calculo": "subida_poliza_anio_M00129413",
+   "formato": "int",
+   "valor": "116"
+  },
+  {
+   "id": "re-189",
+   "en": "readme",
+   "contexto": "sube su prima comercial en 116 y 129 CU",
+   "calculo": "subida_poliza_anio_B00250679",
+   "formato": "int",
+   "valor": "129"
+  },
+  {
+   "id": "re-190",
+   "en": "readme",
+   "contexto": "no pasa de 894.000 y 283.200",
+   "ruta": [
+    "capital",
+    "buildings",
+    "capital_normal_max"
+   ],
+   "formato": "int",
+   "valor": "894.000"
+  },
+  {
+   "id": "re-191",
+   "en": "readme",
+   "contexto": "no pasa de 894.000 y 283.200",
+   "ruta": [
+    "capital",
+    "contents",
+    "capital_normal_max"
+   ],
+   "formato": "int",
+   "valor": "283.200"
+  },
+  {
+   "id": "re-192",
+   "en": "readme",
+   "contexto": "va de 0,451 a 17,4 (mediana 1,06)",
+   "ruta": [
+    "capital",
+    "buildings",
+    "ppm_normal_min"
+   ],
+   "formato": "dec3",
+   "valor": "0,451"
+  },
+  {
+   "id": "re-193",
+   "en": "readme",
+   "contexto": "va de 0,451 a 17,4 (mediana 1,06)",
+   "ruta": [
+    "capital",
+    "buildings",
+    "ppm_normal_max"
+   ],
+   "formato": "dec1",
+   "valor": "17,4"
+  },
+  {
+   "id": "re-194",
+   "en": "readme",
+   "contexto": "va de 0,451 a 17,4 (mediana 1,06)",
+   "ruta": [
+    "capital",
+    "buildings",
+    "ppm_normal_mediana"
+   ],
+   "formato": "dec2",
+   "valor": "1,06"
+  },
+  {
+   "id": "re-195",
+   "en": "readme",
+   "contexto": "de 1,61 a 10,6 (mediana 3,43)",
+   "ruta": [
+    "capital",
+    "contents",
+    "ppm_normal_min"
+   ],
+   "formato": "dec2",
+   "valor": "1,61"
+  },
+  {
+   "id": "re-196",
+   "en": "readme",
+   "contexto": "de 1,61 a 10,6 (mediana 3,43)",
+   "ruta": [
+    "capital",
+    "contents",
+    "ppm_normal_max"
+   ],
+   "formato": "dec1",
+   "valor": "10,6"
+  },
+  {
+   "id": "re-197",
+   "en": "readme",
+   "contexto": "de 1,61 a 10,6 (mediana 3,43)",
+   "ruta": [
+    "capital",
+    "contents",
+    "ppm_normal_mediana"
+   ],
+   "formato": "dec2",
+   "valor": "3,43"
+  },
+  {
+   "id": "re-198",
+   "en": "readme",
+   "contexto": "(157 de edificios y 192 de contenidos;",
+   "ruta": [
+    "capital",
+    "buildings",
+    "pasan"
+   ],
+   "formato": "int",
+   "valor": "157"
+  },
+  {
+   "id": "re-199",
+   "en": "readme",
+   "contexto": "(157 de edificios y 192 de contenidos;",
+   "ruta": [
+    "capital",
+    "contents",
+    "pasan"
+   ],
+   "formato": "int",
+   "valor": "192"
+  },
+  {
+   "id": "re-200",
+   "en": "readme",
+   "contexto": "41 y 231 veces por debajo",
+   "ruta": [
+    "capital",
+    "buildings",
+    "veces_hueco_min_normal_sobre_max_extrema"
+   ],
+   "formato": "int",
+   "valor": "41"
+  },
+  {
+   "id": "re-201",
+   "en": "readme",
+   "contexto": "41 y 231 veces por debajo",
+   "ruta": [
+    "capital",
+    "contents",
+    "veces_hueco_min_normal_sobre_max_extrema"
+   ],
+   "formato": "int",
+   "valor": "231"
+  },
+  {
+   "id": "re-202",
+   "en": "readme",
+   "contexto": "72 de las 157 de edificios y 91 de las 192 de contenidos",
+   "ruta": [
+    "capital",
+    "buildings",
+    "confirmadas_por_historia"
+   ],
+   "formato": "int",
+   "valor": "72"
+  },
+  {
+   "id": "re-203",
+   "en": "readme",
+   "contexto": "72 de las 157 de edificios y 91 de las 192 de contenidos",
+   "ruta": [
+    "capital",
+    "contents",
+    "confirmadas_por_historia"
+   ],
+   "formato": "int",
+   "valor": "91"
+  },
+  {
+   "id": "re-204",
+   "en": "readme",
+   "contexto": "| Filas por encima del umbral | 157 | 192 |",
+   "ruta": [
+    "capital",
+    "buildings",
+    "filas_sobre_umbral"
+   ],
+   "formato": "int",
+   "valor": "157"
+  },
+  {
+   "id": "re-205",
+   "en": "readme",
+   "contexto": "| Filas por encima del umbral | 157 | 192 |",
+   "ruta": [
+    "capital",
+    "contents",
+    "filas_sobre_umbral"
+   ],
+   "formato": "int",
+   "valor": "192"
+  },
+  {
+   "id": "re-206",
+   "en": "readme",
+   "contexto": "| Pasan la prueba | 157 | 192 |",
+   "ruta": [
+    "capital",
+    "buildings",
+    "pasan"
+   ],
+   "formato": "int",
+   "valor": "157"
+  },
+  {
+   "id": "re-207",
+   "en": "readme",
+   "contexto": "| De ellas en test | 104 | 135 |",
+   "ruta": [
+    "capital",
+    "buildings",
+    "pasan_test"
+   ],
+   "formato": "int",
+   "valor": "104"
+  },
+  {
+   "id": "re-208",
+   "en": "readme",
+   "contexto": "| De ellas en test | 104 | 135 |",
+   "ruta": [
+    "capital",
+    "contents",
+    "pasan_test"
+   ],
+   "formato": "int",
+   "valor": "135"
+  },
+  {
+   "id": "re-209",
+   "en": "readme",
+   "contexto": "| Confirmadas además por la historia de la póliza | 72 | 91 |",
+   "ruta": [
+    "capital",
+    "contents",
+    "confirmadas_por_historia"
+   ],
+   "formato": "int",
+   "valor": "91"
+  },
+  {
+   "id": "re-210",
+   "en": "readme",
+   "contexto": "| Prima por mil máxima con el capital leído | 0,011 | 0,0070 |",
+   "ruta": [
+    "capital",
+    "buildings",
+    "ppm_bruta_max"
+   ],
+   "formato": "dec3",
+   "valor": "0,011"
+  },
+  {
+   "id": "re-211",
+   "en": "readme",
+   "contexto": "| Mínimo de la población normal | 0,451 | 1,61 |",
+   "ruta": [
+    "capital",
+    "contents",
+    "ppm_normal_min"
+   ],
+   "formato": "dec2",
+   "valor": "1,61"
+  },
+  {
+   "id": "re-212",
+   "en": "readme",
+   "contexto": "Da cero.",
+   "ruta": [
+    "capital",
+    "buildings",
+    "control_hueco_mediana_entre_100"
+   ],
+   "igual": 0
+  },
+  {
+   "id": "re-213",
+   "en": "readme",
+   "contexto": "Da cero.",
+   "ruta": [
+    "capital",
+    "contents",
+    "control_hueco_mediana_entre_100"
+   ],
+   "igual": 0
+  },
+  {
+   "id": "re-214",
+   "en": "readme",
+   "contexto": "no podía fallar",
+   "ruta": [
+    "capital",
+    "buildings",
+    "control_hueco_preinscrito"
+   ],
+   "igual": 0
+  },
+  {
+   "id": "re-215",
+   "en": "readme",
+   "contexto": "la exposición al viento (0,87 y 0,91)",
+   "ruta": [
+    "clima",
+    "persistencia",
+    "wind_exposure_index",
+    "r_2023_2024"
+   ],
+   "formato": "dec2",
+   "valor": "0,87"
+  },
+  {
+   "id": "re-216",
+   "en": "readme",
+   "contexto": "la exposición al viento (0,87 y 0,91)",
+   "ruta": [
+    "clima",
+    "persistencia",
+    "wind_exposure_index",
+    "r_2024_2025"
+   ],
+   "formato": "dec2",
+   "valor": "0,91"
+  },
+  {
+   "id": "re-217",
+   "en": "readme",
+   "contexto": "el índice forestal (0,89 y 0,87)",
+   "ruta": [
+    "clima",
+    "persistencia",
+    "wildfire_index",
+    "r_2023_2024"
+   ],
+   "formato": "dec2",
+   "valor": "0,89"
+  },
+  {
+   "id": "re-218",
+   "en": "readme",
+   "contexto": "el índice forestal (0,89 y 0,87)",
+   "ruta": [
+    "clima",
+    "persistencia",
+    "wildfire_index",
+    "r_2024_2025"
+   ],
+   "formato": "dec2",
+   "valor": "0,87"
+  },
+  {
+   "id": "re-219",
+   "en": "readme",
+   "contexto": "la lluvia anual (0,92 y 0,95)",
+   "ruta": [
+    "clima",
+    "persistencia",
+    "rainfall_mm",
+    "r_2023_2024"
+   ],
+   "formato": "dec2",
+   "valor": "0,92"
+  },
+  {
+   "id": "re-220",
+   "en": "readme",
+   "contexto": "la lluvia anual (0,92 y 0,95)",
+   "ruta": [
+    "clima",
+    "persistencia",
+    "rainfall_mm",
+    "r_2024_2025"
+   ],
+   "formato": "dec2",
+   "valor": "0,95"
+  },
+  {
+   "id": "re-221",
+   "en": "readme",
+   "contexto": "granizo (0,20 y 0,23)",
+   "ruta": [
+    "clima",
+    "persistencia",
+    "hail_days",
+    "r_2023_2024"
+   ],
+   "formato": "dec2",
+   "valor": "0,20"
+  },
+  {
+   "id": "re-222",
+   "en": "readme",
+   "contexto": "granizo (0,20 y 0,23)",
+   "ruta": [
+    "clima",
+    "persistencia",
+    "hail_days",
+    "r_2024_2025"
+   ],
+   "formato": "dec2",
+   "valor": "0,23"
+  },
+  {
+   "id": "re-223",
+   "en": "readme",
+   "contexto": "sequía estival (0,60 y −0,24)",
+   "ruta": [
+    "clima",
+    "persistencia",
+    "dry_summer_index",
+    "r_2023_2024"
+   ],
+   "formato": "dec2",
+   "valor": "0,60"
+  },
+  {
+   "id": "re-224",
+   "en": "readme",
+   "contexto": "sequía estival (0,60 y −0,24)",
+   "ruta": [
+    "clima",
+    "persistencia",
+    "dry_summer_index",
+    "r_2024_2025"
+   ],
+   "menor": -0.235
+  },
+  {
+   "id": "re-225",
+   "en": "readme",
+   "contexto": "heladas (0,79 y 0,70)",
+   "ruta": [
+    "clima",
+    "persistencia",
+    "freezing_days",
+    "r_2023_2024"
+   ],
+   "formato": "dec2",
+   "valor": "0,79"
+  },
+  {
+   "id": "re-226",
+   "en": "readme",
+   "contexto": "heladas (0,79 y 0,70)",
+   "ruta": [
+    "clima",
+    "persistencia",
+    "freezing_days",
+    "r_2024_2025"
+   ],
+   "formato": "dec2",
+   "valor": "0,70"
+  },
+  {
+   "id": "re-227",
+   "en": "readme",
+   "contexto": "temperatura (0,90 y 0,50)",
+   "ruta": [
+    "clima",
+    "persistencia",
+    "mean_temperature_c",
+    "r_2023_2024"
+   ],
+   "formato": "dec2",
+   "valor": "0,90"
+  },
+  {
+   "id": "re-228",
+   "en": "readme",
+   "contexto": "temperatura (0,90 y 0,50)",
+   "ruta": [
+    "clima",
+    "persistencia",
+    "mean_temperature_c",
+    "r_2024_2025"
+   ],
+   "formato": "dec2",
+   "valor": "0,50"
+  },
+  {
+   "id": "re-229",
+   "en": "readme",
+   "contexto": "| Tormenta en edificios, viento | 1,53 | 1,60 | 5.868 |",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "developed",
+     "ramo": "buildings",
+     "peligro": "storm"
+    },
+    "clave": "razon_alto_bajo_bloque"
+   },
+   "formato": "dec2",
+   "valor": "1,53"
+  },
+  {
+   "id": "re-230",
+   "en": "readme",
+   "contexto": "| Tormenta en edificios, viento | 1,53 | 1,60 | 5.868 |",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "developed",
+     "ramo": "buildings",
+     "peligro": "storm"
+    },
+    "clave": "razon_alto_bajo_propio"
+   },
+   "formato": "dec2",
+   "valor": "1,60"
+  },
+  {
+   "id": "re-231",
+   "en": "readme",
+   "contexto": "| Tormenta en edificios, viento | 1,53 | 1,60 | 5.868 |",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "developed",
+     "ramo": "buildings",
+     "peligro": "storm"
+    },
+    "clave": "siniestros"
+   },
+   "formato": "int",
+   "valor": "5.868"
+  },
+  {
+   "id": "re-232",
+   "en": "readme",
+   "contexto": "| Incendio en edificios, índice forestal | 1,43 | 1,41 | 798 |",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "developed",
+     "ramo": "buildings",
+     "peligro": "fire"
+    },
+    "clave": "razon_alto_bajo_bloque"
+   },
+   "formato": "dec2",
+   "valor": "1,43"
+  },
+  {
+   "id": "re-233",
+   "en": "readme",
+   "contexto": "| Incendio en edificios, índice forestal | 1,43 | 1,41 | 798 |",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "developed",
+     "ramo": "buildings",
+     "peligro": "fire"
+    },
+    "clave": "razon_alto_bajo_propio"
+   },
+   "formato": "dec2",
+   "valor": "1,41"
+  },
+  {
+   "id": "re-234",
+   "en": "readme",
+   "contexto": "| Incendio en edificios, índice forestal | 1,43 | 1,41 | 798 |",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "developed",
+     "ramo": "buildings",
+     "peligro": "fire"
+    },
+    "clave": "siniestros"
+   },
+   "formato": "int",
+   "valor": "798"
+  },
+  {
+   "id": "re-235",
+   "en": "readme",
+   "contexto": "| Inundación en edificios, lluvia | 2,27 | 2,07 | 1.689 |",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "developed",
+     "ramo": "buildings",
+     "peligro": "flood"
+    },
+    "clave": "razon_alto_bajo_bloque"
+   },
+   "formato": "dec2",
+   "valor": "2,27"
+  },
+  {
+   "id": "re-236",
+   "en": "readme",
+   "contexto": "| Inundación en edificios, lluvia | 2,27 | 2,07 | 1.689 |",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "developed",
+     "ramo": "buildings",
+     "peligro": "flood"
+    },
+    "clave": "razon_alto_bajo_propio"
+   },
+   "formato": "dec2",
+   "valor": "2,07"
+  },
+  {
+   "id": "re-237",
+   "en": "readme",
+   "contexto": "| Inundación en edificios, lluvia | 2,27 | 2,07 | 1.689 |",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "developed",
+     "ramo": "buildings",
+     "peligro": "flood"
+    },
+    "clave": "siniestros"
+   },
+   "formato": "int",
+   "valor": "1.689"
+  },
+  {
+   "id": "re-238",
+   "en": "readme",
+   "contexto": "| Inundación en contenidos, lluvia | 2,92 | 2,15 | 1.254 |",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "developed",
+     "ramo": "contents",
+     "peligro": "flood"
+    },
+    "clave": "razon_alto_bajo_bloque"
+   },
+   "formato": "dec2",
+   "valor": "2,92"
+  },
+  {
+   "id": "re-239",
+   "en": "readme",
+   "contexto": "| Inundación en contenidos, lluvia | 2,92 | 2,15 | 1.254 |",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "developed",
+     "ramo": "contents",
+     "peligro": "flood"
+    },
+    "clave": "razon_alto_bajo_propio"
+   },
+   "formato": "dec2",
+   "valor": "2,15"
+  },
+  {
+   "id": "re-240",
+   "en": "readme",
+   "contexto": "| Inundación en contenidos, lluvia | 2,92 | 2,15 | 1.254 |",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "developed",
+     "ramo": "contents",
+     "peligro": "flood"
+    },
+    "clave": "siniestros"
+   },
+   "formato": "int",
+   "valor": "1.254"
+  },
+  {
+   "id": "re-241",
+   "en": "readme",
+   "contexto": "| Escape de agua en edificios, lluvia | 0,87 | 0,88 | 7.507 |",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "developed",
+     "ramo": "buildings",
+     "peligro": "escape_of_water"
+    },
+    "clave": "razon_alto_bajo_bloque"
+   },
+   "formato": "dec2",
+   "valor": "0,87"
+  },
+  {
+   "id": "re-242",
+   "en": "readme",
+   "contexto": "| Escape de agua en edificios, lluvia | 0,87 | 0,88 | 7.507 |",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "developed",
+     "ramo": "buildings",
+     "peligro": "escape_of_water"
+    },
+    "clave": "razon_alto_bajo_propio"
+   },
+   "formato": "dec2",
+   "valor": "0,88"
+  },
+  {
+   "id": "re-243",
+   "en": "readme",
+   "contexto": "| Escape de agua en edificios, lluvia | 0,87 | 0,88 | 7.507 |",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "developed",
+     "ramo": "buildings",
+     "peligro": "escape_of_water"
+    },
+    "clave": "siniestros"
+   },
+   "formato": "int",
+   "valor": "7.507"
+  },
+  {
+   "id": "re-244",
+   "en": "readme",
+   "contexto": "| Escape de agua en contenidos, lluvia | 0,94 | 0,94 | 4.004 |",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "developed",
+     "ramo": "contents",
+     "peligro": "escape_of_water"
+    },
+    "clave": "razon_alto_bajo_bloque"
+   },
+   "formato": "dec2",
+   "valor": "0,94"
+  },
+  {
+   "id": "re-245",
+   "en": "readme",
+   "contexto": "| Escape de agua en contenidos, lluvia | 0,94 | 0,94 | 4.004 |",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "developed",
+     "ramo": "contents",
+     "peligro": "escape_of_water"
+    },
+    "clave": "razon_alto_bajo_propio"
+   },
+   "formato": "dec2",
+   "valor": "0,94"
+  },
+  {
+   "id": "re-246",
+   "en": "readme",
+   "contexto": "| Escape de agua en contenidos, lluvia | 0,94 | 0,94 | 4.004 |",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "developed",
+     "ramo": "contents",
+     "peligro": "escape_of_water"
+    },
+    "clave": "siniestros"
+   },
+   "formato": "int",
+   "valor": "4.004"
+  },
+  {
+   "id": "re-247",
+   "en": "readme",
+   "contexto": "(49 de incendio, 42 y 51 de inundación)",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "emerging",
+     "ramo": "buildings",
+     "peligro": "fire"
+    },
+    "clave": "siniestros"
+   },
+   "formato": "int",
+   "valor": "49"
+  },
+  {
+   "id": "re-248",
+   "en": "readme",
+   "contexto": "(49 de incendio, 42 y 51 de inundación)",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "emerging",
+     "ramo": "buildings",
+     "peligro": "flood"
+    },
+    "clave": "siniestros"
+   },
+   "formato": "int",
+   "valor": "42"
+  },
+  {
+   "id": "re-249",
+   "en": "readme",
+   "contexto": "(49 de incendio, 42 y 51 de inundación)",
+   "buscar": {
+    "lista": [
+     "clima",
+     "comprobacion"
+    ],
+    "campos": {
+     "mercado": "emerging",
+     "ramo": "contents",
+     "peligro": "flood"
+    },
+    "clave": "siniestros"
+   },
+   "formato": "int",
+   "valor": "51"
+  },
+  {
+   "id": "re-250",
+   "en": "readme",
+   "contexto": "315 siniestros de autos",
+   "ruta": [
+    "nuevo_negocio",
+    "relatividad_bruta",
+    "motor",
+    "emergente",
+    "siniestros_nb"
+   ],
+   "formato": "int",
+   "valor": "315"
+  },
+  {
+   "id": "re-251",
+   "en": "readme",
+   "contexto": "40 de edificios",
+   "ruta": [
+    "nuevo_negocio",
+    "relatividad_bruta",
+    "buildings",
+    "emergente",
+    "siniestros_nb"
+   ],
+   "formato": "int",
+   "valor": "40"
+  },
+  {
+   "id": "re-252",
+   "en": "readme",
+   "contexto": "37 de contenidos en 2023",
+   "ruta": [
+    "nuevo_negocio",
+    "relatividad_bruta",
+    "contents",
+    "emergente",
+    "siniestros_nb"
+   ],
+   "formato": "int",
+   "valor": "37"
+  },
+  {
+   "id": "re-253",
+   "en": "readme",
+   "contexto": "(9.400, 1.782 y 1.719 entre 2021 y 2023)",
+   "ruta": [
+    "nuevo_negocio",
+    "relatividad_bruta",
+    "motor",
+    "desarrollado",
+    "siniestros_nb"
+   ],
+   "formato": "int",
+   "valor": "9.400"
+  },
+  {
+   "id": "re-254",
+   "en": "readme",
+   "contexto": "(9.400, 1.782 y 1.719 entre 2021 y 2023)",
+   "ruta": [
+    "nuevo_negocio",
+    "relatividad_bruta",
+    "buildings",
+    "desarrollado",
+    "siniestros_nb"
+   ],
+   "formato": "int",
+   "valor": "1.782"
+  },
+  {
+   "id": "re-255",
+   "en": "readme",
+   "contexto": "(9.400, 1.782 y 1.719 entre 2021 y 2023)",
+   "ruta": [
+    "nuevo_negocio",
+    "relatividad_bruta",
+    "contents",
+    "desarrollado",
+    "siniestros_nb"
+   ],
+   "formato": "int",
+   "valor": "1.719"
+  },
+  {
+   "id": "re-256",
+   "en": "readme",
+   "contexto": "enero, febrero y diciembre es 1,27, 1,35 y 1,45 veces la media",
+   "ruta": [
+    "nuevo_negocio",
+    "indice_estacional_desarrollado",
+    "buildings",
+    0
+   ],
+   "formato": "dec2",
+   "valor": "1,27"
+  },
+  {
+   "id": "re-257",
+   "en": "readme",
+   "contexto": "enero, febrero y diciembre es 1,27, 1,35 y 1,45 veces la media",
+   "ruta": [
+    "nuevo_negocio",
+    "indice_estacional_desarrollado",
+    "buildings",
+    1
+   ],
+   "formato": "dec2",
+   "valor": "1,35"
+  },
+  {
+   "id": "re-258",
+   "en": "readme",
+   "contexto": "enero, febrero y diciembre es 1,27, 1,35 y 1,45 veces la media",
+   "ruta": [
+    "nuevo_negocio",
+    "indice_estacional_desarrollado",
+    "buildings",
+    11
+   ],
+   "formato": "dec2",
+   "valor": "1,45"
+  },
+  {
+   "id": "re-259",
+   "en": "readme",
+   "contexto": "Sale τ = 0,048 en frecuencia",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "tau_f"
+   ],
+   "formato": "dec3",
+   "valor": "0,048"
+  },
+  {
+   "id": "re-260",
+   "en": "readme",
+   "contexto": "el emergente de autos aporta algo (Z = 0,36)",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "motor",
+    "Z_f"
+   ],
+   "formato": "dec2",
+   "valor": "0,36"
+  },
+  {
+   "id": "re-261",
+   "en": "readme",
+   "contexto": "el de hogar casi nada (Z de 0,07 y 0,08)",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "contents",
+    "Z_f"
+   ],
+   "formato": "dec2",
+   "valor": "0,07"
+  },
+  {
+   "id": "re-262",
+   "en": "readme",
+   "contexto": "el de hogar casi nada (Z de 0,07 y 0,08)",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "buildings",
+    "Z_f"
+   ],
+   "formato": "dec2",
+   "valor": "0,08"
+  },
+  {
+   "id": "re-263",
+   "en": "readme",
+   "contexto": "con 40 y 37 siniestros su relatividad tiene un error típico de 0,16 y 0,17",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "buildings",
+    "se_f_em"
+   ],
+   "formato": "dec2",
+   "valor": "0,16"
+  },
+  {
+   "id": "re-264",
+   "en": "readme",
+   "contexto": "con 40 y 37 siniestros su relatividad tiene un error típico de 0,16 y 0,17",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "contents",
+    "se_f_em"
+   ],
+   "formato": "dec2",
+   "valor": "0,17"
+  },
+  {
+   "id": "re-265",
+   "en": "readme",
+   "contexto": "El 1,32 de autos",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "motor",
+    "rel_s_em"
+   ],
+   "formato": "dec2",
+   "valor": "1,32"
+  },
+  {
+   "id": "re-266",
+   "en": "readme",
+   "contexto": "frente al 4,1 % en la renovación",
+   "ruta": [
+    "nuevo_negocio",
+    "concentracion_severidad",
+    "motor",
+    "emergente",
+    "REN",
+    "cuota_5_mayores"
+   ],
+   "formato": "pct1",
+   "valor": "4,1"
+  },
+  {
+   "id": "re-267",
+   "en": "readme",
+   "contexto": "y al 3,9 % del nuevo negocio del desarrollado",
+   "ruta": [
+    "nuevo_negocio",
+    "concentracion_severidad",
+    "motor",
+    "desarrollado",
+    "NB",
+    "cuota_5_mayores"
+   ],
+   "formato": "pct1",
+   "valor": "3,9"
+  },
+  {
+   "id": "re-268",
+   "en": "readme",
+   "contexto": "| Principal | 1,160 | 1,113 | 1,065 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "motor",
+    "rel_cred"
+   ],
+   "formato": "dec3",
+   "valor": "1,160"
+  },
+  {
+   "id": "re-269",
+   "en": "readme",
+   "contexto": "| Principal | 1,160 | 1,113 | 1,065 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "buildings",
+    "rel_cred"
+   ],
+   "formato": "dec3",
+   "valor": "1,113"
+  },
+  {
+   "id": "re-270",
+   "en": "readme",
+   "contexto": "| Principal | 1,160 | 1,113 | 1,065 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "contents",
+    "rel_cred"
+   ],
+   "formato": "dec3",
+   "valor": "1,065"
+  },
+  {
+   "id": "re-271",
+   "en": "readme",
+   "contexto": "| Sin estacionalidad | 1,164 | 1,101 | 1,056 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "sin_estacionalidad",
+    "ramos",
+    "motor",
+    "rel_cred"
+   ],
+   "formato": "dec3",
+   "valor": "1,164"
+  },
+  {
+   "id": "re-272",
+   "en": "readme",
+   "contexto": "| Sin estacionalidad | 1,164 | 1,101 | 1,056 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "sin_estacionalidad",
+    "ramos",
+    "buildings",
+    "rel_cred"
+   ],
+   "formato": "dec3",
+   "valor": "1,101"
+  },
+  {
+   "id": "re-273",
+   "en": "readme",
+   "contexto": "| Sin estacionalidad | 1,164 | 1,101 | 1,056 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "sin_estacionalidad",
+    "ramos",
+    "contents",
+    "rel_cred"
+   ],
+   "formato": "dec3",
+   "valor": "1,056"
+  },
+  {
+   "id": "re-274",
+   "en": "readme",
+   "contexto": "| Índice estacional del emergente | 1,170 | 1,081 | 1,025 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "estacional_emergente",
+    "ramos",
+    "motor",
+    "rel_cred"
+   ],
+   "formato": "dec3",
+   "valor": "1,170"
+  },
+  {
+   "id": "re-275",
+   "en": "readme",
+   "contexto": "| Índice estacional del emergente | 1,170 | 1,081 | 1,025 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "estacional_emergente",
+    "ramos",
+    "buildings",
+    "rel_cred"
+   ],
+   "formato": "dec3",
+   "valor": "1,081"
+  },
+  {
+   "id": "re-276",
+   "en": "readme",
+   "contexto": "| Índice estacional del emergente | 1,170 | 1,081 | 1,025 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "estacional_emergente",
+    "ramos",
+    "contents",
+    "rel_cred"
+   ],
+   "formato": "dec3",
+   "valor": "1,025"
+  },
+  {
+   "id": "re-277",
+   "en": "readme",
+   "contexto": "| τ sin las categorías de NCB | 1,161 | 1,113 | 1,065 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal_sin_ncb_en_tau",
+    "ramos",
+    "motor",
+    "rel_cred"
+   ],
+   "formato": "dec3",
+   "valor": "1,161"
+  },
+  {
+   "id": "re-278",
+   "en": "readme",
+   "contexto": "| τ sin las categorías de NCB | 1,161 | 1,113 | 1,065 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal_sin_ncb_en_tau",
+    "ramos",
+    "buildings",
+    "rel_cred"
+   ],
+   "formato": "dec3",
+   "valor": "1,113"
+  },
+  {
+   "id": "re-279",
+   "en": "readme",
+   "contexto": "| τ sin las categorías de NCB | 1,161 | 1,113 | 1,065 |",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal_sin_ncb_en_tau",
+    "ramos",
+    "contents",
+    "rel_cred"
+   ],
+   "formato": "dec3",
+   "valor": "1,065"
+  },
+  {
+   "id": "re-280",
+   "en": "readme",
+   "contexto": "cada CU de gasto fijo cuesta 1,45 CU de prima en directo y 2,04 en broker",
+   "inverso": [
+    "gasto_fijo",
+    "denominadores",
+    "direct"
+   ],
+   "formato": "dec2",
+   "valor": "1,45"
+  },
+  {
+   "id": "re-281",
+   "en": "readme",
+   "contexto": "cada CU de gasto fijo cuesta 1,45 CU de prima en directo y 2,04 en broker",
+   "inverso": [
+    "gasto_fijo",
+    "denominadores",
+    "broker"
+   ],
+   "formato": "dec2",
+   "valor": "2,04"
+  },
+  {
+   "id": "re-282",
+   "en": "readme",
+   "contexto": "| 11,9 | 12,3 | 173,5 |",
+   "buscar": {
+    "lista": [
+     "gasto_fijo",
+     "referencias"
+    ],
+    "campos": {
+     "row_id": "C00314425"
+    },
+    "clave": "F_por_exposicion_termino_F"
+   },
+   "formato": "dec1",
+   "valor": "11,9"
+  },
+  {
+   "id": "re-283",
+   "en": "readme",
+   "contexto": "| 11,9 | 12,3 | 173,5 |",
+   "buscar": {
+    "lista": [
+     "gasto_fijo",
+     "referencias"
+    ],
+    "campos": {
+     "row_id": "C00314425"
+    },
+    "clave": "F_por_poliza_y_anio_termino_F"
+   },
+   "formato": "dec1",
+   "valor": "12,3"
+  },
+  {
+   "id": "re-284",
+   "en": "readme",
+   "contexto": "| 11,9 | 12,3 | 173,5 |",
+   "buscar": {
+    "lista": [
+     "gasto_fijo",
+     "referencias"
+    ],
+    "campos": {
+     "row_id": "C00314425"
+    },
+    "clave": "F_entero_por_fila_termino_F"
+   },
+   "formato": "dec1",
+   "valor": "173,5"
+  },
+  {
+   "id": "re-285",
+   "en": "readme",
+   "contexto": "| 19,0 | 147,6 | 173,5 |",
+   "buscar": {
+    "lista": [
+     "gasto_fijo",
+     "referencias"
+    ],
+    "campos": {
+     "row_id": "B00250679"
+    },
+    "clave": "F_por_exposicion_termino_F"
+   },
+   "formato": "dec1",
+   "valor": "19,0"
+  },
+  {
+   "id": "re-286",
+   "en": "readme",
+   "contexto": "| 19,0 | 147,6 | 173,5 |",
+   "buscar": {
+    "lista": [
+     "gasto_fijo",
+     "referencias"
+    ],
+    "campos": {
+     "row_id": "B00250679"
+    },
+    "clave": "F_por_poliza_y_anio_termino_F"
+   },
+   "formato": "dec1",
+   "valor": "147,6"
+  },
+  {
+   "id": "re-287",
+   "en": "readme",
+   "contexto": "| 19,0 | 147,6 | 173,5 |",
+   "buscar": {
+    "lista": [
+     "gasto_fijo",
+     "referencias"
+    ],
+    "campos": {
+     "row_id": "B00250679"
+    },
+    "clave": "F_entero_por_fila_termino_F"
+   },
+   "formato": "dec1",
+   "valor": "173,5"
+  },
+  {
+   "id": "re-288",
+   "en": "readme",
+   "contexto": "| 57,5 | 173,5 | 173,5 |",
+   "buscar": {
+    "lista": [
+     "gasto_fijo",
+     "referencias"
+    ],
+    "campos": {
+     "row_id": "M00129413"
+    },
+    "clave": "F_por_exposicion_termino_F"
+   },
+   "formato": "dec1",
+   "valor": "57,5"
+  },
+  {
+   "id": "re-289",
+   "en": "readme",
+   "contexto": "| 57,5 | 173,5 | 173,5 |",
+   "buscar": {
+    "lista": [
+     "gasto_fijo",
+     "referencias"
+    ],
+    "campos": {
+     "row_id": "M00129413"
+    },
+    "clave": "F_por_poliza_y_anio_termino_F"
+   },
+   "formato": "dec1",
+   "valor": "173,5"
+  },
+  {
+   "id": "re-290",
+   "en": "readme",
+   "contexto": "| 57,5 | 173,5 | 173,5 |",
+   "buscar": {
+    "lista": [
+     "gasto_fijo",
+     "referencias"
+    ],
+    "campos": {
+     "row_id": "M00129413"
+    },
+    "clave": "F_entero_por_fila_termino_F"
+   },
+   "formato": "dec1",
+   "valor": "173,5"
+  },
+  {
+   "id": "ap-291",
+   "en": "aporte",
+   "contexto": "(1 + 0,12 en hogar) + 85 × exposición",
+   "ruta": [
+    "gasto_fijo",
+    "supuestos_expenses",
+    "r"
+   ],
+   "formato": "dec2",
+   "valor": "0,12"
+  },
+  {
+   "id": "ap-292",
+   "en": "aporte",
+   "contexto": "(1 + 0,12 en hogar) + 85 × exposición",
+   "ruta": [
+    "gasto_fijo",
+    "supuestos_expenses",
+    "F"
+   ],
+   "formato": "int",
+   "valor": "85"
+  },
+  {
+   "id": "re-293",
+   "en": "readme",
+   "contexto": "F = 85 CU por póliza, v = 0,15, t = 0,08, m = 0,08, comisión 0 en directo y 0,20 en broker, y r = 0,12",
+   "ruta": [
+    "gasto_fijo",
+    "supuestos_expenses",
+    "F"
+   ],
+   "formato": "int",
+   "valor": "85"
+  },
+  {
+   "id": "re-294",
+   "en": "readme",
+   "contexto": "F = 85 CU por póliza, v = 0,15, t = 0,08, m = 0,08, comisión 0 en directo y 0,20 en broker, y r = 0,12",
+   "ruta": [
+    "gasto_fijo",
+    "supuestos_expenses",
+    "v"
+   ],
+   "formato": "dec2",
+   "valor": "0,15"
+  },
+  {
+   "id": "re-295",
+   "en": "readme",
+   "contexto": "F = 85 CU por póliza, v = 0,15, t = 0,08, m = 0,08, comisión 0 en directo y 0,20 en broker, y r = 0,12",
+   "ruta": [
+    "gasto_fijo",
+    "supuestos_expenses",
+    "t"
+   ],
+   "formato": "dec2",
+   "valor": "0,08"
+  },
+  {
+   "id": "re-296",
+   "en": "readme",
+   "contexto": "F = 85 CU por póliza, v = 0,15, t = 0,08, m = 0,08, comisión 0 en directo y 0,20 en broker, y r = 0,12",
+   "ruta": [
+    "gasto_fijo",
+    "supuestos_expenses",
+    "m"
+   ],
+   "formato": "dec2",
+   "valor": "0,08"
+  },
+  {
+   "id": "re-297",
+   "en": "readme",
+   "contexto": "F = 85 CU por póliza, v = 0,15, t = 0,08, m = 0,08, comisión 0 en directo y 0,20 en broker, y r = 0,12",
+   "ruta": [
+    "gasto_fijo",
+    "supuestos_expenses",
+    "comision_broker"
+   ],
+   "formato": "dec2",
+   "valor": "0,20"
+  },
+  {
+   "id": "re-298",
+   "en": "readme",
+   "contexto": "F = 85 CU por póliza, v = 0,15, t = 0,08, m = 0,08, comisión 0 en directo y 0,20 en broker, y r = 0,12",
+   "ruta": [
+    "gasto_fijo",
+    "supuestos_expenses",
+    "r"
+   ],
+   "formato": "dec2",
+   "valor": "0,12"
+  },
+  {
+   "id": "re-299",
+   "en": "readme",
+   "contexto": "F = 85 CU por póliza, v = 0,15, t = 0,08, m = 0,08, comisión 0 en directo y 0,20 en broker, y r = 0,12",
+   "ruta": [
+    "gasto_fijo",
+    "supuestos_expenses",
+    "comision_direct"
+   ],
+   "igual": 0.0
+  },
+  {
+   "id": "re-300",
+   "en": "readme",
+   "contexto": "hundimiento −25 % con solo 52 siniestros",
+   "buscar": {
+    "lista": [
+     "clima",
+     "escenario_2025"
+    ],
+    "campos": {
+     "ramo": "buildings",
+     "peligro": "subsidence"
+    },
+    "clave": "siniestros_2023_2024"
+   },
+   "formato": "int",
+   "valor": "52"
+  },
+  {
+   "id": "re-301",
+   "en": "readme",
+   "contexto": "En 2025 el 77 % de la exposición es nuevo negocio",
+   "ruta": [
+    "escenario_bloque_transferido",
+    "motor",
+    "cuota_exposicion_nb"
+   ],
+   "formato": "pct0",
+   "valor": "77"
+  },
+  {
+   "id": "re-302",
+   "en": "readme",
+   "contexto": "En 2025 el 77 % de la exposición es nuevo negocio",
+   "ruta": [
+    "escenario_bloque_transferido",
+    "buildings",
+    "cuota_exposicion_nb"
+   ],
+   "formato": "pct0",
+   "valor": "77"
+  },
+  {
+   "id": "re-303",
+   "en": "readme",
+   "contexto": "En 2025 el 77 % de la exposición es nuevo negocio",
+   "ruta": [
+    "escenario_bloque_transferido",
+    "contents",
+    "cuota_exposicion_nb"
+   ],
+   "formato": "pct0",
+   "valor": "77"
+  },
+  {
+   "id": "ap-304",
+   "en": "aporte",
+   "contexto": "es lo que anticipa una Z de 0,08",
+   "ruta": [
+    "nuevo_negocio",
+    "credibilidad",
+    "principal",
+    "ramos",
+    "buildings",
+    "Z_f"
+   ],
+   "formato": "dec2",
+   "valor": "0,08"
+  },
+  {
+   "id": "ap-305",
+   "en": "aporte",
+   "contexto": "el diagnóstico sin las 51 filas más caras",
+   "ruta": [
+    "diagnostico_oof",
+    "filas_excluidas_sin_01"
+   ],
+   "formato": "int",
+   "valor": "51"
+  }
+ ]
+}

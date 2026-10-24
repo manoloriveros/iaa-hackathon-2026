@@ -1,0 +1,4138 @@
+{
+ "autor": "Claude (Cowork)",
+ "utc": "2026-10-23T20:45:52+00:00",
+ "preinscripcion": {
+  "id": "CLA-S2-DEC-20261023",
+  "sha256": "2978406fe37a7601cf08b7450a6d46765c5acae23b696a87c93e843ba6a55b51",
+  "utc": "2026-10-23T20:09:00Z"
+ },
+ "entradas": {
+  "emerging/addresses": {
+   "sha256": "4e9bf9d2a1777896e84fd4ee471096ff075aaefefd544f91b731324b25425632",
+   "coincide": true
+  },
+  "emerging/claims": {
+   "sha256": "1a2fce8a26cb1e05de1f53fe4e39bde772a1898e845755487625355fec4cc0e9",
+   "coincide": true
+  },
+  "emerging/policies_buildings": {
+   "sha256": "ccc948fafc11e623d5cb010c2b494f6813f6048719eae7bcde28794467598319",
+   "coincide": true
+  },
+  "emerging/policies_contents": {
+   "sha256": "84d7f48d03933b018bec8fdc2f4bbd96df184cca7ae1971c38d3acc955720f8e",
+   "coincide": true
+  },
+  "emerging/policies_motor": {
+   "sha256": "7c5dbb5e5b46629ebf01a66c991183d20b8585393b589bc2644fcbd6653a3ec1",
+   "coincide": true
+  },
+  "emerging/reference_policies": {
+   "sha256": "6d4c2839e87d092fccd4b3c3ddc16a2a4c4993c35e18481e322462cd382dd8f4",
+   "coincide": true
+  },
+  "emerging/test_buildings": {
+   "sha256": "21f91aaa66a1b9efd216ad0e04ff12a507dbeb721084330d9b9f06c99edd0ca6",
+   "coincide": true
+  },
+  "emerging/test_contents": {
+   "sha256": "af5ef2553e35a2d563ca091b173500daac55acc4969d1d3a96fa6b4ec3c6a012",
+   "coincide": true
+  },
+  "emerging/test_motor": {
+   "sha256": "108d5c68e9bab5ccd90ee5502bc3543aa515a5aa07fda44a3b227cf070a28aa5",
+   "coincide": true
+  },
+  "emerging/weather": {
+   "sha256": "645067069f68de8c4746d1ba48a454ff00155e1aa6fbbf64cdee48ae7269cbbd",
+   "coincide": true
+  },
+  "emerging/expenses": {
+   "sha256": "9033f666a5a45f0b44501d57e40ab1cc571c51c384f23a62942b75db323b1cdf",
+   "coincide": true
+  },
+  "developed/addresses": {
+   "sha256": "2f1a9a157649a73ed1b0ee9b2caa3660b4c2a11766af3c64ab5131389079c0b1",
+   "coincide": true
+  },
+  "developed/claims": {
+   "sha256": "323adf2e0f6c5975a026479d725d4cd04f51fce3aa069f897a99f664c6e392c0",
+   "coincide": true
+  },
+  "developed/policies_buildings": {
+   "sha256": "eb84372c23c16ed0619d89c8eb1396ab6916e5ec46a5907ce42c3dfce4a91cbe",
+   "coincide": true
+  },
+  "developed/policies_contents": {
+   "sha256": "8c067cc80baed583100df999e1c3d5e389295702f7bac21d5331bbd639b83fcd",
+   "coincide": true
+  },
+  "developed/policies_motor": {
+   "sha256": "4d2d7ae03971d5d6df3a71bbaf0ebc168250a6807b27d1561d38b638434dc95e",
+   "coincide": true
+  },
+  "developed/weather": {
+   "sha256": "b8407f0f3c7279a49297c969a4ab2905641b232910e316fb806730065987cd49",
+   "coincide": true
+  },
+  "codex/dev3/oof_2023.parquet": {
+   "sha256": "f74fb722982c66afaf728ee011f9dd8632b028d43d378692f114634015ff4801",
+   "coincide": true
+  },
+  "claude/revision_apertura_20261023/evidencia.json": {
+   "sha256": "9621313187a4988121ae2de591a1869f47fd4d5fa5c34d60bacb30890b36f05d"
+  }
+ },
+ "entorno": {
+  "python": "3.13.17",
+  "pandas": "3.0.5",
+  "numpy": "2.5.3",
+  "pyarrow": "26.0.0",
+  "scipy": "1.18.1"
+ },
+ "capital": {
+  "buildings": {
+   "umbral": 5000000,
+   "filas_normales": 79585,
+   "ppm_normal_min": 0.45094736842105265,
+   "ppm_normal_max": 17.435326086956522,
+   "ppm_normal_mediana": 1.056609195402299,
+   "filas_sobre_umbral": 157,
+   "pasan": 157,
+   "no_pasan": 0,
+   "pasan_train": 53,
+   "pasan_test": 104,
+   "ppm_bruta_mediana": 0.001092676056338028,
+   "ppm_bruta_max": 0.010997926829268293,
+   "ppm_dividida_mediana": 1.092676056338028,
+   "ppm_dividida_min": 0.6031672597864769,
+   "ppm_dividida_max": 10.997926829268293,
+   "veces_hueco_min_normal_sobre_max_extrema": 41.00294313842555,
+   "confirmadas_por_historia": 72,
+   "con_otra_fila_normal": 80,
+   "control_hueco_preinscrito": 0,
+   "control_hueco_mediana_entre_100": 0,
+   "capital_dividido_max": 568000.0,
+   "capital_normal_max": 894000.0,
+   "por_anio": {
+    "2023": 26,
+    "2024": 27,
+    "2025": 104
+   }
+  },
+  "contents": {
+   "umbral": 2000000,
+   "filas_normales": 100621,
+   "ppm_normal_min": 1.6064984227129337,
+   "ppm_normal_max": 10.58875,
+   "ppm_normal_mediana": 3.4317391304347824,
+   "filas_sobre_umbral": 192,
+   "pasan": 192,
+   "no_pasan": 0,
+   "pasan_train": 57,
+   "pasan_test": 135,
+   "ppm_bruta_mediana": 0.003362036731853805,
+   "ppm_bruta_max": 0.00695354609929078,
+   "ppm_dividida_mediana": 3.362036731853805,
+   "ppm_dividida_min": 2.0890143737166325,
+   "ppm_dividida_max": 6.95354609929078,
+   "veces_hueco_min_normal_sobre_max_extrema": 231.0329722092138,
+   "confirmadas_por_historia": 91,
+   "con_otra_fila_normal": 95,
+   "control_hueco_preinscrito": 0,
+   "control_hueco_mediana_entre_100": 0,
+   "capital_dividido_max": 131600.0,
+   "capital_normal_max": 283200.0,
+   "por_anio": {
+    "2023": 30,
+    "2024": 27,
+    "2025": 135
+   }
+  },
+  "total_divididas": 349,
+  "total_divididas_test": 239,
+  "total_divididas_train": 110,
+  "total_no_pasan": 0,
+  "lista_sha256": "964cab97d1fcb2b559c744374581be9a9d21fd92836bef991db29f8878d161bb",
+  "tabla": {
+   "ruta": "capital_caps2_01.parquet",
+   "filas": 349,
+   "sha256": "40005e3c613b8a6659dd1d4da8d0c24c2e38f791d31e2466138ff7625084f260"
+  }
+ },
+ "clima": {
+  "persistencia": {
+   "hail_days": {
+    "r_2023_2024": 0.1987458915550362,
+    "r_2024_2025": 0.2293409643121152,
+    "persistente": false
+   },
+   "wind_exposure_index": {
+    "r_2023_2024": 0.8714814911536277,
+    "r_2024_2025": 0.9131377181846616,
+    "persistente": true
+   },
+   "freezing_days": {
+    "r_2023_2024": 0.7860630691319221,
+    "r_2024_2025": 0.703594469395626,
+    "persistente": false
+   },
+   "dry_summer_index": {
+    "r_2023_2024": 0.5959454248408624,
+    "r_2024_2025": -0.2418893256614915,
+    "persistente": false
+   },
+   "wildfire_index": {
+    "r_2023_2024": 0.8910478788028566,
+    "r_2024_2025": 0.865850541822466,
+    "persistente": true
+   },
+   "rainfall_mm": {
+    "r_2023_2024": 0.9218393470201447,
+    "r_2024_2025": 0.9452034611418033,
+    "persistente": true
+   },
+   "mean_temperature_c": {
+    "r_2023_2024": 0.895560348367332,
+    "r_2024_2025": 0.4975212744024509,
+    "persistente": false
+   }
+  },
+  "umbral": 0.8,
+  "variables_bloque": [
+   "wind_exposure_index",
+   "wildfire_index",
+   "rainfall_mm"
+  ],
+  "regla_anios": {
+   "2023": [
+    2024
+   ],
+   "2024": [
+    2023
+   ],
+   "2025": [
+    2023,
+    2024
+   ]
+  },
+  "tabla": {
+   "ruta": "clima_direccion_s2_01.parquet",
+   "filas": 410742,
+   "sha256": "c87fee99d1dc5f74b3b0259d50781e651e38bba78c7be352c70fa0a40238bd36"
+  },
+  "comprobacion": [
+   {
+    "mercado": "emerging",
+    "ramo": "buildings",
+    "peligro": "storm",
+    "variable": "wind_exposure_index",
+    "siniestros": 210,
+    "razon_alto_bajo_bloque": 1.553240874147764,
+    "frecuencias_bloque": {
+     "bajo": 0.015500455620543661,
+     "medio": 0.01584567040571428,
+     "alto": 0.024075941237741857
+    },
+    "razon_alto_bajo_propio": 1.4560478349765607,
+    "frecuencias_propio": {
+     "bajo": 0.015021931803823175,
+     "medio": 0.01850175603751041,
+     "alto": 0.021872651280122276
+    }
+   },
+   {
+    "mercado": "emerging",
+    "ramo": "buildings",
+    "peligro": "fire",
+    "variable": "wildfire_index",
+    "siniestros": 49,
+    "razon_alto_bajo_bloque": 1.5618341812538257,
+    "frecuencias_bloque": {
+     "bajo": 0.003700008254421546,
+     "medio": 0.0034375389394558473,
+     "alto": 0.005778799362676872
+    },
+    "razon_alto_bajo_propio": 2.5295047352323103,
+    "frecuencias_propio": {
+     "bajo": 0.002383675199038693,
+     "medio": 0.004494595258256329,
+     "alto": 0.006029517703224194
+    }
+   },
+   {
+    "mercado": "emerging",
+    "ramo": "buildings",
+    "peligro": "flood",
+    "variable": "rainfall_mm",
+    "siniestros": 42,
+    "razon_alto_bajo_bloque": 3.0999952299581084,
+    "frecuencias_bloque": {
+     "bajo": 0.0023786886872172817,
+     "medio": 0.0013186320908085923,
+     "alto": 0.007373923583928888
+    },
+    "razon_alto_bajo_propio": 3.993470927072045,
+    "frecuencias_propio": {
+     "bajo": 0.0018475293001515626,
+     "medio": 0.0018476054527139553,
+     "alto": 0.0073780545470690274
+    }
+   },
+   {
+    "mercado": "emerging",
+    "ramo": "contents",
+    "peligro": "flood",
+    "variable": "rainfall_mm",
+    "siniestros": 51,
+    "razon_alto_bajo_bloque": 9.741070909078216,
+    "frecuencias_bloque": {
+     "bajo": 0.0008502539696960167,
+     "medio": 0.001704147205636292,
+     "alto": 0.008282384209534139
+    },
+    "razon_alto_bajo_propio": 32.93447351145998,
+    "frecuencias_propio": {
+     "bajo": 0.00021283841307679212,
+     "medio": 0.0036158304026945366,
+     "alto": 0.007009721077698787
+    }
+   },
+   {
+    "mercado": "emerging",
+    "ramo": "buildings",
+    "peligro": "escape_of_water",
+    "variable": "rainfall_mm",
+    "siniestros": 131,
+    "razon_alto_bajo_bloque": 0.5720229293375081,
+    "frecuencias_bloque": {
+     "bajo": 0.014272132123303692,
+     "medio": 0.01213141523543905,
+     "alto": 0.008163986825064126
+    },
+    "razon_alto_bajo_propio": 0.5546487398711175,
+    "frecuencias_propio": {
+     "bajo": 0.014252368886883481,
+     "medio": 0.012405350896793699,
+     "alto": 0.007905058443288244
+    }
+   },
+   {
+    "mercado": "emerging",
+    "ramo": "contents",
+    "peligro": "escape_of_water",
+    "variable": "rainfall_mm",
+    "siniestros": 86,
+    "razon_alto_bajo_bloque": 1.1239697202782555,
+    "frecuencias_bloque": {
+     "bajo": 0.006802031757568133,
+     "medio": 0.0038343312126816573,
+     "alto": 0.007645277731877666
+    },
+    "razon_alto_bajo_propio": 1.381866021459859,
+    "frecuencias_propio": {
+     "bajo": 0.005533798739996595,
+     "medio": 0.005104701744980522,
+     "alto": 0.0076469684483986755
+    }
+   },
+   {
+    "mercado": "developed",
+    "ramo": "buildings",
+    "peligro": "storm",
+    "variable": "wind_exposure_index",
+    "siniestros": 5868,
+    "razon_alto_bajo_bloque": 1.5345384102248265,
+    "frecuencias_bloque": {
+     "bajo": 0.010713891543716198,
+     "medio": 0.012803541488689556,
+     "alto": 0.016440878096815468
+    },
+    "razon_alto_bajo_propio": 1.6013385326602823,
+    "frecuencias_propio": {
+     "bajo": 0.010355691041565761,
+     "medio": 0.013014792789829237,
+     "alto": 0.016582967097184147
+    }
+   },
+   {
+    "mercado": "developed",
+    "ramo": "buildings",
+    "peligro": "fire",
+    "variable": "wildfire_index",
+    "siniestros": 798,
+    "razon_alto_bajo_bloque": 1.4307297656176936,
+    "frecuencias_bloque": {
+     "bajo": 0.0015202463022137712,
+     "medio": 0.0017403676221143358,
+     "alto": 0.002175061635647474
+    },
+    "razon_alto_bajo_propio": 1.4107423616124795,
+    "frecuencias_propio": {
+     "bajo": 0.0015613442239438158,
+     "medio": 0.0016609083621217222,
+     "alto": 0.0022026544377765026
+    }
+   },
+   {
+    "mercado": "developed",
+    "ramo": "buildings",
+    "peligro": "flood",
+    "variable": "rainfall_mm",
+    "siniestros": 1689,
+    "razon_alto_bajo_bloque": 2.2661058291820537,
+    "frecuencias_bloque": {
+     "bajo": 0.0023301574391027847,
+     "medio": 0.0039047347597415826,
+     "alto": 0.005280383355662747
+    },
+    "razon_alto_bajo_propio": 2.074294503296483,
+    "frecuencias_propio": {
+     "bajo": 0.002626572519718132,
+     "medio": 0.0033916734319089006,
+     "alto": 0.005448284940160914
+    }
+   },
+   {
+    "mercado": "developed",
+    "ramo": "contents",
+    "peligro": "flood",
+    "variable": "rainfall_mm",
+    "siniestros": 1254,
+    "razon_alto_bajo_bloque": 2.9203285291669885,
+    "frecuencias_bloque": {
+     "bajo": 0.0014763909464671628,
+     "medio": 0.0027597290225071084,
+     "alto": 0.004311546601171908
+    },
+    "razon_alto_bajo_propio": 2.147916723127355,
+    "frecuencias_propio": {
+     "bajo": 0.001964652663373789,
+     "medio": 0.0023207971513701697,
+     "alto": 0.004219910310797259
+    }
+   },
+   {
+    "mercado": "developed",
+    "ramo": "buildings",
+    "peligro": "escape_of_water",
+    "variable": "rainfall_mm",
+    "siniestros": 7507,
+    "razon_alto_bajo_bloque": 0.8652828208736044,
+    "frecuencias_bloque": {
+     "bajo": 0.017333932810069844,
+     "medio": 0.018761774333392482,
+     "alto": 0.01499875427873076
+    },
+    "razon_alto_bajo_propio": 0.8819254032614365,
+    "frecuencias_propio": {
+     "bajo": 0.017457768658545387,
+     "medio": 0.018282279927734294,
+     "alto": 0.015396449664232509
+    }
+   },
+   {
+    "mercado": "developed",
+    "ramo": "contents",
+    "peligro": "escape_of_water",
+    "variable": "rainfall_mm",
+    "siniestros": 4004,
+    "razon_alto_bajo_bloque": 0.9364759642319285,
+    "frecuencias_bloque": {
+     "bajo": 0.009149560406775857,
+     "medio": 0.009523104336286845,
+     "alto": 0.008568343404233696
+    },
+    "razon_alto_bajo_propio": 0.9365506656836918,
+    "frecuencias_propio": {
+     "bajo": 0.00919814656034092,
+     "medio": 0.009440183706896896,
+     "alto": 0.008614530284143449
+    }
+   }
+  ],
+  "escenario_2025": [
+   {
+    "ramo": "motor",
+    "peligro": "glass_hail",
+    "variable": "hail_days",
+    "siniestros_2023_2024": 1345,
+    "media_2024": 17.08120425960822,
+    "media_2025": 11.411382327592504,
+    "esperados_con_clima_2024": 2956.0860514132446,
+    "esperados_con_clima_2025": 2256.501779776455,
+    "razon": 0.7633410328828781,
+    "cuota_coste_del_peligro": 0.064564706977155,
+    "efecto_aprox_en_coste_del_ramo": -0.015279816865433133
+   },
+   {
+    "ramo": "buildings",
+    "peligro": "escape_of_water",
+    "variable": "freezing_days",
+    "siniestros_2023_2024": 268,
+    "media_2024": 17.490220138188935,
+    "media_2025": 28.862592576361802,
+    "esperados_con_clima_2024": 531.8848613518069,
+    "esperados_con_clima_2025": 596.238898390686,
+    "razon": 1.1209924209448654,
+    "cuota_coste_del_peligro": 0.1087005837586926,
+    "efecto_aprox_en_coste_del_ramo": 0.013151946787084335
+   },
+   {
+    "ramo": "contents",
+    "peligro": "escape_of_water",
+    "variable": "freezing_days",
+    "siniestros_2023_2024": 171,
+    "media_2024": 17.490220138188935,
+    "media_2025": 28.862592576361802,
+    "esperados_con_clima_2024": 333.69749583832424,
+    "esperados_con_clima_2025": 396.6402910230698,
+    "razon": 1.1886223180267472,
+    "cuota_coste_del_peligro": 0.14047277603385644,
+    "efecto_aprox_en_coste_del_ramo": 0.026496300635158104
+   },
+   {
+    "ramo": "buildings",
+    "peligro": "subsidence",
+    "variable": "dry_summer_index",
+    "siniestros_2023_2024": 52,
+    "media_2024": 0.7118518266941292,
+    "media_2025": 0.6045055728413457,
+    "esperados_con_clima_2024": 112.53529510793814,
+    "esperados_con_clima_2025": 84.71060219742448,
+    "razon": 0.7527469681060894,
+    "cuota_coste_del_peligro": 0.07644403951838756,
+    "efecto_aprox_en_coste_del_ramo": -0.01890102054113924
+   },
+   {
+    "ramo": "buildings",
+    "peligro": "storm",
+    "variable": "wind_exposure_index",
+    "siniestros_2023_2024": 464,
+    "media_2024": 5.4132170559621375,
+    "media_2025": 5.114120542822501,
+    "esperados_con_clima_2024": 968.0860103767577,
+    "esperados_con_clima_2025": 932.5936273843054,
+    "razon": 0.9633375726825765,
+    "cuota_coste_del_peligro": 0.12654501135776727,
+    "efecto_aprox_en_coste_del_ramo": -0.004639447281286678
+   }
+  ]
+ },
+ "nuevo_negocio": {
+  "datos": {
+   "emergente": [
+    2023
+   ],
+   "desarrollado": [
+    2021,
+    2022,
+    2023
+   ]
+  },
+  "indice_estacional_desarrollado": {
+   "motor": [
+    0.9862506958423323,
+    1.0028391623098842,
+    1.007277961886967,
+    0.986139508532418,
+    1.0088589679799407,
+    1.0113864770109493,
+    0.9882389100683882,
+    0.9870990419743015,
+    0.985282698386898,
+    1.0015078789734853,
+    1.0155454380084197,
+    1.0218686962616212
+   ],
+   "buildings": [
+    1.2659110405893768,
+    1.3530259672512883,
+    0.8238022499443459,
+    0.9081165187914273,
+    0.8650092095034593,
+    0.90045492629294,
+    0.8865619790339913,
+    0.9110527056740377,
+    0.8963229548612562,
+    0.8829964683655492,
+    0.8652826677813404,
+    1.4537482867335223
+   ],
+   "contents": [
+    1.1157489160779024,
+    1.0965636543853499,
+    0.9768032754990031,
+    0.9419173248730527,
+    0.9613828373889677,
+    0.9757619109714296,
+    0.9585854280421536,
+    1.0058004767630764,
+    0.9399334777814129,
+    0.952527883895472,
+    0.9302769019254035,
+    1.1406675475662038
+   ]
+  },
+  "indice_estacional_emergente": {
+   "motor": [
+    0.933364510159131,
+    1.005221644487167,
+    1.08226701956195,
+    1.032027555007026,
+    1.00963164912155,
+    1.0132634176432616,
+    0.9696821953793309,
+    1.0858987880839686,
+    0.9644766604974753,
+    0.9515233527692314,
+    0.9307012132426992,
+    1.0205269546876106
+   ],
+   "buildings": [
+    1.3519428917773013,
+    1.1157918282135235,
+    0.8357465149168773,
+    0.8382045929017948,
+    0.7865849552158846,
+    0.9398051496171642,
+    0.9340696343188631,
+    0.8357465149168772,
+    0.8636047320806371,
+    1.0323927537208486,
+    0.7620041753652679,
+    1.6960738096842511
+   ],
+   "contents": [
+    1.037373880915267,
+    1.0049559471364713,
+    0.8817677987779772,
+    0.9647577092509463,
+    1.0373738809152668,
+    1.098751835535801,
+    0.8298991047322133,
+    0.8039647577093311,
+    0.8039647577091229,
+    1.1670456160296754,
+    0.9379588839939768,
+    1.4263890862584916
+   ]
+  },
+  "referencias": {
+   "motor": {
+    "driver_age_band": "65+",
+    "yl_band": "21+",
+    "ncb_band": "9+",
+    "vehicle_value_group": "11",
+    "vage_band": "6-9",
+    "cover_type": "comprehensive",
+    "vehicle_use": "social",
+    "overnight_parking": "driveway",
+    "named_young_driver": "False",
+    "fuel_type": "petrol",
+    "body_type": "hatchback",
+    "transmission": "manual",
+    "channel": "direct",
+    "payment_method": "annual",
+    "voluntary_excess": "0",
+    "urban_density": "suburban"
+   },
+   "buildings": {
+    "policyholder_age_band": "65+",
+    "occupancy": "owner_occupied",
+    "smoke_alarms": "True",
+    "accidental_damage_cover": "False",
+    "mortgage": "True",
+    "voluntary_excess": "0",
+    "channel": "direct",
+    "payment_method": "annual",
+    "urban_density": "suburban",
+    "flood_zone": "1.0",
+    "property_type": "semi_detached",
+    "roof_type": "pitched",
+    "basement": "False",
+    "soil_type": "clay",
+    "prop_age_band": "<1950"
+   },
+   "contents": {
+    "policyholder_age_band": "65+",
+    "tenure": "owner",
+    "security_level": "standard",
+    "high_value_items": "0.0",
+    "accidental_damage_cover": "False",
+    "works_from_home": "False",
+    "lodgers": "False",
+    "bicycle_cover": "False",
+    "voluntary_excess": "0",
+    "channel": "direct",
+    "payment_method": "annual",
+    "urban_density": "suburban",
+    "property_type": "semi_detached",
+    "flood_zone": "1.0"
+   }
+  },
+  "relatividad_bruta": {
+   "motor": {
+    "emergente": {
+     "frecuencia": 1.418260310070914,
+     "prima_pura": 2.2458146338609994,
+     "siniestros_nb": 315,
+     "filas_nb": 2620
+    },
+    "desarrollado": {
+     "frecuencia": 1.4037309122573798,
+     "prima_pura": 1.373365955477987,
+     "siniestros_nb": 9400,
+     "filas_nb": 103419
+    }
+   },
+   "buildings": {
+    "emergente": {
+     "frecuencia": 1.238135487435832,
+     "prima_pura": 0.9554338260538037,
+     "siniestros_nb": 40,
+     "filas_nb": 1507
+    },
+    "desarrollado": {
+     "frecuencia": 1.109459157004089,
+     "prima_pura": 1.0754025101180988,
+     "siniestros_nb": 1782,
+     "filas_nb": 75134
+    }
+   },
+   "contents": {
+    "emergente": {
+     "frecuencia": 1.2374784115437611,
+     "prima_pura": 1.0880646051448544,
+     "siniestros_nb": 37,
+     "filas_nb": 1847
+    },
+    "desarrollado": {
+     "frecuencia": 1.201319120600866,
+     "prima_pura": 1.0522903692891528,
+     "siniestros_nb": 1719,
+     "filas_nb": 76670
+    }
+   }
+  },
+  "ajustes": {
+   "principal": {
+    "motor": {
+     "emergente": {
+      "filas": 21680,
+      "siniestros": 3557,
+      "siniestros_sev": 3557,
+      "convergio": true,
+      "iteraciones": [
+       5,
+       22
+      ],
+      "clusters": [
+       20084,
+       3012
+      ]
+     },
+     "desarrollado": {
+      "filas": 725270,
+      "siniestros": 84631,
+      "siniestros_sev": 84631,
+      "convergio": true,
+      "iteraciones": [
+       5,
+       27
+      ],
+      "clusters": [
+       271914,
+       63185
+      ]
+     }
+    },
+    "buildings": {
+     "emergente": {
+      "filas": 12580,
+      "siniestros": 519,
+      "siniestros_sev": 519,
+      "convergio": true,
+      "iteraciones": [
+       5,
+       23
+      ],
+      "clusters": [
+       12107,
+       497
+      ]
+     },
+     "desarrollado": {
+      "filas": 523725,
+      "siniestros": 19695,
+      "siniestros_sev": 19695,
+      "convergio": true,
+      "iteraciones": [
+       6,
+       10
+      ],
+      "clusters": [
+       203970,
+       17991
+      ]
+     }
+    },
+    "contents": {
+     "emergente": {
+      "filas": 15834,
+      "siniestros": 491,
+      "siniestros_sev": 491,
+      "convergio": true,
+      "iteraciones": [
+       6,
+       35
+      ],
+      "clusters": [
+       14982,
+       482
+      ]
+     },
+     "desarrollado": {
+      "filas": 534126,
+      "siniestros": 17682,
+      "siniestros_sev": 17682,
+      "convergio": true,
+      "iteraciones": [
+       5,
+       11
+      ],
+      "clusters": [
+       204291,
+       16241
+      ]
+     }
+    }
+   },
+   "sin_estacionalidad": {
+    "motor": {
+     "emergente": {
+      "filas": 21680,
+      "siniestros": 3557,
+      "siniestros_sev": 3557,
+      "convergio": true,
+      "iteraciones": [
+       5,
+       22
+      ],
+      "clusters": [
+       20084,
+       3012
+      ]
+     },
+     "desarrollado": {
+      "filas": 725270,
+      "siniestros": 84631,
+      "siniestros_sev": 84631,
+      "convergio": true,
+      "iteraciones": [
+       5,
+       27
+      ],
+      "clusters": [
+       271914,
+       63185
+      ]
+     }
+    },
+    "buildings": {
+     "emergente": {
+      "filas": 12580,
+      "siniestros": 519,
+      "siniestros_sev": 519,
+      "convergio": true,
+      "iteraciones": [
+       5,
+       23
+      ],
+      "clusters": [
+       12107,
+       497
+      ]
+     },
+     "desarrollado": {
+      "filas": 523725,
+      "siniestros": 19695,
+      "siniestros_sev": 19695,
+      "convergio": true,
+      "iteraciones": [
+       6,
+       10
+      ],
+      "clusters": [
+       203970,
+       17991
+      ]
+     }
+    },
+    "contents": {
+     "emergente": {
+      "filas": 15834,
+      "siniestros": 491,
+      "siniestros_sev": 491,
+      "convergio": true,
+      "iteraciones": [
+       6,
+       35
+      ],
+      "clusters": [
+       14982,
+       482
+      ]
+     },
+     "desarrollado": {
+      "filas": 534126,
+      "siniestros": 17682,
+      "siniestros_sev": 17682,
+      "convergio": true,
+      "iteraciones": [
+       5,
+       11
+      ],
+      "clusters": [
+       204291,
+       16241
+      ]
+     }
+    }
+   },
+   "estacional_emergente": {
+    "motor": {
+     "emergente": {
+      "filas": 21680,
+      "siniestros": 3557,
+      "siniestros_sev": 3557,
+      "convergio": true,
+      "iteraciones": [
+       5,
+       22
+      ],
+      "clusters": [
+       20084,
+       3012
+      ]
+     },
+     "desarrollado": {
+      "filas": 725270,
+      "siniestros": 84631,
+      "siniestros_sev": 84631,
+      "convergio": true,
+      "iteraciones": [
+       5,
+       27
+      ],
+      "clusters": [
+       271914,
+       63185
+      ]
+     }
+    },
+    "buildings": {
+     "emergente": {
+      "filas": 12580,
+      "siniestros": 519,
+      "siniestros_sev": 519,
+      "convergio": true,
+      "iteraciones": [
+       5,
+       23
+      ],
+      "clusters": [
+       12107,
+       497
+      ]
+     },
+     "desarrollado": {
+      "filas": 523725,
+      "siniestros": 19695,
+      "siniestros_sev": 19695,
+      "convergio": true,
+      "iteraciones": [
+       6,
+       10
+      ],
+      "clusters": [
+       203970,
+       17991
+      ]
+     }
+    },
+    "contents": {
+     "emergente": {
+      "filas": 15834,
+      "siniestros": 491,
+      "siniestros_sev": 491,
+      "convergio": true,
+      "iteraciones": [
+       6,
+       35
+      ],
+      "clusters": [
+       14982,
+       482
+      ]
+     },
+     "desarrollado": {
+      "filas": 534126,
+      "siniestros": 17682,
+      "siniestros_sev": 17682,
+      "convergio": true,
+      "iteraciones": [
+       5,
+       11
+      ],
+      "clusters": [
+       204291,
+       16241
+      ]
+     }
+    }
+   }
+  },
+  "credibilidad": {
+   "principal": {
+    "tau_f": 0.04840428156662241,
+    "tau_s": 0.0,
+    "niveles_tau_f": 75,
+    "niveles_tau_s": 75,
+    "ramos": {
+     "motor": {
+      "theta_f_em": 0.21031272037538287,
+      "se_f_em": 0.06424418035812646,
+      "theta_f_dev": 0.14789026840386094,
+      "se_f_dev": 0.011704726283498333,
+      "Z_f": 0.36211279085057607,
+      "theta_s_em": 0.2769995368133113,
+      "se_s_em": 0.12675364015975674,
+      "theta_s_dev": -0.02175743770062661,
+      "se_s_dev": 0.028612929514457337,
+      "Z_s": 0.0,
+      "theta_em": 0.4873122571886942,
+      "theta_dev": 0.12613283070323433,
+      "theta_cred": 0.14873679899837816,
+      "rel_em": 1.627934864385446,
+      "rel_dev": 1.134432845788182,
+      "rel_cred": 1.160367539114919,
+      "rel_f_em": 1.2340639165522196,
+      "rel_f_dev": 1.1593856681427177,
+      "rel_s_em": 1.319165760014797,
+      "rel_s_dev": 0.9784775480323913,
+      "c": 0.712784991893987,
+      "c_solo_desarrollado": 0.6968539531932909
+     },
+     "buildings": {
+      "theta_f_em": 0.19052183881799123,
+      "se_f_em": 0.16455670041878767,
+      "theta_f_dev": 0.11940645067130277,
+      "se_f_dev": 0.025206977503791247,
+      "Z_f": 0.07963373872178901,
+      "theta_s_em": -0.02733007042299767,
+      "se_s_em": 0.2531169766830206,
+      "theta_s_dev": -0.017686234626227877,
+      "se_s_dev": 0.05206022140992779,
+      "Z_s": 0.0,
+      "theta_em": 0.16319176839499355,
+      "theta_dev": 0.10172021604507489,
+      "theta_cred": 0.10738340028384691,
+      "rel_em": 1.1772624297695118,
+      "rel_dev": 1.107073686939022,
+      "rel_cred": 1.1133610355971688,
+      "rel_f_em": 1.2098807957154498,
+      "rel_f_dev": 1.126827825149748,
+      "rel_s_em": 0.9730400167839266,
+      "rel_s_dev": 0.9824692488330231,
+      "c": 0.945720348703514,
+      "c_solo_desarrollado": 0.9403796969514848
+     },
+     "contents": {
+      "theta_f_em": 0.1630400226121273,
+      "se_f_em": 0.1702217246652494,
+      "theta_f_dev": 0.13882927377018844,
+      "se_f_dev": 0.025893868609654574,
+      "Z_f": 0.07481141195659508,
+      "theta_s_em": -0.22387100381590136,
+      "se_s_em": 0.22886349299818695,
+      "theta_s_dev": -0.07744070154475755,
+      "se_s_dev": 0.03373142239870991,
+      "Z_s": 0.0,
+      "theta_em": -0.06083098120377406,
+      "theta_dev": 0.0613885722254309,
+      "theta_cred": 0.06319981253082285,
+      "rel_em": 0.9409822700266303,
+      "rel_dev": 1.063312007436773,
+      "rel_cred": 1.0652396662014862,
+      "rel_f_em": 1.1770837987140648,
+      "rel_f_dev": 1.1489279311244889,
+      "rel_s_em": 0.7994182496221851,
+      "rel_s_dev": 0.925481902416698,
+      "c": 1.132050730532191,
+      "c_solo_desarrollado": 1.1300021703986844
+     }
+    }
+   },
+   "sin_estacionalidad": {
+    "tau_f": 0.048371512041881254,
+    "tau_s": 0.0,
+    "niveles_tau_f": 75,
+    "niveles_tau_s": 75,
+    "ramos": {
+     "motor": {
+      "theta_f_em": 0.21297325418345348,
+      "se_f_em": 0.06424259956441015,
+      "theta_f_dev": 0.15067766301190885,
+      "se_f_dev": 0.011704697478711595,
+      "Z_f": 0.361811351820709,
+      "theta_s_em": 0.2769995368133113,
+      "se_s_em": 0.12675364015975674,
+      "theta_s_dev": -0.02175743770062661,
+      "se_s_dev": 0.028612929514457337,
+      "Z_s": 0.0,
+      "theta_em": 0.4899727909967648,
+      "theta_dev": 0.12892022531128225,
+      "theta_cred": 0.15145947736552906,
+      "rel_em": 1.6322718068622901,
+      "rel_dev": 1.1375993689102533,
+      "rel_cred": 1.1635311515068067,
+      "rel_f_em": 1.2373515568232918,
+      "rel_f_dev": 1.1626218416537386,
+      "rel_s_em": 1.319165760014797,
+      "rel_s_dev": 0.9784775480323913,
+      "c": 0.7128292889794244,
+      "c_solo_desarrollado": 0.6969423622509637
+     },
+     "buildings": {
+      "theta_f_em": 0.1816218387106278,
+      "se_f_em": 0.16461622332807901,
+      "theta_f_dev": 0.1084979604383089,
+      "se_f_dev": 0.02520792072804286,
+      "Z_f": 0.07948158849434363,
+      "theta_s_em": -0.02733007042299767,
+      "se_s_em": 0.2531169766830206,
+      "theta_s_dev": -0.017686234626227877,
+      "se_s_dev": 0.05206022140992779,
+      "Z_s": 0.0,
+      "theta_em": 0.1542917682876301,
+      "theta_dev": 0.09081172581208102,
+      "theta_cred": 0.09662372781403195,
+      "rel_em": 1.1668312814827861,
+      "rel_dev": 1.0950628137868226,
+      "rel_cred": 1.1014458522009278,
+      "rel_f_em": 1.1991606319947403,
+      "rel_f_dev": 1.1146026352351872,
+      "rel_s_em": 0.9730400167839266,
+      "rel_s_dev": 0.9824692488330231,
+      "c": 0.9439632530259491,
+      "c_solo_desarrollado": 0.9384928491077462
+     },
+     "contents": {
+      "theta_f_em": 0.1545884543135071,
+      "se_f_em": 0.17022793178630086,
+      "theta_f_dev": 0.12996204415465795,
+      "se_f_dev": 0.025894274571604297,
+      "Z_f": 0.07471267627896641,
+      "theta_s_em": -0.22387100381590136,
+      "se_s_em": 0.22886349299818695,
+      "theta_s_dev": -0.07744070154475755,
+      "se_s_dev": 0.03373142239870991,
+      "Z_s": 0.0,
+      "theta_em": -0.06928254950239426,
+      "theta_dev": 0.05252134260990041,
+      "theta_cred": 0.054361247620011544,
+      "rel_em": 0.9330630063413703,
+      "rel_dev": 1.0539250553498245,
+      "rel_cred": 1.0558659623341486,
+      "rel_f_em": 1.1671775153773978,
+      "rel_f_dev": 1.1387851589509472,
+      "rel_s_em": 0.7994182496221851,
+      "rel_s_dev": 0.925481902416698,
+      "c": 1.1316127154952809,
+      "c_solo_desarrollado": 1.129532569812585
+     }
+    }
+   },
+   "estacional_emergente": {
+    "tau_f": 0.04833698253998243,
+    "tau_s": 0.0,
+    "niveles_tau_f": 75,
+    "niveles_tau_s": 75,
+    "ramos": {
+     "motor": {
+      "theta_f_em": 0.21820455835034394,
+      "se_f_em": 0.06424314216570085,
+      "theta_f_dev": 0.1563658452076474,
+      "se_f_dev": 0.01170465220073258,
+      "Z_f": 0.3614777436073395,
+      "theta_s_em": 0.2769995368133113,
+      "se_s_em": 0.12675364015975674,
+      "theta_s_dev": -0.02175743770062661,
+      "se_s_dev": 0.028612929514457337,
+      "Z_s": 0.0,
+      "theta_em": 0.49520409516365527,
+      "theta_dev": 0.1346084075070208,
+      "theta_cred": 0.15696172600142427,
+      "rel_em": 1.6408330909832876,
+      "rel_dev": 1.1440886800814842,
+      "rel_cred": 1.1699508343474052,
+      "rel_f_em": 1.2438414797582997,
+      "rel_f_dev": 1.1692538907838186,
+      "rel_s_em": 1.319165760014797,
+      "rel_s_dev": 0.9784775480323913,
+      "c": 0.713022452299703,
+      "c_solo_desarrollado": 0.6972608526537433
+     },
+     "buildings": {
+      "theta_f_em": 0.16151670606094756,
+      "se_f_em": 0.1645470229852551,
+      "theta_f_dev": 0.08986597741184985,
+      "se_f_dev": 0.025207339040419875,
+      "Z_f": 0.07943863231000454,
+      "theta_s_em": -0.02733007042299767,
+      "se_s_em": 0.2531169766830206,
+      "theta_s_dev": -0.017686234626227877,
+      "se_s_dev": 0.05206022140992779,
+      "Z_s": 0.0,
+      "theta_em": 0.13418663563794989,
+      "theta_dev": 0.07217974278562198,
+      "theta_cred": 0.07787157867352154,
+      "rel_em": 1.1436062374080294,
+      "rel_dev": 1.0748485229696765,
+      "rel_cred": 1.0809838283787467,
+      "rel_f_em": 1.175292092495697,
+      "rel_f_dev": 1.0940276494621908,
+      "rel_s_em": 0.9730400167839266,
+      "rel_s_dev": 0.9824692488330231,
+      "c": 0.945241284123095,
+      "c_solo_desarrollado": 0.9398764083394723
+     },
+     "contents": {
+      "theta_f_em": 0.12636848176928264,
+      "se_f_em": 0.17025548600341106,
+      "theta_f_dev": 0.10029394399719885,
+      "se_f_dev": 0.025893785022830927,
+      "Z_f": 0.07459165668900297,
+      "theta_s_em": -0.22387100381590136,
+      "se_s_em": 0.22886349299818695,
+      "theta_s_dev": -0.07744070154475755,
+      "se_s_dev": 0.03373142239870991,
+      "Z_s": 0.0,
+      "theta_em": -0.09750252204661872,
+      "theta_dev": 0.022853242452441302,
+      "theta_cred": 0.024798185422261004,
+      "rel_em": 0.9071000538042933,
+      "rel_dev": 1.0231163784782793,
+      "rel_cred": 1.0251082178650195,
+      "rel_f_em": 1.134700207598463,
+      "rel_f_dev": 1.1054958241826551,
+      "rel_s_em": 0.7994182496221851,
+      "rel_s_dev": 0.925481902416698,
+      "c": 1.130093878360839,
+      "c_solo_desarrollado": 1.1278980462931563
+     }
+    }
+   },
+   "principal_sin_ncb_en_tau": {
+    "tau_f": 0.048729045204561464,
+    "tau_s": 0.0,
+    "niveles_tau_f": 71,
+    "niveles_tau_s": 71,
+    "ramos": {
+     "motor": {
+      "theta_f_em": 0.21031272037538287,
+      "se_f_em": 0.06424418035812646,
+      "theta_f_dev": 0.14789026840386094,
+      "se_f_dev": 0.011704726283498333,
+      "Z_f": 0.3652076696103927,
+      "theta_s_em": 0.2769995368133113,
+      "se_s_em": 0.12675364015975674,
+      "theta_s_dev": -0.02175743770062661,
+      "se_s_dev": 0.028612929514457337,
+      "Z_s": 0.0,
+      "theta_em": 0.4873122571886942,
+      "theta_dev": 0.12613283070323433,
+      "theta_cred": 0.14892998891912052,
+      "rel_em": 1.627934864385446,
+      "rel_dev": 1.134432845788182,
+      "rel_cred": 1.1605917320830461,
+      "rel_f_em": 1.2340639165522196,
+      "rel_f_dev": 1.1593856681427177,
+      "rel_s_em": 1.319165760014797,
+      "rel_s_dev": 0.9784775480323913,
+      "c": 0.7129227080723378,
+      "c_solo_desarrollado": 0.6968539531932909
+     },
+     "buildings": {
+      "theta_f_em": 0.19052183881799123,
+      "se_f_em": 0.16455670041878767,
+      "theta_f_dev": 0.11940645067130277,
+      "se_f_dev": 0.025206977503791247,
+      "Z_f": 0.08061947447736947,
+      "theta_s_em": -0.02733007042299767,
+      "se_s_em": 0.2531169766830206,
+      "theta_s_dev": -0.017686234626227877,
+      "se_s_dev": 0.05206022140992779,
+      "Z_s": 0.0,
+      "theta_em": 0.16319176839499355,
+      "theta_dev": 0.10172021604507489,
+      "theta_cred": 0.10745350126471506,
+      "rel_em": 1.1772624297695118,
+      "rel_dev": 1.107073686939022,
+      "rel_cred": 1.1134390860334986,
+      "rel_f_em": 1.2098807957154498,
+      "rel_f_dev": 1.126827825149748,
+      "rel_s_em": 0.9730400167839266,
+      "rel_s_dev": 0.9824692488330231,
+      "c": 0.9457866469513441,
+      "c_solo_desarrollado": 0.9403796969514848
+     },
+     "contents": {
+      "theta_f_em": 0.1630400226121273,
+      "se_f_em": 0.1702217246652494,
+      "theta_f_dev": 0.13882927377018844,
+      "se_f_dev": 0.025893868609654574,
+      "Z_f": 0.07574236762583146,
+      "theta_s_em": -0.22387100381590136,
+      "se_s_em": 0.22886349299818695,
+      "theta_s_dev": -0.07744070154475755,
+      "se_s_dev": 0.03373142239870991,
+      "Z_s": 0.0,
+      "theta_em": -0.06083098120377406,
+      "theta_dev": 0.0613885722254309,
+      "theta_cred": 0.06322235166471371,
+      "rel_em": 0.9409822700266303,
+      "rel_dev": 1.063312007436773,
+      "rel_cred": 1.0652636760515282,
+      "rel_f_em": 1.1770837987140648,
+      "rel_f_dev": 1.1489279311244889,
+      "rel_s_em": 0.7994182496221851,
+      "rel_s_dev": 0.925481902416698,
+      "c": 1.1320762462627278,
+      "c_solo_desarrollado": 1.1300021703986844
+     }
+    }
+   }
+  },
+  "niveles_tau": {
+   "frecuencia": [
+    {
+     "ramo": "motor",
+     "nivel": "driver_age_band=17-24",
+     "delta": -0.21210242579381972,
+     "se_em": 0.16047908571105096,
+     "se_dev": 0.0326038961175375
+    },
+    {
+     "ramo": "motor",
+     "nivel": "driver_age_band=25-34",
+     "delta": -0.17632500763317857,
+     "se_em": 0.13593001635221402,
+     "se_dev": 0.02650061211842703
+    },
+    {
+     "ramo": "motor",
+     "nivel": "driver_age_band=35-49",
+     "delta": -0.05208948362835336,
+     "se_em": 0.07756152093073204,
+     "se_dev": 0.014395177079248448
+    },
+    {
+     "ramo": "motor",
+     "nivel": "driver_age_band=50-64",
+     "delta": -0.01757190131851666,
+     "se_em": 0.06122984951097397,
+     "se_dev": 0.011922257235715916
+    },
+    {
+     "ramo": "motor",
+     "nivel": "yl_band=0-2",
+     "delta": 0.10890395619223092,
+     "se_em": 0.1512074757020083,
+     "se_dev": 0.031695207387486456
+    },
+    {
+     "ramo": "motor",
+     "nivel": "yl_band=11-20",
+     "delta": 0.15281934788036916,
+     "se_em": 0.09572013680295358,
+     "se_dev": 0.018283739887709805
+    },
+    {
+     "ramo": "motor",
+     "nivel": "yl_band=3-5",
+     "delta": 0.11986735538084285,
+     "se_em": 0.15103914093277035,
+     "se_dev": 0.031139760244204322
+    },
+    {
+     "ramo": "motor",
+     "nivel": "yl_band=6-10",
+     "delta": 0.0016601213164595119,
+     "se_em": 0.14715953883877225,
+     "se_dev": 0.02828298261884371
+    },
+    {
+     "ramo": "motor",
+     "nivel": "ncb_band=0",
+     "delta": -0.11274536746869368,
+     "se_em": 0.06626373430382519,
+     "se_dev": 0.014114853448406635
+    },
+    {
+     "ramo": "motor",
+     "nivel": "ncb_band=1-2",
+     "delta": 0.042316466453879986,
+     "se_em": 0.05791125661910206,
+     "se_dev": 0.011322095811280635
+    },
+    {
+     "ramo": "motor",
+     "nivel": "ncb_band=3-4",
+     "delta": 0.059482128687944225,
+     "se_em": 0.06685583792863294,
+     "se_dev": 0.011981738006496127
+    },
+    {
+     "ramo": "motor",
+     "nivel": "ncb_band=5-8",
+     "delta": 0.0714966384245726,
+     "se_em": 0.056703713040730346,
+     "se_dev": 0.01092366524985342
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_value_group=10",
+     "delta": 0.09114280386517727,
+     "se_em": 0.08411531258917067,
+     "se_dev": 0.01698573441670999
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_value_group=12",
+     "delta": 0.21157758011953492,
+     "se_em": 0.07876332239516232,
+     "se_dev": 0.016963007824614885
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_value_group=13",
+     "delta": 0.0967773553353625,
+     "se_em": 0.08432316354114115,
+     "se_dev": 0.01728889103317568
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_value_group=14",
+     "delta": 0.11441399146504519,
+     "se_em": 0.08884135060897676,
+     "se_dev": 0.017849803066620963
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_value_group=15",
+     "delta": 0.09606978062014924,
+     "se_em": 0.09140263081411881,
+     "se_dev": 0.019264251133370807
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_value_group=16",
+     "delta": 0.10957958344647367,
+     "se_em": 0.09995335038451027,
+     "se_dev": 0.021112063473781972
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_value_group=17",
+     "delta": 0.08854326717572569,
+     "se_em": 0.12039993182558884,
+     "se_dev": 0.024273784420772725
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_value_group=5",
+     "delta": 0.10858721594019685,
+     "se_em": 0.10515425755410779,
+     "se_dev": 0.02456712293527965
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_value_group=6",
+     "delta": 0.06877231093219177,
+     "se_em": 0.09512604208139143,
+     "se_dev": 0.021035377267432837
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_value_group=7",
+     "delta": -0.022166852825717363,
+     "se_em": 0.09731567320293968,
+     "se_dev": 0.018824845662128786
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_value_group=8",
+     "delta": -0.011219203605552723,
+     "se_em": 0.0860125872027907,
+     "se_dev": 0.01777330044999056
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_value_group=9",
+     "delta": 0.10677254033656638,
+     "se_em": 0.08169668793476749,
+     "se_dev": 0.017324609475422584
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vage_band=10-14",
+     "delta": 0.024206778804405985,
+     "se_em": 0.044550060951672826,
+     "se_dev": 0.010395499898238828
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vage_band=15+",
+     "delta": 0.05728815297299297,
+     "se_em": 0.06162463763527682,
+     "se_dev": 0.016098140911913816
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vage_band=3-5",
+     "delta": -0.022054890914148605,
+     "se_em": 0.06297347797665528,
+     "se_dev": 0.009300336202828828
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vage_band=NA",
+     "delta": 0.004288007514294382,
+     "se_em": 0.05893866665572512,
+     "se_dev": 0.023450131756349957
+    },
+    {
+     "ramo": "motor",
+     "nivel": "cover_type=third_party_fire_theft",
+     "delta": -0.09570261428300741,
+     "se_em": 0.07587261328340876,
+     "se_dev": 0.017170478007429896
+    },
+    {
+     "ramo": "motor",
+     "nivel": "cover_type=third_party_only",
+     "delta": 0.035213130370782775,
+     "se_em": 0.07627602414432372,
+     "se_dev": 0.01795504864397192
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_use=business",
+     "delta": 0.0142467028048745,
+     "se_em": 0.060183456231913346,
+     "se_dev": 0.012632704646302369
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_use=commuting",
+     "delta": 0.01827019767803771,
+     "se_em": 0.03778019364368339,
+     "se_dev": 0.008007037582622452
+    },
+    {
+     "ramo": "motor",
+     "nivel": "overnight_parking=NA",
+     "delta": 0.03602890780235068,
+     "se_em": 0.056899292884981696,
+     "se_dev": 0.023329286726218777
+    },
+    {
+     "ramo": "motor",
+     "nivel": "overnight_parking=garage",
+     "delta": 0.03527945730314218,
+     "se_em": 0.05040555075962852,
+     "se_dev": 0.010174914884624239
+    },
+    {
+     "ramo": "motor",
+     "nivel": "overnight_parking=street",
+     "delta": -0.040959000762911146,
+     "se_em": 0.0435715322482976,
+     "se_dev": 0.008747668855603833
+    },
+    {
+     "ramo": "motor",
+     "nivel": "named_young_driver=True",
+     "delta": 0.054791492103700434,
+     "se_em": 0.07843759825791463,
+     "se_dev": 0.016514051413892693
+    },
+    {
+     "ramo": "motor",
+     "nivel": "fuel_type=diesel",
+     "delta": 0.02555167439060384,
+     "se_em": 0.04054377315969059,
+     "se_dev": 0.008907597018993381
+    },
+    {
+     "ramo": "motor",
+     "nivel": "fuel_type=hybrid",
+     "delta": 0.12133516070227054,
+     "se_em": 0.05096568531556992,
+     "se_dev": 0.011418094261148879
+    },
+    {
+     "ramo": "motor",
+     "nivel": "body_type=coupe",
+     "delta": 0.10255387043147322,
+     "se_em": 0.06195554576810882,
+     "se_dev": 0.014246796851208455
+    },
+    {
+     "ramo": "motor",
+     "nivel": "body_type=estate",
+     "delta": -0.10420387531565582,
+     "se_em": 0.06276161279563583,
+     "se_dev": 0.012535070946774883
+    },
+    {
+     "ramo": "motor",
+     "nivel": "body_type=saloon",
+     "delta": -0.0494725720210534,
+     "se_em": 0.05112433185397291,
+     "se_dev": 0.01054046836869083
+    },
+    {
+     "ramo": "motor",
+     "nivel": "body_type=suv",
+     "delta": -0.02242292798782492,
+     "se_em": 0.05129650001786936,
+     "se_dev": 0.010535079197391772
+    },
+    {
+     "ramo": "motor",
+     "nivel": "transmission=automatic",
+     "delta": 0.00663241147002605,
+     "se_em": 0.03553158086322687,
+     "se_dev": 0.007532795870348698
+    },
+    {
+     "ramo": "motor",
+     "nivel": "channel=broker",
+     "delta": 0.00552363403012289,
+     "se_em": 0.04249646220873897,
+     "se_dev": 0.009863357529435877
+    },
+    {
+     "ramo": "motor",
+     "nivel": "channel=comparison_site",
+     "delta": 0.011390299780473095,
+     "se_em": 0.08208108697037611,
+     "se_dev": 0.008633777302747836
+    },
+    {
+     "ramo": "motor",
+     "nivel": "payment_method=monthly",
+     "delta": -0.02546967246414672,
+     "se_em": 0.035409658812499974,
+     "se_dev": 0.007548632079370152
+    },
+    {
+     "ramo": "motor",
+     "nivel": "voluntary_excess=1000",
+     "delta": -0.0717774092244633,
+     "se_em": 0.07265042862895656,
+     "se_dev": 0.015088006842768958
+    },
+    {
+     "ramo": "motor",
+     "nivel": "voluntary_excess=250",
+     "delta": -0.045340588080739305,
+     "se_em": 0.040791832207277154,
+     "se_dev": 0.008837206587462882
+    },
+    {
+     "ramo": "motor",
+     "nivel": "voluntary_excess=500",
+     "delta": -0.1460978510066786,
+     "se_em": 0.05387078695762998,
+     "se_dev": 0.010713367462076424
+    },
+    {
+     "ramo": "motor",
+     "nivel": "urban_density=dense_urban",
+     "delta": 0.04720838787143111,
+     "se_em": 0.056455755091167056,
+     "se_dev": 0.012456591020656677
+    },
+    {
+     "ramo": "motor",
+     "nivel": "urban_density=rural",
+     "delta": -0.10065422770074677,
+     "se_em": 0.04989485500155597,
+     "se_dev": 0.010570138950101794
+    },
+    {
+     "ramo": "motor",
+     "nivel": "urban_density=urban",
+     "delta": -0.0013455265698171653,
+     "se_em": 0.04396501433307108,
+     "se_dev": 0.009262149423931325
+    },
+    {
+     "ramo": "buildings",
+     "nivel": "policyholder_age_band=25-34",
+     "delta": 0.11137130878117596,
+     "se_em": 0.13151998070909263,
+     "se_dev": 0.02245440511526762
+    },
+    {
+     "ramo": "buildings",
+     "nivel": "accidental_damage_cover=True",
+     "delta": -0.02353082089163977,
+     "se_em": 0.08978684276314129,
+     "se_dev": 0.014667917058670462
+    },
+    {
+     "ramo": "buildings",
+     "nivel": "mortgage=False",
+     "delta": -0.024870677950062814,
+     "se_em": 0.09049819077507205,
+     "se_dev": 0.014720659153885436
+    },
+    {
+     "ramo": "buildings",
+     "nivel": "voluntary_excess=250",
+     "delta": 0.11613087794413927,
+     "se_em": 0.10100539442715621,
+     "se_dev": 0.01672961662931458
+    },
+    {
+     "ramo": "buildings",
+     "nivel": "channel=broker",
+     "delta": 0.044566802260892074,
+     "se_em": 0.10608289058482698,
+     "se_dev": 0.01903423532839569
+    },
+    {
+     "ramo": "buildings",
+     "nivel": "payment_method=monthly",
+     "delta": 0.13467661166878409,
+     "se_em": 0.08991115280228944,
+     "se_dev": 0.014640232257236273
+    },
+    {
+     "ramo": "buildings",
+     "nivel": "urban_density=rural",
+     "delta": 0.09293098928542046,
+     "se_em": 0.1181501582980422,
+     "se_dev": 0.019757447835290678
+    },
+    {
+     "ramo": "buildings",
+     "nivel": "urban_density=urban",
+     "delta": 0.11746458952873462,
+     "se_em": 0.10964845429773677,
+     "se_dev": 0.01809319387535236
+    },
+    {
+     "ramo": "buildings",
+     "nivel": "property_type=detached",
+     "delta": -0.15078308725019265,
+     "se_em": 0.12347077411877896,
+     "se_dev": 0.01957780978991729
+    },
+    {
+     "ramo": "buildings",
+     "nivel": "property_type=terraced",
+     "delta": -0.12072179544602371,
+     "se_em": 0.1203923146305023,
+     "se_dev": 0.019715058231764414
+    },
+    {
+     "ramo": "buildings",
+     "nivel": "prop_age_band=1950-1979",
+     "delta": -0.0014857630459409465,
+     "se_em": 0.11907390776596881,
+     "se_dev": 0.01946911764883863
+    },
+    {
+     "ramo": "contents",
+     "nivel": "policyholder_age_band=17-24",
+     "delta": 0.010848382224047576,
+     "se_em": 0.12680453397453567,
+     "se_dev": 0.02298513158389602
+    },
+    {
+     "ramo": "contents",
+     "nivel": "tenure=renter",
+     "delta": 0.04588450875616869,
+     "se_em": 0.1196155527984403,
+     "se_dev": 0.018814976873358546
+    },
+    {
+     "ramo": "contents",
+     "nivel": "security_level=alarm_and_locks",
+     "delta": -0.30611736909867143,
+     "se_em": 0.1152674621543859,
+     "se_dev": 0.018788755352232994
+    },
+    {
+     "ramo": "contents",
+     "nivel": "security_level=locks",
+     "delta": -0.20654031894603167,
+     "se_em": 0.11475439704290841,
+     "se_dev": 0.019055573545973207
+    },
+    {
+     "ramo": "contents",
+     "nivel": "accidental_damage_cover=True",
+     "delta": -0.2814833603948424,
+     "se_em": 0.0902344843467877,
+     "se_dev": 0.01575602028076862
+    },
+    {
+     "ramo": "contents",
+     "nivel": "works_from_home=True",
+     "delta": 0.24635233834722142,
+     "se_em": 0.09770781506324469,
+     "se_dev": 0.01807022333618039
+    },
+    {
+     "ramo": "contents",
+     "nivel": "voluntary_excess=250",
+     "delta": 0.06098666970286114,
+     "se_em": 0.10252111110229815,
+     "se_dev": 0.01751232242751298
+    },
+    {
+     "ramo": "contents",
+     "nivel": "channel=broker",
+     "delta": -0.12362177246894071,
+     "se_em": 0.1055087019439194,
+     "se_dev": 0.020093427884540667
+    },
+    {
+     "ramo": "contents",
+     "nivel": "payment_method=monthly",
+     "delta": 0.06042728041631129,
+     "se_em": 0.0900474135303143,
+     "se_dev": 0.01540067932237721
+    },
+    {
+     "ramo": "contents",
+     "nivel": "urban_density=urban",
+     "delta": -0.0822664009895206,
+     "se_em": 0.11517000353393764,
+     "se_dev": 0.01895616674710754
+    },
+    {
+     "ramo": "contents",
+     "nivel": "property_type=detached",
+     "delta": -0.10239914648359946,
+     "se_em": 0.11994771430015357,
+     "se_dev": 0.020700522370400383
+    },
+    {
+     "ramo": "contents",
+     "nivel": "property_type=terraced",
+     "delta": -0.059800483081386385,
+     "se_em": 0.11831180870784466,
+     "se_dev": 0.020634642933838834
+    }
+   ],
+   "severidad": [
+    {
+     "ramo": "motor",
+     "nivel": "driver_age_band=17-24",
+     "delta": -0.166120405292108,
+     "se_em": 0.3048048060565942,
+     "se_dev": 0.19936621193449142
+    },
+    {
+     "ramo": "motor",
+     "nivel": "driver_age_band=25-34",
+     "delta": -0.17871742205461638,
+     "se_em": 0.24052726128723764,
+     "se_dev": 0.2056316736586268
+    },
+    {
+     "ramo": "motor",
+     "nivel": "driver_age_band=35-49",
+     "delta": 0.06543381333074894,
+     "se_em": 0.14941160025152062,
+     "se_dev": 0.036639863617676925
+    },
+    {
+     "ramo": "motor",
+     "nivel": "driver_age_band=50-64",
+     "delta": 0.1547843433053493,
+     "se_em": 0.10799682370301542,
+     "se_dev": 0.028201446259928542
+    },
+    {
+     "ramo": "motor",
+     "nivel": "yl_band=0-2",
+     "delta": 0.09754143336523395,
+     "se_em": 0.2845359250365853,
+     "se_dev": 0.20514878113268933
+    },
+    {
+     "ramo": "motor",
+     "nivel": "yl_band=11-20",
+     "delta": 0.015123320967673944,
+     "se_em": 0.20887652388468797,
+     "se_dev": 0.04682146678414451
+    },
+    {
+     "ramo": "motor",
+     "nivel": "yl_band=3-5",
+     "delta": 0.08452858232914781,
+     "se_em": 0.2627426416532379,
+     "se_dev": 0.20423495594275154
+    },
+    {
+     "ramo": "motor",
+     "nivel": "yl_band=6-10",
+     "delta": 0.2970011395571273,
+     "se_em": 0.249659293709858,
+     "se_dev": 0.20281266497333425
+    },
+    {
+     "ramo": "motor",
+     "nivel": "ncb_band=0",
+     "delta": -0.06065307749726503,
+     "se_em": 0.10381396294162143,
+     "se_dev": 0.03399652936635246
+    },
+    {
+     "ramo": "motor",
+     "nivel": "ncb_band=1-2",
+     "delta": 0.025937011884678736,
+     "se_em": 0.11041939706076637,
+     "se_dev": 0.029153730924717448
+    },
+    {
+     "ramo": "motor",
+     "nivel": "ncb_band=3-4",
+     "delta": -0.11580048222861672,
+     "se_em": 0.10212419432384288,
+     "se_dev": 0.06699674102361312
+    },
+    {
+     "ramo": "motor",
+     "nivel": "ncb_band=5-8",
+     "delta": -0.06299342393628415,
+     "se_em": 0.09706866633459701,
+     "se_dev": 0.02530059065958577
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_value_group=10",
+     "delta": 0.08388659738488619,
+     "se_em": 0.15175737061172243,
+     "se_dev": 0.04339164148257832
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_value_group=12",
+     "delta": 0.005315344496056314,
+     "se_em": 0.14617883427099404,
+     "se_dev": 0.09637654519673468
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_value_group=13",
+     "delta": 0.014321168782177865,
+     "se_em": 0.12978403797318072,
+     "se_dev": 0.044070276137869256
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_value_group=14",
+     "delta": 0.06201415170671006,
+     "se_em": 0.13899646896512688,
+     "se_dev": 0.045275194685455496
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_value_group=15",
+     "delta": 0.17116108826164234,
+     "se_em": 0.1416120082020155,
+     "se_dev": 0.04494655684978823
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_value_group=16",
+     "delta": -0.02481915477827442,
+     "se_em": 0.14288480942937648,
+     "se_dev": 0.04776127745778293
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_value_group=17",
+     "delta": 0.033866575597087674,
+     "se_em": 0.17166238923231694,
+     "se_dev": 0.05015091050091756
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_value_group=5",
+     "delta": 0.04822610764852285,
+     "se_em": 0.16626013984287777,
+     "se_dev": 0.05207747993259657
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_value_group=6",
+     "delta": 0.03698444733268761,
+     "se_em": 0.14643314737904264,
+     "se_dev": 0.050093541033942805
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_value_group=7",
+     "delta": 0.05071880519601026,
+     "se_em": 0.13547539210261159,
+     "se_dev": 0.060793654439114345
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_value_group=8",
+     "delta": 0.025809048051575148,
+     "se_em": 0.13108253543578285,
+     "se_dev": 0.04750440561498109
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_value_group=9",
+     "delta": 0.1306057339345308,
+     "se_em": 0.14319501746302365,
+     "se_dev": 0.047278572009506824
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vage_band=10-14",
+     "delta": 0.02446406613553459,
+     "se_em": 0.07120227228934074,
+     "se_dev": 0.027406072578421488
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vage_band=15+",
+     "delta": 0.0838229992820205,
+     "se_em": 0.09708684688886804,
+     "se_dev": 0.04202045912484159
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vage_band=3-5",
+     "delta": 0.087159000621318,
+     "se_em": 0.12759318947753107,
+     "se_dev": 0.03621293336922671
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vage_band=NA",
+     "delta": 0.008611757658502476,
+     "se_em": 0.09370912054149938,
+     "se_dev": 0.04884956003242438
+    },
+    {
+     "ramo": "motor",
+     "nivel": "cover_type=third_party_fire_theft",
+     "delta": -0.048451887580066244,
+     "se_em": 0.09045465840210556,
+     "se_dev": 0.035981595750794786
+    },
+    {
+     "ramo": "motor",
+     "nivel": "cover_type=third_party_only",
+     "delta": -0.18942882381973813,
+     "se_em": 0.12967103050330556,
+     "se_dev": 0.20927418730946093
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_use=business",
+     "delta": 0.12899282156405106,
+     "se_em": 0.0920482072590166,
+     "se_dev": 0.07913411982186255
+    },
+    {
+     "ramo": "motor",
+     "nivel": "vehicle_use=commuting",
+     "delta": -0.025539842265668463,
+     "se_em": 0.06376318317654817,
+     "se_dev": 0.019251480229582188
+    },
+    {
+     "ramo": "motor",
+     "nivel": "overnight_parking=NA",
+     "delta": 0.1751804993215565,
+     "se_em": 0.09990477476813463,
+     "se_dev": 0.04753064025002621
+    },
+    {
+     "ramo": "motor",
+     "nivel": "overnight_parking=garage",
+     "delta": 0.09603859882523519,
+     "se_em": 0.08338093402444495,
+     "se_dev": 0.029819933814493736
+    },
+    {
+     "ramo": "motor",
+     "nivel": "overnight_parking=street",
+     "delta": 0.01431966223423093,
+     "se_em": 0.06954730443819863,
+     "se_dev": 0.02656148879401013
+    },
+    {
+     "ramo": "motor",
+     "nivel": "named_young_driver=True",
+     "delta": -0.1319332537289832,
+     "se_em": 0.11297566845557647,
+     "se_dev": 0.046680054650406415
+    },
+    {
+     "ramo": "motor",
+     "nivel": "fuel_type=diesel",
+     "delta": 0.0511186683616123,
+     "se_em": 0.0748552111774373,
+     "se_dev": 0.03717651131513319
+    },
+    {
+     "ramo": "motor",
+     "nivel": "fuel_type=hybrid",
+     "delta": 0.2124176126550659,
+     "se_em": 0.08790550747796128,
+     "se_dev": 0.02691175575639664
+    },
+    {
+     "ramo": "motor",
+     "nivel": "body_type=coupe",
+     "delta": -0.10378315919621062,
+     "se_em": 0.09322406485703746,
+     "se_dev": 0.03421073343544907
+    },
+    {
+     "ramo": "motor",
+     "nivel": "body_type=estate",
+     "delta": 0.17001513776385407,
+     "se_em": 0.11964692400869434,
+     "se_dev": 0.03139501423045007
+    },
+    {
+     "ramo": "motor",
+     "nivel": "body_type=saloon",
+     "delta": -0.010114709406602716,
+     "se_em": 0.08346816943728567,
+     "se_dev": 0.05045286137516526
+    },
+    {
+     "ramo": "motor",
+     "nivel": "body_type=suv",
+     "delta": 0.03178630421296966,
+     "se_em": 0.08579610139903661,
+     "se_dev": 0.025886521268391978
+    },
+    {
+     "ramo": "motor",
+     "nivel": "transmission=automatic",
+     "delta": -0.06207340565010441,
+     "se_em": 0.05871812482594668,
+     "se_dev": 0.025939733801518965
+    },
+    {
+     "ramo": "motor",
+     "nivel": "channel=broker",
+     "delta": 0.05318891532029067,
+     "se_em": 0.06336739648032769,
+     "se_dev": 0.032897679355930735
+    },
+    {
+     "ramo": "motor",
+     "nivel": "channel=comparison_site",
+     "delta": 0.176640022418442,
+     "se_em": 0.17537830203249455,
+     "se_dev": 0.03042868601074155
+    },
+    {
+     "ramo": "motor",
+     "nivel": "payment_method=monthly",
+     "delta": -0.011008697596467932,
+     "se_em": 0.059022955212944726,
+     "se_dev": 0.024100403672928365
+    },
+    {
+     "ramo": "motor",
+     "nivel": "voluntary_excess=1000",
+     "delta": 0.15908851035847982,
+     "se_em": 0.10258141187279345,
+     "se_dev": 0.04253999211946846
+    },
+    {
+     "ramo": "motor",
+     "nivel": "voluntary_excess=250",
+     "delta": 0.029118480828635537,
+     "se_em": 0.06648194776268625,
+     "se_dev": 0.027717929641014008
+    },
+    {
+     "ramo": "motor",
+     "nivel": "voluntary_excess=500",
+     "delta": 0.18660518986072194,
+     "se_em": 0.0934377901620645,
+     "se_dev": 0.029569201716718323
+    },
+    {
+     "ramo": "motor",
+     "nivel": "urban_density=dense_urban",
+     "delta": -0.18439970158830338,
+     "se_em": 0.08046527047522953,
+     "se_dev": 0.07675570006410842
+    },
+    {
+     "ramo": "motor",
+     "nivel": "urban_density=rural",
+     "delta": 0.04942051807880393,
+     "se_em": 0.08152413149299914,
+     "se_dev": 0.0246993009208832
+    },
+    {
+     "ramo": "motor",
+     "nivel": "urban_density=urban",
+     "delta": -0.015125743649317451,
+     "se_em": 0.07989449923711954,
+     "se_dev": 0.02175975999681002
+    },
+    {
+     "ramo": "buildings",
+     "nivel": "policyholder_age_band=25-34",
+     "delta": 0.05177214606378071,
+     "se_em": 0.28485207526850886,
+     "se_dev": 0.050342766076815725
+    },
+    {
+     "ramo": "buildings",
+     "nivel": "accidental_damage_cover=True",
+     "delta": -0.008084899086535896,
+     "se_em": 0.18805347913864398,
+     "se_dev": 0.03334130994107553
+    },
+    {
+     "ramo": "buildings",
+     "nivel": "mortgage=False",
+     "delta": 0.19282151289651098,
+     "se_em": 0.18519343620747655,
+     "se_dev": 0.03311850741840519
+    },
+    {
+     "ramo": "buildings",
+     "nivel": "voluntary_excess=250",
+     "delta": -0.2311048571435539,
+     "se_em": 0.20362807058209395,
+     "se_dev": 0.0375849325932983
+    },
+    {
+     "ramo": "buildings",
+     "nivel": "channel=broker",
+     "delta": -0.264893797254181,
+     "se_em": 0.23579678015111827,
+     "se_dev": 0.043055592103657815
+    },
+    {
+     "ramo": "buildings",
+     "nivel": "payment_method=monthly",
+     "delta": 0.10500105820399548,
+     "se_em": 0.16402519311771702,
+     "se_dev": 0.032905190070742114
+    },
+    {
+     "ramo": "buildings",
+     "nivel": "urban_density=rural",
+     "delta": -0.09408516825722912,
+     "se_em": 0.2749623202630168,
+     "se_dev": 0.04575318403037443
+    },
+    {
+     "ramo": "buildings",
+     "nivel": "urban_density=urban",
+     "delta": -0.38886115155187884,
+     "se_em": 0.21527532284763495,
+     "se_dev": 0.04097042582409683
+    },
+    {
+     "ramo": "buildings",
+     "nivel": "property_type=detached",
+     "delta": -0.05361469380934658,
+     "se_em": 0.2452747379119943,
+     "se_dev": 0.04732881982042307
+    },
+    {
+     "ramo": "buildings",
+     "nivel": "property_type=terraced",
+     "delta": -0.031969054141024036,
+     "se_em": 0.2672911177365098,
+     "se_dev": 0.044355120611536035
+    },
+    {
+     "ramo": "buildings",
+     "nivel": "prop_age_band=1950-1979",
+     "delta": -0.16167798018585455,
+     "se_em": 0.27108072141312517,
+     "se_dev": 0.04693516684860911
+    },
+    {
+     "ramo": "contents",
+     "nivel": "policyholder_age_band=17-24",
+     "delta": 0.07194057585689931,
+     "se_em": 0.14841695720062098,
+     "se_dev": 0.030729412819220883
+    },
+    {
+     "ramo": "contents",
+     "nivel": "tenure=renter",
+     "delta": 0.11810744843409604,
+     "se_em": 0.15814587093939494,
+     "se_dev": 0.027058111990647213
+    },
+    {
+     "ramo": "contents",
+     "nivel": "security_level=alarm_and_locks",
+     "delta": 0.16702140198213758,
+     "se_em": 0.13216878614194316,
+     "se_dev": 0.025649935568121913
+    },
+    {
+     "ramo": "contents",
+     "nivel": "security_level=locks",
+     "delta": 0.04898841410948966,
+     "se_em": 0.14115179717236367,
+     "se_dev": 0.025707328801526187
+    },
+    {
+     "ramo": "contents",
+     "nivel": "accidental_damage_cover=True",
+     "delta": -0.12931866555311988,
+     "se_em": 0.10419136607165405,
+     "se_dev": 0.020515327116421095
+    },
+    {
+     "ramo": "contents",
+     "nivel": "works_from_home=True",
+     "delta": 0.2615029778151013,
+     "se_em": 0.13405449206958456,
+     "se_dev": 0.02604392862390111
+    },
+    {
+     "ramo": "contents",
+     "nivel": "voluntary_excess=250",
+     "delta": 0.27662850473969325,
+     "se_em": 0.12453082573703031,
+     "se_dev": 0.023568529516586174
+    },
+    {
+     "ramo": "contents",
+     "nivel": "channel=broker",
+     "delta": 0.17706623792048373,
+     "se_em": 0.12318737499380719,
+     "se_dev": 0.026992356678565043
+    },
+    {
+     "ramo": "contents",
+     "nivel": "payment_method=monthly",
+     "delta": -0.08800913598416418,
+     "se_em": 0.10609247328993424,
+     "se_dev": 0.020834169745472586
+    },
+    {
+     "ramo": "contents",
+     "nivel": "urban_density=urban",
+     "delta": -0.056486274398739766,
+     "se_em": 0.12727479372168238,
+     "se_dev": 0.02556900521421912
+    },
+    {
+     "ramo": "contents",
+     "nivel": "property_type=detached",
+     "delta": -0.2591026487889837,
+     "se_em": 0.15951043207776333,
+     "se_dev": 0.02862552038606801
+    },
+    {
+     "ramo": "contents",
+     "nivel": "property_type=terraced",
+     "delta": -0.34817753751131725,
+     "se_em": 0.13933000766335377,
+     "se_dev": 0.027655960393920764
+    }
+   ]
+  },
+  "credibilidad_por_fold": {
+   "0": {
+    "tau_f": 0.03968781444674659,
+    "tau_s": 0.008272977402112686,
+    "niveles_tau_f": 68,
+    "niveles_tau_s": 68,
+    "ramos": {
+     "motor": {
+      "theta_f_em": 0.23730047269340362,
+      "se_f_em": 0.069738949232366,
+      "theta_f_dev": 0.14789026840386094,
+      "se_f_dev": 0.011704726283498333,
+      "Z_f": 0.2446357804241763,
+      "theta_s_em": 0.23682291569002484,
+      "se_s_em": 0.1317276946435005,
+      "theta_s_dev": -0.02175743770062661,
+      "se_s_dev": 0.028612929514457337,
+      "Z_s": 0.003928799599482341,
+      "theta_em": 0.4741233883834285,
+      "theta_dev": 0.12613283070323433,
+      "theta_cred": 0.14902167619632684,
+      "rel_em": 1.6066052112177476,
+      "rel_dev": 1.134432845788182,
+      "rel_cred": 1.1606981484573484,
+      "rel_f_em": 1.2678220064421282,
+      "rel_f_dev": 1.1593856681427177,
+      "rel_s_em": 1.267216693711085,
+      "rel_s_dev": 0.9784775480323913,
+      "c": 0.7224538675419718,
+      "c_solo_desarrollado": 0.7061055434572653
+     },
+     "buildings": {
+      "theta_f_em": 0.23820767831604392,
+      "se_f_em": 0.17617174904044433,
+      "theta_f_dev": 0.11940645067130277,
+      "se_f_dev": 0.025206977503791247,
+      "Z_f": 0.04829944682277635,
+      "theta_s_em": -0.42957126776780347,
+      "se_s_em": 0.22621395179193132,
+      "theta_s_dev": -0.017686234626227877,
+      "se_s_dev": 0.05206022140992779,
+      "Z_s": 0.0013356861846020344,
+      "theta_em": -0.19136358945175955,
+      "theta_dev": 0.10172021604507489,
+      "theta_cred": 0.10690810047377108,
+      "rel_em": 0.8258322696560142,
+      "rel_dev": 1.107073686939022,
+      "rel_cred": 1.1128319810481269,
+      "rel_f_em": 1.2689727035754135,
+      "rel_f_dev": 1.126827825149748,
+      "rel_s_em": 0.6507880487335762,
+      "rel_s_dev": 0.9824692488330231,
+      "c": 1.3475278478905377,
+      "c_solo_desarrollado": 1.3405551316130502
+     },
+     "contents": {
+      "theta_f_em": 0.18277982097553966,
+      "se_f_em": 0.18783092089846265,
+      "theta_f_dev": 0.13882927377018844,
+      "se_f_dev": 0.025893868609654574,
+      "Z_f": 0.042737700073234824,
+      "theta_s_em": -0.24918772938315698,
+      "se_s_em": 0.18530899473007026,
+      "theta_s_dev": -0.07744070154475755,
+      "se_s_dev": 0.03373142239870991,
+      "Z_s": 0.0019891427072662653,
+      "theta_em": -0.06640790840761732,
+      "theta_dev": 0.0613885722254309,
+      "theta_cred": 0.0629252881820283,
+      "rel_em": 0.9357490865119209,
+      "rel_dev": 1.063312007436773,
+      "rel_cred": 1.064947272112297,
+      "rel_f_em": 1.200550043040788,
+      "rel_f_dev": 1.1489279311244889,
+      "rel_s_em": 0.7794336370534197,
+      "rel_s_dev": 0.925481902416698,
+      "c": 1.138069261795352,
+      "c_solo_desarrollado": 1.1363217156859355
+     }
+    }
+   },
+   "1": {
+    "tau_f": 0.0241905592678873,
+    "tau_s": 0.0,
+    "niveles_tau_f": 70,
+    "niveles_tau_s": 70,
+    "ramos": {
+     "motor": {
+      "theta_f_em": 0.2264736222194824,
+      "se_f_em": 0.07296142585355801,
+      "theta_f_dev": 0.14789026840386094,
+      "se_f_dev": 0.011704726283498333,
+      "Z_f": 0.09904001461828232,
+      "theta_s_em": 0.29236367591249296,
+      "se_s_em": 0.13667498912620396,
+      "theta_s_dev": -0.02175743770062661,
+      "se_s_dev": 0.028612929514457337,
+      "Z_s": 0.0,
+      "theta_em": 0.5188372981319753,
+      "theta_dev": 0.12613283070323433,
+      "theta_cred": 0.13391572721388711,
+      "rel_em": 1.6800730895140947,
+      "rel_dev": 1.134432845788182,
+      "rel_cred": 1.143296466806132,
+      "rel_f_em": 1.254169527189062,
+      "rel_f_dev": 1.1593856681427177,
+      "rel_s_em": 1.3395901057168877,
+      "rel_s_dev": 0.9784775480323913,
+      "c": 0.6805040054160932,
+      "c_solo_desarrollado": 0.6752282700488221
+     },
+     "buildings": {
+      "theta_f_em": 0.14061648682284023,
+      "se_f_em": 0.18968900754974297,
+      "theta_f_dev": 0.11940645067130277,
+      "se_f_dev": 0.025206977503791247,
+      "Z_f": 0.01600299487240059,
+      "theta_s_em": 0.012124665148049076,
+      "se_s_em": 0.29457855148621254,
+      "theta_s_dev": -0.017686234626227877,
+      "se_s_dev": 0.05206022140992779,
+      "Z_s": 0.0,
+      "theta_em": 0.1527411519708893,
+      "theta_dev": 0.10172021604507489,
+      "theta_cred": 0.10205964014485139,
+      "rel_em": 1.165023375905025,
+      "rel_dev": 1.107073686939022,
+      "rel_cred": 1.1074495182080846,
+      "rel_f_em": 1.1509831461260371,
+      "rel_f_dev": 1.126827825149748,
+      "rel_s_em": 1.012198466872642,
+      "rel_s_dev": 0.9824692488330231,
+      "c": 0.9505813712517008,
+      "c_solo_desarrollado": 0.950258775776936
+     },
+     "contents": {
+      "theta_f_em": 0.13974312617059484,
+      "se_f_em": 0.1918104168825998,
+      "theta_f_dev": 0.13882927377018844,
+      "se_f_dev": 0.025893868609654574,
+      "Z_f": 0.015656479954323538,
+      "theta_s_em": -0.2547009854972733,
+      "se_s_em": 0.2628590255549252,
+      "theta_s_dev": -0.07744070154475755,
+      "se_s_dev": 0.03373142239870991,
+      "Z_s": 0.0,
+      "theta_em": -0.11495785932667849,
+      "theta_dev": 0.0613885722254309,
+      "theta_cred": 0.061402879937219074,
+      "rel_em": 0.8914037074677829,
+      "rel_dev": 1.063312007436773,
+      "rel_cred": 1.0633272211073526,
+      "rel_f_em": 1.1499783615683288,
+      "rel_f_dev": 1.1489279311244889,
+      "rel_s_em": 0.7751482438783419,
+      "rel_s_dev": 0.925481902416698,
+      "c": 1.1928682954751826,
+      "c_solo_desarrollado": 1.1928512283815054
+     }
+    }
+   },
+   "2": {
+    "tau_f": 0.0376530689468138,
+    "tau_s": 0.0,
+    "niveles_tau_f": 67,
+    "niveles_tau_s": 67,
+    "ramos": {
+     "motor": {
+      "theta_f_em": 0.1771889555897401,
+      "se_f_em": 0.07160128900842995,
+      "theta_f_dev": 0.14789026840386094,
+      "se_f_dev": 0.011704726283498333,
+      "Z_f": 0.2166328968573408,
+      "theta_s_em": 0.27602664755863815,
+      "se_s_em": 0.14893813997630506,
+      "theta_s_dev": -0.02175743770062661,
+      "se_s_dev": 0.028612929514457337,
+      "Z_s": 0.0,
+      "theta_em": 0.4532156031483783,
+      "theta_dev": 0.12613283070323433,
+      "theta_cred": 0.1324798901824284,
+      "rel_em": 1.573363372044683,
+      "rel_dev": 1.134432845788182,
+      "rel_cred": 1.1416560573632943,
+      "rel_f_em": 1.1938566577044456,
+      "rel_f_dev": 1.1593856681427177,
+      "rel_s_em": 1.3178829819234372,
+      "rel_s_dev": 0.9784775480323913,
+      "c": 0.7256149962863581,
+      "c_solo_desarrollado": 0.7210240596321474
+     },
+     "buildings": {
+      "theta_f_em": 0.08132586978864752,
+      "se_f_em": 0.19410345303524518,
+      "theta_f_dev": 0.11940645067130277,
+      "se_f_dev": 0.025206977503791247,
+      "Z_f": 0.03626533687104893,
+      "theta_s_em": 0.3993917294815918,
+      "se_s_em": 0.2682779310860301,
+      "theta_s_dev": -0.017686234626227877,
+      "se_s_dev": 0.05206022140992779,
+      "Z_s": 0.0,
+      "theta_em": 0.4807175992702393,
+      "theta_dev": 0.10172021604507489,
+      "theta_cred": 0.10033921095112017,
+      "rel_em": 1.6172345122018243,
+      "rel_dev": 1.107073686939022,
+      "rel_cred": 1.10554586774384,
+      "rel_f_em": 1.084724317863174,
+      "rel_f_dev": 1.126827825149748,
+      "rel_s_em": 1.4909175405854784,
+      "rel_s_dev": 0.9824692488330231,
+      "c": 0.6836026929938979,
+      "c_solo_desarrollado": 0.684547403970355
+     },
+     "contents": {
+      "theta_f_em": 0.04862361066690831,
+      "se_f_em": 0.19782766168758104,
+      "theta_f_dev": 0.13882927377018844,
+      "se_f_dev": 0.025893868609654574,
+      "Z_f": 0.03496004774085574,
+      "theta_s_em": -0.31445391254906374,
+      "se_s_em": 0.28729612471603844,
+      "theta_s_dev": -0.07744070154475755,
+      "se_s_dev": 0.03373142239870991,
+      "Z_s": 0.0,
+      "theta_em": -0.26583030188215545,
+      "theta_dev": 0.0613885722254309,
+      "theta_cred": 0.05823497793684468,
+      "rel_em": 0.7665692018147694,
+      "rel_dev": 1.063312007436773,
+      "rel_cred": 1.0599640346118007,
+      "rel_f_em": 1.0498251333850779,
+      "rel_f_dev": 1.1489279311244889,
+      "rel_s_em": 0.7301875116506573,
+      "rel_s_dev": 0.925481902416698,
+      "c": 1.382737569031538,
+      "c_solo_desarrollado": 1.3871050453364122
+     }
+    }
+   },
+   "3": {
+    "tau_f": 0.05220371989373238,
+    "tau_s": 0.0,
+    "niveles_tau_f": 66,
+    "niveles_tau_s": 66,
+    "ramos": {
+     "motor": {
+      "theta_f_em": 0.19815195113884054,
+      "se_f_em": 0.0726691906780486,
+      "theta_f_dev": 0.14789026840386094,
+      "se_f_dev": 0.011704726283498333,
+      "Z_f": 0.3403965620629723,
+      "theta_s_em": 0.19733414281728187,
+      "se_s_em": 0.1219139100724796,
+      "theta_s_dev": -0.02175743770062661,
+      "se_s_dev": 0.028612929514457337,
+      "Z_s": 0.0,
+      "theta_em": 0.39548609395612244,
+      "theta_dev": 0.12613283070323433,
+      "theta_cred": 0.14324173470972124,
+      "rel_em": 1.485105916503695,
+      "rel_dev": 1.134432845788182,
+      "rel_cred": 1.154008731916916,
+      "rel_f_em": 1.2191476306187026,
+      "rel_f_dev": 1.1593856681427177,
+      "rel_s_em": 1.2181510091193977,
+      "rel_s_dev": 0.9784775480323913,
+      "c": 0.7770548343337941,
+      "c_solo_desarrollado": 0.7638733595910225
+     },
+     "buildings": {
+      "theta_f_em": 0.25356963344373196,
+      "se_f_em": 0.17661809288164998,
+      "theta_f_dev": 0.11940645067130277,
+      "se_f_dev": 0.025206977503791247,
+      "Z_f": 0.08034476195299121,
+      "theta_s_em": -0.3125391172348866,
+      "se_s_em": 0.2557562635296605,
+      "theta_s_dev": -0.017686234626227877,
+      "se_s_dev": 0.05206022140992779,
+      "Z_s": 0.0,
+      "theta_em": -0.05896948379115463,
+      "theta_dev": 0.10172021604507489,
+      "theta_cred": 0.11249952502778138,
+      "rel_em": 0.9427355374326944,
+      "rel_dev": 1.107073686939022,
+      "rel_cred": 1.119071725384674,
+      "rel_f_em": 1.288617107208057,
+      "rel_f_dev": 1.126827825149748,
+      "rel_s_em": 0.7315870107259741,
+      "rel_s_dev": 0.9824692488330231,
+      "c": 1.1870473541627458,
+      "c_solo_desarrollado": 1.174320520422792
+     },
+     "contents": {
+      "theta_f_em": 0.2666502145481185,
+      "se_f_em": 0.18080918129185447,
+      "theta_f_dev": 0.13882927377018844,
+      "se_f_dev": 0.025893868609654574,
+      "Z_f": 0.07694649104219743,
+      "theta_s_em": -0.08624224716199061,
+      "se_s_em": 0.23383078132762738,
+      "theta_s_dev": -0.07744070154475755,
+      "se_s_dev": 0.03373142239870991,
+      "Z_s": 0.0,
+      "theta_em": 0.18040796738612788,
+      "theta_dev": 0.0613885722254309,
+      "theta_cred": 0.07122394510000515,
+      "rel_em": 1.1977058884044856,
+      "rel_dev": 1.063312007436773,
+      "rel_cred": 1.0738216760461627,
+      "rel_f_em": 1.3055836922705788,
+      "rel_f_dev": 1.1489279311244889,
+      "rel_s_em": 0.9173719735435115,
+      "rel_s_dev": 0.925481902416698,
+      "c": 0.8965654142993702,
+      "c_solo_desarrollado": 0.8877905817539695
+     }
+    }
+   },
+   "4": {
+    "tau_f": 0.07223556098742719,
+    "tau_s": 0.0,
+    "niveles_tau_f": 65,
+    "niveles_tau_s": 65,
+    "ramos": {
+     "motor": {
+      "theta_f_em": 0.2143606989841612,
+      "se_f_em": 0.07183607759049492,
+      "theta_f_dev": 0.14789026840386094,
+      "se_f_dev": 0.011704726283498333,
+      "Z_f": 0.5027727894919429,
+      "theta_s_em": 0.3164707290572256,
+      "se_s_em": 0.14034206930231308,
+      "theta_s_dev": -0.02175743770062661,
+      "se_s_dev": 0.028612929514457337,
+      "Z_s": 0.0,
+      "theta_em": 0.5308314280413868,
+      "theta_dev": 0.12613283070323433,
+      "theta_cred": 0.15955235450482244,
+      "rel_em": 1.7003454359557966,
+      "rel_dev": 1.134432845788182,
+      "rel_cred": 1.1729856716971883,
+      "rel_f_em": 1.2390695053112146,
+      "rel_f_dev": 1.1593856681427177,
+      "rel_s_em": 1.3722760738339084,
+      "rel_s_dev": 0.9784775480323913,
+      "c": 0.6898513954241484,
+      "c_solo_desarrollado": 0.6671778697429771
+     },
+     "buildings": {
+      "theta_f_em": 0.21826835917007678,
+      "se_f_em": 0.18631063824227279,
+      "theta_f_dev": 0.11940645067130277,
+      "se_f_dev": 0.025206977503791247,
+      "Z_f": 0.13067930371239234,
+      "theta_s_em": -0.06957245311728871,
+      "se_s_em": 0.3359992901895139,
+      "theta_s_dev": -0.017686234626227877,
+      "se_s_dev": 0.05206022140992779,
+      "Z_s": 0.0,
+      "theta_em": 0.14869590605278807,
+      "theta_dev": 0.10172021604507489,
+      "theta_cred": 0.11463942141137293,
+      "rel_em": 1.1603200892384666,
+      "rel_dev": 1.107073686939022,
+      "rel_cred": 1.1214689869536991,
+      "rel_f_em": 1.243920840395936,
+      "rel_f_dev": 1.126827825149748,
+      "rel_s_em": 0.932792547208342,
+      "rel_s_dev": 0.9824692488330231,
+      "c": 0.9665169097345664,
+      "c_solo_desarrollado": 0.954110591729571
+     },
+     "contents": {
+      "theta_f_em": 0.16277333409374092,
+      "se_f_em": 0.1943671076206041,
+      "theta_f_dev": 0.13882927377018844,
+      "se_f_dev": 0.025893868609654574,
+      "Z_f": 0.1213580256389706,
+      "theta_s_em": -0.19480968608866564,
+      "se_s_em": 0.27398182370336555,
+      "theta_s_dev": -0.07744070154475755,
+      "se_s_dev": 0.03373142239870991,
+      "Z_s": 0.0,
+      "theta_em": -0.03203635199492472,
+      "theta_dev": 0.0613885722254309,
+      "theta_cred": 0.06429437611207764,
+      "rel_em": 0.9684713755727585,
+      "rel_dev": 1.063312007436773,
+      "rel_cred": 1.0664062770938432,
+      "rel_f_em": 1.1767699258347761,
+      "rel_f_dev": 1.1489279311244889,
+      "rel_s_em": 0.8229912698404024,
+      "rel_s_dev": 0.925481902416698,
+      "c": 1.1011231761632247,
+      "c_solo_desarrollado": 1.097928172433517
+     }
+    }
+   }
+  },
+  "concentracion_severidad": {
+   "motor": {
+    "emergente": {
+     "REN": {
+      "siniestros": 3242,
+      "media": 2182.0883312769897,
+      "mediana": 981.91,
+      "media_sin_5_mayores": 2094.827003398208,
+      "cuota_5_mayores": 0.04147040704292129,
+      "maximo": 83026.81
+     },
+     "NB": {
+      "siniestros": 315,
+      "media": 3455.3360000000002,
+      "mediana": 1268.53,
+      "media_sin_5_mayores": 2170.172032258065,
+      "cuota_5_mayores": 0.38190530323451694,
+      "maximo": 136767.16
+     }
+    },
+    "desarrollado": {
+     "REN": {
+      "siniestros": 75231,
+      "media": 4004.562700615438,
+      "mediana": 1496.73,
+      "media_sin_5_mayores": 3812.674024007657,
+      "cuota_5_mayores": 0.04798078810984417,
+      "maximo": 11894276.93
+     },
+     "NB": {
+      "siniestros": 9400,
+      "media": 3917.9375702127654,
+      "mediana": 1567.62,
+      "media_sin_5_mayores": 3768.4351027142097,
+      "cuota_5_mayores": 0.038670078718761075,
+      "maximo": 422601.7
+     }
+    }
+   },
+   "buildings": {
+    "emergente": {
+     "REN": {
+      "siniestros": 479,
+      "media": 11471.01052192067,
+      "mediana": 2393.21,
+      "media_sin_5_mayores": 8578.501983122364,
+      "cuota_5_mayores": 0.2599644105302799,
+      "maximo": 339948.9
+     },
+     "NB": {
+      "siniestros": 40,
+      "media": 8851.8515,
+      "mediana": 2642.295,
+      "media_sin_5_mayores": 3152.547428571428,
+      "cuota_5_mayores": 0.6883726528851054,
+      "maximo": 64920.49
+     }
+    },
+    "desarrollado": {
+     "REN": {
+      "siniestros": 17913,
+      "media": 9129.315758946017,
+      "mediana": 3019.28,
+      "media_sin_5_mayores": 9018.603500670091,
+      "cuota_5_mayores": 0.012402856470599851,
+      "maximo": 466446.0
+     },
+     "NB": {
+      "siniestros": 1782,
+      "media": 8849.076616161616,
+      "mediana": 3016.89,
+      "media_sin_5_mayores": 8450.568942037142,
+      "cuota_5_mayores": 0.047713293055623676,
+      "maximo": 165650.0
+     }
+    }
+   },
+   "contents": {
+    "emergente": {
+     "REN": {
+      "siniestros": 454,
+      "media": 2642.4838325991186,
+      "mediana": 1168.88,
+      "media_sin_5_mayores": 2346.5224276169265,
+      "cuota_5_mayores": 0.12178093921546214,
+      "maximo": 35083.71
+     },
+     "NB": {
+      "siniestros": 37,
+      "media": 2323.4289189189194,
+      "mediana": 1311.91,
+      "media_sin_5_mayores": 1306.71125,
+      "cuota_5_mayores": 0.5135944812228245,
+      "maximo": 14316.55
+     }
+    },
+    "desarrollado": {
+     "REN": {
+      "siniestros": 15963,
+      "media": 2760.446369103552,
+      "mediana": 1177.17,
+      "media_sin_5_mayores": 2735.9688645193633,
+      "cuota_5_mayores": 0.00917767390292381,
+      "maximo": 111900.0
+     },
+     "NB": {
+      "siniestros": 1719,
+      "media": 2418.0012449098313,
+      "mediana": 1130.0,
+      "media_sin_5_mayores": 2320.3195390898486,
+      "cuota_5_mayores": 0.04318887132039454,
+      "maximo": 52550.0
+     }
+    }
+   }
+  }
+ },
+ "diagnostico_oof": {
+  "cuota_nb_exposicion_test_2025": {
+   "motor": 0.7685220640363468,
+   "buildings": 0.7676153134769542,
+   "contents": 0.770197581518224
+  },
+  "pesos": {
+   "buildings/NB": 12.148803476768448,
+   "buildings/REN": 0.24805809789568076,
+   "contents/NB": 12.46503274927487,
+   "contents/REN": 0.2449367290045684,
+   "motor/NB": 11.986490250158576,
+   "motor/REN": 0.24733605734304304
+  },
+  "recetas": {
+   "W2-B00": {
+    "guardada": {
+     "D2_mezcla_2023": 0.06858168733600933,
+     "D2_mezcla_2025": 0.05406839325828794,
+     "AE_NB": 1.5498719173075624,
+     "AE_REN": 0.9412388475762118,
+     "AE_mezcla_2025": 1.404807012281795,
+     "D2_NB": 0.04783380378011515,
+     "D2_mezcla_2023_sin_01": 0.0638216162433991,
+     "D2_mezcla_2025_sin_01": 0.13857014557802483,
+     "AE_NB_sin_01": 1.0847993673800358
+    },
+    "emergente": {
+     "D2_mezcla_2023": 0.07386753377827282,
+     "D2_mezcla_2025": 0.09336291918317086,
+     "AE_NB": 0.9159845331656022,
+     "AE_REN": 0.9412388475762118,
+     "AE_mezcla_2025": 0.9202236705283802,
+     "D2_NB": 0.09420107234265374,
+     "D2_mezcla_2023_sin_01": 0.05849930534011394,
+     "D2_mezcla_2025_sin_01": 0.09754863745862619,
+     "AE_NB_sin_01": 0.6413724514176954
+    },
+    "credibilidad": {
+     "D2_mezcla_2023": 0.07348477019208677,
+     "D2_mezcla_2025": 0.09064728679780731,
+     "AE_NB": 1.148220428869635,
+     "AE_REN": 0.9412388475762118,
+     "AE_mezcla_2025": 1.1091916713477257,
+     "D2_NB": 0.09084348294036937,
+     "D2_mezcla_2023_sin_01": 0.06209025237846788,
+     "D2_mezcla_2025_sin_01": 0.12516149517764452,
+     "AE_NB_sin_01": 0.8038998808182983
+    },
+    "desarrollado": {
+     "D2_mezcla_2023": 0.07330188123131154,
+     "D2_mezcla_2025": 0.08928054871127789,
+     "AE_NB": 1.1632260355522268,
+     "AE_REN": 0.9412388475762118,
+     "AE_mezcla_2025": 1.1209413900177188,
+     "D2_NB": 0.08923918708084744,
+     "D2_mezcla_2023_sin_01": 0.06217782399693694,
+     "D2_mezcla_2025_sin_01": 0.1258332306411699,
+     "AE_NB_sin_01": 0.8144019212703567
+    },
+    "g_todo_2023": {
+     "motor": {
+      "razon": 2.274458386523677,
+      "c": 0.712784991893987,
+      "g_NB": 1.62119980260149
+     },
+     "buildings": {
+      "razon": 0.9554209988169681,
+      "c": 0.945720348703514,
+      "g_NB": 0.9035610801598426
+     },
+     "contents": {
+      "razon": 1.0900311652377082,
+      "c": 1.132050730532191,
+      "g_NB": 1.233970576910203
+     }
+    }
+   },
+   "W2-B01": {
+    "guardada": {
+     "D2_mezcla_2023": 0.06665893653096044,
+     "D2_mezcla_2025": 0.02416566091787209,
+     "AE_NB": 0.9815435459516262,
+     "AE_REN": 1.0595494364659528,
+     "AE_mezcla_2025": 0.9928343857887697,
+     "D2_NB": 0.01275117639862866,
+     "D2_mezcla_2023_sin_01": 0.07514897280575839,
+     "D2_mezcla_2025_sin_01": 0.0719955424045704,
+     "AE_NB_sin_01": 0.6870857935726121
+    },
+    "emergente": {
+     "D2_mezcla_2023": 0.06115096481236926,
+     "D2_mezcla_2025": -0.017596037621456118,
+     "AE_NB": 1.0251988511822376,
+     "AE_REN": 1.0595494364659528,
+     "AE_mezcla_2025": 1.0305614088634387,
+     "D2_NB": -0.035564567673841196,
+     "D2_mezcla_2023_sin_01": 0.06914474399387793,
+     "D2_mezcla_2025_sin_01": 0.025367143391433422,
+     "AE_NB_sin_01": 0.717737208688835
+    },
+    "credibilidad": {
+     "D2_mezcla_2023": 0.05955116207718758,
+     "D2_mezcla_2025": -0.029344030983993852,
+     "AE_NB": 1.2954287145721373,
+     "AE_REN": 1.0595494364659528,
+     "AE_mezcla_2025": 1.2505965010562758,
+     "D2_NB": -0.049597983869241746,
+     "D2_mezcla_2023_sin_01": 0.0724738506791951,
+     "D2_mezcla_2025_sin_01": 0.05106266726175368,
+     "AE_NB_sin_01": 0.9067973380579403
+    },
+    "desarrollado": {
+     "D2_mezcla_2023": 0.05918391892314623,
+     "D2_mezcla_2025": -0.03209601052056299,
+     "AE_NB": 1.3120510371539555,
+     "AE_REN": 1.0595494364659528,
+     "AE_mezcla_2025": 1.263597784141539,
+     "D2_NB": -0.05281942855878774,
+     "D2_mezcla_2023_sin_01": 0.07243100035582906,
+     "D2_mezcla_2025_sin_01": 0.05072952725752311,
+     "AE_NB_sin_01": 0.918429669873428
+    },
+    "g_todo_2023": {
+     "motor": {
+      "razon": 1.0160510246381815,
+      "c": 0.712784991893987,
+      "g_NB": 0.7242259213606035
+     },
+     "buildings": {
+      "razon": 0.7295290093529936,
+      "c": 0.945720348703514,
+      "g_NB": 0.6899304291146422
+     },
+     "contents": {
+      "razon": 1.1658740651828858,
+      "c": 1.132050730532191,
+      "g_NB": 1.3198285871988211
+     }
+    }
+   },
+   "W2-B02": {
+    "guardada": {
+     "D2_mezcla_2023": -0.27352879056244506,
+     "D2_mezcla_2025": -0.8011033469778324,
+     "AE_NB": 2.4818766910326753,
+     "AE_REN": 1.983157101006271,
+     "AE_mezcla_2025": 2.390235932244129,
+     "D2_NB": -0.9108244272429429,
+     "D2_mezcla_2023_sin_01": -0.09680139231483254,
+     "D2_mezcla_2025_sin_01": -0.1256299622322976,
+     "AE_NB_sin_01": 1.73731841819212
+    },
+    "emergente": {
+     "D2_mezcla_2023": -0.25396184962544543,
+     "D2_mezcla_2025": -0.6548781852309926,
+     "AE_NB": 1.7428008935579302,
+     "AE_REN": 1.983157101006271,
+     "AE_mezcla_2025": 1.7792831868688936,
+     "D2_NB": -0.7391838744415882,
+     "D2_mezcla_2023_sin_01": -0.09456024547569175,
+     "D2_mezcla_2025_sin_01": -0.10870715044832169,
+     "AE_NB_sin_01": 1.2200609171637662
+    },
+    "credibilidad": {
+     "D2_mezcla_2023": -0.2718363310920986,
+     "D2_mezcla_2025": -0.7882129301524208,
+     "AE_NB": 2.2743383104232855,
+     "AE_REN": 1.983157101006271,
+     "AE_mezcla_2025": 2.2246296616148826,
+     "D2_NB": -0.8959782292593399,
+     "D2_mezcla_2023_sin_01": -0.0961886083740644,
+     "D2_mezcla_2025_sin_01": -0.12072889609499371,
+     "AE_NB_sin_01": 1.5921109384700693
+    },
+    "desarrollado": {
+     "D2_mezcla_2023": -0.2733678622721436,
+     "D2_mezcla_2025": -0.7996770269393385,
+     "AE_NB": 2.307071782348629,
+     "AE_REN": 1.983157101006271,
+     "AE_mezcla_2025": 2.250889427350591,
+     "D2_NB": -0.9094127696518237,
+     "D2_mezcla_2023_sin_01": -0.0965454186820256,
+     "D2_mezcla_2025_sin_01": -0.12346629189105207,
+     "AE_NB_sin_01": 1.6150160364085677
+    },
+    "g_todo_2023": {
+     "motor": {
+      "razon": 1.5139189599417031,
+      "c": 0.712784991893987,
+      "g_NB": 1.0790987135902002
+     },
+     "buildings": {
+      "razon": 1.0187477675008265,
+      "c": 0.945720348703514,
+      "g_NB": 0.963450493921808
+     },
+     "contents": {
+      "razon": 1.2495675360619727,
+      "c": 1.132050730532191,
+      "g_NB": 1.414573842048266
+     }
+    }
+   },
+   "W2-B03": {
+    "guardada": {
+     "D2_mezcla_2023": 0.08672449183055131,
+     "D2_mezcla_2025": 0.06419267166090248,
+     "AE_NB": 1.0322281514055118,
+     "AE_REN": 1.0723764704398562,
+     "AE_mezcla_2025": 1.0385396079917961,
+     "D2_NB": 0.05635731200727312,
+     "D2_mezcla_2023_sin_01": 0.08531906942972334,
+     "D2_mezcla_2025_sin_01": 0.11823670689385113,
+     "AE_NB_sin_01": 0.7226202658875307
+    },
+    "emergente": {
+     "D2_mezcla_2023": 0.08345063800554298,
+     "D2_mezcla_2025": 0.03936983987607856,
+     "AE_NB": 1.03631962877904,
+     "AE_REN": 1.0723764704398562,
+     "AE_mezcla_2025": 1.0420215004716702,
+     "D2_NB": 0.027639175527763626,
+     "D2_mezcla_2023_sin_01": 0.0819564935134729,
+     "D2_mezcla_2025_sin_01": 0.09208485032059721,
+     "AE_NB_sin_01": 0.7255354266587005
+    },
+    "credibilidad": {
+     "D2_mezcla_2023": 0.08131451636355114,
+     "D2_mezcla_2025": 0.023555528202197196,
+     "AE_NB": 1.3053468766527738,
+     "AE_REN": 1.0723764704398562,
+     "AE_mezcla_2025": 1.2612538036847667,
+     "D2_NB": 0.008901187782876296,
+     "D2_mezcla_2023_sin_01": 0.08465144906593125,
+     "D2_mezcla_2025_sin_01": 0.11286480689334921,
+     "AE_NB_sin_01": 0.9137502617565624
+    },
+    "desarrollado": {
+     "D2_mezcla_2023": 0.08097692986460392,
+     "D2_mezcla_2025": 0.02102840256902505,
+     "AE_NB": 1.3222328579716878,
+     "AE_REN": 1.0723764704398562,
+     "AE_mezcla_2025": 1.2744839251535827,
+     "D2_NB": 0.00593989028194597,
+     "D2_mezcla_2023_sin_01": 0.08464366519497946,
+     "D2_mezcla_2025_sin_01": 0.11280348144214714,
+     "AE_NB_sin_01": 0.9255673763509595
+    },
+    "g_todo_2023": {
+     "motor": {
+      "razon": 1.0160510246381815,
+      "c": 0.712784991893987,
+      "g_NB": 0.7242259213606035
+     },
+     "buildings": {
+      "razon": 0.857083825057413,
+      "c": 0.945720348703514,
+      "g_NB": 0.8105616139014382
+     },
+     "contents": {
+      "razon": 1.1658740651828858,
+      "c": 1.132050730532191,
+      "g_NB": 1.3198285871988211
+     }
+    }
+   },
+   "W2-B04": {
+    "guardada": {
+     "D2_mezcla_2023": 0.07341590271097842,
+     "D2_mezcla_2025": 0.025829313858354963,
+     "AE_NB": 1.727321615519727,
+     "AE_REN": 1.1719112296617422,
+     "AE_mezcla_2025": 1.60609921642275,
+     "D2_NB": 0.0127927382253481,
+     "D2_mezcla_2023_sin_01": 0.0911495845937429,
+     "D2_mezcla_2025_sin_01": 0.1450148385493628,
+     "AE_NB_sin_01": 1.2089011624103405
+    },
+    "emergente": {
+     "D2_mezcla_2023": 0.079840274114241,
+     "D2_mezcla_2025": 0.07362447765552882,
+     "AE_NB": 1.1113185996805925,
+     "AE_REN": 1.1719112296617422,
+     "AE_mezcla_2025": 1.1211267176519446,
+     "D2_NB": 0.06914710974451233,
+     "D2_mezcla_2023_sin_01": 0.08810012442704662,
+     "D2_mezcla_2025_sin_01": 0.12136204731473677,
+     "AE_NB_sin_01": 0.7779736909879056
+    },
+    "credibilidad": {
+     "D2_mezcla_2023": 0.07749699199452653,
+     "D2_mezcla_2025": 0.05625745341974442,
+     "AE_NB": 1.4088006383439633,
+     "AE_REN": 1.1719112296617422,
+     "AE_mezcla_2025": 1.364955663100059,
+     "D2_NB": 0.04859191720356648,
+     "D2_mezcla_2023_sin_01": 0.09034544888546714,
+     "D2_mezcla_2025_sin_01": 0.1387023481363444,
+     "AE_NB_sin_01": 0.9861368852066136
+    },
+    "desarrollado": {
+     "D2_mezcla_2023": 0.07718150026074189,
+     "D2_mezcla_2025": 0.053897144889153537,
+     "AE_NB": 1.4273841692344758,
+     "AE_REN": 1.1719112296617422,
+     "AE_mezcla_2025": 1.3795914667924802,
+     "D2_NB": 0.04582443424517224,
+     "D2_mezcla_2023_sin_01": 0.0903393712624978,
+     "D2_mezcla_2025_sin_01": 0.13865589599271644,
+     "AE_NB_sin_01": 0.9991392737619964
+    },
+    "g_todo_2023": {
+     "motor": {
+      "razon": 1.9283841709405611,
+      "c": 0.712784991893987,
+      "g_NB": 1.3745232956523608
+     },
+     "buildings": {
+      "razon": 0.9237465448348132,
+      "c": 0.945720348703514,
+      "g_NB": 0.8736059044948458
+     },
+     "contents": {
+      "razon": 1.068098349936798,
+      "c": 1.132050730532191,
+      "g_NB": 1.20914151732618
+     }
+    }
+   },
+   "W2-B05": {
+    "guardada": {
+     "D2_mezcla_2023": 0.07985840665529398,
+     "D2_mezcla_2025": 0.017368375325704677,
+     "AE_NB": 1.611896293027309,
+     "AE_REN": 1.0458325873053305,
+     "AE_mezcla_2025": 1.4836590813293085,
+     "D2_NB": 0.0017160563493489045,
+     "D2_mezcla_2023_sin_01": 0.08508795770770627,
+     "D2_mezcla_2025_sin_01": 0.1344728067878428,
+     "AE_NB_sin_01": 1.1280359028800282
+    },
+    "emergente": {
+     "D2_mezcla_2023": 0.0864159840341534,
+     "D2_mezcla_2025": 0.06617538570034154,
+     "AE_NB": 1.010875838771589,
+     "AE_REN": 1.0458325873053305,
+     "AE_mezcla_2025": 1.0166545213829712,
+     "D2_NB": 0.05923890624035011,
+     "D2_mezcla_2023_sin_01": 0.08119678698493116,
+     "D2_mezcla_2025_sin_01": 0.10439544570819426,
+     "AE_NB_sin_01": 0.7076532758335551
+    },
+    "credibilidad": {
+     "D2_mezcla_2023": 0.08462043878290626,
+     "D2_mezcla_2025": 0.05288653631764173,
+     "AE_NB": 1.2704056471329968,
+     "AE_REN": 1.0458325873053305,
+     "AE_mezcla_2025": 1.2282319882628612,
+     "D2_NB": 0.043488443227444606,
+     "D2_mezcla_2023_sin_01": 0.08389489544308382,
+     "D2_mezcla_2025_sin_01": 0.12517042376903875,
+     "AE_NB_sin_01": 0.8892342977874009
+    },
+    "desarrollado": {
+     "D2_mezcla_2023": 0.08434723906172503,
+     "D2_mezcla_2025": 0.050842521839385646,
+     "AE_NB": 1.287346023973628,
+     "AE_REN": 1.0458325873053305,
+     "AE_mezcla_2025": 1.2415172065939197,
+     "D2_NB": 0.04109194439199926,
+     "D2_mezcla_2023_sin_01": 0.08392676021759649,
+     "D2_mezcla_2025_sin_01": 0.1254141141614159,
+     "AE_NB_sin_01": 0.901087098751005
+    },
+    "g_todo_2023": {
+     "motor": {
+      "razon": 2.058139355301146,
+      "c": 0.712784991893987,
+      "g_NB": 1.467010843685023
+     },
+     "buildings": {
+      "razon": 0.9303086839271562,
+      "c": 0.945720348703514,
+      "g_NB": 0.8798118529654972
+     },
+     "contents": {
+      "razon": 1.087984889275574,
+      "c": 1.132050730532191,
+      "g_NB": 1.2316540887123983
+     }
+    }
+   },
+   "W2-B06": {
+    "guardada": {
+     "D2_mezcla_2023": 0.08903915027501241,
+     "D2_mezcla_2025": 0.06817846881527001,
+     "AE_NB": 0.9546963038307349,
+     "AE_REN": 0.9846364900782574,
+     "AE_mezcla_2025": 0.9593639614814017,
+     "D2_NB": 0.06066509861457381,
+     "D2_mezcla_2023_sin_01": 0.07968908291528942,
+     "D2_mezcla_2025_sin_01": 0.11503930204476298,
+     "AE_NB_sin_01": 0.6683331262190347
+    },
+    "emergente": {
+     "D2_mezcla_2023": 0.08599331830070167,
+     "D2_mezcla_2025": 0.04508035905633667,
+     "AE_NB": 0.9602277754967867,
+     "AE_REN": 0.9846364900782574,
+     "AE_mezcla_2025": 0.9640749904325724,
+     "D2_NB": 0.0339471621985562,
+     "D2_mezcla_2023_sin_01": 0.07658795186815759,
+     "D2_mezcla_2025_sin_01": 0.09091091805143203,
+     "AE_NB_sin_01": 0.672253627639056
+    },
+    "credibilidad": {
+     "D2_mezcla_2023": 0.08421062139167423,
+     "D2_mezcla_2025": 0.03189641681305422,
+     "AE_NB": 1.2065503108876683,
+     "AE_REN": 0.9846364900782574,
+     "AE_mezcla_2025": 1.1642498880133316,
+     "D2_NB": 0.01830940441475426,
+     "D2_mezcla_2023_sin_01": 0.07955976176235435,
+     "D2_mezcla_2025_sin_01": 0.11379283937245055,
+     "AE_NB_sin_01": 0.8445783648863864
+    },
+    "desarrollado": {
+     "D2_mezcla_2023": 0.08390417831696362,
+     "D2_mezcla_2025": 0.029603113442844275,
+     "AE_NB": 1.2220177635981808,
+     "AE_REN": 0.9846364900782574,
+     "AE_mezcla_2025": 1.1763375026001828,
+     "D2_NB": 0.015621295991734119,
+     "D2_mezcla_2023_sin_01": 0.07957827443880672,
+     "D2_mezcla_2025_sin_01": 0.11393364387289528,
+     "AE_NB_sin_01": 0.8554024325829812
+    },
+    "g_todo_2023": {
+     "motor": {
+      "razon": 1.0157279530208427,
+      "c": 0.712784991893987,
+      "g_NB": 0.7239956407604574
+     },
+     "buildings": {
+      "razon": 0.8566263502673442,
+      "c": 0.945720348703514,
+      "g_NB": 0.8101289706834512
+     },
+     "contents": {
+      "razon": 1.1654607101801715,
+      "c": 1.132050730532191,
+      "g_NB": 1.3193606483660292
+     }
+    }
+   },
+   "W2-B07": {
+    "guardada": {
+     "D2_mezcla_2023": 0.08173829034487456,
+     "D2_mezcla_2025": 0.030539603963228523,
+     "AE_NB": 1.4564874144187407,
+     "AE_REN": 0.9448264819581748,
+     "AE_mezcla_2025": 1.3404801839320266,
+     "D2_NB": 0.01711741831964364,
+     "D2_mezcla_2023_sin_01": 0.07766085735969586,
+     "D2_mezcla_2025_sin_01": 0.1356531022097447,
+     "AE_NB_sin_01": 1.0192738487006208
+    },
+    "emergente": {
+     "D2_mezcla_2023": 0.08710940481098739,
+     "D2_mezcla_2025": 0.07048484924672582,
+     "AE_NB": 0.916949449855898,
+     "AE_REN": 0.9448264819581748,
+     "AE_mezcla_2025": 0.9215791195510603,
+     "D2_NB": 0.06423265514134457,
+     "D2_mezcla_2023_sin_01": 0.07285839294937602,
+     "D2_mezcla_2025_sin_01": 0.09862360487544364,
+     "AE_NB_sin_01": 0.6419016131680004
+    },
+    "credibilidad": {
+     "D2_mezcla_2023": 0.08582857951995482,
+     "D2_mezcla_2025": 0.06102470061204235,
+     "AE_NB": 1.1511594348924712,
+     "AE_REN": 0.9448264819581748,
+     "AE_mezcla_2025": 1.1122747199057739,
+     "D2_NB": 0.052997298439312,
+     "D2_mezcla_2023_sin_01": 0.07596486578589523,
+     "D2_mezcla_2025_sin_01": 0.12249692122322076,
+     "AE_NB_sin_01": 0.8057661323094109
+    },
+    "desarrollado": {
+     "D2_mezcla_2023": 0.08559641790350303,
+     "D2_mezcla_2025": 0.05928851642142585,
+     "AE_NB": 1.166439513712578,
+     "AE_REN": 0.9448264819581748,
+     "AE_mezcla_2025": 1.1242439747573536,
+     "D2_NB": 0.05096078448880215,
+     "D2_mezcla_2023_sin_01": 0.07603062422139462,
+     "D2_mezcla_2025_sin_01": 0.12300082413567481,
+     "AE_NB_sin_01": 0.8164571841890764
+    },
+    "g_todo_2023": {
+     "motor": {
+      "razon": 2.0578800321774207,
+      "c": 0.712784991893987,
+      "g_NB": 1.4668260020543806
+     },
+     "buildings": {
+      "razon": 0.9299325200251567,
+      "c": 0.945720348703514,
+      "g_NB": 0.8794561071089286
+     },
+     "contents": {
+      "razon": 1.0881625255280891,
+      "c": 1.132050730532191,
+      "g_NB": 1.231855181961827
+     }
+    }
+   },
+   "W2-B08": {
+    "guardada": {
+     "D2_mezcla_2023": 0.09317908255732787,
+     "D2_mezcla_2025": 0.0790790017246108,
+     "AE_NB": 1.1815665298125495,
+     "AE_REN": 0.9624487079537262,
+     "AE_mezcla_2025": 1.140121620116386,
+     "D2_NB": 0.07296591067731473,
+     "D2_mezcla_2023_sin_01": 0.08197966511081767,
+     "D2_mezcla_2025_sin_01": 0.1394326942159917,
+     "AE_NB_sin_01": 0.8270993266836736
+    },
+    "emergente": {
+     "D2_mezcla_2023": 0.09291023353271322,
+     "D2_mezcla_2025": 0.07679196667008525,
+     "AE_NB": 0.9372744118405287,
+     "AE_REN": 0.9624487079537262,
+     "AE_mezcla_2025": 0.9413792553235463,
+     "D2_NB": 0.07060757600693512,
+     "D2_mezcla_2023_sin_01": 0.07708005202250234,
+     "D2_mezcla_2025_sin_01": 0.101602211088475,
+     "AE_NB_sin_01": 0.6562175355495853
+    },
+    "credibilidad": {
+     "D2_mezcla_2023": 0.09190808222684599,
+     "D2_mezcla_2025": 0.06942885830561951,
+     "AE_NB": 1.1770490928983115,
+     "AE_REN": 0.9624487079537262,
+     "AE_mezcla_2025": 1.1363618364306212,
+     "D2_NB": 0.06181673820129918,
+     "D2_mezcla_2023_sin_01": 0.08042697948873878,
+     "D2_mezcla_2025_sin_01": 0.12733146356378533,
+     "AE_NB_sin_01": 0.8239811789186038
+    },
+    "desarrollado": {
+     "D2_mezcla_2023": 0.09167265487217902,
+     "D2_mezcla_2025": 0.06766821142241808,
+     "AE_NB": 1.1922839086503432,
+     "AE_REN": 0.9624487079537262,
+     "AE_mezcla_2025": 1.1482781927268426,
+     "D2_NB": 0.059751577304164805,
+     "D2_mezcla_2023_sin_01": 0.08048851841331306,
+     "D2_mezcla_2025_sin_01": 0.12780303341544874,
+     "AE_NB_sin_01": 0.8346429245226344
+    },
+    "g_todo_2023": {
+     "motor": {
+      "razon": 1.4257614825589828,
+      "c": 0.712784991893987,
+      "g_NB": 1.0162613867885635
+     },
+     "buildings": {
+      "razon": 0.903503773523794,
+      "c": 0.945720348703514,
+      "g_NB": 0.8544619037518631
+     },
+     "contents": {
+      "razon": 1.1264878233864752,
+      "c": 1.132050730532191,
+      "g_NB": 1.275241363400277
+     }
+    }
+   },
+   "W2-B09": {
+    "guardada": {
+     "D2_mezcla_2023": 0.08076686900396346,
+     "D2_mezcla_2025": 0.050049207247638505,
+     "AE_NB": 1.5017292960940156,
+     "AE_REN": 0.9430292526053087,
+     "AE_mezcla_2025": 1.371889953670138,
+     "D2_NB": 0.04064978358367244,
+     "D2_mezcla_2023_sin_01": 0.07472233978824583,
+     "D2_mezcla_2025_sin_01": 0.14221794333192805,
+     "AE_NB_sin_01": 1.0510163028614514
+    },
+    "emergente": {
+     "D2_mezcla_2023": 0.08584897602190822,
+     "D2_mezcla_2025": 0.08783059830993034,
+     "AE_NB": 0.9166284836129215,
+     "AE_REN": 0.9430292526053087,
+     "AE_mezcla_2025": 0.921038002582405,
+     "D2_NB": 0.08522985671642602,
+     "D2_mezcla_2023_sin_01": 0.06949625139708848,
+     "D2_mezcla_2025_sin_01": 0.10194595209517954,
+     "AE_NB_sin_01": 0.6417457008911117
+    },
+    "credibilidad": {
+     "D2_mezcla_2023": 0.0851189148396696,
+     "D2_mezcla_2025": 0.08249572104922531,
+     "AE_NB": 1.1499146502546247,
+     "AE_REN": 0.9430292526053087,
+     "AE_mezcla_2025": 1.1109086287199226,
+     "D2_NB": 0.07882578439353893,
+     "D2_mezcla_2023_sin_01": 0.07289765506891033,
+     "D2_mezcla_2025_sin_01": 0.12808240999168397,
+     "AE_NB_sin_01": 0.8049849013912218
+    },
+    "desarrollado": {
+     "D2_mezcla_2023": 0.08492048813104414,
+     "D2_mezcla_2025": 0.081012372241973,
+     "AE_NB": 1.1650639517328674,
+     "AE_REN": 0.9430292526053087,
+     "AE_mezcla_2025": 1.12277225312909,
+     "D2_NB": 0.07708519192848629,
+     "D2_mezcla_2023_sin_01": 0.07297959486945693,
+     "D2_mezcla_2025_sin_01": 0.12871062888878249,
+     "AE_NB_sin_01": 0.8155859137565284
+    },
+    "g_todo_2023": {
+     "motor": {
+      "razon": 2.160995912173489,
+      "c": 0.712784991893987,
+      "g_NB": 1.5403254537415194
+     },
+     "buildings": {
+      "razon": 0.9425243561321242,
+      "c": 0.945720348703514,
+      "g_NB": 0.8913644627428274
+     },
+     "contents": {
+      "razon": 1.0890972499229525,
+      "c": 1.132050730532191,
+      "g_NB": 1.2329133373958785
+     }
+    }
+   }
+  },
+  "filas_excluidas_sin_01": 51
+ },
+ "escenario_bloque_transferido": {
+  "motor": {
+   "cuota_exposicion_nb_enero": 0.7231945846997763,
+   "cuota_exposicion_nb": 0.7685220640363468,
+   "relatividad_creible": 1.160367539114919,
+   "relatividad_solo_emergente": 1.627934864385446,
+   "cambio_nivel_si_bloque_como_renovacion": -0.10325159106599324,
+   "cambio_nivel_creible_frente_a_solo_emergente": -0.24237165623075396
+  },
+  "buildings": {
+   "cuota_exposicion_nb_enero": 0.735353747960289,
+   "cuota_exposicion_nb": 0.7676153134769542,
+   "relatividad_creible": 1.1133610355971688,
+   "relatividad_solo_emergente": 1.1772624297695118,
+   "cambio_nivel_si_bloque_como_renovacion": -0.07668731147545138,
+   "cambio_nivel_creible_frente_a_solo_emergente": -0.043176667408230784
+  },
+  "contents": {
+   "cuota_exposicion_nb_enero": 0.7321484434248646,
+   "cuota_exposicion_nb": 0.770197581518224,
+   "relatividad_creible": 1.0652396662014862,
+   "relatividad_solo_emergente": 0.9409822700266303,
+   "cambio_nivel_si_bloque_como_renovacion": -0.045479873173067675,
+   "cambio_nivel_creible_frente_a_solo_emergente": 0.10026010024695298
+  }
+ },
+ "gasto_fijo": {
+  "supuestos_expenses": {
+   "F": 85.0,
+   "v": 0.15,
+   "t": 0.08,
+   "m": 0.08,
+   "r": 0.12,
+   "comision_direct": 0.0,
+   "comision_broker": 0.2,
+   "comision_comparison_site": null
+  },
+  "tasa_ilustrativa_2023": {
+   "motor": 432.7046601170045,
+   "buildings": 514.2802524362875,
+   "contents": 91.13143209117962
+  },
+  "denominadores": {
+   "direct": 0.6900000000000001,
+   "broker": 0.49000000000000005
+  },
+  "referencias": [
+   {
+    "row_id": "B00215707",
+    "policy_id": "B75172079",
+    "line": "buildings",
+    "channel": "broker",
+    "new_business": true,
+    "period_start": "2025-01-06",
+    "period_end": "2025-12-31",
+    "exposure": 0.9863,
+    "filas_poliza_2025": 1,
+    "exposicion_poliza_2025": 0.9863,
+    "denominador": 0.49000000000000005,
+    "written_premium": 272.44,
+    "R_ilustrativo": 507.23461297791033,
+    "F_por_exposicion_F": 83.8355,
+    "F_por_exposicion_termino_F": 171.09285714285713,
+    "F_por_exposicion_P": 1330.4862582352237,
+    "F_por_exposicion_P_anualizada": 1348.9671076094735,
+    "F_por_poliza_y_anio_F": 85.0,
+    "F_por_poliza_y_anio_termino_F": 173.46938775510202,
+    "F_por_poliza_y_anio_P": 1332.8627888474687,
+    "F_por_poliza_y_anio_P_anualizada": 1351.3766489379182,
+    "F_entero_por_fila_F": 85.0,
+    "F_entero_por_fila_termino_F": 173.46938775510202,
+    "F_entero_por_fila_P": 1332.8627888474687,
+    "F_entero_por_fila_P_anualizada": 1351.3766489379182
+   },
+   {
+    "row_id": "B00215809",
+    "policy_id": "B88623113",
+    "line": "buildings",
+    "channel": "direct",
+    "new_business": true,
+    "period_start": "2025-01-10",
+    "period_end": "2025-12-31",
+    "exposure": 0.9753,
+    "filas_poliza_2025": 1,
+    "exposicion_poliza_2025": 0.9753,
+    "denominador": 0.6900000000000001,
+    "written_premium": 237.22,
+    "R_ilustrativo": 501.57753020111113,
+    "F_por_exposicion_F": 82.9005,
+    "F_por_exposicion_termino_F": 120.14565217391302,
+    "F_por_exposicion_P": 934.300483804702,
+    "F_por_exposicion_P_anualizada": 957.9621488820897,
+    "F_por_poliza_y_anio_F": 85.0,
+    "F_por_poliza_y_anio_termino_F": 123.18840579710144,
+    "F_por_poliza_y_anio_P": 937.3432374278905,
+    "F_por_poliza_y_anio_P_anualizada": 961.0819618864867,
+    "F_entero_por_fila_F": 85.0,
+    "F_entero_por_fila_termino_F": 123.18840579710144,
+    "F_entero_por_fila_P": 937.3432374278905,
+    "F_entero_por_fila_P_anualizada": 961.0819618864867
+   },
+   {
+    "row_id": "B00217584",
+    "policy_id": "B13799940",
+    "line": "buildings",
+    "channel": "broker",
+    "new_business": true,
+    "period_start": "2025-01-13",
+    "period_end": "2025-12-31",
+    "exposure": 0.9671,
+    "filas_poliza_2025": 1,
+    "exposicion_poliza_2025": 0.9671,
+    "denominador": 0.49000000000000005,
+    "written_premium": 323.36,
+    "R_ilustrativo": 497.36043213113356,
+    "F_por_exposicion_F": 82.20349999999999,
+    "F_por_exposicion_termino_F": 167.76224489795914,
+    "F_por_exposicion_P": 1304.5860897691214,
+    "F_por_exposicion_P_anualizada": 1348.967107609473,
+    "F_por_poliza_y_anio_F": 85.0,
+    "F_por_poliza_y_anio_termino_F": 173.46938775510202,
+    "F_por_poliza_y_anio_P": 1310.2932326262644,
+    "F_por_poliza_y_anio_P_anualizada": 1354.8684030878549,
+    "F_entero_por_fila_F": 85.0,
+    "F_entero_por_fila_termino_F": 173.46938775510202,
+    "F_entero_por_fila_P": 1310.2932326262644,
+    "F_entero_por_fila_P_anualizada": 1354.8684030878549
+   },
+   {
+    "row_id": "B00218282",
+    "policy_id": "B74876592",
+    "line": "buildings",
+    "channel": "broker",
+    "new_business": true,
+    "period_start": "2025-01-11",
+    "period_end": "2025-12-31",
+    "exposure": 0.9726,
+    "filas_poliza_2025": 1,
+    "exposicion_poliza_2025": 0.9726,
+    "denominador": 0.49000000000000005,
+    "written_premium": 230.8,
+    "R_ilustrativo": 500.1889735195332,
+    "F_por_exposicion_F": 82.671,
+    "F_por_exposicion_termino_F": 168.71632653061224,
+    "F_por_exposicion_P": 1312.0054088609738,
+    "F_por_exposicion_P_anualizada": 1348.9671076094733,
+    "F_por_poliza_y_anio_F": 85.0,
+    "F_por_poliza_y_anio_termino_F": 173.46938775510202,
+    "F_por_poliza_y_anio_P": 1316.7584700854636,
+    "F_por_poliza_y_anio_P_anualizada": 1353.8540716486361,
+    "F_entero_por_fila_F": 85.0,
+    "F_entero_por_fila_termino_F": 173.46938775510202,
+    "F_entero_por_fila_P": 1316.7584700854636,
+    "F_entero_por_fila_P_anualizada": 1353.8540716486361
+   },
+   {
+    "row_id": "B00223369",
+    "policy_id": "B73680946",
+    "line": "buildings",
+    "channel": "broker",
+    "new_business": true,
+    "period_start": "2025-01-03",
+    "period_end": "2025-12-31",
+    "exposure": 0.9945,
+    "filas_poliza_2025": 1,
+    "exposicion_poliza_2025": 0.9945,
+    "denominador": 0.49000000000000005,
+    "written_premium": 204.56,
+    "R_ilustrativo": 511.4517110478879,
+    "F_por_exposicion_F": 84.5325,
+    "F_por_exposicion_termino_F": 172.51530612244895,
+    "F_por_exposicion_P": 1341.5477885176215,
+    "F_por_exposicion_P_anualizada": 1348.9671076094735,
+    "F_por_poliza_y_anio_F": 85.0,
+    "F_por_poliza_y_anio_termino_F": 173.46938775510202,
+    "F_por_poliza_y_anio_P": 1342.5018701502745,
+    "F_por_poliza_y_anio_P_anualizada": 1349.9264657116887,
+    "F_entero_por_fila_F": 85.0,
+    "F_entero_por_fila_termino_F": 173.46938775510202,
+    "F_entero_por_fila_P": 1342.5018701502745,
+    "F_entero_por_fila_P_anualizada": 1349.9264657116887
+   },
+   {
+    "row_id": "B00229821",
+    "policy_id": "B92110463",
+    "line": "buildings",
+    "channel": "broker",
+    "new_business": true,
+    "period_start": "2025-01-04",
+    "period_end": "2025-12-31",
+    "exposure": 0.9918,
+    "filas_poliza_2025": 1,
+    "exposicion_poliza_2025": 0.9918,
+    "denominador": 0.49000000000000005,
+    "written_premium": 285.6,
+    "R_ilustrativo": 510.0631543663099,
+    "F_por_exposicion_F": 84.303,
+    "F_por_exposicion_termino_F": 172.04693877551017,
+    "F_por_exposicion_P": 1337.9055773270757,
+    "F_por_exposicion_P_anualizada": 1348.9671076094733,
+    "F_por_poliza_y_anio_F": 85.0,
+    "F_por_poliza_y_anio_termino_F": 173.46938775510202,
+    "F_por_poliza_y_anio_P": 1339.3280263066674,
+    "F_por_poliza_y_anio_P_anualizada": 1350.4013171069444,
+    "F_entero_por_fila_F": 85.0,
+    "F_entero_por_fila_termino_F": 173.46938775510202,
+    "F_entero_por_fila_P": 1339.3280263066674,
+    "F_entero_por_fila_P_anualizada": 1350.4013171069444
+   },
+   {
+    "row_id": "B00250679",
+    "policy_id": "B05817658",
+    "line": "buildings",
+    "channel": "broker",
+    "new_business": true,
+    "period_start": "2025-11-22",
+    "period_end": "2025-12-31",
+    "exposure": 0.1096,
+    "filas_poliza_2025": 2,
+    "exposicion_poliza_2025": 0.1288,
+    "denominador": 0.49000000000000005,
+    "written_premium": 180.72,
+    "R_ilustrativo": 56.36511566701711,
+    "F_por_exposicion_F": 9.316,
+    "F_por_exposicion_termino_F": 19.01224489795918,
+    "F_por_exposicion_P": 147.8467949939983,
+    "F_por_exposicion_P_anualizada": 1348.9671076094735,
+    "F_por_poliza_y_anio_F": 72.32919254658385,
+    "F_por_poliza_y_anio_termino_F": 147.61059703384458,
+    "F_por_poliza_y_anio_P": 276.4451471298837,
+    "F_por_poliza_y_anio_P_anualizada": 2522.30973658653,
+    "F_entero_por_fila_F": 85.0,
+    "F_entero_por_fila_termino_F": 173.46938775510202,
+    "F_entero_por_fila_P": 302.3039378511411,
+    "F_entero_por_fila_P_anualizada": 2758.247608130849
+   },
+   {
+    "row_id": "C00259568",
+    "policy_id": "C16955632",
+    "line": "contents",
+    "channel": "broker",
+    "new_business": false,
+    "period_start": "2025-01-01",
+    "period_end": "2025-12-31",
+    "exposure": 1.0,
+    "filas_poliza_2025": 1,
+    "exposicion_poliza_2025": 1.0,
+    "denominador": 0.49000000000000005,
+    "written_premium": 83.18,
+    "R_ilustrativo": 91.13143209117962,
+    "F_por_exposicion_F": 85.0,
+    "F_por_exposicion_termino_F": 173.46938775510202,
+    "F_por_exposicion_P": 381.7698039635126,
+    "F_por_exposicion_P_anualizada": 381.7698039635126,
+    "F_por_poliza_y_anio_F": 85.0,
+    "F_por_poliza_y_anio_termino_F": 173.46938775510202,
+    "F_por_poliza_y_anio_P": 381.7698039635126,
+    "F_por_poliza_y_anio_P_anualizada": 381.7698039635126,
+    "F_entero_por_fila_F": 85.0,
+    "F_entero_por_fila_termino_F": 173.46938775510202,
+    "F_entero_por_fila_P": 381.7698039635126,
+    "F_entero_por_fila_P_anualizada": 381.7698039635126
+   },
+   {
+    "row_id": "C00270331",
+    "policy_id": "C97318122",
+    "line": "contents",
+    "channel": "broker",
+    "new_business": true,
+    "period_start": "2025-01-11",
+    "period_end": "2025-12-31",
+    "exposure": 0.9726,
+    "filas_poliza_2025": 1,
+    "exposicion_poliza_2025": 0.9726,
+    "denominador": 0.49000000000000005,
+    "written_premium": 140.29,
+    "R_ilustrativo": 88.6344308518813,
+    "F_por_exposicion_F": 82.671,
+    "F_por_exposicion_termino_F": 168.71632653061224,
+    "F_por_exposicion_P": 371.30931133491237,
+    "F_por_exposicion_P_anualizada": 381.76980396351263,
+    "F_por_poliza_y_anio_F": 85.0,
+    "F_por_poliza_y_anio_termino_F": 173.46938775510202,
+    "F_por_poliza_y_anio_P": 376.06237255940215,
+    "F_por_poliza_y_anio_P_anualizada": 386.65676800267545,
+    "F_entero_por_fila_F": 85.0,
+    "F_entero_por_fila_termino_F": 173.46938775510202,
+    "F_entero_por_fila_P": 376.06237255940215,
+    "F_entero_por_fila_P_anualizada": 386.65676800267545
+   },
+   {
+    "row_id": "C00283470",
+    "policy_id": "C11841593",
+    "line": "contents",
+    "channel": "broker",
+    "new_business": true,
+    "period_start": "2025-01-11",
+    "period_end": "2025-12-31",
+    "exposure": 0.9726,
+    "filas_poliza_2025": 1,
+    "exposicion_poliza_2025": 0.9726,
+    "denominador": 0.49000000000000005,
+    "written_premium": 117.97,
+    "R_ilustrativo": 88.6344308518813,
+    "F_por_exposicion_F": 82.671,
+    "F_por_exposicion_termino_F": 168.71632653061224,
+    "F_por_exposicion_P": 371.30931133491237,
+    "F_por_exposicion_P_anualizada": 381.76980396351263,
+    "F_por_poliza_y_anio_F": 85.0,
+    "F_por_poliza_y_anio_termino_F": 173.46938775510202,
+    "F_por_poliza_y_anio_P": 376.06237255940215,
+    "F_por_poliza_y_anio_P_anualizada": 386.65676800267545,
+    "F_entero_por_fila_F": 85.0,
+    "F_entero_por_fila_termino_F": 173.46938775510202,
+    "F_entero_por_fila_P": 376.06237255940215,
+    "F_entero_por_fila_P_anualizada": 386.65676800267545
+   },
+   {
+    "row_id": "C00286287",
+    "policy_id": "C12450281",
+    "line": "contents",
+    "channel": "broker",
+    "new_business": true,
+    "period_start": "2025-01-13",
+    "period_end": "2025-12-31",
+    "exposure": 0.9671,
+    "filas_poliza_2025": 1,
+    "exposicion_poliza_2025": 0.9671,
+    "denominador": 0.49000000000000005,
+    "written_premium": 269.23,
+    "R_ilustrativo": 88.1332079753798,
+    "F_por_exposicion_F": 82.20349999999999,
+    "F_por_exposicion_termino_F": 167.76224489795914,
+    "F_por_exposicion_P": 369.209577413113,
+    "F_por_exposicion_P_anualizada": 381.7698039635126,
+    "F_por_poliza_y_anio_F": 85.0,
+    "F_por_poliza_y_anio_termino_F": 173.46938775510202,
+    "F_por_poliza_y_anio_P": 374.9167202702559,
+    "F_por_poliza_y_anio_P_anualizada": 387.6710994418942,
+    "F_entero_por_fila_F": 85.0,
+    "F_entero_por_fila_termino_F": 173.46938775510202,
+    "F_entero_por_fila_P": 374.9167202702559,
+    "F_entero_por_fila_P_anualizada": 387.6710994418942
+   },
+   {
+    "row_id": "C00302985",
+    "policy_id": "C36495409",
+    "line": "contents",
+    "channel": "broker",
+    "new_business": true,
+    "period_start": "2025-01-04",
+    "period_end": "2025-12-31",
+    "exposure": 0.9918,
+    "filas_poliza_2025": 1,
+    "exposicion_poliza_2025": 0.9918,
+    "denominador": 0.49000000000000005,
+    "written_premium": 115.88,
+    "R_ilustrativo": 90.38415434803194,
+    "F_por_exposicion_F": 84.303,
+    "F_por_exposicion_termino_F": 172.04693877551017,
+    "F_por_exposicion_P": 378.63929157101177,
+    "F_por_exposicion_P_anualizada": 381.7698039635126,
+    "F_por_poliza_y_anio_F": 85.0,
+    "F_por_poliza_y_anio_termino_F": 173.46938775510202,
+    "F_por_poliza_y_anio_P": 380.0617405506036,
+    "F_por_poliza_y_anio_P_anualizada": 383.2040134609837,
+    "F_entero_por_fila_F": 85.0,
+    "F_entero_por_fila_termino_F": 173.46938775510202,
+    "F_entero_por_fila_P": 380.0617405506036,
+    "F_entero_por_fila_P_anualizada": 383.2040134609837
+   },
+   {
+    "row_id": "C00314425",
+    "policy_id": "C17515168",
+    "line": "contents",
+    "channel": "broker",
+    "new_business": true,
+    "period_start": "2025-01-13",
+    "period_end": "2025-02-06",
+    "exposure": 0.0685,
+    "filas_poliza_2025": 2,
+    "exposicion_poliza_2025": 0.9671,
+    "denominador": 0.49000000000000005,
+    "written_premium": 102.87,
+    "R_ilustrativo": 6.2425030982458045,
+    "F_por_exposicion_F": 5.822500000000001,
+    "F_por_exposicion_termino_F": 11.88265306122449,
+    "F_por_exposicion_P": 26.151231571500613,
+    "F_por_exposicion_P_anualizada": 381.7698039635126,
+    "F_por_poliza_y_anio_F": 6.02057698273188,
+    "F_por_poliza_y_anio_termino_F": 12.286891801493631,
+    "F_por_poliza_y_anio_P": 26.555470311769756,
+    "F_por_poliza_y_anio_P_anualizada": 387.6710994418942,
+    "F_entero_por_fila_F": 85.0,
+    "F_entero_por_fila_termino_F": 173.46938775510202,
+    "F_entero_por_fila_P": 187.73796626537813,
+    "F_entero_por_fila_P_anualizada": 2740.7002374507756
+   },
+   {
+    "row_id": "M00118569",
+    "policy_id": "M75811658",
+    "line": "motor",
+    "channel": "direct",
+    "new_business": false,
+    "period_start": "2025-01-01",
+    "period_end": "2025-12-09",
+    "exposure": 0.9397,
+    "filas_poliza_2025": 1,
+    "exposicion_poliza_2025": 0.9397,
+    "denominador": 0.6900000000000001,
+    "written_premium": 1095.48,
+    "R_ilustrativo": 406.61256911194914,
+    "F_por_exposicion_F": 79.8745,
+    "F_por_exposicion_termino_F": 115.76014492753622,
+    "F_por_exposicion_P": 705.0537233506509,
+    "F_por_exposicion_P_anualizada": 750.2966088652239,
+    "F_por_poliza_y_anio_F": 85.0,
+    "F_por_poliza_y_anio_termino_F": 123.18840579710144,
+    "F_por_poliza_y_anio_P": 712.4819842202161,
+    "F_por_poliza_y_anio_P_anualizada": 758.2015368949836,
+    "F_entero_por_fila_F": 85.0,
+    "F_entero_por_fila_termino_F": 123.18840579710144,
+    "F_entero_por_fila_P": 712.4819842202161,
+    "F_entero_por_fila_P_anualizada": 758.2015368949836
+   },
+   {
+    "row_id": "M00129413",
+    "policy_id": "M41089337",
+    "line": "motor",
+    "channel": "broker",
+    "new_business": true,
+    "period_start": "2025-09-02",
+    "period_end": "2025-12-31",
+    "exposure": 0.3315,
+    "filas_poliza_2025": 1,
+    "exposicion_poliza_2025": 0.3315,
+    "denominador": 0.49000000000000005,
+    "written_premium": 354.15,
+    "R_ilustrativo": 143.441594828787,
+    "F_por_exposicion_F": 28.177500000000002,
+    "F_por_exposicion_termino_F": 57.505102040816325,
+    "F_por_exposicion_P": 350.24305067099385,
+    "F_por_exposicion_P_anualizada": 1056.540122687764,
+    "F_por_poliza_y_anio_F": 85.0,
+    "F_por_poliza_y_anio_termino_F": 173.46938775510202,
+    "F_por_poliza_y_anio_P": 466.2073363852796,
+    "F_por_poliza_y_anio_P_anualizada": 1406.356972504614,
+    "F_entero_por_fila_F": 85.0,
+    "F_entero_por_fila_termino_F": 173.46938775510202,
+    "F_entero_por_fila_P": 466.2073363852796,
+    "F_entero_por_fila_P_anualizada": 1406.356972504614
+   },
+   {
+    "row_id": "M00153851",
+    "policy_id": "M47069725",
+    "line": "motor",
+    "channel": "broker",
+    "new_business": true,
+    "period_start": "2025-01-15",
+    "period_end": "2025-12-31",
+    "exposure": 0.9616,
+    "filas_poliza_2025": 1,
+    "exposicion_poliza_2025": 0.9616,
+    "denominador": 0.49000000000000005,
+    "written_premium": 414.72,
+    "R_ilustrativo": 416.0888011685115,
+    "F_por_exposicion_F": 81.736,
+    "F_por_exposicion_termino_F": 166.80816326530612,
+    "F_por_exposicion_P": 1015.968981976554,
+    "F_por_exposicion_P_anualizada": 1056.540122687764,
+    "F_por_poliza_y_anio_F": 85.0,
+    "F_por_poliza_y_anio_termino_F": 173.46938775510202,
+    "F_por_poliza_y_anio_P": 1022.6302064663499,
+    "F_por_poliza_y_anio_P_anualizada": 1063.4673528144237,
+    "F_entero_por_fila_F": 85.0,
+    "F_entero_por_fila_termino_F": 173.46938775510202,
+    "F_entero_por_fila_P": 1022.6302064663499,
+    "F_entero_por_fila_P_anualizada": 1063.4673528144237
+   },
+   {
+    "row_id": "M00161473",
+    "policy_id": "M92909747",
+    "line": "motor",
+    "channel": "broker",
+    "new_business": true,
+    "period_start": "2025-01-14",
+    "period_end": "2025-12-31",
+    "exposure": 0.9644,
+    "filas_poliza_2025": 1,
+    "exposicion_poliza_2025": 0.9644,
+    "denominador": 0.49000000000000005,
+    "written_premium": 1131.78,
+    "R_ilustrativo": 417.30037421683915,
+    "F_por_exposicion_F": 81.974,
+    "F_por_exposicion_termino_F": 167.2938775510204,
+    "F_por_exposicion_P": 1018.9272943200798,
+    "F_por_exposicion_P_anualizada": 1056.540122687764,
+    "F_por_poliza_y_anio_F": 85.0,
+    "F_por_poliza_y_anio_termino_F": 173.46938775510202,
+    "F_por_poliza_y_anio_P": 1025.1028045241615,
+    "F_por_poliza_y_anio_P_anualizada": 1062.9435965617602,
+    "F_entero_por_fila_F": 85.0,
+    "F_entero_por_fila_termino_F": 173.46938775510202,
+    "F_entero_por_fila_P": 1025.1028045241615,
+    "F_entero_por_fila_P_anualizada": 1062.9435965617602
+   },
+   {
+    "row_id": "M00167496",
+    "policy_id": "M61457154",
+    "line": "motor",
+    "channel": "broker",
+    "new_business": true,
+    "period_start": "2025-01-07",
+    "period_end": "2025-12-31",
+    "exposure": 0.9836,
+    "filas_poliza_2025": 1,
+    "exposicion_poliza_2025": 0.9836,
+    "denominador": 0.49000000000000005,
+    "written_premium": 463.95,
+    "R_ilustrativo": 425.6083036910856,
+    "F_por_exposicion_F": 83.60600000000001,
+    "F_por_exposicion_termino_F": 170.62448979591838,
+    "F_por_exposicion_P": 1039.2128646756848,
+    "F_por_exposicion_P_anualizada": 1056.540122687764,
+    "F_por_poliza_y_anio_F": 85.0,
+    "F_por_poliza_y_anio_termino_F": 173.46938775510202,
+    "F_por_poliza_y_anio_P": 1042.0577626348686,
+    "F_por_poliza_y_anio_P_anualizada": 1059.432454895149,
+    "F_entero_por_fila_F": 85.0,
+    "F_entero_por_fila_termino_F": 173.46938775510202,
+    "F_entero_por_fila_P": 1042.0577626348686,
+    "F_entero_por_fila_P_anualizada": 1059.432454895149
+   },
+   {
+    "row_id": "M00176777",
+    "policy_id": "M42023395",
+    "line": "motor",
+    "channel": "broker",
+    "new_business": true,
+    "period_start": "2025-01-04",
+    "period_end": "2025-12-31",
+    "exposure": 0.9918,
+    "filas_poliza_2025": 1,
+    "exposicion_poliza_2025": 0.9918,
+    "denominador": 0.49000000000000005,
+    "written_premium": 443.61,
+    "R_ilustrativo": 429.15648190404505,
+    "F_por_exposicion_F": 84.303,
+    "F_por_exposicion_termino_F": 172.04693877551017,
+    "F_por_exposicion_P": 1047.8764936817247,
+    "F_por_exposicion_P_anualizada": 1056.5401226877643,
+    "F_por_poliza_y_anio_F": 85.0,
+    "F_por_poliza_y_anio_termino_F": 173.46938775510202,
+    "F_por_poliza_y_anio_P": 1049.2989426613162,
+    "F_por_poliza_y_anio_P_anualizada": 1057.9743321852352,
+    "F_entero_por_fila_F": 85.0,
+    "F_entero_por_fila_termino_F": 173.46938775510202,
+    "F_entero_por_fila_P": 1049.2989426613162,
+    "F_entero_por_fila_P_anualizada": 1057.9743321852352
+   },
+   {
+    "row_id": "M00185311",
+    "policy_id": "M83715550",
+    "line": "motor",
+    "channel": "direct",
+    "new_business": true,
+    "period_start": "2025-01-14",
+    "period_end": "2025-12-31",
+    "exposure": 0.9644,
+    "filas_poliza_2025": 1,
+    "exposicion_poliza_2025": 0.9644,
+    "denominador": 0.6900000000000001,
+    "written_premium": 872.31,
+    "R_ilustrativo": 417.30037421683915,
+    "F_por_exposicion_F": 81.974,
+    "F_por_exposicion_termino_F": 118.80289855072463,
+    "F_por_exposicion_P": 723.5860495896219,
+    "F_por_exposicion_P_anualizada": 750.2966088652238,
+    "F_por_poliza_y_anio_F": 85.0,
+    "F_por_poliza_y_anio_termino_F": 123.18840579710144,
+    "F_por_poliza_y_anio_P": 727.9715568359987,
+    "F_por_poliza_y_anio_P_anualizada": 754.8440033554529,
+    "F_entero_por_fila_F": 85.0,
+    "F_entero_por_fila_termino_F": 123.18840579710144,
+    "F_entero_por_fila_P": 727.9715568359987,
+    "F_entero_por_fila_P_anualizada": 754.8440033554529
+   }
+  ],
+  "filas_con_exposicion_menor_0_99": 15,
+  "diferencia_max_F_entero_menos_exposicion": 161.58673469387753,
+  "fila_diferencia_max": "C00314425",
+  "diferencia_mediana": 4.753061224489784,
+  "suma_termino_F_exposicion": 2822.727062999112,
+  "suma_termino_F_entero": 3318.5448092280394,
+  "suma_termino_F_poliza_anio": 3131.5035225531738
+ },
+ "segundos": 199
+}

@@ -1,0 +1,15 @@
+Codex. Continúo COD-S2-20261023-003 por la nueva petición de revisar variables, clima 2025, reporte y reservas, y registrar cuándo se puede entrenar.
+
+La descripción de datos se consultó otra vez en Kaggle: sigue anunciando clima 2023–2024 y no acredita que el clima anual 2025 sea conocido al cotizar. El archivo contiene datos 2025 distintos de 2024. La base inicial excluirá todo clima contemporáneo; una tabla opcional conservará solo el último año completo anterior a la fecha de cotización inferida. Para 2023 ese historial no existe: quedará ausente, sin completar con datos futuros.
+
+El bloque inicial admitirá variables contractuales y físicas bajo una hipótesis explícita de estabilidad de los maestros. Quedan fuera identificadores, resultados, grupos/folds, contactos de servicio, decisiones de renovación, prima/descuento comercial, perfiles sin fecha y género. Las variables condicionales se conservan separadas. No habrá imputación o codificación aprendida fuera de los folds.
+
+Se detectó además una separación de escala en capitales: edificios hasta 894.000 frente a una segunda agrupación desde 60 millones; contenidos hasta 283.200 frente a otra desde 7,6 millones. El logaritmo del capital quedará ausente por encima de los filtros de calidad 10 millones/1 millón, sin dividir por mil ni cambiar el original. Son filtros de incertidumbre, no límites oficiales de cobertura ni prueba de error individual. La marca de revisión no será predictor.
+
+Para reporte, estimaré curvas por ramo y peligro con el estimador producto-límite de tiempo inverso, que contempla truncamiento. Separaré completitud de conteos y del coste observado mediante marcas de incurrido neto. Se ajustarán dentro de los grupos de cada split: 2023 completo para el temporal, 2023 sin el fold retenido para desarrollo/población nueva, y 2023–2024 solo para producción. No se usarán etiquetas de validación en ese ajuste.
+
+El coste observado ya incluye reserva de caso. Mantendré b=1 como hipótesis condicional del escenario base, con b=0,75/1,25 aplicados solo a la reserva y recalculando la curva de coste. No se certifica suficiencia ni se añade otra vez la reserva. La cola fuera de la historia observada no está identificada: se declara la hipótesis de soporte y se preparan escenarios de masa de coste tardío de 5 %/10 % para lesiones y hundimiento, sin tratarlos como estimaciones observadas.
+
+La exposición efectiva incorporará la proporción reportada una sola vez. Al predecir el último de 2025 se usa exposición nominal; no se añade otro multiplicador IBNR a una tasa ya ajustada. El contraste de 2024 usará el vínculo de observación correspondiente frente a T0, sin llamarlo validación del último oculto.
+
+La [preinscripción](../../Repositorio_IAA2026/registro/semana2_variables_ultimo_plan.json) fija método, ámbitos y controles. El resultado podrá habilitar los primeros entrenamientos de precio bajo estas condiciones, pero este bloque no entrenará modelos de precio. El diagnóstico y el método quedan separados de la revisión humana y de una validación independiente inexistente.

@@ -1,0 +1,83 @@
+{
+  "id": "CLA-S2-DEC-20261023",
+  "autor": "Claude (Cowork)",
+  "utc": "2026-10-23T20:09:00Z",
+  "estado": "preinscrita antes de calcular listas, bloques y factores",
+  "mensaje_participante": "en las cuatro recomendaciones realiza tus sugerencias, dividir los valores con criterio, clima como indicas, nivel de nuevos negocios con credibilidad, gasto fijo de la primas según exposición pero en este caso dame tu opinión",
+  "responde_a": "Decisiones del participante pedidas en CLA-S2-20261023-001 (sección «Decisiones del participante»)",
+  "conocido_antes_de_preinscribir": [
+    "Relatividades brutas de frecuencia NB/REN publicadas en CLA-S2-20261023-001: autos 1,30 (emergente) y 1,39 (desarrollado); edificios 0,94 y 1,05; contenidos 1,37 y 1,16.",
+    "Medianas de prima por mil de las 349 filas de escala dudosa y los huecos entre nubes (CLA-S2-20261023-001, S2-CLA-03).",
+    "Correlaciones interanuales del clima por dirección (exploración de esta sesión): viento 0,871/0,913, índice forestal 0,891/0,866, lluvia 0,922/0,945, granizo 0,199/0,229, heladas 0,786/0,704, sequía 0,596/-0,242, temperatura 0,896/0,498 (pares 2023-2024 y 2024-2025).",
+    "Índice mensual de frecuencia por ramo en las renovaciones (exploración de esta sesión, sin relatividades NB): autos plano; edificios con enero, febrero y diciembre entre 1,27 y 1,45 en el desarrollado; contenidos entre 1,10 y 1,14 en esos meses. El nuevo negocio orgánico empieza a lo largo del año (enero 7-8 %) y cubre en promedio 0,46-0,48 años.",
+    "Resultados de las tandas v1 a v3 de Codex en 2023 publicados en el foro (COD-S2-20261023-009, 011 y 013)."
+  ],
+  "reglas": {
+    "CAPS2-01": {
+      "decision": "Dividir entre mil, con criterio, el capital de escala dudosa (en lugar de la máscara de F0).",
+      "ambito": "Filas de edificios y contenidos del emergente: entrenamiento 2023-2024 y test 2025.",
+      "umbral_CU": {"buildings": 5000000, "contents": 2000000},
+      "prueba_prima_por_mil": "ppm = 1000 * written_premium / sum_insured. Población normal del ramo: todas las filas con sum_insured <= umbral (entrenamiento y test). Una fila por encima del umbral se divide entre 1000 si ppm_bruta < min(ppm normal) y ppm con el capital dividido queda dentro de [min, max] de la población normal, como en D66.",
+      "si_no_pasa": "La fila conserva el capital desconocido de F0 (máscara) y se lista aparte.",
+      "confirmacion_por_historia": "audit_capital_scale_confirmed = la misma policy_id tiene otra fila (2023-2025) por debajo del umbral con capital entre 0,80 y 1,25 veces el capital dividido. Es informativa: no condiciona la división.",
+      "control_de_hueco": "Número de filas por debajo del umbral con ppm_bruta < min(ppm normal) / 10; se espera cero.",
+      "salidas": "Tabla por fila (row_id, line, year, is_test, sum_insured_raw, sum_insured_model, audit_capital_scale_adjusted, audit_capital_scale_confirmed, ppm_raw, ppm_model) en privado y SHA-256 de la lista ordenada de row_id divididos. Para F0: x_log_sum_insured = log(sum_insured_model); las marcas audit_* quedan fuera de los predictores."
+    },
+    "CLIMA-S2-01": {
+      "decision": "Clima como se propuso en CLA-S2-20261023-001.",
+      "base": "Sin clima del año de cobertura, como en S2-F0-ULT-20261023; se conserva.",
+      "bloque_de_la_direccion": "Variables con correlación de Pearson entre direcciones >= 0,80 en los dos pares 2023->2024 y 2024->2025. Para una fila del año y, media de la variable de su dirección en los años de {2023, 2024} distintos de y: las filas de 2023 toman 2024, las de 2024 toman 2023 y las de 2025 la media de 2023 y 2024. Nunca entra el clima del propio año ni el de 2025. Columnas x_clima_dir_<variable>.",
+      "declaracion": "En las filas de 2023 el valor procede de 2024: se usa como medida de un atributo estable de la dirección, no del tiempo del periodo. La persistencia interanual es lo que lo justifica y se informa.",
+      "comprobacion_descriptiva": "Sin modelo: frecuencia de 2023 por terciles de la variable del bloque frente a terciles del clima del propio año, en los pares tormenta-viento (edificios), incendio-índice forestal (edificios), inundación-lluvia (edificios y contenidos) y escape de agua-lluvia (edificios y contenidos). Se informa la razón entre terciles extremos con cada versión.",
+      "uso": "Variante F0 + bloque para que Codex la contraste con su política de selección; no entra a la base sin ese contraste.",
+      "escenario_2025": "Los factores por peligro de la estandarización directa con el clima realizado de 2025 (revision_apertura_20261023/evidencia.json, clima.sensibilidad_2025) se declaran como escenario, no como predicción."
+    },
+    "NB-CRED-01": {
+      "decision": "Nivel del nuevo negocio con credibilidad frente al desarrollado.",
+      "objeto": "Relatividad del nuevo negocio frente a la renovación por ramo, neta de covariables, que fija el nivel del nuevo negocio de 2025.",
+      "datos": "Emergente 2023 (año de desarrollo de Codex; 2024 sigue cerrado) y desarrollado 2021-2023 (maduros al 31-12-2024; DUP01 excluido e ID01 aplicado como en la revisión). Exposición días inclusivos / 365. Frecuencia: siniestros aceptados asignados con neto > 0. Severidad: su neto.",
+      "estacionalidad": "Exposición estacional e_s = suma por mes calendario de (días del periodo en el mes / 365) * s_m, con s_m el índice mensual de frecuencia de las renovaciones del desarrollado 2021-2023 en ese ramo (media ponderada por exposición igual a 1). Sensibilidades: sin estacionalidad y con el índice del emergente 2023.",
+      "modelos": "Por mercado y ramo: Poisson con enlace log y desplazamiento log(e_s) para la frecuencia; Gamma con enlace log para la severidad por siniestro. Mismas covariables en los dos mercados, región propia de cada mercado e indicador NB. Ridge 1e-8 solo por estabilidad. Errores típicos robustos agrupados por cliente.",
+      "covariables": {
+        "motor": ["driver_age_band", "years_licensed en tramos 0-2/3-5/6-10/11-20/21+", "ncb_years en tramos 0/1-2/3-4/5-8/9+", "vehicle_value_group", "vehicle_age en tramos 0-2/3-5/6-9/10-14/15+", "cover_type", "vehicle_use", "overnight_parking", "named_young_driver", "fuel_type", "body_type", "transmission", "channel", "payment_method", "voluntary_excess", "urban_density", "region"],
+        "buildings": ["policyholder_age_band", "log(sum_insured_model) centrado", "occupancy", "smoke_alarms", "accidental_damage_cover", "mortgage", "voluntary_excess", "channel", "payment_method", "urban_density", "flood_zone", "property_type", "roof_type", "basement", "soil_type", "antigüedad de la vivienda en tramos <1950/1950-1979/1980-1999/2000+", "region"],
+        "contents": ["policyholder_age_band", "log(sum_insured_model) centrado", "tenure", "security_level", "high_value_items", "accidental_damage_cover", "works_from_home", "lodgers", "bicycle_cover", "voluntary_excess", "channel", "payment_method", "urban_density", "property_type", "flood_zone", "region"],
+        "edad_desarrollado": "driver_age y policyholder_age del desarrollado se llevan a las bandas 17-24/25-34/35-49/50-64/65+ del emergente.",
+        "excluidas": "renewal_count, antigüedad del cliente, customer_since_year, days_quote_to_inception, mes de inicio (dependen del propio nuevo negocio), contactos, prima escrita y descuentos, make_model y construction_type (codificación distinta entre mercados)."
+      },
+      "tau": "tau^2 = max(0, media de (beta_em - beta_dev)^2 - SE_em^2 - SE_dev^2) sobre los niveles compartidos con al menos 100 siniestros emergentes (frecuencia) o 100 siniestros con neto positivo (severidad), excluidos región y NB, agrupando los tres ramos; uno para frecuencia y otro para severidad. Sensibilidad: excluyendo los niveles de NCB.",
+      "credibilidad": "Z = tau^2 / (tau^2 + SE_em,NB^2) por ramo y componente.",
+      "relatividad_creible": "theta* = Z_f theta_f,em + (1 - Z_f) theta_f,dev + Z_s theta_s,em + (1 - Z_s) theta_s,dev. Factor de contracción c = exp(theta* - theta_em), con theta_em = theta_f,em + theta_s,em.",
+      "aplicacion_a_una_receta": "g_NB = (A/E_NB / A/E_REN) de la receta, con predicciones cruzadas en sus filas de ajuste, multiplicado por c; g_REN = 1. No cambia el nivel de las renovaciones.",
+      "diagnostico": "Sobre los OOF de 2023 guardados por Codex (W2-B00 a W2-B02 de dev_20261023T173828Z_7efe46fc y, si se pueden copiar con su SHA, W2-B03 a W2-B09 de dev3_20261023T181613Z_24c943a3): para cada fold k, A/E y theta_em sin el fold k; se informan D2 y A/E del nuevo negocio con la mezcla de 2023 y con la mezcla de 2025, junto a Z = 1 (solo emergente) y Z = 0 (solo desarrollado).",
+      "escenario_no_adoptado": "El bloque transferido en enero de 2025 se comporta como renovación (theta = 0): efecto en el nivel de 2025 por ramo.",
+      "fuera_de_alcance": "No elige receta, no abre 2024, no usa el tablero público ni ajusta modelos de precios."
+    },
+    "GASTO-F-01": {
+      "decision": "Gasto fijo según exposición; el participante pide opinión.",
+      "regla": "F_fila = 85 CU * exposure (expenses.parquet, fixed_expense_per_policy del emergente).",
+      "prima_comercial": "P_fila = [R_fila * (1 + 0,12 * 1{edificios o contenidos}) + F_fila] / (1 - 0,15 - c_canal - 0,08 - 0,08), con c_canal 0 en directo y 0,20 en broker; comparison_site no tiene valor en el emergente y no aparece entre las referencias.",
+      "se_informa": "La prima comercial anualizada P/exposure junto a la prima escrita, que es anual.",
+      "sensibilidades": "F entero por póliza y año repartido entre sus filas de 2025 según exposición, y F entero en cada fila.",
+      "R": "Ilustrativo hasta tener el candidato: frecuencia por severidad observadas en 2023 por ramo y exposición de la fila, señalado como ilustrativo."
+    }
+  },
+  "salidas_previstas": [
+    "evidencia_decisiones.json con todas las cifras",
+    "tablas CSV de agregados y figuras PNG",
+    "privado: capital_caps2_01.parquet y clima_direccion_s2_01.parquet por fila o dirección",
+    "factor_nuevo_negocio.py para aplicar NB-CRED-01 a cualquier receta",
+    "verificador de las cifras del aporte"
+  ],
+  "se_informa_sea_cual_sea_el_resultado": [
+    "Número de filas divididas, filas que no pasan y control de hueco.",
+    "Variables que superan o no el umbral de persistencia.",
+    "theta, SE, tau, Z y factores por ramo, con las sensibilidades, aunque contradigan la propuesta.",
+    "Diagnóstico de 2023 con las dos mezclas, aunque el factor empeore el D2."
+  ],
+  "limites": [
+    "Nada de esto ajusta modelos de precios ni sustituye el contraste de Codex.",
+    "La relatividad orgánica de nuevo negocio no mide directamente el bloque transferido en enero de 2025.",
+    "Revisión de IA, no revisión profesional independiente."
+  ]
+}

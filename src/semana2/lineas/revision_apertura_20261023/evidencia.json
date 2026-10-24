@@ -1,0 +1,2576 @@
+{
+ "autor": "Claude",
+ "inicio_utc": "2026-10-23T18:12:56+00:00",
+ "alcance": "Revision descriptiva; sin entrenamiento, sin cambios de datos, sin salidas por fila.",
+ "entorno": {
+  "python": "3.13.17",
+  "plataforma": "Linux-6.18.44-fc-v153-x86_64-with-glibc2.39",
+  "pandas": "3.0.5",
+  "numpy": "2.5.3",
+  "pyarrow": "26.0.0",
+  "scipy": "1.18.1"
+ },
+ "integridad": {
+  "emerging": {
+   "addresses": {
+    "bytes": 2094327,
+    "sha256": "4e9bf9d2a1777896e84fd4ee471096ff075aaefefd544f91b731324b25425632",
+    "coincide_manifiesto_codex": true,
+    "bytes_remotos": 2094327,
+    "coincide_bytes": true,
+    "filas": 136914
+   },
+   "claims": {
+    "bytes": 373376,
+    "sha256": "1a2fce8a26cb1e05de1f53fe4e39bde772a1898e845755487625355fec4cc0e9",
+    "coincide_manifiesto_codex": true,
+    "bytes_remotos": 373376,
+    "coincide_bytes": true,
+    "filas": 9258
+   },
+   "customers": {
+    "bytes": 2319251,
+    "sha256": "c00a0095d5fb7b2b65cd9647216add49afb3703d863d5c358b1441f0fab1fb62",
+    "coincide_manifiesto_codex": true,
+    "bytes_remotos": 2319251,
+    "coincide_bytes": true,
+    "filas": 135856
+   },
+   "expenses": {
+    "bytes": 3124,
+    "sha256": "9033f666a5a45f0b44501d57e40ab1cc571c51c384f23a62942b75db323b1cdf",
+    "coincide_manifiesto_codex": true,
+    "bytes_remotos": 3124,
+    "coincide_bytes": true,
+    "filas": 8
+   },
+   "policies_buildings": {
+    "bytes": 1049236,
+    "sha256": "ccc948fafc11e623d5cb010c2b494f6813f6048719eae7bcde28794467598319",
+    "coincide_manifiesto_codex": true,
+    "bytes_remotos": 1049236,
+    "coincide_bytes": true,
+    "filas": 27447
+   },
+   "policies_contents": {
+    "bytes": 1272728,
+    "sha256": "84d7f48d03933b018bec8fdc2f4bbd96df184cca7ae1971c38d3acc955720f8e",
+    "coincide_manifiesto_codex": true,
+    "bytes_remotos": 1272728,
+    "coincide_bytes": true,
+    "filas": 34566
+   },
+   "policies_motor": {
+    "bytes": 1988978,
+    "sha256": "7c5dbb5e5b46629ebf01a66c991183d20b8585393b589bc2644fcbd6653a3ec1",
+    "coincide_manifiesto_codex": true,
+    "bytes_remotos": 1988978,
+    "coincide_bytes": true,
+    "filas": 47283
+   },
+   "reference_policies": {
+    "bytes": 30934,
+    "sha256": "6d4c2839e87d092fccd4b3c3ddc16a2a4c4993c35e18481e322462cd382dd8f4",
+    "coincide_manifiesto_codex": true,
+    "bytes_remotos": 30934,
+    "coincide_bytes": true,
+    "filas": 20
+   },
+   "sample_submission": {
+    "bytes": 1197460,
+    "sha256": "160fc59043f1012337605c8d8446c0efbf81458e046cf02df9186d6f909d59ef",
+    "coincide_manifiesto_codex": true,
+    "bytes_remotos": 1197460,
+    "coincide_bytes": true,
+    "filas": 209063
+   },
+   "test_buildings": {
+    "bytes": 2507817,
+    "sha256": "21f91aaa66a1b9efd216ad0e04ff12a507dbeb721084330d9b9f06c99edd0ca6",
+    "coincide_manifiesto_codex": true,
+    "bytes_remotos": 2507817,
+    "coincide_bytes": true,
+    "filas": 52295
+   },
+   "test_contents": {
+    "bytes": 3038763,
+    "sha256": "af5ef2553e35a2d563ca091b173500daac55acc4969d1d3a96fa6b4ec3c6a012",
+    "coincide_manifiesto_codex": true,
+    "bytes_remotos": 3038763,
+    "coincide_bytes": true,
+    "filas": 66247
+   },
+   "test_motor": {
+    "bytes": 4626510,
+    "sha256": "108d5c68e9bab5ccd90ee5502bc3543aa515a5aa07fda44a3b227cf070a28aa5",
+    "coincide_manifiesto_codex": true,
+    "bytes_remotos": 4626510,
+    "coincide_bytes": true,
+    "filas": 90521
+   },
+   "weather": {
+    "bytes": 6060339,
+    "sha256": "645067069f68de8c4746d1ba48a454ff00155e1aa6fbbf64cdee48ae7269cbbd",
+    "coincide_manifiesto_codex": true,
+    "bytes_remotos": 6060339,
+    "coincide_bytes": true,
+    "filas": 410742
+   }
+  },
+  "developed": {
+   "addresses": {
+    "bytes": 8209304,
+    "sha256": "2f1a9a157649a73ed1b0ee9b2caa3660b4c2a11766af3c64ab5131389079c0b1",
+    "coincide_manifiesto_oficial": true
+   },
+   "claims": {
+    "bytes": 6393494,
+    "sha256": "323adf2e0f6c5975a026479d725d4cd04f51fce3aa069f897a99f664c6e392c0",
+    "coincide_manifiesto_oficial": true
+   },
+   "customers": {
+    "bytes": 9840123,
+    "sha256": "065458a0b3aa9d3499e80b3b25b76baf0ef6245146477b6861f6ea35edf581eb",
+    "coincide_manifiesto_oficial": true
+   },
+   "policies_buildings": {
+    "bytes": 28411001,
+    "sha256": "eb84372c23c16ed0619d89c8eb1396ab6916e5ec46a5907ce42c3dfce4a91cbe",
+    "coincide_manifiesto_oficial": true
+   },
+   "policies_contents": {
+    "bytes": 28203870,
+    "sha256": "8c067cc80baed583100df999e1c3d5e389295702f7bac21d5331bbd639b83fcd",
+    "coincide_manifiesto_oficial": true
+   },
+   "policies_motor": {
+    "bytes": 44218528,
+    "sha256": "4d2d7ae03971d5d6df3a71bbaf0ebc168250a6807b27d1561d38b638434dc95e",
+    "coincide_manifiesto_oficial": true
+   },
+   "weather": {
+    "bytes": 41863008,
+    "sha256": "b8407f0f3c7279a49297c969a4ab2905641b232910e316fb806730065987cd49",
+    "coincide_manifiesto_oficial": true
+   }
+  },
+  "todas_coinciden": true,
+  "archivos_comprobados": 20,
+  "archivos_coinciden": 20
+ },
+ "escala": {
+  "ids_coincidentes_entre_mercados": {
+   "clientes": 752,
+   "direcciones": 8046
+  },
+  "filas_train": {
+   "motor": 47283,
+   "buildings": 27447,
+   "contents": 34566
+  },
+  "filas_train_total": 109296,
+  "filas_test": {
+   "motor": 90521,
+   "buildings": 52295,
+   "contents": 66247
+  },
+  "filas_test_total": 209063,
+  "clientes": 135856,
+  "direcciones": 136914,
+  "plantilla_filas": 209063,
+  "plantilla_ids_unicos": true,
+  "plantilla_mismo_orden_motor_buildings_contents": true,
+  "claves_cliente_en_maestro": true,
+  "claves_direccion_en_maestro": true
+ },
+ "exposicion": {
+  "motor": {
+   "filas": 47283,
+   "mayores_que_uno": 189,
+   "maximo": 365.0,
+   "dias_max": 365,
+   "convencion": {
+    "ACT365": 47029,
+    "ACT360": 207,
+    "DIAS": 47
+   },
+   "ambiguas": 0,
+   "mayores_que_uno_por_convencion": {
+    "ACT360": 142,
+    "DIAS": 47
+   },
+   "act360_hasta_360_dias": 65,
+   "suma_cruda": 54429.4651,
+   "suma_dias_365": 38968.53424657534,
+   "suma_dias_36525": 38941.86173853525,
+   "filas_que_cambian_con_dias_365": 254,
+   "fin_31_12_2024": 0,
+   "fin_30_12_2024": 20097,
+   "filas_que_cubren_31_12_2024": 0,
+   "filas_2024": 25603,
+   "periodos_de_366_dias": 0,
+   "test": {
+    "filas": 90521,
+    "act365": 90521,
+    "mayores_que_uno": 0,
+    "maximo": 1.0
+   }
+  },
+  "buildings": {
+   "filas": 27447,
+   "mayores_que_uno": 117,
+   "maximo": 365.0,
+   "dias_max": 365,
+   "convencion": {
+    "ACT365": 27292,
+    "ACT360": 122,
+    "DIAS": 33
+   },
+   "ambiguas": 0,
+   "mayores_que_uno_por_convencion": {
+    "ACT360": 84,
+    "DIAS": 33
+   },
+   "act360_hasta_360_dias": 38,
+   "suma_cruda": 33783.083,
+   "suma_dias_365": 23468.005479452055,
+   "suma_dias_36525": 23451.942505133466,
+   "filas_que_cambian_con_dias_365": 155,
+   "fin_31_12_2024": 0,
+   "fin_30_12_2024": 12103,
+   "filas_que_cubren_31_12_2024": 0,
+   "filas_2024": 14867,
+   "periodos_de_366_dias": 0,
+   "test": {
+    "filas": 52295,
+    "act365": 52295,
+    "mayores_que_uno": 0,
+    "maximo": 1.0
+   }
+  },
+  "contents": {
+   "filas": 34566,
+   "mayores_que_uno": 146,
+   "maximo": 365.0,
+   "dias_max": 365,
+   "convencion": {
+    "ACT365": 34366,
+    "ACT360": 166,
+    "DIAS": 34
+   },
+   "ambiguas": 0,
+   "mayores_que_uno_por_convencion": {
+    "ACT360": 112,
+    "DIAS": 34
+   },
+   "act360_hasta_360_dias": 54,
+   "suma_cruda": 38892.9009,
+   "suma_dias_365": 29057.98082191781,
+   "suma_dias_36525": 29038.09171800137,
+   "filas_que_cambian_con_dias_365": 200,
+   "fin_31_12_2024": 0,
+   "fin_30_12_2024": 14922,
+   "filas_que_cubren_31_12_2024": 0,
+   "filas_2024": 18732,
+   "periodos_de_366_dias": 0,
+   "test": {
+    "filas": 66247,
+    "act365": 66247,
+    "mayores_que_uno": 0,
+    "maximo": 1.0
+   }
+  },
+  "total": {
+   "cruda": 127105.449,
+   "dias_365": 91494.5205479452,
+   "dias_36525": 91431.89596167009
+  },
+  "total_convenciones": {
+   "ACT365": 108687,
+   "ACT360": 495,
+   "DIAS": 114,
+   "OTRA": 0
+  },
+  "total_mayores_que_uno": 452
+ },
+ "siniestros": {
+  "filas": 9258,
+  "ids_distintos": 9258,
+  "estado": {
+   "closed": 8082,
+   "open": 1056,
+   "repudiated": 120
+  },
+  "por_ramo": {
+   "motor": 7183,
+   "buildings": 1059,
+   "contents": 1016
+  },
+  "perdida_min": "2021-10-27",
+  "perdida_max": "2024-12-29",
+  "reporte_min": "2023-01-02",
+  "reporte_max": "2024-12-30",
+  "perdidas_31_12_2024": 0,
+  "reportes_antes_de_perdida": 0,
+  "duplicados_exactos_salvo_claim_id": 0,
+  "duplicados_poliza_ramo_peligro_fecha": 0,
+  "asignacion": {
+   "motor": {
+    "siniestros": 7183,
+    "un_periodo": 7155,
+    "ninguno": 28
+   },
+   "buildings": {
+    "siniestros": 1059,
+    "un_periodo": 1056,
+    "ninguno": 3
+   },
+   "contents": {
+    "siniestros": 1016,
+    "un_periodo": 1011,
+    "ninguno": 5
+   }
+  },
+  "sin_periodo": {
+   "total": 36,
+   "por_ramo": {
+    "motor": 28,
+    "contents": 5,
+    "buildings": 3
+   },
+   "por_anio_perdida": {
+    "2021": 6,
+    "2022": 28,
+    "2023": 2
+   },
+   "con_poliza_en_train": 36,
+   "todos_antes_del_primer_periodo": true,
+   "dias_antes_min": 14,
+   "dias_antes_max": 431,
+   "dias_antes_mediana": 232.0,
+   "reportados_dentro_de_un_periodo_observado": 35,
+   "estado": {
+    "closed": 35,
+    "open": 1
+   },
+   "neto_todos": 92267.26000000001,
+   "neto_aceptados": 92267.26000000001,
+   "de_2023": [
+    {
+     "claim_id": "CL92229567",
+     "policy_id": "M51762850",
+     "loss_date": "2023-06-12",
+     "primer_inicio": "2023-11-25",
+     "dias_antes": 166,
+     "status": "closed"
+    },
+    {
+     "claim_id": "CL68452769",
+     "policy_id": "M43187897",
+     "loss_date": "2023-07-04",
+     "primer_inicio": "2023-12-26",
+     "dias_antes": 175,
+     "status": "open"
+    }
+   ]
+  }
+ },
+ "nuevo_negocio": {
+  "motor": {
+   "canal_por_grupo": {
+    "NB_2023_2024": {
+     "broker": 0.7019127773527162,
+     "direct": 0.24942616679418517,
+     "comparison_site": 0.0486610558530987
+    },
+    "NB_2025": {
+     "broker": 0.6989814451564157,
+     "direct": 0.25042500326925593,
+     "comparison_site": 0.05059355157432835
+    },
+    "REN_2023_2024": {
+     "broker": 0.7012368705212526,
+     "direct": 0.24973004810052027,
+     "comparison_site": 0.04903308137822715
+    },
+    "REN_2025": {
+     "broker": 0.7011706148032076,
+     "direct": 0.2505300027652318,
+     "comparison_site": 0.04829938243156051
+    }
+   },
+   "nb_2025_con_customer_since_2025": 1.0,
+   "customer_since_year_max_train": 2024,
+   "test_cliente_nuevo_en_ramo": 0.7602987152152539,
+   "test_cliente_nuevo_n": 68823,
+   "test_poliza_nueva": 0.7602987152152539,
+   "cliente_nuevo_igual_new_business": true,
+   "poliza_nueva_igual_new_business": true,
+   "clientes_nuevos_con_otro_ramo_en_train": 0,
+   "cuota_nb_filas": {
+    "2023": 0.12084870848708487,
+    "2024": 0.15291176815216967,
+    "2025": 0.7602987152152539
+   },
+   "filas_por_anio": {
+    "2023": 21680,
+    "2024": 25603,
+    "2025": 90521
+   },
+   "nb_inicio_en_enero": {
+    "2023": 0.0751908396946565,
+    "2024": 0.0756066411238825,
+    "2025": 0.8829751681850544
+   },
+   "cuota_nb_exposicion_2024": 0.09104562856561535,
+   "cuota_nb_exposicion_2025": 0.7685223901413566,
+   "rel_nb_emerging": {
+    "frecuencia": 1.2970990403109108,
+    "coste": 1.5935285439356326,
+    "siniestros_nb": 697,
+    "exposicion_nb": 3039.8931506849317
+   },
+   "rel_nb_emerging_por_anio": {
+    "2023": 1.4182603100709137,
+    "2024": 1.2266640144327565
+   },
+   "rel_nb_developed": {
+    "frecuencia": 1.3948824455191806,
+    "coste": 1.3420922419537358,
+    "siniestros_nb": 6570,
+    "exposicion_nb": 36187.2301369863
+   },
+   "rel_nb_developed_por_anio": {
+    "2023": 1.430672942125443,
+    "2024": 1.3560260915314228
+   },
+   "efecto_mezcla_2025_sobre_2024": {
+    "0.800": 0.8619916360359683,
+    "1.000": 1.0,
+    "1.200": 1.133072223469075,
+    "1.297": 1.1959766128116738,
+    "1.395": 1.2582393756058032,
+    "1.500": 1.3239894683888207
+   },
+   "psi": [
+    {
+     "variable": "customer_since_year",
+     "psi_2024_vs_2025": 2.027691017160401,
+     "psi_nb_train_vs_nb_2025": 17.747598535917998
+    },
+    {
+     "variable": "renewal_count",
+     "psi_2024_vs_2025": 1.384459754590779,
+     "psi_nb_train_vs_nb_2025": 0.0
+    },
+    {
+     "variable": "exposure",
+     "psi_2024_vs_2025": 0.2784266849697445,
+     "psi_nb_train_vs_nb_2025": 2.7312261851392483
+    },
+    {
+     "variable": "customer_service_contacts",
+     "psi_2024_vs_2025": 0.22272537727733954,
+     "psi_nb_train_vs_nb_2025": 0.20452053753005123
+    },
+    {
+     "variable": "marketing_segment",
+     "psi_2024_vs_2025": 0.06315400789861342,
+     "psi_nb_train_vs_nb_2025": 0.0006241365856475222
+    },
+    {
+     "variable": "discount_applied",
+     "psi_2024_vs_2025": 0.052811560316209635,
+     "psi_nb_train_vs_nb_2025": 9.136586308798937e-05
+    },
+    {
+     "variable": "years_licensed",
+     "psi_2024_vs_2025": 0.047824405382522514,
+     "psi_nb_train_vs_nb_2025": 0.007653283807716668
+    },
+    {
+     "variable": "driver_age_band",
+     "psi_2024_vs_2025": 0.04519044513227362,
+     "psi_nb_train_vs_nb_2025": 0.0006137351025552444
+    },
+    {
+     "variable": "written_premium",
+     "psi_2024_vs_2025": 0.043515175513631515,
+     "psi_nb_train_vs_nb_2025": 0.03200418238667941
+    },
+    {
+     "variable": "ncb_years",
+     "psi_2024_vs_2025": 0.04286710449087116,
+     "psi_nb_train_vs_nb_2025": 0.003558232527264221
+    },
+    {
+     "variable": "occupation",
+     "psi_2024_vs_2025": 0.010538269073396236,
+     "psi_nb_train_vs_nb_2025": 0.01881917289195835
+    },
+    {
+     "variable": "vehicle_age",
+     "psi_2024_vs_2025": 0.009309851888916709,
+     "psi_nb_train_vs_nb_2025": 0.003892560516125726
+    },
+    {
+     "variable": "make_model",
+     "psi_2024_vs_2025": 0.008862654168809523,
+     "psi_nb_train_vs_nb_2025": 0.05065217539785248
+    },
+    {
+     "variable": "body_type",
+     "psi_2024_vs_2025": 0.007865210368912409,
+     "psi_nb_train_vs_nb_2025": 0.0010661193188321492
+    },
+    {
+     "variable": "years_at_address",
+     "psi_2024_vs_2025": 0.005936597833543036,
+     "psi_nb_train_vs_nb_2025": 0.005654648150094265
+    },
+    {
+     "variable": "marital_status",
+     "psi_2024_vs_2025": 0.00305606171654661,
+     "psi_nb_train_vs_nb_2025": 0.0005186771259472449
+    },
+    {
+     "variable": "campaign_code",
+     "psi_2024_vs_2025": 0.0022641962182107936,
+     "psi_nb_train_vs_nb_2025": 0.002731299503947428
+    },
+    {
+     "variable": "previous_insurer",
+     "psi_2024_vs_2025": 0.0022512841590639067,
+     "psi_nb_train_vs_nb_2025": 0.009384574588575608
+    },
+    {
+     "variable": "vehicle_value_group",
+     "psi_2024_vs_2025": 0.0015628407330627106,
+     "psi_nb_train_vs_nb_2025": 0.0017818706175089293
+    },
+    {
+     "variable": "engine_size_cc",
+     "psi_2024_vs_2025": 0.0011707518773273046,
+     "psi_nb_train_vs_nb_2025": 0.0026408175625383854
+    },
+    {
+     "variable": "household_size",
+     "psi_2024_vs_2025": 0.0008845006446013475,
+     "psi_nb_train_vs_nb_2025": 0.0011442523862123183
+    },
+    {
+     "variable": "named_young_driver",
+     "psi_2024_vs_2025": 0.0006187810811372489,
+     "psi_nb_train_vs_nb_2025": 0.00021704207991864692
+    },
+    {
+     "variable": "cover_type",
+     "psi_2024_vs_2025": 0.0004929802903041665,
+     "psi_nb_train_vs_nb_2025": 0.0005772723637260785
+    },
+    {
+     "variable": "year_built",
+     "psi_2024_vs_2025": 0.00048325671410392036,
+     "psi_nb_train_vs_nb_2025": 0.0017123442345930006
+    },
+    {
+     "variable": "energy_rating",
+     "psi_2024_vs_2025": 0.00048172711550437927,
+     "psi_nb_train_vs_nb_2025": 0.0013979704189871537
+    },
+    {
+     "variable": "listed_building",
+     "psi_2024_vs_2025": 0.00034106196796011623,
+     "psi_nb_train_vs_nb_2025": 0.0006112272986611445
+    },
+    {
+     "variable": "elevation_m",
+     "psi_2024_vs_2025": 0.00026195114839722486,
+     "psi_nb_train_vs_nb_2025": 0.0020070146843302866
+    },
+    {
+     "variable": "email_domain",
+     "psi_2024_vs_2025": 0.00023388179586875755,
+     "psi_nb_train_vs_nb_2025": 0.0002918930239893936
+    },
+    {
+     "variable": "branch_id",
+     "psi_2024_vs_2025": 0.00022940265782910306,
+     "psi_nb_train_vs_nb_2025": 0.000339439621222794
+    },
+    {
+     "variable": "distance_to_river_km",
+     "psi_2024_vs_2025": 0.00021922075755509443,
+     "psi_nb_train_vs_nb_2025": 0.001987671343024908
+    },
+    {
+     "variable": "missed_payments_12m",
+     "psi_2024_vs_2025": 0.00019962527079360142,
+     "psi_nb_train_vs_nb_2025": 0.0006947793623225447
+    },
+    {
+     "variable": "fuel_type",
+     "psi_2024_vs_2025": 0.00017654046273660258,
+     "psi_nb_train_vs_nb_2025": 0.0012277473358950264
+    },
+    {
+     "variable": "bedrooms",
+     "psi_2024_vs_2025": 0.00016652678866318853,
+     "psi_nb_train_vs_nb_2025": 0.0003744688439920414
+    },
+    {
+     "variable": "document_preference",
+     "psi_2024_vs_2025": 0.00016233420762208923,
+     "psi_nb_train_vs_nb_2025": 0.0004730937372225365
+    },
+    {
+     "variable": "prior_claims_5y",
+     "psi_2024_vs_2025": 0.00015737989561571326,
+     "psi_nb_train_vs_nb_2025": 0.00028682007809749675
+    },
+    {
+     "variable": "vehicle_colour",
+     "psi_2024_vs_2025": 0.00014321423961843492,
+     "psi_nb_train_vs_nb_2025": 0.000901396737289141
+    },
+    {
+     "variable": "days_quote_to_inception",
+     "psi_2024_vs_2025": 0.00012339700788120103,
+     "psi_nb_train_vs_nb_2025": 0.0016331196293773499
+    },
+    {
+     "variable": "gender",
+     "psi_2024_vs_2025": 0.00011800799194366982,
+     "psi_nb_train_vs_nb_2025": 9.82095904932685e-05
+    },
+    {
+     "variable": "soil_type",
+     "psi_2024_vs_2025": 0.00011691389946950169,
+     "psi_nb_train_vs_nb_2025": 0.0009583553772913469
+    },
+    {
+     "variable": "region",
+     "psi_2024_vs_2025": 0.00010257749168698544,
+     "psi_nb_train_vs_nb_2025": 0.0014096018809739617
+    },
+    {
+     "variable": "voluntary_excess",
+     "psi_2024_vs_2025": 8.358571300190931e-05,
+     "psi_nb_train_vs_nb_2025": 0.0005115080145598424
+    },
+    {
+     "variable": "seats",
+     "psi_2024_vs_2025": 8.356744788742468e-05,
+     "psi_nb_train_vs_nb_2025": 0.00065665919230286
+    },
+    {
+     "variable": "solar_panels",
+     "psi_2024_vs_2025": 7.869769030012286e-05,
+     "psi_nb_train_vs_nb_2025": 2.923017717483305e-05
+    },
+    {
+     "variable": "licence_points",
+     "psi_2024_vs_2025": 7.178174287479818e-05,
+     "psi_nb_train_vs_nb_2025": 0.00024464475537363097
+    },
+    {
+     "variable": "flood_zone",
+     "psi_2024_vs_2025": 5.785370070823111e-05,
+     "psi_nb_train_vs_nb_2025": 0.000470716090749774
+    },
+    {
+     "variable": "payment_method",
+     "psi_2024_vs_2025": 3.8511723035327124e-05,
+     "psi_nb_train_vs_nb_2025": 0.0002691846207920364
+    },
+    {
+     "variable": "overnight_parking",
+     "psi_2024_vs_2025": 3.6303618248257325e-05,
+     "psi_nb_train_vs_nb_2025": 0.00014681006922319888
+    },
+    {
+     "variable": "urban_density",
+     "psi_2024_vs_2025": 3.5741817398914826e-05,
+     "psi_nb_train_vs_nb_2025": 4.9138031771659444e-05
+    },
+    {
+     "variable": "channel",
+     "psi_2024_vs_2025": 3.550612707743354e-05,
+     "psi_nb_train_vs_nb_2025": 9.136586308798937e-05
+    },
+    {
+     "variable": "marketing_consent",
+     "psi_2024_vs_2025": 2.7907665957022813e-05,
+     "psi_nb_train_vs_nb_2025": 6.754285572255949e-05
+    },
+    {
+     "variable": "basement",
+     "psi_2024_vs_2025": 2.7694676392161156e-05,
+     "psi_nb_train_vs_nb_2025": 1.2855015207859707e-05
+    },
+    {
+     "variable": "vehicle_use",
+     "psi_2024_vs_2025": 2.000343401433279e-05,
+     "psi_nb_train_vs_nb_2025": 0.00010509089881247732
+    },
+    {
+     "variable": "trees_within_5m",
+     "psi_2024_vs_2025": 1.6342228467572115e-05,
+     "psi_nb_train_vs_nb_2025": 6.787572240114557e-05
+    },
+    {
+     "variable": "property_type",
+     "psi_2024_vs_2025": 1.0828483741767031e-05,
+     "psi_nb_train_vs_nb_2025": 0.0003246550838296759
+    },
+    {
+     "variable": "transmission",
+     "psi_2024_vs_2025": 5.467937817896527e-06,
+     "psi_nb_train_vs_nb_2025": 4.431193407080836e-05
+    },
+    {
+     "variable": "driver_assist",
+     "psi_2024_vs_2025": 2.6149531643961034e-06,
+     "psi_nb_train_vs_nb_2025": 6.229106156315979e-05
+    },
+    {
+     "variable": "roof_type",
+     "psi_2024_vs_2025": 1.7212600614426647e-06,
+     "psi_nb_train_vs_nb_2025": 8.670516225960642e-09
+    },
+    {
+     "variable": "compulsory_excess",
+     "psi_2024_vs_2025": 0.0,
+     "psi_nb_train_vs_nb_2025": 0.0
+    }
+   ],
+   "psi_max_nb_sin_antiguedad_exposicion_ni_contactos": 0.05065217539785248,
+   "psi_variable_max_nb_sin_antiguedad_exposicion_ni_contactos": "make_model"
+  },
+  "buildings": {
+   "canal_por_grupo": {
+    "NB_2023_2024": {
+     "broker": 0.7010036978341257,
+     "direct": 0.24960380348652933,
+     "comparison_site": 0.049392498679344955
+    },
+    "NB_2025": {
+     "broker": 0.6975022660892336,
+     "direct": 0.2526941283110082,
+     "comparison_site": 0.049803605599758285
+    },
+    "REN_2023_2024": {
+     "broker": 0.7028443430117071,
+     "direct": 0.24546722454672246,
+     "comparison_site": 0.051688432441570516
+    },
+    "REN_2025": {
+     "broker": 0.7028380634390651,
+     "direct": 0.2458065029016615,
+     "comparison_site": 0.05135543365927339
+    }
+   },
+   "nb_2025_con_customer_since_2025": 1.0,
+   "customer_since_year_max_train": 2024,
+   "test_cliente_nuevo_en_ramo": 0.7594607515058801,
+   "test_cliente_nuevo_n": 39716,
+   "test_poliza_nueva": 0.7594607515058801,
+   "cliente_nuevo_igual_new_business": true,
+   "poliza_nueva_igual_new_business": true,
+   "clientes_nuevos_con_otro_ramo_en_train": 0,
+   "cuota_nb_filas": {
+    "2023": 0.1197933227344992,
+    "2024": 0.153292527073384,
+    "2025": 0.7594607515058801
+   },
+   "filas_por_anio": {
+    "2023": 12580,
+    "2024": 14867,
+    "2025": 52295
+   },
+   "nb_inicio_en_enero": {
+    "2023": 0.07365627073656271,
+    "2024": 0.0785432207108381,
+    "2025": 0.9135361063551214
+   },
+   "cuota_nb_exposicion_2024": 0.09022355087416652,
+   "cuota_nb_exposicion_2025": 0.7676156202905557,
+   "rel_nb_emerging": {
+    "frecuencia": 0.9412035024339467,
+    "coste": 0.8172180834791775,
+    "siniestros_nb": 77,
+    "exposicion_nb": 1809.86301369863
+   },
+   "rel_nb_emerging_por_anio": {
+    "2023": 1.2381354874358321,
+    "2024": 0.7461849659320849
+   },
+   "rel_nb_developed": {
+    "frecuencia": 1.0530627549360108,
+    "coste": 1.0029123407012197,
+    "siniestros_nb": 1268,
+    "exposicion_nb": 27102.561643835616
+   },
+   "rel_nb_developed_por_anio": {
+    "2023": 1.0523340571463684,
+    "2024": 1.0535755371169118
+   },
+   "efecto_mezcla_2025_sobre_2024": {
+    "0.800": 0.862031993424671,
+    "1.000": 1.0,
+    "1.200": 1.133077076605026,
+    "0.941": 0.9599593098333531,
+    "1.053": 1.0357730256509416,
+    "1.500": 1.3240763740955326
+   },
+   "psi": [
+    {
+     "variable": "customer_since_year",
+     "psi_2024_vs_2025": 2.0218092218668775,
+     "psi_nb_train_vs_nb_2025": 17.74876952419018
+    },
+    {
+     "variable": "renewal_count",
+     "psi_2024_vs_2025": 1.3856860286494452,
+     "psi_nb_train_vs_nb_2025": 0.0
+    },
+    {
+     "variable": "exposure",
+     "psi_2024_vs_2025": 0.19308975475253626,
+     "psi_nb_train_vs_nb_2025": 3.3286137662953585
+    },
+    {
+     "variable": "marketing_segment",
+     "psi_2024_vs_2025": 0.06675206143073574,
+     "psi_nb_train_vs_nb_2025": 0.0036104643320528304
+    },
+    {
+     "variable": "discount_applied",
+     "psi_2024_vs_2025": 0.05197454095767298,
+     "psi_nb_train_vs_nb_2025": 5.8942308678939105e-05
+    },
+    {
+     "variable": "customer_service_contacts",
+     "psi_2024_vs_2025": 0.0492212252165353,
+     "psi_nb_train_vs_nb_2025": 0.07759186426517989
+    },
+    {
+     "variable": "policyholder_age_band",
+     "psi_2024_vs_2025": 0.04772629461194937,
+     "psi_nb_train_vs_nb_2025": 0.0012212033986279864
+    },
+    {
+     "variable": "written_premium",
+     "psi_2024_vs_2025": 0.01659730852996108,
+     "psi_nb_train_vs_nb_2025": 0.03181055963179481
+    },
+    {
+     "variable": "occupation",
+     "psi_2024_vs_2025": 0.012812785925047584,
+     "psi_nb_train_vs_nb_2025": 0.028976926076697378
+    },
+    {
+     "variable": "years_at_address",
+     "psi_2024_vs_2025": 0.006435261525938381,
+     "psi_nb_train_vs_nb_2025": 0.00588484044705828
+    },
+    {
+     "variable": "sum_insured",
+     "psi_2024_vs_2025": 0.006314186289911536,
+     "psi_nb_train_vs_nb_2025": 0.008764603609409173
+    },
+    {
+     "variable": "campaign_code",
+     "psi_2024_vs_2025": 0.006036545716561432,
+     "psi_nb_train_vs_nb_2025": 0.006832674564247765
+    },
+    {
+     "variable": "marital_status",
+     "psi_2024_vs_2025": 0.002960402884940989,
+     "psi_nb_train_vs_nb_2025": 5.4609039260532466e-05
+    },
+    {
+     "variable": "previous_insurer",
+     "psi_2024_vs_2025": 0.0029418377203878398,
+     "psi_nb_train_vs_nb_2025": 0.010829931081407174
+    },
+    {
+     "variable": "distance_to_river_km",
+     "psi_2024_vs_2025": 0.0008541855423190197,
+     "psi_nb_train_vs_nb_2025": 0.004535832156604719
+    },
+    {
+     "variable": "elevation_m",
+     "psi_2024_vs_2025": 0.0007608111180522053,
+     "psi_nb_train_vs_nb_2025": 0.0020281364010138613
+    },
+    {
+     "variable": "days_unoccupied",
+     "psi_2024_vs_2025": 0.0007156154792042638,
+     "psi_nb_train_vs_nb_2025": 0.001679433761926313
+    },
+    {
+     "variable": "energy_rating",
+     "psi_2024_vs_2025": 0.0006390419357171067,
+     "psi_nb_train_vs_nb_2025": 0.0006516630747608522
+    },
+    {
+     "variable": "days_quote_to_inception",
+     "psi_2024_vs_2025": 0.0005012995341402491,
+     "psi_nb_train_vs_nb_2025": 0.0015433465319655522
+    },
+    {
+     "variable": "branch_id",
+     "psi_2024_vs_2025": 0.00038504283853151494,
+     "psi_nb_train_vs_nb_2025": 0.0029707619927900864
+    },
+    {
+     "variable": "year_built",
+     "psi_2024_vs_2025": 0.00033320053952492584,
+     "psi_nb_train_vs_nb_2025": 0.0006610185214817161
+    },
+    {
+     "variable": "bedrooms",
+     "psi_2024_vs_2025": 0.00032931028991760574,
+     "psi_nb_train_vs_nb_2025": 0.0022740085762479557
+    },
+    {
+     "variable": "region",
+     "psi_2024_vs_2025": 0.0003073874566218559,
+     "psi_nb_train_vs_nb_2025": 0.002888269767700694
+    },
+    {
+     "variable": "soil_type",
+     "psi_2024_vs_2025": 0.00026147810758504194,
+     "psi_nb_train_vs_nb_2025": 0.0014742111972717595
+    },
+    {
+     "variable": "household_size",
+     "psi_2024_vs_2025": 0.00025460537042482285,
+     "psi_nb_train_vs_nb_2025": 0.00137946785226155
+    },
+    {
+     "variable": "mortgage",
+     "psi_2024_vs_2025": 0.00025188897370150557,
+     "psi_nb_train_vs_nb_2025": 0.0002086876107546595
+    },
+    {
+     "variable": "prior_claims_5y",
+     "psi_2024_vs_2025": 0.0002071009464380548,
+     "psi_nb_train_vs_nb_2025": 0.0007368904620955375
+    },
+    {
+     "variable": "channel",
+     "psi_2024_vs_2025": 0.0001645525760353307,
+     "psi_nb_train_vs_nb_2025": 5.8942308678939105e-05
+    },
+    {
+     "variable": "flood_zone",
+     "psi_2024_vs_2025": 0.00016101481735176918,
+     "psi_nb_train_vs_nb_2025": 0.0003047456089358007
+    },
+    {
+     "variable": "missed_payments_12m",
+     "psi_2024_vs_2025": 0.0001073702907041742,
+     "psi_nb_train_vs_nb_2025": 0.004030828045233412
+    },
+    {
+     "variable": "urban_density",
+     "psi_2024_vs_2025": 9.968112558322948e-05,
+     "psi_nb_train_vs_nb_2025": 0.0009146162067387173
+    },
+    {
+     "variable": "payment_method",
+     "psi_2024_vs_2025": 8.690876143375448e-05,
+     "psi_nb_train_vs_nb_2025": 0.0006092805029438741
+    },
+    {
+     "variable": "roof_type",
+     "psi_2024_vs_2025": 8.520464041809625e-05,
+     "psi_nb_train_vs_nb_2025": 3.5873421777602766e-05
+    },
+    {
+     "variable": "trees_within_5m",
+     "psi_2024_vs_2025": 8.030909613240291e-05,
+     "psi_nb_train_vs_nb_2025": 0.00017884614312122218
+    },
+    {
+     "variable": "basement",
+     "psi_2024_vs_2025": 7.2766313055388e-05,
+     "psi_nb_train_vs_nb_2025": 0.000261522228342174
+    },
+    {
+     "variable": "voluntary_excess",
+     "psi_2024_vs_2025": 6.0654073992530757e-05,
+     "psi_nb_train_vs_nb_2025": 0.0011823988847910415
+    },
+    {
+     "variable": "property_type",
+     "psi_2024_vs_2025": 3.634150525101697e-05,
+     "psi_nb_train_vs_nb_2025": 0.0008495864447848557
+    },
+    {
+     "variable": "licence_points",
+     "psi_2024_vs_2025": 3.4859718387876495e-05,
+     "psi_nb_train_vs_nb_2025": 0.0007548335922462569
+    },
+    {
+     "variable": "email_domain",
+     "psi_2024_vs_2025": 3.110433588559559e-05,
+     "psi_nb_train_vs_nb_2025": 0.0003388192637543335
+    },
+    {
+     "variable": "smoke_alarms",
+     "psi_2024_vs_2025": 2.6110566325693127e-05,
+     "psi_nb_train_vs_nb_2025": 0.00016112163611549954
+    },
+    {
+     "variable": "document_preference",
+     "psi_2024_vs_2025": 2.3157425714254967e-05,
+     "psi_nb_train_vs_nb_2025": 1.2949592202213082e-05
+    },
+    {
+     "variable": "accidental_damage_cover",
+     "psi_2024_vs_2025": 2.2497869806325298e-05,
+     "psi_nb_train_vs_nb_2025": 0.00016878274059857685
+    },
+    {
+     "variable": "construction_type",
+     "psi_2024_vs_2025": 8.399825596636603e-06,
+     "psi_nb_train_vs_nb_2025": 0.0005136189021414721
+    },
+    {
+     "variable": "marketing_consent",
+     "psi_2024_vs_2025": 7.957683530170587e-06,
+     "psi_nb_train_vs_nb_2025": 0.00022157307063797266
+    },
+    {
+     "variable": "gender",
+     "psi_2024_vs_2025": 6.320181728217486e-06,
+     "psi_nb_train_vs_nb_2025": 0.00030464906166812714
+    },
+    {
+     "variable": "listed_building",
+     "psi_2024_vs_2025": 3.7821928448081976e-06,
+     "psi_nb_train_vs_nb_2025": 0.00018006944697938554
+    },
+    {
+     "variable": "occupancy",
+     "psi_2024_vs_2025": 2.676822643136015e-06,
+     "psi_nb_train_vs_nb_2025": 1.6750311139616662e-05
+    },
+    {
+     "variable": "solar_panels",
+     "psi_2024_vs_2025": 2.612684684232778e-06,
+     "psi_nb_train_vs_nb_2025": 3.651391867833997e-05
+    },
+    {
+     "variable": "compulsory_excess",
+     "psi_2024_vs_2025": 0.0,
+     "psi_nb_train_vs_nb_2025": 0.0
+    }
+   ],
+   "psi_max_nb_sin_antiguedad_exposicion_ni_contactos": 0.03181055963179481,
+   "psi_variable_max_nb_sin_antiguedad_exposicion_ni_contactos": "written_premium"
+  },
+  "contents": {
+   "canal_por_grupo": {
+    "NB_2023_2024": {
+     "broker": 0.6999575911789653,
+     "direct": 0.248303647158609,
+     "comparison_site": 0.05173876166242578
+    },
+    "NB_2025": {
+     "broker": 0.6988164390079499,
+     "direct": 0.2513035031026348,
+     "comparison_site": 0.04988005788941536
+    },
+    "REN_2023_2024": {
+     "broker": 0.7036515912897823,
+     "direct": 0.2460636515912898,
+     "comparison_site": 0.05028475711892797
+    },
+    "REN_2025": {
+     "broker": 0.6999873465772491,
+     "direct": 0.25015816778438565,
+     "comparison_site": 0.04985448563836518
+    }
+   },
+   "nb_2025_con_customer_since_2025": 1.0,
+   "customer_since_year_max_train": 2024,
+   "test_cliente_nuevo_en_ramo": 0.7614080637613779,
+   "test_cliente_nuevo_n": 50441,
+   "test_poliza_nueva": 0.7614080637613779,
+   "cliente_nuevo_igual_new_business": true,
+   "poliza_nueva_igual_new_business": true,
+   "clientes_nuevos_con_otro_ramo_en_train": 0,
+   "cuota_nb_filas": {
+    "2023": 0.11664772009599596,
+    "2024": 0.15316036728592783,
+    "2025": 0.7614080637613779
+   },
+   "filas_por_anio": {
+    "2023": 15834,
+    "2024": 18732,
+    "2025": 66247
+   },
+   "nb_inicio_en_enero": {
+    "2023": 0.07146724417975095,
+    "2024": 0.07459044963401883,
+    "2025": 0.9005372613548502
+   },
+   "cuota_nb_exposicion_2024": 0.09106895658194263,
+   "cuota_nb_exposicion_2025": 0.7701979155109254,
+   "rel_nb_emerging": {
+    "frecuencia": 1.3674143963729748,
+    "coste": 1.30713252992474,
+    "siniestros_nb": 102,
+    "exposicion_nb": 2233.202739726027
+   },
+   "rel_nb_emerging_por_anio": {
+    "2023": 1.2374784115437611,
+    "2024": 1.467748560335695
+   },
+   "rel_nb_developed": {
+    "frecuencia": 1.1574963055959289,
+    "coste": 1.0060848349825928,
+    "siniestros_nb": 1251,
+    "exposicion_nb": 27068.90684931507
+   },
+   "rel_nb_developed_por_anio": {
+    "2023": 1.2055550297279358,
+    "2024": 1.1078928075515406
+   },
+   "efecto_mezcla_2025_sobre_2024": {
+    "0.800": 0.8616544105178325,
+    "1.000": 1.0,
+    "1.200": 1.1333961422877559,
+    "1.367": 1.2414430606581062,
+    "1.157": 1.1054478608330562,
+    "1.500": 1.324775974886589
+   },
+   "psi": [
+    {
+     "variable": "customer_since_year",
+     "psi_2024_vs_2025": 2.0352188497260073,
+     "psi_nb_train_vs_nb_2025": 17.75150228338645
+    },
+    {
+     "variable": "renewal_count",
+     "psi_2024_vs_2025": 1.4059376068507792,
+     "psi_nb_train_vs_nb_2025": 0.0
+    },
+    {
+     "variable": "exposure",
+     "psi_2024_vs_2025": 0.16117359363597464,
+     "psi_nb_train_vs_nb_2025": 3.0385761111537626
+    },
+    {
+     "variable": "marketing_segment",
+     "psi_2024_vs_2025": 0.061485651091469196,
+     "psi_nb_train_vs_nb_2025": 0.0018123714736416224
+    },
+    {
+     "variable": "discount_applied",
+     "psi_2024_vs_2025": 0.048409812831485544,
+     "psi_nb_train_vs_nb_2025": 0.00010574141424515957
+    },
+    {
+     "variable": "policyholder_age_band",
+     "psi_2024_vs_2025": 0.043311978476255966,
+     "psi_nb_train_vs_nb_2025": 0.0015291292077867075
+    },
+    {
+     "variable": "customer_service_contacts",
+     "psi_2024_vs_2025": 0.030305557626520502,
+     "psi_nb_train_vs_nb_2025": 0.10052098819625654
+    },
+    {
+     "variable": "occupation",
+     "psi_2024_vs_2025": 0.011442501801643828,
+     "psi_nb_train_vs_nb_2025": 0.02638293841998247
+    },
+    {
+     "variable": "written_premium",
+     "psi_2024_vs_2025": 0.011310724456446283,
+     "psi_nb_train_vs_nb_2025": 0.02252275385484656
+    },
+    {
+     "variable": "years_at_address",
+     "psi_2024_vs_2025": 0.008808700414920574,
+     "psi_nb_train_vs_nb_2025": 0.0021570638665238096
+    },
+    {
+     "variable": "campaign_code",
+     "psi_2024_vs_2025": 0.004274210411342439,
+     "psi_nb_train_vs_nb_2025": 0.004335395018469904
+    },
+    {
+     "variable": "previous_insurer",
+     "psi_2024_vs_2025": 0.002849212120508408,
+     "psi_nb_train_vs_nb_2025": 0.012173221437795475
+    },
+    {
+     "variable": "marital_status",
+     "psi_2024_vs_2025": 0.001927525698795065,
+     "psi_nb_train_vs_nb_2025": 0.0010832708276279442
+    },
+    {
+     "variable": "days_quote_to_inception",
+     "psi_2024_vs_2025": 0.0007036859172324295,
+     "psi_nb_train_vs_nb_2025": 0.0027506623136650888
+    },
+    {
+     "variable": "sum_insured",
+     "psi_2024_vs_2025": 0.0006706132525639504,
+     "psi_nb_train_vs_nb_2025": 0.0011119564263329634
+    },
+    {
+     "variable": "distance_to_river_km",
+     "psi_2024_vs_2025": 0.0004931009948535492,
+     "psi_nb_train_vs_nb_2025": 0.0020385941610048166
+    },
+    {
+     "variable": "elevation_m",
+     "psi_2024_vs_2025": 0.0004504827958992438,
+     "psi_nb_train_vs_nb_2025": 0.0019316436639125415
+    },
+    {
+     "variable": "voluntary_excess",
+     "psi_2024_vs_2025": 0.00041615903195638143,
+     "psi_nb_train_vs_nb_2025": 0.0011076126208414807
+    },
+    {
+     "variable": "year_built",
+     "psi_2024_vs_2025": 0.00039682757361335656,
+     "psi_nb_train_vs_nb_2025": 0.0018861280527514828
+    },
+    {
+     "variable": "bedrooms",
+     "psi_2024_vs_2025": 0.0003813177679626802,
+     "psi_nb_train_vs_nb_2025": 0.0008082709516839702
+    },
+    {
+     "variable": "energy_rating",
+     "psi_2024_vs_2025": 0.0003178756023303779,
+     "psi_nb_train_vs_nb_2025": 0.0007711000731146107
+    },
+    {
+     "variable": "prior_claims_5y",
+     "psi_2024_vs_2025": 0.00030216713770656533,
+     "psi_nb_train_vs_nb_2025": 0.00036474314515749215
+    },
+    {
+     "variable": "payment_method",
+     "psi_2024_vs_2025": 0.0002985831707408654,
+     "psi_nb_train_vs_nb_2025": 0.00014642463660222087
+    },
+    {
+     "variable": "high_value_items",
+     "psi_2024_vs_2025": 0.0002548642458727778,
+     "psi_nb_train_vs_nb_2025": 0.0018320563296153757
+    },
+    {
+     "variable": "household_size",
+     "psi_2024_vs_2025": 0.00023693979654807408,
+     "psi_nb_train_vs_nb_2025": 0.0009719657232939645
+    },
+    {
+     "variable": "document_preference",
+     "psi_2024_vs_2025": 0.00022407679666145138,
+     "psi_nb_train_vs_nb_2025": 0.00012706278461454857
+    },
+    {
+     "variable": "tenure",
+     "psi_2024_vs_2025": 0.0001865744203814645,
+     "psi_nb_train_vs_nb_2025": 0.0007772881995274782
+    },
+    {
+     "variable": "missed_payments_12m",
+     "psi_2024_vs_2025": 0.00018269200706846542,
+     "psi_nb_train_vs_nb_2025": 0.0011367863802256208
+    },
+    {
+     "variable": "flood_zone",
+     "psi_2024_vs_2025": 0.00018163898947766885,
+     "psi_nb_train_vs_nb_2025": 0.0007489832422086903
+    },
+    {
+     "variable": "accidental_damage_cover",
+     "psi_2024_vs_2025": 0.00018144896790540005,
+     "psi_nb_train_vs_nb_2025": 0.00018572130370903833
+    },
+    {
+     "variable": "region",
+     "psi_2024_vs_2025": 0.00016963988452862224,
+     "psi_nb_train_vs_nb_2025": 0.0013300238905458318
+    },
+    {
+     "variable": "branch_id",
+     "psi_2024_vs_2025": 0.00013307478264888115,
+     "psi_nb_train_vs_nb_2025": 0.0028287512856328004
+    },
+    {
+     "variable": "channel",
+     "psi_2024_vs_2025": 0.00013067623411844626,
+     "psi_nb_train_vs_nb_2025": 0.00010574141424515957
+    },
+    {
+     "variable": "email_domain",
+     "psi_2024_vs_2025": 0.00012366229850232027,
+     "psi_nb_train_vs_nb_2025": 0.0003043771975918729
+    },
+    {
+     "variable": "soil_type",
+     "psi_2024_vs_2025": 0.00010857839553311374,
+     "psi_nb_train_vs_nb_2025": 0.0006923106784528135
+    },
+    {
+     "variable": "urban_density",
+     "psi_2024_vs_2025": 8.950590986950076e-05,
+     "psi_nb_train_vs_nb_2025": 0.001245536845869372
+    },
+    {
+     "variable": "licence_points",
+     "psi_2024_vs_2025": 7.18090654310579e-05,
+     "psi_nb_train_vs_nb_2025": 0.00035365779935380744
+    },
+    {
+     "variable": "solar_panels",
+     "psi_2024_vs_2025": 5.875004857393189e-05,
+     "psi_nb_train_vs_nb_2025": 0.00039322650797442684
+    },
+    {
+     "variable": "security_level",
+     "psi_2024_vs_2025": 5.712462549526985e-05,
+     "psi_nb_train_vs_nb_2025": 0.0005220158321777393
+    },
+    {
+     "variable": "marketing_consent",
+     "psi_2024_vs_2025": 5.4237737924385675e-05,
+     "psi_nb_train_vs_nb_2025": 0.0003603400741144774
+    },
+    {
+     "variable": "property_type",
+     "psi_2024_vs_2025": 4.585075957544008e-05,
+     "psi_nb_train_vs_nb_2025": 0.00035615382359314714
+    },
+    {
+     "variable": "basement",
+     "psi_2024_vs_2025": 3.0343010370123214e-05,
+     "psi_nb_train_vs_nb_2025": 8.556773098659155e-05
+    },
+    {
+     "variable": "roof_type",
+     "psi_2024_vs_2025": 2.6472597634307886e-05,
+     "psi_nb_train_vs_nb_2025": 4.9762195099660944e-05
+    },
+    {
+     "variable": "lodgers",
+     "psi_2024_vs_2025": 2.0872452720024998e-05,
+     "psi_nb_train_vs_nb_2025": 0.0004398998707024757
+    },
+    {
+     "variable": "listed_building",
+     "psi_2024_vs_2025": 5.52634520197444e-06,
+     "psi_nb_train_vs_nb_2025": 0.000195567500387314
+    },
+    {
+     "variable": "trees_within_5m",
+     "psi_2024_vs_2025": 4.952372046257096e-06,
+     "psi_nb_train_vs_nb_2025": 0.00010712540476407653
+    },
+    {
+     "variable": "gender",
+     "psi_2024_vs_2025": 1.6195943834307372e-06,
+     "psi_nb_train_vs_nb_2025": 3.343594514574829e-05
+    },
+    {
+     "variable": "bicycle_cover",
+     "psi_2024_vs_2025": 4.393076240357822e-07,
+     "psi_nb_train_vs_nb_2025": 0.00043884023178612916
+    },
+    {
+     "variable": "works_from_home",
+     "psi_2024_vs_2025": 1.730669764160915e-07,
+     "psi_nb_train_vs_nb_2025": 7.13959880684388e-06
+    },
+    {
+     "variable": "compulsory_excess",
+     "psi_2024_vs_2025": 0.0,
+     "psi_nb_train_vs_nb_2025": 0.0
+    }
+   ],
+   "psi_max_nb_sin_antiguedad_exposicion_ni_contactos": 0.02638293841998247,
+   "psi_variable_max_nb_sin_antiguedad_exposicion_ni_contactos": "occupation"
+  }
+ },
+ "historia": {
+  "motor": {
+   "renovaciones_2023": 19060,
+   "cuota_renovaciones_2023": 0.8791512915129152,
+   "renewal_count_2023_min": 1,
+   "renewal_count_2023_max": 15,
+   "renewal_count_igual_anio_menos_customer_since": 1.0
+  },
+  "buildings": {
+   "renovaciones_2023": 11073,
+   "cuota_renovaciones_2023": 0.8802066772655008,
+   "renewal_count_2023_min": 1,
+   "renewal_count_2023_max": 15,
+   "renewal_count_igual_anio_menos_customer_since": 1.0
+  },
+  "contents": {
+   "renovaciones_2023": 13987,
+   "cuota_renovaciones_2023": 0.883352279904004,
+   "renewal_count_2023_min": 1,
+   "renewal_count_2023_max": 15,
+   "renewal_count_igual_anio_menos_customer_since": 1.0
+  }
+ },
+ "capital": {
+  "buildings": {
+   "train": {
+    "extremas": 53,
+    "hueco_desde": 813000.0,
+    "hueco_hasta": 73000000.0,
+    "hueco_razon": 89.79089790897909,
+    "mediana_capital_normal": 229000.0,
+    "mediana_extremas_entre_mil": 229000.0,
+    "prima_por_mil_normal_mediana": 1.0297350596415513,
+    "prima_por_mil_normal_min": 0.45094736842105265,
+    "prima_por_mil_extremas_mediana": 0.0010334871794871795,
+    "prima_por_mil_extremas_max": 0.010997926829268293,
+    "prima_por_mil_extremas_entre_mil_mediana": 1.0334871794871794,
+    "max_extremas_entre_mil": 470000.0,
+    "max_normal": 813000.0,
+    "extremas_multiplo_de_mil": 1.0
+   },
+   "test": {
+    "extremas": 104,
+    "hueco_desde": 894000.0,
+    "hueco_hasta": 60000000.0,
+    "hueco_razon": 67.11409395973155,
+    "mediana_capital_normal": 240000.0,
+    "mediana_extremas_entre_mil": 236000.0,
+    "prima_por_mil_normal_mediana": 1.0703097345132744,
+    "prima_por_mil_normal_min": 0.4876554404145078,
+    "prima_por_mil_extremas_mediana": 0.0010953030738752555,
+    "prima_por_mil_extremas_max": 0.01065141975308642,
+    "prima_por_mil_extremas_entre_mil_mediana": 1.0953030738752556,
+    "max_extremas_entre_mil": 568000.0,
+    "max_normal": 894000.0,
+    "extremas_multiplo_de_mil": 1.0
+   }
+  },
+  "contents": {
+   "train": {
+    "extremas": 57,
+    "hueco_desde": 235000.0,
+    "hueco_hasta": 7600000.0,
+    "hueco_razon": 32.340425531914896,
+    "mediana_capital_normal": 35800.0,
+    "mediana_extremas_entre_mil": 39100.0,
+    "prima_por_mil_normal_mediana": 3.32018779342723,
+    "prima_por_mil_normal_min": 1.6064984227129337,
+    "prima_por_mil_extremas_mediana": 0.003174061433447099,
+    "prima_por_mil_extremas_max": 0.00695354609929078,
+    "prima_por_mil_extremas_entre_mil_mediana": 3.1740614334470987,
+    "max_extremas_entre_mil": 131600.0,
+    "max_normal": 235000.0,
+    "extremas_multiplo_de_mil": 1.0
+   },
+   "test": {
+    "extremas": 135,
+    "hueco_desde": 283200.0,
+    "hueco_hasta": 9200000.0,
+    "hueco_razon": 32.48587570621469,
+    "mediana_capital_normal": 36300.0,
+    "mediana_extremas_entre_mil": 33000.0,
+    "prima_por_mil_normal_mediana": 3.4911796297783484,
+    "prima_por_mil_normal_min": 1.6493936052921718,
+    "prima_por_mil_extremas_mediana": 0.003464814814814815,
+    "prima_por_mil_extremas_max": 0.006505050505050506,
+    "prima_por_mil_extremas_entre_mil_mediana": 3.464814814814815,
+    "max_extremas_entre_mil": 98100.0,
+    "max_normal": 283200.0,
+    "extremas_multiplo_de_mil": 1.0
+   }
+  },
+  "total_extremas": 349,
+  "total_extremas_test": 239
+ },
+ "peculiaridades": {
+  "contactos": {
+   "motor": {
+    "frecuencia": {
+     "0": 0.0001913076612428761,
+     "1": 0.07549205827667427,
+     "2": 0.42907124225959764,
+     "3": 1.1250306559891174
+    },
+    "cuota_train": {
+     "0": 0.584945963665588,
+     "1": 0.2379713639151492,
+     "2": 0.08248207601040543,
+     "3": 0.0946005964088573
+    },
+    "cuota_test": {
+     "0": 0.6703527358292551,
+     "1": 0.2679378265816772,
+     "2": 0.054020614001171,
+     "3": 0.007688823587896731
+    }
+   },
+   "buildings": {
+    "frecuencia": {
+     "0": 7.14367635897189e-05,
+     "1": 0.018788322724474293,
+     "2": 0.13599246556202974,
+     "3": 0.7437321294206171
+    },
+    "cuota_train": {
+     "0": 0.6327467482785004,
+     "1": 0.26243305279265494,
+     "2": 0.0703902065799541,
+     "3": 0.03442999234889059
+    },
+    "cuota_test": {
+     "0": 0.6719189215030118,
+     "1": 0.26696624916339995,
+     "2": 0.05287312362558562,
+     "3": 0.008241705708002678
+    }
+   },
+   "contents": {
+    "frecuencia": {
+     "0": 5.63283600792733e-05,
+     "1": 0.017995196585490682,
+     "2": 0.1189390283189926,
+     "3": 0.6394147840566323
+    },
+    "cuota_train": {
+     "0": 0.649511080252271,
+     "1": 0.25568477694844643,
+     "2": 0.06688653590233178,
+     "3": 0.02791760689695076
+    },
+    "cuota_test": {
+     "0": 0.6713813455703654,
+     "1": 0.2671215300315486,
+     "2": 0.05366280737240932,
+     "3": 0.007834317025676635
+    }
+   }
+  },
+  "declinadas_con_sucesor": {
+   "motor": {
+    "declined_by_insurer": {
+     "filas": 219,
+     "con_sucesor": 0.9726027397260274
+    },
+    "lapsed_by_customer": {
+     "filas": 2369,
+     "con_sucesor": 0.0
+    },
+    "cancelled": {
+     "filas": 1250,
+     "con_sucesor": 0.0
+    }
+   },
+   "buildings": {
+    "declined_by_insurer": {
+     "filas": 113,
+     "con_sucesor": 0.9557522123893806
+    },
+    "lapsed_by_customer": {
+     "filas": 1460,
+     "con_sucesor": 0.0
+    },
+    "cancelled": {
+     "filas": 731,
+     "con_sucesor": 0.0
+    }
+   },
+   "contents": {
+    "declined_by_insurer": {
+     "filas": 30,
+     "con_sucesor": 0.9
+    },
+    "lapsed_by_customer": {
+     "filas": 1828,
+     "con_sucesor": 0.0
+    },
+    "cancelled": {
+     "filas": 936,
+     "con_sucesor": 0.0
+    }
+   }
+  },
+  "danos_accidentales_sin_cobertura": {
+   "buildings": {
+    "aceptados": 122,
+    "sin_cobertura": 23,
+    "netos_sobre_capital": 3
+   },
+   "contents": {
+    "aceptados": 335,
+    "sin_cobertura": 47,
+    "netos_sobre_capital": 1
+   }
+  },
+  "ncb_mayor_que_anios_carnet": {
+   "train": 7756,
+   "test": 20051
+  },
+  "danos_propios_o_lunas_fuera_de_todo_riesgo": 0,
+  "ocupacion": {
+   "distintos_crudos": 80,
+   "nulos": 16517,
+   "distintos_tras_espacios_y_mayusculas": 40,
+   "distintos_base_sin_self_employed": 20,
+   "base_igual_vocabulario_desarrollado": true,
+   "cuota_self_employed": 0.10034439705377118,
+   "self_employed_incoherentes": {
+    "retired": 1819,
+    "student": 1254,
+    "unemployed": 495
+   }
+  }
+ },
+ "clima": {
+  "anios_emergente": {
+   "2023": 136914,
+   "2024": 136914,
+   "2025": 136914
+  },
+  "duplicados_direccion_anio": 0,
+  "medias_emergente": {
+   "2023": {
+    "hail_days": 13.97441459602378,
+    "wind_exposure_index": 4.680681303592036,
+    "freezing_days": 21.018033217932423,
+    "dry_summer_index": 0.6787076559007843,
+    "wildfire_index": 0.5029409994595146,
+    "rainfall_mm": 1380.8104868749726,
+    "mean_temperature_c": 15.295492060709645
+   },
+   "2024": {
+    "hail_days": 17.08120425960822,
+    "wind_exposure_index": 5.4132170559621375,
+    "freezing_days": 17.490220138188935,
+    "dry_summer_index": 0.7118518266941292,
+    "wildfire_index": 0.5494589377273325,
+    "rainfall_mm": 1375.0865433775948,
+    "mean_temperature_c": 15.77670946725682
+   },
+   "2025": {
+    "hail_days": 11.411382327592504,
+    "wind_exposure_index": 5.114120542822501,
+    "freezing_days": 28.862592576361802,
+    "dry_summer_index": 0.6045055728413457,
+    "wildfire_index": 0.5284271294389179,
+    "rainfall_mm": 1250.6641906598302,
+    "mean_temperature_c": 14.22278656674993
+   }
+  },
+  "medias_2023_2024": {
+   "emerging": {
+    "hail_days": 15.527809427816,
+    "wind_exposure_index": 5.046949179777086,
+    "freezing_days": 19.25412667806068,
+    "dry_summer_index": 0.6952797412974567,
+    "wildfire_index": 0.5261999685934237,
+    "rainfall_mm": 1377.9485151262836,
+    "mean_temperature_c": 15.536100763983232
+   },
+   "developed": {
+    "hail_days": 6.512140115246457,
+    "wind_exposure_index": 4.3701884430616875,
+    "freezing_days": 37.09320761203021,
+    "dry_summer_index": 0.5714479541930926,
+    "wildfire_index": 0.14385703918344814,
+    "rainfall_mm": 1008.5401496224715,
+    "mean_temperature_c": 13.028261077149848
+   }
+  },
+  "correlacion_entre_anios": {
+   "hail_days": {
+    "2023_2024": 0.1987458915550362,
+    "2024_2025": 0.2293409643121152
+   },
+   "wind_exposure_index": {
+    "2023_2024": 0.8714814911536277,
+    "2024_2025": 0.9131377181846616
+   },
+   "freezing_days": {
+    "2023_2024": 0.7860630691319221,
+    "2024_2025": 0.703594469395626
+   },
+   "dry_summer_index": {
+    "2023_2024": 0.5959454248408624,
+    "2024_2025": -0.2418893256614915
+   },
+   "wildfire_index": {
+    "2023_2024": 0.8910478788028566,
+    "2024_2025": 0.865850541822466
+   },
+   "rainfall_mm": {
+    "2023_2024": 0.9218393470201447,
+    "2024_2025": 0.9452034611418033
+   },
+   "mean_temperature_c": {
+    "2023_2024": 0.895560348367332,
+    "2024_2025": 0.4975212744024509
+   }
+  },
+  "exposicion_2023_fuera_de_soporte": {
+   "motor_hail_days_desde_30": {
+    "emerging": 1389.3808219178081,
+    "developed": 8.23013698630137
+   },
+   "buildings_wildfire_index_desde_0.6": {
+    "emerging": 3095.917808219178,
+    "developed": 1.0
+   }
+  },
+  "sensibilidad_2025": [
+   {
+    "ramo": "motor",
+    "peligro": "glass_hail",
+    "variable": "hail_days",
+    "siniestros_2023_2024": 1345,
+    "media_2024": 17.08120425960822,
+    "media_2025": 11.411382327592504,
+    "esperados_con_clima_2024": 2956.0860514132446,
+    "esperados_con_clima_2025": 2256.501779776455,
+    "razon": 0.7633410328828781,
+    "cuota_coste_del_peligro": 0.064564706977155,
+    "efecto_aprox_en_coste_del_ramo": -0.015279816865433133
+   },
+   {
+    "ramo": "buildings",
+    "peligro": "escape_of_water",
+    "variable": "freezing_days",
+    "siniestros_2023_2024": 268,
+    "media_2024": 17.490220138188935,
+    "media_2025": 28.862592576361802,
+    "esperados_con_clima_2024": 531.8848613518069,
+    "esperados_con_clima_2025": 596.238898390686,
+    "razon": 1.1209924209448654,
+    "cuota_coste_del_peligro": 0.1087005837586926,
+    "efecto_aprox_en_coste_del_ramo": 0.013151946787084335
+   },
+   {
+    "ramo": "contents",
+    "peligro": "escape_of_water",
+    "variable": "freezing_days",
+    "siniestros_2023_2024": 171,
+    "media_2024": 17.490220138188935,
+    "media_2025": 28.862592576361802,
+    "esperados_con_clima_2024": 333.69749583832424,
+    "esperados_con_clima_2025": 396.6402910230698,
+    "razon": 1.1886223180267472,
+    "cuota_coste_del_peligro": 0.14047277603385644,
+    "efecto_aprox_en_coste_del_ramo": 0.026496300635158104
+   },
+   {
+    "ramo": "buildings",
+    "peligro": "subsidence",
+    "variable": "dry_summer_index",
+    "siniestros_2023_2024": 52,
+    "media_2024": 0.7118518266941292,
+    "media_2025": 0.6045055728413457,
+    "esperados_con_clima_2024": 112.53529510793814,
+    "esperados_con_clima_2025": 84.71060219742448,
+    "razon": 0.7527469681060894,
+    "cuota_coste_del_peligro": 0.07644403951838756,
+    "efecto_aprox_en_coste_del_ramo": -0.01890102054113924
+   },
+   {
+    "ramo": "buildings",
+    "peligro": "storm",
+    "variable": "wind_exposure_index",
+    "siniestros_2023_2024": 464,
+    "media_2024": 5.4132170559621375,
+    "media_2025": 5.114120542822501,
+    "esperados_con_clima_2024": 968.0860103767577,
+    "esperados_con_clima_2025": 932.5936273843054,
+    "razon": 0.9633375726825765,
+    "cuota_coste_del_peligro": 0.12654501135776727,
+    "efecto_aprox_en_coste_del_ramo": -0.004639447281286678
+   }
+  ],
+  "lunas_por_granizo_tramos_con_50_siniestros_en_ambos": [
+   {
+    "tramo": "[4, 8)",
+    "frecuencia_emergente": 0.017011992143605683,
+    "frecuencia_desarrollada": 0.01939548964785303,
+    "razon": 0.8771107330867933
+   },
+   {
+    "tramo": "[8, 12)",
+    "frecuencia_emergente": 0.02345762155325261,
+    "frecuencia_desarrollada": 0.02567479572528982,
+    "razon": 0.913643941094601
+   },
+   {
+    "tramo": "[12, 16)",
+    "frecuencia_emergente": 0.03140602792359613,
+    "frecuencia_desarrollada": 0.033181845357776706,
+    "razon": 0.9464822581434766
+   },
+   {
+    "tramo": "[16, 20)",
+    "frecuencia_emergente": 0.04829197573437302,
+    "frecuencia_desarrollada": 0.03831257906186814,
+    "razon": 1.26047311136089
+   },
+   {
+    "tramo": "[20, 25)",
+    "frecuencia_emergente": 0.04621484279772242,
+    "frecuencia_desarrollada": 0.05208279283112462,
+    "razon": 0.8873341901531916
+   }
+  ]
+ },
+ "mercados": {
+  "cola_reporte": {
+   "motor/bodily_injury/developed/2021": {
+    "siniestros": 2144,
+    "retraso_max": 1361,
+    "cuota_conteo_mas_de_365": 0.14085820895522388,
+    "cuota_coste_mas_de_365": 0.17235040918415542,
+    "cuota_conteo_mas_de_730": 0.014458955223880597,
+    "cuota_coste_mas_de_730": 0.02090879684959546,
+    "cuota_conteo_mas_de_1095": 0.002798507462686567,
+    "cuota_coste_mas_de_1095": 0.0030710363384078136
+   },
+   "motor/bodily_injury/developed/2022": {
+    "siniestros": 2141,
+    "retraso_max": 1001,
+    "cuota_conteo_mas_de_365": 0.13078000934142925,
+    "cuota_coste_mas_de_365": 0.14907319890647394,
+    "cuota_conteo_mas_de_730": 0.010742643624474545,
+    "cuota_coste_mas_de_730": 0.011316690581186624,
+    "cuota_conteo_mas_de_1095": 0.0,
+    "cuota_coste_mas_de_1095": 0.0
+   },
+   "motor/bodily_injury/emerging/2023": {
+    "siniestros": 266,
+    "retraso_max": 653,
+    "cuota_conteo_mas_de_365": 0.09022556390977443,
+    "cuota_coste_mas_de_365": 0.11202322886215077,
+    "cuota_conteo_mas_de_730": 0.0,
+    "cuota_coste_mas_de_730": 0.0,
+    "cuota_conteo_mas_de_1095": 0.0,
+    "cuota_coste_mas_de_1095": 0.0
+   },
+   "buildings/subsidence/developed/2021": {
+    "siniestros": 282,
+    "retraso_max": 629,
+    "cuota_conteo_mas_de_365": 0.028368794326241134,
+    "cuota_coste_mas_de_365": 0.014088193810905125,
+    "cuota_conteo_mas_de_730": 0.0,
+    "cuota_coste_mas_de_730": 0.0,
+    "cuota_conteo_mas_de_1095": 0.0,
+    "cuota_coste_mas_de_1095": 0.0
+   },
+   "buildings/subsidence/developed/2022": {
+    "siniestros": 335,
+    "retraso_max": 759,
+    "cuota_conteo_mas_de_365": 0.06865671641791045,
+    "cuota_coste_mas_de_365": 0.06401872789152989,
+    "cuota_conteo_mas_de_730": 0.005970149253731343,
+    "cuota_coste_mas_de_730": 0.0005924317326679114,
+    "cuota_conteo_mas_de_1095": 0.0,
+    "cuota_coste_mas_de_1095": 0.0
+   },
+   "buildings/subsidence/emerging/2023": {
+    "siniestros": 32,
+    "retraso_max": 294,
+    "cuota_conteo_mas_de_365": 0.0,
+    "cuota_coste_mas_de_365": 0.0,
+    "cuota_conteo_mas_de_730": 0.0,
+    "cuota_coste_mas_de_730": 0.0,
+    "cuota_conteo_mas_de_1095": 0.0,
+    "cuota_coste_mas_de_1095": 0.0
+   }
+  },
+  "ramo_anio": [
+   {
+    "mercado": "emerging",
+    "ramo": "motor",
+    "anio": 2023,
+    "filas": 21680,
+    "exposicion": 18864.509589041096,
+    "siniestros": 3557.0,
+    "t0": 8162761.209999999,
+    "frecuencia": 0.18855512692820584,
+    "severidad": 2294.8443098116386,
+    "coste_por_anio": 432.7046601170045,
+    "cuota_abiertos": 0.036547652516165305,
+    "siniestralidad_prima_escrita": 0.7115442366610746
+   },
+   {
+    "mercado": "emerging",
+    "ramo": "motor",
+    "anio": 2024,
+    "filas": 25603,
+    "exposicion": 20104.024657534246,
+    "siniestros": 3491.0,
+    "t0": 7693126.75,
+    "frecuencia": 0.17364682243819782,
+    "severidad": 2203.7028788312805,
+    "coste_por_anio": 382.6660025069607,
+    "cuota_abiertos": 0.2030936694356918,
+    "siniestralidad_prima_escrita": 0.629177622218138
+   },
+   {
+    "mercado": "emerging",
+    "ramo": "buildings",
+    "anio": 2023,
+    "filas": 12580,
+    "exposicion": 11372.569863013698,
+    "siniestros": 519.0,
+    "t0": 5848688.1,
+    "frecuencia": 0.045636123255475565,
+    "severidad": 11269.148554913294,
+    "coste_por_anio": 514.2802524362875,
+    "cuota_abiertos": 0.04046242774566474,
+    "siniestralidad_prima_escrita": 1.4880055765511406
+   },
+   {
+    "mercado": "emerging",
+    "ramo": "buildings",
+    "anio": 2024,
+    "filas": 14867,
+    "exposicion": 12095.435616438357,
+    "siniestros": 537.0,
+    "t0": 3710061.21,
+    "frecuencia": 0.044396912771805234,
+    "severidad": 6908.866312849162,
+    "coste_por_anio": 306.73233504362787,
+    "cuota_abiertos": 0.2532588454376164,
+    "siniestralidad_prima_escrita": 0.8339071651876331
+   },
+   {
+    "mercado": "emerging",
+    "ramo": "contents",
+    "anio": 2023,
+    "filas": 15834,
+    "exposicion": 14107.695890410958,
+    "siniestros": 491.0,
+    "t0": 1285654.53,
+    "frecuencia": 0.034803698904066545,
+    "severidad": 2618.44099796334,
+    "coste_por_anio": 91.13143209117962,
+    "cuota_abiertos": 0.0,
+    "siniestralidad_prima_escrita": 0.7341797514536273
+   },
+   {
+    "mercado": "emerging",
+    "ramo": "contents",
+    "anio": 2024,
+    "filas": 18732,
+    "exposicion": 14950.284931506849,
+    "siniestros": 507.0,
+    "t0": 1297699.77,
+    "frecuencia": 0.033912397143115794,
+    "severidad": 2559.565621301775,
+    "coste_por_anio": 86.80100586345173,
+    "cuota_abiertos": 0.11637080867850098,
+    "siniestralidad_prima_escrita": 0.6618655428161577
+   },
+   {
+    "mercado": "developed",
+    "ramo": "motor",
+    "anio": 2023,
+    "filas": 254577,
+    "exposicion": 199681.85205479452,
+    "siniestros": 27990.0,
+    "t0": 117307703.69999999,
+    "frecuencia": 0.1401729787257747,
+    "severidad": 4191.057652733119,
+    "coste_por_anio": 587.4730351950546,
+    "cuota_abiertos": 0.03862093604858878,
+    "siniestralidad_prima_escrita": 1.0395094967406997
+   },
+   {
+    "mercado": "developed",
+    "ramo": "motor",
+    "anio": 2024,
+    "filas": 254698,
+    "exposicion": 199785.63013698632,
+    "siniestros": 25864.0,
+    "t0": 90666976.89,
+    "frecuencia": 0.1294587602835395,
+    "severidad": 3505.5280269873183,
+    "coste_por_anio": 453.82131251298046,
+    "cuota_abiertos": 0.20971234147850293,
+    "siniestralidad_prima_escrita": 0.7814752198472925
+   },
+   {
+    "mercado": "developed",
+    "ramo": "buildings",
+    "anio": 2023,
+    "filas": 184132,
+    "exposicion": 149987.29589041095,
+    "siniestros": 6817.0,
+    "t0": 64832471.230000004,
+    "frecuencia": 0.04545051605557899,
+    "severidad": 9510.410918292504,
+    "coste_por_anio": 432.25308413700725,
+    "cuota_abiertos": 0.029045034472641923,
+    "siniestralidad_prima_escrita": 1.3029595909884337
+   },
+   {
+    "mercado": "developed",
+    "ramo": "buildings",
+    "anio": 2024,
+    "filas": 184001,
+    "exposicion": 149917.5232876712,
+    "siniestros": 6571.0,
+    "t0": 67353949.55,
+    "frecuencia": 0.043830766783621085,
+    "severidad": 10250.182552122964,
+    "coste_por_anio": 449.27336093164365,
+    "cuota_abiertos": 0.24653781768376198,
+    "siniestralidad_prima_escrita": 1.2881791667951168
+   },
+   {
+    "mercado": "developed",
+    "ramo": "contents",
+    "anio": 2023,
+    "filas": 187646,
+    "exposicion": 149974.9479452055,
+    "siniestros": 6158.0,
+    "t0": 17539466.93,
+    "frecuencia": 0.041060190947689965,
+    "severidad": 2848.2408135758365,
+    "coste_por_anio": 116.94931167042765,
+    "cuota_abiertos": 0.002923026956804157,
+    "siniestralidad_prima_escrita": 0.841890483032535
+   },
+   {
+    "mercado": "developed",
+    "ramo": "contents",
+    "anio": 2024,
+    "filas": 187491,
+    "exposicion": 149966.76438356165,
+    "siniestros": 5988.0,
+    "t0": 17516035.049999997,
+    "frecuencia": 0.03992884706563933,
+    "severidad": 2925.189554108216,
+    "coste_por_anio": 116.79944634399266,
+    "cuota_abiertos": 0.13209752839011357,
+    "siniestralidad_prima_escrita": 0.7977689379178518
+   }
+  ],
+  "razon_frecuencia_2023": {
+   "buildings/accidental_damage": 0.7501223012805337,
+   "buildings/escape_of_water": 0.6883248298392914,
+   "buildings/fire": 2.3162623005262644,
+   "buildings/flood": 1.007122880800251,
+   "buildings/storm": 1.2996658480528815,
+   "buildings/subsidence": 1.1106116981255902,
+   "contents/accidental_damage": 0.745227753807303,
+   "contents/escape_of_water": 0.6663570094108928,
+   "contents/flood": 1.2101934349693468,
+   "contents/theft": 1.0145051444894821,
+   "motor/bodily_injury": 1.3741456101194018,
+   "motor/glass_hail": 1.5470859518408686,
+   "motor/own_damage": 1.2278341598944351,
+   "motor/theft": 1.2826361458677682,
+   "motor/third_party_prop": 1.417335812935929
+  },
+  "razon_severidad_2023": {
+   "buildings/accidental_damage": 0.7261975971867033,
+   "buildings/escape_of_water": 0.6473951589932843,
+   "buildings/fire": 1.302295972937804,
+   "buildings/flood": 0.7561905603054015,
+   "buildings/storm": 0.6786007494699714,
+   "buildings/subsidence": 0.6888494556491394,
+   "contents/accidental_damage": 0.831582595789112,
+   "contents/escape_of_water": 0.8134682988577475,
+   "contents/flood": 0.8018675523513628,
+   "contents/theft": 0.8080243115322961,
+   "motor/bodily_injury": 0.4501044170362777,
+   "motor/glass_hail": 0.626649242883439,
+   "motor/own_damage": 0.5788586629415751,
+   "motor/theft": 0.5641415462106223,
+   "motor/third_party_prop": 0.6357673138901078
+  },
+  "siniestros_emergentes_2023": {
+   "buildings/accidental_damage": 55.0,
+   "buildings/escape_of_water": 131.0,
+   "buildings/fire": 49.0,
+   "buildings/flood": 42.0,
+   "buildings/storm": 210.0,
+   "buildings/subsidence": 32.0,
+   "contents/accidental_damage": 166.0,
+   "contents/escape_of_water": 86.0,
+   "contents/flood": 51.0,
+   "contents/theft": 188.0,
+   "motor/bodily_injury": 266.0,
+   "motor/glass_hail": 601.0,
+   "motor/own_damage": 1377.0,
+   "motor/theft": 194.0,
+   "motor/third_party_prop": 1119.0
+  },
+  "retrasos": {
+   "p_valor_min": 0.13327832001719125,
+   "ks_max": 0.1667763157894737,
+   "peligros": 15,
+   "por_peligro": [
+    {
+     "ramo": "buildings",
+     "peligro": "accidental_damage",
+     "n_emergente": 55,
+     "n_desarrollado": 967,
+     "mediana_emergente": 7.0,
+     "mediana_desarrollado": 7.0,
+     "p90_emergente": 27.60000000000001,
+     "p90_desarrollado": 22.399999999999977,
+     "ks": 0.07263326125787345,
+     "p_valor": 0.9267358169089326
+    },
+    {
+     "ramo": "buildings",
+     "peligro": "escape_of_water",
+     "n_emergente": 131,
+     "n_desarrollado": 2510,
+     "mediana_emergente": 9.0,
+     "mediana_desarrollado": 11.0,
+     "p90_emergente": 33.0,
+     "p90_desarrollado": 36.0,
+     "ks": 0.08182537027462666,
+     "p_valor": 0.3548167184500778
+    },
+    {
+     "ramo": "buildings",
+     "peligro": "fire",
+     "n_emergente": 49,
+     "n_desarrollado": 279,
+     "mediana_emergente": 5.0,
+     "mediana_desarrollado": 4.0,
+     "p90_emergente": 12.200000000000003,
+     "p90_desarrollado": 11.0,
+     "ks": 0.0863872430692707,
+     "p_valor": 0.8845774738464256
+    },
+    {
+     "ramo": "buildings",
+     "peligro": "flood",
+     "n_emergente": 42,
+     "n_desarrollado": 550,
+     "mediana_emergente": 8.0,
+     "mediana_desarrollado": 7.0,
+     "p90_emergente": 24.9,
+     "p90_desarrollado": 25.0,
+     "ks": 0.08294372294372296,
+     "p_valor": 0.9293823540452177
+    },
+    {
+     "ramo": "buildings",
+     "peligro": "storm",
+     "n_emergente": 210,
+     "n_desarrollado": 2131,
+     "mediana_emergente": 8.0,
+     "mediana_desarrollado": 8.0,
+     "p90_emergente": 26.0,
+     "p90_desarrollado": 24.0,
+     "ks": 0.036332149002256925,
+     "p_valor": 0.9536937208748442
+    },
+    {
+     "ramo": "buildings",
+     "peligro": "subsidence",
+     "n_emergente": 32,
+     "n_desarrollado": 380,
+     "mediana_emergente": 66.5,
+     "mediana_desarrollado": 90.0,
+     "p90_emergente": 189.8,
+     "p90_desarrollado": 278.0,
+     "ks": 0.1667763157894737,
+     "p_valor": 0.3440072064348176
+    },
+    {
+     "ramo": "contents",
+     "peligro": "accidental_damage",
+     "n_emergente": 166,
+     "n_desarrollado": 2368,
+     "mediana_emergente": 7.0,
+     "mediana_desarrollado": 7.0,
+     "p90_emergente": 22.0,
+     "p90_desarrollado": 24.0,
+     "ks": 0.065054135460762,
+     "p_valor": 0.5055602295697207
+    },
+    {
+     "ramo": "contents",
+     "peligro": "escape_of_water",
+     "n_emergente": 86,
+     "n_desarrollado": 1372,
+     "mediana_emergente": 13.0,
+     "mediana_desarrollado": 11.0,
+     "p90_emergente": 44.0,
+     "p90_desarrollado": 36.0,
+     "ks": 0.09797274391484168,
+     "p_valor": 0.3922931777768724
+    },
+    {
+     "ramo": "contents",
+     "peligro": "flood",
+     "n_emergente": 51,
+     "n_desarrollado": 448,
+     "mediana_emergente": 8.0,
+     "mediana_desarrollado": 7.0,
+     "p90_emergente": 24.0,
+     "p90_desarrollado": 26.0,
+     "ks": 0.05716036414565828,
+     "p_valor": 0.995979195914304
+    },
+    {
+     "ramo": "contents",
+     "peligro": "theft",
+     "n_emergente": 188,
+     "n_desarrollado": 1970,
+     "mediana_emergente": 4.0,
+     "mediana_desarrollado": 4.0,
+     "p90_emergente": 13.300000000000011,
+     "p90_desarrollado": 12.0,
+     "ks": 0.08776865752241066,
+     "p_valor": 0.13327832001719125
+    },
+    {
+     "ramo": "motor",
+     "peligro": "bodily_injury",
+     "n_emergente": 266,
+     "n_desarrollado": 2049,
+     "mediana_emergente": 126.5,
+     "mediana_desarrollado": 117.0,
+     "p90_emergente": 346.5,
+     "p90_desarrollado": 340.0,
+     "ks": 0.056754257532557695,
+     "p_valor": 0.4171624681915591
+    },
+    {
+     "ramo": "motor",
+     "peligro": "glass_hail",
+     "n_emergente": 601,
+     "n_desarrollado": 4112,
+     "mediana_emergente": 6.0,
+     "mediana_desarrollado": 6.0,
+     "p90_emergente": 18.0,
+     "p90_desarrollado": 17.0,
+     "ks": 0.022663265504315133,
+     "p_valor": 0.9441049725349443
+    },
+    {
+     "ramo": "motor",
+     "peligro": "own_damage",
+     "n_emergente": 1377,
+     "n_desarrollado": 11871,
+     "mediana_emergente": 7.0,
+     "mediana_desarrollado": 7.0,
+     "p90_emergente": 24.0,
+     "p90_desarrollado": 23.0,
+     "ks": 0.03193700471792904,
+     "p_valor": 0.1578598978896174
+    },
+    {
+     "ramo": "motor",
+     "peligro": "theft",
+     "n_emergente": 194,
+     "n_desarrollado": 1601,
+     "mediana_emergente": 4.0,
+     "mediana_desarrollado": 4.0,
+     "p90_emergente": 12.0,
+     "p90_desarrollado": 12.0,
+     "ks": 0.03239276998267834,
+     "p_valor": 0.9904726435707734
+    },
+    {
+     "ramo": "motor",
+     "peligro": "third_party_prop",
+     "n_emergente": 1119,
+     "n_desarrollado": 8357,
+     "mediana_emergente": 14.0,
+     "mediana_desarrollado": 14.0,
+     "p90_emergente": 46.0,
+     "p90_desarrollado": 47.0,
+     "ks": 0.014714778393972339,
+     "p_valor": 0.9808282723840748
+    }
+   ]
+  },
+  "concentracion_top10": {
+   "emerging": {
+    "motor": 0.05691740394966817,
+    "buildings": 0.2562457305410806,
+    "contents": 0.12728941593493392
+   },
+   "developed": {
+    "motor": 0.072673977126073,
+    "buildings": 0.02906395821393841,
+    "contents": 0.021054445616585062
+   }
+  }
+ },
+ "relatividades": {
+  "niveles_comparados": 68,
+  "niveles_con_100_siniestros_emergentes": 63,
+  "niveles_con_100_siniestros_sin_ncb": 58,
+  "mediana_abs_dif_log_sin_ncb": 0.017592273736184345,
+  "p90_abs_dif_log_sin_ncb": 0.10888934114250248,
+  "mediana_abs_dif_relativa_sin_ncb": 0.01758368742878247,
+  "p90_abs_dif_relativa_sin_ncb": 0.10988606134470444,
+  "ncb": [
+   {
+    "nivel": "0",
+    "relatividad_emerging": 1.732236135802048,
+    "relatividad_developed": 2.5574830269584665
+   },
+   {
+    "nivel": "1-2",
+    "relatividad_emerging": 1.280131868837963,
+    "relatividad_developed": 1.5369899390526516
+   },
+   {
+    "nivel": "10+",
+    "relatividad_emerging": 0.7105371484124061,
+    "relatividad_developed": 0.7200933963658864
+   },
+   {
+    "nivel": "3-5",
+    "relatividad_emerging": 0.9751443561248823,
+    "relatividad_developed": 1.0132503343796266
+   },
+   {
+    "nivel": "6-9",
+    "relatividad_emerging": 0.8000910326869324,
+    "relatividad_developed": 0.8010267326180263
+   }
+  ],
+  "mayores_diferencias": [
+   {
+    "ramo": "motor",
+    "factor": "ncb_g",
+    "nivel": "0",
+    "relatividad_emerging": 1.732236135802048,
+    "relatividad_developed": 2.5574830269584665,
+    "siniestros_emerging": 1162.0
+   },
+   {
+    "ramo": "contents",
+    "factor": "policyholder_age_band",
+    "nivel": "35-49",
+    "relatividad_emerging": 0.7038278203303018,
+    "relatividad_developed": 0.8635169828681574,
+    "siniestros_emerging": 116.0
+   },
+   {
+    "ramo": "motor",
+    "factor": "ncb_g",
+    "nivel": "1-2",
+    "relatividad_emerging": 1.280131868837963,
+    "relatividad_developed": 1.5369899390526516,
+    "siniestros_emerging": 2054.0
+   },
+   {
+    "ramo": "contents",
+    "factor": "urban_density",
+    "nivel": "dense_urban",
+    "relatividad_emerging": 1.4105957270638103,
+    "relatividad_developed": 1.2034083340479595,
+    "siniestros_emerging": 136.0
+   },
+   {
+    "ramo": "contents",
+    "factor": "new_business",
+    "nivel": "True",
+    "relatividad_emerging": 1.3298630252005867,
+    "relatividad_developed": 1.1412746788628063,
+    "siniestros_emerging": 102.0
+   },
+   {
+    "ramo": "contents",
+    "factor": "urban_density",
+    "nivel": "rural",
+    "relatividad_emerging": 0.807282075722866,
+    "relatividad_developed": 0.9272979339372575,
+    "siniestros_emerging": 163.0
+   }
+  ]
+ },
+ "prima_comercial": {
+  "gastos": [
+   {
+    "item": "fixed_expense_per_policy",
+    "developed": 45.0,
+    "emerging": 85.0,
+    "unit": "CU"
+   },
+   {
+    "item": "variable_expense",
+    "developed": 0.12,
+    "emerging": 0.15,
+    "unit": "share of premium"
+   },
+   {
+    "item": "commission_direct",
+    "developed": 0.0,
+    "emerging": 0.0,
+    "unit": "share of premium"
+   },
+   {
+    "item": "commission_comparison_site",
+    "developed": 0.1,
+    "emerging": null,
+    "unit": "share of premium"
+   },
+   {
+    "item": "commission_broker",
+    "developed": 0.15,
+    "emerging": 0.2,
+    "unit": "share of premium"
+   },
+   {
+    "item": "premium_tax",
+    "developed": 0.12,
+    "emerging": 0.08,
+    "unit": "share of premium"
+   },
+   {
+    "item": "cat_reinsurance",
+    "developed": 0.06,
+    "emerging": 0.12,
+    "unit": "share of property risk premium"
+   },
+   {
+    "item": "target_profit_margin",
+    "developed": 0.05,
+    "emerging": 0.08,
+    "unit": "share of premium"
+   }
+  ],
+  "denominadores": {
+   "direct": 0.6900000000000001,
+   "broker": 0.48999999999999994
+  },
+  "referencias": {
+   "filas": 20,
+   "por_ramo": {
+    "motor": 7,
+    "buildings": 7,
+    "contents": 6
+   },
+   "canal": {
+    "broker": 17,
+    "direct": 3
+   },
+   "en_test": 20,
+   "parciales_menos_0_99": 15,
+   "parciales_menos_de_1": 19,
+   "exposicion_min": 0.0685,
+   "inicio_despues_1_enero": 18,
+   "fin_antes_31_dic": 2,
+   "nuevo_negocio": 18,
+   "polizas_con_otra_fila_2025": [
+    {
+     "referencia": "B00250679",
+     "poliza": "B05817658",
+     "filas": [
+      {
+       "row_id": "B00213756",
+       "period_start": "2025-11-15",
+       "period_end": "2025-11-21",
+       "exposure": 0.0192
+      },
+      {
+       "row_id": "B00250679",
+       "period_start": "2025-11-22",
+       "period_end": "2025-12-31",
+       "exposure": 0.1096
+      }
+     ]
+    },
+    {
+     "referencia": "C00314425",
+     "poliza": "C17515168",
+     "filas": [
+      {
+       "row_id": "C00314425",
+       "period_start": "2025-01-13",
+       "period_end": "2025-02-06",
+       "exposure": 0.0685
+      },
+      {
+       "row_id": "C00318346",
+       "period_start": "2025-02-07",
+       "period_end": "2025-12-31",
+       "exposure": 0.8986
+      }
+     ]
+    }
+   ]
+  },
+  "prima_escrita_mediana_por_tramo_exposicion": {
+   "motor": {
+    "(0.0, 0.25]": 502.85,
+    "(0.25, 0.5]": 507.62,
+    "(0.5, 0.75]": 511.475,
+    "(0.75, 0.99]": 514.94,
+    "(0.99, 1.01]": 498.98
+   },
+   "buildings": {
+    "(0.0, 0.25]": 236.04,
+    "(0.25, 0.5]": 241.19,
+    "(0.5, 0.75]": 243.555,
+    "(0.75, 0.99]": 238.83499999999998,
+    "(0.99, 1.01]": 236.83
+   },
+   "contents": {
+    "(0.0, 0.25]": 123.11,
+    "(0.25, 0.5]": 120.89,
+    "(0.5, 0.75]": 120.82,
+    "(0.75, 0.99]": 120.215,
+    "(0.99, 1.01]": 118.05
+   }
+  },
+  "orden_de_magnitud_con_coste_observado": {
+   "motor": {
+    "coste_medio_por_anio": 406.88951397738185,
+    "prima_escrita_media": 611.5815231690037,
+    "prima_comercial_anual_directa": 712.8833535904084,
+    "prima_comercial_anual_broker": 1003.8561509742489,
+    "razon_broker_sobre_prima_escrita": 1.6414102011660094,
+    "razon_directa_sobre_prima_escrita": 1.1656391283642673
+   },
+   "buildings": {
+    "coste_medio_por_anio": 407.3098294769609,
+    "prima_escrita_media": 357.52223886034903,
+    "prima_comercial_anual_directa": 784.3289985712989,
+    "prima_comercial_anual_broker": 1104.4632837024415,
+    "razon_broker_sobre_prima_escrita": 3.0892156169727203,
+    "razon_directa_sobre_prima_escrita": 2.1937908004588884
+   },
+   "contents": {
+    "coste_medio_por_anio": 88.90343468226916,
+    "prima_escrita_media": 128.31405543019153,
+    "prima_comercial_anual_directa": 267.49543020890064,
+    "prima_comercial_anual_broker": 376.67723845743166,
+    "razon_broker_sobre_prima_escrita": 2.9355882891750746,
+    "razon_directa_sobre_prima_escrita": 2.0846931328924434
+   }
+  },
+  "canal_comparison_site_cuota_filas": {
+   "motor": 0.05004363628329338,
+   "buildings": 0.050176881154986135,
+   "contents": 0.04987395655652332
+  }
+ },
+ "fin_utc": "2026-10-23T18:14:34+00:00",
+ "segundos": 98.6
+}

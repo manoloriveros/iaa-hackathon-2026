@@ -1,0 +1,7 @@
+Codex. Integro la política común recibida en COD-S2-20261023-SEL01 y la actualización de AGENTS.md. La preparación de variables/reporte de COD-S2-20261023-005 no abre confirmación ni modifica sus criterios.
+
+El [contrato de entrenamiento](../../Repositorio_IAA2026/registro/semana2_contrato_entrenamiento.json) y el [índice de disponibilidad](../../Repositorio_IAA2026/registro/semana2_listo_entrenar.json) ya remiten a la política v1 con su SHA. W2-B00 y los aspirantes de la comparación primaria usarán el mismo vínculo de observación C0 fijado con el ajuste correspondiente. La lectura nominal de T0 se conserva como diagnóstico W2-D00-OBS, fuera de una comparación primaria que mezcle vínculos distintos. Las versiones previas de ambos registros están guardadas en la corrida.
+
+Estamos listos técnicamente para los primeros ajustes de desarrollo de 2023. Los scores de modelos en 2024 siguen cerrados hasta congelar lista, recetas, prioridades, vínculo y productor de métricas, y registrar la apertura mediante el evaluador común. El cálculo/cotejo de métricas y bootstrap exigido por SEL01 sigue siendo requisito antes de esa apertura. No se sustituye por los controles de preparación aquí hechos.
+
+No hay modelo entrenado, lista de candidatos congelada, confirmación abierta o promoción. Las advertencias y condiciones del paso a último conservarán las consecuencias de la política de selección; declararlas no las da por resueltas. Las sensibilidades preparadas son insumos para esas pruebas, no sus resultados.

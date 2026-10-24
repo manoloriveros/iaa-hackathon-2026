@@ -1,0 +1,1702 @@
+{
+  "autor": "Codex",
+  "started_utc": "2026-10-23T16:18:17.570117+00:00",
+  "environment": {
+    "python": "3.12.14",
+    "pyarrow": "26.0.0",
+    "pandas": "3.0.1",
+    "numpy": "2.3.5"
+  },
+  "local_originals": [
+    {
+      "name": "addresses.parquet",
+      "bytes": 8209304,
+      "rows": 575983,
+      "sha256": "2f1a9a157649a73ed1b0ee9b2caa3660b4c2a11766af3c64ab5131389079c0b1",
+      "week1_sha256": "2f1a9a157649a73ed1b0ee9b2caa3660b4c2a11766af3c64ab5131389079c0b1",
+      "same_as_week1": true
+    },
+    {
+      "name": "claims.parquet",
+      "bytes": 6393494,
+      "rows": 163150,
+      "sha256": "323adf2e0f6c5975a026479d725d4cd04f51fce3aa069f897a99f664c6e392c0",
+      "week1_sha256": "323adf2e0f6c5975a026479d725d4cd04f51fce3aa069f897a99f664c6e392c0",
+      "same_as_week1": true
+    },
+    {
+      "name": "customers.parquet",
+      "bytes": 9840123,
+      "rows": 545240,
+      "sha256": "065458a0b3aa9d3499e80b3b25b76baf0ef6245146477b6861f6ea35edf581eb",
+      "week1_sha256": "065458a0b3aa9d3499e80b3b25b76baf0ef6245146477b6861f6ea35edf581eb",
+      "same_as_week1": true
+    },
+    {
+      "name": "policies_buildings.parquet",
+      "bytes": 28411001,
+      "rows": 707726,
+      "sha256": "eb84372c23c16ed0619d89c8eb1396ab6916e5ec46a5907ce42c3dfce4a91cbe",
+      "week1_sha256": "eb84372c23c16ed0619d89c8eb1396ab6916e5ec46a5907ce42c3dfce4a91cbe",
+      "same_as_week1": true
+    },
+    {
+      "name": "policies_contents.parquet",
+      "bytes": 28203870,
+      "rows": 721617,
+      "sha256": "8c067cc80baed583100df999e1c3d5e389295702f7bac21d5331bbd639b83fcd",
+      "week1_sha256": "8c067cc80baed583100df999e1c3d5e389295702f7bac21d5331bbd639b83fcd",
+      "same_as_week1": true
+    },
+    {
+      "name": "policies_motor.parquet",
+      "bytes": 44218528,
+      "rows": 979968,
+      "sha256": "4d2d7ae03971d5d6df3a71bbaf0ebc168250a6807b27d1561d38b638434dc95e",
+      "week1_sha256": "4d2d7ae03971d5d6df3a71bbaf0ebc168250a6807b27d1561d38b638434dc95e",
+      "same_as_week1": true
+    },
+    {
+      "name": "sample_submission.parquet",
+      "bytes": 3271617,
+      "rows": 626639,
+      "sha256": "9529f3b6a679d3410350baa7c2ef3fb085d1d8843a838360c5852dfe820d4d95",
+      "week1_sha256": "9529f3b6a679d3410350baa7c2ef3fb085d1d8843a838360c5852dfe820d4d95",
+      "same_as_week1": true
+    },
+    {
+      "name": "test_buildings.parquet",
+      "bytes": 7917305,
+      "rows": 184155,
+      "sha256": "7b2b96507de29241c70617c17df66146ed30b51f826ce5219bbda5da536d4957",
+      "week1_sha256": "7b2b96507de29241c70617c17df66146ed30b51f826ce5219bbda5da536d4957",
+      "same_as_week1": true
+    },
+    {
+      "name": "test_contents.parquet",
+      "bytes": 7795903,
+      "rows": 187498,
+      "sha256": "c2212f62f3b7a21431c0073277549c3db5e63857565a8b88855e79a65fa1b8b6",
+      "week1_sha256": "c2212f62f3b7a21431c0073277549c3db5e63857565a8b88855e79a65fa1b8b6",
+      "same_as_week1": true
+    },
+    {
+      "name": "test_motor.parquet",
+      "bytes": 12035693,
+      "rows": 254986,
+      "sha256": "8d28fb9fd091caf2a044913a013592226a4c0917d5c6fcc9c5e8cdcec2ab4fc5",
+      "week1_sha256": "8d28fb9fd091caf2a044913a013592226a4c0917d5c6fcc9c5e8cdcec2ab4fc5",
+      "same_as_week1": true
+    },
+    {
+      "name": "weather.parquet",
+      "bytes": 41863008,
+      "rows": 2879915,
+      "sha256": "b8407f0f3c7279a49297c969a4ab2905641b232910e316fb806730065987cd49",
+      "week1_sha256": "b8407f0f3c7279a49297c969a4ab2905641b232910e316fb806730065987cd49",
+      "same_as_week1": true
+    }
+  ],
+  "emerging_files": [
+    {
+      "name": "addresses.parquet",
+      "rows": 136914,
+      "columns": 16,
+      "bytes": 2094327,
+      "sha256": "4e9bf9d2a1777896e84fd4ee471096ff075aaefefd544f91b731324b25425632",
+      "schema": {
+        "address_id": "string",
+        "region": "string",
+        "urban_density": "string",
+        "flood_zone": "double",
+        "distance_to_river_km": "double",
+        "elevation_m": "double",
+        "soil_type": "string",
+        "year_built": "int64",
+        "property_type": "string",
+        "roof_type": "string",
+        "basement": "bool",
+        "trees_within_5m": "bool",
+        "listed_building": "bool",
+        "bedrooms": "int64",
+        "energy_rating": "string",
+        "solar_panels": "bool"
+      },
+      "nulls": {
+        "address_id": 0,
+        "region": 0,
+        "urban_density": 0,
+        "flood_zone": 4037,
+        "distance_to_river_km": 16421,
+        "elevation_m": 0,
+        "soil_type": 16480,
+        "year_built": 0,
+        "property_type": 0,
+        "roof_type": 16337,
+        "basement": 0,
+        "trees_within_5m": 0,
+        "listed_building": 0,
+        "bedrooms": 0,
+        "energy_rating": 16515,
+        "solar_panels": 0
+      },
+      "id_diagnostics": {
+        "address_id": {
+          "unique": 136914,
+          "duplicate_rows": 0,
+          "nulls": 0
+        }
+      }
+    },
+    {
+      "name": "claims.parquet",
+      "rows": 9258,
+      "columns": 12,
+      "bytes": 373376,
+      "sha256": "1a2fce8a26cb1e05de1f53fe4e39bde772a1898e845755487625355fec4cc0e9",
+      "schema": {
+        "claim_id": "string",
+        "policy_id": "string",
+        "line": "string",
+        "peril": "string",
+        "loss_date": "date32[day]",
+        "report_date": "date32[day]",
+        "status": "string",
+        "paid_to_date": "double",
+        "incurred_to_date": "double",
+        "recoveries": "double",
+        "repairer_id": "string",
+        "third_party_id": "string"
+      },
+      "nulls": {
+        "claim_id": 0,
+        "policy_id": 0,
+        "line": 0,
+        "peril": 0,
+        "loss_date": 0,
+        "report_date": 0,
+        "status": 0,
+        "paid_to_date": 0,
+        "incurred_to_date": 0,
+        "recoveries": 0,
+        "repairer_id": 4283,
+        "third_party_id": 6545
+      },
+      "id_diagnostics": {
+        "claim_id": {
+          "unique": 9258,
+          "duplicate_rows": 0,
+          "nulls": 0
+        }
+      }
+    },
+    {
+      "name": "customers.parquet",
+      "rows": 135856,
+      "columns": 17,
+      "bytes": 2319251,
+      "sha256": "c00a0095d5fb7b2b65cd9647216add49afb3703d863d5c358b1441f0fab1fb62",
+      "schema": {
+        "customer_id": "string",
+        "surname": "string",
+        "gender": "string",
+        "occupation": "string",
+        "marital_status": "string",
+        "household_size": "double",
+        "prior_claims_5y": "int64",
+        "licence_points": "int64",
+        "years_at_address": "double",
+        "customer_since_year": "int64",
+        "email_domain": "string",
+        "marketing_consent": "bool",
+        "document_preference": "string",
+        "previous_insurer": "string",
+        "campaign_code": "string",
+        "branch_id": "int64",
+        "marketing_segment": "string"
+      },
+      "nulls": {
+        "customer_id": 0,
+        "surname": 0,
+        "gender": 0,
+        "occupation": 16517,
+        "marital_status": 16348,
+        "household_size": 16037,
+        "prior_claims_5y": 0,
+        "licence_points": 0,
+        "years_at_address": 16226,
+        "customer_since_year": 0,
+        "email_domain": 0,
+        "marketing_consent": 0,
+        "document_preference": 0,
+        "previous_insurer": 0,
+        "campaign_code": 27433,
+        "branch_id": 0,
+        "marketing_segment": 0
+      },
+      "id_diagnostics": {
+        "customer_id": {
+          "unique": 135856,
+          "duplicate_rows": 0,
+          "nulls": 0
+        }
+      }
+    },
+    {
+      "name": "expenses.parquet",
+      "rows": 8,
+      "columns": 4,
+      "bytes": 3124,
+      "sha256": "9033f666a5a45f0b44501d57e40ab1cc571c51c384f23a62942b75db323b1cdf",
+      "schema": {
+        "item": "string",
+        "developed": "double",
+        "emerging": "double",
+        "unit": "string"
+      },
+      "nulls": {
+        "item": 0,
+        "developed": 0,
+        "emerging": 1,
+        "unit": 0
+      }
+    },
+    {
+      "name": "policies_buildings.parquet",
+      "rows": 27447,
+      "columns": 27,
+      "bytes": 1049236,
+      "sha256": "ccc948fafc11e623d5cb010c2b494f6813f6048719eae7bcde28794467598319",
+      "schema": {
+        "row_id": "string",
+        "policy_id": "string",
+        "customer_id": "string",
+        "address_id": "string",
+        "period_start": "date32[day]",
+        "period_end": "date32[day]",
+        "exposure": "double",
+        "policyholder_age_band": "string",
+        "sum_insured": "double",
+        "construction_type": "string",
+        "occupancy": "string",
+        "days_unoccupied": "double",
+        "smoke_alarms": "bool",
+        "accidental_damage_cover": "bool",
+        "mortgage": "bool",
+        "voluntary_excess": "int64",
+        "compulsory_excess": "int64",
+        "channel": "string",
+        "payment_method": "string",
+        "missed_payments_12m": "int64",
+        "new_business": "bool",
+        "renewal_count": "int64",
+        "days_quote_to_inception": "int64",
+        "discount_applied": "double",
+        "written_premium": "double",
+        "customer_service_contacts": "int64",
+        "renewal_decision": "string"
+      },
+      "nulls": {
+        "row_id": 0,
+        "policy_id": 0,
+        "customer_id": 0,
+        "address_id": 0,
+        "period_start": 0,
+        "period_end": 0,
+        "exposure": 0,
+        "policyholder_age_band": 0,
+        "sum_insured": 0,
+        "construction_type": 0,
+        "occupancy": 0,
+        "days_unoccupied": 3291,
+        "smoke_alarms": 3266,
+        "accidental_damage_cover": 0,
+        "mortgage": 0,
+        "voluntary_excess": 0,
+        "compulsory_excess": 0,
+        "channel": 0,
+        "payment_method": 0,
+        "missed_payments_12m": 0,
+        "new_business": 0,
+        "renewal_count": 0,
+        "days_quote_to_inception": 0,
+        "discount_applied": 0,
+        "written_premium": 0,
+        "customer_service_contacts": 0,
+        "renewal_decision": 0
+      },
+      "id_diagnostics": {
+        "row_id": {
+          "unique": 27447,
+          "duplicate_rows": 0,
+          "nulls": 0
+        },
+        "customer_id": {
+          "unique": 14299,
+          "duplicate_rows": 13148,
+          "nulls": 0
+        },
+        "address_id": {
+          "unique": 15340,
+          "duplicate_rows": 12107,
+          "nulls": 0
+        }
+      }
+    },
+    {
+      "name": "policies_contents.parquet",
+      "rows": 34566,
+      "columns": 28,
+      "bytes": 1272728,
+      "sha256": "84d7f48d03933b018bec8fdc2f4bbd96df184cca7ae1971c38d3acc955720f8e",
+      "schema": {
+        "row_id": "string",
+        "policy_id": "string",
+        "customer_id": "string",
+        "address_id": "string",
+        "period_start": "date32[day]",
+        "period_end": "date32[day]",
+        "exposure": "double",
+        "policyholder_age_band": "string",
+        "sum_insured": "double",
+        "tenure": "string",
+        "security_level": "string",
+        "high_value_items": "double",
+        "accidental_damage_cover": "bool",
+        "works_from_home": "bool",
+        "lodgers": "bool",
+        "bicycle_cover": "bool",
+        "voluntary_excess": "int64",
+        "compulsory_excess": "int64",
+        "channel": "string",
+        "payment_method": "string",
+        "missed_payments_12m": "int64",
+        "new_business": "bool",
+        "renewal_count": "int64",
+        "days_quote_to_inception": "int64",
+        "discount_applied": "double",
+        "written_premium": "double",
+        "customer_service_contacts": "int64",
+        "renewal_decision": "string"
+      },
+      "nulls": {
+        "row_id": 0,
+        "policy_id": 0,
+        "customer_id": 0,
+        "address_id": 0,
+        "period_start": 0,
+        "period_end": 0,
+        "exposure": 0,
+        "policyholder_age_band": 0,
+        "sum_insured": 0,
+        "tenure": 0,
+        "security_level": 4238,
+        "high_value_items": 4067,
+        "accidental_damage_cover": 0,
+        "works_from_home": 0,
+        "lodgers": 0,
+        "bicycle_cover": 0,
+        "voluntary_excess": 0,
+        "compulsory_excess": 0,
+        "channel": 0,
+        "payment_method": 0,
+        "missed_payments_12m": 0,
+        "new_business": 0,
+        "renewal_count": 0,
+        "days_quote_to_inception": 0,
+        "discount_applied": 0,
+        "written_premium": 0,
+        "customer_service_contacts": 0,
+        "renewal_decision": 0
+      },
+      "id_diagnostics": {
+        "row_id": {
+          "unique": 34566,
+          "duplicate_rows": 0,
+          "nulls": 0
+        },
+        "customer_id": {
+          "unique": 17689,
+          "duplicate_rows": 16877,
+          "nulls": 0
+        },
+        "address_id": {
+          "unique": 18935,
+          "duplicate_rows": 15631,
+          "nulls": 0
+        }
+      }
+    },
+    {
+      "name": "policies_motor.parquet",
+      "rows": 47283,
+      "columns": 36,
+      "bytes": 1988978,
+      "sha256": "7c5dbb5e5b46629ebf01a66c991183d20b8585393b589bc2644fcbd6653a3ec1",
+      "schema": {
+        "row_id": "string",
+        "policy_id": "string",
+        "customer_id": "string",
+        "address_id": "string",
+        "period_start": "date32[day]",
+        "period_end": "date32[day]",
+        "exposure": "double",
+        "driver_age_band": "string",
+        "years_licensed": "int64",
+        "ncb_years": "int64",
+        "vehicle_value_group": "int64",
+        "vehicle_age": "double",
+        "make_model": "string",
+        "engine_size_cc": "double",
+        "body_type": "string",
+        "transmission": "string",
+        "seats": "int64",
+        "vehicle_colour": "string",
+        "fuel_type": "string",
+        "driver_assist": "bool",
+        "cover_type": "string",
+        "overnight_parking": "string",
+        "vehicle_use": "string",
+        "named_young_driver": "bool",
+        "voluntary_excess": "int64",
+        "compulsory_excess": "int64",
+        "channel": "string",
+        "payment_method": "string",
+        "missed_payments_12m": "int64",
+        "new_business": "bool",
+        "renewal_count": "int64",
+        "days_quote_to_inception": "int64",
+        "discount_applied": "double",
+        "written_premium": "double",
+        "customer_service_contacts": "int64",
+        "renewal_decision": "string"
+      },
+      "nulls": {
+        "row_id": 0,
+        "policy_id": 0,
+        "customer_id": 0,
+        "address_id": 0,
+        "period_start": 0,
+        "period_end": 0,
+        "exposure": 0,
+        "driver_age_band": 0,
+        "years_licensed": 0,
+        "ncb_years": 0,
+        "vehicle_value_group": 0,
+        "vehicle_age": 5604,
+        "make_model": 0,
+        "engine_size_cc": 5745,
+        "body_type": 0,
+        "transmission": 0,
+        "seats": 0,
+        "vehicle_colour": 0,
+        "fuel_type": 0,
+        "driver_assist": 0,
+        "cover_type": 0,
+        "overnight_parking": 5697,
+        "vehicle_use": 0,
+        "named_young_driver": 0,
+        "voluntary_excess": 0,
+        "compulsory_excess": 0,
+        "channel": 0,
+        "payment_method": 0,
+        "missed_payments_12m": 0,
+        "new_business": 0,
+        "renewal_count": 0,
+        "days_quote_to_inception": 0,
+        "discount_applied": 0,
+        "written_premium": 0,
+        "customer_service_contacts": 0,
+        "renewal_decision": 0
+      },
+      "id_diagnostics": {
+        "row_id": {
+          "unique": 47283,
+          "duplicate_rows": 0,
+          "nulls": 0
+        },
+        "customer_id": {
+          "unique": 23722,
+          "duplicate_rows": 23561,
+          "nulls": 0
+        },
+        "address_id": {
+          "unique": 23799,
+          "duplicate_rows": 23484,
+          "nulls": 0
+        }
+      }
+    },
+    {
+      "name": "reference_policies.parquet",
+      "rows": 20,
+      "columns": 50,
+      "bytes": 30934,
+      "sha256": "6d4c2839e87d092fccd4b3c3ddc16a2a4c4993c35e18481e322462cd382dd8f4",
+      "schema": {
+        "row_id": "string",
+        "policy_id": "string",
+        "customer_id": "string",
+        "address_id": "string",
+        "period_start": "date32[day]",
+        "period_end": "date32[day]",
+        "exposure": "double",
+        "driver_age_band": "string",
+        "years_licensed": "double",
+        "ncb_years": "double",
+        "vehicle_value_group": "double",
+        "vehicle_age": "double",
+        "make_model": "string",
+        "engine_size_cc": "double",
+        "body_type": "string",
+        "transmission": "string",
+        "seats": "double",
+        "vehicle_colour": "string",
+        "fuel_type": "string",
+        "driver_assist": "bool",
+        "cover_type": "string",
+        "overnight_parking": "string",
+        "vehicle_use": "string",
+        "named_young_driver": "bool",
+        "voluntary_excess": "int64",
+        "compulsory_excess": "int64",
+        "channel": "string",
+        "payment_method": "string",
+        "missed_payments_12m": "int64",
+        "new_business": "bool",
+        "renewal_count": "int64",
+        "days_quote_to_inception": "int64",
+        "discount_applied": "double",
+        "written_premium": "double",
+        "customer_service_contacts": "int64",
+        "line": "string",
+        "policyholder_age_band": "string",
+        "sum_insured": "double",
+        "construction_type": "string",
+        "occupancy": "string",
+        "days_unoccupied": "double",
+        "smoke_alarms": "bool",
+        "accidental_damage_cover": "bool",
+        "mortgage": "bool",
+        "tenure": "string",
+        "security_level": "string",
+        "high_value_items": "double",
+        "works_from_home": "bool",
+        "lodgers": "bool",
+        "bicycle_cover": "bool"
+      },
+      "nulls": {
+        "row_id": 0,
+        "policy_id": 0,
+        "customer_id": 0,
+        "address_id": 0,
+        "period_start": 0,
+        "period_end": 0,
+        "exposure": 0,
+        "driver_age_band": 13,
+        "years_licensed": 13,
+        "ncb_years": 13,
+        "vehicle_value_group": 13,
+        "vehicle_age": 15,
+        "make_model": 13,
+        "engine_size_cc": 13,
+        "body_type": 13,
+        "transmission": 13,
+        "seats": 13,
+        "vehicle_colour": 13,
+        "fuel_type": 13,
+        "driver_assist": 13,
+        "cover_type": 13,
+        "overnight_parking": 14,
+        "vehicle_use": 13,
+        "named_young_driver": 13,
+        "voluntary_excess": 0,
+        "compulsory_excess": 0,
+        "channel": 0,
+        "payment_method": 0,
+        "missed_payments_12m": 0,
+        "new_business": 0,
+        "renewal_count": 0,
+        "days_quote_to_inception": 0,
+        "discount_applied": 0,
+        "written_premium": 0,
+        "customer_service_contacts": 0,
+        "line": 0,
+        "policyholder_age_band": 7,
+        "sum_insured": 7,
+        "construction_type": 13,
+        "occupancy": 13,
+        "days_unoccupied": 14,
+        "smoke_alarms": 14,
+        "accidental_damage_cover": 7,
+        "mortgage": 13,
+        "tenure": 14,
+        "security_level": 14,
+        "high_value_items": 15,
+        "works_from_home": 14,
+        "lodgers": 14,
+        "bicycle_cover": 14
+      },
+      "id_diagnostics": {
+        "row_id": {
+          "unique": 20,
+          "duplicate_rows": 0,
+          "nulls": 0
+        },
+        "customer_id": {
+          "unique": 20,
+          "duplicate_rows": 0,
+          "nulls": 0
+        },
+        "address_id": {
+          "unique": 20,
+          "duplicate_rows": 0,
+          "nulls": 0
+        }
+      }
+    },
+    {
+      "name": "sample_submission.parquet",
+      "rows": 209063,
+      "columns": 2,
+      "bytes": 1197460,
+      "sha256": "160fc59043f1012337605c8d8446c0efbf81458e046cf02df9186d6f909d59ef",
+      "schema": {
+        "row_id": "string",
+        "prediction": "double"
+      },
+      "nulls": {
+        "row_id": 0,
+        "prediction": 0
+      },
+      "id_diagnostics": {
+        "row_id": {
+          "unique": 209063,
+          "duplicate_rows": 0,
+          "nulls": 0
+        }
+      }
+    },
+    {
+      "name": "test_buildings.parquet",
+      "rows": 52295,
+      "columns": 26,
+      "bytes": 2507817,
+      "sha256": "21f91aaa66a1b9efd216ad0e04ff12a507dbeb721084330d9b9f06c99edd0ca6",
+      "schema": {
+        "row_id": "string",
+        "policy_id": "string",
+        "customer_id": "string",
+        "address_id": "string",
+        "period_start": "date32[day]",
+        "period_end": "date32[day]",
+        "exposure": "double",
+        "policyholder_age_band": "string",
+        "sum_insured": "double",
+        "construction_type": "string",
+        "occupancy": "string",
+        "days_unoccupied": "double",
+        "smoke_alarms": "bool",
+        "accidental_damage_cover": "bool",
+        "mortgage": "bool",
+        "voluntary_excess": "int64",
+        "compulsory_excess": "int64",
+        "channel": "string",
+        "payment_method": "string",
+        "missed_payments_12m": "int64",
+        "new_business": "bool",
+        "renewal_count": "int64",
+        "days_quote_to_inception": "int64",
+        "discount_applied": "double",
+        "written_premium": "double",
+        "customer_service_contacts": "int64"
+      },
+      "nulls": {
+        "row_id": 0,
+        "policy_id": 0,
+        "customer_id": 0,
+        "address_id": 0,
+        "period_start": 0,
+        "period_end": 0,
+        "exposure": 0,
+        "policyholder_age_band": 0,
+        "sum_insured": 0,
+        "construction_type": 0,
+        "occupancy": 0,
+        "days_unoccupied": 6240,
+        "smoke_alarms": 6341,
+        "accidental_damage_cover": 0,
+        "mortgage": 0,
+        "voluntary_excess": 0,
+        "compulsory_excess": 0,
+        "channel": 0,
+        "payment_method": 0,
+        "missed_payments_12m": 0,
+        "new_business": 0,
+        "renewal_count": 0,
+        "days_quote_to_inception": 0,
+        "discount_applied": 0,
+        "written_premium": 0,
+        "customer_service_contacts": 0
+      },
+      "id_diagnostics": {
+        "row_id": {
+          "unique": 52295,
+          "duplicate_rows": 0,
+          "nulls": 0
+        },
+        "customer_id": {
+          "unique": 50300,
+          "duplicate_rows": 1995,
+          "nulls": 0
+        },
+        "address_id": {
+          "unique": 52295,
+          "duplicate_rows": 0,
+          "nulls": 0
+        }
+      }
+    },
+    {
+      "name": "test_contents.parquet",
+      "rows": 66247,
+      "columns": 27,
+      "bytes": 3038763,
+      "sha256": "af5ef2553e35a2d563ca091b173500daac55acc4969d1d3a96fa6b4ec3c6a012",
+      "schema": {
+        "row_id": "string",
+        "policy_id": "string",
+        "customer_id": "string",
+        "address_id": "string",
+        "period_start": "date32[day]",
+        "period_end": "date32[day]",
+        "exposure": "double",
+        "policyholder_age_band": "string",
+        "sum_insured": "double",
+        "tenure": "string",
+        "security_level": "string",
+        "high_value_items": "double",
+        "accidental_damage_cover": "bool",
+        "works_from_home": "bool",
+        "lodgers": "bool",
+        "bicycle_cover": "bool",
+        "voluntary_excess": "int64",
+        "compulsory_excess": "int64",
+        "channel": "string",
+        "payment_method": "string",
+        "missed_payments_12m": "int64",
+        "new_business": "bool",
+        "renewal_count": "int64",
+        "days_quote_to_inception": "int64",
+        "discount_applied": "double",
+        "written_premium": "double",
+        "customer_service_contacts": "int64"
+      },
+      "nulls": {
+        "row_id": 0,
+        "policy_id": 0,
+        "customer_id": 0,
+        "address_id": 0,
+        "period_start": 0,
+        "period_end": 0,
+        "exposure": 0,
+        "policyholder_age_band": 0,
+        "sum_insured": 0,
+        "tenure": 0,
+        "security_level": 8050,
+        "high_value_items": 7954,
+        "accidental_damage_cover": 0,
+        "works_from_home": 0,
+        "lodgers": 0,
+        "bicycle_cover": 0,
+        "voluntary_excess": 0,
+        "compulsory_excess": 0,
+        "channel": 0,
+        "payment_method": 0,
+        "missed_payments_12m": 0,
+        "new_business": 0,
+        "renewal_count": 0,
+        "days_quote_to_inception": 0,
+        "discount_applied": 0,
+        "written_premium": 0,
+        "customer_service_contacts": 0
+      },
+      "id_diagnostics": {
+        "row_id": {
+          "unique": 66247,
+          "duplicate_rows": 0,
+          "nulls": 0
+        },
+        "customer_id": {
+          "unique": 62636,
+          "duplicate_rows": 3611,
+          "nulls": 0
+        },
+        "address_id": {
+          "unique": 64690,
+          "duplicate_rows": 1557,
+          "nulls": 0
+        }
+      }
+    },
+    {
+      "name": "test_motor.parquet",
+      "rows": 90521,
+      "columns": 35,
+      "bytes": 4626510,
+      "sha256": "108d5c68e9bab5ccd90ee5502bc3543aa515a5aa07fda44a3b227cf070a28aa5",
+      "schema": {
+        "row_id": "string",
+        "policy_id": "string",
+        "customer_id": "string",
+        "address_id": "string",
+        "period_start": "date32[day]",
+        "period_end": "date32[day]",
+        "exposure": "double",
+        "driver_age_band": "string",
+        "years_licensed": "int64",
+        "ncb_years": "int64",
+        "vehicle_value_group": "int64",
+        "vehicle_age": "double",
+        "make_model": "string",
+        "engine_size_cc": "double",
+        "body_type": "string",
+        "transmission": "string",
+        "seats": "int64",
+        "vehicle_colour": "string",
+        "fuel_type": "string",
+        "driver_assist": "bool",
+        "cover_type": "string",
+        "overnight_parking": "string",
+        "vehicle_use": "string",
+        "named_young_driver": "bool",
+        "voluntary_excess": "int64",
+        "compulsory_excess": "int64",
+        "channel": "string",
+        "payment_method": "string",
+        "missed_payments_12m": "int64",
+        "new_business": "bool",
+        "renewal_count": "int64",
+        "days_quote_to_inception": "int64",
+        "discount_applied": "double",
+        "written_premium": "double",
+        "customer_service_contacts": "int64"
+      },
+      "nulls": {
+        "row_id": 0,
+        "policy_id": 0,
+        "customer_id": 0,
+        "address_id": 0,
+        "period_start": 0,
+        "period_end": 0,
+        "exposure": 0,
+        "driver_age_band": 0,
+        "years_licensed": 0,
+        "ncb_years": 0,
+        "vehicle_value_group": 0,
+        "vehicle_age": 11070,
+        "make_model": 0,
+        "engine_size_cc": 11004,
+        "body_type": 0,
+        "transmission": 0,
+        "seats": 0,
+        "vehicle_colour": 0,
+        "fuel_type": 0,
+        "driver_assist": 0,
+        "cover_type": 0,
+        "overnight_parking": 10859,
+        "vehicle_use": 0,
+        "named_young_driver": 0,
+        "voluntary_excess": 0,
+        "compulsory_excess": 0,
+        "channel": 0,
+        "payment_method": 0,
+        "missed_payments_12m": 0,
+        "new_business": 0,
+        "renewal_count": 0,
+        "days_quote_to_inception": 0,
+        "discount_applied": 0,
+        "written_premium": 0,
+        "customer_service_contacts": 0
+      },
+      "id_diagnostics": {
+        "row_id": {
+          "unique": 90521,
+          "duplicate_rows": 0,
+          "nulls": 0
+        },
+        "customer_id": {
+          "unique": 83907,
+          "duplicate_rows": 6614,
+          "nulls": 0
+        },
+        "address_id": {
+          "unique": 81670,
+          "duplicate_rows": 8851,
+          "nulls": 0
+        }
+      }
+    },
+    {
+      "name": "weather.parquet",
+      "rows": 410742,
+      "columns": 9,
+      "bytes": 6060339,
+      "sha256": "645067069f68de8c4746d1ba48a454ff00155e1aa6fbbf64cdee48ae7269cbbd",
+      "schema": {
+        "address_id": "string",
+        "year": "int64",
+        "hail_days": "double",
+        "wind_exposure_index": "double",
+        "freezing_days": "double",
+        "dry_summer_index": "double",
+        "wildfire_index": "double",
+        "rainfall_mm": "double",
+        "mean_temperature_c": "double"
+      },
+      "nulls": {
+        "address_id": 0,
+        "year": 0,
+        "hail_days": 0,
+        "wind_exposure_index": 0,
+        "freezing_days": 0,
+        "dry_summer_index": 0,
+        "wildfire_index": 0,
+        "rainfall_mm": 0,
+        "mean_temperature_c": 0
+      },
+      "id_diagnostics": {
+        "address_id": {
+          "unique": 136914,
+          "duplicate_rows": 273828,
+          "nulls": 0
+        }
+      }
+    }
+  ],
+  "training": false,
+  "data_modified": false,
+  "schema_differences": {
+    "addresses": {
+      "only_developed": [],
+      "only_emerging": []
+    },
+    "claims": {
+      "only_developed": [],
+      "only_emerging": []
+    },
+    "customers": {
+      "only_developed": [
+        "credit_band",
+        "date_of_birth"
+      ],
+      "only_emerging": [
+        "gender"
+      ]
+    },
+    "policies_buildings": {
+      "only_developed": [
+        "policyholder_age"
+      ],
+      "only_emerging": [
+        "policyholder_age_band"
+      ]
+    },
+    "policies_contents": {
+      "only_developed": [
+        "policyholder_age"
+      ],
+      "only_emerging": [
+        "policyholder_age_band"
+      ]
+    },
+    "policies_motor": {
+      "only_developed": [
+        "annual_mileage",
+        "driver_age",
+        "telematics_opt_in",
+        "telematics_score"
+      ],
+      "only_emerging": [
+        "driver_age_band"
+      ]
+    },
+    "sample_submission": {
+      "only_developed": [],
+      "only_emerging": []
+    },
+    "test_buildings": {
+      "only_developed": [
+        "policyholder_age"
+      ],
+      "only_emerging": [
+        "policyholder_age_band"
+      ]
+    },
+    "test_contents": {
+      "only_developed": [
+        "policyholder_age"
+      ],
+      "only_emerging": [
+        "policyholder_age_band"
+      ]
+    },
+    "test_motor": {
+      "only_developed": [
+        "annual_mileage",
+        "driver_age",
+        "telematics_opt_in",
+        "telematics_score"
+      ],
+      "only_emerging": [
+        "driver_age_band"
+      ]
+    },
+    "weather": {
+      "only_developed": [],
+      "only_emerging": []
+    }
+  },
+  "policies": [
+    {
+      "line": "motor",
+      "set": "train",
+      "rows": 47283,
+      "policies": 23722,
+      "customers": 23722,
+      "year_counts": {
+        "2024": 25603,
+        "2023": 21680
+      },
+      "start_min": "2023-01-01 00:00:00",
+      "end_max": "2024-12-30 00:00:00",
+      "exposure_sum": 54429.4651,
+      "exposure_invalid": 189,
+      "end_before_start": 0,
+      "period_date_missing": 0,
+      "new_business": {
+        "False": 40748,
+        "True": 6535
+      },
+      "channel": {
+        "broker": 33161,
+        "direct": 11806,
+        "comparison_site": 2316
+      },
+      "missing_customer_rows": 0,
+      "missing_address_rows": 0,
+      "customers_not_in_training_share": null,
+      "policies_not_in_training_share": null,
+      "annual": [
+        {
+          "year": 2023,
+          "rows": 21680,
+          "exposure": 26535.7663
+        },
+        {
+          "year": 2024,
+          "rows": 25603,
+          "exposure": 27893.6988
+        }
+      ]
+    },
+    {
+      "line": "motor",
+      "set": "test",
+      "rows": 90521,
+      "policies": 83907,
+      "customers": 83907,
+      "year_counts": {
+        "2025": 90521
+      },
+      "start_min": "2025-01-01 00:00:00",
+      "end_max": "2025-12-31 00:00:00",
+      "exposure_sum": 79006.8994,
+      "exposure_invalid": 0,
+      "end_before_start": 0,
+      "period_date_missing": 0,
+      "new_business": {
+        "True": 68823,
+        "False": 21698
+      },
+      "channel": {
+        "broker": 63320,
+        "direct": 22671,
+        "comparison_site": 4530
+      },
+      "missing_customer_rows": 0,
+      "missing_address_rows": 0,
+      "customers_not_in_training_share": 0.7602987152152539,
+      "policies_not_in_training_share": 0.7602987152152539,
+      "annual": [
+        {
+          "year": 2025,
+          "rows": 90521,
+          "exposure": 79006.8994
+        }
+      ]
+    },
+    {
+      "line": "buildings",
+      "set": "train",
+      "rows": 27447,
+      "policies": 14299,
+      "customers": 14299,
+      "year_counts": {
+        "2024": 14867,
+        "2023": 12580
+      },
+      "start_min": "2023-01-01 00:00:00",
+      "end_max": "2024-12-30 00:00:00",
+      "exposure_sum": 33783.083,
+      "exposure_invalid": 117,
+      "end_before_start": 0,
+      "period_date_missing": 0,
+      "new_business": {
+        "False": 23661,
+        "True": 3786
+      },
+      "channel": {
+        "broker": 19284,
+        "direct": 6753,
+        "comparison_site": 1410
+      },
+      "missing_customer_rows": 0,
+      "missing_address_rows": 0,
+      "customers_not_in_training_share": null,
+      "policies_not_in_training_share": null,
+      "annual": [
+        {
+          "year": 2023,
+          "rows": 12580,
+          "exposure": 18743.0605
+        },
+        {
+          "year": 2024,
+          "rows": 14867,
+          "exposure": 15040.0225
+        }
+      ],
+      "sum_insured": {
+        "non_numeric_non_null": 0,
+        "nonpositive": 0,
+        "missing": 0
+      }
+    },
+    {
+      "line": "buildings",
+      "set": "test",
+      "rows": 52295,
+      "policies": 50300,
+      "customers": 50300,
+      "year_counts": {
+        "2025": 52295
+      },
+      "start_min": "2025-01-01 00:00:00",
+      "end_max": "2025-12-31 00:00:00",
+      "exposure_sum": 47376.318400000004,
+      "exposure_invalid": 0,
+      "end_before_start": 0,
+      "period_date_missing": 0,
+      "new_business": {
+        "True": 39716,
+        "False": 12579
+      },
+      "channel": {
+        "broker": 36543,
+        "direct": 13128,
+        "comparison_site": 2624
+      },
+      "missing_customer_rows": 0,
+      "missing_address_rows": 0,
+      "customers_not_in_training_share": 0.7594607515058801,
+      "policies_not_in_training_share": 0.7594607515058801,
+      "annual": [
+        {
+          "year": 2025,
+          "rows": 52295,
+          "exposure": 47376.318400000004
+        }
+      ],
+      "sum_insured": {
+        "non_numeric_non_null": 0,
+        "nonpositive": 0,
+        "missing": 0
+      }
+    },
+    {
+      "line": "contents",
+      "set": "train",
+      "rows": 34566,
+      "policies": 17689,
+      "customers": 17689,
+      "year_counts": {
+        "2024": 18732,
+        "2023": 15834
+      },
+      "start_min": "2023-01-01 00:00:00",
+      "end_max": "2024-12-30 00:00:00",
+      "exposure_sum": 38892.9009,
+      "exposure_invalid": 146,
+      "end_before_start": 0,
+      "period_date_missing": 0,
+      "new_business": {
+        "False": 29850,
+        "True": 4716
+      },
+      "channel": {
+        "broker": 24305,
+        "direct": 8516,
+        "comparison_site": 1745
+      },
+      "missing_customer_rows": 0,
+      "missing_address_rows": 0,
+      "customers_not_in_training_share": null,
+      "policies_not_in_training_share": null,
+      "annual": [
+        {
+          "year": 2023,
+          "rows": 15834,
+          "exposure": 18372.9192
+        },
+        {
+          "year": 2024,
+          "rows": 18732,
+          "exposure": 20519.9817
+        }
+      ],
+      "sum_insured": {
+        "non_numeric_non_null": 0,
+        "nonpositive": 0,
+        "missing": 0
+      }
+    },
+    {
+      "line": "contents",
+      "set": "test",
+      "rows": 66247,
+      "policies": 62636,
+      "customers": 62636,
+      "year_counts": {
+        "2025": 66247
+      },
+      "start_min": "2025-01-01 00:00:00",
+      "end_max": "2025-12-31 00:00:00",
+      "exposure_sum": 59016.3802,
+      "exposure_invalid": 0,
+      "end_before_start": 0,
+      "period_date_missing": 0,
+      "new_business": {
+        "True": 50441,
+        "False": 15806
+      },
+      "channel": {
+        "broker": 46313,
+        "direct": 16630,
+        "comparison_site": 3304
+      },
+      "missing_customer_rows": 0,
+      "missing_address_rows": 0,
+      "customers_not_in_training_share": 0.7614080637613779,
+      "policies_not_in_training_share": 0.7614080637613779,
+      "annual": [
+        {
+          "year": 2025,
+          "rows": 66247,
+          "exposure": 59016.3802
+        }
+      ],
+      "sum_insured": {
+        "non_numeric_non_null": 0,
+        "nonpositive": 0,
+        "missing": 0
+      }
+    }
+  ],
+  "submission_contract": {
+    "test_rows": 209063,
+    "sample_rows": 209063,
+    "sample_columns": [
+      "row_id",
+      "prediction"
+    ],
+    "unique_test_row_ids": 209063,
+    "unique_sample_row_ids": 209063,
+    "sample_set_equals_test": true,
+    "sample_order_equals_concatenated_tests": true,
+    "sample_predictions_finite_nonnegative": true,
+    "overlap_developed_sample_row_ids": 0
+  },
+  "claims": {
+    "rows": 9258,
+    "unique_ids": 9258,
+    "duplicate_id_rows": 0,
+    "exact_duplicate_rows": 0,
+    "status": {
+      "closed": 8082,
+      "open": 1056,
+      "repudiated": 120
+    },
+    "line": {
+      "motor": 7183,
+      "buildings": 1059,
+      "contents": 1016
+    },
+    "peril": {
+      "own_damage": 2712,
+      "third_party_prop": 2263,
+      "glass_hail": 1350,
+      "theft": 826,
+      "storm": 466,
+      "accidental_damage": 462,
+      "bodily_injury": 450,
+      "escape_of_water": 440,
+      "flood": 167,
+      "fire": 70,
+      "subsidence": 52
+    },
+    "report_before_loss": 0,
+    "reports_after_valuation": 0,
+    "incurred_below_paid": 0,
+    "negative_net_incurred": 0,
+    "negative_paid": 0,
+    "negative_recoveries": 0,
+    "observed_net_incurred_all_rows": 28090258.83,
+    "warning": "Recuento descriptivo crudo, antes de resolver duplicados y asignación; no es el objetivo último.",
+    "by_line_year_status": [
+      {
+        "line": "buildings",
+        "year": 2021,
+        "status": "closed",
+        "rows": 1,
+        "net_incurred": 5656.16
+      },
+      {
+        "line": "buildings",
+        "year": 2022,
+        "status": "closed",
+        "rows": 2,
+        "net_incurred": 13770.85
+      },
+      {
+        "line": "buildings",
+        "year": 2023,
+        "status": "closed",
+        "rows": 498,
+        "net_incurred": 5410478.79
+      },
+      {
+        "line": "buildings",
+        "year": 2023,
+        "status": "open",
+        "rows": 21,
+        "net_incurred": 438209.31000000006
+      },
+      {
+        "line": "buildings",
+        "year": 2024,
+        "status": "closed",
+        "rows": 401,
+        "net_incurred": 2423055.56
+      },
+      {
+        "line": "buildings",
+        "year": 2024,
+        "status": "open",
+        "rows": 136,
+        "net_incurred": 1287005.65
+      },
+      {
+        "line": "contents",
+        "year": 2021,
+        "status": "closed",
+        "rows": 1,
+        "net_incurred": 98.48
+      },
+      {
+        "line": "contents",
+        "year": 2022,
+        "status": "closed",
+        "rows": 4,
+        "net_incurred": 9485.03
+      },
+      {
+        "line": "contents",
+        "year": 2023,
+        "status": "closed",
+        "rows": 491,
+        "net_incurred": 1285654.53
+      },
+      {
+        "line": "contents",
+        "year": 2023,
+        "status": "repudiated",
+        "rows": 8,
+        "net_incurred": 0.0
+      },
+      {
+        "line": "contents",
+        "year": 2024,
+        "status": "closed",
+        "rows": 448,
+        "net_incurred": 1063838.25
+      },
+      {
+        "line": "contents",
+        "year": 2024,
+        "status": "open",
+        "rows": 59,
+        "net_incurred": 233861.51999999996
+      },
+      {
+        "line": "contents",
+        "year": 2024,
+        "status": "repudiated",
+        "rows": 5,
+        "net_incurred": 0.0
+      },
+      {
+        "line": "motor",
+        "year": 2021,
+        "status": "closed",
+        "rows": 4,
+        "net_incurred": 15875.39
+      },
+      {
+        "line": "motor",
+        "year": 2022,
+        "status": "closed",
+        "rows": 22,
+        "net_incurred": 45033.32
+      },
+      {
+        "line": "motor",
+        "year": 2023,
+        "status": "closed",
+        "rows": 3428,
+        "net_incurred": 6712318.42
+      },
+      {
+        "line": "motor",
+        "year": 2023,
+        "status": "open",
+        "rows": 131,
+        "net_incurred": 1452790.8199999998
+      },
+      {
+        "line": "motor",
+        "year": 2023,
+        "status": "repudiated",
+        "rows": 49,
+        "net_incurred": 0.0
+      },
+      {
+        "line": "motor",
+        "year": 2024,
+        "status": "closed",
+        "rows": 2782,
+        "net_incurred": 4794930.640000001
+      },
+      {
+        "line": "motor",
+        "year": 2024,
+        "status": "open",
+        "rows": 709,
+        "net_incurred": 2898196.1100000003
+      },
+      {
+        "line": "motor",
+        "year": 2024,
+        "status": "repudiated",
+        "rows": 58,
+        "net_incurred": 0.0
+      }
+    ]
+  },
+  "claim_assignment_raw": {
+    "exactly_one": 9222,
+    "ambiguous": 0,
+    "unmatched": 36,
+    "unmatched_status": {
+      "closed": 35,
+      "open": 1
+    },
+    "warning": "Se inspeccionan filas originales, sin deduplicar y sin construir etiquetas."
+  },
+  "market_dimensions": {
+    "regions": {
+      "E03": 40212,
+      "E06": 26633,
+      "E02": 24481,
+      "E05": 22479,
+      "E01": 17235,
+      "E04": 5874
+    },
+    "gender": {
+      "F": 67973,
+      "M": 67883
+    },
+    "occupations_distinct": 80,
+    "occupation_top25": {
+      "Retired": 9218,
+      "Student": 6445,
+      "retired": 4431,
+      "student": 3236,
+      "Retired ": 2736,
+      "Care worker": 2694,
+      "Nurse": 2648,
+      "Teacher": 2638,
+      "Administrator": 2636,
+      "Hairdresser": 2606,
+      "Retail assistant": 2587,
+      "Accountant": 2432,
+      "Doctor": 2430,
+      "Sales representative": 2416,
+      "Unemployed": 2413,
+      "Software developer": 2408,
+      "Manager": 2387,
+      "Chef": 2384,
+      "Driver": 2267,
+      "Engineer": 2230,
+      "Mechanic": 2227,
+      "Builder": 2208,
+      "Electrician": 2166,
+      "Student ": 1976,
+      "Self-employed retired": 1819
+    },
+    "construction_train": {
+      "BRK": 19194,
+      "WOD": 3302,
+      "MIX": 2781,
+      "STN": 2170
+    },
+    "construction_test": {
+      "BRK": 36709,
+      "WOD": 6255,
+      "MIX": 5214,
+      "STN": 4117
+    },
+    "weather_years": {
+      "2023": 136914,
+      "2024": 136914,
+      "2025": 136914
+    },
+    "weather_duplicate_address_year": 0,
+    "cross_market_customer_id_overlap": 752,
+    "cross_market_address_id_overlap": 8046
+  },
+  "expenses": [
+    {
+      "item": "fixed_expense_per_policy",
+      "developed": 45.0,
+      "emerging": 85.0,
+      "unit": "CU"
+    },
+    {
+      "item": "variable_expense",
+      "developed": 0.12,
+      "emerging": 0.15,
+      "unit": "share of premium"
+    },
+    {
+      "item": "commission_direct",
+      "developed": 0.0,
+      "emerging": 0.0,
+      "unit": "share of premium"
+    },
+    {
+      "item": "commission_comparison_site",
+      "developed": 0.1,
+      "emerging": null,
+      "unit": "share of premium"
+    },
+    {
+      "item": "commission_broker",
+      "developed": 0.15,
+      "emerging": 0.2,
+      "unit": "share of premium"
+    },
+    {
+      "item": "premium_tax",
+      "developed": 0.12,
+      "emerging": 0.08,
+      "unit": "share of premium"
+    },
+    {
+      "item": "cat_reinsurance",
+      "developed": 0.06,
+      "emerging": 0.12,
+      "unit": "share of property risk premium"
+    },
+    {
+      "item": "target_profit_margin",
+      "developed": 0.05,
+      "emerging": 0.08,
+      "unit": "share of premium"
+    }
+  ],
+  "reference_policies": {
+    "rows": 20,
+    "line": {
+      "motor": 7,
+      "buildings": 7,
+      "contents": 6
+    },
+    "unique_row_ids": 20,
+    "all_in_test": true,
+    "columns": [
+      "row_id",
+      "policy_id",
+      "customer_id",
+      "address_id",
+      "period_start",
+      "period_end",
+      "exposure",
+      "driver_age_band",
+      "years_licensed",
+      "ncb_years",
+      "vehicle_value_group",
+      "vehicle_age",
+      "make_model",
+      "engine_size_cc",
+      "body_type",
+      "transmission",
+      "seats",
+      "vehicle_colour",
+      "fuel_type",
+      "driver_assist",
+      "cover_type",
+      "overnight_parking",
+      "vehicle_use",
+      "named_young_driver",
+      "voluntary_excess",
+      "compulsory_excess",
+      "channel",
+      "payment_method",
+      "missed_payments_12m",
+      "new_business",
+      "renewal_count",
+      "days_quote_to_inception",
+      "discount_applied",
+      "written_premium",
+      "customer_service_contacts",
+      "line",
+      "policyholder_age_band",
+      "sum_insured",
+      "construction_type",
+      "occupancy",
+      "days_unoccupied",
+      "smoke_alarms",
+      "accidental_damage_cover",
+      "mortgage",
+      "tenure",
+      "security_level",
+      "high_value_items",
+      "works_from_home",
+      "lodgers",
+      "bicycle_cover"
+    ]
+  },
+  "finished_utc": "2026-10-23T16:18:36.899681+00:00",
+  "elapsed_seconds": 19.32800000000043
+}

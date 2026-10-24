@@ -1,0 +1,6394 @@
+{
+ "autor": "Claude (Cowork)",
+ "utc": "2026-10-24T00:13:53+00:00",
+ "entorno": {
+  "python": "3.13.17",
+  "pandas": "3.0.5",
+  "numpy": "2.5.3",
+  "pyarrow": "26.0.0",
+  "scipy": "1.18.1"
+ },
+ "resumen": {
+  "controles": 74,
+  "por_resultado": {
+   "pasa": 41,
+   "informativo": 16,
+   "hallazgo": 12,
+   "limite": 5
+  },
+  "por_area": {
+   "Autos": {
+    "hallazgo": 3,
+    "informativo": 0,
+    "limite": 0,
+    "pasa": 1
+   },
+   "Calendario": {
+    "hallazgo": 1,
+    "informativo": 1,
+    "limite": 0,
+    "pasa": 4
+   },
+   "Capas derivadas": {
+    "hallazgo": 1,
+    "informativo": 0,
+    "limite": 0,
+    "pasa": 8
+   },
+   "Clientes": {
+    "hallazgo": 1,
+    "informativo": 2,
+    "limite": 0,
+    "pasa": 2
+   },
+   "Clima": {
+    "hallazgo": 0,
+    "informativo": 1,
+    "limite": 0,
+    "pasa": 1
+   },
+   "Comercial": {
+    "hallazgo": 0,
+    "informativo": 1,
+    "limite": 0,
+    "pasa": 0
+   },
+   "Contenidos": {
+    "hallazgo": 0,
+    "informativo": 0,
+    "limite": 0,
+    "pasa": 1
+   },
+   "Direcciones": {
+    "hallazgo": 0,
+    "informativo": 1,
+    "limite": 0,
+    "pasa": 2
+   },
+   "Disponibilidad": {
+    "hallazgo": 0,
+    "informativo": 0,
+    "limite": 3,
+    "pasa": 1
+   },
+   "Edificios": {
+    "hallazgo": 0,
+    "informativo": 0,
+    "limite": 0,
+    "pasa": 1
+   },
+   "Entrega": {
+    "hallazgo": 1,
+    "informativo": 0,
+    "limite": 0,
+    "pasa": 2
+   },
+   "Faltantes": {
+    "hallazgo": 0,
+    "informativo": 1,
+    "limite": 0,
+    "pasa": 0
+   },
+   "Historia": {
+    "hallazgo": 0,
+    "informativo": 1,
+    "limite": 0,
+    "pasa": 0
+   },
+   "Hogar": {
+    "hallazgo": 1,
+    "informativo": 0,
+    "limite": 0,
+    "pasa": 1
+   },
+   "Integridad": {
+    "hallazgo": 1,
+    "informativo": 0,
+    "limite": 0,
+    "pasa": 6
+   },
+   "Métrica": {
+    "hallazgo": 0,
+    "informativo": 0,
+    "limite": 0,
+    "pasa": 1
+   },
+   "Objetivo": {
+    "hallazgo": 0,
+    "informativo": 0,
+    "limite": 1,
+    "pasa": 0
+   },
+   "Pólizas": {
+    "hallazgo": 2,
+    "informativo": 0,
+    "limite": 0,
+    "pasa": 1
+   },
+   "Relaciones": {
+    "hallazgo": 0,
+    "informativo": 1,
+    "limite": 0,
+    "pasa": 5
+   },
+   "Revisión": {
+    "hallazgo": 0,
+    "informativo": 0,
+    "limite": 1,
+    "pasa": 0
+   },
+   "Siniestros": {
+    "hallazgo": 1,
+    "informativo": 2,
+    "limite": 0,
+    "pasa": 4
+   },
+   "Tendencia": {
+    "hallazgo": 0,
+    "informativo": 1,
+    "limite": 0,
+    "pasa": 0
+   },
+   "Test": {
+    "hallazgo": 0,
+    "informativo": 4,
+    "limite": 0,
+    "pasa": 0
+   }
+  },
+  "hallazgos": [
+   {
+    "id": "VE05",
+    "severidad": "P2",
+    "titulo": "Columnas de texto con espacios, cadenas vacías o variantes de mayúsculas",
+    "observado": "1 columnas con variantes",
+    "n_casos": 0
+   },
+   {
+    "id": "VE16",
+    "severidad": "P0",
+    "titulo": "Convención de exposición por fila: días/365 (normal), días/360 y número de días; ninguna sin explicar; test todo días/365",
+    "observado": "609 filas de entrenamiento en otra convención (495 en días/360 y 114 en días), 0 sin explicar; test 100 % días/365",
+    "n_casos": 609
+   },
+   {
+    "id": "VE21",
+    "severidad": "P2",
+    "titulo": "Ocupación: texto libre con variantes de escritura y prefijo «self-employed»; vocabulario frente al desarrollado",
+    "observado": "80 valores crudos → 40 normalizados → 20 sin prefijo; 20 coinciden con las 20 del desarrollado",
+    "n_casos": 0
+   },
+   {
+    "id": "VE30",
+    "severidad": "P2",
+    "titulo": "Dominios de autos (bandas, carrocería, combustible, cobertura, uso, aparcamiento, franquicias, canal, pago); make_model coherente; eléctricos con cilindrada",
+    "observado": "0 columnas fuera de dominio; 2465 eléctricos con cilindrada; vehicle_age mínimo 3 (desarrollado 0)",
+    "n_casos": 0
+   },
+   {
+    "id": "VE75",
+    "severidad": "P1",
+    "titulo": "make_model: 300 códigos que no describen el vehículo (cada uno con varias carrocerías y combustibles); sobredispersión de la frecuencia por código en los dos mercados, pero las frecuencias por código no se correlacionan entre mercados",
+    "observado": "300 de 300 códigos con varias carrocerías; dispersión 1.595 (p 2.6e-10); correlación entre mercados 0.028",
+    "n_casos": 0
+   },
+   {
+    "id": "VE31",
+    "severidad": "P2",
+    "titulo": "Coherencia: edad implícita al obtener el carnet, NCB frente a años de carnet, conductor joven nombrado frente a banda del titular",
+    "observado": "0 carnets antes de los 16 (cota superior de la banda); 27807 NCB mayor que carnet",
+    "n_casos": 27807
+   },
+   {
+    "id": "VE36",
+    "severidad": "P1",
+    "titulo": "Capital asegurado: dos nubes separadas por un hueco, prueba de prima por mil en la nube extrema (CAPS2-01), capital frente a dormitorios",
+    "observado": "157 + 192 filas en la nube extrema; hueco 67× y 27×",
+    "n_casos": 0
+   },
+   {
+    "id": "VE38",
+    "severidad": "P0",
+    "titulo": "customer_service_contacts mide el siniestro del propio periodo y cambia en el test; impagos coherentes con el método de pago",
+    "observado": "frecuencia con 3+ contactos 1.125 frente a 0.0002 con 0; 3+ en 9.5% del train y 0.8% del test",
+    "n_casos": 0
+   },
+   {
+    "id": "VE42",
+    "severidad": "P1",
+    "titulo": "Peligro frente a cobertura: daños propios/robo/lunas sin cobertura completa; daño accidental sin la cobertura opcional; neto mayor que el capital",
+    "observado": "0 autos fuera de cobertura; 23 + 47 daños accidentales sin cobertura; 4 netos sobre el capital",
+    "n_casos": 74
+   },
+   {
+    "id": "VE46",
+    "severidad": "P2",
+    "titulo": "renewal_decision frente a la existencia de un periodo posterior: declined_by_insurer con sucesor, lapsed y cancelled sin él",
+    "observado": "{'motor': {'cancelled': 0.0, 'declined_by_insurer': 0.973, 'lapsed_by_customer': 0.0, 'mid_term_change': 1.0, 'renewed': 1.0}, 'buildings': {'cancelled': 0.0, 'declined_by_insurer': 0.956, 'lapsed_by_customer': 0.0, 'mid_term_change': 1.0, 'renewed': 1.0}, 'contents': {'cancelled': 0.0, 'declined_by_insurer': 0.9, 'lapsed_by_customer': 0.0, 'mid_term_change': 1.0, 'renewed': 1.0}}",
+    "n_casos": 0
+   },
+   {
+    "id": "VE52",
+    "severidad": "P2",
+    "titulo": "Tabla de gastos: ocho ítems, unidades, comisión de comparison_site vacía aunque el canal tiene alrededor del 5 % de las filas",
+    "observado": "comparison_site sin comisión; 5.0% del train y 5.0% del test por ese canal; 0 referencias",
+    "n_casos": 0
+   },
+   {
+    "id": "VE59",
+    "severidad": "P2",
+    "titulo": "Matrices F0: cada predictor igual a su columna de origen (pólizas y direcciones), derivados correctos (antigüedad, mes, edad de la vivienda, log del capital con la máscara), sin columnas excluidas, contrato = columnas; predictores constantes o duplicados",
+    "observado": "0 discrepancias de valores; predictores constantes: {'motor': ['x_compulsory_excess'], 'buildings': ['x_compulsory_excess'], 'contents': ['x_compulsory_excess']}; x_renewal_count = x_customer_tenure_years en el 100%",
+    "n_casos": 0
+   }
+  ],
+  "limites": [
+   {
+    "id": "VE62",
+    "titulo": "Maestros sin fecha de versión: la copia actual se asume estable (customer_since_year 2025 en todo el nuevo negocio del test; previous_insurer y campaña sin fecha)"
+   },
+   {
+    "id": "VE63",
+    "titulo": "El clima de 2025 está en el archivo aunque la página anuncia 2023–2024: no es información conocida al cotizar; queda como escenario (CLIMA-S2-01)"
+   },
+   {
+    "id": "VE64",
+    "titulo": "Contactos, impagos y desocupación no tienen anclaje temporal: contactos fuera (VE38); impagos y desocupación con frecuencia por nivel para decidir"
+   },
+   {
+    "id": "VE68",
+    "titulo": "Una sola valoración al 31-12-2024: reserva de caso dentro de T0, abiertos por año, sin triángulo; el último no está identificado"
+   },
+   {
+    "id": "VE74",
+    "titulo": "Alcance: controles propios de IA sobre copias con huella; no son revisión profesional independiente ni aprobación de la base"
+   }
+  ]
+ },
+ "controles": [
+  {
+   "id": "VE01",
+   "area": "Integridad",
+   "titulo": "Huellas y tamaños de los trece Parquet frente al manifiesto de descarga y al listado de Kaggle",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "13 de 13 coinciden",
+   "esperado": "13 de 13",
+   "vd_semana1": "VD01",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE02",
+   "area": "Integridad",
+   "titulo": "Columnas de cada tabla frente al diccionario de la página de datos (marcando las de un solo mercado)",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "0 diferencias",
+   "esperado": "0",
+   "vd_semana1": "VD02",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE03",
+   "area": "Integridad",
+   "titulo": "Tipos de las columnas comunes iguales a los del mercado desarrollado",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "0 columnas con tipo distinto",
+   "esperado": "0",
+   "vd_semana1": "VD02",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE04",
+   "area": "Integridad",
+   "titulo": "Filas, duplicados exactos y unicidad de claves en las trece tablas",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "claves únicas y sin duplicados exactos",
+   "esperado": "sin duplicados",
+   "vd_semana1": "VD02",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE05",
+   "area": "Integridad",
+   "titulo": "Columnas de texto con espacios, cadenas vacías o variantes de mayúsculas",
+   "resultado": "hallazgo",
+   "severidad": "P2",
+   "observado": "1 columnas con variantes",
+   "esperado": "0",
+   "vd_semana1": "VD02",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE06",
+   "area": "Integridad",
+   "titulo": "Perfil de nulos por tabla; claves, fechas y exposición sin nulos; nulos de pólizas en train frente a test",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "0 claves o fechas con nulos",
+   "esperado": "0",
+   "vd_semana1": "VD41",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE07",
+   "area": "Integridad",
+   "titulo": "Rangos numéricos frente al diccionario (índices 0–10 y 0–1, días 0–366, capitales y primas positivos)",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "todo dentro de rango",
+   "esperado": "0",
+   "vd_semana1": "VD02",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE08",
+   "area": "Relaciones",
+   "titulo": "Claves de pólizas y test en los maestros de clientes y direcciones; maestros sin uso",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "0 claves sin maestro; 0 clientes y 0 direcciones sin póliza",
+   "esperado": "0 claves sin maestro",
+   "vd_semana1": "VD03",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE09",
+   "area": "Relaciones",
+   "titulo": "Clima: cada dirección del maestro exactamente una vez en 2023, 2024 y 2025",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "{2023: 136914, 2024: 136914, 2025: 136914}",
+   "esperado": "tres años completos",
+   "vd_semana1": "VD40",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE10",
+   "area": "Relaciones",
+   "titulo": "Formato de identificadores: prefijo de ramo, ocho dígitos, longitudes uniformes (sin ceros perdidos como ID01)",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "0 anomalías",
+   "esperado": "0",
+   "vd_semana1": "VD49",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE11",
+   "area": "Relaciones",
+   "titulo": "Siniestros: póliza existente en su ramo, prefijo coherente y peligro dentro del catálogo del ramo",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "{'policy_sin_poliza_del_ramo': 0, 'prefijo_poliza_igual_ramo': True, 'peril_fuera_del_ramo': 0, 'policy_en_test_sin_train': 0}",
+   "esperado": "todo coherente",
+   "vd_semana1": "VD03",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE12",
+   "area": "Relaciones",
+   "titulo": "Los 752 clientes y 8.046 direcciones con el mismo identificador en los dos mercados no comparten atributos",
+   "resultado": "informativo",
+   "severidad": "",
+   "observado": "apellido igual en 0.5%; tipo de vivienda igual en 25.6%",
+   "esperado": "identificadores reutilizados, no las mismas entidades",
+   "vd_semana1": "VD49",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE13",
+   "area": "Relaciones",
+   "titulo": "Hogares con edificios y contenidos el mismo año: banda de edad (salvo cumpleaños entre inicios distintos), canal e inicio; inquilinos con póliza de edificios",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "31 bandas distintas, todas explicadas por un inicio posterior (31); 0 inquilinos con edificios de 56915 hogares",
+   "esperado": "0",
+   "vd_semana1": "VD38",
+   "casos": "casos_VE13.parquet",
+   "n_casos": 31
+  },
+  {
+   "id": "VE14",
+   "area": "Calendario",
+   "titulo": "Fechas: inicio ≤ fin, ningún periodo cruza el año natural, 1–365 días; 2024 termina el 30-12 y 2025 el 31-12",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "0 anomalías de fechas; 2024 sin ningún periodo que cubra el 31-12",
+   "esperado": "0",
+   "vd_semana1": "VD15",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE15",
+   "area": "Calendario",
+   "titulo": "Solapes dentro de la misma póliza y huecos entre periodos consecutivos (incluido el día 31-12-2024)",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "0 solapes; huecos de un día en la transición 2024→2025: {'motor': 20097, 'buildings': 12103, 'contents': 14922}",
+   "esperado": "0 solapes",
+   "vd_semana1": "VD16",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE16",
+   "area": "Calendario",
+   "titulo": "Convención de exposición por fila: días/365 (normal), días/360 y número de días; ninguna sin explicar; test todo días/365",
+   "resultado": "hallazgo",
+   "severidad": "P0",
+   "observado": "609 filas de entrenamiento en otra convención (495 en días/360 y 114 en días), 0 sin explicar; test 100 % días/365",
+   "esperado": "una sola convención",
+   "vd_semana1": "VD15",
+   "casos": "casos_VE16.parquet",
+   "n_casos": 609
+  },
+  {
+   "id": "VE17",
+   "area": "Calendario",
+   "titulo": "new_business ⇔ renewal_count = 0; renewal_count = año − customer_since_year; NB solo en el primer año de la póliza (también en sus tramos); sin año de ingreso posterior",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "0 incoherencias",
+   "esperado": "0",
+   "vd_semana1": "VD17",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE18",
+   "area": "Calendario",
+   "titulo": "Días entre cotización e inicio no negativos; dominio de renewal_decision; distribución en nuevo negocio y renovación",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "min 0 días; valores de renewal_decision dentro del diccionario",
+   "esperado": "sin negativos",
+   "vd_semana1": "VD17",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE19",
+   "area": "Calendario",
+   "titulo": "Pólizas con varios periodos en el mismo año (cambios a mitad de año): cuántos y qué atributos cambian",
+   "resultado": "informativo",
+   "severidad": "",
+   "observado": "{'motor': 10091, 'buildings': 3036, 'contents': 5506}",
+   "esperado": "",
+   "vd_semana1": "VD17",
+   "casos": "casos_VE19.parquet",
+   "n_casos": 37266
+  },
+  {
+   "id": "VE20",
+   "area": "Clientes",
+   "titulo": "Dominios y perfiles de las 17 columnas del maestro de clientes (género, estado civil, preferencias, campañas, sucursales)",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "dominios del diccionario",
+   "esperado": "0",
+   "vd_semana1": "VD56",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE21",
+   "area": "Clientes",
+   "titulo": "Ocupación: texto libre con variantes de escritura y prefijo «self-employed»; vocabulario frente al desarrollado",
+   "resultado": "hallazgo",
+   "severidad": "P2",
+   "observado": "80 valores crudos → 40 normalizados → 20 sin prefijo; 20 coinciden con las 20 del desarrollado",
+   "esperado": "un vocabulario",
+   "vd_semana1": "VD55",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE22",
+   "area": "Clientes",
+   "titulo": "Año de ingreso frente al primer periodo observado; nuevo negocio del test con ingreso 2025; años en la dirección frente a la edad",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "0 ingresos posteriores al primer periodo; 0 años en la dirección por encima de la edad",
+   "esperado": "0",
+   "vd_semana1": "VD56",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE23",
+   "area": "Clientes",
+   "titulo": "prior_claims_5y (declarado al ingresar) frente a la frecuencia observada: relatividad plausible, sin salto que delate fuga",
+   "resultado": "informativo",
+   "severidad": "",
+   "observado": "{'motor': {'0': 0.934, '1': 1.159, '2': 1.611, '3': 1.699, '4': 1.761}, 'buildings': {'0': 0.959, '1': 1.08, '2': 1.405, '3': 2.598, '4': 0.0}, 'contents': {'0': 0.944, '1': 1.134, '2': 1.362, '3': 2.684, '4': 0.0, '5': 0.0}}",
+   "esperado": "relatividad moderada y creciente",
+   "vd_semana1": "VD47",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE24",
+   "area": "Clientes",
+   "titulo": "Nulos del maestro de clientes por segmento (renovación y nuevo negocio, train y test): ¿estructurales o desplazados?",
+   "resultado": "informativo",
+   "severidad": "",
+   "observado": "{'occupation': 0.1188, 'marital_status': 0.1207, 'household_size': 0.1163, 'years_at_address': 0.1195, 'campaign_code': 0.9358}",
+   "esperado": "",
+   "vd_semana1": "VD41",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE25",
+   "area": "Direcciones",
+   "titulo": "Dominios del maestro de direcciones (región E01–E06, densidad, zona de inundación 1–5, suelo, tipo, tejado, energía)",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "dominios del diccionario",
+   "esperado": "0",
+   "vd_semana1": "VD39",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE26",
+   "area": "Direcciones",
+   "titulo": "Coherencia física: la distancia al río baja con la zona de inundación, sin elevaciones negativas, ninguna vivienda construida después de su primer periodo",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "0 incoherencias; distancia decrece con la zona: True",
+   "esperado": "0",
+   "vd_semana1": "VD20",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE27",
+   "area": "Direcciones",
+   "titulo": "Desplazamiento de las direcciones frente al desarrollado (PSI por columna)",
+   "resultado": "informativo",
+   "severidad": "",
+   "observado": "{'elevation_m': 0.0201, 'soil_type': 0.0166, 'flood_zone': 0.0008, 'distance_to_river_km': 0.0002, 'urban_density': 0.0001}",
+   "esperado": "",
+   "vd_semana1": "VD43",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE28",
+   "area": "Clima",
+   "titulo": "Clima: 2025 no es copia de 2024, signos físicos coherentes (heladas frente a temperatura, sequía frente a lluvia), medias por región",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "copias 2024→2025: 0; r(heladas, temperatura) -0.886; r(sequía, lluvia) 0.277",
+   "esperado": "sin copias y signos físicos",
+   "vd_semana1": "VD40",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE29",
+   "area": "Clima",
+   "titulo": "Clima emergente 2023–2024 frente al desarrollado: medias, PSI y valores fuera del rango observado en el desarrollado",
+   "resultado": "informativo",
+   "severidad": "",
+   "observado": "{'hail_days': 1.7474, 'wind_exposure_index': 0.2068, 'freezing_days': 2.0744, 'dry_summer_index': 1.2032, 'wildfire_index': 6.7191, 'rainfall_mm': 3.5073, 'mean_temperature_c': 2.3163}",
+   "esperado": "",
+   "vd_semana1": "VD44",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE30",
+   "area": "Autos",
+   "titulo": "Dominios de autos (bandas, carrocería, combustible, cobertura, uso, aparcamiento, franquicias, canal, pago); make_model coherente; eléctricos con cilindrada",
+   "resultado": "hallazgo",
+   "severidad": "P2",
+   "observado": "0 columnas fuera de dominio; 2465 eléctricos con cilindrada; vehicle_age mínimo 3 (desarrollado 0)",
+   "esperado": "dominios del diccionario",
+   "vd_semana1": "VD35",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE75",
+   "area": "Autos",
+   "titulo": "make_model: 300 códigos que no describen el vehículo (cada uno con varias carrocerías y combustibles); sobredispersión de la frecuencia por código en los dos mercados, pero las frecuencias por código no se correlacionan entre mercados",
+   "resultado": "hallazgo",
+   "severidad": "P1",
+   "observado": "300 de 300 códigos con varias carrocerías; dispersión 1.595 (p 2.6e-10); correlación entre mercados 0.028",
+   "esperado": "un código describe un vehículo",
+   "vd_semana1": "VD44",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE31",
+   "area": "Autos",
+   "titulo": "Coherencia: edad implícita al obtener el carnet, NCB frente a años de carnet, conductor joven nombrado frente a banda del titular",
+   "resultado": "hallazgo",
+   "severidad": "P2",
+   "observado": "0 carnets antes de los 16 (cota superior de la banda); 27807 NCB mayor que carnet",
+   "esperado": "0",
+   "vd_semana1": "VD33",
+   "casos": "casos_VE31.parquet",
+   "n_casos": 27807
+  },
+  {
+   "id": "VE32",
+   "area": "Autos",
+   "titulo": "Evolución de la póliza de un año al siguiente: carnet +1, edad del vehículo +1 si es el mismo modelo, NCB en −2…+1, banda de edad sin retroceder, mismo cliente",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "0 carnets que no suben 1; 0 bandas que retroceden; 0 cambios de cliente en 40181 pares",
+   "esperado": "0",
+   "vd_semana1": "VD36",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE33",
+   "area": "Edificios",
+   "titulo": "Dominios de edificios; códigos de construcción BRK/STN/WOD/MIX frente a brick/stone/timber/non-standard (y los alias t/w del desarrollado); desocupación frente a ocupación",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "0 columnas fuera de dominio; códigos ['BRK', 'WOD', 'MIX', 'STN']",
+   "esperado": "dominios del diccionario",
+   "vd_semana1": "VD31",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE34",
+   "area": "Contenidos",
+   "titulo": "Dominios de contenidos (tenencia, seguridad, objetos de valor, teletrabajo, inquilinos, bicicletas); cruce con edificios del mismo hogar",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "0 columnas fuera de dominio; 0 inquilinos con edificios del mismo hogar",
+   "esperado": "dominios del diccionario",
+   "vd_semana1": "VD38",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE35",
+   "area": "Hogar",
+   "titulo": "Evolución de hogar de un año al siguiente: capital indexado (razón año a año), banda de edad sin retroceder, mismo cliente; saltos ×1000",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "razón mediana 1.030 / 1.020; saltos ×1000: 96; bandas que retroceden: 0",
+   "esperado": "0 retrocesos",
+   "vd_semana1": "VD30",
+   "casos": "casos_VE35.parquet",
+   "n_casos": 185
+  },
+  {
+   "id": "VE36",
+   "area": "Hogar",
+   "titulo": "Capital asegurado: dos nubes separadas por un hueco, prueba de prima por mil en la nube extrema (CAPS2-01), capital frente a dormitorios",
+   "resultado": "hallazgo",
+   "severidad": "P1",
+   "observado": "157 + 192 filas en la nube extrema; hueco 67× y 27×",
+   "esperado": "una sola escala",
+   "vd_semana1": "VD30",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE37",
+   "area": "Pólizas",
+   "titulo": "Prima escrita: positiva, anual (mediana plana por tramo de exposición), por año, nuevo negocio frente a renovación en 2025, descuento en [0, 1]",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "prima anual: medianas por tramo de exposición planas en los tres ramos (True)",
+   "esperado": "anual",
+   "vd_semana1": "VD25",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE38",
+   "area": "Pólizas",
+   "titulo": "customer_service_contacts mide el siniestro del propio periodo y cambia en el test; impagos coherentes con el método de pago",
+   "resultado": "hallazgo",
+   "severidad": "P0",
+   "observado": "frecuencia con 3+ contactos 1.125 frente a 0.0002 con 0; 3+ en 9.5% del train y 0.8% del test",
+   "esperado": "fuera de los predictores",
+   "vd_semana1": "VD23",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE39",
+   "area": "Siniestros",
+   "titulo": "Dominios y fechas: estado, peligro, ocurrencia ≤ reporte ≤ 31-12-2024; formato de claim_id; reparador y tercero por peligro",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "0 anomalías; 34 ocurrencias anteriores a 2023",
+   "esperado": "0",
+   "vd_semana1": "VD07",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE40",
+   "area": "Siniestros",
+   "titulo": "Importes: pagado ≤ incurrido, recuperaciones en [0, incurrido], neto ≥ 0, cerrados sin reserva, abiertos con reserva, rechazados sin pago; recuperaciones solo en cerrados",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "0 anomalías de importes; 0 aceptados con neto cero; 0 abiertos con recuperación",
+   "esperado": "0",
+   "vd_semana1": "VD07",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE41",
+   "area": "Siniestros",
+   "titulo": "Asignación por póliza y fecha de ocurrencia: único, ninguno o ambiguo; los no asignados son todos anteriores al primer periodo (ninguno en un hueco ni después del último)",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "9222 únicos, 36 ninguno (todos anteriores al primer inicio), 0 ambiguos",
+   "esperado": "0 ambiguos",
+   "vd_semana1": "VD05",
+   "casos": "casos_VE41.parquet",
+   "n_casos": 36
+  },
+  {
+   "id": "VE42",
+   "area": "Siniestros",
+   "titulo": "Peligro frente a cobertura: daños propios/robo/lunas sin cobertura completa; daño accidental sin la cobertura opcional; neto mayor que el capital",
+   "resultado": "hallazgo",
+   "severidad": "P1",
+   "observado": "0 autos fuera de cobertura; 23 + 47 daños accidentales sin cobertura; 4 netos sobre el capital",
+   "esperado": "0",
+   "vd_semana1": "VD09",
+   "casos": "casos_VE42.parquet",
+   "n_casos": 74
+  },
+  {
+   "id": "VE43",
+   "area": "Siniestros",
+   "titulo": "Duplicados: iguales salvo claim_id (DUP01), misma póliza-peligro-fecha, identificadores de once caracteres",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "{'iguales_salvo_claim_id': 0, 'misma_poliza_peligro_fecha': 0, 'misma_poliza_fecha': 2, 'claim_id_once_caracteres': 0, 'mismo_importe_y_fecha_distinta_poliza': 0}",
+   "esperado": "0",
+   "vd_semana1": "VD04",
+   "casos": "casos_VE43.parquet",
+   "n_casos": 4
+  },
+  {
+   "id": "VE44",
+   "area": "Siniestros",
+   "titulo": "Retraso de reporte por ramo y peligro; más de 365 días; truncamiento de 2024 (medianas menores por falta de seguimiento, no por rapidez)",
+   "resultado": "informativo",
+   "severidad": "",
+   "observado": "{'motor': {'mediana': 9.0, 'mas_de_365': 31}, 'buildings': {'mediana': 8.0, 'mas_de_365': 2}, 'contents': {'mediana': 6.0, 'mas_de_365': 2}}",
+   "esperado": "",
+   "vd_semana1": "VD13",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE45",
+   "area": "Siniestros",
+   "titulo": "Concentración del coste (mayor siniestro, diez mayores, 1 % superior) y peso de la reserva de caso por peligro",
+   "resultado": "informativo",
+   "severidad": "",
+   "observado": "{'motor': {'top10': 0.057, 'abiertos': 839}, 'buildings': {'top10': 0.256, 'abiertos': 157}, 'contents': {'top10': 0.127, 'abiertos': 59}}",
+   "esperado": "",
+   "vd_semana1": "VD45",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE46",
+   "area": "Pólizas",
+   "titulo": "renewal_decision frente a la existencia de un periodo posterior: declined_by_insurer con sucesor, lapsed y cancelled sin él",
+   "resultado": "hallazgo",
+   "severidad": "P2",
+   "observado": "{'motor': {'cancelled': 0.0, 'declined_by_insurer': 0.973, 'lapsed_by_customer': 0.0, 'mid_term_change': 1.0, 'renewed': 1.0}, 'buildings': {'cancelled': 0.0, 'declined_by_insurer': 0.956, 'lapsed_by_customer': 0.0, 'mid_term_change': 1.0, 'renewed': 1.0}, 'contents': {'cancelled': 0.0, 'declined_by_insurer': 0.9, 'lapsed_by_customer': 0.0, 'mid_term_change': 1.0, 'renewed': 1.0}}",
+   "esperado": "declined sin sucesor",
+   "vd_semana1": "VD17",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE47",
+   "area": "Test",
+   "titulo": "Esquema del test = train sin renewal_decision; categorías del test ausentes en el train; numéricos fuera del soporte del train (renewal_count 17 es estructural)",
+   "resultado": "informativo",
+   "severidad": "",
+   "observado": "{'motor': {'categorias_nuevas': [], 'fuera_de_soporte': ['years_licensed', 'vehicle_age', 'missed_payments_12m', 'renewal_count', 'written_premium']}, 'buildings': {'categorias_nuevas': [], 'fuera_de_soporte': ['sum_insured', 'missed_payments_12m', 'renewal_count', 'written_premium']}, 'contents': {'categorias_nuevas': [], 'fuera_de_soporte': ['sum_insured', 'renewal_count', 'written_premium']}}",
+   "esperado": "0",
+   "vd_semana1": "VD44",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE48",
+   "area": "Test",
+   "titulo": "Desplazamiento 2024→2025 por columna (PSI) y dentro del nuevo negocio (orgánico 2023–2024 frente a 2025)",
+   "resultado": "informativo",
+   "severidad": "",
+   "observado": "{'motor': [('new_business', 1.7404), ('renewal_count', 1.3845), ('exposure', 0.2784), ('customer_service_contacts', 0.2227), ('discount_applied', 0.0528)], 'buildings': [('new_business', 1.7324), ('renewal_count', 1.3857), ('exposure', 0.1931), ('discount_applied', 0.052), ('customer_service_contacts', 0.0492)], 'contents': [('new_business', 1.7454), ('renewal_count', 1.4059), ('exposure', 0.1612), ('discount_applied', 0.0484), ('policyholder_age_band', 0.0433)]}",
+   "esperado": "PSI alto solo en lo que explica la cartera nueva",
+   "vd_semana1": "VD43",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE49",
+   "area": "Test",
+   "titulo": "Nuevo negocio de 2025: cuota, concentración en enero, clientes y direcciones nuevas, canal; renovaciones del test con fila en 2024",
+   "resultado": "informativo",
+   "severidad": "",
+   "observado": "{'motor': {'nb': 0.76, 'enero': 0.883, 'ren_sin_2024': 0}, 'buildings': {'nb': 0.759, 'enero': 0.914, 'ren_sin_2024': 0}, 'contents': {'nb': 0.761, 'enero': 0.901, 'ren_sin_2024': 0}}",
+   "esperado": "",
+   "vd_semana1": "VD43",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE50",
+   "area": "Entrega",
+   "titulo": "Plantilla de envío: 209.063 filas únicas, mismo conjunto y orden que los tres test concatenados, predicciones finitas y no negativas",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "{'filas': 209063, 'unicos': True, 'mismo_conjunto': True, 'mismo_orden': True, 'prediccion_valores': {'count': 209063.0, 'mean': 0.0, 'std': 0.0, 'min': 0.0, '25%': 0.0, '50%': 0.0, '75%': 0.0, 'max': 0.0}, 'prediccion_negativas': 0, 'prediccion_no_finitas': 0}",
+   "esperado": "coincide",
+   "vd_semana1": "VD51",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE51",
+   "area": "Entrega",
+   "titulo": "Veinte referencias: todas en el test con los mismos valores en todas las columnas, ramo coherente con el identificador, canales y exposiciones",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "20 en test, 0 con diferencias, 2 pólizas con otra fila en 2025",
+   "esperado": "iguales al test",
+   "vd_semana1": "VD57",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE52",
+   "area": "Entrega",
+   "titulo": "Tabla de gastos: ocho ítems, unidades, comisión de comparison_site vacía aunque el canal tiene alrededor del 5 % de las filas",
+   "resultado": "hallazgo",
+   "severidad": "P2",
+   "observado": "comparison_site sin comisión; 5.0% del train y 5.0% del test por ese canal; 0 referencias",
+   "esperado": "todos los canales con valor",
+   "vd_semana1": "VD57",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE53",
+   "area": "Capas derivadas",
+   "titulo": "Corrida base de Codex: huellas de los archivos copiados frente a su manifiesto y de sus entradas frente a los originales",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "26 de 26 archivos; entradas iguales: 13 de 13",
+   "esperado": "todas",
+   "vd_semana1": "",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE54",
+   "area": "Capas derivadas",
+   "titulo": "Tablas de periodos de la base: idénticas a los originales salvo la exposición; los 609 cambios son exactamente mis filas fuera de días/365 y quedan en días/365",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "0 discrepancias",
+   "esperado": "0",
+   "vd_semana1": "",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE55",
+   "area": "Capas derivadas",
+   "titulo": "T0 de Codex recalculado fila a fila desde los originales (centavos exactos), componentes, conteos, test sin etiquetas, fórmulas T1 y exposición",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "109296 de 109296 filas con T0 idéntico; total 27,997,991.57 CU",
+   "esperado": "todas iguales",
+   "vd_semana1": "VD06",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE56",
+   "area": "Capas derivadas",
+   "titulo": "Los 36 siniestros anteriores a la cobertura y la auditoría de asignación coinciden con mi asignación (mismos claim_id y mismo periodo)",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "{'precobertura_coincide': True, 'n_codex': 36, 'n_mios': 36, 'auditoria_filas': 9258, 'incluidos_en_T0': 9102, 'incluidos_esperados': 9102, 'categorias': {'unique_period': 9222, 'before_first_available_coverage': 36}, 'row_id_coincide': True}",
+   "esperado": "coincide",
+   "vd_semana1": "VD05",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE57",
+   "area": "Capas derivadas",
+   "titulo": "Particiones: los grupos son los componentes conexos cliente–dirección (recalculados), ningún cliente ni dirección en dos folds, test sin fold, banderas de entidad vista coherentes (vista en cualquier año anterior)",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "36398 grupos (míos 36398), equivalentes: True; positivos por cruce entre 88 y 660",
+   "esperado": "equivalentes",
+   "vd_semana1": "VD27",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE58",
+   "area": "Capas derivadas",
+   "titulo": "Splits: en los cinco folds de desarrollo y de población nueva la evaluación es el fold k, el ajuste no lo contiene y no comparten clientes ni direcciones; cada fila se evalúa una vez; contraste temporal y producción con sus roles",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "folds correctos: True; filas de 2023 evaluadas una vez: True; de 2024: True",
+   "esperado": "sin fugas de identidad",
+   "vd_semana1": "VD26",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE59",
+   "area": "Capas derivadas",
+   "titulo": "Matrices F0: cada predictor igual a su columna de origen (pólizas y direcciones), derivados correctos (antigüedad, mes, edad de la vivienda, log del capital con la máscara), sin columnas excluidas, contrato = columnas; predictores constantes o duplicados",
+   "resultado": "hallazgo",
+   "severidad": "P2",
+   "observado": "0 discrepancias de valores; predictores constantes: {'motor': ['x_compulsory_excess'], 'buildings': ['x_compulsory_excess'], 'contents': ['x_compulsory_excess']}; x_renewal_count = x_customer_tenure_years en el 100%",
+   "esperado": "sin discrepancias ni constantes",
+   "vd_semana1": "VD18",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE60",
+   "area": "Capas derivadas",
+   "titulo": "OOF de 2023 (dev3): mismas filas, folds, T0, exposición y nuevo negocio que la base; exposición efectiva C0 en [0, e]; predicciones positivas y finitas",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "prediction = tasa × e_cost en el 100.0% de las filas; C0/e mediana 0.998",
+   "esperado": "coherente",
+   "vd_semana1": "",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE61",
+   "area": "Capas derivadas",
+   "titulo": "Tablas de las decisiones del participante: los 349 capitales coinciden con la auditoría de Codex; el bloque de clima toma el otro año y la media en 2025",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "{'capital_filas': 349, 'capital_mismo_conjunto_que_codex': True, 'capital_dividido_x1000': True, 'clima_filas': 410742, 'clima_direcciones': 136914, 'clima_anios': [2023, 2024, 2025], 'clima_2025_es_media': True, 'clima_2023_toma_2024': True}",
+   "esperado": "coherente",
+   "vd_semana1": "",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE62",
+   "area": "Disponibilidad",
+   "titulo": "Maestros sin fecha de versión: la copia actual se asume estable (customer_since_year 2025 en todo el nuevo negocio del test; previous_insurer y campaña sin fecha)",
+   "resultado": "limite",
+   "severidad": "P1",
+   "observado": "ingreso 2025 en el 100.0% del nuevo negocio del test",
+   "esperado": "supuesto declarado",
+   "vd_semana1": "VD19",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE63",
+   "area": "Disponibilidad",
+   "titulo": "El clima de 2025 está en el archivo aunque la página anuncia 2023–2024: no es información conocida al cotizar; queda como escenario (CLIMA-S2-01)",
+   "resultado": "limite",
+   "severidad": "P1",
+   "observado": "{'anios': [2023, 2024, 2025], 'diccionario_anuncia': '2023–2024 (texto de la página); el archivo trae 2025', 'filas_2025': 136914}",
+   "esperado": "fuera de la base",
+   "vd_semana1": "VD21",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE64",
+   "area": "Disponibilidad",
+   "titulo": "Contactos, impagos y desocupación no tienen anclaje temporal: contactos fuera (VE38); impagos y desocupación con frecuencia por nivel para decidir",
+   "resultado": "limite",
+   "severidad": "P1",
+   "observado": "{'motor': {'0': 0.1754, '1': 0.2513, '2': 0.2147, '3': 0.2389}, 'buildings': {'0': 0.0436, '1': 0.0548, '2': 0.0764, '3': 0.1226}, 'contents': {'0': 0.0333, '1': 0.0422, '2': 0.0541, '3': 0.0917}}",
+   "esperado": "bloque condicional declarado",
+   "vd_semana1": "VD23",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE65",
+   "area": "Disponibilidad",
+   "titulo": "renewal_decision solo existe en el entrenamiento y describe el final del periodo: nunca predictor (F0 la excluye)",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "{'motor': {'train_tiene_renewal_decision': True, 'test_tiene': False, 'mid_term_change_filas': 3477}, 'buildings': {'train_tiene_renewal_decision': True, 'test_tiene': False, 'mid_term_change_filas': 1041}, 'contents': {'train_tiene_renewal_decision': True, 'test_tiene': False, 'mid_term_change_filas': 1895}}",
+   "esperado": "excluida",
+   "vd_semana1": "VD24",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE66",
+   "area": "Comercial",
+   "titulo": "Prima escrita: base anual respaldada por los datos (VE37); siniestralidad observada sobre prima prorrateada por año, sin convertirla en ancla de suficiencia",
+   "resultado": "informativo",
+   "severidad": "",
+   "observado": "{'motor': {2023: 0.712, 2024: 0.629}, 'buildings': {2023: 1.488, 2024: 0.834}, 'contents': {2023: 0.734, 2024: 0.662}}",
+   "esperado": "",
+   "vd_semana1": "VD25",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE67",
+   "area": "Historia",
+   "titulo": "Historial propio observable: frecuencia de 2024 según hubiera o no siniestro en 2023 (solo pólizas con los dos años); prior_claims_5y es declaración al ingresar",
+   "resultado": "informativo",
+   "severidad": "",
+   "observado": "{'motor': {'sin': 0.1484, 'con': 0.3102}, 'buildings': {'sin': 0.0437, 'con': 0.0846}, 'contents': {'sin': 0.032, 'con': 0.0535}}",
+   "esperado": "",
+   "vd_semana1": "VD47",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE68",
+   "area": "Objetivo",
+   "titulo": "Una sola valoración al 31-12-2024: reserva de caso dentro de T0, abiertos por año, sin triángulo; el último no está identificado",
+   "resultado": "limite",
+   "severidad": "P0",
+   "observado": "1055 abiertos en T0; reserva de caso 17.8% de T0",
+   "esperado": "limitación declarada",
+   "vd_semana1": "VD12",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE69",
+   "area": "Métrica",
+   "titulo": "Métrica: la fórmula propia de D² Tweedie 1,5 coincide con scikit-learn; identidad de escala d(e·r, e·q) = e^(2−p) d(r, q); entrega en CU por fila ≥ 0",
+   "resultado": "pasa",
+   "severidad": "",
+   "observado": "{'d2_formula_propia': -0.740004694529284, 'd2_sklearn': -0.7400046945292837, 'coincide': np.True_, 'identidad_escala_e': True}",
+   "esperado": "coincide",
+   "vd_semana1": "VD50",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE70",
+   "area": "Tendencia",
+   "titulo": "Frecuencia, severidad y prima pura observadas por año (2024 truncado por reporte y desarrollo): sin estimar inflación como pendiente",
+   "resultado": "informativo",
+   "severidad": "",
+   "observado": "{'motor': {2023: 432.7, 2024: 382.67}, 'buildings': {2023: 514.28, 2024: 306.73}, 'contents': {2023: 91.13, 2024: 86.8}}",
+   "esperado": "",
+   "vd_semana1": "VD46",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE72",
+   "area": "Faltantes",
+   "titulo": "Los nulos del 12 % en direcciones y pólizas: por región, por año y en la cartera nueva de 2025; correlación entre ausencias (¿estructurales, aleatorias o desplazadas?)",
+   "resultado": "informativo",
+   "severidad": "",
+   "observado": "filas de direcciones con algún nulo: 41.7%; mayor cambio de la cuota de nulos en el nuevo negocio de 2025 frente a 2024: 0.005",
+   "esperado": "misma cuota en todos los segmentos",
+   "vd_semana1": "VD41",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE73",
+   "area": "Test",
+   "titulo": "Mezcla geográfica 2024→2025: región, densidad urbana y zona de inundación de las direcciones aseguradas",
+   "resultado": "informativo",
+   "severidad": "",
+   "observado": "{'motor': {'psi_region': 0.0001, 'psi_densidad': 0.0}, 'buildings': {'psi_region': 0.0003, 'psi_densidad': 0.0001}, 'contents': {'psi_region': 0.0002, 'psi_densidad': 0.0001}}",
+   "esperado": "",
+   "vd_semana1": "VD43",
+   "casos": "",
+   "n_casos": 0
+  },
+  {
+   "id": "VE74",
+   "area": "Revisión",
+   "titulo": "Alcance: controles propios de IA sobre copias con huella; no son revisión profesional independiente ni aprobación de la base",
+   "resultado": "limite",
+   "severidad": "P1",
+   "observado": "revisión de IA",
+   "esperado": "revisión humana pendiente",
+   "vd_semana1": "VD54",
+   "casos": "",
+   "n_casos": 0
+  }
+ ],
+ "detalle": {
+  "VE01": {
+   "addresses": {
+    "sha256": "4e9bf9d2a1777896e84fd4ee471096ff075aaefefd544f91b731324b25425632",
+    "bytes": 2094327,
+    "coincide_manifiesto": true,
+    "bytes_manifiesto": 2094327,
+    "bytes_listado_kaggle": 2094327,
+    "filas": 136914
+   },
+   "claims": {
+    "sha256": "1a2fce8a26cb1e05de1f53fe4e39bde772a1898e845755487625355fec4cc0e9",
+    "bytes": 373376,
+    "coincide_manifiesto": true,
+    "bytes_manifiesto": 373376,
+    "bytes_listado_kaggle": 373376,
+    "filas": 9258
+   },
+   "customers": {
+    "sha256": "c00a0095d5fb7b2b65cd9647216add49afb3703d863d5c358b1441f0fab1fb62",
+    "bytes": 2319251,
+    "coincide_manifiesto": true,
+    "bytes_manifiesto": 2319251,
+    "bytes_listado_kaggle": 2319251,
+    "filas": 135856
+   },
+   "expenses": {
+    "sha256": "9033f666a5a45f0b44501d57e40ab1cc571c51c384f23a62942b75db323b1cdf",
+    "bytes": 3124,
+    "coincide_manifiesto": true,
+    "bytes_manifiesto": 3124,
+    "bytes_listado_kaggle": 3124,
+    "filas": 8
+   },
+   "policies_buildings": {
+    "sha256": "ccc948fafc11e623d5cb010c2b494f6813f6048719eae7bcde28794467598319",
+    "bytes": 1049236,
+    "coincide_manifiesto": true,
+    "bytes_manifiesto": 1049236,
+    "bytes_listado_kaggle": 1049236,
+    "filas": 27447
+   },
+   "policies_contents": {
+    "sha256": "84d7f48d03933b018bec8fdc2f4bbd96df184cca7ae1971c38d3acc955720f8e",
+    "bytes": 1272728,
+    "coincide_manifiesto": true,
+    "bytes_manifiesto": 1272728,
+    "bytes_listado_kaggle": 1272728,
+    "filas": 34566
+   },
+   "policies_motor": {
+    "sha256": "7c5dbb5e5b46629ebf01a66c991183d20b8585393b589bc2644fcbd6653a3ec1",
+    "bytes": 1988978,
+    "coincide_manifiesto": true,
+    "bytes_manifiesto": 1988978,
+    "bytes_listado_kaggle": 1988978,
+    "filas": 47283
+   },
+   "reference_policies": {
+    "sha256": "6d4c2839e87d092fccd4b3c3ddc16a2a4c4993c35e18481e322462cd382dd8f4",
+    "bytes": 30934,
+    "coincide_manifiesto": true,
+    "bytes_manifiesto": 30934,
+    "bytes_listado_kaggle": 30934,
+    "filas": 20
+   },
+   "sample_submission": {
+    "sha256": "160fc59043f1012337605c8d8446c0efbf81458e046cf02df9186d6f909d59ef",
+    "bytes": 1197460,
+    "coincide_manifiesto": true,
+    "bytes_manifiesto": 1197460,
+    "bytes_listado_kaggle": 1197460,
+    "filas": 209063
+   },
+   "test_buildings": {
+    "sha256": "21f91aaa66a1b9efd216ad0e04ff12a507dbeb721084330d9b9f06c99edd0ca6",
+    "bytes": 2507817,
+    "coincide_manifiesto": true,
+    "bytes_manifiesto": 2507817,
+    "bytes_listado_kaggle": 2507817,
+    "filas": 52295
+   },
+   "test_contents": {
+    "sha256": "af5ef2553e35a2d563ca091b173500daac55acc4969d1d3a96fa6b4ec3c6a012",
+    "bytes": 3038763,
+    "coincide_manifiesto": true,
+    "bytes_manifiesto": 3038763,
+    "bytes_listado_kaggle": 3038763,
+    "filas": 66247
+   },
+   "test_motor": {
+    "sha256": "108d5c68e9bab5ccd90ee5502bc3543aa515a5aa07fda44a3b227cf070a28aa5",
+    "bytes": 4626510,
+    "coincide_manifiesto": true,
+    "bytes_manifiesto": 4626510,
+    "bytes_listado_kaggle": 4626510,
+    "filas": 90521
+   },
+   "weather": {
+    "sha256": "645067069f68de8c4746d1ba48a454ff00155e1aa6fbbf64cdee48ae7269cbbd",
+    "bytes": 6060339,
+    "coincide_manifiesto": true,
+    "bytes_manifiesto": 6060339,
+    "bytes_listado_kaggle": 6060339,
+    "filas": 410742
+   }
+  },
+  "VE02": {
+   "addresses": {
+    "columnas": 16,
+    "no_documentadas": [],
+    "documentadas_ausentes": []
+   },
+   "claims": {
+    "columnas": 12,
+    "no_documentadas": [],
+    "documentadas_ausentes": []
+   },
+   "customers": {
+    "columnas": 17,
+    "no_documentadas": [],
+    "documentadas_ausentes": []
+   },
+   "expenses": {
+    "columnas": 4,
+    "no_documentadas": [],
+    "documentadas_ausentes": []
+   },
+   "policies_buildings": {
+    "columnas": 27,
+    "no_documentadas": [],
+    "documentadas_ausentes": []
+   },
+   "policies_contents": {
+    "columnas": 28,
+    "no_documentadas": [],
+    "documentadas_ausentes": []
+   },
+   "policies_motor": {
+    "columnas": 36,
+    "no_documentadas": [],
+    "documentadas_ausentes": []
+   },
+   "reference_policies": {
+    "columnas": 50,
+    "no_documentadas": [],
+    "documentadas_ausentes": []
+   },
+   "sample_submission": {
+    "columnas": 2,
+    "no_documentadas": [],
+    "documentadas_ausentes": []
+   },
+   "test_buildings": {
+    "columnas": 26,
+    "no_documentadas": [],
+    "documentadas_ausentes": []
+   },
+   "test_contents": {
+    "columnas": 27,
+    "no_documentadas": [],
+    "documentadas_ausentes": []
+   },
+   "test_motor": {
+    "columnas": 35,
+    "no_documentadas": [],
+    "documentadas_ausentes": []
+   },
+   "weather": {
+    "columnas": 9,
+    "no_documentadas": [],
+    "documentadas_ausentes": []
+   }
+  },
+  "VE03": {},
+  "VE04": {
+   "addresses": {
+    "filas": 136914,
+    "duplicados_exactos": 0
+   },
+   "claims": {
+    "filas": 9258,
+    "duplicados_exactos": 0
+   },
+   "customers": {
+    "filas": 135856,
+    "duplicados_exactos": 0
+   },
+   "expenses": {
+    "filas": 8,
+    "duplicados_exactos": 0
+   },
+   "policies_buildings": {
+    "filas": 27447,
+    "duplicados_exactos": 0
+   },
+   "policies_contents": {
+    "filas": 34566,
+    "duplicados_exactos": 0
+   },
+   "policies_motor": {
+    "filas": 47283,
+    "duplicados_exactos": 0
+   },
+   "reference_policies": {
+    "filas": 20,
+    "duplicados_exactos": 0
+   },
+   "sample_submission": {
+    "filas": 209063,
+    "duplicados_exactos": 0
+   },
+   "test_buildings": {
+    "filas": 52295,
+    "duplicados_exactos": 0
+   },
+   "test_contents": {
+    "filas": 66247,
+    "duplicados_exactos": 0
+   },
+   "test_motor": {
+    "filas": 90521,
+    "duplicados_exactos": 0
+   },
+   "weather": {
+    "filas": 410742,
+    "duplicados_exactos": 0
+   },
+   "claves_unicas": {
+    "customer_id": true,
+    "address_id": true,
+    "claim_id": true,
+    "weather_address_year": true,
+    "row_id_global": true,
+    "sample_row_id": true,
+    "reference_row_id": true,
+    "expenses_item": true
+   }
+  },
+  "VE05": {
+   "customers.occupation": {
+    "con_espacios": 17982,
+    "vacias": 0,
+    "valores": 80,
+    "valores_tras_normalizar": 40
+   }
+  },
+  "VE06": {
+   "addresses": {
+    "flood_zone": 0.02949,
+    "distance_to_river_km": 0.11994,
+    "soil_type": 0.12037,
+    "roof_type": 0.11932,
+    "energy_rating": 0.12062
+   },
+   "claims": {
+    "repairer_id": 0.46263,
+    "third_party_id": 0.70696
+   },
+   "customers": {
+    "occupation": 0.12158,
+    "marital_status": 0.12033,
+    "household_size": 0.11804,
+    "years_at_address": 0.11944,
+    "campaign_code": 0.20193
+   },
+   "expenses": {
+    "emerging": 0.125
+   },
+   "policies_buildings": {
+    "days_unoccupied": 0.1199,
+    "smoke_alarms": 0.11899
+   },
+   "policies_contents": {
+    "security_level": 0.12261,
+    "high_value_items": 0.11766
+   },
+   "policies_motor": {
+    "vehicle_age": 0.11852,
+    "engine_size_cc": 0.1215,
+    "overnight_parking": 0.12049
+   },
+   "reference_policies": {
+    "driver_age_band": 0.65,
+    "years_licensed": 0.65,
+    "ncb_years": 0.65,
+    "vehicle_value_group": 0.65,
+    "vehicle_age": 0.75,
+    "make_model": 0.65,
+    "engine_size_cc": 0.65,
+    "body_type": 0.65,
+    "transmission": 0.65,
+    "seats": 0.65,
+    "vehicle_colour": 0.65,
+    "fuel_type": 0.65,
+    "driver_assist": 0.65,
+    "cover_type": 0.65,
+    "overnight_parking": 0.7,
+    "vehicle_use": 0.65,
+    "named_young_driver": 0.65,
+    "policyholder_age_band": 0.35,
+    "sum_insured": 0.35,
+    "construction_type": 0.65,
+    "occupancy": 0.65,
+    "days_unoccupied": 0.7,
+    "smoke_alarms": 0.7,
+    "accidental_damage_cover": 0.35,
+    "mortgage": 0.65,
+    "tenure": 0.7,
+    "security_level": 0.7,
+    "high_value_items": 0.75,
+    "works_from_home": 0.7,
+    "lodgers": 0.7,
+    "bicycle_cover": 0.7
+   },
+   "sample_submission": {},
+   "test_buildings": {
+    "days_unoccupied": 0.11932,
+    "smoke_alarms": 0.12125
+   },
+   "test_contents": {
+    "security_level": 0.12151,
+    "high_value_items": 0.12007
+   },
+   "test_motor": {
+    "vehicle_age": 0.12229,
+    "engine_size_cc": 0.12156,
+    "overnight_parking": 0.11996
+   },
+   "weather": {},
+   "nulos_train_test": {
+    "motor.vehicle_age": {
+     "train": 0.1185,
+     "test": 0.1223
+    },
+    "motor.engine_size_cc": {
+     "train": 0.1215,
+     "test": 0.1216
+    },
+    "motor.overnight_parking": {
+     "train": 0.1205,
+     "test": 0.12
+    },
+    "buildings.days_unoccupied": {
+     "train": 0.1199,
+     "test": 0.1193
+    },
+    "buildings.smoke_alarms": {
+     "train": 0.119,
+     "test": 0.1213
+    },
+    "contents.security_level": {
+     "train": 0.1226,
+     "test": 0.1215
+    },
+    "contents.high_value_items": {
+     "train": 0.1177,
+     "test": 0.1201
+    }
+   },
+   "claves_o_fechas_nulas": {}
+  },
+  "VE07": {
+   "fuera": {},
+   "perfil": {
+    "weather.hail_days": {
+     "min": 0.0,
+     "p01": 2.0,
+     "mediana": 12.0,
+     "p99": 40.0,
+     "max": 83.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "weather.wind_exposure_index": {
+     "min": 0.0,
+     "p01": 0.8,
+     "mediana": 5.2,
+     "p99": 9.0,
+     "max": 10.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "weather.freezing_days": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 22.0,
+     "p99": 54.0,
+     "max": 74.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "weather.dry_summer_index": {
+     "min": 0.132,
+     "p01": 0.325,
+     "mediana": 0.669,
+     "p99": 0.957,
+     "max": 1.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "weather.wildfire_index": {
+     "min": 0.104,
+     "p01": 0.255,
+     "mediana": 0.51,
+     "p99": 0.866,
+     "max": 1.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "weather.rainfall_mm": {
+     "min": 622.0,
+     "p01": 849.0,
+     "mediana": 1302.0,
+     "p99": 2006.0,
+     "max": 2727.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "weather.mean_temperature_c": {
+     "min": 9.6,
+     "p01": 11.3,
+     "mediana": 15.1,
+     "p99": 18.8,
+     "max": 19.3,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "addresses.flood_zone": {
+     "min": 1.0,
+     "p01": 1.0,
+     "mediana": 1.0,
+     "p99": 5.0,
+     "max": 5.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 4037
+    },
+    "addresses.distance_to_river_km": {
+     "min": 0.01,
+     "p01": 0.08,
+     "mediana": 2.37,
+     "p99": 12.460800000000019,
+     "max": 30.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 16421
+    },
+    "addresses.elevation_m": {
+     "min": 0.0,
+     "p01": 0.4,
+     "mediana": 7.5,
+     "p99": 37.6,
+     "max": 60.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "addresses.year_built": {
+     "min": 1862.0,
+     "p01": 1865.0,
+     "mediana": 1964.0,
+     "p99": 2021.0,
+     "max": 2021.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "addresses.trees_within_5m": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 1.0,
+     "max": 1.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "addresses.bedrooms": {
+     "min": 1.0,
+     "p01": 1.0,
+     "mediana": 3.0,
+     "p99": 5.0,
+     "max": 7.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "customers.household_size": {
+     "min": 1.0,
+     "p01": 1.0,
+     "mediana": 2.0,
+     "p99": 7.0,
+     "max": 7.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 16037
+    },
+    "customers.prior_claims_5y": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 2.0,
+     "max": 5.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "customers.licence_points": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 9.0,
+     "max": 9.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "customers.years_at_address": {
+     "min": 0.0,
+     "p01": 1.0,
+     "mediana": 6.0,
+     "p99": 23.0,
+     "max": 53.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 16226
+    },
+    "customers.customer_since_year": {
+     "min": 2008.0,
+     "p01": 2008.0,
+     "mediana": 2025.0,
+     "p99": 2025.0,
+     "max": 2025.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_motor.compulsory_excess": {
+     "min": 250.0,
+     "p01": 250.0,
+     "mediana": 250.0,
+     "p99": 250.0,
+     "max": 250.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_motor.missed_payments_12m": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 2.0,
+     "max": 5.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_motor.renewal_count": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 7.0,
+     "p99": 16.0,
+     "max": 16.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_motor.days_quote_to_inception": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 13.0,
+     "p99": 30.0,
+     "max": 30.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_motor.discount_applied": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 0.05,
+     "max": 0.1,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_motor.written_premium": {
+     "min": 192.54,
+     "p01": 273.01279999999997,
+     "mediana": 502.06,
+     "p99": 1581.8552,
+     "max": 2199.17,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_motor.customer_service_contacts": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 6.0,
+     "max": 20.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_motor.exposure": {
+     "min": 0.0027,
+     "p01": 0.0247,
+     "mediana": 1.0,
+     "p99": 1.0,
+     "max": 365.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_motor.years_licensed": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 24.0,
+     "p99": 69.0,
+     "max": 73.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_motor.ncb_years": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 6.0,
+     "p99": 15.0,
+     "max": 15.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_motor.vehicle_value_group": {
+     "min": 1.0,
+     "p01": 2.0,
+     "mediana": 11.0,
+     "p99": 19.0,
+     "max": 20.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_motor.vehicle_age": {
+     "min": 3.0,
+     "p01": 4.0,
+     "mediana": 9.0,
+     "p99": 24.0,
+     "max": 26.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 5604
+    },
+    "policies_motor.engine_size_cc": {
+     "min": 500.0,
+     "p01": 1100.0,
+     "mediana": 2100.0,
+     "p99": 3100.0,
+     "max": 3600.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 5745
+    },
+    "policies_motor.seats": {
+     "min": 2.0,
+     "p01": 2.0,
+     "mediana": 5.0,
+     "p99": 7.0,
+     "max": 7.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_motor.compulsory_excess": {
+     "min": 250.0,
+     "p01": 250.0,
+     "mediana": 250.0,
+     "p99": 250.0,
+     "max": 250.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_motor.missed_payments_12m": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 2.0,
+     "max": 7.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_motor.renewal_count": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 17.0,
+     "max": 17.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_motor.days_quote_to_inception": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 13.0,
+     "p99": 30.0,
+     "max": 30.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_motor.discount_applied": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 0.1,
+     "max": 0.1,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_motor.written_premium": {
+     "min": 173.93,
+     "p01": 286.05400000000003,
+     "mediana": 539.5,
+     "p99": 1714.3940000000002,
+     "max": 2415.21,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_motor.customer_service_contacts": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 2.0,
+     "max": 5.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_motor.exposure": {
+     "min": 0.0027,
+     "p01": 0.0411,
+     "mediana": 0.9781,
+     "p99": 1.0,
+     "max": 1.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_motor.years_licensed": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 13.0,
+     "p99": 70.0,
+     "max": 74.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_motor.ncb_years": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 5.0,
+     "p99": 15.0,
+     "max": 15.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_motor.vehicle_value_group": {
+     "min": 1.0,
+     "p01": 2.0,
+     "mediana": 11.0,
+     "p99": 19.0,
+     "max": 20.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_motor.vehicle_age": {
+     "min": 3.0,
+     "p01": 4.0,
+     "mediana": 10.0,
+     "p99": 24.0,
+     "max": 27.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 11070
+    },
+    "test_motor.engine_size_cc": {
+     "min": 500.0,
+     "p01": 1100.0,
+     "mediana": 2100.0,
+     "p99": 3100.0,
+     "max": 3600.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 11004
+    },
+    "test_motor.seats": {
+     "min": 2.0,
+     "p01": 2.0,
+     "mediana": 5.0,
+     "p99": 7.0,
+     "max": 7.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_buildings.compulsory_excess": {
+     "min": 350.0,
+     "p01": 350.0,
+     "mediana": 350.0,
+     "p99": 350.0,
+     "max": 350.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_buildings.missed_payments_12m": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 2.0,
+     "max": 5.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_buildings.renewal_count": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 7.0,
+     "p99": 16.0,
+     "max": 16.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_buildings.days_quote_to_inception": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 13.0,
+     "p99": 30.0,
+     "max": 30.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_buildings.discount_applied": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 0.05,
+     "max": 0.1,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_buildings.written_premium": {
+     "min": 63.45,
+     "p01": 104.4814,
+     "mediana": 237.56,
+     "p99": 2198.7916,
+     "max": 4629.86,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_buildings.customer_service_contacts": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 4.0,
+     "max": 11.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_buildings.exposure": {
+     "min": 0.0027,
+     "p01": 0.0329,
+     "mediana": 1.0,
+     "p99": 1.0,
+     "max": 365.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_buildings.sum_insured": {
+     "min": 44000.0,
+     "p01": 73000.0,
+     "mediana": 229000.0,
+     "p99": 525000.0,
+     "max": 470000000.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_buildings.days_unoccupied": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 7.0,
+     "p99": 102.0,
+     "max": 119.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 3291
+    },
+    "test_buildings.compulsory_excess": {
+     "min": 350.0,
+     "p01": 350.0,
+     "mediana": 350.0,
+     "p99": 350.0,
+     "max": 350.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_buildings.missed_payments_12m": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 2.0,
+     "max": 7.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_buildings.renewal_count": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 17.0,
+     "max": 17.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_buildings.days_quote_to_inception": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 13.0,
+     "p99": 30.0,
+     "max": 30.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_buildings.discount_applied": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 0.1,
+     "max": 0.1,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_buildings.written_premium": {
+     "min": 76.04,
+     "p01": 111.5958,
+     "mediana": 256.77,
+     "p99": 2351.0601999999963,
+     "max": 4717.45,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_buildings.customer_service_contacts": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 2.0,
+     "max": 6.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_buildings.exposure": {
+     "min": 0.0027,
+     "p01": 0.0575,
+     "mediana": 0.9808,
+     "p99": 1.0,
+     "max": 1.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_buildings.sum_insured": {
+     "min": 45000.0,
+     "p01": 74000.0,
+     "mediana": 241000.0,
+     "p99": 549000.0,
+     "max": 568000000.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_buildings.days_unoccupied": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 7.0,
+     "p99": 101.0,
+     "max": 119.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 6240
+    },
+    "policies_contents.compulsory_excess": {
+     "min": 350.0,
+     "p01": 350.0,
+     "mediana": 350.0,
+     "p99": 350.0,
+     "max": 350.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_contents.missed_payments_12m": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 2.0,
+     "max": 6.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_contents.renewal_count": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 7.0,
+     "p99": 16.0,
+     "max": 16.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_contents.days_quote_to_inception": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 13.0,
+     "p99": 30.0,
+     "max": 30.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_contents.discount_applied": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 0.05,
+     "max": 0.1,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_contents.written_premium": {
+     "min": 26.62,
+     "p01": 46.9565,
+     "mediana": 118.95,
+     "p99": 297.74599999999975,
+     "max": 573.35,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_contents.customer_service_contacts": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 4.0,
+     "max": 11.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_contents.exposure": {
+     "min": 0.0027,
+     "p01": 0.02915500000000009,
+     "mediana": 1.0,
+     "p99": 1.0,
+     "max": 365.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_contents.sum_insured": {
+     "min": 5200.0,
+     "p01": 10300.0,
+     "mediana": 35800.0,
+     "p99": 114734.99999999985,
+     "max": 131600000.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "policies_contents.high_value_items": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 5.0,
+     "max": 5.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 4067
+    },
+    "test_contents.compulsory_excess": {
+     "min": 350.0,
+     "p01": 350.0,
+     "mediana": 350.0,
+     "p99": 350.0,
+     "max": 350.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_contents.missed_payments_12m": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 2.0,
+     "max": 5.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_contents.renewal_count": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 17.0,
+     "max": 17.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_contents.days_quote_to_inception": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 13.0,
+     "p99": 30.0,
+     "max": 30.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_contents.discount_applied": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 0.1,
+     "max": 0.1,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_contents.written_premium": {
+     "min": 29.17,
+     "p01": 50.54,
+     "mediana": 127.03,
+     "p99": 314.3961999999998,
+     "max": 665.49,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_contents.customer_service_contacts": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 2.0,
+     "max": 5.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_contents.exposure": {
+     "min": 0.0027,
+     "p01": 0.0493,
+     "mediana": 0.9781,
+     "p99": 1.0,
+     "max": 1.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_contents.sum_insured": {
+     "min": 4900.0,
+     "p01": 10700.0,
+     "mediana": 36300.0,
+     "p99": 117600.0,
+     "max": 98100000.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 0
+    },
+    "test_contents.high_value_items": {
+     "min": 0.0,
+     "p01": 0.0,
+     "mediana": 0.0,
+     "p99": 5.0,
+     "max": 5.0,
+     "fuera_de_rango": 0,
+     "infinitos": 0,
+     "nulos": 7954
+    }
+   }
+  },
+  "VE08": {
+   "motor_train": {
+    "clientes_sin_maestro": 0,
+    "direcciones_sin_maestro": 0
+   },
+   "motor_test": {
+    "clientes_sin_maestro": 0,
+    "direcciones_sin_maestro": 0
+   },
+   "buildings_train": {
+    "clientes_sin_maestro": 0,
+    "direcciones_sin_maestro": 0
+   },
+   "buildings_test": {
+    "clientes_sin_maestro": 0,
+    "direcciones_sin_maestro": 0
+   },
+   "contents_train": {
+    "clientes_sin_maestro": 0,
+    "direcciones_sin_maestro": 0
+   },
+   "contents_test": {
+    "clientes_sin_maestro": 0,
+    "direcciones_sin_maestro": 0
+   },
+   "clientes_sin_poliza": 0,
+   "direcciones_sin_poliza": 0,
+   "clientes_solo_test": 99088
+  },
+  "VE09": {
+   "direcciones_maestro": 136914,
+   "direcciones_clima": 136914,
+   "por_anio": {
+    "2023": 136914,
+    "2024": 136914,
+    "2025": 136914
+   },
+   "clima_sin_maestro": 0,
+   "maestro_sin_clima": 0,
+   "completo": true
+  },
+  "VE10": {
+   "motor": {
+    "row_id_formato": true,
+    "policy_id_formato": true,
+    "policy_id_distintos": 87532
+   },
+   "buildings": {
+    "row_id_formato": true,
+    "policy_id_formato": true,
+    "policy_id_distintos": 52496
+   },
+   "contents": {
+    "row_id_formato": true,
+    "policy_id_formato": true,
+    "policy_id_distintos": 65403
+   },
+   "policy_id_en_dos_ramos": 0,
+   "customer_id_longitudes": {
+    "8": 135856
+   },
+   "address_id_longitudes": {
+    "8": 136914
+   },
+   "customer_id_en_polizas_longitudes": {
+    "8": 318359
+   },
+   "claim_id_longitudes": {
+    "10": 9258
+   },
+   "customer_id_numericos_con_ceros_iniciales": 13490
+  },
+  "VE11": {
+   "policy_sin_poliza_del_ramo": 0,
+   "prefijo_poliza_igual_ramo": true,
+   "peril_fuera_del_ramo": 0,
+   "policy_en_test_sin_train": 0
+  },
+  "VE12": {
+   "clientes_compartidos": 752,
+   "direcciones_compartidas": 8046,
+   "clientes_atributos_iguales": {
+    "surname": 0.005319148936170213,
+    "occupation": 0.02925531914893617,
+    "marital_status": 0.3377659574468085,
+    "household_size": 0.23138297872340424,
+    "customer_since_year": 0.06515957446808511,
+    "email_domain": 0.1848404255319149
+   },
+   "direcciones_atributos_iguales": {
+    "urban_density": 0.3108376833209048,
+    "flood_zone": 0.4956500124285359,
+    "soil_type": 0.2039522744220731,
+    "year_built": 0.008948545861297539,
+    "property_type": 0.2562764106388267,
+    "bedrooms": 0.2567735520755655,
+    "energy_rating": 0.14193388018891376
+   },
+   "clientes_compartidos_con_poliza_emergente": 752,
+   "colisiones_de_identificadores_entre_mercados": {
+    "motor": {
+     "row_id_entrenamiento": 47283,
+     "row_id_entrenamiento_filas": 47283,
+     "row_id_test": 0,
+     "row_id_test_filas": 90521,
+     "policy_id": 298,
+     "policy_id_emergentes": 87532
+    },
+    "buildings": {
+     "row_id_entrenamiento": 0,
+     "row_id_entrenamiento_filas": 27447,
+     "row_id_test": 0,
+     "row_id_test_filas": 52295,
+     "policy_id": 129,
+     "policy_id_emergentes": 52496
+    },
+    "contents": {
+     "row_id_entrenamiento": 0,
+     "row_id_entrenamiento_filas": 34566,
+     "row_id_test": 0,
+     "row_id_test_filas": 66247,
+     "policy_id": 194,
+     "policy_id_emergentes": 65403
+    },
+    "claim_id": 19,
+    "claim_id_emergentes": 9258
+   },
+   "uso_cruzado_de_estas_claves_en_esta_validacion": "ninguno: las claves solo se cruzan dentro de cada mercado; entre mercados solo se comparan atributos de clientes y direcciones con el mismo identificador"
+  },
+  "VE13": {
+   "clientes_con_varias_direcciones": 4573,
+   "direcciones_con_varios_clientes": 2235,
+   "max_clientes_por_direccion": 8,
+   "clientes_por_numero_de_ramos": {
+    "1": 81089,
+    "2": 39959,
+    "3": 14808
+   },
+   "hogares_con_edificios_y_contenidos_mismo_anio": 56915,
+   "banda_distinta_total": 31,
+   "banda_sube_con_inicio_posterior": 31,
+   "banda_de_edad_distinta_entre_ramos": 0,
+   "canal_distinto_entre_ramos": 0,
+   "inicio_distinto_entre_ramos": 991,
+   "inquilino_con_poliza_de_edificios": 0,
+   "inquilino_con_hipoteca_en_edificios": 0
+  },
+  "VE14": {
+   "motor_train": {
+    "inicio_min": "2023-01-01",
+    "inicio_max": "2024-12-29",
+    "fin_min": "2023-01-01",
+    "fin_max": "2024-12-30",
+    "inicio_despues_de_fin": 0,
+    "dias_min": 1,
+    "dias_max": 365,
+    "cruzan_anio": 0,
+    "anios": {
+     "2023": 21680,
+     "2024": 25603
+    },
+    "fin_30_12_2024": 20097,
+    "fin_31_12_2024": 0,
+    "cubren_31_12_2024": 0,
+    "fin_31_12": 20084,
+    "fin_30_12": 20097
+   },
+   "motor_test": {
+    "inicio_min": "2025-01-01",
+    "inicio_max": "2025-12-30",
+    "fin_min": "2025-01-01",
+    "fin_max": "2025-12-31",
+    "inicio_despues_de_fin": 0,
+    "dias_min": 1,
+    "dias_max": 365,
+    "cruzan_anio": 0,
+    "anios": {
+     "2025": 90521
+    },
+    "fin_30_12_2024": 0,
+    "fin_31_12_2024": 0,
+    "cubren_31_12_2024": 0,
+    "fin_31_12": 80330,
+    "fin_30_12": 0
+   },
+   "buildings_train": {
+    "inicio_min": "2023-01-01",
+    "inicio_max": "2024-12-29",
+    "fin_min": "2023-01-02",
+    "fin_max": "2024-12-30",
+    "inicio_despues_de_fin": 0,
+    "dias_min": 1,
+    "dias_max": 365,
+    "cruzan_anio": 0,
+    "anios": {
+     "2023": 12580,
+     "2024": 14867
+    },
+    "fin_30_12_2024": 12103,
+    "fin_31_12_2024": 0,
+    "cubren_31_12_2024": 0,
+    "fin_31_12": 12107,
+    "fin_30_12": 12103
+   },
+   "buildings_test": {
+    "inicio_min": "2025-01-01",
+    "inicio_max": "2025-12-30",
+    "fin_min": "2025-01-01",
+    "fin_max": "2025-12-31",
+    "inicio_despues_de_fin": 0,
+    "dias_min": 1,
+    "dias_max": 365,
+    "cruzan_anio": 0,
+    "anios": {
+     "2025": 52295
+    },
+    "fin_30_12_2024": 0,
+    "fin_31_12_2024": 0,
+    "cubren_31_12_2024": 0,
+    "fin_31_12": 48146,
+    "fin_30_12": 0
+   },
+   "contents_train": {
+    "inicio_min": "2023-01-01",
+    "inicio_max": "2024-12-29",
+    "fin_min": "2023-01-01",
+    "fin_max": "2024-12-30",
+    "inicio_despues_de_fin": 0,
+    "dias_min": 1,
+    "dias_max": 365,
+    "cruzan_anio": 0,
+    "anios": {
+     "2023": 15834,
+     "2024": 18732
+    },
+    "fin_30_12_2024": 14922,
+    "fin_31_12_2024": 0,
+    "cubren_31_12_2024": 0,
+    "fin_31_12": 14982,
+    "fin_30_12": 14922
+   },
+   "contents_test": {
+    "inicio_min": "2025-01-01",
+    "inicio_max": "2025-12-30",
+    "fin_min": "2025-01-01",
+    "fin_max": "2025-12-31",
+    "inicio_despues_de_fin": 0,
+    "dias_min": 1,
+    "dias_max": 365,
+    "cruzan_anio": 0,
+    "anios": {
+     "2025": 66247
+    },
+    "fin_30_12_2024": 0,
+    "fin_31_12_2024": 0,
+    "cubren_31_12_2024": 0,
+    "fin_31_12": 59938,
+    "fin_30_12": 0
+   }
+  },
+  "VE15": {
+   "motor": {
+    "solapes": 0,
+    "continuidades": 50272,
+    "hueco_0": 30175,
+    "hueco_1": 20097,
+    "hueco_2_30": 0,
+    "hueco_mas_30": 0,
+    "hueco_max": 1,
+    "hueco_1_en_2024_2025": 20097
+   },
+   "buildings": {
+    "solapes": 0,
+    "continuidades": 27246,
+    "hueco_0": 15143,
+    "hueco_1": 12103,
+    "hueco_2_30": 0,
+    "hueco_mas_30": 0,
+    "hueco_max": 1,
+    "hueco_1_en_2024_2025": 12103
+   },
+   "contents": {
+    "solapes": 0,
+    "continuidades": 35410,
+    "hueco_0": 20488,
+    "hueco_1": 14922,
+    "hueco_2_30": 0,
+    "hueco_mas_30": 0,
+    "hueco_max": 1,
+    "hueco_1_en_2024_2025": 14922
+   }
+  },
+  "VE16": {
+   "motor_train": {
+    "convencion": {
+     "ACT365": 47029,
+     "ACT360": 207,
+     "DIAS": 47
+    },
+    "ambiguas": 0,
+    "no_positivas": 0,
+    "mayores_que_uno": 189,
+    "min": 0.0027,
+    "max": 365.0
+   },
+   "motor_test": {
+    "convencion": {
+     "ACT365": 90521
+    },
+    "ambiguas": 0,
+    "no_positivas": 0,
+    "mayores_que_uno": 0,
+    "min": 0.0027,
+    "max": 1.0
+   },
+   "buildings_train": {
+    "convencion": {
+     "ACT365": 27292,
+     "ACT360": 122,
+     "DIAS": 33
+    },
+    "ambiguas": 0,
+    "no_positivas": 0,
+    "mayores_que_uno": 117,
+    "min": 0.0027,
+    "max": 365.0
+   },
+   "buildings_test": {
+    "convencion": {
+     "ACT365": 52295
+    },
+    "ambiguas": 0,
+    "no_positivas": 0,
+    "mayores_que_uno": 0,
+    "min": 0.0027,
+    "max": 1.0
+   },
+   "contents_train": {
+    "convencion": {
+     "ACT365": 34366,
+     "ACT360": 166,
+     "DIAS": 34
+    },
+    "ambiguas": 0,
+    "no_positivas": 0,
+    "mayores_que_uno": 146,
+    "min": 0.0027,
+    "max": 365.0
+   },
+   "contents_test": {
+    "convencion": {
+     "ACT365": 66247
+    },
+    "ambiguas": 0,
+    "no_positivas": 0,
+    "mayores_que_uno": 0,
+    "min": 0.0027,
+    "max": 1.0
+   }
+  },
+  "VE17": {
+   "motor": {
+    "nb_sin_renewal_0": 0,
+    "renewal_0_sin_nb": 0,
+    "renewal_igual_anio_menos_since": 1.0,
+    "nb_con_since_distinto_del_anio": 0,
+    "nb_en_tramo_posterior_del_primer_anio": 5481,
+    "nb_en_anio_posterior_al_primero_de_la_poliza": 0,
+    "renovacion_sin_periodo_previo_en_datos": 0,
+    "renewal_count_salto_distinto_de_1_entre_anios": 0,
+    "renewal_count_cambia_dentro_del_anio": 0,
+    "since_posterior_al_periodo": 0
+   },
+   "buildings": {
+    "nb_sin_renewal_0": 0,
+    "renewal_0_sin_nb": 0,
+    "renewal_igual_anio_menos_since": 1.0,
+    "nb_con_since_distinto_del_anio": 0,
+    "nb_en_tramo_posterior_del_primer_anio": 1660,
+    "nb_en_anio_posterior_al_primero_de_la_poliza": 0,
+    "renovacion_sin_periodo_previo_en_datos": 0,
+    "renewal_count_salto_distinto_de_1_entre_anios": 0,
+    "renewal_count_cambia_dentro_del_anio": 0,
+    "since_posterior_al_periodo": 0
+   },
+   "contents": {
+    "nb_sin_renewal_0": 0,
+    "renewal_0_sin_nb": 0,
+    "renewal_igual_anio_menos_since": 1.0,
+    "nb_con_since_distinto_del_anio": 0,
+    "nb_en_tramo_posterior_del_primer_anio": 2990,
+    "nb_en_anio_posterior_al_primero_de_la_poliza": 0,
+    "renovacion_sin_periodo_previo_en_datos": 0,
+    "renewal_count_salto_distinto_de_1_entre_anios": 0,
+    "renewal_count_cambia_dentro_del_anio": 0,
+    "since_posterior_al_periodo": 0
+   }
+  },
+  "VE18": {
+   "motor": {
+    "train": {
+     "min": 0,
+     "mediana": 13.0,
+     "max": 30,
+     "nb_mediana": 13.0,
+     "ren_mediana": 13.0
+    },
+    "test": {
+     "min": 0,
+     "mediana": 13.0,
+     "max": 30,
+     "nb_mediana": 13.0
+    },
+    "renewal_decision": {
+     "renewed": 39968,
+     "mid_term_change": 3477,
+     "lapsed_by_customer": 2369,
+     "cancelled": 1250,
+     "declined_by_insurer": 219
+    },
+    "renewal_decision_fuera_de_dominio": []
+   },
+   "buildings": {
+    "train": {
+     "min": 0,
+     "mediana": 13.0,
+     "max": 30,
+     "nb_mediana": 13.0,
+     "ren_mediana": 13.0
+    },
+    "test": {
+     "min": 0,
+     "mediana": 13.0,
+     "max": 30,
+     "nb_mediana": 13.0
+    },
+    "renewal_decision": {
+     "renewed": 24102,
+     "lapsed_by_customer": 1460,
+     "mid_term_change": 1041,
+     "cancelled": 731,
+     "declined_by_insurer": 113
+    },
+    "renewal_decision_fuera_de_dominio": []
+   },
+   "contents": {
+    "train": {
+     "min": 0,
+     "mediana": 13.0,
+     "max": 30,
+     "nb_mediana": 13.0,
+     "ren_mediana": 13.0
+    },
+    "test": {
+     "min": 0,
+     "mediana": 13.0,
+     "max": 30,
+     "nb_mediana": 13.0
+    },
+    "renewal_decision": {
+     "renewed": 29877,
+     "mid_term_change": 1895,
+     "lapsed_by_customer": 1828,
+     "cancelled": 936,
+     "declined_by_insurer": 30
+    },
+    "renewal_decision_fuera_de_dominio": []
+   }
+  },
+  "VE19": {
+   "motor": {
+    "polizas_anio_con_varios_periodos": 10091,
+    "max_periodos": 2,
+    "por_anio": {
+     "2023": 1596,
+     "2024": 1881,
+     "2025": 6614
+    },
+    "atributos_que_cambian": {
+     "make_model": 10062,
+     "engine_size_cc": 9444,
+     "vehicle_age": 9390,
+     "vehicle_value_group": 9317,
+     "vehicle_colour": 8867,
+     "body_type": 7470,
+     "fuel_type": 6069,
+     "transmission": 4976,
+     "seats": 4821,
+     "driver_assist": 4283,
+     "cover_type": 3724,
+     "overnight_parking": 2156,
+     "driver_age_band": 362
+    },
+    "renewal_decision_del_primer_tramo": {
+     "mid_term_change": 3477
+    }
+   },
+   "buildings": {
+    "polizas_anio_con_varios_periodos": 3036,
+    "max_periodos": 2,
+    "por_anio": {
+     "2023": 473,
+     "2024": 568,
+     "2025": 1995
+    },
+    "atributos_que_cambian": {
+     "address_id": 3036,
+     "sum_insured": 3022,
+     "days_unoccupied": 2837,
+     "construction_type": 1425,
+     "smoke_alarms": 1237,
+     "policyholder_age_band": 89
+    },
+    "renewal_decision_del_primer_tramo": {
+     "mid_term_change": 1041
+    }
+   },
+   "contents": {
+    "polizas_anio_con_varios_periodos": 5506,
+    "max_periodos": 2,
+    "por_anio": {
+     "2023": 852,
+     "2024": 1043,
+     "2025": 3611
+    },
+    "atributos_que_cambian": {
+     "address_id": 3717,
+     "sum_insured": 1799,
+     "security_level": 1218,
+     "high_value_items": 1140,
+     "policyholder_age_band": 152
+    },
+    "renewal_decision_del_primer_tramo": {
+     "mid_term_change": 1895
+    }
+   }
+  },
+  "VE20": {
+   "gender": {
+    "valores": {
+     "F": 67973,
+     "M": 67883
+    },
+    "fuera_de_dominio": []
+   },
+   "marital_status": {
+    "valores": {
+     "single": 54935,
+     "married": 51481,
+     "divorced": 8858,
+     "widowed": 4234
+    },
+    "fuera_de_dominio": []
+   },
+   "document_preference": {
+    "nulos": 0,
+    "distintos": 3,
+    "valores": {
+     "email": 81586,
+     "app": 33818,
+     "post": 20452
+    }
+   },
+   "household_size": {
+    "nulos": 16037,
+    "distintos": 7,
+    "valores": {
+     "1.0": 47061,
+     "2.0": 33198,
+     "3.0": 19175,
+     "4.0": 10863,
+     "5.0": 5787,
+     "6.0": 2479,
+     "7.0": 1256
+    }
+   },
+   "prior_claims_5y": {
+    "nulos": 0,
+    "distintos": 6,
+    "valores": {
+     "0": 104644,
+     "1": 26817,
+     "2": 3928,
+     "3": 416,
+     "4": 48,
+     "5": 3
+    }
+   },
+   "licence_points": {
+    "nulos": 0,
+    "distintos": 4,
+    "valores": {
+     "0": 108488,
+     "3": 16581,
+     "6": 8143,
+     "9": 2644
+    }
+   },
+   "years_at_address": {
+    "nulos": 16226,
+    "distintos": 46,
+    "valores": {
+     "4.0": 12409,
+     "3.0": 12318,
+     "5.0": 12302,
+     "6.0": 11588,
+     "2.0": 10869,
+     "7.0": 9966,
+     "8.0": 8560,
+     "9.0": 7029,
+     "1.0": 6704,
+     "10.0": 5880,
+     "11.0": 4525,
+     "12.0": 3643
+    }
+   },
+   "customer_since_year": {
+    "nulos": 0,
+    "distintos": 18,
+    "valores": {
+     "2025": 99088,
+     "2024": 5608,
+     "2023": 3727,
+     "2010": 1891,
+     "2016": 1891,
+     "2022": 1872,
+     "2017": 1868,
+     "2013": 1867,
+     "2012": 1851,
+     "2019": 1827,
+     "2018": 1821,
+     "2015": 1821
+    }
+   },
+   "email_domain": {
+    "nulos": 0,
+    "distintos": 5,
+    "valores": {
+     "other": 27324,
+     "inboxly": 27295,
+     "posthub": 27119,
+     "netbox": 27082,
+     "mailone": 27036
+    }
+   },
+   "marketing_consent": {
+    "nulos": 0,
+    "distintos": 2,
+    "valores": {
+     "True": 75092,
+     "False": 60764
+    }
+   },
+   "previous_insurer": {
+    "nulos": 0,
+    "distintos": 40,
+    "valores": {
+     "INS31": 3537,
+     "INS10": 3533,
+     "INS05": 3527,
+     "INS22": 3486,
+     "INS18": 3472,
+     "INS26": 3464,
+     "INS11": 3449,
+     "INS33": 3446,
+     "INS36": 3442,
+     "INS15": 3436,
+     "INS12": 3434,
+     "INS23": 3426
+    }
+   },
+   "campaign_code": {
+    "nulos": 27433,
+    "distintos": 15,
+    "valores": {
+     "CMP10": 7357,
+     "CMP02": 7330,
+     "CMP13": 7309,
+     "CMP07": 7277,
+     "CMP08": 7274,
+     "CMP14": 7242,
+     "CMP01": 7233,
+     "CMP09": 7222,
+     "CMP12": 7213,
+     "CMP05": 7209,
+     "CMP11": 7206,
+     "CMP00": 7206
+    }
+   },
+   "branch_id": {
+    "nulos": 0,
+    "distintos": 25,
+    "valores": {
+     "9": 5572,
+     "4": 5553,
+     "19": 5537,
+     "6": 5516,
+     "2": 5510,
+     "10": 5497,
+     "15": 5494,
+     "8": 5484,
+     "22": 5469,
+     "24": 5456,
+     "11": 5454,
+     "17": 5442
+    }
+   },
+   "marketing_segment": {
+    "nulos": 0,
+    "distintos": 12,
+    "valores": {
+     "young_affluent": 34870,
+     "young_mainstream": 16106,
+     "mature_affluent": 13310,
+     "midlife_affluent": 13225,
+     "senior_affluent": 13224,
+     "young_budget": 12857,
+     "senior_mainstream": 6063,
+     "midlife_mainstream": 5999,
+     "mature_mainstream": 5903,
+     "mature_budget": 4906,
+     "senior_budget": 4747,
+     "midlife_budget": 4646
+    }
+   }
+  },
+  "VE21": {
+   "valores_crudos": 80,
+   "tras_normalizar_espacios_y_mayusculas": 40,
+   "tras_quitar_prefijo_self_employed": 20,
+   "vocabulario_desarrollado": 20,
+   "coinciden_con_desarrollado": 20,
+   "fuera_del_desarrollado": [],
+   "nulos": 16517,
+   "con_prefijo_self_employed": 11975,
+   "self_employed_retired": 1819,
+   "variantes_por_base": {
+    "accountant": 2,
+    "administrator": 2,
+    "builder": 2,
+    "care worker": 2,
+    "chef": 2,
+    "doctor": 2,
+    "driver": 2,
+    "electrician": 2,
+    "engineer": 2,
+    "hairdresser": 2
+   }
+  },
+  "VE22": {
+   "since_mayor_que_primer_anio_observado": 0,
+   "since_menor_que_2023_en_clientes_de_train": 27433,
+   "distribucion_since": {
+    "2008": 1760,
+    "2009": 1765,
+    "2010": 1891,
+    "2011": 1809,
+    "2012": 1851,
+    "2013": 1867,
+    "2014": 1818,
+    "2015": 1821,
+    "2016": 1891,
+    "2017": 1868,
+    "2018": 1821,
+    "2019": 1827,
+    "2020": 1769,
+    "2021": 1803,
+    "2022": 1872,
+    "2023": 3727,
+    "2024": 5608,
+    "2025": 99088
+   },
+   "nb_test_con_since_2025": 1.0,
+   "years_at_address_mayor_que_edad_maxima_banda": 0
+  },
+  "VE23": {
+   "motor": {
+    "frecuencia_relativa_por_prior_claims": {
+     "0": 0.934,
+     "1": 1.159,
+     "2": 1.611,
+     "3": 1.699,
+     "4": 1.761
+    },
+    "filas_por_prior_claims": {
+     "0": 36313,
+     "1": 9488,
+     "2": 1346,
+     "3": 116,
+     "4": 20
+    }
+   },
+   "buildings": {
+    "frecuencia_relativa_por_prior_claims": {
+     "0": 0.959,
+     "1": 1.08,
+     "2": 1.405,
+     "3": 2.598,
+     "4": 0.0
+    },
+    "filas_por_prior_claims": {
+     "0": 21072,
+     "1": 5462,
+     "2": 844,
+     "3": 62,
+     "4": 7
+    }
+   },
+   "contents": {
+    "frecuencia_relativa_por_prior_claims": {
+     "0": 0.944,
+     "1": 1.134,
+     "2": 1.362,
+     "3": 2.684,
+     "4": 0.0,
+     "5": 0.0
+    },
+    "filas_por_prior_claims": {
+     "0": 26457,
+     "1": 6876,
+     "2": 1114,
+     "3": 108,
+     "4": 9,
+     "5": 2
+    }
+   }
+  },
+  "VE24": {
+   "motor": {
+    "train_renovacion": {
+     "occupation": 0.1188,
+     "marital_status": 0.1207,
+     "household_size": 0.1163,
+     "years_at_address": 0.1195,
+     "campaign_code": 0.9358
+    },
+    "train_nb": {
+     "occupation": 0.1304,
+     "marital_status": 0.1213,
+     "household_size": 0.1158,
+     "years_at_address": 0.1151,
+     "campaign_code": 0.0
+    },
+    "test_renovacion": {
+     "occupation": 0.1218,
+     "marital_status": 0.1199,
+     "household_size": 0.1169,
+     "years_at_address": 0.1189,
+     "campaign_code": 0.7202
+    },
+    "test_nb": {
+     "occupation": 0.1227,
+     "marital_status": 0.1192,
+     "household_size": 0.1186,
+     "years_at_address": 0.1192,
+     "campaign_code": 0.0
+    }
+   },
+   "buildings": {
+    "train_renovacion": {
+     "occupation": 0.1211,
+     "marital_status": 0.1198,
+     "household_size": 0.122,
+     "years_at_address": 0.1194,
+     "campaign_code": 0.9365
+    },
+    "train_nb": {
+     "occupation": 0.1276,
+     "marital_status": 0.1204,
+     "household_size": 0.1141,
+     "years_at_address": 0.1189,
+     "campaign_code": 0.0
+    },
+    "test_renovacion": {
+     "occupation": 0.1223,
+     "marital_status": 0.121,
+     "household_size": 0.1204,
+     "years_at_address": 0.1212,
+     "campaign_code": 0.7217
+    },
+    "test_nb": {
+     "occupation": 0.1204,
+     "marital_status": 0.1226,
+     "household_size": 0.1158,
+     "years_at_address": 0.1209,
+     "campaign_code": 0.0
+    }
+   },
+   "contents": {
+    "train_renovacion": {
+     "occupation": 0.1187,
+     "marital_status": 0.1197,
+     "household_size": 0.1203,
+     "years_at_address": 0.1202,
+     "campaign_code": 0.9379
+    },
+    "train_nb": {
+     "occupation": 0.1226,
+     "marital_status": 0.1204,
+     "household_size": 0.1062,
+     "years_at_address": 0.1145,
+     "campaign_code": 0.0
+    },
+    "test_renovacion": {
+     "occupation": 0.1218,
+     "marital_status": 0.1203,
+     "household_size": 0.1168,
+     "years_at_address": 0.121,
+     "campaign_code": 0.7257
+    },
+    "test_nb": {
+     "occupation": 0.1216,
+     "marital_status": 0.1237,
+     "household_size": 0.1187,
+     "years_at_address": 0.121,
+     "campaign_code": 0.0
+    }
+   }
+  },
+  "VE25": {
+   "region": {
+    "valores": {
+     "E03": 40212,
+     "E06": 26633,
+     "E02": 24481,
+     "E05": 22479,
+     "E01": 17235,
+     "E04": 5874
+    },
+    "fuera_de_dominio": []
+   },
+   "urban_density": {
+    "valores": {
+     "suburban": 61895,
+     "urban": 33735,
+     "rural": 27519,
+     "dense_urban": 13765
+    },
+    "fuera_de_dominio": []
+   },
+   "soil_type": {
+    "valores": {
+     "clay": 42529,
+     "chalk": 19499,
+     "loam": 19491,
+     "rock": 19476,
+     "sand": 19439
+    },
+    "fuera_de_dominio": []
+   },
+   "property_type": {
+    "valores": {
+     "semi_detached": 40812,
+     "detached": 34496,
+     "terraced": 34410,
+     "flat": 27196
+    },
+    "fuera_de_dominio": []
+   },
+   "roof_type": {
+    "valores": {
+     "pitched": 108677,
+     "flat": 11900
+    },
+    "fuera_de_dominio": []
+   },
+   "energy_rating": {
+    "valores": {
+     "C": 24213,
+     "B": 23733,
+     "D": 20576,
+     "A": 19265,
+     "E": 13892,
+     "F": 9688,
+     "G": 9032
+    },
+    "fuera_de_dominio": []
+   },
+   "flood_zone": {
+    "1.0": 93961,
+    "2.0": 20150,
+    "3.0": 10586,
+    "4.0": 5875,
+    "5.0": 2305
+   },
+   "basement": {
+    "False": 116410,
+    "True": 20504
+   },
+   "listed_building": {
+    "False": 132860,
+    "True": 4054
+   },
+   "solar_panels": {
+    "False": 123182,
+    "True": 13732
+   },
+   "bedrooms": {
+    "1": 12027,
+    "2": 31010,
+    "3": 47799,
+    "4": 34533,
+    "5": 10394,
+    "6": 1116,
+    "7": 35
+   },
+   "trees_within_5m": {
+    "False": 120551,
+    "True": 16363
+   }
+  },
+  "VE26": {
+   "distancia_mediana_por_zona": {
+    "1": 3.34,
+    "2": 1.34,
+    "3": 0.68,
+    "4": 0.33,
+    "5": 0.16
+   },
+   "elevacion_mediana_por_zona": {
+    "1": 10.1,
+    "2": 5.1,
+    "3": 3.0,
+    "4": 1.7,
+    "5": 0.8
+   },
+   "elevacion_negativa": 0,
+   "distancia_negativa": 0,
+   "construida_despues_del_primer_periodo": 0,
+   "construida_despues_de_2025": 0,
+   "listed_por_tramo_de_construccion": {
+    "(0, 1900]": 0.030220315851043088,
+    "(1900, 1950]": 0.0285965284299173,
+    "(1950, 2000]": 0.030088688176723433,
+    "(2000, 2100]": 0.029415929203539824
+   },
+   "dormitorios_por_tipo": {
+    "detached": 4.0,
+    "flat": 2.0,
+    "semi_detached": 3.0,
+    "terraced": 3.0
+   },
+   "sotano_en_pisos": 0.14980144138843948,
+   "year_built_min": 1862,
+   "year_built_max": 2021,
+   "distancia_decrece_con_la_zona": true
+  },
+  "VE27": {
+   "urban_density": 0.0001,
+   "flood_zone": 0.0008,
+   "soil_type": 0.0166,
+   "year_built": 0.0001,
+   "property_type": 0.0,
+   "roof_type": 0.0,
+   "basement": 0.0,
+   "trees_within_5m": 0.0,
+   "listed_building": 0.0,
+   "bedrooms": 0.0001,
+   "energy_rating": 0.0,
+   "solar_panels": 0.0,
+   "distance_to_river_km": 0.0002,
+   "elevation_m": 0.0201
+  },
+  "VE28": {
+   "filas_identicas_2024_2025": 0,
+   "filas_identicas_2023_2024": 0,
+   "medias_por_anio": {
+    "2023": {
+     "year": 2023.0,
+     "hail_days": 13.974,
+     "wind_exposure_index": 4.681,
+     "freezing_days": 21.018,
+     "dry_summer_index": 0.679,
+     "wildfire_index": 0.503,
+     "rainfall_mm": 1380.81,
+     "mean_temperature_c": 15.295
+    },
+    "2024": {
+     "year": 2024.0,
+     "hail_days": 17.081,
+     "wind_exposure_index": 5.413,
+     "freezing_days": 17.49,
+     "dry_summer_index": 0.712,
+     "wildfire_index": 0.549,
+     "rainfall_mm": 1375.087,
+     "mean_temperature_c": 15.777
+    },
+    "2025": {
+     "year": 2025.0,
+     "hail_days": 11.411,
+     "wind_exposure_index": 5.114,
+     "freezing_days": 28.863,
+     "dry_summer_index": 0.605,
+     "wildfire_index": 0.528,
+     "rainfall_mm": 1250.664,
+     "mean_temperature_c": 14.223
+    }
+   },
+   "correlacion_interanual": {
+    "hail_days": {
+     "r_2023_2024": 0.199,
+     "r_2024_2025": 0.229
+    },
+    "wind_exposure_index": {
+     "r_2023_2024": 0.871,
+     "r_2024_2025": 0.913
+    },
+    "freezing_days": {
+     "r_2023_2024": 0.786,
+     "r_2024_2025": 0.704
+    },
+    "dry_summer_index": {
+     "r_2023_2024": 0.596,
+     "r_2024_2025": -0.242
+    },
+    "wildfire_index": {
+     "r_2023_2024": 0.891,
+     "r_2024_2025": 0.866
+    },
+    "rainfall_mm": {
+     "r_2023_2024": 0.922,
+     "r_2024_2025": 0.945
+    },
+    "mean_temperature_c": {
+     "r_2023_2024": 0.896,
+     "r_2024_2025": 0.498
+    }
+   },
+   "helada_vs_temperatura_corr": -0.886,
+   "sequia_vs_lluvia_corr": 0.277,
+   "variables_con_r_2023_2024_de_0_80_o_mas": [
+    "wind_exposure_index",
+    "wildfire_index",
+    "rainfall_mm",
+    "mean_temperature_c"
+   ],
+   "variables_con_r_en_los_dos_pares_de_0_80_o_mas": [
+    "wind_exposure_index",
+    "wildfire_index",
+    "rainfall_mm"
+   ],
+   "medias_por_region": {
+    "E01": {
+     "hail_days": 17.635,
+     "wind_exposure_index": 4.909,
+     "freezing_days": 18.746,
+     "rainfall_mm": 1302.403,
+     "mean_temperature_c": 15.778
+    },
+    "E02": {
+     "hail_days": 11.477,
+     "wind_exposure_index": 2.594,
+     "freezing_days": 7.386,
+     "rainfall_mm": 1655.926,
+     "mean_temperature_c": 17.357
+    },
+    "E03": {
+     "hail_days": 14.408,
+     "wind_exposure_index": 5.124,
+     "freezing_days": 28.234,
+     "rainfall_mm": 1252.453,
+     "mean_temperature_c": 14.065
+    },
+    "E04": {
+     "hail_days": 5.3,
+     "wind_exposure_index": 6.007,
+     "freezing_days": 8.475,
+     "rainfall_mm": 1550.023,
+     "mean_temperature_c": 17.037
+    },
+    "E05": {
+     "hail_days": 18.33,
+     "wind_exposure_index": 5.128,
+     "freezing_days": 38.508,
+     "rainfall_mm": 1123.087,
+     "mean_temperature_c": 13.297
+    },
+    "E06": {
+     "hail_days": 12.415,
+     "wind_exposure_index": 7.11,
+     "freezing_days": 19.525,
+     "rainfall_mm": 1319.845,
+     "mean_temperature_c": 15.235
+    }
+   }
+  },
+  "VE29": {
+   "hail_days": {
+    "media_desarrollado": 6.512,
+    "media_emergente": 15.528,
+    "psi": 1.7474,
+    "emergente_fuera_del_rango_desarrollado": 2545
+   },
+   "wind_exposure_index": {
+    "media_desarrollado": 4.37,
+    "media_emergente": 5.047,
+    "psi": 0.2068,
+    "emergente_fuera_del_rango_desarrollado": 0
+   },
+   "freezing_days": {
+    "media_desarrollado": 37.093,
+    "media_emergente": 19.254,
+    "psi": 2.0744,
+    "emergente_fuera_del_rango_desarrollado": 0
+   },
+   "dry_summer_index": {
+    "media_desarrollado": 0.571,
+    "media_emergente": 0.695,
+    "psi": 1.2032,
+    "emergente_fuera_del_rango_desarrollado": 0
+   },
+   "wildfire_index": {
+    "media_desarrollado": 0.144,
+    "media_emergente": 0.526,
+    "psi": 6.7191,
+    "emergente_fuera_del_rango_desarrollado": 57237
+   },
+   "rainfall_mm": {
+    "media_desarrollado": 1008.54,
+    "media_emergente": 1377.949,
+    "psi": 3.5073,
+    "emergente_fuera_del_rango_desarrollado": 0
+   },
+   "mean_temperature_c": {
+    "media_desarrollado": 13.028,
+    "media_emergente": 15.536,
+    "psi": 2.3163,
+    "emergente_fuera_del_rango_desarrollado": 273
+   }
+  },
+  "VE30": {
+   "voluntary_excess": {
+    "valores": {
+     "0": 55417,
+     "250": 41657,
+     "500": 27151,
+     "1000": 13579
+    },
+    "fuera_de_dominio": []
+   },
+   "channel": {
+    "valores": {
+     "broker": 96481,
+     "direct": 34477,
+     "comparison_site": 6846
+    },
+    "fuera_de_dominio": []
+   },
+   "payment_method": {
+    "valores": {
+     "annual": 75917,
+     "monthly": 61887
+    },
+    "fuera_de_dominio": []
+   },
+   "driver_age_band": {
+    "valores": {
+     "65+": 34664,
+     "25-34": 31985,
+     "17-24": 31892,
+     "50-64": 19850,
+     "35-49": 19413
+    },
+    "fuera_de_dominio": []
+   },
+   "body_type": {
+    "valores": {
+     "hatchback": 58298,
+     "saloon": 25858,
+     "suv": 25852,
+     "estate": 15110,
+     "coupe": 12686
+    },
+    "fuera_de_dominio": []
+   },
+   "transmission": {
+    "valores": {
+     "manual": 75801,
+     "automatic": 62003
+    },
+    "fuera_de_dominio": []
+   },
+   "fuel_type": {
+    "valores": {
+     "petrol": 74315,
+     "diesel": 40530,
+     "hybrid": 20167,
+     "electric": 2792
+    },
+    "fuera_de_dominio": []
+   },
+   "cover_type": {
+    "valores": {
+     "comprehensive": 107413,
+     "third_party_fire_theft": 15357,
+     "third_party_only": 15034
+    },
+    "fuera_de_dominio": []
+   },
+   "overnight_parking": {
+    "valores": {
+     "driveway": 60788,
+     "street": 36314,
+     "garage": 24146
+    },
+    "fuera_de_dominio": []
+   },
+   "vehicle_use": {
+    "valores": {
+     "social": 62095,
+     "commuting": 61996,
+     "business": 13713
+    },
+    "fuera_de_dominio": []
+   },
+   "make_model_niveles": 300,
+   "make_model_con_varios_body_type": 300,
+   "make_model_con_varios_fuel_type": 300,
+   "make_model_con_varios_seats": 300,
+   "vehicle_age_min": 3,
+   "vehicle_age_min_desarrollado": 0,
+   "electricos_con_cilindrada": 2465,
+   "electricos_sin_cilindrada": 327,
+   "no_electricos_sin_cilindrada": 16422,
+   "compulsory_excess_valores": {
+    "250": 137804
+   },
+   "compulsory_excess_constante": true,
+   "compulsory_excess_constante_en_hogar": {
+    "buildings": 1,
+    "contents": 1
+   },
+   "compulsory_excess_constante_en_desarrollado": true,
+   "compulsory_excess_valor_por_ramo": {
+    "motor": [
+     250.0
+    ],
+    "buildings": [
+     350.0
+    ],
+    "contents": [
+     350.0
+    ]
+   },
+   "compulsory_excess_valor_desarrollado_autos": [
+    250.0
+   ],
+   "discount_applied_valores": {
+    "0.0": 99527,
+    "0.05": 34477,
+    "0.1": 3800
+   }
+  },
+  "VE75": {
+   "niveles_emergente": 300,
+   "niveles_desarrollado": 300,
+   "codigos_comunes": 300,
+   "codigos_con_varias_carrocerias_emergente": 300,
+   "codigos_con_varias_carrocerias_desarrollado": 300,
+   "codigos_con_varios_combustibles_emergente": 300,
+   "filas_por_codigo_emergente": {
+    "min": 386,
+    "mediana": 460.5,
+    "max": 542
+   },
+   "dispersion_frecuencia_por_codigo_emergente": {
+    "chi2": 476.9,
+    "gl": 299,
+    "p": 2.5808293795586596e-10,
+    "dispersion": 1.595
+   },
+   "dispersion_vehicle_value_group": {
+    "chi2": 25.1,
+    "gl": 19,
+    "p": 0.15884256462394336,
+    "dispersion": 1.319
+   },
+   "dispersion_driver_age_band": {
+    "chi2": 574.7,
+    "gl": 4,
+    "p": 4.646078935662866e-123,
+    "dispersion": 143.673
+   },
+   "correlacion_frecuencia_por_codigo_con_desarrollado": 0.028,
+   "dispersion_frecuencia_por_codigo_desarrollado": {
+    "chi2": 494.6,
+    "gl": 299,
+    "p": 7.718112885548012e-12,
+    "dispersion": 1.654
+   },
+   "correlacion_frecuencia_por_codigo_con_desarrollado_filas": 300
+  },
+  "VE31": {
+   "carnet_antes_de_los_16": 0,
+   "carnet_antes_de_los_17_con_edad_minima": 5846,
+   "ncb_mayor_que_carnet": 27807,
+   "ncb_mayor_que_carnet_train": 7756,
+   "ncb_mayor_que_carnet_test": 20051,
+   "ncb_mayor_que_carnet_cuota": 0.20178659545441352,
+   "ncb_mayor_que_carnet_desarrollado_cuota": 0.12963790654388715,
+   "joven_nombrado_con_banda_17_24": 0,
+   "joven_nombrado_por_banda": {
+    "17-24": 0.0,
+    "25-34": 0.05902766921994685,
+    "35-49": 0.06748055426775872,
+    "50-64": 0.06277078085642318,
+    "65+": 0.06352411723978768
+   },
+   "seats_fuera_2_9": 0,
+   "engine_cc_min": 500.0,
+   "engine_cc_max": 3600.0
+  },
+  "VE32": {
+   "pares_anio_siguiente": 40181,
+   "carnet_no_sube_1": 0,
+   "vehiculo_mismo_modelo": 40181,
+   "edad_vehiculo_no_sube_1_mismo_modelo": 9029,
+   "cambio_de_vehiculo": 0,
+   "ncb_salto_fuera_de_menos2_a_mas1": 0,
+   "ncb_distribucion_de_saltos": {
+    "-2.0": 3112,
+    "-1.0": 758,
+    "0.0": 3280,
+    "1.0": 33031
+   },
+   "banda_retrocede": 0,
+   "cambio_de_cliente": 0,
+   "cambio_de_direccion": 599
+  },
+  "VE33": {
+   "voluntary_excess": {
+    "valores": {
+     "0": 39764,
+     "250": 23947,
+     "500": 12043,
+     "1000": 3988
+    },
+    "fuera_de_dominio": []
+   },
+   "channel": {
+    "valores": {
+     "broker": 55827,
+     "direct": 19881,
+     "comparison_site": 4034
+    },
+    "fuera_de_dominio": []
+   },
+   "payment_method": {
+    "valores": {
+     "annual": 43955,
+     "monthly": 35787
+    },
+    "fuera_de_dominio": []
+   },
+   "policyholder_age_band": {
+    "valores": {
+     "65+": 20188,
+     "17-24": 18375,
+     "25-34": 18370,
+     "50-64": 11527,
+     "35-49": 11282
+    },
+    "fuera_de_dominio": []
+   },
+   "construction_type": {
+    "valores": {
+     "BRK": 55903,
+     "WOD": 9557,
+     "MIX": 7995,
+     "STN": 6287
+    },
+    "fuera_de_dominio": []
+   },
+   "occupancy": {
+    "valores": {
+     "owner_occupied": 71731,
+     "let": 8011
+    },
+    "fuera_de_dominio": []
+   },
+   "desocupacion_por_ocupacion": {
+    "let": {
+     "mediana": 7.0,
+     "p90": 14.0,
+     "mayor_de_30": 372
+    },
+    "owner_occupied": {
+     "mediana": 7.0,
+     "p90": 14.0,
+     "mayor_de_30": 3227
+    }
+   },
+   "desocupados_todo_el_anio": 0,
+   "construccion_desarrollado": {
+    "brick": 495644,
+    "non_standard": 70133,
+    "stone": 56393,
+    "w": 44562,
+    "t": 40994
+   },
+   "construccion_emergente": {
+    "BRK": 55903,
+    "WOD": 9557,
+    "MIX": 7995,
+    "STN": 6287
+   }
+  },
+  "VE34": {
+   "voluntary_excess": {
+    "valores": {
+     "0": 50793,
+     "250": 30171,
+     "500": 14931,
+     "1000": 4918
+    },
+    "fuera_de_dominio": []
+   },
+   "channel": {
+    "valores": {
+     "broker": 70618,
+     "direct": 25146,
+     "comparison_site": 5049
+    },
+    "fuera_de_dominio": []
+   },
+   "payment_method": {
+    "valores": {
+     "annual": 55715,
+     "monthly": 45098
+    },
+    "fuera_de_dominio": []
+   },
+   "policyholder_age_band": {
+    "valores": {
+     "65+": 25449,
+     "17-24": 23343,
+     "25-34": 23309,
+     "50-64": 14495,
+     "35-49": 14217
+    },
+    "fuera_de_dominio": []
+   },
+   "tenure": {
+    "valores": {
+     "owner": 56915,
+     "renter": 43898
+    },
+    "fuera_de_dominio": []
+   },
+   "security_level": {
+    "valores": {
+     "standard": 31012,
+     "alarm_and_locks": 30824,
+     "locks": 26689
+    },
+    "fuera_de_dominio": []
+   },
+   "contenidos_con_edificios_mismo_cliente_anio": 56915,
+   "inquilinos_con_edificios": 0,
+   "propietarios_sin_edificios": 0,
+   "high_value_items_valores": {
+    "0.0": 44597,
+    "1.0": 17819,
+    "2.0": 10556,
+    "3.0": 6972,
+    "4.0": 4494,
+    "5.0": 4354
+   }
+  },
+  "VE35": {
+   "buildings": {
+    "pares": 24210,
+    "ratio_mediana": 1.0299625468164795,
+    "ratio_p10": 1.027237354085603,
+    "ratio_p90": 1.0326086956521738,
+    "saltos_x1000": 43,
+    "caidas_x1000": 44,
+    "ratio_fuera_0_7_1_5": 0,
+    "banda_retrocede": 0,
+    "cambio_de_direccion": 0,
+    "cambio_de_cliente": 0
+   },
+   "contents": {
+    "pares": 29904,
+    "ratio_mediana": 1.0199764982373678,
+    "ratio_p10": 1.0180995475113122,
+    "ratio_p90": 1.0217391304347827,
+    "saltos_x1000": 53,
+    "caidas_x1000": 49,
+    "ratio_fuera_0_7_1_5": 185,
+    "banda_retrocede": 0,
+    "cambio_de_direccion": 0,
+    "cambio_de_cliente": 0
+   }
+  },
+  "VE36": {
+   "buildings": {
+    "filas_sobre_umbral": 157,
+    "umbral": 5000000.0,
+    "capital_normal_max": 894000.0,
+    "capital_extremo_min": 60000000.0,
+    "hueco_veces": 67.11409395973155,
+    "ppm_normal": {
+     "min": 0.45094736842105265,
+     "mediana": 1.056609195402299,
+     "max": 17.435326086956522
+    },
+    "ppm_extrema_max": 0.010997926829268293,
+    "ppm_extrema_x1000_dentro": 157,
+    "capital_cero_o_negativo": 0,
+    "capital_mediano_por_dormitorios": {
+     "1": 100000.0,
+     "2": 173000.0,
+     "3": 241000.0,
+     "4": 302000.0,
+     "5": 362000.0,
+     "6": 420000.0,
+     "7": 459000.0
+    }
+   },
+   "contents": {
+    "filas_sobre_umbral": 192,
+    "umbral": 2000000.0,
+    "capital_normal_max": 283200.0,
+    "capital_extremo_min": 7600000.0,
+    "hueco_veces": 26.836158192090394,
+    "ppm_normal": {
+     "min": 1.6064984227129337,
+     "mediana": 3.4317391304347824,
+     "max": 10.58875
+    },
+    "ppm_extrema_max": 0.00695354609929078,
+    "ppm_extrema_x1000_dentro": 192,
+    "capital_cero_o_negativo": 0,
+    "capital_mediano_por_dormitorios": null
+   }
+  },
+  "VE37": {
+   "motor": {
+    "prima_min": 173.93,
+    "prima_mediana": 526.36,
+    "prima_max": 2415.21,
+    "mediana_por_tramo_de_exposicion": {
+     "≤0,25": 520.33,
+     "0,25–0,5": 521.515,
+     "0,5–0,75": 524.815,
+     "0,75–0,99": 546.215,
+     "≈1": 512.66
+    },
+    "mediana_por_anio": {
+     "2023": 497.555,
+     "2024": 505.39,
+     "2025": 539.5
+    },
+    "mediana_nb_vs_ren_2025": {
+     "REN": 514.42,
+     "NB": 550.49
+    },
+    "descuento_fuera_0_1": 0,
+    "descuento_valores": {
+     "0.0": 99527,
+     "0.05": 34477,
+     "0.1": 3800
+    },
+    "prima_por_cobertura": {
+     "comprehensive": 520.84,
+     "third_party_fire_theft": 649.94,
+     "third_party_only": 451.94
+    }
+   },
+   "buildings": {
+    "prima_min": 63.45,
+    "prima_mediana": 250.315,
+    "prima_max": 4717.45,
+    "mediana_por_tramo_de_exposicion": {
+     "≤0,25": 246.515,
+     "0,25–0,5": 248.83499999999998,
+     "0,5–0,75": 251.47,
+     "0,75–0,99": 254.52,
+     "≈1": 246.98
+    },
+    "mediana_por_anio": {
+     "2023": 230.60000000000002,
+     "2024": 244.53,
+     "2025": 256.77
+    },
+    "mediana_nb_vs_ren_2025": {
+     "REN": 258.72,
+     "NB": 256.175
+    },
+    "descuento_fuera_0_1": 0,
+    "descuento_valores": {
+     "0.0": 57696,
+     "0.05": 19881,
+     "0.1": 2165
+    },
+    "prima_por_cobertura": null
+   },
+   "contents": {
+    "prima_min": 26.62,
+    "prima_mediana": 124.13,
+    "prima_max": 665.49,
+    "mediana_por_tramo_de_exposicion": {
+     "≤0,25": 126.17,
+     "0,25–0,5": 126.11,
+     "0,5–0,75": 124.61,
+     "0,75–0,99": 125.88499999999999,
+     "≈1": 122.04
+    },
+    "mediana_por_anio": {
+     "2023": 115.83500000000001,
+     "2024": 121.49,
+     "2025": 127.03
+    },
+    "mediana_nb_vs_ren_2025": {
+     "REN": 128.47,
+     "NB": 126.56
+    },
+    "descuento_fuera_0_1": 0,
+    "descuento_valores": {
+     "0.0": 72907,
+     "0.05": 25146,
+     "0.1": 2760
+    },
+    "prima_por_cobertura": null
+   }
+  },
+  "VE38": {
+   "motor": {
+    "frecuencia_por_contactos": {
+     "0": 0.0002,
+     "1": 0.0755,
+     "2": 0.4291,
+     "3": 1.125
+    },
+    "cuota_3_o_mas_train": 0.0946005964088573,
+    "cuota_3_o_mas_test": 0.007688823587896731,
+    "impagos_train": {
+     "0": 0.9206691622781973,
+     "1": 0.0625171837658355,
+     "2": 0.013345176913478416,
+     "3": 0.0028974472854937294,
+     "4": 0.0004441342554406446
+    },
+    "impagos_test": {
+     "0": 0.9206924360093238,
+     "1": 0.06259321041526275,
+     "2": 0.013588007202748534,
+     "3": 0.0024745639133460745,
+     "4": 0.0005192165353895781
+    },
+    "impagos_en_pago_anual_train": 0.0
+   },
+   "buildings": {
+    "frecuencia_por_contactos": {
+     "0": 0.0001,
+     "1": 0.0188,
+     "2": 0.136,
+     "3": 0.7437
+    },
+    "cuota_3_o_mas_train": 0.03442999234889059,
+    "cuota_3_o_mas_test": 0.008241705708002678,
+    "impagos_train": {
+     "0": 0.9188982402448355,
+     "1": 0.06437862061427478,
+     "2": 0.013808430793893685,
+     "3": 0.002441068240609174,
+     "4": 0.00040077239771195395
+    },
+    "impagos_test": {
+     "0": 0.9197437613538579,
+     "1": 0.06379194951716226,
+     "2": 0.013156133473563439,
+     "3": 0.002638875609522899,
+     "4": 0.0005736686107658476
+    },
+    "impagos_en_pago_anual_train": 0.0
+   },
+   "contents": {
+    "frecuencia_por_contactos": {
+     "0": 0.0001,
+     "1": 0.018,
+     "2": 0.1189,
+     "3": 0.6394
+    },
+    "cuota_3_o_mas_train": 0.02791760689695076,
+    "cuota_3_o_mas_test": 0.007834317025676635,
+    "impagos_train": {
+     "0": 0.918908754267199,
+     "1": 0.06367528785511775,
+     "2": 0.014060059017531679,
+     "3": 0.0027772956084013193,
+     "4": 0.00046288260140021984
+    },
+    "impagos_test": {
+     "0": 0.9197246667773635,
+     "1": 0.06306700680785544,
+     "2": 0.01381194620133742,
+     "3": 0.00292843449514695,
+     "4": 0.0004226606487840959
+    },
+    "impagos_en_pago_anual_train": 0.0
+   }
+  },
+  "VE39": {
+   "estado": {
+    "closed": 8082,
+    "open": 1056,
+    "repudiated": 120
+   },
+   "ramo": {
+    "motor": 7183,
+    "buildings": 1059,
+    "contents": 1016
+   },
+   "fuera_de_dominio": {
+    "status": [],
+    "line": []
+   },
+   "loss_min": "2021-10-27",
+   "loss_max": "2024-12-29",
+   "report_min": "2023-01-02",
+   "report_max": "2024-12-30",
+   "report_antes_de_loss": 0,
+   "report_despues_del_corte": 0,
+   "loss_despues_del_corte": 0,
+   "loss_antes_de_2023": 34,
+   "claim_id_formato_CL_8_digitos": true,
+   "claim_id_longitudes": {
+    "10": 9258
+   },
+   "repairer_por_peligro": {
+    "accidental_damage": 0.0,
+    "bodily_injury": 0.0,
+    "escape_of_water": 0.0,
+    "fire": 0.0,
+    "flood": 0.0,
+    "glass_hail": 0.0,
+    "own_damage": 1.0,
+    "storm": 0.0,
+    "subsidence": 0.0,
+    "theft": 0.0,
+    "third_party_prop": 1.0
+   },
+   "tercero_por_peligro": {
+    "accidental_damage": 0.0,
+    "bodily_injury": 1.0,
+    "escape_of_water": 0.0,
+    "fire": 0.0,
+    "flood": 0.0,
+    "glass_hail": 0.0,
+    "own_damage": 0.0,
+    "storm": 0.0,
+    "subsidence": 0.0,
+    "theft": 0.0,
+    "third_party_prop": 1.0
+   },
+   "reportes_el_31_12_2024": 0,
+   "por_anio_de_perdida": {
+    "2021": 6,
+    "2022": 28,
+    "2023": 4626,
+    "2024": 4598
+   },
+   "tercero_fuera_de_peligros_de_terceros": 0,
+   "reparador_fuera_de_autos": 0,
+   "reparador_en_danos_propios": 1.0
+  },
+  "VE40": {
+   "pagado_mayor_que_incurrido": 0,
+   "recuperaciones_negativas": 0,
+   "recuperaciones_mayores_que_incurrido": 0,
+   "pagos_negativos": 0,
+   "neto_negativo": 0,
+   "cerrados_con_reserva": 0,
+   "abiertos_sin_reserva": 5,
+   "abiertos_con_recuperacion": 0,
+   "cerrados_con_recuperacion": 0.09317000742390498,
+   "repudiados_con_pago": 0,
+   "repudiados_con_incurrido": 0,
+   "aceptados_con_neto_cero": 0,
+   "recuperacion_cuota_por_peligro": {
+    "accidental_damage": 0.0,
+    "bodily_injury": 0.0,
+    "escape_of_water": 0.0,
+    "fire": 0.0,
+    "flood": 0.0,
+    "glass_hail": 0.0,
+    "own_damage": 0.2396,
+    "storm": 0.0,
+    "subsidence": 0.0,
+    "theft": 0.0227,
+    "third_party_prop": 0.0
+   },
+   "reserva_de_caso_total": 4996885.9399999995,
+   "decimales_mas_de_2": 0
+  },
+  "VE41": {
+   "un_periodo": 9222,
+   "ninguno": 36,
+   "ambiguos": 0,
+   "no_asignados_antes_del_primer_inicio": 36,
+   "no_asignados_despues_del_ultimo_fin": 0,
+   "no_asignados_en_hueco": 0,
+   "dias_antes_min": 14,
+   "dias_antes_max": 431,
+   "no_asignados_por_estado": {
+    "closed": 35,
+    "open": 1
+   },
+   "no_asignados_neto": 92267.26000000001,
+   "reporte_dentro_de_un_periodo_observado": 35,
+   "siniestros_el_31_12_2024": 0
+  },
+  "VE42": {
+   "autos_peligro_fuera_de_cobertura": 0,
+   "autos_fuera_por_combinacion": {},
+   "buildings_accidental_damage_sin_cobertura": 23,
+   "buildings_accidental_damage_total": 122,
+   "buildings_neto_mayor_que_capital": 3,
+   "buildings_netos_sobre_el_capital": [
+    {
+     "peligro": "fire",
+     "estado": "closed",
+     "neto": 304128.3,
+     "capital": 304000.0
+    },
+    {
+     "peligro": "fire",
+     "estado": "closed",
+     "neto": 286093.0,
+     "capital": 286000.0
+    },
+    {
+     "peligro": "fire",
+     "estado": "closed",
+     "neto": 181063.9,
+     "capital": 181000.0
+    }
+   ],
+   "buildings_siniestros_en_filas_de_capital_extremo": 0,
+   "buildings_neto_mayor_que_capital_entre_mil_en_filas_extremas": 0,
+   "contents_accidental_damage_sin_cobertura": 47,
+   "contents_accidental_damage_total": 335,
+   "contents_neto_mayor_que_capital": 1,
+   "contents_netos_sobre_el_capital": [
+    {
+     "peligro": "flood",
+     "estado": "open",
+     "neto": 50884.85,
+     "capital": 47400.0
+    }
+   ],
+   "contents_siniestros_en_filas_de_capital_extremo": 1,
+   "contents_neto_mayor_que_capital_entre_mil_en_filas_extremas": 0,
+   "inundacion_por_zona": {
+    "1": 8,
+    "2": 4,
+    "3": 11,
+    "4": 17,
+    "5": 26
+   }
+  },
+  "VE43": {
+   "iguales_salvo_claim_id": 0,
+   "misma_poliza_peligro_fecha": 0,
+   "misma_poliza_fecha": 2,
+   "claim_id_once_caracteres": 0,
+   "mismo_importe_y_fecha_distinta_poliza": 0
+  },
+  "VE44": {
+   "motor": {
+    "retraso_mediana": 9.0,
+    "p90": 40.0,
+    "max": 653,
+    "mas_de_365": 31,
+    "mas_de_365_neto": 316442.19,
+    "por_peligro": {
+     "bodily_injury": {
+      "n": 449,
+      "mediana": 99.0,
+      "p90": 318.0,
+      "max": 653
+     },
+     "glass_hail": {
+      "n": 1345,
+      "mediana": 6.0,
+      "p90": 17.0,
+      "max": 484
+     },
+     "own_damage": {
+      "n": 2672,
+      "mediana": 7.0,
+      "p90": 23.0,
+      "max": 514
+     },
+     "theft": {
+      "n": 389,
+      "mediana": 4.0,
+      "p90": 13.0,
+      "max": 40
+     },
+     "third_party_prop": {
+      "n": 2193,
+      "mediana": 14.0,
+      "p90": 45.0,
+      "max": 167
+     }
+    },
+    "mediana_2023": 9.0,
+    "mediana_2024": 8.0,
+    "reportados_ultima_semana_2024": 68,
+    "negativos": 0
+   },
+   "buildings": {
+    "retraso_mediana": 8.0,
+    "p90": 31.0,
+    "max": 422,
+    "mas_de_365": 2,
+    "mas_de_365_neto": 14910.36,
+    "por_peligro": {
+     "accidental_damage": {
+      "n": 122,
+      "mediana": 8.0,
+      "p90": 23.900000000000006,
+      "max": 62
+     },
+     "escape_of_water": {
+      "n": 268,
+      "mediana": 9.0,
+      "p90": 39.30000000000001,
+      "max": 419
+     },
+     "fire": {
+      "n": 70,
+      "mediana": 4.0,
+      "p90": 12.100000000000001,
+      "max": 20
+     },
+     "flood": {
+      "n": 80,
+      "mediana": 8.0,
+      "p90": 24.10000000000001,
+      "max": 46
+     },
+     "storm": {
+      "n": 464,
+      "mediana": 8.0,
+      "p90": 24.0,
+      "max": 422
+     },
+     "subsidence": {
+      "n": 52,
+      "mediana": 55.5,
+      "p90": 185.29999999999998,
+      "max": 294
+     }
+    },
+    "mediana_2023": 8.0,
+    "mediana_2024": 8.0,
+    "reportados_ultima_semana_2024": 12,
+    "negativos": 0
+   },
+   "contents": {
+    "retraso_mediana": 6.0,
+    "p90": 22.0,
+    "max": 520,
+    "mas_de_365": 2,
+    "mas_de_365_neto": 8620.640000000001,
+    "por_peligro": {
+     "accidental_damage": {
+      "n": 335,
+      "mediana": 7.0,
+      "p90": 22.0,
+      "max": 88
+     },
+     "escape_of_water": {
+      "n": 171,
+      "mediana": 12.0,
+      "p90": 35.0,
+      "max": 94
+     },
+     "flood": {
+      "n": 86,
+      "mediana": 9.0,
+      "p90": 23.5,
+      "max": 40
+     },
+     "theft": {
+      "n": 406,
+      "mediana": 4.0,
+      "p90": 13.0,
+      "max": 520
+     }
+    },
+    "mediana_2023": 6.0,
+    "mediana_2024": 6.0,
+    "reportados_ultima_semana_2024": 10,
+    "negativos": 0
+   }
+  },
+  "VE45": {
+   "motor": {
+    "siniestros": 7048,
+    "coste": 15855887.959999999,
+    "top1": 0.009816848504017811,
+    "top10": 0.056917403949668176,
+    "top1pct": 0.16053168175893193,
+    "abiertos": 839,
+    "cuota_abiertos_por_peligro": {
+     "bodily_injury": 0.579,
+     "glass_hail": 0.036,
+     "own_damage": 0.084,
+     "theft": 0.085,
+     "third_party_prop": 0.125
+    },
+    "reserva_sobre_incurrido": {
+     "bodily_injury": 0.509,
+     "glass_hail": 0.03,
+     "own_damage": 0.075,
+     "theft": 0.093,
+     "third_party_prop": 0.107
+    },
+    "maximo": 155654.85,
+    "p999": 59999.897280002784
+   },
+   "buildings": {
+    "siniestros": 1056,
+    "coste": 9558749.309999999,
+    "top1": 0.03777613872792319,
+    "top10": 0.25624573054108063,
+    "top1pct": 0.25624573054108063,
+    "abiertos": 157,
+    "cuota_abiertos_por_peligro": {
+     "accidental_damage": 0.016,
+     "escape_of_water": 0.142,
+     "fire": 0.143,
+     "flood": 0.263,
+     "storm": 0.125,
+     "subsidence": 0.538
+    },
+    "reserva_sobre_incurrido": {
+     "accidental_damage": 0.006,
+     "escape_of_water": 0.134,
+     "fire": 0.056,
+     "flood": 0.243,
+     "storm": 0.101,
+     "subsidence": 0.381
+    },
+    "maximo": 361092.64,
+    "p999": 337978.7669999977
+   },
+   "contents": {
+    "siniestros": 998,
+    "coste": 2583354.3,
+    "top1": 0.01969720142529424,
+    "top10": 0.12728941593493392,
+    "top1pct": 0.11831015203760478,
+    "abiertos": 59,
+    "cuota_abiertos_por_peligro": {
+     "accidental_damage": 0.057,
+     "escape_of_water": 0.029,
+     "flood": 0.105,
+     "theft": 0.064
+    },
+    "reserva_sobre_incurrido": {
+     "accidental_damage": 0.049,
+     "escape_of_water": 0.03,
+     "flood": 0.15,
+     "theft": 0.045
+    },
+    "maximo": 50884.85,
+    "p999": 44289.166590000284
+   }
+  },
+  "VE46": {
+   "motor": {
+    "cancelled": {
+     "filas": 1250,
+     "con_periodo_posterior": 0.0
+    },
+    "declined_by_insurer": {
+     "filas": 219,
+     "con_periodo_posterior": 0.9726027397260274
+    },
+    "lapsed_by_customer": {
+     "filas": 2369,
+     "con_periodo_posterior": 0.0
+    },
+    "mid_term_change": {
+     "filas": 3477,
+     "con_periodo_posterior": 1.0
+    },
+    "renewed": {
+     "filas": 39968,
+     "con_periodo_posterior": 1.0
+    },
+    "2024_con_fila_en_test": {
+     "cancelled": 0.0,
+     "declined_by_insurer": 0.9469026548672567,
+     "lapsed_by_customer": 0.0,
+     "mid_term_change": 1.0,
+     "renewed": 1.0
+    }
+   },
+   "buildings": {
+    "cancelled": {
+     "filas": 731,
+     "con_periodo_posterior": 0.0
+    },
+    "declined_by_insurer": {
+     "filas": 113,
+     "con_periodo_posterior": 0.9557522123893806
+    },
+    "lapsed_by_customer": {
+     "filas": 1460,
+     "con_periodo_posterior": 0.0
+    },
+    "mid_term_change": {
+     "filas": 1041,
+     "con_periodo_posterior": 1.0
+    },
+    "renewed": {
+     "filas": 24102,
+     "con_periodo_posterior": 1.0
+    },
+    "2024_con_fila_en_test": {
+     "cancelled": 0.0,
+     "declined_by_insurer": 0.9107142857142857,
+     "lapsed_by_customer": 0.0,
+     "mid_term_change": 1.0,
+     "renewed": 1.0
+    }
+   },
+   "contents": {
+    "cancelled": {
+     "filas": 936,
+     "con_periodo_posterior": 0.0
+    },
+    "declined_by_insurer": {
+     "filas": 30,
+     "con_periodo_posterior": 0.9
+    },
+    "lapsed_by_customer": {
+     "filas": 1828,
+     "con_periodo_posterior": 0.0
+    },
+    "mid_term_change": {
+     "filas": 1895,
+     "con_periodo_posterior": 1.0
+    },
+    "renewed": {
+     "filas": 29877,
+     "con_periodo_posterior": 1.0
+    },
+    "2024_con_fila_en_test": {
+     "cancelled": 0.0,
+     "declined_by_insurer": 0.75,
+     "lapsed_by_customer": 0.0,
+     "mid_term_change": 1.0,
+     "renewed": 1.0
+    }
+   }
+  },
+  "VE47": {
+   "motor": {
+    "columnas_solo_train": [
+     "renewal_decision"
+    ],
+    "columnas_solo_test": [],
+    "categorias_nuevas": {},
+    "fuera_de_soporte": {
+     "years_licensed": {
+      "filas": 49,
+      "min_test": 0.0,
+      "max_test": 74.0,
+      "min_train": 0.0,
+      "max_train": 73.0
+     },
+     "vehicle_age": {
+      "filas": 116,
+      "min_test": 3.0,
+      "max_test": 27.0,
+      "min_train": 3.0,
+      "max_train": 26.0
+     },
+     "missed_payments_12m": {
+      "filas": 3,
+      "min_test": 0.0,
+      "max_test": 7.0,
+      "min_train": 0.0,
+      "max_train": 5.0
+     },
+     "renewal_count": {
+      "filas": 993,
+      "min_test": 0.0,
+      "max_test": 17.0,
+      "min_train": 0.0,
+      "max_train": 16.0
+     },
+     "written_premium": {
+      "filas": 15,
+      "min_test": 173.93,
+      "max_test": 2415.21,
+      "min_train": 192.54,
+      "max_train": 2199.17
+     }
+    }
+   },
+   "buildings": {
+    "columnas_solo_train": [
+     "renewal_decision"
+    ],
+    "columnas_solo_test": [],
+    "categorias_nuevas": {},
+    "fuera_de_soporte": {
+     "sum_insured": {
+      "filas": 2,
+      "min_test": 45000.0,
+      "max_test": 568000000.0,
+      "min_train": 44000.0,
+      "max_train": 470000000.0
+     },
+     "missed_payments_12m": {
+      "filas": 1,
+      "min_test": 0.0,
+      "max_test": 7.0,
+      "min_train": 0.0,
+      "max_train": 5.0
+     },
+     "renewal_count": {
+      "filas": 598,
+      "min_test": 0.0,
+      "max_test": 17.0,
+      "min_train": 0.0,
+      "max_train": 16.0
+     },
+     "written_premium": {
+      "filas": 1,
+      "min_test": 76.04,
+      "max_test": 4717.45,
+      "min_train": 63.45,
+      "max_train": 4629.86
+     }
+    }
+   },
+   "contents": {
+    "columnas_solo_train": [
+     "renewal_decision"
+    ],
+    "columnas_solo_test": [],
+    "categorias_nuevas": {},
+    "fuera_de_soporte": {
+     "sum_insured": {
+      "filas": 1,
+      "min_test": 4900.0,
+      "max_test": 98100000.0,
+      "min_train": 5200.0,
+      "max_train": 131600000.0
+     },
+     "renewal_count": {
+      "filas": 744,
+      "min_test": 0.0,
+      "max_test": 17.0,
+      "min_train": 0.0,
+      "max_train": 16.0
+     },
+     "written_premium": {
+      "filas": 3,
+      "min_test": 29.17,
+      "max_test": 665.49,
+      "min_train": 26.62,
+      "max_train": 573.35
+     }
+    }
+   }
+  },
+  "VE48": {
+   "motor": {
+    "exposure": {
+     "psi_2023_2024": 0.0907,
+     "psi_2024_2025": 0.2784
+    },
+    "driver_age_band": {
+     "psi_2023_2024": 0.008,
+     "psi_2024_2025": 0.0452
+    },
+    "years_licensed": {
+     "psi_2023_2024": 0.005,
+     "psi_2024_2025": 0.0478
+    },
+    "ncb_years": {
+     "psi_2023_2024": 0.0667,
+     "psi_2024_2025": 0.0429
+    },
+    "vehicle_value_group": {
+     "psi_2023_2024": 0.0002,
+     "psi_2024_2025": 0.0016
+    },
+    "vehicle_age": {
+     "psi_2023_2024": 0.0792,
+     "psi_2024_2025": 0.0093
+    },
+    "engine_size_cc": {
+     "psi_2023_2024": 0.0004,
+     "psi_2024_2025": 0.0012
+    },
+    "body_type": {
+     "psi_2023_2024": 0.0006,
+     "psi_2024_2025": 0.0079
+    },
+    "transmission": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0
+    },
+    "seats": {
+     "psi_2023_2024": 0.0001,
+     "psi_2024_2025": 0.0001
+    },
+    "vehicle_colour": {
+     "psi_2023_2024": 0.0001,
+     "psi_2024_2025": 0.0001
+    },
+    "fuel_type": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0002
+    },
+    "driver_assist": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0
+    },
+    "cover_type": {
+     "psi_2023_2024": 0.0003,
+     "psi_2024_2025": 0.0005
+    },
+    "overnight_parking": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0
+    },
+    "vehicle_use": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0
+    },
+    "named_young_driver": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0006
+    },
+    "voluntary_excess": {
+     "psi_2023_2024": 0.0001,
+     "psi_2024_2025": 0.0001
+    },
+    "compulsory_excess": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0
+    },
+    "channel": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0
+    },
+    "payment_method": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0
+    },
+    "missed_payments_12m": {
+     "psi_2023_2024": 0.0002,
+     "psi_2024_2025": 0.0002
+    },
+    "new_business": {
+     "psi_2023_2024": 0.0087,
+     "psi_2024_2025": 1.7404
+    },
+    "renewal_count": {
+     "psi_2023_2024": 0.0548,
+     "psi_2024_2025": 1.3845
+    },
+    "days_quote_to_inception": {
+     "psi_2023_2024": 0.0013,
+     "psi_2024_2025": 0.0001
+    },
+    "discount_applied": {
+     "psi_2023_2024": 0.0002,
+     "psi_2024_2025": 0.0528
+    },
+    "written_premium": {
+     "psi_2023_2024": 0.0141,
+     "psi_2024_2025": 0.0435
+    },
+    "customer_service_contacts": {
+     "psi_2023_2024": 0.0033,
+     "psi_2024_2025": 0.2227
+    },
+    "_nb_2023_2024_vs_nb_2025": {
+     "exposure": 2.7312,
+     "driver_age_band": 0.0006,
+     "years_licensed": 0.0077,
+     "ncb_years": 0.0036,
+     "vehicle_value_group": 0.0018,
+     "vehicle_age": 0.0039,
+     "engine_size_cc": 0.0026,
+     "body_type": 0.0011,
+     "transmission": 0.0,
+     "seats": 0.0007,
+     "vehicle_colour": 0.0009,
+     "fuel_type": 0.0012,
+     "driver_assist": 0.0001,
+     "cover_type": 0.0006,
+     "overnight_parking": 0.0001,
+     "vehicle_use": 0.0001,
+     "named_young_driver": 0.0002,
+     "voluntary_excess": 0.0005,
+     "compulsory_excess": 0.0,
+     "channel": 0.0001,
+     "payment_method": 0.0003,
+     "missed_payments_12m": 0.0007,
+     "new_business": 0.0,
+     "renewal_count": 0.0,
+     "days_quote_to_inception": 0.0016,
+     "discount_applied": 0.0001,
+     "written_premium": 0.032,
+     "customer_service_contacts": 0.2045
+    }
+   },
+   "buildings": {
+    "exposure": {
+     "psi_2023_2024": 0.0715,
+     "psi_2024_2025": 0.1931
+    },
+    "policyholder_age_band": {
+     "psi_2023_2024": 0.0082,
+     "psi_2024_2025": 0.0477
+    },
+    "sum_insured": {
+     "psi_2023_2024": 0.0061,
+     "psi_2024_2025": 0.0063
+    },
+    "construction_type": {
+     "psi_2023_2024": 0.0001,
+     "psi_2024_2025": 0.0
+    },
+    "occupancy": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0
+    },
+    "days_unoccupied": {
+     "psi_2023_2024": 0.0024,
+     "psi_2024_2025": 0.0007
+    },
+    "smoke_alarms": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0
+    },
+    "accidental_damage_cover": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0
+    },
+    "mortgage": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0003
+    },
+    "voluntary_excess": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0001
+    },
+    "compulsory_excess": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0
+    },
+    "channel": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0002
+    },
+    "payment_method": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0001
+    },
+    "missed_payments_12m": {
+     "psi_2023_2024": 0.0006,
+     "psi_2024_2025": 0.0001
+    },
+    "new_business": {
+     "psi_2023_2024": 0.0096,
+     "psi_2024_2025": 1.7324
+    },
+    "renewal_count": {
+     "psi_2023_2024": 0.0544,
+     "psi_2024_2025": 1.3857
+    },
+    "days_quote_to_inception": {
+     "psi_2023_2024": 0.0009,
+     "psi_2024_2025": 0.0005
+    },
+    "discount_applied": {
+     "psi_2023_2024": 0.0001,
+     "psi_2024_2025": 0.052
+    },
+    "written_premium": {
+     "psi_2023_2024": 0.0247,
+     "psi_2024_2025": 0.0166
+    },
+    "customer_service_contacts": {
+     "psi_2023_2024": 0.0053,
+     "psi_2024_2025": 0.0492
+    },
+    "_nb_2023_2024_vs_nb_2025": {
+     "exposure": 3.3286,
+     "policyholder_age_band": 0.0012,
+     "sum_insured": 0.0088,
+     "construction_type": 0.0005,
+     "occupancy": 0.0,
+     "days_unoccupied": 0.0017,
+     "smoke_alarms": 0.0002,
+     "accidental_damage_cover": 0.0002,
+     "mortgage": 0.0002,
+     "voluntary_excess": 0.0012,
+     "compulsory_excess": 0.0,
+     "channel": 0.0001,
+     "payment_method": 0.0006,
+     "missed_payments_12m": 0.004,
+     "new_business": 0.0,
+     "renewal_count": 0.0,
+     "days_quote_to_inception": 0.0015,
+     "discount_applied": 0.0001,
+     "written_premium": 0.0318,
+     "customer_service_contacts": 0.0776
+    }
+   },
+   "contents": {
+    "exposure": {
+     "psi_2023_2024": 0.1354,
+     "psi_2024_2025": 0.1612
+    },
+    "policyholder_age_band": {
+     "psi_2023_2024": 0.0087,
+     "psi_2024_2025": 0.0433
+    },
+    "sum_insured": {
+     "psi_2023_2024": 0.0013,
+     "psi_2024_2025": 0.0007
+    },
+    "tenure": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0002
+    },
+    "security_level": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0001
+    },
+    "high_value_items": {
+     "psi_2023_2024": 0.0002,
+     "psi_2024_2025": 0.0003
+    },
+    "accidental_damage_cover": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0002
+    },
+    "works_from_home": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0
+    },
+    "lodgers": {
+     "psi_2023_2024": 0.0001,
+     "psi_2024_2025": 0.0
+    },
+    "bicycle_cover": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0
+    },
+    "voluntary_excess": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0004
+    },
+    "compulsory_excess": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0
+    },
+    "channel": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0001
+    },
+    "payment_method": {
+     "psi_2023_2024": 0.0,
+     "psi_2024_2025": 0.0003
+    },
+    "missed_payments_12m": {
+     "psi_2023_2024": 0.0004,
+     "psi_2024_2025": 0.0002
+    },
+    "new_business": {
+     "psi_2023_2024": 0.0115,
+     "psi_2024_2025": 1.7454
+    },
+    "renewal_count": {
+     "psi_2023_2024": 0.058,
+     "psi_2024_2025": 1.4059
+    },
+    "days_quote_to_inception": {
+     "psi_2023_2024": 0.0009,
+     "psi_2024_2025": 0.0007
+    },
+    "discount_applied": {
+     "psi_2023_2024": 0.0005,
+     "psi_2024_2025": 0.0484
+    },
+    "written_premium": {
+     "psi_2023_2024": 0.0167,
+     "psi_2024_2025": 0.0113
+    },
+    "customer_service_contacts": {
+     "psi_2023_2024": 0.0036,
+     "psi_2024_2025": 0.0303
+    },
+    "_nb_2023_2024_vs_nb_2025": {
+     "exposure": 3.0386,
+     "policyholder_age_band": 0.0015,
+     "sum_insured": 0.0011,
+     "tenure": 0.0008,
+     "security_level": 0.0005,
+     "high_value_items": 0.0018,
+     "accidental_damage_cover": 0.0002,
+     "works_from_home": 0.0,
+     "lodgers": 0.0004,
+     "bicycle_cover": 0.0004,
+     "voluntary_excess": 0.0011,
+     "compulsory_excess": 0.0,
+     "channel": 0.0001,
+     "payment_method": 0.0001,
+     "missed_payments_12m": 0.0011,
+     "new_business": 0.0,
+     "renewal_count": 0.0,
+     "days_quote_to_inception": 0.0028,
+     "discount_applied": 0.0001,
+     "written_premium": 0.0225,
+     "customer_service_contacts": 0.1005
+    }
+   }
+  },
+  "VE49": {
+   "motor": {
+    "nb_filas": 0.7602987152152539,
+    "nb_exposicion": 0.7685220640363468,
+    "nb_enero": 0.8829751681850544,
+    "nb_train_enero": 0.07543993879112472,
+    "clientes_nuevos": 0.7602987152152539,
+    "direcciones_nuevas": 0.7502016106759758,
+    "canal_nb_2025": {
+     "broker": 0.699,
+     "direct": 0.25,
+     "comparison_site": 0.051
+    },
+    "canal_nb_train": {
+     "broker": 0.702,
+     "direct": 0.249,
+     "comparison_site": 0.049
+    },
+    "renovaciones_test_sin_fila_en_2024": 0,
+    "nb_con_cliente_ya_visto": 0
+   },
+   "buildings": {
+    "nb_filas": 0.7594607515058801,
+    "nb_exposicion": 0.7676153134769542,
+    "nb_enero": 0.9135361063551214,
+    "nb_train_enero": 0.07659799260433175,
+    "clientes_nuevos": 0.7594607515058801,
+    "direcciones_nuevas": 0.7685629601300316,
+    "canal_nb_2025": {
+     "broker": 0.698,
+     "direct": 0.253,
+     "comparison_site": 0.05
+    },
+    "canal_nb_train": {
+     "broker": 0.701,
+     "direct": 0.25,
+     "comparison_site": 0.049
+    },
+    "renovaciones_test_sin_fila_en_2024": 0,
+    "nb_con_cliente_ya_visto": 0
+   },
+   "contents": {
+    "nb_filas": 0.7614080637613779,
+    "nb_exposicion": 0.770197581518224,
+    "nb_enero": 0.9005372613548502,
+    "nb_train_enero": 0.07336726039016116,
+    "clientes_nuevos": 0.7614080637613779,
+    "direcciones_nuevas": 0.7671743626126466,
+    "canal_nb_2025": {
+     "broker": 0.699,
+     "direct": 0.251,
+     "comparison_site": 0.05
+    },
+    "canal_nb_train": {
+     "broker": 0.7,
+     "direct": 0.248,
+     "comparison_site": 0.052
+    },
+    "renovaciones_test_sin_fila_en_2024": 0,
+    "nb_con_cliente_ya_visto": 0
+   }
+  },
+  "VE50": {
+   "filas": 209063,
+   "unicos": true,
+   "mismo_conjunto": true,
+   "mismo_orden": true,
+   "prediccion_valores": {
+    "count": 209063.0,
+    "mean": 0.0,
+    "std": 0.0,
+    "min": 0.0,
+    "25%": 0.0,
+    "50%": 0.0,
+    "75%": 0.0,
+    "max": 0.0
+   },
+   "prediccion_negativas": 0,
+   "prediccion_no_finitas": 0
+  },
+  "VE51": {
+   "filas": 20,
+   "en_test": 20,
+   "linea_coherente": true,
+   "canal": {
+    "broker": 17,
+    "direct": 3
+   },
+   "nb": 18,
+   "exposicion_min": 0.0685,
+   "menores_de_0_99": 15,
+   "menores_de_1": 19,
+   "diferencias_con_el_test": {},
+   "polizas_con_otra_fila_en_2025": {
+    "B05817658": 2,
+    "C17515168": 2
+   }
+  },
+  "VE52": {
+   "items": [
+    "fixed_expense_per_policy",
+    "variable_expense",
+    "commission_direct",
+    "commission_comparison_site",
+    "commission_broker",
+    "premium_tax",
+    "cat_reinsurance",
+    "target_profit_margin"
+   ],
+   "unidades": {
+    "share of premium": 6,
+    "CU": 1,
+    "share of property risk premium": 1
+   },
+   "emergente_nulos": [
+    "commission_comparison_site"
+   ],
+   "comparison_site_cuota_train": 0.05005672668716147,
+   "comparison_site_cuota_test": 0.05002319874870254,
+   "comparison_site_en_referencias": 0,
+   "valores": {
+    "fixed_expense_per_policy": 85.0,
+    "variable_expense": 0.15,
+    "commission_direct": 0.0,
+    "commission_comparison_site": null,
+    "commission_broker": 0.2,
+    "premium_tax": 0.08,
+    "cat_reinsurance": 0.12,
+    "target_profit_margin": 0.08
+   }
+  },
+  "VE53": {
+   "archivos": {
+    "claim_assignment_audit.parquet": true,
+    "exposure_changes_609.parquet": true,
+    "group_membership_training_only.parquet": true,
+    "partitions.parquet": true,
+    "periods_policies_buildings.parquet": true,
+    "periods_policies_contents.parquet": true,
+    "periods_policies_motor.parquet": true,
+    "periods_test_buildings.parquet": true,
+    "periods_test_contents.parquet": true,
+    "periods_test_motor.parquet": true,
+    "plan_snapshot.json": true,
+    "precoverage_claims_36.parquet": true,
+    "report.json": true,
+    "splits/cold_2024_fold0.parquet": true,
+    "splits/cold_2024_fold1.parquet": true,
+    "splits/cold_2024_fold2.parquet": true,
+    "splits/cold_2024_fold3.parquet": true,
+    "splits/cold_2024_fold4.parquet": true,
+    "splits/development_2023_fold0.parquet": true,
+    "splits/development_2023_fold1.parquet": true,
+    "splits/development_2023_fold2.parquet": true,
+    "splits/development_2023_fold3.parquet": true,
+    "splits/development_2023_fold4.parquet": true,
+    "splits/production_2025.parquet": true,
+    "splits/temporal_2024.parquet": true,
+    "target_T0_and_stresses.parquet": true
+   },
+   "entradas": {
+    "addresses": true,
+    "claims": true,
+    "customers": true,
+    "expenses": true,
+    "policies_buildings": true,
+    "policies_contents": true,
+    "policies_motor": true,
+    "reference_policies": true,
+    "sample_submission": true,
+    "test_buildings": true,
+    "test_contents": true,
+    "test_motor": true,
+    "weather": true
+   }
+  },
+  "VE54": {
+   "motor_train": {
+    "filas": 47283,
+    "filas_iguales": true,
+    "columnas_cambiadas": [],
+    "exposure_original_igual": true,
+    "cambios_de_exposicion": 254,
+    "mis_filas_fuera_de_365": 254,
+    "corregida_igual_a_dias_365": true,
+    "exposure_changes_coincide_con_mi_lista": true
+   },
+   "motor_test": {
+    "filas": 90521,
+    "filas_iguales": true,
+    "columnas_cambiadas": [],
+    "exposure_original_igual": true,
+    "cambios_de_exposicion": 0,
+    "mis_filas_fuera_de_365": 0,
+    "corregida_igual_a_dias_365": true
+   },
+   "buildings_train": {
+    "filas": 27447,
+    "filas_iguales": true,
+    "columnas_cambiadas": [],
+    "exposure_original_igual": true,
+    "cambios_de_exposicion": 155,
+    "mis_filas_fuera_de_365": 155,
+    "corregida_igual_a_dias_365": true,
+    "exposure_changes_coincide_con_mi_lista": true
+   },
+   "buildings_test": {
+    "filas": 52295,
+    "filas_iguales": true,
+    "columnas_cambiadas": [],
+    "exposure_original_igual": true,
+    "cambios_de_exposicion": 0,
+    "mis_filas_fuera_de_365": 0,
+    "corregida_igual_a_dias_365": true
+   },
+   "contents_train": {
+    "filas": 34566,
+    "filas_iguales": true,
+    "columnas_cambiadas": [],
+    "exposure_original_igual": true,
+    "cambios_de_exposicion": 200,
+    "mis_filas_fuera_de_365": 200,
+    "corregida_igual_a_dias_365": true,
+    "exposure_changes_coincide_con_mi_lista": true
+   },
+   "contents_test": {
+    "filas": 66247,
+    "filas_iguales": true,
+    "columnas_cambiadas": [],
+    "exposure_original_igual": true,
+    "cambios_de_exposicion": 0,
+    "mis_filas_fuera_de_365": 0,
+    "corregida_igual_a_dias_365": true
+   }
+  },
+  "VE55": {
+   "filas_train": 109296,
+   "filas_test": 209063,
+   "test_T0_nulo": true,
+   "T0_cents_iguales": 109296,
+   "paid_iguales": 109296,
+   "inc_iguales": 109296,
+   "rec_iguales": 109296,
+   "n_accepted_iguales": 109296,
+   "n_positive_iguales": 109296,
+   "n_open_iguales": 109296,
+   "T0_total": 27997991.57,
+   "T0_total_mio": 27997991.57,
+   "T1_075_formula": true,
+   "T1_125_formula": true,
+   "T0_igual_a_cents": true,
+   "exposure_igual_a_dias_365": true,
+   "filas_con_T0_positivo": 8071,
+   "estado": {
+    "unlabelled_test": 209063,
+    "observed_net_incurred_not_ultimate": 109296
+   }
+  },
+  "VE56": {
+   "precobertura_coincide": true,
+   "n_codex": 36,
+   "n_mios": 36,
+   "auditoria_filas": 9258,
+   "incluidos_en_T0": 9102,
+   "incluidos_esperados": 9102,
+   "categorias": {
+    "unique_period": 9222,
+    "before_first_available_coverage": 36
+   },
+   "row_id_coincide": true
+  },
+  "VE57": {
+   "grupos_codex": 36398,
+   "grupos_mios": 36398,
+   "particion_equivalente": true,
+   "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "filas_por_fold": {
+    "0": 21891,
+    "1": 21907,
+    "2": 22007,
+    "3": 22056,
+    "4": 21435
+   },
+   "cliente_en_varios_folds": 0,
+   "direccion_en_varios_folds": 0,
+   "max_periodos_por_grupo": 12,
+   "test_con_fold": 0,
+   "roles_temporales": {
+    "unlabelled_test_2025": 209063,
+    "temporal_validation_2024": 59202,
+    "development_2023": 50094
+   },
+   "positivos_por_cruce_min": 88,
+   "positivos_por_cruce_max": 660,
+   "banderas_vistas_coinciden_con_cualquier_anio_anterior": {
+    "customer_seen_prior_year_same_line": 1.0,
+    "address_seen_prior_year_same_line": 1.0,
+    "customer_seen_prior_year_any_line": 1.0,
+    "address_seen_prior_year_any_line": 1.0
+   },
+   "banderas_vistas_coinciden_con_el_anio_inmediatamente_anterior": {
+    "customer_seen_prior_year_same_line": 1.0,
+    "address_seen_prior_year_same_line": 0.9999623067040668,
+    "customer_seen_prior_year_any_line": 1.0,
+    "address_seen_prior_year_any_line": 0.9999654478120612
+   },
+   "lectura": "prior_year significa cualquier año anterior de entrenamiento (2023 cuenta para 2025 aunque la entidad falte en 2024)"
+  },
+  "VE58": {
+   "development_fold0": {
+    "filas": 50094,
+    "ajuste": 40046,
+    "evaluacion": 10048,
+    "anios": [
+     2023
+    ],
+    "eval_es_fold_k": true,
+    "ajuste_sin_fold_k": true,
+    "clientes_compartidos": 0,
+    "direcciones_compartidas": 0
+   },
+   "cold_fold0": {
+    "filas": 51889,
+    "ajuste": 40046,
+    "evaluacion": 11843,
+    "eval_anios": [
+     2024
+    ],
+    "fit_anios": [
+     2023
+    ],
+    "eval_es_fold_k": true,
+    "ajuste_sin_fold_k": true,
+    "clientes_compartidos": 0,
+    "direcciones_compartidas": 0
+   },
+   "development_fold1": {
+    "filas": 50094,
+    "ajuste": 40107,
+    "evaluacion": 9987,
+    "anios": [
+     2023
+    ],
+    "eval_es_fold_k": true,
+    "ajuste_sin_fold_k": true,
+    "clientes_compartidos": 0,
+    "direcciones_compartidas": 0
+   },
+   "cold_fold1": {
+    "filas": 52027,
+    "ajuste": 40107,
+    "evaluacion": 11920,
+    "eval_anios": [
+     2024
+    ],
+    "fit_anios": [
+     2023
+    ],
+    "eval_es_fold_k": true,
+    "ajuste_sin_fold_k": true,
+    "clientes_compartidos": 0,
+    "direcciones_compartidas": 0
+   },
+   "development_fold2": {
+    "filas": 50094,
+    "ajuste": 40044,
+    "evaluacion": 10050,
+    "anios": [
+     2023
+    ],
+    "eval_es_fold_k": true,
+    "ajuste_sin_fold_k": true,
+    "clientes_compartidos": 0,
+    "direcciones_compartidas": 0
+   },
+   "cold_fold2": {
+    "filas": 52001,
+    "ajuste": 40044,
+    "evaluacion": 11957,
+    "eval_anios": [
+     2024
+    ],
+    "fit_anios": [
+     2023
+    ],
+    "eval_es_fold_k": true,
+    "ajuste_sin_fold_k": true,
+    "clientes_compartidos": 0,
+    "direcciones_compartidas": 0
+   },
+   "development_fold3": {
+    "filas": 50094,
+    "ajuste": 39920,
+    "evaluacion": 10174,
+    "anios": [
+     2023
+    ],
+    "eval_es_fold_k": true,
+    "ajuste_sin_fold_k": true,
+    "clientes_compartidos": 0,
+    "direcciones_compartidas": 0
+   },
+   "cold_fold3": {
+    "filas": 51802,
+    "ajuste": 39920,
+    "evaluacion": 11882,
+    "eval_anios": [
+     2024
+    ],
+    "fit_anios": [
+     2023
+    ],
+    "eval_es_fold_k": true,
+    "ajuste_sin_fold_k": true,
+    "clientes_compartidos": 0,
+    "direcciones_compartidas": 0
+   },
+   "development_fold4": {
+    "filas": 50094,
+    "ajuste": 40259,
+    "evaluacion": 9835,
+    "anios": [
+     2023
+    ],
+    "eval_es_fold_k": true,
+    "ajuste_sin_fold_k": true,
+    "clientes_compartidos": 0,
+    "direcciones_compartidas": 0
+   },
+   "cold_fold4": {
+    "filas": 51859,
+    "ajuste": 40259,
+    "evaluacion": 11600,
+    "eval_anios": [
+     2024
+    ],
+    "fit_anios": [
+     2023
+    ],
+    "eval_es_fold_k": true,
+    "ajuste_sin_fold_k": true,
+    "clientes_compartidos": 0,
+    "direcciones_compartidas": 0
+   },
+   "desarrollo_cada_fila_2023_una_vez_en_evaluacion": true,
+   "poblacion_nueva_cada_fila_2024_una_vez_en_evaluacion": true,
+   "temporal": {
+    "filas": 109296,
+    "roles_por_anio": {
+     "2023": {
+      "train": 50094
+     },
+     "2024": {
+      "validation": 59202
+     }
+    }
+   },
+   "production": {
+    "filas": 318359,
+    "roles_por_anio": {
+     "2023": {
+      "train": 50094
+     },
+     "2024": {
+      "train": 59202
+     },
+     "2025": {
+      "test_predict": 209063
+     }
+    }
+   }
+  },
+  "VE59": {
+   "motor": {
+    "filas": 137804,
+    "filas_coinciden": true,
+    "predictores": [
+     "x_voluntary_excess",
+     "x_compulsory_excess",
+     "x_renewal_count",
+     "x_days_quote_to_inception",
+     "x_new_business",
+     "x_years_licensed",
+     "x_ncb_years",
+     "x_vehicle_value_group",
+     "x_vehicle_age",
+     "x_engine_size_cc",
+     "x_seats",
+     "x_driver_assist",
+     "x_named_young_driver",
+     "x_flood_zone",
+     "x_distance_to_river_km",
+     "x_elevation_m",
+     "x_bedrooms",
+     "x_basement",
+     "x_trees_within_5m",
+     "x_listed_building",
+     "x_solar_panels",
+     "x_start_month",
+     "x_customer_tenure_years",
+     "x_property_age",
+     "x_channel",
+     "x_payment_method",
+     "x_driver_age_band",
+     "x_make_model",
+     "x_body_type",
+     "x_transmission",
+     "x_fuel_type",
+     "x_cover_type",
+     "x_overnight_parking",
+     "x_vehicle_use",
+     "x_region",
+     "x_urban_density",
+     "x_soil_type",
+     "x_property_type",
+     "x_roof_type",
+     "x_energy_rating"
+    ],
+    "columnas_x": [
+     "x_voluntary_excess",
+     "x_compulsory_excess",
+     "x_renewal_count",
+     "x_days_quote_to_inception",
+     "x_new_business",
+     "x_years_licensed",
+     "x_ncb_years",
+     "x_vehicle_value_group",
+     "x_vehicle_age",
+     "x_engine_size_cc",
+     "x_seats",
+     "x_driver_assist",
+     "x_named_young_driver",
+     "x_flood_zone",
+     "x_distance_to_river_km",
+     "x_elevation_m",
+     "x_bedrooms",
+     "x_basement",
+     "x_trees_within_5m",
+     "x_listed_building",
+     "x_solar_panels",
+     "x_channel",
+     "x_payment_method",
+     "x_driver_age_band",
+     "x_make_model",
+     "x_body_type",
+     "x_transmission",
+     "x_fuel_type",
+     "x_cover_type",
+     "x_overnight_parking",
+     "x_vehicle_use",
+     "x_region",
+     "x_urban_density",
+     "x_soil_type",
+     "x_property_type",
+     "x_roof_type",
+     "x_energy_rating",
+     "x_start_month",
+     "x_customer_tenure_years",
+     "x_property_age"
+    ],
+    "prohibidas_presentes": [],
+    "columnas_distintas": [],
+    "contrato_igual_a_columnas": true,
+    "tenure_igual_anio_menos_since": true,
+    "renewal_count_igual_tenure": 1.0,
+    "start_month_igual": true,
+    "property_age_igual": true,
+    "categorias_missing": {
+     "x_overnight_parking": 16556,
+     "x_soil_type": 16415,
+     "x_roof_type": 16440,
+     "x_energy_rating": 16554
+    },
+    "numericos_nulos": {
+     "x_vehicle_age": 16674,
+     "x_engine_size_cc": 16749,
+     "x_flood_zone": 3965,
+     "x_distance_to_river_km": 16677
+    },
+    "predictores_constantes": [
+     "x_compulsory_excess"
+    ],
+    "predictores_casi_constantes_99": {}
+   },
+   "buildings": {
+    "filas": 79742,
+    "filas_coinciden": true,
+    "predictores": [
+     "x_voluntary_excess",
+     "x_compulsory_excess",
+     "x_renewal_count",
+     "x_days_quote_to_inception",
+     "x_new_business",
+     "x_days_unoccupied",
+     "x_smoke_alarms",
+     "x_accidental_damage_cover",
+     "x_mortgage",
+     "x_flood_zone",
+     "x_distance_to_river_km",
+     "x_elevation_m",
+     "x_bedrooms",
+     "x_basement",
+     "x_trees_within_5m",
+     "x_listed_building",
+     "x_solar_panels",
+     "x_start_month",
+     "x_customer_tenure_years",
+     "x_property_age",
+     "x_log_sum_insured",
+     "x_channel",
+     "x_payment_method",
+     "x_policyholder_age_band",
+     "x_occupancy",
+     "x_region",
+     "x_urban_density",
+     "x_soil_type",
+     "x_property_type",
+     "x_roof_type",
+     "x_energy_rating",
+     "x_construction_type"
+    ],
+    "columnas_x": [
+     "x_voluntary_excess",
+     "x_compulsory_excess",
+     "x_renewal_count",
+     "x_days_quote_to_inception",
+     "x_new_business",
+     "x_days_unoccupied",
+     "x_smoke_alarms",
+     "x_accidental_damage_cover",
+     "x_mortgage",
+     "x_flood_zone",
+     "x_distance_to_river_km",
+     "x_elevation_m",
+     "x_bedrooms",
+     "x_basement",
+     "x_trees_within_5m",
+     "x_listed_building",
+     "x_solar_panels",
+     "x_channel",
+     "x_payment_method",
+     "x_policyholder_age_band",
+     "x_occupancy",
+     "x_region",
+     "x_urban_density",
+     "x_soil_type",
+     "x_property_type",
+     "x_roof_type",
+     "x_energy_rating",
+     "x_start_month",
+     "x_customer_tenure_years",
+     "x_property_age",
+     "x_log_sum_insured",
+     "x_construction_type"
+    ],
+    "prohibidas_presentes": [],
+    "columnas_distintas": [],
+    "contrato_igual_a_columnas": true,
+    "construction_type_mapa": {
+     "BRK": "brick",
+     "STN": "stone",
+     "WOD": "timber",
+     "MIX": "mixed_or_nonstandard"
+    },
+    "tenure_igual_anio_menos_since": true,
+    "renewal_count_igual_tenure": 1.0,
+    "start_month_igual": true,
+    "property_age_igual": true,
+    "log_capital_nulo": 157,
+    "log_capital_nulo_es_sobre_filtro": true,
+    "log_capital_igual_log": true,
+    "categorias_missing": {
+     "x_soil_type": 9675,
+     "x_roof_type": 9484,
+     "x_energy_rating": 9596
+    },
+    "numericos_nulos": {
+     "x_days_unoccupied": 9531,
+     "x_smoke_alarms": 9607,
+     "x_flood_zone": 2340,
+     "x_distance_to_river_km": 9574,
+     "x_log_sum_insured": 157
+    },
+    "predictores_constantes": [
+     "x_compulsory_excess"
+    ],
+    "predictores_casi_constantes_99": {}
+   },
+   "contents": {
+    "filas": 100813,
+    "filas_coinciden": true,
+    "predictores": [
+     "x_voluntary_excess",
+     "x_compulsory_excess",
+     "x_renewal_count",
+     "x_days_quote_to_inception",
+     "x_new_business",
+     "x_high_value_items",
+     "x_accidental_damage_cover",
+     "x_works_from_home",
+     "x_lodgers",
+     "x_bicycle_cover",
+     "x_flood_zone",
+     "x_distance_to_river_km",
+     "x_elevation_m",
+     "x_bedrooms",
+     "x_basement",
+     "x_trees_within_5m",
+     "x_listed_building",
+     "x_solar_panels",
+     "x_start_month",
+     "x_customer_tenure_years",
+     "x_property_age",
+     "x_log_sum_insured",
+     "x_channel",
+     "x_payment_method",
+     "x_policyholder_age_band",
+     "x_tenure",
+     "x_security_level",
+     "x_region",
+     "x_urban_density",
+     "x_soil_type",
+     "x_property_type",
+     "x_roof_type",
+     "x_energy_rating"
+    ],
+    "columnas_x": [
+     "x_voluntary_excess",
+     "x_compulsory_excess",
+     "x_renewal_count",
+     "x_days_quote_to_inception",
+     "x_new_business",
+     "x_high_value_items",
+     "x_accidental_damage_cover",
+     "x_works_from_home",
+     "x_lodgers",
+     "x_bicycle_cover",
+     "x_flood_zone",
+     "x_distance_to_river_km",
+     "x_elevation_m",
+     "x_bedrooms",
+     "x_basement",
+     "x_trees_within_5m",
+     "x_listed_building",
+     "x_solar_panels",
+     "x_channel",
+     "x_payment_method",
+     "x_policyholder_age_band",
+     "x_tenure",
+     "x_security_level",
+     "x_region",
+     "x_urban_density",
+     "x_soil_type",
+     "x_property_type",
+     "x_roof_type",
+     "x_energy_rating",
+     "x_start_month",
+     "x_customer_tenure_years",
+     "x_property_age",
+     "x_log_sum_insured"
+    ],
+    "prohibidas_presentes": [],
+    "columnas_distintas": [],
+    "contrato_igual_a_columnas": true,
+    "tenure_igual_anio_menos_since": true,
+    "renewal_count_igual_tenure": 1.0,
+    "start_month_igual": true,
+    "property_age_igual": true,
+    "log_capital_nulo": 192,
+    "log_capital_nulo_es_sobre_filtro": true,
+    "log_capital_igual_log": true,
+    "categorias_missing": {
+     "x_security_level": 12288,
+     "x_soil_type": 12360,
+     "x_roof_type": 12016,
+     "x_energy_rating": 11953
+    },
+    "numericos_nulos": {
+     "x_high_value_items": 12021,
+     "x_flood_zone": 2933,
+     "x_distance_to_river_km": 12169,
+     "x_log_sum_insured": 192
+    },
+    "predictores_constantes": [
+     "x_compulsory_excess"
+    ],
+    "predictores_casi_constantes_99": {}
+   }
+  },
+  "VE60": {
+   "modelos": [
+    "W2-B00",
+    "W2-B01",
+    "W2-B02",
+    "W2-B03",
+    "W2-B04",
+    "W2-B05",
+    "W2-B06",
+    "W2-B07",
+    "W2-B08",
+    "W2-B09"
+   ],
+   "filas_por_modelo": 50094,
+   "filas_2023_train": 50094,
+   "mismo_conjunto_que_2023": true,
+   "fold_coincide": true,
+   "T0_coincide": true,
+   "exposure_coincide": true,
+   "nb_coincide": true,
+   "e_cost_entre_0_y_e": true,
+   "e_cost_mix_1_sobre_e_min": 0.9321423409186838,
+   "e_cost_mix_1_sobre_e_mediana": 0.9984569538273478,
+   "predicciones_positivas_finitas": true,
+   "prediccion_igual_tasa_por_e_cost": 1.0,
+   "reserve_coincide": true
+  },
+  "VE61": {
+   "capital_filas": 349,
+   "capital_mismo_conjunto_que_codex": true,
+   "capital_dividido_x1000": true,
+   "clima_filas": 410742,
+   "clima_direcciones": 136914,
+   "clima_anios": [
+    2023,
+    2024,
+    2025
+   ],
+   "clima_2025_es_media": true,
+   "clima_2023_toma_2024": true
+  },
+  "VE62": {
+   "nb_test_since_2025": 1.0,
+   "previous_insurer_nulo_nb": 0.0,
+   "previous_insurer_nulo_renovacion": 0.0,
+   "campaign_code_nulo": 0.2019270403957131,
+   "years_at_address_distribucion": {
+    "count": 119630.0,
+    "mean": 6.85,
+    "std": 4.76,
+    "min": 0.0,
+    "25%": 3.0,
+    "50%": 6.0,
+    "75%": 9.0,
+    "max": 53.0
+   }
+  },
+  "VE63": {
+   "anios": [
+    2023,
+    2024,
+    2025
+   ],
+   "diccionario_anuncia": "2023–2024 (texto de la página); el archivo trae 2025",
+   "filas_2025": 136914
+  },
+  "VE64": {
+   "motor": {
+    "frecuencia_por_impagos": {
+     "0": 0.1754,
+     "1": 0.2513,
+     "2": 0.2147,
+     "3": 0.2389
+    }
+   },
+   "buildings": {
+    "frecuencia_por_impagos": {
+     "0": 0.0436,
+     "1": 0.0548,
+     "2": 0.0764,
+     "3": 0.1226
+    },
+    "frecuencia_por_desocupacion": {
+     "(-1, 0]": 0.0489,
+     "(0, 30]": 0.0458,
+     "(30, 90]": 0.0585,
+     "(90, 366]": 0.0393
+    }
+   },
+   "contents": {
+    "frecuencia_por_impagos": {
+     "0": 0.0333,
+     "1": 0.0422,
+     "2": 0.0541,
+     "3": 0.0917
+    }
+   }
+  },
+  "VE65": {
+   "motor": {
+    "train_tiene_renewal_decision": true,
+    "test_tiene": false,
+    "mid_term_change_filas": 3477
+   },
+   "buildings": {
+    "train_tiene_renewal_decision": true,
+    "test_tiene": false,
+    "mid_term_change_filas": 1041
+   },
+   "contents": {
+    "train_tiene_renewal_decision": true,
+    "test_tiene": false,
+    "mid_term_change_filas": 1895
+   }
+  },
+  "VE66": {
+   "motor": {
+    "siniestralidad_sobre_prima_anualizada_por_exposicion": {
+     "2023": 0.712,
+     "2024": 0.629
+    },
+    "prima_media_por_exposicion": {
+     "2023": 608.12,
+     "2024": 608.2
+    }
+   },
+   "buildings": {
+    "siniestralidad_sobre_prima_anualizada_por_exposicion": {
+     "2023": 1.488,
+     "2024": 0.834
+    },
+    "prima_media_por_exposicion": {
+     "2023": 345.62,
+     "2024": 367.83
+    }
+   },
+   "contents": {
+    "siniestralidad_sobre_prima_anualizada_por_exposicion": {
+     "2023": 0.734,
+     "2024": 0.662
+    },
+    "prima_media_por_exposicion": {
+     "2023": 124.13,
+     "2024": 131.15
+    }
+   }
+  },
+  "VE67": {
+   "motor": {
+    "filas_2024_con_2023": 21965,
+    "frecuencia_sin_siniestro_previo": 0.1484,
+    "frecuencia_con_siniestro_previo": 0.3102,
+    "filas_con_siniestro_previo": 3024
+   },
+   "buildings": {
+    "filas_2024_con_2023": 12675,
+    "frecuencia_sin_siniestro_previo": 0.0437,
+    "frecuencia_con_siniestro_previo": 0.0846,
+    "filas_con_siniestro_previo": 501
+   },
+   "contents": {
+    "filas_2024_con_2023": 16025,
+    "frecuencia_sin_siniestro_previo": 0.032,
+    "frecuencia_con_siniestro_previo": 0.0535,
+    "filas_con_siniestro_previo": 474
+   }
+  },
+  "VE68": {
+   "valoracion": "31-12-2024 única",
+   "abiertos": 1056,
+   "abiertos_en_T0": 1055,
+   "reserva_de_caso_en_T0": 4995797.64,
+   "cuota_reserva_sobre_T0": 0.17843414330308693,
+   "abiertos_por_anio": {
+    "2023": 151,
+    "2024": 904
+   },
+   "abiertos_sin_pago": 0
+  },
+  "VE69": {
+   "d2_formula_propia": -0.740004694529284,
+   "d2_sklearn": -0.7400046945292837,
+   "coincide": true,
+   "identidad_escala_e": true
+  },
+  "VE70": {
+   "motor": {
+    "2023": {
+     "frecuencia": 0.1886,
+     "severidad_media": 2294.8,
+     "severidad_mediana": 996.1,
+     "prima_pura": 432.7
+    },
+    "2024": {
+     "frecuencia": 0.1736,
+     "severidad_media": 2203.7,
+     "severidad_mediana": 981.5,
+     "prima_pura": 382.67
+    }
+   },
+   "buildings": {
+    "2023": {
+     "frecuencia": 0.0456,
+     "severidad_media": 11269.1,
+     "severidad_mediana": 2393.7,
+     "prima_pura": 514.28
+    },
+    "2024": {
+     "frecuencia": 0.0444,
+     "severidad_media": 6908.9,
+     "severidad_mediana": 2127.8,
+     "prima_pura": 306.73
+    }
+   },
+   "contents": {
+    "2023": {
+     "frecuencia": 0.0348,
+     "severidad_media": 2618.4,
+     "severidad_mediana": 1170.3,
+     "prima_pura": 91.13
+    },
+    "2024": {
+     "frecuencia": 0.0339,
+     "severidad_media": 2559.6,
+     "severidad_mediana": 1185.0,
+     "prima_pura": 86.8
+    }
+   }
+  },
+  "VE72": {
+   "direcciones_nulos_por_columna": {
+    "flood_zone": 0.0295,
+    "distance_to_river_km": 0.1199,
+    "soil_type": 0.1204,
+    "roof_type": 0.1193,
+    "energy_rating": 0.1206
+   },
+   "direcciones_nulos_por_region": {
+    "E01": {
+     "flood_zone": 0.0317,
+     "distance_to_river_km": 0.12,
+     "soil_type": 0.1206,
+     "roof_type": 0.1185
+    },
+    "E02": {
+     "flood_zone": 0.0302,
+     "distance_to_river_km": 0.1178,
+     "soil_type": 0.1192,
+     "roof_type": 0.1217
+    },
+    "E03": {
+     "flood_zone": 0.0293,
+     "distance_to_river_km": 0.1222,
+     "soil_type": 0.1162,
+     "roof_type": 0.1197
+    },
+    "E04": {
+     "flood_zone": 0.0296,
+     "distance_to_river_km": 0.1176,
+     "soil_type": 0.1168,
+     "roof_type": 0.1205
+    },
+    "E05": {
+     "flood_zone": 0.0281,
+     "distance_to_river_km": 0.1228,
+     "soil_type": 0.1246,
+     "roof_type": 0.1177
+    },
+    "E06": {
+     "flood_zone": 0.0287,
+     "distance_to_river_km": 0.1165,
+     "soil_type": 0.1248,
+     "roof_type": 0.1182
+    }
+   },
+   "direcciones_filas_con_algun_nulo": 0.41733496939684767,
+   "direcciones_nulos_independientes": {
+    "flood_zone~distance_to_river_km": -0.0,
+    "flood_zone~soil_type": 0.001,
+    "flood_zone~roof_type": -0.004,
+    "flood_zone~energy_rating": -0.002,
+    "distance_to_river_km~soil_type": 0.004,
+    "distance_to_river_km~roof_type": 0.003,
+    "distance_to_river_km~energy_rating": 0.001,
+    "soil_type~roof_type": 0.002,
+    "soil_type~energy_rating": 0.004,
+    "roof_type~energy_rating": 0.003
+   },
+   "polizas_y_direcciones_por_segmento": {
+    "motor": {
+     "2023": {
+      "vehicle_age": 0.1184,
+      "engine_size_cc": 0.1216,
+      "overnight_parking": 0.1217,
+      "flood_zone": 0.0285,
+      "distance_to_river_km": 0.1227,
+      "soil_type": 0.121,
+      "roof_type": 0.1211,
+      "energy_rating": 0.1174
+     },
+     "2024": {
+      "vehicle_age": 0.1186,
+      "engine_size_cc": 0.1214,
+      "overnight_parking": 0.1194,
+      "flood_zone": 0.0269,
+      "distance_to_river_km": 0.1232,
+      "soil_type": 0.1191,
+      "roof_type": 0.1212,
+      "energy_rating": 0.1181
+     },
+     "2025_renovacion": {
+      "vehicle_age": 0.1229,
+      "engine_size_cc": 0.1216,
+      "overnight_parking": 0.12,
+      "flood_zone": 0.0267,
+      "distance_to_river_km": 0.1205,
+      "soil_type": 0.1183,
+      "roof_type": 0.1209,
+      "energy_rating": 0.1181
+     },
+     "2025_nb": {
+      "vehicle_age": 0.1221,
+      "engine_size_cc": 0.1216,
+      "overnight_parking": 0.1199,
+      "flood_zone": 0.0302,
+      "distance_to_river_km": 0.1198,
+      "soil_type": 0.1188,
+      "roof_type": 0.1175,
+      "energy_rating": 0.1224
+     }
+    },
+    "buildings": {
+     "2023": {
+      "days_unoccupied": 0.1184,
+      "smoke_alarms": 0.1223,
+      "flood_zone": 0.0281,
+      "distance_to_river_km": 0.1191,
+      "soil_type": 0.1204,
+      "roof_type": 0.1184,
+      "energy_rating": 0.1184
+     },
+     "2024": {
+      "days_unoccupied": 0.1212,
+      "smoke_alarms": 0.1162,
+      "flood_zone": 0.0283,
+      "distance_to_river_km": 0.1191,
+      "soil_type": 0.1214,
+      "roof_type": 0.1203,
+      "energy_rating": 0.1189
+     },
+     "2025_renovacion": {
+      "days_unoccupied": 0.1137,
+      "smoke_alarms": 0.1219,
+      "flood_zone": 0.028,
+      "distance_to_river_km": 0.1198,
+      "soil_type": 0.1212,
+      "roof_type": 0.1216,
+      "energy_rating": 0.12
+     },
+     "2025_nb": {
+      "days_unoccupied": 0.1211,
+      "smoke_alarms": 0.121,
+      "flood_zone": 0.0306,
+      "distance_to_river_km": 0.1208,
+      "soil_type": 0.1216,
+      "roof_type": 0.1178,
+      "energy_rating": 0.1216
+     }
+    },
+    "contents": {
+     "2023": {
+      "security_level": 0.1208,
+      "high_value_items": 0.1159,
+      "flood_zone": 0.0285,
+      "distance_to_river_km": 0.1214,
+      "soil_type": 0.1228,
+      "roof_type": 0.1186,
+      "energy_rating": 0.1171
+     },
+     "2024": {
+      "security_level": 0.1241,
+      "high_value_items": 0.1192,
+      "flood_zone": 0.0287,
+      "distance_to_river_km": 0.1208,
+      "soil_type": 0.1228,
+      "roof_type": 0.119,
+      "energy_rating": 0.1166
+     },
+     "2025_renovacion": {
+      "security_level": 0.1193,
+      "high_value_items": 0.1193,
+      "flood_zone": 0.0281,
+      "distance_to_river_km": 0.1219,
+      "soil_type": 0.1248,
+      "roof_type": 0.121,
+      "energy_rating": 0.1161
+     },
+     "2025_nb": {
+      "security_level": 0.1222,
+      "high_value_items": 0.1203,
+      "flood_zone": 0.0297,
+      "distance_to_river_km": 0.1201,
+      "soil_type": 0.1218,
+      "roof_type": 0.1189,
+      "energy_rating": 0.1205
+     }
+    }
+   },
+   "max_diferencia_nb_2025_frente_a_2024": 0.004799999999999999
+  },
+  "VE73": {
+   "motor": {
+    "region_2024": {
+     "E03": 0.297,
+     "E06": 0.192,
+     "E02": 0.177,
+     "E05": 0.162,
+     "E01": 0.128,
+     "E04": 0.044
+    },
+    "region_2025": {
+     "E03": 0.295,
+     "E06": 0.193,
+     "E02": 0.179,
+     "E05": 0.163,
+     "E01": 0.126,
+     "E04": 0.044
+    },
+    "psi_region": 0.0001,
+    "psi_densidad": 0.0,
+    "psi_zona_inundacion": 0.0001
+   },
+   "buildings": {
+    "region_2024": {
+     "E03": 0.295,
+     "E06": 0.202,
+     "E02": 0.178,
+     "E05": 0.163,
+     "E01": 0.122,
+     "E04": 0.041
+    },
+    "region_2025": {
+     "E03": 0.293,
+     "E06": 0.196,
+     "E02": 0.178,
+     "E05": 0.165,
+     "E01": 0.125,
+     "E04": 0.043
+    },
+    "psi_region": 0.0003,
+    "psi_densidad": 0.0001,
+    "psi_zona_inundacion": 0.0002
+   },
+   "contents": {
+    "region_2024": {
+     "E03": 0.293,
+     "E06": 0.199,
+     "E02": 0.179,
+     "E05": 0.162,
+     "E01": 0.126,
+     "E04": 0.041
+    },
+    "region_2025": {
+     "E03": 0.293,
+     "E06": 0.194,
+     "E02": 0.179,
+     "E05": 0.165,
+     "E01": 0.127,
+     "E04": 0.042
+    },
+    "psi_region": 0.0002,
+    "psi_densidad": 0.0001,
+    "psi_zona_inundacion": 0.0002
+   }
+  },
+  "VE74": {}
+ },
+ "segundos": 117
+}

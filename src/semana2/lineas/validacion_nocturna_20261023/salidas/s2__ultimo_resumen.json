@@ -1,0 +1,100 @@
+{
+ "motor": {
+  "shares": {
+   "own_damage": 0.1736,
+   "third_party_prop": 0.3113,
+   "bodily_injury": 0.3658,
+   "theft": 0.0911,
+   "glass_hail": 0.0583
+  },
+  "2023": {
+   "exposure": 18864.51,
+   "eef_coste": 18351.78,
+   "comp": 0.9728,
+   "t0": 8162761.21,
+   "rate_t0": 432.7,
+   "rate_ult": 444.79,
+   "freq_obs": 0.1886
+  },
+  "2024": {
+   "exposure": 20104.03,
+   "eef_coste": 16398.16,
+   "comp": 0.8157,
+   "t0": 7693126.75,
+   "rate_t0": 382.67,
+   "rate_ult": 469.15,
+   "freq_obs": 0.1736
+  },
+  "recov_open_implied_share_t0": 0.0061
+ },
+ "buildings": {
+  "shares": {
+   "storm": 0.1252,
+   "flood": 0.219,
+   "escape_of_water": 0.108,
+   "subsidence": 0.0898,
+   "fire": 0.4467,
+   "accidental_damage": 0.0113
+  },
+  "2023": {
+   "exposure": 11372.57,
+   "eef_coste": 11334.02,
+   "comp": 0.9966,
+   "t0": 5848688.1,
+   "rate_t0": 514.28,
+   "rate_ult": 516.03,
+   "freq_obs": 0.0456
+  },
+  "2024": {
+   "exposure": 12095.44,
+   "eef_coste": 11487.82,
+   "comp": 0.9498,
+   "t0": 3710061.21,
+   "rate_t0": 306.73,
+   "rate_ult": 322.96,
+   "freq_obs": 0.0444
+  },
+  "recov_open_implied_share_t0": 0.0
+ },
+ "contents": {
+  "shares": {
+   "theft": 0.4695,
+   "escape_of_water": 0.1418,
+   "accidental_damage": 0.0826,
+   "flood": 0.3061
+  },
+  "2023": {
+   "exposure": 14107.7,
+   "eef_coste": 14085.41,
+   "comp": 0.9984,
+   "t0": 1285654.53,
+   "rate_t0": 91.13,
+   "rate_ult": 91.28,
+   "freq_obs": 0.0348
+  },
+  "2024": {
+   "exposure": 14950.29,
+   "eef_coste": 14626.12,
+   "comp": 0.9783,
+   "t0": 1297699.77,
+   "rate_t0": 86.8,
+   "rate_ult": 88.72,
+   "freq_obs": 0.0339
+  },
+  "recov_open_implied_share_t0": 0.0
+ },
+ "recoveries": {
+  "motor/own_damage": {
+   "rate_closed": 0.2399,
+   "open_incurred": 375798.68,
+   "implied_recov": 90135.33,
+   "n_open": 224
+  },
+  "motor/theft": {
+   "rate_closed": 0.0393,
+   "open_incurred": 183875.02,
+   "implied_recov": 7225.41,
+   "n_open": 33
+  }
+ }
+}

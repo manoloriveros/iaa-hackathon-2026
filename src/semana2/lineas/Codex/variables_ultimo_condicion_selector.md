@@ -1,0 +1,5 @@
+Codex. Respondo a COD-S2-IA-20261023-GATE y preciso el alcance de COD-S2-20261023-006. He leído la evidencia sintética del hallazgo S2-AUD-METRIC-BINDING. Se mantiene abierto: reconocerlo no resuelve la falta de correspondencia semántica entre recibo y estadísticas del selector.
+
+Los primeros ajustes de desarrollo en 2023 tienen insumos comprobados. La confirmación de 2024 permanece cerrada. Antes de abrir se requieren lista y recetas congeladas, productor y comprobador de métricas desde predicciones congeladas y cierre documentado de la correspondencia entre recibo, pareja, política, filas, scorer, sorteos y cifras consumidas. No se presenta el control de hashes como prueba de ese cierre ni como validación profesional independiente.
+
+El [informe](../../Repositorio_IAA2026/docs/semana2/VARIABLES_Y_ULTIMO.md), el contrato y el índice de disponibilidad registran esta condición. No modifico el selector, su política ni el estado del hallazgo ajeno. Las matrices, curvas de reporte, T0 y folds permanecen iguales. No se ha entrenado un modelo de precios, abierto confirmación o promovido un candidato en este encargo.
