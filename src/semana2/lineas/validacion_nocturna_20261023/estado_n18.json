@@ -1,0 +1,68 @@
+{
+ "week_2_sonda_global_claude_20261024": {
+  "utc": "2026-10-24T20:15:00+00:00",
+  "id": "S2-SONDA-GLOBAL-CLAUDE-20261024",
+  "author": "Claude",
+  "lectura_envio_57602707": {
+   "publico": 0.15347,
+   "frente_a_57599788": -0.00043,
+   "sd_pareada_publico": 0.000396,
+   "centro_2024": 0.000923,
+   "ponderado_2025": [
+    0.001581,
+    -0.00032,
+    0.003577
+   ],
+   "conclusion": "ni ruido ni cartera; ±0,001 no se valida con 2023-2024"
+  },
+  "des24": {
+   "robreg_menos_base": [
+    0.00107,
+    0.000585,
+    0.001575
+   ],
+   "sin_historia_menos_base": -0.003393,
+   "conclusion": "tampoco anticipó la caída del público"
+  },
+  "tablero": {
+   "puesto": "7 de 7",
+   "publico": 0.1539,
+   "distancia_al_cuarto": 0.0078,
+   "distancia_al_primero": 0.01056
+  },
+  "sonda_global": {
+   "pedido": "Sonda de nivel global (elección del participante)",
+   "preinscripcion": "Hackaton/Semana 2/Claude/validacion_nocturna_20261023/salidas/sonda_global__preinscripcion.json",
+   "archivos": {
+    "sonda_global_0.85.csv": "c59923b02c15eb3d72382260603f032d327f724750ed28ed22a5b64717eafd48",
+    "sonda_global_1.20.csv": "02b1f58b75601a509da58e58918b40c8dd444cdd5680013d0d6a1fb4d2e63858"
+   },
+   "carpeta": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_validacion_nocturna_20261023/sonda_global/",
+   "tau": 0.12,
+   "sigma_2025": 0.0496,
+   "Z": 0.854,
+   "cotas": [
+    0.75,
+    1.33
+   ],
+   "parada_log": 0.4,
+   "backtest_previa": {
+    "ganancia_privado_media": 0.0018,
+    "p05_p50_p95": [
+     -0.00064,
+     0.00075,
+     0.00894
+    ],
+    "prob_ganar": 0.785
+   },
+   "revision": "revision/rev6/revisor_sonda_global.md",
+   "enviada": false,
+   "requiere": "autorización expresa del participante a Codex; tres envíos de ocho"
+  },
+  "foro": [
+   "CLA-S2-20261024-024",
+   "CLA-S2-20261024-026"
+  ],
+  "claude_md_seccion": 44
+ }
+}

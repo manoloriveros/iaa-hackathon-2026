@@ -1,0 +1,141 @@
+{
+ "exploratorio_2024": {
+  "AE": {
+   "A1fix": {
+    "motor": {
+     "global": 1.1037,
+     "cliente_nuevo": 1.0654,
+     "renovacion": 1.1083
+    },
+    "buildings": {
+     "global": 0.6148,
+     "cliente_nuevo": 0.4876,
+     "renovacion": 0.6269
+    },
+    "contents": {
+     "global": 0.9574,
+     "cliente_nuevo": 1.3595,
+     "renovacion": 0.9172
+    }
+   },
+   "A1fixF1": {
+    "motor": {
+     "global": 1.0628,
+     "cliente_nuevo": 1.0484,
+     "renovacion": 1.0645
+    },
+    "buildings": {
+     "global": 0.6096,
+     "cliente_nuevo": 0.4896,
+     "renovacion": 0.6209
+    },
+    "contents": {
+     "global": 0.9553,
+     "cliente_nuevo": 1.376,
+     "renovacion": 0.9139
+    }
+   },
+   "A1fixF1n": {
+    "motor": {
+     "global": 1.1037,
+     "cliente_nuevo": 1.0887,
+     "renovacion": 1.1055
+    },
+    "buildings": {
+     "global": 0.6148,
+     "cliente_nuevo": 0.4938,
+     "renovacion": 0.6262
+    },
+    "contents": {
+     "global": 0.9574,
+     "cliente_nuevo": 1.379,
+     "renovacion": 0.9159
+    }
+   }
+  },
+  "D2": {
+   "A1fix": {
+    "D2": 0.12136,
+    "menos_A1fix": 0.0,
+    "IC90": [
+     0.0,
+     0.0
+    ],
+    "D2_motor": 0.08015,
+    "D2_buildings": 0.06494,
+    "D2_contents": 0.09204,
+    "D2_cliente_nuevo": 0.12043,
+    "D2_renovacion": 0.11671
+   },
+   "A1fixF1": {
+    "D2": 0.12559,
+    "menos_A1fix": 0.00423,
+    "IC90": [
+     0.00246,
+     0.00606
+    ],
+    "D2_motor": 0.08487,
+    "D2_buildings": 0.06999,
+    "D2_contents": 0.0949,
+    "D2_cliente_nuevo": 0.12313,
+    "D2_renovacion": 0.12118
+   },
+   "A1fixF1n": {
+    "D2": 0.12533,
+    "menos_A1fix": 0.00397,
+    "IC90": [
+     0.00227,
+     0.0057
+    ],
+    "D2_motor": 0.08357,
+    "D2_buildings": 0.07114,
+    "D2_contents": 0.09493,
+    "D2_cliente_nuevo": 0.12252,
+    "D2_renovacion": 0.12097
+   }
+  },
+  "cociente_total_F1_frente_A1fix": {
+   "motor": 1.0385,
+   "buildings": 1.0085,
+   "contents": 1.0022
+  }
+ },
+ "produccion_2025": {
+  "motor": {
+   "cociente_total": 1.0264,
+   "cociente_cliente_nuevo": 1.0201,
+   "cociente_renovacion": 1.0556,
+   "peso_renovacion": 0.1765
+  },
+  "buildings": {
+   "cociente_total": 1.0201,
+   "cociente_cliente_nuevo": 1.0184,
+   "cociente_renovacion": 1.0258,
+   "peso_renovacion": 0.232
+  },
+  "contents": {
+   "cociente_total": 1.0039,
+   "cociente_cliente_nuevo": 1.0006,
+   "cociente_renovacion": 1.0152,
+   "peso_renovacion": 0.2254
+  }
+ },
+ "A1fixF1n": {
+  "sha256": "a81ec156c0c59aafb90ac59d5cfd22e96853a0e6705d4b1b7a08f6fb268e99d4",
+  "total": 66888236.49,
+  "por_ramo": {
+   "M": 40902309.45,
+   "B": 20450749.58,
+   "C": 5535177.46
+  }
+ },
+ "A1fixF1nTc": {
+  "sha256": "0c1db1db153e169f82356a1a1bf799baf955184b3d94dae8fa3ad3e6c60c57ab",
+  "total": 71335216.3,
+  "por_ramo": {
+   "M": 43132118.51,
+   "B": 22371970.8,
+   "C": 5831126.99
+  }
+ }
+}

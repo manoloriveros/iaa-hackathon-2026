@@ -1,0 +1,113 @@
+{
+ "id": "S2-SONDA-NIVEL-MLIND",
+ "utc": "2026-10-24T16:15:27Z",
+ "base": {
+  "archivo": "mezcla50_designada_mlind_2025.csv",
+  "sha256": "12831ef4a05c1773824abe5fa139d9503dd2989b4874e7d93cfc000406cfdb4a",
+  "publico": 0.1539,
+  "envio": 57599788
+ },
+ "forma": "D2(c)-D2(1) = -4[S1(c^-1/2-1)+S2(c^1/2-1)]/N por ramo; c* = S1/S2",
+ "tau_log": {
+  "motor": 0.14,
+  "buildings": 0.2,
+  "contents": 0.06
+ },
+ "ruido": {
+  "motor": {
+   "sd_log_c_publico": 0.049462387835101505,
+   "sd_log_c_privado": 0.034530912572703604,
+   "sigma_pub_menos_priv": 0.06094181033137429
+  },
+  "buildings": {
+   "sd_log_c_publico": 0.12147103251003709,
+   "sd_log_c_privado": 0.08970738918802484,
+   "sigma_pub_menos_priv": 0.15077275960862463
+  },
+  "contents": {
+   "sd_log_c_publico": 0.06941040492110712,
+   "sd_log_c_privado": 0.048744912044579335,
+   "sigma_pub_menos_priv": 0.0849360206111189
+  }
+ },
+ "Z": {
+  "motor": 0.8407000300248599,
+  "buildings": 0.63762878566379,
+  "contents": 0.33289786602061777
+ },
+ "sondas": {
+  "S2sonda_motor_x090.csv": {
+   "sha256": "106ac9e1843cc1d3eb42c298b7d4e76c825f419205efc067ef26dcc72dacf2eb",
+   "ramo": "motor",
+   "factor": 0.9,
+   "total": 64783314.7171296,
+   "filas": 209063
+  },
+  "S2sonda_motor_x110.csv": {
+   "sha256": "f8e7e0e87737d8b4a59aa37c5a694731eaa82adef01b150f2cb56161c1e11592",
+   "ramo": "motor",
+   "factor": 1.1,
+   "total": 73207827.9387704,
+   "filas": 209063
+  },
+  "S2sonda_buildings_x090.csv": {
+   "sha256": "f1f8ab5a6ac56ab0ab718bc156091e0ee3d92b26f2b00fa8501302cab78614d0",
+   "ramo": "buildings",
+   "factor": 0.9,
+   "total": 66858624.4023857,
+   "filas": 209063
+  },
+  "S2sonda_buildings_x110.csv": {
+   "sha256": "68a2bf84d1e78c3939aed39fb7a4a375b239d3313391e539e2133b5ba730eb59",
+   "ramo": "buildings",
+   "factor": 1.1,
+   "total": 71132518.25351429,
+   "filas": 209063
+  },
+  "S2sonda_contents_x090.csv": {
+   "sha256": "a2a8d0fa758e247d448c8fcc88c759e86e8eac5936b81551b6fac646bdfef46c",
+   "ramo": "contents",
+   "factor": 0.9,
+   "total": 68445217.73153971,
+   "filas": 209063
+  },
+  "S2sonda_contents_x110.csv": {
+   "sha256": "ddedcc324c6c271ce19d2e43bdc1e221917969182df6720bf4fc023ccd9b189a",
+   "ramo": "contents",
+   "factor": 1.1,
+   "total": 69545924.9243603,
+   "filas": 209063
+  }
+ },
+ "regla": [
+  "Enviar las seis sondas tal cual; ninguna se selecciona nunca.",
+  "Con las seis puntuaciones públicas y la base, resolver S1/N y S2/N por ramo; si alguno sale <= 0, ese ramo no se ajusta.",
+  "Si c* sale fuera de [0,5; 2,0], ese ramo no se ajusta (la forma supuesta no se cumple).",
+  "Candidato: base x c_Z por ramo, log c_Z = Z log c*. Se envía una vez; su público esperado se fija antes y una desviación > 0,0001 indica que el evaluador no tiene la forma supuesta.",
+  "Selección final: el candidato si su público >= el de la base; si no, la base. La decisión de enviar y seleccionar es del participante; envía Codex."
+ ],
+ "ganancia_privada_esperada": {
+  "supuesto": "coste de nivel cuadrático en el error logarítmico con la curvatura de e09b; tau correcta",
+  "por_ramo": {
+   "motor": {
+    "K": 0.10354901749406047,
+    "coste_previo": 0.0020295607428835855,
+    "coste_posterior": 0.0003233089654040782,
+    "ganancia": 0.0017062517774795072
+   },
+   "buildings": {
+    "K": 0.05486042234991167,
+    "coste_previo": 0.002194416893996467,
+    "coste_posterior": 0.000795193514637394,
+    "ganancia": 0.001399223379359073
+   },
+   "contents": {
+    "K": 0.03182583298865666,
+    "coste_previo": 0.00011457299875916398,
+    "coste_posterior": 7.64318919686554e-05,
+    "ganancia": 3.814110679050857e-05
+   }
+  },
+  "total": 0.0031436162636290887
+ }
+}

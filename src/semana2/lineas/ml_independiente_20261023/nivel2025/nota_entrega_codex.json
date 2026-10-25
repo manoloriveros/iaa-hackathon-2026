@@ -1,0 +1,21 @@
+{
+ "id": "CLA-NIVEL-2025-ENTREGA",
+ "autor": "Claude, línea ML independiente",
+ "pedido_participante": "aplica el punto 3 y preparemos una entrega",
+ "recomendacion": {
+  "archivo": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_validacion_nocturna_20261023/sonda_global/final_sonda_global_2025.csv",
+  "sha256": "42659dbb4101d4f9a4ab00c287d77b2bd21d42be9734d2ca4a4074eb57c9add2",
+  "origen": "otra sesión de Claude, regla preinscrita salidas/sonda_global__preinscripcion.json (SHA df7485a7…)",
+  "factor": 1.187658238648521,
+  "total": 81943158.72,
+  "publico_esperado_forma_cerrada": 0.15948,
+  "verificacion_independiente": {"sha": true, "filas": 209063, "orden_y_ids_iguales_a_la_base": true,
+                                  "cociente_min": 1.187656481282775, "cociente_max": 1.1876625822217162, "lf": true}
+ },
+ "no_recomendados": {
+  "e27_nivel_2025.csv": "regla preinscrita E27; +0,77 %; público esperado 0,1543-0,1545",
+  "reparto_por_tarifa": "no preparado; gana 0,0013 si la tarifa acierta y pierde 0,0010 si no; la tarifa falló su backtest"
+ },
+ "condiciones": "Enviar solo con autorización expresa del participante. La marca final en Kaggle la decide el participante; nunca un sondeo.",
+ "evidencia": "Hackaton/Semana 2/Claude/ml_independiente_20261023/nivel2025/NIVEL_2025.md"
+}

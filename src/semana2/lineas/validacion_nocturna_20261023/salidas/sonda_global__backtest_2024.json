@@ -1,0 +1,72 @@
+{
+ "nivel_como_2024": {
+  "c_optimo_completo_2024": 0.9184,
+  "c_final_mediana": 0.9238,
+  "c_final_p05_p95": [
+   0.8734,
+   0.9775
+  ],
+  "ganancia_privado_media": 0.00088,
+  "p05_p50_p95": [
+   -0.00026,
+   0.00089,
+   0.00201
+  ],
+  "prob_ganar": 0.9
+ },
+ "nivel_correcto": {
+  "c_optimo_completo_2024": 1.0,
+  "c_final_mediana": 0.9935,
+  "c_final_p05_p95": [
+   0.9395,
+   1.0513
+  ],
+  "ganancia_privado_media": -0.00017,
+  "p05_p50_p95": [
+   -0.00097,
+   -7e-05,
+   0.00022
+  ],
+  "prob_ganar": 0.275
+ },
+ "nivel_x1.3": {
+  "c_optimo_completo_2024": 0.7692,
+  "c_final_mediana": 0.7941,
+  "c_final_p05_p95": [
+   0.7509,
+   0.8401
+  ],
+  "ganancia_privado_media": 0.00951,
+  "p05_p50_p95": [
+   0.00628,
+   0.00956,
+   0.01274
+  ],
+  "prob_ganar": 1.0
+ },
+ "nivel_x0.8": {
+  "c_optimo_completo_2024": 1.25,
+  "c_final_mediana": 1.2023,
+  "c_final_p05_p95": [
+   1.1366,
+   1.2722
+  ],
+  "ganancia_privado_media": 0.0066,
+  "p05_p50_p95": [
+   0.00428,
+   0.00646,
+   0.00955
+  ],
+  "prob_ganar": 1.0
+ },
+ "ponderado_por_la_previa": {
+  "ganancia_privado_media": 0.0018,
+  "p05_p50_p95": [
+   -0.00064,
+   0.00075,
+   0.00894
+  ],
+  "prob_ganar": 0.785
+ },
+ "nota": "Tamaño 2025 por remuestreo de componentes de 2024 (200 réplicas); privado = 67 % de cada réplica. Los escenarios ×1,3 y ×0,8 son desvíos de unas dos τ; la cifra que resume la regla con la previa declarada es «ponderado_por_la_previa». El sustituto es A1fixF1b3n de 2024; la base enviada es la mezcla 50/50 con MLind (en 2025, +2,7 % de total y 5,8 % de cambio mediano por fila)."
+}

@@ -1,0 +1,43 @@
+{
+ "escalas": {
+  "motor": [
+   0.85,
+   1.2
+  ],
+  "buildings": [
+   0.8,
+   1.25
+  ],
+  "contents": [
+   0.85,
+   1.2
+  ]
+ },
+ "filas_2024": 59202,
+ "filas_2025": 209063,
+ "replicas": 300,
+ "motor": {
+  "error_redondeo_log_max": 0.00102,
+  "error_redondeo_log_sd": 0.00022,
+  "sd_log_pub_menos_priv_2024": 0.0953,
+  "sd_log_pub_menos_priv_2025": 0.0507,
+  "c_optimo_2024": 1.1315,
+  "k_curvatura": 0.0753
+ },
+ "buildings": {
+  "error_redondeo_log_max": 0.00612,
+  "error_redondeo_log_sd": 0.00115,
+  "sd_log_pub_menos_priv_2024": 0.2952,
+  "sd_log_pub_menos_priv_2025": 0.1571,
+  "c_optimo_2024": 0.602,
+  "k_curvatura": 0.0387
+ },
+ "contents": {
+  "error_redondeo_log_max": 0.00275,
+  "error_redondeo_log_sd": 0.00066,
+  "sd_log_pub_menos_priv_2024": 0.1627,
+  "sd_log_pub_menos_priv_2025": 0.0866,
+  "c_optimo_2024": 0.9449,
+  "k_curvatura": 0.0259
+ }
+}

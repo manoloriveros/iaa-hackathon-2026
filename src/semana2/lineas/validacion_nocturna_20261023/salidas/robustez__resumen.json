@@ -1,0 +1,131 @@
+{
+ "robglmgbm": {
+  "desarrollo_2023": {
+   "diff": -0.0012374,
+   "IC90": [
+    -0.0039418,
+    0.0015788
+   ],
+   "cuerpo": -0.0029961,
+   "cuerpo_IC90": [
+    -0.0047101,
+    -0.0013595
+   ]
+  },
+  "exploratorio_2024": {
+   "diff": 0.001144,
+   "IC90": [
+    -0.001103,
+    0.003469
+   ],
+   "cuerpo": 0.000121,
+   "cuerpo_IC90": [
+    -0.001425,
+    0.001823
+   ],
+   "por_ramo": {
+    "motor": 0.00061,
+    "buildings": -0.0,
+    "contents": 0.0044
+   }
+  },
+  "pasa_regla": false
+ },
+ "robcap": {
+  "desarrollo_2023": {
+   "diff": -0.0015345,
+   "IC90": [
+    -0.0049251,
+    0.0014459
+   ],
+   "cuerpo": 0.0008406,
+   "cuerpo_IC90": [
+    0.0001061,
+    0.0015923
+   ]
+  },
+  "exploratorio_2024": {
+   "diff": 0.000258,
+   "IC90": [
+    -0.000754,
+    0.001238
+   ],
+   "cuerpo": -0.000306,
+   "cuerpo_IC90": [
+    -0.001221,
+    0.00056
+   ],
+   "por_ramo": {
+    "motor": 0.0004,
+    "buildings": 0.00011,
+    "contents": 0.00021
+   }
+  },
+  "pasa_regla": false
+ },
+ "robreg": {
+  "desarrollo_2023": {
+   "diff": 0.0015472,
+   "IC90": [
+    -0.000228,
+    0.0031573
+   ],
+   "cuerpo": 0.0022588,
+   "cuerpo_IC90": [
+    0.0014393,
+    0.0031412
+   ]
+  },
+  "exploratorio_2024": {
+   "diff": 0.001918,
+   "IC90": [
+    0.000501,
+    0.003267
+   ],
+   "cuerpo": 0.002086,
+   "cuerpo_IC90": [
+    0.001029,
+    0.003281
+   ],
+   "por_ramo": {
+    "motor": 0.00031,
+    "buildings": 0.00322,
+    "contents": 0.00422
+   }
+  },
+  "pasa_regla": true
+ },
+ "robrej": {
+  "desarrollo_2023": {
+   "diff": -0.0004192,
+   "IC90": [
+    -0.0014613,
+    0.0005695
+   ],
+   "cuerpo": -2.91e-05,
+   "cuerpo_IC90": [
+    -0.0004884,
+    0.0004333
+   ]
+  },
+  "exploratorio_2024": {
+   "diff": 0.001581,
+   "IC90": [
+    0.000523,
+    0.002776
+   ],
+   "cuerpo": 0.000466,
+   "cuerpo_IC90": [
+    6.2e-05,
+    0.000902
+   ],
+   "por_ramo": {
+    "motor": 0.0,
+    "buildings": 0.00595,
+    "contents": -0.00084
+   }
+  },
+  "pasa_regla": false,
+  "referencia": "robreg"
+ }
+}

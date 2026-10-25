@@ -1,0 +1,76 @@
+{
+ "utc": "2026-10-24T14:19:32Z",
+ "regla": "§5 de la preinscripción: primario D2 OOF 2023 calibrado (A01); un candidato más complejo sustituye solo si mejora >= 0,001; robustez de cuerpo y ponderado frente a T1.",
+ "resultado_dev": "T3bwp+C2 0,1274 frente a T2b+C2 0,1264: +0,0009 < 0,001, se queda T2b. C2 frente a C1 en T2b: +0,0031, se adopta C2. Cuerpo 0,1219 y ponderado 0,1514 superan a T1wp (0,0969 y 0,1133).",
+ "elegido": "T2b_C2",
+ "tendencia": true,
+ "referencias": [
+  "R0_C1",
+  "T2b_C1"
+ ],
+ "candidatos": {
+  "R0_C1": {
+   "componentes": [
+    "R0"
+   ],
+   "calib": "ramo"
+  },
+  "G1_C2": {
+   "componentes": [
+    "G1"
+   ],
+   "calib": "ramo_nb"
+  },
+  "T1wp_C2": {
+   "componentes": [
+    "T1wp"
+   ],
+   "calib": "ramo_nb"
+  },
+  "T2b_C1": {
+   "componentes": [
+    "T2b"
+   ],
+   "calib": "ramo"
+  },
+  "T2b_C2": {
+   "componentes": [
+    "T2b"
+   ],
+   "calib": "ramo_nb"
+  },
+  "T3bwp_C2": {
+   "componentes": [
+    "T3bwp"
+   ],
+   "calib": "ramo_nb"
+  },
+  "N1_C2": {
+   "componentes": [
+    "N1"
+   ],
+   "calib": "ramo_nb"
+  },
+  "N2a_C2": {
+   "componentes": [
+    "N2a"
+   ],
+   "calib": "ramo_nb"
+  },
+  "N3_C2": {
+   "componentes": [
+    "N3"
+   ],
+   "calib": "ramo_nb"
+  },
+  "E1_C2": {
+   "componentes": [
+    "T2b",
+    "T3bwp",
+    "N3"
+   ],
+   "calib": "ramo_nb"
+  }
+ },
+ "nota": "En HOLD los pesos de mezcla y los factores de calibración salen del OOF completo de DEV; la tendencia es la regla §6.2 con el desarrollado 2021-2023. El elegido no cambia por HOLD."
+}

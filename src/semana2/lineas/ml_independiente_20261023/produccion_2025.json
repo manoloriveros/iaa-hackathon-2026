@@ -1,0 +1,310 @@
+{
+ "params": {
+  "componentes": [
+   "T2b"
+  ],
+  "calib": "ramo_nb",
+  "ramos": {
+   "motor": {
+    "pesos": {
+     "T2b": 1.0
+    },
+    "k_ramo": 1.000681248496861,
+    "k_nb": {
+     "True": {
+      "k_seg": 1.4621787711473895,
+      "n_sin": 613,
+      "Z": 0.7539975399753998,
+      "factor": 1.3494003075755023
+     },
+     "False": {
+      "k_seg": 0.9449134927731548,
+      "n_sin": 5478,
+      "Z": 0.9647763296935541,
+      "factor": 0.9474988844984807
+     }
+    }
+   },
+   "buildings": {
+    "pesos": {
+     "T2b": 1.0
+    },
+    "k_ramo": 1.0144338467519682,
+    "k_nb": {
+     "True": {
+      "k_seg": 0.9203905976749194,
+      "n_sin": 75,
+      "Z": 0.2727272727272727,
+      "factor": 0.9924088088688072
+     },
+     "False": {
+      "k_seg": 1.008621607247872,
+      "n_sin": 936,
+      "Z": 0.823943661971831,
+      "factor": 1.0216400993861954
+     }
+    }
+   },
+   "contents": {
+    "pesos": {
+     "T2b": 1.0
+    },
+    "k_ramo": 1.0046114033772207,
+    "k_nb": {
+     "True": {
+      "k_seg": 1.2215661044003545,
+      "n_sin": 100,
+      "Z": 0.3333333333333333,
+      "factor": 1.0788073484047087
+     },
+     "False": {
+      "k_seg": 0.9757871552748834,
+      "n_sin": 869,
+      "Z": 0.8129092609915809,
+      "factor": 0.9848377921240327
+     }
+    }
+   }
+  }
+ },
+ "tendencia": {
+  "motor": {
+   "ae_por_anio": {
+    "2021": 1.0433,
+    "2022": 1.102,
+    "2023": 1.2207,
+    "2024": 1.1982
+   },
+   "tau_anual": 1.0554462690499842,
+   "dt": 1.486114934244597,
+   "factor": 1.0834996649071675,
+   "rondas": 238
+  },
+  "buildings": {
+   "ae_por_anio": {
+    "2021": 1.1636,
+    "2022": 1.1957,
+    "2023": 1.264,
+    "2024": 1.3947
+   },
+   "tau_anual": 1.0619067472027528,
+   "dt": 1.4867812958932518,
+   "factor": 1.0934142819073094,
+   "rondas": 210
+  },
+  "contents": {
+   "ae_por_anio": {
+    "2021": 1.1428,
+    "2022": 1.1253,
+    "2023": 1.2374,
+    "2024": 1.2703
+   },
+   "tau_anual": 1.0425791788642647,
+   "dt": 1.487693270227055,
+   "factor": 1.063997746278615,
+   "rondas": 186
+  }
+ },
+ "variantes": {
+  "final_C1": {
+   "controles": {
+    "filas": 209063,
+    "orden_igual_plantilla": true,
+    "nulos": 0,
+    "min": 0.06505663239758307,
+    "positivas_estrictas": true,
+    "ids_unicos": true,
+    "sha256": "d261388c7e4d5dccb995605d957dbda11f46a97408549fa07b45953ecf7ce0a3",
+    "archivo": "prediccion_2025_mlind.csv"
+   },
+   "totales": {
+    "motor": {
+     "filas": 90521,
+     "exposicion": 79007.00821917808,
+     "total": 43202961.28520656,
+     "tasa": 546.8244179725757,
+     "tasa_NB": 581.7785952275799,
+     "tasa_REN": 430.77402387249373
+    },
+    "buildings": {
+     "filas": 52295,
+     "exposicion": 47376.38356164384,
+     "total": 22147740.528731443,
+     "tasa": 467.4848281721184,
+     "tasa_NB": 471.0747768826046,
+     "tasa_REN": 455.6264549473059
+    },
+    "contents": {
+     "filas": 66247,
+     "exposicion": 59016.46575342466,
+     "total": 5472000.967620751,
+     "tasa": 92.71990278921805,
+     "tasa_NB": 92.88212091331427,
+     "tasa_REN": 92.1762172899557
+    }
+   },
+   "total": 70822702.78155875
+  },
+  "C2": {
+   "controles": {
+    "filas": 209063,
+    "orden_igual_plantilla": true,
+    "nulos": 0,
+    "min": 0.06377613273955925,
+    "positivas_estrictas": true,
+    "ids_unicos": true,
+    "sha256": "e15e4940904f7bee891fc68617b82f4d950a5375aa1ccb434f8ac9985c689f71",
+    "archivo": "prediccion_2025_mlind_C2.csv"
+   },
+   "totales": {
+    "motor": {
+     "filas": 90521,
+     "exposicion": 79007.00821917808,
+     "total": 55094317.59584486,
+     "tasa": 697.3345635744668,
+     "tasa_NB": 784.5177637935949,
+     "tasa_REN": 407.8800394263509
+    },
+    "buildings": {
+     "filas": 52295,
+     "exposicion": 47376.38356164384,
+     "total": 21811421.07583779,
+     "tasa": 460.38594413729015,
+     "tasa_NB": 460.8469637631378,
+     "tasa_REN": 458.86309709178914
+    },
+    "contents": {
+     "filas": 66247,
+     "exposicion": 59016.46575342466,
+     "total": 5759205.1455569295,
+     "tasa": 97.58641206369985,
+     "tasa_NB": 99.74196414638286,
+     "tasa_REN": 90.36192702672187
+    }
+   },
+   "total": 82664943.81723958
+  },
+  "C1_tendencia": {
+   "controles": {
+    "filas": 209063,
+    "orden_igual_plantilla": true,
+    "nulos": 0,
+    "min": 0.06922011025150471,
+    "positivas_estrictas": true,
+    "ids_unicos": true,
+    "sha256": "83b386099e23ee898bff653e75dc7fc2abd4022798a4d5a3fba21c2f48f8e2e4",
+    "archivo": "prediccion_2025_mlind_C1_tendencia.csv"
+   },
+   "totales": {
+    "motor": {
+     "filas": 90521,
+     "exposicion": 79007.00821917808,
+     "total": 46810394.07551864,
+     "tasa": 592.4840736363427,
+     "tasa_NB": 630.3569129792456,
+     "tasa_REN": 466.7435105165591
+    },
+    "buildings": {
+     "filas": 52295,
+     "exposicion": 47376.38356164384,
+     "total": 24216655.8060923,
+     "tasa": 511.15458769837863,
+     "tasa_NB": 515.0798888897392,
+     "tasa_REN": 498.18847305418154
+    },
+    "contents": {
+     "filas": 66247,
+     "exposicion": 59016.46575342466,
+     "total": 5822196.697182881,
+     "tasa": 98.6537676029003,
+     "tasa_NB": 98.82636732134418,
+     "tasa_REN": 98.07528745700077
+    }
+   },
+   "total": 76849246.57879382
+  },
+  "preinscrita_C2_tendencia": {
+   "controles": {
+    "filas": 209063,
+    "orden_igual_plantilla": true,
+    "nulos": 0,
+    "min": 0.06785766150125683,
+    "positivas_estrictas": true,
+    "ids_unicos": true,
+    "sha256": "d820ea742a7f28c1dec3800e38b162bc69c02f1128bf631d2c51c48bd1420c82",
+    "archivo": "prediccion_2025_mlind_preinscrita_C2_tendencia.csv"
+   },
+   "totales": {
+    "motor": {
+     "filas": 90521,
+     "exposicion": 79007.00821917808,
+     "total": 59694674.653386965,
+     "tasa": 755.5617659611206,
+     "tasa_NB": 850.0247341840804,
+     "tasa_REN": 441.93788604077344
+    },
+    "buildings": {
+     "filas": 52295,
+     "exposicion": 47376.38356164384,
+     "total": 23848919.313015133,
+     "tasa": 503.3925665090938,
+     "tasa_NB": 503.8966519522351,
+     "tasa_REN": 501.7274638003825
+    },
+    "contents": {
+     "filas": 66247,
+     "exposicion": 59016.46575342466,
+     "total": 6127781.295228776,
+     "tasa": 103.83172250319289,
+     "tasa_NB": 106.1252250611538,
+     "tasa_REN": 96.14488670582475
+    }
+   },
+   "total": 89671375.26163086
+  },
+  "T2c_C1": {
+   "controles": {
+    "filas": 209063,
+    "orden_igual_plantilla": true,
+    "nulos": 0,
+    "min": 0.05443533771136618,
+    "positivas_estrictas": true,
+    "ids_unicos": true,
+    "sha256": "24bfd9dd726550497f8457f2fec5075624e2e182711077bdcd588dc30fd27b05",
+    "archivo": "prediccion_2025_mlind_T2c_C1.csv"
+   },
+   "totales": {
+    "motor": {
+     "filas": 90521,
+     "exposicion": 79007.00821917808,
+     "total": 43029462.66242526,
+     "tasa": 544.6284276839675,
+     "tasa_NB": 583.5226707326715,
+     "tasa_REN": 415.49673045941745
+    },
+    "buildings": {
+     "filas": 52295,
+     "exposicion": 47376.38356164384,
+     "total": 21622114.236292586,
+     "tasa": 456.390138098214,
+     "tasa_NB": 459.5373863036164,
+     "tasa_REN": 445.99409992035146
+    },
+    "contents": {
+     "filas": 66247,
+     "exposicion": 59016.46575342466,
+     "total": 5478931.2015754,
+     "tasa": 92.83733160956804,
+     "tasa_NB": 93.41941273460917,
+     "tasa_REN": 90.88644561059338
+    }
+   },
+   "total": 70130508.10029325
+  }
+ },
+ "balance_oof_pcv": {
+  "motor": 0.9577759775017414,
+  "buildings": 0.9680038468677593,
+  "contents": 1.0079510984608566
+ }
+}

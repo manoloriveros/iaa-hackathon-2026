@@ -1,0 +1,60 @@
+{
+ "id": "CLA-S2-ROBUSTEZ-20261024",
+ "utc": "2026-10-24T16:22:57+00:00",
+ "pedido": "El participante: «no nos fue bien el anterior envío mandando Sondas, prefiero seguir trabajando en modelos más robustos».",
+ "base": "A1fixF1b3n: relatividades de tres semillas (11, 12, 13) del LightGBM Tweedie desarrollado con historia F1, nivel emergente por ramo por balance, historia neutral, sin tendencia.",
+ "candidatos": {
+  "C1_tope": "Mismo modelo, entrenado con cada siniestro del desarrollado topado a 100.000 CU. El exceso no se modela aparte: lo absorbe el nivel emergente por balance (Σ T0 sin topar / Σ e_ef·g). Motivo: los siniestros grandes mueven las relatividades de un modelo Tweedie; el backtest de nivel mostró que el tope reduce mucho la varianza en autos.",
+  "C2_regularizado": "Mismo modelo con árboles más pequeños y más regularizados: num_leaves 15 (antes 31), min_data_in_leaf 3.000 (antes 1.000), lambda_l2 50 (antes 10), feature_fraction 0,7 (antes 0,8). Motivo: relatividades más suaves deberían trasladarse mejor a otro mercado.",
+  "C12": "Si C1 y C2 pasan cada uno, su combinación (tope y regularización) se mide antes de adoptarla.",
+  "C3_glm_gbm": "Añadido a las 16:40 UTC, antes de ver ningún resultado de C1 o C2: media en logaritmo, 50/50, de las relatividades de la base (GBM con historia, tres semillas) y de un GLM Tweedie 1,5 del desarrollado con el mismo esquema común, la misma historia F1 (en tramos) y ridge 1 (desarrollado_glm.py --f1). Motivo: un GLM y un GBM se equivocan distinto; promediar suele trasladarse mejor. Misma regla de adopción.",
+  "C4_rejilla": {
+   "utc": "2026-10-24T17:14:10+00:00",
+   "texto": "Añadido después de ver que C2 pasa. Rejilla de regularización elegida SOLO con el D² de la validación interna del desarrollado (clientes reservados del mercado desarrollado, sin ninguna etiqueta emergente), semilla 11, versión completa. Por ramo se elige la configuración con mayor D² interno; si no supera a C2 (G1) en al menos 0,0005, se queda C2. La elegida se entrena con tres semillas (completa y conf) y se mide frente a C2 con la misma regla de adopción.",
+   "configs": {
+    "G1_C2": {
+     "num_leaves": 15,
+     "min_data_in_leaf": 3000,
+     "lambda_l2": 50,
+     "feature_fraction": 0.7
+    },
+    "G2": {
+     "num_leaves": 7,
+     "min_data_in_leaf": 5000,
+     "lambda_l2": 100,
+     "feature_fraction": 0.7
+    },
+    "G3": {
+     "num_leaves": 15,
+     "min_data_in_leaf": 10000,
+     "lambda_l2": 50,
+     "feature_fraction": 0.6
+    },
+    "G4": {
+     "num_leaves": 31,
+     "min_data_in_leaf": 3000,
+     "lambda_l2": 50,
+     "feature_fraction": 0.7
+    },
+    "G5": {
+     "num_leaves": 15,
+     "min_data_in_leaf": 3000,
+     "lambda_l2": 200,
+     "feature_fraction": 0.5
+    }
+   }
+  }
+ },
+ "semillas": [
+  11,
+  12,
+  13
+ ],
+ "versiones": "completa 2021-2024 (producción y desarrollo 2023) y conf 2021-2023 (2024 exploratorio)",
+ "medicion": {
+  "desarrollo_2023": "OOF con los cinco folds propios por cliente y nivel por balance en cada fold (s2_escalera.py); par frente a A1fixF1b3_nivel con bootstrap de componentes (10.000 réplicas), completo y sin el 0,1 % superior.",
+  "2024_exploratorio": "Relatividades conf, nivel 2023 y calibración neutral al total de A1fixb3 por ramo (mismo nivel que la base, así que se mide solo el orden); par frente a A1fixF1b3n con 4.000 réplicas, completo y cuerpo."
+ },
+ "regla": "Un candidato se adopta solo si mejora a la base en los dos periodos (diferencia puntual > 0 en desarrollo 2023 y en 2024), con el límite inferior del IC 90 % > 0 en al menos uno, y sin empeorar el cuerpo más de 0,0005 en ninguno. Si ninguno pasa, la base no cambia.",
+ "advertencia": "2024 ya está abierto: su medición es exploratoria. La regla se fija antes de entrenar ningún candidato."
+}

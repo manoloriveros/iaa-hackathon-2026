@@ -1,0 +1,546 @@
+{
+ "huellas": {
+  "emerging/addresses.parquet": "4e9bf9d2a1777896e84fd4ee471096ff075aaefefd544f91b731324b25425632",
+  "emerging/claims.parquet": "1a2fce8a26cb1e05de1f53fe4e39bde772a1898e845755487625355fec4cc0e9",
+  "emerging/customers.parquet": "c00a0095d5fb7b2b65cd9647216add49afb3703d863d5c358b1441f0fab1fb62",
+  "emerging/expenses.parquet": "9033f666a5a45f0b44501d57e40ab1cc571c51c384f23a62942b75db323b1cdf",
+  "emerging/policies_buildings.parquet": "ccc948fafc11e623d5cb010c2b494f6813f6048719eae7bcde28794467598319",
+  "emerging/policies_contents.parquet": "84d7f48d03933b018bec8fdc2f4bbd96df184cca7ae1971c38d3acc955720f8e",
+  "emerging/policies_motor.parquet": "7c5dbb5e5b46629ebf01a66c991183d20b8585393b589bc2644fcbd6653a3ec1",
+  "emerging/reference_policies.parquet": "6d4c2839e87d092fccd4b3c3ddc16a2a4c4993c35e18481e322462cd382dd8f4",
+  "emerging/sample_submission.parquet": "160fc59043f1012337605c8d8446c0efbf81458e046cf02df9186d6f909d59ef",
+  "emerging/test_buildings.parquet": "21f91aaa66a1b9efd216ad0e04ff12a507dbeb721084330d9b9f06c99edd0ca6",
+  "emerging/test_contents.parquet": "af5ef2553e35a2d563ca091b173500daac55acc4969d1d3a96fa6b4ec3c6a012",
+  "emerging/test_motor.parquet": "108d5c68e9bab5ccd90ee5502bc3543aa515a5aa07fda44a3b227cf070a28aa5",
+  "emerging/weather.parquet": "645067069f68de8c4746d1ba48a454ff00155e1aa6fbbf64cdee48ae7269cbbd",
+  "developed/addresses.parquet": "2f1a9a157649a73ed1b0ee9b2caa3660b4c2a11766af3c64ab5131389079c0b1",
+  "developed/claims.parquet": "323adf2e0f6c5975a026479d725d4cd04f51fce3aa069f897a99f664c6e392c0",
+  "developed/customers.parquet": "065458a0b3aa9d3499e80b3b25b76baf0ef6245146477b6861f6ea35edf581eb",
+  "developed/policies_buildings.parquet": "eb84372c23c16ed0619d89c8eb1396ab6916e5ec46a5907ce42c3dfce4a91cbe",
+  "developed/policies_contents.parquet": "8c067cc80baed583100df999e1c3d5e389295702f7bac21d5331bbd639b83fcd",
+  "developed/policies_motor.parquet": "4d2d7ae03971d5d6df3a71bbaf0ebc168250a6807b27d1561d38b638434dc95e",
+  "developed/weather.parquet": "b8407f0f3c7279a49297c969a4ab2905641b232910e316fb806730065987cd49"
+ },
+ "developed_duplicados_retirados": 604,
+ "developed_siniestros": {
+  "leidos": 163150,
+  "usados": 162546,
+  "rechazados": 1705,
+  "neto_negativo": 0
+ },
+ "emerging_siniestros": {
+  "leidos": 9258,
+  "usados": 9258,
+  "rechazados": 120,
+  "neto_negativo": 0
+ },
+ "cdf_coste_desarrollado": {
+  "buildings|accidental_damage": {
+   "0": 0.0,
+   "30": 0.944,
+   "90": 0.9861,
+   "180": 0.9872,
+   "365": 0.9918,
+   "730": 1.0,
+   "n": 887
+  },
+  "buildings|escape_of_water": {
+   "0": 0.0,
+   "30": 0.8632,
+   "90": 0.9908,
+   "180": 0.992,
+   "365": 0.9943,
+   "730": 1.0,
+   "n": 2509
+  },
+  "buildings|fire": {
+   "0": 0.0,
+   "30": 0.9734,
+   "90": 0.9834,
+   "180": 0.9834,
+   "365": 0.9834,
+   "730": 1.0,
+   "n": 237
+  },
+  "buildings|flood": {
+   "0": 0.0,
+   "30": 0.9715,
+   "90": 0.9915,
+   "180": 0.9931,
+   "365": 0.9967,
+   "730": 1.0,
+   "n": 560
+  },
+  "buildings|storm": {
+   "0": 0.0,
+   "30": 0.9216,
+   "90": 0.9857,
+   "180": 0.9913,
+   "365": 0.9965,
+   "730": 1.0,
+   "n": 1804
+  },
+  "buildings|subsidence": {
+   "0": 0.0,
+   "30": 0.2135,
+   "90": 0.4707,
+   "180": 0.773,
+   "365": 0.985,
+   "730": 1.0,
+   "n": 285
+  },
+  "contents|accidental_damage": {
+   "0": 0.0,
+   "30": 0.9438,
+   "90": 0.9927,
+   "180": 0.995,
+   "365": 0.995,
+   "730": 1.0,
+   "n": 2182
+  },
+  "contents|escape_of_water": {
+   "0": 0.0,
+   "30": 0.881,
+   "90": 0.9807,
+   "180": 0.9835,
+   "365": 0.9842,
+   "730": 1.0,
+   "n": 1283
+  },
+  "contents|flood": {
+   "0": 0.0,
+   "30": 0.9305,
+   "90": 0.9675,
+   "180": 0.9693,
+   "365": 0.9702,
+   "730": 1.0,
+   "n": 409
+  },
+  "contents|theft": {
+   "0": 0.0,
+   "30": 0.9847,
+   "90": 0.9909,
+   "180": 0.9926,
+   "365": 0.9942,
+   "730": 1.0,
+   "n": 1760
+  },
+  "motor|bodily_injury": {
+   "0": 0.0,
+   "30": 0.1416,
+   "90": 0.3741,
+   "180": 0.6078,
+   "365": 0.8273,
+   "730": 0.9821,
+   "n": 2165
+  },
+  "motor|glass_hail": {
+   "0": 0.0,
+   "30": 0.9743,
+   "90": 0.985,
+   "180": 0.9858,
+   "365": 0.9891,
+   "730": 1.0,
+   "n": 3609
+  },
+  "motor|own_damage": {
+   "0": 0.0,
+   "30": 0.9446,
+   "90": 0.9891,
+   "180": 0.9905,
+   "365": 0.9934,
+   "730": 1.0,
+   "n": 12091
+  },
+  "motor|theft": {
+   "0": 0.0,
+   "30": 0.9876,
+   "90": 0.9899,
+   "180": 0.9925,
+   "365": 0.9936,
+   "730": 1.0,
+   "n": 1495
+  },
+  "motor|third_party_prop": {
+   "0": 0.0,
+   "30": 0.7527,
+   "90": 0.9741,
+   "180": 0.9876,
+   "365": 0.9919,
+   "730": 1.0,
+   "n": 8257
+  }
+ },
+ "contraste_reporte_emergente_2023": {
+  "buildings|accidental_damage": {
+   "n": 55,
+   "emergente_30_90_180": [
+    0.9429,
+    1.0,
+    1.0
+   ],
+   "desarrollado_30_90_180": [
+    0.9518,
+    0.9942,
+    0.9953
+   ]
+  },
+  "buildings|escape_of_water": {
+   "n": 130,
+   "emergente_30_90_180": [
+    0.867,
+    0.9875,
+    1.0
+   ],
+   "desarrollado_30_90_180": [
+    0.8682,
+    0.9965,
+    0.9977
+   ]
+  },
+  "buildings|fire": {
+   "n": 49,
+   "emergente_30_90_180": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "desarrollado_30_90_180": [
+    0.9898,
+    1.0,
+    1.0
+   ]
+  },
+  "buildings|flood": {
+   "n": 42,
+   "emergente_30_90_180": [
+    0.9509,
+    1.0,
+    1.0
+   ],
+   "desarrollado_30_90_180": [
+    0.9747,
+    0.9947,
+    0.9963
+   ]
+  },
+  "buildings|storm": {
+   "n": 209,
+   "emergente_30_90_180": [
+    0.9364,
+    1.0,
+    1.0
+   ],
+   "desarrollado_30_90_180": [
+    0.9249,
+    0.9892,
+    0.9948
+   ]
+  },
+  "buildings|subsidence": {
+   "n": 32,
+   "emergente_30_90_180": [
+    0.3419,
+    0.4997,
+    0.8395
+   ],
+   "desarrollado_30_90_180": [
+    0.2167,
+    0.4779,
+    0.7848
+   ]
+  },
+  "contents|accidental_damage": {
+   "n": 166,
+   "emergente_30_90_180": [
+    0.9749,
+    1.0,
+    1.0
+   ],
+   "desarrollado_30_90_180": [
+    0.9486,
+    0.9977,
+    1.0
+   ]
+  },
+  "contents|escape_of_water": {
+   "n": 86,
+   "emergente_30_90_180": [
+    0.8719,
+    0.9876,
+    1.0
+   ],
+   "desarrollado_30_90_180": [
+    0.8951,
+    0.9964,
+    0.9992
+   ]
+  },
+  "contents|flood": {
+   "n": 51,
+   "emergente_30_90_180": [
+    0.9679,
+    1.0,
+    1.0
+   ],
+   "desarrollado_30_90_180": [
+    0.9591,
+    0.9973,
+    0.9991
+   ]
+  },
+  "contents|theft": {
+   "n": 186,
+   "emergente_30_90_180": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "desarrollado_30_90_180": [
+    0.9905,
+    0.9968,
+    0.9985
+   ]
+  },
+  "motor|bodily_injury": {
+   "n": 242,
+   "emergente_30_90_180": [
+    0.1184,
+    0.4007,
+    0.6693
+   ],
+   "desarrollado_30_90_180": [
+    0.1712,
+    0.4522,
+    0.7347
+   ]
+  },
+  "motor|glass_hail": {
+   "n": 599,
+   "emergente_30_90_180": [
+    0.9804,
+    1.0,
+    1.0
+   ],
+   "desarrollado_30_90_180": [
+    0.985,
+    0.9958,
+    0.9967
+   ]
+  },
+  "motor|own_damage": {
+   "n": 1372,
+   "emergente_30_90_180": [
+    0.9463,
+    1.0,
+    1.0
+   ],
+   "desarrollado_30_90_180": [
+    0.9508,
+    0.9956,
+    0.997
+   ]
+  },
+  "motor|theft": {
+   "n": 194,
+   "emergente_30_90_180": [
+    0.9755,
+    1.0,
+    1.0
+   ],
+   "desarrollado_30_90_180": [
+    0.994,
+    0.9963,
+    0.999
+   ]
+  },
+  "motor|third_party_prop": {
+   "n": 1119,
+   "emergente_30_90_180": [
+    0.767,
+    0.9853,
+    1.0
+   ],
+   "desarrollado_30_90_180": [
+    0.7589,
+    0.9821,
+    0.9957
+   ]
+  }
+ },
+ "developed_motor_asignacion": {
+  "siniestros_ramo": 112195,
+  "asignados": 111899,
+  "ambiguos": 0,
+  "sin_periodo": 296
+ },
+ "developed_motor_pesos_peligro": {
+  "bodily_injury": 0.4096,
+  "glass_hail": 0.0375,
+  "own_damage": 0.1978,
+  "theft": 0.0848,
+  "third_party_prop": 0.2702
+ },
+ "developed_motor_completitud_media_por_anio": {
+  "2021": 1.0,
+  "2022": 0.9974,
+  "2023": 0.9725,
+  "2024": 0.7855
+ },
+ "developed_buildings_capital_div1000": {
+  "train": 1395,
+  "test": 0
+ },
+ "developed_buildings_asignacion": {
+  "siniestros_ramo": 26333,
+  "asignados": 26266,
+  "ambiguos": 0,
+  "sin_periodo": 67
+ },
+ "developed_buildings_pesos_peligro": {
+  "accidental_damage": 0.0187,
+  "escape_of_water": 0.2322,
+  "fire": 0.2298,
+  "flood": 0.2785,
+  "storm": 0.1077,
+  "subsidence": 0.1331
+ },
+ "developed_buildings_completitud_media_por_anio": {
+  "2021": 1.0,
+  "2022": 1.0,
+  "2023": 0.9973,
+  "2024": 0.9264
+ },
+ "developed_contents_capital_div1000": {
+  "train": 1402,
+  "test": 0
+ },
+ "developed_contents_asignacion": {
+  "siniestros_ramo": 24018,
+  "asignados": 23968,
+  "ambiguos": 0,
+  "sin_periodo": 50
+ },
+ "developed_contents_pesos_peligro": {
+  "accidental_damage": 0.1076,
+  "escape_of_water": 0.2245,
+  "flood": 0.2465,
+  "theft": 0.4214
+ },
+ "developed_contents_completitud_media_por_anio": {
+  "2021": 1.0,
+  "2022": 1.0,
+  "2023": 0.9964,
+  "2024": 0.9629
+ },
+ "developed_motor_filas": {
+  "train": 979968
+ },
+ "developed_motor_T0_por_anio": {
+  "2021": 105897441.08,
+  "2022": 114890724.91,
+  "2023": 117307703.7,
+  "2024": 90666976.89
+ },
+ "developed_buildings_filas": {
+  "train": 707726
+ },
+ "developed_buildings_T0_por_anio": {
+  "2021": 54052834.19,
+  "2022": 60417182.3,
+  "2023": 64832471.23,
+  "2024": 67353949.55
+ },
+ "developed_contents_filas": {
+  "train": 721617
+ },
+ "developed_contents_T0_por_anio": {
+  "2021": 14861300.73,
+  "2022": 15820781.87,
+  "2023": 17539466.93,
+  "2024": 17516035.05
+ },
+ "emerging_motor_asignacion": {
+  "siniestros_ramo": 7183,
+  "asignados": 7155,
+  "ambiguos": 0,
+  "sin_periodo": 28
+ },
+ "emerging_motor_pesos_peligro": {
+  "bodily_injury": 0.3663,
+  "glass_hail": 0.0582,
+  "own_damage": 0.1733,
+  "theft": 0.0909,
+  "third_party_prop": 0.3113
+ },
+ "emerging_motor_completitud_media_por_anio": {
+  "2023": 0.9745,
+  "2024": 0.8027
+ },
+ "emerging_buildings_capital_div1000": {
+  "train": 53,
+  "test": 104
+ },
+ "emerging_buildings_asignacion": {
+  "siniestros_ramo": 1059,
+  "asignados": 1056,
+  "ambiguos": 0,
+  "sin_periodo": 3
+ },
+ "emerging_buildings_pesos_peligro": {
+  "accidental_damage": 0.0113,
+  "escape_of_water": 0.1079,
+  "fire": 0.4481,
+  "flood": 0.2186,
+  "storm": 0.1251,
+  "subsidence": 0.089
+ },
+ "emerging_buildings_completitud_media_por_anio": {
+  "2023": 0.996,
+  "2024": 0.9423
+ },
+ "emerging_contents_capital_div1000": {
+  "train": 57,
+  "test": 135
+ },
+ "emerging_contents_asignacion": {
+  "siniestros_ramo": 1016,
+  "asignados": 1011,
+  "ambiguos": 0,
+  "sin_periodo": 5
+ },
+ "emerging_contents_pesos_peligro": {
+  "accidental_damage": 0.0821,
+  "escape_of_water": 0.1417,
+  "flood": 0.3089,
+  "theft": 0.4673
+ },
+ "emerging_contents_completitud_media_por_anio": {
+  "2023": 0.9961,
+  "2024": 0.9636
+ },
+ "emerging_motor_filas": {
+  "test": 90521,
+  "train": 47283
+ },
+ "emerging_motor_T0_por_anio": {
+  "2023": 8162761.21,
+  "2024": 7693126.75
+ },
+ "emerging_buildings_filas": {
+  "test": 52295,
+  "train": 27447
+ },
+ "emerging_buildings_T0_por_anio": {
+  "2023": 5848688.1,
+  "2024": 3710061.21
+ },
+ "emerging_contents_filas": {
+  "test": 66247,
+  "train": 34566
+ },
+ "emerging_contents_T0_por_anio": {
+  "2023": 1285654.53,
+  "2024": 1297699.77
+ }
+}

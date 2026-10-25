@@ -1,0 +1,60 @@
+{
+ "diagnostico_pesos": {
+  "motor": {
+   "auc_2025_frente_2023_24": 0.8901,
+   "filas_entrenamiento": 47283,
+   "tamano_efectivo_kish": 9445.0,
+   "peso_medio_nuevo_negocio": 5.68,
+   "peso_medio_renovacion": 0.249,
+   "cuota_nb_ponderada": 0.785,
+   "cuota_nb_2025": 0.76
+  },
+  "buildings": {
+   "auc_2025_frente_2023_24": 0.8727,
+   "filas_entrenamiento": 27447,
+   "tamano_efectivo_kish": 5382.0,
+   "peso_medio_nuevo_negocio": 5.685,
+   "peso_medio_renovacion": 0.25,
+   "cuota_nb_ponderada": 0.784,
+   "cuota_nb_2025": 0.759
+  },
+  "contents": {
+   "auc_2025_frente_2023_24": 0.8708,
+   "filas_entrenamiento": 34566,
+   "tamano_efectivo_kish": 6864.0,
+   "peso_medio_nuevo_negocio": 5.757,
+   "peso_medio_renovacion": 0.248,
+   "cuota_nb_ponderada": 0.785,
+   "cuota_nb_2025": 0.761
+  }
+ },
+ "pares_2024": {
+  "mezcla_robusta_menos_enviada": {
+   "sin_pesos_2024": 0.000923,
+   "con_pesos_2025": 0.001581,
+   "IC90_con_pesos": [
+    -0.00032,
+    0.003577
+   ],
+   "por_ramo_con_pesos": {
+    "motor": 0.00268,
+    "buildings": -0.00133,
+    "contents": 0.00299
+   }
+  },
+  "C2_menos_designada": {
+   "sin_pesos_2024": 0.001918,
+   "con_pesos_2025": 0.003877,
+   "IC90_con_pesos": [
+    -0.000206,
+    0.008882
+   ],
+   "por_ramo_con_pesos": {
+    "motor": 0.00603,
+    "buildings": -0.0012,
+    "contents": 0.00601
+   }
+  }
+ },
+ "diferencia_publica_observada": -0.00043
+}

@@ -1,0 +1,59 @@
+{
+ "motor": {
+  "auc": 0.8999,
+  "n_dev": 25603,
+  "n_test": 90521,
+  "ess": 3864.0,
+  "nb_dev": 0.1529,
+  "nb_ponderado": 0.4672,
+  "nb_test": 0.7603,
+  "importancia_top": {
+   "new_business": 0.4312,
+   "start_month": 0.1913,
+   "renewal_count": 0.1464,
+   "years_licensed": 0.0417,
+   "property_age": 0.0382,
+   "vehicle_age": 0.0231,
+   "occupation": 0.0152,
+   "tenure_years": 0.0149
+  }
+ },
+ "buildings": {
+  "auc": 0.8824,
+  "n_dev": 14867,
+  "n_test": 52295,
+  "ess": 2017.1,
+  "nb_dev": 0.1533,
+  "nb_ponderado": 0.4486,
+  "nb_test": 0.7595,
+  "importancia_top": {
+   "new_business": 0.3526,
+   "start_month": 0.2188,
+   "renewal_count": 0.1883,
+   "property_age": 0.0385,
+   "tenure_years": 0.0297,
+   "log_si": 0.025,
+   "occupation": 0.0207,
+   "days_unoccupied": 0.0162
+  }
+ },
+ "contents": {
+  "auc": 0.8823,
+  "n_dev": 18732,
+  "n_test": 66247,
+  "ess": 2676.6,
+  "nb_dev": 0.1532,
+  "nb_ponderado": 0.4572,
+  "nb_test": 0.7614,
+  "importancia_top": {
+   "new_business": 0.4111,
+   "start_month": 0.2151,
+   "renewal_count": 0.1302,
+   "tenure_years": 0.0554,
+   "property_age": 0.0404,
+   "occupation": 0.0172,
+   "log_si": 0.0142,
+   "log_days_quote": 0.0131
+  }
+ }
+}

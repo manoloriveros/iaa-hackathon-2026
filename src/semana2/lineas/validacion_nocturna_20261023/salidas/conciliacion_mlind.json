@@ -1,0 +1,196 @@
+{
+ "dev2023": {
+  "mio_A1fixF1b3": {
+   "D2": 0.125004,
+   "AE": 0.9997,
+   "menos_mio": 0.0,
+   "IC90": [
+    0.0,
+    0.0
+   ]
+  },
+  "T2b": {
+   "D2": 0.129365,
+   "AE": 0.9646,
+   "menos_mio": 0.00436,
+   "IC90": [
+    -0.002846,
+    0.011245
+   ]
+  },
+  "media": {
+   "D2": 0.129094,
+   "AE": 0.9819,
+   "menos_mio": 0.00409,
+   "IC90": [
+    0.00042,
+    0.007689
+   ]
+  },
+  "corr_log": 0.9815
+ },
+ "hold2024": {
+  "mio_A1fixF1b3n": {
+   "D2": 0.124392,
+   "AE": {
+    "motor": 1.1021,
+    "buildings": 0.6146,
+    "contents": 0.9583
+   },
+   "D2_ramo": {
+    "motor": 0.08363,
+    "buildings": 0.06817,
+    "contents": 0.09447
+   },
+   "menos_mio": 0.0,
+   "IC90": [
+    0.0,
+    0.0
+   ]
+  },
+  "T2b_hold": {
+   "D2": 0.121607,
+   "AE": {
+    "motor": 0.8065,
+    "buildings": 0.5812,
+    "contents": 0.9623
+   },
+   "D2_ramo": {
+    "motor": 0.07889,
+    "buildings": 0.06943,
+    "contents": 0.08959
+   },
+   "menos_mio": -0.002785,
+   "IC90": [
+    -0.006879,
+    0.001424
+   ]
+  },
+  "media": {
+   "D2": 0.125423,
+   "AE": {
+    "motor": 0.9314,
+    "buildings": 0.5974,
+    "contents": 0.9603
+   },
+   "D2_ramo": {
+    "motor": 0.08565,
+    "buildings": 0.06945,
+    "contents": 0.09304
+   },
+   "menos_mio": 0.001031,
+   "IC90": [
+    -0.00126,
+    0.003354
+   ]
+  },
+  "A1_acta": {
+   "D2": 0.121439,
+   "AE": {
+    "motor": 1.1051,
+    "buildings": 0.6148,
+    "contents": 0.9574
+   },
+   "D2_ramo": {
+    "motor": 0.08033,
+    "buildings": 0.06494,
+    "contents": 0.09204
+   },
+   "menos_mio": -0.002952,
+   "IC90": [
+    -0.004722,
+    -0.001309
+   ]
+  },
+  "corr_log": 0.9779
+ },
+ "produccion_2025": {
+  "sha_mlind": "d261388c7e4d5dccb995605d957dbda11f46a97408549fa07b45953ecf7ce0a3",
+  "total_mio": 67168439.87,
+  "total_mlind": 70822702.78,
+  "por_ramo_mlind_sobre_mio": {
+   "M": 1.0526,
+   "B": 1.0756,
+   "C": 0.9886
+  },
+  "corr_log_por_ramo": {
+   "M": 0.9855,
+   "B": 0.9695,
+   "C": 0.9687
+  }
+ },
+ "dev2023_orden": {
+  "mio_A1fixF1b3": {
+   "D2": 0.125004,
+   "menos_mio": 0.0,
+   "IC90": [
+    0.0,
+    0.0
+   ],
+   "cuerpo_menos_mio": 0.0
+  },
+  "T2b_neutral": {
+   "D2": 0.129185,
+   "menos_mio": 0.004181,
+   "IC90": [
+    -0.002726,
+    0.01087
+   ],
+   "cuerpo_menos_mio": -0.000608
+  },
+  "media_neutral": {
+   "D2": 0.128885,
+   "menos_mio": 0.003881,
+   "IC90": [
+    0.000357,
+    0.007407
+   ],
+   "cuerpo_menos_mio": 0.000614
+  }
+ },
+ "hold2024_orden": {
+  "mio_A1fixF1b3n": {
+   "D2": 0.124392,
+   "menos_mio": 0.0,
+   "IC90": [
+    0.0,
+    0.0
+   ],
+   "cuerpo_menos_mio": 0.0,
+   "D2_ramo": {
+    "motor": 0.08363,
+    "buildings": 0.06817,
+    "contents": 0.09447
+   }
+  },
+  "T2b_neutral": {
+   "D2": 0.125047,
+   "menos_mio": 0.000655,
+   "IC90": [
+    -0.002824,
+    0.003955
+   ],
+   "cuerpo_menos_mio": 0.001221,
+   "D2_ramo": {
+    "motor": 0.08153,
+    "buildings": 0.07699,
+    "contents": 0.08957
+   }
+  },
+  "media_neutral": {
+   "D2": 0.125584,
+   "menos_mio": 0.001193,
+   "IC90": [
+    -0.000517,
+    0.002857
+   ],
+   "cuerpo_menos_mio": 0.001286,
+   "D2_ramo": {
+    "motor": 0.08363,
+    "buildings": 0.0732,
+    "contents": 0.09301
+   }
+  }
+ },
+ "nota_escala": "Las predicciones guardadas de T2b HOLD no están en la escala del T0 observado de 2024 (A/E de autos 0,81, que coincide con su completitud de 2024 de 0,80), así que la comparación justa es la de orden, con el total por ramo igualado al mío."
+}

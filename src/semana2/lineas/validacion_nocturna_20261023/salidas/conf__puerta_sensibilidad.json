@@ -1,0 +1,82 @@
+{
+ "fuente": "COD-S2-IA-20261024T052608Z",
+ "acta_sha256": "b3faaecee9b96b15d3399e7e9f2a3bb99429ddffac2ef780690565f3a449b080",
+ "primaria_sin_redondeo": {
+  "A1": {
+   "diff": 0.048591570432711895,
+   "lower": 0.02651447920443918,
+   "lower_acta": 0.026514,
+   "pasa_primaria": true
+  },
+  "A2": {
+   "diff": 0.04461568809554306,
+   "lower": 0.02388580121791499,
+   "lower_acta": 0.023886,
+   "pasa_primaria": true
+  }
+ },
+ "cliente_nuevo": {
+  "A1": {
+   "diff": 0.013062258485481704,
+   "acta_2000": {
+    "q050": -0.010534597269930557,
+    "q025": -0.014059375870328263,
+    "P_mayor_menos0001": 0.837
+   },
+   "n10000": {
+    "q050": -0.01042677528049244,
+    "q025": -0.014513813005773646,
+    "P_mayor_menos0001": 0.8451
+   },
+   "n10000_otra_semilla": {
+    "q050": -0.010785134858205892,
+    "q025": -0.0152733261984687,
+    "P_mayor_menos0001": 0.8386
+   },
+   "pasa_en_alguna_variante": false,
+   "margen_al_umbral_acta": -0.009534597269930556
+  },
+  "A2": {
+   "diff": 0.011123885291151936,
+   "acta_2000": {
+    "q050": -0.013176661085031688,
+    "q025": -0.018042292322737175,
+    "P_mayor_menos0001": 0.7885
+   },
+   "n10000": {
+    "q050": -0.013874405410607527,
+    "q025": -0.018451492525032975,
+    "P_mayor_menos0001": 0.7991
+   },
+   "n10000_otra_semilla": {
+    "q050": -0.01438689954411632,
+    "q025": -0.01948679225047825,
+    "P_mayor_menos0001": 0.7948
+   },
+   "pasa_en_alguna_variante": false,
+   "margen_al_umbral_acta": -0.012176661085031688
+  }
+ },
+ "margenes_sin_redondeo": {
+  "A1": {
+   "segmento_motor": 0.03141597380141825,
+   "segmento_buildings": 0.08723073241466173,
+   "segmento_contents": 0.04781327115307721,
+   "segmento_new_customer": 0.014062258485481705,
+   "segmento_renewal": 0.05494671798133788,
+   "influencia": 0.019359316834529516,
+   "minimo": 0.014062258485481705
+  },
+  "A2": {
+   "segmento_motor": 0.031536722964951136,
+   "segmento_buildings": 0.0743108405180789,
+   "segmento_contents": 0.04660040330274973,
+   "segmento_new_customer": 0.012123885291151937,
+   "segmento_renewal": 0.050657264090683385,
+   "influencia": 0.01689323003744858,
+   "minimo": 0.012123885291151937
+  }
+ },
+ "redondeo_pudo_decidir": false,
+ "veredicto_cambia": false
+}

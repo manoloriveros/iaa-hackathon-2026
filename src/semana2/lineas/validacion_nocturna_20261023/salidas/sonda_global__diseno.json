@@ -1,0 +1,36 @@
+{
+ "filas_2024": 59202,
+ "filas_2025": 209063,
+ "pares": {
+  "0.85-1.20": {
+   "error_redondeo_log_max": 0.0004,
+   "error_redondeo_log_sd": 0.00011
+  },
+  "0.80-1.25": {
+   "error_redondeo_log_max": 0.00022,
+   "error_redondeo_log_sd": 6e-05
+  },
+  "0.90-1.12": {
+   "error_redondeo_log_max": 0.00105,
+   "error_redondeo_log_sd": 0.00023
+  }
+ },
+ "escalas_elegidas": [
+  0.85,
+  1.2
+ ],
+ "c_optimo_2024_completo": 0.9184,
+ "sd_log_pub_menos_priv_2024": 0.0922,
+ "sigma_2025": 0.0496,
+ "tau": 0.12,
+ "Z": 0.854,
+ "perdida_D2_por_error_de_nivel_2024": {
+  "0.8": 0.00704,
+  "0.9": 0.00157,
+  "1.1": 0.00128,
+  "1.2": 0.0047,
+  "1.3": 0.00973
+ },
+ "sigma_2025_raiz": 0.0491,
+ "sigma_nota": "σ de 2025 medido por remuestreo de componentes al tamaño del test; sigma_2025_raiz es la escala por raíz del tamaño, solo de control."
+}

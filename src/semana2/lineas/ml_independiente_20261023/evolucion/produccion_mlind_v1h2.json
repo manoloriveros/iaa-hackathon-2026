@@ -1,0 +1,96 @@
+{
+ "componentes": [
+  "T2bh2"
+ ],
+ "encoge": 0.0,
+ "params": {
+  "motor": {
+   "pesos": {
+    "T2bh2": 1.0
+   },
+   "k_ramo": 1.0006812484968606
+  },
+  "buildings": {
+   "pesos": {
+    "T2bh2": 1.0
+   },
+   "k_ramo": 1.0144338467519682
+  },
+  "contents": {
+   "pesos": {
+    "T2bh2": 1.0
+   },
+   "k_ramo": 1.0046114033772207
+  }
+ },
+ "controles": {
+  "filas": 209063,
+  "orden_igual_plantilla": true,
+  "nulos": 0,
+  "min": 0.06505663239758307,
+  "positivas_estrictas": true,
+  "ids_unicos": true,
+  "sha256": "56796c667b87d4fc15c2a8f74fee86903f2828fd7e647406234646acbfb6da5d",
+  "archivo": "prediccion_2025_mlind_v1h2.csv"
+ },
+ "totales": {
+  "motor": {
+   "total": 43212191.50044887,
+   "tasa": 546.9412457762144,
+   "tasa_NB": 581.7785952275799,
+   "tasa_REN": 431.278728425604
+  },
+  "buildings": {
+   "total": 22147994.33335593,
+   "tasa": 467.49018536921545,
+   "tasa_NB": 471.0747768826046,
+   "tasa_REN": 455.6495081193989
+  },
+  "contents": {
+   "total": 5472163.353375753,
+   "tasa": 92.7226543222509,
+   "tasa_NB": 92.88212091331427,
+   "tasa_REN": 92.18819078026998
+  }
+ },
+ "total": 70832349.18718055,
+ "oof_pcv": {
+  "D2": 0.12840287630342861,
+  "D2_motor": 0.06774471610217958,
+  "AE_motor": 0.9577759775017414,
+  "D2_buildings": 0.08938439617401739,
+  "AE_buildings": 0.9680038468677595,
+  "D2_contents": 0.0957307264609244,
+  "AE_contents": 1.0079510984608566,
+  "D2_cuerpo": 0.1236727512298832,
+  "AE_NB": 1.116451691258516,
+  "AE_REN": 0.95170679014454
+ },
+ "balance_oof_pcv": {
+  "motor": 0.9577759775017414,
+  "buildings": 0.9680038468677595,
+  "contents": 1.0079510984608566
+ },
+ "mezcla50": {
+  "filas": 209063,
+  "orden_igual_plantilla": true,
+  "nulos": 0,
+  "min": 0.10230181619879153,
+  "positivas_estrictas": true,
+  "ids_unicos": true,
+  "sha256": "9fc542fc54cd12ce358659457b28ae24e6fa6c741b937e0fc10b44602467e598",
+  "archivo": "mezcla50_designada_mlind_v1h2_2025.csv",
+  "total": 69000394.53073628
+ },
+ "frente_designada": {
+  "corr_log": 0.9869671315877225,
+  "cociente_p01_p99": [
+   0.5992786088684392,
+   1.5509515122479909
+  ]
+ },
+ "frente_mlind_v1": {
+  "corr_log": 0.9999734197736498,
+  "total_v1": 70822702.781367
+ }
+}

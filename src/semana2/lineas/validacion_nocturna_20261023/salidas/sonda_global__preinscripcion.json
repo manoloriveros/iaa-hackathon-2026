@@ -1,0 +1,112 @@
+{
+ "id": "CLA-S2-SONDA-GLOBAL-20261024",
+ "autor": "Claude (Cowork), sesión de validación nocturna",
+ "pedido": "El participante eligió «Sonda de nivel global» el 24-10 tras ver el tablero (séptimos de siete, 0,15390).",
+ "base": {
+  "archivo": "Repositorio_IAA2026/privado/semana2/claude_ml_independiente_20261023/mezcla50_designada_mlind_2025.csv",
+  "sha256": "12831ef4a05c1773824abe5fa139d9503dd2989b4874e7d93cfc000406cfdb4a",
+  "total": 68995571.33,
+  "d2_publico": 0.1539,
+  "envio_kaggle": 57599788
+ },
+ "sondas": {
+  "sonda_global_0.85.csv": {
+   "c": 0.85,
+   "sha256": "c59923b02c15eb3d72382260603f032d327f724750ed28ed22a5b64717eafd48",
+   "total": 58646235.63
+  },
+  "sonda_global_1.20.csv": {
+   "c": 1.2,
+   "sha256": "02b1f58b75601a509da58e58918b40c8dd444cdd5680013d0d6a1fb4d2e63858",
+   "total": 82794685.59
+  }
+ },
+ "metodo": "D2(1) − D2(c) = βA (c^-1/2 − 1) + βB (c^1/2 − 1); con las dos sondas se despejan βA y βB y c* = βA / βB, el óptimo exacto de la desviación Tweedie 1,5 en el público para un factor común a todas las filas.",
+ "credibilidad": {
+  "tau": 0.12,
+  "tau_motivo": "Salto global de nivel de 2023 a 2024 en el emergente (real/esperado 0,884, log −0,12); no incluye el cambio de cartera de 2025, que podría ampliarlo.",
+  "sigma_2025": 0.0496,
+  "Z": 0.854,
+  "nota_Z": "σ es la desviación de log c*_público − log c*_privado. El predictor lineal óptimo del nivel privado solo necesita el error del público, algo menor, y daría Z ≈ 0,90 (pendiente empírica 0,908, revisión independiente). Se mantiene 0,854, más conservador; el efecto en la ganancia esperada es menor de 0,00001."
+ },
+ "regla_final": "c_final = exp(Z · log c*), acotado a [0.75; 1.33]; archivo final = base × c_final en todas las filas. Si c* no es positivo y finito (βA o βB ≤ 0), no se aplica nada y se informa: el modelo de la fórmula no cuadraría con las puntuaciones.",
+ "control": "Si |log c*| > 0,4 (c* fuera de [0,67; 1,49]) el resolutor se detiene sin escribir el archivo final y se informa al participante: sería un desvío mayor que cualquiera visto entre años. Con dos ecuaciones y dos incógnitas no sobra ninguna para comprobar que la métrica de Kaggle es la supuesta; el único control directo son los signos de βA y βB. Como control indirecto, el resolutor informa la desviación nula por fila que implica βB (con Σμ^1/2 del público aproximada por un tercio de la del test) junto a la de 2023-2024.",
+ "backtest_2024": {
+  "nivel_como_2024": {
+   "c_optimo_completo_2024": 0.9184,
+   "c_final_mediana": 0.9238,
+   "c_final_p05_p95": [
+    0.8734,
+    0.9775
+   ],
+   "ganancia_privado_media": 0.00088,
+   "p05_p50_p95": [
+    -0.00026,
+    0.00089,
+    0.00201
+   ],
+   "prob_ganar": 0.9
+  },
+  "nivel_correcto": {
+   "c_optimo_completo_2024": 1.0,
+   "c_final_mediana": 0.9935,
+   "c_final_p05_p95": [
+    0.9395,
+    1.0513
+   ],
+   "ganancia_privado_media": -0.00017,
+   "p05_p50_p95": [
+    -0.00097,
+    -7e-05,
+    0.00022
+   ],
+   "prob_ganar": 0.275
+  },
+  "nivel_x1.3": {
+   "c_optimo_completo_2024": 0.7692,
+   "c_final_mediana": 0.7941,
+   "c_final_p05_p95": [
+    0.7509,
+    0.8401
+   ],
+   "ganancia_privado_media": 0.00951,
+   "p05_p50_p95": [
+    0.00628,
+    0.00956,
+    0.01274
+   ],
+   "prob_ganar": 1.0
+  },
+  "nivel_x0.8": {
+   "c_optimo_completo_2024": 1.25,
+   "c_final_mediana": 1.2023,
+   "c_final_p05_p95": [
+    1.1366,
+    1.2722
+   ],
+   "ganancia_privado_media": 0.0066,
+   "p05_p50_p95": [
+    0.00428,
+    0.00646,
+    0.00955
+   ],
+   "prob_ganar": 1.0
+  },
+  "ponderado_por_la_previa": {
+   "ganancia_privado_media": 0.0018,
+   "p05_p50_p95": [
+    -0.00064,
+    0.00075,
+    0.00894
+   ],
+   "prob_ganar": 0.785
+  },
+  "nota": "Tamaño 2025 por remuestreo de componentes de 2024 (200 réplicas); privado = 67 % de cada réplica. Los escenarios ×1,3 y ×0,8 son desvíos de unas dos τ; la cifra que resume la regla con la previa declarada es «ponderado_por_la_previa». El sustituto es A1fixF1b3n de 2024; la base enviada es la mezcla 50/50 con MLind (en 2025, +2,7 % de total y 5,8 % de cambio mediano por fila)."
+ },
+ "nula_por_fila_referencia": {
+  "2023": 110.61,
+  "2024": 93.37
+ },
+ "coste": "dos envíos para las sondas y uno para el archivo final, de los ocho que quedan; cierre el 30 de octubre a las 22:59 de Bogotá",
+ "limites": "Supone un público de un tercio elegido al azar por filas; σ medido con 2024 (59.202 filas) remuestreado por componentes al tamaño de 2025, sobre A1fixF1b3n como sustituto de la mezcla. Solo ajusta un nivel común, no el orden ni el reparto entre ramos. El envío lo hace Codex con autorización expresa del participante; la selección final es del participante."
+}

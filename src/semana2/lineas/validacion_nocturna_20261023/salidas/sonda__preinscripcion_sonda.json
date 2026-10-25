@@ -1,0 +1,70 @@
+{
+ "id": "CLA-S2-SONDA-NIVEL-20261024",
+ "autor": "Claude (Cowork), sesión de validación nocturna",
+ "base": {
+  "archivo": "Repositorio_IAA2026/privado/semana2/claude_ml_independiente_20261023/mezcla50_designada_mlind_2025.csv",
+  "sha256": "12831ef4a05c1773824abe5fa139d9503dd2989b4874e7d93cfc000406cfdb4a",
+  "d2_publico": 0.1539,
+  "envio_kaggle": 57599788
+ },
+ "sondas": {
+  "sonda_motor_0.85.csv": {
+   "ramo": "motor",
+   "c": 0.85,
+   "sha256": "3624988e064dfa6eb23ff3f98a8ee432c13992b3ce17d660e25839bfce58c630"
+  },
+  "sonda_motor_1.20.csv": {
+   "ramo": "motor",
+   "c": 1.2,
+   "sha256": "5411bf5526844dea343d619524be86ec4803751b0edcb7f9b70cbbc082b1eb31"
+  },
+  "sonda_buildings_0.80.csv": {
+   "ramo": "buildings",
+   "c": 0.8,
+   "sha256": "f4e10dea9b423506f7990ae1a2220ecf32988a5099347c19423f5c8aa70e4269"
+  },
+  "sonda_buildings_1.25.csv": {
+   "ramo": "buildings",
+   "c": 1.25,
+   "sha256": "842747d44cbc889c9894c3ab371238ed39304f8fc423bc676a341c306cc415f2"
+  },
+  "sonda_contents_0.85.csv": {
+   "ramo": "contents",
+   "c": 0.85,
+   "sha256": "60dc5a5d64c3c07982a516a5ddf58951bdf4428a739b265f5d0b45c5c4e736bb"
+  },
+  "sonda_contents_1.20.csv": {
+   "ramo": "contents",
+   "c": 1.2,
+   "sha256": "e54c3fc998fef3d8f87a68130fc1ebdce938a6cba593fc4cd486ff5c3b972fe4"
+  }
+ },
+ "metodo": "D2_pub(c_l) = D2_base - [βA_l (c_l^-1/2 - 1) + βB_l (c_l^1/2 - 1)], dos sondas por ramo; c*_l = A_l / B_l (óptimo exacto de la desviación Tweedie 1,5 en el público). Precisión simulada con redondeo a 5 decimales: error máximo del log de c* 0,001 en autos, 0,006 en edificios y 0,003 en contenidos.",
+ "credibilidad": {
+  "tau": {
+   "motor": 0.1,
+   "buildings": 0.2,
+   "contents": 0.07
+  },
+  "tau_motivo": "Incertidumbre previa del logaritmo del nivel 2025 de cada ramo frente al de la mezcla. Autos 0,10: las dos líneas difieren un 5 %, el exceso del nuevo negocio fue 1,62 en 2023 y 1,09 en 2024, y la tendencia posible es de +3 a +5 % al año. Edificios 0,20: el nivel emergente cayó un 40 % de 2023 a 2024 por el incendio, y las líneas difieren un 7,6 %. Contenidos 0,07: niveles 2023 y 2024 a un 5 %.",
+  "sigma_pub_priv_2025": {
+   "motor": 0.0507,
+   "buildings": 0.1571,
+   "contents": 0.0866
+  },
+  "Z": {
+   "motor": 0.796,
+   "buildings": 0.618,
+   "contents": 0.395
+  }
+ },
+ "regla_final": "c_final_l = exp(Z_l · log c*_l), acotado a [0,80; 1,25]; archivo final = base × c_final por ramo. Si algún c* sale no positivo o no finito, ese ramo no se toca. Control de coherencia: βB_l / Σμ^(1/2)_l debe ser igual en los tres ramos si el público es una muestra al azar; si difiere más de un 5 %, Z se reduce a la mitad en todos los ramos.",
+ "ganancia_esperada_D2_privado": 0.0016,
+ "k_curvatura": {
+  "motor": 0.0753,
+  "buildings": 0.0387,
+  "contents": 0.0259
+ },
+ "coste": "seis envíos de los nueve disponibles hoy más uno para el archivo final; cierre el 30 de octubre a las 22:59 de Bogotá",
+ "limites": "Un 33 % público aproximado; σ medido sobre 2024 como sustituto. La sonda solo ajusta un nivel por ramo, no el orden. No cambia la selección común; el envío lo hace Codex con autorización expresa del participante."
+}

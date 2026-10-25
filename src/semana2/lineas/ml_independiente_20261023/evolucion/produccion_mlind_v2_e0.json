@@ -1,0 +1,108 @@
+{
+ "componentes": [
+  "T2bh2",
+  "T2hh2",
+  "FSh2",
+  "T2oh2"
+ ],
+ "encoge": 0.0,
+ "params": {
+  "motor": {
+   "pesos": {
+    "T2bh2": 0.4173,
+    "T2hh2": 0.0,
+    "FSh2": 0.573,
+    "T2oh2": 0.0097
+   },
+   "k_ramo": 0.9968254780092368
+  },
+  "buildings": {
+   "pesos": {
+    "T2bh2": 0.0,
+    "T2hh2": 0.2289,
+    "FSh2": 0.7711,
+    "T2oh2": 0.0
+   },
+   "k_ramo": 1.005216494603972
+  },
+  "contents": {
+   "pesos": {
+    "T2bh2": 0.0,
+    "T2hh2": 0.6549,
+    "FSh2": 0.1543,
+    "T2oh2": 0.1908
+   },
+   "k_ramo": 0.9998585291866272
+  }
+ },
+ "controles": {
+  "filas": 209063,
+  "orden_igual_plantilla": true,
+  "nulos": 0,
+  "min": 0.05865324728381284,
+  "positivas_estrictas": true,
+  "ids_unicos": true,
+  "sha256": "78b5249c666a884e45abc5323ef4f135953de7f7d98260df145c54f2790903cd",
+  "archivo": "prediccion_2025_mlind_v2_e0.csv"
+ },
+ "totales": {
+  "motor": {
+   "total": 43834973.764247894,
+   "tasa": 554.8238662909835,
+   "tasa_NB": 591.1949958882564,
+   "tasa_REN": 434.06908803270295
+  },
+  "buildings": {
+   "total": 21000415.92148428,
+   "tasa": 443.2676017611088,
+   "tasa_NB": 449.91394179328455,
+   "tasa_REN": 421.3133101996902
+  },
+  "contents": {
+   "total": 5475597.39505733,
+   "tasa": 92.78084217944865,
+   "tasa_NB": 93.39155861041925,
+   "tasa_REN": 90.73398293033608
+  }
+ },
+ "total": 70310987.0807895,
+ "oof_pcv": {
+  "D2": 0.13217335347406234,
+  "D2_motor": 0.06904558294647978,
+  "AE_motor": 0.9662504910290773,
+  "D2_buildings": 0.0979294090689461,
+  "AE_buildings": 1.0322875567169492,
+  "D2_contents": 0.0982474303631784,
+  "AE_contents": 1.0184388193776444,
+  "D2_cuerpo": 0.12829021813153896,
+  "AE_NB": 1.110264438996337,
+  "AE_REN": 0.9813053263973214
+ },
+ "balance_oof_pcv": {
+  "motor": 0.9662504910290773,
+  "buildings": 1.0322875567169492,
+  "contents": 1.0184388193776444
+ },
+ "mezcla50": {
+  "filas": 209063,
+  "orden_igual_plantilla": true,
+  "nulos": 0,
+  "min": 0.09910012364190643,
+  "positivas_estrictas": true,
+  "ids_unicos": true,
+  "sha256": "727cf21096feaa7e3f60aa72b1f931f527b8fc78e0a0ce4f4823b76b399a9fe9",
+  "archivo": "mezcla50_designada_mlind_v2_e0_2025.csv",
+  "total": 68739713.47754076
+ },
+ "frente_designada": {
+  "corr_log": 0.9870928185897185,
+  "cociente_p01_p99": [
+   0.6369561609670041,
+   1.5848400429528562
+  ]
+ },
+ "frente_mlind_v1": {
+  "corr_log": 0.992078336457113,
+  "total_v1": 70822702.781367
+ }
+}

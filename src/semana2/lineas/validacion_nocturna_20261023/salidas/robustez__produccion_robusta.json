@@ -1,0 +1,102 @@
+{
+ "produccion": {
+  "A1robregF1b3n": {
+   "sha256": "a702ed24502cd918998225051835398a9fa6846d7ca95f5cbc14db3bc1b4c872",
+   "total": 67168439.87,
+   "por_ramo": {
+    "M": 41042170.93,
+    "B": 20591197.98,
+    "C": 5535070.96
+   },
+   "cambio_por_fila_frente_designada": {
+    "mediana_abs": 0.0417,
+    "p99_abs": 0.2136
+   }
+  },
+  "mezcla50_robusta": {
+   "sha256": "82082f3c59868a4361654bc1bca23796260a8c694135be5c3f499aec19e87f2f",
+   "total": 68995571.33,
+   "por_ramo": {
+    "M": 42122566.11,
+    "B": 21369469.26,
+    "C": 5503535.96
+   },
+   "cambio_por_fila_frente_mezcla_enviada": {
+    "mediana_abs": 0.0207,
+    "p99_abs": 0.1048
+   }
+  }
+ },
+ "desarrollo_2023": {
+  "base": {
+   "D2": 0.125004,
+   "menos_mezcla_vieja": -0.003881,
+   "IC90": [
+    -0.007407,
+    -0.000357
+   ]
+  },
+  "robreg": {
+   "D2": 0.126551,
+   "menos_mezcla_vieja": -0.002334,
+   "IC90": [
+    -0.00613,
+    0.001248
+   ]
+  },
+  "mezcla_vieja": {
+   "D2": 0.128885,
+   "menos_mezcla_vieja": 0.0,
+   "IC90": [
+    0.0,
+    0.0
+   ]
+  },
+  "mezcla_nueva": {
+   "D2": 0.129549,
+   "menos_mezcla_vieja": 0.000664,
+   "IC90": [
+    -0.000153,
+    0.001418
+   ]
+  }
+ },
+ "exploratorio_2024": {
+  "base": {
+   "D2": 0.124392,
+   "menos_mezcla_vieja": -0.001193,
+   "IC90": [
+    -0.002857,
+    0.000517
+   ],
+   "cuerpo_menos_mezcla_vieja": -0.001286
+  },
+  "robreg": {
+   "D2": 0.12631,
+   "menos_mezcla_vieja": 0.000726,
+   "IC90": [
+    -0.000977,
+    0.002535
+   ],
+   "cuerpo_menos_mezcla_vieja": 0.000801
+  },
+  "mezcla_vieja": {
+   "D2": 0.125584,
+   "menos_mezcla_vieja": 0.0,
+   "IC90": [
+    0.0,
+    0.0
+   ],
+   "cuerpo_menos_mezcla_vieja": 0.0
+  },
+  "mezcla_nueva": {
+   "D2": 0.126507,
+   "menos_mezcla_vieja": 0.000923,
+   "IC90": [
+    0.000201,
+    0.001608
+   ],
+   "cuerpo_menos_mezcla_vieja": 0.00105
+  }
+ }
+}

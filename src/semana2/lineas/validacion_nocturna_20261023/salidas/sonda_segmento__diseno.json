@@ -1,0 +1,246 @@
+{
+ "tau": 0.2,
+ "K": 1.2,
+ "replicas": 150,
+ "composicion_2025": {
+  "motor_1": 0.3292,
+  "contents_1": 0.2413,
+  "buildings_1": 0.19,
+  "motor_0": 0.1038,
+  "contents_0": 0.0756,
+  "buildings_0": 0.0602
+ },
+ "pools": {},
+ "sigma": {
+  "nb": {
+   "REN": 0.0883,
+   "NB": 0.0342
+  },
+  "ramo": {
+   "contents": 0.1017,
+   "buildings": 0.11,
+   "motor": 0.049
+  },
+  "ramo_nb": {
+   "contents_0": 0.1859,
+   "buildings_0": 0.2646,
+   "contents_1": 0.1115,
+   "motor_0": 0.0941,
+   "buildings_1": 0.1196,
+   "motor_1": 0.0666
+  }
+ },
+ "Z": {
+  "nb": {
+   "REN": 0.837,
+   "NB": 0.972
+  },
+  "ramo": {
+   "contents": 0.795,
+   "buildings": 0.768,
+   "motor": 0.943
+  },
+  "ramo_nb": {
+   "contents_0": 0.537,
+   "buildings_0": 0.364,
+   "contents_1": 0.763,
+   "motor_0": 0.819,
+   "buildings_1": 0.737,
+   "motor_1": 0.9
+  }
+ },
+ "ganancia": {
+  "nb": {
+   "2024_nulo": {
+    "media": -0.00017,
+    "p05_p50_p95": [
+     -0.00098,
+     -5e-05,
+     0.00028
+    ],
+    "prob_ganar": 0.373,
+    "techo_oraculo_media": 0.0006
+   },
+   "2024_como_el_año": {
+    "media": 0.0001,
+    "p05_p50_p95": [
+     -0.00082,
+     0.00013,
+     0.00087
+    ],
+    "prob_ganar": 0.68,
+    "techo_oraculo_media": 0.00061
+   },
+   "2024_previa": {
+    "media": 0.00062,
+    "p05_p50_p95": [
+     -0.00088,
+     0.00018,
+     0.00399
+    ],
+    "prob_ganar": 0.687,
+    "techo_oraculo_media": 0.00151
+   },
+   "2023_nulo": {
+    "media": -0.00025,
+    "p05_p50_p95": [
+     -0.00119,
+     -0.0001,
+     0.00027
+    ],
+    "prob_ganar": 0.3,
+    "techo_oraculo_media": 0.00078
+   },
+   "2023_como_el_año": {
+    "media": 0.00526,
+    "p05_p50_p95": [
+     0.00264,
+     0.00503,
+     0.00804
+    ],
+    "prob_ganar": 1.0,
+    "techo_oraculo_media": 0.00635
+   },
+   "2023_previa": {
+    "media": 0.00056,
+    "p05_p50_p95": [
+     -0.00093,
+     7e-05,
+     0.00275
+    ],
+    "prob_ganar": 0.62,
+    "techo_oraculo_media": 0.00179
+   }
+  },
+  "ramo": {
+   "2024_nulo": {
+    "media": -0.00038,
+    "p05_p50_p95": [
+     -0.00149,
+     -0.00022,
+     0.00032
+    ],
+    "prob_ganar": 0.24,
+    "techo_oraculo_media": 0.00075
+   },
+   "2024_como_el_año": {
+    "media": 0.0112,
+    "p05_p50_p95": [
+     0.00835,
+     0.01124,
+     0.0136
+    ],
+    "prob_ganar": 1.0,
+    "techo_oraculo_media": 0.01412
+   },
+   "2024_previa": {
+    "media": 0.0011,
+    "p05_p50_p95": [
+     -0.00092,
+     0.00079,
+     0.00371
+    ],
+    "prob_ganar": 0.787,
+    "techo_oraculo_media": 0.00237
+   },
+   "2023_nulo": {
+    "media": -0.00042,
+    "p05_p50_p95": [
+     -0.00166,
+     -0.00026,
+     0.00027
+    ],
+    "prob_ganar": 0.273,
+    "techo_oraculo_media": 0.00091
+   },
+   "2023_como_el_año": {
+    "media": 0.01104,
+    "p05_p50_p95": [
+     0.00666,
+     0.01097,
+     0.01562
+    ],
+    "prob_ganar": 1.0,
+    "techo_oraculo_media": 0.01259
+   },
+   "2023_previa": {
+    "media": 0.00095,
+    "p05_p50_p95": [
+     -0.00148,
+     0.00062,
+     0.00467
+    ],
+    "prob_ganar": 0.707,
+    "techo_oraculo_media": 0.00246
+   }
+  },
+  "ramo_nb": {
+   "2024_nulo": {
+    "media": -0.00048,
+    "p05_p50_p95": [
+     -0.00149,
+     -0.0004,
+     0.00041
+    ],
+    "prob_ganar": 0.22,
+    "techo_oraculo_media": 0.00118
+   },
+   "2024_como_el_año": {
+    "media": 0.01125,
+    "p05_p50_p95": [
+     0.00893,
+     0.01112,
+     0.01418
+    ],
+    "prob_ganar": 1.0,
+    "techo_oraculo_media": 0.01552
+   },
+   "2024_previa": {
+    "media": 0.0026,
+    "p05_p50_p95": [
+     -0.0005,
+     0.00212,
+     0.00636
+    ],
+    "prob_ganar": 0.88,
+    "techo_oraculo_media": 0.00472
+   },
+   "2023_nulo": {
+    "media": -0.00062,
+    "p05_p50_p95": [
+     -0.00203,
+     -0.00049,
+     0.00037
+    ],
+    "prob_ganar": 0.193,
+    "techo_oraculo_media": 0.00128
+   },
+   "2023_como_el_año": {
+    "media": 0.01753,
+    "p05_p50_p95": [
+     0.01271,
+     0.01757,
+     0.02366
+    ],
+    "prob_ganar": 1.0,
+    "techo_oraculo_media": 0.02114
+   },
+   "2023_previa": {
+    "media": 0.00222,
+    "p05_p50_p95": [
+     -0.00099,
+     0.00182,
+     0.00678
+    ],
+    "prob_ganar": 0.813,
+    "techo_oraculo_media": 0.00462
+   }
+  }
+ },
+ "envios": {
+  "nb": 1,
+  "ramo": 2,
+  "ramo_nb": 5
+ },
+ "segundos": 1050
+}

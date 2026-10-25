@@ -1,0 +1,45 @@
+{
+ "politica": "S2-SELECCION-v2-20261024",
+ "acta_original_sha256": "b3faaecee9b96b15d3399e7e9f2a3bb99429ddffac2ef780690565f3a449b080",
+ "titular_v1": "R0",
+ "pasos": [
+  {
+   "aspirante": "A1",
+   "titular": "R0",
+   "par": {
+    "diff": 0.048591,
+    "lower": 0.026514,
+    "upper": 0.073324,
+    "P_gt0": 1.0
+   },
+   "primaria_pasa": true,
+   "salvaguardas_v2": {
+    "cliente_nuevo_diferencia_puntual": true,
+    "cliente_nuevo_limite95_diagnostico": -0.010535,
+    "escenarios": true,
+    "segmentos": true,
+    "influencia": true,
+    "nivel_2025": true,
+    "pasa_todas": true
+   },
+   "promueve": true
+  },
+  {
+   "aspirante": "A2",
+   "titular": "A1",
+   "par": {
+    "diff": -0.003976,
+    "lower": -0.010405,
+    "upper": 0.002493,
+    "P_gt0": 0.0513
+   },
+   "primaria_pasa": false,
+   "salvaguardas_v2": "no se evalúan: la primaria no pasa",
+   "promueve": false
+  }
+ ],
+ "titular_v2": "A1",
+ "reabre_2024": false,
+ "nuevas_lecturas_de_etiquetas": 0,
+ "advertencia": "Enmienda decidida después de conocer el acta; no restaura una confirmación intacta de 2024."
+}

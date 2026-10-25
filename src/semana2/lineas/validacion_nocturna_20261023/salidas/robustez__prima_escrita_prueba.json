@@ -1,0 +1,22 @@
+{
+ "pregunta": "¿La prima escrita (tarifa vigente, bloque F4) añade señal a la mezcla? Coeficiente de log(tasa de prima escrita / tasa predicha) estimado en el OOF de 2023 y aplicado a 2024 con el mismo total por ramo.",
+ "motor": {
+  "coef": 0.37,
+  "D2_2024_sin": 0.08363,
+  "D2_2024_con": 0.07619,
+  "corr_log_tasas": 0.268
+ },
+ "buildings": {
+  "coef": 0.053,
+  "D2_2024_sin": 0.0732,
+  "D2_2024_con": 0.07352,
+  "corr_log_tasas": 0.403
+ },
+ "contents": {
+  "coef": -0.23,
+  "D2_2024_sin": 0.09301,
+  "D2_2024_con": 0.09139,
+  "corr_log_tasas": 0.229
+ },
+ "lectura": "No añade: empeora autos y contenidos en 2024 y en edificios la ganancia es mínima. La tarifa vigente apenas se parece al riesgo estimado (correlación de 0,23 a 0,40)."
+}

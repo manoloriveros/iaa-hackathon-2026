@@ -1,0 +1,211 @@
+{
+ "codex_oof_sha256": "243945495e5e5fd488e53eaa475bbaeaaa825cc037af593cb3584d7d15beacb7",
+ "filas": 50094,
+ "objetivo_igual": true,
+ "nula_mia": 5540895.477105999,
+ "vinculo_observacion": {
+  "suma_codex": 43958.01,
+  "suma_mia": 43771.21,
+  "cociente_p1_p50_p99": [
+   0.993,
+   1.0029,
+   1.0217
+  ],
+  "exposicion_nominal_igual": true
+ },
+ "D2": {
+  "mio_A1fixF1_nivel": 0.1262,
+  "mio_A1fixb3_nivel": 0.12297,
+  "mio_T1v2_nivel": 0.12126,
+  "mio_A1fix_nivel": 0.12115,
+  "codex_W2-B10": 0.09424,
+  "codex_W2-B08": 0.09318,
+  "codex_W2-B06": 0.08904,
+  "codex_W2-B03": 0.08672,
+  "codex_W2-B13": 0.08671,
+  "codex_W2-B14": 0.08671,
+  "codex_W2-B11": 0.08659,
+  "codex_W2-B16": 0.08655,
+  "codex_W2-B15": 0.08606,
+  "codex_W2-B17": 0.08575,
+  "mio_L3_gbm": 0.08328,
+  "codex_W2-B18": 0.0819,
+  "codex_W2-B07": 0.08174,
+  "codex_W2-B09": 0.08077,
+  "mio_L1_glm_a10": 0.08047,
+  "codex_W2-B05": 0.07986,
+  "codex_W2-B12": 0.07492,
+  "codex_W2-B04": 0.07342,
+  "codex_W2-B00": 0.06858,
+  "mio_L0_tasa": 0.06766,
+  "codex_W2-B01": 0.06666,
+  "codex_W2-B02": -0.27353
+ },
+ "D2_codex_reproduce_informe": {
+  "W2-B00": 0.06858,
+  "W2-B10": 0.09424,
+  "W2-B14": 0.08671
+ },
+ "segmentos": {
+  "codex_W2-B00": {
+   "motor": -0.0058,
+   "buildings": 0.0208,
+   "contents": 0.0289,
+   "nuevo_negocio": 0.0478,
+   "renovacion": 0.0706,
+   "AE": 0.9797
+  },
+  "codex_W2-B10": {
+   "motor": 0.027,
+   "buildings": 0.0299,
+   "contents": 0.0778,
+   "nuevo_negocio": 0.0804,
+   "renovacion": 0.0954,
+   "AE": 1.0802
+  },
+  "codex_W2-B14": {
+   "motor": 0.0331,
+   "buildings": 0.0211,
+   "contents": 0.0373,
+   "nuevo_negocio": 0.1112,
+   "renovacion": 0.0829,
+   "AE": 0.9914
+  },
+  "mio_L0_tasa": {
+   "motor": -0.0031,
+   "buildings": 0.0157,
+   "contents": 0.027,
+   "nuevo_negocio": 0.0435,
+   "renovacion": 0.0701,
+   "AE": 0.9997
+  },
+  "mio_T1v2_nivel": {
+   "motor": 0.0402,
+   "buildings": 0.0766,
+   "contents": 0.1091,
+   "nuevo_negocio": 0.0817,
+   "renovacion": 0.1258,
+   "AE": 0.9998
+  },
+  "mio_A1fixb3_nivel": {
+   "motor": 0.0405,
+   "buildings": 0.0815,
+   "contents": 0.1088,
+   "nuevo_negocio": 0.0841,
+   "renovacion": 0.1274,
+   "AE": 0.9998
+  },
+  "mio_A1fixF1_nivel": {
+   "motor": 0.0431,
+   "buildings": 0.0875,
+   "contents": 0.1092,
+   "nuevo_negocio": 0.0948,
+   "renovacion": 0.1296,
+   "AE": 0.9997
+  }
+ },
+ "pares": {
+  "completo": {
+   "mio_T1v2_nivel − codex_W2-B10": {
+    "diff": 0.0270147,
+    "IC90": [
+     0.0141387,
+     0.0402368
+    ]
+   },
+   "mio_T1v2_nivel − codex_W2-B14": {
+    "diff": 0.0345484,
+    "IC90": [
+     0.0134293,
+     0.0543351
+    ]
+   },
+   "mio_T1v2_nivel − codex_W2-B00": {
+    "diff": 0.0526767,
+    "IC90": [
+     0.0399218,
+     0.064907
+    ]
+   },
+   "mio_A1fixb3_nivel − codex_W2-B10": {
+    "diff": 0.0287298,
+    "IC90": [
+     0.0152552,
+     0.0426212
+    ]
+   },
+   "mio_A1fixF1_nivel − codex_W2-B10": {
+    "diff": 0.0319612,
+    "IC90": [
+     0.0187336,
+     0.0459859
+    ]
+   },
+   "codex_W2-B10 − mio_L3_gbm": {
+    "diff": 0.0109616,
+    "IC90": [
+     -0.0009094,
+     0.0228904
+    ]
+   },
+   "codex_W2-B00 − mio_L0_tasa": {
+    "diff": 0.0009202,
+    "IC90": [
+     -0.0008082,
+     0.0026378
+    ]
+   }
+  },
+  "cuerpo": {
+   "mio_T1v2_nivel − codex_W2-B10": {
+    "diff": 0.0177416,
+    "IC90": [
+     0.0120585,
+     0.0234664
+    ]
+   },
+   "mio_T1v2_nivel − codex_W2-B14": {
+    "diff": 0.026358,
+    "IC90": [
+     0.0191758,
+     0.0335162
+    ]
+   },
+   "mio_T1v2_nivel − codex_W2-B00": {
+    "diff": 0.0498943,
+    "IC90": [
+     0.0417004,
+     0.0582407
+    ]
+   },
+   "mio_A1fixb3_nivel − codex_W2-B10": {
+    "diff": 0.0174823,
+    "IC90": [
+     0.0116041,
+     0.0232723
+    ]
+   },
+   "mio_A1fixF1_nivel − codex_W2-B10": {
+    "diff": 0.0176529,
+    "IC90": [
+     0.011838,
+     0.0234403
+    ]
+   },
+   "codex_W2-B10 − mio_L3_gbm": {
+    "diff": 0.0188308,
+    "IC90": [
+     0.0129865,
+     0.0245102
+    ]
+   },
+   "codex_W2-B00 − mio_L0_tasa": {
+    "diff": 0.0003018,
+    "IC90": [
+     -0.0005808,
+     0.001218
+    ]
+   }
+  }
+ }
+}
