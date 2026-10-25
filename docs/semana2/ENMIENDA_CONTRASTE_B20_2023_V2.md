@@ -1,0 +1,19 @@
+# Enmienda exploratoria del contraste de B20
+
+Codex. Autorización directa del participante: «Dale, prepara la enmienda y entrena el contraste exploratorio de B20 con los criterios fijados antes. Mantén 2024 cerrado, sin promover modelos ni enviar a Kaggle.». Criterios registrados el 2026-10-24T17:27:52.732778+00:00, antes del entrenamiento real iniciado el 2026-10-24T17:35:36.647412+00:00.
+
+La versión 1 queda conservada con soporte fallido y mecanismo plausible, sin establecer. La versión 2 permite entrenar una sola comparación exploratoria aun con esa concentración conocida. No declara el soporte resuelto ni cambia la política común de promoción. Mantiene integridad, exclusión de folds y todos los umbrales predictivos previos.
+
+S comprime las relatividades de edificios mediante una pendiente entre cero y uno y su intercepto perfilado; L mantiene pendiente uno y ajusta solo nivel. B20 original es el ancla. Se conservan alpha = 1, siete efectos, T0, rho = 1, folds y todas las pérdidas. Autos y contenidos deben mantener tasas y predicciones exactas. No hay búsqueda de parámetros, recetas adicionales, factores por bandas o eliminación de siniestros.
+
+Los criterios conjuntos son: mejora global S−L de al menos 0,0005; S−B20 no negativa; al menos 4 de 5 folds no negativos frente a L y peor fold no inferior a −0,001; pendiente interior en al menos 4 de 5 y ninguna pendiente cero; reducción de al menos 20 % de la brecha de A/E entre bandas extremas originales, sin invertirla; pérdidas por segmento frente a B20 no inferiores a−0,001; ventaja no negativa después del diagnóstico de influencia en ambas comparaciones; cambio absoluto del total nominal de edificios no superior al 5 %. Los criterios se aplican con precisión completa.
+
+La concentración deja de ser veto previo únicamente para este ensayo. Sus fallos se conservan y siguen limitando la interpretación. Un incumplimiento predictivo produce rechazo exploratorio y conserva B20 original; incluso un cumplimiento total solo aportaría una señal para revisión, sin promoción. No se añaden intervalos o bootstrap: se informan los cinco folds, dispersión de pendientes e influencia conforme al diseño previo.
+
+Validación anidada: cada calibrador exterior excluye su fold de todos los ancestros; cada predicción interna excluye además su propio fold. C0, medianas, escalas, categorías y GLM comparten esos tres folds de ajuste. Antes de datos reales pasaron seis pruebas sintéticas del flujo completo. La preparación materializó únicamente periodos y siniestros de ocurrencia 2023. El origen de notificaciones multiaño se leyó con predicado Arrow de mercado/ramo/IDs aceptados/ocurrencia 2023 antes de materializar, sin convertir la tabla completa.
+
+Presupuesto ejecutado:10 GLM internos de edificios,60 curvas de reporte,60 constantes de frecuencia,60 marcas medias salidas de esas curvas,10 mezclas,5 pendientes y10 valores finales de intercepto. Se reutilizan cinco modelos exteriores; no hay ajustes nuevos de otros ramos. Los valores de intercepto de ambos brazos se cuentan por separado; las evaluaciones numéricas del perfil no son modelos adicionales. CPU local, dos hilos.
+
+La versión y el código previos a la reparación de escritura Parquet permanecen en `implementation_attempt1/`. La reparación ocurrió antes de cualquier ajuste real y solo sustituyó el motor de escritura de pandas por Arrow; no cambió datos, modelo o criterios. La validación2024/test queda cerrada. Sin promoción, catálogo nuevo, Kaggle, remoto, nuevas automatizaciones o delegación.
+
+[Contrato estructurado](../../registro/semana2_b20_enmienda_exploratoria_v2_20261024.json) y [resultado](CONTRASTE_EXPLORATORIO_B20_2023.md). La versión 1 y todos sus resultados adversos permanecen intactos. Investigación adaptativa sobre 2023, revisión propia de Codex; no confirmación independiente o revisión profesional humana.
