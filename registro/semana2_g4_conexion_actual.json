@@ -1,0 +1,83 @@
+{
+  "id": "S2-G4-CAPITAL-CONEXION2023-FINAL-v1-20261024",
+  "author": "Codex",
+  "utc": "2026-10-24T20:18:03.517932+00:00",
+  "status": "scope_capital_contract_and_input_connection_synthetic_verified_real_parameters_and_nested_objects_pending",
+  "path_base": "workspace_root",
+  "run": "Hackaton/Repositorio_IAA2026/privado/semana2/conexion_g4_2023/contrato_20261024_v1",
+  "prepared_attempt": 1,
+  "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/G4_CONTRATO_CAPITAL_Y_CONEXION_2023.md",
+  "documentation_sha256": "f1b234ec1118090be80a9111147e1883759812e0841889b8316a1c52f3a98219",
+  "forum_prior": "COD-S2-20261024-063",
+  "forum_result": "COD-S2-20261024-064",
+  "reference": "W2-B00",
+  "all_alternatives_preserved": true,
+  "contract_checks": 55,
+  "contract_failures": 0,
+  "synthetic_scope_connections": 15,
+  "real_scope_requests": 15,
+  "real_missing_capital_blocks_before_values": 15,
+  "capital_Decimal_reference_rows": 32,
+  "capital_reference_max_abs_error": 0.0,
+  "input_poison_invariance_cases": 2,
+  "whole_learned_object_invariance_claimed": false,
+  "real_row_values_decoded": 0,
+  "model_fits_including_synthetic": 0,
+  "C0_calls_including_synthetic": 0,
+  "new_inferences": 0,
+  "new_scores": 0,
+  "real_capital_parameters": 0,
+  "real_capital_application": false,
+  "real_parameter_producer_available": false,
+  "real_parameter_receipt_positive_flow_tested": false,
+  "G4_real_full_flow_validated": false,
+  "G4_real_gate_closed": false,
+  "G1_G2_resolved": false,
+  "model_input_ready": false,
+  "B00_or_selection_changed": false,
+  "2024_test_closed": true,
+  "old_diagnostics_or_suites_repeated": false,
+  "submission": false,
+  "night_window_reopened": false,
+  "professional_independent_validation": false,
+  "remaining": [
+    "Exact-scope capital parameter producer/population evidence and real parameters absent",
+    "Positive real parameter receipt flow not tested",
+    "Real nested learned objects/full-flow validation absent",
+    "G1 plausible,unestablished; G2 retained support failed,internal unknown"
+  ],
+  "next_step": "Implement and validate the scope parameter producer on synthetic data without learning from contest rows; real C0/models remain outside current scope.",
+  "plan": {
+    "path": "Hackaton/Repositorio_IAA2026/registro/semana2_g4_conexion_plan_v1.json",
+    "sha256": "7a324a0cf830f65b479359614daacb418df5c66228228a67481201055536c46d"
+  },
+  "capital_contract": {
+    "path": "Hackaton/Repositorio_IAA2026/registro/semana2_g4_capital_contrato_v1.json",
+    "sha256": "64ee6cef6559368aa4bc1a9037b1e3bdee41da00a1aae153761e49b0acc2d74d"
+  },
+  "connection_registry": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/conexion_g4_2023/contrato_20261024_v1/connection_registry.json",
+    "sha256": "6db31ed3e40a067abe10220fc7b53d43a8d6e1999861476ae085e156b3ebcee9"
+  },
+  "validation": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/conexion_g4_2023/contrato_20261024_v1/attempt1/validation.json",
+    "sha256": "8caf6599d110650434d87c5dcee1307e3e4319fd543911ac4fd32956a089edae"
+  },
+  "matrix": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/conexion_g4_2023/contrato_20261024_v1/gate_matrix_updated_G4.json",
+    "sha256": "1e53c03e2f130a268fccf03c0621f72a5e1a2bc9ac9ede499dff2f9b7346fa86"
+  },
+  "decisions": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/conexion_g4_2023/contrato_20261024_v1/decision_journal.json",
+    "sha256": "6e13443dd2541d3e61786e73f357abced7da0e364794b35d3a8c45d5d73faf22"
+  },
+  "subsequent_capital_producer": {
+    "index": "Hackaton/Repositorio_IAA2026/registro/semana2_g4_productor_capital_actual.json",
+    "utc": "2026-10-25T00:43:18.223240+00:00",
+    "status": "scope_capital_producer_receipt_integration_synthetic_verified_real_execution_and_nested_objects_pending",
+    "real_parameters_pending": true,
+    "new_model_fits": 0,
+    "new_C0_calls": 0,
+    "real_full_flow_validated": false
+  }
+}

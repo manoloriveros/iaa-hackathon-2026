@@ -1,0 +1,57 @@
+{
+  "id": "S2-ENVIO-MEZCLA50-ROBUSTA-20261024",
+  "author": "Codex",
+  "utc": "2026-10-24T17:58:48.973602+00:00",
+  "path_base": "workspace_root",
+  "authorization_literal": "Envía a Kaggle la siguiente entrega: mezcla50_robusta_2025.csv, te autorizo",
+  "competition": "iaa-ai-assisted-hackathon-2026-part-2",
+  "source": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_validacion_nocturna_20261023/robustez/mezcla50_robusta_2025.csv",
+  "source_sha256": "82082f3c59868a4361654bc1bca23796260a8c694135be5c3f499aec19e87f2f",
+  "rows": 209063,
+  "lineage": "Claude robust C2 component combined with the independent ML component at 50/50; verified and submitted by Codex.",
+  "preflight": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/mezcla50_robusta_20261024/preflight.json",
+  "transport": {
+    "source_sha256": "82082f3c59868a4361654bc1bca23796260a8c694135be5c3f499aec19e87f2f",
+    "snapshot_sha256": "82082f3c59868a4361654bc1bca23796260a8c694135be5c3f499aec19e87f2f",
+    "zip_sha256": "2f13ce019f249f355cc8650d90544a379b679c256f2772f7b2b3ca28cc13d1d2",
+    "member_name": "mezcla50_robusta_2025.csv",
+    "zip_bytes": 1662240,
+    "decompression_exact": true
+  },
+  "submission": {
+    "ref": 57602707,
+    "date": "2026-10-24T17:57:40.460Z",
+    "status": "COMPLETE",
+    "public_score": "0.15347",
+    "private_score": "",
+    "description": "50/50 blend with regularized C2 GBM and independent ML component, no trend. Emerging 2025 expected ultimate cost per policy period. ZIP contains unchanged mezcla50_robusta_2025.csv.",
+    "file_name": "mezcla50_robusta_2025.zip",
+    "team_name": "ManuelRodr�guez",
+    "submitted_by": "manoloriveros",
+    "error": ""
+  },
+  "remaining_submissions": 8,
+  "quota_source": "kaggle-cli",
+  "public_rank": 6,
+  "teams_at_check": 8,
+  "status_receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/mezcla50_robusta_20261024/status_final.txt",
+  "status_receipt_sha256": "f9a157628f5a57a5a9571873c54426bb6494dc75ea9152d9d7692425870455d2",
+  "previous_submission_ref": 57599788,
+  "previous_public_score": "0.15390",
+  "public_score_difference": "-0.00043",
+  "producer_reported_local_D2_2023": "0.129549",
+  "producer_reported_local_source": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/mezcla50_robusta_20261024/source_manifest.json",
+  "local_metric_scope": "Read from existing producer summary, not recomputed; 2024 labels not opened.",
+  "setup_attempts": [
+    "Read-only status initially failed inside network sandbox: connection failed: gaierror. Authorized network access succeeded.",
+    "Local preflight first tried .venv without cached Arrow, .venv-kaggle without pandas, and bundled Python without cached Arrow. No upload in these attempts. Resolved by .venv plus existing Preparación/.cache/parquet-reader; no installation."
+  ],
+  "scope": {
+    "new_training": 0,
+    "new_inference": 0,
+    "2024_labels_read": false,
+    "manual_final_selection_changed": false,
+    "common_model_promotion": false
+  },
+  "limitations": "Authorized public leaderboard trial. Lower public score than prior blend; does not change common selection policy, establish private performance or provide independent professional validation."
+}

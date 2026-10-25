@@ -1,0 +1,498 @@
+{
+  "id": "G4-GLM23-FINAL-DEPLOYMENT-v1-20261024",
+  "author": "Codex",
+  "utc": "2026-10-25T01:20:39.949252+00:00",
+  "forum_prior": "COD-S2-20261024-069",
+  "authorization_literal": "continua de manera automática hasta que finalices,no me preguntes más y tomas todas las decisiones que consideres necesarias",
+  "authorization_interpretation": "Complete own standard model and Kaggle-ready CSV,including needed full2023 capital/C0/GLM and2025inference.No2024policy learning/scoring,no account upload or final promotion.",
+  "scope": "deployment_all_emerging2023_for2025_not_validation",
+  "reference": "W2-B00",
+  "recipe": {
+    "id": "W2-B20",
+    "family": "TweedieRegressor",
+    "params": {
+      "power": 1.5,
+      "alpha": 1.0,
+      "fit_intercept": true,
+      "link": "log",
+      "solver": "lbfgs",
+      "max_iter": 2000,
+      "tol": 1e-06,
+      "warm_start": false
+    },
+    "features_by_line": {
+      "motor": {
+        "numeric": [
+          "x_new_business",
+          "x_ncb_years",
+          "x_vehicle_age",
+          "x_vehicle_value_group"
+        ],
+        "categorical": [
+          "x_driver_age_band",
+          "x_region",
+          "x_cover_type"
+        ],
+        "all": [
+          "x_new_business",
+          "x_ncb_years",
+          "x_vehicle_age",
+          "x_vehicle_value_group",
+          "x_driver_age_band",
+          "x_region",
+          "x_cover_type"
+        ]
+      },
+      "buildings": {
+        "numeric": [
+          "x_new_business",
+          "x_log_sum_insured",
+          "x_property_age",
+          "x_flood_zone",
+          "x_accidental_damage_cover"
+        ],
+        "categorical": [
+          "x_property_type",
+          "x_region"
+        ],
+        "all": [
+          "x_new_business",
+          "x_log_sum_insured",
+          "x_property_age",
+          "x_flood_zone",
+          "x_accidental_damage_cover",
+          "x_property_type",
+          "x_region"
+        ]
+      },
+      "contents": {
+        "numeric": [
+          "x_new_business",
+          "x_log_sum_insured",
+          "x_bedrooms",
+          "x_high_value_items",
+          "x_accidental_damage_cover"
+        ],
+        "categorical": [
+          "x_property_type",
+          "x_region"
+        ],
+        "all": [
+          "x_new_business",
+          "x_log_sum_insured",
+          "x_bedrooms",
+          "x_high_value_items",
+          "x_accidental_damage_cover",
+          "x_property_type",
+          "x_region"
+        ]
+      }
+    },
+    "numeric": "median keep_empty_features then StandardScaler, fit-only",
+    "categorical": "OneHotEncoder drop=first, min_frequency=50, max_categories=40, handle_unknown=ignore, fit-only"
+  },
+  "sources": {
+    "static_motor": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/inputs_2023/motor.parquet",
+      "sha256": "44937a7cbedee882e31892d165cc4528310fa188727932ac6821e8190de07003",
+      "columns": [
+        "market",
+        "line",
+        "row_id",
+        "year",
+        "is_test",
+        "fold",
+        "group_id",
+        "customer_id",
+        "address_id",
+        "policy_id",
+        "period_start",
+        "period_end",
+        "exposure",
+        "T0",
+        "x_new_business",
+        "x_ncb_years",
+        "x_vehicle_age",
+        "x_vehicle_value_group",
+        "x_driver_age_band",
+        "x_region"
+      ],
+      "kind": "prepared"
+    },
+    "coverage_motor": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/inputs_2023/motor.parquet",
+      "sha256": "f5e2f4c4513f64d1ebf0fe69d3add15c388363edcf24d70ff7ce8a221544a64d",
+      "columns": [
+        "market",
+        "line",
+        "row_id",
+        "year",
+        "is_test",
+        "fold",
+        "group_id",
+        "customer_id",
+        "address_id",
+        "policy_id",
+        "period_start",
+        "period_end",
+        "exposure",
+        "x_new_business",
+        "cover_type"
+      ],
+      "kind": "prepared"
+    },
+    "claims_motor": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/inputs_2023/claims_motor.parquet",
+      "sha256": "cd44b64cf551898c207d534b516216df258201b29c2b229ec60dce580e5266c9",
+      "columns": [
+        "market",
+        "line",
+        "row_id",
+        "claim_id",
+        "policy_id",
+        "year",
+        "fold",
+        "group_id",
+        "included_in_T0",
+        "loss_date",
+        "report_date",
+        "peril",
+        "T0_cents"
+      ],
+      "kind": "prepared"
+    },
+    "test_motor": {
+      "path": "Hackaton/Semana 2/Datos/emerging/test_motor.parquet",
+      "sha256": "108d5c68e9bab5ccd90ee5502bc3543aa515a5aa07fda44a3b227cf070a28aa5",
+      "columns": [
+        "row_id",
+        "policy_id",
+        "customer_id",
+        "address_id",
+        "period_start",
+        "period_end",
+        "exposure",
+        "new_business",
+        "ncb_years",
+        "vehicle_age",
+        "vehicle_value_group",
+        "driver_age_band",
+        "cover_type"
+      ],
+      "kind": "quotes2025"
+    },
+    "static_buildings": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/inputs_2023/buildings.parquet",
+      "sha256": "b7b4202cc3e305c2a304d8e7a6aa54ae4548853a0807d45da623c497f9c6f6fd",
+      "columns": [
+        "market",
+        "line",
+        "row_id",
+        "year",
+        "is_test",
+        "fold",
+        "group_id",
+        "customer_id",
+        "address_id",
+        "policy_id",
+        "period_start",
+        "period_end",
+        "exposure",
+        "T0",
+        "x_new_business",
+        "x_property_age",
+        "x_flood_zone",
+        "x_accidental_damage_cover",
+        "x_property_type",
+        "x_region"
+      ],
+      "kind": "prepared"
+    },
+    "coverage_buildings": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/inputs_2023/buildings.parquet",
+      "sha256": "04b1c9e3b2ba3505149e0afe8ec0d485a5024678f39082976cf392079e52c095",
+      "columns": [
+        "market",
+        "line",
+        "row_id",
+        "year",
+        "is_test",
+        "fold",
+        "group_id",
+        "customer_id",
+        "address_id",
+        "policy_id",
+        "period_start",
+        "period_end",
+        "exposure",
+        "x_new_business",
+        "accidental_damage_cover"
+      ],
+      "kind": "prepared"
+    },
+    "claims_buildings": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/inputs_2023/claims_buildings.parquet",
+      "sha256": "a9b4c452dbc848e93ebe95cc27dee0858447cd5b6c186a1aaa2a2a35723e3be8",
+      "columns": [
+        "market",
+        "line",
+        "row_id",
+        "claim_id",
+        "policy_id",
+        "year",
+        "fold",
+        "group_id",
+        "included_in_T0",
+        "loss_date",
+        "report_date",
+        "peril",
+        "T0_cents"
+      ],
+      "kind": "prepared"
+    },
+    "raw_buildings": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/inputs_2023/raw_buildings.parquet",
+      "sha256": "bd0f0fc85c45fd876c6c844d25fc0316e8761769fb6b742a1546d0fc726586b6",
+      "columns": [
+        "row_id",
+        "period_start",
+        "period_end",
+        "sum_insured",
+        "written_premium"
+      ],
+      "kind": "raw_periods"
+    },
+    "test_buildings": {
+      "path": "Hackaton/Semana 2/Datos/emerging/test_buildings.parquet",
+      "sha256": "21f91aaa66a1b9efd216ad0e04ff12a507dbeb721084330d9b9f06c99edd0ca6",
+      "columns": [
+        "row_id",
+        "policy_id",
+        "customer_id",
+        "address_id",
+        "period_start",
+        "period_end",
+        "exposure",
+        "new_business",
+        "sum_insured",
+        "written_premium",
+        "accidental_damage_cover"
+      ],
+      "kind": "quotes2025"
+    },
+    "static_contents": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/inputs_2023/contents.parquet",
+      "sha256": "5ebb2bfe03ef15066fa382938bbbfbb93a335d187c8ae8a1880e26997930dbc0",
+      "columns": [
+        "market",
+        "line",
+        "row_id",
+        "year",
+        "is_test",
+        "fold",
+        "group_id",
+        "customer_id",
+        "address_id",
+        "policy_id",
+        "period_start",
+        "period_end",
+        "exposure",
+        "T0",
+        "x_new_business",
+        "x_bedrooms",
+        "x_high_value_items",
+        "x_accidental_damage_cover",
+        "x_property_type",
+        "x_region"
+      ],
+      "kind": "prepared"
+    },
+    "coverage_contents": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/inputs_2023/contents.parquet",
+      "sha256": "ebc1b1be167a9d879bd53b21cd71faac29190d7444dc311a38a5119c86dcc516",
+      "columns": [
+        "market",
+        "line",
+        "row_id",
+        "year",
+        "is_test",
+        "fold",
+        "group_id",
+        "customer_id",
+        "address_id",
+        "policy_id",
+        "period_start",
+        "period_end",
+        "exposure",
+        "x_new_business",
+        "accidental_damage_cover"
+      ],
+      "kind": "prepared"
+    },
+    "claims_contents": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/inputs_2023/claims_contents.parquet",
+      "sha256": "af187658e49c671a328759090552ea1d31d8673355e07c46e5391e118ac55070",
+      "columns": [
+        "market",
+        "line",
+        "row_id",
+        "claim_id",
+        "policy_id",
+        "year",
+        "fold",
+        "group_id",
+        "included_in_T0",
+        "loss_date",
+        "report_date",
+        "peril",
+        "T0_cents"
+      ],
+      "kind": "prepared"
+    },
+    "raw_contents": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/inputs_2023/raw_contents.parquet",
+      "sha256": "0e00d59bfa1af5c8bd82970ff9c7aedf6a7b22e843dbef7b36208dd35e4d1463",
+      "columns": [
+        "row_id",
+        "period_start",
+        "period_end",
+        "sum_insured",
+        "written_premium"
+      ],
+      "kind": "raw_periods"
+    },
+    "test_contents": {
+      "path": "Hackaton/Semana 2/Datos/emerging/test_contents.parquet",
+      "sha256": "af5ef2553e35a2d563ca091b173500daac55acc4969d1d3a96fa6b4ec3c6a012",
+      "columns": [
+        "row_id",
+        "policy_id",
+        "customer_id",
+        "address_id",
+        "period_start",
+        "period_end",
+        "exposure",
+        "new_business",
+        "sum_insured",
+        "written_premium",
+        "accidental_damage_cover",
+        "high_value_items"
+      ],
+      "kind": "quotes2025"
+    },
+    "addresses": {
+      "path": "Hackaton/Semana 2/Datos/emerging/addresses.parquet",
+      "sha256": "4e9bf9d2a1777896e84fd4ee471096ff075aaefefd544f91b731324b25425632",
+      "columns": [
+        "address_id",
+        "region",
+        "property_type",
+        "year_built",
+        "flood_zone",
+        "bedrooms"
+      ],
+      "kind": "address_master"
+    },
+    "sample": {
+      "path": "Hackaton/Semana 2/Datos/emerging/sample_submission.parquet",
+      "sha256": "160fc59043f1012337605c8d8446c0efbf81458e046cf02df9186d6f909d59ef",
+      "columns": [
+        "row_id"
+      ],
+      "kind": "sample"
+    }
+  },
+  "frozen_code": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelo_final_g4_2023.py",
+      "sha256": "87619d042e9ad4b18d9b57e574c7a93fa21d1a621bc7c70d34b2e71173a76e08",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/modelo_final_g4_2023/final_20261024_v1/preregistered_sources/modelo_final_g4_2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/c0_estricto2023.py",
+      "sha256": "fe7e3fa80b605eaf1f672010c34e9b4e83b25231cfcdeabd7c6879d076866d5c",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/modelo_final_g4_2023/final_20261024_v1/preregistered_sources/c0_estricto2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/ambitos_c0_b20_2023.py",
+      "sha256": "e16ae2e2f6e83064612f09f86344ea758c013a91c6ecec08068e7b8c41937933",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/modelo_final_g4_2023/final_20261024_v1/preregistered_sources/ambitos_c0_b20_2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/entradas_g4_2023.py",
+      "sha256": "885c4770433ddb49242a6381c72ccb7ec10e38822f468e5a86963982aee81069",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/modelo_final_g4_2023/final_20261024_v1/preregistered_sources/entradas_g4_2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/preparar_base.py",
+      "sha256": "aaa0be38f70386e85351b6c4670151cffb95e6b76e65b17cd24c8860ba228d35",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/modelo_final_g4_2023/final_20261024_v1/preregistered_sources/preparar_base.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/probar_modelo_final_g4_2023.py",
+      "sha256": "01b90bc9263959496fa5e8e65b61b6a9385b524a21f7c82ef24aae5e3cae9585",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/modelo_final_g4_2023/final_20261024_v1/preregistered_sources/probar_modelo_final_g4_2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/entrenar_y_predecir_final_g4_2023.py",
+      "sha256": "53f650052b4ab1c2f9e93f9c878c6fbec0ddbc471832d4f1945ba19aabd0ca20",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/modelo_final_g4_2023/final_20261024_v1/preregistered_sources/entrenar_y_predecir_final_g4_2023.py"
+    }
+  ],
+  "target": "Inherited observed netT0; responseT0/C0,weights sqrt(C0),rho1,tail0;future prediction=nominal reconciled2025exposure*rate.",
+  "full_scope": "All eligible emerging2023rows,no heldout exclusions. Distinct final deployment object,never an outer-fold artifact renamed.",
+  "perils": {
+    "motor": [
+      "bodily_injury",
+      "glass_hail",
+      "own_damage",
+      "theft",
+      "third_party_prop"
+    ],
+    "buildings": [
+      "accidental_damage",
+      "escape_of_water",
+      "fire",
+      "flood",
+      "storm",
+      "subsidence"
+    ],
+    "contents": [
+      "accidental_damage",
+      "escape_of_water",
+      "flood",
+      "theft"
+    ]
+  },
+  "capital_thresholds": {
+    "buildings": 10000000.0,
+    "contents": 1000000.0
+  },
+  "exposure": "Existing deterministic inclusive days/365 rounded4; only declared days-unit/basis360 corrections.",
+  "hypothesis": "Standard main-effects GLM already specified in B20 can be fitted in the final all2023scope and replayed without adjustments to generate own2025CSV; no new calibration,climate,trend or ML family.",
+  "criteria": [
+    "synthetic full chain3branches passes before real fitting; rejects non2023training and outer-capital reuse",
+    "source/hash/column and date-footer guards;no quote/master/sample decoders until all3real GLMs fitted",
+    "T0/claim integer-cent reconciliation;C0 positive;calendar integration check<=1e-12",
+    "GLM convergence maxiter2000,tol1e-6 and penalized gradient<=1e-4",
+    "manual exp(Xbeta+intercept) and Tweedie weight identity rtol1e-12/atol1e-9",
+    "same trained state before/after2025inference;disk replay all209063rows exact with all fits blocked",
+    "CSV209063uniqueIDs exact official sample order,finitepositive values,roundtrip exact;no padding/clipping"
+  ],
+  "budgets": {
+    "synthetic_GLM_fits": 3,
+    "synthetic_reporting_fits": 15,
+    "real_GLM_fits": 3,
+    "real_reporting_fits": 15,
+    "real_frequency_constants": 15
+  },
+  "validation_policy": "Reuse previous2023OOF evidence;no repeat fold training/bootstrap.No2024opening.Training diagnostics do not measure generalization.",
+  "no_adaptive_selection": true,
+  "no_calibration_slope": true,
+  "all_alternatives_preserved": true,
+  "promotion": false,
+  "manual_final_selection": false,
+  "submission_sent": false,
+  "external_actions": "None;end at verified ownCSV locally.",
+  "professional_independent_validation": false
+}

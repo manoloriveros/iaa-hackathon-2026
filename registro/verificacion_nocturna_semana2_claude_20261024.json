@@ -1,0 +1,329 @@
+{
+ "id": "S2-VERNOC-CLAUDE-20261024",
+ "tipo": "verificacion_independiente_de_modelado",
+ "registrado_por": "Claude (Cowork), sesión del Proyecto IAA (la misma de CLA-S2-20261023-001 a 004)",
+ "canal": "Conversación del participante con Claude (Cowork), 24 de octubre de 2026 (23 de octubre por la noche en Bogotá)",
+ "mensaje_literal": "continua (el participante eligió después 'Verificar la tanda nocturna de Codex')",
+ "path_base": "workspace_root",
+ "alcance": "Corridas congeladas de Codex dev5 (B12/B13), dev6 (B14/B15), dev7 (B16–B18), cola (T10F/T10R) y mecanismo (R075/R125/L1), más revision_filas (56 capitales): 41 archivos con huella igual a sus manifiestos; recálculo con código propio de lo publicado en COD-S2-20261023-017, COD-S2-20261024-019, 021, 024 y 026 y en sus report.json; replay por reajuste de los 30 GLM de B13 y B14. Sin precios nuevos, sin 2024 ni test, sin modificar nada de Codex. Cubre las unidades 016 a 033 (la ampliación añadió mezcla, soporte y coberturas: 17 archivos más con huella); la apertura de 2024 de la sesión nocturna de Claude queda fuera",
+ "catalogo": {
+  "controles": 37,
+  "numeracion": "VN01–VN17 (tanda 016–027), VN18–VN21 (ampliación 028–033), VN22–VN29 (ampliación 035–039) y VN30–VN37 (ampliación B20-ATTR a B20-SYNTH)",
+  "por_resultado": {
+   "pasa": 29,
+   "informativo": 5,
+   "limite": 3
+  },
+  "hallazgos": 0,
+  "corrida_utc": "2026-10-24T01:39:04+00:00",
+  "segundos": 40,
+  "corrida_utc_ampliacion2": "2026-10-24T02:58:00+00:00",
+  "segundos_ampliacion2": 68,
+  "corrida_utc_ampliacion3": "2026-10-24T17:11:05+00:00",
+  "segundos_ampliacion3": 69
+ },
+ "controles": [
+  {
+   "id": "VN01",
+   "area": "Fuentes",
+   "resultado": "pasa",
+   "titulo": "Huellas de las corridas copiadas (OOF, informes, planes, código) frente a los manifiestos de Codex"
+  },
+  {
+   "id": "VN02",
+   "area": "Fuentes",
+   "resultado": "pasa",
+   "titulo": "Los OOF de dev5, dev6, dev7, cola y mecanismo tienen las 50.094 filas de 2023 con T0, reserva, exposición, fold, grupo y C0 iguales a la base y a dev3; x_new_business igual a las pólizas"
+  },
+  {
+   "id": "VN03",
+   "area": "Fuentes",
+   "resultado": "pasa",
+   "titulo": "Identidades por fila: prediction = tasa × C0 (o × exposición efectiva), nominal = exposición × tasa, unit_deviance = fórmula Tweedie 1,5 sobre el objetivo del escenario"
+  },
+  {
+   "id": "VN04",
+   "area": "Recetas",
+   "resultado": "pasa",
+   "titulo": "D², predicho, A/E y segmentos de nuevo negocio recalculados para los 49 pares corrida-modelo de dev5, dev6 y dev7 frente a report.json y a las tablas del foro (017, 019, 021)"
+  },
+  {
+   "id": "VN05",
+   "area": "Recetas",
+   "resultado": "pasa",
+   "titulo": "B00 (15 constantes por ramo y fold) y B12 (30 por ramo, negocio y fold) reconstruidos con la fórmula declarada sum(T0/√e)/sum(√e) sobre los folds de ajuste y el enlace C0 del fold: predicciones OOF idénticas"
+  },
+  {
+   "id": "VN06",
+   "area": "Capital",
+   "resultado": "pasa",
+   "titulo": "Las 56 filas de capital de 2023 (26 edificios, 30 contenidos) son las de CAPS2-01, tienen T0 = 0 y cambian entre −62,36 % y +154,09 % de B13 a B14, con un efecto del reajuste de como mucho 0,157 % y 0,272 % en escala log en esas filas; autos idéntico; el resto del hogar se mueve por los coeficientes reajustados"
+  },
+  {
+   "id": "VN07",
+   "area": "Credibilidad",
+   "resultado": "pasa",
+   "titulo": "B15 = B14 × c solo en el nuevo negocio: c constante dentro de cada ramo y fold e igual al c del informe de dev6; renovación idéntica; rangos de c frente al c de Claude con todo 2023"
+  },
+  {
+   "id": "VN08",
+   "area": "Ablaciones",
+   "resultado": "pasa",
+   "titulo": "B16, B17 y B18 cambian solo los autos nuevos (hogar y renovaciones idénticos a B14), con un factor constante por fold; c_f × c_s = c de B15; rangos 0,932–0,977 y 0,713–0,803 como en 021"
+  },
+  {
+   "id": "VN09",
+   "area": "Ablaciones",
+   "resultado": "pasa",
+   "titulo": "Descomposición de la pérdida de autos nuevos B15 frente a B14: 265 filas positivas, 2.355 ceros, saldo, fold 0 y los cinco grupos más perjudicados, como en 021"
+  },
+  {
+   "id": "VN10",
+   "area": "Influencia",
+   "resultado": "pasa",
+   "titulo": "Once pares del foro (017, 019, 021): delta D², intervalo exploratorio al 95 % con 2.000 remuestreos de componentes (semilla 2026102302) y delta tras retirar 31 grupos favorables, replicados"
+  },
+  {
+   "id": "VN11",
+   "area": "Cola",
+   "resultado": "pasa",
+   "titulo": "Sensibilidad de cola (024): T10R es la identidad tasa × Z y e / Z con predicción y D² idénticos; T10F y los nominales condicionados de 2023 coinciden con la tabla publicada"
+  },
+  {
+   "id": "VN12",
+   "area": "Mecanismo",
+   "resultado": "pasa",
+   "titulo": "Reservas y reporte tardío (026): T_s = T0 + (b − 1) × reserva exacto, tabla de nueve filas (respuesta, D² bajo su objetivo, A/E, nominal y cambio) y par L1/B14 con remuestreo replicados; reserva de 2023 1.427.914,85 CU (9,335 %) frente al 17,8 % de los dos años"
+  },
+  {
+   "id": "VN13",
+   "area": "Replay",
+   "resultado": "pasa",
+   "titulo": "Reajuste independiente de B13 y B14 (GLM Tweedie 1,5 log sin penalización, seis variables por ramo, imputación y OHE solo con el fold de ajuste, enlace C0 del fold): predicciones OOF reproducidas; inputs de Codex iguales a F0"
+  },
+  {
+   "id": "VN14",
+   "area": "Estabilidad",
+   "resultado": "informativo",
+   "titulo": "La relatividad creíble es estable entre folds (la fija el desarrollado) pero el factor c = creíble / emergente oscila con el fold en hogar porque la relatividad emergente depende de pocos siniestros de nuevo negocio"
+  },
+  {
+   "id": "VN15",
+   "area": "Estabilidad",
+   "resultado": "informativo",
+   "titulo": "D² por fold de B00, B08, B12, B13 y B14–B18: la dispersión entre folds es mayor que las diferencias entre recetas; el orden cambia de un fold a otro"
+  },
+  {
+   "id": "VN16",
+   "area": "Lectura",
+   "resultado": "informativo",
+   "titulo": "Ninguna receta nocturna acredita mejora: los intervalos exploratorios cruzan cero o las ventajas se invierten al retirar 31 grupos (replicado en VN10); el mayor D² global puntual entre las 19 recetas sigue siendo B10, luego B08"
+  },
+  {
+   "id": "VN17",
+   "area": "Alcance",
+   "resultado": "limite",
+   "titulo": "Lo que esta verificación no cubre y lo que sí; revisión de IA con código propio sobre copias con huella, no revisión profesional independiente"
+  },
+  {
+   "id": "VN18",
+   "area": "Ampliación",
+   "resultado": "pasa",
+   "titulo": "Mezcla de C0 por peril y negocio (028): tabla de seis variantes (D², A/E, nominal, cambio), D² de nuevo negocio de B14, reducción máxima de exposición efectiva en autos nuevos (4,47 %) y los doce pares con remuestreo"
+  },
+  {
+   "id": "VN19",
+   "area": "Ampliación",
+   "resultado": "pasa",
+   "titulo": "Escasez del nuevo negocio (028 y 031): siniestros por celda de ajuste y por peril, siniestros únicos de 2023 por ramo y negocio (4.567), y las cinco celdas de frecuencia cero (incendio en edificios nuevos) recalculados desde la asignación canónica"
+  },
+  {
+   "id": "VN20",
+   "area": "Ampliación",
+   "resultado": "pasa",
+   "titulo": "Coberturas (033): seis siniestros de edificios (3.175,58 CU) y 24 de contenidos (25.869,48 CU) de daño accidental sin bandera, cerrados y con coste; ninguno de autos fuera de las máscaras; denominadores nominales por celda iguales a la tabla de Codex; conciliación con VE42"
+  },
+  {
+   "id": "VN21",
+   "area": "Ampliación",
+   "resultado": "pasa",
+   "titulo": "Soporte de calendario (031): exposición madura a 540 días por ramo, negocio y fold de ajuste (52,33 % renovación, 26,54–27,33 % nuevo negocio) y el perfil de calendario (periodos, grupos, exposición, días cubiertos, siniestros) recalculados desde las pólizas"
+  }
+ ],
+ "resultados_clave": [
+  "88 cifras de las tablas del foro y 49 resúmenes de report.json reproducidos (D² a 1e-9)",
+  "B00 y B12 reconstruidos exactamente con el enlace C0 del fold (links_2023/{ramo}_fold{k}); con el C0 del OOF la reconstrucción falla por 1,4 %",
+  "56 filas de capital de 2023 = las de CAPS2-01, T0 = 0, cambio −62,36 % a +154,09 %, efecto del reajuste ≤ 0,157 % y 0,271 % (020/021 escriben 0,272 %)",
+  "B15 = B14 × c por ramo y fold solo en nuevo negocio; c_f × c_s = c; B18 0,460–0,569; descomposición de autos nuevos exacta",
+  "once pares con remuestreo (semilla 2026102302, 2.000 sorteos, 31 grupos) replicados con diferencia máxima 6e-14",
+  "T10R identidad exacta; T10F y nominales de 024; T_s = T0 + (b − 1) × reserva y tabla de 026; L1/B14 replicado",
+  "replay de 30 GLM: diferencia relativa máxima 9,5e-9; inputs iguales a F0; coeficiente de negocio de autos 0,714–0,911",
+  "reserva 2023 1.427.914,85 CU (9,335 %) frente a 4.995.797,64 CU (17,8 %) de los dos años: ambas correctas"
+ ],
+ "observaciones": [
+  "la relatividad creíble es estable entre folds (1,142–1,173 / 1,106–1,121 / 1,060–1,074) e igual a la de CLA-S2-20261023-003; c oscila en hogar (edificios 0,684–1,348, contenidos 0,897–1,383, autos 0,681–0,777) porque hay 40 y 36 siniestros de nuevo negocio; llevar a 2025 el nivel creíble, no un c por fold",
+  "el D² por fold va de 0,036 a 0,097 en B00 y de 0,069 a 0,095 en B13; B13 > B00 en 4 de 5 folds, B08 > B13 en 3 de 5",
+  "el mayor D² global puntual entre las 19 recetas es B10 (0,0942), luego B08 (0,0932); 017 cita a B08"
+ ],
+ "archivos": {
+  "carpeta": "Hackaton/Semana 2/Claude/verificacion_nocturna_20261024",
+  "sha256": {
+   "verificar_nocturna.py": "da994c8b5f791ada46e02e4103629006d5399ffb0af82536cf5e3403df142c24",
+   "figuras_nocturna.py": "decefb398df8003163f7c5c228b9d327e756b4b44f617be1f7b2d606befff610",
+   "evidencia_nocturna.json": "4231c9e97710140889b52280d0f472284a243e418d816719ab09d9d5b565bff2",
+   "tablas/controles.csv": "d3fe991a12e307fd4b29052178caa245bb5077831a71c5fc2303d9d142d82afc",
+   "tablas/recetas_recalculadas.csv": "9fdb3aa73f1c622a5dcf3d886676b01e61c0a2040e1a105369bee0ac0816808c",
+   "tablas/pares_recalculados.csv": "ce67fbe0565d9dd74ddbb4b6b9b55b29cc87dd14f7653c06b5c6f3d68d24738c",
+   "INFORME.md": "9d1a4a85b8bba6c5af5075994501f99b1b7ca838dc2087af18d2b38119aaf575",
+   "aporte_CLA-S2-20261024-007.md": "6237f8b7e0e0741a1a2d3555d085185638fdd79a11aa587bb4d7487f91e7b9f9",
+   "aporte_CLA-S2-20261024-008.md": "2b3355e3686b4655ba89fe159362323f14032948b0272bea64e1d517b0f2b174",
+   "cifras_informe.json": "36e7632bc1d1b5cb4895726ba1b2854b6b23d0167cd050569b497ec7b9707a42",
+   "verificar_informe.py": "25013127cc84c4b652f6d48a8a251fa01e900596a9dcceb16915635b1c540dfe",
+   "verificacion_informe.json": "99026a333379b80ed8888b084afd7cb687cda0c53f26821a9ae73b2b950d9259",
+   "completar_manifiesto.py": "6401a8ae90cace4239e08ca37f563b7788bbd0f76fa989d14d29601c1ffad129",
+   "manifiesto.json": "d9810d6da303939a7c891aaaa2d9d90a1309bfafe1ca3f1f7abbbc62ba5f3890"
+  },
+  "figuras_sha256_sin_caBX": {
+   "fig1_concordancia.png": "09a2b4adf01ad5727738988d8f0b67b4f037608ddecfa52d4ff475958ecd20a6",
+   "fig2_credibilidad.png": "e85b6412ee9810b7f6c466116b4342f0e6f0af0ce524fced04f2bbfe75789f9d",
+   "fig3_folds.png": "55762997b41905763345fc535295312f2b0e9e6c42e8f227b100145fdbe7c7de"
+  },
+  "verificacion": "323 cifras del informe y de los dos aportes comprobadas contra la evidencia, 0 fallos (también en el equipo del participante)"
+ },
+ "foro": {
+  "id": "CLA-S2-20261024-007",
+  "utc": "2026-10-24T01:26:12+00:00",
+  "foro_sha256": "120cc87e3db84e3b3342ed050c1f94d67001c369001f0b3ae5ba554e6b73c57b",
+  "previo_sha256": "09fad812e1592da76164c629e6401951600f78aeff226a151b039bb9eeeefb57",
+  "corte_de_lectura": "COD-S2-20261024-B20-PRE (01:38 UTC), CLA-S2-20261024-006 y la incidencia COD-S2-20261024-K752144",
+  "nota_ids": "CLA-S2-20261024-005 y 006 son de la sesión nocturna de Claude (otra sesión del participante, carpeta validacion_nocturna_20261023); por eso este aporte es el 007",
+  "ampliacion": "CLA-S2-20261024-008"
+ },
+ "no_cubierto": [
+  "auxiliares Poisson/Gamma de dev6 (θ, SE, τ, Z tomados del informe)",
+  "curvas de reporte y pesos de C0",
+  "B01–B11 y LightGBM",
+  "unidades 028–033",
+  "apertura de 2024 de la sesión nocturna de Claude",
+  "revisión profesional independiente"
+ ],
+ "siguiente_accion": [
+  "si NB-CRED-01 se lleva a 2025, aplicar el nivel creíble (relatividad) y no un c por fold; recalcular c con todo el emergente disponible",
+  "citar B10 como mayor D² puntual cuando se hable del máximo",
+  "coordinar los identificadores de aportes entre las dos sesiones de Claude antes de escribir en el foro"
+ ],
+ "estado": "cerrado; ampliado tres veces (028–033, 035–039 y B20-ATTR a B20-SYNTH)",
+ "ampliacion_028_033": {
+  "utc": "2026-10-24T01:44:00+00:00",
+  "foro": "CLA-S2-20261024-008 (01:43:56 UTC; FORO sha 742645b4…13fb)",
+  "resultados": [
+   "VN18 mezcla de C0: tabla de seis variantes, D² de nuevo negocio de B14 (−0,010191 / −0,011551), reducción máxima de exposición efectiva en autos nuevos 4,47 %, doce pares con remuestreo iguales",
+   "VN19 escasez: siniestros por celda de ajuste y por peril, 4.567 únicos de 2023 (479/40, 454/37, 3.242/315), cinco celdas cero = incendio en edificios nuevos (ninguno en 2023)",
+   "VN20 coberturas: 6 (3.175,58 CU) y 24 (25.869,48 CU) daños accidentales sin bandera cerrados con coste; autos ninguno fuera; denominadores nominales exactos; VE42 (23 y 47) concilia",
+   "VN21 calendario: madurez a 540 días 52,33 % renovación (191/365) y 26,54–27,33 % nuevo negocio; perfil de calendario exacto; 150 celdas y 1.200 puntos"
+  ],
+  "no_cubierto": [
+   "distancias entre calendarios (histogramas no copiados)",
+   "constantes de mezcla y medias ponderadas de 028",
+   "B19, B20 y la incidencia de Kaggle 752144 (posteriores)"
+  ]
+ },
+ "ampliacion_035_039": {
+  "utc": "2026-10-24T03:05:00+00:00",
+  "foro": "CLA-S2-20261024-011 (03:02:13 UTC; FORO sha bfbbb462…dafb0ea)",
+  "unidades": [
+   "COD-S2-20261024-034/035 (B19)",
+   "COD-S2-20261024-B20-PRE/B20-RESULT (B20 ridge)",
+   "COD-S2-20261024-036/037 (estabilidad e influencia de B19)",
+   "COD-S2-20261024-038/039 (trazabilidad de siniestros de B19)"
+  ],
+  "corridas": [
+   "dev8_20261024T013001Z_e8a35214",
+   "ridge20_20261024_v1",
+   "estabilidad_b19_20261024T014815Z_9b2b1803",
+   "traza_b19_20261024T021036Z_fe5038de"
+  ],
+  "archivos_con_huella_igual": "58 de 58",
+  "controles_nuevos": "VN22–VN29 (8); total 29: 23 pasan, 4 informativos, 2 límites, 0 hallazgos",
+  "cifras_publicadas_comparadas": 213,
+  "cifras_publicadas_discrepantes": 0,
+  "cifras_de_los_documentos_verificadas": 604,
+  "resultados": [
+   "VN23 métricas: D² B00 0,068582, B14 0,086710, B19 0,082470, B20 0,089382; segmentos por ramo, negocio, cobertura y fold iguales a report.json, segments.json, 035, B20-PRE, B20-RESULT y los dos informes (71 cifras)",
+   "VN24 pares: B19/B14 −0,004240 [−0,009969; +0,000507] −0,007145; B19/B00 +0,013888; B20/B19 +0,006912 [+0,001420; +0,013511] −0,003869; B20/B14 +0,002672 [−0,003673; +0,008683] −0,006513; B20/B00 +0,020800; huella de sorteos igual a la de Codex, distribuciones iguales a 5e-14",
+   "VN25 replay de 45 GLM (B19, B20, B14): diferencia relativa máxima 9,5e-9; 205 coeficientes de B19 en escala original a 3e-10; B19 mejora el ajuste de B14 en 15/15 celdas; B20 baja la norma cuadrada en 15/15; razones AD edificios 0,795–1,388 (fold 3 < 1), TPO autos 0,567–0,857",
+   "VN26 estabilidad 037: edificios 12.107 componentes, delta −0,012743, cinco incendios 1.237.635,60 CU = 31,5 %; autos nuevos 2.427, delta −0,021777, lesiones corporales 136.767,16 CU = 56,1 % (+0,009766 segmento, −0,002430 global); Hessianos 80,9–165,1, leverage 0,461/0,293, influencia local de 128.084 componentes a 4e-11; cambios −0,245 a −0,223 (TPO) y −0,156 a −0,100 (AD, incendio 286.093)",
+   "VN27 traza 039: misma selección (12 componentes, 20 periodos, 12 siniestros); edificios 1.325.514,09 pagado / 74.089,21 reserva / 1.399.603,30 T0; autos 201.475,05 / 14.954,51 / 216.429,56; total 1.616.032,86 con 89.043,72 de reserva (5,51 %), 10 cerrados y 2 abiertos; demoras 1–349 días, 2 reportes en 2024; estrés ±22.260,93 (1,38 %)",
+   "VN28 lectura: B20 recupera lo de B19 más que mejorar sobre B14 (3 de 5 folds; tres contrastes invertidos con 31 grupos; B10 0,0942 sigue siendo el mayor punto de 21 recetas); nivel A/E 1,0113 (1,0296 edificios, 1,0353 contenidos), nominal −2,008 % frente a B19"
+  ],
+  "no_cubierto": [
+   "B20-ATTR, 040–044, B20-BANDS y B20-SYNTH (posteriores al corte 039)",
+   "modelos serializados de Codex (convergencia comprobada por replay)",
+   "sus comprobadores internos y adversos",
+   "2024 y test: cerrados"
+  ],
+  "archivos_nuevos": [
+   "aporte_CLA-S2-20261024-011.md",
+   "fig4_b19_b20.png",
+   "fig5_influencia.png",
+   "tablas/recetas_b19_b20.csv",
+   "tablas/pares_b19_b20.csv",
+   "tablas/remuestreo_b19_b20.csv",
+   "tablas/retiros_037.csv",
+   "tablas/hessianos_b19.csv",
+   "tablas/influencia_local_destacados.csv",
+   "recibo_foro_011.json"
+  ],
+  "manifiesto": "164 entradas, 4 scripts, 17 salidas, 6 documentos"
+ },
+ "ampliacion_b20_attr_synth": {
+  "utc": "2026-10-24T17:20:00+00:00",
+  "foro": "CLA-S2-20261024-021 (17:15:09 UTC; FORO sha 0ed8bf47…1303f8); numerado 021 porque 012 a 020 ya estaban tomados por la otra sesión de Claude",
+  "unidades": [
+   "COD-S2-20261024-B20-ATTR-PRE/RESULT (atribución por grupos y segmentos)",
+   "COD-S2-20261024-040/041/042 (contracción y nivel)",
+   "COD-S2-20261024-B20-BANDS-PRE/RESULT (calibración por bandas)",
+   "COD-S2-20261024-043/044 (incendio fijado y AD por fold)",
+   "COD-S2-20261024-B20-SYNTH-PRE/RESULT (síntesis, 02:55 UTC)"
+  ],
+  "corridas": [
+   "b20_atribucion_20261024_v1a",
+   "contraccion_b20_20261024T023428Z_7f3565db",
+   "b20_bandas_calibracion_20261024_v1",
+   "incendio_AD_b20_20261024T025027Z_87782526",
+   "b20_sintesis_20261024_v1 (33 fuentes con huella)"
+  ],
+  "archivos_con_huella_igual": "70 de 70",
+  "controles_nuevos": "VN30–VN37 (8); total 37: 29 pasan, 5 informativos, 3 límites, 0 hallazgos",
+  "cifras_publicadas_comparadas": 336,
+  "cifras_publicadas_discrepantes": 0,
+  "cifras_de_los_documentos_verificadas": 953,
+  "metodo": "Diagnósticos rehechos enteros desde los OOF congelados (dev7 y dev8/ridge) y desde mis réplicas de B19 y B20 (VN25): ganancia por fila = desviancia de la referencia menos la de B20; grupos por componente; descomposición de log-tasa con mis matrices de diseño; quintiles sobre la tasa de ajuste de mis 15 modelos B20; exclusión del incendio con nula recalculada",
+  "resultados": [
+   "VN31 atribución: mismos 31 grupos favorables de cada referencia; frente a B14 +14.803,66 total, +48.637,02 en los 31, −33.833,36 en el resto (−0,006106 con la nula original, −0,006513 recalculada); 62 periodos, 31 positivos, 10,93 % del coste en el 0,1004 % de los componentes; prefijos que invierten el signo 3 (B14), 10 (B19) y 13 (B00); segmentos, retiro cruzado y solapamientos 21/5/4 a 1e-9; descomposición log B20 − B19 bloque a bloque en 50.094 filas",
+   "VN32 contracción: norma L2 estandarizada −28,7 % a −61,4 % en 15 pares, 33 coordenadas crecen en 14; razones condicionales de B20 del replay; niveles 15.436.941,83 → 15.126.408,70 CU (−2,01 %), doce grupos −1,64 %, cinco incendios −5,41 %, cinco autos nuevos +12,10 %; tres casos al centavo (90,25 → 95,07 con log +0,052047; 168,39 → 244,78 con ganancia 13.724,81; 340,33 → 334,29 con −557,25); veinte periodos 14.620,81 de 38.299,18 (38,2 %)",
+   "VN33 bandas: cortes iguales a 1e-7 y ninguna de las 50.094 filas en otra banda; A/E B20 edificios 1,966/1,563/0,856/1,198/0,714, autos 1,082/0,861/1,038/1,019/0,981, contenidos 1,226/1,175/0,759/1,444/0,789; banda 1 de edificios 69 positivos y un componente con 31,65 % del coste (A/E por fold 0,342–3,457); autos nuevos: banda 1 vacía, 13/2 (11,991), 104/6 (6,786, 93,91 % en un componente), banda 5 2.145/232 (0,823); cuatro tasas fuera de rango",
+   "VN34 incendio y AD: 13.724,81 de ganancia del incendio de 261.192,30 CU = 93,9 % de la neta de los doce grupos, 71,8 % de su bruta, 35,8 % de la neta global, 7,2 % de la bruta global por componente y 6,6 % por fila (190.363,86 positivas, 152.064,68 adversas, 12.955 y 17.914 componentes); sin su fila 24.574,37 y ΔD² +0,004480 frente a +0,006912; tabla de AD por fold entera; los dos incendios (547.285,30 CU) fuera de la vista 3, la única con AD < 1",
+   "VN35 síntesis: 49 cifras consolidadas iguales al recálculo y 44 fuentes con huella; no calcula nada nuevo y no selecciona B21",
+   "VN36 lectura: la ventaja de B20 la sostienen 31 componentes con el 10,9 % del coste y basta retirar 3; un incendio es el 35,8 % de la ganancia neta frente a B19; A/E 1,011 esconde 0,71–1,97 (edificios) y 0,76–1,44 (contenidos); 82 % de los autos nuevos en el quintil más alto"
+  ],
+  "no_cubierto": [
+   "COD-S2-20261024-B20-C0-ADAPTADOR-PRE/RESULT (adaptador C0 estricto en sintético, 17:04–17:08 UTC)",
+   "unidades F05 de clima (056/057)",
+   "modelos serializados de Codex (convergencia comprobada por replay)",
+   "sus comprobadores internos y adversos",
+   "producción designada, mezcla y envío del participante (otra sesión)",
+   "2024 y test: cerrados; al releer el foro se vio el encabezado con la puntuación pública del envío, no se usa"
+  ],
+  "archivos_nuevos": [
+   "aporte_CLA-S2-20261024-021.md",
+   "fig6_atribucion_bandas.png",
+   "tablas/ganancia_acumulada_b20.csv",
+   "tablas/bandas_b20.csv",
+   "recibo_foro_021.json"
+  ],
+  "manifiesto": "219 entradas, 4 scripts, 20 salidas, 7 documentos",
+  "verificacion_en_equipo": "verificar_informe.py en el equipo: 953 comprobaciones, 0 fallos (17:20:20 UTC); el verificacion_informe.json guardado es el de la nube (sha 4b599449…), el del manifiesto, porque ese archivo lleva la hora de ejecución",
+  "huellas_sintesis_en_equipo": "Las 44 fuentes y 5 salidas del manifiesto de b20_sintesis_20261024_v1 se comprobaron con sha256 en el equipo del participante (17:18 UTC): 49 de 49 iguales; en la nube solo había copiadas 33 (las 16 restantes son comprobadores internos, diarios de decisión y fixtures de las corridas de B20 y Preparación/Antecedentes/IAA_IA/PRACTICAS_PRIORITARIAS.md)"
+ }
+}

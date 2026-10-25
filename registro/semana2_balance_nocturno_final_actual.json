@@ -1,0 +1,205 @@
+{
+  "id": "S2-BALANCE-NOCHE20261024-v1",
+  "author": "Codex",
+  "prepared_utc": "2026-10-24T12:33:29.913722+00:00",
+  "prepared_bogota": "2026-10-24T07:33:29.913722-05:00",
+  "first_clock_read_utc": "2026-10-24T12:27:30Z",
+  "authorized_window_end_utc": "2026-10-24T12:00:00Z",
+  "balance_prepared_after_deadline": true,
+  "delivery_at0700_not_evidenced": true,
+  "new_experiments_after_window": 0,
+  "night_entries_before_balance": 24,
+  "entries_are_mixed_historical_and_documentary_not_models": true,
+  "registered_current_unit_at_cut": null,
+  "development_id": "S2-GLM-RIDGE-COBERTURAS2023-v1-20261024",
+  "cumulative_own_price_fits": 195,
+  "cumulative_own_constants": 285,
+  "counters_are_not_night_or_balance_fit_counts": true,
+  "last_existing_kaggle_check": {
+    "utc": "2026-10-24T09:58:39.477692+00:00",
+    "topic_id": 752144,
+    "semantic_content_unchanged": true,
+    "receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/seguimiento_nocturno/20261024T0957Z.json",
+    "receipt_sha256": "ce93d34d40ab52c413400a82cd16d8c932ce87b53b8794c4bd784979eca1681c",
+    "source_archive_duplicated": false,
+    "test_row_check_repeated": false,
+    "submission_attempt": false
+  },
+  "new_post_window_kaggle_poll": false,
+  "reference": "W2-B00",
+  "all_alternatives_preserved": true,
+  "models_preserved": [
+    "W2-B00",
+    "W2-B01",
+    "W2-B02",
+    "W2-B03",
+    "W2-B04",
+    "W2-B05",
+    "W2-B06",
+    "W2-B07",
+    "W2-B08",
+    "W2-B09",
+    "W2-B10",
+    "W2-B11",
+    "W2-B12",
+    "W2-B13",
+    "W2-B14",
+    "W2-B15",
+    "W2-B16",
+    "W2-B17",
+    "W2-B18",
+    "W2-B19",
+    "W2-B20"
+  ],
+  "promotion": false,
+  "final_roster_frozen": false,
+  "2024_test_closed": true,
+  "new_fits": 0,
+  "new_inference": 0,
+  "new_C0_values": 0,
+  "new_scores": 0,
+  "new_bootstrap": 0,
+  "new_numerical_diagnostics": 0,
+  "new_recipes": 0,
+  "new_model_loads": 0,
+  "professional_independent_validation": false,
+  "prior_external2024_subject_exposure_disclosed": true,
+  "complete_blindness_claim_allowed": false,
+  "mechanism": "plausible_not_established",
+  "heldout_support": "measured_failed_five_of_ten_cells_four_folds",
+  "inner_support": "unknown",
+  "whole_numeric_pipeline_isolation": "not_implemented_or_verified",
+  "sources": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_continuidad_nocturna.json",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/balance_nocturno_20261024_cierre_v1/sources/00_semana2_continuidad_nocturna.json",
+      "sha256": "3451b6268aa198b238d4faa1a166e1ab8d50712f6f123479f563d4075ab6ef4a",
+      "mutable_shared_index": true
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_actual.json",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/balance_nocturno_20261024_cierre_v1/sources/01_semana2_desarrollo2023_actual.json",
+      "sha256": "27a605b6a575ef5ea588f252c814669ccff2de3d79d061f201767acecf5c3d51",
+      "mutable_shared_index": false
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_contadores_propios_actual.json",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/balance_nocturno_20261024_cierre_v1/sources/02_semana2_contadores_propios_actual.json",
+      "sha256": "716b1f947cdce852b08588bca3a39530f533694a15ff24c81f7d703892c130b4",
+      "mutable_shared_index": false
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_prioridades_actual.json",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/balance_nocturno_20261024_cierre_v1/sources/03_semana2_b20_prioridades_actual.json",
+      "sha256": "ab108feec1f5e0b5aab1c949f48ad2007321da417346b3b2600c8c6afc00ff82",
+      "mutable_shared_index": false
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_mecanismo_soporte_revision_actual.json",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/balance_nocturno_20261024_cierre_v1/sources/04_semana2_b20_mecanismo_soporte_revision_actual.json",
+      "sha256": "251f41562f7cc8dbaab7c572a974cd847b44db60963d8a69acdae4c4735a7b3d",
+      "mutable_shared_index": false
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_soporte_folds_actual.json",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/balance_nocturno_20261024_cierre_v1/sources/05_semana2_b20_soporte_folds_actual.json",
+      "sha256": "17658ec222f5f1492c6217aaf6a713df135eed792b116f4a303ecd4aa1a8db84",
+      "mutable_shared_index": false
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_preflight_c0_actual.json",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/balance_nocturno_20261024_cierre_v1/sources/06_semana2_b20_preflight_c0_actual.json",
+      "sha256": "99f3a9cf9a6808ef03e8480e135cd08308945e8e0e8403a1dbbe4c8999d08d66",
+      "mutable_shared_index": false
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_sintesis_actual.json",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/balance_nocturno_20261024_cierre_v1/sources/07_semana2_b20_sintesis_actual.json",
+      "sha256": "4c5ac9e8b23be24147beb9ef0eb210bbc63b0a0a34cdd0f023d4c3d60019b63a",
+      "mutable_shared_index": false
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_incendio_AD_actual.json",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/balance_nocturno_20261024_cierre_v1/sources/08_semana2_b20_incendio_AD_actual.json",
+      "sha256": "f472ccede1e6720aaa2dacfd9161c0f6a65a1d5ed24ffeb77ed14832ab4f8a5a",
+      "mutable_shared_index": false
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_contraccion_actual.json",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/balance_nocturno_20261024_cierre_v1/sources/09_semana2_b20_contraccion_actual.json",
+      "sha256": "a790444b65aed44d53e533386e286f4e116fd32a7f82993482cf3c36957bed20",
+      "mutable_shared_index": false
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_incidencia_kaggle_752144.json",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/balance_nocturno_20261024_cierre_v1/sources/10_semana2_incidencia_kaggle_752144.json",
+      "sha256": "45ef829a83ad9e7d7c3b57f8f9596821e487caf64f2f59ab8acd515ce39d68cd",
+      "mutable_shared_index": false
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/DESARROLLO_2023_MODELOS_ESTANDAR.md",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/balance_nocturno_20261024_cierre_v1/sources/11_DESARROLLO_2023_MODELOS_ESTANDAR.md",
+      "sha256": "e54d8a09f525cbc7c491f8b8ee4a8b0d6f11267a067e848b013587c487316167",
+      "mutable_shared_index": false
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/CAPITAL_CLIMA_CREDIBILIDAD_2023.md",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/balance_nocturno_20261024_cierre_v1/sources/12_CAPITAL_CLIMA_CREDIBILIDAD_2023.md",
+      "sha256": "23486ca64d22f6f203849d48fd3ba2b67b048765ed0afd7e6ebbfcb9c7da80e6",
+      "mutable_shared_index": false
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/CAPITAL_POR_FILA_Y_AUTOS_NUEVOS_2023.md",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/balance_nocturno_20261024_cierre_v1/sources/13_CAPITAL_POR_FILA_Y_AUTOS_NUEVOS_2023.md",
+      "sha256": "f3f5ddc204b3045c78db3ee55e767e8e57c6f8e089656eeac8534ebfa2b82a0f",
+      "mutable_shared_index": false
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/BALANCE_NOCTURNO_PARCIAL_20261024.md",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/balance_nocturno_20261024_cierre_v1/sources/14_BALANCE_NOCTURNO_PARCIAL_20261024.md",
+      "sha256": "8a26e3fe1dbb4f423ddbf1248e4699840ea7ddf6c17b650a477895bd8876d0a3",
+      "mutable_shared_index": false
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/SINTESIS_B20_Y_SIGUIENTE_PASO_2023.md",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/balance_nocturno_20261024_cierre_v1/sources/15_SINTESIS_B20_Y_SIGUIENTE_PASO_2023.md",
+      "sha256": "53d96bac9c0192668b3bb336ffca0cd3e4dfac9f55abac0beaa5cd8decdf36f3",
+      "mutable_shared_index": false
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/PREFLIGHT_C0_Y_AISLAMIENTO_B20_2023.md",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/balance_nocturno_20261024_cierre_v1/sources/16_PREFLIGHT_C0_Y_AISLAMIENTO_B20_2023.md",
+      "sha256": "5ce2de75d86bd93f30422afd6127dbfdf59e51a2191bc44b3f6c19ff60f6482a",
+      "mutable_shared_index": false
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/SOPORTE_B20_POR_FOLD_2023.md",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/balance_nocturno_20261024_cierre_v1/sources/17_SOPORTE_B20_POR_FOLD_2023.md",
+      "sha256": "ae194f0a13a027de50a2101ffb25b76cfedf56b0c0c1a52688e56f8fc2af8316",
+      "mutable_shared_index": false
+    }
+  ],
+  "path_base": "workspace_root",
+  "status": "window_closed_balance_published_after_deadline_no_new_experiments",
+  "administrative_closure_recorded_utc": "2026-10-24T12:34:59.537542+00:00",
+  "forum_result": "COD-S2-20261024-050",
+  "forum_publication_utc": "2026-10-24T12:34:59+00:00",
+  "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/BALANCE_NOCTURNO_20261024.md",
+  "documentation_sha256": "23d61b76787be0baf8fdd247dc0a1b1183a0cba17e2e06a9bbcba01a2287a249",
+  "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/balance_nocturno_20261024_cierre_v1",
+  "automation_status": "DELETED",
+  "automation_id": "iaa-semana-2-modelos-est-ndar-y-validaci-n-nocturna",
+  "other_automations_changed_by_this_unit": false,
+  "balance_data": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/balance_nocturno_20261024_cierre_v1/balance.json",
+    "sha256": "12f118e0a460d195fbda141985e6b35647859acbd984e0703834640c8ae9b933"
+  },
+  "decision_journal": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/balance_nocturno_20261024_cierre_v1/decision_journal.json",
+    "sha256": "4e93b516df1d7483eb8da68d1e390440887358030d4a8a5c932992c0da4b10f4"
+  },
+  "automation_closure_receipt": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/balance_nocturno_20261024_cierre_v1/automation_closure_receipt.json",
+    "sha256": "cd37a434dbf346d4e62d4265394d2e32b9ac85e93c6703b2921de2d18c3db848"
+  }
+}

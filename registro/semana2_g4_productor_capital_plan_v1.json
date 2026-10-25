@@ -1,0 +1,80 @@
+{
+  "id": "S2-G4-PRODUCTOR-CAPITAL2023-v1-20261024",
+  "author": "Codex",
+  "utc": "2026-10-25T00:40:11.093732+00:00",
+  "forum_prior": "COD-S2-20261024-065",
+  "authorization_literal": "Implementa el productor de parámetros de capital por ámbito y valida su integración con datos sintéticos.Sin ajustar modelos ni recalcular C0; conserva B00,deja resultados en foro y mantén2024cerrado.",
+  "prepared_input_manifest": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/entradas_g4_2023/ingreso_20261024_v1/attempt1/input_manifest.json",
+    "sha256": "fd35a88e4f523666afdc558baea0e2826590e75cf42dd749b6979694c29128d2"
+  },
+  "frozen_code": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/productor_capital_g4_2023.py",
+      "sha256": "ecde3f5d1f2067e3e2ffde19d4ae345318fe95d9e2ed7e7f1d7214f003d5e0b7",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/productor_capital_g4_2023/productor_20261024_v1/preregistered_sources/productor_capital_g4_2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/conexion_g4_2023.py",
+      "sha256": "159d2e4d44d618dd5c1c4d0cf219fe0b4914e1145320d152f9b7d8e4302ef5bf",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/productor_capital_g4_2023/productor_20261024_v1/preregistered_sources/conexion_g4_2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/entradas_g4_2023.py",
+      "sha256": "885c4770433ddb49242a6381c72ccb7ec10e38822f468e5a86963982aee81069",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/productor_capital_g4_2023/productor_20261024_v1/preregistered_sources/entradas_g4_2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/ambitos_c0_b20_2023.py",
+      "sha256": "e16ae2e2f6e83064612f09f86344ea758c013a91c6ecec08068e7b8c41937933",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/productor_capital_g4_2023/productor_20261024_v1/preregistered_sources/ambitos_c0_b20_2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/probar_productor_capital_g4_2023.py",
+      "sha256": "75b96c6a149887e7f02e195e232bfa508f3b15d67d1e9f6ba53053fb2861a013",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/productor_capital_g4_2023/productor_20261024_v1/preregistered_sources/probar_productor_capital_g4_2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/probar_conexion_g4_2023.py",
+      "sha256": "2a3d25bc4e0e02798a362cd4eee4e31360095c37d5e35f250427a25d32ea3eb7",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/productor_capital_g4_2023/productor_20261024_v1/preregistered_sources/probar_conexion_g4_2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/validar_productor_capital_g4_2023.py",
+      "sha256": "d88f0e020e5c32fc9135a1b6ca99d7afc360e83c7666b0919c514c089079cbb0",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/productor_capital_g4_2023/productor_20261024_v1/preregistered_sources/validar_productor_capital_g4_2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_g4_capital_contrato_v2.json",
+      "sha256": "17b6c41ce294826bb61166799865759802c309534cb3a34d9b4c4a34860abae4",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/productor_capital_g4_2023/productor_20261024_v1/preregistered_sources/semana2_g4_capital_contrato_v2.json"
+    }
+  ],
+  "hypothesis": "El productor puede derivar min/max de prima por mil solo de capitales normales del ámbito permitido y producir evidencia que la conexión reproduce contra esos capitales, sin fuga ni modelos.",
+  "recipe": "CAPS2-01 numerical rule unchanged; new v2 provenance/population replay and input interface, old v1 source and receipts preserved.",
+  "criteria": [
+    "15synthetic scopes end-to-end with excluded value files forbidden and producer reads metadata/capital only",
+    "normal min/max and corrected log capital agree with Decimal/math.log at absolute1e-12",
+    "15protected changes preserve numerical parameter payload,normal population content,allowed frames and learning signatures; archival seals may differ",
+    "allowed premium change changes learned capital bound and invalidates earlier artifact",
+    "coherently resealed omission from normal population passes structural checks but fails replay against actual allowed capital",
+    "invalid/empty normal population fails without fallback; artifact/receipt/scope/origin adversaries rejected",
+    "saved producer artifact/receipt/population replay identical with all model/C0/inference functions blocked"
+  ],
+  "budgets": {
+    "valid_synthetic_parameter_artifacts": 31,
+    "model_fits_including_synthetic": 0,
+    "C0_calls_including_synthetic": 0,
+    "inferences": 0,
+    "scores": 0,
+    "real_row_value_decoders": 0,
+    "real_parameter_artifacts": 0
+  },
+  "scope_limits": [
+    "Only generated Parquet; real15requests remain missing parameters and must fail before values",
+    "No independent professional validation,whole-model invariance,real learned objects or resolution of G1/G2"
+  ],
+  "B00_preserved": true,
+  "2024_test_closed": true,
+  "old_suites_or_diagnostics_repeated": false
+}

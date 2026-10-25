@@ -1,0 +1,74 @@
+{
+  "id": "S2-G4-CAPITAL-CONEXION2023-v1-20261024",
+  "author": "Codex",
+  "utc": "2026-10-24T20:15:51.420968+00:00",
+  "forum_prior": "COD-S2-20261024-063",
+  "authorization_literal": "Prepara el contrato de capital por ámbito y conecta las entradas de2023 a G4. Valídalo con datos sintéticos,sin ajustar modelos ni recalcular C0; conserva B00,deja resultados en foro y mantén2024cerrado.",
+  "prepared_input_index": {
+    "path": "Hackaton/Repositorio_IAA2026/registro/semana2_g4_entradas2023_actual.json",
+    "sha256": "fb297b8929bc7f5ed12d11dd22a6a90b4741645e6e17ba1c42eb69c32fe1b470"
+  },
+  "prepared_input_manifest": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/entradas_g4_2023/ingreso_20261024_v1/attempt1/input_manifest.json",
+    "sha256": "fd35a88e4f523666afdc558baea0e2826590e75cf42dd749b6979694c29128d2"
+  },
+  "frozen_code": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/conexion_g4_2023.py",
+      "sha256": "159d2e4d44d618dd5c1c4d0cf219fe0b4914e1145320d152f9b7d8e4302ef5bf",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/conexion_g4_2023/contrato_20261024_v1/preregistered_sources/conexion_g4_2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/entradas_g4_2023.py",
+      "sha256": "885c4770433ddb49242a6381c72ccb7ec10e38822f468e5a86963982aee81069",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/conexion_g4_2023/contrato_20261024_v1/preregistered_sources/entradas_g4_2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/ambitos_c0_b20_2023.py",
+      "sha256": "e16ae2e2f6e83064612f09f86344ea758c013a91c6ecec08068e7b8c41937933",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/conexion_g4_2023/contrato_20261024_v1/preregistered_sources/ambitos_c0_b20_2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/probar_conexion_g4_2023.py",
+      "sha256": "2a3d25bc4e0e02798a362cd4eee4e31360095c37d5e35f250427a25d32ea3eb7",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/conexion_g4_2023/contrato_20261024_v1/preregistered_sources/probar_conexion_g4_2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/validar_conexion_g4_2023.py",
+      "sha256": "103259fc9d6a7d47604621a5f19b2365ba34b10f1d3d48ed6b840e3191431fe5",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/conexion_g4_2023/contrato_20261024_v1/preregistered_sources/validar_conexion_g4_2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_g4_capital_contrato_v1.json",
+      "sha256": "64ee6cef6559368aa4bc1a9037b1e3bdee41da00a1aae153761e49b0acc2d74d",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/conexion_g4_2023/contrato_20261024_v1/preregistered_sources/semana2_g4_capital_contrato_v1.json"
+    }
+  ],
+  "hypothesis": "La frontera lector estricto->capital congelado->siete predictores puede aislar ámbitos y preservar T0 sin ajuste; las entradas reales fallan antes de decodificar valores cuando falta capital del ámbito.",
+  "scope": "Real15request wiring and pending templates from existing manifest metadata; integration on generated Parquet fixtures and fixed fictitious parameters only. Not real parameter estimation or model execution.",
+  "criteria": [
+    "all15synthetic scope connections preserve keys,targets and excluded values stay unopened",
+    "capital math agrees with Decimal/math.log to absolute1e-12 including threshold/missing/rejection cases",
+    "invalid parameter/source/scope/hash/target/finite/provenance contracts rejected before values",
+    "protected-fold payload changes leave allowed frames and learning signature identical; allowed change invalidates old capital",
+    "disk contract roundtrip identical without fit or C0",
+    "all15real requests block before values when parameters absent; fixed synthetic parameters do not unlock real data"
+  ],
+  "budgets": {
+    "model_fits_including_synthetic": 0,
+    "C0_calls_including_synthetic": 0,
+    "inferences": 0,
+    "scores": 0,
+    "real_value_decoders": 0,
+    "real_parameter_estimates": 0
+  },
+  "limits": [
+    "Real parameter producer/estimation and positive real receipt flow absent",
+    "Input invariance is not invariance of learned objects",
+    "No synthetic learner marker added to real rows",
+    "G1/G2 remain unchanged; G4 real full flow remains open"
+  ],
+  "B00_preserved": true,
+  "2024_test_closed": true,
+  "old_diagnostics_or_suites_repeated": false
+}

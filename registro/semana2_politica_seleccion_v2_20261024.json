@@ -1,0 +1,25 @@
+{
+ "id": "S2-SELECCION-v2-20261024",
+ "version": 2,
+ "enmienda_de": "S2-SELECCION-v1-20261023 (Hackaton/Repositorio_IAA2026/registro/semana2_politica_seleccion_v1.json), que se conserva sin cambios junto con su acta y sus resultados fallidos",
+ "autor": "Claude (Cowork), sesión de validación nocturna, por decisión explícita del participante",
+ "fecha_utc": "2026-10-24T14:47:00+00:00",
+ "autorizacion_literal": "1. Si enmiendas la salvaguarda de cliente nuevo de SEL01. Si la enmiendas, A1 promueve sin volver a abrir 2024: Enmiendala. 2. El nivel de 2025 [...]: Sin tendencia. 3. Si adoptas una versión 2 de la política con la historia de la póliza en versión neutral y el promedio de tres semillas: me quedo con tu recomendación. 4. Si la transferencia del mercado desarrollado entra en la selección común del proyecto [...]: me quedo con tu recomendación",
+ "base_en_v1": "v1 permite una enmienda humana explícita posterior, versionada, que conserva v1 y sus resultados fallidos y no restaura una confirmación intacta de 2024 (campo changes_after_opening)",
+ "cambios": {
+  "salvaguarda_cliente_nuevo": {
+   "v1": {"cold_start_nominal_delta_min": 0.0, "cold_start_lower95_min": -0.001},
+   "v2": {"diferencia_puntual_min": 0.0, "limite95": "se informa como diagnóstico, sin veto"},
+   "motivo": "Potencia medida por el revisor rev2 en la puerta de 2024: la desviación típica de la diferencia en las 9.063 filas de cliente nuevo (447 siniestros) es 0,014; con el efecto observado la regla pasaría el 26 % de las veces y para un 80 % harían falta unas 55.900 filas de cliente nuevo. Con un margen de 0,07 desviaciones típicas, el límite funcionaba como prueba de superioridad y no como la salvaguarda de no inferioridad que v1 declara en su campo interpretation. El resto de salvaguardas (escenarios, cinco segmentos con el de cliente nuevo >= -0,001, influencia y nivel) no cambia."
+  },
+  "receta_de_produccion": {
+   "texto": "La producción 2025 usa la receta del titular con dos añadidos evaluados después de abrir 2024: historia de la póliza en versión neutral (ordena con la historia y toma el total por ramo del modelo sin historia) y promedio de tres semillas del GBM desarrollado (11, 12 y 13). También la corrección técnica ID01.",
+   "evidencia": "Exploratoria, posterior a la apertura: historia neutral +0,0040 [+0,0023; +0,0057] y tres semillas +0,0005 [-0,0009; +0,0019] en 2024; no es una confirmación."
+  },
+  "nivel_2025": "Sin tendencia: nivel por ramo de 2023-2024 por balance. Decisión del participante; TEN-N2 queda documentada como alternativa.",
+  "seleccion_comun": "La transferencia del desarrollado (familia A1) entra en la selección común del proyecto como titular de la semana 2, con la conciliación de desarrollo 2023 frente al catálogo de Codex (A1 - W2-B10 = +0,0270 [+0,0141; +0,0402]) como evidencia. Las alternativas de Codex se conservan."
+ },
+ "sin_cambios": "Métrica, bootstrap, márgenes de la primaria (0,0005), Bonferroni, orden secuencial, escenarios, segmentos, influencia, condición de nivel y retiro de alternativas.",
+ "advertencia": "Las cuatro decisiones se tomaron después de conocer el acta de 2024. No hay confirmación intacta de 2024 para v2; la promoción descansa en la misma evidencia del acta original.",
+ "envio_autorizado_por_esta_politica": false
+}

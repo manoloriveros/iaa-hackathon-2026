@@ -1,0 +1,434 @@
+{
+  "id": "S2-B20-CONTRASTE-EXPLORATORIO-v2-20261024",
+  "author": "Codex",
+  "registered_utc": "2026-10-24T17:27:52.732778+00:00",
+  "path_base": "workspace_root",
+  "authorization_literal": "Dale, prepara la enmienda y entrena el contraste exploratorio de B20 con los criterios fijados antes. Mantén 2024 cerrado, sin promover modelos ni enviar a Kaggle.",
+  "amends": {
+    "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_contraste_minimo_diseno_v1.json",
+    "sha256": "02b64e0b2a427a8bc3c2312b909e1cf0c8b6bac77474abd3e04d76e75ec88aba"
+  },
+  "change": "Known concentration/support failure and plausible mechanism no longer prohibit this single exploratory fit. They remain failed/unestablished and prohibit any claim that support has been resolved. Technical integrity remains mandatory.",
+  "unchanged": [
+    "All original numerical predictive/influence acceptance thresholds",
+    "One S versus L comparison; fixed B20 alpha1/seven effects; no searches",
+    "Original grouped2023 folds, T0, rho1 C0, all losses/periods",
+    "Raw motor/contents exact; original outer band memberships",
+    "No2024/test, promotion, selection-policy change or Kaggle submission"
+  ],
+  "mechanism": {
+    "id": "M20-BUILDING-SPREAD",
+    "hypothesis": "Relatividades de riesgo de edificios demasiado dispersas, una vez separado el nivel global.",
+    "evidence": "A/E B20 edificios 1.966/1.563/.856/1.198/.714 por bandas de ajuste; extremos compatibles con pendiente de calibración menor que uno.",
+    "not_established": [
+      "No monotonía estricta en bandas intermedias",
+      "Rangos de folds cruzan uno",
+      "Costes concentrados",
+      "C0/maduración y mezcla de perils pueden producir el patrón"
+    ],
+    "fire_AD_role": "Composición/incendios y AD inestable son explicación rival; no justifican interacción, máscara, exclusión o efecto causal."
+  },
+  "contrast": {
+    "line": "buildings",
+    "family": "Tweedie power1.5 log-rate calibration",
+    "raw_anchor": "B20 unchanged",
+    "control_L": {
+      "b": 1.0,
+      "a": "estimated on inner cross-fitted training predictions"
+    },
+    "candidate_S": {
+      "b_bounds": [
+        0.0,
+        1.0
+      ],
+      "a": "profiled separately under same objective"
+    },
+    "additional_free_parameters_vs_L": 1,
+    "one_candidate_only": true,
+    "primary_comparison": "S_minus_L",
+    "raw_guard": "S_minus_rawB20",
+    "formula": "z_i=log(r_i)-m; r_star=exp(m); h_i(b)=C0_i*r_star*exp(b*z_i); mu_i=exp(a)*h_i(b)",
+    "centering": "m=sum(C0_i*log(r_i))/sum(C0_i) from inner-OOF training rows only",
+    "objective": "unweighted sum d_1.5(T0_i,mu_i); no penalty on a,b, no per-band parameters",
+    "profile_intercept": "a(b)=log(sum(T0_i/sqrt(h_i(b)))/sum(sqrt(h_i(b))))",
+    "no_forced_AE_one": true,
+    "scope_fixed": [
+      "B20 alpha1 and seven original features",
+      "All perils T0 and C0 family unchanged",
+      "All buildings rows; same transformation for new and renewal",
+      "motor and contents exact rawB20 predictions"
+    ],
+    "excluded": [
+      "other alpha",
+      "per-band factors",
+      "isotonic",
+      "business slopes",
+      "AD interaction",
+      "hard coverage masks",
+      "row routing",
+      "claim deletion",
+      "target winsorization",
+      "new seeds"
+    ]
+  },
+  "acceptance": {
+    "role": "Exploratory development eligibility only, never automatic promotion or independent confirmation.",
+    "all_conditions_conjunctive": true,
+    "preconditions": [
+      "Explicit participant authorization for this exploratory fit, preserving v1 support failure",
+      "Frozen recipe, sources, implementation, resources and forum preregistration",
+      "Strict2023 full-pipeline synthetic isolation preflight passes",
+      "No unresolved technical blockers; positive finite rates/C0 and identifiable calibration"
+    ],
+    "primary_global_delta_D2_S_minus_L_min": 0.0005,
+    "global_delta_D2_S_minus_rawB20_min": 0.0,
+    "nonnegative_outer_fold_deltas_S_minus_L_min_count": 4,
+    "worst_outer_fold_delta_D2_S_minus_L_min": -0.001,
+    "strict_0_lt_b_lt_1_min_outer_scopes": 4,
+    "b_at_zero_in_any_scope_reject": true,
+    "tail_gap": {
+      "definition": "G=log(AE_band1)-log(AE_band5), same original B20 memberships for L/S",
+      "G_L_must_be_positive": true,
+      "G_S_min": 0.0,
+      "G_S_over_G_L_max": 0.8
+    },
+    "segment_delta_D2_S_minus_rawB20_min": -0.001,
+    "segments": [
+      "motor",
+      "buildings",
+      "contents",
+      "new_customer",
+      "renewal",
+      "buildings_new",
+      "buildings_renewal"
+    ],
+    "unchanged_motor_contents_absolute_tolerance": 0.0,
+    "influence": {
+      "remove": "max(5,ceil(.001*G)) capped atG-1; favorable groups selected separately per comparison",
+      "comparisons": [
+        "S_minus_L",
+        "S_minus_rawB20"
+      ],
+      "delta_D2_remaining_min": 0.0,
+      "evaluation_sensitivity_only_not_refit_or_cleanup": true
+    },
+    "absolute_buildings_nominal2023_total_change_vs_raw_max": 0.05,
+    "no_new_CI_or_bootstrap_in_this_trial": true,
+    "stop_if_any_fail_or_unknown": true,
+    "negative_result": "Keep raw B20 and B00/all alternatives; publish failure, no automatic next alpha/cut/seed/recipe.",
+    "positive_result": "Only evidence for further review. Adaptive2023 choice and parameter/first-stage uncertainty remain; common selection policy unchanged."
+  },
+  "uncertainty": "Original no-new-bootstrap/no-new-CI rule retained. Report all five fold effects, slope dispersion and favorable-component sensitivity; no independent confirmation or refit uncertainty claim.",
+  "segment_definitions": {
+    "new_customer": "x_customer_tenure_years ==0 in prepared2023 metadata; not a synonym for x_new_business",
+    "renewal": "x_new_business ==0",
+    "buildings_new": "line=buildings and x_new_business ==1",
+    "buildings_renewal": "line=buildings and x_new_business ==0"
+  },
+  "calibration_numerics": {
+    "solver": "bounded scipy minimize_scalar on[0,1], profile intercept",
+    "xatol": 1e-08,
+    "maxiter": 500,
+    "endpoints_explicit": [
+      0.0,
+      1.0
+    ],
+    "objective_tie_relative": 1e-10,
+    "tie_preference": "b1 then b0 then interior",
+    "boundary_tolerance": 1e-06,
+    "profile_intercept_values_counted": 10,
+    "minimum_inner_log_P80_P20": 0.22314355131420976
+  },
+  "recipe": {
+    "id": "W2-B20",
+    "family": "TweedieRegressor",
+    "params": {
+      "power": 1.5,
+      "alpha": 1.0,
+      "fit_intercept": true,
+      "link": "log",
+      "solver": "lbfgs",
+      "max_iter": 2000,
+      "tol": 1e-06,
+      "warm_start": false
+    },
+    "features_by_line": {
+      "motor": {
+        "numeric": [
+          "x_new_business",
+          "x_ncb_years",
+          "x_vehicle_age",
+          "x_vehicle_value_group"
+        ],
+        "categorical": [
+          "x_driver_age_band",
+          "x_region",
+          "x_cover_type"
+        ],
+        "all": [
+          "x_new_business",
+          "x_ncb_years",
+          "x_vehicle_age",
+          "x_vehicle_value_group",
+          "x_driver_age_band",
+          "x_region",
+          "x_cover_type"
+        ]
+      },
+      "buildings": {
+        "numeric": [
+          "x_new_business",
+          "x_log_sum_insured",
+          "x_property_age",
+          "x_flood_zone",
+          "x_accidental_damage_cover"
+        ],
+        "categorical": [
+          "x_property_type",
+          "x_region"
+        ],
+        "all": [
+          "x_new_business",
+          "x_log_sum_insured",
+          "x_property_age",
+          "x_flood_zone",
+          "x_accidental_damage_cover",
+          "x_property_type",
+          "x_region"
+        ]
+      },
+      "contents": {
+        "numeric": [
+          "x_new_business",
+          "x_log_sum_insured",
+          "x_bedrooms",
+          "x_high_value_items",
+          "x_accidental_damage_cover"
+        ],
+        "categorical": [
+          "x_property_type",
+          "x_region"
+        ],
+        "all": [
+          "x_new_business",
+          "x_log_sum_insured",
+          "x_bedrooms",
+          "x_high_value_items",
+          "x_accidental_damage_cover",
+          "x_property_type",
+          "x_region"
+        ]
+      }
+    },
+    "numeric": "median keep_empty_features then StandardScaler, fit-only",
+    "categorical": "OneHotEncoder drop=first, min_frequency=50, max_categories=40, handle_unknown=ignore, fit-only"
+  },
+  "inputs": {
+    "feature_frames": {
+      "0": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\semana2\\desarrollo2023\\dev8_20261024T013001Z_e8a35214\\inputs_2023\\buildings_fold0.parquet",
+      "1": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\semana2\\desarrollo2023\\dev8_20261024T013001Z_e8a35214\\inputs_2023\\buildings_fold1.parquet",
+      "2": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\semana2\\desarrollo2023\\dev8_20261024T013001Z_e8a35214\\inputs_2023\\buildings_fold2.parquet",
+      "3": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\semana2\\desarrollo2023\\dev8_20261024T013001Z_e8a35214\\inputs_2023\\buildings_fold3.parquet",
+      "4": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\semana2\\desarrollo2023\\dev8_20261024T013001Z_e8a35214\\inputs_2023\\buildings_fold4.parquet"
+    },
+    "other_line_frames": {
+      "motor": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\semana2\\desarrollo2023\\dev8_20261024T013001Z_e8a35214\\inputs_2023\\motor_fold0.parquet",
+      "contents": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\semana2\\desarrollo2023\\dev8_20261024T013001Z_e8a35214\\inputs_2023\\contents_fold0.parquet"
+    },
+    "claim_audit": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\semana2\\preparacion\\base_20261023T164102Z_b3e6c2a3\\claim_assignment_audit.parquet",
+    "claim_metadata": {
+      "0": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\semana2\\ultimo\\f0_ultimo_20261023T170841Z_82038766\\exclude_fold0\\reporting_fit_claims.parquet",
+      "1": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\semana2\\ultimo\\f0_ultimo_20261023T170841Z_82038766\\exclude_fold1\\reporting_fit_claims.parquet",
+      "2": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\semana2\\ultimo\\f0_ultimo_20261023T170841Z_82038766\\exclude_fold2\\reporting_fit_claims.parquet",
+      "3": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\semana2\\ultimo\\f0_ultimo_20261023T170841Z_82038766\\exclude_fold3\\reporting_fit_claims.parquet",
+      "4": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\semana2\\ultimo\\f0_ultimo_20261023T170841Z_82038766\\exclude_fold4\\reporting_fit_claims.parquet"
+    },
+    "outer_models": {
+      "0": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\semana2\\desarrollo2023\\ridge20_20261024_v1\\models\\buildings_fold0\\bundle.joblib",
+      "1": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\semana2\\desarrollo2023\\ridge20_20261024_v1\\models\\buildings_fold1\\bundle.joblib",
+      "2": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\semana2\\desarrollo2023\\ridge20_20261024_v1\\models\\buildings_fold2\\bundle.joblib",
+      "3": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\semana2\\desarrollo2023\\ridge20_20261024_v1\\models\\buildings_fold3\\bundle.joblib",
+      "4": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\semana2\\desarrollo2023\\ridge20_20261024_v1\\models\\buildings_fold4\\bundle.joblib"
+    },
+    "raw_oof": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\semana2\\desarrollo2023\\ridge20_20261024_v1\\new_oof_2023.parquet",
+    "original_bands": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\semana2\\desarrollo2023\\b20_bandas_calibracion_20261024_v1\\heldout_bands_2023.parquet"
+  },
+  "frozen_sources": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_contraste_minimo_diseno_v1.json",
+      "sha256": "02b64e0b2a427a8bc3c2312b909e1cf0c8b6bac77474abd3e04d76e75ec88aba"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_glm_ridge_coberturas_plan_v1.json",
+      "sha256": "4fdee1366df2b330fe455506de63a25f74ecb79c64cba6a82a9e2e8c25eac623"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_soporte_folds_actual.json",
+      "sha256": "17658ec222f5f1492c6217aaf6a713df135eed792b116f4a303ecd4aa1a8db84"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_contadores_propios_actual.json",
+      "sha256": "716b1f947cdce852b08588bca3a39530f533694a15ff24c81f7d703892c130b4"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold0.parquet",
+      "sha256": "e7a230e9256610c75d017c09ce26952d32aa79fd29c0b81ee3f8579c9a2a6126"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold1.parquet",
+      "sha256": "78a3b3a7c7d662b6ad6533808989334f48d77665d601124fbbddbb2591b89f9a"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold2.parquet",
+      "sha256": "1d342f21384ae5bb85be042bd4943acb75746e70146a5f9a271be4f031d5b206"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold3.parquet",
+      "sha256": "b065d9ecd0c8be3b18411be89b719856d08faf4c7ef70b45e33fd4c69f9efa9d"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold4.parquet",
+      "sha256": "cf7bb6b579ada600613dc14b4e76d7b8c0492c6b7086e871b7f12be11d187de3"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/motor_fold0.parquet",
+      "sha256": "76861f7a75e4c61e1d982ba44a5c6c3da8307747b8ec6bac0c77a79c7672ca3f"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/contents_fold0.parquet",
+      "sha256": "7ee44117a2caf2bfb70f23bbdd3a27249503f7e37e681447dfce75e83439efd7"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3/claim_assignment_audit.parquet",
+      "sha256": "81be34c36682c10e1c02b3592b80c588b1ace1f734521a379fb6809bf3f63a8a"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/exclude_fold0/reporting_fit_claims.parquet",
+      "sha256": "837ee3b638b162734ac8bcbf922a08120690882869979ff86279e32b929693ba"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/exclude_fold1/reporting_fit_claims.parquet",
+      "sha256": "e6abce99aa6642fca7cb50a40d6f6158bd552c0c6ccb3f477a78911691a838f4"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/exclude_fold2/reporting_fit_claims.parquet",
+      "sha256": "f6ba4d26e58775eb09fc1d9e0d10417b90bf6e8f1c62f711c92f04328c88b86b"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/exclude_fold3/reporting_fit_claims.parquet",
+      "sha256": "c01a2d8c3f4aa1f20dab4646db1ad71c3eaacdfcdde3853cb0ea2a8919cfaa3e"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/exclude_fold4/reporting_fit_claims.parquet",
+      "sha256": "afbe07616e89dfec695f7c5488eb3f8dda64aca47b3c78d973bade89cec2d445"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/models/buildings_fold0/bundle.joblib",
+      "sha256": "396cb32372d5bce3ce22555625424b74aad893bc8ecdfe6b2bcede0787b23e8a"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/models/buildings_fold1/bundle.joblib",
+      "sha256": "458a4fd334e20cd3481a6cfdd4dc22dc68fe31a7076edd864257bbb919e57121"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/models/buildings_fold2/bundle.joblib",
+      "sha256": "d9e7c5a77c809bb3bd8ff4d2df9ce511c80fc368947658ea52d8e71d6f7f5380"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/models/buildings_fold3/bundle.joblib",
+      "sha256": "c12a2752f73ce913808623cca161a7db023f89713573dcaf2993e365632f2cae"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/models/buildings_fold4/bundle.joblib",
+      "sha256": "1b52501671cee94f248570d85df0817a51e2d456058ce852bb663977c94ec255"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/new_oof_2023.parquet",
+      "sha256": "0c04df34d1a10e13daad4c44f4707491dfddf645b8c75ebc3c4b1fb308a6a434"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_bandas_calibracion_20261024_v1/heldout_bands_2023.parquet",
+      "sha256": "b705b4db71c0b88e40afb9af6b763c3cc001c1730f6f3c0a6e1e4e1b315e18c6"
+    }
+  ],
+  "claim_reader": "Arrow predicate before materialization: accepted claim IDs from strict2023 metadata union, emerging, buildings, included_in_T0 true, loss_date in2023. Only identity/date/T0 columns. Mixed-year source never materialized wholesale.",
+  "execution": {
+    "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_contraste_exploratorio_20261024_v2",
+    "threads": 2,
+    "unique_inner_GLM_fits": 10,
+    "C0_workflows": 10,
+    "reporting_peril_fits": 60,
+    "frequency_constants": 60,
+    "weighted_marks_from_reporting": 60,
+    "mixtures": 10,
+    "saved_outer_models_reused": 5,
+    "slope_calibrations": 5,
+    "intercept_values": 10,
+    "new_outer_models": 0,
+    "new_other_line_models": 0,
+    "new_bootstrap": 0,
+    "new_catalog_recipes": 0,
+    "remote": false
+  },
+  "support_v1": {
+    "status": "failed_on_existing_screen_no_fit_eligible",
+    "origin": "Project prudential design choices fixed now after existing2023 diagnostics; not Kaggle/IAA requirements, power estimates or confirmatory thresholds.",
+    "screen_population": "Existing building OOF tails: original fixed training-defined bands1 and5; do not rebin.",
+    "pooled_tail": {
+      "positive_groups_min": 50,
+      "largest_cost_group_share_max": 0.2,
+      "cost_concentration_equivalent_groups_min": 10.0
+    },
+    "fold_tail": {
+      "positive_groups_min": 10,
+      "largest_cost_group_share_max": 0.5,
+      "cost_concentration_equivalent_groups_min": 3.0
+    },
+    "inner_calibration_each_outer_scope": {
+      "positive_groups_total_min": 100,
+      "tail_support": "same pooled_tail rules on inner-OOF fit-only bands1/5",
+      "log_rate_p80_minus_p20_min": 0.22314355131420976,
+      "strict_positive_finite_C0_and_rates": true,
+      "unique_complete_groups_and_2023_only": true
+    },
+    "concentration_equivalent_count_is_not_inferential_sample_size": true,
+    "all_five_scopes_must_pass": true,
+    "no_fold_or_cell_deletion_to_pass": true,
+    "known_screen": [
+      {
+        "cell": "buildings pooled band1",
+        "positive_groups": 69,
+        "largest_cost_group_share": 0.3165190285652545,
+        "cost_concentration_equivalent_groups": 6.091867231595157,
+        "result": "fail concentration and equivalent-count rules"
+      },
+      {
+        "cell": "buildings pooled band5",
+        "positive_groups": 124,
+        "largest_cost_group_share": 0.19024732159082064,
+        "cost_concentration_equivalent_groups": 14.157133853009933,
+        "result": "pass three pooled-tail rules, not overall readiness"
+      },
+      {
+        "cell": "buildings band1 most concentrated fold",
+        "largest_cost_group_share_rounded": 0.9182,
+        "result": "fail fold share rule"
+      }
+    ],
+    "unknown": [
+      "Remaining fold support",
+      "Inner-OOF calibration-scope support",
+      "Log-rate spread"
+    ],
+    "failure_consequence": "Stop before any future fit. No automatic threshold relaxation, regrouping or additional complexity; a revision needs distinct evidence and a version preserving this failure."
+  },
+  "support_status": "FAILED preserved; permission_to_explore is not statistical_support",
+  "acceptance_consequence": "All numerical criteria conjunctive. Failure/unknown => exploratory rejection; preserve raw B20 and all artifacts. Even a pass is only an exploratory signal, never promotion. No automatic next recipe.",
+  "forum_prior": "COD-S2-20261024-B20-EXPL-V2-PRE",
+  "reference": "W2-B00",
+  "promotion": false,
+  "submission": false,
+  "2024_test_closed": true,
+  "prior_exposure": "Prior2024 narratives and the mixture public score were seen in other contexts; not used to choose this fixed recipe.2023 repeatedly used, so no complete-blindness claim.",
+  "implementation_frozen": false
+}

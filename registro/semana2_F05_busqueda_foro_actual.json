@@ -1,0 +1,65 @@
+{
+  "id": "S2-F05-FORO-DIRECTO2023-v1-20261024",
+  "author": "Codex",
+  "utc": "2026-10-24T17:05:12.645248+00:00",
+  "status": "F05_direct_forum_search_verified_at_cut_no_climate_clarification_temporal_gaps_open",
+  "remote_keyword_search_repaired": false,
+  "remote_root_cause": "not_established; known topic absent through tested minimal/nullable/global keyword requests",
+  "verified_replacement": "Complete competition topic enumeration, direct full-message retrieval, coverage validation and local text search",
+  "topics": 9,
+  "roots": 9,
+  "replies": 12,
+  "messages": 21,
+  "inventories_stable_before_after": true,
+  "positive_control_topic": 751543,
+  "positive_control_found": true,
+  "climate_matches": 0,
+  "general_temporal_context_matches": 0,
+  "retrieval_adverse_controls_rejected": 4,
+  "new_official_temporal_clarification_located": false,
+  "absence_scope": "Nine listed public topics and their21retrieved messages at this cut; not every private source or edit history.",
+  "original_F05_index_preserved": "Hackaton/Repositorio_IAA2026/registro/semana2_F05_clima2023_actual.json",
+  "new_feature_admission": false,
+  "new_fits": 0,
+  "model_loads": 0,
+  "new_predictions": 0,
+  "new_scores": 0,
+  "new_numerical_diagnostics": 0,
+  "new_bootstrap": 0,
+  "row_values_read": 0,
+  "climate_parquet_opened": false,
+  "reference": "W2-B00",
+  "all_alternatives_preserved": true,
+  "target_exposure_C0_folds_changed": false,
+  "G1_closed": false,
+  "G2_closed": false,
+  "2024_test_model_validation_opened": false,
+  "prior_external2024_subject_exposure_disclosed": true,
+  "professional_independent_validation": false,
+  "night_window_reopened": false,
+  "path_base": "workspace_root",
+  "run": "Hackaton/Repositorio_IAA2026/privado/semana2/revision_F05_2023/f05_busqueda_directa_20261024_v1",
+  "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/F05_BUSQUEDA_DIRECTA_Y_COBERTURA_FORO.md",
+  "documentation_sha256": "b8e27525aeff36f0270993c814f5a27fe05f40f3e011190d1f2f833b77c1fd2d",
+  "forum_result": "COD-S2-20261024-057",
+  "receipt": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/revision_F05_2023/f05_busqueda_directa_20261024_v1/direct_search_receipt.json",
+    "sha256": "8442c8d0c738d7d6833a0461af18049588966fc94e7ce7a58a0c1d796608a93e"
+  },
+  "guards": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/revision_F05_2023/f05_busqueda_directa_20261024_v1/retrieval_guard_checks.json",
+    "sha256": "c550e2b79f005ba15cbb2563674933e3a36a70ac4440fd85816bd98a227fafa9"
+  },
+  "sources": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/revision_F05_2023/f05_busqueda_directa_20261024_v1/source_manifest.json",
+    "sha256": "fea66cb6568a7c4ade85c0b4678669730f9b495deba10a685ab38dccd12b46cd"
+  },
+  "decisions": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/revision_F05_2023/f05_busqueda_directa_20261024_v1/decision_journal.json",
+    "sha256": "f147c12a03012bb47673e68c28946f6779436957e7ce3ac380d0f521bc57ea62"
+  },
+  "code": {
+    "path": "Hackaton/Repositorio_IAA2026/herramientas/buscar_aclaraciones_foro_seguro.mjs",
+    "sha256": "333b77783c124c66cdfa1eb427d9157123b3c79ef5160a96fd6972b14e504621"
+  }
+}

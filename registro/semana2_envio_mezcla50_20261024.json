@@ -1,0 +1,69 @@
+{
+  "id": "S2-ENVIO-MEZCLA50-20261024",
+  "author": "Codex",
+  "utc": "2026-10-24T16:03:57.640359+00:00",
+  "path_base": "workspace_root",
+  "authorization_literal": "probemos este envío a kaggle: mezcla50_designada_mlind_2025.csv",
+  "competition": "iaa-ai-assisted-hackathon-2026-part-2",
+  "source": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_ml_independiente_20261023/mezcla50_designada_mlind_2025.csv",
+  "source_sha256": "12831ef4a05c1773824abe5fa139d9503dd2989b4874e7d93cfc000406cfdb4a",
+  "rows": 209063,
+  "lineage": "Claude: 50% designated A1fixF1b3n and 50% independent ML T2b-C1; no trend. Codex verified and submitted the existing file.",
+  "preflight": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/mezcla50_20261024/preflight_v2.json",
+  "transport": {
+    "source_sha256": "12831ef4a05c1773824abe5fa139d9503dd2989b4874e7d93cfc000406cfdb4a",
+    "zip_sha256": "ee82ed473dad9606d73bbbe40b0e672141a7255914ef28f24b76b6ef95a5b3af",
+    "member_name": "mezcla50_designada_mlind_2025.csv",
+    "zip_bytes": 1661498,
+    "decompression_exact": true
+  },
+  "submission": {
+    "ref": 57599788,
+    "date": "2026-10-24T16:02:56.210Z",
+    "status": "COMPLETE",
+    "public_score": "0.15390",
+    "private_score": "",
+    "description": "50/50 blend of designated A1fixF1b3n and independent transfer T2b-C1, no trend. Emerging 2025 expected ultimate cost per policy period. ZIP with original CSV filename.",
+    "file_name": "mezcla50_designada_mlind_2025.zip",
+    "team_name": "ManuelRodr�guez",
+    "submitted_by": "manoloriveros",
+    "error": ""
+  },
+  "remaining_submissions": 9,
+  "quota_source": "kaggle-cli",
+  "public_rank": 5,
+  "teams_at_check": 7,
+  "status_receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/mezcla50_20261024/status_final.txt",
+  "status_receipt_sha256": "4504a3590e37a6f1d9565caa089bce0af85623354c653f5b25e026915e3e08d1",
+  "earlier_attempts": [
+    {
+      "stage": "skill_setup",
+      "outcome": "CLI executable not found on PATH; no upload; fixed process-local PATH.",
+      "receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/mezcla50_20261024/submit.txt"
+    },
+    {
+      "stage": "csv_upload",
+      "outcome": "Stopped at 46% after prolonged slow transfer; no submission created; verified empty submissions before replacement.",
+      "receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/mezcla50_20261024/submit_r2.txt"
+    },
+    {
+      "stage": "browser_upload",
+      "outcome": "File chooser API required extension file URL permission; no file uploaded and no setting changed."
+    },
+    {
+      "stage": "gzip",
+      "ref": 57599672,
+      "outcome": "ERROR: No .csv or .parquet found after extracting the submission archive",
+      "receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/mezcla50_20261024/watch.txt"
+    }
+  ],
+  "incident_752144": "Acceptance and scoring verified for this exact 209063-row emerging CSV. Internal root cause not established.",
+  "scope": {
+    "new_training": 0,
+    "new_inference": 0,
+    "2024_labels_read": false,
+    "manual_final_selection_changed": false,
+    "common_model_promotion": false
+  },
+  "limitations": "Public leaderboard trial authorized by participant. Does not replace common selection policy, confirm out-of-sample superiority, or provide independent professional validation."
+}

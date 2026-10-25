@@ -1,0 +1,123 @@
+{
+  "id": "S2-B20-FUENTES-NUEVAS2023-v1-20261024",
+  "author": "Codex",
+  "utc": "2026-10-24T12:48:49.600709+00:00",
+  "request": "Identificar fuentes nuevas2023 y priorizar revisión, sin entrenamiento ni repetición de diagnósticos; B00 conservado y2024cerrado.",
+  "kind": "source_provenance_and_documentary_plan_not_model_recipe",
+  "current_official_data_page_unchanged": true,
+  "new_official_active_parquet_names": [],
+  "new_2023_cohort_confirmed": false,
+  "content_version_resolved": false,
+  "candidates": [
+    {
+      "id": "F01",
+      "priority": 1,
+      "source": "Versión oficial de los archivos emergentes y documentación de cambios",
+      "locator": [
+        "Kaggle MCP list_competition_data_files",
+        "https://www.kaggle.com/competitions/iaa-ai-assisted-hackathon-2026-part-2/data"
+      ],
+      "availability": "Metadatos nuevos consultados; cambio de contenido no verificado",
+      "novelty": "Fecha remota distinta; mismos24nombres/tamaños Parquet activos. No cohorte nueva demostrada.",
+      "question": "¿Existe corrección real de datos2023 o solo cambio de publicación/metadatos?",
+      "mechanism_contribution": "Una errata real y trazable podría cambiar la interpretación; aún no existe evidencia suficiente.",
+      "support_contribution": "Solo si añade información2023 legítima o corrige un error real; fecha/tamaño no aportan soporte.",
+      "first_review": "Localizar checksum/versionado/nota de cambios oficial para claims,policies_buildings,addresses. Comparar con hashes locales declarados en manifiesto; no descargar tablas mixtas o test.",
+      "stop": "Sin evidencia de contenido, dejar versión no resuelta y no repetir diagnósticos. Con hashes iguales, cerrar revisión sin reanalizar.",
+      "estimated_documentary_minutes": "hasta20, si existe evidencia oficial accesible; después registrar carencia",
+      "execution": "metadata_search_completed_content_evidence_pending"
+    },
+    {
+      "id": "F02",
+      "priority": 2,
+      "source": "Declaraciones y términos contractuales de edificios de ocurrencia/exposición2023",
+      "locator": [
+        "Hackaton/Semana 2/Datos/emerging/policies_buildings.parquet",
+        "Hackaton/Repositorio_IAA2026/privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/availability_contract.json",
+        "Hackaton/Repositorio_IAA2026/registro/semana2_glm_ridge_coberturas_plan_v1.json"
+      ],
+      "availability": "Archivo y diccionario disponibles; historial/endosos/condiciones completas no localizados",
+      "novelty": "Campos existentes fuera de los siete efectos B20; no nuevo archivo, observaciones o primera utilización global demostrada.",
+      "question": "¿Construcción, ocupación, desocupación, alarmas y franquicias distinguen heterogeneidad real y escala de coste neto de un fallo de dispersión?",
+      "mechanism_contribution": "Nueva pregunta de procedencia/semántica respecto al contraste; puede delimitar hipótesis, sin estimar efectos o probar causalidad.",
+      "support_contribution": "No aumenta el número de componentes ni cura la pantalla retenida de bandas ya fijadas.",
+      "first_review": "Revisar significado y fecha de declaración de los seis campos. Exigir selección2023 antes de leer valores en cualquier revisión posterior. days_unoccupied requiere aclarar si fue declarado o realizado; no dar por admisible por estar en F0. Paid ya es neto de franquicia: no descontarla otra vez.",
+      "stop": "Sin fecha/definición, no admitir el campo. Sin dato nuevo pertinente, no recalcular grupos, bandas, A/E o costes ya revisados.",
+      "estimated_documentary_minutes": "30–45, solo definición/procedencia",
+      "execution": "field_inventory_completed_documentary_review_prioritized"
+    },
+    {
+      "id": "F03",
+      "priority": 3,
+      "source": "Contratos y cartera desarrollada2023, como contraste documental separado",
+      "locator": [
+        "Hackaton/Semana 1/Datos/policies_buildings.parquet",
+        "Hackaton/Semana 1/Datos/addresses.parquet",
+        "Hackaton/Semana 1/Datos/claims.parquet"
+      ],
+      "availability": "Archivos existentes de varios años; no se leen filas en este plan",
+      "novelty": "Fuente ya disponible y relacionada con el prior histórico; no cohorte emergente nueva ni evidencia totalmente inédita.",
+      "question": "¿Son comparables construcción, cobertura, franquicias y corte de valoración antes de cualquier referencia externa al mercado emergente?",
+      "mechanism_contribution": "Aclarar comparabilidad/transportabilidad; no una confirmación de efecto B20.",
+      "support_contribution": "No sumar componentes o siniestros desarrollados al soporte emergente ni mezclar mercados.",
+      "first_review": "Ficha de correspondencia de campos/códigos y procedencia2023. El acceso posterior debe excluir2024 antes de materializar datos, sin cargar modelos, predicciones o scores previos. Mantener claves con mercado y grupos separados.",
+      "stop": "Sin equivalencia contractual/temporal, no transferencia. Este plan no propone rehacer credibilidad o el prior.",
+      "estimated_documentary_minutes": "20–30 si la documentación de correspondencia existe",
+      "execution": "source_located_metadata_only"
+    },
+    {
+      "id": "F04",
+      "priority": "alta_condicionada_a_existencia",
+      "source": "Historial de movimientos y cortes comparables de siniestros de ocurrencia2023; cohorte emergente2023 adicional",
+      "locator": [
+        "No incluido como archivo separado en el inventario oficial consultado"
+      ],
+      "availability": "No localizado; fuente requerida, no disponible confirmada",
+      "novelty": "Sería nueva información si el organizador la proporcionara con procedencia; no reconstruible de un único snapshot.",
+      "question": "¿El desarrollo de pagos,reservas,recuperos/reaperturas o más componentes2023 legítimos cambia la información que limita G1/G2?",
+      "mechanism_contribution": "Distinguir observación/maduración de riesgo.",
+      "support_contribution": "Podría cambiar información de costes o añadir componentes reales; no garantiza superar reglas y requiere versión nueva.",
+      "first_review": "Solo ante una publicación legítima: verificar disponibilidad, valoración, llaves y exportación restringida a ocurrencia2023. No abrir un ledger2024 o solicitar datos por mensaje externo bajo este encargo.",
+      "stop": "Ausencia confirmada de archivo no se rellena con simulación, pseudoetiquetas, bootstrap o duplicados. No prometer que la fuente existe.",
+      "estimated_documentary_minutes": "sin estimación mientras no exista",
+      "execution": "required_but_not_located"
+    },
+    {
+      "id": "F05",
+      "priority": "baja_solo_contexto_retrospectivo",
+      "source": "weather2023 sintético enlazado a address_id",
+      "locator": [
+        "Hackaton/Semana 2/Datos/emerging/weather.parquet"
+      ],
+      "availability": "Archivo existente; datos anuales realizados, no observaciones nuevas",
+      "novelty": "Ya inventariado; no reabrir diagnósticos de clima",
+      "question": "¿Una futura aclaración oficial separa hazard estático de realización anual?",
+      "mechanism_contribution": "Solo contexto retrospectivo si hubiera aclaración nueva y ámbito justificado.",
+      "support_contribution": "Ninguna nueva cohorte de siniestros. No cura concentración.",
+      "first_review": "Solo revisar aclaración documental nueva. Clima anual2023 no es conocido al cotizar a inicios2023. Los códigosE01–E06 no tienen correspondencia real publicada; no unir clima real a identificadores sintéticos.",
+      "stop": "No introducir clima2024/2025, selector futuro o asignación geográfica inventada. Sin aclaración, no revisar nuevamente.",
+      "estimated_documentary_minutes": "no iniciar sin aclaración nueva",
+      "execution": "deferred_no_repeat"
+    }
+  ],
+  "evidence_gate_current": "G1plausible,G2retenido fallido,interno desconocido; ningún cierre de carencia",
+  "review_order": [
+    "F01",
+    "F02",
+    "F03"
+  ],
+  "conditional_high_value_source": "F04",
+  "deferred_source": "F05",
+  "row_data_reads": 0,
+  "new_fits": 0,
+  "new_scores": 0,
+  "new_numerical_diagnostics": 0,
+  "new_bootstrap": 0,
+  "new_models_or_recipes": 0,
+  "reference": "W2-B00",
+  "all_alternatives_preserved": true,
+  "2024_test_closed": true,
+  "night_window_reopened": false,
+  "automation_created_or_updated": false,
+  "professional_independent_validation": false
+}

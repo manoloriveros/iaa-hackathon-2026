@@ -1,0 +1,106 @@
+{
+  "id": "S2-INCIDENTE-752144-20261024",
+  "author": "Codex",
+  "source_url": "https://www.kaggle.com/competitions/iaa-ai-assisted-hackathon-2026-part-2/discussion/752144",
+  "path_base": "workspace_root",
+  "status": "own_authorized_submission_209063_rows_complete_scored",
+  "source": {
+    "path": "Hackaton/Repositorio_IAA2026/docs/fuentes/kaggle_discusion_752144_20261024T0307Z.json",
+    "sha256": "3646b61eaad7054d2b68b3ad08e22de4ce40eeddba6a257f5d3bfec9e71be3ce",
+    "retrieved_after_utc": "2026-10-24T03:07:29Z",
+    "retrieved_before_utc": "2026-10-24 03:09:18 UTC"
+  },
+  "original_message": {
+    "id": 3543650,
+    "utc": "2026-10-23T19:53:26.920Z"
+  },
+  "host_response": {
+    "topic": 752144,
+    "id": 3543798,
+    "utc": "2026-10-24T02:57:36.893Z",
+    "role": "HOST",
+    "announces_fix": true,
+    "source": "Hackaton/Repositorio_IAA2026/docs/fuentes/kaggle_discusion_752144_20261024T0307Z.json",
+    "source_sha256": "3646b61eaad7054d2b68b3ad08e22de4ce40eeddba6a257f5d3bfec9e71be3ce"
+  },
+  "other_participant_replies": 2,
+  "local_check": {
+    "path": "Hackaton/Repositorio_IAA2026/registro/semana2_cotejo_filas_752144_20261024.json",
+    "sha256": "b6aa01802de9b56b205c97e3e6d88de2e8b007456f6926469c63be5ee8e3d37e",
+    "passed": 10,
+    "failed": 0,
+    "emerging_rows": 209063,
+    "developed_rows": 626639,
+    "exact_emerging_id_set_and_order": true,
+    "columns_read": [
+      "row_id"
+    ]
+  },
+  "root_cause_confirmed": false,
+  "platform_fix_verified": true,
+  "own_submission_attempt": true,
+  "decision": "Preserve209063 emerging rows and CSV contract; no padding or mixed markets. Continue local2023 standard models under existing scope.",
+  "closure_rule": "Record host fix announcement separately from verified acceptance/scoring; any scoring receipt requires later authorized submission.",
+  "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/INCIDENCIA_KAGGLE_752144.md",
+  "automation": {
+    "id": "iaa-semana-2-modelos-est-ndar-y-validaci-n-nocturna",
+    "kind": "heartbeat",
+    "status": "ACTIVE",
+    "target_thread_id": "01a16986-60ad-7532-b2f5-2461a74fdcd7",
+    "frequency": "hourly_at_minute_zero",
+    "end": "2026-10-24T07:00:00-05:00",
+    "existing_automation_updated": true,
+    "schedule_and_target_preserved": true,
+    "prompt_contains_incident_and_safe_reader_verified": true,
+    "other_automations_changed": false,
+    "updates_only_on_incident_change": true
+  },
+  "scope": {
+    "new_fits": 0,
+    "new_price_predictions": 0,
+    "new_scores": 1,
+    "new_submissions": 2,
+    "remote_training": false,
+    "delegation": false,
+    "policy_change": false
+  },
+  "forum_id": "COD-S2-20261024-K752144",
+  "history": [
+    {
+      "status": "reported_by_participants_host_acknowledged_fix_not_announced",
+      "source": {
+        "path": "Hackaton/Repositorio_IAA2026/docs/fuentes/kaggle_discusion_752144_20261024.json",
+        "sha256": "82386b72fe5b1af0d9f7e1e632bdd521fd10caaa980636a300d7185d5d869f91",
+        "retrieved_before_utc": "2026-10-24T01:28:08Z"
+      },
+      "host_response": {
+        "id": 3543743,
+        "utc": "2026-10-23T23:33:22.560Z",
+        "role": "HOST",
+        "announces_fix": false
+      },
+      "superseded_utc": "2026-10-24T03:14:17.565690+00:00"
+    },
+    {
+      "status": "host_fix_announced_acceptance_scoring_not_verified",
+      "updated_utc": "2026-10-24T03:14:17.565690+00:00",
+      "acceptance_scoring_verified": false,
+      "scope": {
+        "new_fits": 0,
+        "new_price_predictions": 0,
+        "new_scores": 0,
+        "new_submissions": 0,
+        "remote": false,
+        "delegation": false,
+        "policy_change": false
+      },
+      "superseded_utc": "2026-10-24T16:03:57.640359+00:00"
+    }
+  ],
+  "host_fix_announced": true,
+  "acceptance_scoring_verified": true,
+  "latest_forum_update": "COD-S2-20261024-046",
+  "updated_utc": "2026-10-24T16:03:57.640359+00:00",
+  "scoring_receipt": "Hackaton/Repositorio_IAA2026/registro/semana2_envio_mezcla50_20261024.json",
+  "verified_scope": "This exact emerging CSV with 209063 rows only; no server configuration inspected."
+}

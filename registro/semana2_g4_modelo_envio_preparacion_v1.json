@@ -1,0 +1,181 @@
+{
+  "id": "G4-STANDARD-SUBMISSION-PREPARATION-v1-20261024",
+  "author": "Codex",
+  "utc": "2026-10-25T00:56:31.355621+00:00",
+  "status": "standard_recipe_prepared_no_new_fit_no_prediction",
+  "participant_latest_literal": "no,continua con las validaciciones y empecemos a preparar un modelo para enviar",
+  "existing_csv_reuse_declined": true,
+  "candidate_is_G4_preparation_not_existing_mixture": true,
+  "source_recipe": {
+    "path": "Hackaton/Repositorio_IAA2026/registro/semana2_glm_ridge_coberturas_plan_v1.json",
+    "sha256": "4fdee1366df2b330fe455506de63a25f74ecb79c64cba6a82a9e2e8c25eac623",
+    "model_id": "W2-B20"
+  },
+  "recipe": {
+    "id": "W2-B20",
+    "family": "TweedieRegressor",
+    "params": {
+      "power": 1.5,
+      "alpha": 1.0,
+      "fit_intercept": true,
+      "link": "log",
+      "solver": "lbfgs",
+      "max_iter": 2000,
+      "tol": 1e-06,
+      "warm_start": false
+    },
+    "features_by_line": {
+      "motor": {
+        "numeric": [
+          "x_new_business",
+          "x_ncb_years",
+          "x_vehicle_age",
+          "x_vehicle_value_group"
+        ],
+        "categorical": [
+          "x_driver_age_band",
+          "x_region",
+          "x_cover_type"
+        ],
+        "all": [
+          "x_new_business",
+          "x_ncb_years",
+          "x_vehicle_age",
+          "x_vehicle_value_group",
+          "x_driver_age_band",
+          "x_region",
+          "x_cover_type"
+        ]
+      },
+      "buildings": {
+        "numeric": [
+          "x_new_business",
+          "x_log_sum_insured",
+          "x_property_age",
+          "x_flood_zone",
+          "x_accidental_damage_cover"
+        ],
+        "categorical": [
+          "x_property_type",
+          "x_region"
+        ],
+        "all": [
+          "x_new_business",
+          "x_log_sum_insured",
+          "x_property_age",
+          "x_flood_zone",
+          "x_accidental_damage_cover",
+          "x_property_type",
+          "x_region"
+        ]
+      },
+      "contents": {
+        "numeric": [
+          "x_new_business",
+          "x_log_sum_insured",
+          "x_bedrooms",
+          "x_high_value_items",
+          "x_accidental_damage_cover"
+        ],
+        "categorical": [
+          "x_property_type",
+          "x_region"
+        ],
+        "all": [
+          "x_new_business",
+          "x_log_sum_insured",
+          "x_bedrooms",
+          "x_high_value_items",
+          "x_accidental_damage_cover",
+          "x_property_type",
+          "x_region"
+        ]
+      }
+    },
+    "numeric": "median keep_empty_features then StandardScaler, fit-only",
+    "categorical": "OneHotEncoder drop=first, min_frequency=50, max_categories=40, handle_unknown=ignore, fit-only"
+  },
+  "objective": "SameT0/e_cost_mix_1.0 response andsqrt(e) weights; half weighted rate deviance plus alpha/2||beta||2, weights normalized by sum. Heldout observed prediction=e*annualrate. Same per-fold C0, correctedcapital and persisted2023 partitions.",
+  "reference": "W2-B00",
+  "all_alternatives_preserved": true,
+  "model_choice_rationale": "Reuse an already specified standard main-effects GLM without extra calibration or a new hyperparameter search; not selected by a new2023score.",
+  "unchanged_standard_params": {
+    "power": 1.5,
+    "alpha": 1.0,
+    "fit_intercept": true,
+    "link": "log",
+    "solver": "lbfgs",
+    "max_iter": 2000,
+    "tol": 1e-06,
+    "warm_start": false
+  },
+  "no_new_recipe_or_validation_training": true,
+  "no_extra_climate_credibility_trend_or_calibration": true,
+  "capital_registry": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/capital_real_g4_2023/produccion_20261024_v1/real_capital_connection_registry.json",
+    "sha256": "d595f033f479b0c541ccd044129c208229a9f6cb85a038df8782b24dbc06bda2"
+  },
+  "existing_fold_model_inventory": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/capital_real_g4_2023/produccion_20261024_v1/existing_standard_model_inventory.json",
+    "sha256": "30ea425394983523c2e3443c1d47d943eaad9a478759c2727b913450cb6f854a"
+  },
+  "readiness_gaps": [
+    {
+      "gate": "final_scope",
+      "status": "not_registered_in_this_G4_pipeline",
+      "needed": "Explicit full2023 deployment scope. Current capital contract supports one/two exclusions; do not use an outer artifact as a full-cohort object."
+    },
+    {
+      "gate": "C0",
+      "status": "final_scope_object_not_registered_in_this_package",
+      "needed": "Traceable same-scope frozen C0 and contract for2025 application. This continuation cannot estimate/recalculate it."
+    },
+    {
+      "gate": "final_standard_model",
+      "status": "not_fitted_under_this_request",
+      "needed": "Complete2023 final GLM/preprocessor objects for each branch, or explicit justified use of existing fold objects; no silent ensemble or duplicate OOF run."
+    },
+    {
+      "gate": "all_branches_and_2025",
+      "status": "not_connected_in_this_G4_package",
+      "needed": "Complete motor/contents feature contracts and2025 inference/ID-order pipeline. Only buildings base capital connection was checked here."
+    }
+  ],
+  "fit_allowed_by_current_preparation": false,
+  "C0_recalculation_allowed": false,
+  "training_years_if_later_authorized": [
+    2023
+  ],
+  "2024_closed": true,
+  "current_G1_G2_resolved": false,
+  "B20_historical_adverse_results_preserved": true,
+  "promotion": false,
+  "final_roster_frozen": false,
+  "CSV_produced": false,
+  "submission_sent": false,
+  "subsequent_final_deployment": {
+    "index": "Hackaton/Repositorio_IAA2026/registro/semana2_g4_entrega_final_actual.json",
+    "utc": "2026-10-25T01:29:04.906726+00:00",
+    "CSV": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/modelo_final_g4_2023/final_20261024_v1/attempt1/submission_g4_glm_2023_2025.csv",
+      "sha256": "e5e30c5921c0494b7c0bebe76fbf33725f45ab392f7bed5ab7f6927a89f394ab",
+      "rows": 209063,
+      "columns": [
+        "row_id",
+        "prediction"
+      ]
+    },
+    "status": "own_CSV_ready",
+    "training_years": [
+      2023
+    ],
+    "prediction_years": [
+      2025
+    ],
+    "models_fitted": 3,
+    "reporting_fits": 15,
+    "2024_closed": true,
+    "promotion": false,
+    "submission_sent": false
+  }
+}

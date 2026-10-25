@@ -1,0 +1,80 @@
+{
+  "id": "S2-B20-CONSOLIDACION-F01-F05-2023-v1-20261024",
+  "author": "Codex",
+  "utc": "2026-10-24T17:19:44.604470+00:00",
+  "status": "F01_F05_consolidated_B20_current_slope_blocked_no_new_trial",
+  "priority_order": [
+    "G6",
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5"
+  ],
+  "current_gate_statuses": {
+    "G6": "local_scope_preserved_ultimate_conditional",
+    "G1": "plausible_not_established",
+    "G2": "heldout_failed_internal_unknown",
+    "G3": "added_complexity_not_justified",
+    "G4": "C0_numeric_stage_synthetic_verified_full_flow_pending",
+    "G5": "not_evaluated_no_promotion"
+  },
+  "gates_closed": [],
+  "non_model_issues_resolved": [
+    "F01 binary identity at reviewed cut",
+    "F05 public-message retrieval coverage at reviewed cut"
+  ],
+  "concurrent_progress_reconciled": "C0 numerical software stage implemented and synthetic verified; complete learning flow still open",
+  "current_blockers": [
+    "G1: residual mechanism not established",
+    "G2: current slope support failed; internal support unknown",
+    "G4: full numerical learning flow and real nested2023 artifacts not verified"
+  ],
+  "can_start_current_slope_trial": false,
+  "new_emerging2023_information_established": false,
+  "material_source_correction_established": false,
+  "new_fits": 0,
+  "model_loads": 0,
+  "new_predictions": 0,
+  "new_scores": 0,
+  "new_bootstrap": 0,
+  "new_numeric_diagnostics": 0,
+  "new_model_tests": 0,
+  "new_source_searches": 0,
+  "row_values_read": 0,
+  "reference": "W2-B00",
+  "all_alternatives_preserved": true,
+  "target_exposure_C0_folds_changed": false,
+  "promotion": false,
+  "final_roster_frozen": false,
+  "2024_test_closed": true,
+  "prior_external2024_subject_exposure_disclosed": true,
+  "professional_independent_validation": false,
+  "night_window_reopened": false,
+  "path_base": "workspace_root",
+  "run": "Hackaton/Repositorio_IAA2026/privado/semana2/revision_fuentes2023/consolidacion_F01_F05_20261024_v1",
+  "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/CONSOLIDACION_F01_F05_Y_BLOQUEOS_B20_2023.md",
+  "documentation_sha256": "f50a915ec368f200704b92fb4c7d598feaa6120b759bb3a77241d0c5d735f6be",
+  "forum_result": "COD-S2-20261024-058",
+  "previous_priority_index_snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/revision_fuentes2023/consolidacion_F01_F05_20261024_v1/sources/10_semana2_b20_prioridades_actual.json",
+  "source_reviews": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/revision_fuentes2023/consolidacion_F01_F05_20261024_v1/source_review_matrix.json",
+    "sha256": "629e27081d569ea5d7dae0d43cb11cbd046898affa00b102ff1d5f856178d2be"
+  },
+  "matrix": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/revision_fuentes2023/consolidacion_F01_F05_20261024_v1/updated_gate_matrix.json",
+    "sha256": "6db802b3c37727dba0412bdcbd521fb21508deb6d352ae7aaf7e4df0e4b2816d"
+  },
+  "reentry_packet": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/revision_fuentes2023/consolidacion_F01_F05_20261024_v1/reentry_evidence_packet.json",
+    "sha256": "f294b923975338dc5940749997580674585a1117421bb58d5ac89b85f7e260fd"
+  },
+  "sources": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/revision_fuentes2023/consolidacion_F01_F05_20261024_v1/source_manifest.json",
+    "sha256": "6cbad16a870be9dfcf9b373b8642f76a6280900aa67e085d27432521cb105c30"
+  },
+  "decisions": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/revision_fuentes2023/consolidacion_F01_F05_20261024_v1/decision_journal.json",
+    "sha256": "db3c7c1eeece463f51ce62bc2ddcda01e81cd07d1f8b16d7f8675d133deff887"
+  }
+}

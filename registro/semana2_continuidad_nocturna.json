@@ -1,0 +1,1016 @@
+{
+  "submission_platform_incident": {
+    "index": "Hackaton/Repositorio_IAA2026/registro/semana2_incidencia_kaggle_752144.json",
+    "topic_id": 752144,
+    "status": "host_fix_announced_acceptance_scoring_not_verified",
+    "correct_local_rows": 209063,
+    "automation_prompt_updated_and_verified": true,
+    "other_automations_changed": false,
+    "effect": "Record announcement only; no authorized submission or verified scoring. Continue local2023 scope.",
+    "latest_host_message": 3543798
+  },
+  "id": "S2-NOCHE-20261023",
+  "author": "Codex",
+  "path_base": "workspace_root",
+  "status": "window_closed_balance_published_after_deadline",
+  "plan": "Hackaton/Repositorio_IAA2026/docs/semana2/PLAN_NOCTURNO_20261023.md",
+  "timezone": "America/Bogota",
+  "window_start": "2026-10-23T19:00:00-05:00",
+  "window_end": "2026-10-24T07:00:00-05:00",
+  "frequency": "hourly_at_minute_zero",
+  "automation_id": "iaa-semana-2-modelos-est-ndar-y-validaci-n-nocturna",
+  "automation_kind": "heartbeat",
+  "automation_target_thread": "01a16986-60ad-7532-b2f5-2461a74fdcd7",
+  "automation_status_verified": "DELETED",
+  "same_chat": true,
+  "other_automations_changed": false,
+  "latest_completed_unit": {
+    "id": "S2-CORTE-OPERATIVO-NOCHE2023-0400-v1-20261024",
+    "author": "Codex",
+    "completed_utc": "2026-10-24T04:04:36.425904+00:00",
+    "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/corte_operativo_nocturno_20261024T0400Z_v1",
+    "index": "Hackaton/Repositorio_IAA2026/registro/semana2_corte_nocturno0400_actual.json",
+    "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/CORTE_NOCTURNO_20261024_0400.md",
+    "forum_result": "COD-S2-20261024-049",
+    "new_fits": 0,
+    "new_numerical_diagnostics": 0,
+    "own_automation_updated": true,
+    "schedule_preserved": true
+  },
+  "current_unit": null,
+  "queue": [],
+  "reference": "W2-B00",
+  "confirmation_2024_open": false,
+  "test_predictions_authorized": false,
+  "remote_training_authorized": false,
+  "submissions_authorized": false,
+  "delegation_authorized": false,
+  "professional_independent_validation": false,
+  "updated_utc": "2026-10-24T12:34:59.547547+00:00",
+  "next_unit": "This overnight window has ended. No automatic continuation or new experiments. B20 contrast remains non executable; evidence and resumption requirements are in final balance. Preserve B00/all alternatives and own2024/test closed.",
+  "no_retraining_or_suite_repetition_for_completed_v5": true,
+  "method_priority": "Standard models first; added complexity requires a documented residual failure and a preregistered test",
+  "completed_units": [
+    {
+      "id": "S2-DEV2023-v5-20261023",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev5_20261023T232328Z_69df9ead",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/DESARROLLO_2023_MODELOS_ESTANDAR.md",
+      "decision_journal": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev5_20261023T232328Z_69df9ead/decision_journal.json",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev5_20261023T232328Z_69df9ead/verifications/20261023T232550Z_bf02f31b.json",
+        "sha256": "f027c9eb179dda5742ff53d64ba3429f62f79bc6b8116d7f188ac24f3087428a",
+        "passed": 712,
+        "failed": 0
+      },
+      "fixtures": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev5_20261023T232328Z_69df9ead/fixture_checks.json",
+        "sha256": "7599705a58fee1b0c511f659dec01bde711144d0eea299e838f0dceae36333e0",
+        "passed": 22,
+        "failed": 0
+      },
+      "forum_result": "COD-S2-20261023-017"
+    },
+    {
+      "id": "S2-DEV2023-v6-20261023",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/CAPITAL_CLIMA_CREDIBILIDAD_2023.md",
+      "decision_journal": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/decision_journal.json",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/verifications/20261023T234646Z_f84baa76.json",
+        "sha256": "7062a5ef18392f867966e941a82d5fd0d71055785c67dd5fc07dc92a3d81314e",
+        "passed": 832,
+        "failed": 0
+      },
+      "fixtures": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/fixture_checks.json",
+        "sha256": "d06674b251c493b7cfd0915182710ea7be7085ec9ff59d3a4a779952eb26ee8f",
+        "passed": 26,
+        "failed": 0
+      },
+      "forum_result": "COD-S2-20261023-019"
+    },
+    {
+      "id": "S2-DEV2023-v7-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev7_20261023T235935Z_55507793",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/CAPITAL_POR_FILA_Y_AUTOS_NUEVOS_2023.md",
+      "decision_journal": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev7_20261023T235935Z_55507793/decision_journal.json",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev7_20261023T235935Z_55507793/verifications/v7_20261024T000045Z_9a6648a0.json",
+        "sha256": "e58769689ef3f9b9476d02051f5949dc7b6c095d47d7623b678b5c60cf8a37f0",
+        "passed": 622,
+        "failed": 0
+      },
+      "fixtures": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev7_20261023T235935Z_55507793/fixture_checks.json",
+        "sha256": "541a76b36d8d8f6294384a146716d7f089bdbce7b75d996431f7d65078340341",
+        "passed": 31,
+        "failed": 0
+      },
+      "forum_result": "COD-S2-20261024-021",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_v7_snapshot.json",
+      "index_sha256": "10a821c226df2f3476802ce7c92dede147fd7d1f5e7707ad1e1c465bf849bf25"
+    },
+    {
+      "id": "S2-COLA2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/cola_20261024T001114Z_e5d1c211",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_sensibilidad_observacion_cola_v1_snapshot.json",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/SENSIBILIDAD_COLA_Y_NIVEL_2023.md",
+      "decision_journal": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/cola_20261024T001114Z_e5d1c211/decision_journal.json",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/cola_20261024T001114Z_e5d1c211/verifications/cola_20261024T001611Z_2ed4b58a.json",
+        "sha256": "1f25087bef2015e23c1cac65f218a2b552f0b522a65dfb205c9551a82fcac20a",
+        "passed": 715,
+        "failed": 0
+      },
+      "fixtures": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/cola_20261024T001114Z_e5d1c211/fixture_checks.json",
+        "sha256": "ee8e8403c28f81b106fd4e29f0f8dbb05f9183de8682c109308662d048bacbdb",
+        "passed": 34,
+        "failed": 0
+      },
+      "forum_result": "COD-S2-20261024-024",
+      "index_at_original_registration": "Hackaton/Repositorio_IAA2026/registro/semana2_sensibilidad_observacion_actual.json",
+      "index_sha256": "39f4b30bb7a928cbc339ef93ef896352d52414fb667107b670e8aa89376d07d5"
+    },
+    {
+      "id": "S2-C0-RESERVAS2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mecanismo_20261024T002849Z_c8f124bf",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_sensibilidad_observacion_c0_reservas_v1_snapshot.json",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/NIVEL_C0_REPORTES_Y_RESERVAS_2023.md",
+      "decision_journal": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mecanismo_20261024T002849Z_c8f124bf/decision_journal.json",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mecanismo_20261024T002849Z_c8f124bf/verifications/c0_20261024T003122Z_eb2e940d.json",
+        "sha256": "dbcc7571b9e60e817a617a327a4008863ce4047c38bdc6d82a078ae627ffd326",
+        "passed": 1477,
+        "failed": 0
+      },
+      "fixtures": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mecanismo_20261024T002849Z_c8f124bf/fixture_checks.json",
+        "sha256": "698fb55ce9028761afd08144cde3e70294345eec53d63d6c3f9b1e6aa165bc35",
+        "passed": 48,
+        "failed": 0
+      },
+      "forum_result": "COD-S2-20261024-026",
+      "index_at_original_registration": "Hackaton/Repositorio_IAA2026/registro/semana2_sensibilidad_observacion_actual.json",
+      "index_sha256": "7ca32aa2a5d5d2efb1eef5398f1d26254aec27143cc2d26d71309a6528305750"
+    },
+    {
+      "id": "S2-C0-MEZCLA-NEGOCIO2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mezcla_20261024T004833Z_e8ff18e0",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/MEZCLA_C0_PERIL_Y_NEGOCIO_2023.md",
+      "decision_journal": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mezcla_20261024T004833Z_e8ff18e0/decision_journal.json",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mezcla_20261024T004833Z_e8ff18e0/verifications/mix_20261024T005106Z_bdcdc17e.json",
+        "sha256": "0fbe284e17420ccdbb6a1b30611ab977dabeaab084cc09b2cca3cfae39459efe",
+        "passed": 1570,
+        "failed": 0
+      },
+      "fixtures": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mezcla_20261024T004833Z_e8ff18e0/fixture_checks.json",
+        "sha256": "b1588dc4c78296c58c92ec9f6cc00009a496a78fdfa0021cd5ff034324329695",
+        "passed": 47,
+        "failed": 0
+      },
+      "forum_result": "COD-S2-20261024-028",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_sensibilidad_observacion_actual.json"
+    },
+    {
+      "id": "S2-SOPORTE-CALENDARIO2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/soporte_20261024T010555Z_c4428b52",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/SOPORTE_CALENDARIO_REPORTE_2023.md",
+      "decision_journal": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/soporte_20261024T010555Z_c4428b52/decision_journal.json",
+        "sha256": "89522d20b8644a524acc451bca1bef6007ce5b535ec1e628dfbc8a0d8d48704d"
+      },
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/soporte_20261024T010555Z_c4428b52/verification.json",
+        "sha256": "a14e6377a373146a81d57649f10dc2812658b669a8258fae7bdf87d2a3f0f324"
+      },
+      "forum_result": "COD-S2-20261024-031",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_soporte_calendario2023_actual.json"
+    },
+    {
+      "id": "S2-COBERTURAS-PERIL2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/COBERTURAS_Y_DENOMINADORES_PERIL_2023.md",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/verification.json",
+        "sha256": "c85c3cdabab130ef535da7967695ec1b02c209b63e0e4b54d452a134ca64c315"
+      },
+      "decision_journal": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/decision_journal.json",
+        "sha256": "c5854f5ed31239ff7e2d723de8cd48367dee1d276c50d3381284a6b0796bc125"
+      },
+      "forum_result": "COD-S2-20261024-033",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_coberturas_peril2023_actual.json"
+    },
+    {
+      "id": "S2-DEV2023-v8-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/GLM_COBERTURAS_2023.md",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/verification.json",
+        "sha256": "743a6a94287b802232448833d0f130cf43ac618560dd8724c956c815dbbed698",
+        "passed": 569,
+        "failed": 0
+      },
+      "fixtures": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/fixture_checks.json",
+        "sha256": "895431a25ad23163f45ca259d47394966c5f1089a619111e397a327dc961d32d",
+        "passed": 39,
+        "failed": 0
+      },
+      "decision_journal": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/decision_journal.json",
+      "forum_result": "COD-S2-20261024-035",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_actual.json"
+    },
+    {
+      "id": "S2-GLM-RIDGE-COBERTURAS2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/GLM_RIDGE_COBERTURAS_2023.md",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/verification.json",
+        "sha256": "607979397dde62eaa3b13249ef17e38ea0f9d42c2894108f8b0f6b21f03b6692",
+        "passed": 542,
+        "failed": 0
+      },
+      "fixtures": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/fixture_checks.json",
+        "sha256": "acdd77a901209313e994beef76b2408fbbf6892beaf5ca7747145b801862e31f",
+        "passed": 48,
+        "failed": 0
+      },
+      "decision_journal": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/decision_journal.json",
+      "forum_result": "COD-S2-20261024-B20-RESULT",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_glm_ridge_actual.json"
+    },
+    {
+      "id": "S2-B19-ESTABILIDAD2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/estabilidad_b19_20261024T014815Z_9b2b1803",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/ESTABILIDAD_E_INFLUENCIA_B19_2023.md",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/estabilidad_b19_20261024T014815Z_9b2b1803/verification.json",
+        "sha256": "f120f015324e561b3c4c3f6d082ff196904f9815f076a466f9f0ce98047d53c2"
+      },
+      "decision_journal": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/estabilidad_b19_20261024T014815Z_9b2b1803/decision_journal.json",
+        "sha256": "1e30aa5f02b03d8af2253a750261a2819c1feb4da62860876d161ba28d9bfb05"
+      },
+      "forum_result": "COD-S2-20261024-037",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_b19_estabilidad_actual.json",
+      "completed_utc": "2026-10-24T01:59:47.301715+00:00",
+      "new_fits": 0,
+      "new_models": 0,
+      "new_bootstrap": 0
+    },
+    {
+      "id": "S2-B19-TRAZA2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/traza_b19_20261024T021036Z_fe5038de",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/TRAZABILIDAD_SINIESTROS_B19_2023.md",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/traza_b19_20261024T021036Z_fe5038de/verification.json",
+        "sha256": "d18bb1e9bfa282b16ef480b708ffa0b7ccf51387dd2b4de72eda557d0ce1ef8d"
+      },
+      "decision_journal": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/traza_b19_20261024T021036Z_fe5038de/decision_journal.json",
+        "sha256": "7070cd781a5e53189e3417b96cdb7f19613ff62f124851cec46675476014614c"
+      },
+      "forum_result": "COD-S2-20261024-039",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_b19_traza_actual.json",
+      "completed_utc": "2026-10-24T02:21:43.850140+00:00",
+      "new_fits": 0,
+      "new_scores": 0,
+      "new_bootstrap": 0
+    },
+    {
+      "id": "S2-B20-ATRIBUCION2023-v1a-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_atribucion_20261024_v1a",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/ATRIBUCION_GRUPOS_Y_SEGMENTOS_B20_2023.md",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_atribucion_20261024_v1a/verification_corrected.json",
+        "sha256": "9511888ad30d1e53d375915113da3ecea9719d5173d14b748eb7f37d1b171398",
+        "passed": 1014,
+        "failed": 0
+      },
+      "fixtures": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_atribucion_20261024_v1a/fixture_checks.json",
+        "sha256": "75cf75fe49b7edc0e9693401f4571fbe957826c526b6bbbd90b2df35683a4412",
+        "passed": 16,
+        "failed": 0
+      },
+      "decision_journal": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_atribucion_20261024_v1a/decision_journal.json",
+        "sha256": "c6ade1c4b97dc02dec83f5f1f07f1bd27778ca2aad1a2ae994f90a8e55d6baaf"
+      },
+      "forum_result": "COD-S2-20261024-B20-ATTR-RESULT",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_atribucion_actual.json",
+      "new_fits": 0,
+      "new_bootstrap": 0
+    },
+    {
+      "id": "S2-B20-CONTRACCION2023-v2-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/CONTRACCION_Y_NIVEL_B20_VS_B19_2023.md",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/verification.json",
+        "sha256": "1a6a7051eb5e0c14172b686c0c77afc7863e3d616adb420f048cad3da47e9707"
+      },
+      "decision_journal": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/decision_journal.json",
+        "sha256": "abb7e0b08b03902ceeba85f2e1c6824622dce87c91056a98dbcf72a99478e867"
+      },
+      "forum_result": "COD-S2-20261024-041",
+      "forum_followup": "COD-S2-20261024-042",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_contraccion_actual.json",
+      "completed_utc": "2026-10-24T02:38:41.274803+00:00",
+      "new_fits": 0,
+      "new_price_predictions": 0,
+      "new_bootstrap": 0
+    },
+    {
+      "id": "S2-B20-BANDAS-CALIBRACION2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_bandas_calibracion_20261024_v1",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/CALIBRACION_B20_BANDAS_AJUSTE_2023.md",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_bandas_calibracion_20261024_v1/verification.json",
+        "sha256": "aa30098d17e3853f6738d2b539221eff6877191c59ff20b178fcb96658806389",
+        "passed": 2121,
+        "failed": 0
+      },
+      "fixtures": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_bandas_calibracion_20261024_v1/fixture_checks.json",
+        "sha256": "076dcd09a0a2b8d68b76c6e60d2675c67666f4c6b2c2c4cd1c3dac904a9b9441",
+        "passed": 21,
+        "failed": 0
+      },
+      "decision_journal": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_bandas_calibracion_20261024_v1/decision_journal.json",
+        "sha256": "530cc3e89b5ce29e8d95a87d293d52ae99b3b9e87d87c1688ba8d85277935e75"
+      },
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_bandas_calibracion_actual.json",
+      "forum_result": "COD-S2-20261024-B20-BANDS-RESULT",
+      "new_fits": 0,
+      "new_bootstrap": 0,
+      "training_replay_scopes": 15
+    },
+    {
+      "id": "S2-B20-SINTESIS2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/SINTESIS_B20_Y_SIGUIENTE_PASO_2023.md",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/verification.json",
+        "sha256": "f78dee55f48b9b11fd72dc87928331f379155192f9d946201fff1ae97feb1206",
+        "passed": 205,
+        "failed": 0
+      },
+      "decision_journal": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_sintesis_20261024_v1/decision_journal.json",
+        "sha256": "01fe0b7b89fd5e8a94cd030fb8a09ba203c8c4ad0359111b3ed9c6d399269497"
+      },
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_sintesis_actual.json",
+      "forum_result": "COD-S2-20261024-B20-SYNTH-RESULT",
+      "completed_utc": "2026-10-24T02:55:01.590374+00:00",
+      "new_fits": 0,
+      "new_inference": 0,
+      "new_bootstrap": 0
+    },
+    {
+      "id": "S2-B20-INCENDIO-AD2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/incendio_AD_b20_20261024T025027Z_87782526",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/INCENDIO_Y_AD_B20_2023.md",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/incendio_AD_b20_20261024T025027Z_87782526/verification.json",
+        "sha256": "374e076f4866f678b477451a7127165520ee1fc85920b01d9fcb2ddb1e6c3fa2"
+      },
+      "decision_journal": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/incendio_AD_b20_20261024T025027Z_87782526/decision_journal.json",
+        "sha256": "f5b7c03bbd9b72bb27e116f806a5314041c480947dde021e383648b2d03fef3c"
+      },
+      "forum_result": "COD-S2-20261024-044",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_incendio_AD_actual.json",
+      "completed_utc": "2026-10-24T02:56:10.791774+00:00",
+      "new_fits": 0,
+      "model_loads": 0,
+      "new_price_predictions": 0,
+      "new_bootstrap": 0
+    },
+    {
+      "id": "S2-CONTINUIDAD-INCIDENCIA2023-v1-20261024",
+      "author": "Codex",
+      "completed_utc": "2026-10-24T03:14:17.561193+00:00",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/continuidad_20261024T0310Z_v1",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/VIGENCIA_B20_E_INCIDENCIA_20261024.md",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_conciliacion_nocturna_actual.json",
+      "forum_result": "COD-S2-20261024-046",
+      "new_fits": 0,
+      "new_scores": 0,
+      "new_bootstrap": 0
+    },
+    {
+      "id": "S2-B20-DISENO-CONTRASTE2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/DISENO_CONTRASTE_MINIMO_B20_2023.md",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_contraste_minimo_actual.json",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/verification.json",
+        "sha256": "91e1b291b7d5d396a5621eed05a9260cd0964e8badcbfeb528e5ea62eb66bb59",
+        "passed": 174,
+        "failed": 0
+      },
+      "decision_journal": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1/decision_journal.json",
+        "sha256": "d6ce69799fff51bfb7d08b8637f3bb587f5ed29a72a65fa9073c1027ca8b5e0f"
+      },
+      "completed_utc": "2026-10-24T03:14:24.728517+00:00",
+      "forum_result": "COD-S2-20261024-B20-DESIGN-RESULT",
+      "new_fits": 0,
+      "new_inference": 0,
+      "support_gate": "failed",
+      "fit_authorized": false
+    },
+    {
+      "id": "S2-B20-PRIORIDADES2023-v1-20261024",
+      "author": "Codex",
+      "completed_utc": "2026-10-24T03:18:49.243095+00:00",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/prioridades_b20_20261024_v1",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIORIDADES_Y_EVIDENCIA_PENDIENTE_B20_2023.md",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_prioridades_actual.json",
+      "forum_result": "COD-S2-20261024-047",
+      "new_fits": 0,
+      "new_diagnostics": 0,
+      "new_scores": 0
+    },
+    {
+      "id": "S2-B20-SOPORTE-FOLDS2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_soporte_folds_20261024_v1",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/SOPORTE_B20_POR_FOLD_2023.md",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_soporte_folds_actual.json",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_soporte_folds_20261024_v1/verification.json",
+        "sha256": "2861781f0b160736cc060ef6a4d1e4bbd4c2808d1e8d3ead5bc2039a6a63b41a",
+        "passed": 911,
+        "failed": 0
+      },
+      "decision_journal": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_soporte_folds_20261024_v1/decision_journal.json",
+        "sha256": "333eda4f9fad3e484073faf268955410be1800ce92e60b0aa221018922e7e6e0"
+      },
+      "completed_utc": "2026-10-24T03:21:59.314936+00:00",
+      "forum_result": "COD-S2-20261024-B20-SUPPORT-RESULT",
+      "new_fits": 0,
+      "new_inference": 0,
+      "support_gate": "failed",
+      "fit_authorized": false
+    },
+    {
+      "id": "S2-B20-EVIDENCIA-MECANISMO-SOPORTE2023-v1-20261024",
+      "author": "Codex",
+      "completed_utc": "2026-10-24T03:25:30.162185+00:00",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/evidencia_mecanismo_soporte_b20_20261024_v1",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/EVIDENCIA_DISPONIBLE_MECANISMO_SOPORTE_B20_2023.md",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_mecanismo_soporte_revision_actual.json",
+      "forum_result": "COD-S2-20261024-048",
+      "new_fits": 0,
+      "new_numerical_diagnostics": 0,
+      "new_scores": 0,
+      "mechanism": "plausible_not_established",
+      "support": "measured_failed"
+    },
+    {
+      "id": "S2-B20-PREFLIGHT-C02023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_preflight_c0_20261024_v1",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/PREFLIGHT_C0_Y_AISLAMIENTO_B20_2023.md",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_preflight_c0_actual.json",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_preflight_c0_20261024_v1/verification.json",
+        "sha256": "3496dab1adf2e90d35ee4fc8c1c5a616c65871570826ad312d7d909bc350dd85",
+        "passed": 384,
+        "failed": 0
+      },
+      "decision_journal": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_preflight_c0_20261024_v1/decision_journal.json",
+        "sha256": "35908c39c23e7f0dba16e846459035b9c601f4d55b71caac66e901129f380632"
+      },
+      "completed_utc": "2026-10-24T03:32:38.109841+00:00",
+      "forum_result": "COD-S2-20261024-B20-C0-RESULT",
+      "support_gate": "failed",
+      "new_fits": 0,
+      "new_inference": 0,
+      "new_C0_values": 0,
+      "fit_authorized": false
+    },
+    {
+      "id": "S2-CORTE-OPERATIVO-NOCHE2023-0400-v1-20261024",
+      "author": "Codex",
+      "completed_utc": "2026-10-24T04:04:36.425904+00:00",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/corte_operativo_nocturno_20261024T0400Z_v1",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_corte_nocturno0400_actual.json",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/CORTE_NOCTURNO_20261024_0400.md",
+      "forum_result": "COD-S2-20261024-049",
+      "new_fits": 0,
+      "new_numerical_diagnostics": 0,
+      "own_automation_updated": true,
+      "schedule_preserved": true
+    }
+  ],
+  "integration_decisions": {
+    "capital": "56-row representation/refit decomposition verified; no economic scale proof; B13/B14 retained without new score-driven capital rule",
+    "climate": "Not admitted prospectively; availability conditions unchanged",
+    "credibility": "B15 and motor-only B16/B17/B18 conditional alternatives; none establishes improvement over B14; no optimized weight",
+    "tail": "T10F standard refit andT10R mixture normalization verified conditionally; observedD2 fails to identify nominal ultimate scale. No adopted mass or mixture.",
+    "reserves_and_late_reports": "Matched reserve-mark/target/C0 verified; B14 nominal about±2.48%; lateC0component stress−0.658% and point gains reverse under own31 influence. No adopted factor or exclusion.",
+    "business_peril_mixture": "MIXF and MIXFS estimated only ownfold2023; no point gain, sparse concentrated severity, verified completion bound. No business mixture adopted; B00/all alternatives retained.",
+    "calendar_support": "Direct daily exposure audit verified; newbusiness has less mature exposure at long delays and sparse reverse-risk support. No business timing curve adopted, no new price model or score.",
+    "coverage_denominators": "Home hardaccidental_damage mask conflicts with30closed positive claims/29045.06CU; not adopted. Motor conventional masks observedcompatible only. No bicycle-to-alltheft mask. Broad current denominator remains conditional; no fits/scores this unit.",
+    "coverage_GLM": "B19 adds one coverage field perline withsameT0/C0. All15fit objectives improve but globalOOF.086710->.082470, building loss andmotornewbusiness deterioration. No promotion/retirement; no masks or hyperparameter changes.",
+    "ridge_main_effects": "B20 point improves vsB19/B14; B14 interval crosses0,31groupremoval reversesall gains,motor/contentsnewbusiness harms. No promotion or complexity added.",
+    "B19_saved_artifact_stability": "Building coverage ratio crosses1; no single evaluationgroup deletion removes building loss. Motornew oneTPOnly injury group concentrates56.1%gross adverse loss, segment-only reversal after evaluation deletion. LocalH^-1G approximate, no coefficient adoption or price. No data deletion, model promotion or additional fit.",
+    "B19_claim_source_trace": "Twelve selected2023 groups match original monetary fields/intervals and savedT0/reserve. Dominant motornew claim closed/fullypaid, not reserve-open or >365daylate. Keep claims/models; same-source snapshot does not establish reserve adequacy, ultimate or C0. No new fit/price/score.",
+    "B20_attribution": "B14 own31gain48637 exceedsnet14804, remainder−33833. Denominator positivecannotreverse sign; selectedsets reference-dependent. No group deletion,promotion or complexity.",
+    "B20_contraction_level": "All15 standardizednorms contract but33coordinate exceptions; AD building effect still crosses1, motornew business effect littlechanged. Fixed12group/20period level and deviance gains descriptive only. PreserveB00/all data/models, no normalization/alpha/routing/promotion.",
+    "B20_calibration_bands": "GlobalAE1.011 hides band/segment mismatch; buildinglow1.966/high0.714 and sparseconcentrated newbusinesscells. No adopted normalization or complexmodel.",
+    "B20_synthesis": "B20 remains alternative: jointnorm shrinkage, outcome-selected influence and heterogeneous/sparse bands do not justify recalibration or added capacity. Nine decisions and six evidence gates recorded.",
+    "fixedfire_AD": "Fixedfire35.8%globalnet and7.2%globalpositivegrosscomponent gain; singlecase exclusion leavespositivepoint. ADfit3 excludes bothfixedfires; composition descriptive and oldB19localinfluence approximate. Keepallrecords/B00/alternatives, no mask or promotion.",
+    "B20_minimal_contrast_design": "One slope compression versus level-only control specified; current buildingtail support fails. No calibration/fit or automatic next model. Ten decisions; current counters unchanged.",
+    "B20_fold_support": "10heldoutbuildingtailcells:5fail in folds1/2/3/4, all on maxcostshare+concentrationequivalent; positivecounts pass. Outertraining context is not innerOOF; no fit or threshold relaxation.",
+    "B20_C0_preflight": "Fiveouter scopes/links reconciled;20nested cache reuses unsafe. Tenplannedtrios,60hypotheticalreportingcalls. Metadata selector14fixtures is not numericC0; supportfailed and nofit."
+  },
+  "open_conditions": [
+    {
+      "id": "TAIL-UNIDENTIFIED",
+      "status": "open",
+      "effect": "Renormalized tail shifts conditional nominal2023 totals about2.5% with observed predictions identical. Observed D2 cannot identify unseen cost mass or ultimate scale."
+    },
+    {
+      "id": "TAIL-INTERPRETATION",
+      "status": "open",
+      "effect": "Fixedshare and renormalized mixtures are different declared assumptions. Neither establishes true tailmass/severity/stationarity; row-peril mix is approximate."
+    },
+    {
+      "id": "TAIL-RESERVES",
+      "status": "open",
+      "effect": "Reserve.75/1.25 refit remains pending, not completed by this tail-only unit."
+    },
+    {
+      "id": "TAIL-SEARCH",
+      "status": "open",
+      "effect": "Six observation-stress configurations and6new unadjusted exploratory pairs after19 adaptive pricing recipes. No common-link candidate promotion, equivalence or final roster."
+    },
+    {
+      "id": "TAIL-2024-CLOSED",
+      "status": "open",
+      "effect": "Explicit participant restriction, regardless of corrected selector. No2024/test prices or predictions, ledger absent."
+    },
+    {
+      "id": "DEV7-CAPITAL-UNIT",
+      "status": "open",
+      "effect": "56 corrected2023 records have no positive T0. Values within training support and formula replay cannot confirm economic scale; B13/B14 and private row detail retained."
+    },
+    {
+      "id": "DEV7-MOTOR-CRED",
+      "status": "open",
+      "effect": "All3 prespecified motor-only corrections worsen point D2 againstB14; CIs include0. No choice of weight or substitution established; keep B15 and ablations without promotion."
+    },
+    {
+      "id": "DEV7-PRIOR-OBJECTIVE",
+      "status": "open",
+      "effect": "Received developed2021-2023 prior/seasonality not raw-reproduced here; prior uncertainty omitted in Z; tau uses correlated effects. Auxiliary count/severity and price Tweedie objectives/observation differ."
+    },
+    {
+      "id": "DEV7-SEARCH",
+      "status": "open",
+      "effect": "19 adaptive recipes,171 unadjusted exploratory contrasts; no temporal confirmation, equivalence or final roster."
+    },
+    {
+      "id": "DEV7-ULTIMATE",
+      "status": "open",
+      "effect": "Reporting, late-cost and reserves remain conditional; fixed-rate stresses are not full refits or final2025 ultimate validation."
+    },
+    {
+      "id": "DEV7-2024-CLOSED",
+      "status": "open",
+      "effect": "Explicit participant instruction: keep2024/test unpriced, unpredicted and unscored, ledger absent."
+    },
+    {
+      "id": "C0R-RESERVE-TRUTH",
+      "status": "open",
+      "effect": "Reserve.75/1.25 are design stresses, not adequacy estimates or statistical bounds. Target changes; cross-target D2 is not a superiority contrast."
+    },
+    {
+      "id": "C0R-LATE-INFLUENCE",
+      "status": "open",
+      "effect": "L1 is a reporting-estimator-only component removal stress. Small positive observed-score gains reverse after own31 favorable groups; do not discard costly claims or adopt altered C0."
+    },
+    {
+      "id": "C0R-TAIL-UNIDENTIFIED",
+      "status": "open",
+      "effect": "Previous tail normalization preserves observedD2 while nominal2023 rises~2.5%; no identification of mass/severity beyond support. No new joint tail/reserve scenario fitted here."
+    },
+    {
+      "id": "C0R-MIXTURE",
+      "status": "open",
+      "effect": "Line-level peril mixture may differ by row/business; report/cost dependence, censoring and stationarity unresolved. Groups2023 at2024cutoff are not prospective at beginning2023."
+    },
+    {
+      "id": "C0R-SEARCH",
+      "status": "open",
+      "effect": "19 main recipes and successive conditional observation stresses;12new unadjusted exploratory contrasts, no temporal confirmation or final roster."
+    },
+    {
+      "id": "C0R-2024-CLOSED",
+      "status": "open",
+      "effect": "Participant keeps2024/test prices/predictions/scores closed and ledger absent, regardless of selector state."
+    },
+    {
+      "id": "MIX-SPARSE",
+      "status": "open",
+      "effect": "Business/peril positive severity has small weighted effective samples and concentrated costs. Five zerofoldcells represent one observed absence of newbusiness buildingfire, not no future risk."
+    },
+    {
+      "id": "MIX-REPRO-NOT-GAIN",
+      "status": "open",
+      "effect": "All MIXF pointD2 belowownbase; all MIXFS belowMIXF. No adopted business mixture, selected smoothing, equivalence or promotion."
+    },
+    {
+      "id": "MIX-COMPLETION",
+      "status": "open",
+      "effect": "Differences in mixture shares can have little impact when peril cost-completion curves are similar. Verified TV*spread bound only2023; not2025 or ultimate accuracy."
+    },
+    {
+      "id": "MIX-POOLED-CURVES",
+      "status": "open",
+      "effect": "Count/cost timing and truncation weights remain pooledbyperil; no business-specific curve, independent cost-report timing proof or individual coverage masks."
+    },
+    {
+      "id": "MIX-SEARCH",
+      "status": "open",
+      "effect": "Six further observation-stress configurations and12new unadjusted conditional bootstrap contrasts after adaptive research. Fixedfit OOF intervals omit first-stage parameter-refit uncertainty."
+    },
+    {
+      "id": "MIX-2024-CLOSED",
+      "status": "open",
+      "effect": "Direct participant instruction. MainB00 and19catalog retained; no2024/test prices/predictions/scores or ledger."
+    },
+    {
+      "id": "MIX-EXTERNAL-2024-SCOPE",
+      "status": "open",
+      "owner": "Codex",
+      "effect": "Claude announced another-chat authorization and an opening of 2024. This task retains its direct 2023-only restriction, quarantines external confirmation outputs and opens no additional batch; global state requires separate reconciliation."
+    },
+    {
+      "id": "SUPPORT-CALENDAR",
+      "status": "open",
+      "effect": "Newbusiness has less mature exposure at long delays; calendar differences do not identify causal price-model failure."
+    },
+    {
+      "id": "SUPPORT-TAIL",
+      "status": "open",
+      "effect": "Observed delay support and tiny newbusiness reverse risk near pooled endpoints do not identify unseen tail or justify separate business curves."
+    },
+    {
+      "id": "SUPPORT-COVERAGE",
+      "status": "open",
+      "effect": "Peril denominators still use broad line/business exposure. Review admissible technical coverage masks before more complexity; no structural zero inferred."
+    },
+    {
+      "id": "SUPPORT-EXPOSURE-2024",
+      "status": "open",
+      "effect": "External forum subject exposed2024 outcome metrics; no complete-blindness claim. Safe reader emits only author/id/UTC; no external outcome used in this data-only audit."
+    },
+    {
+      "id": "COV-HOME-POSITIVE-OUTSIDE",
+      "status": "open",
+      "effect": "30closed positive accidental_damage claims and29045.06CU outside flag-based home mask. Do not exclude exposure/claims or enforce structuralzero under currentT0."
+    },
+    {
+      "id": "COV-MOTOR-CONTRACT",
+      "status": "open",
+      "effect": "No observed motor claim outside conventional mask in2023 is necessary compatibility only, not complete contract mapping or future no-risk proof."
+    },
+    {
+      "id": "COV-NUMERATOR-DENOMINATOR",
+      "status": "open",
+      "effect": "Changing denominator alone with broad numerator is incoherent for home candidate; row-specific cost composition is not achieved by aggregate rate shrink/normalization."
+    },
+    {
+      "id": "COV-BICYCLE",
+      "status": "open",
+      "effect": "Optional bicycle cover is not a mask for all theft. No crosswalk or structuralzero inferred."
+    },
+    {
+      "id": "DEV8-HOME-OOF",
+      "status": "open",
+      "effect": "All15 nestedfit objectives improve but globalB19D2 falls; building D2.021094->.008352. A-E close1 does not establish row-level performance."
+    },
+    {
+      "id": "DEV8-MOTOR-NEW",
+      "status": "open",
+      "effect": "Motor aggregate slightly improves but newbusinessD2-.010045->-.031822 and thirdpartyonly worsens. Descriptive segment evidence, no segment superiority interval."
+    },
+    {
+      "id": "DEV8-INFLUENCE",
+      "status": "open",
+      "effect": "B19/B00 positive point reverses after own31 favorable groups; B19/B14 negative point and both exploratoryCIs include0. No promotion/equivalence/retirement."
+    },
+    {
+      "id": "DEV8-SEARCH",
+      "status": "open",
+      "effect": "20 adaptive catalogrecipes;171 inherited+2new pair contrasts,17 possibleB19pairs uncomputed. Fixedfit exploratory intervals omit first-stage/model refit uncertainty."
+    },
+    {
+      "id": "DEV8-COVERAGE-SEMANTICS",
+      "status": "open",
+      "effect": "Coverage effects are predictors, not contract masks or causal estimates;30positive home claims retained. BroadperilC0 and ultimate, capital, climate and prior conditions persist."
+    },
+    {
+      "id": "DEV8-2024-EXPOSURE",
+      "status": "open",
+      "effect": "User keeps2024/test closed; prior external header metric exposure disclosed, no complete-blindness claim, no external outcome used or new external confirmation artifact read."
+    },
+    {
+      "id": "RIDGE-SEARCH-INFLUENCE-SEGMENTS",
+      "status": "open",
+      "effect": "Conditional exploratory gains; adaptive search,groupinfluence,segment harms and unstablecoverage direction remain. No finalroster or2024opening."
+    },
+    {
+      "id": "B19-STABILITY-FOLDS",
+      "status": "open",
+      "effect": "Coverage coefficients vary on common original scale;5overlappingfits are not independent CI. Numerical Hessian conditioning does not establish generalization."
+    },
+    {
+      "id": "B19-GROUP-MOTOR",
+      "status": "open",
+      "effect": "OneTPOnly bodilyinjury component accounts for56.1%gross adverse motornewloss; evaluation deletion flipssegmentcontrast but not wholeportfolio. No record removal or promotion."
+    },
+    {
+      "id": "B19-GROUP-BUILDINGS",
+      "status": "open",
+      "effect": "No individualgroup deletion removes building loss; top5adversegroups arefire. AD effect associates with totalcost/perils, not contract-only accidental risk."
+    },
+    {
+      "id": "B19-LOCAL-APPROX",
+      "status": "open",
+      "effect": "H^-1G localdeletion uses fullH/frozenC0, not refit; highleverage and largecomponents make exact deletion uncertain. No changedcoefficient price or score."
+    },
+    {
+      "id": "B19-SOURCE-TRACE",
+      "status": "open",
+      "effect": "Validate payment/reserve/recovery/status/date lineage of highlighted heavyclaims before another recipe; never delete a valid expensive claim to improve score."
+    },
+    {
+      "id": "B19-TRACE-SNAPSHOT",
+      "status": "open",
+      "effect": "Raw and cached selected claims agree at a single valuation, not independent transaction evidence, reserve adequacy or ultimate verification."
+    },
+    {
+      "id": "B19-TRACE-SELECTION",
+      "status": "open",
+      "effect": "Twelve groups selected by earlier B19 influence, not random or representative. No absence of late>365 selected losses can close C0 reporting-tail uncertainty."
+    },
+    {
+      "id": "B19-TRACE-PAID-TAIL",
+      "status": "open",
+      "effect": "Dominant motornew loss fully paid/closed and not affected by simple current-reserve multiplier. Valid heavy losses retained; no model promotion or deletion from this source audit."
+    },
+    {
+      "id": "B20-ATTR-OUTCOME-SELECTION",
+      "status": "open",
+      "effect": "Outcome-selected removals and adaptive2023 research are diagnostic, not freshvalidation or a claim-exclusion rule. No stablepopulation-superiority conclusion."
+    },
+    {
+      "id": "B20-CONTRACTION-COORDINATES",
+      "status": "open",
+      "effect": "Jointnorm contraction does not contract everycoordinate; rawscale units/common references required. Fiveoverlappingfolds are not independent CI."
+    },
+    {
+      "id": "B20-LEVEL-CODING",
+      "status": "open",
+      "effect": "Intercept/coverage/business/other decomposition depends on shared centering/reference and all effects change. No coverage-only causal effect or adopted calibration."
+    },
+    {
+      "id": "B20-FIXED-GROUPS",
+      "status": "open",
+      "effect": "The12groups were selected by priorB19 loss/influence. Their gain fraction of netportfolio gain can exceed100%; no freshvalidation, groupdeletion or model promotion."
+    },
+    {
+      "id": "B20-BANDS-CALIBRATION-SUPPORT",
+      "status": "open",
+      "effect": "BandA/E heterogeneity and costconcentration, overlappingfolds and adaptive2023research do not support automatic calibrationfactors or modelpromotion."
+    },
+    {
+      "id": "B20-FIRE-NET-DENOMINATOR",
+      "status": "open",
+      "effect": "93.9% refers to selectednet gain,35.8%globalnet,7.2%globalgross positivecomponent gains. Singlefire removal leaves a positive point but does not cure prior31group concentration or demonstrate superiority."
+    },
+    {
+      "id": "B20-AD-FOLD-COMPOSITION",
+      "status": "open",
+      "effect": "Both fixedfires areADyes and excluded fromfit3, whereADlogbeta isnegative forB19/B20. Composition is descriptive; wholefold omissions/confounding and allperil target prevent singlefire causal attribution."
+    },
+    {
+      "id": "B20-AD-OLD-LOCAL-ONLY",
+      "status": "open",
+      "effect": "Existing B19local deletion estimates are approximate/highleverage, notB20 influence or exact refit. No alteredbeta, mask, target or price adopted."
+    }
+  ],
+  "no_retraining_or_suite_repetition_for_completed_v6": true,
+  "no_retraining_or_suite_repetition_for_completed_v7": true,
+  "current_global_fit_counter_index": "Hackaton/Repositorio_IAA2026/registro/semana2_contadores_propios_actual.json",
+  "latest_observation_sensitivity_index": "Hackaton/Repositorio_IAA2026/registro/semana2_sensibilidad_observacion_actual.json",
+  "no_retraining_or_suite_repetition_for_completed_tail": true,
+  "no_retraining_or_suite_repetition_for_completed_c0_reserves": true,
+  "forum_reading_guard": "Only emit author, ID and UTC from forum inventory via herramientas/leer_foro_semana2_seguro.py. Never emit external subjects/titles, bodies, actas, predictions, scores or SEL01 artifacts. Do not dump whole shared memory/state: select own current branches and own dated sections. An external subject already exposed2024 outcome metrics; do not claim complete blindness or use those outcomes for2023 choices. No ledger reading or second batch.",
+  "confirmation_scope_conflict": {
+    "source_forum_id": "CLA-S2-20261024-005",
+    "notice": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mezcla_20261024T004833Z_e8ff18e0/confirmation_scope_notice.json",
+    "notice_sha256": "a2eb8ac3a67fcb852f0472de555d655838da06b3c5b1f2945048eda319cdbf41",
+    "own_participant_scope": "2023 only; 2024 closed",
+    "external_authorization_claim_verified": false,
+    "external_authorization_invalidated": false,
+    "external_2024_predictions_or_scores_read": false,
+    "confirmation_opened_by_this_task": false,
+    "forum_notice": "COD-S2-20261024-029",
+    "next_action": "Keep external confirmation quarantined. Disclose subject exposure; do not use it for2023 choices. No additional confirmation batch.",
+    "header_metric_exposure_recorded": true,
+    "external_2024_metrics_seen_in_subject": true,
+    "external_2024_prediction_files_or_acta_read": false,
+    "complete_blindness_claim_allowed": false
+  },
+  "no_retraining_or_suite_repetition_for_completed_business_mixture": true,
+  "condition_progress_without_auto_closure": {
+    "TAIL-RESERVES": "Reserve refits completed in prior unit, but reserve adequacy and ultimate identification remain open.",
+    "C0R-MIXTURE": "This unit diagnoses business weights; timing curves, row coverage masks and stationarity remain conditional.",
+    "SUPPORT-COVERAGE": "Coverage audit complete: hardhome mask incompatible, motor mapping conditional, optionalbicycle not alltheft. Actual contractual crosswalk and row-specific composition still open.",
+    "DEV8-INFLUENCE": "Saved2023 coefficients and distinct training/OOF influence mechanisms audited. Source trace and local approximation limitations remain open; no automatic condition closure.",
+    "B19-SOURCE-TRACE": "Selected raw/cache source reconciliation complete with exact cents; single snapshot and ultimate/adequacy limitations retained. Existing warning not automatically closed.",
+    "B20-coefficients": "Joint contraction and selected level mechanisms checked; samecoding dependence, adaptive fixedgroup selection and unstableAD remain open.",
+    "B20-FIXED-GROUPS": "Denominators and onefixedfire sensitivity reviewed, not closure of prior31group or adaptive uncertainty warnings.",
+    "B20-fold-support": "Inventory completed and exactcostchecked, but support condition FAILS; innerOOF evidence remains missing, no automatic closure.",
+    "B20-C0-preflight": "Membership/dependencies and resourcecounts audited; numeric scoped adapter and full learned-object tests missing. No closure of failed support."
+  },
+  "confirmation_header_exposure": {
+    "utc": "2026-10-24T01:05:48.339085+00:00",
+    "source": "CLA-S2-20261024-006 header only",
+    "cause": "Header-only inventory displayed an external2024 subject containing outcome metrics. No body, acta, prediction file or ledger opened. Cannot claim complete blindness after this exposure.",
+    "metrics_repeated_in_this_record": false,
+    "use_for_2023_choices": false,
+    "consequence": "No fitting, scoring or adaptive recipe selection this unit. Continue only pre-existing data-support diagnostic; future result claims must disclose header exposure. Safe inventory now exposes author/id/UTC only, never any subject.",
+    "scope": "External2024 metrics seen in one forum subject only; no body, acta, prediction or ledger opened. This is a disclosed information exposure, not a valid confirmation of this line.",
+    "subsequent_2023_fit_or_score_in_this_unit": false,
+    "safe_reader": "Hackaton/Repositorio_IAA2026/herramientas/leer_foro_semana2_seguro.py",
+    "verification": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/soporte_20261024T010555Z_c4428b52/verification.json"
+  },
+  "latest_data_support_audit_index": "Hackaton/Repositorio_IAA2026/registro/semana2_soporte_calendario2023_actual.json",
+  "partial_night_balance": "Hackaton/Repositorio_IAA2026/docs/semana2/BALANCE_NOCTURNO_PARCIAL_20261024.md",
+  "no_retraining_or_suite_repetition_for_completed_calendar_support": true,
+  "latest_coverage_exposure_audit_index": "Hackaton/Repositorio_IAA2026/registro/semana2_coberturas_peril2023_actual.json",
+  "no_retraining_or_suite_repetition_for_completed_coverage_audit": true,
+  "historical_active_index_resolution": [
+    {
+      "path_at_original_cut": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_actual.json",
+      "sha256": "10a821c226df2f3476802ce7c92dede147fd7d1f5e7707ad1e1c465bf849bf25",
+      "immutable_snapshot": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_v7_snapshot.json"
+    },
+    {
+      "path_at_original_cut": "Hackaton/Repositorio_IAA2026/registro/semana2_contadores_propios_actual.json",
+      "sha256": "6a640c8d0a08aa11da1c1be89520af5a31187b7377f21ef5d20de40ea22a460e",
+      "immutable_snapshot": "Hackaton/Semana 2/Codex/contadores_antes_v8.json"
+    }
+  ],
+  "no_retraining_or_suite_repetition_for_completed_v8": true,
+  "latest_standard_ridge_index": "Hackaton/Repositorio_IAA2026/registro/semana2_glm_ridge_actual.json",
+  "no_retraining_or_suite_repetition_for_completed_ridge20": true,
+  "latest_B19_stability_audit_index": "Hackaton/Repositorio_IAA2026/registro/semana2_b19_estabilidad_actual.json",
+  "latest_artifact_diagnostic": {
+    "id": "S2-B20-INCENDIO-AD2023-v1-20261024",
+    "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/incendio_AD_b20_20261024T025027Z_87782526",
+    "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/INCENDIO_Y_AD_B20_2023.md",
+    "verification": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/incendio_AD_b20_20261024T025027Z_87782526/verification.json",
+      "sha256": "374e076f4866f678b477451a7127165520ee1fc85920b01d9fcb2ddb1e6c3fa2"
+    },
+    "decision_journal": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/incendio_AD_b20_20261024T025027Z_87782526/decision_journal.json",
+      "sha256": "f5b7c03bbd9b72bb27e116f806a5314041c480947dde021e383648b2d03fef3c"
+    },
+    "forum_result": "COD-S2-20261024-044",
+    "index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_incendio_AD_actual.json",
+    "completed_utc": "2026-10-24T02:56:10.791774+00:00",
+    "new_fits": 0,
+    "model_loads": 0,
+    "new_price_predictions": 0,
+    "new_bootstrap": 0
+  },
+  "next_artifact_diagnostic": "Consolidate existing2023 risk matrix and decisions for standard B00/B12/B14/B19/B20, including completed bands, attribution, contraction and fixedfire/AD receipts. No unchanged suites, resampling, fitting, routing or finalroster. Retain unresolved ultimate/capital/reporting limits and own2024/test closed.",
+  "no_retraining_or_suite_repetition_for_completed_B19_stability": true,
+  "next_unit_before_B19_artifact_audit": "Saved-artifact group/segment attribution; no newfit,alpha search,routing,2024 opening or complexity. Owncounters195/285; retainB00/B01-B20 and disclose prior2024header exposure. Keep existing window and Kaggle incident tracking.",
+  "latest_B19_source_trace_index": "Hackaton/Repositorio_IAA2026/registro/semana2_b19_traza_actual.json",
+  "no_retraining_or_suite_repetition_for_completed_B19_source_trace": true,
+  "next_unit_before_B19_source_trace": "Trace payment, reserve, recovery, status and dates for the highlighted saved2023 claim components; artifact-only reconciliation, no refit, new bootstrap, target change or removal. Keep B00/all alternatives and own2024/test closed. Any later model requires a separate justified frozen recipe and prior forum comment.",
+  "latest_kaggle_752144_check": {
+    "utc": "2026-10-24T09:58:39.477692+00:00",
+    "topic_id": 752144,
+    "semantic_content_unchanged": true,
+    "receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/seguimiento_nocturno/20261024T0957Z.json",
+    "receipt_sha256": "ce93d34d40ab52c413400a82cd16d8c932ce87b53b8794c4bd784979eca1681c",
+    "source_archive_duplicated": false,
+    "test_row_check_repeated": false,
+    "submission_attempt": false
+  },
+  "parallel_artifact_diagnostics": {
+    "S2-B20-CONTRACCION2023-v1-20261024": {
+      "id": "S2-B20-CONTRACCION2023-v1-20261024",
+      "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_contraccion2023_plan_v1.json",
+      "status": "superseded_before_forum_or_calculation",
+      "forum_preregistration": "COD-S2-20261024-040",
+      "replacement": "S2-B20-CONTRACCION2023-v2-20261024"
+    },
+    "S2-B20-SINTESIS2023-v1-20261024": {
+      "id": "S2-B20-SINTESIS2023-v1-20261024",
+      "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_sintesis_plan_v1.json",
+      "status": "completed_verified",
+      "forum_prior": "COD-S2-20261024-B20-SYNTH-PRE",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_sintesis_actual.json"
+    }
+  },
+  "latest_b20_attribution_index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_atribucion_actual.json",
+  "no_repetition_for_completed_b20_attribution": true,
+  "latest_B20_contraction_audit_index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_contraccion_actual.json",
+  "no_retraining_or_suite_repetition_for_completed_B20_contraction": true,
+  "next_unit_before_B20_contraction": "If continuing, preregister a saved2023 risk-band calibration diagnostic with bands frozen from training rows, B20/B19 and segment uncertainty; no fit,alpha search,newmodel,2024/test or ledger. Do not repeat completed attribution or bootstrap.",
+  "latest_B20_concurrent_reconciliation": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/contraccion_b20_20261024T023428Z_7f3565db/concurrent_v1a_reconciliation.json",
+    "sha256": "d5cf5828c87882aa31a0751f27f424224b1f2dfd1c57d0460064df8dc8f5c834"
+  },
+  "latest_b20_calibration_bands_index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_bandas_calibracion_actual.json",
+  "no_repetition_for_completed_b20_calibration_bands": true,
+  "latest_b20_synthesis_index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_sintesis_actual.json",
+  "no_repetition_for_completed_b20_synthesis": true,
+  "latest_B20_fixed_fire_AD_index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_incendio_AD_actual.json",
+  "no_retraining_or_suite_repetition_for_completed_fixedfire_AD": true,
+  "completed_artifact_diagnostics": {
+    "S2-B20-INCENDIO-AD2023-v1-20261024": {
+      "id": "S2-B20-INCENDIO-AD2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/incendio_AD_b20_20261024T025027Z_87782526",
+      "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/INCENDIO_Y_AD_B20_2023.md",
+      "verification": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/incendio_AD_b20_20261024T025027Z_87782526/verification.json",
+        "sha256": "374e076f4866f678b477451a7127165520ee1fc85920b01d9fcb2ddb1e6c3fa2"
+      },
+      "decision_journal": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/incendio_AD_b20_20261024T025027Z_87782526/decision_journal.json",
+        "sha256": "f5b7c03bbd9b72bb27e116f806a5314041c480947dde021e383648b2d03fef3c"
+      },
+      "forum_result": "COD-S2-20261024-044",
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_incendio_AD_actual.json",
+      "completed_utc": "2026-10-24T02:56:10.791774+00:00",
+      "new_fits": 0,
+      "model_loads": 0,
+      "new_price_predictions": 0,
+      "new_bootstrap": 0
+    }
+  },
+  "next_unit_before_fixedfire_AD": "B20 synthesis completed: consult latest_b20_synthesis_index without repeating its diagnostics. Preserve ongoing authorized artifact unit. Any next proposal first needs a concrete residual mechanism, support and a finite preregistered standard comparison; no fit/recalibration/complexity or2024/test/ledger opening under this consolidation.",
+  "latest_continuity_reconciliation_index": "Hackaton/Repositorio_IAA2026/registro/semana2_conciliacion_nocturna_actual.json",
+  "latest_b20_minimal_contrast_design_index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_contraste_minimo_actual.json",
+  "no_repetition_for_completed_b20_minimal_design": true,
+  "latest_b20_priorities_index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_prioridades_actual.json",
+  "latest_b20_fold_support_index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_soporte_folds_actual.json",
+  "no_repetition_for_completed_b20_fold_support": true,
+  "latest_b20_mechanism_support_evidence_index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_mecanismo_soporte_revision_actual.json",
+  "next_unit_before_B20_evidence_review": "Saved B20 fold-support audit is complete: read latest_b20_fold_support_index without repeating suites. Fiveheldouttailcells fail in fourfolds under unchanged rules; no fitting, calibration, newprices, exclusions, rebinning or threshold relaxation. Only separate necessary evidence/scoped-preflight review may be designed; innerOOF artifacts are not generated under current no-training scope. Own2024/test/ledger stayclosed; preserve window/incident and any concurrent authorized unit.",
+  "latest_b20_C0_preflight_index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_preflight_c0_actual.json",
+  "no_repetition_for_completed_b20_C0_preflight": true,
+  "latest_night_operational_checkpoint_index": "Hackaton/Repositorio_IAA2026/registro/semana2_corte_nocturno0400_actual.json",
+  "automation_scope_refreshed": {
+    "utc": "2026-10-24T04:04:36.426902+00:00",
+    "id": "iaa-semana-2-modelos-est-ndar-y-validaci-n-nocturna",
+    "verification": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/corte_operativo_nocturno_20261024T0400Z_v1/automation_update_verification.json",
+      "sha256": "8395f966bdca6336c0adb3030dc59c3347d111349a9c2097a88b3f3bbe3454a0"
+    },
+    "schedule_and_target_preserved": true,
+    "other_automations_changed": false
+  },
+  "next_unit_before_operational0400": "B20 C0 metadata preflight completed; reuse latest_b20_C0_preflight_index without repeating suites. Fiveouter scopes valid for original use, all20nested reuses invalid. Numeric strict2023 C0 adapter/full fitted-object poisoning/nested artifacts remain absent. Support staysFAILED; no training, C0reestimation, calibration, newprices, relaxedthresholds, deletions or2024/test/ledger opening. Any further work must stay separately authorized and preserve existing window/incident/concurrent unit.",
+  "final_balance": {
+    "id": "S2-BALANCE-NOCHE20261024-v1",
+    "index": "Hackaton/Repositorio_IAA2026/registro/semana2_balance_nocturno_final_actual.json",
+    "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/BALANCE_NOCTURNO_20261024.md",
+    "forum_result": "COD-S2-20261024-050",
+    "published_utc": "2026-10-24T12:34:59+00:00",
+    "published_after_window": true
+  },
+  "authorized_window_ended_utc": "2026-10-24T12:00:00Z",
+  "administrative_closure_recorded_utc": "2026-10-24T12:34:59.547547+00:00",
+  "automation_closure_receipt": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/balance_nocturno_20261024_cierre_v1/automation_closure_receipt.json",
+    "sha256": "cd37a434dbf346d4e62d4265394d2e32b9ac85e93c6703b2921de2d18c3db848"
+  },
+  "next_unit_before_final_balance": "Use current indices and updated overnight scope. Preflight C0 reconciled only metadata/original outer use; internal reuse unsafe, numeric adapter/whole-fit invariance absent. G1/G2 unchanged; no repeated diagnostics/fits or redundant document cycles. Monitor genuine new evidence/pending registered runs and prepare07:00Bogota final balance; preserve B00/all alternatives and own2024/test closed.",
+  "queue_before_final_balance": [
+    "Current B20 slope proposal remains non executable; internal support unknown, heldout support measured failed.",
+    "Do not repeat completed evidence review or support diagnostics on identical sources.",
+    "Preserve existing incident monitor/window and honest07:00Bogota balance."
+  ]
+}

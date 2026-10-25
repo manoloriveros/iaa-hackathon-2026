@@ -1,0 +1,86 @@
+{
+  "id": "S2-G4-CAPITAL-REAL2023-FINAL-v1-20261024",
+  "author": "Codex",
+  "utc": "2026-10-25T00:56:31.561338+00:00",
+  "status": "real_scope_capital_and_base_input_connection_verified_full_learning_and_final_scope_pending",
+  "path_base": "workspace_root",
+  "run": "Hackaton/Repositorio_IAA2026/privado/semana2/capital_real_g4_2023/produccion_20261024_v1",
+  "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/G4_CAPITAL_REAL_Y_PREPARACION_MODELO_2023.md",
+  "documentation_sha256": "166b7a8aaf45ed6df571df5b2a00b62fe24e0e35ce6e63ca89b1e8645d760af9",
+  "forum_prior": "COD-S2-20261024-067",
+  "forum_result": "COD-S2-20261024-068",
+  "reference": "W2-B00",
+  "all_alternatives_preserved": true,
+  "real_parameter_artifacts": 15,
+  "real_feature_views": 15,
+  "unique_building_periods": 12580,
+  "total_period_copies": 125800,
+  "all_scope_reads_protected_values_blocked": true,
+  "max_independent_bound_error": 0.0,
+  "max_independent_log_error": 0.0,
+  "G4_real_base_input_connection_verified": true,
+  "G4_real_full_flow_validated": false,
+  "G4_real_gate_closed": false,
+  "G1_G2_resolved": false,
+  "standard_model_recipe_prepared": true,
+  "existing_fold_models_bytes_verified": 15,
+  "model_deserializations": 0,
+  "model_fits": 0,
+  "C0_calls": 0,
+  "new_predictions": 0,
+  "new_scores": 0,
+  "model_input_ready": false,
+  "2024_closed": true,
+  "submission_sent": false,
+  "CSV_produced": false,
+  "existing_csv_reuse_declined": true,
+  "old_suites_or_diagnostics_repeated": false,
+  "professional_independent_validation": false,
+  "remaining_model_gaps": [
+    {
+      "gate": "final_scope",
+      "status": "not_registered_in_this_G4_pipeline",
+      "needed": "Explicit full2023 deployment scope. Current capital contract supports one/two exclusions; do not use an outer artifact as a full-cohort object."
+    },
+    {
+      "gate": "C0",
+      "status": "final_scope_object_not_registered_in_this_package",
+      "needed": "Traceable same-scope frozen C0 and contract for2025 application. This continuation cannot estimate/recalculate it."
+    },
+    {
+      "gate": "final_standard_model",
+      "status": "not_fitted_under_this_request",
+      "needed": "Complete2023 final GLM/preprocessor objects for each branch, or explicit justified use of existing fold objects; no silent ensemble or duplicate OOF run."
+    },
+    {
+      "gate": "all_branches_and_2025",
+      "status": "not_connected_in_this_G4_package",
+      "needed": "Complete motor/contents feature contracts and2025 inference/ID-order pipeline. Only buildings base capital connection was checked here."
+    }
+  ],
+  "next_step": "Declare final all2023 deployment scope and resolve frozen C0/final model dependencies before fitting or2025inference; keep2024closed.",
+  "plan": {
+    "path": "Hackaton/Repositorio_IAA2026/registro/semana2_g4_capital_real_plan_v1.json",
+    "sha256": "3fef3c87c865370830b98b03838307412cd44ff9c948abf7cf7fbdb6d05d63be"
+  },
+  "registry": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/capital_real_g4_2023/produccion_20261024_v1/real_capital_connection_registry.json",
+    "sha256": "d595f033f479b0c541ccd044129c208229a9f6cb85a038df8782b24dbc06bda2"
+  },
+  "model_preparation": {
+    "path": "Hackaton/Repositorio_IAA2026/registro/semana2_g4_modelo_envio_preparacion_v1.json",
+    "sha256": "2e89b2c38ab1ef6d42d90419e38dd3f8bce82c16cf65f7b1de82bd726e8177de"
+  },
+  "readiness": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/capital_real_g4_2023/produccion_20261024_v1/model_readiness.json",
+    "sha256": "50bdb0e0a541f0c8f9e93f0841e4cd3260acdcfeaa9c1ebb4733f564b99289ad"
+  },
+  "matrix": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/capital_real_g4_2023/produccion_20261024_v1/gate_matrix_updated_G4.json",
+    "sha256": "0c3edffff58641a048c24dd4ab6784fe8f3fbca04fc5f54ab6b17a1af83d2e5a"
+  },
+  "decisions": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/capital_real_g4_2023/produccion_20261024_v1/decision_journal.json",
+    "sha256": "92dd53630329534e666259143b17277c79a665bc6baf9f372d037504e4f00489"
+  }
+}

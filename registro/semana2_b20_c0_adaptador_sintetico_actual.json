@@ -1,0 +1,72 @@
+{
+  "id": "S2-B20-C0-ADAPTADOR-SINTETICO-v1-20261024",
+  "author": "Codex",
+  "utc": "2026-10-24T17:08:50.049352+00:00",
+  "path_base": "workspace_root",
+  "authorization_literal": "continua con esto",
+  "status": "C0_numeric_stage_synthetic_verified_only_support_failed_no_competition_execution",
+  "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/c0_adapter_sintetico_20261024_v1",
+  "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/ADAPTADOR_C0_ESTRICTO_2023.md",
+  "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_c0_adaptador_sintetico_plan_v1.json",
+  "verification": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/c0_adapter_sintetico_20261024_v1/verification.json",
+    "sha256": "b07a479ef55dd2701e594dfa04620be5ef219fd7e06b0a3bd95fb3943c107173"
+  },
+  "tests": 13,
+  "ordered_poison_cases": 20,
+  "synthetic_C0_fit_calls": 79,
+  "competition_rows_read": 0,
+  "competition_C0_fits": 0,
+  "new_pricing_fits": 0,
+  "new_predictions": 0,
+  "new_scores": 0,
+  "new_bootstrap": 0,
+  "source_and_snapshot_hashes": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/c0_estricto2023.py",
+      "sha256": "fe7e3fa80b605eaf1f672010c34e9b4e83b25231cfcdeabd7c6879d076866d5c",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/c0_adapter_sintetico_20261024_v1/final_c0_estricto2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/probar_c0_estricto2023.py",
+      "sha256": "f4a39151e9e31f72c25701111c8b171d15f9d9e08ffa3fe69cf4808af8459036",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/c0_adapter_sintetico_20261024_v1/final_probar_c0_estricto2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/registrar_c0_estricto2023.py",
+      "sha256": "21261cd5849d45fbee7fa4cce6e5fc890e765d9cca2f15195cf3f54d6b83f635",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/c0_adapter_sintetico_20261024_v1/final_registrar_c0_estricto2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/ADAPTADOR_C0_ESTRICTO_2023.md",
+      "sha256": "f4e0e67e8210110e27ae88e2221a9704cffc208acc0295b762525e0c71d1a9ca",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/c0_adapter_sintetico_20261024_v1/final_ADAPTADOR_C0_ESTRICTO_2023.md"
+    }
+  ],
+  "historical_sources_unchanged": true,
+  "support_gate": "FAILED unchanged",
+  "G1_closed": false,
+  "G2_closed": false,
+  "G4_C0_software_stage": "implemented_and_synthetic_verified",
+  "G4_full_flow_closed": false,
+  "2024_test_read": false,
+  "selection_or_reference_changed": false,
+  "remote_training": false,
+  "submission": false,
+  "automation_changed": false,
+  "delegation": false,
+  "first_attempt": {
+    "receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/c0_adapter_sintetico_20261024_v1/attempt1_verification.json",
+    "errors": 3,
+    "reason": "Adverse fixture assignment rejected by pandas3 before adapter; failures preserved."
+  },
+  "future_C0_budget": {
+    "unique_internal_scopes": 10,
+    "reporting_fits": 60,
+    "frequency_constants": 60,
+    "cost_means_from_reporting": 60,
+    "mixtures": 10,
+    "executed_on_competition_data": false
+  },
+  "limits": "Own C0-stage software verification with synthetic data; no GLM/calibrator whole-flow or professional independence claim."
+}

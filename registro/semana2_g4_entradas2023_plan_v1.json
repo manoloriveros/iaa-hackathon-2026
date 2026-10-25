@@ -1,0 +1,191 @@
+{
+  "id": "S2-G4-ENTRADAS2023-v1-20261024",
+  "author": "Codex",
+  "utc": "2026-10-24T19:46:25.485650+00:00",
+  "authorization_literal": "Prepara el adaptador y las entradas estrictas de2023 para G4,sin ajustar modelos ni recalcular C0. Conserva B00,deja trazabilidad y bloqueos en foro y mantén2024cerrado.",
+  "scope": "Prepare existing emerging2023 building base inputs and global three-line memberships only; no fitting,prediction,scoring,C0 estimation or new information claim.",
+  "sources": {
+    "motor": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/inputs_2023/motor.parquet",
+      "sha256": "f5e2f4c4513f64d1ebf0fe69d3add15c388363edcf24d70ff7ce8a221544a64d",
+      "columns": [
+        "market",
+        "line",
+        "row_id",
+        "year",
+        "is_test",
+        "fold",
+        "group_id",
+        "customer_id",
+        "address_id",
+        "policy_id"
+      ],
+      "kind": "prepared",
+      "historical_manifest": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/manifest.json"
+    },
+    "buildings": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/inputs_2023/buildings.parquet",
+      "sha256": "04b1c9e3b2ba3505149e0afe8ec0d485a5024678f39082976cf392079e52c095",
+      "columns": [
+        "market",
+        "line",
+        "row_id",
+        "year",
+        "is_test",
+        "fold",
+        "group_id",
+        "customer_id",
+        "address_id",
+        "policy_id",
+        "period_start",
+        "period_end",
+        "exposure",
+        "x_new_business"
+      ],
+      "kind": "prepared",
+      "historical_manifest": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/manifest.json"
+    },
+    "contents": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/inputs_2023/contents.parquet",
+      "sha256": "ebc1b1be167a9d879bd53b21cd71faac29190d7444dc311a38a5119c86dcc516",
+      "columns": [
+        "market",
+        "line",
+        "row_id",
+        "year",
+        "is_test",
+        "fold",
+        "group_id",
+        "customer_id",
+        "address_id",
+        "policy_id"
+      ],
+      "kind": "prepared",
+      "historical_manifest": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/manifest.json"
+    },
+    "static": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/inputs_2023/buildings.parquet",
+      "sha256": "b7b4202cc3e305c2a304d8e7a6aa54ae4548853a0807d45da623c497f9c6f6fd",
+      "columns": [
+        "market",
+        "line",
+        "row_id",
+        "year",
+        "is_test",
+        "fold",
+        "group_id",
+        "customer_id",
+        "address_id",
+        "policy_id",
+        "period_start",
+        "period_end",
+        "exposure",
+        "x_new_business",
+        "x_property_age",
+        "x_flood_zone",
+        "x_accidental_damage_cover",
+        "x_property_type",
+        "x_region",
+        "T0"
+      ],
+      "kind": "prepared",
+      "historical_manifest": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/manifest.json"
+    },
+    "raw": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/inputs_2023/raw_buildings.parquet",
+      "sha256": "bd0f0fc85c45fd876c6c844d25fc0316e8761769fb6b742a1546d0fc726586b6",
+      "columns": [
+        "row_id",
+        "policy_id",
+        "customer_id",
+        "address_id",
+        "period_start",
+        "period_end",
+        "exposure",
+        "sum_insured",
+        "written_premium",
+        "new_business",
+        "accidental_damage_cover"
+      ],
+      "kind": "raw_periods",
+      "historical_manifest": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/manifest.json"
+    },
+    "claims": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/inputs_2023/claims_buildings.parquet",
+      "sha256": "a9b4c452dbc848e93ebe95cc27dee0858447cd5b6c186a1aaa2a2a35723e3be8",
+      "columns": [
+        "market",
+        "line",
+        "row_id",
+        "claim_id",
+        "policy_id",
+        "year",
+        "fold",
+        "group_id",
+        "included_in_T0",
+        "loss_date",
+        "report_date",
+        "peril",
+        "T0_cents"
+      ],
+      "kind": "prepared",
+      "historical_manifest": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/coberturas_20261024T011932Z_14b50ca9/manifest.json"
+    }
+  },
+  "frozen_code": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/entradas_g4_2023.py",
+      "sha256": "885c4770433ddb49242a6381c72ccb7ec10e38822f468e5a86963982aee81069",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/entradas_g4_2023/ingreso_20261024_v1/preregistered_sources/entradas_g4_2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/ambitos_c0_b20_2023.py",
+      "sha256": "e16ae2e2f6e83064612f09f86344ea758c013a91c6ecec08068e7b8c41937933",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/entradas_g4_2023/ingreso_20261024_v1/preregistered_sources/ambitos_c0_b20_2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/preparar_entradas_g4_2023.py",
+      "sha256": "e7b676785095ca8b48c31d2d4c68848b394336a15cf328a490aa82886f36f888",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/entradas_g4_2023/ingreso_20261024_v1/preregistered_sources/preparar_entradas_g4_2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/probar_adaptador_entradas_g4_2023.py",
+      "sha256": "c9918c66c74f7c963642b021a152c7fd0bb0b3eaa3369e9f1a8b142b6af8956b",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/entradas_g4_2023/ingreso_20261024_v1/preregistered_sources/probar_adaptador_entradas_g4_2023.py"
+    }
+  ],
+  "forum_prior": "COD-S2-20261024-061",
+  "reader_contract": "Pinned SHA and row-group min=max2023(or raw period dates2023),false test when supplied,explicit columns before decode. Missing/mixed statistics fail closed.",
+  "output": "Separate metadata,unlearned periods,targets,claims and capital-audit files by saved fold; five outer and ten unique inner file lists. No C0 or learned features copied.",
+  "capital": "Keep original sum insured and written premium in audit-only table. No x_log_sum_insured produced until exact-scope frozen parameters exist. Application helper never estimates them.",
+  "target": "Preserve observed T0; integer-cent comparison against inherited included claims only checks the new copies,no revaluation,claim deletion or target correction.",
+  "temporal": "Loss/policy cohort2023; report dates through original valuation2024-12-31 are follow-up of those occurrences,not opening2024 policy cohort.",
+  "scope_contract": "Only allowed fold data files are opened for learning inputs; protected fold metadata retained,protected values absent. Training signature excludes protected payload hashes.",
+  "validation": [
+    "new-reader year/hash/path rejection before decoding",
+    "component/key integrity without new folds",
+    "new-copy T0/claim reconciliation",
+    "all15scope file lists disjoint",
+    "one outer and one inner scope with protected-file opens forbidden",
+    "no-capital/wrong-scope rejection and pure synthetic application",
+    "model/C0 fit and model load/network entrypoints blocked"
+  ],
+  "no_old_diagnostics": [
+    "support/concentration",
+    "calibration/score",
+    "climate",
+    "reserve/tail sensitivity",
+    "original exposure reconciliation",
+    "C0/GLM suites"
+  ],
+  "all_fit_calls": 0,
+  "C0_values_created": 0,
+  "new_predictions": 0,
+  "new_scores": 0,
+  "new_features_admitted": false,
+  "reference": "W2-B00",
+  "all_alternatives_preserved": true,
+  "2024_test_closed": true,
+  "promotion": false,
+  "professional_independent_validation": false
+}

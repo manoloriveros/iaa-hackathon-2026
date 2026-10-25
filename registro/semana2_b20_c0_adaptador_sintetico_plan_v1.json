@@ -1,0 +1,44 @@
+{
+  "id": "S2-B20-C0-ADAPTADOR-SINTETICO-v1-20261024",
+  "author": "Codex",
+  "utc": "2026-10-24T17:04:09.206440+00:00",
+  "authorization_literal": "continua con esto",
+  "scope": "Software implementation and synthetic verification of strict2023 C0 only. No competition rows, model fits, C0 estimates, inference, scores or resampling.",
+  "hypothesis": "One C0 fitted only on the three allowed folds is invariant to all target/date/peril payloads in both excluded folds, including count curves, marks, frequencies, mixture and cache identity.",
+  "acceptance": [
+    "Reject any2024/test/foreign market metadata before estimation",
+    "Use compound market/line/row_id and protect group/customer/address",
+    "Base rho1 only; no calibration slope passed as reserve stress",
+    "20 ordered outer/inner cases pass poisoning; training positive control must change object",
+    "Match historical base C0 on fixed synthetic data",
+    "No filesystem loaders in numeric API; explicit cache identity binds sources, recipe, valuation and selected training content"
+  ],
+  "support_gate": "FAILED unchanged; code does not authorize real-data execution",
+  "limitations": [
+    "C0 stage only; no GLM/preprocessor/calibrator invariance claim",
+    "No new support or mechanism evidence",
+    "Synthetic tests are author verification, not independent professional validation"
+  ],
+  "frozen_sources": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/variables_ultimo.py",
+      "sha256": "9f40d75e5b0ffafddc9ae6547df8b826825026e88d5f8aabd0258b88bbd0fec2",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/c0_adapter_sintetico_20261024_v1/variables_ultimo.py.source"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/ambitos_c0_b20_2023.py",
+      "sha256": "e16ae2e2f6e83064612f09f86344ea758c013a91c6ecec08068e7b8c41937933",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/c0_adapter_sintetico_20261024_v1/ambitos_c0_b20_2023.py.source"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_soporte_folds_actual.json",
+      "sha256": "17658ec222f5f1492c6217aaf6a713df135eed792b116f4a303ecd4aa1a8db84",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/c0_adapter_sintetico_20261024_v1/semana2_b20_soporte_folds_actual.json.source"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_preflight_c0_actual.json",
+      "sha256": "99f3a9cf9a6808ef03e8480e135cd08308945e8e0e8403a1dbbe4c8999d08d66",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/c0_adapter_sintetico_20261024_v1/semana2_b20_preflight_c0_actual.json.source"
+    }
+  ]
+}

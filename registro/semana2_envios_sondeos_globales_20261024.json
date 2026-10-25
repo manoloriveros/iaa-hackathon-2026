@@ -1,0 +1,133 @@
+{
+  "id": "S2-SONDEOS-GLOBALES-ENVIO-20261024",
+  "author": "Codex",
+  "utc": "2026-10-25T00:37:14.071720+00:00",
+  "path_base": "workspace_root",
+  "authorization_literal": "envia los sondeos que tenemos pendientes a kaggle, te autorizo",
+  "competition": "iaa-ai-assisted-hackathon-2026-part-2",
+  "source_author": "Claude",
+  "preflight": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/sondeos_globales_20261024/preflight.json",
+  "preinscription": "Hackaton/Semana 2/Claude/validacion_nocturna_20261023/salidas/sonda_global__preinscripcion.json",
+  "preinscription_sha256": "df7485a703d992a60954acb5683148a980ba404882592c9b73b39bb19607f44d",
+  "base_submission_ref": 57599788,
+  "base_public_score": "0.15390",
+  "probes": [
+    {
+      "file": "sonda_global_0.85.csv",
+      "source": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_validacion_nocturna_20261023/sonda_global/sonda_global_0.85.csv",
+      "factor": 0.85,
+      "source_sha256": "c59923b02c15eb3d72382260603f032d327f724750ed28ed22a5b64717eafd48",
+      "rows": 209063,
+      "prediction_sum": 58646235.627254,
+      "checks": {
+        "sha_matches_preinscription": true,
+        "rows_exact": true,
+        "ids_and_order_exact": true,
+        "ids_nonempty_and_unique": true,
+        "predictions_positive_and_finite": true,
+        "global_factor_matches_to_csv_rounding": true,
+        "total_matches_printed_cent_precision": true
+      },
+      "passed": true,
+      "max_factor_rounding_error": 5.000001692678779e-07,
+      "transport": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/sondeos_globales_20261024/sonda_global_0.85.zip",
+        "sha256": "919e865809274e31200ecacb57e7fa5a8821e0d927fac9f6f83083e2d3add666",
+        "bytes": 1653134,
+        "member_name": "sonda_global_0.85.csv",
+        "decompression_exact": true
+      },
+      "submission": {
+        "ref": 57611615,
+        "date": "2026-10-25T00:34:24.983Z",
+        "status": "COMPLETE",
+        "public_score": "0.14095",
+        "private_score": "",
+        "description": "Pre-registered global level probe x0.85 on original blend 57599788. Same factor for all emerging 2025 rows. ZIP contains the unchanged CSV.",
+        "file_name": "sonda_global_0.85.zip",
+        "team_name": "ManuelRodr�guez",
+        "submitted_by": "manoloriveros",
+        "error": ""
+      },
+      "difference_from_base": "-0.01295"
+    },
+    {
+      "file": "sonda_global_1.20.csv",
+      "source": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_validacion_nocturna_20261023/sonda_global/sonda_global_1.20.csv",
+      "factor": 1.2,
+      "source_sha256": "02b1f58b75601a509da58e58918b40c8dd444cdd5680013d0d6a1fb4d2e63858",
+      "rows": 209063,
+      "prediction_sum": 82794685.593518,
+      "checks": {
+        "sha_matches_preinscription": true,
+        "rows_exact": true,
+        "ids_and_order_exact": true,
+        "ids_nonempty_and_unique": true,
+        "predictions_positive_and_finite": true,
+        "global_factor_matches_to_csv_rounding": true,
+        "total_matches_printed_cent_precision": true
+      },
+      "passed": true,
+      "max_factor_rounding_error": 4.000003173132427e-07,
+      "transport": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/sondeos_globales_20261024/sonda_global_1.20.zip",
+        "sha256": "f94a438322783cf748012f493161c9379cabdf236c5fadb6ae7eaa0a10231f04",
+        "bytes": 1671092,
+        "member_name": "sonda_global_1.20.csv",
+        "decompression_exact": true
+      },
+      "submission": {
+        "ref": 57611628,
+        "date": "2026-10-25T00:34:41.057Z",
+        "status": "COMPLETE",
+        "public_score": "0.15955",
+        "private_score": "",
+        "description": "Pre-registered global level probe x1.20 on original blend 57599788. Same factor for all emerging 2025 rows. ZIP contains the unchanged CSV.",
+        "file_name": "sonda_global_1.20.zip",
+        "team_name": "ManuelRodr�guez",
+        "submitted_by": "manoloriveros",
+        "error": ""
+      },
+      "difference_from_base": "0.00565"
+    }
+  ],
+  "remaining_submissions": 8,
+  "quota_source": "kaggle-cli",
+  "status_checked_utc": "2026-10-25T00:35:22Z",
+  "status_receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/sondeos_globales_20261024/status_scored.txt",
+  "status_receipt_sha256": "064b49c7435b0180e59154cb02eed4acba4c8dcdf1bfc898ae95bd8fbb9d45e8",
+  "public_rank": 6,
+  "teams_at_check": 11,
+  "frozen_rule_result": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/sondeos_globales_20261024/resultado_regla.json",
+    "sha256": "e2ddc38f5ac5f104bf1fe5418516022eabc6771625ea8cdda0990a82e1e4b649",
+    "public_optimum": 1.2230965922038044,
+    "credibility_factor": 1.1876582386485208,
+    "preinscribed_stop": false,
+    "derived_file": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/sondeos_globales_20261024/final_sonda_global_2025.csv",
+      "sha256": "42659dbb4101d4f9a4ab00c287d77b2bd21d42be9734d2ca4a4074eb57c9add2",
+      "rows": 209063,
+      "prediction_sum": 81943158.717815,
+      "checks": {
+        "rows_exact": true,
+        "ids_and_order_exact": true,
+        "positive_finite": true,
+        "factor_within_csv_rounding": true
+      },
+      "submitted": false
+    },
+    "verification": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/sondeos_globales_20261024/verificacion_resultado.json"
+  },
+  "scope": {
+    "new_training": 0,
+    "model_loading": 0,
+    "2024_labels_read": false,
+    "existing_probe_uploads": 2,
+    "new_local_arithmetic_calibration": true,
+    "derived_file_uploaded": false,
+    "common_model_promotion": false,
+    "manual_final_selection_changed": false
+  },
+  "limitations": "Global public scaling experiment. Public optimum is conditional on metric assumptions and rounded scores; does not identify the private optimum or cause of earlier score differences. Common selection and human review remain separate."
+}

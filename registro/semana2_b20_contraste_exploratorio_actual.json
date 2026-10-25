@@ -1,0 +1,116 @@
+{
+  "id": "S2-B20-CONTRASTE-EXPLORATORIO-v2-20261024",
+  "author": "Codex",
+  "utc": "2026-10-24T17:39:48.353301+00:00",
+  "path_base": "workspace_root",
+  "status": "trained_and_verified_exploratory_rejected_on_two_influence_criteria",
+  "authorization_literal": "Dale, prepara la enmienda y entrena el contraste exploratorio de B20 con los criterios fijados antes. Mantén 2024 cerrado, sin promover modelos ni enviar a Kaggle.",
+  "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_contraste_exploratorio_20261024_v2",
+  "amendment": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_enmienda_exploratoria_v2_20261024.json",
+  "amendment_sha256": "9165a29907f5d9ca170cef56eb21d6f750452c539ebcc566178191df30c7f629",
+  "preregistered_utc": "2026-10-24T17:27:52.732778+00:00",
+  "execution_plan_sha256": "15ebcda453635246447f68586e68f69c7d8519c58edaf5cc2ec243d61a167a74",
+  "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/CONTRASTE_EXPLORATORIO_B20_2023.md",
+  "documentation_sha256": "15264650f2e00e379e8650c330146217d1110417cdbd85210f09912d021e3c90",
+  "evaluation": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_contraste_exploratorio_20261024_v2/evaluation.json",
+    "sha256": "43882db059e43464ea85952f19e314e0342f891f2aef581a57a8dbefb749225f"
+  },
+  "verification": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_contraste_exploratorio_20261024_v2/verification.json",
+    "sha256": "8bf03b843341e9d7d407046ab0ca01208112b7741a152fad7476903fcd26cc90",
+    "passed": 219,
+    "failed": 0
+  },
+  "summary": {
+    "raw": {
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 15126408.703486292,
+      "actual_over_expected": 1.0112845778439377,
+      "deviance_sum": 5045640.3340719845,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.08938178766957827
+    },
+    "L": {
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 16124104.867272824,
+      "actual_over_expected": 0.9487102673866012,
+      "deviance_sum": 5042299.664000789,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.0899846992539961
+    },
+    "S": {
+      "rows": 50094,
+      "observed_total": 15297103.84,
+      "predicted_total": 15294471.223636458,
+      "actual_over_expected": 1.0001721286290353,
+      "deviance_sum": 5021454.269392795,
+      "null_deviance_sum": 5540895.477105999,
+      "D2": 0.09374679776210249
+    }
+  },
+  "delta_S_L": 0.003762098508106382,
+  "delta_S_raw": 0.004365010092524213,
+  "failed_criteria": [
+    "influence_S_minus_L",
+    "influence_S_minus_raw"
+  ],
+  "predictive_checks_passed": 17,
+  "predictive_checks_total": 19,
+  "influence": [
+    {
+      "reference": "L",
+      "removed_favorable_groups": 31,
+      "delta_after_removal": -0.006439951989732018,
+      "evaluation_only_no_refit": true
+    },
+    {
+      "reference": "raw",
+      "removed_favorable_groups": 31,
+      "delta_after_removal": -0.014058594965163929,
+      "evaluation_only_no_refit": true
+    }
+  ],
+  "support_v1": "FAILED preserved",
+  "inner_tail_cells_passing_v1": 1,
+  "inner_tail_cells_total": 10,
+  "training_work": {
+    "utc": "2026-10-24T17:35:53.914103+00:00",
+    "new_price_GLMs": 10,
+    "new_reporting_fits": 60,
+    "new_frequency_constants": 60,
+    "weighted_marks_from_reporting": 60,
+    "new_mixtures": 10,
+    "new_slope_calibrations": 5,
+    "new_intercept_values": 10,
+    "outer_bundles_reused": 5,
+    "2024_test_closed": true,
+    "promotion": false,
+    "submission": false
+  },
+  "counters_before": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_contraste_exploratorio_20261024_v2/counter_before.json",
+    "sha256": "716b1f947cdce852b08588bca3a39530f533694a15ff24c81f7d703892c130b4"
+  },
+  "counters_after": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_contraste_exploratorio_20261024_v2/counter_after.json",
+    "sha256": "bc30b1261b14f1005037142aa4fc57e19c7422f0fe75be86c1e01ebc662c2fc1"
+  },
+  "counter_current_path_changed_by_this_authorized_registration": true,
+  "reference": "W2-B00 for this historical line",
+  "raw_B20_preserved": true,
+  "promotion": false,
+  "submission": false,
+  "new_catalog_recipes": 0,
+  "2024_test_closed": true,
+  "remote": false,
+  "delegation": false,
+  "professional_independent_validation": false,
+  "forum_prior": "COD-S2-20261024-B20-EXPL-V2-PRE",
+  "forum_result": "COD-S2-20261024-B20-EXPL-V2-RESULT",
+  "known_limits": "Adaptive repeated2023 exploration; fold variation and influence are diagnostic, not independent confirmation or full-refit uncertainty.",
+  "amendment_documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/ENMIENDA_CONTRASTE_B20_2023_V2.md",
+  "amendment_documentation_sha256": "65708407ce33b66cd8e35c125b9e83756a8314314f6c1e713ee3e3900c11106a"
+}

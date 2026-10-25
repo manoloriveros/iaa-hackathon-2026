@@ -1,0 +1,68 @@
+{
+  "id": "S2-G4-CAPITAL-REAL2023-v1-20261024",
+  "author": "Codex",
+  "utc": "2026-10-25T00:49:12.471935+00:00",
+  "forum_prior": "COD-S2-20261024-067",
+  "input_manifest": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/entradas_g4_2023/ingreso_20261024_v1/attempt1/input_manifest.json",
+    "sha256": "fd35a88e4f523666afdc558baea0e2826590e75cf42dd749b6979694c29128d2"
+  },
+  "frozen_code": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/productor_capital_g4_2023.py",
+      "sha256": "ecde3f5d1f2067e3e2ffde19d4ae345318fe95d9e2ed7e7f1d7214f003d5e0b7",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/capital_real_g4_2023/produccion_20261024_v1/preregistered_sources/productor_capital_g4_2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/conexion_g4_2023.py",
+      "sha256": "159d2e4d44d618dd5c1c4d0cf219fe0b4914e1145320d152f9b7d8e4302ef5bf",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/capital_real_g4_2023/produccion_20261024_v1/preregistered_sources/conexion_g4_2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/entradas_g4_2023.py",
+      "sha256": "885c4770433ddb49242a6381c72ccb7ec10e38822f468e5a86963982aee81069",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/capital_real_g4_2023/produccion_20261024_v1/preregistered_sources/entradas_g4_2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/ambitos_c0_b20_2023.py",
+      "sha256": "e16ae2e2f6e83064612f09f86344ea758c013a91c6ecec08068e7b8c41937933",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/capital_real_g4_2023/produccion_20261024_v1/preregistered_sources/ambitos_c0_b20_2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/generar_capital_real_g4_2023.py",
+      "sha256": "5597919856352d5f8454800451cd1c34afd87248625777ce0f29e3ae17cbb260",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/capital_real_g4_2023/produccion_20261024_v1/preregistered_sources/generar_capital_real_g4_2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_g4_capital_contrato_v2.json",
+      "sha256": "17b6c41ce294826bb61166799865759802c309534cb3a34d9b4c4a34860abae4",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/capital_real_g4_2023/produccion_20261024_v1/preregistered_sources/semana2_g4_capital_contrato_v2.json"
+    }
+  ],
+  "authorization_literal": "Genera los parámetros de capital por ámbito con entradas reales2023 y valida conexión a G4,sin ajustar modelos ni recalcular C0;conserva B00,deja resultados en foro y mantén2024cerrado.Prepara CSV para Kaggle.",
+  "recipe": "CAPS2-01-SCOPE-v2 and G4-INPUT-CONNECTION-2023-v2 unchanged; same five saved outer folds and ten unique inner pairs.",
+  "criteria": [
+    "15exact-scope parameter artifacts and15base feature views with original period/target membership",
+    "producer and independent reference read metadata/capital only; protected value files never opened in each scope",
+    "normal bounds versus Decimal absolute error<=1e-12; corrected log versus Decimal/math.log error<=1e-12 and identical missing decisions",
+    "population receipt replay agrees with permitted raw capital; no fallback,band change or row deletion",
+    "all model/preprocessor fit,predict,C0 fit/apply,model load and network entrypoints blocked"
+  ],
+  "budgets": {
+    "real_capital_parameter_artifacts": 15,
+    "real_feature_views": 15,
+    "model_fits": 0,
+    "C0_calls": 0,
+    "predictions": 0,
+    "scores": 0
+  },
+  "previous_synthetic_verification": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/productor_capital_g4_2023/productor_20261024_v1/attempt1/validation.json",
+    "sha256": "a0903b8fa69d10ff9b9c2e841f2ac0efa46882f2cbcd4b13f57a76744c7412fc"
+  },
+  "synthetic_suite_rerun": false,
+  "kaggle_preparation": "Separate reuse/preflight of existing2025CSV only if provenance compatible; not a G4 trained prediction,not promotion or upload. No2024ledger/actas/SEL01.",
+  "B00_preserved": true,
+  "2024_closed": true,
+  "G4_full_flow_not_closed_by_this_work": true
+}

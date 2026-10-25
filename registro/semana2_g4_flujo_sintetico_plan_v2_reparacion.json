@@ -1,0 +1,156 @@
+{
+  "id": "S2-G4-FLUJO-SINTETICO2023-v2-REPARACION-20261024",
+  "author": "Codex",
+  "utc": "2026-10-24T17:39:58.783748+00:00",
+  "authorization_literal": "Avanza con G4 y valida el flujo completo con datos sintéticos. Sin entrenar con datos del concurso ni repetir diagnósticos; conserva B00, deja las decisiones y resultados en el foro y mantén2024cerrado.",
+  "scope": "Synthetic software integration only: preprocessing,C0,GLM,nested calibration,application and replay. No contest data/estimators or external submission.",
+  "hypothesis": "Changing protected outer labels/predictors cannot change any learned ancestor or calibration. Each inner learner also excludes its own inner fold. Allowed training changes must affect the learned stages.",
+  "fixture": {
+    "id": "G4-SYNTHETIC-v1",
+    "seed": 20261024,
+    "building_rows": 400,
+    "motor_contents_passthrough_rows": 40,
+    "claims": 360,
+    "folds": 5,
+    "source": "Generated from fixed code in memory; no real-data parameter extraction."
+  },
+  "GLM": {
+    "features": [
+      "x_new_business",
+      "x_log_sum_insured",
+      "x_property_age",
+      "x_flood_zone",
+      "x_accidental_damage_cover",
+      "x_property_type",
+      "x_region"
+    ],
+    "family": "TweedieRegressor",
+    "power": 1.5,
+    "alpha": 1.0,
+    "link": "log",
+    "solver": "lbfgs",
+    "max_iter": 2000,
+    "tol": 1e-06,
+    "numeric": "fit-only median keep_empty_features and StandardScaler",
+    "categorical": "fit-only OHE drop-first,min_frequency50,max_categories40,unknown-ignore",
+    "response": "T0/C0",
+    "sample_weight": "sqrt(C0)",
+    "normalized_penalized_gradient_max": 0.0001
+  },
+  "C0": {
+    "core": "c0_estricto2023.py frozen",
+    "valuation": "2024-12-31",
+    "reserve_factor": 1.0,
+    "additional_tail_mass": 0.0,
+    "six_building_perils": true,
+    "no_reestimate_on_competition_data": true
+  },
+  "calibration": {
+    "scope": "Four inner OOF folds inside each outer-training set; all ancestor learners exclude outer and respective inner folds.",
+    "L": "b=1,profiled a",
+    "S": "0<=b<=1,profiled a; one bounded solve plus endpoint comparisons",
+    "objective": "Unweighted sum observed-unit Tweedie deviance1.5, no A/E balancing",
+    "centering": "C0-weighted mean log rate on inner OOF training only",
+    "a_formula": "log(sum(y/sqrt(h)))-log(sum(sqrt(h))); h=C0*exp(m+b*(log(r)-m))",
+    "solver": "scipy bounded,xatol1e-10,maxiter500",
+    "normalized_projected_KKT_max": 1e-06,
+    "reject": "All-zero target,constant rates,wrong scopes or corrupt artifacts; no fallback to protected rows."
+  },
+  "acceptance": {
+    "all_new_tests_pass": true,
+    "outer_poison_cases": 5,
+    "ordered_inner_poison_cases": 20,
+    "entire_learned_state_and_serialized_objects_identical": true,
+    "positive_training_controls": 2,
+    "serialization_replay_no_fit": true,
+    "manual_exp_X_beta_rtol": 1e-10,
+    "deviance_formula_external_api_rtol": 1e-12,
+    "profile_vs_joint_optimization_loss_difference_max": 1e-08,
+    "known_calibration_a_b_error_max": 1e-05,
+    "exact_motor_contents_passthrough": true,
+    "wrong_year_test_scope_mutation_duplicate_group_crossing_rejected": true,
+    "input_data_or_network_open_attempts": 0,
+    "one_deliberate_fake_reader_guard_probe": true
+  },
+  "resources": {
+    "CPU_threads": 2,
+    "wall_seconds_max": 600,
+    "scope_attempts_max": 120,
+    "successful_synthetic_GLM_fits_max": 120,
+    "synthetic_C0_workflows_max": 120,
+    "synthetic_reporting_peril_calls_max": 720,
+    "synthetic_calibrator_calls_max": 80,
+    "joint_reference_optimizations": 3,
+    "expected_baseline_unique_inner_fits": 10,
+    "expected_baseline_outer_fits": 5,
+    "expected_total_successful_scoped_fits": 72,
+    "new_competition_fits": 0,
+    "new_real_predictions_scores": 0,
+    "new_catalog_candidates": 0,
+    "old_suites_or_resampling": 0,
+    "cumulative_repair_ceiling": {
+      "scope_attempts": 180,
+      "successful_GLM_and_C0_fits_each": 120,
+      "calibration_calls": 80,
+      "wall_seconds": 600,
+      "reason": "Explicitly accounts for failed/cache attempts plus focused investigation and corrected full integration. Each executable attempt retains original120scope-attempt ceiling; no change to technical acceptance."
+    }
+  },
+  "failure_policy": "Preserve failed attempt/source/log. Only documented implementation/fixture repairs,never tune criteria to predictive results. No optimizer restarts or new seeds.",
+  "retained_reference": "W2-B00",
+  "G1_G2_remain_unresolved": true,
+  "2024_test_closed": true,
+  "ledger_actas_SEL01_closed": true,
+  "promotion": false,
+  "forum_prior": "COD-S2-20261024-G4-FLOW-REPAIR1",
+  "frozen_sources": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/flujo_g4_sintetico2023.py",
+      "sha256": "56437ac36b0d5d0022bd18e259133e88f399c6588e44000c254a0aae6f2f8dfe",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/g4_flujo_sintetico_20261024_v1/repair1_frozen_sources/flujo_g4_sintetico2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/probar_flujo_g4_sintetico2023.py",
+      "sha256": "dc75eae83a05ce61ef49e8b15a174aa4c02a523aa9bd7691444b1f389a190f43",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/g4_flujo_sintetico_20261024_v1/repair1_frozen_sources/probar_flujo_g4_sintetico2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/c0_estricto2023.py",
+      "sha256": "fe7e3fa80b605eaf1f672010c34e9b4e83b25231cfcdeabd7c6879d076866d5c",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/g4_flujo_sintetico_20261024_v1/repair1_frozen_sources/c0_estricto2023.py"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/ambitos_c0_b20_2023.py",
+      "sha256": "e16ae2e2f6e83064612f09f86344ea758c013a91c6ecec08068e7b8c41937933",
+      "snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/g4_flujo_sintetico_20261024_v1/repair1_frozen_sources/ambitos_c0_b20_2023.py"
+    }
+  ],
+  "previous_plan": {
+    "path": "Hackaton/Repositorio_IAA2026/registro/semana2_g4_flujo_sintetico_plan_v1.json",
+    "sha256": "1cf10039cf7ab1799a8ae9cc23b37af20a4bd90185bedc2e471e35ace8e8e1a6"
+  },
+  "original_forum_prior": "COD-S2-20261024-059",
+  "implementation_repairs": [
+    {
+      "failure": "Protected payload changed canonical cache hash though all numeric learned state was identical.",
+      "cause": "astype(str) formats datetime64 as date but object/Timestamp with time after adversarial dtype promotion.",
+      "repair": "Explicit ISO normalization of selected training loss/report dates and integer cents before hashing; no protected values enter."
+    },
+    {
+      "failure": "Joint numerical reference returned ABNORMAL near exact solution with tiny negative deviance.",
+      "cause": "Subtractive cancellation in equivalent deviance formula near y=mu.",
+      "repair": "Use algebraically identical nonnegative4*(sqrt(y)-sqrt(mu))^2/sqrt(mu). Solver,seed,parameters,tolerances and acceptance unchanged."
+    }
+  ],
+  "preserved_attempts": [
+    "attempt1_verification.json",
+    "attempt1_test_output.txt",
+    "attempt1_sources",
+    "attempt1_failure_investigation.json"
+  ],
+  "repair_investigation_work": {
+    "synthetic_scoped_fits": 2,
+    "joint_reference_diagnostics": 3,
+    "competition_rows": 0
+  }
+}

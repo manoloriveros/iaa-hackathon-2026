@@ -1,0 +1,53 @@
+{
+  "id": "S2-ENVIO-FINAL-SONDA-GLOBAL-20261024",
+  "author": "Codex",
+  "utc": "2026-10-25T00:52:12.426860+00:00",
+  "path_base": "workspace_root",
+  "authorization_literal": "envia esta entrega a kaggle: final_sonda_global_2025.csv",
+  "competition": "iaa-ai-assisted-hackathon-2026-part-2",
+  "source": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_validacion_nocturna_20261023/sonda_global/final_sonda_global_2025.csv",
+  "source_sha256": "42659dbb4101d4f9a4ab00c287d77b2bd21d42be9734d2ca4a4074eb57c9add2",
+  "rows": 209063,
+  "lineage": "Original Claude 50/50 blend 57599788 scaled by the pre-registered credibility rule. Claude canonical file equals Codex Windows adapter output byte for byte.",
+  "preflight": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/final_sonda_global_20261024/preflight.json",
+  "transport": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/final_sonda_global_20261024/final_sonda_global_2025.zip",
+    "sha256": "211ce0425be3c29c9b6d5f6e15deabd51253e455de75f6e6776622c0ebd85f56",
+    "bytes": 1671606,
+    "member_name": "final_sonda_global_2025.csv",
+    "decompression_exact": true
+  },
+  "credibility_factor": 1.1876582386485208,
+  "expected_public_score": 0.15947962433859533,
+  "expected_at_5_decimals": "0.15948",
+  "submission": {
+    "ref": 57612023,
+    "date": "2026-10-25T00:50:47.943Z",
+    "status": "COMPLETE",
+    "public_score": "0.15948",
+    "private_score": "",
+    "description": "Pre-registered global credibility level adjustment x1.1876582386485208 on original blend 57599788. Z=0.854 from probes 57611615 and 57611628. ZIP contains unchanged final_sonda_global_2025.csv.",
+    "file_name": "final_sonda_global_2025.zip",
+    "team_name": "ManuelRodr�guez",
+    "submitted_by": "manoloriveros",
+    "error": ""
+  },
+  "difference_from_original_blend": "0.00558",
+  "difference_from_x120_probe": "-0.00007",
+  "remaining_submissions": 7,
+  "quota_source": "kaggle-cli",
+  "public_rank": 6,
+  "teams_at_check": 11,
+  "status_checked_utc": "2026-10-25T00:51:26Z",
+  "status_receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/final_sonda_global_20261024/status_final.txt",
+  "status_receipt_sha256": "13aef2f805bfbe03d3045bfda95c543cb88c6ebc2c1a41d42ee647b4c7eda6b6",
+  "scope": {
+    "new_training": 0,
+    "new_inference": 0,
+    "new_calibration": 0,
+    "2024_labels_read": false,
+    "manual_final_selection_changed": false,
+    "common_model_promotion": false
+  },
+  "limitations": "Public scoring of the frozen credibility rule. Does not establish private superiority, change the common selection policy or certify independent professional validation."
+}

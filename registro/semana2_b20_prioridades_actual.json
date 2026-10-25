@@ -1,0 +1,123 @@
+{
+  "id": "S2-B20-PRIORIDADES2023-v2-F01F05-20261024",
+  "author": "Codex",
+  "utc": "2026-10-24T17:19:44.604470+00:00",
+  "status": "F01_F05_consolidated_B20_current_slope_blocked_no_new_trial",
+  "priority_order": [
+    "G6",
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5"
+  ],
+  "current_gate_statuses": {
+    "G6": "local_scope_preserved_ultimate_conditional",
+    "G1": "plausible_not_established",
+    "G2": "heldout_failed_internal_unknown",
+    "G3": "added_complexity_not_justified",
+    "G4": "standard_full2023_to2025_pipeline_verified_nested_calibration_trial_not_run",
+    "G5": "not_evaluated_no_promotion"
+  },
+  "gates_closed": [],
+  "non_model_issues_resolved": [
+    "F01 binary identity at reviewed cut",
+    "F05 public-message retrieval coverage at reviewed cut"
+  ],
+  "concurrent_progress_reconciled": "C0 numerical software stage implemented and synthetic verified; complete learning flow still open",
+  "current_blockers": [
+    "G1: residual mechanism not established",
+    "G2: current slope support failed; internal support unknown",
+    "G4:standard final pipeline verified;nested calibration trial remains unrun"
+  ],
+  "can_start_current_slope_trial": false,
+  "new_emerging2023_information_established": false,
+  "material_source_correction_established": false,
+  "new_fits": 0,
+  "model_loads": 0,
+  "new_predictions": 0,
+  "new_scores": 0,
+  "new_bootstrap": 0,
+  "new_numeric_diagnostics": 0,
+  "new_model_tests": 0,
+  "new_source_searches": 0,
+  "row_values_read": 0,
+  "reference": "W2-B00",
+  "all_alternatives_preserved": true,
+  "target_exposure_C0_folds_changed": false,
+  "promotion": false,
+  "final_roster_frozen": false,
+  "2024_test_closed": true,
+  "prior_external2024_subject_exposure_disclosed": true,
+  "professional_independent_validation": false,
+  "night_window_reopened": false,
+  "path_base": "workspace_root",
+  "run": "Hackaton/Repositorio_IAA2026/privado/semana2/revision_fuentes2023/consolidacion_F01_F05_20261024_v1",
+  "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/CONSOLIDACION_F01_F05_Y_BLOQUEOS_B20_2023.md",
+  "documentation_sha256": "f50a915ec368f200704b92fb4c7d598feaa6120b759bb3a77241d0c5d735f6be",
+  "forum_result": "COD-S2-20261024-058",
+  "previous_priority_index_snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/revision_fuentes2023/consolidacion_F01_F05_20261024_v1/sources/10_semana2_b20_prioridades_actual.json",
+  "source_reviews": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/revision_fuentes2023/consolidacion_F01_F05_20261024_v1/source_review_matrix.json",
+    "sha256": "629e27081d569ea5d7dae0d43cb11cbd046898affa00b102ff1d5f856178d2be"
+  },
+  "matrix": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/capital_real_g4_2023/produccion_20261024_v1/gate_matrix_updated_G4.json",
+    "sha256": "0c3edffff58641a048c24dd4ab6784fe8f3fbca04fc5f54ab6b17a1af83d2e5a"
+  },
+  "reentry_packet": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/revision_fuentes2023/consolidacion_F01_F05_20261024_v1/reentry_evidence_packet.json",
+    "sha256": "f294b923975338dc5940749997580674585a1117421bb58d5ac89b85f7e260fd"
+  },
+  "sources": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/revision_fuentes2023/consolidacion_F01_F05_20261024_v1/source_manifest.json",
+    "sha256": "6cbad16a870be9dfcf9b373b8642f76a6280900aa67e085d27432521cb105c30"
+  },
+  "decisions": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/revision_fuentes2023/consolidacion_F01_F05_20261024_v1/decision_journal.json",
+    "sha256": "db3c7c1eeece463f51ce62bc2ddcda01e81cd07d1f8b16d7f8675d133deff887"
+  },
+  "consolidation_index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_consolidacion_F01_F05_actual.json",
+  "original_gate_statuses": {
+    "G1": "not_established",
+    "G2": "insufficient",
+    "G3": "not_justified",
+    "G4": "not_from_this_work",
+    "G5": "not_evaluated_here",
+    "G6": "conditional"
+  },
+  "previous_index_snapshot": "Hackaton/Repositorio_IAA2026/privado/semana2/revision_fuentes2023/consolidacion_F01_F05_20261024_v1/sources/10_semana2_b20_prioridades_actual.json",
+  "verification_scope": "Documentary source identity/integration only; prior numerical/synthetic tests reused, not rerun.",
+  "G4_software_update_index": "Hackaton/Repositorio_IAA2026/registro/semana2_g4_flujo_sintetico_actual.json",
+  "G4_software_updated_utc": "2026-10-24T17:48:54.443599+00:00",
+  "previous_G4_matrix": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/revision_fuentes2023/consolidacion_F01_F05_20261024_v1/updated_gate_matrix.json",
+    "sha256": "6db802b3c37727dba0412bdcbd521fb21508deb6d352ae7aaf7e4df0e4b2816d"
+  },
+  "previous_G4_input_matrix": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/g4_flujo_sintetico_20261024_v1/gate_matrix_updated_G4.json",
+    "sha256": "b0f5541d484924cd36787cdece5dcecd78710bced9639ec84ae3105fe488a592"
+  },
+  "G4_input_preparation_index": "Hackaton/Repositorio_IAA2026/registro/semana2_g4_entradas2023_actual.json",
+  "G4_input_preparation_utc": "2026-10-24T19:50:08.869784+00:00",
+  "G4_capital_connection_index": "Hackaton/Repositorio_IAA2026/registro/semana2_g4_conexion_actual.json",
+  "G4_capital_connection_utc": "2026-10-24T20:18:03.739775+00:00",
+  "previous_G4_connection_matrix": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/entradas_g4_2023/ingreso_20261024_v1/gate_matrix_updated_G4.json",
+    "sha256": "4977188e65d63be4ba2d1560bad868af47943d3164f8af016d05ca6c144a5c35"
+  },
+  "G4_capital_producer_index": "Hackaton/Repositorio_IAA2026/registro/semana2_g4_productor_capital_actual.json",
+  "G4_capital_producer_utc": "2026-10-25T00:43:18.162920+00:00",
+  "previous_G4_producer_matrix": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/conexion_g4_2023/contrato_20261024_v1/gate_matrix_updated_G4.json",
+    "sha256": "1e53c03e2f130a268fccf03c0621f72a5e1a2bc9ac9ede499dff2f9b7346fa86"
+  },
+  "G4_real_capital_index": "Hackaton/Repositorio_IAA2026/registro/semana2_g4_capital_real_actual.json",
+  "G4_real_capital_utc": "2026-10-25T00:56:31.828450+00:00",
+  "previous_G4_real_capital_matrix": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/productor_capital_g4_2023/productor_20261024_v1/gate_matrix_updated_G4.json",
+    "sha256": "2b4f48a995e16217400dde20b071387d6621dc7f5b5028ddbd3b758be5862af8"
+  },
+  "G4_final_standard_index": "Hackaton/Repositorio_IAA2026/registro/semana2_g4_entrega_final_actual.json",
+  "G4_final_standard_utc": "2026-10-25T01:29:04.895276+00:00"
+}
