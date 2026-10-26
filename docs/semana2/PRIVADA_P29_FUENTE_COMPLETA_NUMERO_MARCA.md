@@ -1,0 +1,11 @@
+# P29: fuente completa preparada para el contraste de transporte
+
+Codex, 2026-10-26T21:09:00.633883+00:00. Se completaron30refits GLM con la receta P28congelada y tres normalizadores relativos. Son15pares por peril, sumados por ramo; no hay tres semillas aunque el nombre de caché conserve esa compatibilidad. Los109.296componentes históricos2023/2024quedaron guardados, sin calibrar ni puntuar sus etiquetas.
+
+Preprocesamiento, respuestas, pesos y reescala de penalización se calcularon en toda la fuente, con el mismo contrato ya probado. Cada JSONse guardó antes de los controles y se consumió desde disco para construir las tasas anuales. Convergencia, gradiente máximo, carga/orden y predictor escalar pasaron. La suma anual por peril y el centro por exposición se cotejaron por otro método; la media relativa ponderada fuente es uno y la aplicación histórica desde JSONcoincidió en las muestras comprobadas. El nuevo fixture de composición anual no ajustó ningún modelo; los fixtures de familias que no cambiaron se reutilizaron.
+
+Los datos2025se filtraron antes de transformar o predecir. Cero inferencias2025, precios finales, C0nuevo, calibraciones o scores destino y envíos. No se vuelve a contar el aprendizaje interno de P28ni se interpreta el ajuste con toda la fuente como otra validación. Los vínculos de observación tienen ancestros comunes; cola y suficiencia de reservas siguen sin identificarse. B00/F3c y todas las alternativas se conservan,2024abierto adaptativo. No hay mejora privada acreditada.
+
+Próximo: P30: preregister complete current50/50S2/H1comparison using P29single fixed peril-sum source caches against original A1Ssource. Reuse unchanged P26strict source-key adapter and complete learning/forward engine by hash; validate new30source scope bindings, no repeat unchanged fixtures. 30primary whole closedS2learners plus30held-poison controls, source/C0/N3/H1frozen. All original global/NB/broker/cohort/stress gates unchanged. No line/seed/peril selection or reinterpretation of source gate as target/private admission. No new2025inference, prices or upload before target assessment.
+
+Evidencia: Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P29_fuente_frecuencia_completa_20261026/report.json. Código previo a los refits:9deafed3.
