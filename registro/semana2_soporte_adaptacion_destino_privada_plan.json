@@ -1,0 +1,44 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T21:56:06.076107+00:00",
+  "question": "Before considering one target newbusiness-by-broker residual effect on original S2/H1, is the effect distinct from prior P23/P18and supported in every affected training scope?",
+  "candidate_not_fitted": "Original incumbent, one NB-by-broker term; no rescue of P30source, favorable line subset or source capacity change.",
+  "known_prior": {
+    "P23": "Broker main effect shared across businesses within each line; already adverse.",
+    "P18": "Joint ridge with line/business main effects, different GAMbase; no shared broker-by-business interaction."
+  },
+  "scope": "Only canonical emerging training rows: fold!=outer; additionally year2023for conditional transfer. Apply filters before loading/interpreting T0. No held outcome diagnostics.",
+  "cells": [
+    "NB_BROKER",
+    "NB_OTHER"
+  ],
+  "screen": {
+    "minimum_positive_cost_groups_each_affected_line_cell": 30,
+    "minimum_pooled_target_positive_groups_each_cell": 100,
+    "all30scopes_required": true,
+    "no_threshold_or_fold_changes": true,
+    "meaning": "Existing per-level feasibility minimum retained; not credibility, approval to fit or new emerging support from pooling."
+  },
+  "pooling": "Count unique connected groups across target lines, not sums of line counts. Pooling requires an explicit exchangeability assumption; it cannot erase a failed per-line requirement or borrow developed-market events.",
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/revisar_soporte_adaptacion_P33.py": "8936ad547e5ae075454411827dcc84a0400f421b8ca6d580ce1432f1addbb0a7",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_canal_privada_plan.json": "6579975d775b8f5c4c06075d8bf5ee3cdf241b8640940b7389b87e8a60d477f3",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_calibracion_conjunta_privada_plan.json": "c2c626619b10249557e5a4b9031272efaee178b10b814cd21108d4716db406ff",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_frecuencia_marca_validacion_privada_plan.json": "652dfe965a924d8b24a18fca33e3ee24aaf5748d244036c49c086697b62f676f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P32_adecuacion_condicional_fuente_20261026/report_recovered.json": "d6ab3d74580a69ab68d66220676e0dec8cb90f43da6b204f19642c9fc4132fef",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P19_cohortes_broker_20261026/covariates.parquet": "179f06e488bc8f074851b3f7dc8fcc4c31b9bf46e4af6bdba7336d3f9b60ccff",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/canonical_motor.parquet": "263f5a20d9048b4e035f311b6f3d9c7bb79499bd190dea879afdc45680fa29d5",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/canonical_buildings.parquet": "e76a5d07cb7f0c6aaaa061762f48c5b1012eeda48d0b40f9ba238f56676b6e1e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/canonical_contents.parquet": "1fb354c30f8f093903203d896abcc6cfef3f0696677b3f6d7daa2edf67c35092"
+  },
+  "budget": {
+    "new_fits": 0,
+    "new_C0_fits": 0,
+    "new_model_inference": 0,
+    "new_prices": 0,
+    "new_scores": 0,
+    "new_submissions": 0
+  },
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true
+}
