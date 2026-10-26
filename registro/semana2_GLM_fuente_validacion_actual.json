@@ -1,0 +1,323 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T16:57:50.971032+00:00",
+  "status": "P12complete_standard_source_GLM_evaluated",
+  "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_GLM_fuente_validacion_plan.json",
+  "plan_sha256": "9553dc4ac5cdc3637c46ee09b15996d253a16c48871540fcd4af3feaaaa4e56b",
+  "forum": {
+    "author": "Codex",
+    "id": "COD-S2-20261026-PRIVADA-P12-GLM-RESULTADO",
+    "utc": "2026-10-26T16:57:51+00:00",
+    "previous_sha256": "268226df7668279b2be86e74df817e17847a9869ee0baf4ec2d98a3406023f1c",
+    "sha256": "213bf41105c312fdfb70de6e8141f84db9a853f37c174d20b866c8c7362e2ec9"
+  },
+  "output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P12_validacion_GLM_20261026",
+  "diagnostic_gates": {
+    "pooled_delta_ge002": false,
+    "pooled_lower95_positive": false,
+    "pooled_atleast4positive_folds": false,
+    "both_pooled_years_nonnegative": true,
+    "pooled_post31_nonnegative": false,
+    "conditional_transfer_nonnegative": false,
+    "all_nominal_and_stress_cell_floors": false
+  },
+  "new_primary_closed_learners": 30,
+  "new_adverse_closed_learners_separate": 30,
+  "new_source_fits": 0,
+  "new_C0_fits": 0,
+  "new_future2025inference": 0,
+  "new_finaltestprices": 0,
+  "new_submissions": 0,
+  "source_models_per_line": 1,
+  "formal_promotion": false,
+  "submission_allowed": false,
+  "private_improvement_established": false,
+  "goal_achieved": false,
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true,
+  "limits": [
+    "Both target years adaptive; source2021-2024and undated master snapshot conditional.",
+    "Year transfer learns target only2023but source contains2024; no prospective sourceyear holdout.",
+    "No exact full delivered F3c historical replay; comparator is the reproducible S2/H1algorithm.",
+    "Same source round budget selected with original feature; dropping column also alters random feature subsampling mapping.",
+    "Prior H1reserve/tail adverses and inadequate futureweightESS remain; a new delta cannot erase them.",
+    "Frozen valuation stress is not reserve adequacy proof or whole branch recalibration.",
+    "All source numeric predictors are linear; genuine nonlinear risk and interactions may be lost.",
+    "Current four-year source GLM is new, not a replay of source2023physical-teacher GLMs.",
+    "P10and earlier adaptive searches remain; per-recipe intervals are exploratory, not global search-adjusted confirmation."
+  ],
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P12_validacion_GLM_20261026/report.json",
+  "report_sha256": "c4f727f81558a374bfb8c14251e4dd337fd17e32ba1ab9a61fddbce9e0203fb0",
+  "replay": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P12_validacion_GLM_20261026/replay_report.json",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P12_VALIDACION_GLM.md",
+  "nominal": {
+    "POOLED": {
+      "delta": 0.0005932892895100261,
+      "bootstrap95": [
+        -0.0022064908263424313,
+        0.0034677734826997937
+      ],
+      "simultaneous95_family10": [
+        -0.003164674769832188,
+        0.00492273345761724
+      ],
+      "post31_delta": -0.004002310522549194,
+      "folds": {
+        "0": 0.0006477266913880984,
+        "1": -0.0006257958488585647,
+        "2": -0.00041523662622833,
+        "3": 0.0003864437873676191,
+        "4": 0.0006001512858412032
+      },
+      "years": {
+        "2023": 0.0005293663377101298,
+        "2024": 6.392295179989639e-05
+      },
+      "cells": [
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 0,
+          "rows": 11073,
+          "delta_global": 0.0011216573894246337,
+          "delta_cell_null": 0.007329254533791331,
+          "AE_base": 1.2583942386427394,
+          "AE_candidate": 1.280308037435935
+        },
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 1,
+          "rows": 1507,
+          "delta_global": -4.5060982261574235e-05,
+          "delta_cell_null": -0.003077921319308409,
+          "AE_base": 1.166214903357763,
+          "AE_candidate": 1.108814359424012
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 0,
+          "rows": 12588,
+          "delta_global": -0.0002757785910237117,
+          "delta_cell_null": -0.0021420447013082928,
+          "AE_base": 0.7742547297078182,
+          "AE_candidate": 0.7673775167541809
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2279,
+          "delta_global": -0.00018176950932811148,
+          "delta_cell_null": -0.011637959301586672,
+          "AE_base": 0.6225216997772074,
+          "AE_candidate": 0.5871487940529881
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 0,
+          "rows": 13987,
+          "delta_global": -0.0003583905916024856,
+          "delta_cell_null": -0.004495107213674904,
+          "AE_base": 1.0680298936213382,
+          "AE_candidate": 1.0831759644387209
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 1,
+          "rows": 1847,
+          "delta_global": -9.525749333995855e-05,
+          "delta_cell_null": -0.011874866268500633,
+          "AE_base": 1.0599284915717062,
+          "AE_candidate": 1.0336117245451484
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 0,
+          "rows": 15863,
+          "delta_global": -4.3755274558160756e-05,
+          "delta_cell_null": -0.0005229958808440064,
+          "AE_base": 0.9740366453944687,
+          "AE_candidate": 0.967121670170322
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2869,
+          "delta_global": 0.0001946707435169928,
+          "delta_cell_null": 0.01404377355082602,
+          "AE_base": 1.429418709460475,
+          "AE_candidate": 1.3907799697441845
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 0,
+          "rows": 19060,
+          "delta_global": -0.00011688333610659338,
+          "delta_cell_null": -0.0006408400605694938,
+          "AE_base": 0.9280020691480009,
+          "AE_candidate": 0.9346945139654805
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 1,
+          "rows": 2620,
+          "delta_global": 2.3301351596107554e-05,
+          "delta_cell_null": 0.0007903153227657526,
+          "AE_base": 1.268101465959399,
+          "AE_candidate": 1.2580497947551377
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 0,
+          "rows": 21688,
+          "delta_global": 0.0003507374509484424,
+          "delta_cell_null": 0.0017627966404106742,
+          "AE_base": 1.0775040805284564,
+          "AE_candidate": 1.0721380266664895
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 1,
+          "rows": 3915,
+          "delta_global": 1.9818132244444988e-05,
+          "delta_cell_null": 0.0006563674663301771,
+          "AE_base": 0.8568608485576714,
+          "AE_candidate": 0.8420149467501076
+        }
+      ],
+      "worst_cell_delta": -0.011874866268500633,
+      "base_D2": 0.13840694770665685,
+      "candidate_D2": 0.13900023699616693,
+      "futureweight_point_only_ESS_failed": -0.011828058658398135,
+      "same_level_sensitivity": {
+        "0.95": 0.0007866141954360043,
+        "1.0": 0.0005932892895100261,
+        "1.05": 0.00040976277670103366
+      }
+    },
+    "TRANSFER": {
+      "delta": -0.0006248637904728612,
+      "bootstrap95": [
+        -0.003123256385393187,
+        0.002150135520143701
+      ],
+      "simultaneous95_family10": [
+        -0.00411465634784533,
+        0.0034328450476059334
+      ],
+      "post31_delta": -0.005148465752299593,
+      "folds": {
+        "0": 0.00021311581352675496,
+        "1": -0.0010984538145571213,
+        "2": 0.0003630769361110677,
+        "3": -0.0006777001262792537,
+        "4": 0.000575097400725691
+      },
+      "years": {
+        "2024": -0.0006248637904728612
+      },
+      "cells": [
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 0,
+          "rows": 12588,
+          "delta_global": -0.0011124004529861429,
+          "delta_cell_null": -0.004293986704623388,
+          "AE_base": 0.6217864960513668,
+          "AE_candidate": 0.6127748014356397
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2279,
+          "delta_global": -0.0005401496570324813,
+          "delta_cell_null": -0.017187054773222486,
+          "AE_base": 0.4922636127333661,
+          "AE_candidate": 0.46014439236201427
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 0,
+          "rows": 15863,
+          "delta_global": -0.00026771291469389,
+          "delta_cell_null": -0.0015902621945612016,
+          "AE_base": 0.9547886492821178,
+          "AE_candidate": 0.9299237588112415
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2869,
+          "delta_global": 0.0004547455680150744,
+          "delta_cell_null": 0.016303586899693804,
+          "AE_base": 1.4819395588582684,
+          "AE_candidate": 1.4032812266231407
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 0,
+          "rows": 21688,
+          "delta_global": 0.0008397823675852258,
+          "delta_cell_null": 0.002097579267003779,
+          "AE_base": 1.1590407861224514,
+          "AE_candidate": 1.1472023617259515
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 1,
+          "rows": 3915,
+          "delta_global": 8.712986393532682e-07,
+          "delta_cell_null": 1.4341114967994066e-05,
+          "AE_base": 0.8687200327304127,
+          "AE_candidate": 0.8412142036705375
+        }
+      ],
+      "worst_cell_delta": -0.017187054773222486,
+      "base_D2": 0.1318209954932763,
+      "candidate_D2": 0.13119613170280353,
+      "futureweight_point_only_ESS_failed": -0.007076188497642591,
+      "same_level_sensitivity": {
+        "0.95": -0.00019365561098489873,
+        "1.0": -0.0006248637904728612,
+        "1.05": -0.0010354060088504423
+      }
+    }
+  },
+  "primary_constants": 670,
+  "primary_constant_breakdown": {
+    "shape_factors": 280,
+    "level_constants": 90,
+    "residual_factors": 180,
+    "training_nuisance_levels": 120,
+    "shape_training_normalizers_separate": 80,
+    "training_stage_normalizers_separate": 120,
+    "held_stage_normalizers_separate": 120
+  },
+  "adverse_constant_breakdown_separate": {
+    "shape_factors": 280,
+    "level_constants": 90,
+    "residual_factors": 180,
+    "training_nuisance_levels": 120,
+    "shape_training_normalizers_separate": 80,
+    "training_stage_normalizers_separate": 120,
+    "held_stage_normalizers_separate": 120
+  },
+  "GLM_replacement_adopted": false,
+  "next_unit": "Before another model fit, attribute current GLM4versus A1Sadverses using only P12stored prices and existing source relativities/covariates: analytic profile-level versus allocation loss on fixed cells and factual source/target support, without new bootstrap, inference or training. Diagnostic profiled levels are oracles, never admissible prices or calibration factors. Do not rescue by positive-line selection, mixtures, penalty/seed searches or totalmatching. A later standard correction needs a concrete unresolved mechanism and preregistration. Preserve B00/F3c/P6, all failed variants and private priority;2024adaptiveopen. Complete own code version checkpoint before future deliveries; no upload/publicscore tuning now. Current public-source check does not create a new modeling assumption."
+}

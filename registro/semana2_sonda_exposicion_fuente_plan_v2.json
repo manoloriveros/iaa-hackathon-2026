@@ -1,0 +1,335 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T16:18:51.437961+00:00",
+  "type": "P8_frozen_source_exposure_feature_sensitivity",
+  "repair_before_real_inference": "V1fixture ratio-substring filter also selected duration_band. V2uses explicit ratio suffix/token only. Numeric transformation/selection/probe/summary/run/replay ASTunchanged. Preserve failure and15inputsnapshots byte-identically; zero actualsourceinferenceorfit inV1.",
+  "hypothesis": "The active exposure_model feature creates an annual source-relativity dependency not tested by changing calendar exposure with cached source relativities fixed. Quantify it as one possible model-risk route under cohortduration shift, without claiming it is wrong or explains the10.83percent basegap.",
+  "selection": "At most8future2025rows per line/NB-REN/durationband(1-30,31-90,91-180,181-366days), smallestSHA256(P8-exp-v1|rowid). No labels, predictions, influence or publicscore used; nonrepresentative diagnostic sample.",
+  "interventions": "BASE unchanged; D75/D50 replace only sourcefeatureexposure_model with round4(max(1,floor(originaldays*fraction))/365). Other matrixfeatures and sourcecentres fixed. Metadata daycounts are shortened within originalcoverage. Do not claim coherent completeS2/H1prices, source-featurecausality or duration-neutral annualrisk.",
+  "frozen": "All9sourceA1Sboosters and3seedgeometricmean, original per-seed centres, feature/categoricalorder, source/treatment/modelselection and nominaltarget. No refit, recentering, calibrator, C0or new full2025pricecandidate.",
+  "criterion": "Descriptive dependency flag perline/condition amongchangedrows if median(abs(log(geomeanrelative_ratio)))>=log1.02 or p95>=log1.10. Not a statistical acceptance or feature-removal criterion. Report all9seeds, bothinterventions and allstrata, no winnerselection or confidenceinterval from this probe.",
+  "controls": [
+    "Actual baseline raw_deltaandraw-center equal cachedperseedvalues at every selectedrow",
+    "Strict modelhash/featureorder, category/NaNpreservation and realactualLibraryflow",
+    "Changedinput rawscores agree with separately summed saved leafvalues at<=8fixedrows permodel/condition; leafindices frompred_leaf so routing is not an independentsecondimplementation",
+    "Independent scalar geomean arithmetic, one-day unchangedinputidentity, immutablemodel/treecountandsources",
+    "Training/update/refit APIs forbidden duringrun; pure numericfixture before realinference",
+    "Replay of saved rawarrays/centres with model loading/prediction forbidden; no repeatquery suite"
+  ],
+  "budget": {
+    "max_selected_rows_perline": 64,
+    "max_raw_prediction_calls": 27,
+    "max_primary_raw_prediction_rows": 1728,
+    "max_leafcontrol_calls": 27,
+    "max_leafcontrol_rows": 216,
+    "new_model_fits": 0,
+    "new_C0fits": 0,
+    "new_calibrationfits": 0,
+    "new_finaltestprices": 0,
+    "new_submissions": 0
+  },
+  "limits": [
+    "Finite outcome-free selectedfeatureprobe not populationimpact, predictivegain or a causal exposureeffect",
+    "Only A1Ssourcefeature changes; T2b/member/S2prices are not recomputed so no fullpolicyforecastclaim",
+    "Cached baseline/centres and originalmodelcontext including2024 and undatedmasters remain conditional",
+    "Private performance, emerging support, nominalgainminimum and prioradverses unresolved"
+  ],
+  "scopes": [
+    {
+      "line": "motor",
+      "rows": 64,
+      "metadata": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/metadata_motor.parquet",
+      "matrix": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/X_motor.parquet",
+      "models": [
+        {
+          "seed": 11,
+          "model": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/motor_seed11_full/model.txt",
+          "model_sha256": "b1b55babeb762b56c5d03b8cc0bd32b097935c3bdf8f00cd137d7694ba1e63b1",
+          "center": -0.07540026836803726,
+          "baseline": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/baseline_motor_seed11.parquet"
+        },
+        {
+          "seed": 12,
+          "model": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/motor_seed12_full/model.txt",
+          "model_sha256": "9c132d11561f01eb3bd6b46eb2b404727a78b6c6fc0f55c40ab475910d7bd03c",
+          "center": -0.07168013729615019,
+          "baseline": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/baseline_motor_seed12.parquet"
+        },
+        {
+          "seed": 13,
+          "model": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/motor_seed13_full/model.txt",
+          "model_sha256": "cfc71a7a8e60e60691961e54bc33c0dd94953a534c14086a33868874e2547ca2",
+          "center": -0.07422679344453087,
+          "baseline": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/baseline_motor_seed13.parquet"
+        }
+      ],
+      "cell_counts": [
+        {
+          "new_business": false,
+          "duration_band": "1-30",
+          "rows": 8
+        },
+        {
+          "new_business": false,
+          "duration_band": "181-366",
+          "rows": 8
+        },
+        {
+          "new_business": false,
+          "duration_band": "31-90",
+          "rows": 8
+        },
+        {
+          "new_business": false,
+          "duration_band": "91-180",
+          "rows": 8
+        },
+        {
+          "new_business": true,
+          "duration_band": "1-30",
+          "rows": 8
+        },
+        {
+          "new_business": true,
+          "duration_band": "181-366",
+          "rows": 8
+        },
+        {
+          "new_business": true,
+          "duration_band": "31-90",
+          "rows": 8
+        },
+        {
+          "new_business": true,
+          "duration_band": "91-180",
+          "rows": 8
+        }
+      ]
+    },
+    {
+      "line": "buildings",
+      "rows": 64,
+      "metadata": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/metadata_buildings.parquet",
+      "matrix": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/X_buildings.parquet",
+      "models": [
+        {
+          "seed": 11,
+          "model": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/buildings_seed11_full/model.txt",
+          "model_sha256": "976e5afb5d39f26bfd7405962d91e4667d53af14cc311efff736a0e792efeedd",
+          "center": -0.12091831878074721,
+          "baseline": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/baseline_buildings_seed11.parquet"
+        },
+        {
+          "seed": 12,
+          "model": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/buildings_seed12_full/model.txt",
+          "model_sha256": "fa5514c7ef6a8d98fed87536065280b6841a9bfcb818a29586bcb126b79d4d00",
+          "center": -0.13009830840864112,
+          "baseline": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/baseline_buildings_seed12.parquet"
+        },
+        {
+          "seed": 13,
+          "model": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/buildings_seed13_full/model.txt",
+          "model_sha256": "54dac2d06e0d3c52ef4428dea202adb9a6e65bbf23f7be1b70aec89fffb33d3f",
+          "center": -0.1188424256550551,
+          "baseline": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/baseline_buildings_seed13.parquet"
+        }
+      ],
+      "cell_counts": [
+        {
+          "new_business": false,
+          "duration_band": "1-30",
+          "rows": 8
+        },
+        {
+          "new_business": false,
+          "duration_band": "181-366",
+          "rows": 8
+        },
+        {
+          "new_business": false,
+          "duration_band": "31-90",
+          "rows": 8
+        },
+        {
+          "new_business": false,
+          "duration_band": "91-180",
+          "rows": 8
+        },
+        {
+          "new_business": true,
+          "duration_band": "1-30",
+          "rows": 8
+        },
+        {
+          "new_business": true,
+          "duration_band": "181-366",
+          "rows": 8
+        },
+        {
+          "new_business": true,
+          "duration_band": "31-90",
+          "rows": 8
+        },
+        {
+          "new_business": true,
+          "duration_band": "91-180",
+          "rows": 8
+        }
+      ]
+    },
+    {
+      "line": "contents",
+      "rows": 64,
+      "metadata": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/metadata_contents.parquet",
+      "matrix": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/X_contents.parquet",
+      "models": [
+        {
+          "seed": 11,
+          "model": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/contents_seed11_full/model.txt",
+          "model_sha256": "7742c685d6b98444f59e851d119030b6e52ba24700b828f5085ab04ff0a4238a",
+          "center": -0.10415580443492978,
+          "baseline": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/baseline_contents_seed11.parquet"
+        },
+        {
+          "seed": 12,
+          "model": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/contents_seed12_full/model.txt",
+          "model_sha256": "53faf7b2c9202dece9fff5640335c892acd5faf721cbd2e8d661233e04b7492f",
+          "center": -0.10194913641853809,
+          "baseline": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/baseline_contents_seed12.parquet"
+        },
+        {
+          "seed": 13,
+          "model": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/contents_seed13_full/model.txt",
+          "model_sha256": "104d2789e3de1191ad2fa38a66c0b0c190520ae3e6529e19fdd797799d42ce56",
+          "center": -0.101208193555685,
+          "baseline": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/baseline_contents_seed13.parquet"
+        }
+      ],
+      "cell_counts": [
+        {
+          "new_business": false,
+          "duration_band": "1-30",
+          "rows": 8
+        },
+        {
+          "new_business": false,
+          "duration_band": "181-366",
+          "rows": 8
+        },
+        {
+          "new_business": false,
+          "duration_band": "31-90",
+          "rows": 8
+        },
+        {
+          "new_business": false,
+          "duration_band": "91-180",
+          "rows": 8
+        },
+        {
+          "new_business": true,
+          "duration_band": "1-30",
+          "rows": 8
+        },
+        {
+          "new_business": true,
+          "duration_band": "181-366",
+          "rows": 8
+        },
+        {
+          "new_business": true,
+          "duration_band": "31-90",
+          "rows": 8
+        },
+        {
+          "new_business": true,
+          "duration_band": "91-180",
+          "rows": 8
+        }
+      ]
+    }
+  ],
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true,
+  "submission_allowed": false,
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/sondar_exposicion_fuente_P8.py": "33825804ca4198a4d62de90ffad4af5368b49609cd95651666554e043547dc89",
+    "Hackaton/Repositorio_IAA2026/herramientas/validar_transferencia_anual_H1.py": "4adf19918e974ac840c54d2da57d36fb98b16017830f0491a8201e95a1cf0213",
+    "Hackaton/Repositorio_IAA2026/herramientas/evaluar_media_anidada_H1_v3.py": "e3fb55db71f751d3a7a3c29661c9984245549403cc2b0cb10ddc547c8e50efe3",
+    "Hackaton/Repositorio_IAA2026/herramientas/registrar_avance_mision017_fase2.py": "5409cc1d5e4d40ef566e4fd7d592d394dab33e456bbbf8bee72f27baecb62017",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_contrato_fuente_estatico_20261026_v1/report.json": "c442740846d1f94157bfa773d3c013d06f6179fad815c22ff4486c25554cd278",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_contrato_fuente_estatico_20261026_v1/completion_receipt.json": "f3deb1e822527d69b9f283c8518b8e87ed8e957073ebfeffb3451e6c6721cc12",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/report.json": "16e00f41001ef78ba607d5cd2fd41fe77974b13c1e6d2bf18dc3573b7fa2534a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/report.json": "94b27c0bafeb80f5e9238957d028880784586a619377239381154aecc1335ea3",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P6_productor_S2_H1_nominal_20261026_v1/report.json": "8949c5ce21f2af790d2ce97741b35bd80901bf161802d060681924be1c1ed19f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P6_productor_S2_H1_nominal_20261026_v1/production_artifacts_manifest.json": "c7a8d6869da6e8bd3127aac815b52776048466b8d70a626841fd8910728c0bcc",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P7_ventana_reporte_madura_20261026_v2/report.json": "b4c0938ba993dd4c69f51242e4cf72b34379273b41342885dbe4a94e26014c2e",
+    "Hackaton/Repositorio_IAA2026/herramientas/entrenar_nucleo_A1S.py": "bf5532f092aa93d5f728523b7366fa0e1bc1bc28381569bbc95bfd540de7ed52",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_mision_privada_plan_v1.json": "3329dbc7fe931d71e1e945bdf536fd9d810040f2626709f3d103c2dc5cdd7876",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_control_entregas_codex_actual.json": "09608aa42f7784e13787e5a7bfd1d324afcc922041a492048b04fb03cc7820cf",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P6_productor_S2_H1_nominal_20261026_v1/future_motor.parquet": "31e6e6e4c63d3021163861f9d1042e9c7f1cc7a27af1e41c61bfec1b90a617eb",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s2_motor.parquet": "7a6e236ecb97dda159f73650b660955206b33a73bd4b22e3935581c72afc3631",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s2_motor.parquet": "2063f50044d41963032164373dcc895583e92dd7e9d1687aac7efda31910e75d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/X_motor.parquet": "eb068795cca66b873cc6bfb57097fa80b189c59e0aa9537bcadbfd68be673fbd",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/metadata_motor.parquet": "36749df7a4bd6e8eebbb52cb232dd3a58526386163c5096a2dd2b60530a63ff4",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/motor_seed11_full/model.txt": "b1b55babeb762b56c5d03b8cc0bd32b097935c3bdf8f00cd137d7694ba1e63b1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/motor_seed11_full/fit_record.json": "088e8a70b48c5ede6d6b14b8f02b306de8922c3d214d9ea41badc222f86467d7",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/motor_seed11_full/application.json": "0ddedd8777e340a0d4281992b6d7f920a2c23dd06bfd10a8b850b029a669f196",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/motor_seed11_full/target_components.parquet": "8d3efdd4c3eae25b25dff244ab5550b206317505d7bafe7dd8393ef5616f32c5",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/baseline_motor_seed11.parquet": "506696036ab09883a6fc14806a30bc3417da89347abb857029bec74103010680",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/motor_seed12_full/model.txt": "9c132d11561f01eb3bd6b46eb2b404727a78b6c6fc0f55c40ab475910d7bd03c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/motor_seed12_full/fit_record.json": "d0c4fdd3a7d65ca233a0491e5773c434d1c98ffafdfef286324f48db9bb3582c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/motor_seed12_full/application.json": "b9c417da0b7565c328e5a2ac05480b8888ba02088ff6e1d411e01d895f7599b6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/motor_seed12_full/target_components.parquet": "484df273613282f269c99d174e936b00d0e340b8e6d226fe23dcb0f38c4ce698",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/baseline_motor_seed12.parquet": "b840bb9b42762221b0e9c7e47e599797716732d07267c0cf28aee5bbf8c098fc",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/motor_seed13_full/model.txt": "cfc71a7a8e60e60691961e54bc33c0dd94953a534c14086a33868874e2547ca2",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/motor_seed13_full/fit_record.json": "2144e4ae1780642c97820fb3d2ec348dc41c076d8d941d96bb76bc5343423d89",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/motor_seed13_full/application.json": "feaed3f73abdc6f340f215270bfb5276db2ae0ead34848753959aa3a018e6d23",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/motor_seed13_full/target_components.parquet": "9cc628f545f74d905ad30d916d25d56b5c0da6f88f3a4c53468402dde38b23cd",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/baseline_motor_seed13.parquet": "f21443eb77e41ad3afbaa9f3d3f1fb770ec479398f90565fef003b5aa5bb113c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P6_productor_S2_H1_nominal_20261026_v1/future_buildings.parquet": "975622e351566ccf13d3e315482517c88e91883be096370012e74560a31ec25a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s2_buildings.parquet": "26dad682688854722be16ff52bc4332fd9acfe310b5ea4838d8c772bea32b775",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s2_buildings.parquet": "801b708d1738b6b6e04e1e9e814ec798397e65f817e9267bfc425c537f153846",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/X_buildings.parquet": "98d1ce1d541e47f4fdcfeefb564fcd49c46ae56ef3f6236dc100027de99b959b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/metadata_buildings.parquet": "7411b0c67aa5159a7b42390f5992e0fcddf3f045f21bcf4fb61d82a42ab64ff7",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/buildings_seed11_full/model.txt": "976e5afb5d39f26bfd7405962d91e4667d53af14cc311efff736a0e792efeedd",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/buildings_seed11_full/fit_record.json": "75d39e5f3b5945aca3497f892d163057198bd80e296e3960249c78c9faef973a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/buildings_seed11_full/application.json": "0c9132df221e65bd15fe7fa2dbc4dd949bef01fd3f7751429bfa28dece92b771",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/buildings_seed11_full/target_components.parquet": "e9f7780a1bcf6d684594e1993402b8631d78d5889022c5d8ab9111d825a5c1a1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/baseline_buildings_seed11.parquet": "109f275faa9bc51cf44d9b9507be2716520d6b2de9e5ec0259bb2d7170f50e47",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/buildings_seed12_full/model.txt": "fa5514c7ef6a8d98fed87536065280b6841a9bfcb818a29586bcb126b79d4d00",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/buildings_seed12_full/fit_record.json": "fd3c05bce307a64fc0389210c912e2a0573dd6f96a0667da0e12747f4845758f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/buildings_seed12_full/application.json": "ac952534d17a60ed21ce46576b057c9a4ed33d9722972c2a7191d75e2987cfc6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/buildings_seed12_full/target_components.parquet": "beb776f0dd6a97ed7b4f3110e784abc695bf8de1fba359c47692b02f232ae083",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/baseline_buildings_seed12.parquet": "33a402d552b6527a6f09bb04c3b8901d9a640636f9a9c9370e9a47d2109e4cca",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/buildings_seed13_full/model.txt": "54dac2d06e0d3c52ef4428dea202adb9a6e65bbf23f7be1b70aec89fffb33d3f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/buildings_seed13_full/fit_record.json": "ebdebc5a622edd30fd7e8061fef7460adfb49bb5131a4bdc4732f3266845bbb1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/buildings_seed13_full/application.json": "c4537c071e7ed49fca3fe527ed383e5744204d4c9f77624a1430a4c6c5ec61b6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/buildings_seed13_full/target_components.parquet": "9bfae7a67e6ba85efce284a11f4c58284d9f90be0e06678c364023bc4238a479",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/baseline_buildings_seed13.parquet": "9ab9abf9724b50911361b815bc147068d52efb5df9542cb627e5ecaef7ed3d16",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P6_productor_S2_H1_nominal_20261026_v1/future_contents.parquet": "ceeef170f6f32bb582f2857a1bcd8581b09e8c56ffd658a45f9e7bd75a40c834",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s2_contents.parquet": "633f4b7bbccd5929daf418a062c5023e761bfabfd5db2a7da432354c47472ccc",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s2_contents.parquet": "1576409971c67f28f9bc61a82b887c63a93a2e783ae12ed39b15e07fe34f46c7",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/X_contents.parquet": "0e72a74c05cfab01146d9793e0beceaef94e19e102e570b307dafdd17217f4fe",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/metadata_contents.parquet": "1895fb9fa0673b451ca0782e1e4b130f786c0dac511b72682b14c1c2d4b17403",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/contents_seed11_full/model.txt": "7742c685d6b98444f59e851d119030b6e52ba24700b828f5085ab04ff0a4238a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/contents_seed11_full/fit_record.json": "30e8b998e1105b880110912c0b5b4969d9ee4e946cd2f89ce52b48d3e22e9b77",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/contents_seed11_full/application.json": "fd91487270e6fea47bbe448a4931bfe722429005ba566c80e67d245f12b86f06",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/contents_seed11_full/target_components.parquet": "19e0ae0e5309d35fcee00a1e81f0091d438081d7180ec58c930978a48f2b3f6e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/baseline_contents_seed11.parquet": "771154c83b68dfc0b8da055cc11e11c5beca1315e7f4250ede9da02ffeb18a7b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/contents_seed12_full/model.txt": "53faf7b2c9202dece9fff5640335c892acd5faf721cbd2e8d661233e04b7492f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/contents_seed12_full/fit_record.json": "1fd16fd5a199769ae62d066534efafbe00115f9ca87d97fb1886686063753d89",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/contents_seed12_full/application.json": "7cb2eea15d24bd1ac1514a4517caff258f30ac67fec78542446872a65a657d8c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/contents_seed12_full/target_components.parquet": "9b03aca15c9d3e456efe35339a858bd2a3909edb94b5d7eb37051b69898713cb",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/baseline_contents_seed12.parquet": "02f5c8a2a9cb6d23f615508ae42806842f8a3e801383ed5f4ccf26cb69297cf2",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/contents_seed13_full/model.txt": "104d2789e3de1191ad2fa38a66c0b0c190520ae3e6529e19fdd797799d42ce56",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/contents_seed13_full/fit_record.json": "2273210b05dc17736b1fda881120c234088eec94e2313ce0d7a4538da659e41d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/contents_seed13_full/application.json": "52c0817a7ccc1dac94dfbf5be96a236d36b41bc1a1c7565980b6bf05b8caab16",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/contents_seed13_full/target_components.parquet": "9e5d4fe6b91cedf518ba478b182d4ce4910c0f845a47ce08d510cee0764832c4",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/baseline_contents_seed13.parquet": "c26bfa669a43f7152cfd0bdf01bdebac4c537c8e99b976cbc73afec6763d1304",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/synthetic_report.json": "ec0ce61150efa27e827da6e151d0f735fde893a92113608d199835c14740b88d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/input_reuse.json": "7f49bc9e39055096950c121220436d03365347cdb32049cc56cbe5672a1b0216",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v1/defect_before_real_inference.json": "65653ba164c121dca5159114ca12e687b3431a7d78973682104cd9aa4e6b9b9a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v1/prepare_attempt_v1.py": "f6429305d62dff9b9de5cc045a033cf53f98f608f874a5b8fe0ea7eb397fedff"
+  }
+}

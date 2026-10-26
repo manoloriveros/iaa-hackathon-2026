@@ -1,0 +1,56 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T16:27:37.762719+00:00",
+  "status": "P8frozen_source_exposure_probe_complete",
+  "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_sonda_exposicion_fuente_plan_v2.json",
+  "plan_sha256": "920a4fbf65a4359c1920a3262fa2e9813075adc6603b7101bbb5a40aa99a844e",
+  "output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2",
+  "registration": {
+    "plan_sha256": "920a4fbf65a4359c1920a3262fa2e9813075adc6603b7101bbb5a40aa99a844e",
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261026-PRIVADA-P8-SONDA-V2-PREVIO",
+      "utc": "2026-10-26T16:18:51+00:00",
+      "previous_sha256": "30661574d9f799d9ab7fbbd4215a3139ad17313bdb537f043eb28fe6af8584d4",
+      "sha256": "1ca9d5fbd69bd8853e427754bc667551b2e86664b8e711938a989afd0ce475a8"
+    }
+  },
+  "new_model_fits": 0,
+  "new_targetprices": 0,
+  "new_submissions": 0,
+  "2024_open": true,
+  "goal_achieved": false,
+  "actual_raw_prediction_calls": 27,
+  "primary_raw_prediction_rows": 1728,
+  "actual_leaf_control_calls": 27,
+  "leaf_control_rows_separate": 216,
+  "new_C0fits": 0,
+  "new_calibrationfits": 0,
+  "new_finaltestprices": 0,
+  "new_predictive_price_families": 0,
+  "feature_removal_adopted": false,
+  "P6_CSV_unchanged": true,
+  "private_improvement_established": false,
+  "formal_promotion": false,
+  "submission_allowed": false,
+  "B00_all_alternatives_preserved": true,
+  "limits": [
+    "Finite outcome-free selectedfeatureprobe not populationimpact, predictivegain or a causal exposureeffect",
+    "Only A1Ssourcefeature changes; T2b/member/S2prices are not recomputed so no fullpolicyforecastclaim",
+    "Cached baseline/centres and originalmodelcontext including2024 and undatedmasters remain conditional",
+    "Private performance, emerging support, nominalgainminimum and prioradverses unresolved"
+  ],
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/report.json",
+  "report_sha256": "64f658f5b44326dd4ed2d7e8a977153ba6b07164d32c58e9a850c8f21404603f",
+  "replay": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/replay_report.json",
+  "replay_sha256": "9f1ba4c172d4a503a09f878f6f0fcc1d34093a50bde0d9f88d42648b1f38219b",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P8_SENSIBILIDAD_EXPOSICION.md",
+  "forum": {
+    "author": "Codex",
+    "id": "COD-S2-20261026-PRIVADA-P8-SONDA-RESULTADO",
+    "utc": "2026-10-26T16:27:37+00:00",
+    "previous_sha256": "1ca9d5fbd69bd8853e427754bc667551b2e86664b8e711938a989afd0ce475a8",
+    "sha256": "d216efbbfcf996dbba4ee33b1fe0793d7e69449962a670979a305f55071264f8"
+  },
+  "next_unit": "Preregister P9fixed-budget source exposure-feature ablation: drop only exposure_model from A1S, retain offset/e_cost, source-only categories, all3seeds, original fullroundcounts/capacity and target recipes. At most9new sourcefullfits; no new source earlystopsearch or C0fits. Reuse exact H1/G3inner ratios because their learning is independent of A1S. Refit S2outercomponent in each originalscope, validate pooled and conditional2023-to2024 transfer, all prior stressscenarios/cells/influence and complete held-poison/replay flow. Do not infer a bug or adopt removal from P8. No uploads, levelmatching or publicscore tuning; preserve B00/F3c/P6/alternatives and adaptive2024open."
+}
