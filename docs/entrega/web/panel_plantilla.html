@@ -94,9 +94,9 @@ footer{color:var(--text-muted);font-size:12px;border-top:1px solid var(--border)
       kicker: 'AI Hackathon IAA 2026 · Parte 1', titulo: 'Mezcla por peligro: panel del modelo final', claro: 'Claro', oscuro: 'Oscuro',
       subtitulo: 'Prima de riesgo por periodo de póliza en autos, edificios y contenidos. Solo cifras agregadas; sin datos por fila.',
       tabla: 'Ver tabla', grafico: 'Ver gráfico',
-      sec: { resumen: 'Resumen', datos: 'Datos', objetivo: 'Objetivo e IBNR', modelo: 'Modelo', validacion: 'Validación', ia: 'Uso de IA', controles: 'Controles', limites: 'Límites y semana 2' },
-      resumen_lead: 'Este panel recorre el modelo entregado con los mismos números del informe. Cada gráfico tiene su tabla, y todas las cifras salen de docs/entrega/datos/cifras_entregables.json, que guarda la ruta y el SHA-256 de cada fuente.',
-      k1: 'puntuación pública del modelo final (D² Tweedie, potencia 1,5)', k2: 'D² de 2024 fuera de muestra; la tasa constante por ramo da ', k3: 'periodos de 2025 predichos en tres ramos', k4: 'aportes en el foro común de IA durante {horas} horas',
+      sec: { resumen: 'Resumen', datos: 'Datos', objetivo: 'Objetivo e IBNR', modelo: 'Modelo', nivel: 'Nivel 2025', validacion: 'Validación', ia: 'Uso de IA', controles: 'Controles', limites: 'Límites y semana 2' },
+      resumen_lead: 'Este panel recorre el modelo entregado con los mismos números del informe. La entrega final, S41, es la Mezcla por peligro con su nivel de 2025 calibrado con tres factores, uno por ramo, según una regla de credibilidad fijada antes de mirar (sección Nivel 2025). Cada gráfico tiene su tabla, y todas las cifras salen de docs/entrega/datos/cifras_entregables.json, que guarda la ruta y el SHA-256 de cada fuente.',
+      k1: 'puntuación pública de la entrega final (D² Tweedie, potencia 1,5); el modelo solo, {m}; primer puesto entre {eq} equipos el 22 de octubre', k2: 'D² de 2024 fuera de muestra; la tasa constante por ramo da ', k3: 'periodos de 2025 predichos en tres ramos', k4: 'aportes en el foro común de IA durante {horas} horas',
       f_flujo: 'Flujo actuarial en seis etapas, con validación temporal y controles en cada paso.',
       datos_lead: 'Los once Parquet originales quedan intactos; cada cambio vive en una capa derivada con bitácora por fila. La tabla resume qué se corrigió y qué se dejó como incertidumbre declarada.',
       t_reglas: ['Problema encontrado', 'Filas', 'Tratamiento'],
@@ -115,11 +115,23 @@ footer{color:var(--text-muted);font-size:12px;border-top:1px solid var(--border)
       t_ceros: ['Ramo', '2021', '2022', '2023', '2024'], ceros: 'Periodos sin coste observado (%)',
       obj_lead: 'T0 es el incurrido neto observado al 31-12-2024. Para llevarlo a nivel último, un chain-ladder de conteos por peligro estima qué parte de la exposición ya está vista; esa exposición efectiva entra como offset al entrenar y 2025 se predice con la exposición nominal, así el IBNR entra una sola vez.',
       f_completitud: 'Parte de la exposición de 2024 cuyos siniestros ya se han reportado, por peligro.',
-      f_prima: 'Prima de riesgo por año-exposición (CU): observada (gris), con IBNR (color) y predicción 2025 (círculo hueco).',
+      f_prima: 'Prima de riesgo por año-exposición (CU): observada (gris), con IBNR (color) y predicción 2025 de la entrega final (círculo hueco).',
       t_reservas: ['Ramo', 'Año', 'Reserva de abiertos / T0', 'Abiertos', 'Aceptados'], reservas_t: 'Peso de las reservas de caso en T0',
-      mod_lead: 'El modelo final pondera, por ramo, modelos del coste total con Tweedie y modelos de frecuencia por peligro multiplicada por la severidad. El nivel de 2025 usa el factor que minimiza la desviación Tweedie, promediado entre 2023 y 2024.',
+      mod_lead: 'El modelo final pondera, por ramo, modelos del coste total con Tweedie y modelos de frecuencia por peligro multiplicada por la severidad. El nivel de 2025 de la mezcla usa el factor que minimiza la desviación Tweedie, promediado entre 2023 y 2024; la entrega final lo recalibra con un factor por ramo (sección Nivel 2025).',
       f_comp: 'Pesos por ramo. Azul: frecuencia × severidad. Naranja: coste total.',
-      t_comp: ['Ramo', 'Componente', 'Tipo', 'Peso'], t_nivel: ['Ramo', 'f 2023', 'f 2024', 'f usado', 'Total 2025 (CU)', 'CU por año-exposición'],
+      t_comp: ['Ramo', 'Componente', 'Tipo', 'Peso'], t_nivel: ['Ramo', 'f 2023', 'f 2024', 'f de la mezcla', 'Factor de S41', 'Total 2025 de S41 (CU)', 'CU por año-exposición, mezcla · S41'],
+      nivel_lead: 'La entrega final, S41, es la Mezcla por peligro con el nivel de 2025 de cada ramo multiplicado por un factor: {fM} en autos, {fB} en edificios y {fC} en contenidos. Es una calibración del nivel con tres parámetros: no se reentrenó nada y dentro de cada ramo cada periodo conserva su orden y sus relatividades. Cada factor pondera dos estimaciones del nivel del ramo: la propia de la mezcla, con 2023 y 2024, y la que implica el tablero público, que se calcula con cerca de un tercio del test y es la única medida de la experiencia de 2025.',
+      f_cal: 'Con la desviación Tweedie de potencia 1,5, D²(c) − D²(1) = −4·[S1·(c^−½ − 1) + S2·(c^½ − 1)]/N: dos sondas por ramo (×0,90 y ×1,10) fijan la curva y su máximo, c* = S1/S2. Puntos: puntuaciones devueltas por Kaggle; círculo hueco: óptimo del público; círculo lleno y línea discontinua: factor de S41. Las sondas son diagnósticas y quedaron excluidas de la selección.',
+      t_sondas: ['Ramo', 'Sonda ×0,90', 'Sonda ×1,10', 'Óptimo c*', 'Ruido σ de c*'],
+      nivel_regla_t: 'Una regla fijada antes de mirar',
+      nivel_regla: 'El óptimo del público tiene ruido: aplicarlo entero ganaba {g33} en el tercio de 2024 donde se medía y perdía {p67} de media en los otros dos. Por eso, antes de conocer las sondas, se fijó c = 1 + Z·(c* − 1), con Z = τ²/(τ² + σ²), σ el ruido del óptimo en 300 tercios de 2024 y τ la incertidumbre del nivel propio. S41 es esa regla aplicada sin cambios: puntuó {p41}, lo que preveía la forma cerrada hasta el quinto decimal, y el redondeo deja c* dentro de ±{rd0} a ±{rd1}. Los óptimos se alejaron de 1 más de lo que admitía la previa (chi-cuadrado {chi2} con 3 grados de libertad, p ≈ {pv}): el tablero pide correcciones mayores, y S41 aplica solo la parte creíble.',
+      t_cred: ['Ramo', 'τ previa', 'Z previa', 'Factor de S41', 'f × c final', 'Z con el ruido corregido', 'Parte del error de reserva que conserva'], hip_t: 'Qué supone S41', t_hip: ['Supuesto', 'Cómo se comprobó', 'Si falla'], hip: [['La mezcla ordena y reparte bien el riesgo en 2025', 'D² de {d24} fuera de muestra en 2024, y cada decil de coste predicho sigue al observado', 'Los factores solo corrigen el nivel'], ['El público es la desviación sobre un tercio al azar', 'Las puntuaciones encajan con la forma cerrada al quinto decimal, lo que no identifica al evaluador', 'Solo se aplica del 15 % al 35 % del desvío del público'], ['Un tercio de 2024 mide el ruido del óptimo público', 'Medido después, es {coc} veces mayor frente a los dos tercios no vistos', 'S41 aplica algo más de lo debido; su ganancia esperada sigue positiva'], ['Nuestro nivel es correcto dentro de τ', 'Los desvíos fueron mayores de lo que τ admitía (p ≈ {pv})', 'S41 queda más cerca del nivel de la mezcla de lo que pide el tablero'], ['Las reservas de caso al 31-12-2024 son suficientes', 'Una sola valoración no lo puede probar', 'Un error del {r41a} en las reservas de autos mueve el nivel de S41 un 1 %; material en los tres ramos']],
+      nivel_evid_t: 'Evidencia actuarial sin el tablero',
+      nivel_evid_lead: 'Cada factor se puso frente a tres indicadores que no usan el tablero, con el criterio que la batería de sensibilidad escribió antes de calcular y que aquí se aplica, a posteriori, a los ajustes de S41: un ramo queda apoyado si al menos dos indicadores coinciden en signo con el ajuste y este no supera el mayor de ellos más τ; parcial con uno, o con dos o más y el tamaño fuera; sin apoyo con ninguno. Indicadores: (a) el último año, f24/f − 1; (b) los efectos de etiqueta del análisis de reservas; (c) mantener en 2025 la siniestralidad de 2024, coste último estimado entre prima escrita, un supuesto de tarificación y no un coste observado. El diccionario no dice si la prima es tarifa anual o importe del periodo (hallazgo abierto DATA-006): entre paréntesis, (c) con la prima leída como tarifa anual; la lectura es la misma con las dos. Son independientes del tablero, no de los datos ni de los supuestos del proyecto, y no sustituyen una validación profesional.',
+      t_evid: ['Ramo', 'Ajuste de S41', '(a) Último año', '(b) Efectos de etiqueta', '(c) Siniestralidad de 2024', 'Lectura'],
+      clases: { apoyado: 'Apoyado', parcial: 'Parcial', sin_apoyo: 'Sin apoyo', por_tamano: 'Parcial, por tamaño' }, si_prima: ' si la prima es anual', puntos: ' puntos', no_hay: 'no hay',
+      sens_t: 'Por qué S41', sens_lead: 'Una batería de sensibilidad, preinscrita ya conocidas las puntuaciones, vio que el ruido del óptimo público se había medido frente a todo 2024, que contiene la muestra; frente a los dos tercios no vistos es {coc} veces mayor. Con esa corrección recalculó la ganancia esperada en el privado frente a la mezcla bajo tres pares de previas (tabla): S41 es el único archivo calibrado que supera a la mezcla con los tres. Dos calibraciones posteriores del mismo tablero, una credibilidad revisada y un exponente de forma por ramo, puntuaron más en público ({p42} y {p43}) pero se apoyan más en él; sus esperanzas son menores en promedio y las reglas de alarma del plan se cumplieron a favor de S41 frente a las dos ({al42} y {alarma}, umbral {umb}). Fuera del tablero, además, los óptimos de 2023 y 2024 piden ampliar la forma de autos, no comprimirla. La ventaja es pequeña frente al ruido: la calibración de forma aún supera a S41 con probabilidad de {pmin} a {pmaxp}.', t_sens: ['Archivo', 'Reglas fijadas antes de las sondas', 'Bayes empírico corregido', 'Previas sin el tablero'], filas_sens: { S41: 'S41, la entrega final', S42: 'Credibilidad revisada, probada y no elegida', S43: 'Exponente de forma por ramo, probado y no elegido' },
+      nivel_eleccion: 'El participante seleccionó S41 en Kaggle el 23 de octubre, antes del cierre de la parte 1. La comprobación de la severidad de lesiones, calculada antes de las sondas, ponía el nivel de autos de la mezcla un {s3a} alto; con la regla de S41 el de S41 quedaría un {s3c} alto (de {s3d} a {s3e}), así que, si esa comprobación es correcta, queda la mayor parte de la brecha. S3 no se adoptó.',
       val_lead: 'Validación temporal: ajustar con años pasados y medir en un año completo posterior. 2023 y 2024 también se usaron para elegir, así que no son una prueba final independiente.',
       f_vdis: 'Tres cortes: V23 desarrolla, V24 contrasta y producción predice 2025.', f_d2: 'D² por ramo frente a una tasa constante por ramo.',
       f_dec: 'Coste medio por decil de coste predicho en 2024 (escala logarítmica). Línea: predicho. Círculos: observado.',
@@ -144,9 +156,9 @@ footer{color:var(--text-muted);font-size:12px;border-top:1px solid var(--border)
       ],
       f_bt: 'El chain-ladder de reporte se reestimó con los datos disponibles en tres cortes anteriores; cada celda compara los avisos que proyectaba recibir después del corte con los reportados hasta diciembre de 2024. Las cifras del año recién cerrado de la tabla de experimentos comparan el IBNR de ese año con su reestimación con todos los datos.',
       t_bt: ['Peligro', 'Ramo', 'Corte', 'Proyectados', 'Reportados', 'Error', 'Criterio', '¿Dentro?'],
-      ia_lead: 'Dos asistentes de IA, Claude y Codex, trabajaron en tres líneas independientes que publicaban sus hipótesis en un foro común antes de calcularlas; un enjambre de tres agentes auditaba el proyecto cada seis horas. El participante autorizó las reglas de datos y los envíos y aprobó el modelo final; la selección manual en Kaggle sigue pendiente.',
-      f_ia: 'Organización del trabajo con IA y puntos de decisión humana.', f_foro: 'Aportes al foro por bloque de seis horas y tipo (clasificados por el título).',
-      f_curva: 'Los 14 envíos puntuados: la validación local siguió subiendo mientras la pública se estancaba.',
+      ia_lead: 'Dos asistentes de IA, Claude y Codex, trabajaron en tres líneas que publicaban sus hipótesis en un foro común antes de calcularlas; un enjambre de tres agentes auditaba el proyecto cada seis horas. El participante autorizó las reglas de datos y cada envío, aprobó el modelo final y seleccionó S41 como entrega final en Kaggle el 23 de octubre.',
+      f_ia: 'Organización del trabajo con IA y puntos de decisión humana.', f_foro: 'Aportes al foro por bloque de seis horas y tipo (clasificados por el título), hasta el registro de la selección final.',
+      f_curva: 'Los {nenv} envíos puntuados: la validación local siguió subiendo mientras la pública se estancaba; al final, las seis sondas de nivel, S41 y las calibraciones posteriores que se probaron y no se eligieron.',
       f_pl: 'Seis candidatos previos (gris) y los dos posteriores (azul): el D² sin el 0,5 % de pérdidas mayores ordena casi como el público.',
       t_etapas: ['Etapa', 'Qué hizo la IA', 'Cómo lo verificamos'],
       etapas: [
@@ -154,12 +166,13 @@ footer{color:var(--text-muted);font-size:12px;border-top:1px solid var(--border)
         ['Variables', 'Contrato de disponibilidad por columna; detectó una variable que mide el siniestro del propio periodo', 'Exclusión por código con una guardia de predictores'],
         ['Metodología', '51 fuentes primarias cotejadas con DOI y arXiv, más tres papers de la IAA', 'Afirmaciones sin respaldo descartadas, como una mejora del 17 % propuesta por otra herramienta'],
         ['Modelado y diagnóstico', '44 contrastes numerados en la línea de contraste y preinscripciones en las otras dos', 'Intervalos por cliente, dirección y región; escenarios de reserva'],
+        ['Calibración del nivel', 'Derivó la forma cerrada de la puntuación pública en el factor de nivel, midió su ruido por bootstrap y escribió la regla de credibilidad antes de las sondas', 'Kaggle devolvió la puntuación prevista hasta el quinto decimal; una batería posterior halló el ruido subestimado y favoreció el archivo de la regla'],
         ['Pruebas y gobierno', 'Orquestador de 30 nodos con huellas de 184 salidas; enjambre de validación', 'Un validador detectó controles permisivos: corregidos y probados con 36 casos adversos']
       ],
       t_hall: ['ID', 'Hallazgo', 'Severidad', 'Estado'], hall_t: 'Hallazgos del enjambre de validación', sev: { alta: 'alta', media: 'media', baja: 'baja', informativo: 'informativo' },
       est: { abierto: 'abierto', cerrado_en_auditoria: 'cerrado', remediacion_documental_verificada: 'texto corregido', control_verificado: 'control verificado', remediacion_tecnica_verificada: 'corregido; falta revisión humana', cerrado_en_alcance_de_correccion_tecnica_1_2: 'cerrado por decisión del participante, solo en su alcance técnico', cerrado_en_alcance_de_correccion_tecnica_captura_1_1_2: 'cerrado por decisión del participante, solo en su alcance técnico', limitacion_aceptada_por_participante: 'limitación aceptada por el participante', limitacion_aceptada_por_participante_sin_reproduccion_independiente: 'limitación aceptada: sin reproducción independiente' },
       todos: 'Todos',
-      ctl_lead: 'Cada capa tiene sus controles automáticos. El CSV entregado se regenera byte a byte desde los componentes guardados, y reentrenar toda la receta desde los originales lo reconstruyó con el mismo SHA-256; lo hizo el mismo flujo, sin un operador independiente.',
+      ctl_lead: 'Cada capa tiene sus controles automáticos. El CSV de la mezcla se regenera byte a byte desde los componentes guardados, y reentrenar toda la receta desde los originales lo reconstruyó con el mismo SHA-256; S41 se reconstruye byte a byte aplicando los tres factores (herramientas/regenerar_s41.py), y el paso de nivel, repetido desde la mezcla reentrenada y desde la réplica, dio las seis sondas y S41 con su SHA-256 registrado. Lo hizo el mismo flujo, sin un operador independiente.',
       t_capas: ['Capa', 'Control', 'Resultado'],
       capas: [
         ['Datos originales', 'Huellas SHA-256 y reconstrucción independiente', '11 de 11 idénticos; 0 diferencias en 148 M de celdas'],
@@ -167,16 +180,16 @@ footer{color:var(--text-muted);font-size:12px;border-top:1px solid var(--border)
         ['Variables', 'Contrato por columna y particiones', '25 de 25'],
         ['Modelo', 'D² por ramo y año, deciles, reservas, intervalos agrupados', 'Supera la referencia en cada ramo y año'],
         ['Paquete', '9 casos nominales y 36 adversos desde la consola', '45 de 45 en tres entornos'],
-        ['Entrega', 'Columnas, filas, orden, identificadores, valores y SHA-256', '10 de 10']
+        ['Entrega', 'Columnas, filas, orden, identificadores, valores y SHA-256, en la mezcla y en S41', '10 de 10 en cada archivo']
       ],
       t_bat: ['Entorno', 'Python', 'Versión del paquete', 'Casos', 'Pasan'], env: { controles_nube: 'Nube de referencia', controles_vm: 'Máquina virtual del participante', controles_windows: 'Windows' },
       lim_lead: 'Límites del modelo de semana 1 y protocolo de adaptación definido en ese corte. El análisis de los dos mercados está en el panel de datos de ambas semanas, enlazado en el menú.',
       t_lim: ['Límite', 'Por qué importa', 'Qué hacemos'],
       lim: [
-        ['Una sola valoración (31-12-2024)', 'No permite observar el último ni demostrar suficiencia de reservas; un error del {res_autos} en las de autos ({res_edif} en edificios) ya mueve el nivel de 2025 un 1 %', 'Incertidumbre material declarada en los tres ramos; pedir valoraciones sucesivas'],
+        ['Una sola valoración (31-12-2024)', 'No permite observar el último ni demostrar suficiencia de reservas; en la mezcla un error del {res_autos} en las de autos ({res_edif} en edificios) ya mueve el nivel de 2025 un 1 %, y en S41 basta un {r41a} ({r41b} en edificios)', 'Incertidumbre material en los tres ramos, declarada como limitación también para S41; pedir valoraciones sucesivas'],
         ['2023 y 2024 usados para elegir', 'No son una prueba final independiente', 'Congelar la receta antes del mercado nuevo'],
         ['Disponibilidad al cotizar', 'Historial, telemática y clima podrían no existir en la fecha de cotización', 'Contrato por columna; confirmar fechas con el responsable de los datos'],
-        ['El nivel de 2025', 'Los cortes de edificios distan un 3,4 % de su media; en autos, un escenario que repite el sesgo del IBNR de lesiones y suma los recobros ausentes en los abiertos lo sitúa alto entre un 1,5 % y un 2,5 %', 'Declarado como escenario, sin aplicarlo al archivo enviado; recalibrar es lo primero en la semana 2'],
+        ['El nivel de 2025', 'Ningún corte lo mide; el óptimo del tablero público tiene ruido, que primero se midió de menos', 'Calibrado con tres factores (S41) y una regla fijada antes; sin el tablero, la evidencia apoya edificios y contenidos y solo en parte autos. Ganancia esperada en el privado frente a la mezcla: {g1}, {g2} o {g3} según las previas'],
         ['Elección del modelo final', 'Su ventaja sobre el mejor envío anterior no es robusta: quitar 6 de 373.831 clientes la invierte', 'Se mantiene: ninguna alternativa probada lo supera en todos los criterios; no se afirma equivalencia'],
         ['149 capitales sin confirmación', 'Pesan el 0,01 % del total predicho (24.668 CU), pero deciden sus filas: sin dividir, de 35 a 89 veces mayores', 'Mantener la división; confirmarla con un actuario de hogar'],
         ['Reproducción independiente', 'El reentrenamiento y la réplica los hizo el mismo flujo en su nube de referencia', 'Declarada como limitación por el participante; el kit permite que otro operador la repita']
@@ -187,7 +200,7 @@ footer{color:var(--text-muted);font-size:12px;border-top:1px solid var(--border)
         ['Mezcla de peligros y colas', 'Peligros nuevos o colas más pesadas', 'Reentrenar severidades; revisar criterio de cuerpo y regla de nivel'],
         ['Desarrollo de siniestros', 'Otro patrón de reporte', 'Reestimar el chain-ladder antes de entrenar'],
         ['Variables disponibles', 'Columnas nuevas, ausentes o con otra fecha', 'Actualizar el contrato y la guardia de predictores'],
-        ['Rendimiento del modelo congelado', 'Caída del D² o descalibración', 'Recalibrar primero; reconstruir si no basta']
+        ['Rendimiento del modelo congelado', 'Caída del D² o descalibración', 'Recalibrar primero el nivel, con sondas, una previa fijada antes y el ruido medido en la parte no vista; reconstruir si no basta']
       ],
       pie: 'Generado desde cifras_entregables.json · SHA-256 de las fuentes en el propio JSON · Archivo local: no se publica en línea porque contiene agregados de los datos del concurso.'
     },
@@ -195,9 +208,9 @@ footer{color:var(--text-muted);font-size:12px;border-top:1px solid var(--border)
       kicker: 'IAA AI Hackathon 2026 · Part 1', titulo: 'Per-peril blend: final model dashboard', claro: 'Light', oscuro: 'Dark',
       subtitulo: 'Risk premium per policy period in motor, buildings and contents. Aggregated figures only; no row-level data.',
       tabla: 'Show table', grafico: 'Show chart',
-      sec: { resumen: 'Summary', datos: 'Data', objetivo: 'Target and IBNR', modelo: 'Model', validacion: 'Validation', ia: 'Use of AI', controles: 'Controls', limites: 'Limits and week 2' },
-      resumen_lead: 'This dashboard walks through the delivered model with the same numbers as the report. Every chart has a table, and every figure comes from docs/entrega/datos/cifras_entregables.json, which stores the path and SHA-256 of each source.',
-      k1: 'public score of the final model (Tweedie D², power 1.5)', k2: 'out-of-sample D² on 2024; a constant rate per line gives ', k3: '2025 policy periods predicted across three lines', k4: 'posts in the shared AI forum over {horas} hours',
+      sec: { resumen: 'Summary', datos: 'Data', objetivo: 'Target and IBNR', modelo: 'Model', nivel: '2025 level', validacion: 'Validation', ia: 'Use of AI', controles: 'Controls', limites: 'Limits and week 2' },
+      resumen_lead: 'This dashboard walks through the delivered model with the same numbers as the report. The final submission, S41, is the Per-peril blend with its 2025 level calibrated by three factors, one per line, under a credibility rule fixed before looking (section 2025 level). Every chart has a table, and every figure comes from docs/entrega/datos/cifras_entregables.json, which stores the path and SHA-256 of each source.',
+      k1: 'public score of the final submission (Tweedie D², power 1.5); the model alone, {m}; first of {eq} teams on 22 October', k2: 'out-of-sample D² on 2024; a constant rate per line gives ', k3: '2025 policy periods predicted across three lines', k4: 'posts in the shared AI forum over {horas} hours',
       f_flujo: 'Six-stage actuarial pipeline, with temporal validation and controls at every step.',
       datos_lead: 'The eleven original Parquet files stay untouched; every change lives in a derived layer with a row-level change log. The table summarises what was fixed and what was kept as declared uncertainty.',
       t_reglas: ['Problem found', 'Rows', 'Treatment'],
@@ -216,11 +229,23 @@ footer{color:var(--text-muted);font-size:12px;border-top:1px solid var(--border)
       t_ceros: ['Line', '2021', '2022', '2023', '2024'], ceros: 'Periods with no observed cost (%)',
       obj_lead: 'T0 is the observed net incurred cost at 31-12-2024. To bring it to ultimate, a chain-ladder on claim counts by peril estimates how much of the exposure is already seen; that effective exposure is the training offset and 2025 is predicted with the nominal exposure, so IBNR enters once.',
       f_completitud: 'Share of the 2024 exposure whose claims have already been reported, by peril.',
-      f_prima: 'Risk premium per exposure year (CU): observed (grey), with IBNR (colour) and the 2025 prediction (hollow circle).',
+      f_prima: 'Risk premium per exposure year (CU): observed (grey), with IBNR (colour) and the final submission\'s 2025 prediction (hollow circle).',
       t_reservas: ['Line', 'Year', 'Open reserves / T0', 'Open', 'Accepted'], reservas_t: 'Weight of case reserves in T0',
-      mod_lead: 'In each line the final model weights Tweedie total-cost models and per-peril frequency-times-severity models. The 2025 level uses the factor that minimises the Tweedie deviance, averaged over 2023 and 2024.',
+      mod_lead: 'In each line the final model weights Tweedie total-cost models and per-peril frequency-times-severity models. The blend\'s 2025 level uses the factor that minimises the Tweedie deviance, averaged over 2023 and 2024; the final submission recalibrates it with one factor per line (section 2025 level).',
       f_comp: 'Weights by line. Blue: frequency × severity. Orange: total cost.',
-      t_comp: ['Line', 'Component', 'Type', 'Weight'], t_nivel: ['Line', 'f 2023', 'f 2024', 'f used', '2025 total (CU)', 'CU per exposure year'],
+      t_comp: ['Line', 'Component', 'Type', 'Weight'], t_nivel: ['Line', 'f 2023', 'f 2024', 'Blend f', 'S41 factor', 'S41 2025 total (CU)', 'CU per exposure year, blend · S41'],
+      nivel_lead: 'The final submission, S41, is the Per-peril blend with each line\'s 2025 level multiplied by one factor: {fM} in motor, {fB} in buildings and {fC} in contents. It is a three-parameter calibration of the level: nothing was retrained, and within each line every period keeps its rank and relativities. Each factor weighs two estimates of the line\'s level: the blend\'s own, from 2023 and 2024, and the one implied by the public leaderboard, computed on about a third of the test and the only measure of 2025 experience.',
+      f_cal: 'With the Tweedie deviance at power 1.5, D²(c) − D²(1) = −4·[S1·(c^−½ − 1) + S2·(c^½ − 1)]/N: two probes per line (×0.90 and ×1.10) fix the curve and its maximum, c* = S1/S2. Dots: scores returned by Kaggle; hollow circle: public optimum; filled circle and dashed line: the S41 factor. The probes were diagnostic and excluded from the selection.',
+      t_sondas: ['Line', 'Probe ×0.90', 'Probe ×1.10', 'Optimum c*', 'Noise σ of c*'],
+      nivel_regla_t: 'A rule fixed before looking',
+      nivel_regla: 'The public optimum is noisy: applying it in full gained {g33} on the third of 2024 where it was measured and lost {p67} on average on the other two. So before the probes were scored we fixed c = 1 + Z·(c* − 1), with Z = τ²/(τ² + σ²), σ the noise of the optimum over 300 thirds of 2024 and τ the uncertainty of our own level. S41 is that rule applied without changes: it scored {p41}, what the closed form predicted to the fifth decimal, and rounding leaves c* within ±{rd0} to ±{rd1}. The optima deviated from 1 more than the prior allowed (chi-square {chi2} on 3 degrees of freedom, p ≈ {pv}): the leaderboard asks for larger corrections, and S41 applies only the credible part.',
+      t_cred: ['Line', 'Prior τ', 'Prior Z', 'S41 factor', 'Final f × c', 'Z with the corrected noise', 'Share of a reserve error it keeps'], hip_t: 'What S41 assumes', t_hip: ['Assumption', 'How it was checked', 'If it fails'], hip: [['The blend ranks and spreads risk well in 2025', 'D² {d24} out of sample on 2024, and every decile of predicted cost follows the observed one', 'The factors only correct the level'], ['The public score is the deviance on a random third', 'Scores fit the closed form to five decimals, which does not identify the scorer', 'Only 15% to 35% of the public deviation is applied'], ['A third of 2024 sizes the noise of the public optimum', 'Later measured {coc} times larger against the unseen two thirds', 'S41 applies slightly more than it should; its expected gain stays positive'], ['Our level is right within τ', 'The deviations were wider than τ allowed (p ≈ {pv})', 'S41 stays closer to the blend\'s level than the leaderboard asks'], ['Case reserves at 31-12-2024 are adequate', 'One valuation cannot prove it', 'A {r41a} error in motor reserves moves S41\'s level by 1%; material in all three lines']],
+      nivel_evid_t: 'Actuarial evidence without the leaderboard',
+      nivel_evid_lead: 'Each factor was set against three indicators that do not use the leaderboard, with the criterion the sensitivity battery wrote down before computing, applied here, after the fact, to S41\'s adjustments: a line is supported when at least two indicators agree in sign with the adjustment and it stays within the largest of them plus τ; partial with one, or with two or more and the size outside; unsupported with none. Indicators: (a) the last year, f24/f − 1; (b) the label effects of the reserve analysis; (c) keeping the 2024 loss ratio, estimated ultimate cost over written premium, in 2025, a pricing assumption rather than an observed cost. The data dictionary does not say whether the premium is an annual rate or the amount for the period (open finding DATA-006): in brackets, (c) with the premium read as an annual rate; every line reads the same under both. They are independent of the leaderboard, not of the project\'s data and assumptions, and they do not replace professional validation.',
+      t_evid: ['Line', 'S41 adjustment', '(a) Last year', '(b) Label effects', '(c) 2024 loss ratio', 'Reading'],
+      clases: { apoyado: 'Supported', parcial: 'Partial', sin_apoyo: 'Unsupported', por_tamano: 'Partial, by size' }, si_prima: ' if the premium is annual', puntos: ' points', no_hay: 'none',
+      sens_t: 'Why S41', sens_lead: 'A sensitivity battery, pre-registered once the scores were known, found that the noise of the public optimum had been measured against the whole of 2024, which contains the sample; against the unseen two thirds it is {coc} times larger. With that correction it recomputed the expected private-set gain over the blend under three pairs of priors (table): S41 is the only calibrated file ahead of the blend under all three. Two later calibrations of the same leaderboard, a revised credibility and a shape exponent per line, scored more in public ({p42} and {p43}) but lean further on it; their expectations are lower on average, and the plan\'s alarm rules fired in favour of S41 against both ({al42} and {alarma}, threshold {umb}). Outside the leaderboard, the 2023 and 2024 optima also ask to widen the motor shape, not to compress it. The lead is small against the noise: the shape calibration still beats S41 with probability {pmin} to {pmaxp}.', t_sens: ['File', 'Rules fixed before the probes', 'Corrected empirical Bayes', 'Priors without the leaderboard'], filas_sens: { S41: 'S41, the final submission', S42: 'Revised credibility, tested and not selected', S43: 'Shape exponent per line, tested and not selected' },
+      nivel_eleccion: 'The participant selected S41 in Kaggle on 23 October, before the close of part 1. The bodily injury severity check, computed before the probes, put the blend\'s motor level {s3a} high; with S41\'s rule, S41\'s would be {s3c} high ({s3d} to {s3e}), so if that check is right most of the gap remains. S3 was not adopted.',
       val_lead: 'Temporal validation: fit on past years and score a later full year. 2023 and 2024 were also used for selection, so they are not an independent final test.',
       f_vdis: 'Three cuts: V23 develops, V24 checks and production predicts 2025.', f_d2: 'D² by line against a constant rate per line.',
       f_dec: 'Mean cost by decile of predicted cost in 2024 (log scale). Line: predicted. Circles: observed.',
@@ -245,9 +270,9 @@ footer{color:var(--text-muted);font-size:12px;border-top:1px solid var(--border)
       ],
       f_bt: 'The reporting chain-ladder was re-estimated with the data available at three earlier cuts; each cell compares the claims it projected to be reported after the cut with those reported by December 2024. The year-just-closed figures in the experiments table compare that year\'s IBNR with its re-estimate on all the data.',
       t_bt: ['Peril', 'Line', 'Cut', 'Projected', 'Reported', 'Error', 'Criterion', 'Within?'],
-      ia_lead: 'Two AI assistants, Claude and Codex, worked in three independent lines that posted their hypotheses to a shared forum before computing them; a swarm of three agents audited the project every six hours. The participant authorised the data rules and the submissions and approved the final model; the manual selection in Kaggle is still pending.',
-      f_ia: 'How the AI work was organised, and where humans decide.', f_foro: 'Forum posts by six-hour block and type (classified by title).',
-      f_curva: 'The 14 scored submissions: local validation kept rising while the public score stalled.',
+      ia_lead: 'Two AI assistants, Claude and Codex, worked in three lines that posted their hypotheses to a shared forum before computing them; a swarm of three agents audited the project every six hours. The participant authorised the data rules and every submission, approved the final model and selected S41 as the final submission in Kaggle on 23 October.',
+      f_ia: 'How the AI work was organised, and where humans decide.', f_foro: 'Forum posts by six-hour block and type (classified by title), up to the record of the final selection.',
+      f_curva: 'The {nenv} scored submissions: local validation kept rising while the public score stalled; at the end, the six level probes, S41 and the later calibrations that were tested and not selected.',
       f_pl: 'Six earlier candidates (grey) and the two later ones (blue): D² without the largest 0.5% of losses ranks almost like the public score.',
       t_etapas: ['Stage', 'What AI did', 'How we verified it'],
       etapas: [
@@ -255,12 +280,13 @@ footer{color:var(--text-muted);font-size:12px;border-top:1px solid var(--border)
         ['Features', 'Per-column availability contract; flagged a variable that measures the period’s own claim', 'Excluded in code by a predictor guard'],
         ['Methodology', '51 primary sources checked against DOI and arXiv, plus three IAA papers', 'Unsupported claims dropped, such as a 17% gain proposed by another tool'],
         ['Modelling and diagnostics', '44 numbered tests in the challenge line, plus pre-registrations in the other two', 'Intervals clustered by customer, address and region; reserve scenarios'],
+        ['Level calibration', 'Derived the closed form of the public score in the level factor, sized its noise by bootstrap and wrote the credibility rule before the probes', 'Kaggle returned the predicted score to the fifth decimal; a later battery found the noise understated and favoured the rule\'s file'],
         ['Testing and governance', '30-node orchestrator with fingerprints of 184 outputs; validation swarm', 'A validator found permissive controls: fixed and tested with 36 adverse cases']
       ],
       t_hall: ['ID', 'Finding', 'Severity', 'Status'], hall_t: 'Findings of the validation swarm', sev: { alta: 'high', media: 'medium', baja: 'low', informativo: 'informative' },
       est: { abierto: 'open', cerrado_en_auditoria: 'closed', remediacion_documental_verificada: 'text corrected', control_verificado: 'control verified', remediacion_tecnica_verificada: 'fixed; human review pending', cerrado_en_alcance_de_correccion_tecnica_1_2: 'closed by the participant\'s decision, technical scope only', cerrado_en_alcance_de_correccion_tecnica_captura_1_1_2: 'closed by the participant\'s decision, technical scope only', limitacion_aceptada_por_participante: 'limitation accepted by the participant', limitacion_aceptada_por_participante_sin_reproduccion_independiente: 'limitation accepted: no independent reproduction' },
       todos: 'All',
-      ctl_lead: 'Every layer has automated controls. The delivered CSV is regenerated byte for byte from the saved components, and retraining the whole recipe from the originals rebuilt it with the same SHA-256; the same workflow ran it, without an independent operator.',
+      ctl_lead: 'Every layer has automated controls. The blend\'s CSV is regenerated byte for byte from the saved components, and retraining the whole recipe from the originals rebuilt it with the same SHA-256; S41 is rebuilt byte for byte by applying the three factors (herramientas/regenerar_s41.py), and the level step, rerun from the retrained and the replayed blend, gave the six probes and S41 with their registered SHA-256. The same workflow ran all of it, without an independent operator.',
       t_capas: ['Layer', 'Control', 'Result'],
       capas: [
         ['Original data', 'SHA-256 fingerprints and an independent rebuild', '11 of 11 identical; 0 differences in 148 M cells'],
@@ -268,16 +294,16 @@ footer{color:var(--text-muted);font-size:12px;border-top:1px solid var(--border)
         ['Features', 'Per-column contract and partitions', '25 of 25'],
         ['Model', 'D² by line and year, deciles, reserves, clustered intervals', 'Beats the reference in every line and year'],
         ['Package', '9 nominal and 36 adverse cases from the command line', '45 of 45 in three environments'],
-        ['Delivery', 'Columns, rows, order, identifiers, values and SHA-256', '10 of 10']
+        ['Delivery', 'Columns, rows, order, identifiers, values and SHA-256, in the blend and in S41', '10 of 10 in each file']
       ],
       t_bat: ['Environment', 'Python', 'Package version', 'Cases', 'Passed'], env: { controles_nube: 'Reference cloud', controles_vm: 'Participant virtual machine', controles_windows: 'Windows' },
       lim_lead: 'Limits of the Week 1 model and adaptation protocol defined at that cut. The data dashboard linked in the menu covers both markets.',
       t_lim: ['Limitation', 'Why it matters', 'What we do'],
       lim: [
-        ['A single valuation (31-12-2024)', 'Ultimate cannot be observed and reserve adequacy cannot be proven; a {res_autos} error in motor case reserves ({res_edif} in buildings) already moves the 2025 level by 1%', 'Declared a material uncertainty in all three lines; request successive valuations'],
+        ['A single valuation (31-12-2024)', 'Ultimate cannot be observed and reserve adequacy cannot be proven; in the blend a {res_autos} error in motor case reserves ({res_edif} in buildings) already moves the 2025 level by 1%, and in S41 {r41a} is enough ({r41b} in buildings)', 'Material uncertainty in all three lines, declared as a limitation for S41 too; request successive valuations'],
         ['2023 and 2024 used for selection', 'Not an independent final test', 'Freeze the recipe before the new market'],
         ['Availability at quotation', 'History, telematics and weather might not exist at the quotation date', 'Per-column contract; confirm dates with the data owner'],
-        ['The 2025 level', 'The buildings cuts sit 3.4% from their mean; in motor, a scenario that repeats the bodily-injury IBNR bias and adds the recoveries missing from open claims puts it 1.5% to 2.5% high', 'Declared as a scenario, not applied to the submitted file; recalibration comes first in Week 2'],
+        ['The 2025 level', 'No cut measures it; the public optimum is noisy, and its noise was first understated', 'Calibrated with three factors (S41) and a rule fixed in advance; without the leaderboard the evidence supports buildings and contents and only partly motor. Expected private gain over the blend: {g1}, {g2} or {g3}, depending on the priors'],
         ['Choice of the final model', 'Its lead over the previous best submission is not robust: removing 6 of 373,831 customers reverses it', 'Kept: no tested alternative beats it on every criterion; equivalence is not claimed'],
         ['149 unconfirmed sums insured', 'They carry 0.01% of the predicted total (24,668 CU) yet decide their own rows: undivided, 35 to 89 times larger', 'Keep the division; confirm it with a home actuary'],
         ['Independent reproduction', 'Retraining and replay were run by the same workflow in its reference cloud', 'Declared a limitation by the participant; the kit lets another operator repeat it']
@@ -288,13 +314,13 @@ footer{color:var(--text-muted);font-size:12px;border-top:1px solid var(--border)
         ['Peril mix and tails', 'New perils or heavier tails', 'Refit severities; review the body criterion and the level rule'],
         ['Claims development', 'Another reporting pattern', 'Re-estimate the chain-ladder before training'],
         ['Available features', 'New, missing or differently dated columns', 'Update the contract and the predictor guard'],
-        ['Frozen model performance', 'Lower D² or miscalibration', 'Recalibrate first; rebuild if that is not enough']
+        ['Frozen model performance', 'Lower D² or miscalibration', 'Recalibrate the level first, with probes, a prior fixed in advance and noise measured on the unseen part; rebuild if that is not enough']
       ],
       pie: 'Generated from cifras_entregables.json · source SHA-256 values are inside the JSON · Local file: not published online because it contains aggregates of the competition data.'
     }
   };
 
-  var SECCIONES = ['resumen', 'datos', 'objetivo', 'modelo', 'validacion', 'ia', 'controles', 'limites'];
+  var SECCIONES = ['resumen', 'datos', 'objetivo', 'modelo', 'nivel', 'validacion', 'ia', 'controles', 'limites'];
 
   function el(tag, attrs, hijos) {
     var e = document.createElement(tag);
@@ -321,7 +347,7 @@ footer{color:var(--text-muted);font-size:12px;border-top:1px solid var(--border)
   // Tarjeta con gráfico vivo y su tabla equivalente.
   function tarjeta(titulo, figId, opts, pie, tabla) {
     var T = TXT[lang];
-    var anchas = ['flujo', 'flujo_ia', 'siniestros', 'composicion', 'curva', 'deciles', 'prima_anual', 'validacion_diseno', 'publico_local'];
+    var anchas = ['flujo', 'flujo_ia', 'siniestros', 'composicion', 'curva', 'deciles', 'prima_anual', 'validacion_diseno', 'publico_local', 'calibracion'];
     var vista = el('div', { class: anchas.indexOf(figId) >= 0 ? 'vista ancha' : 'vista' }), tab = el('div', { class: 'tabla' });
     var boton = el('button', { type: 'button', class: 'vt', text: T.tabla, 'aria-expanded': 'false' });
     var fig = el('figure', { class: 'tarjeta' }, [el('div', { class: 'cab' }, [el('strong', { text: titulo }), tabla ? boton : null]), vista, tab, el('figcaption', { text: pie })]);
@@ -354,13 +380,36 @@ footer{color:var(--text-muted);font-size:12px;border-top:1px solid var(--border)
     SECCIONES.forEach(function (s) { nav.appendChild(el('a', { href: '#' + s, text: T.sec[s] })); });
     var main = document.getElementById('contenido'); main.textContent = '';
     G.ocultarTip();
-    var s30 = C.s30, val = C.validacion;
+    var s30 = C.s30, val = C.validacion, ef = C.entrega_final, cal = C.calibracion_nivel, fo = C.calibracion_forma, sf = C.sensibilidad_final;
+    var sg = function (x, d) { return (x >= 0 ? '+' : '\u2212') + n(Math.abs(x), { dec: d }); };
+    var pc1 = function (x) { return n(x * 100, { dec: 1 }) + (lang === 'en' ? '%' : '\u00a0%'); };
+    var vn = { fM: n(ef.factores_calibracion.motor, { dec: 4 }), fB: n(ef.factores_calibracion.buildings, { dec: 4 }), fC: n(ef.factores_calibracion.contents, { dec: 4 }),
+      p41: n(ef.S41.publico, { dec: 5 }), p42: n(ef.S42.publico, { dec: 5 }), chi2: n(cal.chi2, { dec: 2 }), pv: n(cal.p_valor, { dec: 2 }), tauR: pc1(cal.tau_revisada),
+      eA0: pc1(cal.evidencia_autos.escenario_nivel_alto[0]), eA1: pc1(cal.evidencia_autos.escenario_nivel_alto[1]), semiB: pc1(C.sensibilidad.nivel_edificios_semidistancia),
+      s42a: sg(cal.S42.privado[0], 5), s42b: sg(cal.S42.privado[1], 5), s41a: sg(cal.S41.privado[0], 5), s41b: sg(cal.S41.privado[1], 5), m: n(s30.publico, { dec: 5 }), eq: n(ef.equipos),
+      s3a: pc1(Math.abs(cal.evidencia.reservas_S42.ibnr_lesiones_S3.S30)), s3b: n(Math.abs(cal.evidencia.reservas_S42.ibnr_lesiones_S3.S42) * 100, { dec: 2 }) + (lang === 'en' ? '%' : '\u00a0%'),
+      s3c: n(Math.abs(cal.evidencia.reservas_S41.S3_autos.nivel) * 100, { dec: 2 }) + (lang === 'en' ? '%' : '\u00a0%'),
+      s3d: n(Math.abs(cal.evidencia.reservas_S41.S3_autos.nivel_ic90[1]) * 100, { dec: 2 }) + (lang === 'en' ? '%' : '\u00a0%'),
+      s3e: n(Math.abs(cal.evidencia.reservas_S41.S3_autos.nivel_ic90[0]) * 100, { dec: 2 }) + (lang === 'en' ? '%' : '\u00a0%'),
+      r41a: pc1(cal.evidencia.reservas_S41.error_material_S41.motor), r41b: pc1(cal.evidencia.reservas_S41.error_material_S41.buildings),
+      rd0: n(cal.evidencia.redondeo_c_optimo.motor.semiancho_relativo * 100, { dec: 2 }) + (lang === 'en' ? '%' : '\u00a0%'), rd1: n(cal.evidencia.redondeo_c_optimo.contents.semiancho_relativo * 100, { dec: 2 }) + (lang === 'en' ? '%' : '\u00a0%'),
+      aM: n(fo.ramos.motor.a_Z, { dec: 3 }), aB: n(fo.ramos.buildings.a_Z, { dec: 3 }), aC: n(fo.ramos.contents.a_Z, { dec: 3 }),
+      p43: n(fo.S43.kaggle, { dec: 5 }), e43: n(fo.S43.esperado, { dec: 6 }), pmax: n(ef.mejor_publico_equipo, { dec: 5 }), nenv: n(C.envios.length),
+      n7a: n(Math.abs(sf.retroprueba_forma_N07.V23), { dec: 6 }), n7b: n(Math.abs(sf.retroprueba_forma_N07.V24), { dec: 6 }),
+      coc: n(Math.round(sf.ruido.teorico * 10) / 10, { dec: 1 }), umb: n(sf.alarma_S41_frente_S43.umbral, { dec: 5 }), alarma: n(sf.alarma_S41_frente_S43.media, { dec: 7 }),
+      sinc: n(Math.abs(sf.alarma_S41_frente_S43.sin_corregir_ruido), { dec: 7 }),
+      pmin: n(Math.min.apply(null, sf.esperanza_privado.map(function (q) { return q.S43_menos_S41.P_S43_mejor; })), { dec: 2 }),
+      pmaxp: n(Math.max.apply(null, sf.esperanza_privado.map(function (q) { return q.S43_menos_S41.P_S43_mejor; })), { dec: 2 }),
+      g33: n(cal.bootstrap.ganancia_33, { dec: 5 }), p67: n(Math.abs(cal.bootstrap.ganancia_67_media), { dec: 5 }), d24: n(val.d2_recalculado.V24.agregado, { dec: 3 }),
+      al42: n(sf.alarma_S41_frente_S42.media, { dec: 7 }), s41m: n(Math.abs(cal.ramos.motor.c_S41 - 1) * 100, { dec: 1 }) + (lang === 'en' ? '%' : '\u00a0%'),
+      g1: sg(sf.esperanza_privado[0].S41.media, 6), g2: sg(sf.esperanza_privado[1].S41.media, 6), g3: sg(sf.esperanza_privado[2].S41.media, 6) };
+    var rn = function (s) { return s.replace(/\{(\w+)\}/g, function (mm, k) { if (!(k in vn)) throw new Error('cifra sin fuente: ' + k); return vn[k]; }); };
 
     // Resumen
     var r = el('section', { id: 'resumen' }, [el('h2', { text: T.sec.resumen }), el('p', { class: 'lead', text: T.resumen_lead })]);
     var k = el('div', { class: 'kpis' });
-    [[n(s30.publico, { dec: 5 }), T.k1], [n(val.d2_recalculado.V24.agregado, { dec: 3 }), T.k2 + n(val.referencia_m00.V24.agregado, { dec: 3 })],
-     [n(s30.filas), T.k3], [n(C.foro.aportes), T.k4.replace('{horas}', n(Math.round(C.foro.horas)))]].forEach(function (x) { k.appendChild(el('div', { class: 'kpi' }, [el('div', { class: 'v', text: x[0] }), el('div', { class: 'l', text: x[1] })])); });
+    [[n(ef.publico, { dec: 5 }), rn(T.k1)], [n(val.d2_recalculado.V24.agregado, { dec: 3 }), T.k2 + n(val.referencia_m00.V24.agregado, { dec: 3 })],
+     [n(ef.filas), T.k3], [n(C.foro.aportes), T.k4.replace('{horas}', n(Math.round(C.foro.horas)))]].forEach(function (x) { k.appendChild(el('div', { class: 'kpi' }, [el('div', { class: 'v', text: x[0] }), el('div', { class: 'l', text: x[1] })])); });
     r.appendChild(k);
     r.appendChild(tarjeta(lang === 'en' ? 'Actuarial pipeline' : 'Flujo actuarial', 'flujo', {}, T.f_flujo));
     var dosr = el('div', { class: 'dos' });
@@ -378,7 +427,8 @@ footer{color:var(--text-muted);font-size:12px;border-top:1px solid var(--border)
         return tablaHTML([lang === 'en' ? 'Reference' : 'Referencia', 'D²'], [
           [lang === 'en' ? 'Constant rate per line, 2024' : 'Tasa constante por ramo, 2024', n(val.referencia_m00.V24.agregado, { dec: 5 })],
           [lang === 'en' ? 'Final model, 2024 out of sample' : 'Modelo final, 2024 fuera de muestra', n(val.d2_recalculado.V24.agregado, { dec: 5 })],
-          [lang === 'en' ? 'Public score (Kaggle)' : 'Puntuación pública (Kaggle)', n(s30.publico, { dec: 5 })]], [1]);
+          [lang === 'en' ? 'Public score of the model alone (S30)' : 'Puntuación pública del modelo solo (S30)', n(s30.publico, { dec: 5 })],
+          [(lang === 'en' ? 'Public score of the final submission (' : 'Puntuación pública de la entrega final (') + ef.codigo + ')', n(ef.publico, { dec: 5 })]], [1]);
       }));
     r.appendChild(dosr);
     main.appendChild(r);
@@ -402,8 +452,8 @@ footer{color:var(--text-muted);font-size:12px;border-top:1px solid var(--border)
         C.ibnr.completitud_2024_por_peligro.map(function (x) { return [L(x.ramo), F.PELIGROS[lang][x.peligro], pct(x.completitud_2024, 1), n(x.factor_coste, { dec: 3 })]; }), [2, 3]);
     }));
     dos.appendChild(tarjeta(lang === 'en' ? 'Risk premium by year' : 'Prima de riesgo por año', 'prima_anual', {}, T.f_prima, function () {
-      return tablaHTML([lang === 'en' ? 'Line' : 'Ramo', lang === 'en' ? 'Year' : 'Año', 'T0', lang === 'en' ? 'With IBNR' : 'Con IBNR', lang === 'en' ? 'Prediction' : 'Predicción'],
-        C.ibnr.prima_riesgo_por_anio.map(function (x) { return [L(x.ramo), String(x.anio), x.prima_T0 === undefined ? '' : n(x.prima_T0, { dec: 1 }), x.prima_T0_mas_IBNR === undefined ? '' : n(x.prima_T0_mas_IBNR, { dec: 1 }), x.prediccion_S30 === undefined ? '' : n(x.prediccion_S30, { dec: 1 })]; }), [2, 3, 4]);
+      return tablaHTML([lang === 'en' ? 'Line' : 'Ramo', lang === 'en' ? 'Year' : 'Año', 'T0', lang === 'en' ? 'With IBNR' : 'Con IBNR', lang === 'en' ? 'Blend' : 'Mezcla', lang === 'en' ? 'Final submission' : 'Entrega final'],
+        C.ibnr.prima_riesgo_por_anio.map(function (x) { return [L(x.ramo), String(x.anio), x.prima_T0 === undefined ? '' : n(x.prima_T0, { dec: 1 }), x.prima_T0_mas_IBNR === undefined ? '' : n(x.prima_T0_mas_IBNR, { dec: 1 }), x.prediccion_S30 === undefined ? '' : n(x.prediccion_S30, { dec: 1 }), x.prediccion_final === undefined ? '' : n(x.prediccion_final, { dec: 1 })]; }), [2, 3, 4, 5]);
     }));
     o.appendChild(dos);
     o.appendChild(el('h3', { text: T.reservas_t }));
@@ -416,9 +466,36 @@ footer{color:var(--text-muted);font-size:12px;border-top:1px solid var(--border)
       return tablaHTML(T.t_comp, s30.composicion.map(function (x) { return [L(x.ramo), F.COMP[lang][x.componente], x.tipo === 'coste_total' ? L('ft') : L('fs'), n(x.peso, { dec: 1 })]; }), [3]);
     }));
     m.appendChild(tablaHTML(T.t_nivel, ['motor', 'buildings', 'contents'].map(function (l) {
-      var fz = s30.factores_nivel[l]; return [L(l), n(fz.f23, { dec: 3 }), n(fz.f24, { dec: 3 }), n(fz.f, { dec: 3 }), n(s30.por_ramo_2025_CU[l], { compacto: true, decM: 1 }), n(s30.tasa_2025_por_anio_exposicion[l], { dec: 1 })];
-    }), [1, 2, 3, 4, 5]));
+      var fz = s30.factores_nivel[l]; return [L(l), n(fz.f23, { dec: 3 }), n(fz.f24, { dec: 3 }), n(fz.f, { dec: 3 }), n(ef.factores_calibracion[l], { dec: 4 }), n(ef.por_ramo_2025_CU[l], { compacto: true, decM: 1 }), n(s30.tasa_2025_por_anio_exposicion[l], { dec: 1 }) + ' · ' + n(ef.tasa_2025_por_anio_exposicion[l], { dec: 1 })];
+    }), [1, 2, 3, 4, 5, 6]));
     main.appendChild(m);
+
+    // Nivel 2025: calibración con tres parámetros y una regla fijada antes de mirar (S41)
+    var nv = el('section', { id: 'nivel' }, [el('h2', { text: T.sec.nivel }), el('p', { class: 'lead', text: rn(T.nivel_lead) })]);
+    nv.appendChild(tarjeta(lang === 'en' ? 'Level probes by line' : 'Sondas de nivel por ramo', 'calibracion', {}, T.f_cal, function () {
+      return tablaHTML(T.t_sondas, ['motor', 'buildings', 'contents'].map(function (l) { var z = cal.ramos[l];
+        return [L(l), n(z.publico_x090, { dec: 5 }), n(z.publico_x110, { dec: 5 }), n(z.c_optimo, { dec: 4 }), pc1(z.sigma_ruido)]; }), [1, 2, 3, 4]);
+    }));
+    nv.appendChild(el('h3', { text: T.nivel_regla_t }));
+    nv.appendChild(el('p', { text: rn(T.nivel_regla) }));
+    var pc0 = function (x) { return n(x * 100, { dec: 0 }) + (lang === 'en' ? '%' : '\u00a0%'); };
+    nv.appendChild(tablaHTML(T.t_cred, ['motor', 'buildings', 'contents'].map(function (l) { var z = cal.ramos[l];
+      return [L(l), pc1(z.tau_previa), n(z.Z_previa, { dec: 3 }), n(z.c_S41, { dec: 4 }), n(z.f_final_S41, { dec: 4 }), n(sf.ruido.Z_nivel_D100_corregida[l], { dec: 3 }), pc0(cal.evidencia.reservas_S41.sensibilidad_1_menos_Z_sobre_c[l])]; }), [1, 2, 3, 4, 5, 6]));
+    nv.appendChild(el('h3', { text: T.hip_t }));
+    nv.appendChild(tablaHTML(T.t_hip, T.hip.map(function (f) { return f.map(rn); })));
+    nv.appendChild(el('h3', { text: T.sens_t }));
+    nv.appendChild(el('p', { text: rn(T.sens_lead) }));
+    var sg6 = function (x) { return sg(x, 6); };
+    nv.appendChild(tablaHTML(T.t_sens, ['S41', 'S42', 'S43'].map(function (cnd) {
+      return [T.filas_sens[cnd]].concat(sf.esperanza_privado.map(function (q) { return sg6(q[cnd].media); })); }), [1, 2, 3]));
+    nv.appendChild(el('h3', { text: T.nivel_evid_t }));
+    nv.appendChild(el('p', { text: T.nivel_evid_lead }));
+    var pc2 = function (x) { return sg(x * 100, 2) + (lang === 'en' ? '%' : '\u00a0%'); };
+    nv.appendChild(tablaHTML(T.t_evid, ['motor', 'buildings', 'contents'].map(function (l) { var ev = cal.evidencia.ramos[l], ind = ev.indicadores;
+      return [L(l), pc2(ev.ajuste_S41), pc2(ind.ultimo_anio), pc2(ind.etiqueta_D95), pc2(ind.siniestralidad_2024) + ' (' + pc2(ev.siniestralidad_2024_prima_anual) + ')',
+        ev.parcial_por_tamano_S41 ? T.clases.por_tamano : T.clases[ev.clase_S41]]; }), [1, 2, 3, 4]));
+    nv.appendChild(el('p', { text: rn(T.nivel_eleccion) }));
+    main.appendChild(nv);
 
     // Validación
     var v = el('section', { id: 'validacion' }, [el('h2', { text: T.sec.validacion }), el('p', { class: 'lead', text: T.val_lead })]);
@@ -489,7 +566,7 @@ footer{color:var(--text-muted);font-size:12px;border-top:1px solid var(--border)
         C.foro.por_bloque_6h.map(function (b) { return [b.bloque_utc, String(b.preinscripcion || 0), String(b.adverso || 0), String(b.validacion || 0), String(b.resultado_o_coordinacion || 0)]; }), [1, 2, 3, 4]);
     }));
     ia.appendChild(dosi);
-    ia.appendChild(tarjeta(lang === 'en' ? 'Path to the final model' : 'Camino hasta el modelo final', 'curva', {}, T.f_curva, function () {
+    ia.appendChild(tarjeta(lang === 'en' ? 'Path to the final model' : 'Camino hasta el modelo final', 'curva', {}, rn(T.f_curva), function () {
       return tablaHTML(['#', lang === 'en' ? 'Submission' : 'Envío', lang === 'en' ? 'Public' : 'Público', lang === 'en' ? 'Local 2024' : 'Local 2024'],
         C.envios.map(function (x, i) { return [String(i + 1), lang === 'en' ? x.etiqueta_en : x.etiqueta_es, n(x.publico, { dec: 5 }), x.v24_local === null ? '' : n(x.v24_local, { dec: 5 })]; }), [2, 3]);
     }));
@@ -534,15 +611,16 @@ footer{color:var(--text-muted);font-size:12px;border-top:1px solid var(--border)
     c.appendChild(el('h3', { text: lang === 'en' ? 'Control battery of the reproduction package' : 'Batería de control del paquete de reproducción' }));
     c.appendChild(tablaHTML(T.t_bat, C.controles_paquete.baterias.map(function (b) { return [T.env[b.fuente], b.python, b.version, String(b.casos), String(b.pasan)]; }), [3, 4]));
     var pre = el('pre');
-    pre.textContent = 'python reproducir.py plan --objetivo=S30\npython reproducir.py mezcla --objetivo=S30 --semana1="<Hackaton/Semana 1>" --trabajo=privado/mezcla\npython reproducir.py todo --objetivo=S30 --semana1="<Hackaton/Semana 1>" --trabajo=privado/desde_cero';
+    pre.textContent = 'python reproducir.py plan --objetivo=S30\npython reproducir.py mezcla --objetivo=S30 --semana1="<Hackaton/Semana 1>" --trabajo=privado/mezcla\npython reproducir.py todo --objetivo=S30 --semana1="<Hackaton/Semana 1>" --trabajo=privado/desde_cero\npython herramientas/regenerar_s42.py --raiz "<' + (lang === 'en' ? 'project root' : 'raíz del proyecto') + '>"';
     c.appendChild(pre);
-    c.appendChild(el('p', { text: (lang === 'en' ? 'Final CSV SHA-256: ' : 'SHA-256 del CSV final: ') + s30.sha256_csv + (lang === 'en' ? ' · Kaggle submission ' : ' · envío Kaggle ') + s30.envio_kaggle }));
+    c.appendChild(el('p', { text: (lang === 'en' ? 'Final submission (' + ef.codigo + ') SHA-256: ' : 'SHA-256 de la entrega final (' + ef.codigo + '): ') + ef.sha256_csv + (lang === 'en' ? ' · Kaggle submission ' : ' · envío Kaggle ') + ef.envio_kaggle }));
+    c.appendChild(el('p', { text: (lang === 'en' ? 'Blend (S30) SHA-256: ' : 'SHA-256 de la mezcla (S30): ') + s30.sha256_csv + (lang === 'en' ? ' · Kaggle submission ' : ' · envío Kaggle ') + s30.envio_kaggle }));
     main.appendChild(c);
 
     // Límites
     var li = el('section', { id: 'limites' }, [el('h2', { text: T.sec.limites }), el('p', { class: 'lead', text: T.lim_lead })]);
     var ra = C.reservas_acotacion.por_ramo, pc = function (x) { return n(x * 100, { dec: 1 }) + (lang === 'en' ? '%' : '\u00a0%'); };
-    li.appendChild(tablaHTML(T.t_lim, T.lim.map(function (fila) { return fila.map(function (s) { return s.replace('{res_autos}', pc(ra.motor.error_material)).replace('{res_edif}', pc(ra.buildings.error_material)); }); })));
+    li.appendChild(tablaHTML(T.t_lim, T.lim.map(function (fila) { return fila.map(function (s) { return rn(s.replace('{res_autos}', pc(ra.motor.error_material)).replace('{res_edif}', pc(ra.buildings.error_material))); }); })));
     li.appendChild(el('h3', { text: lang === 'en' ? 'Adaptation protocol defined in Week 1' : 'Protocolo de adaptación definido en semana 1' }));
     li.appendChild(el('p', {}, [el('a', { href: 'panel_analisis.html', text: lang === 'en' ? 'Open the data analysis for both weeks: exposure, claims, missingness and source checks.' : 'Abrir el análisis de ambas semanas: exposición, siniestros, faltantes y conciliación con las fuentes.' })]));
     li.appendChild(tablaHTML(T.t_ad, T.ad));
