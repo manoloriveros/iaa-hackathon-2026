@@ -1,0 +1,118 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T15:58:58.255932+00:00",
+  "status": "P7conditional_mature_reporting_window_backtest_complete",
+  "output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P7_ventana_reporte_madura_20261026_v2",
+  "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_ventana_reporte_madura_plan_v2.json",
+  "plan_sha256": "fd7675107465b3e660ffc3d0635958a8d13bd4aeb2285047be95004ee3866c5e",
+  "registration": {
+    "plan_sha256": "fd7675107465b3e660ffc3d0635958a8d13bd4aeb2285047be95004ee3866c5e",
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261026-PRIVADA-P7-VENTANA-V2-PREVIO",
+      "utc": "2026-10-26T15:52:18+00:00",
+      "previous_sha256": "bbc58bbd2a6c77ad85c487d1131ab78bcd14dbf6879a7d5498c412415050197e",
+      "sha256": "b1b88e6efeb91fab7ee6b6b4ac93703e6df82a144bb777c7e06d902c2909c110"
+    }
+  },
+  "new_price_fits": 0,
+  "new_target_C0fits": 0,
+  "new_submissions": 0,
+  "2024_open": true,
+  "goal_achieved": false,
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P7_ventana_reporte_madura_20261026_v2/report.json",
+  "report_sha256": "b4c0938ba993dd4c69f51242e4cf72b34379273b41342885dbe4a94e26014c2e",
+  "replay": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P7_ventana_reporte_madura_20261026_v2/replay_report.json",
+  "replay_sha256": "d6b16ce3fbc02d65aba67aa2743cb1e9998b3523b04600f0442d0a00d9308040",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P7_VENTANA_REPORTE_MADURA.md",
+  "forum": {
+    "author": "Codex",
+    "id": "COD-S2-20261026-PRIVADA-P7-VENTANA-RESULTADO",
+    "utc": "2026-10-26T15:58:58+00:00",
+    "previous_sha256": "b1b88e6efeb91fab7ee6b6b4ac93703e6df82a144bb777c7e06d902c2909c110",
+    "sha256": "475c7ce8e564d11ccfd20fea09bf03f38fded8a27978050c0c0328ee579b9345"
+  },
+  "primary": {
+    "20221231": {
+      "cutoff": "2022-12-31",
+      "known2024_cost": 174811576.0,
+      "observed_at_cut_cost_finalmarks": 171988100.14,
+      "reconstructed_cost": 174754631.27135462,
+      "raw_recovery": 0.9838484617288731,
+      "reconstructed_recovery": 0.9996742508136567,
+      "bootstrap95": [
+        0.9945196723622264,
+        1.0044736660284352
+      ],
+      "family2_exploratory95": [
+        0.9938608902762325,
+        1.0050484075091688
+      ],
+      "material_underrecovery_family_upper_below098": false,
+      "folds": {
+        "0": 1.0017570475808228,
+        "1": 0.9884993549118982,
+        "2": 1.0035003483445342,
+        "3": 1.007052763555648,
+        "4": 0.9973454137801046
+      },
+      "post31largest_missing_cost_groups_recovery_descriptive": 1.0098407157988005,
+      "removed_groups_for_diagnostic_only": 31,
+      "reference_cost_share_of_chosen_groups": 0.010198778369231108,
+      "max_group_share_of_positive_missing_cost": 0.0848008885376322
+    },
+    "20231231": {
+      "cutoff": "2023-12-31",
+      "known2024_cost": 174811576.0,
+      "observed_at_cut_cost_finalmarks": 174442436.87,
+      "reconstructed_cost": 174864173.19332522,
+      "raw_recovery": 0.9978883599218853,
+      "reconstructed_recovery": 1.0003008793498047,
+      "bootstrap95": [
+        0.9986553626740524,
+        1.001648272313021
+      ],
+      "family2_exploratory95": [
+        0.9983848710242534,
+        1.0017686818386644
+      ],
+      "material_underrecovery_family_upper_below098": false,
+      "folds": {
+        "0": 0.9980599469888375,
+        "1": 0.9987894754372567,
+        "2": 0.9993261318518972,
+        "3": 1.0021718696927095,
+        "4": 1.0032399488472534
+      },
+      "post31largest_missing_cost_groups_recovery_descriptive": 1.0024611816874696,
+      "removed_groups_for_diagnostic_only": 31,
+      "reference_cost_share_of_chosen_groups": 0.01978869665931048,
+      "max_group_share_of_positive_missing_cost": 0.19940465342382258
+    }
+  },
+  "counts": {
+    "primary": {
+      "reporting_started": 149,
+      "reporting_completed": 149,
+      "distribution_reuses": 1
+    },
+    "poison": {
+      "reporting_started": 149,
+      "reporting_completed": 149,
+      "distribution_reuses": 1
+    }
+  },
+  "new_price_model_fits": 0,
+  "new_source_model_inference": 0,
+  "new_targetprice_predictions": 0,
+  "new_finaltestprices": 0,
+  "source_tail_prior_adopted": false,
+  "cause_of_P6_F3c_gap_established": false,
+  "P6_CSV_unchanged": true,
+  "P6_CSV_sha256": "7421b827ec9ca73b30af4981bf007231380e339322cff3ebba188c7b293f2647",
+  "formal_promotion": false,
+  "submission_allowed": false,
+  "private_improvement_established": false,
+  "B00_all_alternatives_preserved": true,
+  "next_unit": "Review actual source/backbone feature and absolute-level contracts of S2 versus existing F3clineage, using current source code/feature lists/normalization receipts first, no newtraining or factor chosen to match totals. P7did not support a material global short-window deficit in mature developed2021context, so do not adopt a source-tail uplift to explain10.83percent. Look for a specific schema, exposure-as-feature, capital, normalization or source-to-target availability discrepancy not already resolved by earlier reviews. P6depends on cached source features and its half-exposure check is conditional on those cached relativities; do not present it as raw end-to-end sourceinference sensitivity. Only a documented material unresolved difference can justify a separately preregistered frozen-model probe or standard correction. Do not repeat C0backtest/lateclaiminventory, choose mixture/level/seed by scores, or consume quota. Preserve P6CSVunchanged/unadmitted, B00/F3c/all alternatives, adaptive2024open and private priority."
+}

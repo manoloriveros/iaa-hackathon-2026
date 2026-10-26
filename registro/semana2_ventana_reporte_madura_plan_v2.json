@@ -1,0 +1,391 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T15:52:17.719376+00:00",
+  "type": "P7_conditional_mature_source_reporting_window_backtest",
+  "repair_before_real_fits": "V1incorrectlyrequired every calendar2021claim to lie in observed2021policycoverage. V2reconciles outsidecoverageIDs exactly against originalsourceunassignedfiles and retains them separately. Cohort was always assigned2021coverage. V1had zero real/syntheticfits and no preregisteredscore; failure/code preserved.",
+  "hypothesis": "Short reporting windows plus F(maxdelay)=1can under-reconstruct cost of a more mature observed cohort. Test estimator behaviour before adopting any source-tail anchor or interpreting P6vsF3clevel gap causally.",
+  "not_repeated": "Bounded current-code/results review found no equivalent pseudo-truncation backtest. F03was documentary; A1Stail/seed audit concerned scoremass/seeddispersion; old6lateBIinventory and nominalsourceCDFreplays are preserved, not rerun.",
+  "cohort": "All assigned developed2021periods/claims after original604clone rule; same source global customer/address componentfolds. Repudiatedstatus and netmarks fixed at common2024-12-31snapshot. Reference is known2024cost, a finite lower bound for later/infinite ultimate. Zero-claim sourcegroups retained in cohort metadata.",
+  "windows": [
+    [
+      "20221231",
+      "2022-12-31"
+    ],
+    [
+      "20231231",
+      "2023-12-31"
+    ]
+  ],
+  "learning": "For each line/fold/cut, choose traininggroups and available-at-cutmetadata before reading marks/perils/lossreportdates. Same reverse-productlimit v.fit_reporting; no mature/fullsourceCDFor targetC0as learnerinput. Fit on observed2021trainingclaims only. Cutmetadata frozen from official reportdates.",
+  "held_calculation": "Held reportedclaims atcut supply observed finalmarks and knownlossdate/peril as reconstructioninputs. q_i=estimatedcostCDF(cut-lossdate_i); reconstruct=sum(net_i/q_i), compare with all known2024nonrepudiatedheld2021cost. This is a reporting-cost nowcast diagnostic, not held-response-free pricingCV. Finalmarks would not generally be available at virtualcut, so no prospectivevaluation claim.",
+  "protected": "Actual learnedcurves must match under poisoning all heldpayload and all unavailabletrainingpayload, preserving eligibility/groupmetadata. Heldreconstruction must ignore unavailablefuture marks/perils/dates. Reportedheldmarks legitimately enter reconstruction and are not falsely poisoned as if pricescouldignorethem.",
+  "math": "Independent risk count via sorted D/A search; reverse logproduct CDF; event-probability costCDF/mean; directstep evaluation without hardcoded2024average_completion. No floor if heldcompletionzero.",
+  "reuse": "Across the secondwindow reuse only exactsame trainingclaim IDs/marks when both windows are fullyuntruncated(minage>=maxdelay): distribution/risksets identical; update nonestimatedfollowupmetadata. Each controlrole reuses only its own earliercurve, never primarycurves.",
+  "primary": "Total reconstructed/mature-knowncost ratio at each of two cuts, compared also with rawobserved/matureknownratio. Material underrecovery if paired-group Poissonbootstrap upper95family2 below.98. Report everyresult regardlesscriterion; no pricepromotion.",
+  "secondary": "All line/peril/fold/lossquarter ratios; exploratory marginal95perperil, not simultaneousclaims. LongtailBI/subsidenceunder.95reported as materialdescriptivewarning. Record maximumsinglemissingcostgroup and post31missingcostgroups without refitting/deletingrows from model.",
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 2026102636,
+    "unit": "same global sourcecomponent",
+    "method": "joint Poisson1weights across bothcuts/perils; zero-contributiongroups analytically omitted from ratio draws",
+    "primary_family": 2,
+    "conditional": "Curve estimates fixed during bootstrap; not unconditional model uncertainty or independentcuts"
+  },
+  "budget": {
+    "primary_reporting_calls_max": 150,
+    "adverse_reporting_calls_max_separate": 150,
+    "source_price_model_fits": 0,
+    "target_C0fits": 0,
+    "new_targetprices": 0,
+    "new_finaltestprices": 0,
+    "new_submissions": 0
+  },
+  "limits": [
+    "Developed context does not create emerging support or identify transported delay/severitylaw",
+    "Finalmarks/status and fullsourcegroupmetadata make the exercise conditionalretrospective, not genuinepastdataavailability",
+    "Referenceobservedto2024stillmayomitlaterlossreports/development; no infiniteultimate claim",
+    "Calendar/seasonality/severityheterogeneity and sampling can also explain reconstructionerrors; tailcause or10.83percentgap not automatically identified",
+    "No tailprior/scale/pricefeatureadoption or publicscore inference from this diagnostic"
+  ],
+  "scopes": [
+    {
+      "line": "motor",
+      "fold": 0,
+      "cut": "20221231",
+      "cutoff": "2022-12-31",
+      "train_claims": 21891,
+      "minimum_peril_reports": 1164,
+      "training_claim_digest": "90c6a44e45199ec923f7fccba101683f59a6ea7f15973dbc8a387f981cc303d9",
+      "training_groups_digest": "e87de8ffa67daeb6493e22b91399dc4b1e5ed4e884ca966e7598f30a1547405f"
+    },
+    {
+      "line": "motor",
+      "fold": 0,
+      "cut": "20231231",
+      "cutoff": "2023-12-31",
+      "train_claims": 21999,
+      "minimum_peril_reports": 1166,
+      "training_claim_digest": "1ad80474e479ac0ecec34842a178237a7f7a8228d14e3f2f070a789c1977f2c4",
+      "training_groups_digest": "973ed21c29e9195545091f803de709b0f205b3529e7acc62c5ae99c436485398"
+    },
+    {
+      "line": "motor",
+      "fold": 1,
+      "cut": "20221231",
+      "cutoff": "2022-12-31",
+      "train_claims": 21745,
+      "minimum_peril_reports": 1208,
+      "training_claim_digest": "b93b570eb5762dc244917524cc7c9ba4c65410add3d666a75e1b1804fa6bc39a",
+      "training_groups_digest": "2369f04db3376d67b1fca9f7afb36a36886c6fd0feeebca0aef9306bdc15b730"
+    },
+    {
+      "line": "motor",
+      "fold": 1,
+      "cut": "20231231",
+      "cutoff": "2023-12-31",
+      "train_claims": 21838,
+      "minimum_peril_reports": 1209,
+      "training_claim_digest": "e90c97228c1c99088c89f25365f686da08b05207a3dbbe02ec458536ffb87470",
+      "training_groups_digest": "be1c0747a8c78747e7cf4e247bd8a243f5d2b74e77ef44310479edc0769ec87a"
+    },
+    {
+      "line": "motor",
+      "fold": 2,
+      "cut": "20221231",
+      "cutoff": "2022-12-31",
+      "train_claims": 21801,
+      "minimum_peril_reports": 1185,
+      "training_claim_digest": "f5c7f0128de9ca25e941e673b0d78d302b4f81bcda822a41672ff7b4d8bbd5e2",
+      "training_groups_digest": "b62ae8caa6e407bc42c5e43c6e865e0e61fa2c8819e3b1f5a4c8f8a3ed6da58f"
+    },
+    {
+      "line": "motor",
+      "fold": 2,
+      "cut": "20231231",
+      "cutoff": "2023-12-31",
+      "train_claims": 21913,
+      "minimum_peril_reports": 1187,
+      "training_claim_digest": "5f798df0faf659eb3f843e223adeedf4c75f32958c5dd8014f1efd6fbae03edd",
+      "training_groups_digest": "c20dada82e87f1fab354a09e1afac07ad86720d76521d12f228509603de2bb82"
+    },
+    {
+      "line": "motor",
+      "fold": 3,
+      "cut": "20221231",
+      "cutoff": "2022-12-31",
+      "train_claims": 21693,
+      "minimum_peril_reports": 1177,
+      "training_claim_digest": "e2a9c2c5fcd61446e9246d3b3682243111ab977b7ee2a115d22f8ad44ed52387",
+      "training_groups_digest": "270bb87871281dcef0ad60a4d06b436a756eea595d5579d82303b813482aac11"
+    },
+    {
+      "line": "motor",
+      "fold": 3,
+      "cut": "20231231",
+      "cutoff": "2023-12-31",
+      "train_claims": 21802,
+      "minimum_peril_reports": 1179,
+      "training_claim_digest": "7760d1de468120b7ad2fe6937f64a2b3463e67bee42b2dc60b6b2a54f04ff02b",
+      "training_groups_digest": "6c304fb5b6049162db064720c6c35b43b28c1b94d2f2d4a2f300621a2ab05ea9"
+    },
+    {
+      "line": "motor",
+      "fold": 4,
+      "cut": "20221231",
+      "cutoff": "2022-12-31",
+      "train_claims": 21702,
+      "minimum_peril_reports": 1174,
+      "training_claim_digest": "f73cb2d9d542c80240be2f226b0144c58af26aaf61e796a161a9958d7b33b982",
+      "training_groups_digest": "a3dbf5a2d7e0b25e432737a739a614d8ebbea5f3ff091266d6eadecf6f1c12f0"
+    },
+    {
+      "line": "motor",
+      "fold": 4,
+      "cut": "20231231",
+      "cutoff": "2023-12-31",
+      "train_claims": 21804,
+      "minimum_peril_reports": 1175,
+      "training_claim_digest": "915202b0c5ff8d068463dbb55480e120291b347430f772938bc01bf62516a435",
+      "training_groups_digest": "ce18fabc2a102b6fb23181b2d489177bd366068f59ad4dfd89c75bd19af02789"
+    },
+    {
+      "line": "buildings",
+      "fold": 0,
+      "cut": "20221231",
+      "cutoff": "2022-12-31",
+      "train_claims": 4982,
+      "minimum_peril_reports": 182,
+      "training_claim_digest": "e22cc9db19f6b3d144a725faa8b207a4476c1ba3d096ff52e6e171f6a5f209ae",
+      "training_groups_digest": "89abc3f21a552944db40c8aede6aa18c3c8d7e52a2fdd0fcb7e67d667ed9d057"
+    },
+    {
+      "line": "buildings",
+      "fold": 0,
+      "cut": "20231231",
+      "cutoff": "2023-12-31",
+      "train_claims": 4990,
+      "minimum_peril_reports": 182,
+      "training_claim_digest": "f61f958bce42698717b388df51f69e2caf67c26d0d03ed1a5dad0fd5566b34fa",
+      "training_groups_digest": "35432db67d681c6a1624c4dd94e5665656deaeaa375e3136f0deb9604cf21ed1"
+    },
+    {
+      "line": "buildings",
+      "fold": 1,
+      "cut": "20221231",
+      "cutoff": "2022-12-31",
+      "train_claims": 4866,
+      "minimum_peril_reports": 181,
+      "training_claim_digest": "f233580352dd5e748beba2dbe8603e131b859c7cb6aa135a4ee104a753d0fc91",
+      "training_groups_digest": "9051d30d732f7acf8e3e7e35c242bf718a83fdfec0930e42169f4acaa1d9205d"
+    },
+    {
+      "line": "buildings",
+      "fold": 1,
+      "cut": "20231231",
+      "cutoff": "2023-12-31",
+      "train_claims": 4876,
+      "minimum_peril_reports": 181,
+      "training_claim_digest": "bd3c14a507cc73af8fac9229585a736494a8d437eb95215f902d15ae001fd9d7",
+      "training_groups_digest": "e2486576187bf81a27aa8969a2d9274650d07f07bcaa377636d8006a230e6c38"
+    },
+    {
+      "line": "buildings",
+      "fold": 2,
+      "cut": "20221231",
+      "cutoff": "2022-12-31",
+      "train_claims": 4936,
+      "minimum_peril_reports": 172,
+      "training_claim_digest": "cf5272a686c73b915044bcb55dd2def2b5360f63a63a0afdc86b57f436837b11",
+      "training_groups_digest": "c1beb076318db6e86f5131bca03f120bcef69dd830b83384a1f69dd2c75c180e"
+    },
+    {
+      "line": "buildings",
+      "fold": 2,
+      "cut": "20231231",
+      "cutoff": "2023-12-31",
+      "train_claims": 4944,
+      "minimum_peril_reports": 172,
+      "training_claim_digest": "6a3fa1b78ecb8e5a31916883f57e9d3343f8ebe814754e94a8e8f4024de3d23e",
+      "training_groups_digest": "b8ce1b31248116e44ea67ab7f4456ce038e210d8c9138c780e00e84c0f8db62d"
+    },
+    {
+      "line": "buildings",
+      "fold": 3,
+      "cut": "20221231",
+      "cutoff": "2022-12-31",
+      "train_claims": 4979,
+      "minimum_peril_reports": 206,
+      "training_claim_digest": "c9acf7ef5c0879a3493e99328f21135471bb211c2239e052f0bc34b75379b2b3",
+      "training_groups_digest": "b32922f3f443ce81677f1197b2b2ae0b2b696be8d3ec3fcf6ca8bcf4d53638f2"
+    },
+    {
+      "line": "buildings",
+      "fold": 3,
+      "cut": "20231231",
+      "cutoff": "2023-12-31",
+      "train_claims": 4989,
+      "minimum_peril_reports": 206,
+      "training_claim_digest": "0794c3e32fa9e97e0c8d040b2f5da647b85493f7dc5922ab83621d3f1f25d711",
+      "training_groups_digest": "d695f73f849699dda1381f80032bbc1e8e6d1aa475e904b6c06fc622623a15bf"
+    },
+    {
+      "line": "buildings",
+      "fold": 4,
+      "cut": "20221231",
+      "cutoff": "2022-12-31",
+      "train_claims": 4977,
+      "minimum_peril_reports": 203,
+      "training_claim_digest": "7e5522001474c21087c05c267b7d695aa7ee30730b6fcba1e2381aefd25e2122",
+      "training_groups_digest": "ab80df3dbf440f5e7d196411b322a047725c764d7b70bbf4357f8d7ce4efb6bd"
+    },
+    {
+      "line": "buildings",
+      "fold": 4,
+      "cut": "20231231",
+      "cutoff": "2023-12-31",
+      "train_claims": 4981,
+      "minimum_peril_reports": 203,
+      "training_claim_digest": "1cd47a172de3a65e65fbda13f669aa8f1b94b0261afbcecedacf00addf65ef6a",
+      "training_groups_digest": "1d4e1bb2d98f79fa6fe3edd4f04f15c88f3267922979fe29415a7e6de3514a36"
+    },
+    {
+      "line": "contents",
+      "fold": 0,
+      "cut": "20221231",
+      "cutoff": "2022-12-31",
+      "train_claims": 4473,
+      "minimum_peril_reports": 313,
+      "training_claim_digest": "8c90bd72e9d4b6c070f99cfd9a19428c83ceea16cf0b142bb08923eb657e9616",
+      "training_groups_digest": "8f8b1a961450b90f4d2eebe0577a4a322d3223a57d65f1c451b8b923efd6be1d"
+    },
+    {
+      "line": "contents",
+      "fold": 0,
+      "cut": "20231231",
+      "cutoff": "2023-12-31",
+      "train_claims": 4481,
+      "minimum_peril_reports": 313,
+      "training_claim_digest": "e2fd3571f338c4c93c3bd3efc371b54a2724677ef5f83730676e87334fd47f33",
+      "training_groups_digest": "d262292c4032470a0f09498971f971ed929843ac7d6c85d9979707490a5bc539"
+    },
+    {
+      "line": "contents",
+      "fold": 1,
+      "cut": "20221231",
+      "cutoff": "2022-12-31",
+      "train_claims": 4508,
+      "minimum_peril_reports": 337,
+      "training_claim_digest": "1048b7cbc251fd8d67e2cebf68142866fc426bfc65183ec82d1bfa0c7f0b231a",
+      "training_groups_digest": "aecddf5ca000a3a118f4fb03f6ba70cfd2d9717d24201b27ca2ea7b747c30c5c"
+    },
+    {
+      "line": "contents",
+      "fold": 1,
+      "cut": "20231231",
+      "cutoff": "2023-12-31",
+      "train_claims": 4518,
+      "minimum_peril_reports": 337,
+      "training_claim_digest": "f9bff40be375f08a2625ef86d15dae665ea6045d2d8be6029824f8231a028e6b",
+      "training_groups_digest": "a04fbbe3a1e97de366cec04e200e5835d1a3c09894113c27df18d2ed5f515dcc"
+    },
+    {
+      "line": "contents",
+      "fold": 2,
+      "cut": "20221231",
+      "cutoff": "2022-12-31",
+      "train_claims": 4456,
+      "minimum_peril_reports": 325,
+      "training_claim_digest": "8f3a82cea78fd125e35224c8c2a6c64b8657ade9a0fea8ae87c44cc9ab0d95ae",
+      "training_groups_digest": "349182deeae28047cdcebca7fb852e2a756c3cc95ed5ad761dff138d9f1e00d5"
+    },
+    {
+      "line": "contents",
+      "fold": 2,
+      "cut": "20231231",
+      "cutoff": "2023-12-31",
+      "train_claims": 4464,
+      "minimum_peril_reports": 325,
+      "training_claim_digest": "b26ee0b870757da7aa0f89c1b0379038976d8eb421b072a8dc45eb8b9c34f811",
+      "training_groups_digest": "1a90cb6911bc5ca316ddea1eb7acfa4e5edcabb3acb19c405731b07e4a19d380"
+    },
+    {
+      "line": "contents",
+      "fold": 3,
+      "cut": "20221231",
+      "cutoff": "2022-12-31",
+      "train_claims": 4408,
+      "minimum_peril_reports": 315,
+      "training_claim_digest": "916c32e847709bdfc35890e2b06c7492b17be0e7420a4131971ccf2631610285",
+      "training_groups_digest": "3620a6ccf4a8c69624e253c6a00e4dbca60101f07648eb619fab12a7ed0a4cb4"
+    },
+    {
+      "line": "contents",
+      "fold": 3,
+      "cut": "20231231",
+      "cutoff": "2023-12-31",
+      "train_claims": 4415,
+      "minimum_peril_reports": 315,
+      "training_claim_digest": "a522f243f47c455c6cac55e9f3dea931caa2d25b9ebe319d605417528854fd61",
+      "training_groups_digest": "50280daf4d26521822bfa5011e194590da0fbedcdef77b3ce8124a2acabd7b26"
+    },
+    {
+      "line": "contents",
+      "fold": 4,
+      "cut": "20221231",
+      "cutoff": "2022-12-31",
+      "train_claims": 4443,
+      "minimum_peril_reports": 326,
+      "training_claim_digest": "8161bfa43f215de3f0173a4e7bb422f0ada9a6eb4a7dd3c536b2bc7ebf0ff099",
+      "training_groups_digest": "c605b0ae206474ad20d3c7f8de0ab3363e394629272253cb178733ea93d1cfc7"
+    },
+    {
+      "line": "contents",
+      "fold": 4,
+      "cut": "20231231",
+      "cutoff": "2023-12-31",
+      "train_claims": 4450,
+      "minimum_peril_reports": 326,
+      "training_claim_digest": "790f21675960262c05af014ec223718dd6ba3492cd3dca21ead191204cd84bbf",
+      "training_groups_digest": "97c5b839961e1f38845108044138b80749347d4f6eeb8b599792f9886172fde7"
+    }
+  ],
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true,
+  "submission_allowed": false,
+  "sources": {
+    "Hackaton/Semana 1/Datos/claims.parquet": "323adf2e0f6c5975a026479d725d4cd04f51fce3aa069f897a99f664c6e392c0",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/report.json": "16e00f41001ef78ba607d5cd2fd41fe77974b13c1e6d2bf18dc3573b7fa2534a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/partition_source/report.json": "5397bf4abaa3962cc45f0f93bde60e0011184439657b9a3df2d984f9e674b939",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_motor.parquet": "ded113876f2069f7341491aa855e7e0fc4036e5e6e38d476466da905f5bee99c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/partition_source/folds_motor.parquet": "81f9c33285595d956952e2431696095b017503a15a4080215efe232c232575a1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/unassigned_motor.parquet": "490b945c39513a64a928d343320cfeff1ab4de29bd26946d4bb63394159ca43a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P7_ventana_reporte_madura_20261026_v2/cohort_claims_motor.parquet": "9dc4b0be42e1331e399472bdc7bc42e01c7f0420d87c5ce203669a11e4818c49",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_buildings.parquet": "a04a76fa8564f83a6da02d4f1885972b7ef82b3d741cc5a6bd22f0df1d98bf88",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/partition_source/folds_buildings.parquet": "99ffe4451eda354a687d01465c6ceaca740e1c38b766d520b65107e95b4778e8",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/unassigned_buildings.parquet": "3398c80228e984803f7982bd8d1d84ac0c0f83e8515610f43dc0fe88a8506ef8",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P7_ventana_reporte_madura_20261026_v2/cohort_claims_buildings.parquet": "a21577a5ef5b50cb79ec1f39a2863c17dd2b42ea3c0231baca85d66b84ad5500",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_contents.parquet": "f8d5c595dc4bc1357decca37bc73660a557a473638f2aae83e085c9e68d4e1f1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/partition_source/folds_contents.parquet": "de57e8d6bcd92628778104a627d4c98c046063ed31139ac1fc50c6194e804279",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/unassigned_contents.parquet": "fc474beba54b27940d554255ac199c340f2b2266103c6ef7f1848ce8015a66a7",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P7_ventana_reporte_madura_20261026_v2/cohort_claims_contents.parquet": "b9f85414fc5e72b4fbb4b919c753c7a620e27b3143cbf102f5eda9b8b5206dd0",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P7_ventana_reporte_madura_20261026_v2/cohort_groups.parquet": "827309f0c4d4723fd4cf3ad3b56544b6aba9e760b7067d3ccfa2580fcd55a7a1",
+    "Hackaton/Repositorio_IAA2026/herramientas/validar_ventana_reporte_madura.py": "0792395e0ccdfd03ee8a15fbce4b4c4db64c6b76a7576098ccbd3866270db4a2",
+    "Hackaton/Repositorio_IAA2026/herramientas/validar_transferencia_anual_H1.py": "4adf19918e974ac840c54d2da57d36fb98b16017830f0491a8201e95a1cf0213",
+    "Hackaton/Repositorio_IAA2026/src/semana2/variables_ultimo.py": "9f40d75e5b0ffafddc9ae6547df8b826825026e88d5f8aabd0258b88bbd0fec2",
+    "Hackaton/Repositorio_IAA2026/herramientas/evaluar_media_anidada_H1_v3.py": "e3fb55db71f751d3a7a3c29661c9984245549403cc2b0cb10ddc547c8e50efe3",
+    "Hackaton/Repositorio_IAA2026/herramientas/registrar_avance_mision017_fase2.py": "5409cc1d5e4d40ef566e4fd7d592d394dab33e456bbbf8bee72f27baecb62017",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P7_ventana_reporte_madura_20261026_v2/preflight.json": "c1589007cb83d40ad2e570171cbfc99209f5e47c743c820ffde393c5a7f38651",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P7_ventana_reporte_madura_20261026_v2/synthetic_report.json": "37b6639870426e10ae293796cda749fd0921adeb5ade96b485109bc24314b2f9",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P7_ventana_reporte_madura_20261026_v2/literature_context.json": "34e35e83532e6d4d8192eb390b3ed669a117d217ae686cb417941591ad519860",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P6_productor_S2_H1_nominal_20261026_v1/report.json": "8949c5ce21f2af790d2ce97741b35bd80901bf161802d060681924be1c1ed19f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P6_productor_S2_H1_nominal_20261026_v1/level_context.json": "0d18cb498f02cf8e336e6f6e117d8f7ae559db13962977010699d08b87101126",
+    "Hackaton/Repositorio_IAA2026/herramientas/auditar_cola_fuente_A1S.py": "bf5e4102f07d41ac89254bc2ec85c26900e79ec2f0d0561b84a50d95f7091f3e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_tail_seed_audit/report.json": "683a5fd595ce2b85def0e25ecc0f432b685e0eecb423dc35ef501de47dea382c",
+    "Hackaton/Repositorio_IAA2026/herramientas/registrar_F03_desarrollado2023.py": "4851a17a42eae1cc6280f7c1c0e651a6e0dd74eed37f3049d004439d4caecc31",
+    "Hackaton/Repositorio_IAA2026/src/semana2/fuente_f2_2024_cb.py": "7c1e0926af8904624753b208480c24977f82b9b3d168ed5038472426ce05725e",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_mision_privada_plan_v1.json": "3329dbc7fe931d71e1e945bdf536fd9d810040f2626709f3d103c2dc5cdd7876",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_control_entregas_codex_actual.json": "09608aa42f7784e13787e5a7bfd1d324afcc922041a492048b04fb03cc7820cf",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P7_ventana_reporte_madura_20261026_v1/defect_before_real_start.json": "13f2f1698208cbd52b9f45d0789bbc2797c4b138b8a680c65293e76ba4324c2d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P7_ventana_reporte_madura_20261026_v1/preflight_attempt_v1.py": "2b45ebc11509bbfa25e7e96053353323d013276eb57396423ad807ea013d37af"
+  }
+}

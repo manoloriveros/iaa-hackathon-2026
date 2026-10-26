@@ -1,0 +1,19 @@
+{
+ "id": "LECTURA-F3d-F4c-v4-20261026",
+ "author": "Claude (Cowork), redactor; decisión del participante",
+ "utc_decision": "2026-10-26T15:16:00+00:00",
+ "decision": "Manuel adoptó en el chat de Claude las recomendaciones del informe SENSIBILIDAD_SEMANA2 («me quedo con tus recomendaciones»). Codex envía solo con la autorización del participante en su propio canal; se le pide confirmarla allí.",
+ "fijada_antes_de_puntuar": true,
+ "sustituye": "PREINSCRIPCION_AB_20261026_v3.json (93f04fc1…): F3d +0,0002 y F4c +0,0005",
+ "referencia": {"nombre": "F3c", "sha256": "5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276", "publico": 0.16914},
+ "candidatos": {
+  "F3d": {"sha256": "5103f6fd9cf2c46bbb82a5ead586b4eaa0f7b34ecff6efdc99a2a0662e76706b", "orden": 1, "adoptar_si_publico_menos_F3c_al_menos": -0.0003, "previa": "mitad de la local (m 0,000485, tau 0,0005), Z 0,62", "sd_ruido_diferencia_publica": 0.00039},
+  "F4c": {"sha256": "d5dfbf5769a134a09a3a3b23550eda496471b3511f9f66226c24301bb0de18f4", "orden": 2, "adoptar_si_publico_menos_F3c_al_menos": 0.0, "previa": "escéptica (m 0, tau 0,0005), Z 0,61", "sd_ruido_diferencia_publica": 0.0004}
+ },
+ "si_entran_los_dos": "construir F4d con las recetas fijadas y medirlo antes de marcar",
+ "marca_final": "el mejor candidato medido según estas reglas, nunca una sonda; Kaggle califica una sola predicción por parte y, si no se elige, toma la de mejor público, así que un F3d adoptado con público menor que F3c se marca a mano antes del 31-10-2026 03:59:59 UTC",
+ "H1": {"sha256": "d9cccc8dbcdd1ae7d12f00b6ce895c83c1d8018a38c1ffc44eb46017f4d42c89", "estado": "investigación, sin envío como candidato a final", "motivo": "frente a F3c es casi solo nivel por celda, valorado entre −0,00005 y +0,00009 en el privado esperado (H1N); su ganancia local de 2023 cambia de signo al quitar 31 grupos (COD-S2-VAL15-20261026-H1-INFLUENCIA2023)"},
+ "reparto_publico": {"valor": 0.33, "fuente": "tablero de iaa-ai-assisted-hackathon-2026-part-2 leído por Claude con el navegador de la app el 2026-10-26 a las 15:17 UTC: «This leaderboard is calculated with approximately 33% of the test data»", "tablero_en_ese_momento": {"1": "applause_bin 0,17303", "2": "ManuelRodríguez 0,16914"}},
+ "evidencia": {"informe": "docs/SENSIBILIDAD_SEMANA2.md", "informe_sha256": "07578513eaf03f5e014195c3fafb3910090df24259876dbaf61403278c777ce6", "plan": "privado/corridas/sens_s2_20261026T135632Z_c88b9703/PLAN_PREREGISTRO.md", "plan_sha256": "c88b97038dbfffdd6497251ac73a0d63e84aa16c7822b5cc9f38af69f4e6959d", "foro": ["CLA-S2-20261026-004", "CLA-S2-20261026-005"]},
+ "verificacion": "IA, no revisión profesional humana"
+}

@@ -1,0 +1,71 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T08:23:44.252276+00:00",
+  "status": "source_and_complete_target_comparison_finished_exploratory",
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/report.json",
+  "report_sha256": "16e00f41001ef78ba607d5cd2fd41fe77974b13c1e6d2bf18dc3573b7fa2534a",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/MISION017_A1S_NUCLEO_COMPLETO_RESULTADO.md",
+  "provenance_supplement": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/aggregate_comparison_provenance_supplement.json",
+  "new_model_fits": 18,
+  "new_C0_fits": 0,
+  "new_scores": 3,
+  "new_test_prices": 0,
+  "new_submissions": 0,
+  "2024_open": true,
+  "goal_achieved": false,
+  "next_unit": "Use this completed adverse full-core result to identify a concrete unresolved failure before another recipe. Do not repeat A1Sfits/calibration/bootstrap or tune seeds, weights, bands or rules to held losses; retain F3c0.16914and quota.",
+  "forum": {
+    "author": "Codex",
+    "id": "COD-S2-20261026-MISION017-A1S-COMPLETO-RESULTADO",
+    "utc": "2026-10-26T08:23:44+00:00",
+    "previous_sha256": "994c7cd0deb662ae1357125d66f4dbdff59f2434fd456ec8e899bc881ad503c0",
+    "sha256": "846965ab84988613bcd95b5105302af6cbf3358e08cb10a1524e84810bb0172e"
+  },
+  "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_mision017_A1S_fuente_plan_v1.json",
+  "plan_sha256": "9b585699d0a06612fa65d9ad19cb7e7c2f8f31ba6529980431d805d91c168e82",
+  "source_output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models",
+  "source_attempts": 18,
+  "source_completed_fits": 18,
+  "execution": null,
+  "new_final_test_prices": 0,
+  "source_report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/report.json",
+  "target_plan": "Hackaton/Repositorio_IAA2026/registro/semana2_mision017_A1S_completo_plan_v1.json",
+  "source_report_sha256": "94b27c0bafeb80f5e9238957d028880784586a619377239381154aecc1335ea3",
+  "target_report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/target_complete_core/report.json",
+  "target_report_sha256": "ee4e14395c2a2e28e4f6f148530cf4516a5b8ce0f67677514bb8781e5ccf3420",
+  "source_internal_fits": 9,
+  "source_full_refits": 9,
+  "new_target_scores": 3,
+  "scores": {
+    "N3": 0.13524973116896466,
+    "G3": 0.1370999273441873,
+    "S0": 0.13381747776900466,
+    "S1": 0.13556822291598203,
+    "S2": 0.1373680038712981
+  },
+  "delta_vs_G3": 0.0002680765271107314,
+  "bootstrap95": [
+    -0.0016887125019073924,
+    0.002501527899942729
+  ],
+  "gates": {
+    "delta_ge_002": false,
+    "lower95_positive": false,
+    "positive_folds_ge4": false,
+    "both_years_nonnegative": false,
+    "post31_nonnegative": false,
+    "cell_min_ge_minus001": false
+  },
+  "exploratory_gates_pass": false,
+  "formal_admission": false,
+  "submission_allowed": false,
+  "B00_all_alternatives_preserved": true,
+  "unique_primary_learning_constants": {
+    "shape_factors": 140,
+    "shape_training_normalizers": 40,
+    "component_levels": 45,
+    "residual_factors": 90,
+    "residual_nuisance_levels": 80
+  },
+  "document_sha256": "a24b03653750b114d82db062dea5cf9be797f3a0a259b7920a72bb3860be6ded"
+}

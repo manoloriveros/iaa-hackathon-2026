@@ -1,0 +1,793 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T15:00:48.061734+00:00",
+  "type": "P5_complete_target_price_recalibration_two_reserve_bases",
+  "hypothesis": "P3afrozen prices do not establish whether the complete target learner remains stable when reserves change the training target and its observation link. Evaluate both predefined reserve valuations without selecting either as the new production objective.",
+  "unchanged": "T0nominal remains production reference. Same source models and profiles, sourceA1Sgeometricmean, fixedS2mixture50/50, K300/K400, source/targetfeatures, partitions and five-member arithmetic mean. No new model capacity or hyperparameter/level/weight searches.",
+  "target": "For each b=.75/1.25, train and score Y_b=T0+(b-1)*reserve. Use existing costCDF_b/meanmark_b, same countCDF and frequencies. qglobal_b=sum_p(frequency_p*meanmark_b normalized *costcompletion_b); qsource_b=source f_period*s weightedcostcompletion_b, sourceprofile fixed. No double exposure.",
+  "algebraic_reuse": "P3aevent-probability verification established stored branch equivalence for all90C0objects. Delay/countdistribution and frequencies do not depend on reserve marks. Reuse those protected branches; no C0refit, curve suite or mark reestimation. Every new target shape/level/stage and the complete S2outerbase must actually be relearned under each b.",
+  "data_scope": "All109296observed2023/2024rows, same five globalgroups and saved inner groups. Outer15and inner75target scopes per branch. No held target is used for learning; each branch target remains separate. Source is not revalued, so this is full emerging price recalibration conditional on fixed source, not a full all-market revaluation.",
+  "algorithm": "Same complete feasible S2ultimate outerbase * mean5(U_H1/U_G3), with fresh branch-specific S2and G3/H1calibrations. Outer branchC0only for evaluation, never inner learning. Calendar once and ultimate predictionnormalizers at forward; original rounded exposure at fit.",
+  "contrasts": [
+    "RESERVE075_recalibrated_vs_recalibrated_base",
+    "RESERVE125_recalibrated_vs_recalibrated_base",
+    "RESERVE075_new_candidate_vs_P3afrozen_candidate",
+    "RESERVE125_new_candidate_vs_P3afrozen_candidate"
+  ],
+  "criterion": "Diagnostic robustness: both primary intervals, allfold/year/cells, post31and failures recorded; loss below-.001byline/year/NBfails stability. Historical minimumgain.002and lower95/fold/year rules reported, no automatic promotion/valuationchoice or public-driven release. Secondary contrasts cannot rescue primary failures.",
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 2026102633,
+    "unit": "saved globalconnectedcomponent",
+    "joint4": true,
+    "family": "exploratory Bonferroni4"
+  },
+  "controls": [
+    "Actual newbranch-learning and ultimateflow with heldT0/reservepoison, exactartifact/priceequality in all180line/outer/member/branchscopes",
+    "C0exact training keys; protected parent receipts pinned, no fitting reporting allowed",
+    "Synthetic same real entrypoint for three lines and bothbranches; zeroreserve+identicallink limitingidentity",
+    "Blocked-learning real replay, scalar moment, bridge, mean, standardmetric and immutable sources",
+    "Derived globalweights separate, not new frequencyfits; prediction normalizers/control/synthetic fits separate"
+  ],
+  "budget": {
+    "primary_closed_learners": 390,
+    "adverse_closed_learners_separate": 390,
+    "primary_price_constants_max": 11000,
+    "new_C0_fits": 0,
+    "new_source_models": 0,
+    "new_source_inference": 0,
+    "new_final_test_prices": 0,
+    "new_submissions": 0
+  },
+  "limits": [
+    "Adaptive2023/2024and feasibleS2proxy, not full deliveredF3creplay or independent professional confirmation",
+    "Sourcefixed and final2024valuation/undatedmasteravailability; no pristine prospectiveor hiddenprivateproof",
+    "Same low2025NBsupport/ESSfailure and unidentifiedtrue ultimate tail, source peril mix and reserveadequacy",
+    "Reserve stress recalibrates targetonly; hypotheticaltail has no identifiedjointcountseverity model and is not falsely refit"
+  ],
+  "scopes": [
+    {
+      "line": "motor",
+      "outer": 0,
+      "member": -1,
+      "training_row_digest": "a0aff00e29929cdd5424692d947dbfccdd2feba1f86fcd461157a87488ec8e6f"
+    },
+    {
+      "line": "motor",
+      "outer": 0,
+      "member": 0,
+      "training_row_digest": "8aa9280728ad46f336f2042b263cd9ba8e64a103a4be52be48f74fc02a18a078"
+    },
+    {
+      "line": "motor",
+      "outer": 0,
+      "member": 1,
+      "training_row_digest": "bb46c4a111bd727d72be37372ebd89d4833e2afcf3969adef4a94c4d936388e7"
+    },
+    {
+      "line": "motor",
+      "outer": 0,
+      "member": 2,
+      "training_row_digest": "0e5f95006481f25425627694fc234669f45e21fd9c9e285bb49776d0ff2723ce"
+    },
+    {
+      "line": "motor",
+      "outer": 0,
+      "member": 3,
+      "training_row_digest": "352dbf398fa16fd640de9a64ae967cbf823d6f7a30edb474552ad9cced8e0745"
+    },
+    {
+      "line": "motor",
+      "outer": 0,
+      "member": 4,
+      "training_row_digest": "534974ac001168b94d28f7704de0e6d42e8ddd4e32008766467a0b66941b4663"
+    },
+    {
+      "line": "motor",
+      "outer": 1,
+      "member": -1,
+      "training_row_digest": "80e9931763bab26388ee15ba5bacd6bbdf569842a98bc87a5ebfa5c75824f0cd"
+    },
+    {
+      "line": "motor",
+      "outer": 1,
+      "member": 0,
+      "training_row_digest": "80c528d9530a51b0ca4da4d4a9d903faed8f0eab6cd497ec557c2d2f26848fc3"
+    },
+    {
+      "line": "motor",
+      "outer": 1,
+      "member": 1,
+      "training_row_digest": "a3d9af628adc5d45746d81be2a7ac034267e5dfc8b9bef207b2c0ad508be1937"
+    },
+    {
+      "line": "motor",
+      "outer": 1,
+      "member": 2,
+      "training_row_digest": "c81ef4214d1a0e8d54540998155eb38654a85f68d0f64b57bf7b5ca7948d0b5d"
+    },
+    {
+      "line": "motor",
+      "outer": 1,
+      "member": 3,
+      "training_row_digest": "452d8fabc45a8a69876d9b871f2452276f9a8e87cfd854252c44fdda17dbf51d"
+    },
+    {
+      "line": "motor",
+      "outer": 1,
+      "member": 4,
+      "training_row_digest": "e33d6f7339e178788a75d4de4ecf66e39b6d1bcb2c2e3feed9423dd91e659587"
+    },
+    {
+      "line": "motor",
+      "outer": 2,
+      "member": -1,
+      "training_row_digest": "ea79c3c8acdefc23f911c622d0c7f6ccc25def72a64f4de69654aae8d0db9433"
+    },
+    {
+      "line": "motor",
+      "outer": 2,
+      "member": 0,
+      "training_row_digest": "019fbc67fc6d2b49dff32d3fb6ef91b009d841d18d38380ffe533ec51ac5af00"
+    },
+    {
+      "line": "motor",
+      "outer": 2,
+      "member": 1,
+      "training_row_digest": "723b43a9040d15104827f920788100fc12a6a2ff9ee9ccebe7c50c46d3262182"
+    },
+    {
+      "line": "motor",
+      "outer": 2,
+      "member": 2,
+      "training_row_digest": "34ec0a3a91f489aee1d90a34fbe7e90b3ae639f08ee2cf82946e711184d43656"
+    },
+    {
+      "line": "motor",
+      "outer": 2,
+      "member": 3,
+      "training_row_digest": "5c491257a0d5b2ee2834f514dac0ba08d83638fe664a124e68c9ccea45c2ff92"
+    },
+    {
+      "line": "motor",
+      "outer": 2,
+      "member": 4,
+      "training_row_digest": "514a451632a2315917cdec856c17302f219309381ffa45faa3469d4a6878dc31"
+    },
+    {
+      "line": "motor",
+      "outer": 3,
+      "member": -1,
+      "training_row_digest": "182d3c402300bd359b21bb14b8d9b91d4e8defee4bfb5323dc9c831cbc3335fe"
+    },
+    {
+      "line": "motor",
+      "outer": 3,
+      "member": 0,
+      "training_row_digest": "3b7a23615d231738e058343da7ccb1f39bafd8ff156c9a52a27793605026bfe2"
+    },
+    {
+      "line": "motor",
+      "outer": 3,
+      "member": 1,
+      "training_row_digest": "03f5d7f5fccaffabae046008a4e8d658df3e112bec4f8c7553729cb7ecd3697e"
+    },
+    {
+      "line": "motor",
+      "outer": 3,
+      "member": 2,
+      "training_row_digest": "125d7e71ad30875641803718784755c94e7010a0bb8b29de9877473c7dc8c8e2"
+    },
+    {
+      "line": "motor",
+      "outer": 3,
+      "member": 3,
+      "training_row_digest": "a57c423005ea09b3aa5a475ec2c6819a182e8fdbac3f71e938cc31e89402cc38"
+    },
+    {
+      "line": "motor",
+      "outer": 3,
+      "member": 4,
+      "training_row_digest": "628ab6d23c3d7f85d3e44a0a4ac23d046276adbb35c532a3c42b764c1f8f469e"
+    },
+    {
+      "line": "motor",
+      "outer": 4,
+      "member": -1,
+      "training_row_digest": "eb1ab4ca3bd06c19537efbc4b97b571911a4f9cb2bd80cae2417bd4f6549b61c"
+    },
+    {
+      "line": "motor",
+      "outer": 4,
+      "member": 0,
+      "training_row_digest": "0319dc1eed44490c550cab602f6656d857692eb984d63392ebc43cc67ce75357"
+    },
+    {
+      "line": "motor",
+      "outer": 4,
+      "member": 1,
+      "training_row_digest": "9a4918c7568c4520f30442eb1312a7124138b95d8d9eb9ad731a02923c52b4c3"
+    },
+    {
+      "line": "motor",
+      "outer": 4,
+      "member": 2,
+      "training_row_digest": "da6575ad1cc304762b0b82ea3d4f9a8fb6b2e75dabb8c812552eea4691b66227"
+    },
+    {
+      "line": "motor",
+      "outer": 4,
+      "member": 3,
+      "training_row_digest": "5cfea24271563569be8caa2c3450e638344414c4ac1c1fcc535d3b1283bb840e"
+    },
+    {
+      "line": "motor",
+      "outer": 4,
+      "member": 4,
+      "training_row_digest": "b3a375735f6f8ed718b4de3a2787473c64a038a9bb239ff89e248de74b77fedf"
+    },
+    {
+      "line": "buildings",
+      "outer": 0,
+      "member": -1,
+      "training_row_digest": "3fc78412edddfd8fa3323a4d147db5bc49f53e60656a26768fafc86d893f384b"
+    },
+    {
+      "line": "buildings",
+      "outer": 0,
+      "member": 0,
+      "training_row_digest": "bbfc76fd55333c044382d50924db0ecb66deb54fe31d071ce9e0037599e16de6"
+    },
+    {
+      "line": "buildings",
+      "outer": 0,
+      "member": 1,
+      "training_row_digest": "d83663aad3929075845945fcaa020edce422c74758da927dec6bee3a945cb873"
+    },
+    {
+      "line": "buildings",
+      "outer": 0,
+      "member": 2,
+      "training_row_digest": "1b81f4e8adb94170c9e9f0773ddb85da1b2ae5b5cd1f7a4ca76273adfa23b570"
+    },
+    {
+      "line": "buildings",
+      "outer": 0,
+      "member": 3,
+      "training_row_digest": "165401754f03bfbce835381f9f684286f884e190048f21ded9e7f76960b7cea2"
+    },
+    {
+      "line": "buildings",
+      "outer": 0,
+      "member": 4,
+      "training_row_digest": "bf28025c2cc173a58d33663e47119d64599bd9d1a51ae82155b0e3fb323ef289"
+    },
+    {
+      "line": "buildings",
+      "outer": 1,
+      "member": -1,
+      "training_row_digest": "f3ad2cfff4f79a08b3a3931e1c6b073eb998037bd7c555ed9bfdc7cbf5faabec"
+    },
+    {
+      "line": "buildings",
+      "outer": 1,
+      "member": 0,
+      "training_row_digest": "c0a2c07afbf123f98f3347264391585dc51578151dbe3fa829cf0f169f3a233a"
+    },
+    {
+      "line": "buildings",
+      "outer": 1,
+      "member": 1,
+      "training_row_digest": "005eb2106d5b02706db3d24d4e8b1a2b08f5145bc2b08e560716891af6492c16"
+    },
+    {
+      "line": "buildings",
+      "outer": 1,
+      "member": 2,
+      "training_row_digest": "e033c3272ec6aaa00705b28f5a39ff0c97140f6a559afa4beeafe85a9ad16625"
+    },
+    {
+      "line": "buildings",
+      "outer": 1,
+      "member": 3,
+      "training_row_digest": "b8d146eada8cbf008838c7056ea4c9ad900aa9a7171cdb70deb4fc3205a76e54"
+    },
+    {
+      "line": "buildings",
+      "outer": 1,
+      "member": 4,
+      "training_row_digest": "463689c518693e9ecc8d0f631077fe258378491f1c248cdd130f5cd7c6fc6b76"
+    },
+    {
+      "line": "buildings",
+      "outer": 2,
+      "member": -1,
+      "training_row_digest": "01ce3cb3d8ecd859e804a5ab59a29ad841d63f980b8e3376dce368ac7b417f01"
+    },
+    {
+      "line": "buildings",
+      "outer": 2,
+      "member": 0,
+      "training_row_digest": "772e931cdeae646606e8c8d55afa96c338cbeaf7727295745f376f6338a3802c"
+    },
+    {
+      "line": "buildings",
+      "outer": 2,
+      "member": 1,
+      "training_row_digest": "08c87e40383783cc41462ebee2f363ef6505ce4ea387d9546e15069407767d0b"
+    },
+    {
+      "line": "buildings",
+      "outer": 2,
+      "member": 2,
+      "training_row_digest": "5befbcfc1e534c9239758c5ad7dc09072632661bfebde950c1905d3f42604991"
+    },
+    {
+      "line": "buildings",
+      "outer": 2,
+      "member": 3,
+      "training_row_digest": "804845e4a98bf1a797fec5ff646aeaa1bd798d0deadc5e4f247df454c046897f"
+    },
+    {
+      "line": "buildings",
+      "outer": 2,
+      "member": 4,
+      "training_row_digest": "772e48b9aba8af76b40f76372c2ed39725f159061be3fe71c13f1be30267ba50"
+    },
+    {
+      "line": "buildings",
+      "outer": 3,
+      "member": -1,
+      "training_row_digest": "668281cfa21f2dfc8ce155179074c1db39aa30cbe3aa9fe1e1b0e9549e161209"
+    },
+    {
+      "line": "buildings",
+      "outer": 3,
+      "member": 0,
+      "training_row_digest": "8c51927f0ecef9852ef0a341988a3aefec355f8aab3fad3e01c86c380caa1bb7"
+    },
+    {
+      "line": "buildings",
+      "outer": 3,
+      "member": 1,
+      "training_row_digest": "7956a319a034fd91728128784a113e008a9dbdd08b3e949f2ba65a81c1c455a0"
+    },
+    {
+      "line": "buildings",
+      "outer": 3,
+      "member": 2,
+      "training_row_digest": "43b4e75e24bba71a67f776594498fc65070774d3a036629ac09480cf8ea7cf55"
+    },
+    {
+      "line": "buildings",
+      "outer": 3,
+      "member": 3,
+      "training_row_digest": "de569143c3adf0ee76a4d229951e7ca5e0f3e343d1310f1fcde73bcffcd4cbc5"
+    },
+    {
+      "line": "buildings",
+      "outer": 3,
+      "member": 4,
+      "training_row_digest": "31bc863c8f537f57dfe6cb61e5160e615968b90a56bf53e238d0c5fbf0f569f6"
+    },
+    {
+      "line": "buildings",
+      "outer": 4,
+      "member": -1,
+      "training_row_digest": "1870022d00d589b07c74e7f81e2e3cb53b0fbbb4b7f7cf59f5c2de3ca5702ee7"
+    },
+    {
+      "line": "buildings",
+      "outer": 4,
+      "member": 0,
+      "training_row_digest": "c34d313beee48a3eeb92de47c7e332011c2fb3ec04f1763efeb227dca4688aa1"
+    },
+    {
+      "line": "buildings",
+      "outer": 4,
+      "member": 1,
+      "training_row_digest": "4781fafd18c76e8aef0f2c47e637a119d9542d8aa24ed67447a76930fb166e6e"
+    },
+    {
+      "line": "buildings",
+      "outer": 4,
+      "member": 2,
+      "training_row_digest": "338894a08c295a8edf32cfe765e2138e0fcac86ff0748298d487ab361eb1f9fc"
+    },
+    {
+      "line": "buildings",
+      "outer": 4,
+      "member": 3,
+      "training_row_digest": "b52fc8392b79155fe70b9da3b2632048ea51a7e50f2e087e4e85e8c80805f2cc"
+    },
+    {
+      "line": "buildings",
+      "outer": 4,
+      "member": 4,
+      "training_row_digest": "5a498ef7ad2976e039c6fc933e488e5ef3a89c833ec001e7e049284d26cf81bb"
+    },
+    {
+      "line": "contents",
+      "outer": 0,
+      "member": -1,
+      "training_row_digest": "87706fd89e00d7d6dc90c69bd4825fd8b67c01f301c960d61e46f74b69ecdd50"
+    },
+    {
+      "line": "contents",
+      "outer": 0,
+      "member": 0,
+      "training_row_digest": "b7ff16f20bab549a3be3d330abb1e72d2e52871148a44d737e47e99cec02bfe7"
+    },
+    {
+      "line": "contents",
+      "outer": 0,
+      "member": 1,
+      "training_row_digest": "9b46f130309641bc4e38bf9390855d19852d353aa2f18fcbdd97f4247d81b0e4"
+    },
+    {
+      "line": "contents",
+      "outer": 0,
+      "member": 2,
+      "training_row_digest": "a6183fd0448aeef721ebc2279a958237199fef290572b83f1042c5d8d2372e2f"
+    },
+    {
+      "line": "contents",
+      "outer": 0,
+      "member": 3,
+      "training_row_digest": "0d3948de1e9e9520d6df2c44e1d7a299b8c139080bbd3686c80831f45a0852c8"
+    },
+    {
+      "line": "contents",
+      "outer": 0,
+      "member": 4,
+      "training_row_digest": "5781bda2fa3d58d8959e02fcb72387d279c3014ebe97b3ef4e86d76fb3e43cf5"
+    },
+    {
+      "line": "contents",
+      "outer": 1,
+      "member": -1,
+      "training_row_digest": "24e769070e33c6cc88fe2e1e6734f029cb84aee999a1c78fac22a4b0625ca5e6"
+    },
+    {
+      "line": "contents",
+      "outer": 1,
+      "member": 0,
+      "training_row_digest": "26479a53a3eb7c7122507cf95afd9e6f7893dcaf1d33a442215ebbd071dd8777"
+    },
+    {
+      "line": "contents",
+      "outer": 1,
+      "member": 1,
+      "training_row_digest": "c17e6261afd64bb5f2dc1fd5457674fface6b757a2ec57f5605461ab0d784db2"
+    },
+    {
+      "line": "contents",
+      "outer": 1,
+      "member": 2,
+      "training_row_digest": "c7e3f06a8a2cb9a35c8b1a7e7ac352f02182354764f8200fb6c680857890150c"
+    },
+    {
+      "line": "contents",
+      "outer": 1,
+      "member": 3,
+      "training_row_digest": "46e7af916642b32226b338b85904b4961804919ea6840dba617d9a29bf7b0548"
+    },
+    {
+      "line": "contents",
+      "outer": 1,
+      "member": 4,
+      "training_row_digest": "64edf29b75e04e0e1f7bd3304fa5515bc72f4095d8c64709688204888e69121c"
+    },
+    {
+      "line": "contents",
+      "outer": 2,
+      "member": -1,
+      "training_row_digest": "5990a27fdc5956c11128c47df5aa550798651ae6315fdb08ccfa2567702eef8a"
+    },
+    {
+      "line": "contents",
+      "outer": 2,
+      "member": 0,
+      "training_row_digest": "2c62a93a327bab8439ee9ba84fc1f632dde683d14ed07ca4136e084c7252db23"
+    },
+    {
+      "line": "contents",
+      "outer": 2,
+      "member": 1,
+      "training_row_digest": "518288fd27bb2e4a5d704a4e30d0b31b63b91201ca0c70426da45506ce065cae"
+    },
+    {
+      "line": "contents",
+      "outer": 2,
+      "member": 2,
+      "training_row_digest": "dc75e73921351e924b04d1a172fdc452188e322210d108419d336df8c9e3cece"
+    },
+    {
+      "line": "contents",
+      "outer": 2,
+      "member": 3,
+      "training_row_digest": "8359d1b61dee55335d87c2d750675f09b1b7b83b5897c729dcf9e5c2b1e2986e"
+    },
+    {
+      "line": "contents",
+      "outer": 2,
+      "member": 4,
+      "training_row_digest": "f7ff6435af316d8d4b2ac325c1b0d4957a287e17a732c6d08196075d848cf6f7"
+    },
+    {
+      "line": "contents",
+      "outer": 3,
+      "member": -1,
+      "training_row_digest": "6a41eda432a0b02e1ea2b4a666b7ddbd72f4770ebfab52da6a26103c9a74a26c"
+    },
+    {
+      "line": "contents",
+      "outer": 3,
+      "member": 0,
+      "training_row_digest": "c6350abb734252bdaf476e08c84b15b393837a316f805ced349e75aa6b4ecc7e"
+    },
+    {
+      "line": "contents",
+      "outer": 3,
+      "member": 1,
+      "training_row_digest": "f2a17e8e8a5729929c124e32923562f7498e5aeda9df28f512ebbcf7b22eefc8"
+    },
+    {
+      "line": "contents",
+      "outer": 3,
+      "member": 2,
+      "training_row_digest": "30212e7fb36b708a763848f32b64042a5fdd0b1b5bea8ada3a2cfdc3599c4313"
+    },
+    {
+      "line": "contents",
+      "outer": 3,
+      "member": 3,
+      "training_row_digest": "67adbbe55dea45cb8f40984f1d07e677994521ea207e767aa2595d7a5d548663"
+    },
+    {
+      "line": "contents",
+      "outer": 3,
+      "member": 4,
+      "training_row_digest": "0dd18042a8a1366a9626c005adbe0fda47b908bba20f300b94cf86b5a658b184"
+    },
+    {
+      "line": "contents",
+      "outer": 4,
+      "member": -1,
+      "training_row_digest": "cf6052b53bd5dcc0c16114b91ffd7322897ab4b1fe5f66e08a5709a89330f91a"
+    },
+    {
+      "line": "contents",
+      "outer": 4,
+      "member": 0,
+      "training_row_digest": "1d1ab2bbb829638f615d53326688662b2f2d1eebdecb58ed1aa56d9d46fc2c42"
+    },
+    {
+      "line": "contents",
+      "outer": 4,
+      "member": 1,
+      "training_row_digest": "fb9c131f205688e79a7e4c8b1a5183188d7fca7bebe797898eec4ee71eb4c764"
+    },
+    {
+      "line": "contents",
+      "outer": 4,
+      "member": 2,
+      "training_row_digest": "52a7ae6b6240324060ca5da1c54504e6d0a278a0e873cab8697bc989eba4ec8b"
+    },
+    {
+      "line": "contents",
+      "outer": 4,
+      "member": 3,
+      "training_row_digest": "2b88107ffe20533e5b550e284fff3d43b95b77265608032c41d1ead071f95fae"
+    },
+    {
+      "line": "contents",
+      "outer": 4,
+      "member": 4,
+      "training_row_digest": "35854fc2e2f49d5f362b61ed2050a123ec31a95e5d611e6920e9cd11323155af"
+    }
+  ],
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true,
+  "submission_allowed": false,
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/recalibrar_valoracion_H1.py": "e5e78441f6d5b2a48b52b1791d614df2cb09227e3e688b070708943aa90ec442",
+    "Hackaton/Repositorio_IAA2026/herramientas/validar_transferencia_anual_H1.py": "4adf19918e974ac840c54d2da57d36fb98b16017830f0491a8201e95a1cf0213",
+    "Hackaton/Repositorio_IAA2026/herramientas/evaluar_media_anidada_H1_v3.py": "e3fb55db71f751d3a7a3c29661c9984245549403cc2b0cb10ddc547c8e50efe3",
+    "Hackaton/Repositorio_IAA2026/herramientas/contrastar_enlace_HET.py": "84245ba43e64af75b9f487a23c09bd298236d64bec82135b1428766c8a863bd3",
+    "Hackaton/Repositorio_IAA2026/herramientas/glm_discrepancia_A1S.py": "c26d974044dfb3c5fc6488850abed36b3763c1a5466d21409869539a764548d6",
+    "Hackaton/Repositorio_IAA2026/herramientas/mision017_fase2_tanda2.py": "70442fc1e28fc6b2e8fc153381fe96b6c3997bd5adf4b5be69e96f5881bfeb45",
+    "Hackaton/Repositorio_IAA2026/herramientas/mision017_fase2_tanda10_factores.py": "eed943325d39fc1c9be616bf943a9822bafaa02ee592d8e006091b53328ff501",
+    "Hackaton/Repositorio_IAA2026/src/semana2/variables_ultimo.py": "9f40d75e5b0ffafddc9ae6547df8b826825026e88d5f8aabd0258b88bbd0fec2",
+    "Hackaton/Repositorio_IAA2026/herramientas/registrar_avance_mision017_fase2.py": "5409cc1d5e4d40ef566e4fd7d592d394dab33e456bbbf8bee72f27baecb62017",
+    "Hackaton/Repositorio_IAA2026/herramientas/validar_nucleo_completo_A1S.py": "2f2e6fa98cd7797615be33040fb5b35da69c95cc480e26ec07ebc858c82b912f",
+    "Hackaton/Repositorio_IAA2026/herramientas/sensibilidad_congelada_media_H1.py": "0815f7dc98ad202ba4577f88372ab40aff1cb88568ecff1fde33c7ad32bf9e44",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/report.json": "5e5b2e61a886c0d1964202da46a07db85e14d6a75d9d169935189e956e2ef5f4",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/report.json": "4c021c0043d121d60386f014b18a553ab689df6b068b09ad1c6e276d60aca6db",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/sensibilidad_congelada_media_H1_20261026_v1/report.json": "62e47aa809727cd1d4dd2ecd3f724a92b64ca93db621e2ba20c8061688677942",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/sensibilidad_congelada_media_H1_20261026_v1/held_frozen_scenario_prices.parquet": "af7a127d7425fd96c28236c4e27d129a0b6818b869f111acdab2fd67e044bdba",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P4_transferencia_anual_H1_20261026_v1/report.json": "945193f26d9dbb0d9e8859401a33860948070b296be232c2976d9b4f6d57e01b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P4_transferencia_anual_H1_20261026_v1/replay_report.json": "8254c95700044efe1576a69e02d61430051242f3badfbf12bb2f601da5099596",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3/target_T0_and_stresses.parquet": "114dd8ae8048a04530855c7be8f8e718ebd9fe969f491c4513fc1fadbd0bcca6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/estimando_cartera2025_v3/weights.parquet": "cb14dff16c82b83195b17a100c4e8eae62a01622129a7c757968b2ca10c8a486",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_mision_privada_plan_v1.json": "3329dbc7fe931d71e1e945bdf536fd9d810040f2626709f3d103c2dc5cdd7876",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_control_entregas_codex_actual.json": "09608aa42f7784e13787e5a7bfd1d324afcc922041a492048b04fb03cc7820cf",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/canonical_motor.parquet": "263f5a20d9048b4e035f311b6f3d9c7bb79499bd190dea879afdc45680fa29d5",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/target_motor_three_seed_components.parquet": "56939d171177c2279b94f10ffe46d3fa3ac01cc0770dc8c7b648f9f16819c60a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_motor_fold0.json": "217ff527fc1c084a423f9db50a164a281d691601273d03730c872c8fd3c13057",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer0_member0/primary/C0.json": "d6efce841f15558122762b3ece764cbefd076f3e738eff8b9dae379c0d0c7568",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer0_member0/committed.json": "b9637511a09cd190faf1cf6b5a7b0a3fdb42528094a8cd3fef6f60e6c5862c7e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer0_member1/primary/C0.json": "bf58b410a0bbd10d9beb6972ac0c8482a2fdd97229b8c9b40224dc3616371dab",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer0_member1/committed.json": "80752037ce17a82f10139e4ba5e808b5303a7866f40b23838fba778a6f5ec4e8",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer0_member2/primary/C0.json": "9332fd7629d42909a8ed1c29c772c7e502ca4c4cc42d3688be7f84ecc5e79cab",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer0_member2/committed.json": "60053f6c33a63f6837782edc92abe96a48fe3ca937ca1c585db29e47e7195a87",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer0_member3/primary/C0.json": "6b84fad99232ced3c74656fce7cb6ac260b37f1fbc18976fd0e0e66e77ff5e0a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer0_member3/committed.json": "b4dbd1363c298f138dc61cbb4412a4e91cbd1b68bf8dc5c2e3bb4ead44226c5f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer0_member4/primary/C0.json": "678090ebc17a2c9c50fb58f0e1667316511df3a57443035d90c4cd096b22ac19",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer0_member4/committed.json": "f5f987f0014d0c1eb138199f3a681cde488ff08edbcfe46a742c07926ee4c9ce",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_motor_fold1.json": "fc5da7ea8d2d7ebb0640356d73a511b10a2d3321554e648e0fb0eb8ed7bf8b05",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer1_member0/primary/C0.json": "128ac414cdfda27dfbb63b6a167bf4b2667e3d0a4de87ad65c0b14d036571f3c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer1_member0/committed.json": "c2bf2ca94443f1c418d6f42c4e072372c1a0f6ef4f9fc8d91818ed475b75ecde",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer1_member1/primary/C0.json": "908ea957ee347ca8d9b9a1e8df979b205ba71e7dd5b38d6bf643c2932ca1da28",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer1_member1/committed.json": "1be6d407f6c3aebd130720021857d26ac6d2dfe471600e8d5d334a344678e877",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer1_member2/primary/C0.json": "7b8c1bd727d9ded708d5023d011b557217c0de4630a08103480b5414ada1f01f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer1_member2/committed.json": "450be729a74a3648e0d6d45d849988ddcfb8c749539bf2a5d36b35e2902789fb",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer1_member3/primary/C0.json": "afea7e101a732f4b29aae87610df6a9fdb7fc11da05eedbbb59ef399369f3b5a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer1_member3/committed.json": "473b958a94cd7658070cc938137c162784b8eac3b69c2ce032c661fe12142281",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer1_member4/primary/C0.json": "dd2af35adb70a1250ad1525302e913c84b64ff348f36791e85ec0e1e3f6e31f2",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer1_member4/committed.json": "79aee4c5c54c8f695f2a4c080aab2090f7820515e764c45e698a5a69a80754c4",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_motor_fold2.json": "bb21ab5a2600e45b3dadd669d164499b956df99af8a73c3303b56d1d4fa58f83",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer2_member0/primary/C0.json": "3752694e0b7630d1ad5e05507cb02a8e3cc2c8a52dc8b4bd675e4a6dea98c81a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer2_member0/committed.json": "45cdfcccccd9aa13deea48647644457b9cf2f6f44bfda4d7081e28016e215144",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer2_member1/primary/C0.json": "23ba4afb275c197015808038e1526464e88d2447814c56167a1006637adfe17d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer2_member1/committed.json": "af009fbf31a2b5cfed50bf0e4855e2f563fc508b49e3fec54f19086bc0b5dc91",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer2_member2/primary/C0.json": "1ef5304ea918b64ccdb666e5581adeb367383b747b41131d7ebecfd64fe8ee33",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer2_member2/committed.json": "f47d4fb9d6559aa5c2a1a884c28d122a5d355d240f232dc0fb50aa6022d2ddd3",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer2_member3/primary/C0.json": "00bc59abf418abec7034e5fc745a870373185604754fde2db18ad3b5f1427044",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer2_member3/committed.json": "d4aa364f3ac1014d9d1aa1c697f3b9123332b17bd4558ed7be7eed54c3f5e142",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer2_member4/primary/C0.json": "77f3f2acce8eac08970e7f9a83100cd0864c4b88d0ac5d767860dc253ffc29ad",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer2_member4/committed.json": "4671531f8bee8f727550772909d195e8848bf71823aa93d24feba94f1128d819",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_motor_fold3.json": "6a651a06736ad9611a7005b4c2b488028d8003a5c0fb10d551bfa5741902bcfe",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer3_member0/primary/C0.json": "27387dbc55e61ef5d43d8dd24e798eed7b0ababce0c9d1b8e4363cbc801b709a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer3_member0/committed.json": "aadd776ea68bd711808ba6f90c0d9a2832ec8fba0cd2e794ee691c68e45e7f0b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer3_member1/primary/C0.json": "390597aec2ee6c250e428b2f42421a08850523f2c2d0c50fe576ca6cfdf3f7fa",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer3_member1/committed.json": "b205c157012dd61c6a788111cf05cc30cf5e2c7f257b4ce2854125e82ad0abf4",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer3_member2/primary/C0.json": "4850a2340dcdf502df11f5e3d975b15a01d1159ad7b47407066f098b14be6b1f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer3_member2/committed.json": "a218f3df74688848371fc0a4b7268c6b6c35d82c8ea067f03660a28bb8fdb4a1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer3_member3/primary/C0.json": "eb70843899e61c7bb8b85c74d0757d95032bad1eff96ea1ad74dee6f76b5e183",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer3_member3/committed.json": "4621f281c4ec088d8df2e1053aaf24e1713dd25b9cf87b977d51f3ce7ec93265",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer3_member4/primary/C0.json": "08a011adfe9a7a7667cf97e8f526bab7c0775506fa3a490ef73f562481dbae1e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer3_member4/committed.json": "03a9dac77badd656f2e88715d91a8267055ab9a9e193a2cb393139fc48c7ef2a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_motor_fold4.json": "565d0a8a8978572936cd163020221823de1cc6b7728c98a003abe15496916d4f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer4_member0/primary/C0.json": "29d5144d8594ed4d3c55953347929b2c7ec87a92333eeed5f839480b0078bdfb",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer4_member0/committed.json": "ffa2fad39329048cd750c0e1101ef97f29d8904c2471f1f59ce71b201a4c5ea0",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer4_member1/primary/C0.json": "4d58d621f426dd3b2532be05ebf0f0243da4d03c4ac7bca355b700c285d3cbb9",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer4_member1/committed.json": "68095828c7dc67872f00a2efa725a84f7d1a3c1bb35474e45a2dc154890a2348",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer4_member2/primary/C0.json": "84e30c4a6c4de2cb017443564a59c2bd5774125914e8e239b5b2d7b93be0c993",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer4_member2/committed.json": "09abb6ccbfddaa853d15281efc6af4067a15a308741a53dd823b0a03e914a0f7",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer4_member3/primary/C0.json": "9f9705044546357211aada51fc5adefb130e71031979b1537a89d46eb4f2d6c3",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer4_member3/committed.json": "bd79adf18014888903a87b5d4d04d9a9d8e15e22b818ceb870244d988d54836c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer4_member4/primary/C0.json": "64f59cb080fb4f8195907d081a2c21a00354beeb9e55d4caa5a11150c234c787",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_motor_outer4_member4/committed.json": "e9028969530ba9852ad649de326aed29821bcd8cea229c2cfe721a2bf3f430f6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/canonical_buildings.parquet": "e76a5d07cb7f0c6aaaa061762f48c5b1012eeda48d0b40f9ba238f56676b6e1e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/target_buildings_three_seed_components.parquet": "d6f6ed12b1846fa7fa5a490af4e6fcd8b790d17492bfc277e41b27a751743669",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_buildings_fold0.json": "243027e20d64f20e7c0dd573dadf9a3d0ed48e74a3211f2d6cf4762f4e18d29d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer0_member0/primary/C0.json": "750ee7453a40caf9543e8a5d563a90c14e9a3b18647934c2032a75451873bcc0",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer0_member0/committed.json": "d4efd750e3ce1e68f3cec070c4dc0e6687bd0a2f5bb84a26188f44b8d81e4f6d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer0_member1/primary/C0.json": "192ff6de0a324b6bba432b91dd15244b1dabf0fdc10f47418369f94ec502a73f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer0_member1/committed.json": "34c2af040a68043def8c18e2d058a08e08626c59ea0433aa6e179548caeb4695",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer0_member2/primary/C0.json": "3979075da3a36a16ecdc03a724550a31492c51de58b3f46b986c71c1cd104e91",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer0_member2/committed.json": "3155de17ca9239f1ad0676128fc2f6161f1baff8ed85db1be17f66cddbd192b8",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer0_member3/primary/C0.json": "eb500652e2ad845523325be80ad3317621f86072a541a883b4cee339f470c11a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer0_member3/committed.json": "60f19e69c9e56f41e75ea308def70fd4d406b72a3707a7efe534f5beb2421c29",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer0_member4/primary/C0.json": "31d82646944e01108ce3d9d92923b9924da5530c9267f18c7c6b39fa09b5a0ff",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer0_member4/committed.json": "ac5efa8cad3d480827c1a5583f739f0195b5fe55141860652aea01d2dfeb84d1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_buildings_fold1.json": "6efcba1d4e91d1145d12fd12cb719dcaffa14b75212b3bffbe150ee7e34a48f4",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer1_member0/primary/C0.json": "ebb6fc82c4082581d8b5619f18f326d34e40d8c4f6a7a6920105042cdf7056c6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer1_member0/committed.json": "af9d800504c817d8fec62a4824e46742cba20d2bd42b168caa541a6408fa7f15",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer1_member1/primary/C0.json": "eed4245650966c1bccca7fd0ef9d382c33a35a1fcaa06106b556cbfdf3de48e5",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer1_member1/committed.json": "9248d53cee35e4912955714a2d1f28812b5b6673f36f805f80fa03b247ec01a8",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer1_member2/primary/C0.json": "6bcefd9217fdfafbe1767cd8290d1acc737da1d6580f5b0f9b761bc70290f296",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer1_member2/committed.json": "e087dd8b1a10d6e85beccc1253557c76c79e56929995648a31461f0bdd9d1de2",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer1_member3/primary/C0.json": "fe8a3edb6a59b24199f801d3ec0267fe7e1c3d30154a7c1a1e3cc878e26ea52c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer1_member3/committed.json": "2244e6826529821bcb473c76341c204f920277cc5e7b3d885a1767925ec5f7bf",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer1_member4/primary/C0.json": "657c2402ac580517e1f9a7d0c93ea7dfaad10d8ecfacdfe64f958c49de616126",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer1_member4/committed.json": "e92092e65dd63170f89c1dbd1017d43af7776e0d0b0254523d77db8e93e54efa",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_buildings_fold2.json": "a2e1797549e9279e6b69312cd3f32d2fe2b3105dccce320ce98607e9ed04712a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer2_member0/primary/C0.json": "1bfd695c6f32fd0c3e57010b2a72f171e71bb2548b2ba15f711324e3af1d68f0",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer2_member0/committed.json": "e5d13a2de3498dc2b9b2adf6b55fa4bf3aadeff945631560b13aa4d459c4ef79",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer2_member1/primary/C0.json": "d0ada79c0f084a0ae8242701046e768e47c1c41b8f4e42dc07d223588cee208d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer2_member1/committed.json": "09210c3db1b46f00a347357258816527d93e4765266d272d5d765b322826178b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer2_member2/primary/C0.json": "fae38b8e3d975cb756a39ea6e48b57629098a48dc68a202285277c86f6798368",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer2_member2/committed.json": "ca425ed678cf4b70d64e26edf0c2047622f998854f973c22e5719c15b7d0364b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer2_member3/primary/C0.json": "3f67f0771d30bde3f50b95a9af2ae6fa1a54bf6c9d28fee0d1f035cc8aa71eed",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer2_member3/committed.json": "46fb3f10c3d4e5c949fb9b9478e02b63d0429c275d0784d2c96ff6608b538f69",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer2_member4/primary/C0.json": "6ad0607f6ff9cf9628613dac66705d552be214b62985e080d3968b8f6d3c9fa2",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer2_member4/committed.json": "f13399af93af4a31a829a20535bbcdf9126d9136762d4d139fce6ca3bf461fef",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_buildings_fold3.json": "2f69262774a2121fd399884c527cb138cb62330ce85d8c40bcafd725220d29a7",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer3_member0/primary/C0.json": "33e29c74f53a7d3f17675d36166e680aae13476b18e9413709176352d0022476",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer3_member0/committed.json": "7e158dc52538270b856c7d00510bd27cbac1b5901ef86d6a3b96da593cce34c5",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer3_member1/primary/C0.json": "0955515d4cbfbdb3a418e1309998566c1a5cf0fcfc3661232de47232e6e6a04b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer3_member1/committed.json": "a910fee011d63c9663cc63c030e7b2ee191ab086f4e41168d4c5d0f8d605da29",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer3_member2/primary/C0.json": "0db54ff22de888a827accd00fae28a4a6a0532bf97549c8894dfe162bef61406",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer3_member2/committed.json": "af3f888994c71282b2ead36e43171b703339fab23fcb8567797ca5bb10196973",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer3_member3/primary/C0.json": "2b8f5c6d85630269b6f132c4ee4bbe8d757e2dce4de08b80b261feb711739092",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer3_member3/committed.json": "e7af896e62afd3c16fbbfb4b430664fa8fe25b8d2da890aaba8fdc1bcb5793fc",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer3_member4/primary/C0.json": "4094cace01e85e8ca8a8f27faf3507fe7aa20bae4dc9ad7d165a4fe6a67d98c9",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer3_member4/committed.json": "e49cba19fd9c56e03cbd62a065598e2db85d94cc2899ee281c2bebb2488277c6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_buildings_fold4.json": "9cae2e3ec161fc2453df41ad8d2916b85b97ff7fb37037f7f9ee4f2d7be3a127",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer4_member0/primary/C0.json": "1b0abd859dc1126f1b5cb7be95adcdc8947b7a9b7274a550416d8ff29df99a2b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer4_member0/committed.json": "7c232af714cf0d3dfccb87fbfc2fe748fb69aa800288eb575fb936a4957aa328",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer4_member1/primary/C0.json": "78a4dd62acff9367222f6d6013117f7619df438f7ba6ffc2327ce7f89bd3e0d0",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer4_member1/committed.json": "58c41c252e7718ecb406afc4cf97e495077771a920e87361944043f8bbd49a36",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer4_member2/primary/C0.json": "0f0abbdeb368f91498d07e6f61657e10177df555048e936c598b6923b05aa528",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer4_member2/committed.json": "2f81d851d5e8445f77ab75602448f654131138f0710b058c5d22950f69da5c93",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer4_member3/primary/C0.json": "9335079f70068a94a2952b16be2ab64480efbaac47d41efe953ead0c4e034eaf",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer4_member3/committed.json": "2bad25b7a02e9b525bc082f02592ab8a9a4f13457cad989d3f9ff91483c6bed8",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer4_member4/primary/C0.json": "d0ba830d41cdbc3940079c67676b1bcae5f4c3e9c37975dca1f25aed65b7a147",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_buildings_outer4_member4/committed.json": "63a50bec10253be938f723a6ca802b70fc2973e1a098f9c663994119693602b2",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/canonical_contents.parquet": "1fb354c30f8f093903203d896abcc6cfef3f0696677b3f6d7daa2edf67c35092",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/target_contents_three_seed_components.parquet": "b5a4f11aee1fcfa643f6e8205b024fc930badbb74c9f7ecf3c756112282bb6c5",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_contents_fold0.json": "3e17ec76549baac258553ce7a46bd298f01b10d56a18238180d1c2e2e395197d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer0_member0/primary/C0.json": "8a1cc00a5da4159e7f3ec37a997c5511432c4e70f34aab7c81cc5a39ec60a01b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer0_member0/committed.json": "575521926de74fdcf3ffd1705b00421b353081486ab07f7872060b6b4ea9b48e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer0_member1/primary/C0.json": "534281b16d64564d13296550fd94101cddf7b2f9c1ee9c8d53cd594ce49ae63b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer0_member1/committed.json": "01dc300200ed766c33d732bd1db019cd37a0f741439a30fcb163b558a824acf1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer0_member2/primary/C0.json": "eac284263819977af0b701665e41311550ad44737a0c14c73d3252d5570c7da9",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer0_member2/committed.json": "86b0cbd610f950de789d4ec7b2abd00bf253da071b0edfff48057bfeffce3086",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer0_member3/primary/C0.json": "140f1e2bdee126c4b5c00ecbd09365d7dda3a6a812fc062215c508733ad7e80b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer0_member3/committed.json": "75f4a973e871a094d9b39e156896346131146d522cd2338173347307edf00ef4",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer0_member4/primary/C0.json": "031a623af5414b80bb32f076cd77a25889816a6cb33792d071042d2669107191",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer0_member4/committed.json": "2b9e45bce07c26b68dced4e164a31a4fc63cd919898edd1006186018c209ee5d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_contents_fold1.json": "0f1df633d131bd3c4fabce1914cb241f2ad99a1f0035a73da299f5aa74e962cb",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer1_member0/primary/C0.json": "a203796bf3e67ae59b738ec63100a5b38209f44659d254fcc48571dcdc650866",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer1_member0/committed.json": "021953a57dbaaacb024ac3a2bd8da359133ef80611553a8987962c6559dfe8e0",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer1_member1/primary/C0.json": "1a79208ff1f2fee9c83af10b1b8c309e259ad05b1b5deabf6b088651a9f2cdc1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer1_member1/committed.json": "0967c2f2f0a04d104132bd877d62bb98996f220cbab5313053790b110136f6db",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer1_member2/primary/C0.json": "87e7e362df4a423ca8022acdc9deca9831c684f837a002d4f3739dca24c078c1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer1_member2/committed.json": "098da76f960411a3fa5dd10bc365bb2dc94c2352f07f8249178ba2d113dc3a5c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer1_member3/primary/C0.json": "df7414a0a446763b61d08953b664d9279a0c622f8d476c658821826e564acdc8",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer1_member3/committed.json": "daf90fb5cd32931750fa877f70acc2a9c7ddcd1dbdf26c3a5d4cdc1868e440c6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer1_member4/primary/C0.json": "0f376e1846d2e4bf47ce356ce2e7de5752077186f697ef4d4e3815179099fdfe",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer1_member4/committed.json": "12351593d96339304d84e030a7a15b1e73e1518dc48a5b7e0eeeae5594af4774",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_contents_fold2.json": "5632e4076f539f3ef4b55e972f80a006e720b83e9b986667b7377eb3045681aa",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer2_member0/primary/C0.json": "9c5a6ef97bef3d5c41f5135cdd53a1637902c37747c5843fc1226b333fe88b59",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer2_member0/committed.json": "f7979a9b990281b3151b554360a35e358902d02889ffb13aeb33eafa178f4059",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer2_member1/primary/C0.json": "35a2bef57e383ceb32a94f85ee9883723e294f7a02734aff0683ceaf174aeac4",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer2_member1/committed.json": "bdcf87f08083116ff20b70dad8dd4d542f70ee1a1c22836b5e96094b7fb7e213",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer2_member2/primary/C0.json": "1f0f45c6d41614f1941e2e7ad5aafe506461406f50be58a1831285f3a91e4fb5",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer2_member2/committed.json": "91202fed6aed3e41ef33cfe5322bb58346b37ec344204a5302916c5fd0a754ef",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer2_member3/primary/C0.json": "a416a3fa628fec0cef64f6f1fbb2b547da369649c19f6fc36265eb678b643982",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer2_member3/committed.json": "b57fc2338fea7c1af89118f4e30c932b2daa81adc18f52d195ec761dd8af8d07",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer2_member4/primary/C0.json": "519aa47f9ebdc797c5d3c7b7ad5d49b38b0e22da25ef16fe94661b44a7614391",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer2_member4/committed.json": "65b9edc3b11e0d500b2c7d45ba8c3a2ead1f870d250ef9622dbdc508baf4b5bd",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_contents_fold3.json": "8a25af0b73ab8d7c8da967cd77a0b8500eff532a7b95a03755d7556a9a4c9e34",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer3_member0/primary/C0.json": "7a5edac091d089fb3d35b895c2bba74ada5cf83731982f9e0efddcb3c43fda43",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer3_member0/committed.json": "06eb2aebc94c501b4545a39a14e12cab669a4811b65f7d70f2416eff5d46c50d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer3_member1/primary/C0.json": "81a69d4d0bb9910f98afc51097fedab2424e47cf2aad59126317f1fe0b42039d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer3_member1/committed.json": "af50c4c0ecec538048b30d0e71680fc99d1c5bf78d81f5ad0f68cfa0dba66255",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer3_member2/primary/C0.json": "a91dd1e4415d0f4cb618450ac2f91dddfdecda7c1d023b001147d0aa9e50302f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer3_member2/committed.json": "6d885eab4f394ccc1853928ea4e0a0d46550efea949afc39867c04d7a9706291",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer3_member3/primary/C0.json": "9c66c496212fe13868b3f01c7a299c997f7db4b821273b72eac4b326e8f6842f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer3_member3/committed.json": "041ab0688bbe337d84afe2b902e1e5e855aaa34fbf58f02db1680541d4486583",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer3_member4/primary/C0.json": "147fc0513fa9a7cce591bcb2479a3178508ccd40d29c6761d53a0e171042a1ca",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer3_member4/committed.json": "6a818b6d1baa7bd961ee18628b101706af8627eab3498d1f08e4d6a093f1de9d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_contents_fold4.json": "f66f8b61d13e44d34de86ee1cf90b8ce529442f852ffbae0180f50ed0ba5a998",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer4_member0/primary/C0.json": "6c185c012da913540bb4505727872e26d809ae27be8c573218fbd8a23c95ec25",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer4_member0/committed.json": "0b021447b068a7fdd2374a58e333f1085134988af4074b455f2e073aa3536f12",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer4_member1/primary/C0.json": "2998ce3e54b47cb0db7c3d83c01dbe8c6a0ba8a6a52b5dccdb367cd8d9ad1ae6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer4_member1/committed.json": "442e42aaafa5fd64068bab22a9bcfdf991cae4b869bf1bf56a30e84600a45f2b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer4_member2/primary/C0.json": "70b7f8efa4b5960a645494c2fc0de549d4ee339db44ab5dbb259c926b60a3f6d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer4_member2/committed.json": "cf6b8aba56de44a043063a43815a1609834a4b4be606b451286131d8e767254d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer4_member3/primary/C0.json": "3fb8b794bb8301093248177fa02d7b194d028e4d4cc347a23c6473407d61dfd3",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer4_member3/committed.json": "e8a57fb1c9eb11811dc03689588256f8743ab3deee718b3f25947f1e60834835",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer4_member4/primary/C0.json": "3fc6fac12a480a45dc211d5dd532f8a230f3b3d9b7b5bc79622b95e2b6619af6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/scope_contents_outer4_member4/committed.json": "cb7006db1963f3ac273ba16cb3b83d28787b2f6a03a3299b3223738d0f6eb947",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/inner_groups_outer0.parquet": "55ac0eefda71864b39d1f1eeb2a7f4276628610f7dbd3d444d04add4f81c75b7",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/inner_groups_outer1.parquet": "93d5b090f6b9ae8779a9becb0dac33ea9ef45eab64b57431a5f6656460520d45",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/inner_groups_outer2.parquet": "5f9b38679d67f9a44cf0ee95d4c2bdf6383d6fec4eb23eb6c4ec92f044d4dcb6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/inner_groups_outer3.parquet": "f8754451c0d6317c38f576901abdcae75bb8c5f28de1b6f610c563f0f93cc7b4",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/inner_groups_outer4.parquet": "8d6fbab41d8d510474f8b3a1570a15923952068180150a4535f1dd6af8a7f0c4",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P5_recalibracion_reservas_H1_20261026_v1/synthetic_report.json": "4e9f8266c07a983caeddaf79c9e757b82379633409c0cff5c7102e9783bc5805"
+  }
+}

@@ -1,0 +1,274 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T06:05:43.272326+00:00",
+  "hypothesis": "Missing numerical f/s outputs prevent isolating FSp from the received composite F4c residual factors. Recover the existing two-line source producer, not new architectures or another round search.",
+  "necessity": "Selected received roots contain code/metadata/CSV but no numerical FSp Parquet or saved Boosters. Inventory and196feature/18scalar checks are archived.",
+  "reference": "No predictive comparison or candidate promotion in this recovery; preserve F3c/B00 and buildings models already completed.",
+  "source_years": {
+    "dev": [
+      2021,
+      2022,
+      2023
+    ],
+    "prod": [
+      2021,
+      2022,
+      2023,
+      2024
+    ]
+  },
+  "target_covariates": [
+    2023,
+    2024,
+    2025
+  ],
+  "no_target_response_loaded": true,
+  "climate": {
+    "dev": {
+      "source": [
+        2021,
+        2022,
+        2023
+      ],
+      "target": [
+        2023
+      ]
+    },
+    "prod": {
+      "source": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "target": [
+        2023,
+        2024
+      ]
+    }
+  },
+  "history": "historia2 explicitly: [min(inception,V)-365days,min(inception,V)), V=2024-12-31",
+  "parameters": {
+    "f": {
+      "objective": "poisson",
+      "learning_rate": 0.08,
+      "num_leaves": 31,
+      "min_data_in_leaf": 1000,
+      "feature_fraction": 0.8,
+      "bagging_fraction": 0.8,
+      "bagging_freq": 1,
+      "lambda_l2": 10.0,
+      "max_cat_to_onehot": 8,
+      "cat_smooth": 50,
+      "verbose": -1,
+      "num_threads": 2,
+      "seed": 20261026
+    },
+    "s": {
+      "objective": "gamma",
+      "learning_rate": 0.05,
+      "num_leaves": 15,
+      "min_data_in_leaf": 200,
+      "feature_fraction": 0.8,
+      "bagging_fraction": 0.8,
+      "bagging_freq": 1,
+      "lambda_l2": 10.0,
+      "max_cat_to_onehot": 8,
+      "cat_smooth": 50,
+      "verbose": -1,
+      "num_threads": 2,
+      "seed": 20261026
+    }
+  },
+  "rounds": {
+    "motor": {
+      "dev": {
+        "bodily_injury": {
+          "b0": -4.505460049060101,
+          "rondas_f": 110,
+          "rondas_s": 20,
+          "n_dev": 6334,
+          "sev_media": 22292.443986422484
+        },
+        "glass_hail": {
+          "b0": -3.921587622671649,
+          "rondas_f": 132,
+          "rondas_s": 10,
+          "n_dev": 11623,
+          "sev_media": 1051.503547276951
+        },
+        "own_damage": {
+          "b0": -2.7716370786563553,
+          "rondas_f": 237,
+          "rondas_s": 98,
+          "n_dev": 36722,
+          "sev_media": 1799.431243157866
+        },
+        "theft": {
+          "b0": -4.845491298154555,
+          "rondas_f": 93,
+          "rondas_s": 12,
+          "n_dev": 4616,
+          "sev_media": 6217.1724783362215
+        },
+        "third_party_prop": {
+          "b0": -3.1425914004203253,
+          "rondas_f": 166,
+          "rondas_s": 20,
+          "n_dev": 25337,
+          "sev_media": 3548.112282827485
+        }
+      },
+      "prod": {
+        "bodily_injury": {
+          "b0": -4.508443781796677,
+          "rondas_f": 118,
+          "rondas_s": 10,
+          "n_dev": 7512,
+          "sev_media": 21592.512392172524
+        },
+        "glass_hail": {
+          "b0": -3.909570908920481,
+          "rondas_f": 129,
+          "rondas_s": 25,
+          "n_dev": 15643,
+          "sev_media": 1087.2816403503164
+        },
+        "own_damage": {
+          "b0": -2.782516507117351,
+          "rondas_f": 260,
+          "rondas_s": 90,
+          "n_dev": 48259,
+          "sev_media": 1856.7432239214224
+        },
+        "theft": {
+          "b0": -4.851329739430091,
+          "rondas_f": 96,
+          "rondas_s": 31,
+          "n_dev": 6119,
+          "sev_media": 6301.433856839353
+        },
+        "third_party_prop": {
+          "b0": -3.155467531114231,
+          "rondas_f": 189,
+          "rondas_s": 69,
+          "n_dev": 32963,
+          "sev_media": 3682.624716196948
+        }
+      }
+    },
+    "contents": {
+      "dev": {
+        "accidental_damage": {
+          "b0": -4.175190149913813,
+          "rondas_f": 110,
+          "rondas_s": 42,
+          "n_dev": 6774,
+          "sev_media": 768.1066327133157
+        },
+        "escape_of_water": {
+          "b0": -4.699901934625764,
+          "rondas_f": 108,
+          "rondas_s": 35,
+          "n_dev": 4004,
+          "sev_media": 2713.720364635365
+        },
+        "flood": {
+          "b0": -5.859951469948436,
+          "rondas_f": 144,
+          "rondas_s": 81,
+          "n_dev": 1254,
+          "sev_media": 9705.426714513556
+        },
+        "theft": {
+          "b0": -4.35668966696481,
+          "rondas_f": 81,
+          "rondas_s": 36,
+          "n_dev": 5650,
+          "sev_media": 3536.64668318584
+        }
+      },
+      "prod": {
+        "accidental_damage": {
+          "b0": -4.169005645037953,
+          "rondas_f": 119,
+          "rondas_s": 44,
+          "n_dev": 9063,
+          "sev_media": 782.0003034315348
+        },
+        "escape_of_water": {
+          "b0": -4.687037230067917,
+          "rondas_f": 148,
+          "rondas_s": 43,
+          "n_dev": 5366,
+          "sev_media": 2738.5326071561685
+        },
+        "flood": {
+          "b0": -5.886192555491638,
+          "rondas_f": 133,
+          "rondas_s": 135,
+          "n_dev": 1615,
+          "sev_media": 9978.75276780186
+        },
+        "theft": {
+          "b0": -4.344556724079375,
+          "rondas_f": 77,
+          "rondas_s": 59,
+          "n_dev": 7626,
+          "sev_media": 3650.624723314975
+        }
+      }
+    }
+  },
+  "offset": "Reuse saved b0/mean mark and original max(source_E_cost/source_exposure,1e-4); no CDF/C0 estimation.",
+  "semantics": "Cost-completion Poisson f times observed positive mark s is a cost proxy. f already includes calendar period exposure once; never apply future cp=0 to an ultimate price.",
+  "criteria": [
+    "Pinned sources unchanged",
+    "36saved models and keyed per-row f/s/raw fields",
+    "Exact save/load and row-order replay",
+    "Independent sum of tree leaves and exponent/offset/exposure arithmetic",
+    "All outputs finite/positive and source/count row alignment exact"
+  ],
+  "budget": {
+    "source_component_model_fits": 36,
+    "new_early_stopping_searches": 0,
+    "new_C0_fits": 0,
+    "new_target_price_fits": 0,
+    "new_calibrations": 0,
+    "new_scores": 0,
+    "new_aggregated_price_CSVs": 0,
+    "new_submissions": 0
+  },
+  "reconstruction_not_exact_original_tree_replay": true,
+  "predictive_admission": false,
+  "B00_all_alternatives_preserved": true,
+  "2024_open": true,
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/recuperar_productor_FSp_MC.py": "030acb7c9181ad70e251ea22c60744d2c28bf69babb6240d85f65b733b47ce11",
+    "Hackaton/Repositorio_IAA2026/herramientas/recuperar_productor_FSp_edificios.py": "7130268160c9358b9b093afb34aae80ce70f7bcc91f75d20c4fb5d957dde493e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/report.json": "1eb30a82f589d4c1e16228c76b53792b92fd833157a46a1ef93786af36e21a83",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/received_output_inventory.json": "fe3ff67f66cb194d6627e6cb22b7fbb2cdea8571c2a59573566ccca7ed7667e7",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/matrix_motor_source_prod.parquet": "424e64a23793c28c1f743abf2c2a23b296d15f2e75ef5890a809532de215968b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/rows_motor_source_prod.parquet": "65641c29adca996e1c4ca4058f0c35b1d6c2745dd23287102dbd6b050856ae2b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/matrix_motor_target_prod.parquet": "7d75c1d4f78554e13f55f75660e7f7f1bbd7658f0fbbb72ab963b088737f5c8f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/rows_motor_target_prod.parquet": "51507b77e87394815556b017cbaa80a5ced447bbed50a7dfbc9a694ba429b556",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/matrix_motor_source_dev.parquet": "121905c6966f0ccab3fcdd134bf5c476dbd204cd43f4166a88697cb0018277ce",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/rows_motor_source_dev.parquet": "6cfd844e7d8b1ef40d501f85531d63423be16fef2305bfe1fe11577ec021acf8",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/matrix_motor_target_dev.parquet": "b393a8076b6cea11bf03aa9f045265f70a2612302809821e170109b9667baf49",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/rows_motor_target_dev.parquet": "51507b77e87394815556b017cbaa80a5ced447bbed50a7dfbc9a694ba429b556",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/matrix_contents_source_prod.parquet": "6a68de36e8b6a0debafca2cdf713dc3ff286ae8c6bb0d48fe4774094ceb9e086",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/rows_contents_source_prod.parquet": "9ee14a7f9b793fae19f91a52e3d3bcf02adbc7a04d0dd03723ac04282cedca8a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/matrix_contents_target_prod.parquet": "8d91f0237ed7eb3b5399898dfb99f73f0953408ced510ab8b63d9893963a91cf",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/rows_contents_target_prod.parquet": "852d5ab062877322d10c1d35b8bdb7a0baccfb851b86a288646a81e019f97e03",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/matrix_contents_source_dev.parquet": "2071f54c5dcc2c50bf7dce860a68bbb288aa5ec4c82987935be84bcb43697b91",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/rows_contents_source_dev.parquet": "bd5bc9e1e7265194f7e9a0b8e920ee5b049c7ea6378367522cce034e01c88bbf",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/matrix_contents_target_dev.parquet": "37318447d3a31947fc1780ae2a41511401f49040dca30154d1303de7e0b6bb6b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/rows_contents_target_dev.parquet": "852d5ab062877322d10c1d35b8bdb7a0baccfb851b86a288646a81e019f97e03",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/recuentos_fuente2024_v1/counts_motor.parquet": "3488603e1d5ff29535eb6d617fa9b9dc237f19ab5d4fad1d0b8344951371f19b",
+    "Hackaton/Semana 2/Claude/mision017_20261025/exp26_20261026/ml2/trabajo/pred/fsp/motor_meta.json": "3c4f3efaa4985e27b3ddace4889ec3d1cd9b0a780ff5d20d43b36f3e324a155d",
+    "Hackaton/Semana 2/Claude/mision017_20261025/exp26_20261026/ml2/trabajo/pred/fsp/motor_prod_meta.json": "c64b4c747ad7ccbbfb45a473456cae39eff11bcff57fffcd088367318ae5df06",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/recuentos_fuente2024_v1/counts_contents.parquet": "da10794289296fd749b11c26948dbce4fcd5be480d5ad81ff8f432801ed35c50",
+    "Hackaton/Semana 2/Claude/mision017_20261025/exp26_20261026/ml2/trabajo/pred/fsp/contents_meta.json": "1cc7185b4685460b5932f20b4fd5c6cf1715bc0e18ab89344a92115ffe819455",
+    "Hackaton/Semana 2/Claude/mision017_20261025/exp26_20261026/ml2/trabajo/pred/fsp/contents_prod_meta.json": "c6389c2ed3cf8134ccf3db322a6de42313ff7791ac80faeed11b33240a2522fe"
+  }
+}

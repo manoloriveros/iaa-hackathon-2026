@@ -1,0 +1,360 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T13:53:37.853753+00:00",
+  "status": "nested_five_member_H1_correction_evaluation_complete",
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/report.json",
+  "report_sha256": "4c021c0043d121d60386f014b18a553ab689df6b068b09ad1c6e276d60aca6db",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P2_MEDIA_ANIDADA_H1.md",
+  "forum": {
+    "author": "Codex",
+    "id": "COD-S2-20261026-PRIVADA-MEDIA-H1-RESULTADO",
+    "utc": "2026-10-26T13:53:38+00:00",
+    "previous_sha256": "664c0e8274b43cec953395fb815fc118353886f154a54cf79e835732402a1e8a",
+    "sha256": "b1dcb2d53e0a5174a9118ff4619740d8856ec18dcfdf32c7acb85b96ebb45354"
+  },
+  "primary": {
+    "delta": 0.0010384699324265346,
+    "bootstrap95": [
+      0.0005797067645935937,
+      0.0014676670933683337
+    ],
+    "simultaneous95_family": [
+      0.000523079481058477,
+      0.00152578376325356
+    ],
+    "folds": {
+      "0": 0.00019291570508869036,
+      "1": 0.00020989732134285108,
+      "2": 0.00011826345680690906,
+      "3": 0.0002487162171289323,
+      "4": 0.00026867723205915183
+    },
+    "years": {
+      "2023": 5.23766892969254e-05,
+      "2024": 0.0009860932431296093
+    },
+    "cells": [
+      {
+        "line": "buildings",
+        "year": 2023,
+        "NB": 0,
+        "delta_global": 6.675097816629184e-05,
+        "delta_cell_null": 0.00043617143164479034
+      },
+      {
+        "line": "buildings",
+        "year": 2023,
+        "NB": 1,
+        "delta_global": 5.807381918594223e-06,
+        "delta_cell_null": 0.0003966772076304682
+      },
+      {
+        "line": "buildings",
+        "year": 2024,
+        "NB": 0,
+        "delta_global": 0.0002278265111623893,
+        "delta_cell_null": 0.0017695883108308093
+      },
+      {
+        "line": "buildings",
+        "year": 2024,
+        "NB": 1,
+        "delta_global": 1.1581536880754646e-05,
+        "delta_cell_null": 0.0007415185053107389
+      },
+      {
+        "line": "contents",
+        "year": 2023,
+        "NB": 0,
+        "delta_global": 1.650892634804419e-06,
+        "delta_cell_null": 2.0706289633694298e-05
+      },
+      {
+        "line": "contents",
+        "year": 2023,
+        "NB": 1,
+        "delta_global": -2.7719383277783135e-07,
+        "delta_cell_null": -3.455517859306403e-05
+      },
+      {
+        "line": "contents",
+        "year": 2024,
+        "NB": 0,
+        "delta_global": 1.5189596878257118e-05,
+        "delta_cell_null": 0.0001815574620255195
+      },
+      {
+        "line": "contents",
+        "year": 2024,
+        "NB": 1,
+        "delta_global": -1.373980057735388e-06,
+        "delta_cell_null": -9.912051726715841e-05
+      },
+      {
+        "line": "motor",
+        "year": 2023,
+        "NB": 0,
+        "delta_global": -3.2252302979371465e-09,
+        "delta_cell_null": -1.7683074836225664e-08
+      },
+      {
+        "line": "motor",
+        "year": 2023,
+        "NB": 1,
+        "delta_global": -2.1552144359689306e-05,
+        "delta_cell_null": -0.0007309872071441246
+      },
+      {
+        "line": "motor",
+        "year": 2024,
+        "NB": 0,
+        "delta_global": 0.00041136059168319386,
+        "delta_cell_null": 0.0020674868539290263
+      },
+      {
+        "line": "motor",
+        "year": 2024,
+        "NB": 1,
+        "delta_global": 0.0003215089865827497,
+        "delta_cell_null": 0.010648230434775375
+      }
+    ],
+    "post31_delta": 0.00048470876146047755,
+    "worst_single_group_removed_delta": 0.0009317921729000895,
+    "same_level_sensitivities": {
+      "0.95": 0.0010322235887866924,
+      "1.0": 0.0010384699324265346,
+      "1.05": 0.0010450452876518109
+    },
+    "scores": {
+      "base": 0.13736847777423056,
+      "corrected": 0.13840694770665685
+    },
+    "direction_coherence": {
+      "point_positive": true,
+      "lower95_positive": true,
+      "all_years_positive": true,
+      "at_least4positive_folds": true,
+      "post31_nonnegative": true
+    },
+    "worst_cell_delta": -0.0007309872071441246,
+    "diagnostic_gates": {
+      "delta_ge002": false,
+      "lower95_positive": true,
+      "at_least4positive_folds": true,
+      "both_years_nonnegative": true,
+      "post31_nonnegative": true,
+      "worst_cell_ge_minus001": true
+    }
+  },
+  "secondary_nested_minus_frozen_single": {
+    "delta": -6.577222744149542e-06,
+    "bootstrap95": [
+      -2.3174111702752624e-05,
+      5.189067116295842e-06
+    ],
+    "simultaneous95_family": [
+      -2.670863675050909e-05,
+      6.255163973318552e-06
+    ],
+    "folds": {
+      "0": -8.044919642984327e-06,
+      "1": 1.8177759615492589e-06,
+      "2": -1.2266663821956856e-06,
+      "3": 1.989833697269557e-06,
+      "4": -1.1132463777883433e-06
+    },
+    "years": {
+      "2023": -8.035167585365773e-06,
+      "2024": 1.4579448412162318e-06
+    },
+    "cells": [
+      {
+        "line": "buildings",
+        "year": 2023,
+        "NB": 0,
+        "delta_global": -1.1604309342211231e-07,
+        "delta_cell_null": -7.582612806709771e-07
+      },
+      {
+        "line": "buildings",
+        "year": 2023,
+        "NB": 1,
+        "delta_global": -6.02087879073921e-07,
+        "delta_cell_null": -4.1126025800798034e-05
+      },
+      {
+        "line": "buildings",
+        "year": 2024,
+        "NB": 0,
+        "delta_global": -8.842253680403839e-07,
+        "delta_cell_null": -6.8680105201147655e-06
+      },
+      {
+        "line": "buildings",
+        "year": 2024,
+        "NB": 1,
+        "delta_global": 3.486778150930716e-07,
+        "delta_cell_null": 2.232441643496123e-05
+      },
+      {
+        "line": "contents",
+        "year": 2023,
+        "NB": 0,
+        "delta_global": 2.0169299581982017e-08,
+        "delta_cell_null": 2.5297305836169397e-07
+      },
+      {
+        "line": "contents",
+        "year": 2023,
+        "NB": 1,
+        "delta_global": 2.7098656702230587e-08,
+        "delta_cell_null": 3.378137646836557e-06
+      },
+      {
+        "line": "contents",
+        "year": 2024,
+        "NB": 0,
+        "delta_global": 1.3511773439466097e-07,
+        "delta_cell_null": 1.615028570405859e-06
+      },
+      {
+        "line": "contents",
+        "year": 2024,
+        "NB": 1,
+        "delta_global": -3.904442139351533e-08,
+        "delta_cell_null": -2.8167099101139067e-06
+      },
+      {
+        "line": "motor",
+        "year": 2023,
+        "NB": 0,
+        "delta_global": -5.023231270722444e-07,
+        "delta_cell_null": -2.7541033127670605e-06
+      },
+      {
+        "line": "motor",
+        "year": 2023,
+        "NB": 1,
+        "delta_global": -6.861981442081706e-06,
+        "delta_cell_null": -0.00023273882014283374
+      },
+      {
+        "line": "motor",
+        "year": 2024,
+        "NB": 0,
+        "delta_global": 6.301139967434856e-08,
+        "delta_cell_null": 3.166935362994466e-07
+      },
+      {
+        "line": "motor",
+        "year": 2024,
+        "NB": 1,
+        "delta_global": 1.8344076814880496e-06,
+        "delta_cell_null": 6.0754742538990725e-05
+      }
+    ],
+    "post31_delta": -1.2842450733155396e-05,
+    "worst_single_group_removed_delta": -7.230059176052404e-06,
+    "same_level_sensitivities": {
+      "0.95": -9.766101587897692e-06,
+      "1.0": -6.577222744149542e-06,
+      "1.05": -3.5480087672553918e-06
+    },
+    "scores": {
+      "base": 0.13841352492940118,
+      "corrected": 0.13840694770665685
+    },
+    "direction_coherence": {
+      "point_positive": false,
+      "lower95_positive": false,
+      "all_years_positive": false,
+      "at_least4positive_folds": false,
+      "post31_nonnegative": false
+    }
+  },
+  "counts": {
+    "author": "Codex",
+    "utc": "2026-10-26T13:53:37.853753+00:00",
+    "primary_reporting_peril_fits": 375,
+    "adverse_reporting_peril_fits_separate": 375,
+    "primary_frequency_constants": 375,
+    "primary_mark_means_threebranches_separate": 1125,
+    "primary_normalized_mixtures": 75,
+    "primary_closed_scope_learner_calls": 150,
+    "adverse_closed_learner_calls_separate": 150,
+    "unique_closed_price_constants": 3550,
+    "breakdown": {
+      "shape_factors": 1400,
+      "shape_training_normalizers_separate": 400,
+      "levels": 450,
+      "residual_factors": 900,
+      "training_nuisance_levels": 800,
+      "stage_calls": 200,
+      "training_stage_normalizers_separate": 800,
+      "observed_held_stage_normalizers_separate": 800,
+      "pricing_constants_total": 3550
+    },
+    "adverse_recomputed_constants_separate": {
+      "shape_factors": 1400,
+      "shape_training_normalizers_separate": 400,
+      "levels": 450,
+      "residual_factors": 900,
+      "training_nuisance_levels": 800,
+      "stage_calls": 200,
+      "training_stage_normalizers_separate": 800,
+      "observed_held_stage_normalizers_separate": 800,
+      "pricing_constants_total": 3550
+    },
+    "predecessor_v2_primary_curves_reused_not_refit": 5,
+    "predecessor_v2_closed_learners_reused_not_refit": 2,
+    "v3_new_primary_curves": 370,
+    "v3_new_primary_closed_learners": 148,
+    "primary_ultimate_prediction_normalizers_committed": 800,
+    "adverse_ultimate_normalizers_committed_separate": 800,
+    "extra_v2_partial_forward_and_v3_cache_replay_normalizers_separate": {
+      "v2_ultimate": 8,
+      "v3_cached_observed": 8
+    },
+    "synthetic_by_version_excluded": [
+      {
+        "version": 1,
+        "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v1/synthetic_report.json",
+        "sha256": "4643ea59064bcb5b3d113964b64d9ebac4ec29009d5c4f07ad4d41d73487e77e",
+        "reporting_peril_fits": 35,
+        "closed_learner_calls": 14
+      },
+      {
+        "version": 2,
+        "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v2/synthetic_report.json",
+        "sha256": "9c67768a2f4383d8b0f676f1de2b92003efc4b94536e7fd448b62f201d50a05d",
+        "reporting_peril_fits": 35,
+        "closed_learner_calls": 14
+      },
+      {
+        "version": 3,
+        "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/synthetic_report.json",
+        "sha256": "9c67768a2f4383d8b0f676f1de2b92003efc4b94536e7fd448b62f201d50a05d",
+        "reporting_peril_fits": 35,
+        "closed_learner_calls": 14
+      }
+    ],
+    "new_iterative_price_fits": 0,
+    "new_source_models": 0,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/report.json",
+    "report_sha256": "4c021c0043d121d60386f014b18a553ab689df6b068b09ad1c6e276d60aca6db"
+  },
+  "actual_nested_correction_algorithm_validated": true,
+  "actual_F3c_full_learning_replay": false,
+  "new_source_models": 0,
+  "new_iterative_price_fits": 0,
+  "new_final_test_prices": 0,
+  "new_submissions": 0,
+  "submission_allowed": false,
+  "formal_promotion": false,
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true,
+  "private_improvement_established": false,
+  "goal_achieved": false,
+  "next_unit": "P3 private-generalization: inspect and preregister target-observation reserve/tail robustness of the completed nested five-member algorithm, not a new feature/model search. Use saved member C0countCDF/costCDF branches/meanmarks, fixed partitions and source components. First derive exactly what can be reused algebraically and what closed calibration must be re-estimated under changed training labels/exposure. Separate fixed-structure timing sensitivity from target-valuation recalibration and from a full source/model revaluation; do not claim the latter without doing it. Report every declared reserve075/125 and priorBI/subsidencecosttail05/10 convention, NB/REN/line/year, influence and the existing unsupported2025weight sensitivity honestly. No changing splits, thresholds, C0tail assumptions or weights to remove adverse cells; no repeat of finished primary nested assay/bootstraps on identical inputs. Freeze specific new uncertainty, criterion, source hashes/code/cost/forum before new calibration or scenario scoring. H1delivery remains deferred and B00/F3c/all alternatives preserved.2024open adaptive, public secondary, hidden private performance unproven."
+}

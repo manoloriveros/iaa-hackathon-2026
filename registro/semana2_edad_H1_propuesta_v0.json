@@ -1,0 +1,84 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T09:24:55.592660+00:00",
+  "status": "proposal_only_not_registered_for_fit",
+  "hypothesis": "Age correction learned under the old global observation exposure failed. H1changed that exposure and offset materially in NB, including age cohorts. Retest the exact same standard GLM under this changed estimand/offset, not the same sources or a new age/penalty search.",
+  "necessity_evidence": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/edad_H1_cambio_enlace_20261026_v1/report.json",
+  "necessity_evidence_sha256": "dfde74bf98c9106643ca565be0e47d4ae7db94374a13827a69ffa9358c9d937c",
+  "not_claimed": "No new age effect is established by the exposure-only audit. This is an exploratory next test, not a rescue of the old adverse result.",
+  "model": "AGEH1: same5agebands,K300,objective,optimizer and year-nuisance as the archived standardGLM;15newtargetfits maximum. Offset H1, NB-only. RENunchanged.",
+  "configuration": {
+    "years": [
+      2023,
+      2024
+    ],
+    "folds": "saved global components",
+    "training": "NB of non-held groups only",
+    "features": [
+      "policy age band"
+    ],
+    "levels": [
+      "17-24",
+      "25-34",
+      "35-49",
+      "50-64",
+      "65+"
+    ],
+    "new_variables_from_masters": 0,
+    "objective": "half summed Tweedie1.5deviance divided by S plus symmetric ridge on all5agecoefficients",
+    "offset": "log(saved outer H1observed-cost period price), already includes the changed risk-specific observation exposure exactly once; no extra exposure.",
+    "K": 300.0,
+    "S": "sum sqrt(training NB baseline)",
+    "ridge_normalized": "K/n_positive_training_NB_periods",
+    "year_nuisance": "two unpenalized training-year intercepts, not transferred",
+    "application": "exp(agecoefficient), NB-only prediction normalization per held year; REN exact",
+    "unknown_age": "neutral0logeffect",
+    "optimizer": {
+      "method": "L-BFGS-B",
+      "maxiter": 2000,
+      "gtol": 1e-10,
+      "ftol": 1e-15,
+      "maxls": 50,
+      "gradient_guard": 1e-06
+    },
+    "no_choice_of_K_or_bands_from_validation": true
+  },
+  "criterion_combined_vs_G3": {
+    "delta_min": 0.002,
+    "lower95_gt": 0.0,
+    "positive_folds_min": 4,
+    "min_cell_delta_full_null": -0.001,
+    "post31_nonnegative": true,
+    "both_years_nonnegative": true,
+    "additional_veto": "Weighted2025 sensitivity point positive and originalA1_2024 proxy not negative; weighted-primary ESS gate remains failed"
+  },
+  "NB_addition_guard": {
+    "point_nonnegative": true,
+    "both_years_nonnegative": true,
+    "positive_folds_min": 4,
+    "lower95_positive": true,
+    "no_cell_worse_than_minus001": true
+  },
+  "extra_guard": "Weighted2025NBincrement point nonnegative, A1original2024NBproxy point nonnegative; ESSfailure remains limitation. RENgain must not mask NBharm.",
+  "combined_primary": "PUL3: PUL2renewals plus AGEH1NB. Compare combined vsG3and incremental NBvsH1/PUL2; do not choose after scoring.",
+  "budget_if_registered": {
+    "new_real_GLM_fits": 15,
+    "age_coefficients": 75,
+    "year_nuisance_intercepts": 30,
+    "new_source_fits": 0,
+    "new_C0_fits": 0,
+    "new_kappa_fits": 0,
+    "new_source_inference": 0,
+    "new_final_test_prices": 0,
+    "new_submissions": 0
+  },
+  "before_fit": [
+    "Prepare15strictscopeinputs and validate H1/PUL2/C0/kappaancestry, protected membership and agekey alignment",
+    "Verify exact archived GLMengine/config hashes; no need to rerun its unchanged synthetic optimizer suite",
+    "Test the NEWH1/PUL2adapter with no-fit synthetic fixtures, zero-effectidentity and REN/NB routing; full numeric problem poisoning and independent math on newfits",
+    "Freeze code/config/criterion/cost and forum before any new fit or score; preserve every old model/adverse result"
+  ],
+  "2024_open": true,
+  "B00_F3c_all_alternatives_preserved": true,
+  "goal_achieved": false
+}

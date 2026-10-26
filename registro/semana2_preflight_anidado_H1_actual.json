@@ -1,0 +1,39 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T13:34:03.467456+00:00",
+  "status": "P0_bridge_and_P1_nested_support_complete",
+  "bridge_report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/puente_ultimo_observado_H1_20261026_v1/report.json",
+  "bridge_report_sha256": "fecf6ff2250daa41536b81f53a890d35fb3e81e944d49107bbe9162fb21e418a",
+  "nested_preflight_report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/report.json",
+  "nested_preflight_report_sha256": "5e5b2e61a886c0d1964202da46a07db85e14d6a75d9d169935189e956e2ef5f4",
+  "primary_delta": 0.0010450471551706841,
+  "primary_bootstrap95": [
+    0.0005935770105332734,
+    0.0014993235257123756
+  ],
+  "primary_post31_delta": 0.0004909368347482365,
+  "all75scopes_numerically_supported": true,
+  "minimum_notifications": 24,
+  "new_model_fits": 0,
+  "new_C0_fits": 0,
+  "new_calibration_fits": 0,
+  "new_source_inference": 0,
+  "new_final_test_prices": 0,
+  "new_submissions": 0,
+  "actual_five_member_nested_validation": false,
+  "submission_allowed": false,
+  "formal_promotion": false,
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true,
+  "hidden_private_improvement_established": false,
+  "goal_achieved": false,
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P0_P1_PUENTE_Y_SOPORTE_H1.md",
+  "forum": {
+    "author": "Codex",
+    "id": "COD-S2-20261026-PRIVADA-P0-P1-RESULTADO",
+    "utc": "2026-10-26T13:34:03+00:00",
+    "previous_sha256": "a26f54951316bbc4b8c1be141ae405ec929f3b1683a0e6c4c30b26c97647743d",
+    "sha256": "1309a18de4124c94619d54fc16e371b4006064c8e87293233ced7a2ba7ddb50f"
+  },
+  "next_unit": "P2 private-generalization: implement and preregister the full numerical nested five-member H1 correction with P1canonical inputs/saved inner groups. Primary algorithm is fixed P0outerS2ultimate * arithmetic_mean5(U_H1_inner/U_G3_inner) * q_source_outer versus P0outerS2ultimate*q_global_outer. Outer observation adapters are evaluation-only, never member-learning inputs. Use calendar exposure and ultimate stage normalizers only at forward; member fits use original rounded exposure and own C0. 75line/outer/member scopes,375primary reporting-peril fits plus375full-poison-control reporting fits separately,150primary G3/H1closed learner calls plus150controlcalls. No source models, coefficient searches or new capacity. First test full synthetic C0+closedlearning+ultimateforward+mean+observation flow. Freeze code/source/hypothesis/criterion/cost/forum before real fit or scoring. Prove complete outer-held cost/reserve/peril/date poisoning invariance and scalar/metric/bridge mathematics; keep source hashes, fit events and per-scope commits so partial work is reconciled rather than repeated. Report pooled primary result, folds/years/cells/influence and all failed gates; adaptive2023/2024and64percent-vs80percenttraining-size limits remain. H1delivery stays deferred under current execution gate; no quota polling/upload during this local unit. Private-generalization priority from planv1, B00/F3c/alternatives preserved,2024open."
+}

@@ -1,0 +1,113 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T14:50:10.028650+00:00",
+  "type": "P4_conditional_target_year_transfer_complete_H1_mean",
+  "hypothesis": "A correction validated with random target groups over both years may rely on contemporaneous target labels. Test whether the complete five-member H1 algorithm transfers to target2024 when every target learner sees2023only.",
+  "why_distinct": "P2 used pooled2023/2024training. Existing E13annualweather, trend and E27premium-level holdout are different algorithms, with recorded adverse/uncertain results. They are not rerun. This test adds no model capacity or new candidate weights.",
+  "static_review": {
+    "trend_hold_deltas": [
+      -0.0012641297930696682,
+      -0.0016005310040791976
+    ],
+    "annual_weather_hold_delta": 0.00025603561147746756,
+    "annual_weather_hold95": [
+      -0.0025386089821575557,
+      0.0032032405765009763
+    ],
+    "E27_held_T2b": 0.12599104719844045,
+    "E27_held_shrunk_level": 0.12478897819166834
+  },
+  "partition": "Existing five global outer component folds unchanged. Held=year2024&outerfoldk. Outer training=year2023&fold!=k. Each of five members additionally excludes its saved P1innerfold. Every target2024row is absent from all learning, as are held globalgroups. No reassignments or favourable cell deletion.",
+  "valuation_and_source": "Common2024-12-31claim valuation, not a reconstructed2023snapshot. Frozen T2b/A1S/FSp source includes2024and undated master fields; their precomputed profiles are fixed conditional covariates, not proven2023available. Do not call this prospective/pristine or validate source learning with targetpoison.",
+  "training": "Same nominalT0, rounded observed exposure, reverse-truncation reporting, K300NCB/prior/residual and K400business levels. Own C0in every scope, no reuse of pooled-year learned values. S2base also rebuilt using only2023targetresponses: same frozen50/50N3+A1Scomponent and residual stages. No calendarcoefficient, alpha, seed, clipping, feature or hyperparameter search.",
+  "algorithm": "Outer S2ultimate trained on2023outertraining * arithmetic_mean5(U_H1member/U_G3member), all members trained on their2023innertraining. Ultimate forward uses calendar once and ultimate prediction normalizers. Outer2023onlyC0evaluation adapter applied aftermean; baseline qglobal, correction qsource. Outer C0never an inner learner input.",
+  "contrasts": {
+    "primary": "nominal complete H1mean versus freshly2023calibrated S2base",
+    "secondary": "five-member mean versus2023outertraining single H1/G3correction",
+    "sensitivity": "All four frozen P3areserve/tail conventions with identical fitted ultimate prices; no valuation-specific recalibration"
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 2026102631,
+    "unit": "unchanged global customer/address component",
+    "joint_contrasts": 6,
+    "family": "exploratory Bonferroni6"
+  },
+  "criterion": {
+    "diagnostic_delta_min": 0.002,
+    "lower95_positive": true,
+    "positive_folds_min": 4,
+    "post31_nonnegative": true,
+    "all_nominal_and_four_stress_line_business_cells_floor": -0.001,
+    "not_applicable": "Both-year held gate cannot be tested with held2024only. Report this absence, no synthetic zero gain2023 or substitute approval.",
+    "no_formal_promotion": true,
+    "no_automatic_submission": true
+  },
+  "controls": [
+    "Whole actual2024claim/T0/reserve/peril/datepoison and savedartifact/ultimateprice exact equality for all90new scopes",
+    "No inherited pooled-year target calibration, source inference or oracle multiplier input",
+    "Exact training row/group digests and complete key coverage, integer cents ingestion",
+    "Independent scalar Tweedie moment, observed/ultimate bridge and mean arithmetic, standard metric check, immutable SHA",
+    "Synthetic exact same yearfiltered entrypoint with all3ramos and actual types"
+  ],
+  "budget": {
+    "target_outer_scopes": 15,
+    "inner_member_scopes": 75,
+    "primary_reporting_peril_fits": 450,
+    "adverse_reporting_fits_separate": 450,
+    "primary_closed_learner_calls": 195,
+    "adverse_closed_learner_calls_separate": 195,
+    "primary_price_constants_max": 5000,
+    "new_iterative_source_models": 0,
+    "new_source_inference": 0,
+    "new_final_test_prices": 0,
+    "new_submissions": 0
+  },
+  "limits": [
+    "Adaptive inspected2023/2024; one heldtargetyear and reduced training support do not reproduce production2025",
+    "Frozen source2024and final2024valuation exclude a prospective2023asof claim",
+    "Complete feasible S2proxy, not exact deliveredF3c; unidentified delay-tail/reserve/sourceprofile assumptions persist",
+    "2025newbusiness composition support/ESS failure remains; weights sensitivity cannot rescue failure",
+    "No private performance guarantee or independent professional validation"
+  ],
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true,
+  "submission_allowed": false,
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/validar_transferencia_anual_H1.py": "4adf19918e974ac840c54d2da57d36fb98b16017830f0491a8201e95a1cf0213",
+    "Hackaton/Repositorio_IAA2026/herramientas/evaluar_media_anidada_H1_v3.py": "e3fb55db71f751d3a7a3c29661c9984245549403cc2b0cb10ddc547c8e50efe3",
+    "Hackaton/Repositorio_IAA2026/herramientas/contrastar_enlace_HET.py": "84245ba43e64af75b9f487a23c09bd298236d64bec82135b1428766c8a863bd3",
+    "Hackaton/Repositorio_IAA2026/herramientas/mision017_fase2_tanda2.py": "70442fc1e28fc6b2e8fc153381fe96b6c3997bd5adf4b5be69e96f5881bfeb45",
+    "Hackaton/Repositorio_IAA2026/herramientas/mision017_fase2_tanda10_factores.py": "eed943325d39fc1c9be616bf943a9822bafaa02ee592d8e006091b53328ff501",
+    "Hackaton/Repositorio_IAA2026/src/semana2/variables_ultimo.py": "9f40d75e5b0ffafddc9ae6547df8b826825026e88d5f8aabd0258b88bbd0fec2",
+    "Hackaton/Repositorio_IAA2026/herramientas/validar_nucleo_completo_A1S.py": "2f2e6fa98cd7797615be33040fb5b35da69c95cc480e26ec07ebc858c82b912f",
+    "Hackaton/Repositorio_IAA2026/herramientas/sensibilidad_congelada_media_H1.py": "0815f7dc98ad202ba4577f88372ab40aff1cb88568ecff1fde33c7ad32bf9e44",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3/claim_assignment_audit.parquet": "81be34c36682c10e1c02b3592b80c588b1ace1f734521a379fb6809bf3f63a8a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3/target_T0_and_stresses.parquet": "114dd8ae8048a04530855c7be8f8e718ebd9fe969f491c4513fc1fadbd0bcca6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P4_transferencia_anual_H1_20261026_v1/preflight.json": "62bac08ff39de157184db3a0122b803efe0629e04134c8cd2f0a75d04d55920b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P4_transferencia_anual_H1_20261026_v1/synthetic_report.json": "efbc9ebdb1dc9bfa2a58aec469f265967051b3c0388eca9bdd0e6b74f7ab8fb1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/H3B_mezcla_negocio_20261026_v1/report.json": "525a39e542efb20d97e8b3b825482d4e2e69ac4dbd11bab529bb98999bbc126e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/report.json": "4c021c0043d121d60386f014b18a553ab689df6b068b09ad1c6e276d60aca6db",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/estimando_cartera2025_v3/weights.parquet": "cb14dff16c82b83195b17a100c4e8eae62a01622129a7c757968b2ca10c8a486",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/estimando_cartera2025_v3/report.json": "aeac7a539813c6b72f6d12a184bb41430f52b8d367b76ccac57daa4aef1d4581",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_mision_privada_plan_v1.json": "3329dbc7fe931d71e1e945bdf536fd9d810040f2626709f3d103c2dc5cdd7876",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_control_entregas_codex_actual.json": "09608aa42f7784e13787e5a7bfd1d324afcc922041a492048b04fb03cc7820cf",
+    "Hackaton/Semana 2/Claude/ml_independiente_20261023/codigo/tendencia.py": "0f52906e26a2c9898b3c8da9c5bbc0c464e626f29f50cedb80ea5cb405732524",
+    "Hackaton/Semana 2/Claude/ml_independiente_20261023/codigo/e13_clima_anual.py": "f5c735ffe5baccc5218ecd30c0dad3d135b75fe9451dbd000997a4fad9d2c9a8",
+    "Hackaton/Semana 2/Claude/ml_independiente_20261023/codigo/e27_backtest.py": "0d592204e2d86f9652ff0f6b03511409a2edd3d268e2a518a5ae3f18f680dce0",
+    "Hackaton/Semana 2/Claude/ml_independiente_20261023/hold_prueba_tendencia.json": "ad6c5fe34a32aaa2171b080ad7866b1433bbaa9794bbe9ea089191f0e029ce33",
+    "Hackaton/Semana 2/Claude/ml_independiente_20261023/e13_clima_anual.json": "20cdc19a7be3b714b6da1fbbafdb43f95478663681fc7b4273578f421a208bb5",
+    "Hackaton/Semana 2/Claude/ml_independiente_20261023/nivel2025/e27_backtest_2024.json": "8eab3e9cf0e1a619f4d46198af3a82f6b81883008d2cf9f929f3f3a7af34d9e0",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/canonical_motor.parquet": "263f5a20d9048b4e035f311b6f3d9c7bb79499bd190dea879afdc45680fa29d5",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/target_motor_three_seed_components.parquet": "56939d171177c2279b94f10ffe46d3fa3ac01cc0770dc8c7b648f9f16819c60a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/canonical_buildings.parquet": "e76a5d07cb7f0c6aaaa061762f48c5b1012eeda48d0b40f9ba238f56676b6e1e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/target_buildings_three_seed_components.parquet": "d6f6ed12b1846fa7fa5a490af4e6fcd8b790d17492bfc277e41b27a751743669",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/canonical_contents.parquet": "1fb354c30f8f093903203d896abcc6cfef3f0696677b3f6d7daa2edf67c35092",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/target_contents_three_seed_components.parquet": "b5a4f11aee1fcfa643f6e8205b024fc930badbb74c9f7ecf3c756112282bb6c5",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/inner_groups_outer0.parquet": "55ac0eefda71864b39d1f1eeb2a7f4276628610f7dbd3d444d04add4f81c75b7",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/inner_groups_outer1.parquet": "93d5b090f6b9ae8779a9becb0dac33ea9ef45eab64b57431a5f6656460520d45",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/inner_groups_outer2.parquet": "5f9b38679d67f9a44cf0ee95d4c2bdf6383d6fec4eb23eb6c4ec92f044d4dcb6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/inner_groups_outer3.parquet": "f8754451c0d6317c38f576901abdcae75bb8c5f28de1b6f610c563f0f93cc7b4",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/inner_groups_outer4.parquet": "8d6fbab41d8d510474f8b3a1570a15923952068180150a4535f1dd6af8a7f0c4"
+  }
+}

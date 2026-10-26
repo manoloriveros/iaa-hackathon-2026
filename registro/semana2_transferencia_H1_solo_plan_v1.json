@@ -1,0 +1,68 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T10:35:25.786784+00:00",
+  "type": "standard_H1_only_cross_base_ablation_no_admission",
+  "motivation": "The local H1 correction has positive post31; adding REN FSp ultimate shape creates concentration failures in PUL2. Isolate H1 rather than tune REN powers or add capacity.",
+  "primary_base": "S2 source-safe frozen complete-core ensemble",
+  "secondary_bases": [
+    "S0 source-safe A1S calibrated",
+    "S1 fixed half A1S half T2b"
+  ],
+  "conditional_auxiliary": "Original A1 2024 only; original observation ancestry not fully independent and not a full F3c replay",
+  "operator": "T_base_i = base_i * saved_H1_i / saved_G3_i; same own-held scope, no new REN normalization or FSp shape, no tunable weight or level.",
+  "comparators": "Same base uncorrected; report previously completed full PUL2 operator by reference only, no rerun or rescoring.",
+  "response_metric": "Unchanged T0 period costs; Tweedie D2 power1.5,109296 held2023/2024 rows in existing global5folds.",
+  "criterion": "Diagnostic readiness: positive point/lower95, both years positive, at least4positive folds, nonnegative post31 and no cell loss beyond.001. Formal minimum gain.002 remains unchanged and must be reported separately, never relaxed. Report every declared base even if adverse. No admission or upload from this audit.",
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 2026102614,
+    "unit": "saved connected global components",
+    "joint_three_bases": true,
+    "family_interval": "exploratory Bonferroni3"
+  },
+  "level_sensitivity": [
+    0.95,
+    1.0,
+    1.05
+  ],
+  "controls": [
+    "Exact shared row/order/target/year/group/fold/cell alignment",
+    "Independent log-domain multiplication on sampled real rows",
+    "Key-shuffled real flow must recover identical prices",
+    "G3 operator algebra recovers cached H1 within floating error, with no repeated base statistics",
+    "Pin completed samefold learning/report sources, unchanged hashes; no fit or new inference"
+  ],
+  "budget": {
+    "new_model_fits": 0,
+    "new_C0_fits": 0,
+    "new_calibration_fits": 0,
+    "new_source_inference": 0,
+    "new_adjusted_historical_price_rows": 387090,
+    "new_prediction_normalizers": 0,
+    "new_final_test_prices": 0,
+    "new_CSVs": 0,
+    "new_submissions": 0
+  },
+  "limits": [
+    "Adaptive ablation after inspecting PUL2 concentration; intervals are exploratory, not independent confirmation",
+    "Operator transfer assumes a proportional correction; not a complete F3c held replay or nested ensemble validation",
+    "No identification of true ultimate shares, late claims or reserve adequacy; weightedESS failure persists",
+    "Prior PUL2 adverse results and failed age extensions remain intact"
+  ],
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true,
+  "submission_allowed": false,
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/auditar_transferencia_H1_solo.py": "ea7aeaf35e40a9165a4908d299a625658088f73287e7d61809d1855f34512e56",
+    "Hackaton/Repositorio_IAA2026/herramientas/auditar_transferencia_PUL2.py": "db61ff50308afa675115f47de2829624adc292df0f64952f60a71e1dba278100",
+    "Hackaton/Repositorio_IAA2026/herramientas/glm_discrepancia_A1S.py": "c26d974044dfb3c5fc6488850abed36b3763c1a5466d21409869539a764548d6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/forma_ultima_PUL_20261026_v1/oof_2023_2024.parquet": "e667884530bd18115979799636f0943f8e2d0875b8fbb3b22de43af589c3782b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/forma_ultima_PUL_20261026_v1/report.json": "a0ec3043b9e71b1e3f969c61e15a295ca21339cd0ff1494308e8cf3716914934",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/enlace_HET_20261026_v1/report.json": "cb98fc7257aa8d10b107991fbe7b62fd8f1c1f255b62e82cf3825a55d4a678bc",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/target_complete_core/oof_2023_2024.parquet": "bdd6a1499ef3a44adb3008ca2f318b012112747729db2c744502c5a8a834b99a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/target_complete_core/report.json": "ee4e14395c2a2e28e4f6f148530cf4516a5b8ce0f67677514bb8781e5ccf3420",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/transferencia_PUL2_20261026_v1/report.json": "4c99019eb7ac81eaa041ea2d18d53911def0d6cb1810be87eed0ea99aa7f1d6a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/sensibilidad_observacion_PUL2_20261026_v2/report.json": "da8974748534ae98ca36a44996627a4d8db9778bd19c557184f62669357db895",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_REN_G3_prod_contraste_20261026_v1/A1_original2024_proxy_prices.parquet": "8e139a90dadf4e62218ec07c0f2c88908f1f501a3dd8b126107533ce61523456"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T08:11:37.671500+00:00",
+  "candidate": "A1S",
+  "hypothesis": "A source-only, saved and reproducible complete A1-family core permits evaluating full calibrated prices instead of treating residual gains on the incomplete G3 surrogate as gains over delivered F3c.",
+  "necessity": "Corrected historical A1 three-seed models, per-row relativities and source round metadata were not found in the already archived bounded inventory. This is a NEW explicit alternative, not exact historical A1 reproduction.",
+  "market": "Developed source2021-2024 only for all fitted tree labels, offsets, categories and source early stopping. Emerging2023/2024/2025 covariates for application only at this stage.",
+  "objective": "T0 incurred net recoveries, no reserve adjustment; log existing source-only e_cost plus source training base as init_score, no second exposure.",
+  "inputs": "Existing frozen A1S matrices and source T0/e_cost, no reconstruction or new reporting curves.",
+  "partition": {
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/partition_source/report.json",
+    "inner_held_fold": 1,
+    "grouping": "Connected components of canonical8digit customer and separate address namespace across all3source lines"
+  },
+  "parameters": {
+    "objective": "tweedie",
+    "metric": "tweedie",
+    "tweedie_variance_power": 1.5,
+    "learning_rate": 0.02,
+    "num_leaves": 31,
+    "min_data_in_leaf": 1000,
+    "feature_fraction": 0.8,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "lambda_l2": 10.0,
+    "min_data_per_group": 1000,
+    "cat_smooth": 50,
+    "verbosity": -1,
+    "deterministic": true,
+    "force_row_wise": true,
+    "num_threads": 2
+  },
+  "seeds": [
+    11,
+    12,
+    13
+  ],
+  "source_years": [
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "early_stopping": {
+    "max_rounds": 4000,
+    "patience": 400,
+    "metric": "tweedie",
+    "initial_base_learned_only_on_inner_training": true,
+    "one_round_choice_per_line_seed": true
+  },
+  "full_refit": "Same parameters/seed; selected source-only round count; full-source log(sumT0/sum_e_cost) initialization.",
+  "relative": "Raw full Booster delta minus log source exposure_model-weighted mean exp(delta), per seed. Geometric mean across all3seeds with no seed selection.",
+  "history": "Notifications irrespective of eventual status, before min(period_start,2024-12-31); observed history duration clipped at same cutoff; no future weather.",
+  "budget": {
+    "source_internal_earlystop_fits": 9,
+    "source_full_refits": 9,
+    "total_real_model_fit_calls": 18,
+    "new_C0_fits": 0,
+    "new_target_calibration_fits": 0,
+    "new_target_scores": 0,
+    "final_test_price_CSVs": 0,
+    "new_submissions": 0
+  },
+  "criteria": [
+    "All input SHA unchanged and schemas/key ordering exact",
+    "Every started fit accounted and every completed model saved before downstream checks",
+    "Held source LightGBM Tweedie metric reproduced by manual loss and sklearn deviance",
+    "Save/load, row-order and independent leaf-sum checks; exposure applied exactly once",
+    "All finite positive relativities; source exposure-weighted mean one per model",
+    "Fixed three-seed aggregation without label/score-based seed selection"
+  ],
+  "predictive_admission": "NONE from this source stage. Next separately preregister complete group-held emerging calibration and comparison with stored baselines, per year/line/business, concentration and level sensitivity. Do not infer improvement over publicF3c from G3 alone.",
+  "limits": [
+    "Inner early stopping is conditional on whole-source frozen observation link; not independent end-to-end confirmation",
+    "Source2024 and full-snapshot histories are retrospective development inputs, not prospective2023 forecasting",
+    "Undated master snapshots, reporting tail and reserve adequacy remain assumptions",
+    "Emerging2024 is explicitly open/adaptive development, not pristine holdout",
+    "Stored full-model future relativities are components, not validated final prices or permission to submit"
+  ],
+  "max_cycle_minutes": 45,
+  "checkpoint": "Finish current fit, then yield between fits; never automatically repeat an incomplete attempted fit.",
+  "B00_all_alternatives_preserved": true,
+  "2024_open": true,
+  "preflight": {
+    "tweedie_loss_two_methods": true,
+    "offset_exposure_once": true,
+    "relative_center_unit_weighted_mean": true,
+    "synthetic_model_fits": 0
+  },
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/entrenar_nucleo_A1S.py": "bf5532f092aa93d5f728523b7366fa0e1bc1bc28381569bbc95bfd540de7ed52",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/report.json": "16e00f41001ef78ba607d5cd2fd41fe77974b13c1e6d2bf18dc3573b7fa2534a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/partition_source/report.json": "5397bf4abaa3962cc45f0f93bde60e0011184439657b9a3df2d984f9e674b939",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s1_motor.parquet": "c2a2f3d5a14f96892bdd6f6f973b03449f874a7df0ff42d687533254a5833ed3",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s2_motor.parquet": "2063f50044d41963032164373dcc895583e92dd7e9d1687aac7efda31910e75d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_motor.parquet": "ded113876f2069f7341491aa855e7e0fc4036e5e6e38d476466da905f5bee99c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s2_motor.parquet": "7a6e236ecb97dda159f73650b660955206b33a73bd4b22e3935581c72afc3631",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/partition_source/folds_motor.parquet": "81f9c33285595d956952e2431696095b017503a15a4080215efe232c232575a1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s1_buildings.parquet": "471922f7f8318216270fc7332028286d84162fbe78aa0279173903525b4aee90",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s2_buildings.parquet": "801b708d1738b6b6e04e1e9e814ec798397e65f817e9267bfc425c537f153846",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_buildings.parquet": "a04a76fa8564f83a6da02d4f1885972b7ef82b3d741cc5a6bd22f0df1d98bf88",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s2_buildings.parquet": "26dad682688854722be16ff52bc4332fd9acfe310b5ea4838d8c772bea32b775",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/partition_source/folds_buildings.parquet": "99ffe4451eda354a687d01465c6ceaca740e1c38b766d520b65107e95b4778e8",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s1_contents.parquet": "07c2395bc8efe3045baec7677e56c3824c44200bd9ab75c14212e862f6e63993",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s2_contents.parquet": "1576409971c67f28f9bc61a82b887c63a93a2e783ae12ed39b15e07fe34f46c7",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_contents.parquet": "f8d5c595dc4bc1357decca37bc73660a557a473638f2aae83e085c9e68d4e1f1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s2_contents.parquet": "633f4b7bbccd5929daf418a062c5023e761bfabfd5db2a7da432354c47472ccc",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/partition_source/folds_contents.parquet": "de57e8d6bcd92628778104a627d4c98c046063ed31139ac1fc50c6194e804279"
+  }
+}

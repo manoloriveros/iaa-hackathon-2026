@@ -1,0 +1,84 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T05:55:40.792207+00:00",
+  "hypothesis": "The recovered buildings cost-proxy shape may improve renewal ranking on saved global held groups. Test exactly one .25 insertion without diluting prior-claims multipliers or changing new business/levels.",
+  "reference": "Frozen N3 research comparator, not full F3c/C1/F2 and not exact K replay",
+  "version_semantics": "F4b-style preservation of N3 shape: N3*(FSp_observed/unshaped_T2b_observed)^.25, only REN; per-year held prediction-only level preservation.",
+  "peril_calibration": "Training-only kappa_p=sum(y_p)/sum(risk_p*q_p), 6perils x5saved folds; no held labels.",
+  "exposure": "Producer f includes original calendar exposure; divide that exposure and apply canonical scope exposure once.",
+  "source": {
+    "2023_target": "dev source2021–2023",
+    "2024_target": "prod source2021–2024",
+    "availability": "common December2024 snapshot; conditional retrospective development, not clean prospective backtest"
+  },
+  "configuration": {
+    "weight": 0.25,
+    "new_business_weight": 0,
+    "folds": "saved global customer/address groups",
+    "years": [
+      2023,
+      2024
+    ],
+    "new_C0_fits": 0,
+    "no_test_inference_or_price_CSV": true,
+    "normalization": "separately by year on held REN, preserve N3 totals without held outcomes"
+  },
+  "criterion": {
+    "delta_min": 0.002,
+    "lower95_gt": 0.0,
+    "positive_folds_min": 4,
+    "min_cell_delta_full_null": -0.001,
+    "post31_nonnegative": true,
+    "both_years_nonnegative": true,
+    "additional_veto": "Weighted2025 sensitivity point positive and originalA1_2024 proxy not negative; weighted-primary ESS gate remains failed"
+  },
+  "formal_admission_not_possible_from_this_proxy_alone": true,
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 2026102612,
+    "unit": "saved connected component",
+    "conditional_on_fixed_source_models": true
+  },
+  "budget": {
+    "iterative_price_fits": 0,
+    "peril_calibration_constants": 30,
+    "learning_calls": 5,
+    "held_prediction_only_normalizers": 10,
+    "new_C0_fits": 0,
+    "new_test_prices": 0,
+    "new_submissions": 0
+  },
+  "control": "Full real learn/apply entry point excludes held labels before every calculation; poison held total/peril labels. Replay saved calibration without estimation. Independent loss and arithmetic.",
+  "preflight": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_REN_contraste_20261026_v1/preflight.json",
+    "sha256": "2ca2f38e6c2f2a0e1e3e7e4bd2f3e86e3a6003fc50e7c096b4aa3ecad8963309"
+  },
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/contrastar_FSp_edificios_REN.py": "acd383b96fd5a113c912b37cde4faeaa707e0cbee02f9aec8606bf2965027b6c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_productor_20261026_v1/report.json": "e3abb5fa217d1edbc87e84c8900d2790e39293a4821f8a4a97bc414c8ec994a2",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/oof_2023_2024.parquet": "a4652f2abc2663e6793d4076752045d3850111e5e8608ddd31bd3740fc7c11cc",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/raw_rates_buildings.parquet": "ff825920110bcbc06248adac0152e7397912a26dfc6271acc502de17572a8be6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3/claim_assignment_audit.parquet": "81be34c36682c10e1c02b3592b80c588b1ace1f734521a379fb6809bf3f63a8a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_matrices_20261026_v1/rows_target_prod.parquet": "8f9228dd2bcaf60d9ea0659c6126745bb3f740684413a0c98fc1a134a9ec9c76",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_politica_desarrollo2024_v2.json": "676964dbda949239ccc314ea31c3c2fee630b0b7b61e1bf599f21f23dca9e33d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_productor_20261026_v1/components_dev.parquet": "4f6991e58c7b4a4cbad95247bccb1660b28a2308d072b17638ea2127a25e7fc1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_productor_20261026_v1/components_prod.parquet": "c7f0a7ce9db57cca4066332f9d988a6d231bbbb5170bcefce361a665db441a1e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda6_pendiente_20261025_v1/inputs_buildings_fold0.parquet": "e338bf9f88834b3adada4ae4c4961e58d57b2d05cfbb698f89697d7729da3f0e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_buildings_fold0.json": "243027e20d64f20e7c0dd573dadf9a3d0ed48e74a3211f2d6cf4762f4e18d29d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda6_pendiente_20261025_v1/inputs_buildings_fold1.parquet": "9de0fc1e6616e7179034145a54fd0d40315a51a15e524bd746b33793885ca18b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_buildings_fold1.json": "6efcba1d4e91d1145d12fd12cb719dcaffa14b75212b3bffbe150ee7e34a48f4",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda6_pendiente_20261025_v1/inputs_buildings_fold2.parquet": "caf6e8a09348902ed29acbf5dea80a4e7ef263d6988a707027be9f8c988989eb",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_buildings_fold2.json": "a2e1797549e9279e6b69312cd3f32d2fe2b3105dccce320ce98607e9ed04712a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda6_pendiente_20261025_v1/inputs_buildings_fold3.parquet": "71ba3b98ceac1723cc9683ecbd17ffc761fa1dd539f915b66662c4799d914842",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_buildings_fold3.json": "2f69262774a2121fd399884c527cb138cb62330ce85d8c40bcafd725220d29a7",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda6_pendiente_20261025_v1/inputs_buildings_fold4.parquet": "9551b44f16f5b4a6d9d2b008defca1d049b6ae92033e445a9911c324a41020ba",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_buildings_fold4.json": "9cae2e3ec161fc2453df41ad8d2916b85b97ff7fb37037f7f9ee4f2d7be3a127",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_REN_contraste_20261026_v1/inputs_fold0.parquet": "c131807c2fa9e6fb93f99ddf28f7b89f33713d926cc82f66a48be5446460a323",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_REN_contraste_20261026_v1/inputs_fold1.parquet": "302061122edb7434c1007ee20cb62003d9ce94037dfc90ea22c70351a853f682",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_REN_contraste_20261026_v1/inputs_fold2.parquet": "e79bd1641460240c68c351ee22d6eabe67f70a580fd0a8ca6dd1c404755f8857",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_REN_contraste_20261026_v1/inputs_fold3.parquet": "d147010d29a8c0a88e4ba911c9bc3b3bb6b4f9fbd3b25d1e86ce07eeb03150fd",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_REN_contraste_20261026_v1/inputs_fold4.parquet": "079c5f16cf06609184305b27cfe858a6bf2c5d927209e8d41f0e9bf5e66afec4"
+  },
+  "B00_all_alternatives_preserved": true,
+  "2024_open": true
+}

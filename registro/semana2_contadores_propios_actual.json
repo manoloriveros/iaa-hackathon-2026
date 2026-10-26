@@ -1,0 +1,2056 @@
+{
+  "author": "Codex",
+  "as_of_utc": "2026-10-26T20:44:15.756019+00:00",
+  "scope": "Own pricing/development lineage only; not all project fits or other authors. Historical main catalog retains its dated counter.",
+  "cumulative_price_base_fits": 1687,
+  "cumulative_closed_form_constants": 25664,
+  "auxiliary_Poisson_Gamma_fits_separate": 30,
+  "baseline": {
+    "index": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_v7_snapshot.json",
+    "sha256": "10a821c226df2f3476802ce7c92dede147fd7d1f5e7707ad1e1c465bf849bf25",
+    "price_base_fits": 90,
+    "constants": 60,
+    "auxiliary_fits": 30,
+    "index_at_original_registration": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_actual.json"
+  },
+  "increments": [
+    {
+      "id": "S2-COLA2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/cola_20261024T001114Z_e5d1c211",
+      "price_GLM_fits": 10,
+      "constant_values": 30,
+      "auxiliary_fits": 0,
+      "reporting_fits": 0,
+      "constants_before_receipt_failure": 3,
+      "constants_after_resume": 27,
+      "cached_bundles_reused": 2,
+      "analytic_adapters_not_fits": 45,
+      "exact_content_reuses_not_fits": 15
+    },
+    {
+      "id": "S2-C0-RESERVAS2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mecanismo_20261024T002849Z_c8f124bf",
+      "price_GLM_fits": 35,
+      "constant_values": 105,
+      "auxiliary_fits": 0,
+      "reporting_fits": 75,
+      "exact_reuses_not_fits": 30
+    },
+    {
+      "id": "S2-C0-MEZCLA-NEGOCIO2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/mezcla_20261024T004833Z_e8ff18e0",
+      "price_GLM_fits": 30,
+      "constant_values": 90,
+      "auxiliary_fits": 0,
+      "reporting_fits": 0,
+      "exact_reuses_not_fits": 0,
+      "mixture_frequency_constants_separate": 150,
+      "mixture_positive_severity_means_separate": 145
+    },
+    {
+      "id": "S2-DEV2023-v8-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214",
+      "price_GLM_fits": 15,
+      "constant_values": 0,
+      "auxiliary_fits": 0,
+      "reporting_fits": 0,
+      "new_scores": "Only B19; two new grouped pairs, no old-pair bootstrap repeated"
+    },
+    {
+      "id": "S2-GLM-RIDGE-COBERTURAS2023-v1-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1",
+      "price_GLM_fits": 15,
+      "constant_values": 0,
+      "auxiliary_fits": 0,
+      "reporting_fits": 0
+    },
+    {
+      "id": "S2-B20-CONTRASTE-EXPLORATORIO-v2-20261024",
+      "run": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/b20_contraste_exploratorio_20261024_v2",
+      "price_GLM_fits": 10,
+      "constant_values": 10,
+      "slope_calibration_fits_separate": 5,
+      "reporting_fits": 60,
+      "mixture_frequency_constants_separate": 60,
+      "mixture_positive_severity_means_from_reporting_separate": 60,
+      "normalized_mixtures_separate": 10,
+      "outer_bundles_reused_not_fits": 5,
+      "synthetic_preflight_invocations_excluded_from_actual_fit_counter": 32
+    },
+    {
+      "id": "G4-STANDARD-CSV-READY-v1-20261024",
+      "utc": "2026-10-25T01:29:04.882381+00:00",
+      "scope": "Final all2023 standard model,not repeated CV",
+      "price_base_fits": 3,
+      "closed_form_pricing_constants": 0,
+      "reporting_peril_fits": 15,
+      "frequency_constants": 15,
+      "positive_weighted_mark_means": 15,
+      "capital_reference_objects": 2,
+      "normalized_mixtures": 3,
+      "synthetic_GLM_fits_separate": 3,
+      "synthetic_reporting_fits_separate": 15,
+      "index": "Hackaton/Repositorio_IAA2026/registro/semana2_g4_entrega_final_actual.json"
+    }
+  ],
+  "latest_sensitivity_index": "Hackaton/Repositorio_IAA2026/registro/semana2_sensibilidad_observacion_actual.json",
+  "next_unit_must_read_this_counter": true,
+  "supplementary_reporting_peril_fits_since_counter_start": 1259,
+  "reporting_counter_notice": "135 supplementary reporting-peril fits:75 prior sensitivity +60 B20 nested exploration; historical preparation105 and other authors remain separate. Added15 final all2023reporting-peril fits inG4deployment;synthetic15excluded.",
+  "mixture_frequency_constants_since_counter_start_separate": 1155,
+  "mixture_positive_severity_means_since_counter_start_separate": 3010,
+  "mixture_counter_notice": "First-stage mixture estimates shared between MIXF/MIXFS; separate from pricing constants, historical reporting curves and native credibility auxiliary fits.",
+  "latest_development_index": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_actual.json",
+  "historical_active_index_resolution": [
+    {
+      "path_at_original_cut": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_actual.json",
+      "sha256": "10a821c226df2f3476802ce7c92dede147fd7d1f5e7707ad1e1c465bf849bf25",
+      "immutable_snapshot": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_v7_snapshot.json"
+    },
+    {
+      "path_at_original_cut": "Hackaton/Repositorio_IAA2026/registro/semana2_contadores_propios_actual.json",
+      "sha256": "6a640c8d0a08aa11da1c1be89520af5a31187b7377f21ef5d20de40ea22a460e",
+      "immutable_snapshot": "Hackaton/Semana 2/Codex/contadores_antes_v8.json"
+    }
+  ],
+  "slope_calibration_fits_since_counter_start_separate": 5,
+  "latest_exploratory_contrast_index": "Hackaton/Repositorio_IAA2026/registro/semana2_b20_contraste_exploratorio_actual.json",
+  "constant_counter_notice": "This contrast adds10 terminal profiled/level intercept values,5 slope fits separate,60 frequency constants separate and60 weighted marks from reporting separate. Optimizer profile evaluations are not independent fitted models.",
+  "latest_final_deployment_index": "Hackaton/Repositorio_IAA2026/registro/semana2_g4_entrega_final_actual.json",
+  "final_deployment_counter_notice": "3full2023GLM,15reporting curves/frequencies/weighted means;pricing constants and slopes unchanged.Synthetic3GLM/15reporting fits separate.",
+  "robustness_cycles": [
+    {
+      "cycle": 1,
+      "utc": "2026-10-25T11:39:19.285726+00:00",
+      "price_fits": 30,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo1_20261025_v1/report_recovered.json",
+      "report_sha256": "cab41a3aed7ad2859c2c224d40a51336ae0018f77dd16c761bcbb1d3a57ddd19"
+    },
+    {
+      "cycle": 2,
+      "utc": "2026-10-25T11:39:19.542830+00:00",
+      "price_fits": 30,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo2_20261025_v1/report.json",
+      "report_sha256": "e22622cb4404fe05d28969d95855d462306028b4b2364e4bd9b6e56f3a88e304"
+    },
+    {
+      "cycle": 3,
+      "utc": "2026-10-25T11:42:31.096226+00:00",
+      "price_fits": 45,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo3_20261025_v1/report.json",
+      "report_sha256": "1fe3752babca99b4ac7db5f36423ef7ac66234f2df8bdf3b3e7fa94f7583e90a"
+    },
+    {
+      "cycle": 4,
+      "utc": "2026-10-25T11:52:25.487182+00:00",
+      "price_fits": 31,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo4_20261025_v1/report.json",
+      "report_sha256": "0306853cbcaaa57fb603145a2c17cc734207e63f5f64df811774e5a2f6fe6c13"
+    },
+    {
+      "cycle": 5,
+      "utc": "2026-10-25T11:58:10.134423+00:00",
+      "price_fits": 30,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo5_20261025_v1/report.json",
+      "report_sha256": "17932b81f5aefab881b84a2726c80168dec91bd120228a756ad5fd901e26487d"
+    },
+    {
+      "cycle": 6,
+      "utc": "2026-10-25T12:02:48.058515+00:00",
+      "price_fits": 36,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo6_20261025_v1/report.json",
+      "report_sha256": "2ccac7cd212824f4c8cdc005d84b18ce271edc768c4689f6c803901f5ce2e2b5"
+    },
+    {
+      "cycle": 7,
+      "utc": "2026-10-25T12:12:40.166553+00:00",
+      "price_fits": 7,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo7_20261025_v1/report.json",
+      "report_sha256": "e00fe86919f5e70d2c7ff1dae7c8f82e0fbe51cbfc83a70af7597084a28a2d23"
+    },
+    {
+      "cycle": 8,
+      "utc": "2026-10-25T12:50:18.377300+00:00",
+      "price_fits": 30,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo8_20261025_v1/report.json",
+      "report_sha256": "71ef0afca63f8838a8d35637ad594d2b5ac480199985de834eaebcc193be4dd1"
+    },
+    {
+      "cycle": 9,
+      "utc": "2026-10-25T13:01:11.765007+00:00",
+      "price_fits": 30,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo9_20261025_v1/report.json",
+      "report_sha256": "5654c7bd12ac1637018afdd67fc157787ff48c31f5fc86059edc4bec4a559f0e"
+    },
+    {
+      "cycle": 10,
+      "utc": "2026-10-25T13:08:44.359985+00:00",
+      "price_fits": 54,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo10_20261025_v1/report.json",
+      "report_sha256": "b637f841dbb0dfab86f88719310be371136f6ab2776540d883f7b700250683bb"
+    },
+    {
+      "cycle": 11,
+      "utc": "2026-10-25T13:13:46.439933+00:00",
+      "price_fits": 48,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo11_20261025_v1/report.json",
+      "report_sha256": "d0d072b8babd8e8bb554daaea7d81656f7a14d5960a7bf2ac990edad313f2ac0"
+    },
+    {
+      "cycle": 12,
+      "utc": "2026-10-25T13:17:16.291263+00:00",
+      "price_fits": 42,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo12_20261025_v1/report.json",
+      "report_sha256": "ddf7f9b280ca239b8cb52ce8d480b9b4293fbde3acb4ae31c647a8a76c789898"
+    },
+    {
+      "cycle": 13,
+      "utc": "2026-10-25T13:22:57.143729+00:00",
+      "price_fits": 30,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo13_20261025_v1/report.json",
+      "report_sha256": "8f8942b145718999e1c19c67ac9da11ac696350b4aa21706700ad96b710ed4d3"
+    },
+    {
+      "cycle": 14,
+      "utc": "2026-10-25T13:25:23.723037+00:00",
+      "price_fits": 30,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo14_20261025_v1/report.json",
+      "report_sha256": "b3f12476cc955c51d74c85c700eabd4c3b656bc4f8dae7155278503cd09a8945"
+    },
+    {
+      "cycle": 15,
+      "utc": "2026-10-25T14:14:54.844226+00:00",
+      "price_fits": 30,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo15_20261025_v1/report.json",
+      "report_sha256": "8a4eba285427610a5eac0960e89044eab555af143a59c2f559171a23c5d93cee"
+    },
+    {
+      "cycle": 16,
+      "utc": "2026-10-25T14:22:38.835275+00:00",
+      "price_fits": 30,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo16_20261025_v1/report.json",
+      "report_sha256": "d74394ca18e90ebf321691b46a57c4abc3bdff66dd554bbf4e2d0712fc6a53a5"
+    },
+    {
+      "cycle": 17,
+      "utc": "2026-10-25T14:29:35.648692+00:00",
+      "price_fits": 60,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo17_20261025_v1/report.json",
+      "report_sha256": "03d4344a22921339231d694115fd24da0a587405c2008895bd78ddfe98059486"
+    },
+    {
+      "cycle": 18,
+      "utc": "2026-10-25T14:37:26.731285+00:00",
+      "price_fits": 24,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo18_20261025_v1/report.json",
+      "report_sha256": "38bc7ab9598cd338152900ff36ab1b76676ab0bb8df20b4936d8fe01265a4766"
+    },
+    {
+      "cycle": 19,
+      "utc": "2026-10-25T14:43:26.681144+00:00",
+      "price_fits": 30,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo19_20261025_v1/report.json",
+      "report_sha256": "394cef4d1daf9f8251174427014d8284b8752e8490938aca00bb07788c029ae3"
+    },
+    {
+      "cycle": 20,
+      "utc": "2026-10-25T15:17:16.363268+00:00",
+      "price_fits": 42,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo20_20261025_v1/report.json",
+      "report_sha256": "e1415ce4d137ddd145e061e704bd3cbd74dcf410ffe9246930a982cd782c11e6"
+    },
+    {
+      "cycle": 21,
+      "utc": "2026-10-25T15:28:08.689735+00:00",
+      "price_fits": 12,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo21_20261025_v1/report.json",
+      "report_sha256": "c00acd56ad40076b2aac64c2dc0cecbd3af3e9399e570358bb82f5cc307f9b97"
+    },
+    {
+      "cycle": 22,
+      "utc": "2026-10-25T15:35:21.891476+00:00",
+      "price_fits": 48,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo22_20261025_v1/report.json",
+      "report_sha256": "fce610be2ab1918708f13afbfc0c5194f187d2e709a9ca910e62e1568c513a1b"
+    },
+    {
+      "cycle": 23,
+      "utc": "2026-10-25T15:38:21.545303+00:00",
+      "price_fits": 30,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo23_20261025_v1/report.json",
+      "report_sha256": "ab599b4ee34fbfd071e377cc1b8b1eae886e73896bfebb94fb19615c14fcade5"
+    },
+    {
+      "cycle": 24,
+      "utc": "2026-10-25T15:43:44.412495+00:00",
+      "price_fits": 66,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo24_20261025_v1/report.json",
+      "report_sha256": "c15c10a9fda8a2bb6eb02d58bcf96949f71a905c1e157c184709c92bbb3232bf"
+    },
+    {
+      "cycle": 25,
+      "utc": "2026-10-25T15:48:49.462429+00:00",
+      "price_fits": 45,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo25_20261025_v1/report.json",
+      "report_sha256": "482e2905aaaa28f20daf9d63a174dda81b6ec5558fbc6cb8a1ab5684fc320049"
+    },
+    {
+      "cycle": 26,
+      "utc": "2026-10-25T16:08:12.747439+00:00",
+      "price_fits": 48,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo26_20261025_v1/report.json",
+      "report_sha256": "30bd6d113090dd12b0795e4a267492c73e5df8da171b097470d0d764258482d0"
+    },
+    {
+      "cycle": 27,
+      "utc": "2026-10-25T16:14:02.545341+00:00",
+      "price_fits": 10,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo27_20261025_v1/report.json",
+      "report_sha256": "2374170c08bc9844bc0283171055775c65832891398173fc4abaef440e018294"
+    },
+    {
+      "cycle": 28,
+      "utc": "2026-10-25T16:24:29.686335+00:00",
+      "price_fits": 10,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo28_20261025_v1/report.json",
+      "report_sha256": "04148e51ea3708f265081f02f7e280fa886b2693a40a065c48610aa4ec651ee2"
+    },
+    {
+      "cycle": 29,
+      "utc": "2026-10-25T16:48:53.794604+00:00",
+      "price_fits": 22,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo29_20261025_v1/report.json",
+      "report_sha256": "1e36cb9a5f7795c3ac7f5c9f334c1fce973fccf07dd664b4a944a7da5910ea35"
+    },
+    {
+      "cycle": 30,
+      "utc": "2026-10-25T16:55:39.445399+00:00",
+      "price_fits": 30,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo30_20261025_v1/report.json",
+      "report_sha256": "36966bb741ab1a2268ada957cb94fb4ab7e80a681fcd2c2132add5305fb2ab2b"
+    },
+    {
+      "cycle": 31,
+      "utc": "2026-10-25T17:01:24.487769+00:00",
+      "price_fits": 30,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo31_20261025_v1/report.json",
+      "report_sha256": "fb8fcb0e04d2c1a4235af28600c2e754cf3417aec56669d29ff81bf25224d471"
+    },
+    {
+      "cycle": 32,
+      "utc": "2026-10-25T17:05:22.443390+00:00",
+      "price_fits": 17,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo32_20261025_v1/report.json",
+      "report_sha256": "3edaa43c74646204ea32ff72568c157a5876912a0f2390554426c3a7b05c99bc"
+    },
+    {
+      "cycle": 33,
+      "utc": "2026-10-25T17:11:29.019705+00:00",
+      "price_fits": 22,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo33_20261025_v1/report.json",
+      "report_sha256": "027f84b7390f1d9c2d545366eef9da13a3d9799f48b75e7e8592f27f3d0a043f"
+    },
+    {
+      "cycle": 34,
+      "utc": "2026-10-25T17:29:49.578711+00:00",
+      "price_fits": 0,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo34_20261025_v1/report.json",
+      "report_sha256": "f553e37fd4ae16ec676987eed68cd95fd42a36c88ad58ab190f1673f708f059c"
+    },
+    {
+      "cycle": 35,
+      "utc": "2026-10-25T17:38:31.187855+00:00",
+      "price_fits": 30,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo35_20261025_v1/report.json",
+      "report_sha256": "f662b1c6ef510a05ddfca780967fc984cd875c6aadb7a2815ec6f5221fb114b9"
+    },
+    {
+      "cycle": 36,
+      "utc": "2026-10-25T17:44:46.123055+00:00",
+      "price_fits": 15,
+      "C0_fits": 0,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo36_20261025_v1/report.json",
+      "report_sha256": "716f9e2a1ae8c7bdb5c2f0491109cf9c335bb619574d1e5a597fa44177e5f78d"
+    }
+  ],
+  "latest_robustness_index": "Hackaton/Repositorio_IAA2026/registro/semana2_robustez2023_actual.json",
+  "robustness_final_deployment": {
+    "real_price_fits": 3,
+    "source_fits": 0,
+    "C0_fits": 0,
+    "receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/entrega_20261025_v1/ready.json"
+  },
+  "mission017_research_deployments": [
+    {
+      "id": "HOME27-RESEARCH-FINAL-v1",
+      "utc": "2026-10-25T16:32:24.488476+00:00",
+      "new_price_fits": 1,
+      "newsource": 0,
+      "newC0": 0,
+      "training_receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/comparacion_publica_hogar_20261025_v1/training_receipt.json",
+      "training_receipt_sha256": "2b6c7a6e375ccb4305a41d4ea945ef7e04314c3fd7ebc3a7dc0d05058acd2af9",
+      "ready": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/comparacion_publica_hogar_20261025_v1/ready.json",
+      "ready_sha256": "330f7df85c67410e1e18de6686435533e161a0d5dca12d8109301b51a6240725",
+      "recipe": "Hackaton/Repositorio_IAA2026/registro/semana2_comparacion_publica_hogar_plan_v2.json",
+      "research_only": true,
+      "gates_remain_failed": true,
+      "promotion": false
+    }
+  ],
+  "mission017_domain_diagnostics": [
+    {
+      "id": "S2-DOMINIO2023-PREFILTRO-v3-20261025",
+      "utc": "2026-10-25T17:19:24.439256+00:00",
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/prefiltro_dominio2023_v3/report.json",
+      "report_sha256": "85c98ee9a9b960a21134c7b391545f66b09b58f82d4effbd44031b0f6a02979f",
+      "diagnostic_classifier_fits": 15,
+      "price_fits": 0,
+      "C0_fits": 0,
+      "eligible_for_considering_weight_recipe": [
+        "motor"
+      ],
+      "not_eligible": [
+        "buildings",
+        "contents"
+      ],
+      "not_price_authorization_or_promotion": true,
+      "2024_closed": true,
+      "B00_preserved": true
+    }
+  ],
+  "cumulative_diagnostic_classifier_fits": 15,
+  "phase2_2024_tanda1": {
+    "price_fits": 12,
+    "source_reporting_curves": 15,
+    "source_reporting_v1_partial": 5,
+    "source_reporting_v2_additional": 10,
+    "emerging_C0_fits": 0,
+    "closed_form_price_levels": 6,
+    "source_frequency_constants": 15,
+    "source_weighted_mark_means_3reserve_branches": 45,
+    "source_normalized_mixtures": 3,
+    "receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda1_20261025_v2/validation_v1/report.json",
+    "receipt_sha256": "e2a953c361c49656a454e6cbfebfd6fa725559f2d7fadce8bf9be0c8c97f5330"
+  },
+  "phase2_2024_tanda2": {
+    "price_estimator_fits": 0,
+    "reporting_peril_fits": 75,
+    "frequency_constants": 75,
+    "weighted_mark_means_3reserve_branches": 225,
+    "normalized_scope_mixtures": 15,
+    "closed_form_price_levels": 105,
+    "bucket_factors": 140,
+    "training_normalizers": 40,
+    "receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/validation_v1/report.json",
+    "sha256": "559c05d9f206081bd732e1836c1605c08a05f3b88e878e095f28a0680390d5ac"
+  },
+  "phase2_2024_tanda3": {
+    "source_price_fits": 3,
+    "motor_reused_not_refitted": true,
+    "empirical_source_cost_CDF_reconstructions": 15,
+    "new_target_C0_fits": 0,
+    "closed_form_price_levels": 48,
+    "source_cost_mixtures_reconstructed": 3,
+    "receipt": {
+      "batch": 3,
+      "output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda3_20261025_v3",
+      "status": "completed_exploratory_no_admission",
+      "price_report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda3_20261025_v3/price_report.json",
+      "price_report_sha256": "cf24af894b154a54cb86b793239184d854547e55dd3710b707f1712732fe017a",
+      "validation": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda3_20261025_v3/validation_v1/report.json",
+      "validation_sha256": "254ac56867ebcc1ae4a3819cc88eb2e38f92eaddee6749346e52cd4da19654b5",
+      "reference": "N0",
+      "scores": {
+        "N0": 0.13382926409823204,
+        "Q1": 0.13131380394170278,
+        "Q2": 0.13478451252921908,
+        "Q3": 0.13476412888197142
+      },
+      "exploratory_pass": [],
+      "new_price_estimator_fits": 3,
+      "new_source_reporting_reconstructions": 15,
+      "new_emerging_C0_fits": 0,
+      "submissions": 0,
+      "forum": {
+        "author": "Codex",
+        "id": "COD-S2-20261025-MISION017-FASE2-TANDA3-RESULTADO",
+        "utc": "2026-10-26T02:18:23+00:00",
+        "previous_sha256": "3f72b45752544bf810437ca27f91350629b12a4c210678d5be54054eae892789",
+        "sha256": "d99b8ce24d420cdf9c6b4e3c00b31719eff781a341fd0fbf04d3ee4cf14c1d1d"
+      }
+    }
+  },
+  "phase2_2024_tanda4": {
+    "source_GLM_fits": 3,
+    "new_C0_fits": 0,
+    "new_target_label_fitted_levels": 0,
+    "covariate_only_portfolio_normalizers": 90,
+    "source_year_initialization_values_not_independent_models": 12,
+    "receipt": {
+      "batch": 4,
+      "output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda4_marketing_20261025_v1",
+      "status": "completed_exploratory_no_admission",
+      "price_report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda4_marketing_20261025_v1/price_report.json",
+      "price_report_sha256": "68c6accd6060a119b83aa7d48aac8f391048214fa2061df59322552610cc07f1",
+      "validation": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda4_marketing_20261025_v1/validation_v1/report.json",
+      "validation_sha256": "f7fb30d4b4a8d37a9b9c4f045db06d10cbfb71d62db79bb08aa33f8f1902a7d7",
+      "reference": "N3",
+      "scores": {
+        "N0": 0.13382926409823204,
+        "N3": 0.13524973116896466,
+        "R1": 0.13569513109409415,
+        "R2": 0.13555434905584696,
+        "R3": 0.13542250103901377
+      },
+      "exploratory_pass": [],
+      "new_price_estimator_fits": 3,
+      "new_source_reporting_reconstructions": 0,
+      "new_emerging_C0_fits": 0,
+      "submissions": 0,
+      "forum": {
+        "author": "Codex",
+        "id": "COD-S2-20261025-MISION017-FASE2-TANDA4-RESULTADO",
+        "utc": "2026-10-26T02:18:23+00:00",
+        "previous_sha256": "d99b8ce24d420cdf9c6b4e3c00b31719eff781a341fd0fbf04d3ee4cf14c1d1d",
+        "sha256": "1895b704cb4bd874de973dec8b806abcdd45ce0d3f237aecc7172636933aef51"
+      }
+    }
+  },
+  "latest_phase2_index": "Hackaton/Repositorio_IAA2026/registro/semana2_mision017_fase2_actual.json",
+  "phase2_2024_tanda5": {
+    "source_GLM_fits": 6,
+    "new_C0_fits": 0,
+    "new_target_label_fitted_levels": 0,
+    "covariate_only_portfolio_normalizers": 90,
+    "synthetic_fits_separate": 2,
+    "source_year_initialization_values_not_independent_models": 24,
+    "receipt": {
+      "batch": 5,
+      "output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda5_prima_20261025_v1",
+      "status": "completed_exploratory_no_admission",
+      "price_report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda5_prima_20261025_v1/price_report.json",
+      "price_report_sha256": "5bf34690d731d020bb0c2e5b2e8045836959c2470a1716fb5e69033130c71a00",
+      "validation": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda5_prima_20261025_v1/validation_v1/report.json",
+      "validation_sha256": "8bf294f9ac7726c694832db37011dc930c804276307c29c2fb7c0698c8e0572b",
+      "reference": "N3",
+      "scores": {
+        "N0": 0.13382926409823204,
+        "N3": 0.13524973116896466,
+        "S1": 0.13508025743066654,
+        "S2": 0.13556777794622532,
+        "S3": 0.13554163493637195
+      },
+      "exploratory_pass": [],
+      "new_price_estimator_fits": 6,
+      "new_source_reporting_reconstructions": 0,
+      "new_emerging_C0_fits": 0,
+      "new_covariate_only_normalizers": 90,
+      "submissions": 0,
+      "forum": {
+        "author": "Codex",
+        "id": "COD-S2-20261025-MISION017-FASE2-TANDA5-RESULTADO",
+        "utc": "2026-10-26T02:32:01+00:00",
+        "previous_sha256": "4ed2a8053da52fd0306bbc325a36d9dceb74f285d027946dffb054060e40dda4",
+        "sha256": "058991e0ed3dbdd09e59cfa6684270a83589b33bd3dbf9d5fb5a9e71c47e911d"
+      }
+    }
+  },
+  "phase2_2024_tanda6": {
+    "price_GLM_fits": 30,
+    "new_C0_fits": 0,
+    "new_parent_fits": 0,
+    "covariate_only_portfolio_normalizers": 90,
+    "synthetic_fits_separate": 6,
+    "GLM_nuisance_intercepts_not_independent_estimators": 120,
+    "receipt": {
+      "batch": 6,
+      "output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda6_pendiente_20261025_v1",
+      "status": "completed_exploratory_no_admission",
+      "price_report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda6_pendiente_20261025_v1/price_report.json",
+      "price_report_sha256": "979ecc731518cff443830960526ec1ce7d52110288791ca3ab446240929929dd",
+      "validation": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda6_pendiente_20261025_v1/validation_v1/report.json",
+      "validation_sha256": "37294fa1d0b4ca2cb4718ee8b9f455f2ffad3c52dfaf6b6d1ca5f3699d1936ed",
+      "reference": "N3",
+      "scores": {
+        "base_N3": 0.13524973116896466,
+        "T1": 0.13437030280880213,
+        "T2": 0.13419302096115182,
+        "T3": 0.13483410783384464
+      },
+      "exploratory_pass": [],
+      "new_price_estimator_fits": 30,
+      "new_source_reporting_reconstructions": 0,
+      "new_emerging_C0_fits": 0,
+      "new_covariate_only_normalizers": 90,
+      "submissions": 0,
+      "forum": {
+        "author": "Codex",
+        "id": "COD-S2-20261025-MISION017-FASE2-TANDA6-RESULTADO",
+        "utc": "2026-10-26T02:48:27+00:00",
+        "previous_sha256": "b5ccb47cbf78e1f336e43649453c96cb32da40869548cf0f8a75aa4a6c4a1f75",
+        "sha256": "4927272095bea40f69e10a0902481545a5cbd3931f14cfbb09404479956d21df"
+      }
+    }
+  },
+  "phase2_C1_F2_calibrated_delivery": {
+    "new_fits": 0,
+    "new_C0_fits": 0,
+    "new_submissions": 1,
+    "receipt": {
+      "id": "S2-MISION017-C1-F2-CREIBLE",
+      "author_recipe": "Claude",
+      "author_replay_audit_upload": "Codex",
+      "status": "scored_research_not_formal_promotion",
+      "output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/calibracion_F2_creible_20261025_v1",
+      "CSV": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/calibracion_F2_creible_20261025_v1/final_creible_2025.csv",
+        "sha256": "1a003d8682f1fcd71ad4a44f59f785d394488fc1cc95e60722f418b04c30ef29",
+        "rows": 209063,
+        "bytes": 4351463,
+        "total": 87294622.34319453
+      },
+      "receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/calibracion_F2_creible_20261025_v1/public_receipt.json",
+      "receipt_sha256": "e8f7dc1f266bfcbc206d1d697ab4ded8da0293f7484d02cb60a3a65e3122b326",
+      "ref": 57651126,
+      "public_score": 0.16519,
+      "gain_vs_F2": 0.004860000000000003,
+      "forecast_gap": -0.00041843792882126363,
+      "new_fits": 0,
+      "new_C0_fits": 0,
+      "new_submissions": 1,
+      "private_score_not_read": true,
+      "no_final_selection": true,
+      "forum": {
+        "author": "Codex",
+        "id": "COD-S2-20261025-MISION017-CALF2-RESULTADO",
+        "utc": "2026-10-26T03:02:50+00:00",
+        "previous_sha256": "a5b568f9dd7b12ef0838ad395d5ef974e8d35cdd2b0e841a88cd17b83f034462",
+        "sha256": "072323e2cb6c5d4c351c9a2d8f0f1fc54c957cf296bd71265fa614beab94fba8"
+      }
+    }
+  },
+  "phase2_2024_tanda7": {
+    "source_GLM_fits": 6,
+    "new_C0_fits": 0,
+    "new_parent_fits": 0,
+    "cached_source_offset_inferences": 3,
+    "covariate_only_normalizers": 180,
+    "synthetic_fits_separate": 2,
+    "receipt": {
+      "batch": 7,
+      "output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda7_clima_20261026_v2",
+      "status": "completed_exploratory_no_admission",
+      "price_report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda7_clima_20261026_v2/price_report.json",
+      "price_report_sha256": "6cb3f4961ad57117a46127654cb9c3cebb152547d43d670906f18d10e0381753",
+      "validation": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda7_clima_20261026_v2/validation_v1/report.json",
+      "validation_sha256": "2b5f8d7de7aedc2551f186823a42a75baf7df5628f22e28dcf87b1f715d75cba",
+      "reference": "N3",
+      "scores": {
+        "N3": 0.13524973116896466,
+        "W1": 0.13558723415663154,
+        "W2": 0.13544197977742167,
+        "W3": 0.13538934594360652
+      },
+      "exploratory_pass": [],
+      "new_price_estimator_fits": 6,
+      "new_source_T2b_offset_inferences_cached": 3,
+      "new_C0_fits": 0,
+      "new_covariate_only_normalizers": 180,
+      "new_test_predictions": 0,
+      "new_submissions": 0,
+      "forum": {
+        "author": "Codex",
+        "id": "COD-S2-20261025-MISION017-FASE2-TANDA7-RESULTADO",
+        "utc": "2026-10-26T03:34:03+00:00",
+        "previous_sha256": "49de9b35c02a6d9100664f90d8828b46bac13de6114d29f85c18dddd2646c3d6",
+        "sha256": "62bce4fbd685afe80d9f7de5a98d898f9cc391adeb96959cdff0760ba55cce97"
+      }
+    }
+  },
+  "phase2_source_counts2024_preparation": {
+    "new_source_count_CDFs": 15,
+    "source_RKM_refits": 0,
+    "new_source_cost_CDFs": 0,
+    "new_target_C0_fits": 0,
+    "new_price_fits": 0,
+    "receipt": {
+      "author": "Codex",
+      "utc": "2026-10-26T04:02:32.345370+00:00",
+      "status": "inputs_reconciled_for_future_preregistered_trial_not_model_admission",
+      "source_rows": 2409311,
+      "accepted_assigned_claims": 160432,
+      "count_inputs": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/recuentos_fuente2024_v1/report.json",
+        "sha256": "47a3fdba8d7b09e3ffc97772ce54e5cf23e1c334e2012ba9568e56ad15e6ab1d"
+      },
+      "validation": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/recuentos_fuente2024_v1/validation_v1/report.json",
+        "sha256": "e39614fc818c942295257a1eb6e06bb2e2e5df1c7a0a1a6a79d9a1faad166028"
+      },
+      "RKM_reuse": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/recuentos_fuente2024_rkm_reuse_v1/report.json",
+        "sha256": "92fd18616644ea973fb59c147c4163c0df6104b0a3400d45a3e2b7de2abfed7a"
+      },
+      "new_source_empirical_count_CDF_fits": 15,
+      "new_source_cost_CDF_fits": 0,
+      "new_target_C0_fits": 0,
+      "new_price_fits": 0,
+      "new_scores": 0,
+      "new_submissions": 0,
+      "observed_tail_preserved": [
+        {
+          "line": "motor",
+          "peril": "bodily_injury",
+          "observed_mature_claims_beyond1095": 6,
+          "observed_net_cents_beyond1095": 14123852,
+          "max_observed_delay": 1361,
+          "not_estimate_of_unreported_tail": true
+        }
+      ],
+      "full_ultimate_tail_not_identified": true,
+      "forum": {
+        "author": "Codex",
+        "id": "COD-S2-20261025-MISION017-RECUENTOS-FUENTE-RESULTADO",
+        "utc": "2026-10-26T04:02:32+00:00",
+        "previous_sha256": "ad7c858d2515b60e5edb2727531d2def5dc4ea3dd3eb85043c3d079ae5bcebd9",
+        "sha256": "2b3719a1bf47529058a941565ec2b0a5d31bd7f3f78f524a18a39ac8672d1191"
+      }
+    }
+  },
+  "phase2_2024_tanda8": {
+    "real_GLM_attempts_including_failure": 12,
+    "unique_accepted_source_models": 11,
+    "v1_failed_attempts": 1,
+    "models_reused_by_SHA_not_refit": 2,
+    "new_C0_fits": 0,
+    "covariate_only_normalizers": 180,
+    "synthetic_fits_separate": 2,
+    "receipt": {
+      "batch": 8,
+      "output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda8_poisson_20261026_v2",
+      "status": "completed_exploratory_no_admission",
+      "price_report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda8_poisson_20261026_v2/price_report.json",
+      "price_report_sha256": "3bef95701721b8760be66f1f1499b363c1633c2984c3cca788974364634a84a0",
+      "validation": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda8_poisson_20261026_v2/validation_v1/report.json",
+      "validation_sha256": "bbebc86b56535e3111abc949ae6a882a81b0573514cef611254a3484a92b2108",
+      "reference": "N3",
+      "scores": {
+        "N3": 0.13524973116896466,
+        "P1": 0.1359236181718957,
+        "P2": 0.13560655687412515,
+        "P3": 0.1354331317507057
+      },
+      "exploratory_pass": [],
+      "new_price_estimator_fits": 12,
+      "unique_source_models": 11,
+      "failed_GLM_attempts_v1": 1,
+      "completed_models_reused_without_refit": 2,
+      "conditional_stress_fits": 0,
+      "new_C0_fits": 0,
+      "new_covariate_only_normalizers": 180,
+      "new_test_predictions": 0,
+      "new_submissions": 0,
+      "forum": {
+        "author": "Codex",
+        "id": "COD-S2-20261025-MISION017-FASE2-TANDA8-RESULTADO",
+        "utc": "2026-10-26T04:25:06+00:00",
+        "previous_sha256": "9d2938ade09b32ae1595161713cdc7a65954bd40c11708865c63c4aae14bea82",
+        "sha256": "4aa0deb75d5c3138df678b1db98404219757639ae8123d28760656267406b958"
+      }
+    }
+  },
+  "phase2_2024_tanda9": {
+    "leaf_refit_calls": 15,
+    "new_source_fits": 0,
+    "new_C0_fits": 0,
+    "covariate_only_normalizers": 180,
+    "synthetic_fits_separate": 10,
+    "v1_v2_real_fits": 0,
+    "receipt": {
+      "batch": 9,
+      "output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda9_hojas_20261026_v3",
+      "status": "completed_exploratory_no_admission",
+      "price_report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda9_hojas_20261026_v3/price_report.json",
+      "price_report_sha256": "15f2f20d459d87a1d671667bfd2e5f38c46d24319241e207a3008df489d91d9c",
+      "validation": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda9_hojas_20261026_v3/validation_v1/report.json",
+      "validation_sha256": "09e28679f6ebeea2c9b9ab71f599c53c1fdc524695c4a4e5f2904b10ddb86d1a",
+      "reference": "N3",
+      "scores": {
+        "N3": 0.13524973116896466,
+        "L1": 0.1350201850942112,
+        "L2": 0.13521880033994105,
+        "L3": 0.1352551844346822
+      },
+      "exploratory_pass": [],
+      "new_price_estimator_fits": 15,
+      "new_source_fits": 0,
+      "new_C0_fits": 0,
+      "new_splits": 0,
+      "new_covariate_only_normalizers": 180,
+      "new_test_prices": 0,
+      "new_submissions": 0,
+      "forum": {
+        "author": "Codex",
+        "id": "COD-S2-20261025-MISION017-FASE2-TANDA9-RESULTADO",
+        "utc": "2026-10-26T04:40:22+00:00",
+        "previous_sha256": "7a5a7476265fa72050596e3077a23e1ab28570c6e6e3bb3fdd211cbb332fd901",
+        "sha256": "0da8bc34dba488cb2475de170f089abaab20a9dd34f99eab57e3a2ec7bf3601f"
+      }
+    }
+  },
+  "phase2_2024_tanda10": {
+    "closed_stage_learning_calls": 20,
+    "factor_parameters": 90,
+    "training_nuisance_levels": 80,
+    "prediction_only_normalizers": 160,
+    "new_iterative_price_fits": 0,
+    "new_C0_fits": 0,
+    "receipt": {
+      "batch": 10,
+      "output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda10_factores_20261026_v1",
+      "status": "completed_exploratory_no_admission",
+      "price_report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda10_factores_20261026_v1/price_report.json",
+      "price_report_sha256": "1a7c4c04ec2cbc00c492b1325a7449a96f50539181bb5657f93ff82c0a55290f",
+      "validation": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda10_factores_20261026_v1/validation_v1/report.json",
+      "validation_sha256": "291d5837fada1fa98a5146879820a5bfeae408c3b2673f9bbd960f0547af10ce",
+      "scores": {
+        "N3": 0.13524973116896466,
+        "G1": 0.13640531139839573,
+        "G2": 0.13673006536608157,
+        "G3": 0.1370999273441873
+      },
+      "exploratory_pass": [],
+      "new_price_estimator_fits": 0,
+      "closed_form_stage_calls": 20,
+      "factor_parameters": 90,
+      "nuisance_levels": 80,
+      "prediction_only_normalizers": 160,
+      "new_C0_fits": 0,
+      "new_test_predictions": 0,
+      "new_submissions": 0,
+      "forum": {
+        "author": "Codex",
+        "id": "COD-S2-20261025-MISION017-FASE2-TANDA10-RESULTADO",
+        "utc": "2026-10-26T04:55:23+00:00",
+        "previous_sha256": "781305266c25673e74cd95fe62374316e7cffb08792f2eae4ebfbfd214a6b7a9",
+        "sha256": "c05fbf29e89466b2286359a32ce27c0859260b355c7455f2daa7b2711b4106bf"
+      }
+    }
+  },
+  "phase2_2024_tanda11": {
+    "joint_GLM_fits": 20,
+    "new_C0_fits": 0,
+    "prediction_only_normalizers": 80,
+    "synthetic_fits_separate": 3,
+    "receipt": {
+      "batch": 11,
+      "output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda11_conjunto_20261026_v1",
+      "status": "completed_exploratory_no_admission",
+      "price_report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda11_conjunto_20261026_v1/price_report.json",
+      "price_report_sha256": "c78b557a00c8cb002f1c1619c8f181e2b7361f05d47076a6e63c578d5834c5cd",
+      "validation": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda11_conjunto_20261026_v1/validation_v1/report.json",
+      "validation_sha256": "0dfc5fa0ae3aaa420f6cba4a22852971ab1d43d7e7f21fe3c3fb6b616125dac3",
+      "scores": {
+        "N3": 0.13524973116896466,
+        "J1": 0.13640586210722083,
+        "J2": 0.13674326095231293,
+        "J3": 0.13709891573728217
+      },
+      "exploratory_pass": [],
+      "new_price_estimator_fits": 20,
+      "new_C0_fits": 0,
+      "prediction_only_normalizers": 80,
+      "new_test_predictions": 0,
+      "new_submissions": 0,
+      "forum": {
+        "author": "Codex",
+        "id": "COD-S2-20261026-MISION017-FASE2-TANDA11-RESULTADO",
+        "utc": "2026-10-26T05:01:52+00:00",
+        "previous_sha256": "6680d64e534a6b253f24100f4377f9d9fe20497edbfd5eda9add6911704d83c8",
+        "sha256": "f4de4e21378c78e55e5d6964d21df079d261ff502c4cb24244b627cc614ebea5"
+      }
+    }
+  },
+  "phase2_F3c_research_submission": {
+    "new_submissions": 1,
+    "ref": 57654514,
+    "CSV_sha256": "5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276",
+    "response": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/entrega_F3c_investigacion_20261026_v1/submission_response.json",
+    "status": "COMPLETE",
+    "public_score": 0.16914,
+    "receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/entrega_F3c_investigacion_20261026_v1/public_receipt.json",
+    "receipt_sha256": "7da5f5d5b177f5dc50b1d4024c533270c3c8d7362b9674dbad93c716927c93b4"
+  },
+  "phase2_renewal_composition_preparation": {
+    "derived_candidate_files": 1,
+    "derived_price_rows": 37504,
+    "prediction_only_normalizers": 2,
+    "new_price_fits": 0,
+    "new_C0_fits": 0,
+    "new_submissions": 0,
+    "receipt": {
+      "author": "Codex",
+      "utc": "2026-10-26T05:49:54.645025+00:00",
+      "status": "input_preparation_complete_numerical_producer_registered",
+      "evidence": {
+        "received_semantics_audit": {
+          "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/renovacion_fsp_recepcion_20261026_v1/audit.json",
+          "sha256": "95fc74233ba0c62b3ef80a28f2372f59d7db886aa2760cf1c41eef8f5ec8ae3d"
+        },
+        "provisional_candidate": {
+          "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/renovacion_fsp_composicion_20261026_v1/report.json",
+          "sha256": "b74e91e2fdde72fafadf7d8f585dd8de72c79a87d85a556937f4d5ee68d2d636"
+        },
+        "count_offset_inputs": {
+          "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_recuperacion_entradas_20261026_v1/report.json",
+          "sha256": "a4a83da4dfa724dd8673ec439c340d546bf7fe52301a5f30f27941f3e210d65b"
+        },
+        "raw_precision_matrices": {
+          "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_matrices_20261026_v1/report.json",
+          "sha256": "e9a0d645f0fd22bbe24c56e0b49f7ec06c234ca6f73e4cf1ef89625606132d6e"
+        },
+        "producer_plan": {
+          "path": "Hackaton/Repositorio_IAA2026/registro/semana2_mision017_FSp_edificios_recuperacion_plan_v1.json",
+          "sha256": "598b7c492e8aa691c35667f779a1efd3a2f225726cedf7cc5794647bea3d5e00"
+        }
+      },
+      "provisional_candidate_ready": false,
+      "B00_preserved": true,
+      "2024_open": true,
+      "predictive_improvement_established": false,
+      "goal_achieved": false,
+      "next_unit": "Conciliar la ejecución del productor de edificios registrado; recuperar24modelos fuente con rondas fijas, sin repetir matriz/count/C0. Guardar modelos y f/s/raw porfila; cerrar controles numéricos y contadores antes de registrar comparación predictiva sobre ámbitos guardados. La composición REN motor/contenidos es provisional y edificios permanece pendiente de evaluación, no excluido por resultado. No asignar previsiones K a esa composición ni llamarla FSp puro.2024abierto, cuota0, objetivo0.17activo.",
+      "forum": {
+        "author": "Codex",
+        "id": "COD-S2-20261026-MISION017-RENOVACIONES-ENTRADAS-RESULTADO",
+        "utc": "2026-10-26T05:49:54+00:00",
+        "previous_sha256": "6fdc649b222409ec9db597dac89f84458e43622d89f9e0549c81adc5013971ac",
+        "sha256": "ef42e13398f7e71ddc5c570fff56d79c228b7d757aa210c226df68427bf25f9f"
+      }
+    }
+  },
+  "phase2_source_FSp_buildings_recovery": {
+    "source_Poisson_Gamma_component_fits": 24,
+    "counted_in_cumulative_price_base_fits": true,
+    "new_C0_fits": 0,
+    "new_scores": 0,
+    "new_aggregated_submission_CSVs": 0,
+    "new_submissions": 0,
+    "receipt": {
+      "author": "Codex",
+      "utc": "2026-10-26T05:50:28.264793+00:00",
+      "status": "numerical_producer_complete_predictive_comparison_pending",
+      "evidence": {
+        "received_semantics_audit": {
+          "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/renovacion_fsp_recepcion_20261026_v1/audit.json",
+          "sha256": "95fc74233ba0c62b3ef80a28f2372f59d7db886aa2760cf1c41eef8f5ec8ae3d"
+        },
+        "provisional_candidate": {
+          "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/renovacion_fsp_composicion_20261026_v1/report.json",
+          "sha256": "b74e91e2fdde72fafadf7d8f585dd8de72c79a87d85a556937f4d5ee68d2d636"
+        },
+        "count_offset_inputs": {
+          "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_recuperacion_entradas_20261026_v1/report.json",
+          "sha256": "a4a83da4dfa724dd8673ec439c340d546bf7fe52301a5f30f27941f3e210d65b"
+        },
+        "raw_precision_matrices": {
+          "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_matrices_20261026_v1/report.json",
+          "sha256": "e9a0d645f0fd22bbe24c56e0b49f7ec06c234ca6f73e4cf1ef89625606132d6e"
+        },
+        "producer_plan": {
+          "path": "Hackaton/Repositorio_IAA2026/registro/semana2_mision017_FSp_edificios_recuperacion_plan_v1.json",
+          "sha256": "598b7c492e8aa691c35667f779a1efd3a2f225726cedf7cc5794647bea3d5e00"
+        },
+        "numerical_producer": {
+          "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_productor_20261026_v1/report.json",
+          "sha256": "e3abb5fa217d1edbc87e84c8900d2790e39293a4821f8a4a97bc414c8ec994a2"
+        }
+      },
+      "provisional_candidate_ready": false,
+      "B00_preserved": true,
+      "2024_open": true,
+      "predictive_improvement_established": false,
+      "goal_achieved": false,
+      "next_unit": "Registrar el contraste predictivo de componentes de edificios sobre los ámbitos/C0 ya guardados, antes de puntuar. Auditar procedencia y fórmula de las entradas requeridas para que el comparador F3c/F2 completo no se sustituya silenciosamente por N3. Separar2023/2024,NB/REN,peligros,nivel,cola y grupos; pesos no afinados con retenidos o público. FSp de motor/contenidos no está aislado en los donantes compuestos; no atribuir el efecto entero a FSp. Modelos y matrices ya completos: no repetir24fits,90cotejos,curvas o inventario K sin cambio. Cuota0conservada;0.17activo.",
+      "forum": {
+        "author": "Codex",
+        "id": "COD-S2-20261026-MISION017-FSP-EDIFICIOS-RECUPERACION-RESULTADO",
+        "utc": "2026-10-26T05:50:28+00:00",
+        "previous_sha256": "ef42e13398f7e71ddc5c570fff56d79c228b7d757aa210c226df68427bf25f9f",
+        "sha256": "f4b2919477ed6ff879d24ec7415f0bda32dd7e9754d8ef098b3a35e71f174abe"
+      }
+    }
+  },
+  "phase2_FSp_buildings_renewal_contrast": {
+    "author": "Codex",
+    "utc": "2026-10-26T05:58:35.136847+00:00",
+    "status": "completed_exploratory_adverse_no_integration",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_REN_contraste_20261026_v1/report.json",
+    "report_sha256": "afacbdcd42359a74e9569a3de9b3e5c8e439020be94a2506a88bf95c430fd34d",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/MISION017_FSp_EDIFICIOS_REN_CONTRASTE.md",
+    "delta": 0.00015526615212332862,
+    "bootstrap95": [
+      -0.0011524090260337488,
+      0.001553083269066383
+    ],
+    "checks": {
+      "delta_min": false,
+      "lower95_positive": false,
+      "at_least4positive_folds": false,
+      "both_years_nonnegative": false,
+      "post31_nonnegative": false,
+      "min_cell_delta": false,
+      "complete_F3c_comparator_and_vetoes_available": false
+    },
+    "new_price_calibration_constants": 30,
+    "new_iterative_price_fits": 0,
+    "new_C0_fits": 0,
+    "new_test_prices": 0,
+    "new_submissions": 0,
+    "2024_open": true,
+    "B00_all_alternatives_preserved": true,
+    "goal_achieved": false,
+    "next_unit": "FSp de edificios ya está reconstruido y su inserción REN .25 no pasó: no repetir esos24fits,30constantes o bootstrap. Mantener la alternativa y B00/F2/C1/F3c. La composición F3c/F4c REN motor/contenidos sigue provisional y no es FSp puro. Primero buscar de forma acotada salidas numéricas motor/contents f/s en otras rutas recibidas pertinentes, sin repetir las dos carpetas ya inventariadas ni el inventario K. Si no existen, preparar entradas de precisión completa de esos dos ramos y conciliar metadatos ya presentes usando los recuentos y C0 existentes; no reconstruir los edificios otra vez. Registrar la necesidad, rondas fijas, coste y foro antes de cualquier recuperación fuente adicional. El propósito es aislar FSp de los factores y contrastar en los mismos grupos antes de considerar un envío. No relajar criterios ni retocar pesos por el resultado adverso de edificios o el score público.2024abierto como desarrollo; cuota0; meta0.17activa.",
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261026-MISION017-FSP-EDIFICIOS-REN-CONTRASTE-RESULTADO",
+      "utc": "2026-10-26T05:58:35+00:00",
+      "previous_sha256": "f4dcf4f008c9fe4e648e7be0dd6e59480e0e02594a724ae1812fbaefbab851f2",
+      "sha256": "b57cb0c55f324be367c68d2ca00a7ab19afeff8ba99f050e590c5ea6f07ba24d"
+    }
+  },
+  "phase2_source_FSp_MC_recovery": {
+    "author": "Codex",
+    "utc": "2026-10-26T06:10:19.210262+00:00",
+    "status": "source_recovery_complete_no_predictive_admission",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/productor/report.json",
+    "report_sha256": "61de35e142755d2dae794a51d3345b30f8571988e47faa44e3e4ed670214975c",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/MISION017_FSp_MOTOR_CONTENIDOS_RECUPERACION.md",
+    "new_source_component_model_fits": 36,
+    "new_C0_fits": 0,
+    "new_scores": 0,
+    "new_submissions": 0,
+    "new_component_row_predictions": 4369088,
+    "goal_achieved": false,
+    "2024_open": true,
+    "next_unit": "Los36modelos MC y los24de edificios ya están completos, con matrices/modelos/componentes guardados: no repetirlos. Preparar y registrar un contraste único de FSp aislado sobre la referencia G3 de factores residuales guardados, sin reestimarlos, solo REN y pesos fijos recibidos motor.25/buildings.25/contents.5. La calibración recibida contiene kf/ks/kg y n/(n+100), distinta de la igualación de coste sin contracción probada antes en edificios; documentar esa necesidad y adaptar expresamente a C0 protegido por grupos, sin llamarlo replay exacto de F4c. Usar los ámbitos guardados, exposición una sola vez, NB/total de celda fijos y los criterios sin relajar. Registrar antes de estimar constantes o puntuar. Sin nuevos árboles/C0/test/envíos en el contraste. El F3c completo sigue como comparador no reproducido íntegramente; G3 es proxy.2024abierto;cuota0;meta0.17activa.",
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261026-MISION017-FSP-MC-RECUPERACION-RESULTADO",
+      "utc": "2026-10-26T06:10:19+00:00",
+      "previous_sha256": "97952331a1c76a1c719972354928a050569e989d38c838f89c8d71ae1939536e",
+      "sha256": "8d5e289cf6aad446654daf07fd6502c293bf5ac364d457a5cfe5a57bf8ccd80f"
+    },
+    "included_in_cumulative_price_base_fits": true
+  },
+  "phase2_FSp_REN_G3_contrast": {
+    "author": "Codex",
+    "utc": "2026-10-26T06:25:39.845489+00:00",
+    "status": "positive_partial_signal_no_admission",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_REN_G3_contraste_20261026_v2/report.json",
+    "report_sha256": "b61cae8436702f0ef85ccab36105fe07bf91641c266a4fc5903d3139080e3453",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/MISION017_FSp_REN_G3_CONTRASTE.md",
+    "scores": {
+      "N3": 0.13524973116896466,
+      "G3": 0.1370999273441873,
+      "RFS1": 0.13868724363897367
+    },
+    "delta": 0.0015873162947861643,
+    "bootstrap95": [
+      7.185039911618453e-05,
+      0.0031547165074834477
+    ],
+    "criteria": {
+      "delta_min": false,
+      "lower95_positive": true,
+      "positive_folds_min4": true,
+      "both_years_nonnegative": true,
+      "post31_nonnegative": false,
+      "cell_min": true,
+      "full_F3c_comparator_and_additional_vetoes": false
+    },
+    "empirical_constants": 165,
+    "reused_v1_constants": 11,
+    "new_v2_constants": 154,
+    "derived_peril_factors_not_added_to_fit_count": 75,
+    "new_price_model_fits": 0,
+    "new_C0_fits": 0,
+    "new_test_prices": 0,
+    "new_submissions": 0,
+    "goal_achieved": false,
+    "2024_open": true,
+    "next_unit": "RFS1 está completo:15ámbitos,165momentos únicos (11reutilizados de v1 y154nuevos en v2),sin nuevos árboles/C0. No repetirlo, retocar K/pesos o ocultar el fallo post31. Siguiente incertidumbre concreta: alinear el flujo de despliegue con la fuente2021–2024 disponible para ambos años objetivo. G3/T2b usa el padre fuente2021–2024 en2023/24, mientras el primer FSp usó dev2021–2023 en2023; la producción2025 necesita prod2021–2024. Registrar antes un control de consistencia usando únicamente las salidas prod ya guardadas, sin nuevos modelos, conservando todos los demás parámetros y criterios. No elegir la ventana por el mejor score ni reescribir RFS1. Además, sigue faltando el comparador F3c/F2 completo: el A1 corregido de tres semillas no tiene archivos históricos/modelos con los tags exactos en la búsqueda registrada (el código original sí los guardaba). No repetir ese inventario; revisar el contrato/offset/matrices y metadatos de rondas de ese productor antes de proponer una reconstrucción, no usar el A1 original2024como si fuera el corregido. No hay CSV nuevo listo o aprobado para enviar. Cuota0conservada,2024abierto,B00/alternativas preservados,meta0.17activa.",
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261026-MISION017-FSP-REN-G3-CONTRASTE-RESULTADO",
+      "utc": "2026-10-26T06:25:40+00:00",
+      "previous_sha256": "4cf9a30ade2cb360132b374debacde965b18d782355951d582343d63fede192f",
+      "sha256": "a5ca4ac4dff7c31f1f3a611e7e5f462fb8a4d4bacf44d843dc0cffacdd215ccb"
+    },
+    "moment_decomposition": {
+      "global_cost": 15,
+      "frequency": 75,
+      "mark": 75
+    }
+  },
+  "phase2_RFS1P_and_prototype": {
+    "author": "Codex",
+    "utc": "2026-10-26T07:11:27.519001+00:00",
+    "status": "production_consistency_positive_partial_prototype_not_admitted",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/MISION017_RFS1P_Y_PROTO2025.md",
+    "CV": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_REN_G3_prod_contraste_20261026_v1/report.json",
+      "sha256": "73f04a88d9d2d247cd9957d1a853a01fdfe7e62438b1382a294bc61a3c2af6e5"
+    },
+    "vetoes": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_REN_G3_prod_contraste_20261026_v1/additional_veto_points.json",
+      "sha256": "801b1cb147020d631a193de15f45d01d2406aa2ace37fb231863b167ef7b39a1"
+    },
+    "prototype": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/F3c_FSp_REN_prototipo_20261026_v1/report.json",
+      "sha256": "0be6c2c24f9e174b0027e2f9790b59dd3622804d4143f781f1464144a1c4a994"
+    },
+    "prototype_CSV": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/F3c_FSp_REN_prototipo_20261026_v1/F3c_FSp_REN_prototipo_2025.csv",
+      "sha256": "ed639b1cba9cc0a58c2864e0899e40b8aa4c50933cee99ecda145fd459d1922a",
+      "rows": 209063,
+      "bytes": 4351099,
+      "total_CU": 87269136.420546
+    },
+    "history_compatibility": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_historia_compatibilidad_20261026_v1/report.json",
+      "sha256": "dde721b89852aff063045dbd3993ea305312fb644195e96f55110d2161055e20"
+    },
+    "count_mark_review": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/enlace_numero_marca_revision_20261026_v1/report.json",
+      "sha256": "f6f492ef290b8b61ae2f6baf4798ee102b060aef5c9acf2c0b273738a0855e3a"
+    },
+    "new_empirical_moment_constants": 165,
+    "new_price_model_fits": 0,
+    "new_C0_fits": 0,
+    "new_T2b_primary_future_inference_rows": 50083,
+    "historic_check_rows": 192,
+    "future_shuffle_check_rows": 96,
+    "diagnostic_legacy_history_inference_rows": 199,
+    "new_candidate_price_rows": 50083,
+    "new_CSVs": 1,
+    "new_submissions": 0,
+    "submission_allowed": false,
+    "submission_ready": false,
+    "formal_promotion": false,
+    "2024_open": true,
+    "B00_all_alternatives_preserved": true,
+    "goal_achieved": false,
+    "next_unit": "No repetir los60modelos fuente, las matrices, RFS1/RFS1P, el bootstrap REN o la compatibilidad de199filas: ya terminaron. El test2025es76.04%NB y la receta REN no lo cambia; la sensibilidad ponderada de RFS1P es solo+.00038157 y el veto A1 original sigue negativo. Antes de añadir modelos/variables, registrar un único contraste de aplicación FSp a NB con la misma configuración prod, G3, C0 protegido, kappa por ámbito ya guardados y pesos .25/.25/.5. No reestimar nada. Medir la aportación NB separadamente y la receta completa REN+NB como combinación fija, con totales año/ramo/negocio conservados y criterios existentes. La evidencia NB negativa recibida era de otra receta/ámbito y no sustituye este contraste aislado sobre el núcleo reconstruido. Registrar hipótesis, coste y foro antes de puntuar; si también falla, documentar el fallo concreto antes de una calibración estándar adicional. El prototipo ed639b1c conserva158980NB y50083RENcambiadas, está explícitamente no admitido; no enviarlo al recuperar cuota. La revisión número/marca preserva la validez del producto proxy agregado en un riesgo homogéneo y no demuestra superioridad de otro enlace: no rehacer30modelos solo por una diferencia semántica. Para interpretar frecuencia nativa se necesitarían ambos offsets coherentes y nueva prueba. Falta aún F3c/F2 histórico completo y el A1 corregido; no sustituirlo por A1 original ni repetir el inventario exacto sin cambios. 2024abierto como desarrollo, B00/alternativas preservados, mejor público0.16914,cuota0,meta0.17activa.",
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261026-MISION017-RFS1P-PROTOTIPO-RESULTADO",
+      "utc": "2026-10-26T07:11:27+00:00",
+      "previous_sha256": "5039b1e316f87d91154b4f9749bc8692a44f004d51e9f6ccc723aa78a32b2a63",
+      "sha256": "145484358ce84888b652f354a0a7ac25da150bfd19c08bc7667892ddc0043c85"
+    }
+  },
+  "phase2_saved_FSp_NB_application": {
+    "author": "Codex",
+    "utc": "2026-10-26T07:28:45.245787+00:00",
+    "status": "completed_adverse_no_NB_FSp_adoption",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_NB_aplicacion_20261026_v2/report.json",
+    "report_sha256": "cbcb39ce018e6b392b00ffcf08792a72e13a97b82750bc5109cffbac5da05d8a",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/MISION017_FSp_NB_RESULTADO.md",
+    "new_price_model_fits": 0,
+    "new_C0_fits": 0,
+    "new_calibration_constants": 0,
+    "new_prediction_only_normalizers": 45,
+    "new_OOF_NB_rows": 15037,
+    "new_test_prices": 0,
+    "new_submissions": 0,
+    "2024_open": true,
+    "goal_achieved": false,
+    "next_unit": "NB FSp completo y adverso: no repetir aplicación, κ, modelos, bootstrap o pesos. Registrar y probar un único GLM Tweedie1.5 de ajuste de edad en NB, por ramo, sobre G3 congelado, cinco bandas de edad de póliza, ridge Fisher K300 ya usado, dos interceptos año de entrenamiento no transferidos y normalización NB por año sin etiquetas. Quince ajustes pequeños máximo, sin nuevos árboles/C0/variables de maestros o2025precios. Preparar edad de matrices existentes y soporte; usar los mismos15ámbitos/C0. Conservar los mismos criterios/guardas NB y medir la receta completa con REN congelada sin usarla para ocultar daño NB. No afinar K/bandas/pesos por los retenidos. Falta comparador completoF3c/A1corregido; prototipo ed639b1c no admitido no se envía.2024abierto, B00/alternativas guardados, cuota0, meta0.17activa.",
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261026-MISION017-FSP-NB-RESULTADO",
+      "utc": "2026-10-26T07:28:45+00:00",
+      "previous_sha256": "ce19a67d0e463be882d2df69472aa8eb65d52d1e87eeb6dca51392e39483ee02",
+      "sha256": "3165ac4baeeddb6e96874e79a7a2534d3ece8f610302c208364776865fde2de5"
+    }
+  },
+  "phase2_GLM_age_NB": {
+    "author": "Codex",
+    "utc": "2026-10-26T07:47:46.999967+00:00",
+    "status": "completed_adverse_no_age_NB_adoption",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/GLM_edad_NB_20261026_v1/report.json",
+    "report_sha256": "6dbebd676b2c9af93174c0465d0ec3c20814605386d7205caf9c7dd9d129337b",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/MISION017_GLM_EDAD_NB_RESULTADO.md",
+    "new_price_model_fits": 15,
+    "synthetic_fits_separate": 3,
+    "new_C0_fits": 0,
+    "new_source_models": 0,
+    "new_source_inferences": 0,
+    "new_test_prices": 0,
+    "new_submissions": 0,
+    "2024_open": true,
+    "goal_achieved": false,
+    "next_unit": "GLM edad NB completo y adverso en5folds/ambos años; no afinar K,bandas,variables o repetirlo. Priorizar un núcleo A1 verificable para evitar más ajustes sobre un sustituto distinto del modelo enviado. Preparar matrices de una reconstrucción A1S nueva, no replay exacto: esquema del productor A1 corregido, IDs correctos, sin make_model motor/region,3semillas fuente11/12/13, observación fuente-only E_cost/T0 ya cacheada y verificada, sin C0 nuevos. Historia de notificaciones conocida antes del inicio/corte, sin usar aceptación futura como covariable y sin años futuros no observados. El A1 legado usaba otra canalización de curvas/exposición, potencialmente de ambos mercados; no está acreditada exclusión por grupo ni se recibieron los modelos/relatividades o metadatos de rondas necesarios. Producción con todas las etiquetas de entrenamiento es legítima; eso no permite validar objetos congelados con posible ascendencia del retenido. La reconstrucción segura se etiqueta alternativa nueva, no certificación retrospectiva del A1 original. Sin entrenar hasta congelar insumos/criterio/coste y foro; si faltan rondas, presupuestar explícitamente9ajustes internos de fuente más9refits para las3semillas×3ramos, sin explorar hiperparámetros o etiquetas emergentes.2024abierto,B00/alternativas intactos,mejor0.16914,cuota0,meta0.17activa.",
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261026-MISION017-GLM-EDAD-NB-RESULTADO",
+      "utc": "2026-10-26T07:47:47+00:00",
+      "previous_sha256": "5eb217cdd153d4d342f99477b6a92c096ed93d787090212d016a9bc1aa378aec",
+      "sha256": "4cbd263d8e035e13876429c4efa29563cce71f7b3e1e6993ad6fb2d4e74d1ba2"
+    }
+  },
+  "phase2_A1S_source": {
+    "counted_fit_keys": [
+      "buildings_seed11_full",
+      "buildings_seed11_inner",
+      "buildings_seed12_full",
+      "buildings_seed12_inner",
+      "buildings_seed13_full",
+      "buildings_seed13_inner",
+      "contents_seed11_full",
+      "contents_seed11_inner",
+      "contents_seed12_full",
+      "contents_seed12_inner",
+      "contents_seed13_full",
+      "contents_seed13_inner",
+      "motor_seed11_full",
+      "motor_seed11_inner",
+      "motor_seed12_full",
+      "motor_seed12_inner",
+      "motor_seed13_full",
+      "motor_seed13_inner"
+    ],
+    "attempts": 18,
+    "completed": 18,
+    "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_mision017_A1S_fuente_plan_v1.json",
+    "new_C0_fits": 0,
+    "note": "Counts actual fit invocation checkpoints including failed/interrupted attempts, not just saved full models."
+  },
+  "phase2_A1S_complete_target": {
+    "unique_learned_price_constants": 355,
+    "breakdown": {
+      "shape_factors": 140,
+      "shape_training_normalizers": 40,
+      "component_levels": 45,
+      "residual_factors": 90,
+      "residual_nuisance_levels": 80
+    },
+    "control_recomputation_same_constants_separate": {
+      "shape_factors": 140,
+      "shape_training_normalizers": 40,
+      "component_levels": 45,
+      "residual_factors": 90,
+      "residual_nuisance_levels": 80
+    },
+    "new_iterative_fits": 0,
+    "new_C0_fits": 0,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/target_complete_core/report.json",
+    "report_sha256": "ee4e14395c2a2e28e4f6f148530cf4516a5b8ce0f67677514bb8781e5ccf3420"
+  },
+  "phase2_GLM_discrepancy_A1S": {
+    "author": "Codex",
+    "utc": "2026-10-26T08:30:07.691217+00:00",
+    "status": "complete_exploratory_no_admission",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/GLM_discrepancia_A1S_20261026_v1/report.json",
+    "report_sha256": "45e3f2ac8c1afbcce62d3a67d3949432cd404b6f66173fd42eb31f40c53e23cd",
+    "new_real_GLM_fits": 15,
+    "new_C0_fits": 0,
+    "new_source_fits": 0,
+    "synthetic_fits_separate": 3,
+    "slopes": 30,
+    "nuisance_intercepts": 60,
+    "new_final_test_prices": 0,
+    "new_submissions": 0,
+    "scores": {
+      "N3": 0.13524973116896466,
+      "G3": 0.1370999273441873,
+      "D1": 0.1356617029716608
+    },
+    "delta_vs_G3": -0.0014382243725265594,
+    "bootstrap95": [
+      -0.0033660869960305366,
+      0.00014633368179229751
+    ],
+    "gates": {
+      "delta_ge_002": false,
+      "lower95_positive": false,
+      "positive_folds_ge4": false,
+      "both_years_nonnegative": false,
+      "post31_nonnegative": false,
+      "cell_min_ge_minus001": false
+    },
+    "formal_admission": false,
+    "submission_allowed": false,
+    "2024_open": true,
+    "B00_all_alternatives_preserved": true,
+    "goal_achieved": false,
+    "next_unit": "Keep this completed result without repeating source A1S fits, mixture calibration, GLM, bootstrap or tuning K/weights on held losses. Review a distinct, documented uncertainty or new legitimate source before registering another finite standard-model trial. Preserve F3c0.16914/B00;2024open; no slot consumed and public0.17goal remains active."
+  },
+  "phase2_DT1": {
+    "author": "Codex",
+    "utc": "2026-10-26T08:49:37.411056+00:00",
+    "status": "complete_exploratory_no_admission",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/residuo_aditivo_DT1_20261026_v1/report.json",
+    "report_sha256": "7a074baa200b271bf49bc4dcdf63d7a062bd45569057b45d4ab68404e48de6bc",
+    "new_real_target_price_fits": 15,
+    "new_training_nuisance_levels": 60,
+    "synthetic_fits_separate": 3,
+    "new_source_fits": 0,
+    "new_C0_fits": 0,
+    "new_final_test_prices": 0,
+    "new_submissions": 0,
+    "scores": {
+      "N3": 0.13524973116896466,
+      "G3": 0.1370999273441873,
+      "DT1": 0.13641164361214297
+    },
+    "delta_vs_G3": -0.0006882837320445565,
+    "bootstrap95": [
+      -0.0016516044246032027,
+      0.0003090948647299828
+    ],
+    "gates": {
+      "delta_ge_002": false,
+      "lower95_positive": false,
+      "positive_folds_ge4": false,
+      "both_years_nonnegative": false,
+      "post31_nonnegative": false,
+      "cell_min_ge_minus001": false
+    },
+    "formal_admission": false,
+    "submission_allowed": false,
+    "2024_open": true,
+    "goal_achieved": false,
+    "B00_all_alternatives_preserved": true,
+    "next_unit": "Investigate risk-dependent peril reporting completion as a distinct observation-link uncertainty using saved outer C0 and existing FSp source components/outer calibration artifacts only. First measure its variation/availability without new fits, curves, prices, scores or inference; no automatic recipe or adoption. Do not repeat DT1/A1S/GLM or tune depth/rounds/weights.2024open;B00/F3c0.16914and quota preserved."
+  },
+  "phase2_HET": {
+    "unique_closed_price_constants": 710,
+    "breakdown": {
+      "shape_factors": 280,
+      "component_levels": 90,
+      "residual_factors": 180,
+      "nuisance_levels": 160,
+      "shape_training_normalizers": 80
+    },
+    "control_recomputations_separate": {
+      "shape_factors": 280,
+      "component_levels": 90,
+      "residual_factors": 180,
+      "nuisance_levels": 160,
+      "shape_training_normalizers": 80
+    },
+    "new_iterative_fits": 0,
+    "new_C0_fits": 0,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/enlace_HET_20261026_v1/report.json",
+    "report_sha256": "cb98fc7257aa8d10b107991fbe7b62fd8f1c1f255b62e82cf3825a55d4a678bc"
+  },
+  "phase2_AGEH1_PUL3": {
+    "author": "Codex",
+    "utc": "2026-10-26T09:37:46.103721+00:00",
+    "status": "complete_adverse_NB_rejected",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/edad_H1_PUL3_20261026_v1/report.json",
+    "report_sha256": "2525fa9ce19129e77efb5e0e332d2008c716a375803c988e86992a705c639014",
+    "new_real_GLM_fits": 15,
+    "synthetic_optimizer_fits": 0,
+    "new_C0_fits": 0,
+    "new_source_fits": 0,
+    "new_kappa_fits": 0,
+    "new_final_test_prices": 0,
+    "new_submissions": 0,
+    "combined": {
+      "scores": {
+        "N3": 0.13524973116896466,
+        "G3": 0.1370999273441873,
+        "PUL3": 0.13939707732206486
+      },
+      "delta_vs_G3": 0.0022971499778775416,
+      "bootstrap95": [
+        0.000833495599041226,
+        0.0038448711764021283
+      ],
+      "gates": {
+        "delta_ge_002": true,
+        "lower95_positive": true,
+        "positive_folds_ge4": true,
+        "both_years_nonnegative": true,
+        "post31_nonnegative": false,
+        "cell_min_ge_minus001": false
+      },
+      "weighted2025_sensitivity_delta": -0.0015754310811844279
+    },
+    "NB_delta": -0.0002913793808248633,
+    "NB_bootstrap95": [
+      -0.0006144458280533537,
+      -5.510677993969583e-05
+    ],
+    "NB_guards": {
+      "point_nonnegative": false,
+      "both_years_nonnegative": false,
+      "positive_folds_min4": false,
+      "lower95_positive": false,
+      "cell_min": false
+    },
+    "weighted_NB_increment": -0.003920899533233045,
+    "additional_vetoes": {
+      "weighted_NB_increment_nonnegative": false,
+      "weighted_full_nonnegative": false,
+      "A1_original2024_age_only_NB_proxy_nonnegative": false,
+      "A1_original2024_full_ratio_proxy_nonnegative": true
+    },
+    "formal_admission": false,
+    "submission_allowed": false,
+    "2024_open": true,
+    "goal_achieved": false,
+    "B00_all_alternatives_preserved": true,
+    "next_unit": "Prepare concrete2025PUL2correction prototype relative to actualF3c, with all five frozen outer calibrations and sameRENweights; no age or newfit. First inventory/cache2025T2bREN/NBrates and needed covariates, define source/target lineage and ensemble/normalization before inference. ProductionQAand actual price/level/cohort shifts, not a claim failed post31passed. Freeze recipe/cost/forum before predictions. No upload: separate admission/research decision still unestablished;2024open,B00/F3c/alternatives preserved."
+  },
+  "phase2_private_nested_H1": {
+    "author": "Codex",
+    "utc": "2026-10-26T13:53:37.853753+00:00",
+    "primary_reporting_peril_fits": 375,
+    "adverse_reporting_peril_fits_separate": 375,
+    "primary_frequency_constants": 375,
+    "primary_mark_means_threebranches_separate": 1125,
+    "primary_normalized_mixtures": 75,
+    "primary_closed_scope_learner_calls": 150,
+    "adverse_closed_learner_calls_separate": 150,
+    "unique_closed_price_constants": 3550,
+    "breakdown": {
+      "shape_factors": 1400,
+      "shape_training_normalizers_separate": 400,
+      "levels": 450,
+      "residual_factors": 900,
+      "training_nuisance_levels": 800,
+      "stage_calls": 200,
+      "training_stage_normalizers_separate": 800,
+      "observed_held_stage_normalizers_separate": 800,
+      "pricing_constants_total": 3550
+    },
+    "adverse_recomputed_constants_separate": {
+      "shape_factors": 1400,
+      "shape_training_normalizers_separate": 400,
+      "levels": 450,
+      "residual_factors": 900,
+      "training_nuisance_levels": 800,
+      "stage_calls": 200,
+      "training_stage_normalizers_separate": 800,
+      "observed_held_stage_normalizers_separate": 800,
+      "pricing_constants_total": 3550
+    },
+    "predecessor_v2_primary_curves_reused_not_refit": 5,
+    "predecessor_v2_closed_learners_reused_not_refit": 2,
+    "v3_new_primary_curves": 370,
+    "v3_new_primary_closed_learners": 148,
+    "primary_ultimate_prediction_normalizers_committed": 800,
+    "adverse_ultimate_normalizers_committed_separate": 800,
+    "extra_v2_partial_forward_and_v3_cache_replay_normalizers_separate": {
+      "v2_ultimate": 8,
+      "v3_cached_observed": 8
+    },
+    "synthetic_by_version_excluded": [
+      {
+        "version": 1,
+        "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v1/synthetic_report.json",
+        "sha256": "4643ea59064bcb5b3d113964b64d9ebac4ec29009d5c4f07ad4d41d73487e77e",
+        "reporting_peril_fits": 35,
+        "closed_learner_calls": 14
+      },
+      {
+        "version": 2,
+        "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v2/synthetic_report.json",
+        "sha256": "9c67768a2f4383d8b0f676f1de2b92003efc4b94536e7fd448b62f201d50a05d",
+        "reporting_peril_fits": 35,
+        "closed_learner_calls": 14
+      },
+      {
+        "version": 3,
+        "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/synthetic_report.json",
+        "sha256": "9c67768a2f4383d8b0f676f1de2b92003efc4b94536e7fd448b62f201d50a05d",
+        "reporting_peril_fits": 35,
+        "closed_learner_calls": 14
+      }
+    ],
+    "new_iterative_price_fits": 0,
+    "new_source_models": 0,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/media_anidada_H1_20261026_v3/report.json",
+    "report_sha256": "4c021c0043d121d60386f014b18a553ab689df6b068b09ad1c6e276d60aca6db"
+  },
+  "phase2_private_H3B": {
+    "primary": {
+      "closed_learners": 75,
+      "constants": {
+        "shape_factors": 700,
+        "shape_training_normalizers_separate": 200,
+        "levels": 225,
+        "residual_factors": 450,
+        "training_nuisance_levels": 400,
+        "stage_calls": 100,
+        "training_stage_normalizers_separate": 400,
+        "observed_held_stage_normalizers_separate": 400,
+        "price_total": 1775
+      },
+      "source_business_mixtures": 150,
+      "derived_covariate_weights": 750
+    },
+    "adverse_separate": {
+      "closed_learners": 75,
+      "constants": {
+        "shape_factors": 700,
+        "shape_training_normalizers_separate": 200,
+        "levels": 225,
+        "residual_factors": 450,
+        "training_nuisance_levels": 400,
+        "stage_calls": 100,
+        "training_stage_normalizers_separate": 400,
+        "observed_held_stage_normalizers_separate": 400,
+        "price_total": 1775
+      },
+      "source_business_mixtures": 150,
+      "derived_covariate_weights": 750
+    },
+    "outer_covariate_mixtures_separate": 30,
+    "outer_derived_covariate_weights_separate": 150,
+    "synthetic_closed_learners_excluded": 6,
+    "new_C0_fits": 0,
+    "new_iterative_price_fits": 0,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/H3B_mezcla_negocio_20261026_v1/report.json",
+    "report_sha256": "525a39e542efb20d97e8b3b825482d4e2e69ac4dbd11bab529bb98999bbc126e"
+  },
+  "phase2_private_P4_year_transfer": {
+    "counts": {
+      "primary": {
+        "reporting_started": 450,
+        "reporting_completed": 450,
+        "closed_learners_started": 195,
+        "closed_learners_completed": 195,
+        "constants": {
+          "shape_factors": 1820,
+          "levels": 585,
+          "residual_factors": 1170,
+          "training_nuisance_levels": 520,
+          "shape_training_normalizers_separate": 520,
+          "training_stage_normalizers_separate": 520,
+          "observed_held_stage_normalizers_separate": 520,
+          "stage_calls": 260,
+          "price_total": 4095
+        }
+      },
+      "poison": {
+        "reporting_started": 450,
+        "reporting_completed": 450,
+        "closed_learners_started": 195,
+        "closed_learners_completed": 195,
+        "constants": {
+          "shape_factors": 1820,
+          "levels": 585,
+          "residual_factors": 1170,
+          "training_nuisance_levels": 520,
+          "shape_training_normalizers_separate": 520,
+          "training_stage_normalizers_separate": 520,
+          "observed_held_stage_normalizers_separate": 520,
+          "stage_calls": 260,
+          "price_total": 4095
+        }
+      }
+    },
+    "primary_reporting_scope_mixtures": 90,
+    "synthetic_reporting_fits_excluded": 30,
+    "synthetic_closed_learners_excluded": 18,
+    "replay_ultimate_normalizers_separate": 520,
+    "new_iterative_price_fits": 0,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P4_transferencia_anual_H1_20261026_v1/report.json",
+    "report_sha256": "945193f26d9dbb0d9e8859401a33860948070b296be232c2976d9b4f6d57e01b"
+  },
+  "phase2_private_P5_reserve_recalibration": {
+    "counts": {
+      "primary": {
+        "closed_learners_completed": 390,
+        "constants": {
+          "shape_factors": 3640,
+          "levels": 1170,
+          "residual_factors": 2340,
+          "training_nuisance_levels": 2080,
+          "shape_training_normalizers_separate": 1040,
+          "training_stage_normalizers_separate": 2080,
+          "observed_held_stage_normalizers_separate": 2080,
+          "stage_calls": 520,
+          "price_total": 9230
+        }
+      },
+      "poison": {
+        "closed_learners_completed": 390,
+        "constants": {
+          "shape_factors": 3640,
+          "levels": 1170,
+          "residual_factors": 2340,
+          "training_nuisance_levels": 2080,
+          "shape_training_normalizers_separate": 1040,
+          "training_stage_normalizers_separate": 2080,
+          "observed_held_stage_normalizers_separate": 2080,
+          "stage_calls": 520,
+          "price_total": 9230
+        }
+      }
+    },
+    "new_C0_fits": 0,
+    "new_iterative_price_fits": 0,
+    "synthetic_closed_learners_excluded": 54,
+    "primary_ultimate_normalizers": 2080,
+    "adverse_ultimate_normalizers_separate": 2080,
+    "replay_ultimate_normalizers_separate": 2080,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P5_recalibracion_reservas_H1_20261026_v1/report.json",
+    "report_sha256": "b290f3d01ead20698f0f9cf58b90f02a6bd14147c5055b80ace18871b7249c50"
+  },
+  "phase2_private_P6_nominal_producer": {
+    "counts": {
+      "reporting_started": 15,
+      "reporting_completed": 15,
+      "closed_calibrations": 6,
+      "constants": {
+        "shape_factors": 56,
+        "levels": 18,
+        "residual_factors": 18,
+        "training_nuisance_levels": 16,
+        "shape_training_normalizers_separate": 16,
+        "training_stage_normalizers_separate": 16,
+        "observed_held_stage_normalizers_separate": 0,
+        "stage_calls": 4,
+        "price_total": 108
+      }
+    },
+    "new_source_inference": 0,
+    "synthetic_C0_fits_excluded": 15,
+    "synthetic_closed_learners_excluded": 9,
+    "normalizers_separate": {
+      "primary": 8,
+      "embedded_replay": 8,
+      "shuffle": 8,
+      "other_process": 8,
+      "CLIexport": 8
+    },
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P6_productor_S2_H1_nominal_20261026_v1/report.json",
+    "report_sha256": "8949c5ce21f2af790d2ce97741b35bd80901bf161802d060681924be1c1ed19f"
+  },
+  "diagnostic_reporting_fits_since_private_priority_separate": 149,
+  "phase2_private_P7_mature_reporting_window": {
+    "counts": {
+      "primary": {
+        "reporting_started": 149,
+        "reporting_completed": 149,
+        "distribution_reuses": 1
+      },
+      "poison": {
+        "reporting_started": 149,
+        "reporting_completed": 149,
+        "distribution_reuses": 1
+      }
+    },
+    "pricing_curves": 0,
+    "new_diagnostic_weighted_mark_means_threebranches_separate": 447,
+    "synthetic_reporting_fits_excluded": 21,
+    "v1_real_fits": 0,
+    "new_price_model_fits": 0,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P7_ventana_reporte_madura_20261026_v2/report.json",
+    "report_sha256": "b4c0938ba993dd4c69f51242e4cf72b34379273b41342885dbe4a94e26014c2e"
+  },
+  "phase2_private_P8_frozen_source_probe": {
+    "author": "Codex",
+    "utc": "2026-10-26T16:27:37.762719+00:00",
+    "status": "P8frozen_source_exposure_probe_complete",
+    "actual_raw_prediction_calls": 27,
+    "primary_raw_prediction_rows": 1728,
+    "actual_leaf_control_calls": 27,
+    "leaf_control_rows_separate": 216,
+    "new_model_fits": 0,
+    "new_C0fits": 0,
+    "new_calibrationfits": 0,
+    "new_finaltestprices": 0,
+    "new_submissions": 0,
+    "new_predictive_price_families": 0,
+    "feature_removal_adopted": false,
+    "P6_CSV_unchanged": true,
+    "private_improvement_established": false,
+    "formal_promotion": false,
+    "submission_allowed": false,
+    "2024_open": true,
+    "B00_all_alternatives_preserved": true,
+    "goal_achieved": false,
+    "plan_sha256": "920a4fbf65a4359c1920a3262fa2e9813075adc6603b7101bbb5a40aa99a844e",
+    "limits": [
+      "Finite outcome-free selectedfeatureprobe not populationimpact, predictivegain or a causal exposureeffect",
+      "Only A1Ssourcefeature changes; T2b/member/S2prices are not recomputed so no fullpolicyforecastclaim",
+      "Cached baseline/centres and originalmodelcontext including2024 and undatedmasters remain conditional",
+      "Private performance, emerging support, nominalgainminimum and prioradverses unresolved"
+    ],
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/report.json",
+    "report_sha256": "64f658f5b44326dd4ed2d7e8a977153ba6b07164d32c58e9a850c8f21404603f",
+    "replay": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P8_sonda_exposicion_fuente_20261026_v2/replay_report.json",
+    "replay_sha256": "9f1ba4c172d4a503a09f878f6f0fcc1d34093a50bde0d9f88d42648b1f38219b",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P8_SENSIBILIDAD_EXPOSICION.md",
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261026-PRIVADA-P8-SONDA-RESULTADO",
+      "utc": "2026-10-26T16:27:37+00:00",
+      "previous_sha256": "1ca9d5fbd69bd8853e427754bc667551b2e86664b8e711938a989afd0ce475a8",
+      "sha256": "d216efbbfcf996dbba4ee33b1fe0793d7e69449962a670979a305f55071264f8"
+    },
+    "next_unit": "Preregister P9fixed-budget source exposure-feature ablation: drop only exposure_model from A1S, retain offset/e_cost, source-only categories, all3seeds, original fullroundcounts/capacity and target recipes. At most9new sourcefullfits; no new source earlystopsearch or C0fits. Reuse exact H1/G3inner ratios because their learning is independent of A1S. Refit S2outercomponent in each originalscope, validate pooled and conditional2023-to2024 transfer, all prior stressscenarios/cells/influence and complete held-poison/replay flow. Do not infer a bug or adopt removal from P8. No uploads, levelmatching or publicscore tuning; preserve B00/F3c/P6/alternatives and adaptive2024open."
+  },
+  "phase2_private_P9_source_ablation": {
+    "real_source_full_fits": 9,
+    "attempts": 9,
+    "synthetic_source_fits_separate": 2,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P9_fuente_sin_exposicion_20261026/report.json",
+    "report_sha256": "d861e278669c3e4c138fa63865b809ee1365d1806413ea391330c01d44522764"
+  },
+  "phase2_private_P10_source_ablation_validation": {
+    "primary_closed_learners": 30,
+    "adverse_closed_learners_separate": 30,
+    "unique_primary_price_constants": 670,
+    "constant_breakdown": {
+      "shape_factors": 280,
+      "level_constants": 90,
+      "residual_factors": 180,
+      "training_nuisance_levels": 120,
+      "shape_training_normalizers_separate": 80,
+      "training_stage_normalizers_separate": 120,
+      "held_stage_normalizers_separate": 120
+    },
+    "synthetic_completed_closed_calls_separate": 6,
+    "synthetic_failed_call_separate": 1,
+    "new_source_fits": 0,
+    "new_C0_fits": 0,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P10_validacion_sin_exposicion_20261026/report.json",
+    "report_sha256": "bb0c972e04f1a2d05cbacf041ead01002e63e8e4b96c98652421cb635d1f50da"
+  },
+  "phase2_private_P11_standard_source_GLM": {
+    "real_source_GLM_fits": 3,
+    "synthetic_source_GLM_fits_separate": 1,
+    "GLM_parameters_not_closedform_constants": 359,
+    "historical_replay_inference_rows_separate": 109296,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P11_GLM_fuente_20261026/report.json",
+    "report_sha256": "bb967e19e1695c5cca2130eac4b916d6ed66d1dc228772b9a35b1df2264be854"
+  },
+  "phase2_private_P12_standard_GLM_validation": {
+    "primary_closed_learners": 30,
+    "adverse_closed_learners_separate": 30,
+    "unique_primary_price_constants": 670,
+    "constant_breakdown": {
+      "shape_factors": 280,
+      "level_constants": 90,
+      "residual_factors": 180,
+      "training_nuisance_levels": 120,
+      "shape_training_normalizers_separate": 80,
+      "training_stage_normalizers_separate": 120,
+      "held_stage_normalizers_separate": 120
+    },
+    "new_synthetic_fits": 0,
+    "new_source_fits": 0,
+    "new_C0_fits": 0,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P12_validacion_GLM_20261026/report.json",
+    "report_sha256": "c4f727f81558a374bfb8c14251e4dd337fd17e32ba1ab9a61fddbce9e0203fb0"
+  },
+  "phase2_private_P13_attribution": {
+    "diagnostic_oracle_scalars_inadmissible_separate": 40,
+    "loss_decompositions": 20,
+    "new_model_fits": 0,
+    "new_price_constants": 0,
+    "new_inference": 0,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P13_atribucion_GLM_20261026/report.json",
+    "report_sha256": "b24224f501aef3962fcfbe3d9dc4e037136ee213f7f51fe93f043ab68d06878e"
+  },
+  "phase2_private_P14_missing_source_GLM": {
+    "real_source_GLM_fits": 3,
+    "synthetic_source_GLM_fits_separate": 1,
+    "GLMparameters_not_closedform_constants": 375,
+    "new_C0_fits": 0,
+    "historical_replay_inference_rows_separate": 109296,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P14_GLM_ausentes_20261026/context_report.json",
+    "report_sha256": "190dc3ed486e0d6ace249d677c755685e9b68cb30704dfb6c47994e61f69dd31"
+  },
+  "phase2_private_P15_missing_GLM_validation": {
+    "primary_closed_learners": 30,
+    "adverse_closed_learners_separate": 30,
+    "unique_primary_price_constants": 670,
+    "constant_breakdown": {
+      "shape_factors": 280,
+      "level_constants": 90,
+      "residual_factors": 180,
+      "training_nuisance_levels": 120,
+      "shape_training_normalizers_separate": 80,
+      "training_stage_normalizers_separate": 120,
+      "held_stage_normalizers_separate": 120
+    },
+    "secondary_new_resampling": 0,
+    "new_source_fits": 0,
+    "new_C0_fits": 0,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P15_validacion_ausentes_20261026/context_report.json",
+    "report_sha256": "d7a75659fd38f74a15d8d3d35666010a942381e0a88c9f0666c452069d8e0a00"
+  },
+  "phase2_private_P16_source_GAM": {
+    "actual_source_estimator_fits": 3,
+    "pipeline_invocations": 4,
+    "preprocessing_failures_before_estimator_fit": 1,
+    "reused_completed_models_not_additional_fits": 2,
+    "synthetic_source_GAMfits_separate": 2,
+    "parameters_not_closedform_constants": 411,
+    "historical_replay_inference_rows_separate": 109296,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P16_GAM_bedrooms_lineal_20261026/report.json",
+    "report_sha256": "e14d7177c4c6a6d30ef98b398628915ef7551914693401061ad3589eee18301c"
+  },
+  "phase2_private_P17_GAM_validation": {
+    "primary_closed_learners": 30,
+    "adverse_closed_learners_separate": 30,
+    "unique_primary_price_constants": 670,
+    "constant_breakdown": {
+      "shape_factors": 280,
+      "level_constants": 90,
+      "residual_factors": 180,
+      "training_nuisance_levels": 120,
+      "shape_training_normalizers_separate": 80,
+      "training_stage_normalizers_separate": 120,
+      "held_stage_normalizers_separate": 120
+    },
+    "secondary_new_resampling": 0,
+    "new_source_fits": 0,
+    "new_C0_fits": 0,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P17_validacion_GAM_20261026/context_report.json",
+    "report_sha256": "2b4e0975cebec86ed443cf3e2f6dfc18adbb975acd569bfd5aec041dcef704b4"
+  },
+  "phase2_private_P18_joint_calibration": {
+    "primary_GLM_fits": 10,
+    "adverse_GLM_fits_separate": 10,
+    "primary_coefficients_not_closed_form_constants": 290,
+    "new_closed_form_constants": 0,
+    "new_source_fits": 0,
+    "new_C0_fits": 0,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P18_calibracion_conjunta_20261026/report.json",
+    "report_sha256": "a0e05a95f171e1fbc3fda51082d3c0196b89b9d2be3a70df2df955f5c1cd1339"
+  },
+  "phase2_private_P19_cohorts": {
+    "new_price_fits": 0,
+    "new_C0_fits": 0,
+    "new_inference": 0,
+    "new_submissions": 0,
+    "new_bootstrap_families": 1,
+    "bootstrap_replicates": 2000,
+    "comparisons": 30,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P19_cohortes_broker_20261026/report.json",
+    "report_sha256": "54ffcd07c8e2fdeba7a0f033c08dd9ecde8b387e5673cebadc152c55ea1ac764"
+  },
+  "phase2_private_P23_channel": {
+    "new_primary_stages": 30,
+    "adverse_stages_separate": 30,
+    "new_primary_constants": 150,
+    "constant_breakdown": {
+      "shape_factors": 0,
+      "level_constants": 0,
+      "residual_factors": 60,
+      "training_nuisance_levels": 90,
+      "shape_training_normalizers_separate": 0,
+      "training_stage_normalizers_separate": 90,
+      "held_stage_normalizers_separate": 90
+    },
+    "new_iterative_price_fits": 0,
+    "new_source_fits": 0,
+    "new_C0_fits": 0,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P23_canal_principal_20261026/P23_context_report.json",
+    "report_sha256": "25f6d7d452e638be7a245dc3f5dfda145dd3a603c46ad3725631f79d2bfe5981"
+  },
+  "phase2_private_P24_single_component": {
+    "new_primary_stages": 40,
+    "adverse_stages_separate": 40,
+    "new_primary_constants": 300,
+    "source_components_reused": 30,
+    "new_iterative_price_fits": 0,
+    "new_C0_fits": 0,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P24_componente_unico_20261026/P24_context_report.json",
+    "report_sha256": "e68fb30e0d3dbf347bef41c5660f143c7b6d77e29bade21815acb1c71e8a91c8"
+  },
+  "phase2_private_P25_source_masks": {
+    "counted_fit_keys": [
+      "buildings_seed11_full",
+      "buildings_seed11_inner",
+      "buildings_seed12_full",
+      "buildings_seed12_inner",
+      "buildings_seed13_full",
+      "buildings_seed13_inner",
+      "contents_seed11_full",
+      "contents_seed11_inner",
+      "contents_seed12_full",
+      "contents_seed12_inner",
+      "contents_seed13_full",
+      "contents_seed13_inner",
+      "motor_seed11_full",
+      "motor_seed11_inner",
+      "motor_seed12_full",
+      "motor_seed12_inner",
+      "motor_seed13_full",
+      "motor_seed13_inner"
+    ],
+    "attempts": 18,
+    "completed": 18,
+    "new_C0_fits": 0,
+    "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_fuente_ausencias_privada_plan.json",
+    "source_covariate_normalizers_counted": 9,
+    "reused_initial_bases": 18,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P25_fuente_ausencias_20261026/report.json"
+  },
+  "phase2_private_P26_missingness_target": {
+    "primary_closed_learners": 30,
+    "adverse_closed_learners_separate": 30,
+    "new_primary_constants": 670,
+    "constant_breakdown": {
+      "shape_factors": 280,
+      "level_constants": 90,
+      "residual_factors": 180,
+      "training_nuisance_levels": 120,
+      "new_source_component_calls": 30,
+      "new_residual_stage_calls": 40,
+      "shape_training_normalizers_separate": 80,
+      "training_stage_normalizers_separate": 120,
+      "held_stage_normalizers_separate": 120
+    },
+    "new_iterative_price_fits": 0,
+    "new_source_fits": 0,
+    "new_C0_fits": 0,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P26_validacion_ausencias_20261026/P26_context_report.json",
+    "report_sha256": "3c0fb7a430dd0b6101805ebee4c21f1bf0dbed697be6089c76ceeda6b4f8f860"
+  },
+  "phase2_private_P28_source_pairs": {
+    "counted_keys": [
+      "buildings_accidental_damage_frequency",
+      "buildings_accidental_damage_mark",
+      "buildings_escape_of_water_frequency",
+      "buildings_escape_of_water_mark",
+      "buildings_fire_frequency",
+      "buildings_fire_mark",
+      "buildings_flood_frequency",
+      "buildings_flood_mark",
+      "buildings_storm_frequency",
+      "buildings_storm_mark",
+      "buildings_subsidence_frequency",
+      "buildings_subsidence_mark",
+      "contents_accidental_damage_frequency",
+      "contents_accidental_damage_mark",
+      "contents_escape_of_water_frequency",
+      "contents_escape_of_water_mark",
+      "contents_flood_frequency",
+      "contents_flood_mark",
+      "contents_theft_frequency",
+      "contents_theft_mark",
+      "motor_bodily_injury_frequency",
+      "motor_bodily_injury_mark",
+      "motor_glass_hail_frequency",
+      "motor_glass_hail_mark",
+      "motor_own_damage_frequency",
+      "motor_own_damage_mark",
+      "motor_theft_frequency",
+      "motor_theft_mark",
+      "motor_third_party_prop_frequency",
+      "motor_third_party_prop_mark"
+    ],
+    "attempts": 30,
+    "completed": 30,
+    "baseline_constants_counted": 30,
+    "synthetic_GLM_fits_separate": 2,
+    "replay": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P28_fuente_frecuencia_marca_20261026/numerical_replay.json"
+  },
+  "phase2_private_P29_full_pairs": {
+    "counted_keys": [
+      "buildings_accidental_damage_frequency",
+      "buildings_accidental_damage_mark",
+      "buildings_escape_of_water_frequency",
+      "buildings_escape_of_water_mark",
+      "buildings_fire_frequency",
+      "buildings_fire_mark",
+      "buildings_flood_frequency",
+      "buildings_flood_mark",
+      "buildings_storm_frequency",
+      "buildings_storm_mark",
+      "buildings_subsidence_frequency",
+      "buildings_subsidence_mark",
+      "contents_accidental_damage_frequency",
+      "contents_accidental_damage_mark",
+      "contents_escape_of_water_frequency",
+      "contents_escape_of_water_mark",
+      "contents_flood_frequency",
+      "contents_flood_mark",
+      "contents_theft_frequency",
+      "contents_theft_mark",
+      "motor_bodily_injury_frequency",
+      "motor_bodily_injury_mark",
+      "motor_glass_hail_frequency",
+      "motor_glass_hail_mark",
+      "motor_own_damage_frequency",
+      "motor_own_damage_mark",
+      "motor_theft_frequency",
+      "motor_theft_mark",
+      "motor_third_party_prop_frequency",
+      "motor_third_party_prop_mark"
+    ],
+    "attempts": 30,
+    "completed": 30,
+    "source_normalizers_counted": 3,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P29_fuente_frecuencia_completa_20261026/report.json",
+    "report_sha256": "10fedba90079e56dc1abcf4e9bafaf31b4de5e61b607f1ae28110905a647924e"
+  },
+  "phase2_private_P30_peril_source_target": {
+    "primary_closed_learners": 30,
+    "adverse_closed_learners_separate": 30,
+    "new_primary_constants": 670,
+    "constant_breakdown": {
+      "shape_factors": 280,
+      "level_constants": 90,
+      "residual_factors": 180,
+      "training_nuisance_levels": 120,
+      "new_source_component_calls": 30,
+      "new_residual_stage_calls": 40,
+      "shape_training_normalizers_separate": 80,
+      "training_stage_normalizers_separate": 120,
+      "held_stage_normalizers_separate": 120
+    },
+    "new_iterative_price_fits": 0,
+    "new_source_fits": 0,
+    "new_C0_fits": 0,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P30_validacion_frecuencia_marca_20261026/P30_context_report.json",
+    "report_sha256": "f6ca0ac5884951704d4f4c23b6052a4a48617f7fe46c3ad33fc9a42630e300a4"
+  }
+}

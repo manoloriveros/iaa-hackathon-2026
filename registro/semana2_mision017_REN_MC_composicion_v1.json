@@ -1,0 +1,64 @@
+{
+  "id": "S2-MISION017-REN-MC-COMPOSITION-v1",
+  "author": "Codex",
+  "utc": "2026-10-26T05:26:58.163456+00:00",
+  "hypothesis": "A provisional available-output renewal shape may add useful diversity while keeping all NB exactly fixed; assess mechanical composition now, not predictive admission.",
+  "parent": "Processed F3c0.16914, source Claude; review/transport Codex",
+  "donor": "Received F4c, includes FSp and reestimated residual factors together, not isolated FSp",
+  "recipe": {
+    "active_cells": [
+      [
+        "motor",
+        false
+      ],
+      [
+        "contents",
+        false
+      ]
+    ],
+    "donor_weights": "unchanged received0.25motor/0.5contents, not tuned here",
+    "new_price_in_active_cell": "F4c_i * sum(F3c_cell)/sum(F4c_cell)",
+    "other_rows": "copy original F3c exactly, including every NB and all buildings",
+    "arithmetic": "six-decimal source prices as integer microCU; exact rational rescaling, round ties to even",
+    "no_new_labels_or_levels_from_claims": true
+  },
+  "quality_criteria": [
+    "source hashes frozen",
+    "keyed one-to-one coverage and original row order",
+    "only the two declared renewal cells may change",
+    "all NB/buildings price strings remain exact",
+    "cell totals conserved before rounding, after rounding within half microCU per affected row",
+    "integer rational and independent floating arithmetic agree within rounding",
+    "shuffle/scale/outside-scope/label-payload controls passed; positive finite outputs"
+  ],
+  "predictive_admission_criteria_passed": false,
+  "not_a_K_replay": true,
+  "not_a_pure_FSp_isolation": true,
+  "full_renewal_alternative_incomplete": "BuildingREN has favorable received evidence but F4c donor carries no building FSp shape. Keep recovery/validation pending, do not call it rejected or solved.",
+  "evidence_limits": [
+    "K original blends FSp with F2 and reestimates common factors; newer F4c preserves F2 multipliers and has different coupled factors",
+    "Received K forecast and bootstrap cannot be assigned exactly to this new composition",
+    "No local per-row FSp OOF/learning replay currently recovered for this candidate",
+    "This freezes NB explicitly; zero mixture weights alone did not freeze the received full K recipe",
+    "2024adaptive development, received AI reviews not professional independent validation"
+  ],
+  "budget": {
+    "new_model_fits": 0,
+    "new_C0_fits": 0,
+    "new_model_inferences": 0,
+    "new_candidate_files": 1,
+    "new_submissions": 0
+  },
+  "submission_ready_under_this_plan": false,
+  "no_new_score_or_goal_complete_claim": true,
+  "B00_all_alternatives_preserved": true,
+  "2024_open": true,
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/preparar_F3c_REN_MC.py": "c2d0dfc24b335ac9015f743922ee39f35dec34f5f3e310fa29e27e522f3eb463",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/renovacion_fsp_recepcion_20261026_v1/audit.json": "95fc74233ba0c62b3ef80a28f2372f59d7db886aa2760cf1c41eef8f5ec8ae3d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/renovacion_fsp_recepcion_20261026_v1/cohort_2025.parquet": "6e842179cffbb9ae4557cce4a9ecb3b6ab6f597816f832a0238c5b94721c49ad",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/claude_mision017_20261025/F3c_2025.csv": "5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/claude_mision017_20261025/F4c_2025.csv": "d5dfbf5769a134a09a3a3b23550eda496471b3511f9f66226c24301bb0de18f4",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/entrega_F3c_investigacion_20261026_v1/public_receipt.json": "7da5f5d5b177f5dc50b1d4024c533270c3c8d7362b9674dbad93c716927c93b4"
+  }
+}

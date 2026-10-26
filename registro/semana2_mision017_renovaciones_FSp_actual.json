@@ -1,0 +1,232 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T07:28:45.245787+00:00",
+  "status": "NB_FSp_adverse_standard_age_calibration_next",
+  "evidence": {
+    "received_semantics_audit": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/renovacion_fsp_recepcion_20261026_v1/audit.json",
+      "sha256": "95fc74233ba0c62b3ef80a28f2372f59d7db886aa2760cf1c41eef8f5ec8ae3d"
+    },
+    "provisional_candidate": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/renovacion_fsp_composicion_20261026_v1/report.json",
+      "sha256": "b74e91e2fdde72fafadf7d8f585dd8de72c79a87d85a556937f4d5ee68d2d636"
+    },
+    "count_offset_inputs": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_recuperacion_entradas_20261026_v1/report.json",
+      "sha256": "a4a83da4dfa724dd8673ec439c340d546bf7fe52301a5f30f27941f3e210d65b"
+    },
+    "raw_precision_matrices": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_matrices_20261026_v1/report.json",
+      "sha256": "e9a0d645f0fd22bbe24c56e0b49f7ec06c234ca6f73e4cf1ef89625606132d6e"
+    },
+    "producer_plan": {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_mision017_FSp_edificios_recuperacion_plan_v1.json",
+      "sha256": "598b7c492e8aa691c35667f779a1efd3a2f225726cedf7cc5794647bea3d5e00"
+    },
+    "numerical_producer": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_productor_20261026_v1/report.json",
+      "sha256": "e3abb5fa217d1edbc87e84c8900d2790e39293a4821f8a4a97bc414c8ec994a2"
+    }
+  },
+  "provisional_candidate_ready": false,
+  "B00_preserved": true,
+  "2024_open": true,
+  "predictive_improvement_established": false,
+  "goal_achieved": false,
+  "next_unit": "NB FSp completo y adverso: no repetir aplicación, κ, modelos, bootstrap o pesos. Registrar y probar un único GLM Tweedie1.5 de ajuste de edad en NB, por ramo, sobre G3 congelado, cinco bandas de edad de póliza, ridge Fisher K300 ya usado, dos interceptos año de entrenamiento no transferidos y normalización NB por año sin etiquetas. Quince ajustes pequeños máximo, sin nuevos árboles/C0/variables de maestros o2025precios. Preparar edad de matrices existentes y soporte; usar los mismos15ámbitos/C0. Conservar los mismos criterios/guardas NB y medir la receta completa con REN congelada sin usarla para ocultar daño NB. No afinar K/bandas/pesos por los retenidos. Falta comparador completoF3c/A1corregido; prototipo ed639b1c no admitido no se envía.2024abierto, B00/alternativas guardados, cuota0, meta0.17activa.",
+  "forum": {
+    "author": "Codex",
+    "id": "COD-S2-20261026-MISION017-FSP-EDIFICIOS-RECUPERACION-RESULTADO",
+    "utc": "2026-10-26T05:50:28+00:00",
+    "previous_sha256": "ef42e13398f7e71ddc5c570fff56d79c228b7d757aa210c226df68427bf25f9f",
+    "sha256": "f4b2919477ed6ff879d24ec7415f0bda32dd7e9754d8ef098b3a35e71f174abe"
+  },
+  "buildings_REN_contrast": {
+    "author": "Codex",
+    "utc": "2026-10-26T05:58:35.136847+00:00",
+    "status": "completed_exploratory_adverse_no_integration",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_REN_contraste_20261026_v1/report.json",
+    "report_sha256": "afacbdcd42359a74e9569a3de9b3e5c8e439020be94a2506a88bf95c430fd34d",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/MISION017_FSp_EDIFICIOS_REN_CONTRASTE.md",
+    "delta": 0.00015526615212332862,
+    "bootstrap95": [
+      -0.0011524090260337488,
+      0.001553083269066383
+    ],
+    "checks": {
+      "delta_min": false,
+      "lower95_positive": false,
+      "at_least4positive_folds": false,
+      "both_years_nonnegative": false,
+      "post31_nonnegative": false,
+      "min_cell_delta": false,
+      "complete_F3c_comparator_and_vetoes_available": false
+    },
+    "new_price_calibration_constants": 30,
+    "new_iterative_price_fits": 0,
+    "new_C0_fits": 0,
+    "new_test_prices": 0,
+    "new_submissions": 0,
+    "2024_open": true,
+    "B00_all_alternatives_preserved": true,
+    "goal_achieved": false,
+    "next_unit": "FSp de edificios ya está reconstruido y su inserción REN .25 no pasó: no repetir esos24fits,30constantes o bootstrap. Mantener la alternativa y B00/F2/C1/F3c. La composición F3c/F4c REN motor/contenidos sigue provisional y no es FSp puro. Primero buscar de forma acotada salidas numéricas motor/contents f/s en otras rutas recibidas pertinentes, sin repetir las dos carpetas ya inventariadas ni el inventario K. Si no existen, preparar entradas de precisión completa de esos dos ramos y conciliar metadatos ya presentes usando los recuentos y C0 existentes; no reconstruir los edificios otra vez. Registrar la necesidad, rondas fijas, coste y foro antes de cualquier recuperación fuente adicional. El propósito es aislar FSp de los factores y contrastar en los mismos grupos antes de considerar un envío. No relajar criterios ni retocar pesos por el resultado adverso de edificios o el score público.2024abierto como desarrollo; cuota0; meta0.17activa.",
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261026-MISION017-FSP-EDIFICIOS-REN-CONTRASTE-RESULTADO",
+      "utc": "2026-10-26T05:58:35+00:00",
+      "previous_sha256": "f4dcf4f008c9fe4e648e7be0dd6e59480e0e02594a724ae1812fbaefbab851f2",
+      "sha256": "b57cb0c55f324be367c68d2ca00a7ab19afeff8ba99f050e590c5ea6f07ba24d"
+    }
+  },
+  "motor_contents_source_recovery": {
+    "author": "Codex",
+    "utc": "2026-10-26T06:10:19.210262+00:00",
+    "status": "source_recovery_complete_no_predictive_admission",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/productor/report.json",
+    "report_sha256": "61de35e142755d2dae794a51d3345b30f8571988e47faa44e3e4ed670214975c",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/MISION017_FSp_MOTOR_CONTENIDOS_RECUPERACION.md",
+    "new_source_component_model_fits": 36,
+    "new_C0_fits": 0,
+    "new_scores": 0,
+    "new_submissions": 0,
+    "new_component_row_predictions": 4369088,
+    "goal_achieved": false,
+    "2024_open": true,
+    "next_unit": "Los36modelos MC y los24de edificios ya están completos, con matrices/modelos/componentes guardados: no repetirlos. Preparar y registrar un contraste único de FSp aislado sobre la referencia G3 de factores residuales guardados, sin reestimarlos, solo REN y pesos fijos recibidos motor.25/buildings.25/contents.5. La calibración recibida contiene kf/ks/kg y n/(n+100), distinta de la igualación de coste sin contracción probada antes en edificios; documentar esa necesidad y adaptar expresamente a C0 protegido por grupos, sin llamarlo replay exacto de F4c. Usar los ámbitos guardados, exposición una sola vez, NB/total de celda fijos y los criterios sin relajar. Registrar antes de estimar constantes o puntuar. Sin nuevos árboles/C0/test/envíos en el contraste. El F3c completo sigue como comparador no reproducido íntegramente; G3 es proxy.2024abierto;cuota0;meta0.17activa.",
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261026-MISION017-FSP-MC-RECUPERACION-RESULTADO",
+      "utc": "2026-10-26T06:10:19+00:00",
+      "previous_sha256": "97952331a1c76a1c719972354928a050569e989d38c838f89c8d71ae1939536e",
+      "sha256": "8d5e289cf6aad446654daf07fd6502c293bf5ac364d457a5cfe5a57bf8ccd80f"
+    }
+  },
+  "isolated_FSp_G3_contrast": {
+    "author": "Codex",
+    "utc": "2026-10-26T06:25:39.845489+00:00",
+    "status": "positive_partial_signal_no_admission",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_REN_G3_contraste_20261026_v2/report.json",
+    "report_sha256": "b61cae8436702f0ef85ccab36105fe07bf91641c266a4fc5903d3139080e3453",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/MISION017_FSp_REN_G3_CONTRASTE.md",
+    "scores": {
+      "N3": 0.13524973116896466,
+      "G3": 0.1370999273441873,
+      "RFS1": 0.13868724363897367
+    },
+    "delta": 0.0015873162947861643,
+    "bootstrap95": [
+      7.185039911618453e-05,
+      0.0031547165074834477
+    ],
+    "criteria": {
+      "delta_min": false,
+      "lower95_positive": true,
+      "positive_folds_min4": true,
+      "both_years_nonnegative": true,
+      "post31_nonnegative": false,
+      "cell_min": true,
+      "full_F3c_comparator_and_additional_vetoes": false
+    },
+    "empirical_constants": 165,
+    "reused_v1_constants": 11,
+    "new_v2_constants": 154,
+    "derived_peril_factors_not_added_to_fit_count": 75,
+    "new_price_model_fits": 0,
+    "new_C0_fits": 0,
+    "new_test_prices": 0,
+    "new_submissions": 0,
+    "goal_achieved": false,
+    "2024_open": true,
+    "next_unit": "RFS1 está completo:15ámbitos,165momentos únicos (11reutilizados de v1 y154nuevos en v2),sin nuevos árboles/C0. No repetirlo, retocar K/pesos o ocultar el fallo post31. Siguiente incertidumbre concreta: alinear el flujo de despliegue con la fuente2021–2024 disponible para ambos años objetivo. G3/T2b usa el padre fuente2021–2024 en2023/24, mientras el primer FSp usó dev2021–2023 en2023; la producción2025 necesita prod2021–2024. Registrar antes un control de consistencia usando únicamente las salidas prod ya guardadas, sin nuevos modelos, conservando todos los demás parámetros y criterios. No elegir la ventana por el mejor score ni reescribir RFS1. Además, sigue faltando el comparador F3c/F2 completo: el A1 corregido de tres semillas no tiene archivos históricos/modelos con los tags exactos en la búsqueda registrada (el código original sí los guardaba). No repetir ese inventario; revisar el contrato/offset/matrices y metadatos de rondas de ese productor antes de proponer una reconstrucción, no usar el A1 original2024como si fuera el corregido. No hay CSV nuevo listo o aprobado para enviar. Cuota0conservada,2024abierto,B00/alternativas preservados,meta0.17activa.",
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261026-MISION017-FSP-REN-G3-CONTRASTE-RESULTADO",
+      "utc": "2026-10-26T06:25:40+00:00",
+      "previous_sha256": "4cf9a30ade2cb360132b374debacde965b18d782355951d582343d63fede192f",
+      "sha256": "a5ca4ac4dff7c31f1f3a611e7e5f462fb8a4d4bacf44d843dc0cffacdd215ccb"
+    }
+  },
+  "production_consistency_and_prototype": {
+    "author": "Codex",
+    "utc": "2026-10-26T07:11:27.519001+00:00",
+    "status": "production_consistency_positive_partial_prototype_not_admitted",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/MISION017_RFS1P_Y_PROTO2025.md",
+    "CV": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_REN_G3_prod_contraste_20261026_v1/report.json",
+      "sha256": "73f04a88d9d2d247cd9957d1a853a01fdfe7e62438b1382a294bc61a3c2af6e5"
+    },
+    "vetoes": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_REN_G3_prod_contraste_20261026_v1/additional_veto_points.json",
+      "sha256": "801b1cb147020d631a193de15f45d01d2406aa2ace37fb231863b167ef7b39a1"
+    },
+    "prototype": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/F3c_FSp_REN_prototipo_20261026_v1/report.json",
+      "sha256": "0be6c2c24f9e174b0027e2f9790b59dd3622804d4143f781f1464144a1c4a994"
+    },
+    "prototype_CSV": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/F3c_FSp_REN_prototipo_20261026_v1/F3c_FSp_REN_prototipo_2025.csv",
+      "sha256": "ed639b1cba9cc0a58c2864e0899e40b8aa4c50933cee99ecda145fd459d1922a",
+      "rows": 209063,
+      "bytes": 4351099,
+      "total_CU": 87269136.420546
+    },
+    "history_compatibility": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_historia_compatibilidad_20261026_v1/report.json",
+      "sha256": "dde721b89852aff063045dbd3993ea305312fb644195e96f55110d2161055e20"
+    },
+    "count_mark_review": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/enlace_numero_marca_revision_20261026_v1/report.json",
+      "sha256": "f6f492ef290b8b61ae2f6baf4798ee102b060aef5c9acf2c0b273738a0855e3a"
+    },
+    "new_empirical_moment_constants": 165,
+    "new_price_model_fits": 0,
+    "new_C0_fits": 0,
+    "new_T2b_primary_future_inference_rows": 50083,
+    "historic_check_rows": 192,
+    "future_shuffle_check_rows": 96,
+    "diagnostic_legacy_history_inference_rows": 199,
+    "new_candidate_price_rows": 50083,
+    "new_CSVs": 1,
+    "new_submissions": 0,
+    "submission_allowed": false,
+    "submission_ready": false,
+    "formal_promotion": false,
+    "2024_open": true,
+    "B00_all_alternatives_preserved": true,
+    "goal_achieved": false,
+    "next_unit": "No repetir los60modelos fuente, las matrices, RFS1/RFS1P, el bootstrap REN o la compatibilidad de199filas: ya terminaron. El test2025es76.04%NB y la receta REN no lo cambia; la sensibilidad ponderada de RFS1P es solo+.00038157 y el veto A1 original sigue negativo. Antes de añadir modelos/variables, registrar un único contraste de aplicación FSp a NB con la misma configuración prod, G3, C0 protegido, kappa por ámbito ya guardados y pesos .25/.25/.5. No reestimar nada. Medir la aportación NB separadamente y la receta completa REN+NB como combinación fija, con totales año/ramo/negocio conservados y criterios existentes. La evidencia NB negativa recibida era de otra receta/ámbito y no sustituye este contraste aislado sobre el núcleo reconstruido. Registrar hipótesis, coste y foro antes de puntuar; si también falla, documentar el fallo concreto antes de una calibración estándar adicional. El prototipo ed639b1c conserva158980NB y50083RENcambiadas, está explícitamente no admitido; no enviarlo al recuperar cuota. La revisión número/marca preserva la validez del producto proxy agregado en un riesgo homogéneo y no demuestra superioridad de otro enlace: no rehacer30modelos solo por una diferencia semántica. Para interpretar frecuencia nativa se necesitarían ambos offsets coherentes y nueva prueba. Falta aún F3c/F2 histórico completo y el A1 corregido; no sustituirlo por A1 original ni repetir el inventario exacto sin cambios. 2024abierto como desarrollo, B00/alternativas preservados, mejor público0.16914,cuota0,meta0.17activa.",
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261026-MISION017-RFS1P-PROTOTIPO-RESULTADO",
+      "utc": "2026-10-26T07:11:27+00:00",
+      "previous_sha256": "5039b1e316f87d91154b4f9749bc8692a44f004d51e9f6ccc723aa78a32b2a63",
+      "sha256": "145484358ce84888b652f354a0a7ac25da150bfd19c08bc7667892ddc0043c85"
+    }
+  },
+  "NB_application": {
+    "author": "Codex",
+    "utc": "2026-10-26T07:28:45.245787+00:00",
+    "status": "completed_adverse_no_NB_FSp_adoption",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_NB_aplicacion_20261026_v2/report.json",
+    "report_sha256": "cbcb39ce018e6b392b00ffcf08792a72e13a97b82750bc5109cffbac5da05d8a",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/MISION017_FSp_NB_RESULTADO.md",
+    "new_price_model_fits": 0,
+    "new_C0_fits": 0,
+    "new_calibration_constants": 0,
+    "new_prediction_only_normalizers": 45,
+    "new_OOF_NB_rows": 15037,
+    "new_test_prices": 0,
+    "new_submissions": 0,
+    "2024_open": true,
+    "goal_achieved": false,
+    "next_unit": "NB FSp completo y adverso: no repetir aplicación, κ, modelos, bootstrap o pesos. Registrar y probar un único GLM Tweedie1.5 de ajuste de edad en NB, por ramo, sobre G3 congelado, cinco bandas de edad de póliza, ridge Fisher K300 ya usado, dos interceptos año de entrenamiento no transferidos y normalización NB por año sin etiquetas. Quince ajustes pequeños máximo, sin nuevos árboles/C0/variables de maestros o2025precios. Preparar edad de matrices existentes y soporte; usar los mismos15ámbitos/C0. Conservar los mismos criterios/guardas NB y medir la receta completa con REN congelada sin usarla para ocultar daño NB. No afinar K/bandas/pesos por los retenidos. Falta comparador completoF3c/A1corregido; prototipo ed639b1c no admitido no se envía.2024abierto, B00/alternativas guardados, cuota0, meta0.17activa.",
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261026-MISION017-FSP-NB-RESULTADO",
+      "utc": "2026-10-26T07:28:45+00:00",
+      "previous_sha256": "ce19a67d0e463be882d2df69472aa8eb65d52d1e87eeb6dca51392e39483ee02",
+      "sha256": "3165ac4baeeddb6e96874e79a7a2534d3ece8f610302c208364776865fde2de5"
+    }
+  }
+}

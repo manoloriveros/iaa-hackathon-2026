@@ -1,0 +1,811 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T14:43:17.468319+00:00",
+  "status": "H3B_business_source_mixture_nested_assay_complete",
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/H3B_mezcla_negocio_20261026_v1/report.json",
+  "report_sha256": "525a39e542efb20d97e8b3b825482d4e2e69ac4dbd11bab529bb98999bbc126e",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_H3B_MEZCLA_POR_NEGOCIO.md",
+  "forum": {
+    "author": "Codex",
+    "id": "COD-S2-20261026-PRIVADA-H3B-RESULTADO",
+    "utc": "2026-10-26T14:43:17+00:00",
+    "previous_sha256": "be1da2f586a0ab43e7d648acedc2e1031b5b9ba1172d772b15dc10a34713649e",
+    "sha256": "9a431f2ffd150e260b6b58f62b018239dc7ac9626f1b378be920ce72c6eb264d"
+  },
+  "results": {
+    "NOMINAL_VS_BASE": {
+      "delta": 5.6198041391365114e-05,
+      "bootstrap95": [
+        -0.0002633602841577453,
+        0.0003563479940395802
+      ],
+      "simultaneous95_six": [
+        -0.0003908873619001666,
+        0.00045624707526509836
+      ],
+      "post31_delta": -0.00030648428524711015,
+      "folds": {
+        "0": 9.049325500462143e-05,
+        "1": -5.4807392218113835e-05,
+        "2": -5.9808638315256263e-05,
+        "3": -5.624010057521796e-05,
+        "4": 0.00013656091749533175
+      },
+      "years": {
+        "2023": 7.412952773010626e-05,
+        "2024": -1.7931486338741213e-05
+      },
+      "cells": [
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 0,
+          "rows": 11073,
+          "delta_global": 5.763395770771147e-05,
+          "delta_cell_null": 0.0003765980145205158
+        },
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 1,
+          "rows": 1507,
+          "delta_global": 5.814037028731697e-06,
+          "delta_cell_null": 0.00039713178949589607
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 0,
+          "rows": 12588,
+          "delta_global": 9.515148251979456e-05,
+          "delta_cell_null": 0.0007390665395619128
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2279,
+          "delta_global": 3.256016164141744e-05,
+          "delta_cell_null": 0.002084694168106531
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 0,
+          "rows": 13987,
+          "delta_global": -7.124609596227856e-08,
+          "delta_cell_null": -8.936028104817908e-07
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 1,
+          "rows": 1847,
+          "delta_global": -9.823624867191256e-09,
+          "delta_cell_null": -1.2246200007960888e-06
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 0,
+          "rows": 15863,
+          "delta_global": 3.6029144179417867e-07,
+          "delta_cell_null": 4.306473719213801e-06
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2869,
+          "delta_global": 1.9720339956654676e-09,
+          "delta_cell_null": 1.422648229996562e-07
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 0,
+          "rows": 19060,
+          "delta_global": -8.188982672194259e-05,
+          "delta_cell_null": -0.00044898001087731405
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 1,
+          "rows": 2620,
+          "delta_global": 9.265242943643516e-05,
+          "delta_cell_null": 0.0031425058916891074
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 0,
+          "rows": 21688,
+          "delta_global": -0.00012855533634194042,
+          "delta_cell_null": -0.0006461155328512353
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 1,
+          "rows": 3915,
+          "delta_global": -1.7450057633802628e-05,
+          "delta_cell_null": -0.0005779379194336059
+        }
+      ],
+      "worst_cell_delta": -0.0006461155328512353,
+      "weighted2025_point_only_ESS_failed": 0.0021391937234790616
+    },
+    "NOMINAL_VS_H1": {
+      "delta": -0.0009822718910351697,
+      "bootstrap95": [
+        -0.0016153152003489837,
+        -0.0004234817786877051
+      ],
+      "simultaneous95_six": [
+        -0.0018943314007607613,
+        -0.00027592547050548825
+      ],
+      "post31_delta": -0.0016018371055704693,
+      "folds": {
+        "0": -0.00010242245008406896,
+        "1": -0.000264704713560965,
+        "2": -0.0001780720951221653,
+        "3": -0.00030495631770415026,
+        "4": -0.00013211631456382008
+      },
+      "years": {
+        "2023": 2.175283843318087e-05,
+        "2024": -0.0010040247294683506
+      },
+      "cells": [
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 0,
+          "rows": 11073,
+          "delta_global": -9.117020458580355e-06,
+          "delta_cell_null": -5.95734171242744e-05
+        },
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 1,
+          "rows": 1507,
+          "delta_global": 6.6551101374735625e-09,
+          "delta_cell_null": 4.5458186542779936e-07
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 0,
+          "rows": 12588,
+          "delta_global": -0.00013267502864259474,
+          "delta_cell_null": -0.0010305217712688966
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2279,
+          "delta_global": 2.097862476066279e-05,
+          "delta_cell_null": 0.001343175662795792
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 0,
+          "rows": 13987,
+          "delta_global": -1.7221387307666977e-06,
+          "delta_cell_null": -2.159989244417609e-05
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 1,
+          "rows": 1847,
+          "delta_global": 2.673702079106401e-07,
+          "delta_cell_null": 3.3330558592267935e-05
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 0,
+          "rows": 15863,
+          "delta_global": -1.482930543646294e-05,
+          "delta_cell_null": -0.00017725098830630572
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2869,
+          "delta_global": 1.375952091731054e-06,
+          "delta_cell_null": 9.92627820901581e-05
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 0,
+          "rows": 19060,
+          "delta_global": -8.188660149164464e-05,
+          "delta_cell_null": -0.0004489623278024777
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 1,
+          "rows": 2620,
+          "delta_global": 0.00011420457379612443,
+          "delta_cell_null": 0.0038734930988332307
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 0,
+          "rows": 21688,
+          "delta_global": -0.0005399159280251344,
+          "delta_cell_null": -0.0027136023867802618
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 1,
+          "rows": 3915,
+          "delta_global": -0.0003389590442165523,
+          "delta_cell_null": -0.01122616835420898
+        }
+      ],
+      "worst_cell_delta": -0.01122616835420898,
+      "weighted2025_point_only_ESS_failed": -1.5585640615798033e-05
+    },
+    "RESERVE075": {
+      "delta": 0.00023790691319127284,
+      "bootstrap95": [
+        -9.029025252833551e-05,
+        0.0005508891217696731
+      ],
+      "simultaneous95_six": [
+        -0.00022775956676930828,
+        0.0006507512192911518
+      ],
+      "post31_delta": -8.797193245798562e-05,
+      "folds": {
+        "0": 9.383426120412095e-05,
+        "1": -3.896932124648397e-06,
+        "2": -2.949139606013953e-05,
+        "3": -1.8989711412806456e-05,
+        "4": 0.0001964506915847463
+      },
+      "years": {
+        "2023": 1.0971661215501213e-05,
+        "2024": 0.00022693525197577165
+      },
+      "cells": [
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 0,
+          "rows": 11073,
+          "delta_global": 5.554764192336868e-05,
+          "delta_cell_null": 0.00035638963495557687
+        },
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 1,
+          "rows": 1507,
+          "delta_global": 5.131045541935533e-06,
+          "delta_cell_null": 0.00034677040587547563
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 0,
+          "rows": 12588,
+          "delta_global": 0.00011951663276832919,
+          "delta_cell_null": 0.000936676648612431
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2279,
+          "delta_global": 4.644638765699347e-05,
+          "delta_cell_null": 0.0031109213240904936
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 0,
+          "rows": 13987,
+          "delta_global": -6.823961855565298e-08,
+          "delta_cell_null": -8.354376989225661e-07
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 1,
+          "rows": 1847,
+          "delta_global": -1.706093619780523e-08,
+          "delta_cell_null": -2.075995754209305e-06
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 0,
+          "rows": 15863,
+          "delta_global": 2.5788768786340897e-07,
+          "delta_cell_null": 3.063206215624416e-06
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2869,
+          "delta_global": 1.7461440120698555e-07,
+          "delta_cell_null": 1.2696736932732165e-05
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 0,
+          "rows": 19060,
+          "delta_global": -0.0001183312828752195,
+          "delta_cell_null": -0.0006454866308501779
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 1,
+          "rows": 2620,
+          "delta_global": 6.870955718016996e-05,
+          "delta_cell_null": 0.002356848064710004
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 0,
+          "rows": 21688,
+          "delta_global": -1.2940043481537438e-05,
+          "delta_cell_null": -6.62683371220152e-05
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 1,
+          "rows": 3915,
+          "delta_global": 7.347977294291604e-05,
+          "delta_cell_null": 0.0025123637054937685
+        }
+      ],
+      "worst_cell_delta": -0.0006454866308501779,
+      "weighted2025_point_only_ESS_failed": 0.0020532927699325122
+    },
+    "RESERVE125": {
+      "delta": 6.959897314957163e-05,
+      "bootstrap95": [
+        -0.0002157643612283484,
+        0.0003548913595955407
+      ],
+      "simultaneous95_six": [
+        -0.0003326352210668193,
+        0.0004737628940679557
+      ],
+      "post31_delta": -0.00033346504606470865,
+      "folds": {
+        "0": 0.00012676213400713307,
+        "1": -5.381505083607636e-05,
+        "2": -5.105093614271239e-05,
+        "3": -5.803802090402033e-05,
+        "4": 0.00010574084702524767
+      },
+      "years": {
+        "2023": 0.0001417603045452345,
+        "2024": -7.216133139566283e-05
+      },
+      "cells": [
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 0,
+          "rows": 11073,
+          "delta_global": 5.963953790487763e-05,
+          "delta_cell_null": 0.00039659346282180507
+        },
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 1,
+          "rows": 1507,
+          "delta_global": 6.464623194776707e-06,
+          "delta_cell_null": 0.0004460572896730274
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 0,
+          "rows": 12588,
+          "delta_global": 7.339190086537244e-05,
+          "delta_cell_null": 0.0005655122943507369
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2279,
+          "delta_global": 2.0928976763748192e-05,
+          "delta_cell_null": 0.0012904067783878574
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 0,
+          "rows": 13987,
+          "delta_global": -7.384501551508775e-08,
+          "delta_cell_null": -9.481540369308983e-07
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 1,
+          "rows": 1847,
+          "delta_global": -3.342680241278568e-09,
+          "delta_cell_null": -4.265782129157019e-07
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 0,
+          "rows": 15863,
+          "delta_global": 3.7851333050277867e-07,
+          "delta_cell_null": 4.551322390802137e-06
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2869,
+          "delta_global": -2.0203656849601034e-07,
+          "delta_cell_null": -1.4473690711510875e-05
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 0,
+          "rows": 19060,
+          "delta_global": -4.278779670034969e-05,
+          "delta_cell_null": -0.0002356944299345787
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 1,
+          "rows": 2620,
+          "delta_global": 0.0001185211278416862,
+          "delta_cell_null": 0.003979375434107108
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 0,
+          "rows": 21688,
+          "delta_global": -0.00010781987605805957,
+          "delta_cell_null": -0.0005328192063696229
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 1,
+          "rows": 3915,
+          "delta_global": -5.883880972873066e-05,
+          "delta_cell_null": -0.0018953655177929892
+        }
+      ],
+      "worst_cell_delta": -0.0018953655177929892,
+      "weighted2025_point_only_ESS_failed": 0.0023697199700068662
+    },
+    "TAIL005": {
+      "delta": 2.8640597038367943e-05,
+      "bootstrap95": [
+        -0.0002824251032959269,
+        0.0003154547584598016
+      ],
+      "simultaneous95_six": [
+        -0.0004154086053367886,
+        0.00041278155033977124
+      ],
+      "post31_delta": -0.0002447717455449813,
+      "folds": {
+        "0": 5.598922093566191e-05,
+        "1": -4.561307551338597e-05,
+        "2": -5.621420400047102e-05,
+        "3": -5.448288253438281e-05,
+        "4": 0.0001289615381509458
+      },
+      "years": {
+        "2023": 7.190598482591965e-05,
+        "2024": -4.326538778755166e-05
+      },
+      "cells": [
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 0,
+          "rows": 11073,
+          "delta_global": 3.737510592714917e-05,
+          "delta_cell_null": 0.00024422044302494677
+        },
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 1,
+          "rows": 1507,
+          "delta_global": 3.4897008274583337e-06,
+          "delta_cell_null": 0.00023836641004609463
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 0,
+          "rows": 12588,
+          "delta_global": 0.00010452170052904173,
+          "delta_cell_null": 0.0008118474822823202
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2279,
+          "delta_global": 3.368980909756701e-05,
+          "delta_cell_null": 0.002157020881032176
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 0,
+          "rows": 13987,
+          "delta_global": -7.124609596227341e-08,
+          "delta_cell_null": -8.936028104817262e-07
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 1,
+          "rows": 1847,
+          "delta_global": -9.823624867330275e-09,
+          "delta_cell_null": -1.224620000813419e-06
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 0,
+          "rows": 15863,
+          "delta_global": 3.602914417943722e-07,
+          "delta_cell_null": 4.306473719216115e-06
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2869,
+          "delta_global": 1.972033995828122e-09,
+          "delta_cell_null": 1.4226482301139027e-07
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 0,
+          "rows": 19060,
+          "delta_global": -4.564957837134877e-05,
+          "delta_cell_null": -0.0002502844249909871
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 1,
+          "rows": 2620,
+          "delta_global": 7.677182616349053e-05,
+          "delta_cell_null": 0.002603881166440608
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 0,
+          "rows": 21688,
+          "delta_global": -0.00016328461717885815,
+          "delta_cell_null": -0.0008206639291449537
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 1,
+          "rows": 3915,
+          "delta_global": -1.8554543711092515e-05,
+          "delta_cell_null": -0.000614517992631519
+        }
+      ],
+      "worst_cell_delta": -0.0008206639291449537,
+      "weighted2025_point_only_ESS_failed": 0.0019171797316965401
+    },
+    "TAIL010": {
+      "delta": -2.1269591102805093e-05,
+      "bootstrap95": [
+        -0.0003239726245358326,
+        0.0002575850729958865
+      ],
+      "simultaneous95_six": [
+        -0.00046505488367449394,
+        0.00035929811321430574
+      ],
+      "post31_delta": -0.00020972947795423755,
+      "folds": {
+        "0": 1.4924859094847483e-05,
+        "1": -3.96144343075955e-05,
+        "2": -5.665789354989511e-05,
+        "3": -5.729542353789917e-05,
+        "4": 0.00011737330119773718
+      },
+      "years": {
+        "2023": 5.604190838886945e-05,
+        "2024": -7.731149949167452e-05
+      },
+      "cells": [
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 0,
+          "rows": 11073,
+          "delta_global": 1.6124049822288304e-05,
+          "delta_cell_null": 0.00010535950315782627
+        },
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 1,
+          "rows": 1507,
+          "delta_global": 1.0761254671802398e-06,
+          "delta_cell_null": 7.350548859449267e-05
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 0,
+          "rows": 12588,
+          "delta_global": 0.00011353341693612576,
+          "delta_cell_null": 0.0008818438489612247
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2279,
+          "delta_global": 3.479872014819164e-05,
+          "delta_cell_null": 0.0022280199266034193
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 0,
+          "rows": 13987,
+          "delta_global": -7.124609596227341e-08,
+          "delta_cell_null": -8.936028104817262e-07
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 1,
+          "rows": 1847,
+          "delta_global": -9.823624867330275e-09,
+          "delta_cell_null": -1.224620000813419e-06
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 0,
+          "rows": 15863,
+          "delta_global": 3.602914417943722e-07,
+          "delta_cell_null": 4.306473719216115e-06
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2869,
+          "delta_global": 1.972033995828122e-09,
+          "delta_cell_null": 1.4226482301139027e-07
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 0,
+          "rows": 19060,
+          "delta_global": -1.959004090365997e-05,
+          "delta_cell_null": -0.00010740695309904098
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 1,
+          "rows": 2620,
+          "delta_global": 5.851284372389045e-05,
+          "delta_cell_null": 0.001984588609929109
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 0,
+          "rows": 21688,
+          "delta_global": -0.00020570180838793304,
+          "delta_cell_null": -0.0010338515484220462
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 1,
+          "rows": 3915,
+          "delta_global": -2.03040916638491e-05,
+          "delta_cell_null": -0.0006724622198074109
+        }
+      ],
+      "worst_cell_delta": -0.0010338515484220462,
+      "weighted2025_point_only_ESS_failed": 0.001653891580485788
+    }
+  },
+  "diagnostic_gates": {
+    "delta_ge002": false,
+    "lower95_positive": false,
+    "at_least4positive_folds": false,
+    "both_years_nonnegative": false,
+    "post31_nonnegative": false,
+    "nominal_cell_floor": true,
+    "all_frozen_scenario_cell_floors": false
+  },
+  "counts": {
+    "primary": {
+      "closed_learners": 75,
+      "constants": {
+        "shape_factors": 700,
+        "shape_training_normalizers_separate": 200,
+        "levels": 225,
+        "residual_factors": 450,
+        "training_nuisance_levels": 400,
+        "stage_calls": 100,
+        "training_stage_normalizers_separate": 400,
+        "observed_held_stage_normalizers_separate": 400,
+        "price_total": 1775
+      },
+      "source_business_mixtures": 150,
+      "derived_covariate_weights": 750
+    },
+    "poison": {
+      "closed_learners": 75,
+      "constants": {
+        "shape_factors": 700,
+        "shape_training_normalizers_separate": 200,
+        "levels": 225,
+        "residual_factors": 450,
+        "training_nuisance_levels": 400,
+        "stage_calls": 100,
+        "training_stage_normalizers_separate": 400,
+        "observed_held_stage_normalizers_separate": 400,
+        "price_total": 1775
+      },
+      "source_business_mixtures": 150,
+      "derived_covariate_weights": 750
+    }
+  },
+  "committed_scopes": 75,
+  "new_C0_fits": 0,
+  "new_iterative_price_fits": 0,
+  "new_source_inference": 0,
+  "new_final_test_prices": 0,
+  "new_submissions": 0,
+  "submission_allowed": false,
+  "formal_promotion": false,
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true,
+  "private_improvement_established": false,
+  "goal_achieved": false,
+  "next_unit": "Bounded static review of existing temporal trend/annual-weather recipes and available result receipts, before any further fitting. Determine whether an unresolved calendar/availability mechanism is materially distinct from completed E13/T7/E27/source-trend work; do not rerun historical producers. Record evidence and a finite next action, with no automatic new candidate, pooling coefficient search, oracle level transfer or submission. Keep private-generalization priority, adaptive2023/2024open, B00/F3c/all alternatives preserved and H1delivery held."
+}

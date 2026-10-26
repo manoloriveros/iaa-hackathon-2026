@@ -1,0 +1,153 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T08:42:41.600702+00:00",
+  "status": "proposal_design_compared_not_registered_for_fit",
+  "necessity": "New full-core transfer and a two-slope standard GLM both failed. Existing source A1S tail audit does not justify removing or capping claims. Investigate a minimal additive target correction to the existing G3/T2b risk before deeper or new source architectures.",
+  "uncertainty": "Whether small nonlinear main effects in the target covariates add stable information beyond the source risk and existing categorical corrections; no claim this already fixes the support/transfer problem.",
+  "primary_candidate": "DT1 only; additive shallow LightGBM Tweedie residual on G3, not another source A1S mixture.",
+  "model_class": "Boosted decision stumps, max_depth1/num_leaves2. No interactions, no hyperparameter grid or early stopping on held labels.",
+  "parameters": {
+    "objective": "tweedie",
+    "tweedie_variance_power": 1.5,
+    "learning_rate": 0.01,
+    "num_leaves": 2,
+    "max_depth": 1,
+    "min_data_in_leaf": 1000,
+    "lambda_l2": 100.0,
+    "max_delta_step": 0.1,
+    "feature_fraction": 1.0,
+    "bagging_fraction": 1.0,
+    "cat_smooth": 50,
+    "min_data_per_group": 1000,
+    "boost_from_average": false,
+    "seed": 2026102613,
+    "deterministic": true,
+    "force_row_wise": true,
+    "num_threads": 2,
+    "verbosity": -1
+  },
+  "fixed_rounds": 60,
+  "features": "Exactly the51/43/44 frozen A1S official-policy/master/history covariates per line, no additional log(G3/e_cost), raw A1S prediction, gender enrichment or new external features. Source category schema fixed before target fitting. Final columns must equal input-report list.",
+  "initialization": "Training-only four Tweedie-optimal year/business nuisance levels added to log(G3) init_score; nuisance never transferred. Raw stump delta only, prediction-only year/business normalization preserves G3totals.",
+  "bound_pending_real_flow_verification": "If every final leaf output obeys learning_rate*max_delta_step=.001 and no hidden initial tree bias,60rounds imply abs(raw_delta)<=.06 and normalized ratios within exp(+/- .12). Verify actual saved trees and full fit/predict flow before any contest fit.",
+  "technical_source": "https://lightgbm.readthedocs.io/en/v4.6.0/Parameters.html#max_delta_step",
+  "data": "Official historical2023/2024 and existing global group folds. Source-derived category schema fixed. Same saved outer C0/e_cost, no internal early-stopping selection and no C0reuse as independent inner validation.",
+  "budget_if_registered": {
+    "target_price_model_fits": 15,
+    "nuisance_closed_levels": 60,
+    "source_fits": 0,
+    "new_C0_fits": 0,
+    "new_source_inference": 0,
+    "new_final_test_prices": 0,
+    "new_submissions": 0
+  },
+  "criterion": "Reuse unchanged delta>=.002, lower95>0,>=4positivefolds, bothyears>=0, post31>=0, worst line/year/business cell>=-.001; full-cell/cohort/level sensitivity, no formal promotion or automatic upload.",
+  "before_fit_required": [
+    "Finalize feature list without held labels; prepare schema/key/C0-membership checks",
+    "Implement producer with immutable source hashes and persisted model/invocation checkpoints",
+    "Synthetic complete estimator held-payload invariance, optimizer-free replay, saved tree-depth/leaf-output bound and independent metric/exposure checks",
+    "Register final recipe/configuration/criterion/cost and forum comment before any contest fit or score"
+  ],
+  "2024_open": true,
+  "B00_F3c_all_alternatives_preserved": true,
+  "goal_achieved": false,
+  "parent_proposal": {
+    "path": "Hackaton/Repositorio_IAA2026/registro/semana2_mision017_residuo_acotado_propuesta_v0.json",
+    "sha256": "900956671ea3559c8da74f18b113b87262f1524675936e98a193dc3e7f11c3c8"
+  },
+  "comparison_to_completed_designs": {
+    "evidence": {
+      "B03": {
+        "id": "W2-B03",
+        "family": "TweedieRegressor",
+        "params": {
+          "power": 1.5,
+          "alpha": 10.0,
+          "fit_intercept": true,
+          "link": "log",
+          "solver": "lbfgs",
+          "max_iter": 2000,
+          "tol": 1e-06,
+          "warm_start": false
+        },
+        "numeric_transform": "SimpleImputer(strategy=median,keep_empty_features=True), StandardScaler; fitted inside training fold only",
+        "categorical_transform": "OneHotEncoder(handle_unknown=ignore,min_frequency=50,max_categories=40,sparse_output=True), fitted inside training fold only; unknown-level counts recorded",
+        "penalty": "alpha fixed in the solver's normalized weighted objective; no alpha search",
+        "routing": {
+          "buildings": "new_fit",
+          "motor": "reuse_W2-B01",
+          "contents": "reuse_W2-B01"
+        },
+        "hypothesis": "Stronger ridge in buildings reduces coefficient variance and improves buildings OOF relative to B01; other lines unchanged. No trimming, capital change or intercept recalibration."
+      },
+      "B05": {
+        "id": "W2-B05",
+        "family": "LGBMRegressor",
+        "params": {
+          "objective": "tweedie",
+          "tweedie_variance_power": 1.5,
+          "n_estimators": 80,
+          "learning_rate": 0.03,
+          "num_leaves": 2,
+          "max_depth": 1,
+          "min_child_samples": 1000,
+          "reg_lambda": 100.0,
+          "reg_alpha": 0.0,
+          "subsample": 1.0,
+          "subsample_freq": 0,
+          "colsample_bytree": 1.0,
+          "max_bin": 127,
+          "cat_smooth": 20.0,
+          "min_data_per_group": 50,
+          "deterministic": true,
+          "force_col_wise": true,
+          "random_state": 2026102302,
+          "n_jobs": 2,
+          "verbosity": -1
+        },
+        "numeric_transform": "Native missing values; no learned scaling",
+        "categorical_transform": "Native categoricals with categories learned only from training fold; unseen levels become missing and are counted",
+        "stopping": "Fixed 80 rounds, no validation set, early stopping or parameter search",
+        "hypothesis": "Joint capacity/regularization reduction narrows the generalization gap relative to B02; individual parameter causality is not identified."
+      },
+      "B09": {
+        "id": "W2-B09",
+        "parent_model": "W2-B05",
+        "shape_weight": 0.5
+      },
+      "T9": {
+        "hypothesis": "Fixed source-tree partitions can express market-specific nonlinear corrections missed by the failed target linear slopes without estimating new splits from sparse emerging claims. Retain90percent each old leaf via standard LGBM.refit, with frozen outer-training N3 offsets.",
+        "configuration": {
+          "LGBM_version": "4.6.0",
+          "source": "Frozen T2b developed2021–2024, original source authorship Claude",
+          "tree_structure": "unchanged all features, splits, leaves and iteration count",
+          "data": "emerging2023–2024, existing global component folds",
+          "objective": "Tweedie1.5 period observed net total cost",
+          "init_score": "log(frozen training-scope N3_i)-parent_raw_i, including existing exposure and target calibration",
+          "decay_rate": 0.9,
+          "regularization": "All existing source objective/leaf penalties preserved, no new hyperparameter search",
+          "new_features": [],
+          "new_splits": 0,
+          "application": "N3 times exp(strength*(new_raw-old_raw))",
+          "strengths_no_further_refit": {
+            "L1": 1.0,
+            "L2": 0.5,
+            "L3": 0.25
+          },
+          "normalization": "Input/prediction-only per line/year/business, preserving N3 totals",
+          "no_clipping": true
+        },
+        "budget": {
+          "real_leaf_refit_calls": 15,
+          "new_source_fits": 0,
+          "new_C0_fits": 0,
+          "covariate_only_normalizers": 180,
+          "new_test_prices": 0,
+          "submissions": 0
+        }
+      }
+    },
+    "material_change": "B05/B09were target-only2023annual-rate models (80stumps,lr.03), with optional B00level anchoring/fixed contraction. DT1is a bounded residual to saved source2021-24T2b/G3prices, target2023+2024,60stumps/4training-only nuisancelevels per scope, per-leafoutputbound and no transfer of nuisance. T9re-estimated existing many source leaf values without new splits; DT1learns only60additive target splits. B03is linear GLM. Same model family acknowledged, not advertised as a new algorithm.",
+    "no_fit_or_statistical_replay_performed": true
+  }
+}

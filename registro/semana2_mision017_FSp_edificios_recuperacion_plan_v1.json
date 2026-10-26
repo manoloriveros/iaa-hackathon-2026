@@ -1,0 +1,221 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T05:48:19.968397+00:00",
+  "id": "S2-MISION017-FSp-BUILDINGS-RECOVERY-V1",
+  "hypothesis": "The missing per-row buildings producer prevents evaluating the full renewal alternative. Restore that existing Poisson/Gamma component with fixed source-selected rounds before adding complexity or choosing a new blend.",
+  "necessity": "Original received producer did not persist Boosters; available F4c donor has buildings weight0. Source counts/marks/offsets and full-precision matrices now reconciled. Do not repeat completed model comparisons or tune from public score.",
+  "reconstruction_not_exact_original_tree_replay": true,
+  "comparator_for_later_preregistered_predictive_comparison": "F3c unchanged including new business, B00 preserved; no candidate promotion in this recovery",
+  "source_market": "developed",
+  "source_dev_years": [
+    2021,
+    2022,
+    2023
+  ],
+  "source_prod_years": [
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "target_covariate_years": [
+    2023,
+    2024,
+    2025
+  ],
+  "no_target_response_loaded": true,
+  "dev_climate": {
+    "source": [
+      2021,
+      2022,
+      2023
+    ],
+    "target": [
+      2023
+    ]
+  },
+  "prod_climate": {
+    "source": [
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "target": [
+      2023,
+      2024
+    ]
+  },
+  "history_mode": "historia2, end=min(period_start,2024-12-31); original FSp runtime mode not known",
+  "parameters": {
+    "frequency": {
+      "objective": "poisson",
+      "learning_rate": 0.08,
+      "num_leaves": 31,
+      "min_data_in_leaf": 1000,
+      "feature_fraction": 0.8,
+      "bagging_fraction": 0.8,
+      "bagging_freq": 1,
+      "lambda_l2": 10.0,
+      "max_cat_to_onehot": 8,
+      "cat_smooth": 50,
+      "verbose": -1,
+      "num_threads": 2,
+      "seed": 20261026
+    },
+    "severity": {
+      "objective": "gamma",
+      "learning_rate": 0.05,
+      "num_leaves": 15,
+      "min_data_in_leaf": 200,
+      "feature_fraction": 0.8,
+      "bagging_fraction": 0.8,
+      "bagging_freq": 1,
+      "lambda_l2": 10.0,
+      "max_cat_to_onehot": 8,
+      "cat_smooth": 50,
+      "verbose": -1,
+      "num_threads": 2,
+      "seed": 20261026
+    }
+  },
+  "rounds": {
+    "dev": {
+      "accidental_damage": {
+        "b0": -5.045068242627287,
+        "rondas_f": 67,
+        "rondas_s": 1,
+        "n_dev": 2836,
+        "sev_media": 1192.584527503526
+      },
+      "escape_of_water": {
+        "b0": -4.071867188015902,
+        "rondas_f": 104,
+        "rondas_s": 54,
+        "n_dev": 7507,
+        "sev_media": 5474.221753030505
+      },
+      "fire": {
+        "b0": -6.311577697799127,
+        "rondas_f": 23,
+        "rondas_s": 237,
+        "n_dev": 798,
+        "sev_media": 52113.64576441102
+      },
+      "flood": {
+        "b0": -5.563812712019057,
+        "rondas_f": 127,
+        "rondas_s": 75,
+        "n_dev": 1689,
+        "sev_media": 30174.49295441089
+      },
+      "storm": {
+        "b0": -4.318300371036402,
+        "rondas_f": 119,
+        "rondas_s": 42,
+        "n_dev": 5868,
+        "sev_media": 3319.245669734151
+      },
+      "subsidence": {
+        "b0": -6.090173505810965,
+        "rondas_f": 53,
+        "rondas_s": 47,
+        "n_dev": 997,
+        "sev_media": 22865.18935807422
+      }
+    },
+    "prod": {
+      "accidental_damage": {
+        "b0": -5.029556279569413,
+        "rondas_f": 81,
+        "rondas_s": 8,
+        "n_dev": 3825,
+        "sev_media": 1216.764096732026
+      },
+      "escape_of_water": {
+        "b0": -4.059683359819193,
+        "rondas_f": 159,
+        "rondas_s": 53,
+        "n_dev": 10065,
+        "sev_media": 5732.160026825633
+      },
+      "fire": {
+        "b0": -6.271007991358176,
+        "rondas_f": 53,
+        "rondas_s": 72,
+        "n_dev": 1107,
+        "sev_media": 51773.1075971093
+      },
+      "flood": {
+        "b0": -5.575726897793197,
+        "rondas_f": 100,
+        "rondas_s": 49,
+        "n_dev": 2219,
+        "sev_media": 31314.027309598914
+      },
+      "storm": {
+        "b0": -4.321836175182936,
+        "rondas_f": 115,
+        "rondas_s": 46,
+        "n_dev": 7762,
+        "sev_media": 3455.063274929142
+      },
+      "subsidence": {
+        "b0": -6.041176784150307,
+        "rondas_f": 82,
+        "rondas_s": 38,
+        "n_dev": 1288,
+        "sev_media": 23828.62273291925
+      }
+    }
+  },
+  "offsets": "Reuse saved b0/weighted observed mark mean, and source E_cost_peril/exposure with original q floor1e-4; no CDF or C0 estimation.",
+  "semantics": "Frequency uses cost-completion offset; f*s is a cost proxy, not an identified ultimate-event-frequency and severity decomposition. f includes period exposure exactly once; no future cp multiplication.",
+  "frozen_cost": {
+    "source_model_fits": 24,
+    "perils": 6,
+    "phases": 2,
+    "early_stopping_searches": 0,
+    "new_C0_fits": 0,
+    "new_target_price_fits": 0,
+    "new_calibrations": 0,
+    "new_submission_CSVs": 0,
+    "new_scores": 0,
+    "new_submissions": 0
+  },
+  "criteria_before_fit": [
+    "All pinned source SHA unchanged",
+    "All90 prior feature checks passed",
+    "Source rows/years match saved counts in each phase",
+    "Counts, weighted positive marks and b0 match saved metadata"
+  ],
+  "criteria_after_fit": [
+    "Save every model and per-row f/s/raw outputs",
+    "Finite positive components and exposure included once",
+    "Exact save/load and shuffled-key inference replay",
+    "Independent tree-leaf sum and exponent/offset arithmetic",
+    "No target labels, reestimated C0, new hyperparameter search or submission"
+  ],
+  "predictive_admission": false,
+  "new_candidate_weights_chosen": false,
+  "B00_all_alternatives_preserved": true,
+  "2024_open": true,
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/recuperar_productor_FSp_edificios.py": "7130268160c9358b9b093afb34aae80ce70f7bcc91f75d20c4fb5d957dde493e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_matrices_20261026_v1/report.json": "e9a0d645f0fd22bbe24c56e0b49f7ec06c234ca6f73e4cf1ef89625606132d6e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/recuentos_fuente2024_v1/counts_buildings.parquet": "47fffb7a872db2d99894670f0273d666be1e3cb38b0bc43f6d5048075eb10dff",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_recuperacion_entradas_20261026_v1/report.json": "a4a83da4dfa724dd8673ec439c340d546bf7fe52301a5f30f27941f3e210d65b",
+    "Hackaton/Semana 2/Claude/mision017_20261025/exp26_20261026/ml2/codigo/fsp_light.py": "bd82aba69c5a1457a2c49aed6e54f9e02e7b9fbd81cce556c568b2b054697cce",
+    "Hackaton/Semana 2/Claude/mision017_20261025/exp26_20261026/ml2/codigo/fsp_light_prod.py": "5a5ebf6e0d8fd8b4c8e9a28ada33ef2e353dfe7cb4b6f17ec51b386f2f374749",
+    "Hackaton/Semana 2/Claude/mision017_20261025/exp26_20261026/ml2/trabajo/pred/fsp/buildings_meta.json": "e08010d9efbc5435dd9173c2c27044b28bbeef19edf0b85874e620d5115993e0",
+    "Hackaton/Semana 2/Claude/mision017_20261025/exp26_20261026/ml2/trabajo/pred/fsp/buildings_prod_meta.json": "3ea6d5459d9d21cbce04d5326cab676a2be0ef8434dea8aeb206658d095f7570",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_matrices_20261026_v1/rows_source_dev.parquet": "bc1ca88c1971207b73adcd0dd439bf8a41cf7641e91b872ac0754c75026085f1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_matrices_20261026_v1/matrix_source_dev.parquet": "7ea70bd9892ac23620f9456e23a1161471dd6f96e99c48acf8fd82bbf9d6fe42",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_matrices_20261026_v1/rows_target_dev.parquet": "8f9228dd2bcaf60d9ea0659c6126745bb3f740684413a0c98fc1a134a9ec9c76",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_matrices_20261026_v1/matrix_target_dev.parquet": "04c99ae41292116bcb9da926adc14e13da3f7e80c2b2c5d7320291ad12e38f03",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_matrices_20261026_v1/rows_source_prod.parquet": "ccbf8a7a75f9a99b2536019b4bd82951c9cd6a7e841e08aa9ea8b1c856a0a086",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_matrices_20261026_v1/matrix_source_prod.parquet": "708286984e3b0d43b251578ff70932224d121fa07a0c03aa145a3882fc5a15e5",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_matrices_20261026_v1/rows_target_prod.parquet": "8f9228dd2bcaf60d9ea0659c6126745bb3f740684413a0c98fc1a134a9ec9c76",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_matrices_20261026_v1/matrix_target_prod.parquet": "624806536463eb6dec56b8b7e69374dc9819a1a9d356685b1307058a28b56e6b"
+  }
+}

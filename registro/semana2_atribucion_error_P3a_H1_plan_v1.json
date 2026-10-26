@@ -1,0 +1,40 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T14:13:40.094532+00:00",
+  "type": "descriptive_loss_decomposition_not_a_price_candidate",
+  "motivation": "P3afixed-price aggregate gains coexist with adverse motorNB2023cells. A/Eis closer to1there but Tweedie loss worsens. Distinguish total scale from relative allocation before another model change.",
+  "scope": "All48declared line/year/NBcells across all4P3ascenarios, not only adverse cells.",
+  "mathematics": "For fixedmu,p=1.5, A=sum(y/sqrt(mu)),B=sum(sqrt(mu)),C=sum(sqrt(y)). D(mu)=4A+4B-8C; inf_over_scaleD=8sqrt(AB)-8C. Gain=relative_shape_gain+(baseline_scale_regret-candidate_scale_regret). The minimizing multiplierA/Buses held labels and is diagnostic only.",
+  "restrictions": [
+    "No oracle-scaled price vector, model candidate, CSV, CVgain or deployment adjustment is produced",
+    "No bootstrap/CI or model selection approval from the best-scale lower bound",
+    "Do not treat this held-label lower bound as independent or prospective performance; no threshold relaxation",
+    "Relative-shape term is invariant to common scale, not a pure rank/Gini metric"
+  ],
+  "readout": "Allcells and terms normalized by their existing cellnull; verify exact additivity and agreement with the recorded P3adifference. Retain computed diagnostic multiplier as explicit evidence marked inadmissible for pricing.",
+  "budget": {
+    "new_pricing_model_fits": 0,
+    "new_C0_fits": 0,
+    "new_source_inference": 0,
+    "new_prices": 0,
+    "new_bootstraps": 0,
+    "diagnostic_held_optimum_scalars_not_pricing_parameters": 96,
+    "new_submissions": 0
+  },
+  "limits": [
+    "Descriptive/adaptive analysis of inspected held outcomes; does not identify a causal error or a better model",
+    "A new simpler hypothesis, if warranted, must be separately preregistered and learned without held labels"
+  ],
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true,
+  "submission_allowed": false,
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/atribuir_error_sensibilidad_H1.py": "dfd7303d8b1c5d113c10153861e9708a2f1bef2aa09fc181ab0ee287bfba1093",
+    "Hackaton/Repositorio_IAA2026/herramientas/sensibilidad_congelada_media_H1.py": "0815f7dc98ad202ba4577f88372ab40aff1cb88568ecff1fde33c7ad32bf9e44",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/sensibilidad_congelada_media_H1_20261026_v1/report.json": "62e47aa809727cd1d4dd2ecd3f724a92b64ca93db621e2ba20c8061688677942",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/sensibilidad_congelada_media_H1_20261026_v1/held_frozen_scenario_prices.parquet": "af7a127d7425fd96c28236c4e27d129a0b6818b869f111acdab2fd67e044bdba",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3/target_T0_and_stresses.parquet": "114dd8ae8048a04530855c7be8f8e718ebd9fe969f491c4513fc1fadbd0bcca6",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_mision_privada_plan_v1.json": "3329dbc7fe931d71e1e945bdf536fd9d810040f2626709f3d103c2dc5cdd7876",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_control_entregas_codex_actual.json": "09608aa42f7784e13787e5a7bfd1d324afcc922041a492048b04fb03cc7820cf"
+  }
+}

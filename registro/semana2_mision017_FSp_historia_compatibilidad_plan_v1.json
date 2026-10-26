@@ -1,0 +1,55 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T07:02:10.387428+00:00",
+  "hypothesis": "Legacy T2b compatibility differences may be explained by unbounded-inception history versus the explicit observed-cut historia2. Test only these199rows and keep the prototype unchanged.",
+  "configuration": {
+    "rows": 199,
+    "fields_changed": [
+      "hist_pol_12m",
+      "hist_cli_12m"
+    ],
+    "counterfactual": "Legacy [period_start-365days,period_start) using only supplied report dates",
+    "retained_prototype": "Explicit observed-cut [min(period_start,V)-365days,min(period_start,V)), V=2024-12-31",
+    "level_for_comparison": "Already stored median ratio from prototype diagnostic, not learned again or deployed"
+  },
+  "criterion": "Explain original CSV within1microCU after substituting only history fields. Record unexplained rows; do not change recipe to force a match.",
+  "observed_dates": {
+    "max_report_date": "2024-12-30 00:00:00",
+    "reports2024_12_31": 0,
+    "reports2024_01_01": 14,
+    "do_not_infer_an_unobserved_day_is_a_known_zero_or_extend_cutoff": true
+  },
+  "budget": {
+    "diagnostic_T2b_inference_rows": 199,
+    "new_model_fits": 0,
+    "new_C0_fits": 0,
+    "new_candidate_prices": 0,
+    "new_candidate_CSVs": 0,
+    "new_submissions": 0
+  },
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/conciliar_historia_T2b_prototipo.py": "ec806965c86cc090664cbe3c6fb3270c0fee8a7a6cf579e99bece4fbc40a1850",
+    "Hackaton/Repositorio_IAA2026/herramientas/preparar_prototipo_F3c_FSp_REN.py": "98865db09bac05f420363ea0b1075d6164c0ae1597b9b443de53f53f8b2c19da",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/F3c_FSp_REN_prototipo_20261026_v1/report.json": "0be6c2c24f9e174b0027e2f9790b59dd3622804d4143f781f1464144a1c4a994",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/F3c_FSp_REN_prototipo_20261026_v1/annual_T2b_REN_2025.parquet": "4f6559ecc3436c80bf578a32677b80bd87f6c27a0f79bc2e5d20a6887e17886e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/claude_ml_independiente_20261023/prediccion_2025_mlind.csv": "d261388c7e4d5dccb995605d957dbda11f46a97408549fa07b45953ecf7ce0a3",
+    "Hackaton/Semana 2/Datos/emerging/claims.parquet": "1a2fce8a26cb1e05de1f53fe4e39bde772a1898e845755487625355fec4cc0e9",
+    "Hackaton/Semana 2/Datos/emerging/policies_motor.parquet": "7c5dbb5e5b46629ebf01a66c991183d20b8585393b589bc2644fcbd6653a3ec1",
+    "Hackaton/Semana 2/Datos/emerging/test_motor.parquet": "108d5c68e9bab5ccd90ee5502bc3543aa515a5aa07fda44a3b227cf070a28aa5",
+    "Hackaton/Semana 2/Datos/emerging/policies_buildings.parquet": "ccc948fafc11e623d5cb010c2b494f6813f6048719eae7bcde28794467598319",
+    "Hackaton/Semana 2/Datos/emerging/test_buildings.parquet": "21f91aaa66a1b9efd216ad0e04ff12a507dbeb721084330d9b9f06c99edd0ca6",
+    "Hackaton/Semana 2/Datos/emerging/policies_contents.parquet": "84d7f48d03933b018bec8fdc2f4bbd96df184cca7ae1971c38d3acc955720f8e",
+    "Hackaton/Semana 2/Datos/emerging/test_contents.parquet": "af5ef2553e35a2d563ca091b173500daac55acc4969d1d3a96fa6b4ec3c6a012",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/matrix_motor_target_prod.parquet": "7d75c1d4f78554e13f55f75660e7f7f1bbd7658f0fbbb72ab963b088737f5c8f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/rows_motor_target_prod.parquet": "51507b77e87394815556b017cbaa80a5ced447bbed50a7dfbc9a694ba429b556",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/modelos/prod/T2b_motor.txt": "63048d90ac018ee27fe56466866578b6836a72dba6cf7ea3b1889929380bbcc0",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_matrices_20261026_v1/matrix_target_prod.parquet": "624806536463eb6dec56b8b7e69374dc9819a1a9d356685b1307058a28b56e6b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_matrices_20261026_v1/rows_target_prod.parquet": "8f9228dd2bcaf60d9ea0659c6126745bb3f740684413a0c98fc1a134a9ec9c76",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/modelos/prod/T2b_buildings.txt": "c51b0ea814781bd0f6a35147ed4356685b2b78018173282addf0a6b64ad8c07b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/matrix_contents_target_prod.parquet": "8d91f0237ed7eb3b5399898dfb99f73f0953408ced510ab8b63d9893963a91cf",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/rows_contents_target_prod.parquet": "852d5ab062877322d10c1d35b8bdb7a0baccfb851b86a288646a81e019f97e03",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/modelos/prod/T2b_contents.txt": "a55017f8b8c04430d4d86b82a7237eb19fc6bf56a0ac5664fbdda576cb20596a"
+  },
+  "prototype_not_modified": true,
+  "2024_open": true
+}

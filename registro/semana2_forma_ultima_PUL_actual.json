@@ -1,0 +1,82 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T09:22:48.678608+00:00",
+  "status": "complete_exploratory_post31_gate_failed",
+  "primary": "PUL2",
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/forma_ultima_PUL_20261026_v1/report.json",
+  "report_sha256": "a0ec3043b9e71b1e3f969c61e15a295ca21339cd0ff1494308e8cf3716914934",
+  "results": {
+    "PUL1": {
+      "scores": {
+        "N3": 0.13524973116896466,
+        "G3": 0.1370999273441873,
+        "PUL1": 0.13877627552035843
+      },
+      "delta_vs_G3": 0.0016763481761711003,
+      "bootstrap95": [
+        0.00033285885588152657,
+        0.00305333153263634
+      ],
+      "gates": {
+        "delta_ge_002": false,
+        "lower95_positive": true,
+        "positive_folds_ge4": true,
+        "both_years_nonnegative": true,
+        "post31_nonnegative": false,
+        "cell_min_ge_minus001": true
+      },
+      "weighted2025_sensitivity_delta": 0.00034271380596333256
+    },
+    "PUL2": {
+      "scores": {
+        "N3": 0.13524973116896466,
+        "G3": 0.1370999273441873,
+        "PUL2": 0.13968845670288987
+      },
+      "delta_vs_G3": 0.0025885293587024046,
+      "bootstrap95": [
+        0.0011517666549802142,
+        0.004111004611333552
+      ],
+      "gates": {
+        "delta_ge_002": true,
+        "lower95_positive": true,
+        "positive_folds_ge4": true,
+        "both_years_nonnegative": true,
+        "post31_nonnegative": false,
+        "cell_min_ge_minus001": true
+      },
+      "weighted2025_sensitivity_delta": 0.002345468452048617
+    }
+  },
+  "incremental_vs_H1": {
+    "delta": 0.001669427969379699,
+    "paired_bootstrap95": [
+      0.00032993157245935075,
+      0.0030487474389317222
+    ],
+    "point_positive": true,
+    "same_group_outcome_order_and_seed_checked": true
+  },
+  "new_price_estimator_fits": 0,
+  "new_C0_fits": 0,
+  "new_kappa_fits": 0,
+  "new_source_inference": 0,
+  "new_prediction_normalizers": 60,
+  "new_final_test_prices": 0,
+  "new_submissions": 0,
+  "formal_admission": false,
+  "submission_allowed": false,
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true,
+  "goal_achieved": false,
+  "next_unit": "First inspect age-wise changes in the NEW H1NBobservation exposure and price offset using saved artifacts only, without outcome scoring. If material, register exact old standard ageNBGLM (same5bands,K300,optimizer) under H1, retaining PUL2renewals;15newfits maximum,no tree/source/C0/kappa changes. This is a changed observation-link assay, not repeating the old G3offset age experiment or tuning age bands. Preserve old NBaddition guard so RENgains cannot mask NBdamage. Do not weaken PUL2post31criterion or tune RENweights.2024open;B00/F3c0.16914and slots preserved.",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/MISION017_PUL_RESULTADO.md",
+  "forum": {
+    "author": "Codex",
+    "id": "COD-S2-20261026-MISION017-PUL-RESULTADO",
+    "utc": "2026-10-26T09:22:48+00:00",
+    "previous_sha256": "ddbd175ed86a217aef8893e33ede9c9d2769c594cde0c8c6c029fe6923af34eb",
+    "sha256": "a2185e284fb71d5b3b3927ee9d9802b5232b645004a7a735af7cbb839ef2f927"
+  }
+}

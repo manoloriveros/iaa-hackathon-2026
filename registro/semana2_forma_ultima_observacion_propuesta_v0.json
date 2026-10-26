@@ -1,0 +1,36 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T09:14:59.179896+00:00",
+  "status": "proposal_only_not_registered_for_price_score",
+  "question": "The old RFSobserved-cost ratio conflates ultimate FSp risk shape and peril-completion mismatch. Separate them, preserving all models, weights, cohorts and adverse assays.",
+  "identity": "old_RFS_ratio = pure_ultimate_ratio*(q_saved_outer_risk/q_global), where pure_ultimate_ratio=sum(kappa*f*s)/(T2b_annual_raw*calendar_exposure). f already contains calendar exposure once. Verify algebra on pinned inputs before fitting/pricing.",
+  "primary": "PUL2: savedH1observedcost prices times pure_ultimate_ratio^w on renewals only, normalized per line/year/REN preservingH1totals. No new source fit,C0,kappa or target calibration.",
+  "companion": "PUL1: same ultimate-only shape on savedG3, declared ablation to distinguish observation-link interaction; no post-score switch of winner.",
+  "fixed_weights_REN": {
+    "motor": 0.25,
+    "buildings": 0.25,
+    "contents": 0.5
+  },
+  "NB": "PUL2NBidenticalH1NB;PUL1NBidenticalG3NB. Do not reintroduce failed NB_FSp changes.",
+  "source_of_H1": "Declared secondary ablation of completedHET; now used as an exploratory component by a documented adaptive decision, not promoted or re-tested as independent evidence. H2 remains originalprimary and is retained with its failures.",
+  "criterion": "Preserve primary pooleddelta>=.002,lower95>0,>=4positivefolds,bothyears>=0,post31>=0,worstline/year/business>=-.001, plus incremental vsH1 and NBidentity controls. Weighted2025point nonnegative is additional consideration,ESSfailure persists. No formal promotion or automatic upload.",
+  "budget_if_registered": {
+    "new_source_fits": 0,
+    "new_target_estimator_fits": 0,
+    "new_C0_fits": 0,
+    "new_kappa_fits": 0,
+    "new_source_inference": 0,
+    "held_prediction_only_normalizers": 60,
+    "new_final_test_prices": 0,
+    "new_submissions": 0
+  },
+  "before_price_score": [
+    "Verify source/outer C0and kappa memberships and parentH1OOFmapping",
+    "Verify exact decomposition and exposure-once math; isolate ultimate ratio from q/T0/reserve/count fields",
+    "Synthetic/adverse identity and replay, finitepositivevalues, zero-weightbaseline, independentlog/scalar math",
+    "Freeze code/config/cost/criterion and forum comment before creating/scoring new historical prices"
+  ],
+  "2024_open": true,
+  "B00_F3c_all_alternatives_preserved": true,
+  "goal_achieved": false
+}

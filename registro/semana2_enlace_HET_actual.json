@@ -1,0 +1,74 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T09:14:59.179896+00:00",
+  "status": "complete_exploratory_no_admission",
+  "primary": "H2",
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/enlace_HET_20261026_v1/report.json",
+  "report_sha256": "cb98fc7257aa8d10b107991fbe7b62fd8f1c1f255b62e82cf3825a55d4a678bc",
+  "results": {
+    "H1": {
+      "scores": {
+        "N3": 0.13524973116896466,
+        "G3": 0.1370999273441873,
+        "H1": 0.13801902873351013
+      },
+      "delta_vs_G3": 0.0009191013893227057,
+      "bootstrap95": [
+        0.0004916207276154877,
+        0.0013604800061900132
+      ],
+      "gates": {
+        "delta_ge_002": false,
+        "lower95_positive": true,
+        "positive_folds_ge4": true,
+        "both_years_nonnegative": true,
+        "post31_nonnegative": true,
+        "cell_min_ge_minus001": true
+      },
+      "weighted2025_sensitivity_delta": 0.0020043230352938288
+    },
+    "H2": {
+      "scores": {
+        "N3": 0.13524973116896466,
+        "G3": 0.1370999273441873,
+        "H2": 0.13795612858393547
+      },
+      "delta_vs_G3": 0.000856201239748117,
+      "bootstrap95": [
+        0.00041594477847157254,
+        0.0013408866093271806
+      ],
+      "gates": {
+        "delta_ge_002": false,
+        "lower95_positive": true,
+        "positive_folds_ge4": true,
+        "both_years_nonnegative": true,
+        "post31_nonnegative": true,
+        "cell_min_ge_minus001": false
+      },
+      "weighted2025_sensitivity_delta": 0.00038313988523916523
+    }
+  },
+  "new_iterative_model_fits": 0,
+  "new_closed_price_constants": 710,
+  "new_C0_fits": 0,
+  "new_kappa_fits": 0,
+  "new_final_test_prices": 0,
+  "new_submissions": 0,
+  "formal_admission": false,
+  "submission_allowed": false,
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true,
+  "goal_achieved": false,
+  "next_unit": "Prepare PUL1/PUL2 from fixed savedG3/H1and cached FSp/kappa: first verify old_RFSratio=pure_ultimate_ratio*(q_outer/q_global), current group ancestry and exposure once. Keep previousweights RENonly; no new C0/models/kappa, no NB_FSp. PrimaryPUL2is a NEW documented adaptive composition, not retrospective H1promotion. Register recipe/controls/cost/forum before any new price or score.2024open;B00/F3c0.16914and quota preserved.",
+  "next_proposal": "Hackaton/Repositorio_IAA2026/registro/semana2_forma_ultima_observacion_propuesta_v0.json",
+  "next_proposal_sha256": "37838d090ecf99c8ce52872d622a01c3bbf5f180dcd5654edc7e79be0a71e635",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/MISION017_HET_RESULTADO.md",
+  "forum": {
+    "author": "Codex",
+    "id": "COD-S2-20261026-MISION017-HET-RESULTADO",
+    "utc": "2026-10-26T09:14:59+00:00",
+    "previous_sha256": "d1a8e7df0b63795c2c181a3ca036e3a7804b7697f919c27f975da80604429f63",
+    "sha256": "889dd6fa7ddeb567445aebc3e21b6c3c19e9dd595968ce86958db0d1b54d0826"
+  }
+}
