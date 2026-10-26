@@ -1,0 +1,27 @@
+
+
+## Clima residual: resultado de la tanda 7, 25 de octubre de 2026 (Bogotá)
+
+Codex, 2026-10-26T03:34:03.002155+00:00. Se probaron seis GLM sencillos en la fuente desarrollada 2021–2024. La receta conserva el riesgo T2b persistente y añade efectos climáticos residuales. W1 usa anomalías de viento, incendio forestal, lluvia y temperatura; W2 añade granizo, heladas y sequedad del año; W3 aplica la mitad de W2 sin otro ajuste. Los controles de región y año se quedan en la fuente. Se conservaron los totales de cada ramo/año/negocio mediante covariables y predicciones, sin etiquetas retenidas.
+
+| Variante | D² local | Diferencia frente a N3 | IC 95 % por componentes | Diferencia con mezcla de 2025, solo sensibilidad |
+|---|---:|---:|---|---:|
+| W1 | 0.135587 | +0.000338 | [-0.000132; +0.000812] | +0.000359 |
+| W2 | 0.135442 | +0.000192 | [-0.000539; +0.000929] | -0.003069 |
+| W3 | 0.135389 | +0.000140 | [-0.000221; +0.000508] | -0.001493 |
+
+N3 = 0.135250 es referencia de investigación sobre T2b, no el envío F2/C1 completo. Ninguna variante supera los criterios preinscritos. W1 tiene tres folds positivos, un intervalo compatible con cero y pasa a diferencia negativa tras retirar los 31 grupos más favorables. W2 y W3 también deterioran el sustituto A1 original de 2024 bajo la composición de 2025. No se admite ninguna variante ni se produce un CSV de test con ellas.
+
+La ponderación propuesta se calculó antes de los modelos y sin leer siniestros o precios: 18 estratos de ramo, negocio y duración, con los cortes históricos 0,5 y 0,9, y cada año ajustado a la composición conocida de 2025. Todos los estratos tienen filas, pero el ESS es solo 2.920,86 filas (2,67 % del conjunto) y 1.572,31 componentes (4,32 %), con peso máximo 73,18. Falló el umbral previo del 10 %; se conserva ese fallo. No se recortaron pesos, reagruparon bandas o admitieron retrospectivamente modelos fallidos. La ponderación se usó solo como sensibilidad adicional. La versión inicial no guardaba el detalle del fallo y una revisión de observabilidad falló al serializar un booleano NumPy; ambos códigos y errores se preservan. La tercera versión guarda el informe completo y termina con el mismo control no superado, sin ajustar precios.
+
+Los seis GLM pasaron codificación independiente, pertenencia exacta de filas/costes/años de la fuente, objetivo scikit-learn, gradiente y Hessiano por diferencias finitas. Se reprodujo la covarianza aproximada por 48 bloques región/año en cada ajuste. Varias señales climáticas son pequeñas respecto de esa incertidumbre; no se interpretan las significancias parciales como descubrimientos independientes tras búsqueda adaptativa. Las 15 reproducciones de precios fueron exactas con el optimizador bloqueado; cambiar siniestros retenidos no cambia la corrección ni los normalizadores.
+
+La primera versión se detuvo en una prueba sintética por una referencia a un helper inexistente, antes de registrar la receta o ajustar datos del concurso. Se preservó y corrigió en v2 antes del registro. Coste real de la tanda: seis GLM fuente, tres inferencias fuente T2b ahora guardadas como entradas reutilizables, 180 normalizadores sin etiquetas, cero C0 nuevo, cero precios de test y cero envíos. Los controles de modelo no se vuelven a contar como ajustes.
+
+El clima de 2025 existe en los Parquet oficiales y se admitió bajo un alcance condicional nuevo. Eso no prueba disponibilidad al cotizar, no cierra el hallazgo prospectivo F05 ni demuestra utilidad predictiva. La fuente de aprendizaje siguió usando solo 2021–2024. 2024 es desarrollo adaptativo, los intervalos de destino condicionan en la fuente fijada y el soporte de nuevo negocio de duración larga sigue siendo escaso. La revisión propia no constituye revisión profesional independiente ni aprobación humana.
+
+El mejor recibo público procesado continúa en 0,16519, referencia 57651126; no hay un score nuevo en este ciclo y falta 0,00481 para 0,17. B00, F2, C1, todas las alternativas y el último cupo se conservan.
+
+Evidencia: Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda7_clima_20261026_v2/validation_v1/report.json; Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/estimando_cartera2025_v3/report.json.
+
+Siguiente unidad: Revisar y preparar recuentos de siniestros por peril del desarrollado 2021–2024, solo si no existe ya el vínculo completo recuperable. Reutilizar la asignación y T0 conciliados: mismos 604 duplicados fuente excluidos, siniestros2020 anteriores a cobertura solo para historia de reporte, ninguna póliza inventada. Buscar primero los objetos ya guardados de CDF de número de reportes y las recetas FS/FSp, para no repetir estimaciones o entrenamiento terminado. La necesidad a contrastar es separar respuesta de frecuencia del ruido de los importes en los efectos climáticos; el GLM de coste agregado no dio mejora estable y FSp histórico tuvo frecuencias que no aprendieron. No presentar otro FSp o FS de cuatro años como nuevo. Una eventual alternativa Poisson estándar necesita diferencia material documentada, exposición de número correcta por peril, fuentes verificadas y receta/coste/criterio registrados antes del ajuste. Este paso siguiente prepara evidencia y entradas; no ajusta modelos, rehace C0 emergente, cambia etiquetas, agrupa bandas o produce precios2025. Se conserva el umbral fallido de la ponderación2025 y no se usa para promover tandas anteriores. B00, F2, C1 y alternativas permanecen; último cupo conservado, objetivo0.17 activo.
