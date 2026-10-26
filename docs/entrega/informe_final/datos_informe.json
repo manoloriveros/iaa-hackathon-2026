@@ -1,0 +1,79 @@
+{
+  "id": "INFORME-COMPARATIVO-20261026",
+  "autor_edicion": "Codex",
+  "autor_recetas_previas": "Claude y líneas originales según su registro",
+  "utc": "2026-10-26T20:35:10.468265+00:00",
+  "run": "Hackaton/Repositorio_IAA2026/privado/informe_comparativo/20261026T203508447684Z",
+  "sources": [
+    {
+      "ruta": "Hackaton/Repositorio_IAA2026/docs/entrega/analisis/datos_panel.json",
+      "sha256": "94366492d5554b2f587f3d29f8ccfb00b70b7ae8be7a60c918e225dce233056c",
+      "rol": "EDA_comun"
+    },
+    {
+      "ruta": "Hackaton/Repositorio_IAA2026/privado/informe_comparativo/20261026T203508447684Z/fuentes/indice_EDA_corte_previo.json",
+      "sha256": "ef59da6dd991755a37ae46be2814d1b42da1a178eed0699a456403f683a00dfc",
+      "rol": "indice_EDA_corte_previo"
+    },
+    {
+      "ruta": "Hackaton/Semana 2/Claude/informe_final_20261026/informe_final_IAA2026_es.pdf",
+      "sha256": "0483efc9a5f1d220c5ffaf682987603d445a28dfe83cf6f6b16d1da9335e1db0",
+      "rol": "informe_previo_Claude"
+    },
+    {
+      "ruta": "Hackaton/Semana 2/Claude/informe_final_20261026/fuente/paginas.py",
+      "sha256": "e2e16fd62a0254092832c20565a66ffdc8db49f93ddc71bbe760f4bde417c41c",
+      "rol": "redaccion_previa_Claude"
+    },
+    {
+      "ruta": "Hackaton/Repositorio_IAA2026/docs/RESULTADOS_PRIVADOS_SEMANA1.md",
+      "sha256": "867ce6ff6bf1e605128d846561e7781711a87d51467e0a91add3c13eca077b1c",
+      "rol": "evidencia_previa"
+    },
+    {
+      "ruta": "Hackaton/Repositorio_IAA2026/docs/SENSIBILIDAD_SEMANA2.md",
+      "sha256": "07578513eaf03f5e014195c3fafb3910090df24259876dbaf61403278c777ce6",
+      "rol": "evidencia_previa"
+    },
+    {
+      "ruta": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P20_REQUISITOS_F3C.md",
+      "sha256": "87a0c42c0192a1b09092b16273ada3ec1e27e94b01c67df593396b4be633f509",
+      "rol": "evidencia_previa"
+    },
+    {
+      "ruta": "Hackaton/Repositorio_IAA2026/registro/semana2_control_entregas_codex_actual.json",
+      "sha256": "09608aa42f7784e13787e5a7bfd1d324afcc922041a492048b04fb03cc7820cf",
+      "rol": "evidencia_previa"
+    },
+    {
+      "ruta": "Hackaton/Repositorio_IAA2026/registro/recibo_reproduccion_completa_20261020.json",
+      "sha256": "6c580a371758b3c47286ee68f41b697e7db2196a16adfbc833ea9da51e6d9ef1",
+      "rol": "evidencia_previa"
+    },
+    {
+      "ruta": "Hackaton/Semana 2/Datos/emerging/reference_policies.parquet",
+      "sha256": "6d4c2839e87d092fccd4b3c3ddc16a2a4c4993c35e18481e322462cd382dd8f4",
+      "rol": "20_referencias"
+    },
+    {
+      "ruta": "Hackaton/Semana 2/Datos/emerging/expenses.parquet",
+      "sha256": "9033f666a5a45f0b44501d57e40ab1cc571c51c384f23a62942b75db323b1cdf",
+      "rol": "gastos_oficiales"
+    },
+    {
+      "ruta": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_mision017_20261025/F3c_2025.csv",
+      "sha256": "5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276",
+      "rol": "F3c_guardado"
+    }
+  ],
+  "reference_count": 20,
+  "R_total": 9005.765652,
+  "P_total": 20304.20079217746,
+  "scope": "Datos, evidencia y precios guardados; sin entrenamiento, inferencia o selección.",
+  "displayed_totals_CU": {
+    "R": "9005.76",
+    "cat": "414.32",
+    "fixed": "1454.06",
+    "P": "20304.23"
+  }
+}

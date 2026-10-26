@@ -2,6 +2,8 @@
 
 AI Hackathon IAA 2026 · Parte 1, mercado establecido · Manuel Rodríguez, equipo individual (Kaggle: manoloriveros). La versión en inglés de esta página es el [README.md](README.md).
 
+La edición conjunta de ambas semanas está en [el informe de cinco páginas](privado/entrega_final/informe_dos_semanas.pdf), disponible localmente fuera de Git por sus veinte referencias comerciales, y en [el dashboard comparativo](docs/entrega/panel_analisis.html). [Fuentes, figuras y validación de esa edición](docs/entrega/informe_final/README.md). El recorrido de semana 1 que sigue se conserva como antecedente; la selección de semana 2 continúa abierta en el corte del 26 de octubre.
+
 El modelo predice, para cada periodo de póliza de 2025 en autos particulares, edificios y contenidos del hogar, el coste último esperado de los siniestros ocurridos en el periodo, neto de franquicias y recobros y sin siniestros rechazados. Se entrega un solo modelo final, la Mezcla por peligro (S30 en el código y los recibos). En cada ramo mezcla modelos Tweedie del coste total con modelos de frecuencia × severidad por peligro y fija el nivel de 2025 con dos años fuera de muestra. La IA participó en todas las etapas, sobre todo para contrastar posturas: tres líneas de trabajo independientes publicaron sus hipótesis en un foro común antes de calcularlas, y un enjambre de agentes de validación auditó el proyecto cada seis horas. Los datos son sintéticos y los importes van en una unidad monetaria ficticia (CU).
 
 | Cifra | Valor |
@@ -23,7 +25,7 @@ Los envíos anteriores solo aparecen en la curva de aprendizaje del informe, com
 | Cómo se usó la IA y cómo se comprobó | [docs/entrega/USO_DE_IA_ES.md](docs/entrega/USO_DE_IA_ES.md) · [AI_WORKFLOW_EN.md](docs/entrega/AI_WORKFLOW_EN.md) |
 | Las cifras detrás de cada entregable | [docs/entrega/datos/cifras_entregables.json](docs/entrega/datos/cifras_entregables.json), con la ruta y el SHA-256 de cada fuente |
 | Expediente de trabajo: foro y registro de decisiones | [docs/expediente/](docs/expediente/) |
-| Adaptación de la semana 2 | Planificada en el informe; los resultados se añadirán al terminar la parte 2 |
+| Adaptación de la semana 2 | [Informe conjunto y figuras](docs/entrega/informe_final/README.md); comparación al 26 de octubre, selección final pendiente |
 
 ## Cómo se organizó el trabajo
 

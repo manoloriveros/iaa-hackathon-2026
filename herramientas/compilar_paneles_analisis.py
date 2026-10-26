@@ -11,7 +11,7 @@ def main():
     ent=REPO/'docs/entrega'
     data=json.loads((ent/'analisis/datos_panel.json').read_text(encoding='utf-8'))
     encoded=json.dumps(data,ensure_ascii=False,allow_nan=False).replace('</','<\\/')
-    template=(ent/'web/analisis_plantilla.html').read_text(encoding='utf-8')
+    template=(ent/'web/comparacion_plantilla.html').read_text(encoding='utf-8')
     (ent/'panel_analisis.html').write_text(template.replace('__ANALYSIS_DATA__',encoded),encoding='utf-8')
     spec=importlib.util.spec_from_file_location('entrega_builder',REPO/'herramientas/construir_entrega.py')
     module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)

@@ -2,6 +2,8 @@
 
 IAA AI Hackathon 2026 · Part 1, established market · Manuel Rodríguez, individual team (Kaggle: manoloriveros). A Spanish copy of this page is in [README.es.md](README.es.md).
 
+The joint Spanish report now covers both weeks in [five total pages](privado/entrega_final/informe_dos_semanas.pdf), available locally outside Git because it includes the twenty reference prices. See the [comparison dashboard](docs/entrega/panel_analisis.html) and [sources, figures and checks](docs/entrega/informe_final/README.md). The Week 1 account below is preserved; the Week 2 final selection remains open at the 26 October cut.
+
 The model predicts, for every 2025 policy period in private motor, home buildings and home contents, the expected ultimate cost of the claims that occur in the period, net of excess and recoveries and excluding declined claims. One final model is delivered, the Per-peril blend (S30 in code and receipts). It blends Tweedie total-cost models with per-peril frequency × severity models in each line and sets the 2025 level with two out-of-sample years. AI took part in every stage, mostly to challenge positions: three independent work lines posted their hypotheses to a shared forum before computing them, and a swarm of validation agents audited the project every six hours. The data are synthetic and amounts are in a fictional currency unit (CU).
 
 | Figure | Value |
@@ -23,7 +25,7 @@ Earlier submissions appear only on the learning curve of the report, as the path
 | How AI was used and how it was checked | [docs/entrega/AI_WORKFLOW_EN.md](docs/entrega/AI_WORKFLOW_EN.md) · [USO_DE_IA_ES.md](docs/entrega/USO_DE_IA_ES.md) |
 | The numbers behind every deliverable | [docs/entrega/datos/cifras_entregables.json](docs/entrega/datos/cifras_entregables.json), with the path and SHA-256 of each source |
 | Working record: forum and decision log | [docs/expediente/](docs/expediente/) |
-| Week 2 adaptation | Planned in the report; results will be added after Part 2 |
+| Week 2 adaptation | [Joint report and figures](docs/entrega/informe_final/README.md), as of 26 October; final selection pending |
 
 ## How the work was organised
 

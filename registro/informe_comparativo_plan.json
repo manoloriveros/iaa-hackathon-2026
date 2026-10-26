@@ -1,0 +1,26 @@
+{
+  "id": "INFORME-COMPARATIVO-20261026",
+  "autor": "Codex",
+  "solicitud": "Integrar hallazgos y figuras en el informe final de ambas semanas, respetar cinco páginas y facilitar la comparación visual.",
+  "alcance": "Edición, maquetación y comparación de evidencia existente; sin entrenamiento, inferencia, nuevos scores o selección de modelos.",
+  "base_documental": "Informe conjunto previo de Claude del 26 de octubre, conservado sin modificaciones, y EDA común validado por Codex.",
+  "criterios": [
+    "Cinco páginas totales, sin portada o anexos dentro de ese PDF",
+    "Semanas en columnas paralelas, años comunes 2023-2024 y escalas compartidas",
+    "Volúmenes de toda la historia separados de tasas en años comparables",
+    "T0 observado separado de riesgo último y de prima comercial",
+    "Resultados públicos y privados etiquetados; semana 2 no declarada cerrada",
+    "Veinte pólizas comerciales calculadas solo desde predicciones F3c guardadas y gastos oficiales, con conciliación Decimal",
+    "PDF con datos de las veinte referencias guardado en privado, fuera de Git",
+    "PDF rasterizado e inspeccionado en sus cinco páginas; dashboard probado con comparación simultánea y exportación"
+  ],
+  "entregables": {
+    "plantilla_informe": "docs/entrega/informe_final/INFORME_ES.md",
+    "pdf_local": "privado/entrega_final/informe_dos_semanas.pdf",
+    "dashboard": "docs/entrega/panel_analisis.html",
+    "indice": "registro/informe_comparativo_actual.json"
+  },
+  "autoria": "La receta y el informe anterior conservan su autoría. Codex consolida y verifica esta edición; no se presenta revisión profesional independiente.",
+  "publicacion": false,
+  "entrenamiento": false
+}
