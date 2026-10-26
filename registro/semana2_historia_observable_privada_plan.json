@@ -1,0 +1,89 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T19:17:31.280709+00:00",
+  "hypothesis": "Una ventana calendario completa y un historial de siniestros cero pueden coexistir con ninguna póliza previa observada. Antes de modificar el modelo, medir si esa representación cambia entre fuente, destino histórico y adquisición2025.",
+  "scope": "Solo covariables: historiales12m restaurados, fechas/IDs de pólizas y años observados A1S; mercados separados, nunca unidos por IDs entre países.",
+  "binding": "Primero comprobar igualdad exacta de los dos historiales destino2023/2024 frente al cache T2b. Si falla, detenerse antes de interpretar2025.",
+  "definitions": {
+    "policy_no_prior_record": "f1_anios_observados ==0; cotejar con la primera fecha de póliza observada y known_end=min(period_start,2024-12-31).",
+    "client_no_prior_record": "Ninguna fecha inicial de póliza de ese cliente, en cualquier ramo de este mercado, anterior a known_end. Es presencia histórica en esta base, no prueba de carencia de seguro anterior.",
+    "calendar_window": "known_end-365days >=2021-01-01para fuente, >=2023-01-01para destino; esta condición no prueba cobertura personal completa durante esos365días.",
+    "claim_history_states": "Ausente, cero o positivo; preservar positivos sin póliza anterior visible, sin borrar ni imputar."
+  },
+  "tables": "Por mercado/ramo/año/negocio, y negocio nuevo por broker. Conteos y cruces de presencia observada con historiales12m, sin riesgos, precios o scores nuevos.",
+  "decision_rule": "No enmascarar o añadir variables por defecto. Solo proponer una receta posterior si la procedencia y un fallo concreto lo justifican; distinguir observabilidad de siniestralidad real y del corte de reportes.",
+  "limits": [
+    "Las matrices fuente restauradas no son por sí solas el archivo exacto de entrenamiento original T2b.",
+    "Primera póliza observada no equivale a exposición continua durante todo el lookback ni a toda experiencia asegurada.",
+    "Los maestros sin fecha conservan sus límites de disponibilidad temporal; no se leen resultados2025.",
+    "No se repite la compatibilidad de199REN entre historia H1/H2 ni los diagnósticos predictivos anteriores."
+  ],
+  "columns": {
+    "restored_matrix": [
+      "hist_pol_12m",
+      "hist_cli_12m"
+    ],
+    "row_metadata": [
+      "row_id",
+      "policy_id",
+      "customer_id",
+      "address_id",
+      "year",
+      "period_start",
+      "period_end",
+      "new_business",
+      "is_test"
+    ],
+    "A1S_matrix": [
+      "channel",
+      "new_business",
+      "f1_anios_observados"
+    ],
+    "legacy_history": [
+      "row_id",
+      "hist_pol_12m",
+      "hist_cli_12m"
+    ]
+  },
+  "cost": {
+    "model_fits": 0,
+    "C0_fits": 0,
+    "model_loading": 0,
+    "inference": 0,
+    "scores": 0,
+    "resampling": 0,
+    "submissions": 0
+  },
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/auditar_historia_observable_P22.py": "dfe7f47086aed04cc01a4085667e18e0491c5b9de7af6ff58132d196c0f68c55",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/features_motor.parquet": "a25e433cdf217c5870447000797a1664551ba2727a64af1cbfc437dc7f596a83",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/matrix_motor_source_prod.parquet": "424e64a23793c28c1f743abf2c2a23b296d15f2e75ef5890a809532de215968b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/rows_motor_source_prod.parquet": "65641c29adca996e1c4ca4058f0c35b1d6c2745dd23287102dbd6b050856ae2b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_motor.parquet": "ded113876f2069f7341491aa855e7e0fc4036e5e6e38d476466da905f5bee99c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s1_motor.parquet": "c2a2f3d5a14f96892bdd6f6f973b03449f874a7df0ff42d687533254a5833ed3",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/matrix_motor_target_prod.parquet": "7d75c1d4f78554e13f55f75660e7f7f1bbd7658f0fbbb72ab963b088737f5c8f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/rows_motor_target_prod.parquet": "51507b77e87394815556b017cbaa80a5ced447bbed50a7dfbc9a694ba429b556",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s2_motor.parquet": "7a6e236ecb97dda159f73650b660955206b33a73bd4b22e3935581c72afc3631",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s2_motor.parquet": "2063f50044d41963032164373dcc895583e92dd7e9d1687aac7efda31910e75d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/features_buildings.parquet": "056e53626aaa696c767f0cc32cec23b2b5c5a244eaa7a3bd0b4fa5ce65ef7f6a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_matrices_20261026_v1/matrix_source_prod.parquet": "708286984e3b0d43b251578ff70932224d121fa07a0c03aa145a3882fc5a15e5",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_matrices_20261026_v1/rows_source_prod.parquet": "ccbf8a7a75f9a99b2536019b4bd82951c9cd6a7e841e08aa9ea8b1c856a0a086",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_buildings.parquet": "a04a76fa8564f83a6da02d4f1885972b7ef82b3d741cc5a6bd22f0df1d98bf88",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s1_buildings.parquet": "471922f7f8318216270fc7332028286d84162fbe78aa0279173903525b4aee90",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_matrices_20261026_v1/matrix_target_prod.parquet": "624806536463eb6dec56b8b7e69374dc9819a1a9d356685b1307058a28b56e6b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_edificios_matrices_20261026_v1/rows_target_prod.parquet": "8f9228dd2bcaf60d9ea0659c6126745bb3f740684413a0c98fc1a134a9ec9c76",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s2_buildings.parquet": "26dad682688854722be16ff52bc4332fd9acfe310b5ea4838d8c772bea32b775",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s2_buildings.parquet": "801b708d1738b6b6e04e1e9e814ec798397e65f817e9267bfc425c537f153846",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/features_contents.parquet": "b1c66e0ef27ab205d1de695e3ce6ded772c60fd43f0852236f0de074fb8b880b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/matrix_contents_source_prod.parquet": "6a68de36e8b6a0debafca2cdf713dc3ff286ae8c6bb0d48fe4774094ceb9e086",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/rows_contents_source_prod.parquet": "9ee14a7f9b793fae19f91a52e3d3bcf02adbc7a04d0dd03723ac04282cedca8a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_contents.parquet": "f8d5c595dc4bc1357decca37bc73660a557a473638f2aae83e085c9e68d4e1f1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s1_contents.parquet": "07c2395bc8efe3045baec7677e56c3824c44200bd9ab75c14212e862f6e63993",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/matrix_contents_target_prod.parquet": "8d91f0237ed7eb3b5399898dfb99f73f0953408ced510ab8b63d9893963a91cf",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_MC_recuperacion_20261026_v1/matrices/rows_contents_target_prod.parquet": "852d5ab062877322d10c1d35b8bdb7a0baccfb851b86a288646a81e019f97e03",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s2_contents.parquet": "633f4b7bbccd5929daf418a062c5023e761bfabfd5db2a7da432354c47472ccc",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s2_contents.parquet": "1576409971c67f28f9bc61a82b887c63a93a2e783ae12ed39b15e07fe34f46c7"
+  },
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true
+}
