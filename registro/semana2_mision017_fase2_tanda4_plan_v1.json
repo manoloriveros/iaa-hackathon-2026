@@ -1,0 +1,73 @@
+{
+  "id": "S2-MISION017-FASE2-TANDA4-MKT-v1",
+  "author": "Codex",
+  "utc": "2026-10-26T02:04:23.040321+00:00",
+  "hypothesis": "marketing_segment is an available shared field omitted by the source T2b; in488180source historical customers it has mutual information .99777nats with unavailable emerging credit_band. Test its residual source effect with a small GLM, not a target-trained high-variance model.",
+  "not_claimed": "Source association does not prove a causal effect, shared risk meaning or predictive transport; local component OOF must test it. credit_band is never an emerging input or invented label.",
+  "source_GLM": "Tweedie1.5 loglink, offset source_e_cost*source_T2b_rate on stored sourcefeature precision; categorical marketing_segment main effects, source-region nuisance and four unpenalized source-year intercepts. Only marketing coefficients transfer. alpha.1 for marketing/region. No label clipping.",
+  "source_years": [
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "source_model_count": 3,
+  "target": "Existing N3 OOF2023–2024, with all C0 and risk calibrators excluding the saved connected component. N3 is a research comparator close to F2 corrections; not a promotion/replacement of B00/F2.",
+  "models": {
+    "R1": "Full source marketing logeffect",
+    "R2": "Half source marketing logeffect",
+    "R3": "Quarter source marketing logeffect"
+  },
+  "portfolio_transform": "Multiply frozen N3 prices by exp(strength*source_marketing_coefficient). Normalize within line×new_business on the evaluated known portfolio using predicted costs only, preserving that cell total. No held labels fit levels. This is explicitly a batch-portfolio, covariate-only transform; no online/prospective independence claim.",
+  "criterion": {
+    "delta_min": 0.002,
+    "lower95_gt": 0.0,
+    "positive_folds_min": 4,
+    "min_cell_delta_full_null": -0.001,
+    "post31_nonnegative": true,
+    "both_years_nonnegative": true
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 2026102505,
+    "unit": "saved connected component",
+    "quantiles": [
+      0.025,
+      0.975
+    ]
+  },
+  "budget": {
+    "price_estimator_fits": 3,
+    "source_reporting_refits": 0,
+    "target_reporting_refits": 0,
+    "new_label_fitted_target_levels": 0,
+    "portfolio_normalizers": 90,
+    "submissions": 0
+  },
+  "quality_limits": [
+    "Undated profile and marketing definition availability is conditional on supplied snapshot.",
+    "Shared tokens do not certify same underwriting effect across countries.",
+    "Credit proxy/social-group effects require explanation; no real-world underwriting suitability or legal approval asserted.",
+    "Source teacher is evaluated at the stored source numeric precision; original N3 reference values are preserved exactly.",
+    "2024adaptive development, not intact independent confirmation."
+  ],
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/mision017_fase2_tanda4_marketing.py": "edad14753e70e0ac5d456e8143c1fa60a2eafd18ef9366609d413db96607f85f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/admisibilidad_campos_comunes_v1/report.json": "72b7520e8f4fdc51ddf2445a1835427550dac10e4d35e384421a0a23bb49b021",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/oof_2023_2024.parquet": "a4652f2abc2663e6793d4076752045d3850111e5e8608ddd31bd3740fc7c11cc",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/validation_v1/report.json": "559c05d9f206081bd732e1836c1605c08a05f3b88e878e095f28a0680390d5ac",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/report.json": "57eda2556d06a969e2586abcc186261ae197cc0fd911977f0b2b296917fbbb1d",
+    "Hackaton/Semana 1/Datos/customers.parquet": "065458a0b3aa9d3499e80b3b25b76baf0ef6245146477b6861f6ea35edf581eb",
+    "Hackaton/Semana 1/Datos/addresses.parquet": "2f1a9a157649a73ed1b0ee9b2caa3660b4c2a11766af3c64ab5131389079c0b1",
+    "Hackaton/Semana 2/Datos/emerging/customers.parquet": "c00a0095d5fb7b2b65cd9647216add49afb3703d863d5c358b1441f0fab1fb62",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/motor.parquet": "5576c0178b1d17b4a9a3349461241dd2bd3113426388db5c33d320d455f1cf49",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/buildings.parquet": "0e732f8fba5eba51ee5e10c7fe99b7c9018c2dd63849a2a5bcb2bbf25e14d444",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/contents.parquet": "037207ea2f474de6ab858b2e9953b8539bafd01844c733d58ada93aa9815fdbb",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/modelos/prod/T2b_buildings.txt": "c51b0ea814781bd0f6a35147ed4356685b2b78018173282addf0a6b64ad8c07b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/modelos/prod/T2b_contents.txt": "a55017f8b8c04430d4d86b82a7237eb19fc6bf56a0ac5664fbdda576cb20596a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/modelos/prod/T2b_motor.txt": "63048d90ac018ee27fe56466866578b6836a72dba6cf7ea3b1889929380bbcc0"
+  },
+  "B00_preserved": true,
+  "all_alternatives_preserved": true,
+  "no_automatic_submission": true
+}

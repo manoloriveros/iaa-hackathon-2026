@@ -1,0 +1,228 @@
+{
+  "id": "S2-TANDA-F2-20261025",
+  "author": "Codex",
+  "utc": "2026-10-26T00:32:26.606725+00:00",
+  "path_base": "workspace_root",
+  "authorization": "Cancela F1_forma_ncb_2025.csv (4a72964a...) y las sondas aa118bb7... y 84fc16c6...; retiradas por error, CLA-S2-20261025-003. Desde el reinicio de las 19:00 de Bogotá autorizo enviar en este orden, verificando SHA: sonda_seg_buildings_1.csv (28a61e3a...), F2_ncb_previos_2025.csv (119627d9...), sonda_F2_motor_1_a06.csv (66fb6140...), sonda_F2_motor_1_a08.csv (b393dd70...), las cuatro sondas F2 buildings_1 a07/a13 y contents_1 a07/a13 (SHA en sondas_F2_info.json). Anota en el foro cada D² con su SHA. Después envía el final que Claude publique en el foro con su SHA. No envíes variantes propias.",
+  "competition": "iaa-ai-assisted-hackathon-2026-part-2",
+  "manifest": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/tanda_F2_20261025/manifest.json",
+  "manifest_sha256": "c3a2bfe05d67362e6ab3f71a2bc7ddf676643660c8f461765d727041b8d8f27e",
+  "cancelled": {
+    "F1_forma_ncb_2025.csv": "4a72964a5a574e6e968d571e081f1719f8bf659014f93a41b9208c83382238a8",
+    "sonda_forma_motor1_a03.csv": "aa118bb78f127a266ea4aa83fecd4d397cc330df2cbcc2b492d7e690b90dbae6",
+    "sonda_forma_motor1_a07.csv": "84fc16c656a15b8782c881e701743c2c404aff4d8964b56cb9918a414d2f08f5"
+  },
+  "ordered_receipts": [
+    {
+      "order": 1,
+      "file": "sonda_seg_buildings_1.csv",
+      "sha256": "28a61e3a5281bb56bae77836f0edc40ad625f1a104ac6b1b4678ee0d6980de7f",
+      "d2": 0.15858,
+      "d2_text": "0.15858",
+      "submission_ref": 57647383,
+      "submission": {
+        "ref": 57647383,
+        "date": "2026-10-26T00:26:44.403Z",
+        "status": "COMPLETE",
+        "public_score": "0.15858",
+        "private_score": "",
+        "description": "F2-20261025 | 01/08 | sonda_seg_buildings_1.csv | CSV_SHA256=28a61e3a5281bb56bae77836f0edc40ad625f1a104ac6b1b4678ee0d6980de7f | Claude exact artifact; authorized order.",
+        "file_name": "sonda_seg_buildings_1.zip",
+        "team_name": "ManuelRodríguez",
+        "submitted_by": "manoloriveros",
+        "error": ""
+      },
+      "transport_sha256": "548522521af455cbdb0f9436d362cde179c4111ca78daa800581950c8a793507",
+      "source": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_validacion_nocturna_20261023/sonda_segmento/sonda_seg_buildings_1.csv"
+    },
+    {
+      "order": 2,
+      "file": "F2_ncb_previos_2025.csv",
+      "sha256": "119627d93003a98933d261e773ffaf6e29a7125346367f716a0a411b97dca11a",
+      "d2": 0.16033,
+      "d2_text": "0.16033",
+      "submission_ref": 57647413,
+      "submission": {
+        "ref": 57647413,
+        "date": "2026-10-26T00:27:34Z",
+        "status": "COMPLETE",
+        "public_score": "0.16033",
+        "private_score": "",
+        "description": "F2-20261025 | 02/08 | F2_ncb_previos_2025.csv | CSV_SHA256=119627d93003a98933d261e773ffaf6e29a7125346367f716a0a411b97dca11a | Claude exact artifact; authorized order.",
+        "file_name": "F2_ncb_previos_2025.zip",
+        "team_name": "ManuelRodríguez",
+        "submitted_by": "manoloriveros",
+        "error": ""
+      },
+      "transport_sha256": "a71bc75b8aac5d79ed58488195954721985ec34f16afa9ce2a11b5e178590d08",
+      "source": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_mision017_20261025/F2_ncb_previos_2025.csv"
+    },
+    {
+      "order": 3,
+      "file": "sonda_F2_motor_1_a06.csv",
+      "sha256": "66fb61402bacd3a3f5c6bd2aba9a0979c244d553694b65515d68bb2453f78a78",
+      "d2": 0.15246,
+      "d2_text": "0.15246",
+      "submission_ref": 57647443,
+      "submission": {
+        "ref": 57647443,
+        "date": "2026-10-26T00:28:23.437Z",
+        "status": "COMPLETE",
+        "public_score": "0.15246",
+        "private_score": "",
+        "description": "F2-20261025 | 03/08 | sonda_F2_motor_1_a06.csv | CSV_SHA256=66fb61402bacd3a3f5c6bd2aba9a0979c244d553694b65515d68bb2453f78a78 | Claude exact artifact; authorized order.",
+        "file_name": "sonda_F2_motor_1_a06.zip",
+        "team_name": "ManuelRodríguez",
+        "submitted_by": "manoloriveros",
+        "error": ""
+      },
+      "transport_sha256": "54973819e0b7dd558f23dfc663109bef97e477d924a8b484f4d70349a27b0e95",
+      "source": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_mision017_20261025/sonda_F2_motor_1_a06.csv"
+    },
+    {
+      "order": 4,
+      "file": "sonda_F2_motor_1_a08.csv",
+      "sha256": "b393dd709f5ef6ed208d353726cc40de8738852b74911fcc66525769f9a918eb",
+      "d2": 0.15705,
+      "d2_text": "0.15705",
+      "submission_ref": 57647458,
+      "submission": {
+        "ref": 57647458,
+        "date": "2026-10-26T00:28:52.417Z",
+        "status": "COMPLETE",
+        "public_score": "0.15705",
+        "private_score": "",
+        "description": "F2-20261025 | 04/08 | sonda_F2_motor_1_a08.csv | CSV_SHA256=b393dd709f5ef6ed208d353726cc40de8738852b74911fcc66525769f9a918eb | Claude exact artifact; authorized order.",
+        "file_name": "sonda_F2_motor_1_a08.zip",
+        "team_name": "ManuelRodríguez",
+        "submitted_by": "manoloriveros",
+        "error": ""
+      },
+      "transport_sha256": "5c1651047a62d9e3239dbf48976d69e388fcf6a7c379ed67453567542c495eaf",
+      "source": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_mision017_20261025/sonda_F2_motor_1_a08.csv"
+    },
+    {
+      "order": 5,
+      "file": "sonda_F2_buildings_1_a07.csv",
+      "sha256": "451ac68bae3148da9d898fec483f45ea994a822e7aa9febbdce91a66a420a8fc",
+      "d2": 0.15894,
+      "d2_text": "0.15894",
+      "submission_ref": 57647473,
+      "submission": {
+        "ref": 57647473,
+        "date": "2026-10-26T00:29:23.563Z",
+        "status": "COMPLETE",
+        "public_score": "0.15894",
+        "private_score": "",
+        "description": "F2-20261025 | 05/08 | sonda_F2_buildings_1_a07.csv | CSV_SHA256=451ac68bae3148da9d898fec483f45ea994a822e7aa9febbdce91a66a420a8fc | Claude exact artifact; authorized order.",
+        "file_name": "sonda_F2_buildings_1_a07.zip",
+        "team_name": "ManuelRodríguez",
+        "submitted_by": "manoloriveros",
+        "error": ""
+      },
+      "transport_sha256": "1c3a47364070621c97a5b2f7822e5196aa8cc9c1c5938e59a64382b0645e2d1f",
+      "source": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_mision017_20261025/sonda_F2_buildings_1_a07.csv"
+    },
+    {
+      "order": 6,
+      "file": "sonda_F2_buildings_1_a13.csv",
+      "sha256": "2dff0eb76100a4116d5b4517402d0219d492adf7e708d21d08df259e92f44e01",
+      "d2": 0.1591,
+      "d2_text": "0.15910",
+      "submission_ref": 57647494,
+      "submission": {
+        "ref": 57647494,
+        "date": "2026-10-26T00:29:53.170Z",
+        "status": "COMPLETE",
+        "public_score": "0.15910",
+        "private_score": "",
+        "description": "F2-20261025 | 06/08 | sonda_F2_buildings_1_a13.csv | CSV_SHA256=2dff0eb76100a4116d5b4517402d0219d492adf7e708d21d08df259e92f44e01 | Claude exact artifact; authorized order.",
+        "file_name": "sonda_F2_buildings_1_a13.zip",
+        "team_name": "ManuelRodríguez",
+        "submitted_by": "manoloriveros",
+        "error": ""
+      },
+      "transport_sha256": "df508485db040cdf9272bdeb479563cba6af59cc0d7a59b12c1080b06f6e46dd",
+      "source": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_mision017_20261025/sonda_F2_buildings_1_a13.csv"
+    },
+    {
+      "order": 7,
+      "file": "sonda_F2_contents_1_a07.csv",
+      "sha256": "f2401cda8e7a9c0373148995c4ee16210174011b229c2c6802c09d8b76e020b4",
+      "d2": 0.15958,
+      "d2_text": "0.15958",
+      "submission_ref": 57647520,
+      "submission": {
+        "ref": 57647520,
+        "date": "2026-10-26T00:30:24.503Z",
+        "status": "COMPLETE",
+        "public_score": "0.15958",
+        "private_score": "",
+        "description": "F2-20261025 | 07/08 | sonda_F2_contents_1_a07.csv | CSV_SHA256=f2401cda8e7a9c0373148995c4ee16210174011b229c2c6802c09d8b76e020b4 | Claude exact artifact; authorized order.",
+        "file_name": "sonda_F2_contents_1_a07.zip",
+        "team_name": "ManuelRodríguez",
+        "submitted_by": "manoloriveros",
+        "error": ""
+      },
+      "transport_sha256": "7c18a87a934f1cc4600f5cbee4014daefa6a943b9b1deb98727bac50521e66ad",
+      "source": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_mision017_20261025/sonda_F2_contents_1_a07.csv"
+    },
+    {
+      "order": 8,
+      "file": "sonda_F2_contents_1_a13.csv",
+      "sha256": "859e2226240f682330aa7e04a8bcaaa40a101590b61beb22736496171439c4ce",
+      "d2": 0.16001,
+      "d2_text": "0.16001",
+      "submission_ref": 57647549,
+      "submission": {
+        "ref": 57647549,
+        "date": "2026-10-26T00:31:14.547Z",
+        "status": "COMPLETE",
+        "public_score": "0.16001",
+        "private_score": "",
+        "description": "F2-20261025 | 08/08 | sonda_F2_contents_1_a13.csv | CSV_SHA256=859e2226240f682330aa7e04a8bcaaa40a101590b61beb22736496171439c4ce | Claude exact artifact; authorized order.",
+        "file_name": "sonda_F2_contents_1_a13.zip",
+        "team_name": "ManuelRodríguez",
+        "submitted_by": "manoloriveros",
+        "error": ""
+      },
+      "transport_sha256": "3fd0876cd34a45f4e5fbddc79627bc92b544eef4cf6f7eddad57d7bf4aaecec5",
+      "source": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_mision017_20261025/sonda_F2_contents_1_a13.csv"
+    }
+  ],
+  "status": "eight_scored_final_pending_no_automatic_followup",
+  "final_receipt": null,
+  "batch_quota": {
+    "numToday": 8,
+    "numTotal": 20,
+    "numAllowedNow": 2
+  },
+  "pending_old_segment_probe_resolved": {
+    "file": "sonda_seg_buildings_1.csv",
+    "sha256": "28a61e3a5281bb56bae77836f0edc40ad625f1a104ac6b1b4678ee0d6980de7f",
+    "ref": 57647383,
+    "D2": "0.15858"
+  },
+  "scope": {
+    "new_training": 0,
+    "new_inference": 0,
+    "new_calibration": 0,
+    "own_variant_uploads": 0,
+    "cancelled_file_uploads": 0,
+    "2024_labels_read": false,
+    "manual_final_selection_changed": false,
+    "common_model_promotion": false
+  },
+  "limitations": "F2 metric-to-recipe validation gaps documented in MOD-006/MOD-002 remain; this is an explicitly authorized upload, not promotion or proof of independent validation. Synthetic receipts are excluded from all score evidence.",
+  "followup": {
+    "utc": "2026-10-26T00:33:31.870394+00:00",
+    "author": "Codex",
+    "final_status": "pending_claude_publication_no_automatic_followup",
+    "automation_created": false,
+    "user_reply_literal": "No, dejar el final pendiente",
+    "auto_review_rejection": "Crea una recurrencia persistente que posteriormente puede enviar a Kaggle y publicar automáticamente; el usuario autorizó el archivo final, pero no delegó explícitamente esa automatización.",
+    "action_rejected": "Create heartbeat every 10 minutes to await and submit the Claude final and post its score",
+    "remaining_user_authorization": "Exact Claude final may be handled in a later user-driven continuation; no scheduled wakeups or substitute background watcher.",
+    "last_claude_forum_post_at_check": "CLA-S2-20261025-003"
+  }
+}

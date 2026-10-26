@@ -1,0 +1,219 @@
+{
+  "id": "S2-ROBUSTEZ2023-CICLO35-v1-20261025",
+  "author": "Codex",
+  "utc": "2026-10-25T17:31:31.772616+00:00",
+  "forum_prior": "COD-S2-20261025-ROBUSTEZ35-PREVIO",
+  "models": [
+    {
+      "id": "W2-COD-R136",
+      "kind": "glm",
+      "reference": "W2-COD-R31"
+    },
+    {
+      "id": "W2-COD-R137",
+      "kind": "trees",
+      "reference": "W2-COD-R32"
+    }
+  ],
+  "natural_outputs": {
+    "W2-COD-R136": "W2-COD-R138",
+    "W2-COD-R137": "W2-COD-R139"
+  },
+  "hypothesis": "C34directdensitycorrectionfailedcombinedESSinallscopes,withoutpricefit. TestONEfixedregularizedcorrectionwithsquare-rootclippedodds(.5strength),trading exactdistributionmatching forboundedvariance with samephysicalmean/capacity. This is a newpostadaptivehypothesis,not a passedC34,not an identified targetdensity ratio or newtargetsupport. No exponentsearch to justreachESS.",
+  "domain": "reuse exactmotorfoldk logistic from domainv3;its sourceblockk andemergingfoldk wereexcluded fromALLclassifierlearning;no newclassifierfits,heldtargetattrs/outcomes neverlearnweights",
+  "weight_rule": "r=sqrt(clip(exp(logit),.2,5));w=sqrt(nominalsourceexposure)*r/weightedmean(r,sqrt(exposure)) oncurrentpricefitrows. Fixedpower.5;rawoddsclip unchanged,effectivefactors[sqrt(.2),sqrt(5)],positiveallrows. No claimthisequalstarget/source density.",
+  "first_gate": "beforeANYpricefit,combined w ESS/n>=.5 onall10plannedpilot/fullsource scopes(5helddomainmodels xfit/full). Anyfailure stopswholepricedrecipewithoutfit;no regrouping/thresholdrelaxation",
+  "source_GLM": "same original physical linear Tweedie1.5alpha1 andfitonlymedian/clip.005,.995/scale/OHEmin100max40dropfirst,regionexcluded;sampleweights onlychange",
+  "source_trees": "same200depth3leaves8lr.025min5000L2500L1100seed2026102506,Tweedie1.5 residual,parentandcaseweights new;weightsum normalizationpreservesoriginalregularization scale",
+  "source_veto": "5pairedsavedsourceblocks,baselineC17samefamily,sameunweightedtotal-periodTweedie1.5costloss;pooledratio<=1.002 and>=4/5foldsinside1.002. Alreadyadaptive sourceblocks,not independentconfirmation;vetoedfamilies nottransferred",
+  "target_flow": "perouterfoldkfitfullsourcepriceprofessor(s)withfrozenkdomainmodel,thenminimalTweedie1.5adapteroutsidek. SourcefullteacherisNOTshared acrossouterfolds,becauseitsweightsdependonouterfitattrs. Fitonlynumeric/sourcecategories,unchangedtargetadapter/labels/exposure/C0.",
+  "real_fit_budget_max": 30,
+  "source_pilot_fits": 10,
+  "full_source_fits_max": 10,
+  "target_fits_max": 10,
+  "new_domain_fits": 0,
+  "new_C0_fits": 0,
+  "first_gate_fail_price_fits": 0,
+  "outputs": "R136/R137motorfixedsqrt50/50B20;R138/R139natural;homeexactR36,no newinference;weights not selected bytargetorpublicscores",
+  "primary_reference": "W2-COD-R36",
+  "criteria": {
+    "delta_min": 0.005,
+    "lower_exploratory_min": 0.0005,
+    "positive_folds_min": 4,
+    "segment_harm_max_fullnull": 0.0005,
+    "after31groups_min": 0.0005
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 2026102501,
+    "quantiles": [
+      0.0041666666667,
+      0.9958333333333
+    ]
+  },
+  "preference_order": [
+    "W2-COD-R136",
+    "W2-COD-R137",
+    "W2-COD-R138",
+    "W2-COD-R139"
+  ],
+  "scope": "strict2023,sourcecomponentblocks/saved5emergingfolds,T0/exposure/C0 preserved;no2024 orweatheradmission",
+  "pending_public_CSVs_unchanged": true,
+  "2024_closed": true,
+  "B00_preserved": true,
+  "promotion": false,
+  "adaptive_exploratory": true,
+  "sources": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/robustez2023_ciclo34.py",
+      "sha256": "d0210b418c3019314de29f98edc935866508db208d3acb7c4efd6c46d6803227"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelo_fuente_densidad2023.py",
+      "sha256": "b276520f7d9ae161915c7f0514f43a992fc739d8f6c098887b0fc8cc8b319eca"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/diagnostico_dominio2023.py",
+      "sha256": "e6cb17c90777f3d5fd594e6ab7d6b18eb0b8772afaa3c23f7880a35c5366fc91"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelo_fuente_penalizacion2023.py",
+      "sha256": "ba6b002593cf57fe1c72a2ca505597ac07b0d9092bf6a4f13127d37615cb6b8a"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelo_profesor_comun2023.py",
+      "sha256": "b8fffff61f16da937b206299685dbe3be9c4fb97f5c5ee0c2b4ef544a0749279"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelos_robustos2023.py",
+      "sha256": "af3dcaf489367def2cb29a9785e8003cb12bd2f3378062bd274919e080466bf8"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelos_robustos_compuestos2023.py",
+      "sha256": "b70429dde8717039c7f69174aeebdba90a461580bfd5657c0cac34ebdf75c86a"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelo_transferencia2023_v2.py",
+      "sha256": "6737d8c4e63d28e80df82dcb69bdb43e1ddcf4e68329b61dcd4bd74230a7a1d1"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/evaluar_robustez2023_v2.py",
+      "sha256": "6102d8bbce922ac5b7958764fb41d92559d33f971af66f0d15ac81738d39b91a"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/fuente_desarrollado2023_fisica_v1/motor_2023.parquet",
+      "sha256": "ac4227b65b6283c7af47c622cad3367f7c4c7ead1071414424da6f1eeb65ec50"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/bloques_fuente2023_v1/motor.parquet",
+      "sha256": "09aaf34a8f37f325d3caae107a029d84f08d72db7631304012fa9db535537812"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo7_20261025_v1/new_oof_2023.parquet",
+      "sha256": "13d8b82a53b1078b0beb98121b8b2cbbbb49a07c22e7d61c9094917a21d8ded2"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/oof_2023.parquet",
+      "sha256": "4fa0052e2ce708abac2414d2fa5536a703a79b214439a755e835890104356d9b"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/prefiltro_dominio2023_v3/report.json",
+      "sha256": "85c98ee9a9b960a21134c7b391545f66b09b58f82d4effbd44031b0f6a02979f"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/prefiltro_dominio2023_v3/plan.json",
+      "sha256": "63dc8903cac92802e7a65105998a758af8ff0e1115bb68fca2fc101ae047c172"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/prefiltro_dominio2023_v3/manifest.json",
+      "sha256": "1f5ffeb594d6ea93df925a881a7593ac80728d6d723c1aeed1caa94a55709e82"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/prefiltro_dominio2023_v3/models/motor_fold0.joblib",
+      "sha256": "0f09b98f9d8b77894bb57b69983ec17a82ec366ed63d4deecb1b4fe059df7ac5"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/prefiltro_dominio2023_v3/models/motor_fold1.joblib",
+      "sha256": "83d2287eb62210a3fe270ca2df29506dbabeb91962b21f6eeedecb8c4fbca8ea"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/prefiltro_dominio2023_v3/models/motor_fold2.joblib",
+      "sha256": "8bc761bf540dc347970b442be66f1104a6399821193bf4d35ffb4f0e87315796"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/prefiltro_dominio2023_v3/models/motor_fold3.joblib",
+      "sha256": "83867ee9a6a7065af1d056a5627bc8a2c23c74307f704c195c397602fa11f954"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/prefiltro_dominio2023_v3/models/motor_fold4.joblib",
+      "sha256": "73e16ed4ede4ec5c81650bcefa8555aae6244d041d18c99542b79e16806b4db7"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo17_20261025_v1/source_bags/motor_bag0.joblib",
+      "sha256": "1146a12f6a766c31f4fe039c2fb3f533a99d3887afa03de664086b253e263819"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo17_20261025_v1/source_bags/motor_bag1.joblib",
+      "sha256": "eb1a95ca7a5bd5aca7ae15b254e74afb1e0f2654881406b29caf308cf83d03fd"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo17_20261025_v1/source_bags/motor_bag2.joblib",
+      "sha256": "a498fc1bcf1036e5d1b276eb263294439c9bec800e1111ed032a8a53ce3c47c7"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo17_20261025_v1/source_bags/motor_bag3.joblib",
+      "sha256": "42ae077862e0f144bcc326735aedad58d4dd6411ee01283f652a4dcf62f386d2"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo17_20261025_v1/source_bags/motor_bag4.joblib",
+      "sha256": "359e1682891f08913a5742f4af2c539016382b8d7e969fec504e540b2b60643d"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/motor_fold0.parquet",
+      "sha256": "76861f7a75e4c61e1d982ba44a5c6c3da8307747b8ec6bac0c77a79c7672ca3f"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/motor_fold1.parquet",
+      "sha256": "4c413d769e89657a10bddea839e2677c38ee909616da67a6dc3202f29ee6d81d"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/motor_fold2.parquet",
+      "sha256": "759b40348d729a9f0f240e43c72fb00eb34cfd433e4c4ab5062412c9ee9ba563"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/motor_fold3.parquet",
+      "sha256": "4b9b7a16b54bb957e526d63267d8d8675bfd0b9fbb2afb5e4ee967f643486377"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/motor_fold4.parquet",
+      "sha256": "2aec59b0c2333c7fbb12227d7a2d89c86e982eeaf1f59cec8d78f6f3a59ab7cb"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/robustez2023_ciclo35.py",
+      "sha256": "bf6d93096e2d0d9f76a989adf9609e97f4a986a5250892cc9f83de013dd058d5"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelo_fuente_densidad_templada2023.py",
+      "sha256": "225daacafaa0e7b82665a7777f1aec2155ba95073a613889ff6c23360135f5fb"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo34_20261025_v1/plan.json",
+      "sha256": "0a42cd78cc8dcb746e2667808e5dd64257ef30d82de276d290ab40581abb08fa"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo34_20261025_v1/report.json",
+      "sha256": "f553e37fd4ae16ec676987eed68cd95fd42a36c88ad58ab190f1673f708f059c"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo34_20261025_v1/combined_weight_preflight.json",
+      "sha256": "ae46513c340e4af9fc211f6ac54d9d4cd21305164fe5c0c0c7c353d38311cfbb"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo34_20261025_v1/ESS_independent_check.json",
+      "sha256": "4d997f2cdacacb287fb49b878995b76743cc44ea3e05a61431781378befdded8"
+    }
+  ],
+  "tempering_power": 0.5,
+  "regularization_rationale": "half-strengthlog-densitycorrectionfixedbeforeweightsorprices;variance/biastradeoff,not thresholdrelaxation. Original C34 failedreceipt remains. IfsameESS>=.5fails again,stop;do notsearchpower orchangegate.",
+  "unchanged": "sameESS/sourceveto/primaryR36gain,uncertainty,fold,segment,influencegates;sourceT0/exposure/caseinclusion,source/targetTweedie1.5alpha1andoldtreecapacity,domainmodels andnoC0fit;allfollowoldnumericalengine"
+}

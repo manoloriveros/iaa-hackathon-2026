@@ -1,0 +1,151 @@
+{
+  "id": "S2-COMPARACION-PUBLICA-HOGAR-v2-20261025",
+  "author": "Codex",
+  "utc": "2026-10-25T16:28:46.478731+00:00",
+  "forum_prior": "COD-S2-20261025-HOGAR-PUBLICO-PREVIO",
+  "purpose": "Research-only prospective publicbenchmark of the SAME fixed C27tau20 model under its two preexisting home outputs;measure whether householdregionalpartialpooling transfers to2025 brokerportfolio;not hidden-label probing,publicweight tuning or formalpromotion.",
+  "authorization": "User explicitly authorized own KaggleCSVsubmission and autonomous necessary decisions without furtherquestions;operational research exception retains common selectionpolicy and all failedgates.",
+  "variants": [
+    {
+      "model_id": "W2-COD-R104-HOME-RESEARCH",
+      "home_weight": 1.0,
+      "filename": "submission_home27_natural_motorR36_2025.csv"
+    },
+    {
+      "model_id": "W2-COD-R102-HOME-RESEARCH",
+      "home_weight": 0.5,
+      "filename": "submission_home27_pool50_motorR36_2025.csv"
+    }
+  ],
+  "fit_recipe": {
+    "model_id": "HOME27-RESEARCH-FINAL",
+    "tau": 20.0,
+    "source": "unchanged frozen physical source2023teachers fromR36",
+    "target": "all28414home2023periods,existing finalscopeC0/exposure/T0",
+    "new_joint_price_fits": 1,
+    "newsourcefits": 0,
+    "newC0fits": 0
+  },
+  "scope": "train2023only;readfrozen2025quotesafterfit;motor all90521predictionstrings exactlyincumbentR36;official209063IDs/order",
+  "selection_status": "NO candidatepassed all2023gates;doNOTpromote,retire,reopen2024orlabelrobustbypublicscore",
+  "unresolved_2023_gates": [
+    {
+      "model_id": "W2-COD-R102",
+      "checks": {
+        "material_gain": false,
+        "lower_bound": false,
+        "four_folds": false,
+        "segment_harm": true,
+        "not_few_groups": false
+      },
+      "all_pass": false,
+      "formal_promotion": false
+    },
+    {
+      "model_id": "W2-COD-R104",
+      "checks": {
+        "material_gain": true,
+        "lower_bound": false,
+        "four_folds": true,
+        "segment_harm": true,
+        "not_few_groups": false
+      },
+      "all_pass": false,
+      "formal_promotion": false
+    }
+  ],
+  "public_protocol": "atmost2submissions,priority R104natural then R102fixed50pool;choose availableprefixbeforeanynewpublicscore;freeze allCSVhashes thenpost selectedbatch beforecheckingnewpublicscores;no reweightingorretrainfromthose scores;ownCOMPLETEreceipts only,private/foreignscoresnotread;no manualfinalselection",
+  "success_interpretation": "A processedpublicscore>=.17 proves onlypublicsubgoal;fullgoalremainsunproven while robustlocalevidence missing. ExistingB00/alternatives/referenceandgates unchanged.",
+  "validation": "source/inputhashes;fullperiod2023/quote2025roles;sampleIDorder;positivefinite209063;fullindependenthomeformula;nominallevelattribution;exactmotorstrings;separateprocess replaywithallfits/optimizerblocked;skilldryrunbeforePOST",
+  "B00_preserved": true,
+  "2024_closed": true,
+  "promotion": false,
+  "sources": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/comparacion_publica_hogar2023_v2.py",
+      "sha256": "9bb70dbc434193c217b75165772f1e0a5a1274f2ae9d8c8f3364dcea7d638454"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelo_region_hogar2023.py",
+      "sha256": "190b7c532f065302d1201a5ff869371c632ce71893543552e5bff172c3374daf"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelo_profesor_comun2023.py",
+      "sha256": "b8fffff61f16da937b206299685dbe3be9c4fb97f5c5ee0c2b4ef544a0749279"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelos_robustos2023.py",
+      "sha256": "af3dcaf489367def2cb29a9785e8003cb12bd2f3378062bd274919e080466bf8"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelos_robustos_compuestos2023.py",
+      "sha256": "b70429dde8717039c7f69174aeebdba90a461580bfd5657c0cac34ebdf75c86a"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelo_transferencia2023_v2.py",
+      "sha256": "6737d8c4e63d28e80df82dcb69bdb43e1ddcf4e68329b61dcd4bd74230a7a1d1"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/desplegar_robustez2023.py",
+      "sha256": "4e3f7d1236b5a71337ef74a28ed38a7cdba4ad13a5329089a27ab0fcac85bf7a"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo27_20261025_v1/report.json",
+      "sha256": "2374170c08bc9844bc0283171055775c65832891398173fc4abaef440e018294"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_robustez2023_ciclo27_plan.json",
+      "sha256": "fee41ce66ba6fbd46ea738a8675bbf1af8ab4645fbdc587e3c165dbe3996ad0f"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/modelo_final_g4_2023/final_20261024_v1/attempt1/submission_g4_glm_2023_2025.csv",
+      "sha256": "e5e30c5921c0494b7c0bebe76fbf33725f45ab392f7bed5ab7f6927a89f394ab"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/entrega_20261025_v1/submission_R36_transfer50_GLM50_2025.csv",
+      "sha256": "b4ca8806b01bd5dfaab597774c5a4d1229e910a7638db0d1bc8bbff890d9baa2"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/g4_20261025_v1/official_sample_format.csv",
+      "sha256": "0a4496eb14d6450bb4583b2e90ae31fde95d71c1629656a03d54ffd1515f666c"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo7_20261025_v1/teachers/W2-COD-R35_buildings.joblib",
+      "sha256": "01781873738796ba42a1aafd045d7fac153670101bffad285cf26173ead72aae"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo6_20261025_v1/teachers/W2-COD-R32_contents.joblib",
+      "sha256": "d1d778f8cb166bb6f3adf092162b709c7e86f190a182076dca2800f40d4d25be"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/entrega_20261025_v1/training/buildings_2023.parquet",
+      "sha256": "964009f1d95e8b905b695246d96f98b1679cb56da7775e7d2f93932cd34acc94"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/entrega_20261025_v1/training/contents_2023.parquet",
+      "sha256": "23f9edb19b14f5687bb2a1039d711e396a6770bcdf92dda4e1ac9a5244a8a18d"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/entrega_20261025_v1/quotes/motor_2025.parquet",
+      "sha256": "b461dc24e0ff354491325d9d68fd2fb2841a7fe984f23758572756590b1926b6"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/entrega_20261025_v1/quotes/buildings_2025.parquet",
+      "sha256": "dd34613fe91f8cbe3c7ffa6eb6e03aa363a995fa22db49d477240f53254df61b"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/entrega_20261025_v1/quotes/contents_2025.parquet",
+      "sha256": "0e800ebceb58f0eff9ae8b0cd8529420863672cd8aec9b2b9dc45823eb4d78ee"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/comparacion_publica_hogar2023.py",
+      "sha256": "1c343806e4894fc5bfd4da9215d007a42b37d6db960a1f7135ebe0e52882e371"
+    }
+  ],
+  "previous_unfitted_draft": {
+    "path": "Hackaton/Repositorio_IAA2026/registro/semana2_comparacion_publica_hogar_plan_v1.json",
+    "sha256": "886489c4b83995b9ed85233110914ec53a737b117592779ccc448811dcefa92c"
+  },
+  "api_contract_correction": "Before any realfit,adapt frozen model_id to unchanged GLM id argument;no priceconfigurationchange.",
+  "level_attribution": "decompose home total difference into known fixed50pool->natural weight effect and regionaljointupdate using own known component;numeric attribution doesnot resolvefailed2023gates"
+}

@@ -1,0 +1,278 @@
+{
+  "id": "S2-SONDAS-SEGMENTO-ENVIO-20261025",
+  "author": "Codex",
+  "utc": "2026-10-25T14:32:08.685515+00:00",
+  "path_base": "workspace_root",
+  "authorization_literal": "autorizo enviar ahora a Kaggle (parte 2) las cinco sondas por segmento de CLA-S2-20261024-028, tal cual, verificando cada SHA: sonda_seg_contents_0.csv (fb568cef...), sonda_seg_buildings_0.csv (62373a31...), sonda_seg_motor_0.csv (f76c3a6c...), sonda_seg_contents_1.csv (131716ee...) y sonda_seg_buildings_1.csv (28a61e3a...), en Repositorio_IAA2026/privado/semana2/claude_validacion_nocturna_20261023/sonda_segmento/",
+  "competition": "iaa-ai-assisted-hackathon-2026-part-2",
+  "forum_source": "CLA-S2-20261024-028",
+  "source_author": "Claude",
+  "preflight": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/sondas_segmento_20261025/preflight.json",
+  "preinscription_sha256": "33e02d95b5fe2a9068ea4cef4bcb0e46b097e86dfbcb8048957c6fdc50825676",
+  "status": "four_scored_one_blocked_by_daily_quota",
+  "requested_count": 5,
+  "scored_count": 4,
+  "pending_count": 1,
+  "probes": [
+    {
+      "file": "sonda_seg_contents_0.csv",
+      "source": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_validacion_nocturna_20261023/sonda_segmento/sonda_seg_contents_0.csv",
+      "sha256": "fb568cefdd6cf8908b5a53ed37ed211b5a984bfaea65f6d9031eea0cc9183168",
+      "cell": "contents_0",
+      "factor": 1.2,
+      "rows": 209063,
+      "scaled_rows": 15806,
+      "prediction_sum": 82241464.190286,
+      "checks": {
+        "sha_matches_explicit_forum_and_preinscription": true,
+        "rows_exact": true,
+        "ids_and_order_exact": true,
+        "ids_unique_nonempty": true,
+        "positive_finite": true,
+        "scaled_count_exact": true,
+        "scaled_values_match_1_2_within_csv_rounding": true,
+        "scaled_rows_in_named_line": true,
+        "unscaled_values_text_exact": true,
+        "sum_matches_preinscription_cent_precision": true
+      },
+      "passed": true,
+      "transport": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/sondas_segmento_20261025/sonda_seg_contents_0.zip",
+        "sha256": "64808e770c2c7aabe30d92a6db8bdc953eed670106af17215a912d0524047e69",
+        "bytes": 1672343,
+        "member_name": "sonda_seg_contents_0.csv",
+        "decompression_exact": true
+      },
+      "submission": {
+        "ref": 57633161,
+        "date": "2026-10-25T14:29:58.867Z",
+        "status": "COMPLETE",
+        "public_score": "0.15888",
+        "private_score": "",
+        "description": "CLA-S2-20261024-028 | sonda_seg_contents_0 | F 57612023, one fixed cell x1.2. ZIP contains exact pre-registered CSV with verified SHA-256.",
+        "file_name": "sonda_seg_contents_0.zip",
+        "team_name": "ManuelRodr�guez",
+        "submitted_by": "manoloriveros",
+        "error": ""
+      },
+      "public_score_difference_from_F": "-0.00060"
+    },
+    {
+      "file": "sonda_seg_buildings_0.csv",
+      "source": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_validacion_nocturna_20261023/sonda_segmento/sonda_seg_buildings_0.csv",
+      "sha256": "62373a316abbb97b869c9fb315bf257b1e69fa94dcb29ee91a2515ce63efe5fb",
+      "cell": "buildings_0",
+      "factor": 1.2,
+      "rows": 209063,
+      "scaled_rows": 12579,
+      "prediction_sum": 83110161.164919,
+      "checks": {
+        "sha_matches_explicit_forum_and_preinscription": true,
+        "rows_exact": true,
+        "ids_and_order_exact": true,
+        "ids_unique_nonempty": true,
+        "positive_finite": true,
+        "scaled_count_exact": true,
+        "scaled_values_match_1_2_within_csv_rounding": true,
+        "scaled_rows_in_named_line": true,
+        "unscaled_values_text_exact": true,
+        "sum_matches_preinscription_cent_precision": true
+      },
+      "passed": true,
+      "transport": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/sondas_segmento_20261025/sonda_seg_buildings_0.zip",
+        "sha256": "48585eb7631f942bd114f039bd0951fee946d06d0674637d16e06fdd3656b48b",
+        "bytes": 1672030,
+        "member_name": "sonda_seg_buildings_0.csv",
+        "decompression_exact": true
+      },
+      "submission": {
+        "ref": 57633165,
+        "date": "2026-10-25T14:30:12.520Z",
+        "status": "COMPLETE",
+        "public_score": "0.15804",
+        "private_score": "",
+        "description": "CLA-S2-20261024-028 | sonda_seg_buildings_0 | F 57612023, one fixed cell x1.2. ZIP contains exact pre-registered CSV with verified SHA-256.",
+        "file_name": "sonda_seg_buildings_0.zip",
+        "team_name": "ManuelRodr�guez",
+        "submitted_by": "manoloriveros",
+        "error": ""
+      },
+      "public_score_difference_from_F": "-0.00144"
+    },
+    {
+      "file": "sonda_seg_motor_0.csv",
+      "source": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_validacion_nocturna_20261023/sonda_segmento/sonda_seg_motor_0.csv",
+      "sha256": "f76c3a6c53057008b0fdf242b4cb36312822b1a6721e6100dfaee961bc966d76",
+      "cell": "motor_0",
+      "factor": 1.2,
+      "rows": 209063,
+      "scaled_rows": 21698,
+      "prediction_sum": 83762225.508347,
+      "checks": {
+        "sha_matches_explicit_forum_and_preinscription": true,
+        "rows_exact": true,
+        "ids_and_order_exact": true,
+        "ids_unique_nonempty": true,
+        "positive_finite": true,
+        "scaled_count_exact": true,
+        "scaled_values_match_1_2_within_csv_rounding": true,
+        "scaled_rows_in_named_line": true,
+        "unscaled_values_text_exact": true,
+        "sum_matches_preinscription_cent_precision": true
+      },
+      "passed": true,
+      "transport": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/sondas_segmento_20261025/sonda_seg_motor_0.zip",
+        "sha256": "9f622902cb43c5a2b1948c65bb41f23e1e2c9f260bf394b434998070646bf3ee",
+        "bytes": 1672345,
+        "member_name": "sonda_seg_motor_0.csv",
+        "decompression_exact": true
+      },
+      "submission": {
+        "ref": 57633170,
+        "date": "2026-10-25T14:30:29.510Z",
+        "status": "COMPLETE",
+        "public_score": "0.15898",
+        "private_score": "",
+        "description": "CLA-S2-20261024-028 | sonda_seg_motor_0 | F 57612023, one fixed cell x1.2. ZIP contains exact pre-registered CSV with verified SHA-256.",
+        "file_name": "sonda_seg_motor_0.zip",
+        "team_name": "ManuelRodr�guez",
+        "submitted_by": "manoloriveros",
+        "error": ""
+      },
+      "public_score_difference_from_F": "-0.00050"
+    },
+    {
+      "file": "sonda_seg_contents_1.csv",
+      "source": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_validacion_nocturna_20261023/sonda_segmento/sonda_seg_contents_1.csv",
+      "sha256": "131716eede0d7a652063b21b86018622853f224026583450170b7d9eda3455a1",
+      "cell": "contents_1",
+      "factor": 1.2,
+      "rows": 209063,
+      "scaled_rows": 50441,
+      "prediction_sum": 82952117.211179,
+      "checks": {
+        "sha_matches_explicit_forum_and_preinscription": true,
+        "rows_exact": true,
+        "ids_and_order_exact": true,
+        "ids_unique_nonempty": true,
+        "positive_finite": true,
+        "scaled_count_exact": true,
+        "scaled_values_match_1_2_within_csv_rounding": true,
+        "scaled_rows_in_named_line": true,
+        "unscaled_values_text_exact": true,
+        "sum_matches_preinscription_cent_precision": true
+      },
+      "passed": true,
+      "transport": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/sondas_segmento_20261025/sonda_seg_contents_1.zip",
+        "sha256": "8e6309be92067ce364c4bd6e82fb26710563ac9fd8593df13ae876d66e59bfbc",
+        "bytes": 1674481,
+        "member_name": "sonda_seg_contents_1.csv",
+        "decompression_exact": true
+      },
+      "submission": {
+        "ref": 57633177,
+        "date": "2026-10-25T14:30:41.900Z",
+        "status": "COMPLETE",
+        "public_score": "0.15830",
+        "private_score": "",
+        "description": "CLA-S2-20261024-028 | sonda_seg_contents_1 | F 57612023, one fixed cell x1.2. ZIP contains exact pre-registered CSV with verified SHA-256.",
+        "file_name": "sonda_seg_contents_1.zip",
+        "team_name": "ManuelRodr�guez",
+        "submitted_by": "manoloriveros",
+        "error": ""
+      },
+      "public_score_difference_from_F": "-0.00118"
+    },
+    {
+      "file": "sonda_seg_buildings_1.csv",
+      "source": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_validacion_nocturna_20261023/sonda_segmento/sonda_seg_buildings_1.csv",
+      "sha256": "28a61e3a5281bb56bae77836f0edc40ad625f1a104ac6b1b4678ee0d6980de7f",
+      "cell": "buildings_1",
+      "factor": 1.2,
+      "rows": 209063,
+      "scaled_rows": 39716,
+      "prediction_sum": 85852081.514078,
+      "checks": {
+        "sha_matches_explicit_forum_and_preinscription": true,
+        "rows_exact": true,
+        "ids_and_order_exact": true,
+        "ids_unique_nonempty": true,
+        "positive_finite": true,
+        "scaled_count_exact": true,
+        "scaled_values_match_1_2_within_csv_rounding": true,
+        "scaled_rows_in_named_line": true,
+        "unscaled_values_text_exact": true,
+        "sum_matches_preinscription_cent_precision": true
+      },
+      "passed": true,
+      "transport": {
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/sondas_segmento_20261025/sonda_seg_buildings_1.zip",
+        "sha256": "8a95e3fdd6d8ad7087a7a823d07046c25448c07ec2281f64c7135d5d0ba570ce",
+        "bytes": 1673210,
+        "member_name": "sonda_seg_buildings_1.csv",
+        "decompression_exact": true
+      },
+      "status": "pending_quota",
+      "blocker": "Kaggle numAllowedNow=0, numToday=10",
+      "upload_attempts": 0,
+      "authorization_retained": true,
+      "next_action": "After quota renewal, recheck account duplicates and quota, verify full SHA, send this exact CSV in its prepared ZIP, then retrieve and record the score. No reauthorization is needed for this exact pending file."
+    }
+  ],
+  "base_submission_ref": 57612023,
+  "base_sha256": "42659dbb4101d4f9a4ab00c287d77b2bd21d42be9734d2ca4a4074eb57c9add2",
+  "base_public_score": "0.15948",
+  "remaining_submissions": 0,
+  "quota_source": "kaggle-cli",
+  "quota_checks": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/sondas_segmento_20261025/quota_checks.jsonl",
+  "status_receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/sondas_segmento_20261025/status_final.txt",
+  "status_receipt_sha256": "4ef0064f51263a523558186f5cd1184aa27eb2b99257cfd1bcee9b44ab39d399",
+  "status_checked_utc": "2026-10-25T14:31:04Z",
+  "public_rank": 7,
+  "teams_at_check": 16,
+  "partial_receipts_for_resolver": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/sondas_segmento_20261025/recibos_parciales.json",
+  "resolver_ready": false,
+  "pending": [
+    {
+      "file": "sonda_seg_buildings_1.csv",
+      "sha256": "28a61e3a5281bb56bae77836f0edc40ad625f1a104ac6b1b4678ee0d6980de7f",
+      "source": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_validacion_nocturna_20261023/sonda_segmento/sonda_seg_buildings_1.csv",
+      "prepared_zip": "Hackaton/Repositorio_IAA2026/privado/semana2/envios/sondas_segmento_20261025/sonda_seg_buildings_1.zip",
+      "status": "pending_quota",
+      "authorization_retained": true,
+      "upload_attempts": 0
+    }
+  ],
+  "blocker": {
+    "type": "daily_submission_quota_exhausted",
+    "exact_response": {
+      "utc": "2026-10-25T14:30:48.850778+00:00",
+      "file": "sonda_seg_buildings_1.csv",
+      "source_sha256": "28a61e3a5281bb56bae77836f0edc40ad625f1a104ac6b1b4678ee0d6980de7f",
+      "quota": {
+        "numToday": 10,
+        "numTotal": 12,
+        "numAllowedNow": 0
+      },
+      "allowed_to_send_now": false
+    },
+    "failed_uploads_for_pending_file": 0,
+    "expected_next_reset_bogota": "2026-10-25T19:00:00-05:00",
+    "reset_basis": "Existing project Kaggle operational protocol: UTC midnight, 19:00 America/Bogota; live quota must still be checked before retry.",
+    "automatic_retry_scheduled": false
+  },
+  "shell_exit_note": "Upload loop ended with native guard code 20 when quota reached zero; PowerShell reported exit 1. All four uploads and scores verified separately; fifth file was never uploaded.",
+  "scope": {
+    "new_training": 0,
+    "new_inference": 0,
+    "new_calibration": 0,
+    "2024_labels_read": false,
+    "segment_resolver_run": false,
+    "manual_final_selection_changed": false,
+    "common_model_promotion": false
+  },
+  "limitations": "Partial experiment, not ready for the frozen segment resolver. Public score changes do not establish private superiority or prove public segment composition. Verification by AI, not independent professional validation."
+}

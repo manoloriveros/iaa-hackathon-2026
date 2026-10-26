@@ -1,0 +1,96 @@
+{
+  "id": "S2-MISION017-FASE2-TANDA7-CLIMA-v2",
+  "author": "Codex",
+  "utc": "2026-10-26T03:24:11.016658+00:00",
+  "hypothesis": "Official2025weather varies materially from the persistent2023/2024mean used by F2. Preserve that baseline and test source-trained main-effect residual weather, rather than repeat E13 replacing the baseline with another GBM.",
+  "source": "Developed2021–2024 price rows, same frozen T2b and observation link, no2025weather in source learning",
+  "models": {
+    "W1": "Four anomalies: current wind/wildfire/temp minus persistent mean, log1p current rain minus log1p persistent rain; full effect",
+    "W2": "W1 plus log1p current hail/freezing days and current dry_summer index, absent from the baseline; full effect",
+    "W3": "Half W2 effect, no additional fit"
+  },
+  "configuration": {
+    "objective": "half Tweedie1.5 deviance of source net observed period cost",
+    "offset": "source_e_cost * frozen T2b_rate",
+    "feature_scaling": "source mean/SD, no labels",
+    "alpha_weather": 1.0,
+    "nuisance": "free source-region main effects(drop reference) and four free source-year intercepts; no interactions; no nuisance transferred",
+    "optimizer": {
+      "method": "L-BFGS-B",
+      "maxiter": 2000,
+      "gtol": 1e-07,
+      "ftol": 1e-13,
+      "maxls": 40
+    },
+    "target": "Existing held N3 prices; normalize each line/year/new_business cell using only input covariates and predicted costs",
+    "no_clipping_or_target_changes": true
+  },
+  "criterion": {
+    "primary": "Original unweighted D2, frozen five componentfolds across2023/2024; no weighted rescue of failures",
+    "delta_min": 0.002,
+    "lower95_gt": 0.0,
+    "positive_folds_min": 4,
+    "min_cell_delta_full_null": -0.001,
+    "post31_nonnegative": true,
+    "both_years_nonnegative": true,
+    "additional_veto": "2025composition weighted sensitivity must have positive point difference; originalA1_2024 proxy must not deteriorate",
+    "submission_not_automatic": "One remaining slot requires separate substantial evidence; passing this exploratory screen alone is insufficient"
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 2026102601,
+    "unit": "saved connected component",
+    "quantiles": [
+      0.025,
+      0.975
+    ]
+  },
+  "weighted_estimand": {
+    "role": "diagnostic only, not accepted as primary",
+    "unchanged_failed_gate": "row/group ESS fractions>=.1",
+    "row_ESS": 2920.86269466014,
+    "group_ESS": 1572.3053358675327,
+    "no_clipping_rebinning_or_retroactive_admission": true
+  },
+  "budget": {
+    "new_source_price_GLM_fits": 6,
+    "new_target_price_fits": 0,
+    "new_C0_fits": 0,
+    "new_source_T2b_offset_inferences_cached": 3,
+    "covariate_only_year_business_normalizers": 180,
+    "new_test_price_predictions": 0,
+    "submissions": 0
+  },
+  "limits": [
+    "Conditional use of official annual covariates, not prospective quote-time validation; F05 vintage unresolved",
+    "2024adaptive development and source includes developed2024, not pristine temporal confirmation",
+    "N3 reference is not the complete submitted F2; originalA1_2024 is only a proxy for model dependence",
+    "Source covariance clustered in region×year is approximate; fixed-source target bootstrap omits some source/C0/reserve/master uncertainty",
+    "Target2025composition has low effective historical support; no positive result may conceal that limit"
+  ],
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/mision017_fase2_tanda7_clima.py": "1ce9b286f087d4b7d1482ebc6c45f3e834e1cbdcd118b55f4e7a125586b0dae9",
+    "Hackaton/Repositorio_IAA2026/herramientas/mision017_fase2_tanda4_marketing.py": "edad14753e70e0ac5d456e8143c1fa60a2eafd18ef9366609d413db96607f85f",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_alcance_covariables_oficiales2025_v3.json": "31d9b34a8aae7a3ad089865a862efe40d7b8240c9e0e74b13f75c6654be328c5",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/estimando_cartera2025_v3/report.json": "aeac7a539813c6b72f6d12a184bb41430f52b8d367b76ccac57daa4aef1d4581",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/estimando_cartera2025_v3/weights.parquet": "cb14dff16c82b83195b17a100c4e8eae62a01622129a7c757968b2ca10c8a486",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/clima2025_auditoria_20261026_v1/report.json": "a393dc5fa6097571e245fd9a6fdeb72bea55f55740f67c7371d04911de297ff6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/oof_2023_2024.parquet": "a4652f2abc2663e6793d4076752045d3850111e5e8608ddd31bd3740fc7c11cc",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/report.json": "57eda2556d06a969e2586abcc186261ae197cc0fd911977f0b2b296917fbbb1d",
+    "Hackaton/Semana 1/Datos/weather.parquet": "b8407f0f3c7279a49297c969a4ab2905641b232910e316fb806730065987cd49",
+    "Hackaton/Semana 1/Datos/addresses.parquet": "2f1a9a157649a73ed1b0ee9b2caa3660b4c2a11766af3c64ab5131389079c0b1",
+    "Hackaton/Semana 2/Datos/emerging/weather.parquet": "645067069f68de8c4746d1ba48a454ff00155e1aa6fbbf64cdee48ae7269cbbd",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/claude_validacion_nocturna_20261023/predicciones_2024.parquet": "e4f55f69677bad6ed0820190e76b7f617e39b526bc6dbd368e2402890e3a7eb7",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/motor.parquet": "5576c0178b1d17b4a9a3349461241dd2bd3113426388db5c33d320d455f1cf49",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/features_motor.parquet": "a25e433cdf217c5870447000797a1664551ba2727a64af1cbfc437dc7f596a83",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/modelos/prod/T2b_motor.txt": "63048d90ac018ee27fe56466866578b6836a72dba6cf7ea3b1889929380bbcc0",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/buildings.parquet": "0e732f8fba5eba51ee5e10c7fe99b7c9018c2dd63849a2a5bcb2bbf25e14d444",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/features_buildings.parquet": "056e53626aaa696c767f0cc32cec23b2b5c5a244eaa7a3bd0b4fa5ce65ef7f6a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/modelos/prod/T2b_buildings.txt": "c51b0ea814781bd0f6a35147ed4356685b2b78018173282addf0a6b64ad8c07b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/contents.parquet": "037207ea2f474de6ab858b2e9953b8539bafd01844c733d58ada93aa9815fdbb",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/features_contents.parquet": "b1c66e0ef27ab205d1de695e3ce6ded772c60fd43f0852236f0de074fb8b880b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/modelos/prod/T2b_contents.txt": "a55017f8b8c04430d4d86b82a7237eb19fc6bf56a0ac5664fbdda576cb20596a"
+  },
+  "B00_preserved": true,
+  "all_alternatives_preserved": true
+}

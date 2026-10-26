@@ -1,0 +1,32 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T01:16:04.174892+00:00",
+  "purpose": "Reutilizar el padre T2b de F2 con autoría Claude y comprobar su forma numérica antes de nuevas pruebas. No cambiar precios ni elegir por scores.",
+  "models": "modelos/prod/T2b, desarrollado 2021–2024; comparar sus tasas con OOF pcv 2023–2024 guardado.",
+  "not_temporal_2023_to_2024": "Los modelos prod usan fuente desarrollada 2024; solo son admisibles para desarrollo con información disponible al inicio de 2025 y validación por grupos emergentes. No son una predicción prospectiva de 2024.",
+  "acceptance": "En cada ramo y antiguo fold por cliente, mu_guardada/(exposición_nominal*exp(raw)) debe ser una constante positiva, variación relativa máxima <=1e-8. Reconstrucción de perfiles sin costes, sin clima 2025, historial con report_date anterior al inicio y ventana completa.",
+  "source_implementation": "Código histórico inspeccionado, reimplementación explícita; no ejecutar scripts del archivo ni sus puntos de entrada.",
+  "source_authorship": "Claude; reconstrucción y revisión propia por Codex, no revisión humana independiente.",
+  "known_conditional_features": [
+    "maestros sin fecha",
+    "missed_payments_12m y discount_applied según instantánea provista",
+    "clima 2023–2024 como información histórica disponible al inicio de 2025"
+  ],
+  "no_labels_read_for_predictors": true,
+  "new_fits": 0,
+  "new_C0": 0,
+  "new_scores": 0,
+  "submissions": 0,
+  "B00_preserved": true,
+  "code": {
+    "Hackaton/Repositorio_IAA2026/herramientas/reconciliar_padre_F2_2024.py": "19883cfdf1892a393d154c743a28f277a5c0bfe954eec4b0b7ccf8d790258549"
+  },
+  "parents": {
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/modelos/prod/T2b_buildings.txt": "c51b0ea814781bd0f6a35147ed4356685b2b78018173282addf0a6b64ad8c07b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/modelos/prod/T2b_contents.txt": "a55017f8b8c04430d4d86b82a7237eb19fc6bf56a0ac5664fbdda576cb20596a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/modelos/prod/T2b_motor.txt": "63048d90ac018ee27fe56466866578b6836a72dba6cf7ea3b1889929380bbcc0",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/pred/pcv/T2b_buildings.parquet": "e6fd3294c453066cf55a109a2f723dffc20953b04623f55ae32f60479e39f642",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/pred/pcv/T2b_contents.parquet": "2e79695056c1f7f602ee50fa00ff69d3e4ccbc7188b21b377baa24aa0c1e8334",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/pred/pcv/T2b_motor.parquet": "b6215fdbf309e961be9ad10f8b70e834286c749f967e62c5e29453909f991962"
+  }
+}

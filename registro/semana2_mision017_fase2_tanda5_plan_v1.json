@@ -1,0 +1,76 @@
+{
+  "id": "S2-MISION017-FASE2-TANDA5-PRIMA-v1",
+  "author": "Codex",
+  "utc": "2026-10-26T02:24:03.455001+00:00",
+  "hypothesis": "The provided current premium behaves annual-like in both markets. Previous WP variants divided it by exposure or made it the dominant offset. Test only residual information in a source-trained small GLM, keeping claims as response and T2b risk as offset.",
+  "unit_evidence": "Split-policy pairs selected by exposure, not price: median logP/logE change approximately0 in both markets; this is empirical unit support, not proof of a dated tariff formula.",
+  "source_fit": "Tweedie1.5, source net observed cost, offset source_e_cost*T2b_rate on stored source precision. Main effect log(annualP)-median(logP bysourceyear/channel); source region/channel nuisance, four free source-year intercepts; alpha.1. No clipping. Variant joint adds marketing_segment. Only premium/marketing effects transfer.",
+  "models": {
+    "S1": "Full premium-only source effect",
+    "S2": "Full joint premium+marketing source effects",
+    "S3": "Half joint source effects"
+  },
+  "target": "Existing N3 held-component prices, 2023–2024. Target premium centering is year×channel within the known evaluated portfolio, using input values only. Cell predicted-cost normalization preserves line×new_business totals. No held claims fit parameters or levels.",
+  "criterion": {
+    "delta_min": 0.002,
+    "lower95_gt": 0.0,
+    "positive_folds_min": 4,
+    "min_cell_delta_full_null": -0.001,
+    "post31_nonnegative": true,
+    "both_years_nonnegative": true
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 2026102506,
+    "unit": "saved connected component",
+    "quantiles": [
+      0.025,
+      0.975
+    ]
+  },
+  "budget": {
+    "source_price_estimator_fits": 6,
+    "source_C0_fits": 0,
+    "target_C0_fits": 0,
+    "new_target_label_fitted_levels": 0,
+    "portfolio_normalizers": 90,
+    "covariate_premium_medians": "source≤36;target≤90, input-only",
+    "submissions": 0
+  },
+  "scope": "Available official historical information through2024, conditional competition prediction for2025. No2025claim labels or futureweather; no prospective2024 claim.",
+  "limits": [
+    "Incumbent commercial premium is a conditional external input, not ultimate-risk truth or this model output.",
+    "No exact equality between tariffs or commercial loading formula is assumed across countries.",
+    "Supplied profiles/quotes lack historic versions; source effect transport must be validated.",
+    "Portfolio transforms are covariate-only/transductive, not online pricing confirmation.",
+    "2024adaptive development, source parameter/C0 uncertainty not fully identified."
+  ],
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/mision017_fase2_tanda5_prima.py": "ce0ef2de9202ca56db2bb0f204342e571d16f601f28519dd45405fb964a885df",
+    "Hackaton/Repositorio_IAA2026/herramientas/mision017_fase2_tanda4_marketing.py": "edad14753e70e0ac5d456e8143c1fa60a2eafd18ef9366609d413db96607f85f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/unidad_prima_vigente_v1/report.json": "175387734608cd55aee3dbf91ebd320e3ab5571aabff151f77482d11f23a751d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/oof_2023_2024.parquet": "a4652f2abc2663e6793d4076752045d3850111e5e8608ddd31bd3740fc7c11cc",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/report.json": "57eda2556d06a969e2586abcc186261ae197cc0fd911977f0b2b296917fbbb1d",
+    "Hackaton/Semana 1/Datos/customers.parquet": "065458a0b3aa9d3499e80b3b25b76baf0ef6245146477b6861f6ea35edf581eb",
+    "Hackaton/Semana 1/Datos/addresses.parquet": "2f1a9a157649a73ed1b0ee9b2caa3660b4c2a11766af3c64ab5131389079c0b1",
+    "Hackaton/Semana 2/Datos/emerging/customers.parquet": "c00a0095d5fb7b2b65cd9647216add49afb3703d863d5c358b1441f0fab1fb62",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/motor.parquet": "5576c0178b1d17b4a9a3349461241dd2bd3113426388db5c33d320d455f1cf49",
+    "Hackaton/Semana 1/Datos/policies_motor.parquet": "4d2d7ae03971d5d6df3a71bbaf0ebc168250a6807b27d1561d38b638434dc95e",
+    "Hackaton/Semana 2/Datos/emerging/policies_motor.parquet": "7c5dbb5e5b46629ebf01a66c991183d20b8585393b589bc2644fcbd6653a3ec1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/features_motor.parquet": "a25e433cdf217c5870447000797a1664551ba2727a64af1cbfc437dc7f596a83",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/modelos/prod/T2b_motor.txt": "63048d90ac018ee27fe56466866578b6836a72dba6cf7ea3b1889929380bbcc0",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/buildings.parquet": "0e732f8fba5eba51ee5e10c7fe99b7c9018c2dd63849a2a5bcb2bbf25e14d444",
+    "Hackaton/Semana 1/Datos/policies_buildings.parquet": "eb84372c23c16ed0619d89c8eb1396ab6916e5ec46a5907ce42c3dfce4a91cbe",
+    "Hackaton/Semana 2/Datos/emerging/policies_buildings.parquet": "ccc948fafc11e623d5cb010c2b494f6813f6048719eae7bcde28794467598319",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/features_buildings.parquet": "056e53626aaa696c767f0cc32cec23b2b5c5a244eaa7a3bd0b4fa5ce65ef7f6a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/modelos/prod/T2b_buildings.txt": "c51b0ea814781bd0f6a35147ed4356685b2b78018173282addf0a6b64ad8c07b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/contents.parquet": "037207ea2f474de6ab858b2e9953b8539bafd01844c733d58ada93aa9815fdbb",
+    "Hackaton/Semana 1/Datos/policies_contents.parquet": "8c067cc80baed583100df999e1c3d5e389295702f7bac21d5331bbd639b83fcd",
+    "Hackaton/Semana 2/Datos/emerging/policies_contents.parquet": "84d7f48d03933b018bec8fdc2f4bbd96df184cca7ae1971c38d3acc955720f8e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/features_contents.parquet": "b1c66e0ef27ab205d1de695e3ce6ded772c60fd43f0852236f0de074fb8b880b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/modelos/prod/T2b_contents.txt": "a55017f8b8c04430d4d86b82a7237eb19fc6bf56a0ac5664fbdda576cb20596a"
+  },
+  "B00_preserved": true,
+  "all_alternatives_preserved": true,
+  "no_automatic_submission": true
+}

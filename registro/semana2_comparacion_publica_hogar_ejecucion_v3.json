@@ -1,0 +1,50 @@
+{
+  "id": "S2-HOGAR-EJECUCION-v3-20261025",
+  "author": "Codex",
+  "utc": "2026-10-25T17:59:12.147348+00:00",
+  "model_recipe_unchanged": "Hackaton/Repositorio_IAA2026/registro/semana2_comparacion_publica_hogar_plan_v2.json",
+  "recipe_sha256": "36f7f62858fa75942c4187c15bbecd521bacc60a4a66de7a7e75b40d3b42f5bb",
+  "CSV": [
+    {
+      "model_id": "W2-COD-R104-HOME-RESEARCH",
+      "home_weight": 1.0,
+      "filename": "submission_home27_natural_motorR36_2025.csv",
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/comparacion_publica_hogar_20261025_v1/submission_home27_natural_motorR36_2025.csv",
+      "sha256": "4bc52c07c6b126d8c218539ff06f58430db9bfde8f3e95be6879fb4a3ba95e17",
+      "bytes": 6179663,
+      "rows": 209063
+    },
+    {
+      "model_id": "W2-COD-R102-HOME-RESEARCH",
+      "home_weight": 0.5,
+      "filename": "submission_home27_pool50_motorR36_2025.csv",
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/comparacion_publica_hogar_20261025_v1/submission_home27_pool50_motorR36_2025.csv",
+      "sha256": "5f2d1ea47ba3f8dbe23ea9aed7cf92c98e6daf12e11cdb9b77b43ce05aae2dc2",
+      "bytes": 6178428,
+      "rows": 209063
+    }
+  ],
+  "submitter": "Hackaton/Repositorio_IAA2026/herramientas/enviar_comparacion_hogar2023_v3.py",
+  "submitter_sha256": "d2bf9b3cde9b5a377129d3a538616f39302f0af870c52361d71a04cf61638964",
+  "base_v2_guard": "Hackaton/Repositorio_IAA2026/herramientas/enviar_comparacion_hogar2023_v2.py",
+  "base_v2_sha256": "e694b557f1c316405d54e7ed36282832a57862cb36e2b291c939d1182d3ab479",
+  "synthetic_flow_report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/comparacion_publica_hogar_20261025_v1/synthetic_resume_v3/report.json",
+  "synthetic_flow_report_sha256": "f7aa696e0bcecfd76c47835cec32d13fa65f315dd4e9bbb154efb7370f1ac2de",
+  "all9cases_passed": true,
+  "new_fit_calls": 0,
+  "new_submissions": 0,
+  "new_public_scores": 0,
+  "2024_closed": true,
+  "B00_preserved": true,
+  "promotion": false,
+  "manual_final_selection": false,
+  "research_only_local_gates_remain_failed": true,
+  "new_rules": "resume frozenprefix only;reconcile known exactmetadata andlocalmarkers beforeanyPOST;no blindretryunknown;only remainingneverstarted CSVmayPOST;allselectedacceptedbeforeanyscore;allmetadata checkedbeforefirstscore",
+  "remaining_limits": "Unknown POST withoutvisible row stays unresolved;remotecontentSHA notreturned;localhash/marker/ref/exactmetadata are evidence,notdirectremotechecksum. No actor/humanapproval invented.",
+  "pending_preflight_job_unchanged": {
+    "exec_session_id": 48990,
+    "pid": 32136,
+    "not_before_utc": "2026-10-25T18:02:22.672693+00:00"
+  },
+  "use_after_preflight": "enviar_comparacion_hogar2023_v3.py resume thencheck;preflight still immutablev2,no duplicatequery beforejobreturns"
+}

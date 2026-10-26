@@ -1,0 +1,143 @@
+{
+  "id": "S2-MISION017-FASE2-TANDA11-CONJUNTO-v1",
+  "author": "Codex",
+  "utc": "2026-10-26T04:57:34.658051+00:00",
+  "hypothesis": "A single joint penalized Tweedie objective can handle dependence among the same residual main effects and nuisance levels more coherently than a heuristic sequential pass. No new variables, categories, K tuning or nonlinear capacity.",
+  "reference": "Frozen N3 research benchmark; matched G1/G2/G3 additionally veto deterioration. Not full C1/F2.",
+  "models": {
+    "J1": "Joint gender in motor/contents",
+    "J2": "J1 plus joint gender/telework in contents",
+    "J3": "J1 plus joint gender/telework/marketing in contents"
+  },
+  "configuration": {
+    "years": [
+      2023,
+      2024
+    ],
+    "folds": "same saved global components",
+    "offset": "log(frozen N3 outer-training baseline)",
+    "features": {
+      "motor": {
+        "J1": [
+          "gender"
+        ]
+      },
+      "contents": {
+        "J1": [
+          "gender"
+        ],
+        "J2": [
+          "gender",
+          "works_from_home"
+        ],
+        "J3": [
+          "gender",
+          "works_from_home",
+          "marketing_segment"
+        ]
+      }
+    },
+    "encoding": "full categorical one-hot, symmetric positive ridge on every level, unknown neutral0logeffect",
+    "nuisance": "four year/business intercepts unpenalized, learned on training only and not transferred",
+    "criterion_objective": "half summed Tweedie1.5 deviance plus half lambda times squared categorical coefficients",
+    "K": 300.0,
+    "Fisher_mass_S": "sum sqrt(training N3)",
+    "lambda_sum_loss": "K*S/n_positive_training_periods",
+    "normalized_objective": "sum_loss/S; ridge normalized=K/n_positive; this approximates prior K-positive information per category",
+    "optimizer": {
+      "method": "L-BFGS-B",
+      "maxiter": 2000,
+      "gtol": 1e-10,
+      "ftol": 1e-15,
+      "maxls": 50,
+      "max_gradient_guard": 1e-06
+    },
+    "normalization": "same prediction-only per year/business, baseline totals preserved",
+    "no_clipping_no_category_regrouping": true
+  },
+  "criterion": {
+    "delta_min": 0.002,
+    "lower95_gt": 0.0,
+    "positive_folds_min": 4,
+    "min_cell_delta_full_null": -0.001,
+    "post31_nonnegative": true,
+    "both_years_nonnegative": true,
+    "additional_veto": "Weighted2025 sensitivity point positive and originalA1_2024 proxy not negative; weighted-primary ESS gate remains failed",
+    "extra_matched_sequential_veto": "own unweighted point delta versus matching G stage must be nonnegative"
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 2026102605,
+    "unit": "saved connected component"
+  },
+  "budget": {
+    "new_joint_GLM_fits": 20,
+    "motor_shared_across_J_families": true,
+    "new_C0_fits": 0,
+    "new_source_fits": 0,
+    "held_prediction_only_normalizers": 80,
+    "new_test_prices": 0,
+    "submissions": 0
+  },
+  "candidate_priority_if_all_checks_pass": [
+    "J1",
+    "J2",
+    "J3"
+  ],
+  "limits": [
+    "Prior variable screening is adaptive; received AI reviews not independent professional validation",
+    "Undated customer/master snapshots do not establish inception-time availability",
+    "Telework NB severity interaction has sparse support in received evidence",
+    "Marketing composite can duplicate age signals",
+    "Heuristic credibility and single sequential pass are not a joint maximum-likelihood fit",
+    "Weighted2025 primary ESS failed; diagnostic/veto only",
+    "2024 development adaptive; no full C1/A1 historical replay",
+    "No automatic test candidate, submission, formal promotion or final selection",
+    "Fisher prior is an approximation, not empirical proof of K validity",
+    "Bootstrap conditions on fixed OOF fits; adaptive development, not professional independent validation"
+  ],
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/mision017_fase2_tanda10_factores.py": "eed943325d39fc1c9be616bf943a9822bafaa02ee592d8e006091b53328ff501",
+    "Hackaton/Semana 2/Datos/emerging/customers.parquet": "c00a0095d5fb7b2b65cd9647216add49afb3703d863d5c358b1441f0fab1fb62",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_politica_desarrollo2024_v2.json": "676964dbda949239ccc314ea31c3c2fee630b0b7b61e1bf599f21f23dca9e33d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/aportes_F3c_F4c_20261026_v2/report.json": "cb7755a7588be391e79a03181240a4f7127407734517ce75c2b02833f6f2ac9d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda6_pendiente_20261025_v1/preflight.json": "e29530b2417240e6ba5e91f4ebb2d4014f274d36b9a4b678fc04355d2b3fe505",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda6_pendiente_20261025_v1/validation_v1/report.json": "37294fa1d0b4ca2cb4718ee8b9f455f2ffad3c52dfaf6b6d1ca5f3699d1936ed",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/oof_2023_2024.parquet": "a4652f2abc2663e6793d4076752045d3850111e5e8608ddd31bd3740fc7c11cc",
+    "Hackaton/Semana 2/Datos/emerging/policies_motor.parquet": "7c5dbb5e5b46629ebf01a66c991183d20b8585393b589bc2644fcbd6653a3ec1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda6_pendiente_20261025_v1/inputs_motor_fold0.parquet": "1a42fe5096b3b66813a2af40cd545a87db0a264f614d2213dd57aa07bb017463",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_motor_fold0.json": "217ff527fc1c084a423f9db50a164a281d691601273d03730c872c8fd3c13057",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda6_pendiente_20261025_v1/inputs_motor_fold1.parquet": "37238ec2e230183801f12e4a9945b87252d94e4266a631fac8baddd58e838cdb",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_motor_fold1.json": "fc5da7ea8d2d7ebb0640356d73a511b10a2d3321554e648e0fb0eb8ed7bf8b05",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda6_pendiente_20261025_v1/inputs_motor_fold2.parquet": "f9144032b2448e02e9746b7fc400b7c9f6d1f54b8c6b804187a664531687f8bb",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_motor_fold2.json": "bb21ab5a2600e45b3dadd669d164499b956df99af8a73c3303b56d1d4fa58f83",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda6_pendiente_20261025_v1/inputs_motor_fold3.parquet": "db48a32026dad1aca01e902cd9582a4d9b7392a132e3d8f29c72d35b2e3825aa",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_motor_fold3.json": "6a651a06736ad9611a7005b4c2b488028d8003a5c0fb10d551bfa5741902bcfe",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda6_pendiente_20261025_v1/inputs_motor_fold4.parquet": "e2d47a5c14c4f894079da38f28bd39325668333b79f2ed0fc4a71bbe33d43ab5",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_motor_fold4.json": "565d0a8a8978572936cd163020221823de1cc6b7728c98a003abe15496916d4f",
+    "Hackaton/Semana 2/Datos/emerging/policies_contents.parquet": "84d7f48d03933b018bec8fdc2f4bbd96df184cca7ae1971c38d3acc955720f8e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda6_pendiente_20261025_v1/inputs_contents_fold0.parquet": "fe3c6a334eff023351cc40551380abab1b2f058eaeffe13ad3226999a3655c22",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_contents_fold0.json": "3e17ec76549baac258553ce7a46bd298f01b10d56a18238180d1c2e2e395197d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda6_pendiente_20261025_v1/inputs_contents_fold1.parquet": "57795a97c4ca1631ee4409a325a66d4c76ee82c7284103166475b376a43d49c1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_contents_fold1.json": "0f1df633d131bd3c4fabce1914cb241f2ad99a1f0035a73da299f5aa74e962cb",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda6_pendiente_20261025_v1/inputs_contents_fold2.parquet": "2d15004b3c8740c99dbabe7f1651adde71aad1e5e1f1cdce0541bd6347cc41e6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_contents_fold2.json": "5632e4076f539f3ef4b55e972f80a006e720b83e9b986667b7377eb3045681aa",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda6_pendiente_20261025_v1/inputs_contents_fold3.parquet": "084a029cd6760043ab03aebd2db37ebb6d1f9aab4b254dd415909e5fe7d82398",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_contents_fold3.json": "8a25af0b73ab8d7c8da967cd77a0b8500eff532a7b95a03755d7556a9a4c9e34",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda6_pendiente_20261025_v1/inputs_contents_fold4.parquet": "c8b9643c4f6af86925b60b275ff26611c12510252ea1c8c7e1a414e87e7eeabf",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_contents_fold4.json": "f66f8b61d13e44d34de86ee1cf90b8ce529442f852ffbae0180f50ed0ba5a998",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda10_factores_20261026_v1/covariates_motor.parquet": "114baaf6776141ffd4b5934b788abedec5c43b73b27982112365acb254dd6d22",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda10_factores_20261026_v1/covariates_contents.parquet": "a25d9922f21e13001235c6ec2ab82c56178906a14898645888179f30e7325b02",
+    "Hackaton/Repositorio_IAA2026/herramientas/mision017_fase2_tanda11_conjunto.py": "8e8143ccf5eed90ad2bbb5dff82bb885400f06d327420ec4b033f9af26997695",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_mision017_fase2_tanda10_plan_v1.json": "a87e600ab9e3b6f564b4a5e53459988764b0f66ce46c6334a05918879bba769d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda10_factores_20261026_v1/preflight.json": "dd2c9a36ead2321819bac651c4276d1c6355b901a8a6120f6fd520df1dd66234",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda10_factores_20261026_v1/validation_v1/report.json": "291d5837fada1fa98a5146879820a5bfeae408c3b2673f9bbd960f0547af10ce",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda10_factores_20261026_v1/oof_2023_2024.parquet": "10d54a2a00f0be9f6f4e69c529aaddd18927647f82e60de280a51aed942b8336",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda10_factores_20261026_v1/completion_receipt.json": "96954c829bcc9345b926df364fd5c20825e1c52c270aabd16444868e208d711b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda11_conjunto_20261026_v1/preflight.json": "a2eb7730210f7f534074795eda832c427d0ba36c59352055753ec279a941194f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda11_conjunto_20261026_v1/synthetic.json": "b2d4a6c198d7d23a827cf253274f3f2f584845394c6156a4aa3f7a5a673413a8"
+  },
+  "B00_preserved": true,
+  "all_alternatives_preserved": true,
+  "2024_open": true
+}

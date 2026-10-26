@@ -1,0 +1,317 @@
+{
+  "id": "S2-ROBUSTEZ2023-CICLO3-v1-20261025",
+  "author": "Codex",
+  "utc": "2026-10-25T11:40:48.305921+00:00",
+  "authorization": "trabaja sin parar hasta tener un modelo mucho más robusto, con resultados significativamente mejores",
+  "forum_prior": "COD-S2-20261025-ROBUSTEZ3-PREVIO",
+  "run": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo3_20261025_v1",
+  "training_years": [
+    2023
+  ],
+  "heldout_years": [
+    2023
+  ],
+  "C0": "reuse exact current outer-fold inputs; no recalculation, no nested tuning",
+  "folds": "same five connected-component folds; verify group/customer/address disjoint",
+  "models": [
+    {
+      "id": "W2-COD-R25",
+      "shape": "frequency_severity",
+      "alpha": null
+    },
+    {
+      "id": "W2-COD-R26",
+      "shape": "residual_boost",
+      "alpha": null
+    }
+  ],
+  "hypothesis": "R21-R24 fail stability; separate positive-count and mark mean with standard Poisson/Gamma versus small fixed depth2 tree residual correction on frozen B20. Preserve C0, folds and complete loss target.",
+  "features": {
+    "motor": {
+      "numeric": [
+        "x_new_business",
+        "x_ncb_years",
+        "x_vehicle_age",
+        "x_vehicle_value_group",
+        "x_years_licensed",
+        "x_engine_size_cc",
+        "x_named_young_driver",
+        "x_driver_assist",
+        "x_log_voluntary_excess",
+        "x_log_compulsory_excess"
+      ],
+      "categorical": [
+        "x_driver_age_band",
+        "x_region",
+        "x_cover_type",
+        "x_body_type",
+        "x_transmission",
+        "x_fuel_type",
+        "x_overnight_parking",
+        "x_vehicle_use"
+      ]
+    },
+    "buildings": {
+      "numeric": [
+        "x_new_business",
+        "x_log_sum_insured",
+        "x_property_age",
+        "x_flood_zone",
+        "x_log_distance_to_river_km",
+        "x_elevation_m",
+        "x_smoke_alarms",
+        "x_accidental_damage_cover",
+        "x_log_voluntary_excess",
+        "x_log_compulsory_excess"
+      ],
+      "categorical": [
+        "x_property_type",
+        "x_region",
+        "x_construction_type",
+        "x_occupancy",
+        "x_roof_type",
+        "x_soil_type"
+      ]
+    },
+    "contents": {
+      "numeric": [
+        "x_new_business",
+        "x_log_sum_insured",
+        "x_bedrooms",
+        "x_high_value_items",
+        "x_accidental_damage_cover",
+        "x_basement",
+        "x_log_distance_to_river_km",
+        "x_elevation_m",
+        "x_bicycle_cover",
+        "x_log_voluntary_excess",
+        "x_log_compulsory_excess"
+      ],
+      "categorical": [
+        "x_property_type",
+        "x_region",
+        "x_security_level",
+        "x_tenure",
+        "x_roof_type",
+        "x_soil_type"
+      ]
+    }
+  },
+  "excluded": [
+    "premium",
+    "claims_as_predictors",
+    "days_unoccupied",
+    "realized_climate",
+    "IDs",
+    "start_month",
+    "channel",
+    "payment_method",
+    "make_model"
+  ],
+  "temporal_scope": "conditional benchmark with supplied period attributes, NOT historically timestamped prospective pricing; F02 limits retained. No 2024 cohort/metrics.",
+  "numeric": "R25 core:fit-only median/clipping/scaling;R26:native numeric missing handling",
+  "categorical": "R25:fit-only OHE;R26:fit-only native category vocabularies",
+  "Tweedie": {
+    "power": 1.5,
+    "link": "log",
+    "max_iter": 3000,
+    "tol": 1e-07,
+    "response": "T0/C0",
+    "weight": "sqrt(C0)"
+  },
+  "comparators": [
+    "W2-B00",
+    "W2-B20"
+  ],
+  "reference_preserved": "W2-B00",
+  "real_fit_budget": 45,
+  "primary_material_delta_D2_over_B20": 0.005,
+  "lower_exploratory_bound_over_B20": 0.0005,
+  "bootstrap": {
+    "seed": 2026102501,
+    "replicates": 2000,
+    "quantiles": [
+      0.0041666666667,
+      0.9958333333333
+    ],
+    "unit": "connected group; common null recalculated"
+  },
+  "stability": {
+    "positive_folds_min": 4,
+    "max_segment_harm_over_full_null": 0.0005,
+    "remove_favorable_group_fraction": 0.001,
+    "delta_after_removal_min": 0.0005
+  },
+  "no_formal_promotion": true,
+  "2024_closed": true,
+  "no_auto_submission_from_training": true,
+  "search_disclosure": "exploratory after B00-B20 and publicG4 result; bootstrap does not erase adaptive search",
+  "sources": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/motor_fold0.parquet",
+      "sha256": "76861f7a75e4c61e1d982ba44a5c6c3da8307747b8ec6bac0c77a79c7672ca3f"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/motor_fold1.parquet",
+      "sha256": "4c413d769e89657a10bddea839e2677c38ee909616da67a6dc3202f29ee6d81d"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/motor_fold2.parquet",
+      "sha256": "759b40348d729a9f0f240e43c72fb00eb34cfd433e4c4ab5062412c9ee9ba563"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/motor_fold3.parquet",
+      "sha256": "4b9b7a16b54bb957e526d63267d8d8675bfd0b9fbb2afb5e4ee967f643486377"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/motor_fold4.parquet",
+      "sha256": "2aec59b0c2333c7fbb12227d7a2d89c86e982eeaf1f59cec8d78f6f3a59ab7cb"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold0.parquet",
+      "sha256": "e7a230e9256610c75d017c09ce26952d32aa79fd29c0b81ee3f8579c9a2a6126"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold1.parquet",
+      "sha256": "78a3b3a7c7d662b6ad6533808989334f48d77665d601124fbbddbb2591b89f9a"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold2.parquet",
+      "sha256": "1d342f21384ae5bb85be042bd4943acb75746e70146a5f9a271be4f031d5b206"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold3.parquet",
+      "sha256": "b065d9ecd0c8be3b18411be89b719856d08faf4c7ef70b45e33fd4c69f9efa9d"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold4.parquet",
+      "sha256": "cf7bb6b579ada600613dc14b4e76d7b8c0492c6b7086e871b7f12be11d187de3"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/contents_fold0.parquet",
+      "sha256": "7ee44117a2caf2bfb70f23bbdd3a27249503f7e37e681447dfce75e83439efd7"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/contents_fold1.parquet",
+      "sha256": "692805013e60e817a7826e9e76cf9c91788447d634f3d7bcfdc2a2f7657dec97"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/contents_fold2.parquet",
+      "sha256": "558d43c05fa71ba37820016aef96244969a0283b78143cdffc500d85e4f56a5f"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/contents_fold3.parquet",
+      "sha256": "ac639a2ad62ad5281bd6df7d06ccf3cb98131eb371683f6da5d838e1da37e4e8"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/contents_fold4.parquet",
+      "sha256": "50368d57022725ed13f68b2052bd57ea8114ee0af1828e2d4128501f2e23fca8"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/oof_2023.parquet",
+      "sha256": "4fa0052e2ce708abac2414d2fa5536a703a79b214439a755e835890104356d9b"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelos_robustos_compuestos2023.py",
+      "sha256": "b70429dde8717039c7f69174aeebdba90a461580bfd5657c0cac34ebdf75c86a"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelos_robustos2023.py",
+      "sha256": "af3dcaf489367def2cb29a9785e8003cb12bd2f3378062bd274919e080466bf8"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/robustez2023_ciclo3.py",
+      "sha256": "2fb6b8a1ea12a2be147810434411f8d0d4365e41271225aba30ed6307ed0423a"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_politica_seleccion_v1.json",
+      "sha256": "8de4043120b600813c44870d015569bac53c0ddb1d289970c071d1f152281139"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/models/motor_fold0/bundle.joblib",
+      "sha256": "de59c069fcd688c0f71a089eec5e6e30701a36bcaf0b03a86da450d0c90005da"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/models/motor_fold1/bundle.joblib",
+      "sha256": "8b0e02e7c961e264383f0ce8476d4f7aa93735be12ee1c84f0b47dd36d7efe77"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/models/motor_fold2/bundle.joblib",
+      "sha256": "0e87eeabfbb04ad9a4dce8108f9ea593b27aa1ba0423e27e35d5e7a15d614d7a"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/models/motor_fold3/bundle.joblib",
+      "sha256": "faa240ac05736d7b9f86b3e681d1714e6930edda082337ea5c0c89d23161b328"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/models/motor_fold4/bundle.joblib",
+      "sha256": "c7672ca2614a151ba61cc683780f06f2d3e7928a3a6439d2f618c5ec0e29b994"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/models/buildings_fold0/bundle.joblib",
+      "sha256": "396cb32372d5bce3ce22555625424b74aad893bc8ecdfe6b2bcede0787b23e8a"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/models/buildings_fold1/bundle.joblib",
+      "sha256": "458a4fd334e20cd3481a6cfdd4dc22dc68fe31a7076edd864257bbb919e57121"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/models/buildings_fold2/bundle.joblib",
+      "sha256": "d9e7c5a77c809bb3bd8ff4d2df9ce511c80fc368947658ea52d8e71d6f7f5380"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/models/buildings_fold3/bundle.joblib",
+      "sha256": "c12a2752f73ce913808623cca161a7db023f89713573dcaf2993e365632f2cae"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/models/buildings_fold4/bundle.joblib",
+      "sha256": "1b52501671cee94f248570d85df0817a51e2d456058ce852bb663977c94ec255"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/models/contents_fold0/bundle.joblib",
+      "sha256": "b85ba4ad7f9913e51172c55d77cf06ceb44abb6ab291ca834ec2b541d1c75858"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/models/contents_fold1/bundle.joblib",
+      "sha256": "c623eb81a71054aba9b4de03e4c6b0e1d05edf3073582fdca79d410401b1413b"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/models/contents_fold2/bundle.joblib",
+      "sha256": "f7f5b1641af4edb2c9ee1ced282a292db1e6bee8ca028694f2a9565a211058de"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/models/contents_fold3/bundle.joblib",
+      "sha256": "8212db18cc7bb9f169c4fd6b37b41500b18b23dd6c9da901fdd7a2e484921d16"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/models/contents_fold4/bundle.joblib",
+      "sha256": "955f890514a66c3b4b19a59dd7795dbb900f5c4624482758a01067b494d89297"
+    }
+  ],
+  "compound_details": {
+    "R25": {
+      "frequency": "Poisson alpha0.01, response n_positive/C0,weight C0",
+      "severity": "Gamma alpha0.1,response T0/n_positive,weight n_positive,positive rows only",
+      "features": "seven CORE features per ramo as source",
+      "min_positive_rows": 100,
+      "meaning": "positive cost-count proxy under inherited COST exposure; not separately identified ultimate frequency"
+    },
+    "R26": {
+      "base": "frozen B20 outer-fold GLM",
+      "init_score": "log(base rate)",
+      "prediction": "base rate * exp(tree raw score)",
+      "n_estimators": 100,
+      "learning_rate": 0.025,
+      "num_leaves": 4,
+      "max_depth": 2,
+      "min_child_samples": 1000,
+      "reg_lambda": 100,
+      "reg_alpha": 10,
+      "max_bin": 63,
+      "seed": 2026102503,
+      "stopping": "fixed100,no validation labels",
+      "features": "physical feature blocks; native categoricals fit-only"
+    }
+  },
+  "output_bundle_count": 30
+}

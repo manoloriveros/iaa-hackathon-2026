@@ -1,0 +1,154 @@
+{
+  "id": "S2-MISION017-FASE2-TANDA1-v2",
+  "author": "Codex",
+  "utc": "2026-10-26T01:10:06.634990+00:00",
+  "scope_policy": "Hackaton/Repositorio_IAA2026/registro/semana2_politica_desarrollo2024_v2.json",
+  "scope_policy_sha256": "676964dbda949239ccc314ea31c3c2fee630b0b7b61e1bf599f21f23dca9e33d",
+  "source_years": [
+    2021,
+    2022,
+    2023
+  ],
+  "emerging_fit": [
+    2023
+  ],
+  "evaluation": [
+    2024
+  ],
+  "hypothesis": "La fuente 2021–2023 y los perfiles declarados aportan relatividades; ajustes pequeños GLM/boosting pueden corregir el transporte. La prima comercial vigente es una hipótesis separada, con dependencia explícita de la tarifa del asegurador.",
+  "observation": "T0 neto en centavos, exposición conciliada. Reutilizar C0 temporal emergente aprendido solo en 2023. Fuente: mismo estimador de reporte histórico, solo ocurrencias 2021–2023, sin mezclar soporte de mercados.",
+  "availability": "Sin clima, sin resultados posteriores de póliza, sin identificadores como predictores. Maestros sin fecha bajo hipótesis de estabilidad. La valoración única a diciembre 2024 impide afirmar un backtest prospectivo de reservas disponible en enero 2024.",
+  "models": {
+    "M0": "LightGBM fuente 400 rondas fijas; nivel por ramo aprendido solo en emergente 2023, sin nuevas pendientes.",
+    "M1": "M0 como offset y GLM Tweedie 1.5 de efectos principales, penalización 1 y constante libre; variables congeladas por ramo.",
+    "M2": "M0 como offset y LightGBM residual de 100 rondas fijas, 7 hojas, mínimo 500 filas, lambda_l2 1000.",
+    "M3": "GLM principal con prima comercial anual vigente como offset, pendiente log-prima libre y variables de M1. La prima no es el objetivo."
+  },
+  "source_features": "F0 físico y contractual común, salvo región, más prior_claims_5y, licence_points, household_size, years_at_address y occupation normalizada. No premium ni outcomes en fuente.",
+  "parameters": {
+    "source": {
+      "objective": "tweedie",
+      "tweedie_variance_power": 1.5,
+      "learning_rate": 0.03,
+      "num_leaves": 31,
+      "min_data_in_leaf": 1000,
+      "lambda_l2": 100.0,
+      "feature_fraction": 0.8,
+      "bagging_fraction": 0.8,
+      "bagging_freq": 1,
+      "verbosity": -1,
+      "num_threads": 2,
+      "deterministic": true,
+      "force_col_wise": true,
+      "seed": 20261025
+    },
+    "source_rounds": 400,
+    "residual": {
+      "objective": "tweedie",
+      "tweedie_variance_power": 1.5,
+      "learning_rate": 0.02,
+      "num_leaves": 7,
+      "min_data_in_leaf": 500,
+      "lambda_l2": 1000.0,
+      "feature_fraction": 1.0,
+      "bagging_fraction": 1.0,
+      "bagging_freq": 0,
+      "verbosity": -1,
+      "num_threads": 2,
+      "deterministic": true,
+      "force_col_wise": true,
+      "seed": 20261025
+    },
+    "residual_rounds": 100,
+    "glm_penalty": 1.0,
+    "glm_num": {
+      "motor": [
+        "x_ncb_years",
+        "x_vehicle_age",
+        "x_vehicle_value_group",
+        "x_prior_claims_5y"
+      ],
+      "buildings": [
+        "x_log_sum_insured",
+        "x_property_age",
+        "x_accidental_damage_cover",
+        "x_days_unoccupied",
+        "x_prior_claims_5y"
+      ],
+      "contents": [
+        "x_log_sum_insured",
+        "x_high_value_items",
+        "x_accidental_damage_cover",
+        "x_bedrooms",
+        "x_prior_claims_5y"
+      ]
+    },
+    "glm_cat": {
+      "motor": [
+        "x_region",
+        "x_driver_age_band",
+        "x_cover_type"
+      ],
+      "buildings": [
+        "x_region",
+        "x_property_type",
+        "x_construction_type",
+        "x_occupancy"
+      ],
+      "contents": [
+        "x_region",
+        "x_property_type",
+        "x_security_level",
+        "x_tenure"
+      ]
+    }
+  },
+  "comparators": [
+    "M0 como referencia de esta tanda",
+    "B00 histórico conservado; constante equivalente con el mismo C0, identificado como B00-TEMP-v2"
+  ],
+  "criterion_exploratory": {
+    "primary": "D2 temporal 2024 sin pesos, sin ajustar nivel con etiquetas de 2024",
+    "required_delta_vs_M0": 0.002,
+    "paired_group_bootstrap_lower_95_gt": 0.0,
+    "positive_2024_group_folds_min": 4,
+    "min_delta_each_line_x_business_full_null": -0.001,
+    "post_remove_31_favorable_groups_delta_min": 0.0,
+    "stress": "Misma tarifa fija, mapear con links C0 2023 de reserva .75/1.25 y cola .05/.10; diferencia puntual no negativa.",
+    "secondary": "Composición por ramo/negocio/exposición; A/E y cola. Ningún óptimo calculado en evaluación cuenta como predicción."
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 2026102502,
+    "unit": "saved customer-address connected group",
+    "quantiles": [
+      0.025,
+      0.975
+    ]
+  },
+  "not_formal_v1_promotion": true,
+  "prior_2024_exposure_adaptive": true,
+  "cost_budget": {
+    "price_estimator_fits": 12,
+    "source_reporting_curves": 15,
+    "emerging_C0_fits": 0,
+    "closed_form_B00_M0_levels": 6,
+    "submissions": 0
+  },
+  "code": {
+    "Hackaton/Repositorio_IAA2026/herramientas/mision017_fase2_tanda1_v2.py": "950b7dcc65602a3b4d144e769a5d4cfe918f7aa4739bdd7f7379a961f213b134",
+    "Hackaton/Repositorio_IAA2026/src/semana2/fase2_2024_datos.py": "17ba2941c0d4e6afa30ad042c90ea06d57610d2d6a654f688f4711b6333d02a4"
+  },
+  "B00_preserved": true,
+  "all_alternatives_preserved": true,
+  "no_automatic_submission": true,
+  "v1_correction": {
+    "failure": "Construction labels in developed data were not normalized before mapping.",
+    "change": "Lowercase/strip, W and T map to timber, then common reviewed codes; model recipes unchanged.",
+    "v1_price_fits": 0,
+    "source_reporting_fits_reused": 5,
+    "additional_source_reporting_fits": 10,
+    "partial_manifest": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/entradas_temporales_v1/partial_reuse_manifest.json",
+    "partial_manifest_sha256": "946eb41d53dea3c9b0ace5a403b9d553148cf9157540972546a196a2f24a0e93"
+  }
+}

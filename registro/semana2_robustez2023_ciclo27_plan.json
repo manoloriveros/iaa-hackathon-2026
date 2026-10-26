@@ -1,0 +1,201 @@
+{
+  "id": "S2-ROBUSTEZ2023-CICLO27-v1-20261025",
+  "author": "Codex",
+  "utc": "2026-10-25T16:09:29.882587+00:00",
+  "forum_prior": "COD-S2-20261025-ROBUSTEZ27-PREVIO",
+  "models": [
+    {
+      "id": "W2-COD-R102",
+      "tau": 20.0
+    },
+    {
+      "id": "W2-COD-R103",
+      "tau": 200.0
+    }
+  ],
+  "home_natural_outputs": {
+    "W2-COD-R102": "W2-COD-R104",
+    "W2-COD-R103": "W2-COD-R105"
+  },
+  "hypothesis": "Noisy independent home region adjustments may be stabilized by partialsharing across buildings/contents of same geography. Perils can differ,so contrast remains estimable;not assumption of identicalrisk or independent cover observations.",
+  "offset": "unchanged frozen physical teachers supportingR36,NOTcycle26maskedteachers;0sourcefits",
+  "design": "same14parameters as two7parameterGLMs:lineintercepts2free,lineNB2ridge1,regioncommon5ridge2,regioncontrast5ridge tau20or200;beta_build=common+contrast,beta_contents=common-contrast",
+  "objective": "sum of perline sqrt(e_cost) normalized halfTweedie1.5loss plus ridge;atcontrasttau2 exactly two existing GLMs,verifiedfromstoredcoefficientswithoutrefit. Newtau20and200 are10xand100xcontrastshrinkage only.",
+  "control_required": "mappedtau2 coefficients must match original independent objectives/gradients and heldOOF predictions beforeanyfit perouterfold;commonencnames andembeddedsourcehashes identical",
+  "scope": "five saved2023connectedcomponentfolds jointlyacrosshome lines;allgroups/customer/addressdisjoint;T0/exposure/existingC0 unchanged;motor entireOOF heldexactR36 withno newpriceprediction",
+  "outputs": {
+    "pooled_home": [
+      "W2-COD-R102",
+      "W2-COD-R103"
+    ],
+    "home_only_natural": {
+      "W2-COD-R102": "W2-COD-R104",
+      "W2-COD-R103": "W2-COD-R105"
+    },
+    "motor": "exactR36 for all4outputs",
+    "fixed_pool": "home sqrt50/50withB20,no learnedweights"
+  },
+  "real_fit_budget": 10,
+  "source_fit_budget": 0,
+  "new_C0_fits": 0,
+  "primary_reference": "W2-COD-R36",
+  "criteria": {
+    "delta_min": 0.005,
+    "lower_exploratory_min": 0.0005,
+    "positive_folds_min": 4,
+    "segment_harm_max_fullnull": 0.0005,
+    "after31groups_min": 0.0005
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 2026102501,
+    "quantiles": [
+      0.0041666666667,
+      0.9958333333333
+    ]
+  },
+  "preference_order": [
+    "W2-COD-R102",
+    "W2-COD-R103",
+    "W2-COD-R104",
+    "W2-COD-R105"
+  ],
+  "promotion": false,
+  "2024_closed": true,
+  "B00_preserved": true,
+  "adaptive_exploratory": true,
+  "sources": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/robustez2023_ciclo27.py",
+      "sha256": "e902164bfe96349bb856503c4aec29cc9b26318f9e6d033d59b5cba36b069a69"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelo_region_hogar2023.py",
+      "sha256": "190b7c532f065302d1201a5ff869371c632ce71893543552e5bff172c3374daf"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelo_profesor_comun2023.py",
+      "sha256": "b8fffff61f16da937b206299685dbe3be9c4fb97f5c5ee0c2b4ef544a0749279"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelos_robustos2023.py",
+      "sha256": "af3dcaf489367def2cb29a9785e8003cb12bd2f3378062bd274919e080466bf8"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelos_robustos_compuestos2023.py",
+      "sha256": "b70429dde8717039c7f69174aeebdba90a461580bfd5657c0cac34ebdf75c86a"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelo_transferencia2023_v2.py",
+      "sha256": "6737d8c4e63d28e80df82dcb69bdb43e1ddcf4e68329b61dcd4bd74230a7a1d1"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/desplegar_robustez2023.py",
+      "sha256": "4e3f7d1236b5a71337ef74a28ed38a7cdba4ad13a5329089a27ab0fcac85bf7a"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/evaluar_robustez2023_v2.py",
+      "sha256": "6102d8bbce922ac5b7958764fb41d92559d33f971af66f0d15ac81738d39b91a"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo7_20261025_v1/new_oof_2023.parquet",
+      "sha256": "13d8b82a53b1078b0beb98121b8b2cbbbb49a07c22e7d61c9094917a21d8ded2"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/oof_2023.parquet",
+      "sha256": "4fa0052e2ce708abac2414d2fa5536a703a79b214439a755e835890104356d9b"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/mision017_20261025_v1/calibration_coefficient_audit.json",
+      "sha256": "dae81e7342c697aafde215ffd4caa8e326a5ec229786ba4d81b229c1f1565dee"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo7_20261025_v1/teachers/W2-COD-R35_buildings.joblib",
+      "sha256": "01781873738796ba42a1aafd045d7fac153670101bffad285cf26173ead72aae"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo6_20261025_v1/teachers/W2-COD-R32_contents.joblib",
+      "sha256": "d1d778f8cb166bb6f3adf092162b709c7e86f190a182076dca2800f40d4d25be"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo7_20261025_v1/models/W2-COD-R35_buildings_fold0.joblib",
+      "sha256": "2194eea883979b851c0883af3bd12926eb36c51e98ff0b020aca3a08199c0d50"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo7_20261025_v1/models/W2-COD-R35_buildings_fold1.joblib",
+      "sha256": "568188b751d51dbf3e92ebdd895deb67b69085b2a8bf23e0f51bc27d035d0c7f"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo7_20261025_v1/models/W2-COD-R35_buildings_fold2.joblib",
+      "sha256": "94597c194ca6bb128973ef78968f62306a4e43cd374b6e525a9b9d72df8c00c0"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo7_20261025_v1/models/W2-COD-R35_buildings_fold3.joblib",
+      "sha256": "60bce056cbf1c4522a49a6cbae9d636dfbfb3a553896bd780ebf405a0a3a9f91"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo7_20261025_v1/models/W2-COD-R35_buildings_fold4.joblib",
+      "sha256": "06fd5f0cb275cd0d26daf7fd2452a9c63d351242aed8aa5b3a92e1d38b24d874"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo6_20261025_v1/models/W2-COD-R32_contents_fold0.joblib",
+      "sha256": "d2defe6d6aa42ca1b4498094c95ed5a1b80d3223220dc4971fa2539d1fab983f"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo6_20261025_v1/models/W2-COD-R32_contents_fold1.joblib",
+      "sha256": "df4ed8679bf1b04294e8d5d05e0b142fc983886b2eb2f77e436cbb5928b71022"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo6_20261025_v1/models/W2-COD-R32_contents_fold2.joblib",
+      "sha256": "d1003ce5bfd2ae5fc22da7f4a5857f20b3ba2cb154b957d8c0f0ff9e14f37de2"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo6_20261025_v1/models/W2-COD-R32_contents_fold3.joblib",
+      "sha256": "ef8762f22eb1957338433a0907b4ced6a1463e29e58bb0c1b8e27362035af2f0"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo6_20261025_v1/models/W2-COD-R32_contents_fold4.joblib",
+      "sha256": "2ebd59ef8346cbc53f3f0d2272bd5639ac35395410d9e6beba41056b5db22fe3"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold0.parquet",
+      "sha256": "e7a230e9256610c75d017c09ce26952d32aa79fd29c0b81ee3f8579c9a2a6126"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold1.parquet",
+      "sha256": "78a3b3a7c7d662b6ad6533808989334f48d77665d601124fbbddbb2591b89f9a"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold2.parquet",
+      "sha256": "1d342f21384ae5bb85be042bd4943acb75746e70146a5f9a271be4f031d5b206"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold3.parquet",
+      "sha256": "b065d9ecd0c8be3b18411be89b719856d08faf4c7ef70b45e33fd4c69f9efa9d"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold4.parquet",
+      "sha256": "cf7bb6b579ada600613dc14b4e76d7b8c0492c6b7086e871b7f12be11d187de3"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/contents_fold0.parquet",
+      "sha256": "7ee44117a2caf2bfb70f23bbdd3a27249503f7e37e681447dfce75e83439efd7"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/contents_fold1.parquet",
+      "sha256": "692805013e60e817a7826e9e76cf9c91788447d634f3d7bcfdc2a2f7657dec97"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/contents_fold2.parquet",
+      "sha256": "558d43c05fa71ba37820016aef96244969a0283b78143cdffc500d85e4f56a5f"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/contents_fold3.parquet",
+      "sha256": "ac639a2ad62ad5281bd6df7d06ccf3cb98131eb371683f6da5d838e1da37e4e8"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/contents_fold4.parquet",
+      "sha256": "50368d57022725ed13f68b2052bd57ea8114ee0af1828e2d4128501f2e23fca8"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "S2-MISION017-FASE2-TANDA3-v1",
+  "author": "Codex",
+  "utc": "2026-10-26T01:32:13.984305+00:00",
+  "hypothesis": "La transferencia LightGBM es la referencia más fuerte conciliada; los ajustes libres o por bandas no dieron una mejora robusta. Probar una familia estándar diversa, más regularizada que CB E15, con fuente ampliada a 2021–2024 y nivel emergente aprendido dentro de componentes 2023–2024.",
+  "prior_adverse_evidence": [
+    "CB E15: fuente 2021–2023, depth6 lr.08 L2=3, pierde en emergente frente a T2b; no repetir ese ajuste.",
+    "C18 propio: Ordered depth3/4 con GLM físico de 2023, no transfería robustamente.",
+    "La tanda2 ganó solo .00142, inferior al umbral, y perdió al retirar31grupos favorables."
+  ],
+  "material_changes": "Fuente 2021–2024 completa; variables comunes del padre F2 reproducidas; depth5 lr.04 L2 original10; sin selección de rondas en etiquetas evaluadas. No es una repetición de los anteriores datos/configuraciones.",
+  "source_data": "Reconstruir fuente histórica F2 desde originales: clones exactos ya identificados fuera, periodos/días inclusivos, neto en centavos y curvas empíricas maduras de coste. Cotejar CDF, mezcla y T0 por año con preparacion.json histórico antes de ajustar.",
+  "scope": "Toda la información histórica hasta diciembre2024 para la tarifa2025; CV emergente por componentes de ambos años. No es una validación prospectiva de 2024.",
+  "models": {
+    "Q1": "Solo CatBoost fuente con nivel por ramo aprendido en entrenamiento emergente",
+    "Q2": "75%T2b+25%CB, cada tronco nivelado en entrenamiento y nuevo nivel de la mezcla aprendido allí",
+    "Q3": "50%T2b+50%CB, misma regla; pesos fijos"
+  },
+  "reference": "N0 de tanda2 exacto; mantener B00, F2 y todas las alternativas",
+  "CatBoost": {
+    "version": "1.2.8",
+    "params": {
+      "loss_function": "Tweedie:variance_power=1.5",
+      "iterations": 600,
+      "depth": 5,
+      "learning_rate": 0.04,
+      "random_strength": 0.0,
+      "bootstrap_type": "Bernoulli",
+      "subsample": 0.8,
+      "one_hot_max_size": 8,
+      "max_ctr_complexity": 1,
+      "border_count": 64,
+      "boosting_type": "Plain",
+      "leaf_estimation_iterations": 3,
+      "leaf_estimation_method": "Newton",
+      "thread_count": 2,
+      "allow_writing_files": false,
+      "used_ram_limit": "1536mb",
+      "rsm": 0.8,
+      "random_seed": 2026102504
+    },
+    "l2_leaf_reg": "10/sqrt(scale)",
+    "scale": "max(1000,max(source_period_T0)/1000), fit source only; no clipping",
+    "baseline": "log(source_e_cost*source_constant_rate/scale), no boost_from_average",
+    "prediction": "source_constant_rate*exp(raw_model_without_pool_baseline)",
+    "unit_reference": "https://catboost.ai/docs/en/concepts/loss-functions-regression"
+  },
+  "C0": "Consumir sin reestimar las15mezclas/75curvas por ámbito de tanda2; aplicar cada objeto tanto a las filas de entrenamiento como a las retenidas de ese fold. Ningún dato de etiquetas retenidas entra en niveles o mezclas.",
+  "criterion": {
+    "delta_min": 0.002,
+    "lower95_gt": 0.0,
+    "positive_folds_min": 4,
+    "min_cell_delta_full_null": -0.001,
+    "post31_nonnegative": true,
+    "both_years_nonnegative": true
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 2026102504,
+    "unit": "saved customer-address connected component",
+    "quantiles": [
+      0.025,
+      0.975
+    ]
+  },
+  "budget": {
+    "price_estimator_fits": 3,
+    "source_empirical_CDF_reconstructions": 15,
+    "target_reporting_refits": 0,
+    "closed_form_price_levels": 48,
+    "new_source_mixtures": 3,
+    "submissions": 0
+  },
+  "quality_limits": [
+    "Legacy capital normalization is replayed for parity, not newly certified in all cases.",
+    "Undated profiles; conditional payment/discount snapshot; no contacts/outcome/premium identifiers as predictors.",
+    "One2024valuation; maturity/tail/reserve assumptions remain conditional; no2025weather.",
+    "No independent professional validation or formal v1 promotion."
+  ],
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/mision017_fase2_tanda3.py": "10041ad92deb6f64e1101496cbd85b0fad6400a876933043fa45fe0a9ca36e75",
+    "Hackaton/Repositorio_IAA2026/src/semana2/fuente_f2_2024_cb.py": "7e32fb90524243e9c4af354ac5d2e594ec04f0b000acf95a0647e682a7b99be4",
+    "Hackaton/Repositorio_IAA2026/src/semana2/variables_ultimo.py": "9f40d75e5b0ffafddc9ae6547df8b826825026e88d5f8aabd0258b88bbd0fec2",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/oof_2023_2024.parquet": "a4652f2abc2663e6793d4076752045d3850111e5e8608ddd31bd3740fc7c11cc",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/validation_v1/report.json": "559c05d9f206081bd732e1836c1605c08a05f3b88e878e095f28a0680390d5ac",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3/partitions.parquet": "a6aca273c7657feb5bddf4fa602658f731decfab5c6eb6528fcd626f12be408b",
+    "Hackaton/Semana 2/Claude/ml_independiente_20261023/preparacion.json": "b61aebeb4f3cf6d6f154c0b737ca767a1f57975396268ec35e755593dc4b6379",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/features_buildings.parquet": "056e53626aaa696c767f0cc32cec23b2b5c5a244eaa7a3bd0b4fa5ce65ef7f6a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/features_contents.parquet": "b1c66e0ef27ab205d1de695e3ce6ded772c60fd43f0852236f0de074fb8b880b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/features_motor.parquet": "a25e433cdf217c5870447000797a1664551ba2727a64af1cbfc437dc7f596a83",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/raw_rates_buildings.parquet": "ff825920110bcbc06248adac0152e7397912a26dfc6271acc502de17572a8be6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/raw_rates_contents.parquet": "8284d6e7569539d330af7b52b3932643b801c4d98362254467ccd97dac301c45",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/raw_rates_motor.parquet": "5813aeba55ce946582a89bb8d1a13772fd35a20b4840369104b25e2050d635c3",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_buildings_fold0.json": "243027e20d64f20e7c0dd573dadf9a3d0ed48e74a3211f2d6cf4762f4e18d29d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_buildings_fold1.json": "6efcba1d4e91d1145d12fd12cb719dcaffa14b75212b3bffbe150ee7e34a48f4",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_buildings_fold2.json": "a2e1797549e9279e6b69312cd3f32d2fe2b3105dccce320ce98607e9ed04712a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_buildings_fold3.json": "2f69262774a2121fd399884c527cb138cb62330ce85d8c40bcafd725220d29a7",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_buildings_fold4.json": "9cae2e3ec161fc2453df41ad8d2916b85b97ff7fb37037f7f9ee4f2d7be3a127",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_contents_fold0.json": "3e17ec76549baac258553ce7a46bd298f01b10d56a18238180d1c2e2e395197d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_contents_fold1.json": "0f1df633d131bd3c4fabce1914cb241f2ad99a1f0035a73da299f5aa74e962cb",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_contents_fold2.json": "5632e4076f539f3ef4b55e972f80a006e720b83e9b986667b7377eb3045681aa",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_contents_fold3.json": "8a25af0b73ab8d7c8da967cd77a0b8500eff532a7b95a03755d7556a9a4c9e34",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_contents_fold4.json": "f66f8b61d13e44d34de86ee1cf90b8ce529442f852ffbae0180f50ed0ba5a998",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_motor_fold0.json": "217ff527fc1c084a423f9db50a164a281d691601273d03730c872c8fd3c13057",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_motor_fold1.json": "fc5da7ea8d2d7ebb0640356d73a511b10a2d3321554e648e0fb0eb8ed7bf8b05",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_motor_fold2.json": "bb21ab5a2600e45b3dadd669d164499b956df99af8a73c3303b56d1d4fa58f83",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_motor_fold3.json": "6a651a06736ad9611a7005b4c2b488028d8003a5c0fb10d551bfa5741902bcfe",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_motor_fold4.json": "565d0a8a8978572936cd163020221823de1cc6b7728c98a003abe15496916d4f"
+  },
+  "B00_preserved": true,
+  "no_automatic_submission": true
+}

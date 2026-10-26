@@ -1,0 +1,104 @@
+{
+  "id": "G4-STANDARD-CSV-READY-v1-20261024",
+  "author": "Codex",
+  "utc": "2026-10-25T01:29:04.664358+00:00",
+  "status": "own_standard_model_CSV_Kaggle_COMPLETE_2023_only_2024_closed",
+  "path_base": "workspace_root",
+  "run": "Hackaton/Repositorio_IAA2026/privado/semana2/modelo_final_g4_2023/final_20261024_v1",
+  "model_id": "G4-GLM2023-FINAL-v1",
+  "CSV": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/modelo_final_g4_2023/final_20261024_v1/attempt1/submission_g4_glm_2023_2025.csv",
+    "sha256": "e5e30c5921c0494b7c0bebe76fbf33725f45ab392f7bed5ab7f6927a89f394ab",
+    "rows": 209063,
+    "columns": [
+      "row_id",
+      "prediction"
+    ]
+  },
+  "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/G4_MODELO_PROPIO_Y_CSV_2025.md",
+  "documentation_sha256": "1832c4db3be8e3b29be3b4821d6099e7145e13287592c0b00337c36fa6fdf5ab",
+  "forum_prior": "COD-S2-20261024-069",
+  "forum_guard_repair": "COD-S2-20261024-G4-FINAL-GUARD1",
+  "forum_result": "COD-S2-20261024-070",
+  "training_years": [
+    2023
+  ],
+  "prediction_years": [
+    2025
+  ],
+  "training_rows": 50094,
+  "real_price_GLM_fits": 3,
+  "real_reporting_fits": 15,
+  "real_frequency_constants": 15,
+  "real_weighted_mark_means": 15,
+  "synthetic_price_GLM_fits": 3,
+  "synthetic_reporting_fits": 15,
+  "synthetic_tests": 8,
+  "guard_focal_tests": 8,
+  "C0_calendar_reference_cases": 120,
+  "C0_calendar_max_abs_error": 2.731148640577885e-14,
+  "independent_process_replay_exact": true,
+  "raw2025_features_identical_after_guard_repair": true,
+  "CSV_roundtrip_exact": true,
+  "standard_final_pipeline_real_verified": true,
+  "G4_nested_calibration_flow_real_verified": false,
+  "G4_original_nested_trial_gate_closed": false,
+  "reference": "W2-B00",
+  "all_alternatives_preserved": true,
+  "G1_G2_resolved": false,
+  "2024_policy_rows_read": 0,
+  "2024_predictions": 0,
+  "2024_scores_consulted": false,
+  "prior_external2024_subject_exposure_disclosed": true,
+  "promotion": false,
+  "manual_final_selection": false,
+  "submission_sent": true,
+  "Kaggle_score": 0.1331,
+  "remote_training": false,
+  "professional_independent_validation": false,
+  "packet": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/modelo_final_g4_2023/final_20261024_v1/paquete_modelo_propio_g4_2023.zip",
+    "sha256": "7cb741043617ac7d48c81e13365f47db92268cb7d070e134bf554892c16f63c5",
+    "files": 51,
+    "private_local_only": true
+  },
+  "plan": {
+    "path": "Hackaton/Repositorio_IAA2026/registro/semana2_g4_modelo_final_plan_v1.json",
+    "sha256": "bc793981741713187f33fb82ecb19fd02178c23df82dad36b096886fa36553c6"
+  },
+  "validation": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/modelo_final_g4_2023/final_20261024_v1/attempt1/validation.json",
+    "sha256": "df4ff35ad0403fbf7845a07dd0c0b9cce47b1ddbcfeb673179ee54bba38bf5ad"
+  },
+  "guard_repair": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/modelo_final_g4_2023/final_20261024_v1/guard1_verification.json",
+    "sha256": "334388b26fc300e364b6b5a14cf705bd840b1d89fc4bec29cf11248789362bca"
+  },
+  "replay": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/modelo_final_g4_2023/final_20261024_v1/standalone_replay_guard1_receipt.json",
+    "sha256": "09c8f880038f4d51f12680c07263b240ab639150549e0e6fcce62528e3380571"
+  },
+  "replay_manifest": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/modelo_final_g4_2023/final_20261024_v1/replay_manifest_guard1.json",
+    "sha256": "974c128a17f5b245bb7edbee6772805496d3e472b699b0dd77eb46d840219c19"
+  },
+  "previous_2023_recipe_evidence": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/modelo_final_g4_2023/final_20261024_v1/reused_2023_recipe_evidence.json",
+    "sha256": "575816ed75cf68f8322f2834eb6f58fcf3d272b6b845c9779fdadf6605320f59"
+  },
+  "decisions": {
+    "path": "Hackaton/Repositorio_IAA2026/privado/semana2/modelo_final_g4_2023/final_20261024_v1/decision_journal.json",
+    "sha256": "6799f99d5b2a1f3d3c1bedda1409eeea6bca0840a6ab6057b8078c40a72568da"
+  },
+  "submission_processed": true,
+  "Kaggle_submission": {
+    "index": "Hackaton/Repositorio_IAA2026/registro/semana2_g4_envio_kaggle_actual.json",
+    "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/ENVIO_G4_KAGGLE_20261025.md",
+    "submission_ref": 57628123,
+    "utc": "2026-10-25T11:28:22.152330+00:00",
+    "status": "COMPLETE",
+    "public_score": "0.13310",
+    "new_fit_calls": 0,
+    "2024_closed": true
+  }
+}

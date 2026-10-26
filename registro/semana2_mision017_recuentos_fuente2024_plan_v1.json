@@ -1,0 +1,73 @@
+{
+  "id": "S2-SOURCE-COUNT-LINK2024-v1",
+  "author": "Codex",
+  "utc": "2026-10-26T03:44:34.906708+00:00",
+  "purpose": "Prepare coherent count/mark observation inputs for standard frequency research; no price-model training or performance claim",
+  "prior_evidence": [
+    "FS/FSp frequency uses cost-weighted completion and unadjusted observed marks; it is not automatically a broken pure-premium product",
+    "Own cycle8 used source2023 observed/nominal counts and kept separate count/cost links in target adaptation",
+    "Existing phase1 source reporting models use2021–2023 RKM, a different estimator/cohort from the mature empirical cost curves of the frozen source2021–2024"
+  ],
+  "source_counts": "Exactly the frozen F2 source rows2021–2024; same604 exact-attribute duplicate clones removed; nonrepudiated claims assigned by policy and inclusive loss-date interval; retain zero net amounts",
+  "new_count_curve": {
+    "estimator": "empirical unweighted reporting-delay CDF in mature accepted claims",
+    "valuation": "2024-12-31",
+    "maturity_days_min": 1095,
+    "delay_support": [
+      0,
+      1095
+    ],
+    "normalization": "Conditional on observed delay<=1095, matching the cohort/support of existing cost CDF; tail beyond1095 remains unproven",
+    "precoverage2020": "May contribute reporting history only, never a fabricated policy row"
+  },
+  "cost_curves": "Reuse unchanged full mature cost CDFs and cost mixture in source line_link.json; no new cost curve or target C0 fit",
+  "identities": {
+    "E_N": "nominal inclusive calendar exposure × mean G_count over covered dates",
+    "E_C": "same exposure × existing mean G_cost over covered dates",
+    "mark_observation_multiplier": "E_C/E_N on positive E_N",
+    "coherent_product": "(lambda*E_N) * (mu*E_C/E_N) = lambda*mu*E_C",
+    "warning": "Changing frequency to E_N while retaining observed marks without E_C/E_N does not preserve the ultimate-cost interpretation"
+  },
+  "criteria": [
+    "All source row and per-row net cents match frozen source exactly",
+    "All accepted assigned claim counts reconcile, including zero marks",
+    "Count CDF reproduced by sorted delays/searchsorted",
+    "Existing cost mixture reproduces frozen e_cost",
+    "Direct calendar summation checks on one-day/year-end/full-year records",
+    "No positive count under zero E_N or positive cost under zero E_C may be silently clipped or deleted"
+  ],
+  "zero_exposure": "Retain all rows and flag zero observation exposure. Zero exposure with zero observed response is noninformative for that likelihood, not a coverage exclusion; positive-response violations block downstream modeling.",
+  "budget": {
+    "new_empirical_source_count_CDFs": 15,
+    "new_source_cost_CDFs": 0,
+    "new_emerging_C0_fits": 0,
+    "new_price_fits": 0,
+    "new_price_constants": 0,
+    "new_model_price_inferences": 0,
+    "new_scores": 0,
+    "new_test_predictions": 0,
+    "submissions": 0
+  },
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/preparar_recuentos_fuente2024.py": "af97aa2c8bf37df96de09117427d043f09086f1ddc4e06fe6345908348228e1f",
+    "Hackaton/Repositorio_IAA2026/src/semana2/variables_ultimo.py": "9f40d75e5b0ffafddc9ae6547df8b826825026e88d5f8aabd0258b88bbd0fec2",
+    "Hackaton/Semana 1/Datos/claims.parquet": "323adf2e0f6c5975a026479d725d4cd04f51fce3aa069f897a99f664c6e392c0",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/report.json": "57eda2556d06a969e2586abcc186261ae197cc0fd911977f0b2b296917fbbb1d",
+    "Hackaton/Semana 2/Claude/ml_independiente_20261023/codigo/transfer2.py": "7c50fe735b2988434fa3a10ed3765ad6219d0976641c3f92721a22080418e3f5",
+    "Hackaton/Semana 2/Claude/ml_independiente_20261023/codigo/completitud.py": "c174414cf967e60b5a5e329270948c3cc74c92175246544999426aac7b385c1b",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_robustez2023_ciclo8_plan.json": "64a56e2887bf9fd890dfc0922f848a9d59bc623ef2a123c49124f3ceab60747b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/motor.parquet": "5576c0178b1d17b4a9a3349461241dd2bd3113426388db5c33d320d455f1cf49",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/motor_link.json": "d26fbb21a2d2594aa697cc3dfd7e5630366efbc72286357c75864297c55abd22",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/entradas_temporales_v1/source_reporting_motor.json": "f93a850501aa9acdf82bad646818ce4dbbfed09047056481b4b5f6e8ed1097b1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/buildings.parquet": "0e732f8fba5eba51ee5e10c7fe99b7c9018c2dd63849a2a5bcb2bbf25e14d444",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/buildings_link.json": "5f119eed931a2ebedd7e621957483719229def5daf7da1e82d6155e8ebb5d7f3",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/entradas_temporales_v1/source_reporting_buildings.json": "0f63589a6e14f5a887ce665183d545a1260419066c7744e65e49ba9c31a797e9",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/contents.parquet": "037207ea2f474de6ab858b2e9953b8539bafd01844c733d58ada93aa9815fdbb",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/contents_link.json": "d9b008ca4c11ee1af53aefab3b55beaf9243d07fe2c964441ba048e28f811a45",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/entradas_temporales_v1/source_reporting_contents.json": "66821dd27accd9eb2912e77f7a581216362ecd107e6798b4913a70d7524bd062"
+  },
+  "B00_preserved": true,
+  "all_alternatives_preserved": true,
+  "2024_open_as_adaptive_development": true,
+  "no_new_recipe_for_price_yet": true
+}

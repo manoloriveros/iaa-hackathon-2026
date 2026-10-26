@@ -1,0 +1,57 @@
+{
+  "id": "S2-MISION017-F2-CREIBLE-REPLAY-v1",
+  "author": "Codex",
+  "utc": "2026-10-26T02:52:02.050629+00:00",
+  "purpose": "Audit and reproduce the existing calibrated F2 proposal and its test-portfolio scope; no new model/parameter search",
+  "recipe_author": "Claude",
+  "replay_and_audit_author": "Codex",
+  "base_F2_sha256": "119627d93003a98933d261e773ffaf6e29a7125346367f716a0a411b97dca11a",
+  "fixed_parameters": "Hackaton/Semana 2/Claude/mision017_20261025/final_info_3puntos.json",
+  "expected_CSV_sha256": "1a003d8682f1fcd71ad4a44f59f785d394488fc1cc95e60722f418b04c30ef29",
+  "formula": "F2 -> cell power shape, preserving its cell total -> historical shape-level ratio -> existing credible cell factor/g. Inclusive days/365 full precision.",
+  "checks": [
+    "Match official processed public receipts to the existing parameter audit, never read private_score",
+    "Recompute the existing five cell calibration identities and three predeclared parabolas; compare to fixed parameters without choosing new ones",
+    "Exact CSV SHA replay, official template ID order/schema, finite positive predictions, cell totals and independent log-form arithmetic",
+    "Report target2025 vs historic2023/2024 composition by line/business/exposure bins fixed at .5/.9; do not reweight/select failed models after the fact",
+    "Report extrapolation and sampling/market-shift uncertainty; no claim of intact independent confirmation"
+  ],
+  "limits": [
+    "Motor new-business shape1.3715 extrapolates beyond measured points .6/.8/1; not yet confirmed at1.4",
+    "Credibility depends on historical public/private simulations and common market snapshots, not professional independent review",
+    "Replay does not recover missing corrected A1 source weights or certify complete historical F2 training",
+    "Public-score calibration is adaptive; it does not supply individual hidden2025claim labels",
+    "The full-strength alternative is not constructed or chosen",
+    "Goal0.17 is unproven and predicted public performance is not a processed receipt"
+  ],
+  "budget": {
+    "model_fits": 0,
+    "C0_fits": 0,
+    "new_parameter_fits": 0,
+    "replay_candidate_CSV": 1,
+    "submissions_in_this_unit": 0
+  },
+  "subsequent_submission": "Separate evidence-based admission before any upload. At most one initial candidate; preserve remaining slot. No old queue, no final selection.",
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/reproducir_calibracion_F2_creible.py": "99758b910f8a30539d8a29a1b69248d5be6876c734e91a1112e1638feceb562d",
+    "Hackaton/Semana 2/Claude/mision017_20261025/final_info_3puntos.json": "a3207cb5489dd9ae5600372077d73daca549a2a846c6786226e71f60c7d4619e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/claude_validacion_nocturna_20261023/sonda_segmento/preinscripcion.json": "33e02d95b5fe2a9068ea4cef4bcb0e46b097e86dfbcb8048957c6fdc50825676",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/estado_publico_20261026_v1/receipt.json": "f81ce73c16e33783c66be61c8a72f93d755fa295896a5885057bf04e7643b6dc",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/claude_mision017_20261025/F2_ncb_previos_2025.csv": "119627d93003a98933d261e773ffaf6e29a7125346367f716a0a411b97dca11a",
+    "Hackaton/Semana 2/Claude/mision017_20261025/sigma_forma.json": "c68ce32b300f57687222916c0f62ffdd616763a12a0e6f7da9b425bec2d81801",
+    "Hackaton/Semana 2/Claude/mision017_20261025/recibos_reales_20261026.json": "07049791a5f46b85c672eefe100c4bf011f90a10b95ca393854ff163854fa498",
+    "Hackaton/Semana 2/Claude/mision017_20261025/sondas_F2_info.json": "c304e64884eb4f06e42c9be7482e1dd3d25e22385000cf1a2adbc2cca397363d",
+    "Hackaton/Semana 2/Claude/mision017_20261025/PREINSCRIPCION_FINAL.json": "96c28ad84bb7551ffff008843b1cab186f3653b8c1e9db1183d84344e9ca0252",
+    "Hackaton/Semana 2/Claude/mision017_20261025/codigo/construir_final.py": "cdbf2a4de39ee0e1b9858beb02b40ebd5e64f5eea92b50f0312d8e985cd53c04",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/oof_2023_2024.parquet": "a4652f2abc2663e6793d4076752045d3850111e5e8608ddd31bd3740fc7c11cc",
+    "Hackaton/Semana 2/Datos/emerging/test_motor.parquet": "108d5c68e9bab5ccd90ee5502bc3543aa515a5aa07fda44a3b227cf070a28aa5",
+    "Hackaton/Semana 2/Datos/emerging/test_buildings.parquet": "21f91aaa66a1b9efd216ad0e04ff12a507dbeb721084330d9b9f06c99edd0ca6",
+    "Hackaton/Semana 2/Datos/emerging/test_contents.parquet": "af5ef2553e35a2d563ca091b173500daac55acc4969d1d3a96fa6b4ec3c6a012",
+    "Hackaton/Semana 2/Datos/emerging/sample_submission.parquet": "160fc59043f1012337605c8d8446c0efbf81458e046cf02df9186d6f909d59ef"
+  },
+  "B00_preserved": true,
+  "all_alternatives_preserved": true,
+  "2024_open": true,
+  "2024_is_adaptive_development": true,
+  "no_automatic_submission": true
+}

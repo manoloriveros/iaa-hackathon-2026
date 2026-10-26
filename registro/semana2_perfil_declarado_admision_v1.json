@@ -1,0 +1,49 @@
+{
+  "id": "S2-PERFIL-DECLARADO-ADMISSION-v1-20261025",
+  "utc": "2026-10-25T12:53:30.243502+00:00",
+  "author": "Codex",
+  "fields": [
+    "customers.prior_claims_5y",
+    "customers.gender"
+  ],
+  "old_role": "conditional_undated_profile_not_default",
+  "new_role": "experimental supplied-data conditional benchmark covariates, not historical-asof verified",
+  "official_dictionary": "prior_claims5y refers to self-declaration before joining;genderM/F explicitly permitted for emerging pricing",
+  "public_source": "KaggleMCP live official pages archived ciclo8/official_pages_live_20261025.json; no claim of new publication/change",
+  "no_actual_claim_history_derived": true,
+  "source_market": "emerging only, never cross-market ID join",
+  "year_consistency_check": "customer_since_year <= policy year2023 for every matched row; joining day/capture version unavailable",
+  "scope": "2023 CV;2025 given profiles only after frozen final fits",
+  "historical_quote_timestamp_proven": false,
+  "all_clauses_of_prior_F0_not_rewritten": true,
+  "hard_BLOCKED_fields_unchanged": [
+    "written_premium",
+    "renewal_decision",
+    "customer_service_contacts",
+    "discount_applied",
+    "missed_payments_12m"
+  ],
+  "not_automatic_production_admission": true,
+  "authority": "User authorizes necessary autonomous model improvement; this is Codex experimental scope decision, not human technical approval",
+  "2024_policy_rows_read": 0,
+  "new_fits": 0,
+  "B00_preserved": true,
+  "sources": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/inputs_2023/motor.parquet",
+      "sha256": "44937a7cbedee882e31892d165cc4528310fa188727932ac6821e8190de07003"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/inputs_2023/buildings.parquet",
+      "sha256": "b7b4202cc3e305c2a304d8e7a6aa54ae4548853a0807d45da623c497f9c6f6fd"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev6_20261023T234239Z_fdab9f0b/inputs_2023/contents.parquet",
+      "sha256": "5ebb2bfe03ef15066fa382938bbbfbb93a335d187c8ae8a1880e26997930dbc0"
+    },
+    {
+      "path": "Hackaton/Semana 2/Datos/emerging/customers.parquet",
+      "sha256": "c00a0095d5fb7b2b65cd9647216add49afb3703d863d5c358b1441f0fab1fb62"
+    }
+  ]
+}

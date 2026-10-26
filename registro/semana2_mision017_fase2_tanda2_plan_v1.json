@@ -1,0 +1,66 @@
+{
+  "id": "S2-MISION017-FASE2-TANDA2-v1",
+  "author": "Codex",
+  "utc": "2026-10-26T01:18:41.649907+00:00",
+  "hypothesis": "Las pendientes libres aprendidas con 2023 dañaron la validación 2024. Se prueba la forma T2b conciliada y correcciones cerradas de credibilidad, con dos años de soporte emergente y exclusión conjunta de componentes.",
+  "data": "emerging 2023–2024, cinco folds guardados por componentes cliente-dirección; padre T2b fuente developed 2021–2024 ya congelado y conciliado. Ámbito de información: inicio de 2025; no es un backtest prospectivo de 2024.",
+  "C0": "Reestimar por ramo/fold solo con ocurrencias y grupos de entrenamiento; curvas, marcas, frecuencias y mezcla excluyen el grupo retenido. Conserva el estimador histórico, misma cola base y reserva 1. Sin cambios de siniestros, bandas o particiones.",
+  "models": {
+    "N0": "T2b + nivel Tweedie único por ramo aprendido dentro del fold",
+    "N1": "N0 + factores relativos NCB por negocio en motor y previos 0/1/2+ por negocio en cada ramo, n/(n+300), normalización aprendida solo en entrenamiento y nuevo nivel por ramo",
+    "N2": "T2b con nivel por negocio contraído al del ramo, n/(n+400), sin cambiar forma",
+    "N3": "Forma de N1 y nivel por negocio contraído n/(n+400)"
+  },
+  "criterion": {
+    "primary": "D2 sin pesos del OOF total de ambos años; comparador N0",
+    "delta_min": 0.002,
+    "lower95_gt": 0.0,
+    "positive_folds_min": 4,
+    "min_cell_delta_full_null": -0.001,
+    "post_31_favorable_groups_delta_min": 0.0,
+    "years": "diferencia puntual >=0 en 2023 y en 2024",
+    "secondary": "nuevo/renovación, exposición >=.9, ramos, A/E y nivel; no ajustar sobre etiquetas retenidas ni seleccionar por público"
+  },
+  "bootstrap": {
+    "groups": "saved connected component",
+    "replicates": 2000,
+    "seed": 2026102503,
+    "quantiles": [
+      0.025,
+      0.975
+    ]
+  },
+  "scope_limits": [
+    "2024 desarrollo adaptativo; no promoción formal por política v1",
+    "valoración común de reservas a diciembre 2024",
+    "maestros sin fecha; clima histórico <=2024, nunca 2025",
+    "parent conditional payment/discount snapshot fields retained as historical benchmark",
+    "no se considera que fuente desarrollada aumente soporte emergente"
+  ],
+  "budget": {
+    "new_price_estimator_fits": 0,
+    "new_reporting_peril_fits": 75,
+    "closed_form_level_constants": 105,
+    "bucket_credibility_factors_max": 140,
+    "bucket_normalizers_max": 40,
+    "new_parent_model_fits": 0,
+    "submissions": 0
+  },
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/mision017_fase2_tanda2.py": "70442fc1e28fc6b2e8fc153381fe96b6c3997bd5adf4b5be69e96f5881bfeb45",
+    "Hackaton/Repositorio_IAA2026/src/semana2/variables_ultimo.py": "9f40d75e5b0ffafddc9ae6547df8b826825026e88d5f8aabd0258b88bbd0fec2",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3/partitions.parquet": "a6aca273c7657feb5bddf4fa602658f731decfab5c6eb6528fcd626f12be408b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3/claim_assignment_audit.parquet": "81be34c36682c10e1c02b3592b80c588b1ace1f734521a379fb6809bf3f63a8a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3/target_T0_and_stresses.parquet": "114dd8ae8048a04530855c7be8f8e718ebd9fe969f491c4513fc1fadbd0bcca6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/replay_report.json": "ad2dd077475b99c161c1ab9a25d41acfe314949aeedefa1d4df8e951824c8610",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/raw_rates_buildings.parquet": "ff825920110bcbc06248adac0152e7397912a26dfc6271acc502de17572a8be6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/raw_rates_contents.parquet": "8284d6e7569539d330af7b52b3932643b801c4d98362254467ccd97dac301c45",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/raw_rates_motor.parquet": "5813aeba55ce946582a89bb8d1a13772fd35a20b4840369104b25e2050d635c3",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/features_buildings.parquet": "056e53626aaa696c767f0cc32cec23b2b5c5a244eaa7a3bd0b4fa5ce65ef7f6a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/features_contents.parquet": "b1c66e0ef27ab205d1de695e3ce6ded772c60fd43f0852236f0de074fb8b880b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/features_motor.parquet": "a25e433cdf217c5870447000797a1664551ba2727a64af1cbfc437dc7f596a83"
+  },
+  "B00_preserved": true,
+  "no_automatic_submission": true,
+  "target_public_goal_achieved": false
+}

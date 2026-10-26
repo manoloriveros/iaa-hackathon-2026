@@ -1,0 +1,119 @@
+{
+  "id": "S2-ROBUSTEZ2023-CICLO7-v1-20261025",
+  "utc": "2026-10-25T12:06:48.507858+00:00",
+  "author": "Codex",
+  "forum_prior": "COD-S2-20261025-ROBUSTEZ7-PREVIO",
+  "models": [
+    {
+      "id": "W2-COD-R35",
+      "building_teacher": "source physical, exclude construction, other lines exactR32"
+    },
+    {
+      "id": "W2-COD-R36",
+      "formula": "square(0.5*sqrt(R35)+0.5*sqrt(B20))"
+    },
+    {
+      "id": "W2-COD-R37",
+      "formula": "square(0.25*sqrt(R35)+0.75*sqrt(B20))"
+    }
+  ],
+  "hypothesis": "Remove unsupported construction-code transport without guessing W=timber; fixed sqrt-price pooling dampens uncertain transfer while preserving a p1.5 per-row Jensen bound. No weights fitted or level probes.",
+  "semantic_evidence": "official developed dictionary says timber/non-standard; historic code explicitly says W material unconfirmed. Case aliases and opaqueW are not silently mapped to emerging timber.",
+  "price_fit_budget": 7,
+  "source_fits": 2,
+  "target_building_adapter_fits": 5,
+  "other_line_models_reused": 10,
+  "source_params": "same sourceGLM and source-only residual teacherR32, only remove building construction column",
+  "adapter_params": "same intercept+new_business+region ridge1,source shapes fixed",
+  "folds": "existing five connected groups;only2023",
+  "C0": "exact inherited, no recalculation",
+  "criteria": {
+    "delta_B20": 0.005,
+    "lower_bound": 0.0005,
+    "positive_folds": 4,
+    "segment_harm_full_null": 0.0005,
+    "after31groups": 0.0005
+  },
+  "bootstrap": {
+    "seed": 2026102501,
+    "replicates": 2000,
+    "quantiles": [
+      0.0041666666667,
+      0.9958333333333
+    ]
+  },
+  "preference_if_multiple_pass": [
+    "W2-COD-R37",
+    "W2-COD-R36",
+    "W2-COD-R35"
+  ],
+  "status": "exploratory;no formal promotion;prior adaptive search remains",
+  "2024_closed": true,
+  "B00_preserved": true,
+  "sources": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/fuente_desarrollado2023_fisica_v1/buildings_2023.parquet",
+      "sha256": "21fb3cd93b44689477c278b3485788a2862ee2502f47bd58959deb43ab721f62"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo6_20261025_v1/new_oof_2023.parquet",
+      "sha256": "a9bc99ddb2af0eb1a9f435b656ac1a20d4db025a37f0de63020eee930eec0aab"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/oof_2023.parquet",
+      "sha256": "4fa0052e2ce708abac2414d2fa5536a703a79b214439a755e835890104356d9b"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold0.parquet",
+      "sha256": "e7a230e9256610c75d017c09ce26952d32aa79fd29c0b81ee3f8579c9a2a6126"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold1.parquet",
+      "sha256": "78a3b3a7c7d662b6ad6533808989334f48d77665d601124fbbddbb2591b89f9a"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold2.parquet",
+      "sha256": "1d342f21384ae5bb85be042bd4943acb75746e70146a5f9a271be4f031d5b206"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold3.parquet",
+      "sha256": "b065d9ecd0c8be3b18411be89b719856d08faf4c7ef70b45e33fd4c69f9efa9d"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold4.parquet",
+      "sha256": "cf7bb6b579ada600613dc14b4e76d7b8c0492c6b7086e871b7f12be11d187de3"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/robustez2023_ciclo7.py",
+      "sha256": "e8486005c51841909564e5e4f82f58e7869dd5f7e408dbc7fb01138dca6a792c"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelo_profesor_comun2023.py",
+      "sha256": "b8fffff61f16da937b206299685dbe3be9c4fb97f5c5ee0c2b4ef544a0749279"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelos_robustos2023.py",
+      "sha256": "af3dcaf489367def2cb29a9785e8003cb12bd2f3378062bd274919e080466bf8"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/evaluar_robustez2023.py",
+      "sha256": "76dd533015997730b956f6ac1e40d7c6dc36d3d671570c342da70c691ffea63b"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelo_transferencia2023_v2.py",
+      "sha256": "6737d8c4e63d28e80df82dcb69bdb43e1ddcf4e68329b61dcd4bd74230a7a1d1"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelos_robustos_compuestos2023.py",
+      "sha256": "b70429dde8717039c7f69174aeebdba90a461580bfd5657c0cac34ebdf75c86a"
+    },
+    {
+      "path": "Hackaton/Semana 1/Revision_construccion/analyze_construction.py",
+      "sha256": "436d7dbb28da2f7f2dcb3f54464d110e6a5172096f487ac73032f59eeac80777"
+    },
+    {
+      "path": "Hackaton/Semana 1/Revision_construccion/runs/construction_20261016T192514Z_779b361e/evidence/official_data_description.md",
+      "sha256": "787803ba12ddd9fba91cc913aea5ae96fd61cc3311c1b4926d4fb96870e9fc65"
+    }
+  ]
+}

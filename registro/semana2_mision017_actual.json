@@ -1,0 +1,2654 @@
+{
+  "id": "S2-MISION017-v1-20261025",
+  "author": "Codex",
+  "utc": "2026-10-26T01:00:29.792060+00:00",
+  "target_own_public_score": 0.17,
+  "status": "active_phase2_2024_authorized",
+  "user_instruction": "la misión es llegar a 0.17, sigue haciendo las mejoras que sean necesarias, pero que sean consistentes y robustas",
+  "scope": "autonomous necessary local work and own authorized Kaggle submissions;2024closed,B00/allalternatives preserved;no remote/delegation/otherchat/automation changes",
+  "best_own_processed_public": {
+    "model_id": "W2-COD-R36-FINAL",
+    "submission": 57629589,
+    "score": 0.14331,
+    "receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/entrega_20261025_v1/public_check02.json"
+  },
+  "inherited_cycles": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "new_cycles": [
+    {
+      "cycle": 15,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo15_20261025_v1/report.json",
+      "sha256": "8a4eba285427610a5eac0960e89044eab555af143a59c2f559171a23c5d93cee",
+      "gates": [
+        {
+          "model_id": "W2-COD-R55",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": true,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R54",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R57",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": true,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R56",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        }
+      ],
+      "summaries": [
+        {
+          "model_id": "W2-B00",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15614394.394606076,
+          "deviance_sum": 5160891.515933607,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.06858168733600944,
+          "AE": 0.9796796118640577
+        },
+        {
+          "model_id": "W2-B20",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15126408.703486292,
+          "deviance_sum": 5045640.3340719845,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.08938178766957827,
+          "AE": 1.0112845778439377
+        },
+        {
+          "model_id": "W2-COD-R36",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15308753.45189023,
+          "deviance_sum": 4928422.76651804,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11053677390569605,
+          "AE": 0.9992390228292042
+        },
+        {
+          "model_id": "W2-COD-R54",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15104478.97069799,
+          "deviance_sum": 4950794.323080764,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10649923942139472,
+          "AE": 1.0127528311089509
+        },
+        {
+          "model_id": "W2-COD-R55",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15301044.519576708,
+          "deviance_sum": 4930785.759029953,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11011030989429638,
+          "AE": 0.9997424568256327
+        },
+        {
+          "model_id": "W2-COD-R56",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15364090.690671567,
+          "deviance_sum": 4938563.206932498,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10870666531470075,
+          "AE": 0.995640038058859
+        },
+        {
+          "model_id": "W2-COD-R57",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15863064.781255238,
+          "deviance_sum": 4914488.051772676,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11305165887382784,
+          "AE": 0.9643220935513034
+        }
+      ],
+      "new_price_fits": 30
+    },
+    {
+      "cycle": 16,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo16_20261025_v1/report.json",
+      "sha256": "d74394ca18e90ebf321691b46a57c4abc3bdff66dd554bbf4e2d0712fc6a53a5",
+      "gates": [
+        {
+          "model_id": "W2-COD-R58",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R59",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R60",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R61",
+          "checks": {
+            "material_gain": true,
+            "lower_bound": false,
+            "four_folds": true,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        }
+      ],
+      "summaries": [
+        {
+          "model_id": "W2-B00",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15614394.394606076,
+          "deviance_sum": 5160891.515933607,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.06858168733600944,
+          "AE": 0.9796796118640577
+        },
+        {
+          "model_id": "W2-B20",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15126408.703486292,
+          "deviance_sum": 5045640.3340719845,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.08938178766957827,
+          "AE": 1.0112845778439377
+        },
+        {
+          "model_id": "W2-COD-R36",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15308753.45189023,
+          "deviance_sum": 4928422.76651804,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11053677390569605,
+          "AE": 0.9992390228292042
+        },
+        {
+          "model_id": "W2-COD-R58",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15609683.89548263,
+          "deviance_sum": 4921265.426026186,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.1118285038293928,
+          "AE": 0.9799752475722402
+        },
+        {
+          "model_id": "W2-COD-R59",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15596823.177913344,
+          "deviance_sum": 4917144.0964911515,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.112572305901109,
+          "AE": 0.9807833085946774
+        },
+        {
+          "model_id": "W2-COD-R60",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15342433.358895048,
+          "deviance_sum": 4901985.694702424,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11530803730975214,
+          "AE": 0.9970454804766176
+        },
+        {
+          "model_id": "W2-COD-R61",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15341694.909950037,
+          "deviance_sum": 4900691.315858532,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11554164194085204,
+          "AE": 0.9970934717310069
+        }
+      ],
+      "new_price_fits": 30
+    },
+    {
+      "cycle": 17,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo17_20261025_v1/report.json",
+      "sha256": "03d4344a22921339231d694115fd24da0a587405c2008895bd78ddfe98059486",
+      "gates": [
+        {
+          "model_id": "W2-COD-R62",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R63",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R64",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R65",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": true,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        }
+      ],
+      "summaries": [
+        {
+          "model_id": "W2-B00",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15614394.394606076,
+          "deviance_sum": 5160891.515933607,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.06858168733600944,
+          "AE": 0.9796796118640577
+        },
+        {
+          "model_id": "W2-B20",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15126408.703486292,
+          "deviance_sum": 5045640.3340719845,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.08938178766957827,
+          "AE": 1.0112845778439377
+        },
+        {
+          "model_id": "W2-COD-R36",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15308753.45189023,
+          "deviance_sum": 4928422.76651804,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11053677390569605,
+          "AE": 0.9992390228292042
+        },
+        {
+          "model_id": "W2-COD-R62",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15228051.89727678,
+          "deviance_sum": 4982756.544100545,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10073081784552429,
+          "AE": 1.0045345224188242
+        },
+        {
+          "model_id": "W2-COD-R63",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15313562.514098072,
+          "deviance_sum": 4932947.434318507,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10972017885907182,
+          "AE": 0.9989252223913985
+        },
+        {
+          "model_id": "W2-COD-R64",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15493215.107594647,
+          "deviance_sum": 4960589.253597747,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10473148715870484,
+          "AE": 0.9873421193578785
+        },
+        {
+          "model_id": "W2-COD-R65",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15796462.563845325,
+          "deviance_sum": 4901998.597494513,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11530570866230838,
+          "AE": 0.9683879399057198
+        }
+      ],
+      "new_price_fits": 60
+    },
+    {
+      "cycle": 18,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo18_20261025_v1/report.json",
+      "sha256": "38bc7ab9598cd338152900ff36ab1b76676ab0bb8df20b4936d8fe01265a4766",
+      "gates": [
+        {
+          "model_id": "W2-COD-R66",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R68",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": true,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        }
+      ],
+      "summaries": [
+        {
+          "model_id": "W2-B00",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15614394.394606076,
+          "deviance_sum": 5160891.515933607,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.06858168733600944,
+          "AE": 0.9796796118640577
+        },
+        {
+          "model_id": "W2-B20",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15126408.703486292,
+          "deviance_sum": 5045640.3340719845,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.08938178766957827,
+          "AE": 1.0112845778439377
+        },
+        {
+          "model_id": "W2-COD-R36",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15308753.45189023,
+          "deviance_sum": 4928422.76651804,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11053677390569605,
+          "AE": 0.9992390228292042
+        },
+        {
+          "model_id": "W2-COD-R66",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15311986.365767453,
+          "deviance_sum": 4936607.62592327,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10905960122863523,
+          "AE": 0.9990280473472256
+        },
+        {
+          "model_id": "W2-COD-R68",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15790482.053772237,
+          "deviance_sum": 4903909.4384973,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11496084725665967,
+          "AE": 0.9687547085584779
+        }
+      ],
+      "new_price_fits": 24
+    },
+    {
+      "cycle": 19,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo19_20261025_v1/report.json",
+      "sha256": "394cef4d1daf9f8251174427014d8284b8752e8490938aca00bb07788c029ae3",
+      "gates": [
+        {
+          "model_id": "W2-COD-R70",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R71",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R72",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R73",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        }
+      ],
+      "summaries": [
+        {
+          "model_id": "W2-B00",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15614394.394606076,
+          "deviance_sum": 5160891.515933607,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.06858168733600944,
+          "AE": 0.9796796118640577
+        },
+        {
+          "model_id": "W2-B20",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15126408.703486292,
+          "deviance_sum": 5045640.3340719845,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.08938178766957827,
+          "AE": 1.0112845778439377
+        },
+        {
+          "model_id": "W2-COD-R36",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15308753.45189023,
+          "deviance_sum": 4928422.76651804,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11053677390569605,
+          "AE": 0.9992390228292042
+        },
+        {
+          "model_id": "W2-COD-R70",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15210025.231154151,
+          "deviance_sum": 4955370.061117655,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10567342741035857,
+          "AE": 1.0057250798419117
+        },
+        {
+          "model_id": "W2-COD-R71",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15206591.849728834,
+          "deviance_sum": 4955783.22075154,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.1055988619117686,
+          "AE": 1.0059521549052939
+        },
+        {
+          "model_id": "W2-COD-R72",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15561337.801209673,
+          "deviance_sum": 4939428.213861154,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.1085505521138237,
+          "AE": 0.9830198428576538
+        },
+        {
+          "model_id": "W2-COD-R73",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15554441.2818316,
+          "deviance_sum": 4940307.424731193,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10839187543896645,
+          "AE": 0.983455693639592
+        }
+      ],
+      "new_price_fits": 30
+    },
+    {
+      "cycle": 20,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo20_20261025_v1/report.json",
+      "sha256": "e1415ce4d137ddd145e061e704bd3cbd74dcf410ffe9246930a982cd782c11e6",
+      "gates": [
+        {
+          "model_id": "W2-COD-R74",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false,
+            "age_distribution_stress": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R75",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": true,
+            "not_few_groups": false,
+            "age_distribution_stress": true
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R76",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false,
+            "age_distribution_stress": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R77",
+          "checks": {
+            "material_gain": true,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false,
+            "age_distribution_stress": true
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        }
+      ],
+      "summaries": [
+        {
+          "model_id": "W2-B00",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15614394.394606076,
+          "deviance_sum": 5160891.515933607,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.06858168733600944,
+          "AE": 0.9796796118640577
+        },
+        {
+          "model_id": "W2-B20",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15126408.703486292,
+          "deviance_sum": 5045640.3340719845,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.08938178766957827,
+          "AE": 1.0112845778439377
+        },
+        {
+          "model_id": "W2-COD-R36",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15308753.45189023,
+          "deviance_sum": 4928422.76651804,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11053677390569605,
+          "AE": 0.9992390228292042
+        },
+        {
+          "model_id": "W2-COD-R74",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15248215.306457516,
+          "deviance_sum": 4977825.834527995,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10162069378578031,
+          "AE": 1.003206180694588
+        },
+        {
+          "model_id": "W2-COD-R75",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15311616.489993107,
+          "deviance_sum": 4928337.218853974,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11055221322672626,
+          "AE": 0.9990521804146159
+        },
+        {
+          "model_id": "W2-COD-R76",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15550046.187328663,
+          "deviance_sum": 4954571.35114955,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10581757558485583,
+          "AE": 0.9837336594193026
+        },
+        {
+          "model_id": "W2-COD-R77",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15806785.161414344,
+          "deviance_sum": 4895453.32490023,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11648697487123194,
+          "AE": 0.9677555356000841
+        }
+      ],
+      "new_price_fits": 42
+    },
+    {
+      "cycle": 21,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo21_20261025_v1/report.json",
+      "sha256": "c00acd56ad40076b2aac64c2dc0cecbd3af3e9399e570358bb82f5cc307f9b97",
+      "gates": [],
+      "summaries": [
+        {
+          "model_id": "W2-B00",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15614394.394606076,
+          "deviance_sum": 5160891.515933607,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.06858168733600944,
+          "AE": 0.9796796118640577
+        },
+        {
+          "model_id": "W2-B20",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15126408.703486292,
+          "deviance_sum": 5045640.3340719845,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.08938178766957827,
+          "AE": 1.0112845778439377
+        },
+        {
+          "model_id": "W2-COD-R36",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15308753.45189023,
+          "deviance_sum": 4928422.76651804,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11053677390569605,
+          "AE": 0.9992390228292042
+        }
+      ],
+      "new_price_fits": 12
+    },
+    {
+      "cycle": 22,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo22_20261025_v1/report.json",
+      "sha256": "fce610be2ab1918708f13afbfc0c5194f187d2e709a9ca910e62e1568c513a1b",
+      "gates": [
+        {
+          "model_id": "W2-COD-R82",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R84",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        }
+      ],
+      "summaries": [
+        {
+          "model_id": "W2-B00",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15614394.394606076,
+          "deviance_sum": 5160891.515933607,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.06858168733600944,
+          "AE": 0.9796796118640577
+        },
+        {
+          "model_id": "W2-B20",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15126408.703486292,
+          "deviance_sum": 5045640.3340719845,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.08938178766957827,
+          "AE": 1.0112845778439377
+        },
+        {
+          "model_id": "W2-COD-R36",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15308753.45189023,
+          "deviance_sum": 4928422.76651804,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11053677390569605,
+          "AE": 0.9992390228292042
+        },
+        {
+          "model_id": "W2-COD-R82",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15214810.334023066,
+          "deviance_sum": 4982942.048164777,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10069733876890241,
+          "AE": 1.0054087763284771
+        },
+        {
+          "model_id": "W2-COD-R84",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15455942.169952497,
+          "deviance_sum": 4959192.7111972645,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10498352988469606,
+          "AE": 0.989723154486092
+        }
+      ],
+      "new_price_fits": 48
+    },
+    {
+      "cycle": 23,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo23_20261025_v1/report.json",
+      "sha256": "ab599b4ee34fbfd071e377cc1b8b1eae886e73896bfebb94fb19615c14fcade5",
+      "gates": [
+        {
+          "model_id": "W2-COD-R87",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": true,
+            "segment_harm": true,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R86",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": true,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R89",
+          "checks": {
+            "material_gain": true,
+            "lower_bound": false,
+            "four_folds": true,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R88",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": true,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        }
+      ],
+      "summaries": [
+        {
+          "model_id": "W2-B00",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15614394.394606076,
+          "deviance_sum": 5160891.515933607,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.06858168733600944,
+          "AE": 0.9796796118640577
+        },
+        {
+          "model_id": "W2-B20",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15126408.703486292,
+          "deviance_sum": 5045640.3340719845,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.08938178766957827,
+          "AE": 1.0112845778439377
+        },
+        {
+          "model_id": "W2-COD-R36",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15308753.45189023,
+          "deviance_sum": 4928422.76651804,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11053677390569605,
+          "AE": 0.9992390228292042
+        },
+        {
+          "model_id": "W2-COD-R86",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15340189.875996869,
+          "deviance_sum": 4934213.000015075,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10949177431655743,
+          "AE": 0.9971912970865969
+        },
+        {
+          "model_id": "W2-COD-R87",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15321402.460283935,
+          "deviance_sum": 4923756.366548885,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11137894824167405,
+          "AE": 0.9984140733626101
+        },
+        {
+          "model_id": "W2-COD-R88",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15885666.16008345,
+          "deviance_sum": 4906348.5735316,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11452064132886741,
+          "AE": 0.9629501014214717
+        },
+        {
+          "model_id": "W2-COD-R89",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15887665.227032844,
+          "deviance_sum": 4899283.238026868,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11579576653812729,
+          "AE": 0.9628289381357303
+        }
+      ],
+      "new_price_fits": 30
+    },
+    {
+      "cycle": 24,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo24_20261025_v1/report.json",
+      "sha256": "c15c10a9fda8a2bb6eb02d58bcf96949f71a905c1e157c184709c92bbb3232bf",
+      "gates": [
+        {
+          "model_id": "W2-COD-R90",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R91",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": true,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R92",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R93",
+          "checks": {
+            "material_gain": true,
+            "lower_bound": false,
+            "four_folds": true,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        }
+      ],
+      "summaries": [
+        {
+          "model_id": "W2-B00",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15614394.394606076,
+          "deviance_sum": 5160891.515933607,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.06858168733600944,
+          "AE": 0.9796796118640577
+        },
+        {
+          "model_id": "W2-B20",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15126408.703486292,
+          "deviance_sum": 5045640.3340719845,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.08938178766957827,
+          "AE": 1.0112845778439377
+        },
+        {
+          "model_id": "W2-COD-R36",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15308753.45189023,
+          "deviance_sum": 4928422.76651804,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11053677390569605,
+          "AE": 0.9992390228292042
+        },
+        {
+          "model_id": "W2-COD-R90",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15312886.430578649,
+          "deviance_sum": 4981166.163928555,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10101784368431899,
+          "AE": 0.9989693262174836
+        },
+        {
+          "model_id": "W2-COD-R91",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15332820.084468313,
+          "deviance_sum": 4927210.101876686,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11075563106450081,
+          "AE": 0.9976706017372178
+        },
+        {
+          "model_id": "W2-COD-R92",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15712106.290726665,
+          "deviance_sum": 4966355.984921623,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10369072915348643,
+          "AE": 0.9735870899134891
+        },
+        {
+          "model_id": "W2-COD-R93",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15869013.467243422,
+          "deviance_sum": 4897213.495241566,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11616930594053143,
+          "AE": 0.9639606060941376
+        }
+      ],
+      "new_price_fits": 66
+    },
+    {
+      "cycle": 25,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo25_20261025_v1/report.json",
+      "sha256": "482e2905aaaa28f20daf9d63a174dda81b6ec5558fbc6cb8a1ab5684fc320049",
+      "gates": [],
+      "summaries": [
+        {
+          "model_id": "W2-B00",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15614394.394606076,
+          "deviance_sum": 5160891.515933607,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.06858168733600944,
+          "AE": 0.9796796118640577
+        },
+        {
+          "model_id": "W2-B20",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15126408.703486292,
+          "deviance_sum": 5045640.3340719845,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.08938178766957827,
+          "AE": 1.0112845778439377
+        },
+        {
+          "model_id": "W2-COD-R36",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15308753.45189023,
+          "deviance_sum": 4928422.76651804,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11053677390569605,
+          "AE": 0.9992390228292042
+        }
+      ],
+      "new_price_fits": 45
+    },
+    {
+      "cycle": 26,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo26_20261025_v1/report.json",
+      "sha256": "30bd6d113090dd12b0795e4a267492c73e5df8da171b097470d0d764258482d0",
+      "gates": [
+        {
+          "model_id": "W2-COD-R98",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R100",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        }
+      ],
+      "summaries": [
+        {
+          "model_id": "W2-B00",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15614394.394606076,
+          "deviance_sum": 5160891.515933607,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.06858168733600944,
+          "AE": 0.9796796118640577
+        },
+        {
+          "model_id": "W2-B20",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15126408.703486292,
+          "deviance_sum": 5045640.3340719845,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.08938178766957827,
+          "AE": 1.0112845778439377
+        },
+        {
+          "model_id": "W2-COD-R100",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15524297.544603623,
+          "deviance_sum": 4962780.0211306205,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10433610566451756,
+          "AE": 0.985365282780051
+        },
+        {
+          "model_id": "W2-COD-R36",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15308753.45189023,
+          "deviance_sum": 4928422.76651804,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11053677390569605,
+          "AE": 0.9992390228292042
+        },
+        {
+          "model_id": "W2-COD-R98",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15238363.021392789,
+          "deviance_sum": 4982623.443131298,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10075483940842822,
+          "AE": 1.0038547984796495
+        }
+      ],
+      "new_price_fits": 48
+    },
+    {
+      "cycle": 27,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo27_20261025_v1/report.json",
+      "sha256": "2374170c08bc9844bc0283171055775c65832891398173fc4abaef440e018294",
+      "gates": [
+        {
+          "model_id": "W2-COD-R102",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": true,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R103",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": true,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R104",
+          "checks": {
+            "material_gain": true,
+            "lower_bound": false,
+            "four_folds": true,
+            "segment_harm": true,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R105",
+          "checks": {
+            "material_gain": true,
+            "lower_bound": false,
+            "four_folds": true,
+            "segment_harm": true,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        }
+      ],
+      "summaries": [
+        {
+          "model_id": "W2-B00",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15614394.394606076,
+          "deviance_sum": 5160891.515933607,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.06858168733600944,
+          "AE": 0.9796796118640577
+        },
+        {
+          "model_id": "W2-B20",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15126408.703486292,
+          "deviance_sum": 5045640.3340719845,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.08938178766957827,
+          "AE": 1.0112845778439377
+        },
+        {
+          "model_id": "W2-COD-R102",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15302620.740122957,
+          "deviance_sum": 4923230.371952236,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11147387777045181,
+          "AE": 0.9996394800461537
+        },
+        {
+          "model_id": "W2-COD-R103",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15303860.15892497,
+          "deviance_sum": 4922475.82986214,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11161005469225327,
+          "AE": 0.9995585219118047
+        },
+        {
+          "model_id": "W2-COD-R104",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15528284.989837732,
+          "deviance_sum": 4884306.908525331,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11849863822437656,
+          "AE": 0.9851122548311662
+        },
+        {
+          "model_id": "W2-COD-R105",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15536995.782248754,
+          "deviance_sum": 4884371.119575916,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.1184870496551913,
+          "AE": 0.9845599531845897
+        },
+        {
+          "model_id": "W2-COD-R36",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15308753.45189023,
+          "deviance_sum": 4928422.76651804,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11053677390569605,
+          "AE": 0.9992390228292042
+        }
+      ],
+      "new_price_fits": 10
+    },
+    {
+      "cycle": 28,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo28_20261025_v1/report.json",
+      "sha256": "04148e51ea3708f265081f02f7e280fa886b2693a40a065c48610aa4ec651ee2",
+      "gates": [
+        {
+          "model_id": "W2-COD-R106",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": true,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R107",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": true,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R108",
+          "checks": {
+            "material_gain": true,
+            "lower_bound": false,
+            "four_folds": true,
+            "segment_harm": true,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R109",
+          "checks": {
+            "material_gain": true,
+            "lower_bound": false,
+            "four_folds": true,
+            "segment_harm": true,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        }
+      ],
+      "summaries": [
+        {
+          "model_id": "W2-B00",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15614394.394606076,
+          "deviance_sum": 5160891.515933607,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.06858168733600944,
+          "AE": 0.9796796118640577
+        },
+        {
+          "model_id": "W2-B20",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15126408.703486292,
+          "deviance_sum": 5045640.3340719845,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.08938178766957827,
+          "AE": 1.0112845778439377
+        },
+        {
+          "model_id": "W2-COD-R106",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15316246.28380584,
+          "deviance_sum": 4927384.367975034,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11072418017374352,
+          "AE": 0.9987501869941802
+        },
+        {
+          "model_id": "W2-COD-R107",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15317452.795773733,
+          "deviance_sum": 4926624.868614538,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11086125176508366,
+          "AE": 0.9986715182971317
+        },
+        {
+          "model_id": "W2-COD-R108",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15546709.2944968,
+          "deviance_sum": 4891123.518327494,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11726840209551836,
+          "AE": 0.9839448046677534
+        },
+        {
+          "model_id": "W2-COD-R109",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15555324.581177142,
+          "deviance_sum": 4891222.926396386,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11725046130069516,
+          "AE": 0.9833998487251366
+        },
+        {
+          "model_id": "W2-COD-R36",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15308753.45189023,
+          "deviance_sum": 4928422.76651804,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11053677390569605,
+          "AE": 0.9992390228292042
+        }
+      ],
+      "new_price_fits": 10
+    },
+    {
+      "cycle": 29,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo29_20261025_v1/report.json",
+      "sha256": "1e36cb9a5f7795c3ac7f5c9f334c1fce973fccf07dd664b4a944a7da5910ea35",
+      "gates": [
+        {
+          "model_id": "W2-COD-R110",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": true,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R111",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": true,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R112",
+          "checks": {
+            "material_gain": true,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": true,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R113",
+          "checks": {
+            "material_gain": true,
+            "lower_bound": false,
+            "four_folds": true,
+            "segment_harm": true,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R115",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R114",
+          "checks": {
+            "material_gain": true,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": true,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        }
+      ],
+      "summaries": [
+        {
+          "model_id": "W2-B00",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15614394.394606076,
+          "deviance_sum": 5160891.515933607,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.06858168733600944,
+          "AE": 0.9796796118640577
+        },
+        {
+          "model_id": "W2-B20",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15126408.703486292,
+          "deviance_sum": 5045640.3340719845,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.08938178766957827,
+          "AE": 1.0112845778439377
+        },
+        {
+          "model_id": "W2-COD-R110",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15315968.750536412,
+          "deviance_sum": 4926660.455875578,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11085482910990319,
+          "AE": 0.9987682848637471
+        },
+        {
+          "model_id": "W2-COD-R111",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15317131.980140563,
+          "deviance_sum": 4925910.814017532,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11099012165623312,
+          "AE": 0.9986924353614939
+        },
+        {
+          "model_id": "W2-COD-R112",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15551802.900148652,
+          "deviance_sum": 4891134.985728385,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11726633250208562,
+          "AE": 0.9836225380565865
+        },
+        {
+          "model_id": "W2-COD-R113",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15560346.90575441,
+          "deviance_sum": 4891207.2616877975,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11725328840845284,
+          "AE": 0.9830824423549928
+        },
+        {
+          "model_id": "W2-COD-R114",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15556963.051185388,
+          "deviance_sum": 4897992.502118392,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11602871370592871,
+          "AE": 0.9832962763792392
+        },
+        {
+          "model_id": "W2-COD-R115",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15322647.089935068,
+          "deviance_sum": 4931908.456404423,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10990768968983489,
+          "AE": 0.998332974075227
+        },
+        {
+          "model_id": "W2-COD-R36",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15308753.45189023,
+          "deviance_sum": 4928422.76651804,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11053677390569605,
+          "AE": 0.9992390228292042
+        }
+      ],
+      "new_price_fits": 22
+    },
+    {
+      "cycle": 30,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo30_20261025_v1/report.json",
+      "sha256": "36966bb741ab1a2268ada957cb94fb4ab7e80a681fcd2c2132add5305fb2ab2b",
+      "gates": [
+        {
+          "model_id": "W2-COD-R116",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R117",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R118",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R119",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        }
+      ],
+      "summaries": [
+        {
+          "model_id": "W2-B00",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15614394.394606076,
+          "deviance_sum": 5160891.515933607,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.06858168733600944,
+          "AE": 0.9796796118640577
+        },
+        {
+          "model_id": "W2-B20",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15126408.703486292,
+          "deviance_sum": 5045640.3340719845,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.08938178766957827,
+          "AE": 1.0112845778439377
+        },
+        {
+          "model_id": "W2-COD-R116",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15231559.401859658,
+          "deviance_sum": 4972968.862658683,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.1024972618223694,
+          "AE": 1.0043031994565401
+        },
+        {
+          "model_id": "W2-COD-R117",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15014816.842819773,
+          "deviance_sum": 4973819.113917141,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10234381166941653,
+          "AE": 1.0188005621470648
+        },
+        {
+          "model_id": "W2-COD-R118",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15576985.000227442,
+          "deviance_sum": 4967314.297142463,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10351777656399996,
+          "AE": 0.982032392005041
+        },
+        {
+          "model_id": "W2-COD-R119",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15244842.181039568,
+          "deviance_sum": 5001362.43470248,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.09737289660719539,
+          "AE": 1.0034281534921647
+        },
+        {
+          "model_id": "W2-COD-R36",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15308753.45189023,
+          "deviance_sum": 4928422.76651804,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11053677390569605,
+          "AE": 0.9992390228292042
+        }
+      ],
+      "new_price_fits": 30
+    },
+    {
+      "cycle": 31,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo31_20261025_v1/report.json",
+      "sha256": "fb8fcb0e04d2c1a4235af28600c2e754cf3417aec56669d29ff81bf25224d471",
+      "gates": [],
+      "summaries": [
+        {
+          "model_id": "W2-B00",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15614394.394606076,
+          "deviance_sum": 5160891.515933607,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.06858168733600944,
+          "AE": 0.9796796118640577
+        },
+        {
+          "model_id": "W2-B20",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15126408.703486292,
+          "deviance_sum": 5045640.3340719845,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.08938178766957827,
+          "AE": 1.0112845778439377
+        },
+        {
+          "model_id": "W2-COD-R36",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15308753.45189023,
+          "deviance_sum": 4928422.76651804,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11053677390569605,
+          "AE": 0.9992390228292042
+        }
+      ],
+      "new_price_fits": 30
+    },
+    {
+      "cycle": 32,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo32_20261025_v1/report.json",
+      "sha256": "3edaa43c74646204ea32ff72568c157a5876912a0f2390554426c3a7b05c99bc",
+      "gates": [
+        {
+          "model_id": "W2-COD-R124",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": true,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R125",
+          "checks": {
+            "material_gain": true,
+            "lower_bound": false,
+            "four_folds": true,
+            "segment_harm": true,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R126",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R127",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": true,
+            "segment_harm": true,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        }
+      ],
+      "summaries": [
+        {
+          "model_id": "W2-B00",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15614394.394606076,
+          "deviance_sum": 5160891.515933607,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.06858168733600944,
+          "AE": 0.9796796118640577
+        },
+        {
+          "model_id": "W2-B20",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15126408.703486292,
+          "deviance_sum": 5045640.3340719845,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.08938178766957827,
+          "AE": 1.0112845778439377
+        },
+        {
+          "model_id": "W2-COD-R124",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15256866.937671944,
+          "deviance_sum": 4933095.515725097,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.109693453683114,
+          "AE": 1.0026372978470897
+        },
+        {
+          "model_id": "W2-COD-R125",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15397197.546031833,
+          "deviance_sum": 4893486.561320778,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11684192897343049,
+          "AE": 0.9934992257043797
+        },
+        {
+          "model_id": "W2-COD-R126",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15265823.100063303,
+          "deviance_sum": 4938624.0486103855,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10869568483724212,
+          "AE": 1.0020490699867055
+        },
+        {
+          "model_id": "W2-COD-R127",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15408761.583143814,
+          "deviance_sum": 4901040.089138392,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11547869664955357,
+          "AE": 0.992753619910249
+        },
+        {
+          "model_id": "W2-COD-R36",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15308753.45189023,
+          "deviance_sum": 4928422.76651804,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11053677390569605,
+          "AE": 0.9992390228292042
+        }
+      ],
+      "new_price_fits": 17
+    },
+    {
+      "cycle": 33,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo33_20261025_v1/report.json",
+      "sha256": "027f84b7390f1d9c2d545366eef9da13a3d9799f48b75e7e8592f27f3d0a043f",
+      "gates": [
+        {
+          "model_id": "W2-COD-R128",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R129",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": true,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R130",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R131",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": true,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        }
+      ],
+      "summaries": [
+        {
+          "model_id": "W2-B00",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15614394.394606076,
+          "deviance_sum": 5160891.515933607,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.06858168733600944,
+          "AE": 0.9796796118640577
+        },
+        {
+          "model_id": "W2-B20",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15126408.703486292,
+          "deviance_sum": 5045640.3340719845,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.08938178766957827,
+          "AE": 1.0112845778439377
+        },
+        {
+          "model_id": "W2-COD-R128",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15242506.531637765,
+          "deviance_sum": 4939203.161056751,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10859116879849728,
+          "AE": 1.0035819114296531
+        },
+        {
+          "model_id": "W2-COD-R129",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15299731.000747293,
+          "deviance_sum": 4927938.457668132,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11062418014750452,
+          "AE": 0.99982828712824
+        },
+        {
+          "model_id": "W2-COD-R130",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15397619.252115712,
+          "deviance_sum": 4946904.38022968,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.1072012816936515,
+          "AE": 0.9934720160000124
+        },
+        {
+          "model_id": "W2-COD-R131",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15557445.121897113,
+          "deviance_sum": 4931308.684432469,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.1100159342821454,
+          "AE": 0.9832658074730611
+        },
+        {
+          "model_id": "W2-COD-R36",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15308753.45189023,
+          "deviance_sum": 4928422.76651804,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11053677390569605,
+          "AE": 0.9992390228292042
+        }
+      ],
+      "new_price_fits": 22
+    },
+    {
+      "cycle": 34,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo34_20261025_v1/report.json",
+      "sha256": "f553e37fd4ae16ec676987eed68cd95fd42a36c88ad58ab190f1673f708f059c",
+      "gates": [],
+      "summaries": [
+        {
+          "model_id": "W2-B00",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15614394.394606076,
+          "deviance_sum": 5160891.515933607,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.06858168733600944,
+          "AE": 0.9796796118640577
+        },
+        {
+          "model_id": "W2-B20",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15126408.703486292,
+          "deviance_sum": 5045640.3340719845,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.08938178766957827,
+          "AE": 1.0112845778439377
+        },
+        {
+          "model_id": "W2-COD-R36",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15308753.45189023,
+          "deviance_sum": 4928422.76651804,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11053677390569605,
+          "AE": 0.9992390228292042
+        }
+      ],
+      "new_price_fits": 0
+    },
+    {
+      "cycle": 35,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo35_20261025_v1/report.json",
+      "sha256": "f662b1c6ef510a05ddfca780967fc984cd875c6aadb7a2815ec6f5221fb114b9",
+      "gates": [
+        {
+          "model_id": "W2-COD-R136",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R137",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": true,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R138",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R139",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        }
+      ],
+      "summaries": [
+        {
+          "model_id": "W2-B00",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15614394.394606076,
+          "deviance_sum": 5160891.515933607,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.06858168733600944,
+          "AE": 0.9796796118640577
+        },
+        {
+          "model_id": "W2-B20",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15126408.703486292,
+          "deviance_sum": 5045640.3340719845,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.08938178766957827,
+          "AE": 1.0112845778439377
+        },
+        {
+          "model_id": "W2-COD-R136",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15266752.608222216,
+          "deviance_sum": 4939074.286265508,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10861442763667173,
+          "AE": 1.001988060759001
+        },
+        {
+          "model_id": "W2-COD-R137",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15310167.706322037,
+          "deviance_sum": 4929516.099990301,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11033945318799276,
+          "AE": 0.9991467195805672
+        },
+        {
+          "model_id": "W2-COD-R138",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15457622.247893121,
+          "deviance_sum": 4948859.702919733,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10684839240019117,
+          "AE": 0.9896155821821173
+        },
+        {
+          "model_id": "W2-COD-R139",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15579993.514090382,
+          "deviance_sum": 4935572.948718466,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10924633588354427,
+          "AE": 0.9818427604713353
+        },
+        {
+          "model_id": "W2-COD-R36",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15308753.45189023,
+          "deviance_sum": 4928422.76651804,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11053677390569605,
+          "AE": 0.9992390228292042
+        }
+      ],
+      "new_price_fits": 30
+    },
+    {
+      "cycle": 36,
+      "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo36_20261025_v1/report.json",
+      "sha256": "716f9e2a1ae8c7bdb5c2f0491109cf9c335bb619574d1e5a597fa44177e5f78d",
+      "gates": [
+        {
+          "model_id": "W2-COD-R140",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        },
+        {
+          "model_id": "W2-COD-R141",
+          "checks": {
+            "material_gain": false,
+            "lower_bound": false,
+            "four_folds": false,
+            "segment_harm": false,
+            "not_few_groups": false
+          },
+          "all_pass": false,
+          "formal_promotion": false
+        }
+      ],
+      "summaries": [
+        {
+          "model_id": "W2-B00",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15614394.394606076,
+          "deviance_sum": 5160891.515933607,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.06858168733600944,
+          "AE": 0.9796796118640577
+        },
+        {
+          "model_id": "W2-B20",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15126408.703486292,
+          "deviance_sum": 5045640.3340719845,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.08938178766957827,
+          "AE": 1.0112845778439377
+        },
+        {
+          "model_id": "W2-COD-R140",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15304632.078065582,
+          "deviance_sum": 4933491.793335876,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.10962193498863271,
+          "AE": 0.9995081072170058
+        },
+        {
+          "model_id": "W2-COD-R141",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15798149.55188929,
+          "deviance_sum": 4903911.75278523,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11496042958266828,
+          "AE": 0.9682845316634333
+        },
+        {
+          "model_id": "W2-COD-R36",
+          "rows": 50094,
+          "observed_total": 15297103.84,
+          "predicted_total": 15308753.45189023,
+          "deviance_sum": 4928422.76651804,
+          "null_deviance_sum": 5540895.477105999,
+          "D2": 0.11053677390569605,
+          "AE": 0.9992390228292042
+        }
+      ],
+      "new_price_fits": 15
+    }
+  ],
+  "goal_achieved": false,
+  "promotion": false,
+  "validation": "saved five2023componentfolds,T0/exposure/C0kept;criteria preregistered;group uncertainty/fold/segment/influence;fullflow+replay;exploratory after adaptive search",
+  "next_unit": "Audit existing2024 datasets and temporalpredictionlineage;identify T2b/A1 baselines andfullscopeC0 without invoking oldmultiyearproducers. Register finite leakagecorrecttemporalbatch beforeanyfit ornewscore. Do notspendtwoavailableentriesonoldprobesorparabolicpublicscore extrapolation.",
+  "previous_checkpoint_not_a_human_fit_prohibition": true,
+  "success_requires": "own COMPLETE Kaggle receipt >=0.17 and archived robust local evidence, not forecast or promise",
+  "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/MISION_017_SEGUIMIENTO.md",
+  "progress1": {
+    "utc": "2026-10-25T14:50:27.591758+00:00",
+    "status": "active",
+    "target_public_score": 0.17,
+    "best_processed_public_score": 0.14331,
+    "mission_new_cycles_completed": [
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "mission_new_price_fits": 174,
+    "price_fits_total": 858,
+    "closed_form_constants_total": 670,
+    "new_Kaggle_submissions": 0,
+    "2024_closed": true,
+    "B00_preserved": true,
+    "next_unit": "Audit source exactage versus target agebands using only2023narrowcolumns;validate temporal availability,joins and uncertainty before any marginalization recipe;no agefit preregistered yet.",
+    "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/MISION_017_SEGUIMIENTO.md",
+    "forum_id": "COD-S2-20261025-MISION017-AVANCE1",
+    "no_running_fit_from_completed_cycles": true
+  },
+  "progress2": {
+    "utc": "2026-10-25T15:54:56.285796+00:00",
+    "status": "active",
+    "target_public_score": 0.17,
+    "best_processed_public_score": 0.14331,
+    "mission_new_cycles_completed": [
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "mission_new_price_fits": 417,
+    "price_fits_total": 1101,
+    "closed_form_constants_total": 670,
+    "new_Kaggle_submissions": 0,
+    "2024_closed": true,
+    "B00_preserved": true,
+    "goal_achieved": false,
+    "latest_numeric_audit": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/mision017_20261025_v1/numeric_overlap2023_v3.json",
+      "sha256": "252294af92a5d6f8e8731670af39f2cfd40d3bba77bea0ea123bf072ad8c276b"
+    },
+    "next_unit": "C26 pending,not preregistered or fitted: test fixed10%additional source measurement-missingness on the six affected numeric line/field pairs,with standard physical GLM and existing smalltreecapacity;preserveoriginals/allcosts,entity-stable labelindependent masks,compare original+masked source5blockcosts before2023target CV. Freeze configuration/criteria and post beforefit;no newC0,no2024. Do not repeatcompletedcycles.",
+    "documentation": "Hackaton/Repositorio_IAA2026/docs/semana2/MISION_017_SEGUIMIENTO.md",
+    "forum_id": "COD-S2-20261025-MISION017-AVANCE2",
+    "no_running_fits_from_completed_cycles": true
+  },
+  "research_public_comparisons": [
+    {
+      "id": "HOME27-RESEARCH-FINAL-v1",
+      "utc": "2026-10-25T16:32:24.488476+00:00",
+      "new_price_fits": 1,
+      "newsource": 0,
+      "newC0": 0,
+      "training_receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/comparacion_publica_hogar_20261025_v1/training_receipt.json",
+      "training_receipt_sha256": "2b6c7a6e375ccb4305a41d4ea945ef7e04314c3fd7ebc3a7dc0d05058acd2af9",
+      "ready": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/comparacion_publica_hogar_20261025_v1/ready.json",
+      "ready_sha256": "330f7df85c67410e1e18de6686435533e161a0d5dca12d8109301b51a6240725",
+      "recipe": "Hackaton/Repositorio_IAA2026/registro/semana2_comparacion_publica_hogar_plan_v2.json",
+      "research_only": true,
+      "gates_remain_failed": true,
+      "promotion": false
+    }
+  ],
+  "progress3": {
+    "utc": "2026-10-25T16:41:24.753910+00:00",
+    "status": "active",
+    "target_public_score": 0.17,
+    "goal_achieved": false,
+    "best_processed_public_score": 0.14331,
+    "completed_cycles": 28,
+    "mission_price_fits_CV": 485,
+    "mission_final_price_fits": 1,
+    "mission_total_price_fits": 486,
+    "price_fits_total": 1170,
+    "closed_form_constants_total": 670,
+    "new_C0_fits_in_mission": 0,
+    "new_Kaggle_submissions_in_mission": 0,
+    "public_comparison": {
+      "queue": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/comparacion_publica_hogar_20261025_v1/queue_ready.json",
+      "sha256": "21bc9a6d050a0d8e012373d4df2c8086af22d9a486567a07cd03ba71e13afc3a",
+      "status": "pending_external_daily_quota",
+      "report": "Hackaton/Repositorio_IAA2026/docs/semana2/COMPARACION_PUBLICA_HOGAR_20261025.md"
+    },
+    "next_unit": "C29 proposed,notregistered/fitted: home-onlymaskedsource smalltrees with C26 fullsourceGLMparents and already-passedhome two-viewsourcechecks;motor staysR36. Freeze22fitbudget(2source residuals+10independent home controls+10joint) andpostbeforefit,0C0. No repeat C26globalrecipe. Publichome CSVsfrozen separately,blockedbydailyquota;recheck noearlierthan2026-10-25T17:02:31.231189+00:00(backoff,NOTclaimedreset),using enviar_comparacion_hogar2023_v2.py preflight beforeanyPOST;preservehashes/failed2023gates.",
+    "B00_preserved": true,
+    "2024_closed": true,
+    "forum_id": "COD-S2-20261025-MISION017-AVANCE3",
+    "no_running_fit_from_completed_cycles": true,
+    "prior_goal_turn_classification": "progress"
+  },
+  "domain_diagnostic2023": {
+    "id": "S2-DOMINIO2023-PREFILTRO-v3-20261025",
+    "utc": "2026-10-25T17:19:24.439256+00:00",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/prefiltro_dominio2023_v3/report.json",
+    "report_sha256": "85c98ee9a9b960a21134c7b391545f66b09b58f82d4effbd44031b0f6a02979f",
+    "diagnostic_classifier_fits": 15,
+    "price_fits": 0,
+    "C0_fits": 0,
+    "eligible_for_considering_weight_recipe": [
+      "motor"
+    ],
+    "not_eligible": [
+      "buildings",
+      "contents"
+    ],
+    "not_price_authorization_or_promotion": true,
+    "2024_closed": true,
+    "B00_preserved": true
+  },
+  "progress4": {
+    "utc": "2026-10-25T17:22:45.618050+00:00",
+    "status": "active",
+    "target_public_score": 0.17,
+    "goal_achieved": false,
+    "best_processed_public_score": 0.14331,
+    "completed_price_cycles": 33,
+    "mission_price_fits_CV": 606,
+    "mission_final_price_fits": 1,
+    "mission_total_price_fits": 607,
+    "price_fits_total": 1291,
+    "closed_form_constants_total": 670,
+    "new_diagnostic_classifier_fits": 15,
+    "new_C0_fits_in_mission": 0,
+    "new_Kaggle_submissions_in_mission": 0,
+    "public_comparison": {
+      "queue": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/comparacion_publica_hogar_20261025_v1/queue_followup4.json",
+      "sha256": "1889a869cb95c27f0bed9ce4b4a60c3d5a211e7e5a4ad2438e7cf33fed100db5",
+      "status": "pending_external_daily_quota"
+    },
+    "next_unit": "C34 proposed,notimplemented/registered/fitted: motor-only densityweighted standard sourceGLM1.5 plus original residualtrees. Reuse each frozen domainmotorfoldk classifier;clipodds.2..5 then normalize sqrt-exposureweightedmean1fitonly,allcaseweightspositive. Beforeanypricefit gate combined sqrt(exposure)*density ESS/n>=.5 on all planned pilot/fullscopes;no thresholdrelaxation. Then five pairedsourcepilotblocks comparedtoC17samefamily with unweightedTweedie1.5 sourceveto(<=1.002pooled and>=4/5inside tolerance),followedonlyifeligible by fold-specificfullsource/targetfits,budget30pricefits,0newdomainfits,0C0. Freezecode/config/criteria/hypothesis andforum beforefit/score. KeephomeR36 asit failed domainoverlap;allR36primarygates unchanged. FrozenpublichomeCSVpriority/hashunchanged;recheckquota noearlierthan2026-10-25T18:02:22.672693+00:00 backoff,notclaimedreset;use enviar_comparacion_hogar2023_v2.py.",
+    "B00_preserved": true,
+    "2024_closed": true,
+    "no_running_own_fit_jobs_in_reconciled_units": true,
+    "forum_id": "COD-S2-20261025-MISION017-AVANCE4"
+  },
+  "progress5": {
+    "utc": "2026-10-25T17:51:34.361447+00:00",
+    "status": "active_waiting_on_confirmed_live_readonly_process",
+    "target_public_score": 0.17,
+    "goal_achieved": false,
+    "best_processed_public_score": 0.14331,
+    "completed_price_cycles": 36,
+    "mission_price_fits_CV": 651,
+    "mission_final_price_fits": 1,
+    "mission_total_price_fits": 652,
+    "price_fits_total": 1336,
+    "closed_form_constants_total": 670,
+    "diagnostic_classifier_fits_total": 15,
+    "new_C0_fits_in_mission": 0,
+    "new_Kaggle_submissions_in_mission": 0,
+    "active_own_job": {
+      "kind": "single_current_session_readonly_quota_preflight",
+      "exec_session_id": 48990,
+      "pid": 32136,
+      "not_before_utc": "2026-10-25T18:02:22.672693+00:00",
+      "started_receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/comparacion_publica_hogar_20261025_v1/single_deferred_quota_started.json",
+      "started_receipt_sha256": "5204b50491adf7bd23db0e15b9942a2c47ff9fa5832662a7c5f3bc76ef72e903",
+      "last_confirmed_live_by_write_stdin_utc": "2026-10-25T17:49:08Z",
+      "last_poll_returned_same_live_session": true,
+      "this_state_is_not_future_liveness_proof": true,
+      "scheduled_app_automation_created": false,
+      "new_price_fits": 0,
+      "new_submissions": 0,
+      "new_scores": 0
+    },
+    "next_unit": "Poll SAME live exec session48990/PID32136,which performs ONE authenticated preflight notbefore2026-10-25T18:02:22.672693UTC. Do not restart onobservationtimeout orlaunchanotherquotaquery;reconcile completion/quota_checks/markers. Ifavailable,selected immutableprefix naturalthenpool max2 is already authorized;submit with enviar_comparacion_hogar2023_v2.py submit,completeallselectedPOSTs beforereading anynewownscore;checkownrefs only. If0,recordrealblockwithoutCSV/weight/criterion changes oralternatechannel. C34/35/36done,do not repeatfits/suites/ESS. No furtherconcretepricehypothesisregistered atthiscut;do not invent fitsforcadence. Newlegitimatesourceevidence may be reviewed within2023scope;2024closed/B00kept.",
+    "B00_preserved": true,
+    "2024_closed": true,
+    "all_registered_own_price_jobs_terminal": true,
+    "forum_id": "COD-S2-20261025-MISION017-AVANCE5"
+  },
+  "blocker": {
+    "kind": "external_Kaggle_submission_quota",
+    "utc": "2026-10-25T18:06:31.777895+00:00",
+    "audit": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/mision017_20261025_v1/bloqueo_cupo_1802/audit.json",
+    "audit_sha256": "bc730c9ed57b7a84cd33960fb288faa1aa166cf8729030ee70165eee719d6e29",
+    "latest_quota": {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/comparacion_publica_hogar_20261025_v1/quota_checks/20261025T180224667742Z.json",
+      "sha256": "c76293f3336701fe1445fd610060c70f1d4715eb160a323894a3b1a39434bbdf",
+      "utc": "2026-10-25T18:02:24.667742+00:00",
+      "limits": {
+        "num_today": 10,
+        "num_total": 12,
+        "num_allowed_now": 0,
+        "limited_by_total": false
+      }
+    },
+    "quota_repeated_across_goal_turns": true,
+    "full_goal_not_achieved": true,
+    "no_automatic_reset_time_claimed": true,
+    "live_own_quota_job": null,
+    "next_on_resume": "Verify freshquota and frozenexecutionv3/code/CSVhashes;preservepriority,allselectedPOSTsbeforeownscorechecks;do notfitagainforpackaging,open2024orchangeotherautomations."
+  },
+  "current_active_own_job": null,
+  "public_execution_v3": {
+    "id": "S2-HOGAR-EJECUCION-v3-20261025",
+    "author": "Codex",
+    "utc": "2026-10-25T17:59:12.147348+00:00",
+    "model_recipe_unchanged": "Hackaton/Repositorio_IAA2026/registro/semana2_comparacion_publica_hogar_plan_v2.json",
+    "recipe_sha256": "36f7f62858fa75942c4187c15bbecd521bacc60a4a66de7a7e75b40d3b42f5bb",
+    "CSV": [
+      {
+        "model_id": "W2-COD-R104-HOME-RESEARCH",
+        "home_weight": 1.0,
+        "filename": "submission_home27_natural_motorR36_2025.csv",
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/comparacion_publica_hogar_20261025_v1/submission_home27_natural_motorR36_2025.csv",
+        "sha256": "4bc52c07c6b126d8c218539ff06f58430db9bfde8f3e95be6879fb4a3ba95e17",
+        "bytes": 6179663,
+        "rows": 209063
+      },
+      {
+        "model_id": "W2-COD-R102-HOME-RESEARCH",
+        "home_weight": 0.5,
+        "filename": "submission_home27_pool50_motorR36_2025.csv",
+        "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/comparacion_publica_hogar_20261025_v1/submission_home27_pool50_motorR36_2025.csv",
+        "sha256": "5f2d1ea47ba3f8dbe23ea9aed7cf92c98e6daf12e11cdb9b77b43ce05aae2dc2",
+        "bytes": 6178428,
+        "rows": 209063
+      }
+    ],
+    "submitter": "Hackaton/Repositorio_IAA2026/herramientas/enviar_comparacion_hogar2023_v3.py",
+    "submitter_sha256": "d2bf9b3cde9b5a377129d3a538616f39302f0af870c52361d71a04cf61638964",
+    "base_v2_guard": "Hackaton/Repositorio_IAA2026/herramientas/enviar_comparacion_hogar2023_v2.py",
+    "base_v2_sha256": "e694b557f1c316405d54e7ed36282832a57862cb36e2b291c939d1182d3ab479",
+    "synthetic_flow_report": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/comparacion_publica_hogar_20261025_v1/synthetic_resume_v3/report.json",
+    "synthetic_flow_report_sha256": "f7aa696e0bcecfd76c47835cec32d13fa65f315dd4e9bbb154efb7370f1ac2de",
+    "all9cases_passed": true,
+    "new_fit_calls": 0,
+    "new_submissions": 0,
+    "new_public_scores": 0,
+    "2024_closed": true,
+    "B00_preserved": true,
+    "promotion": false,
+    "manual_final_selection": false,
+    "research_only_local_gates_remain_failed": true,
+    "new_rules": "resume frozenprefix only;reconcile known exactmetadata andlocalmarkers beforeanyPOST;no blindretryunknown;only remainingneverstarted CSVmayPOST;allselectedacceptedbeforeanyscore;allmetadata checkedbeforefirstscore",
+    "remaining_limits": "Unknown POST withoutvisible row stays unresolved;remotecontentSHA notreturned;localhash/marker/ref/exactmetadata are evidence,notdirectremotechecksum. No actor/humanapproval invented.",
+    "pending_preflight_job_unchanged": {
+      "exec_session_id": 48990,
+      "pid": 32136,
+      "not_before_utc": "2026-10-25T18:02:22.672693+00:00"
+    },
+    "use_after_preflight": "enviar_comparacion_hogar2023_v3.py resume thencheck;preflight still immutablev2,no duplicatequery beforejobreturns"
+  },
+  "current_phase": "Hackaton/Repositorio_IAA2026/registro/semana2_mision017_fase2_actual.json",
+  "current_objective": "Alcanzar un score público del equipo de al menos 0,17 mediante una mejora consistente y robusta, con los datos oficiales disponibles, incluido 2024, validación temporal y controles de fuga. Conservar B00, alternativas, autoría y presupuesto de envíos; exigir recibo procesado y evidencia local.",
+  "human_scope_amendment": {
+    "literal": "2024 no tiene que estar bloqueado, usa todo lo que tenemos y necesites que nos lleve a mejorar significativamente el modelo",
+    "policy": "Hackaton/Repositorio_IAA2026/registro/semana2_politica_desarrollo2024_v2.json",
+    "2024_open": true
+  },
+  "historical_codex_pipeline_best_public": {
+    "model_id": "W2-COD-R36-FINAL",
+    "submission": 57629589,
+    "score": 0.14331,
+    "receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/entrega_20261025_v1/public_check02.json"
+  },
+  "best_user_team_processed_public": {
+    "ref": 57647413,
+    "date_UTC": "2026-10-26T00:27:34Z",
+    "status": "COMPLETE",
+    "public_score": 0.16033,
+    "bytes": 1670320,
+    "source_author": "Claude",
+    "transport_author": "Codex, separate authorizedsubmissionflow",
+    "receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/mision017_20261025_v1/retoma_20261025_noche_v1/cuota_y_score_captura.json",
+    "receipt_sha256": "92b1f2284035b208a82b2cb3e9d3c65842d05a240fd7891e347d1c7b72d9451d",
+    "user_capture_confirmed": true,
+    "not_this_chat_new_submission": true
+  },
+  "current_blocker": null
+}

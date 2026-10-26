@@ -1,0 +1,281 @@
+{
+  "id": "S2-ROBUSTEZ2023-CICLO10-v1-20261025",
+  "utc": "2026-10-25T13:04:38.071856+00:00",
+  "author": "Codex",
+  "forum_prior": "COD-S2-20261025-ROBUSTEZ10-PREVIO",
+  "models": [
+    {
+      "id": "W2-COD-R42",
+      "kind": "glm"
+    },
+    {
+      "id": "W2-COD-R43",
+      "kind": "gam"
+    },
+    {
+      "id": "W2-COD-R44",
+      "kind": "trees"
+    }
+  ],
+  "hypothesis": "Common urban density and home age at inception omitted from transported teacher may matter. Compare extended main-effects GLM with additive standard spline and existing small source-only residual tree recipe. Source provides shape, never target support.",
+  "new_features": {
+    "all": [
+      "urban_density"
+    ],
+    "home": [
+      "policyholder_age_band at period start"
+    ],
+    "buildings": [
+      "trees_within_5m",
+      "listed_building"
+    ]
+  },
+  "availability": "supplied static address benchmark; unversioned physical master limitation. Official age explicitly at start; no realized weather, undated customer profiles, or premium fields added",
+  "features": {
+    "motor": {
+      "numeric": [
+        "x_new_business",
+        "x_ncb_years",
+        "x_vehicle_age",
+        "x_vehicle_value_group",
+        "x_years_licensed",
+        "x_engine_size_cc",
+        "x_named_young_driver",
+        "x_driver_assist",
+        "x_log_voluntary_excess",
+        "x_log_compulsory_excess"
+      ],
+      "categorical": [
+        "x_driver_age_band",
+        "x_region",
+        "x_cover_type",
+        "x_body_type",
+        "x_transmission",
+        "x_fuel_type",
+        "x_overnight_parking",
+        "x_vehicle_use",
+        "x_urban_density"
+      ]
+    },
+    "buildings": {
+      "numeric": [
+        "x_new_business",
+        "x_log_sum_insured",
+        "x_property_age",
+        "x_flood_zone",
+        "x_log_distance_to_river_km",
+        "x_elevation_m",
+        "x_smoke_alarms",
+        "x_accidental_damage_cover",
+        "x_log_voluntary_excess",
+        "x_log_compulsory_excess",
+        "x_trees_within_5m",
+        "x_listed_building"
+      ],
+      "categorical": [
+        "x_property_type",
+        "x_region",
+        "x_construction_type",
+        "x_occupancy",
+        "x_roof_type",
+        "x_soil_type",
+        "x_urban_density",
+        "x_policyholder_age_band"
+      ]
+    },
+    "contents": {
+      "numeric": [
+        "x_new_business",
+        "x_log_sum_insured",
+        "x_bedrooms",
+        "x_high_value_items",
+        "x_accidental_damage_cover",
+        "x_basement",
+        "x_log_distance_to_river_km",
+        "x_elevation_m",
+        "x_bicycle_cover",
+        "x_log_voluntary_excess",
+        "x_log_compulsory_excess"
+      ],
+      "categorical": [
+        "x_property_type",
+        "x_region",
+        "x_security_level",
+        "x_tenure",
+        "x_roof_type",
+        "x_soil_type",
+        "x_urban_density",
+        "x_policyholder_age_band"
+      ]
+    }
+  },
+  "source": "developed2023 only, observed net incurred and nominal exposure unchanged",
+  "target": "emerging2023 T0/existing outer C0 unchanged",
+  "source_GLM": "Tweedie1.5 alpha1; median,clip.005/.995,scale;OHE min100 max40 dropfirst; allsourceonly",
+  "source_GAM": "same objective/ridge1;numeric four quantile knots degree2 no bias linear extrapolation, sourcefitonly",
+  "source_trees": "exact prior200trees depth3 leaves8 lr.025 min5000 L2=500 L1=100 seed2026102506;residual on extendedGLM",
+  "adapter": "intercept free + new_business + region ridge1, same five component folds; no profile effects",
+  "final_price": "fixed sqrt50%candidate+50%B20 identical weight toR36; no optimizedweight",
+  "real_fit_budget": 54,
+  "source_price_fits": 9,
+  "target_price_fits": 45,
+  "new_C0_fits": 0,
+  "primary_reference": "W2-COD-R36",
+  "criteria": {
+    "delta_min": 0.005,
+    "lower_exploratory_min": 0.0005,
+    "positive_folds_min": 4,
+    "segment_harm_max_fullnull": 0.0005,
+    "delta_after31favorablegroups_min": 0.0005
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 2026102501,
+    "quantiles": [
+      0.0041666666667,
+      0.9958333333333
+    ]
+  },
+  "preference": "R42 if passes; else R43 if passes; else R44 if passes; else retainR36. Standard model preference, no automatic final promotion.",
+  "2024_closed": true,
+  "B00_preserved": true,
+  "adaptive_exploratory": true,
+  "sources": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/robustez2023_ciclo10.py",
+      "sha256": "39029a53bac61470b126e4d7fc5ab95254e884cf1bb27f042f153c42d297385c"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelo_basicas_fuente2023.py",
+      "sha256": "6d38c070f32646e415d395b49407151e0d52a802a8050d2e59aae8d9b940769f"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelo_profesor_comun2023.py",
+      "sha256": "b8fffff61f16da937b206299685dbe3be9c4fb97f5c5ee0c2b4ef544a0749279"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelos_robustos2023.py",
+      "sha256": "af3dcaf489367def2cb29a9785e8003cb12bd2f3378062bd274919e080466bf8"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelo_transferencia2023_v2.py",
+      "sha256": "6737d8c4e63d28e80df82dcb69bdb43e1ddcf4e68329b61dcd4bd74230a7a1d1"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/modelos_robustos_compuestos2023.py",
+      "sha256": "b70429dde8717039c7f69174aeebdba90a461580bfd5657c0cac34ebdf75c86a"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/evaluar_robustez2023_v2.py",
+      "sha256": "6102d8bbce922ac5b7958764fb41d92559d33f971af66f0d15ac81738d39b91a"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/ciclo7_20261025_v1/new_oof_2023.parquet",
+      "sha256": "13d8b82a53b1078b0beb98121b8b2cbbbb49a07c22e7d61c9094917a21d8ded2"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/ridge20_20261024_v1/oof_2023.parquet",
+      "sha256": "4fa0052e2ce708abac2414d2fa5536a703a79b214439a755e835890104356d9b"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/covariables_basicas2023_v1/report.json",
+      "sha256": "808167a7918f768017f66f3b8c892b345147fd85443870707ab2442175deacd3"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/covariables_basicas2023_v1/developed_buildings.parquet",
+      "sha256": "6955a7a7dfdd350f0ce248299eb0a10e713da4ba709e656f9346d54810f4da2b"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/covariables_basicas2023_v1/developed_contents.parquet",
+      "sha256": "ccc9153e392c356129ab7a83fd869635136dc3a47accd8e2a765ccd9c57ccaf8"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/covariables_basicas2023_v1/developed_motor.parquet",
+      "sha256": "7fb1b27e7e2b3ff21684c9513469a77ff264869cd78d281b7d7dfa23b5f28238"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/covariables_basicas2023_v1/emerging_buildings.parquet",
+      "sha256": "7797693d4491a8eebe5357cd7ff1f5534eb3deb6d28454833b8dc48854423130"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/covariables_basicas2023_v1/emerging_contents.parquet",
+      "sha256": "ca46c2dac3e3fb01a9b0a490b118fdd7d0a8c1070a043b1d859e6be456d466f3"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/covariables_basicas2023_v1/emerging_motor.parquet",
+      "sha256": "9c1be375e8626fd105f5291c77830b2df66b481626704025a99f7105c322ae99"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/fuente_desarrollado2023_fisica_v1/motor_2023.parquet",
+      "sha256": "ac4227b65b6283c7af47c622cad3367f7c4c7ead1071414424da6f1eeb65ec50"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/fuente_desarrollado2023_fisica_v1/buildings_2023.parquet",
+      "sha256": "21fb3cd93b44689477c278b3485788a2862ee2502f47bd58959deb43ab721f62"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/robustez2023/fuente_desarrollado2023_fisica_v1/contents_2023.parquet",
+      "sha256": "eb114afd872c496e037d1b1a85f736ee9bf67c45ff221fa9aa70e64907328ced"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/motor_fold0.parquet",
+      "sha256": "76861f7a75e4c61e1d982ba44a5c6c3da8307747b8ec6bac0c77a79c7672ca3f"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/motor_fold1.parquet",
+      "sha256": "4c413d769e89657a10bddea839e2677c38ee909616da67a6dc3202f29ee6d81d"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/motor_fold2.parquet",
+      "sha256": "759b40348d729a9f0f240e43c72fb00eb34cfd433e4c4ab5062412c9ee9ba563"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/motor_fold3.parquet",
+      "sha256": "4b9b7a16b54bb957e526d63267d8d8675bfd0b9fbb2afb5e4ee967f643486377"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/motor_fold4.parquet",
+      "sha256": "2aec59b0c2333c7fbb12227d7a2d89c86e982eeaf1f59cec8d78f6f3a59ab7cb"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold0.parquet",
+      "sha256": "e7a230e9256610c75d017c09ce26952d32aa79fd29c0b81ee3f8579c9a2a6126"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold1.parquet",
+      "sha256": "78a3b3a7c7d662b6ad6533808989334f48d77665d601124fbbddbb2591b89f9a"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold2.parquet",
+      "sha256": "1d342f21384ae5bb85be042bd4943acb75746e70146a5f9a271be4f031d5b206"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold3.parquet",
+      "sha256": "b065d9ecd0c8be3b18411be89b719856d08faf4c7ef70b45e33fd4c69f9efa9d"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/buildings_fold4.parquet",
+      "sha256": "cf7bb6b579ada600613dc14b4e76d7b8c0492c6b7086e871b7f12be11d187de3"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/contents_fold0.parquet",
+      "sha256": "7ee44117a2caf2bfb70f23bbdd3a27249503f7e37e681447dfce75e83439efd7"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/contents_fold1.parquet",
+      "sha256": "692805013e60e817a7826e9e76cf9c91788447d634f3d7bcfdc2a2f7657dec97"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/contents_fold2.parquet",
+      "sha256": "558d43c05fa71ba37820016aef96244969a0283b78143cdffc500d85e4f56a5f"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/contents_fold3.parquet",
+      "sha256": "ac639a2ad62ad5281bd6df7d06ccf3cb98131eb371683f6da5d838e1da37e4e8"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/desarrollo2023/dev8_20261024T013001Z_e8a35214/inputs_2023/contents_fold4.parquet",
+      "sha256": "50368d57022725ed13f68b2052bd57ea8114ee0af1828e2d4128501f2e23fca8"
+    }
+  ]
+}
