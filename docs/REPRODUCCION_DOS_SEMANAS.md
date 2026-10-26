@@ -1,8 +1,8 @@
 # Reproducción y pendientes de la entrega conjunta
 
-Codex, 26 de octubre de 2026. Esta guía distingue la reproducción realizada de los pasos que todavía requieren trabajo o una persona distinta. La evidencia actual es [reproduccion_m017_actual.json](../registro/reproduccion_m017_actual.json).
+Codex, 26 de octubre de 2026. Esta guía distingue la reproducción realizada de los pasos que todavía requieren trabajo o una persona distinta. El corte inicial se conserva en [reproduccion_m017_actual.json](../registro/reproduccion_m017_actual.json). El reentrenamiento posterior completo de semana 2 terminó y se verificó: [guía desde originales](REENTRENAMIENTO_ORIGINALES.md) e [índice actual](../registro/reentrenamiento_originales_actual.json). F3c, F3d y F4c nuevos coinciden con los CSV históricos; la reproducción por otra persona sigue pendiente.
 
-## Qué se comprobó en esta sesión
+## Corte inicial: comprobación parcial desde OOF guardadas
 
 | Objeto | Comprobación realizada | Alcance pendiente |
 | --- | --- | --- |
@@ -31,13 +31,11 @@ La preparación exige una carpeta nueva, copia los insumos y compila todos los s
 
 El entorno nuevo pertenece a esta comprobación parcial. No se declara equivalente al entorno de entrenamiento original de todos los modelos ni reemplaza `requirements.txt` de semana 1.
 
-## Qué falta para entrenar toda la cadena desde originales
+## Brecha inicial y cierre posterior desde originales
 
 La reproducción completa de semana 1 tiene su evidencia histórica y sus diferencias en [REPRODUCCION_COMPLETA.md](REPRODUCCION_COMPLETA.md). No se repitió por cambios documentales.
 
-En semana 2 falta convertir todos los ancestros en una receta ejecutable, desde datos originales hasta los CSV, sin depender de predicciones previas. Debe fijar las órdenes de entrenamiento T2b para desarrollo, contraste y producción, el generador de las predicciones A1 de 2024 que consume la cadena, sus características y versiones, y los pasos de observación/calibración y nivel público. Las constantes aprendidas de sondas históricas deben entrar como insumos congelados con recibos; reproducir no autoriza nuevas sondas. Para F4c faltan además las tablas exactas de frecuencia, severidad y completitud por peligro, sus conteos/bases y su relación con los modelos originales. Los componentes de recuperación de Codex tienen su propio linaje y no se sustituyen silenciosamente por los originales de Claude.
-
-El adaptador de esta sesión permite avanzar y acota la brecha. No ofrece una orden `todo` que afirme entrenar árboles cuando en realidad lee OOF. Antes de iniciar el entrenamiento completo debe existir el grafo de ancestros, configuración fija, coste y comparación esperada. Un resultado que cambie por entorno o receta se conserva como tal; no se corrigen pesos para forzar la igualdad.
+La brecha inicial consistía en enlazar todos los ancestros T2b/A1/FSp, restaurar las piezas faltantes y generar las predicciones sin leer las anteriores. Quedó resuelta en la corrida posterior de 57 etapas, con 87 modelos finales nuevos. Los datos originales, las adaptaciones privadas de rutas, las dos restauraciones explícitas, el entorno y las diferencias internas se documentan en [REENTRENAMIENTO_ORIGINALES.md](REENTRENAMIENTO_ORIGINALES.md). Las constantes públicas históricas permanecen congeladas; no hubo nuevas sondas.
 
 ## Reproducción por otra persona
 
@@ -47,10 +45,10 @@ El acta separa repetir factores desde OOF, reentrenar toda la cadena y revisar l
 
 ## Decisiones vigentes del participante
 
-F3d y F4c se revisan y preparan, sin envío o cambio de selección. La regla v4 queda como antecedente para una futura decisión, no como autorización de envío ni cierre de las guardas comunes de selección. Su ventaja privada esperada depende de supuestos; F3d conserva la sensibilidad a clientes influyentes y F4c la brecha de reproducción.
+F3d y F4c se revisan y preparan, sin envío o cambio de selección. La regla v4 queda como antecedente para una futura decisión, no como autorización de envío ni cierre de las guardas comunes de selección. Su ventaja privada esperada depende de supuestos; F3d conserva la sensibilidad a clientes influyentes y la reproducción exacta de F4c no acredita por sí misma una mejora privada.
 
 El inglés queda diferido hasta que la versión española sea definitiva. El informe español anterior y sus PDF se conservan como corte fechado: su frase sobre `f3_eval` ausente queda superada por esta evidencia y tendrá que actualizarse al cerrar la siguiente edición completa. No se atribuye aprobación humana general.
 
 ## Cotejo posterior de alcance, 26 de octubre
 
-El [cierre de doce pendientes](semana2/CIERRE_DOCE_PENDIENTES_F3C.md) agrega igualdad por fila de las 109.296 etiquetas históricas, cuatro contrastes de receta residual, cinco archivos de intervalos guardados y un grafo de nueve nodos. No reentrena todos los ancestros A1/T2b ni FSp. Los controles adversos protegen los factores y niveles nuevos; la mezcla de peligros, categorías y folds heredados conservan los límites allí identificados. La puerta `herramientas/puerta_uso_F3c.py claim_full_reproduction` rechaza esa afirmación con la evidencia actual. La reproducción integral y la realizada por otra persona siguen abiertas.
+El [cierre de doce pendientes](semana2/CIERRE_DOCE_PENDIENTES_F3C.md) agrega igualdad por fila de las 109.296 etiquetas históricas, cuatro contrastes de receta residual, cinco archivos de intervalos guardados y un grafo de nueve nodos. No reentrena todos los ancestros A1/T2b ni FSp. Los controles adversos protegen los factores y niveles nuevos; la mezcla de peligros, categorías y folds heredados conservan los límites allí identificados. La puerta `herramientas/puerta_uso_F3c.py` conserva las restricciones de ese corte y no se modifica por esta reproducción. La nueva evidencia cierra el reentrenamiento de la cadena histórica desde originales, descrito en la guía posterior; no cierra la reproducción por otra persona, la revisión profesional ni las guardas de selección.

@@ -38,6 +38,8 @@ Dos asistentes de IA, Claude y Codex, trabajaron en tres líneas: modelado, alte
 
 ## Cómo reproducir
 
+El [reentrenamiento completo de semana 2 desde originales](docs/REENTRENAMIENTO_ORIGINALES.md) terminó en un entorno limpio: 57 etapas, 87 modelos finales nuevos y CSV F3c, F3d y F4c idénticos a los históricos. La guía documenta dos restauraciones de código y diferencias numéricas internas. La reproducción por otra persona sigue pendiente; no hubo envíos a Kaggle.
+
 Los datos del concurso no están en este repositorio: las reglas prohíben redistribuirlos. Los scripts los leen de una carpeta con la estructura de `Hackaton/Semana 1`, que se indica con `--semana1=<carpeta>` o con la variable `IAA_SEMANA1`. Conviene instalar las versiones de `requirements.txt` (Python 3.13); con otras versiones la mezcla se repite igual, pero el reentrenamiento puede no ser byte a byte.
 
 ```text

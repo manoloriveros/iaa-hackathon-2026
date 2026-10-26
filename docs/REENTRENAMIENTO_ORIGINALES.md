@@ -59,3 +59,23 @@ Los preparadores exigen destinos nuevos y nunca borran intentos anteriores. Cada
 El comparador abre los históricos en un proceso separado. Informa igualdad de claves, orden, bytes, valores, máximas diferencias absolutas/relativas y concordancia numérica con `rtol=1e-10, atol=1e-9`, fijadas antes del cotejo. Las salidas CSV de seis decimales se informan además por igualdad exacta y diferencia máxima. No se retocan parámetros para mejorar el cotejo ni se confunde una diferencia de redondeo con un cambio de modelo demostrado.
 
 Esta comprobación no entrena con una nueva partición, no vuelve a seleccionar modelos con 2024 y no acredita su generalización privada. La reproducción por otra persona continúa siendo un pendiente separado.
+
+## Resultado verificado al terminar
+
+Las 57 etapas terminaron con código cero. Se conservaron 87 modelos finales nuevos (6 T2b, 21 A1 y 60 FSp), además de los 87 ajustes internos usados para fijar rondas. Los 24 originales y las copias de código de los dos manifiestos permanecieron intactos, incluida la enmienda previa a FSp para guardar sus modelos. Los controles de aislamiento aprobaron las pruebas de lectura ajena, escritura sobre originales y red bloqueadas.
+
+El cotejo separado produjo nueve CSV idénticos byte por byte: ML_C1, A1 sin F1, A1 designada, F, F2, final_creible, F3c, F3d y F4c. Cada uno tiene 209.063 filas. En los tres candidatos finales también aprobaron esquema, unicidad, cobertura y orden de los identificadores contra el sample original, finitud y no negatividad.
+
+| Candidato | SHA-256 del CSV nuevo y del histórico |
+| --- | --- |
+| F3c | `5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276` |
+| F3d | `5103f6fd9cf2c46bbb82a5ead586b4eaa0f7b34ecff6efdc99a2a0662e76706b` |
+| F4c | `d5dfbf5769a134a09a3a3b23550eda496471b3511f9f66226c24301bb0de18f4` |
+
+Las nueve tablas T2b conservan claves y orden; su diferencia relativa máxima es 4,422×10⁻¹⁶. Los seis modelos tienen las mismas rondas que la referencia, pero sus archivos de texto no son idénticos. A1 de confirmación conserva R0 exacto y una diferencia máxima de 4,548×10⁻¹³ CU en A1 (relativa 4,887×10⁻¹⁶). Su tabla contiene solo A1/R0, que consume esta cadena; no se reconstruyeron A2/A3. La preparación de A1 también coincide en todos los campos resumen guardados. Se informa igualdad exacta de los CSV finales, sin extenderla a todos los archivos intermedios.
+
+La evidencia privada está en `comparacion_final.json`, `corrida/verification_complete.json`, `cotejo_preparacion_A1.json` y los 57 recibos de etapas, dentro de la carpeta de esta corrida. El índice versionado conserva sus hashes y los resultados agregados. La suma de tiempos de las etapas fue 3.398,923 segundos, unos 56,6 minutos; no incluye instalación ni revisiones.
+
+Para otro operador, crear primero un venv con Python 3.12.14 e instalar `python -m pip install -r receta/requirements_reentrenamiento_completo.txt`. Los cuatro pasos de preparación y ejecución de arriba solo necesitan el clon con su historial Git, los originales autorizados y el archivo de constantes versionado. El comparador detallado es opcional y requiere además los históricos privados que declara su código; su ausencia en un clon no impide entrenar. Los tres CSV finales nuevos quedan en `privado/una_corrida_nueva/m017/exp26/`; se pueden contrastar sin históricos mediante `Get-FileHash -Algorithm SHA256 <archivo>` y la tabla anterior. Un cambio de huella se registra como diferencia; no autoriza repetir ajustes hasta igualarla.
+
+Este cierre acredita el reentrenamiento técnico de la cadena histórica de semana 2 desde originales. La reproducción por otra persona y la revisión profesional siguen pendientes. Las constantes históricas del público y los ancestros de 2023/2024 conservan su procedencia y sus límites de selección. No hubo envíos, consultas a Kaggle, entrenamiento remoto ni cambio de marca. Los commits nuevos permanecen locales.

@@ -1,8 +1,8 @@
 {
   "id": "REENTRENO-ORIGINALES-20261026",
   "autor": "Codex",
-  "utc": "2026-10-26T22:14:10.852179+00:00",
-  "estado": "en_ejecucion_local",
+  "utc": "2026-10-26T23:01:53.588401+00:00",
+  "estado": "reentrenamiento_completo_verificado_CSV_finales_exactos",
   "plan": "registro/reentrenamiento_originales_plan.json",
   "cadena_plan": "registro/reentrenamiento_cadena_plan.json",
   "guia": "docs/REENTRENAMIENTO_ORIGINALES.md",
@@ -13,12 +13,14 @@
     "until": "t2b_prod_contents"
   },
   "manifiesto_sha256": "d5b77fe76f265bd08d6cc64b668497234789c08581839a178c7cb3a278e1279d",
-  "cadena_manifiesto_sha256": "bc52f1bd49f5432d171e46f1ac473827cb6696d6ed3c7e2cbbba4b9dd7937305",
+  "cadena_manifiesto_sha256": "49de2450dbb40a5806964fc34093042476fed9ed7bedd033d1b28b04fb056b6a",
   "cotejo_inicial": "privado/reentrenamiento_completo_20261026/comparacion_T2b_parcial.json",
   "aislamiento": "privado/reentrenamiento_completo_20261026/corrida/verification_isolation.json",
   "commits": [
     "49140b2",
-    "8979f0b"
+    "8979f0b",
+    "9d1cbd0",
+    "e9e4fb6"
   ],
   "source_commit": "40b3100",
   "procesos_tool_sessions": {
@@ -33,5 +35,179 @@
   "restauraciones": [
     "REP-N2 global desde fórmula conf_insumos sin filtro anual",
     "A1 motor histórico anterior a ID01, solo en su ancestro de confirmación"
-  ]
+  ],
+  "cadena_actual": {
+    "utc": "2026-10-26T22:57:05.638665+00:00",
+    "state": "stages_complete",
+    "until": "m017_F4c"
+  },
+  "live_paths": {
+    "T2b": "privado/reentrenamiento_completo_20261026/corrida/live.json",
+    "cadena": "privado/reentrenamiento_completo_20261026/corrida/chain_live.json"
+  },
+  "resultados_parciales": {
+    "ML_C1_csv_exacto": true,
+    "ML_C1_sha256": "d261388c7e4d5dccb995605d957dbda11f46a97408549fa07b45953ecf7ce0a3",
+    "A1_sin_F1_csv_exacto": true,
+    "A1_sin_F1_sha256": "355dca1a4b43fe38563194a3dbaf030d742bdd90bfd734431e7daa8065bef08f",
+    "tablas_T2b_cotejadas": 9,
+    "max_rel_T2b": 4.4217410236116516e-16,
+    "restauracion_curva_campos_resumen_exactos": true
+  },
+  "enmienda_persistencia": {
+    "utc": "2026-10-26T22:16:10.536534+00:00",
+    "previous_manifest_sha256": "bc52f1bd49f5432d171e46f1ac473827cb6696d6ed3c7e2cbbba4b9dd7937305",
+    "new_fits": 0,
+    "statistical_changes": false
+  },
+  "cotejo_final": {
+    "path": "privado/reentrenamiento_completo_20261026/comparacion_final.json",
+    "sha256": "d73f0e558845ded979925a541c4cca96a793ee533e6077e205dfdaba2330dc48",
+    "tablas": 19,
+    "modelos_texto": 6,
+    "faltantes": []
+  },
+  "verificacion_final": {
+    "path": "privado/reentrenamiento_completo_20261026/corrida/verification_complete.json",
+    "sha256": "0b5686b367b9cb59e6cca031fd26ff925bc0fbed1e8717db22248a82937e6782",
+    "estado": "complete_all_checks_passed",
+    "etapas": 57,
+    "etapas_fallidas": 0,
+    "segundos_suma_etapas": 3398.923000000126,
+    "originales_intactos": 24,
+    "modelos_finales": {
+      "T2b": 6,
+      "A1": 21,
+      "FSp": 60
+    },
+    "total_modelos_finales": 87,
+    "ajustes_internos_rondas": 87,
+    "bloqueos_retirados": true
+  },
+  "resultados_finales": {
+    "ML_C1": {
+      "csv_exacto": true,
+      "filas": 209063,
+      "sha256": "d261388c7e4d5dccb995605d957dbda11f46a97408549fa07b45953ecf7ce0a3"
+    },
+    "A1fixb3": {
+      "csv_exacto": true,
+      "filas": 209063,
+      "sha256": "355dca1a4b43fe38563194a3dbaf030d742bdd90bfd734431e7daa8065bef08f"
+    },
+    "A1fixF1b3n": {
+      "csv_exacto": true,
+      "filas": 209063,
+      "sha256": "f786deb300c95a01617d8072ac42e567998202c8e4ec5cf883222f2e224c53aa"
+    },
+    "F": {
+      "csv_exacto": true,
+      "filas": 209063,
+      "sha256": "42659dbb4101d4f9a4ab00c287d77b2bd21d42be9734d2ca4a4074eb57c9add2"
+    },
+    "F2": {
+      "csv_exacto": true,
+      "filas": 209063,
+      "sha256": "119627d93003a98933d261e773ffaf6e29a7125346367f716a0a411b97dca11a"
+    },
+    "final_creible": {
+      "csv_exacto": true,
+      "filas": 209063,
+      "sha256": "1a003d8682f1fcd71ad4a44f59f785d394488fc1cc95e60722f418b04c30ef29"
+    },
+    "F3c": {
+      "csv_exacto": true,
+      "filas": 209063,
+      "sha256": "5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276"
+    },
+    "F3d": {
+      "csv_exacto": true,
+      "filas": 209063,
+      "sha256": "5103f6fd9cf2c46bbb82a5ead586b4eaa0f7b34ecff6efdc99a2a0662e76706b"
+    },
+    "F4c": {
+      "csv_exacto": true,
+      "filas": 209063,
+      "sha256": "d5dfbf5769a134a09a3a3b23550eda496471b3511f9f66226c24301bb0de18f4"
+    }
+  },
+  "preflight": {
+    "F3c": {
+      "sha256": "5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276",
+      "checks": {
+        "columns": true,
+        "rows": true,
+        "unique": true,
+        "ids_and_order": true,
+        "finite": true,
+        "nonnegative": true
+      },
+      "passed": true,
+      "rows": 209063
+    },
+    "F3d": {
+      "sha256": "5103f6fd9cf2c46bbb82a5ead586b4eaa0f7b34ecff6efdc99a2a0662e76706b",
+      "checks": {
+        "columns": true,
+        "rows": true,
+        "unique": true,
+        "ids_and_order": true,
+        "finite": true,
+        "nonnegative": true
+      },
+      "passed": true,
+      "rows": 209063
+    },
+    "F4c": {
+      "sha256": "d5dfbf5769a134a09a3a3b23550eda496471b3511f9f66226c24301bb0de18f4",
+      "checks": {
+        "columns": true,
+        "rows": true,
+        "unique": true,
+        "ids_and_order": true,
+        "finite": true,
+        "nonnegative": true
+      },
+      "passed": true,
+      "rows": 209063
+    }
+  },
+  "diferencias_internas": {
+    "T2b_max_rel": 4.4217410236116516e-16,
+    "T2b_modelos_texto_bytes_exactos": false,
+    "T2b_rondas_iguales_en_seis_modelos": true,
+    "A1_hold": {
+      "A1": {
+        "same_nan": true,
+        "exact_values": false,
+        "different_values": 22759,
+        "max_abs": 4.547473508864641e-13,
+        "max_rel": 4.88626824365179e-16,
+        "close_1e10_1e9": true
+      },
+      "R0": {
+        "same_nan": true,
+        "exact_values": true,
+        "different_values": 0,
+        "max_abs": 0.0,
+        "max_rel": 0.0,
+        "close_1e10_1e9": true
+      }
+    },
+    "A1_hold_esquema_reducido": "Solo row_id,A1,R0; no se reconstruyen A2/A3 que no consume esta cadena."
+  },
+  "limites": [
+    "Reproducción propia del mismo flujo, no realizada por otra persona ni revisión actuarial independiente.",
+    "Python 3.12.14 frente a 3.13 declarado en la referencia.",
+    "Dos tramos de fuente restaurados expresamente; se cotejan sus resultados, no se afirma recuperar código perdido.",
+    "Constantes del tablero histórico congeladas; no es un experimento ciego al público ni una nueva validación de selección.",
+    "La evidencia de semana 1 se conserva por separado y no se volvió a entrenar en esta corrida.",
+    "Informe español final e inglés diferidos; sin cambio de selección, envío o push nuevo."
+  ],
+  "independencia": false,
+  "foro_cierre": {
+    "id": "COD-S2-20261026-REENTRENO-ORIGINALES-CIERRE",
+    "recibo": "privado/reentrenamiento_completo_20261026/recibo_foro_cierre.json",
+    "sha256": "e0832fd545fa079a66a689c2f879b014ce282c873148fd4d29f329d713f6f427"
+  }
 }

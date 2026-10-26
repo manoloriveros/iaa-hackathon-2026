@@ -73,11 +73,13 @@
       "titulo": "Reproducción completa",
       "etapa": "Ambas",
       "requisito": "Código de entrenamiento e inferencia, entorno y documentación para generar la entrega.",
-      "estado": "Reconstrucción documentada con CSV exacto y diferencias intermedias",
+      "estado": "Semana 1: reconstrucción documentada; semana 2: cadena histórica reentrenada desde originales con CSV finales exactos",
       "evidencia": "docs/REPRODUCCION_COMPLETA.md",
       "limite": "D97: 162/181 huellas iguales, 19 diferentes y código 3. Replay 194/194 del autor, 191 salidas cotejadas en VAL12. Sin independencia, aceptada como limitación.",
       "responsable": "Participante",
-      "fecha": "Evidencia antes del 22oct"
+      "fecha": "Evidencia antes del 22oct",
+      "evidencia_semana2": "registro/reentrenamiento_originales_actual.json",
+      "limite_semana2": "57 etapas correctas, 87 modelos finales nuevos, 24 originales intactos; F3c/F3d/F4c exactos. Dos restauraciones explícitas y diferencias internas documentadas. Reproducción por otra persona y revisión profesional pendientes; no cambia la selección."
     },
     {
       "id": "REQ08",
