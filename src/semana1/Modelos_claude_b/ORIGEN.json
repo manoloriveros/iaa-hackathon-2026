@@ -1,0 +1,891 @@
+{
+ "herramienta": "versionado.py 1.1",
+ "orden": "incorporar",
+ "utc": "2026-10-26T19:11:05Z",
+ "origen": "Hackaton/Semana 1/Modelos_claude_b",
+ "destino": "src/semana1/Modelos_claude_b",
+ "simulado": false,
+ "actualizacion": false,
+ "copiados": 87,
+ "bytes": 314743,
+ "nuevo": 87,
+ "actualizado": 0,
+ "sin_cambios": 0,
+ "duplicados_internos": 0,
+ "omitidos": 18,
+ "por_extension": {
+  ".py": 19,
+  ".json": 38,
+  ".txt": 24,
+  ".md": 6
+ },
+ "archivos": [
+  {
+   "origen": "calibracion_segmentos_b.py",
+   "destino": "src/semana1/Modelos_claude_b/calibracion_segmentos_b.py",
+   "bytes": 6089,
+   "sha256": "a3a59c193c83a1215dfbbc42a2eb41a13eb6dbf93e6a62e462e10b16ca5f85a2",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:38+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "clima_anual.py",
+   "destino": "src/semana1/Modelos_claude_b/clima_anual.py",
+   "bytes": 1738,
+   "sha256": "bffd420591bb9a7bf964d1e392cf8715317526ed3e5233c157bbdc8b1863c71b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:29+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "combinar_peligros_b.py",
+   "destino": "src/semana1/Modelos_claude_b/combinar_peligros_b.py",
+   "bytes": 5049,
+   "sha256": "261635c98a18362e051e274f3961cec04280fb3194d1a4b9cb5829ddee1a500b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:29+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "componente_partes_b.py",
+   "destino": "src/semana1/Modelos_claude_b/componente_partes_b.py",
+   "bytes": 2660,
+   "sha256": "9499711476aa33fb0cfbd8fd1968f801798cea2e3c01a2154da6c47c0ed3c032",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:30+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "ejecutar_b.py",
+   "destino": "src/semana1/Modelos_claude_b/ejecutar_b.py",
+   "bytes": 1528,
+   "sha256": "e70f5a08b4d512f5392a8e93dd1d49ab70c7772f417fc3ac753fde0fb34cc893",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:30+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "entrega_b.py",
+   "destino": "src/semana1/Modelos_claude_b/entrega_b.py",
+   "bytes": 9188,
+   "sha256": "a94476544f43ea2172689eacff3c300df2f4358639d330f4e48df9eb3b454097",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:30+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/bootstrap_codex_s30.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/bootstrap_codex_s30.json",
+   "bytes": 1297,
+   "sha256": "d85e981e0fed933517eac7e28fbab189dbd02576ab6a8d69ef3e282e876933b6",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:31+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/calibracion_segmentos_s30.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/calibracion_segmentos_s30.json",
+   "bytes": 17845,
+   "sha256": "296d132eb246317aafb3559ec00c5c9d40130117cbdffcd33e292916ded4f5c0",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:52+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/cfg_hogar_wx.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/cfg_hogar_wx.json",
+   "bytes": 1118,
+   "sha256": "14e2b5142c1363e00a9493623b5f30ae9e8ea447825c13d24f4584829a2350dd",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:31+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/eval_B_S12wx.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/eval_B_S12wx.json",
+   "bytes": 133,
+   "sha256": "54872ac709ce78b8190f3d3d31f94e39999ac406bfb89d286f175dfa2088404d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:31+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/frec_factores_buildings.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/frec_factores_buildings.json",
+   "bytes": 4156,
+   "sha256": "511911cd533806725176a830f9b96be963aa6826d4a814ddc1604a9a23190853",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:53+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/frec_factores_buildings_sub.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/frec_factores_buildings_sub.json",
+   "bytes": 4067,
+   "sha256": "f0b7878882f74e0c1b34e4a9bf361dcbb768e2bcdcf005593812cc322a9e9d9c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:51+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/frec_tendencia_buildings.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/frec_tendencia_buildings.json",
+   "bytes": 5984,
+   "sha256": "796fcba3a25b040b64e73c2aee84f97dd00c70725494759673c1707c852f51e0",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:53+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/frec_tendencia_contents.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/frec_tendencia_contents.json",
+   "bytes": 4114,
+   "sha256": "09b2da0261ca6ef21e59b1d81edf27f895fc1fdcbaddc051654ae6497ad7ec38",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:53+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/frec_tendencia_motor.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/frec_tendencia_motor.json",
+   "bytes": 4936,
+   "sha256": "e16ddcc94cb9a9dda6753a7eb59bf72367149f4ce0be253094c0004c6089f58a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:54+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/frec_v22_buildings.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/frec_v22_buildings.json",
+   "bytes": 1395,
+   "sha256": "e19f93edf46f083a6339ca2e0ad4ee3e564da2ed8c0edd0865305d6ef82827b0",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:54+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/influencia_reservas_s30.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/influencia_reservas_s30.json",
+   "bytes": 13928,
+   "sha256": "1b5d5766a61df9bffc6b612870969bd9bafca738d5cd96984886d8bd076fa5ae",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:32+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_B_S12wx_v23.txt",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/log_B_S12wx_v23.txt",
+   "bytes": 132,
+   "sha256": "ebc9f1019fc1eb7c6d63fa7d126797e5717d873f1127465eedf698530aee20b0",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:32+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_B_TOPE_motor.txt",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/log_B_TOPE_motor.txt",
+   "bytes": 1383,
+   "sha256": "4f388b5c6fa88465c94f4155a8c9e4384c05b808aa00912b047af0127911d4ba",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:33+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_B_WXP_buildings.txt",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/log_B_WXP_buildings.txt",
+   "bytes": 414,
+   "sha256": "0cd93f69b87c2949c8651da9dda541c014dcfa4a189fb26b7a2922d5d6b777d0",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:33+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_B_WXP_contents.txt",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/log_B_WXP_contents.txt",
+   "bytes": 410,
+   "sha256": "94e761aa4063afc92ca8d0b9481b7a3f04831a73fb5a5bfb0d48aa6a3a833f2f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:33+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_B_WXP_motor.txt",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/log_B_WXP_motor.txt",
+   "bytes": 347,
+   "sha256": "8d1215fe9969b19d4cd2daf7c4cff1390463acfd31839c9817f52ec9d5cba42d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:34+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_B_WX_buildings.txt",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/log_B_WX_buildings.txt",
+   "bytes": 2219,
+   "sha256": "fddea27d8d43b2137e90ed5efe20def515d7dafbd87b942eb5a6b189dfbb7354",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:34+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_B_WX_contents.txt",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/log_B_WX_contents.txt",
+   "bytes": 1115,
+   "sha256": "553eed555463ee8b59bf31d767de240681838c0671b6ee432449e8035069ab16",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:35+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_B_WX_motor.txt",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/log_B_WX_motor.txt",
+   "bytes": 542,
+   "sha256": "82e910b0cff74ae3f6e7c47b18586166cbb055596f43264e5f0bf15a0171d275",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:35+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_calib_s30.txt",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/log_calib_s30.txt",
+   "bytes": 12339,
+   "sha256": "7bbd7476db66b610564eb8fe0ef983227a97460db381688da1c3d53b1f6924c7",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:48+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_frec_tend_buildings.txt",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/log_frec_tend_buildings.txt",
+   "bytes": 4973,
+   "sha256": "845f7655c9d8c08d748e18e63706e514f04ee7ecbf9a729b0020d1024bfdc894",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:48+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_frec_tend_contents.txt",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/log_frec_tend_contents.txt",
+   "bytes": 3404,
+   "sha256": "f73d6543fdd9babed1bba43914866f405ea0bd19c43292749f0666c7f36f3fae",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:48+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_frec_tend_motor.txt",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/log_frec_tend_motor.txt",
+   "bytes": 4125,
+   "sha256": "daaa8e5062c0dc616e7a6fd747ff2409a5089549ee590303c4e79ca084e5ddcc",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:49+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_infl_s30.txt",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/log_infl_s30.txt",
+   "bytes": 7948,
+   "sha256": "9f336ed2c4b04c21e84bdf7980472a5fdb823a6c16fed7251a771aabf2c9960a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:35+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_pubsim_s30.txt",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/log_pubsim_s30.txt",
+   "bytes": 1333,
+   "sha256": "be61f166d7529cb17423a37154ec745f779190b4c71e8d0dd3f0ad4f5d72452a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:36+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_rej_b2_buildings.txt",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/log_rej_b2_buildings.txt",
+   "bytes": 3997,
+   "sha256": "562b52c4bca70becac1d5431f08cdc3fa70780bdf31bb1cc373d3444e84f5aee",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:50+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_rej_b2_contents.txt",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/log_rej_b2_contents.txt",
+   "bytes": 5170,
+   "sha256": "0b07efd0da90938cb9d23e0462823ccd026da64b67d143cb6eb7560112b23d5e",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:50+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_rej_cuerpo_buildings.txt",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/log_rej_cuerpo_buildings.txt",
+   "bytes": 4164,
+   "sha256": "4da0b9a8a3c5ffd98f3eecfab7558b3f5dd17f7058fe2eb81d543977197472c2",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:36+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_rej_cuerpo_motor.txt",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/log_rej_cuerpo_motor.txt",
+   "bytes": 3164,
+   "sha256": "a054b2f88fabc003d08bfe25d75284d8d1cc1f3478dde70f273a7d85f8f6b62a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:36+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_rob_s33.txt",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/log_rob_s33.txt",
+   "bytes": 1412,
+   "sha256": "6d6d72e95bad4f5b6bb6b33d79fe5ae1dbc4e506c2afdde3410b3888bf2f798d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:52+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_seg_buildings.txt",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/log_seg_buildings.txt",
+   "bytes": 886,
+   "sha256": "ed30827cf6aa9b6cec441a4f90f49c962109356d563564a1ab419859160bf280",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_seg_contents.txt",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/log_seg_contents.txt",
+   "bytes": 890,
+   "sha256": "7e379f7a635931f38aba67225ce47b5951dc76b289f144ae0e09f2393e9784b3",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:46+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_seg_motor.txt",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/log_seg_motor.txt",
+   "bytes": 930,
+   "sha256": "ca07b12f97ae66c420a1c8126751f8127c09478a8e9ac1f60629508e7facb2c1",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_tabla_s30.txt",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/log_tabla_s30.txt",
+   "bytes": 2320,
+   "sha256": "0458c96c02c803a487f7c44d4c8be1761112898fbea3814833abae9b357c4f10",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:37+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_v22_buildings.txt",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/log_v22_buildings.txt",
+   "bytes": 1125,
+   "sha256": "16b53080c97bf15cf2779c0260e014e04c359c06d78236163e94933892fb9e78",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:49+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/medias_por_ramo_s30.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/medias_por_ramo_s30.json",
+   "bytes": 4086,
+   "sha256": "e89b38e46be786b2e7d750f6c0b3f132306c2747068364a26caaba938523400c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:37+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/nivel_inestable_b.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/nivel_inestable_b.json",
+   "bytes": 1563,
+   "sha256": "e4c1a026829398c750e265c06558dd07fb324a80300319b9dd3c22b34e48e655",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:38+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/publico_simulado_s30.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/publico_simulado_s30.json",
+   "bytes": 1520,
+   "sha256": "2c337003a3c5434e8f863ed400af4909f0d6d484c99cc15283863a49815f43fe",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:43+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/rob_B_cfst.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/rob_B_cfst.json",
+   "bytes": 7332,
+   "sha256": "1d9a77f9bd81cdc270409671d36de328df51e5a0aa7552f22d76817d88a37411",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:45+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/rob_B_pp.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/rob_B_pp.json",
+   "bytes": 4965,
+   "sha256": "a2f89f4c4a1090d3a446df95901cc856cf34972ce76692b1f448c3dffed2ca16",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:46+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/rob_B_tend.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/rob_B_tend.json",
+   "bytes": 7737,
+   "sha256": "d4bd60b61a2fef35e187bec829db6fbedecfc8319f97c2bfb6454a113b693d74",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:46+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/rob_s30.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/rob_s30.json",
+   "bytes": 7745,
+   "sha256": "a1e430dd0ecd7cabb503555ee5f210696f1418f8c7a82b1c893c1ea0598769b5",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:46+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/rob_s31.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/rob_s31.json",
+   "bytes": 2556,
+   "sha256": "e8fdbe92c3e17d86d2e6484d65a2dde93814194e29292c657fba92b323c4c4b5",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/rob_s31b.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/rob_s31b.json",
+   "bytes": 2483,
+   "sha256": "3cbad5a40fb860b42673c2ccedd4a57b7fa010d5fb596effb29978ca443b2d8e",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/rob_s32.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/rob_s32.json",
+   "bytes": 2492,
+   "sha256": "739c7fa343402c874c1592e28a6cca28199a8efaae943d0feb4a5a7feaf7ea2d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:44+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/rob_s32a.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/rob_s32a.json",
+   "bytes": 2482,
+   "sha256": "8b5d1144908c9ebd84eb8c451e345e42219ffbcea06de35909b3438b29106863",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:44+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/rob_s33.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/rob_s33.json",
+   "bytes": 2458,
+   "sha256": "dca9023c2482be1e71295a9f39cd78e85e2e1926fb37a514956f1a68639e8e61",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:45+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/rob_s34.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/rob_s34.json",
+   "bytes": 2483,
+   "sha256": "59e326e139fcd79e68a03161292ff026ef730c9ba7052efc862bb775fef1f6ed",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:45+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/rob_s34s.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/rob_s34s.json",
+   "bytes": 2462,
+   "sha256": "ebda75779d78d94a82278c8bad54208bab0001b25180ea44b76db7a81dba8f02",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:46+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/rob_s35.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/rob_s35.json",
+   "bytes": 2434,
+   "sha256": "2abea6496160adda4bf3dea20c4bc4a0c33161e68c1b08589032d029f319e190",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:46+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_B_cfst_tendencia.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/spec_B_cfst_tendencia.json",
+   "bytes": 691,
+   "sha256": "164e30451b58dc8be057742752034a3dea48f0bea6d063ce5fbe77e13d585daa",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:48+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_B_pp_tend.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/spec_B_pp_tend.json",
+   "bytes": 639,
+   "sha256": "2e0c043b078ea9e3e6699d4e1c33ee7c724006d77d3f3e46d751a799cda743d7",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:48+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_B_tend_mb.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/spec_B_tend_mb.json",
+   "bytes": 737,
+   "sha256": "a070bcc9570afb7778a29016ad93a8365fd65d04428f9ff218805b3b7b9c6058",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:48+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s30b.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/spec_s30b.json",
+   "bytes": 681,
+   "sha256": "e53d5b63ce0ba21000061782d65f86c079e97603d1e96e095c22d8e156d3928a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:50+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s31.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/spec_s31.json",
+   "bytes": 649,
+   "sha256": "5cf46e3a9170d6623a595a3ab7d621cf96e6f8ced70b4ff773c847442d967f90",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:50+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s31b.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/spec_s31b.json",
+   "bytes": 665,
+   "sha256": "414842f7ceb72edecfd9a981aa57d36da4cbf3a76e4e9be000f3849e54022116",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:31:51+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s32.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/spec_s32.json",
+   "bytes": 681,
+   "sha256": "0d78f629b3398f5b8342c5d7dd57bca0c1c0841052d3df68106b252345a2e0f2",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:42+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s32a.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/spec_s32a.json",
+   "bytes": 687,
+   "sha256": "11d5a67435f52fcb4154336d7f6c606e1b3e65aa2c48a485275f9262439f53ab",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:42+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s33.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/spec_s33.json",
+   "bytes": 668,
+   "sha256": "a24ee987dc705866643bcfc2deb6935df3b792cfa0f2b989fad6121bdb13a135",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:42+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s34.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/spec_s34.json",
+   "bytes": 645,
+   "sha256": "336217b4afc0f0f8fab166bd830bf21858e5ffecc98730f57f568b3aa538c4d1",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:43+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s34s.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/spec_s34s.json",
+   "bytes": 649,
+   "sha256": "caf356773449662a4abd2a9466d01f8fe736d3c09905cc97e48ffdd39fcbf5cd",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:43+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s35.json",
+   "destino": "src/semana1/Modelos_claude_b/experimentos/spec_s35.json",
+   "bytes": 679,
+   "sha256": "8ab06630937a67c43822c55f2787776cf85452195fe9ebf676a9dd4db47aa00e",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:44+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "factores_frec_b.py",
+   "destino": "src/semana1/Modelos_claude_b/factores_frec_b.py",
+   "bytes": 3594,
+   "sha256": "170774cddd99094ecdf6a3485a3db23d0cdcbfba3f35d9dc8fcab3e395bc412d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:39+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLB-20261018-001.md",
+   "destino": "src/semana1/Modelos_claude_b/foro/CLB-20261018-001.md",
+   "bytes": 6542,
+   "sha256": "ad6afe1df19ec01d5a8fc09e65c07eb275c7050fe2150bed936253a8e86b3b3f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:36:56+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLB-20261018-002.md",
+   "destino": "src/semana1/Modelos_claude_b/foro/CLB-20261018-002.md",
+   "bytes": 3805,
+   "sha256": "81cd14b66367abcdb5bf4eb0814666dbce96987b396b9f01e5026fdc0e39a919",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:36:55+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLB-20261018-003.md",
+   "destino": "src/semana1/Modelos_claude_b/foro/CLB-20261018-003.md",
+   "bytes": 1605,
+   "sha256": "d142406564c81f17f42862c0676920d67d60be6d913e85c9a3713b07da368773",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T23:02:40+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLB-20261018-004.md",
+   "destino": "src/semana1/Modelos_claude_b/foro/CLB-20261018-004.md",
+   "bytes": 3778,
+   "sha256": "2f81311a356f01f8d2b5809f67d4d6cb835e5c7c28f06a687ee1360ed1b090cd",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:41+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/D88_DECISIONES.md",
+   "destino": "src/semana1/Modelos_claude_b/foro/D88_DECISIONES.md",
+   "bytes": 8005,
+   "sha256": "99f32958aff427d6c4cd9e1368ce42a4cd8de6e6a9075adaa5a80d444e71ba0a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:36:56+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/seccion14_claude_md.md",
+   "destino": "src/semana1/Modelos_claude_b/foro/seccion14_claude_md.md",
+   "bytes": 8414,
+   "sha256": "f420f44b15c19ea292f0aac9fd5318a1b948a1ea9809c961201922aad8c4c88d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:04:29+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "frec_peligro_b.py",
+   "destino": "src/semana1/Modelos_claude_b/frec_peligro_b.py",
+   "bytes": 5878,
+   "sha256": "7540465fd86e23fe0a016fe3ae0a686db8d6376d585033c7119881cc4a261c0b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:33:37+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "frecuencia_tendencia_b.py",
+   "destino": "src/semana1/Modelos_claude_b/frecuencia_tendencia_b.py",
+   "bytes": 7832,
+   "sha256": "b39ab6b35a2a75df57608b2253a02bf276bdc5b23343dd19c2f23336bda526c4",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:38+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "partes_b.py",
+   "destino": "src/semana1/Modelos_claude_b/partes_b.py",
+   "bytes": 5006,
+   "sha256": "302cd9e483d5d2f01e5f60e0b25e23545637eb5a28a6cc8668a86070ce9f8554",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:33:38+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "produccion_b.py",
+   "destino": "src/semana1/Modelos_claude_b/produccion_b.py",
+   "bytes": 6395,
+   "sha256": "52b85af6db7d4d55a15297e81346acfb2a79450416e81a5d31efa52c894a36a1",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:40+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "publico_vs_local_b.py",
+   "destino": "src/semana1/Modelos_claude_b/publico_vs_local_b.py",
+   "bytes": 4794,
+   "sha256": "c35c148b3153c83ea2b4b9f16e719baf495f7eb15757aff998620a81e25ecd23",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:33:39+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "rejilla_cuerpo_b.py",
+   "destino": "src/semana1/Modelos_claude_b/rejilla_cuerpo_b.py",
+   "bytes": 5956,
+   "sha256": "0218420537800be6f1bb0d71d99b2a2afbf2de008ee0dc4842a2f243829c375e",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:33:39+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "rejilla_segmentos_b.py",
+   "destino": "src/semana1/Modelos_claude_b/rejilla_segmentos_b.py",
+   "bytes": 4643,
+   "sha256": "3514ce70811d655fb9423dc277044917af9e76bbdfe0a9c55bc169054c294b01",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:41+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "robustez_b.py",
+   "destino": "src/semana1/Modelos_claude_b/robustez_b.py",
+   "bytes": 995,
+   "sha256": "31a870e65fbeb88bd1f76a2edae5fba7211c3f72a18f1d70e6ca49bd5c437dd7",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:33:40+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "severidad_cfs3_b.py",
+   "destino": "src/semana1/Modelos_claude_b/severidad_cfs3_b.py",
+   "bytes": 10023,
+   "sha256": "37bad8b7af5af77205c98029c463d35131df15d5bfa004bd1622e3ad83bc79ff",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:40+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "tabla_robusta_b.py",
+   "destino": "src/semana1/Modelos_claude_b/tabla_robusta_b.py",
+   "bytes": 4371,
+   "sha256": "46b0e2c823e74880de2134975adb90158281ccb7d556a43280cda0145ca0f676",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:33:41+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "tope_parcial_b.py",
+   "destino": "src/semana1/Modelos_claude_b/tope_parcial_b.py",
+   "bytes": 5270,
+   "sha256": "f2a85192f7fd2cfbc887760e8e18540f977b5bc8171fd2ed302d939696541f17",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:33:41+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "v22_frecuencia_b.py",
+   "destino": "src/semana1/Modelos_claude_b/v22_frecuencia_b.py",
+   "bytes": 5001,
+   "sha256": "a1a04b293cc46dd7e7e1ec4cbe9e7576bd1da7080757f5b644aae48cf77de8cc",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:03:39+00:00",
+   "duplicado_de": null
+  }
+ ],
+ "omitidos_detalle": [
+  {
+   "ruta": "README.md",
+   "motivo": "ya está en el repositorio como docs/evidencia/experimentos_linea_b.md"
+  },
+  {
+   "ruta": "mezcla3_b.py",
+   "motivo": "ya está en el repositorio como src/linea_b/mezcla3_b.py"
+  },
+  {
+   "ruta": "nivel_b.py",
+   "motivo": "ya está en el repositorio como src/linea_b/nivel_b.py"
+  },
+  {
+   "ruta": "reproducir_s30_b.py",
+   "motivo": "ya está en el repositorio como src/linea_b/reproducir_s30_b.py"
+  },
+  {
+   "ruta": "severidad_tendencia.py",
+   "motivo": "ya está en el repositorio como src/linea_b/severidad_tendencia.py"
+  },
+  {
+   "ruta": "experimentos/predicciones_v23_v24_s30.parquet",
+   "motivo": "extensión .parquet fuera de código y documentación"
+  },
+  {
+   "ruta": "experimentos/publico_vs_local_b.csv",
+   "motivo": "extensión .csv fuera de código y documentación"
+  },
+  {
+   "ruta": "experimentos/rej_cuerpo_b2_buildings.json.gz",
+   "motivo": "extensión .gz fuera de código y documentación"
+  },
+  {
+   "ruta": "experimentos/rej_cuerpo_b2_contents.json.gz",
+   "motivo": "extensión .gz fuera de código y documentación"
+  },
+  {
+   "ruta": "experimentos/rej_cuerpo_buildings.json.gz",
+   "motivo": "extensión .gz fuera de código y documentación"
+  },
+  {
+   "ruta": "experimentos/rej_cuerpo_contents.json.gz",
+   "motivo": "extensión .gz fuera de código y documentación"
+  },
+  {
+   "ruta": "experimentos/rej_cuerpo_motor.json.gz",
+   "motivo": "extensión .gz fuera de código y documentación"
+  },
+  {
+   "ruta": "experimentos/spec_s21.json",
+   "motivo": "ya está en el repositorio como receta/especificaciones/spec_s22_propio.json"
+  },
+  {
+   "ruta": "experimentos/spec_s22.json",
+   "motivo": "ya está en el repositorio como receta/especificaciones/spec_s22_propio.json"
+  },
+  {
+   "ruta": "experimentos/spec_s30.json",
+   "motivo": "ya está en el repositorio como receta/especificaciones/spec_s30.json"
+  },
+  {
+   "ruta": "experimentos/tabla_rob_1.csv",
+   "motivo": "extensión .csv fuera de código y documentación"
+  },
+  {
+   "ruta": "experimentos/tabla_rob_s30.csv",
+   "motivo": "extensión .csv fuera de código y documentación"
+  },
+  {
+   "ruta": "experimentos/tabla_rob_solo.csv",
+   "motivo": "extensión .csv fuera de código y documentación"
+  }
+ ],
+ "nota": "Copia sin cambios del código tal como se ejecutó, con su fecha de modificación; la carpeta de origen sigue siendo la de trabajo. Las versiones anteriores de un archivo actualizado quedan en los commits anteriores.",
+ "actualizaciones": [
+  {
+   "utc": "2026-10-26T21:36:00Z",
+   "nuevo": 0,
+   "actualizado": 0,
+   "sin_cambios": 87,
+   "omitidos": 18
+  }
+ ]
+}

@@ -1,0 +1,1733 @@
+{
+ "herramienta": "versionado.py 1.1",
+ "orden": "incorporar",
+ "utc": "2026-10-26T19:11:34Z",
+ "origen": "Hackaton/Semana 1/Limpieza",
+ "destino": "src/semana1/Limpieza",
+ "simulado": false,
+ "actualizacion": false,
+ "copiados": 170,
+ "bytes": 5270289,
+ "nuevo": 170,
+ "actualizado": 0,
+ "sin_cambios": 0,
+ "duplicados_internos": 0,
+ "omitidos": 42,
+ "por_extension": {
+  ".md": 58,
+  ".py": 33,
+  ".json": 79
+ },
+ "archivos": [
+  {
+   "origen": "CAPITALES.md",
+   "destino": "src/semana1/Limpieza/CAPITALES.md",
+   "bytes": 10584,
+   "sha256": "18ec9ece881e3baabd6b388db2b6c8c690366a7bb213809c3861b7505ce7c16b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T02:56:50+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "README.md",
+   "destino": "src/semana1/Limpieza/README.md",
+   "bytes": 10703,
+   "sha256": "ee98cdb330bdbdac96b8a72c0ce68959a14fc8bead7c66faf5bf3461e1dd2fdf",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T01:39:05+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "REFINAMIENTO.md",
+   "destino": "src/semana1/Limpieza/REFINAMIENTO.md",
+   "bytes": 3084,
+   "sha256": "ed18853147239a0a7ba175c1f1ae7f3fb0b683d11c89ecb179be456265f1f96f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T01:39:05+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "apply_context_capitals.py",
+   "destino": "src/semana1/Limpieza/apply_context_capitals.py",
+   "bytes": 11678,
+   "sha256": "a085daadfb9711446746757ec8d54ca6143ab6a4391ab90d89c217552bbbdeb3",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T22:09:19+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "apply_distant_capitals.py",
+   "destino": "src/semana1/Limpieza/apply_distant_capitals.py",
+   "bytes": 13966,
+   "sha256": "8b849f326a98f2b550992b5333f0b08b040f2fa59d76541f4364da96a4bc3a90",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T00:45:30+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "apply_duplicates.py",
+   "destino": "src/semana1/Limpieza/apply_duplicates.py",
+   "bytes": 15760,
+   "sha256": "8a64ec3ef8a460075502a482bf5fd91797ff0c4a4780558b79df9da46c15ee4c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T19:58:33+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "apply_numeric_capitals.py",
+   "destino": "src/semana1/Limpieza/apply_numeric_capitals.py",
+   "bytes": 12041,
+   "sha256": "d11f4f21315908ec077c63922db6ff120c02126a5a07ad6207ed4fe353cb866b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:47:55+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "apply_prehistory_audit.py",
+   "destino": "src/semana1/Limpieza/apply_prehistory_audit.py",
+   "bytes": 11127,
+   "sha256": "7592bbc45e77e7527c867b9fc8a84bbe1ee0b5ce0112f04e74b9bd4b813502cb",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:14:51+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "apply_renewal_audit.py",
+   "destino": "src/semana1/Limpieza/apply_renewal_audit.py",
+   "bytes": 11828,
+   "sha256": "483908d899002b8a730f8ad366ef555066efc8c0db340d207eaa4441d3c73bd4",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:36:08+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "apply_retrospective_capitals.py",
+   "destino": "src/semana1/Limpieza/apply_retrospective_capitals.py",
+   "bytes": 12429,
+   "sha256": "a512ccfdd7e8a5dd5d13a714759c3ec16d718bf9f1120783c41db452b545dfd5",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:34:12+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "audit_quality.py",
+   "destino": "src/semana1/Limpieza/audit_quality.py",
+   "bytes": 13341,
+   "sha256": "64a9c38a08e40e3830a0838354b7d7ac0c558a6d49f7b688b2a4f11bd45f5a6a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T18:58:40+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "clean_data.py",
+   "destino": "src/semana1/Limpieza/clean_data.py",
+   "bytes": 11117,
+   "sha256": "bca949ca34e35531c2e92fb309a43f394518dcf917d54da823b4d1b28c78d670",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T17:53:09+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP02R_closure_20261016T213717Z/after/ESTADO_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/CAP02R_closure_20261016T213717Z/after/ESTADO_PROYECTO.json",
+   "bytes": 66743,
+   "sha256": "73eb9acf24397d94f23b8294db6fc1d8bdec0a9308abc572f3033aae33a23a13",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:37:18+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP02R_closure_20261016T213717Z/after/MEMORIA_PROYECTO.md",
+   "destino": "src/semana1/Limpieza/closures/CAP02R_closure_20261016T213717Z/after/MEMORIA_PROYECTO.md",
+   "bytes": 150190,
+   "sha256": "95999207a3019941893924175a9c6aecf15be30fb631f5ed36792b8e2e5b10d7",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:37:18+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP02R_closure_20261016T213717Z/after/RUTAS_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/CAP02R_closure_20261016T213717Z/after/RUTAS_PROYECTO.json",
+   "bytes": 2256,
+   "sha256": "42d58b0c1938bc47701764f28e051e11b947a82ffdb515159b0eba9c57f98a87",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:37:18+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP02R_closure_20261016T213717Z/after/capital_rules.md",
+   "destino": "src/semana1/Limpieza/closures/CAP02R_closure_20261016T213717Z/after/capital_rules.md",
+   "bytes": 4294,
+   "sha256": "8184ff05ed2090ae3390186f7a329973d7c9f30b32afe3022e69be2038592fb8",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:37:18+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP02R_closure_20261016T213717Z/after/cleaning_README.md",
+   "destino": "src/semana1/Limpieza/closures/CAP02R_closure_20261016T213717Z/after/cleaning_README.md",
+   "bytes": 6560,
+   "sha256": "e6f5123777bff19fdba14a3b20a6ccda4a65c188576f4f3b6b5b4b8c4c6b5c00",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:37:18+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP02R_closure_20261016T213717Z/after/methodology.md",
+   "destino": "src/semana1/Limpieza/closures/CAP02R_closure_20261016T213717Z/after/methodology.md",
+   "bytes": 42674,
+   "sha256": "5c46e0c169a7ac1f171d209552f695788b5fa82583b83a1eafb77a3344fdc1db",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:37:18+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP02R_closure_20261016T213717Z/after/model_README.md",
+   "destino": "src/semana1/Limpieza/closures/CAP02R_closure_20261016T213717Z/after/model_README.md",
+   "bytes": 3736,
+   "sha256": "154972511bfbb9293023924675339f17ef7caafdda322aaa21a5e6e72c95d4b1",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:37:18+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP02R_closure_20261016T213717Z/after/protocol.json",
+   "destino": "src/semana1/Limpieza/closures/CAP02R_closure_20261016T213717Z/after/protocol.json",
+   "bytes": 11103,
+   "sha256": "a55ae148470c0a850adc579e4578a443272123a3033dbf805d70a145ab8f387c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:37:18+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP02R_closure_20261016T213717Z/before_ESTADO_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/CAP02R_closure_20261016T213717Z/before_ESTADO_PROYECTO.json",
+   "bytes": 64351,
+   "sha256": "68ca4fd305322e408d58da8152389dba83bbc25deb978ac2cc6149de669b10e5",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:31:45+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP02R_closure_20261016T213717Z/before_MEMORIA_PROYECTO.md",
+   "destino": "src/semana1/Limpieza/closures/CAP02R_closure_20261016T213717Z/before_MEMORIA_PROYECTO.md",
+   "bytes": 149284,
+   "sha256": "ee274230607769a5bd76e79fb9bd12cb6d28ca4f78003f647dd6f392d4226987",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:31:45+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP02R_closure_20261016T213717Z/before_RUTAS_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/CAP02R_closure_20261016T213717Z/before_RUTAS_PROYECTO.json",
+   "bytes": 2015,
+   "sha256": "89d7399a7aa906e5347330eb2ef7d07726c5698f893444d1e8e61d053bb01e15",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:31:45+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP02R_closure_20261016T213717Z/before_capital_rules.md",
+   "destino": "src/semana1/Limpieza/closures/CAP02R_closure_20261016T213717Z/before_capital_rules.md",
+   "bytes": 3421,
+   "sha256": "19099d9ddf6b73a83181eaa8a6d597509c515ce4c35189715cbfa787d7e811bc",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T18:47:58+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP02R_closure_20261016T213717Z/before_cleaning_README.md",
+   "destino": "src/semana1/Limpieza/closures/CAP02R_closure_20261016T213717Z/before_cleaning_README.md",
+   "bytes": 6090,
+   "sha256": "1351725a85deabf56470affef1b18ade0e3fa10385284c80878cef8ea83726b9",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:19:33+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP02R_closure_20261016T213717Z/before_methodology.md",
+   "destino": "src/semana1/Limpieza/closures/CAP02R_closure_20261016T213717Z/before_methodology.md",
+   "bytes": 41148,
+   "sha256": "f31bf6112194b9073237289e4cdbbe0cd211aecbfb357b46aee8d858c55bfa2b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:19:33+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP02R_closure_20261016T213717Z/before_model_README.md",
+   "destino": "src/semana1/Limpieza/closures/CAP02R_closure_20261016T213717Z/before_model_README.md",
+   "bytes": 3242,
+   "sha256": "a61b432888614de9275a537852aae80f83c3250fec87226e11ced3a47c2d2e50",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:19:33+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP02R_closure_20261016T213717Z/before_protocol.json",
+   "destino": "src/semana1/Limpieza/closures/CAP02R_closure_20261016T213717Z/before_protocol.json",
+   "bytes": 9999,
+   "sha256": "e10d0fee58d738821b3a254ba1c826f1c8013db61f557f67685f3b83f24f6075",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:19:33+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP02R_closure_20261016T213717Z/closure.json",
+   "destino": "src/semana1/Limpieza/closures/CAP02R_closure_20261016T213717Z/closure.json",
+   "bytes": 4005,
+   "sha256": "62c5a5a745328a9545ea0688f32bf6a98537d40c54828e792f11b1bb621a30a9",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:37:20+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP02R_closure_20261016T213717Z/delivery_verification.json",
+   "destino": "src/semana1/Limpieza/closures/CAP02R_closure_20261016T213717Z/delivery_verification.json",
+   "bytes": 458,
+   "sha256": "2274ab26a46f8c9a5e8cb0fcdcbff0022a6d578712b6b683714181aa2e08a32f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:37:41+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP02R_closure_20261016T213717Z/post_publication_verification.json",
+   "destino": "src/semana1/Limpieza/closures/CAP02R_closure_20261016T213717Z/post_publication_verification.json",
+   "bytes": 1110,
+   "sha256": "0a0e5a36edcbf7e5a6afda67532cd241bb05b48e964fb71970bf0356a2271696",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:37:20+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP03R_closure_20261016T215048Z/after/ESTADO_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/CAP03R_closure_20261016T215048Z/after/ESTADO_PROYECTO.json",
+   "bytes": 77624,
+   "sha256": "f0dd245c98709989c83c40ac00304a3b9ea896b874cba0fd1d90b790c21c7e67",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:50:49+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP03R_closure_20261016T215048Z/after/MEMORIA_PROYECTO.md",
+   "destino": "src/semana1/Limpieza/closures/CAP03R_closure_20261016T215048Z/after/MEMORIA_PROYECTO.md",
+   "bytes": 155448,
+   "sha256": "4de03928c6785162260c5d4ebc61d58147f891d0091f1636378e812a595bf690",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:50:49+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP03R_closure_20261016T215048Z/after/RUTAS_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/CAP03R_closure_20261016T215048Z/after/RUTAS_PROYECTO.json",
+   "bytes": 2618,
+   "sha256": "02a09f4284b7b1bbfbc51ed426f1fcfd585f734dd127170e4c13a0b19fc8a40a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:50:49+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP03R_closure_20261016T215048Z/after/capital_rules.md",
+   "destino": "src/semana1/Limpieza/closures/CAP03R_closure_20261016T215048Z/after/capital_rules.md",
+   "bytes": 4964,
+   "sha256": "1349edc5eb8ff4408644bba406cf14ce845c2b5b911e50860e69f60edc098faa",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:50:49+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP03R_closure_20261016T215048Z/after/cleaning_README.md",
+   "destino": "src/semana1/Limpieza/closures/CAP03R_closure_20261016T215048Z/after/cleaning_README.md",
+   "bytes": 7230,
+   "sha256": "3b894e806933888fcd9c27617001ea216b1e7fe6fd2af42fb3c7f59ee82b20f6",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:50:49+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP03R_closure_20261016T215048Z/after/methodology.md",
+   "destino": "src/semana1/Limpieza/closures/CAP03R_closure_20261016T215048Z/after/methodology.md",
+   "bytes": 43861,
+   "sha256": "cf65fe864a3f0daf40bb7107e6821cd98be2d30cbbd63d571549397b5557b70c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:50:49+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP03R_closure_20261016T215048Z/after/model_README.md",
+   "destino": "src/semana1/Limpieza/closures/CAP03R_closure_20261016T215048Z/after/model_README.md",
+   "bytes": 5162,
+   "sha256": "fb0a124e68c9a2954339b655d94396c1071458855a6c717bc7479842dd3d60cd",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:50:49+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP03R_closure_20261016T215048Z/after/protocol.json",
+   "destino": "src/semana1/Limpieza/closures/CAP03R_closure_20261016T215048Z/after/protocol.json",
+   "bytes": 12422,
+   "sha256": "a36aea4e304c081b4d43f600253380e89ad45b7967743c410e8818dffd0acbfa",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:50:49+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP03R_closure_20261016T215048Z/before_ESTADO_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/CAP03R_closure_20261016T215048Z/before_ESTADO_PROYECTO.json",
+   "bytes": 74914,
+   "sha256": "c42e7929285ecb42dade0ba59e59d058d904d2000434fa0f8db941333d5fa0d0",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:44:39+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP03R_closure_20261016T215048Z/before_MEMORIA_PROYECTO.md",
+   "destino": "src/semana1/Limpieza/closures/CAP03R_closure_20261016T215048Z/before_MEMORIA_PROYECTO.md",
+   "bytes": 154410,
+   "sha256": "2f244206e98c6a4d3aa5e19fd2a5561ab635abf9582fdb89a618a0e660aa8e26",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:44:57+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP03R_closure_20261016T215048Z/before_RUTAS_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/CAP03R_closure_20261016T215048Z/before_RUTAS_PROYECTO.json",
+   "bytes": 2501,
+   "sha256": "89b58cc629a97aab05e09b2937f41526356d69f33acd8255f3dab23dcdf3461c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:44:39+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP03R_closure_20261016T215048Z/before_model_README.md",
+   "destino": "src/semana1/Limpieza/closures/CAP03R_closure_20261016T215048Z/before_model_README.md",
+   "bytes": 4480,
+   "sha256": "37da4768c404f6c689e7998867a7fadb36bc569a2abb05b5628993c3d3a75129",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:37:48+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP03R_closure_20261016T215048Z/closure.json",
+   "destino": "src/semana1/Limpieza/closures/CAP03R_closure_20261016T215048Z/closure.json",
+   "bytes": 4226,
+   "sha256": "02ab2c63d141fd334a71b6af6d5f092e2c3ca86f426a0acb033c317b06cb8313",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:50:51+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP03R_closure_20261016T215048Z/delivery_verification.json",
+   "destino": "src/semana1/Limpieza/closures/CAP03R_closure_20261016T215048Z/delivery_verification.json",
+   "bytes": 543,
+   "sha256": "4f52cbc5d3dde1bcb4005df76d16045949e92af20d8f45f6cd77ec6439a21fd4",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:51:12+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP03R_closure_20261016T215048Z/post_publication_verification.json",
+   "destino": "src/semana1/Limpieza/closures/CAP03R_closure_20261016T215048Z/post_publication_verification.json",
+   "bytes": 1129,
+   "sha256": "932fa258827dbc8c6354d222249ec2c857571c6463d4cf3bd8967b1c9ba8ba5a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:50:51+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP04R_closure_20261016T220957Z/after/ESTADO_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/CAP04R_closure_20261016T220957Z/after/ESTADO_PROYECTO.json",
+   "bytes": 82137,
+   "sha256": "023dd55f8680ca40d99855ac0a865687ea7ca0e20a306238ca0ec16fd162c4c2",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T22:09:58+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP04R_closure_20261016T220957Z/after/MEMORIA_PROYECTO.md",
+   "destino": "src/semana1/Limpieza/closures/CAP04R_closure_20261016T220957Z/after/MEMORIA_PROYECTO.md",
+   "bytes": 158146,
+   "sha256": "bd034a458225aa1e2e7ab32fc6d90e624097b3825970777abcf8ceb2d97dbab7",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T22:09:58+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP04R_closure_20261016T220957Z/after/RUTAS_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/CAP04R_closure_20261016T220957Z/after/RUTAS_PROYECTO.json",
+   "bytes": 2841,
+   "sha256": "0d3f3bd678c78303a7268bdb149bd3ac9e8ac975c0ae20765d2983af3fab357a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T22:09:58+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP04R_closure_20261016T220957Z/after/capital_rules.md",
+   "destino": "src/semana1/Limpieza/closures/CAP04R_closure_20261016T220957Z/after/capital_rules.md",
+   "bytes": 5754,
+   "sha256": "051a8f538e1b69617d82a6ae3c268ae1b8350bdbdaaa8e6b149467145ea11a01",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T22:09:58+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP04R_closure_20261016T220957Z/after/cleaning_README.md",
+   "destino": "src/semana1/Limpieza/closures/CAP04R_closure_20261016T220957Z/after/cleaning_README.md",
+   "bytes": 8020,
+   "sha256": "14a000863f23d02ff354d1db381bb09d29952e5d306ed1a7358de71e1a184125",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T22:09:58+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP04R_closure_20261016T220957Z/after/methodology.md",
+   "destino": "src/semana1/Limpieza/closures/CAP04R_closure_20261016T220957Z/after/methodology.md",
+   "bytes": 44512,
+   "sha256": "d7a9f5bda946633a1e415888fdc6b3de7bccd1c8bb55178b31ca91630ed84967",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T22:09:58+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP04R_closure_20261016T220957Z/after/model_README.md",
+   "destino": "src/semana1/Limpieza/closures/CAP04R_closure_20261016T220957Z/after/model_README.md",
+   "bytes": 5964,
+   "sha256": "c8b54284b163f4092fc71454e200a11eb38dffe541f4429811c444581a843d0a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T22:09:58+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP04R_closure_20261016T220957Z/after/protocol.json",
+   "destino": "src/semana1/Limpieza/closures/CAP04R_closure_20261016T220957Z/after/protocol.json",
+   "bytes": 13727,
+   "sha256": "fa471c021004d84674f227d7aedfe4ac0093c4903604f10030ecf706a5aad34d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T22:09:58+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP04R_closure_20261016T220957Z/before_ESTADO_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/CAP04R_closure_20261016T220957Z/before_ESTADO_PROYECTO.json",
+   "bytes": 79415,
+   "sha256": "89b659ee635c967f336b8fc1f0273890fcbef2dc8c64f93bd9edab4d74199783",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T22:04:19+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP04R_closure_20261016T220957Z/before_MEMORIA_PROYECTO.md",
+   "destino": "src/semana1/Limpieza/closures/CAP04R_closure_20261016T220957Z/before_MEMORIA_PROYECTO.md",
+   "bytes": 156994,
+   "sha256": "404821dc9e0e78519bec509fda5435a24d56d8d4150b9d16f20ad41193d3feeb",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T22:04:19+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP04R_closure_20261016T220957Z/before_RUTAS_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/CAP04R_closure_20261016T220957Z/before_RUTAS_PROYECTO.json",
+   "bytes": 2724,
+   "sha256": "e31021f610275d0dd4497afe14bc3eee82a29e89c31e751b79e1663531e46237",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T22:04:19+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP04R_closure_20261016T220957Z/closure.json",
+   "destino": "src/semana1/Limpieza/closures/CAP04R_closure_20261016T220957Z/closure.json",
+   "bytes": 4241,
+   "sha256": "636b44b45331bf877c41e561d7060085d40d77805a2d7106e55843d5ce4947bd",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T22:10:00+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP04R_closure_20261016T220957Z/delivery_verification.json",
+   "destino": "src/semana1/Limpieza/closures/CAP04R_closure_20261016T220957Z/delivery_verification.json",
+   "bytes": 892,
+   "sha256": "5862c7e028d4d33434f2b7f52d5d9d777285d0ea47923e2f096c3646db2b0904",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T22:10:21+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP04R_closure_20261016T220957Z/post_publication_verification.json",
+   "destino": "src/semana1/Limpieza/closures/CAP04R_closure_20261016T220957Z/post_publication_verification.json",
+   "bytes": 1081,
+   "sha256": "669507e238e0ade7634b624199133b5a513e279e6336a9216cffa4a261dc77de",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T22:10:00+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP05R_closure_20261017T004609Z/after/ESTADO_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/CAP05R_closure_20261017T004609Z/after/ESTADO_PROYECTO.json",
+   "bytes": 93136,
+   "sha256": "69b7463efe173da30e936bd711715ea2012cde93bd9d1c55932d3826be1e7f28",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T00:46:09+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP05R_closure_20261017T004609Z/after/MEMORIA_PROYECTO.md",
+   "destino": "src/semana1/Limpieza/closures/CAP05R_closure_20261017T004609Z/after/MEMORIA_PROYECTO.md",
+   "bytes": 164558,
+   "sha256": "b12d5cc8b5b7ce5e8fb75cfa79c45bcbe46c46644382ccd26658585c80754fb3",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T00:46:09+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP05R_closure_20261017T004609Z/after/RUTAS_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/CAP05R_closure_20261017T004609Z/after/RUTAS_PROYECTO.json",
+   "bytes": 3394,
+   "sha256": "c0ed390bf63b87bc6d7ff4f29711fb4b1129b866468b1e819b46daa6eab1ebb1",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T00:46:09+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP05R_closure_20261017T004609Z/after/capital_rules.md",
+   "destino": "src/semana1/Limpieza/closures/CAP05R_closure_20261017T004609Z/after/capital_rules.md",
+   "bytes": 6682,
+   "sha256": "826a706ac97885bd931f84a5caa4692295a28ebca50bcc01138287d2be002eec",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T00:46:09+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP05R_closure_20261017T004609Z/after/cleaning_README.md",
+   "destino": "src/semana1/Limpieza/closures/CAP05R_closure_20261017T004609Z/after/cleaning_README.md",
+   "bytes": 8948,
+   "sha256": "f5ec2b5a324dff0b478ce2a3dd905dde64d134764a91355fe3862f2e1a65493f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T00:46:09+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP05R_closure_20261017T004609Z/after/methodology.md",
+   "destino": "src/semana1/Limpieza/closures/CAP05R_closure_20261017T004609Z/after/methodology.md",
+   "bytes": 45301,
+   "sha256": "4f212402da99a2b08e30475caa8196d59d3a9c4440de1f4b7462a3c0fe993b67",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T00:46:09+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP05R_closure_20261017T004609Z/after/model_README.md",
+   "destino": "src/semana1/Limpieza/closures/CAP05R_closure_20261017T004609Z/after/model_README.md",
+   "bytes": 6904,
+   "sha256": "7ad863e32cdadfcad7ef1f2ff4679220f955ee1033eed981dd2bfeb95bf67293",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T00:46:09+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP05R_closure_20261017T004609Z/after/protocol.json",
+   "destino": "src/semana1/Limpieza/closures/CAP05R_closure_20261017T004609Z/after/protocol.json",
+   "bytes": 15209,
+   "sha256": "b636d7c6aca5f747f5734054c4f123404a60bd8fe8139ce31f19c9d439ce5e96",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T00:46:09+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP05R_closure_20261017T004609Z/before_ESTADO_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/CAP05R_closure_20261017T004609Z/before_ESTADO_PROYECTO.json",
+   "bytes": 89802,
+   "sha256": "710e55b1f0e316270fcc87a1a7775c91cadcfebd9db1fb3067148a3727ff2f90",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T00:25:46+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP05R_closure_20261017T004609Z/before_MEMORIA_PROYECTO.md",
+   "destino": "src/semana1/Limpieza/closures/CAP05R_closure_20261017T004609Z/before_MEMORIA_PROYECTO.md",
+   "bytes": 163233,
+   "sha256": "9196e6b41d0653f1e9ad5dc40bd57e4d9f7ada329ec289572873414beed605a4",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T00:25:46+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP05R_closure_20261017T004609Z/before_RUTAS_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/CAP05R_closure_20261017T004609Z/before_RUTAS_PROYECTO.json",
+   "bytes": 3277,
+   "sha256": "9f26efc3c8d175a12132eda8768afaf470b56da6de3813a976348d0577d6d0f8",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T00:25:46+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP05R_closure_20261017T004609Z/closure.json",
+   "destino": "src/semana1/Limpieza/closures/CAP05R_closure_20261017T004609Z/closure.json",
+   "bytes": 4755,
+   "sha256": "1750ca150ddad75e0c0883d8a3d4ef45d7e5e0ebee7261488a33a5259e7400a9",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T00:46:12+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP05R_closure_20261017T004609Z/delivery_verification.json",
+   "destino": "src/semana1/Limpieza/closures/CAP05R_closure_20261017T004609Z/delivery_verification.json",
+   "bytes": 1662,
+   "sha256": "f582d0188371e4f36205c40e2e9c5e6fa4db14185c357c685b616d18545858f4",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T00:46:37+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP05R_closure_20261017T004609Z/post_publication_verification.json",
+   "destino": "src/semana1/Limpieza/closures/CAP05R_closure_20261017T004609Z/post_publication_verification.json",
+   "bytes": 1059,
+   "sha256": "7f336d167e774b34f40e76d58e0211c0eea26feb5c8977aec2a397f7e57bbbd6",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T00:46:12+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP06R_closure_20261017T010905Z/after/ESTADO_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/CAP06R_closure_20261017T010905Z/after/ESTADO_PROYECTO.json",
+   "bytes": 102673,
+   "sha256": "c6606df3c0dd1b0f189f63a24308f98660eb847dedf17e1d1c092e41040a2ba3",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T01:09:06+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP06R_closure_20261017T010905Z/after/MEMORIA_PROYECTO.md",
+   "destino": "src/semana1/Limpieza/closures/CAP06R_closure_20261017T010905Z/after/MEMORIA_PROYECTO.md",
+   "bytes": 169397,
+   "sha256": "b22708aefecb1eeae67d5ffc94c9d2b6c1ca7bd74a9b5f5194c12dd7201f367b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T01:09:06+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP06R_closure_20261017T010905Z/after/RUTAS_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/CAP06R_closure_20261017T010905Z/after/RUTAS_PROYECTO.json",
+   "bytes": 3745,
+   "sha256": "56886aaf60c689335e112a111dfdb5a32ec0077d87cd4a997973ff89a641b938",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T01:09:06+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP06R_closure_20261017T010905Z/after/capital_rules.md",
+   "destino": "src/semana1/Limpieza/closures/CAP06R_closure_20261017T010905Z/after/capital_rules.md",
+   "bytes": 7572,
+   "sha256": "d765061d87e0d572a04b9bd9bef4cb8452c3778e5e02d3b3ab52c8b028a26396",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T01:09:06+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP06R_closure_20261017T010905Z/after/cleaning_README.md",
+   "destino": "src/semana1/Limpieza/closures/CAP06R_closure_20261017T010905Z/after/cleaning_README.md",
+   "bytes": 10348,
+   "sha256": "229b9818985596ea001c6ea94cfae99ddc42a6ae13396145128f8be2570568a4",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T01:09:06+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP06R_closure_20261017T010905Z/after/methodology.md",
+   "destino": "src/semana1/Limpieza/closures/CAP06R_closure_20261017T010905Z/after/methodology.md",
+   "bytes": 46037,
+   "sha256": "154fc62f9f05e8f3a48d8538d660eed3d658f96f75ad5c35b7c1570b2fdca160",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T01:09:06+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP06R_closure_20261017T010905Z/after/model_README.md",
+   "destino": "src/semana1/Limpieza/closures/CAP06R_closure_20261017T010905Z/after/model_README.md",
+   "bytes": 7806,
+   "sha256": "7b6400dc5adf50851e60c25f72a1dc057da23013d5b8e06b7c9339dbc2408f75",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T01:09:06+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP06R_closure_20261017T010905Z/after/protocol.json",
+   "destino": "src/semana1/Limpieza/closures/CAP06R_closure_20261017T010905Z/after/protocol.json",
+   "bytes": 16737,
+   "sha256": "e8eaac97f431daebfe181747d778201f2d49970091a71bf94d0b77998ddebb9f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T01:09:06+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP06R_closure_20261017T010905Z/before_ESTADO_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/CAP06R_closure_20261017T010905Z/before_ESTADO_PROYECTO.json",
+   "bytes": 99597,
+   "sha256": "64629efa365bb168a99516195bffc857542d2cb33eea428619d0b1d05a5c2a09",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T01:03:50+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP06R_closure_20261017T010905Z/before_MEMORIA_PROYECTO.md",
+   "destino": "src/semana1/Limpieza/closures/CAP06R_closure_20261017T010905Z/before_MEMORIA_PROYECTO.md",
+   "bytes": 168153,
+   "sha256": "7b6989c6454b04a33f8ae88a3bce0bdcda5dd1abd37f2833c7d32e26a20da81f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T01:03:50+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP06R_closure_20261017T010905Z/before_RUTAS_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/CAP06R_closure_20261017T010905Z/before_RUTAS_PROYECTO.json",
+   "bytes": 3620,
+   "sha256": "e99f41fdb01924a008fe01db32ce2fc5bd25707e557ba0e1c90b0e4eb468fa3c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T01:03:50+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP06R_closure_20261017T010905Z/before_cleaning_README.md",
+   "destino": "src/semana1/Limpieza/closures/CAP06R_closure_20261017T010905Z/before_cleaning_README.md",
+   "bytes": 9458,
+   "sha256": "b442b742d4181c70447dc56820310a0795ec4f19344e4b30a96d6be2752c4799",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T01:00:08+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP06R_closure_20261017T010905Z/closure.json",
+   "destino": "src/semana1/Limpieza/closures/CAP06R_closure_20261017T010905Z/closure.json",
+   "bytes": 4460,
+   "sha256": "5bb80743c58f27b0977329b1e5b7b5ecc993e918b5d9747e5b219d22ddd9ab45",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T01:09:08+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP06R_closure_20261017T010905Z/delivery_verification.json",
+   "destino": "src/semana1/Limpieza/closures/CAP06R_closure_20261017T010905Z/delivery_verification.json",
+   "bytes": 1137,
+   "sha256": "ec1dbd5ec4c7da949f2e9821236946aed17aacc795706f1e0b0b7b3d5017ce92",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T01:09:32+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/CAP06R_closure_20261017T010905Z/post_activation_verification.json",
+   "destino": "src/semana1/Limpieza/closures/CAP06R_closure_20261017T010905Z/post_activation_verification.json",
+   "bytes": 1044,
+   "sha256": "9785fac4d63662d8474e0704ccf993d504b0df3412999e5abbec95a12ac2aae2",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T01:09:08+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/DUP01_closure_20261016T200446Z/after/Hackaton/Semana 1/Modelado/diagnosticos/actual.json",
+   "destino": "src/semana1/Limpieza/closures/DUP01_closure_20261016T200446Z/after/Hackaton/Semana 1/Modelado/diagnosticos/actual.json",
+   "bytes": 379,
+   "sha256": "3c7a99aa85f26ee2137258d9fe47038f95a9e128178bde603f8151c2444a400e",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:04:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/DUP01_closure_20261016T200446Z/after/Hackaton/Semana 1/README.md",
+   "destino": "src/semana1/Limpieza/closures/DUP01_closure_20261016T200446Z/after/Hackaton/Semana 1/README.md",
+   "bytes": 4747,
+   "sha256": "0fbb22d55b23f1674808082b9e1962de6c502fc3641eb79493ecec0cbe481797",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:04:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/DUP01_closure_20261016T200446Z/after/Preparación/DECISIONES.md",
+   "destino": "src/semana1/Limpieza/closures/DUP01_closure_20261016T200446Z/after/Preparación/DECISIONES.md",
+   "bytes": 86261,
+   "sha256": "99930656f5b56f00cd45f829febd0afc64f236fa9b446314799f7fd3716abede",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:04:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/DUP01_closure_20261016T200446Z/after/Preparación/ESTADO_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/DUP01_closure_20261016T200446Z/after/Preparación/ESTADO_PROYECTO.json",
+   "bytes": 50675,
+   "sha256": "31bb88c2356a89b6e91f11f6e84cdb3428fda558aa6d1612414434528d1739f4",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:04:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/DUP01_closure_20261016T200446Z/after/Preparación/MEMORIA_PROYECTO.md",
+   "destino": "src/semana1/Limpieza/closures/DUP01_closure_20261016T200446Z/after/Preparación/MEMORIA_PROYECTO.md",
+   "bytes": 143834,
+   "sha256": "368a47cd690a4fe3cc23389e5607eec550976aac7e094a8019269614917f9ee4",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:04:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/DUP01_closure_20261016T200446Z/after/RUTAS_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/DUP01_closure_20261016T200446Z/after/RUTAS_PROYECTO.json",
+   "bytes": 1377,
+   "sha256": "98245ef2212e4a3b73678e6d78acbb09beb2716a96132cfe1b677b23e7794105",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:04:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/DUP01_closure_20261016T200446Z/before/Hackaton/Semana 1/Modelado/diagnosticos/actual.json",
+   "destino": "src/semana1/Limpieza/closures/DUP01_closure_20261016T200446Z/before/Hackaton/Semana 1/Modelado/diagnosticos/actual.json",
+   "bytes": 362,
+   "sha256": "b2706f38b2894fd7e71845de7ac623fb0e8e3a2634c5a9e804e5f50b5c8fa837",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T18:13:20+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/DUP01_closure_20261016T200446Z/before/Hackaton/Semana 1/README.md",
+   "destino": "src/semana1/Limpieza/closures/DUP01_closure_20261016T200446Z/before/Hackaton/Semana 1/README.md",
+   "bytes": 4310,
+   "sha256": "0b5e0647202737f169fc9347f1540c1e763773cda1bc5524738a9216cafb9c14",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T19:53:01+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/DUP01_closure_20261016T200446Z/before/Preparación/DECISIONES.md",
+   "destino": "src/semana1/Limpieza/closures/DUP01_closure_20261016T200446Z/before/Preparación/DECISIONES.md",
+   "bytes": 80663,
+   "sha256": "06c9d21bd5c57683eef1acdc796618d1173d7a8b92ef8dfaf1b7624208f39b4b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T19:53:01+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/DUP01_closure_20261016T200446Z/before/Preparación/ESTADO_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/DUP01_closure_20261016T200446Z/before/Preparación/ESTADO_PROYECTO.json",
+   "bytes": 47127,
+   "sha256": "2426b8e3d38802805aaf064846b0d40035133ee6588fdd93375a3ca85b540672",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T19:53:01+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/DUP01_closure_20261016T200446Z/before/Preparación/MEMORIA_PROYECTO.md",
+   "destino": "src/semana1/Limpieza/closures/DUP01_closure_20261016T200446Z/before/Preparación/MEMORIA_PROYECTO.md",
+   "bytes": 141629,
+   "sha256": "e280a4b3c5788465e9571a84a729e4d7adb8849865b1cd71be9c20cf43cc0d59",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T19:53:01+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/DUP01_closure_20261016T200446Z/before/RUTAS_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/DUP01_closure_20261016T200446Z/before/RUTAS_PROYECTO.json",
+   "bytes": 1265,
+   "sha256": "bfd149b84ad11eb5077edc296c4bba0144d005783af60f1b3c7476938e22bb4e",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T19:53:01+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/DUP01_closure_20261016T200446Z/cleaning_README_after.md",
+   "destino": "src/semana1/Limpieza/closures/DUP01_closure_20261016T200446Z/cleaning_README_after.md",
+   "bytes": 4460,
+   "sha256": "49001eefea4647fdc41bf167c38fc573d466d875499b32b5480c2aeafc588c76",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:02:58+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/DUP01_closure_20261016T200446Z/consumer_diagnostic.json",
+   "destino": "src/semana1/Limpieza/closures/DUP01_closure_20261016T200446Z/consumer_diagnostic.json",
+   "bytes": 50394,
+   "sha256": "6f8fe25c2bb8e746371716df9adfca9f05bad2fe511c25e1f64e90904567710b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:03:59+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/DUP01_closure_20261016T200446Z/consumer_integration_verification.json",
+   "destino": "src/semana1/Limpieza/closures/DUP01_closure_20261016T200446Z/consumer_integration_verification.json",
+   "bytes": 1931,
+   "sha256": "2ffaef016718c4b919f0b51279ba29f289681e937ca947eb946082d33d7fd814",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:04:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/DUP01_closure_20261016T200446Z/documentation_verification.json",
+   "destino": "src/semana1/Limpieza/closures/DUP01_closure_20261016T200446Z/documentation_verification.json",
+   "bytes": 918,
+   "sha256": "6fa3df35b088f898d08c6c2a5913b3754a5770c526b7d1c165f35f3b69b9ba55",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:04:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/DUP01_closure_20261016T200446Z/manifest.json",
+   "destino": "src/semana1/Limpieza/closures/DUP01_closure_20261016T200446Z/manifest.json",
+   "bytes": 3718,
+   "sha256": "1be1a86bca4e8a59468372ecd0f8a2a332740d2d6cf2eecefa498353e3e11ec0",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:04:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/DUP01_closure_20261016T200446Z/modelado_after/METODOLOGIA_ACTUARIAL.md",
+   "destino": "src/semana1/Limpieza/closures/DUP01_closure_20261016T200446Z/modelado_after/METODOLOGIA_ACTUARIAL.md",
+   "bytes": 37907,
+   "sha256": "489cf64f84b70cedc81027608ec37dbe8f83d2e34c6ebeb9afe2381d62547236",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:02:58+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/DUP01_closure_20261016T200446Z/modelado_after/README.md",
+   "destino": "src/semana1/Limpieza/closures/DUP01_closure_20261016T200446Z/modelado_after/README.md",
+   "bytes": 2268,
+   "sha256": "bafe386cff76c3a7ea16dd85b95a1b68fa121a13f2161be6c8a5f863d5825ac0",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:02:58+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/DUP01_closure_20261016T200446Z/modelado_after/diagnostico_objetivo.py",
+   "destino": "src/semana1/Limpieza/closures/DUP01_closure_20261016T200446Z/modelado_after/diagnostico_objetivo.py",
+   "bytes": 10235,
+   "sha256": "12cce8c0862bec601f6e62923ee72f72a4c175d763db0c6f8bbf214895f88c20",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:00:44+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/DUP01_closure_20261016T200446Z/modelado_after/protocolo_metodologico.json",
+   "destino": "src/semana1/Limpieza/closures/DUP01_closure_20261016T200446Z/modelado_after/protocolo_metodologico.json",
+   "bytes": 7584,
+   "sha256": "861be45fb29a05eda98a0195bf3a8aed7fa92847fdeb46e72dc92d3b3bc9bb40",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:02:58+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/PRE00_closure_20261016T211933Z/after/ESTADO_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/PRE00_closure_20261016T211933Z/after/ESTADO_PROYECTO.json",
+   "bytes": 61478,
+   "sha256": "d9e36ad0e2b7bad65ddbfad04cd5b5abb04cb4e0f309197f5417e5221ad36836",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:19:33+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/PRE00_closure_20261016T211933Z/after/MEMORIA_PROYECTO.md",
+   "destino": "src/semana1/Limpieza/closures/PRE00_closure_20261016T211933Z/after/MEMORIA_PROYECTO.md",
+   "bytes": 148009,
+   "sha256": "9bb2395f6a175f526a26898a9fd16aa893c3419ebcad183d893489533363da7f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:19:33+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/PRE00_closure_20261016T211933Z/after/RUTAS_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/PRE00_closure_20261016T211933Z/after/RUTAS_PROYECTO.json",
+   "bytes": 1905,
+   "sha256": "5af8a173dcd97cd8eac09fa086986777c8aa49861df2a4bf5851e32ca00d4d02",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:19:33+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/PRE00_closure_20261016T211933Z/before_ESTADO_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/PRE00_closure_20261016T211933Z/before_ESTADO_PROYECTO.json",
+   "bytes": 59105,
+   "sha256": "b73b5bed8ac864aa9acf3dcab9a092c7f8476a92f0e79c2dd5b8abf98d52c3b5",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:05:42+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/PRE00_closure_20261016T211933Z/before_MEMORIA_PROYECTO.md",
+   "destino": "src/semana1/Limpieza/closures/PRE00_closure_20261016T211933Z/before_MEMORIA_PROYECTO.md",
+   "bytes": 147123,
+   "sha256": "81c911309e06d514853107cd3fd1e465cc59716b3d536f2356795136d0d8742f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:05:42+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/PRE00_closure_20261016T211933Z/before_RUTAS_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/PRE00_closure_20261016T211933Z/before_RUTAS_PROYECTO.json",
+   "bytes": 1785,
+   "sha256": "a0979fab6a90467d627c5fdc9af20cbb9149224fb0a2301ca149cda15717dcbb",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:05:42+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/PRE00_closure_20261016T211933Z/before_cleaning_README.md",
+   "destino": "src/semana1/Limpieza/closures/PRE00_closure_20261016T211933Z/before_cleaning_README.md",
+   "bytes": 5286,
+   "sha256": "329ed50f6c0b222d075ac0d00d182f1c70d3cde26c3a3f6e4b62a6c302ea88cf",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:40:13+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/PRE00_closure_20261016T211933Z/before_methodology.md",
+   "destino": "src/semana1/Limpieza/closures/PRE00_closure_20261016T211933Z/before_methodology.md",
+   "bytes": 39447,
+   "sha256": "17f6ac46b9069afbe2f5f9a5f27289a76f6668e45976b52151067c2629778c3d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:40:13+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/PRE00_closure_20261016T211933Z/before_model_README.md",
+   "destino": "src/semana1/Limpieza/closures/PRE00_closure_20261016T211933Z/before_model_README.md",
+   "bytes": 2690,
+   "sha256": "56b142ae29c19fa3c473ad24ce7eb1c96f28a869253c5cf967cbe4575dfbd1f5",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:40:13+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/PRE00_closure_20261016T211933Z/before_protocol.json",
+   "destino": "src/semana1/Limpieza/closures/PRE00_closure_20261016T211933Z/before_protocol.json",
+   "bytes": 8817,
+   "sha256": "d9ad941cdf3bee792765e82e57171fe163477a6aef8787c886f42a575ecffb4f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:40:13+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/PRE00_closure_20261016T211933Z/closure.json",
+   "destino": "src/semana1/Limpieza/closures/PRE00_closure_20261016T211933Z/closure.json",
+   "bytes": 3808,
+   "sha256": "3db2a67e452fde2be63a756971e4989281ac256448d9ab7ad074ee42b0dbe71c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:19:35+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/PRE00_closure_20261016T211933Z/delivery_verification.json",
+   "destino": "src/semana1/Limpieza/closures/PRE00_closure_20261016T211933Z/delivery_verification.json",
+   "bytes": 668,
+   "sha256": "47f250a041ad18327723737dda0dddc41aea543431ed925c03d63692fe458e2f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:20:18+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/PRE00_closure_20261016T211933Z/post_publication_verification.json",
+   "destino": "src/semana1/Limpieza/closures/PRE00_closure_20261016T211933Z/post_publication_verification.json",
+   "bytes": 1077,
+   "sha256": "ffb4fb796bb039194cc581d0f00d797f2f42bba4b3818d6d19491f3a694dfe97",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:19:35+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/REN00_closure_20261016T204013Z/after/DECISIONES.md",
+   "destino": "src/semana1/Limpieza/closures/REN00_closure_20261016T204013Z/after/DECISIONES.md",
+   "bytes": 101556,
+   "sha256": "aed4dda0308dbdf7f448be61674f24f65facfd08680b698c64439b32feface03",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:40:13+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/REN00_closure_20261016T204013Z/after/ESTADO_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/REN00_closure_20261016T204013Z/after/ESTADO_PROYECTO.json",
+   "bytes": 56745,
+   "sha256": "e995e21b0fb81b49b3e9193a4b6d38fa1fa5ede38be6d4020be5b847d6712ce3",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:40:13+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/REN00_closure_20261016T204013Z/after/MEMORIA_PROYECTO.md",
+   "destino": "src/semana1/Limpieza/closures/REN00_closure_20261016T204013Z/after/MEMORIA_PROYECTO.md",
+   "bytes": 146292,
+   "sha256": "bea8341d1e03e27ed82b8705925b8545e2107435e7d77d5318d66777d6eaec3b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:40:13+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/REN00_closure_20261016T204013Z/after/RUTAS_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/REN00_closure_20261016T204013Z/after/RUTAS_PROYECTO.json",
+   "bytes": 1683,
+   "sha256": "d429db7428659821d677832d71209121cc597cb133f3cda06aa5f729244f26bf",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:40:13+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/REN00_closure_20261016T204013Z/before_DECISIONES.md",
+   "destino": "src/semana1/Limpieza/closures/REN00_closure_20261016T204013Z/before_DECISIONES.md",
+   "bytes": 97146,
+   "sha256": "5cf8c9e8864673e97390914824c9e1a9ac05dfbe037c797c94ea136a91454482",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:29:36+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/REN00_closure_20261016T204013Z/before_ESTADO_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/REN00_closure_20261016T204013Z/before_ESTADO_PROYECTO.json",
+   "bytes": 54671,
+   "sha256": "e8622b48c19426e14228193d2c240d1ac0b7fe9c03a4b524e949b148cac11890",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:29:36+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/REN00_closure_20261016T204013Z/before_MEMORIA_PROYECTO.md",
+   "destino": "src/semana1/Limpieza/closures/REN00_closure_20261016T204013Z/before_MEMORIA_PROYECTO.md",
+   "bytes": 145517,
+   "sha256": "07cd5e79ce15f406f4eaa20d7dcaf25089fcb7328c5361870c1d18dce3eabcc1",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:29:36+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/REN00_closure_20261016T204013Z/before_RUTAS_PROYECTO.json",
+   "destino": "src/semana1/Limpieza/closures/REN00_closure_20261016T204013Z/before_RUTAS_PROYECTO.json",
+   "bytes": 1569,
+   "sha256": "71ceb2a61b12240e434038aaa451ade60c8791117667197b163d14a86cfc6025",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:29:36+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/REN00_closure_20261016T204013Z/before_cleaning_README.md",
+   "destino": "src/semana1/Limpieza/closures/REN00_closure_20261016T204013Z/before_cleaning_README.md",
+   "bytes": 4461,
+   "sha256": "77b61d902d4a82475f227f566a03f3291aa5cc2c793ba484978b3a05e97bfef3",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:05:19+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/REN00_closure_20261016T204013Z/closure.json",
+   "destino": "src/semana1/Limpieza/closures/REN00_closure_20261016T204013Z/closure.json",
+   "bytes": 3476,
+   "sha256": "8293f1fb50eb0d8b9c51fdfa819442e3352e492ddc81206a4f1ed6f21f1d233b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:40:14+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "closures/REN00_closure_20261016T204013Z/post_publication_verification.json",
+   "destino": "src/semana1/Limpieza/closures/REN00_closure_20261016T204013Z/post_publication_verification.json",
+   "bytes": 606,
+   "sha256": "845411dc470391721feb283ffe314f9dd72fcdf30d60e4cf606c49284a934014",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:43:31+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "correct_capitals.py",
+   "destino": "src/semana1/Limpieza/correct_capitals.py",
+   "bytes": 11070,
+   "sha256": "67657c740db3ad58082d35871f31a1d07937303bf52e76c0848d63ebb20c7785",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T18:47:53+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "current_capital_correction.json",
+   "destino": "src/semana1/Limpieza/current_capital_correction.json",
+   "bytes": 359,
+   "sha256": "be7427c53c0c584563fd077bec97446c12120eadfd28ff5d7dbac8c3c752d385",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T18:49:29+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "current_context_capital_correction.json",
+   "destino": "src/semana1/Limpieza/current_context_capital_correction.json",
+   "bytes": 382,
+   "sha256": "a45cf1da48b0b1731d505a05ba274b8071949f51cc8096b288c29d43f701b76f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T22:09:58+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "current_dataset.json",
+   "destino": "src/semana1/Limpieza/current_dataset.json",
+   "bytes": 1119,
+   "sha256": "82968c5a8966e7e6857ab112092451b900e5771c650628b6189aa233432a4a15",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:19:33+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "current_distant_capital_correction.json",
+   "destino": "src/semana1/Limpieza/current_distant_capital_correction.json",
+   "bytes": 414,
+   "sha256": "318894bfb93043e789114393232c054601c94e997a56e9b4627b80d5d9edd7d1",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T00:46:09+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "current_duplicate_application.json",
+   "destino": "src/semana1/Limpieza/current_duplicate_application.json",
+   "bytes": 654,
+   "sha256": "e98bb070793a9cd7e10ece663b5ddd7b3d52e97df3553fb9c2bd716a11755271",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:00:16+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "current_endorsement_capital_correction.json",
+   "destino": "src/semana1/Limpieza/current_endorsement_capital_correction.json",
+   "bytes": 379,
+   "sha256": "bda86ebe48be19f0fa684fc02c8b73b1590debce980979e4788e1957240f4ee3",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T01:09:06+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "current_numeric_capital_correction.json",
+   "destino": "src/semana1/Limpieza/current_numeric_capital_correction.json",
+   "bytes": 380,
+   "sha256": "8755657cbe1ff2f9afb7fe8a4857177ae546820c83c80e2fb188255fb7c53128",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:50:49+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "current_prehistory_audit_application.json",
+   "destino": "src/semana1/Limpieza/current_prehistory_audit_application.json",
+   "bytes": 342,
+   "sha256": "40a631d37725dc92f0ca13b1ae3a980d54e07bb25551d1a856fd762592dc8e41",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:19:33+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "current_refinement.json",
+   "destino": "src/semana1/Limpieza/current_refinement.json",
+   "bytes": 432,
+   "sha256": "37abb2a451e13fec199c8fc5d2f4b042c9a7af30b571ee4c1d7f3436d0757fc3",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T19:02:44+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "current_renewal_audit_application.json",
+   "destino": "src/semana1/Limpieza/current_renewal_audit_application.json",
+   "bytes": 346,
+   "sha256": "e2d9f1e0cc19b7d35fef8aa26d8d4dbe1e0ff737654f28c1085c8ba6fe807199",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:40:13+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "current_retrospective_capital_correction.json",
+   "destino": "src/semana1/Limpieza/current_retrospective_capital_correction.json",
+   "bytes": 378,
+   "sha256": "9b869f50625ba0862120c231559fe3ae27bec0472c1c0e3504f822b66bb33e4c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:37:18+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "current_retrospective_dataset.json",
+   "destino": "src/semana1/Limpieza/current_retrospective_dataset.json",
+   "bytes": 2164,
+   "sha256": "3ed723206333ef1a669185aa95afbc9db8c33fa5af1d0a165ebd3633b0e87ba9",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T01:09:06+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "current_run.json",
+   "destino": "src/semana1/Limpieza/current_run.json",
+   "bytes": 155,
+   "sha256": "f6fb988dd86593e41755c39e0d7893f10ecdf7561dfdbb71ba76444637bf7d95",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T17:56:48+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "endorsement_capitals.py",
+   "destino": "src/semana1/Limpieza/endorsement_capitals.py",
+   "bytes": 47721,
+   "sha256": "23bfdcf6792aeb8b6e1737ab6cbc1dc37e972b074b5ca5930f74c3915ca42917",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T01:08:22+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "finalize_context_capitals.py",
+   "destino": "src/semana1/Limpieza/finalize_context_capitals.py",
+   "bytes": 25102,
+   "sha256": "2e88b900063c51ff570e0a6055d05fc27484f73722b8e54492e978aa9561a059",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T22:08:28+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "finalize_distant_capitals.py",
+   "destino": "src/semana1/Limpieza/finalize_distant_capitals.py",
+   "bytes": 28533,
+   "sha256": "bb68b8792bfe830a6da34cdc92bcae7f0d5d0ccbeb80ca4fa6034cf749019a31",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T00:45:07+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "finalize_duplicate_application.py",
+   "destino": "src/semana1/Limpieza/finalize_duplicate_application.py",
+   "bytes": 22202,
+   "sha256": "5bb5e30fbafd74740ae28707f7415073ea70ae7c47c02db7fa2b10c489cc6134",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:04:25+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "finalize_numeric_capitals.py",
+   "destino": "src/semana1/Limpieza/finalize_numeric_capitals.py",
+   "bytes": 26562,
+   "sha256": "138cddd5cc844f6e6b8a3d32134c918ea883fc808c7dac4a267cc27e6f00995d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:50:13+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "finalize_prehistory_audit.py",
+   "destino": "src/semana1/Limpieza/finalize_prehistory_audit.py",
+   "bytes": 26185,
+   "sha256": "f1efe7b9a9c75983e9a2c5200687aabbace6db502e2840e6d77878a4956e68c3",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:17:17+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "finalize_renewal_audit.py",
+   "destino": "src/semana1/Limpieza/finalize_renewal_audit.py",
+   "bytes": 22709,
+   "sha256": "e807b728ad1de879f2f28bd385632e2b552556735aa3c72cc7a8e4dc91ecb008",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:38:26+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "finalize_retrospective_capitals.py",
+   "destino": "src/semana1/Limpieza/finalize_retrospective_capitals.py",
+   "bytes": 28156,
+   "sha256": "a45aa528ddd2f93d30584ca5e435f801bd1595c6ea7931b189415a019b67b8ea",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:36:39+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "refine_data.py",
+   "destino": "src/semana1/Limpieza/refine_data.py",
+   "bytes": 9644,
+   "sha256": "c8149df4ae81d98394def831e4719322804aeac917c9016d047c17f959af1ae7",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T19:00:20+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "render_report.py",
+   "destino": "src/semana1/Limpieza/render_report.py",
+   "bytes": 5824,
+   "sha256": "c3408204bafb60fd6bb1bc83e05602cb3ea12004ce70f19b34adaf7f2dadebec",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T17:53:25+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "verify_artifacts.py",
+   "destino": "src/semana1/Limpieza/verify_artifacts.py",
+   "bytes": 3798,
+   "sha256": "3ef85fa8721d0e2133e35983858745ff13208a450161bc181191667b7d7b6f67",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T17:58:52+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "verify_capital_correction.py",
+   "destino": "src/semana1/Limpieza/verify_capital_correction.py",
+   "bytes": 13316,
+   "sha256": "330425aa4ce423340fcf88e7b227b5ef2d779b889dc1bda64eb6c1da21678fe6",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T18:48:58+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "verify_cleaning.py",
+   "destino": "src/semana1/Limpieza/verify_cleaning.py",
+   "bytes": 5481,
+   "sha256": "501dee27e0fe6e6a7e5f7f4c6d59dc3c80f71dd7ddbee3317e8ef059567f6c54",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T17:56:00+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "verify_context_capitals.py",
+   "destino": "src/semana1/Limpieza/verify_context_capitals.py",
+   "bytes": 13224,
+   "sha256": "c3dd6d88a10bacf3ad70a0a65c9c83c5357a7bb9e94d00ac8b4349d3694f03ae",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T22:09:14+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "verify_distant_capitals.py",
+   "destino": "src/semana1/Limpieza/verify_distant_capitals.py",
+   "bytes": 17435,
+   "sha256": "c46ca68ca77caa1eddf81633c53ffdce11db1b76338bf69aebd1e75e2e4eee52",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T00:37:14+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "verify_duplicate_application.py",
+   "destino": "src/semana1/Limpieza/verify_duplicate_application.py",
+   "bytes": 19804,
+   "sha256": "2209fc25e29b2c65602e71d8e114d4762807504232696890fbc88303bf3a099a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T19:59:43+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "verify_numeric_capitals.py",
+   "destino": "src/semana1/Limpieza/verify_numeric_capitals.py",
+   "bytes": 12186,
+   "sha256": "f8c117d3d4c771b4b73394c5685b5c9cbc1de0f5adc3fdcc26906c2175670cff",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:48:42+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "verify_predictor_exclusion.py",
+   "destino": "src/semana1/Limpieza/verify_predictor_exclusion.py",
+   "bytes": 7010,
+   "sha256": "9c9df85224e7bb91ca9342c823fb1e8a9f8337a1328e4a7655909a1ef3746ed3",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:38:58+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "verify_prehistory_audit.py",
+   "destino": "src/semana1/Limpieza/verify_prehistory_audit.py",
+   "bytes": 17483,
+   "sha256": "d4abdce111a5c0dd0d0a8b61e39476044c4df906eb5b8363bfdecc2682a3d6b4",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:18:07+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "verify_refinement.py",
+   "destino": "src/semana1/Limpieza/verify_refinement.py",
+   "bytes": 14485,
+   "sha256": "2544e961e30bc979459fba9d4667a613158be07ccd491bed06f3be9dbadda454",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T19:02:31+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "verify_renewal_audit.py",
+   "destino": "src/semana1/Limpieza/verify_renewal_audit.py",
+   "bytes": 6256,
+   "sha256": "5db7f5367bb05633bed0b704d6556715eb923d6f42fdcb35547b1c02d557a792",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T20:38:53+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "verify_retrospective_capitals.py",
+   "destino": "src/semana1/Limpieza/verify_retrospective_capitals.py",
+   "bytes": 13614,
+   "sha256": "1878617ba1a38c474946f75aab4a9ec9bb9d78afa895ef1d7c375eee60b65b79",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-16T21:36:34+00:00",
+   "duplicado_de": null
+  }
+ ],
+ "omitidos_detalle": [
+  {
+   "ruta": "closures/CAP02R_closure_20261016T213717Z/before_DECISIONES.md",
+   "motivo": "identificadores por fila: 57 identificadores alfanuméricos distintos con forma de los del concurso"
+  },
+  {
+   "ruta": "closures/CAP02R_closure_20261016T213717Z/after/DECISIONES.md",
+   "motivo": "identificadores por fila: 57 identificadores alfanuméricos distintos con forma de los del concurso"
+  },
+  {
+   "ruta": "closures/CAP03R_closure_20261016T215048Z/before_DECISIONES.md",
+   "motivo": "identificadores por fila: 62 identificadores alfanuméricos distintos con forma de los del concurso"
+  },
+  {
+   "ruta": "closures/CAP03R_closure_20261016T215048Z/before_capital_rules.md",
+   "motivo": "copia idéntica de closures/CAP02R_closure_20261016T213717Z/after/capital_rules.md en el mismo origen"
+  },
+  {
+   "ruta": "closures/CAP03R_closure_20261016T215048Z/before_cleaning_README.md",
+   "motivo": "copia idéntica de closures/CAP02R_closure_20261016T213717Z/after/cleaning_README.md en el mismo origen"
+  },
+  {
+   "ruta": "closures/CAP03R_closure_20261016T215048Z/before_methodology.md",
+   "motivo": "copia idéntica de closures/CAP02R_closure_20261016T213717Z/after/methodology.md en el mismo origen"
+  },
+  {
+   "ruta": "closures/CAP03R_closure_20261016T215048Z/before_protocol.json",
+   "motivo": "copia idéntica de closures/CAP02R_closure_20261016T213717Z/after/protocol.json en el mismo origen"
+  },
+  {
+   "ruta": "closures/CAP03R_closure_20261016T215048Z/after/DECISIONES.md",
+   "motivo": "identificadores por fila: 64 identificadores alfanuméricos distintos con forma de los del concurso"
+  },
+  {
+   "ruta": "closures/CAP04R_closure_20261016T220957Z/before_DECISIONES.md",
+   "motivo": "identificadores por fila: 72 identificadores alfanuméricos distintos con forma de los del concurso"
+  },
+  {
+   "ruta": "closures/CAP04R_closure_20261016T220957Z/before_capital_rules.md",
+   "motivo": "copia idéntica de closures/CAP03R_closure_20261016T215048Z/after/capital_rules.md en el mismo origen"
+  },
+  {
+   "ruta": "closures/CAP04R_closure_20261016T220957Z/before_cleaning_README.md",
+   "motivo": "copia idéntica de closures/CAP03R_closure_20261016T215048Z/after/cleaning_README.md en el mismo origen"
+  },
+  {
+   "ruta": "closures/CAP04R_closure_20261016T220957Z/before_methodology.md",
+   "motivo": "copia idéntica de closures/CAP03R_closure_20261016T215048Z/after/methodology.md en el mismo origen"
+  },
+  {
+   "ruta": "closures/CAP04R_closure_20261016T220957Z/before_model_README.md",
+   "motivo": "copia idéntica de closures/CAP03R_closure_20261016T215048Z/after/model_README.md en el mismo origen"
+  },
+  {
+   "ruta": "closures/CAP04R_closure_20261016T220957Z/before_protocol.json",
+   "motivo": "copia idéntica de closures/CAP03R_closure_20261016T215048Z/after/protocol.json en el mismo origen"
+  },
+  {
+   "ruta": "closures/CAP04R_closure_20261016T220957Z/after/DECISIONES.md",
+   "motivo": "identificadores por fila: 75 identificadores alfanuméricos distintos con forma de los del concurso"
+  },
+  {
+   "ruta": "closures/CAP05R_closure_20261017T004609Z/before_DECISIONES.md",
+   "motivo": "identificadores por fila: 94 identificadores alfanuméricos distintos con forma de los del concurso"
+  },
+  {
+   "ruta": "closures/CAP05R_closure_20261017T004609Z/before_capital_rules.md",
+   "motivo": "copia idéntica de closures/CAP04R_closure_20261016T220957Z/after/capital_rules.md en el mismo origen"
+  },
+  {
+   "ruta": "closures/CAP05R_closure_20261017T004609Z/before_cleaning_README.md",
+   "motivo": "copia idéntica de closures/CAP04R_closure_20261016T220957Z/after/cleaning_README.md en el mismo origen"
+  },
+  {
+   "ruta": "closures/CAP05R_closure_20261017T004609Z/before_methodology.md",
+   "motivo": "copia idéntica de closures/CAP04R_closure_20261016T220957Z/after/methodology.md en el mismo origen"
+  },
+  {
+   "ruta": "closures/CAP05R_closure_20261017T004609Z/before_model_README.md",
+   "motivo": "copia idéntica de closures/CAP04R_closure_20261016T220957Z/after/model_README.md en el mismo origen"
+  },
+  {
+   "ruta": "closures/CAP05R_closure_20261017T004609Z/before_protocol.json",
+   "motivo": "copia idéntica de closures/CAP04R_closure_20261016T220957Z/after/protocol.json en el mismo origen"
+  },
+  {
+   "ruta": "closures/CAP05R_closure_20261017T004609Z/after/DECISIONES.md",
+   "motivo": "identificadores por fila: 96 identificadores alfanuméricos distintos con forma de los del concurso"
+  },
+  {
+   "ruta": "closures/CAP06R_closure_20261017T010905Z/before_DECISIONES.md",
+   "motivo": "identificadores por fila: 100 identificadores alfanuméricos distintos con forma de los del concurso"
+  },
+  {
+   "ruta": "closures/CAP06R_closure_20261017T010905Z/before_capital_rules.md",
+   "motivo": "copia idéntica de closures/CAP05R_closure_20261017T004609Z/after/capital_rules.md en el mismo origen"
+  },
+  {
+   "ruta": "closures/CAP06R_closure_20261017T010905Z/before_methodology.md",
+   "motivo": "copia idéntica de closures/CAP05R_closure_20261017T004609Z/after/methodology.md en el mismo origen"
+  },
+  {
+   "ruta": "closures/CAP06R_closure_20261017T010905Z/before_model_README.md",
+   "motivo": "copia idéntica de closures/CAP05R_closure_20261017T004609Z/after/model_README.md en el mismo origen"
+  },
+  {
+   "ruta": "closures/CAP06R_closure_20261017T010905Z/before_protocol.json",
+   "motivo": "copia idéntica de closures/CAP05R_closure_20261017T004609Z/after/protocol.json en el mismo origen"
+  },
+  {
+   "ruta": "closures/CAP06R_closure_20261017T010905Z/after/DECISIONES.md",
+   "motivo": "identificadores por fila: 100 identificadores alfanuméricos distintos con forma de los del concurso"
+  },
+  {
+   "ruta": "closures/DUP01_closure_20261016T200446Z/finalize_duplicate_application.py",
+   "motivo": "copia idéntica de finalize_duplicate_application.py en el mismo origen"
+  },
+  {
+   "ruta": "closures/PRE00_closure_20261016T211933Z/before_DECISIONES.md",
+   "motivo": "identificadores por fila: 50 identificadores alfanuméricos distintos con forma de los del concurso"
+  },
+  {
+   "ruta": "closures/PRE00_closure_20261016T211933Z/after/DECISIONES.md",
+   "motivo": "identificadores por fila: 51 identificadores alfanuméricos distintos con forma de los del concurso"
+  },
+  {
+   "ruta": "closures/PRE00_closure_20261016T211933Z/after/cleaning_README.md",
+   "motivo": "copia idéntica de closures/CAP02R_closure_20261016T213717Z/before_cleaning_README.md en el mismo origen"
+  },
+  {
+   "ruta": "closures/PRE00_closure_20261016T211933Z/after/methodology.md",
+   "motivo": "copia idéntica de closures/CAP02R_closure_20261016T213717Z/before_methodology.md en el mismo origen"
+  },
+  {
+   "ruta": "closures/PRE00_closure_20261016T211933Z/after/model_README.md",
+   "motivo": "copia idéntica de closures/CAP02R_closure_20261016T213717Z/before_model_README.md en el mismo origen"
+  },
+  {
+   "ruta": "closures/PRE00_closure_20261016T211933Z/after/protocol.json",
+   "motivo": "copia idéntica de closures/CAP02R_closure_20261016T213717Z/before_protocol.json en el mismo origen"
+  },
+  {
+   "ruta": "closures/REN00_closure_20261016T204013Z/before_methodology.md",
+   "motivo": "copia idéntica de closures/DUP01_closure_20261016T200446Z/modelado_after/METODOLOGIA_ACTUARIAL.md en el mismo origen"
+  },
+  {
+   "ruta": "closures/REN00_closure_20261016T204013Z/before_model_README.md",
+   "motivo": "copia idéntica de closures/DUP01_closure_20261016T200446Z/modelado_after/README.md en el mismo origen"
+  },
+  {
+   "ruta": "closures/REN00_closure_20261016T204013Z/before_protocol.json",
+   "motivo": "copia idéntica de closures/DUP01_closure_20261016T200446Z/modelado_after/protocolo_metodologico.json en el mismo origen"
+  },
+  {
+   "ruta": "closures/REN00_closure_20261016T204013Z/after/cleaning_README.md",
+   "motivo": "copia idéntica de closures/PRE00_closure_20261016T211933Z/before_cleaning_README.md en el mismo origen"
+  },
+  {
+   "ruta": "closures/REN00_closure_20261016T204013Z/after/methodology.md",
+   "motivo": "copia idéntica de closures/PRE00_closure_20261016T211933Z/before_methodology.md en el mismo origen"
+  },
+  {
+   "ruta": "closures/REN00_closure_20261016T204013Z/after/model_README.md",
+   "motivo": "copia idéntica de closures/PRE00_closure_20261016T211933Z/before_model_README.md en el mismo origen"
+  },
+  {
+   "ruta": "closures/REN00_closure_20261016T204013Z/after/protocol.json",
+   "motivo": "copia idéntica de closures/PRE00_closure_20261016T211933Z/before_protocol.json en el mismo origen"
+  }
+ ],
+ "nota": "Copia sin cambios del código tal como se ejecutó, con su fecha de modificación; la carpeta de origen sigue siendo la de trabajo. Las versiones anteriores de un archivo actualizado quedan en los commits anteriores.",
+ "actualizaciones": [
+  {
+   "utc": "2026-10-26T21:35:54Z",
+   "nuevo": 0,
+   "actualizado": 0,
+   "sin_cambios": 170,
+   "omitidos": 42
+  }
+ ]
+}

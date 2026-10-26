@@ -1,0 +1,4017 @@
+{
+ "herramienta": "versionado.py 1.1",
+ "orden": "incorporar",
+ "utc": "2026-10-26T19:10:23Z",
+ "origen": "Hackaton/Semana 1/Modelos_claude",
+ "destino": "src/semana1/Modelos_claude",
+ "simulado": false,
+ "actualizacion": false,
+ "copiados": 416,
+ "bytes": 1065311,
+ "nuevo": 416,
+ "actualizado": 0,
+ "sin_cambios": 0,
+ "duplicados_internos": 0,
+ "omitidos": 59,
+ "por_extension": {
+  ".py": 49,
+  ".json": 185,
+  ".sh": 20,
+  ".txt": 115,
+  ".md": 47
+ },
+ "archivos": [
+  {
+   "origen": "ablacion_f3.py",
+   "destino": "src/semana1/Modelos_claude/ablacion_f3.py",
+   "bytes": 1477,
+   "sha256": "649632b819af283284370d278ddc4f62438912c951afa0e4de7c3c29ed3256ce",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T19:33:18+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "busqueda.py",
+   "destino": "src/semana1/Modelos_claude/busqueda.py",
+   "bytes": 2657,
+   "sha256": "709a2556738ef16f694d1f2c39e16aeaa56fab3e51bfbf234769801ff7893e83",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T22:02:26+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "confirmar_v24.py",
+   "destino": "src/semana1/Modelos_claude/confirmar_v24.py",
+   "bytes": 2896,
+   "sha256": "7d9ac2c237067356dd83f0b511a971a8e9346eed0f6a11c94075e198931ae217",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:01:48+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "credibilidad.py",
+   "destino": "src/semana1/Modelos_claude/credibilidad.py",
+   "bytes": 5468,
+   "sha256": "30d8e4c8fefe835062ccee94e85899742065e766bfea408848f932f6b53d2fd3",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T20:39:39+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "diagnostico_inundacion.py",
+   "destino": "src/semana1/Modelos_claude/diagnostico_inundacion.py",
+   "bytes": 2704,
+   "sha256": "75baa6dfa12315d25fba498e11c3a15a15ad9dd98704a4c79c6e08d391d0b2d8",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T11:17:39+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "entrega_propia.py",
+   "destino": "src/semana1/Modelos_claude/entrega_propia.py",
+   "bytes": 3813,
+   "sha256": "d840c5c103a2ac910a8f522fe3b46ca5931ac612b9bae388b4a6a2f7fa6d4e36",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:30+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "evaluar_extra.py",
+   "destino": "src/semana1/Modelos_claude/evaluar_extra.py",
+   "bytes": 2386,
+   "sha256": "2aa8df8834fd0e8db2b5d31b4a3be1b575d66d110b017cfcccc256c4898f9490",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T20:39:38+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "evaluar_frecsev.py",
+   "destino": "src/semana1/Modelos_claude/evaluar_frecsev.py",
+   "bytes": 2951,
+   "sha256": "d5e72aefb6c4238f6e8146301c41490b3113654fc640504556633da0d2055179",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T20:39:36+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "evaluar_grandes.py",
+   "destino": "src/semana1/Modelos_claude/evaluar_grandes.py",
+   "bytes": 3565,
+   "sha256": "0a3e904f47c8db0f76d5692f1b44823d32df49ab7463d2d763bdee5599dec3d7",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T20:39:37+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/ablacion_f3_motor.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/ablacion_f3_motor.json",
+   "bytes": 687,
+   "sha256": "7efc1722f47b4fc0d36b8d01795cbdfd5165bf52a4d319a48583f385a39854f7",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T19:33:20+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/bootstrap_codex_s16.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/bootstrap_codex_s16.json",
+   "bytes": 1303,
+   "sha256": "21c36b62f64567a0710c4bba117d4f44a3587f271a9c94f35983b938af0ee83c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T12:53:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/bootstrap_codex_s17.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/bootstrap_codex_s17.json",
+   "bytes": 1299,
+   "sha256": "9411cd5d8ecd91e0099ab1bf4856213315937fc6338ec0ca09d310bb3867e3d8",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:39+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/bootstrap_codex_s18.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/bootstrap_codex_s18.json",
+   "bytes": 1299,
+   "sha256": "ea3081c5d247e1417c202b33d7e0eb6f92527598888261f4140b3f286fb68e1d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:40+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/bootstrap_codex_s20.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/bootstrap_codex_s20.json",
+   "bytes": 1300,
+   "sha256": "b601a15377d4eb48bbaad46f8319e2405a27f902c91eb7acfb798175e772a48b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:03:15+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/bootstrap_codex_s21.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/bootstrap_codex_s21.json",
+   "bytes": 1299,
+   "sha256": "e0d465dd7c8479824de5bf19408091608d5ad9c4327bb01a260fab94752464d0",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:33+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/bootstrap_codex_s22.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/bootstrap_codex_s22.json",
+   "bytes": 1297,
+   "sha256": "a56f4779f249c517c56c832fe27c37dd6a65d5a62df575af07370b1cd3ae44d0",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T20:15:29+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/busqueda_b1_motor.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/busqueda_b1_motor.json",
+   "bytes": 869,
+   "sha256": "aa9c90fc58143e3aff5d00b416dfe3249ba26b0abab1a76734cca35bb82632b7",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:01:49+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/calibracion_deciles_s20.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/calibracion_deciles_s20.json",
+   "bytes": 2073,
+   "sha256": "be56e69eb6d055eee605835b9c07b72c9c4153c6b0c460aa3bb77c878b8ee1af",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T17:18:45+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/calibracion_deciles_s21.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/calibracion_deciles_s21.json",
+   "bytes": 2069,
+   "sha256": "0a5710490c106cecf0b7e9c2f23f643cbce79ce707195e14d918b162a0708d73",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:36+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/calibracion_deciles_s22.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/calibracion_deciles_s22.json",
+   "bytes": 2075,
+   "sha256": "27e857c712aa61584075ca67bb0447dc73b20e7cefcb1474c59181ba2b9fdc1a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T20:15:30+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/cfg_comp.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/cfg_comp.json",
+   "bytes": 751,
+   "sha256": "1f7a924461cc483a4a440bd05aab494e270a8fff64310b6fb994388f81b167ed",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:01:49+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/cfg_m606.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/cfg_m606.json",
+   "bytes": 725,
+   "sha256": "aeb69a180f344a111f13955244e296bd7e215d1bc8a707275be86b688d8f2146",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:01:50+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/cfsg/CFSG2_buildings_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/cfsg/CFSG2_buildings_resumen.json",
+   "bytes": 2863,
+   "sha256": "0f00ddb93fe0b008f5817041c1ac2caee7dc11ebf7e401664344d9a8e3eb1d8c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:46+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/cfsg/CFSG2_contents_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/cfsg/CFSG2_contents_resumen.json",
+   "bytes": 1996,
+   "sha256": "d26d8cc2c16446c87c36ba44b03ea32aae00ed4c77cca1bd94652b938984457e",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:46+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/cfsg/CFSG2_motor_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/cfsg/CFSG2_motor_resumen.json",
+   "bytes": 2444,
+   "sha256": "60d0b6d322a8c836443b895a0771965f70bd759e9cafb46178a61ebdfc5c8ae1",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/cfsg/CFSG5_buildings_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/cfsg/CFSG5_buildings_resumen.json",
+   "bytes": 2860,
+   "sha256": "06db12b0dc89ff77d718c499968b6eed21ebd83787ca281756ae49339ef390e7",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:46+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/cfsg/CFSG5_contents_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/cfsg/CFSG5_contents_resumen.json",
+   "bytes": 1999,
+   "sha256": "b5d8658ffa9d9d58a0ec720ae4246af6291df2071717d1ae26455d3df62f0713",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/cfsg/CFSG5_motor_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/cfsg/CFSG5_motor_resumen.json",
+   "bytes": 2441,
+   "sha256": "1c1784925f2fbbe6b0c232e9fc52d9f386d489c464fc808b759cff316c9aaaba",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/clima_actual.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/clima_actual.json",
+   "bytes": 201,
+   "sha256": "e61f7ab4171a295b863693167e51b3037cca818e5644627823197e2b42f9ea8e",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:01:52+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/cola37.sh",
+   "destino": "src/semana1/Modelos_claude/experimentos/cola37.sh",
+   "bytes": 238,
+   "sha256": "e128f0095cb7d5b3e09e678c02b2e74c9fa519e0bc480aefec06ee1e984e45d1",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:45+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/cola38.sh",
+   "destino": "src/semana1/Modelos_claude/experimentos/cola38.sh",
+   "bytes": 771,
+   "sha256": "7cec73fd2be8af731f575088915de80788eb1e7b9dfa0a5a5f3687f94bd53fb9",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:45+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/cola39.sh",
+   "destino": "src/semana1/Modelos_claude/experimentos/cola39.sh",
+   "bytes": 675,
+   "sha256": "d47118d15c2e290e29f7b2f510232d2493de09545dc8bfdb9a901e57cfa9b1b3",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T14:11:20+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/cola40.sh",
+   "destino": "src/semana1/Modelos_claude/experimentos/cola40.sh",
+   "bytes": 624,
+   "sha256": "3dd4e5efa8dab344e556ed7e6a5b53f99586de21c15035795b89d7d9236066a6",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:03:20+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/cola40b.sh",
+   "destino": "src/semana1/Modelos_claude/experimentos/cola40b.sh",
+   "bytes": 611,
+   "sha256": "9f748ad0468be7ce5a77b7b34b5a7e57d3bf6fbcb2a1e682df3c41a4e959ff80",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:03:20+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/cola41.sh",
+   "destino": "src/semana1/Modelos_claude/experimentos/cola41.sh",
+   "bytes": 608,
+   "sha256": "68ef30beb8e8e4bbe19855db52a5f00ee96d7633ef36dc724f93aa5f54f1de44",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T17:18:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/cola42.sh",
+   "destino": "src/semana1/Modelos_claude/experimentos/cola42.sh",
+   "bytes": 694,
+   "sha256": "ee3731c179a8c8bb46eac95ae3aa85142adf5b38ef18ffc50e9350c3896a530b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:40+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/cola43.sh",
+   "destino": "src/semana1/Modelos_claude/experimentos/cola43.sh",
+   "bytes": 724,
+   "sha256": "96555ccee61bc70634ee367b3c90c1cd1b36202924f921f13a9a1732a05ce50f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:40+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/cola47.sh",
+   "destino": "src/semana1/Modelos_claude/experimentos/cola47.sh",
+   "bytes": 680,
+   "sha256": "787c38bad5790470b3341033887b95eac28cfd25575129aabfcd821b6c2794c3",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:19:42+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/comparar_codex_s14.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/comparar_codex_s14.json",
+   "bytes": 4136,
+   "sha256": "33f5093dc4c9197a321ad831f420e19250947b8f54340d0c48cfac4579ceb405",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T10:46:12+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/comparar_codex_s14c.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/comparar_codex_s14c.json",
+   "bytes": 4136,
+   "sha256": "2ea12aa2154356b93fc2287dc1c58128da4eb6d310a4e5d3d33e00b72b2beda8",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T10:46:13+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/comparar_codex_s15_final.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/comparar_codex_s15_final.json",
+   "bytes": 4138,
+   "sha256": "8edab3523231052127917bff8ef6ddd854c9c99a9bd2258817ffe125ba960b9a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T12:53:48+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/comparar_codex_s15p.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/comparar_codex_s15p.json",
+   "bytes": 4138,
+   "sha256": "50ab304d1a2c2e5ee8695633bf90ad014270dd78727955be03a73fc1868b2147",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T10:46:13+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/comparar_codex_s16.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/comparar_codex_s16.json",
+   "bytes": 4136,
+   "sha256": "66de6cf95bf20739ecb2bd6890a754811d85b9e3dc19ae58e9b4eb218756618e",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T12:53:48+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/comparar_codex_s17.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/comparar_codex_s17.json",
+   "bytes": 4133,
+   "sha256": "54c50865a68f5b43084cbbf637eeb80f8faf28f5edf2f694d31903089fc36d58",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:39+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/comparar_codex_s18.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/comparar_codex_s18.json",
+   "bytes": 4133,
+   "sha256": "716439032e5990cbcd7966e99024fc81d889ec3b3fa99185a89cd9a33af61337",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:39+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/comparar_codex_s20.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/comparar_codex_s20.json",
+   "bytes": 4136,
+   "sha256": "08c9bdb091d33237c9cccb157b2e8e5f1346490a15c6cdca8cd82d1adf9032ac",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:03:14+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/comparar_codex_s21.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/comparar_codex_s21.json",
+   "bytes": 4134,
+   "sha256": "5e5a9ac2f15de25370614ed33ab68743a8f14598ca5c74a7a2791d43114a2aca",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:33+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/comparar_codex_s22.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/comparar_codex_s22.json",
+   "bytes": 4136,
+   "sha256": "5f77f1db90363c2a5ad9f6e28c77e867d1639d0c13fe011deb195646d73b2a40",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T20:15:28+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/composicion_s17.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/composicion_s17.json",
+   "bytes": 1435,
+   "sha256": "a599fd954a8b0e0a24544048f9ff625393dabf278b6b8f64ded831af3f8f834d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:41+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/composicion_s18.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/composicion_s18.json",
+   "bytes": 1577,
+   "sha256": "be1a9298bca866c6ab58b030472fae77aa00a3182ca61e8641319753be08a1eb",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:41+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/composicion_s20.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/composicion_s20.json",
+   "bytes": 1841,
+   "sha256": "01323c78c149a6b2aadb11371f5b61de789d2c34ebe133b19e88f63e7b55b5b4",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:03:12+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/composicion_s21.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/composicion_s21.json",
+   "bytes": 1824,
+   "sha256": "416b6821d64073f2a9a1f61cd4523873b69fd51b1bac5301a1c17a3175f27642",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:32+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/composicion_s22.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/composicion_s22.json",
+   "bytes": 1971,
+   "sha256": "cd0ffb8e7207345c3365f415c0137528873b4d5170a19ad74b537065b6cb7475",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T20:15:26+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/criterio_s21.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/criterio_s21.json",
+   "bytes": 1689,
+   "sha256": "33a15da2e0563bdfe230d2292aa9ac9b654cae633f4e474c5921a4f73f355ce3",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:23:39+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/criterio_s22.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/criterio_s22.json",
+   "bytes": 1310,
+   "sha256": "ebd980e6b6e3e16624ce09d4a76208fdb112b2560597a7f2fcc589e95724fb5b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T20:15:36+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/deriva_nivel_s20.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/deriva_nivel_s20.json",
+   "bytes": 1452,
+   "sha256": "5bd21a092e66f46127f1e10688906092322bfd5afe0e939fc47a2a38426f8e8f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:03:16+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/deriva_nivel_s20a.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/deriva_nivel_s20a.json",
+   "bytes": 1450,
+   "sha256": "57c9b6de3063131e06d1ce51d69d40bde1fbbcdd141a11d34c4fcde4c1f10176",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:03:16+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/deriva_nivel_s21.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/deriva_nivel_s21.json",
+   "bytes": 1454,
+   "sha256": "1cc007654d7d450bea8be0d4ac8049226a61f4556f3763f71107082cc50ae814",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:35+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/diag_cuerpo_cola_publicos.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/diag_cuerpo_cola_publicos.json",
+   "bytes": 1981,
+   "sha256": "fecbf65b4d4af69870a30c292b911b43a6948b189cffe0301a52261b08889425",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T21:23:56+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/diag_forma_nivel_s21.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/diag_forma_nivel_s21.json",
+   "bytes": 2467,
+   "sha256": "d70764f23c2d3f901acd26e072c8d91b776dd36e91d74ff3be884f59e11a0533",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:47:28+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/diagnostico_inundacion.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/diagnostico_inundacion.txt",
+   "bytes": 3263,
+   "sha256": "7cf274038ff8973cdcbca0e04a473a536c4d59b742a9ec96e5a23e127d8f64a7",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T11:17:38+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/escenarios_reserva_s20a.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/escenarios_reserva_s20a.json",
+   "bytes": 13883,
+   "sha256": "0093db7b103b2c53889dded9de98d957e9a8189fc3701dc073f326c6d2995cde",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:03:17+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/eval_cartera.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/eval_cartera.json",
+   "bytes": 823,
+   "sha256": "0efd299d6e791867928aefa92ac4be9000db24dfaef134df4f3f128fbff20692",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:01:53+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/eval_cat1a.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/eval_cat1a.json",
+   "bytes": 93,
+   "sha256": "cf20e35a4c38ea9ed0dbccc55905c8b78db0032cf351255a16f0c3e94a6342e6",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:01:53+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/eval_cat1b.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/eval_cat1b.json",
+   "bytes": 94,
+   "sha256": "7bab240f42346ce2a954b9a91fe76946b53158c38600113766cdfc8be20f40c8",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:01:53+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/eval_cat1c.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/eval_cat1c.json",
+   "bytes": 95,
+   "sha256": "fb34c202001c21fb8f35b53e3f30acabd224ba3fd855a6bb83e305b58a9b4a92",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:01:54+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/eval_cat2b.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/eval_cat2b.json",
+   "bytes": 95,
+   "sha256": "060ebb39e15cf247c1930e132e6843c461d76e89e652656696e8bd4685cc7caa",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:01:54+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/eval_cat2c.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/eval_cat2c.json",
+   "bytes": 95,
+   "sha256": "3c6cd787c002c5d4ea5e868e3329f516b6871cb0ea8b4d082233162fa9b67ac0",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:01:55+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/eval_cat3_d8.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/eval_cat3_d8.json",
+   "bytes": 93,
+   "sha256": "46b6ac1b8ce4ea859537f6185058f073c3bcff946fce346f822831f631985f7a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:01:55+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/eval_cat3_lr03.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/eval_cat3_lr03.json",
+   "bytes": 93,
+   "sha256": "e47773c38d3817f907a875acd9efac04e5b2f437daa3b6ada69f4498c6bfc342",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:01:55+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/eval_cat4_cap10.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/eval_cat4_cap10.json",
+   "bytes": 92,
+   "sha256": "7ce0e0917bd7a27911b6baabfabfcb1615849d6b470482b256a225289f103cab",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:01:56+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/eval_cat4_cap25.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/eval_cat4_cap25.json",
+   "bytes": 93,
+   "sha256": "d1927834afc2b6372fc45936cb2da0178b849fabfb42d6d9fbae425660e9b9ba",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:01:56+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/eval_cat4_p13.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/eval_cat4_p13.json",
+   "bytes": 93,
+   "sha256": "8179e0db3e5b0a817a11f86381798533d52c07128d1c91d58a82810a2868c040",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:01:57+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/eval_cat5b_f3.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/eval_cat5b_f3.json",
+   "bytes": 96,
+   "sha256": "578d660cf5612e75a4ca8eeda05b975d2569cc4f3c17c2c6e90789ae54c527cf",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T10:46:19+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/eval_cat6b_f3.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/eval_cat6b_f3.json",
+   "bytes": 96,
+   "sha256": "69ea2083e4feeef203185e5d379e04dd76050448764dc524e59428756ab0d0ed",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T10:46:19+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/eval_comp_F0124.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/eval_comp_F0124.json",
+   "bytes": 1144,
+   "sha256": "8efcc47b5744c5320397fe61be030d8042b1a70e52f1b02e5e59a0110521e41d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:01:57+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/eval_cred.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/eval_cred.json",
+   "bytes": 562,
+   "sha256": "fa4e1357aef94c69dc653931bf18896055d92ee11b1c8134859229fed63e8d1c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:01:57+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/eval_fs1.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/eval_fs1.json",
+   "bytes": 1595,
+   "sha256": "df33af1f9d676ca116f8a6104ca48907a8ec09e5f27d2b3c189ebd77c968a542",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:01:58+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/eval_hS2.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/eval_hS2.json",
+   "bytes": 242,
+   "sha256": "0b244c855571f0485a87a1ae8803c104e64b49f15935a159696b02070e08bb96",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:01:58+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/eval_inter.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/eval_inter.json",
+   "bytes": 867,
+   "sha256": "cb706a91daad436c16329a892379ef04921561ff722012796ac04eb3d9f9ce84",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:01:59+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/eval_total_F01234.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/eval_total_F01234.json",
+   "bytes": 348,
+   "sha256": "3982946be285c98c3176171d726d10134dded79bd41f06aaf85c9688aed1d63f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:01:59+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/eval_total_F01234m.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/eval_total_F01234m.json",
+   "bytes": 349,
+   "sha256": "88625958c5f35b72e6554a804f14a66e66e77c1519041686f20406a5825edcb5",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:01:59+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/eval_total_F0124.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/eval_total_F0124.json",
+   "bytes": 350,
+   "sha256": "0354707e44bc3b28caaa703622e01a235a7cf901257fd26cbba9858d2d7fd9e3",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:00+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/eval_total_motor_red.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/eval_total_motor_red.json",
+   "bytes": 349,
+   "sha256": "1c9844e762789076acd492861959c63b023a755e5a16f135d7bc401e549ae98c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:00+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/exp_a1.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/exp_a1.json",
+   "bytes": 3164,
+   "sha256": "a9c6ba9e821cae6f007d597f9a726f013068ebbe654befe5549fc453d0d1cac4",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T19:33:23+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/exportar_s21.sh",
+   "destino": "src/semana1/Modelos_claude/experimentos/exportar_s21.sh",
+   "bytes": 354,
+   "sha256": "2964b70014d3c6a6ce1c3a4eb500a9ff7a2958e5080d24799755cd481bda7172",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:23:40+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/finalizar_s15.sh",
+   "destino": "src/semana1/Modelos_claude/experimentos/finalizar_s15.sh",
+   "bytes": 1022,
+   "sha256": "5c258dee43c824c82417bbe4315c362e61259206aa002ed5e2f535df520605e8",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T12:53:49+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/finalizar_s16.sh",
+   "destino": "src/semana1/Modelos_claude/experimentos/finalizar_s16.sh",
+   "bytes": 624,
+   "sha256": "5962704bedb24a977e2160decd2f9926a532cfe11e4d05b862582b624239e6fe",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T12:53:49+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/finalizar_s17.sh",
+   "destino": "src/semana1/Modelos_claude/experimentos/finalizar_s17.sh",
+   "bytes": 747,
+   "sha256": "e36453756527443e12baf6519b696985f389b552dee34fddb133537fe834dc69",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:44+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/finalizar_s18.sh",
+   "destino": "src/semana1/Modelos_claude/experimentos/finalizar_s18.sh",
+   "bytes": 775,
+   "sha256": "a7f4299ba890bc1be6daf9eb0b005745045485fb92cb31bfca4b55b65a5d5589",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:44+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/finalizar_s20.sh",
+   "destino": "src/semana1/Modelos_claude/experimentos/finalizar_s20.sh",
+   "bytes": 1109,
+   "sha256": "2451d901ad96b593b0b3d4396cee740ae672c3f54a300c9b7c5d742e6af93ef5",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:03:20+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/finalizar_s21.sh",
+   "destino": "src/semana1/Modelos_claude/experimentos/finalizar_s21.sh",
+   "bytes": 1333,
+   "sha256": "d23d4682cd839784bf878792125bb3ae85e423e02c855d6626ae0b0524f4fef6",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:38+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/finalizar_s22.sh",
+   "destino": "src/semana1/Modelos_claude/experimentos/finalizar_s22.sh",
+   "bytes": 1437,
+   "sha256": "5560b797a5d270be3629dc94d74da6fa7b857b0cc1762686537a579cb6fa28fb",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T20:15:27+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/grid_g1.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/grid_g1.json",
+   "bytes": 4721,
+   "sha256": "b0c9014d64bcdc623526dfe10a5f2a7188847c6f94530e4c7170c8514ad8e143",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T19:33:23+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/grid_g2.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/grid_g2.json",
+   "bytes": 4025,
+   "sha256": "271696e0b56eb21e5e46c62d86be64d02dd69eac8ffc5484f4b56a57800d23dd",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T19:33:24+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/influencia_reservas_s20.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/influencia_reservas_s20.json",
+   "bytes": 13812,
+   "sha256": "7f8f5694212121440745f2b448e49bb5a70e4069cb4a80716738e3114a2c50d6",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:03:16+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/influencia_reservas_s21.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/influencia_reservas_s21.json",
+   "bytes": 13793,
+   "sha256": "9f6d05f8889b32062c058d5cddf78c058f989c44651fa5ab3895f8fbdd4935a5",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:35+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/influencia_reservas_s22.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/influencia_reservas_s22.json",
+   "bytes": 13842,
+   "sha256": "dcd983d1ed1a510331ac87def786ceebcdb16d28a8e744ec1f48dc0fa6675d00",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T20:15:29+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/intervalos_region_s21.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/intervalos_region_s21.json",
+   "bytes": 11955,
+   "sha256": "d6d74c585b59d83c0bfb774724aa9cd7f400a22675dca0fff859286bef305359",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T20:41:20+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/intervalos_region_s22.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/intervalos_region_s22.json",
+   "bytes": 11995,
+   "sha256": "619ba974d4d85c72afacfc3098e6d1bf83113c6f0111e7469e818e347f162645",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T20:30:21+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_S08h.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_S08h.txt",
+   "bytes": 1857,
+   "sha256": "0fbe64d66acaa13e34c19ad8600d938e17f487007d80a76bf639d5e8fb090243",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:00+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_S12h.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_S12h.txt",
+   "bytes": 1100,
+   "sha256": "a0b7b85d38fe1cf28b264c95c7a6f258842d140624cc58a2d7bb22a0aa0cb4b1",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:29:34+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_a1.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_a1.txt",
+   "bytes": 2099,
+   "sha256": "f301f3f2678f0b60a74cea5cbd693ee5f0206f8770c5ea9e4dcf78ceda610abe",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T19:33:24+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_bootstrap_codex_s16.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_bootstrap_codex_s16.txt",
+   "bytes": 941,
+   "sha256": "a88949f82d99391c93bc28e89c88d9b944db1e4fd05a74917b5875c0cbbc3f54",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T12:53:49+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cambio.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cambio.txt",
+   "bytes": 1043,
+   "sha256": "72a57ab73f7ba5bb9d35be50cee91da726aa2f13b9adf4417211c431e768607b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:29:34+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cap.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cap.txt",
+   "bytes": 166,
+   "sha256": "4d2470a420dd1bb5748b4c6385a87bd16153b2180421065f8b2d28e1b02b495b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T19:33:25+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cap2.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cap2.txt",
+   "bytes": 512,
+   "sha256": "a9658ac0b31d7bc5549ad3987b29206166add6e6788b15150ff44c072be57772",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T19:33:25+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cap3.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cap3.txt",
+   "bytes": 716,
+   "sha256": "849ecbdd4de9ed9140f0ea9a34574d6eca37db151ec8ee864bebed4c8533272d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T19:33:26+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cap4.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cap4.txt",
+   "bytes": 178,
+   "sha256": "c86895bb89c049dbb46bc4f8ba6be8fe16b3be0d23712fd8da39a193354666d0",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T19:33:26+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cat_s23.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cat_s23.txt",
+   "bytes": 295,
+   "sha256": "33262e638113f918fb6c54bee7cedbedd01ed8885a55e9bd1d61e5c5b9f4aa94",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T08:30:06+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cfs_buildings.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cfs_buildings.txt",
+   "bytes": 1665,
+   "sha256": "c7e76eff45c252b71c11c1c7172313469972a489ec2576c3d658739fe70eeeed",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T09:37:03+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cfs_buildings_s23.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cfs_buildings_s23.txt",
+   "bytes": 2033,
+   "sha256": "172b4ea170172f5e0bb1bcb1d287beb2cc1a5c29202530ca481c07e0811491b9",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:39+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cfs_contents.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cfs_contents.txt",
+   "bytes": 1189,
+   "sha256": "d088bbceed399f9327f73bf716529fb18e184f6b5aee8e68ffee75f38cbbf6b5",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T09:37:03+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cfs_motor.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cfs_motor.txt",
+   "bytes": 477,
+   "sha256": "dd0e2860bb9a6442146158fac6197581b45466a93166986907d3d4a0686192fe",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T08:30:04+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cfs_motor_prod.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cfs_motor_prod.txt",
+   "bytes": 652,
+   "sha256": "bf8d9e454c584eb3a608511d7a20f16d766b85777fe7abd98cd0d22b4e9f7da8",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T08:30:05+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cfs_motor_s23.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cfs_motor_s23.txt",
+   "bytes": 1115,
+   "sha256": "d6c601ba091153bf8c25ca4cff81d5ff9186f7eb7f3ca8979e0fc7018587c69d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T12:53:50+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cfs_motor_s45.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cfs_motor_s45.txt",
+   "bytes": 2172,
+   "sha256": "56d8ad96e9feeb1922b39fd131585aa6f019b1e0ee798f1939e01418cfc289da",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:19:42+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cfs_motor_v23.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cfs_motor_v23.txt",
+   "bytes": 502,
+   "sha256": "e624d8b5b47b2a4d3f5d1b0bc797461870e3c11f56f0b1c9efaba66bf454cef9",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:43+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cfs_solo_prod.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cfs_solo_prod.txt",
+   "bytes": 31,
+   "sha256": "099e8c30fc4829edf6c915fc728651f753b05c5d7b6d6079fb97679c7c6d7582",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T08:30:05+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cfs_solo_prod2.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cfs_solo_prod2.txt",
+   "bytes": 198,
+   "sha256": "f43a1899bca6a781967a465e5d62ff3b35659a5d8d656083b8e4dc0006425c48",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T08:30:06+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cfsg.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cfsg.txt",
+   "bytes": 12330,
+   "sha256": "e923c6257df9704441ae1045517619665fdf7b62143db7d8e728900e8f80039a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:44+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cfss_buildings.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cfss_buildings.txt",
+   "bytes": 1155,
+   "sha256": "d165365f400771abab7caecf3d1704efacfc895b9ef6e3ce99d42308ffee518a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:42+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cfss_contents.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cfss_contents.txt",
+   "bytes": 843,
+   "sha256": "456785da1dde64a2b05957f7b0b2fe280e8dc180f49a086c3024a3d33097f1d2",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:43+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cola1.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cola1.txt",
+   "bytes": 2005,
+   "sha256": "d4715dede2a5d5581b9dcfcd08f0a64923d066af3b5e720ebce4933c6237fb9f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:01+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cola10.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cola10.txt",
+   "bytes": 136,
+   "sha256": "c36639bd67a99306b4baa48f10df90d8e71411cdd085007af3885263fd9ee7d2",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:01+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cola11.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cola11.txt",
+   "bytes": 166,
+   "sha256": "3de5a5c7d4b8f3190859aa54fe385d76f12af7f5818b6fac590c422b5b5df540",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:01+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cola12.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cola12.txt",
+   "bytes": 546,
+   "sha256": "aafd0280edf73ab2ec9f2bd6599ac92ee11c74e275250e422e9b05bc67a23d54",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:02+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cola13.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cola13.txt",
+   "bytes": 373,
+   "sha256": "9eceff568af5803d9952cb92be98bc572e2cde42c76318cabda59cd8c5699888",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:02+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cola14.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cola14.txt",
+   "bytes": 71,
+   "sha256": "d87f244589549c4c30533a05991f6ce96ce83f152bb65197ca54f1b9406f3983",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:03+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cola15.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cola15.txt",
+   "bytes": 255,
+   "sha256": "69c369916f64a523bf8b2ed746e16cb5814b4a65098e559736594cbcce0122f6",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:03+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cola16.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cola16.txt",
+   "bytes": 290,
+   "sha256": "651488994ce2ad861853322da0e6ab615ebe45a38b595a81c865fbb136bcf151",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:03+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cola2.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cola2.txt",
+   "bytes": 2181,
+   "sha256": "17f4231fe82fe236f6dbdb89f6dff20b295943d925dc22049f73d855bc1c2cc8",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:38+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cola3.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cola3.txt",
+   "bytes": 292,
+   "sha256": "8738ba393b5103b73b189ecf660ddd195369d08a44502cb649282a85c0098f15",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:38+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cola4.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cola4.txt",
+   "bytes": 1679,
+   "sha256": "b00ab286c8736d27bdc997c31af26273616adcfb8b963662c92879897c81e9c8",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:38+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cola5.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cola5.txt",
+   "bytes": 1476,
+   "sha256": "6fce180e8f8b84e221911684f427dfd2d7c8963612679edbc2f3aca0f96c4a62",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:39+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cola6.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cola6.txt",
+   "bytes": 165,
+   "sha256": "bf4ea976c4a230ecfcd8d18f690f852d5481781f6cefc1dee871640513977a01",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:39+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cola7.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cola7.txt",
+   "bytes": 81,
+   "sha256": "fcf002163fdf7c0e341d98630e4e6a97cc99913a83e6a4bea5d8d438f6f7cfff",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:40+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cola8.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cola8.txt",
+   "bytes": 4850,
+   "sha256": "e510931efa7fb946b09738079d1d84c600eb202d92a1bdcaf710ccbd9bfddda1",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:40+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_cola9.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_cola9.txt",
+   "bytes": 1456,
+   "sha256": "469fa0e3d1a001af0d6c39e809089b8e8b9db3b949aca828829dfc1328e3778d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:40+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_comparar_s14.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_comparar_s14.txt",
+   "bytes": 2020,
+   "sha256": "18dd0f3c1482e594801470fc652f18a1a3a2eeaae8a29e14df7b582e381a24fe",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T10:46:16+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_comparar_s14c.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_comparar_s14c.txt",
+   "bytes": 2020,
+   "sha256": "f6e63dc4e27bafd3835b411f1df35d00197d04b49262304e534453f58c691dba",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T10:46:16+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_comparar_s15p.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_comparar_s15p.txt",
+   "bytes": 2023,
+   "sha256": "ca959eb755bb35d8b1145cccb2218df813daf51e3ff3e779416fd530ee5bac4f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T10:46:17+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_diag_cola.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_diag_cola.txt",
+   "bytes": 5181,
+   "sha256": "4a3a8ed6c241b323a663f063c3ccc58498243e3a4f1851677c4b582e53a7ed1d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T08:30:09+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_escenarios_reserva_s20a.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_escenarios_reserva_s20a.txt",
+   "bytes": 4550,
+   "sha256": "2378f9cacbd09c12b62d5454fb429b98f8cb51c96cd97426a77fc1b081545486",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:03:19+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_exportar_s21.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_exportar_s21.txt",
+   "bytes": 6613,
+   "sha256": "2fe7f6f9336c6e6ab1412574d4f4947fb5d1abbc9b2c47f52e9fa76dd572b991",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:23:41+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_f3.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_f3.txt",
+   "bytes": 583,
+   "sha256": "11e56bad8db6a1716d09d4877f21fd84cc1118f533c03b31742fe664235e7094",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T19:33:27+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_f3hogar.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_f3hogar.txt",
+   "bytes": 754,
+   "sha256": "7118de54d4865971ca4a1f5b9c255517f546ddcb8d154ce899c55160c1fbdb46",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:41+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_f3hogar_s0.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_f3hogar_s0.txt",
+   "bytes": 424,
+   "sha256": "e616623339b7e448342f467e195a0a271f2a4a83ba73bd4bdc80933281091738",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:41+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_fin.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_fin.txt",
+   "bytes": 943,
+   "sha256": "6ce3533f0adca29c0d5cece093c19e8c69937ed97a56283aa4be79093022e8f8",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:29:35+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_finalizar_s15.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_finalizar_s15.txt",
+   "bytes": 6579,
+   "sha256": "0bf7dce1d6662975ec71d6d92f7a26cde3ff29d9bb5ff4d9c074f49810137fd7",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T12:53:50+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_finalizar_s16.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_finalizar_s16.txt",
+   "bytes": 7106,
+   "sha256": "5c389448b01ff248d92f57dab2f65f3f65eca15044a8cbddb6d60fde0ef7577a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T12:53:50+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_finalizar_s17.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_finalizar_s17.txt",
+   "bytes": 9113,
+   "sha256": "b79083b34de4f602cab405fb27a18f49d9ca471b2359e75f1682cd902f39efbc",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:42+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_finalizar_s18.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_finalizar_s18.txt",
+   "bytes": 9108,
+   "sha256": "c61b5d4115fedc2762aa67e592c9cfcf71a6dada2c6e04cec351262ccf0e553a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:42+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_finalizar_s20.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_finalizar_s20.txt",
+   "bytes": 16899,
+   "sha256": "c5de82507ccbbccb682b62ba4ddf081e2f0876d7f3a14532178171c338be21b1",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:03:17+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_finalizar_s21.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_finalizar_s21.txt",
+   "bytes": 20579,
+   "sha256": "ca0d144772695e446ecc4b83c20a0b51b2301d8122f34643803eda1d82e9131b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:37+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_finalizar_s22.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_finalizar_s22.txt",
+   "bytes": 24645,
+   "sha256": "89a2cb8ff836d21e50b9f174a391fbc112a9e00ab6aecbfa1b21d63b95d27316",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T20:15:27+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_forma.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_forma.txt",
+   "bytes": 272,
+   "sha256": "f1cb703a31b71d8d6f6269af386c5e705cc433997d63c204aeaaec9d58e74d55",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:42+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_fs2_buildings.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_fs2_buildings.txt",
+   "bytes": 966,
+   "sha256": "919ac59f19080eb7b98ae4442b14db79d48c9c3ba32f781393eee6953f15961e",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:29:35+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_fs2_contents.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_fs2_contents.txt",
+   "bytes": 653,
+   "sha256": "265e7b9d2395c24a90c86d4f2c744cd79ba8d13ac43baf3da94de7272ec8325f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:29:36+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_fs2_contents_prod.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_fs2_contents_prod.txt",
+   "bytes": 1373,
+   "sha256": "b632b409c86de59f2893bb652ef0266ac0a0922aca5ae8d6680b06a24fd3c8e9",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:29:36+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_fsa_buildings.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_fsa_buildings.txt",
+   "bytes": 1079,
+   "sha256": "3bd807a11dc2f1f6ed8192d36766d0009142aeb2e140fc1dfc154fbd8d21ada8",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T12:53:51+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_fsa_contents.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_fsa_contents.txt",
+   "bytes": 1396,
+   "sha256": "5048a883a3394c0cd1e6a38a6c9ac736b1c82759b57da563136d2fde319de6f8",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T12:53:51+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_fsap.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_fsap.txt",
+   "bytes": 7191,
+   "sha256": "ec246787d18b7f752dfc034c02de4b2cef898c2e41feb138065e83a29a3451e4",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:03:18+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_fsap2.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_fsap2.txt",
+   "bytes": 2912,
+   "sha256": "84962c900a924920a7452f5f5e715415692d4a4697bdff1270e94c073df0984d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:03:18+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_fsap_motor_b.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_fsap_motor_b.txt",
+   "bytes": 1486,
+   "sha256": "86f31c3e715aeef47dcd4e9532e21d0744d8a7ee444c3104cdd570fa50418b04",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T17:18:48+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_g1.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_g1.txt",
+   "bytes": 4172,
+   "sha256": "556894ff02d61482e40c60e95e057dcf448438d6b44aa3774d4baa5b0b1f640b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T19:33:27+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_g2.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_g2.txt",
+   "bytes": 3447,
+   "sha256": "08bf6bfff254842596a0f8e808194bcc2903da4c051c2c4b897b3dbb6b08790c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T19:33:28+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_hS2.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_hS2.txt",
+   "bytes": 219,
+   "sha256": "a8a03d6330bb5b9a6ef9e7423e60590e193672cfbdbb113813a0465df1004200",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:42+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_hS3.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_hS3.txt",
+   "bytes": 122,
+   "sha256": "4bd67212c85718d078a444aab4b3e4c7df26bb95dc31fae0541de43cb993383d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:29:36+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_hib1.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_hib1.txt",
+   "bytes": 1127,
+   "sha256": "c676d873dd16d63eb9525bc2a38172fbf5df3ed687269058e43c54009ec898f5",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:42+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_intervalos_region_s21.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_intervalos_region_s21.txt",
+   "bytes": 3645,
+   "sha256": "c28a83106b4bad3e2ec78b653ec22f209b938500fdcbaaa5107243fea62d25a8",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T20:41:21+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_intervalos_region_s22.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_intervalos_region_s22.txt",
+   "bytes": 3675,
+   "sha256": "c9bb8539e5d9ad2c88591e367b748245da905b8e1dd192df8845e91cd46e4fb5",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T20:30:21+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_mlp3_buildings.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_mlp3_buildings.txt",
+   "bytes": 950,
+   "sha256": "c7d34a98a73e6f3e2cb33417662fc6cf92cd34d45e09dbbdcba1ffe39e62b69f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:29:37+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_mlp3_contents.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_mlp3_contents.txt",
+   "bytes": 935,
+   "sha256": "c5c7ea09d89b24eae1d15558fa14aa631f72777999bb1af40b9943e1ea805a5a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:29:37+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_mlp3_motor.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_mlp3_motor.txt",
+   "bytes": 897,
+   "sha256": "8e8fc4ac6a144128dce8b873251f7e6fc70ca8f0ffb74d15baea565002742297",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:29:37+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_mlp_c1.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_mlp_c1.txt",
+   "bytes": 296,
+   "sha256": "f00917e1ec70aa1c6f4c847cc5f7e316a81dcb80e0feae66a261e068213726d2",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:43+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_mlp_c2.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_mlp_c2.txt",
+   "bytes": 1085,
+   "sha256": "de726a765e59e28e18337dc035896950f456f2defdf6dc747da3dd2af4c68c96",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:43+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_mono_autos.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_mono_autos.txt",
+   "bytes": 157,
+   "sha256": "378ddd772fe72eb09400ff5db7d95dbe4648b5a06280b5272e74686fe830ba43",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:29:38+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_onlevel_buildings.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_onlevel_buildings.txt",
+   "bytes": 884,
+   "sha256": "04ace1c01c5e554c4fd294d7b5c1cf512e6c5185fe36e286aa6d5cdf65db289c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:29:38+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_onlevel_contents.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_onlevel_contents.txt",
+   "bytes": 698,
+   "sha256": "ecec5996350ee06daf626ef49c981974ec3d43cdc8defb5377eb837af1b6a879",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:29:38+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_onlevel_motor.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_onlevel_motor.txt",
+   "bytes": 796,
+   "sha256": "9733f7ba1414ac850788693ced564610e1a33ec051e028ea35871afd558bf3d9",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:29:39+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_potencia.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_potencia.txt",
+   "bytes": 136,
+   "sha256": "f02b9ddcc8d559e470931d38b0466543df50d5e4e8947ec5b5110638d6c0670d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:43+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_publico_simulado.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_publico_simulado.txt",
+   "bytes": 1066,
+   "sha256": "013d289c44cdcde65ab012c5eeb10f594a0a2eb2187eabd7cc488609fe8821af",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T09:37:02+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_rej_b.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_rej_b.txt",
+   "bytes": 565,
+   "sha256": "fe2b12657cb1fa8e0f7b6c98f30b69222c10be75311b09239ca8b053643c8dda",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:29:39+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_rej_c.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_rej_c.txt",
+   "bytes": 458,
+   "sha256": "e887553b681acdc03a4b4b62c911a5f59ca0198ddffe2c1ed860f54cecfab178",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:29:39+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_rej_m.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_rej_m.txt",
+   "bytes": 363,
+   "sha256": "605dbc5d0393d637facc79f73678f0c1bfa7e92dc973ea27b19ee7c41a4da580",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T10:46:15+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_rejilla_forma_s18.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_rejilla_forma_s18.txt",
+   "bytes": 2410,
+   "sha256": "44043e0df3f7415e32a93272f83950126cbe74f83d5eafe4c4a1523fa99c1f98",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T14:11:20+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_rejilla_pesos_contents.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_rejilla_pesos_contents.txt",
+   "bytes": 1272,
+   "sha256": "0ee668e80796deb8456a7d5afb5a3d124c4ada43bf609e15a16df47dd3338cec",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:03:18+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_rejilla_pesos_contents_s21.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_rejilla_pesos_contents_s21.txt",
+   "bytes": 1801,
+   "sha256": "13bc176101c10a0bea6a29069ec176448fdb9ab16573e1c2a484266a7114fb25",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:38+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_rejilla_pesos_contents_s21c.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_rejilla_pesos_contents_s21c.txt",
+   "bytes": 1801,
+   "sha256": "d799c0cbba17aea39030ae5183254b9a0f7bb66b7ad3c2ddc93042eed8252d73",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:38+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_rejilla_pesos_motor.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_rejilla_pesos_motor.txt",
+   "bytes": 1693,
+   "sha256": "5bd7162c932d384247b43b317b54325c592b4d58e1611243363bb67c49be8bfd",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T17:18:46+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_rejilla_robusta_buildings.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_rejilla_robusta_buildings.txt",
+   "bytes": 744,
+   "sha256": "377d73d2e753e89dbd1c0de597b8814b9c3a3e8199fc8705529b84ba039d09f4",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T21:26:26+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_rejilla_robusta_contents.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_rejilla_robusta_contents.txt",
+   "bytes": 798,
+   "sha256": "edc1e505f12087cfe9d739e86e4846f3e924fce37c6e163da59cfb13c49551d1",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T21:26:26+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_robustez_cfs_edif.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_robustez_cfs_edif.txt",
+   "bytes": 1123,
+   "sha256": "9d2170bd210a2e7ba0c15cf49db9d66ffeb301cee2e017829996a8aebcbf15e2",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T10:46:18+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_robustez_gamc.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_robustez_gamc.txt",
+   "bytes": 2243,
+   "sha256": "1fd2f4bc2b6e6d72d53b4a5e205967c8a16e518d1595aac36179572ed229c9dd",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T10:46:18+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_robustez_s13.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_robustez_s13.txt",
+   "bytes": 1498,
+   "sha256": "fa0a3d1f37242228be22273a9a52e129d9defc1d50fe46fedb06820c2efd8f26",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T08:30:08+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_robustez_s13b.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_robustez_s13b.txt",
+   "bytes": 2266,
+   "sha256": "9c1fc5c39b10a236ccbe96ec31acc851c43b2eef97d6f99b7e975be8bd82b33a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T08:30:08+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_robustez_s13c.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_robustez_s13c.txt",
+   "bytes": 1133,
+   "sha256": "f632bfbb399629725641b42d7fa3851a46889b3537a862711e05d137b5475090",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T08:30:08+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_robustez_s14.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_robustez_s14.txt",
+   "bytes": 2266,
+   "sha256": "ebc64b5424dbc34d3b6b11af97db541ea5e2298337f3ffcd2ecd2381fd9a8f79",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T08:30:03+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_robustez_s14c.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_robustez_s14c.txt",
+   "bytes": 1133,
+   "sha256": "7708da23390d9f9084525b57ea36923f5b6306a8eebfe3a25decf97e5e726c00",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T08:30:09+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_robustez_s15p.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_robustez_s15p.txt",
+   "bytes": 2267,
+   "sha256": "64ee747d58681a1bce0c3b0ca2afb259aa7b458f57ba7a72b294b827f4efb4f8",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T10:46:17+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_robustez_s20a.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_robustez_s20a.txt",
+   "bytes": 1127,
+   "sha256": "4db11703fa624ff20b852c5371b6ea97c2bd81474918312a161ab5d2cca9ac07",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:03:19+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_robustez_s21_prueba.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_robustez_s21_prueba.txt",
+   "bytes": 492,
+   "sha256": "4082123927dfc7768ef77756f1452249916affa9d4c618f1297c4fdceec1055a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T17:18:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/log_s22_sin_forma_autos.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/log_s22_sin_forma_autos.txt",
+   "bytes": 1122,
+   "sha256": "a6757b3e5495867450339f6a32279a3f363300666eeebc0437c1886912feacbf",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:19:06+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/medias_por_ramo_s21.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/medias_por_ramo_s21.json",
+   "bytes": 4090,
+   "sha256": "093bc0415202812accdaeb500592c871217c7d665921086f188c7aeda598e765",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:23:38+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/medias_por_ramo_s22.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/medias_por_ramo_s22.json",
+   "bytes": 4087,
+   "sha256": "c8c9fb0c424563a9b5b710b70375458d7e1bce14f0101ba0788013a363f1f4b1",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T20:15:31+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/memoria_seccion13.md",
+   "destino": "src/semana1/Modelos_claude/experimentos/memoria_seccion13.md",
+   "bytes": 4935,
+   "sha256": "f813b917e11c3d65a7a980f2522954355b3114883b8003d0367d41f82178d777",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:32:30+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/mezcla_codex_prueba_s06.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/mezcla_codex_prueba_s06.json",
+   "bytes": 4385,
+   "sha256": "4cbb3b6092e1bf20daf221140937e48c54d5d7da972ad2598eebec354d0e2721",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:44+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/mezcla_codex_prueba_s09.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/mezcla_codex_prueba_s09.json",
+   "bytes": 4357,
+   "sha256": "175c2372fa6877876f203ae3425884df23150685fdf25d9ed35e74ad66ca8eac",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:44+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/peligro_aislado_buildings.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/peligro_aislado_buildings.json",
+   "bytes": 2814,
+   "sha256": "ce30b0d7d36f880a12d1dfa5321de6b881b37ea3e501e8c7ea11988791035f14",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:11:56+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/permutacion_buildings.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/permutacion_buildings.json",
+   "bytes": 3216,
+   "sha256": "8cbad246978fab03cad60e7bc11ded629f54a13245e366f26b442b2417869b30",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:44+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/permutacion_contents.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/permutacion_contents.json",
+   "bytes": 2985,
+   "sha256": "1ba89ba8106e06b83c8d2afbb38c836aecb8ac32cc520f647d78c695840f751e",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:45+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/permutacion_motor.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/permutacion_motor.json",
+   "bytes": 3468,
+   "sha256": "f06d93742bb3586b55a819a2f2bcf0951de244985ba5d1f783c0de86fa74bdb8",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:45+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/publico_simulado_s14.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/publico_simulado_s14.json",
+   "bytes": 1526,
+   "sha256": "561858c4d8f1448e21feb925927665b7106d41bd7113e00156f8c5f6cc116090",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T09:37:02+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/publico_simulado_s15_final.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/publico_simulado_s15_final.json",
+   "bytes": 1521,
+   "sha256": "98ee4d836602d646b6f284a29413f66b6f799280377a06148aa1615aa40d5e5d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T12:53:51+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/publico_simulado_s16.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/publico_simulado_s16.json",
+   "bytes": 1517,
+   "sha256": "c03c63dd4379ae456f82b50a70f11e14871aa7e5d9bd046de262238bf9c61eaf",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T12:53:52+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/publico_simulado_s17.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/publico_simulado_s17.json",
+   "bytes": 2962,
+   "sha256": "1ee729db79acf7e14f1f9e76da34146b499fe8bfcafbfa8c8accb25aeb20dc6b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:40+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/publico_simulado_s18.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/publico_simulado_s18.json",
+   "bytes": 2956,
+   "sha256": "6717aec2771c5224c657cb32b9aa1dce47dfc7d554125f51975dd270e4ee259f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:40+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/publico_simulado_s20.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/publico_simulado_s20.json",
+   "bytes": 1523,
+   "sha256": "0280b78ab23609be897dcdb8298c84ad2e5d1dffed7efcf4b4f7a308d83962f8",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:03:15+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/publico_simulado_s21.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/publico_simulado_s21.json",
+   "bytes": 1509,
+   "sha256": "3dae765ffca477eb2935f7404b14dcd09d5dd9d8fedb5930be7473fa0d5262b7",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:34+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/publico_simulado_s22.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/publico_simulado_s22.json",
+   "bytes": 1515,
+   "sha256": "8f82e71c86983f5fc81875d79f1ac67a2360f02d62cb844dfc742cbd43def533",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T20:15:29+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/rejilla_forma_s18.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/rejilla_forma_s18.json",
+   "bytes": 20107,
+   "sha256": "e2373933dd30fd3c7691446cd76dd49f232d7e099436befa4a35a5e0565d83f2",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T14:11:19+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/rejilla_forma_s21.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/rejilla_forma_s21.json",
+   "bytes": 12025,
+   "sha256": "8343095889dcc3d94d98a376b6124a9a8b76658197964a90ccdb12a920d41fc6",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:39+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/reproduccion_s18_equipo.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/reproduccion_s18_equipo.json",
+   "bytes": 1247,
+   "sha256": "c3219e1d109197efca8534ce7c0fb964d42107738acb0ab51b2244a8cbf18567",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T14:17:50+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/reproduccion_s20_equipo.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/reproduccion_s20_equipo.json",
+   "bytes": 1349,
+   "sha256": "a3ff6e66aa91cb4e987b018e98306b411901c83e7057b298f6db30721618730d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:07:00+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/reproduccion_s21_equipo.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/reproduccion_s21_equipo.json",
+   "bytes": 1128,
+   "sha256": "e27a6da6f6f65aff89eef92fa43ca71fd35e647255ab059ec147a67be1235bc7",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:11:34+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/reproduccion_s22_equipo.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/reproduccion_s22_equipo.json",
+   "bytes": 1117,
+   "sha256": "9e0bcfcd2287b6b9ff10e0e112aeae17c6fb3750053b0d1e0d03b67b112131fa",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T20:16:08+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/robustez_cfs_edif.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/robustez_cfs_edif.json",
+   "bytes": 2502,
+   "sha256": "7fd3ec93fb4eb7c34025e9ac1aae1ca283cb2232cb8e6572f2c80ba533ec6cbc",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T10:46:14+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/robustez_gamc.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/robustez_gamc.json",
+   "bytes": 4958,
+   "sha256": "eb7627666cc492ce914d66d0799febf65b661ad526db7abc5c6f016c6d32068c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T10:46:14+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/robustez_s13.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/robustez_s13.json",
+   "bytes": 3894,
+   "sha256": "d0eba849b96509b32ba0f79060067fc1c5fa8b990d26fbe1ea11f207a5ae7d00",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T08:30:06+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/robustez_s13b.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/robustez_s13b.json",
+   "bytes": 5245,
+   "sha256": "7696e413fb5c40c590bf83eef7f06cf6e3cbc2fe49772db63650b453239409f4",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T08:30:07+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/robustez_s13c.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/robustez_s13c.json",
+   "bytes": 2640,
+   "sha256": "278bc05b2fe5a966693f3c735b87b8451ae6ac27de8970a983ee5598b123f707",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T08:30:07+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/robustez_s14.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/robustez_s14.json",
+   "bytes": 5241,
+   "sha256": "06705c06919fd0922fad9878127fd2aa9760144da4ee443188eb003bced6d3a3",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T08:30:03+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/robustez_s14c.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/robustez_s14c.json",
+   "bytes": 2640,
+   "sha256": "e73598f4c8b755f6b8b528c2a940da094e1bb56e651403570d738c614d0af1b5",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T08:30:07+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/robustez_s15_final.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/robustez_s15_final.json",
+   "bytes": 5254,
+   "sha256": "62ee7972f8cf63d1d1ac15ebad7074147b54343c6dc63570cb92cded10f336a5",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T12:53:52+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/robustez_s15p.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/robustez_s15p.json",
+   "bytes": 5255,
+   "sha256": "95363006dca81799855232dcaf7c7e0f92453226a0ddca33313b4af748504c7b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T10:46:13+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/robustez_s16.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/robustez_s16.json",
+   "bytes": 7854,
+   "sha256": "c0665bef0b2b753f1a96ff63e8ef8232b43ef1db8d0abeb63f51d0fb673e69ce",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T12:53:53+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/robustez_s17.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/robustez_s17.json",
+   "bytes": 7849,
+   "sha256": "fb3d482faf417dc06aa3e3aeb72ee5103ca84e60c0112fdc47622656b0d05a08",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:38+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/robustez_s18.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/robustez_s18.json",
+   "bytes": 7843,
+   "sha256": "99637736227ee295f7c54b7585a2523c90035013395ae48bbef314f2e54b9fa5",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:38+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/robustez_s20.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/robustez_s20.json",
+   "bytes": 5244,
+   "sha256": "07c8f35351888e3a5bf4db79758031357eff74b87c0f7907375aa1ec60c845ac",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:03:13+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/robustez_s20_frente_s18.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/robustez_s20_frente_s18.json",
+   "bytes": 2579,
+   "sha256": "e9b451e606c52d68e2c3c3b04aef51900e79280a4844514f15a9912890add338",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:03:13+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/robustez_s20a.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/robustez_s20a.json",
+   "bytes": 2577,
+   "sha256": "d1de604b169062f4363d69720d21c6ad4677fe553e1b8ff6b7dd2e5c45c6a392",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:03:14+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/robustez_s21.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/robustez_s21.json",
+   "bytes": 5237,
+   "sha256": "9056a4c610dec13a6b863ae9bce206373c691cf0b7e7ef0c92936408fd4dd130",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:32+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/robustez_s21_frente_s20.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/robustez_s21_frente_s20.json",
+   "bytes": 2534,
+   "sha256": "e828a6be13acdd679219f907897644837c66b8bbd02ab46a3d139bd322d43ac1",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:33+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/robustez_s21_prueba.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/robustez_s21_prueba.json",
+   "bytes": 2493,
+   "sha256": "8a2d3f393fd3b3f822db647f7f9791e761c99b61296720c57a5719dc3d50b032",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T17:18:46+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/robustez_s21_sin_forma_hogar.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/robustez_s21_sin_forma_hogar.json",
+   "bytes": 5235,
+   "sha256": "6697578d3aab54bcc156c6cd52f95542c902d4f7ad70d75b1277b784b68f5597",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:47:28+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/robustez_s22.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/robustez_s22.json",
+   "bytes": 5234,
+   "sha256": "e887e75c608668f9a29d1cfa4849b749c85daeca9e7b6578a19dbe6b7049049c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T20:15:27+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/robustez_s22_frente_s21.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/robustez_s22_frente_s21.json",
+   "bytes": 2573,
+   "sha256": "5eedd6e7aaff2f016399a2a37da6bcd6ac0f7bc69b85c5ca001c7c5f6a080a70",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T20:15:28+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/robustez_s22_semillas_v24.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/robustez_s22_semillas_v24.json",
+   "bytes": 2431,
+   "sha256": "ef924f5d606108ca702fe55a9e870f05da5f999db8d573851f33c24959601714",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T23:23:02+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/robustez_s22_sin_forma_autos.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/robustez_s22_sin_forma_autos.json",
+   "bytes": 2517,
+   "sha256": "98ca315d5e28831a64da590447f67148f1b7a26134ded631d1db1bdbd5bf2ae1",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:19:06+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/ruido_nivel_s14.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/ruido_nivel_s14.json",
+   "bytes": 624,
+   "sha256": "f7d814d6ea8e32b097df8b44e9b1f5f2446be1ef45b56c70daf54e6a3291c820",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T10:46:15+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/s23_pruebas/CFSS4r_buildings_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/s23_pruebas/CFSS4r_buildings_resumen.json",
+   "bytes": 1743,
+   "sha256": "6af3e91d91ad0dac139e50f93c4c7da8d23dc610e611266be4baa9c73089c8b9",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:19:06+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/s23_pruebas/CFSSr_motor_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/s23_pruebas/CFSSr_motor_resumen.json",
+   "bytes": 1492,
+   "sha256": "fa1800aa97d603d3a10e6d6326c2580b22d84a3525a1847ae1eb9d5b9194dbb2",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:19:07+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/s23_pruebas/FSAS4r_buildings_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/s23_pruebas/FSAS4r_buildings_resumen.json",
+   "bytes": 1746,
+   "sha256": "f2c04d522e2547c79b57b32af218e4a5203b881437ed871d25030b900c4ce247",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:19:07+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/s23_pruebas/FSAXc4r_contents_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/s23_pruebas/FSAXc4r_contents_resumen.json",
+   "bytes": 1738,
+   "sha256": "dd26d000a036d5855208204eccd019459358238d3a77ac0e0d286976afc83ef9",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:19:08+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/s23_pruebas/S12t_hogar_tope_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/s23_pruebas/S12t_hogar_tope_resumen.json",
+   "bytes": 4377,
+   "sha256": "a9fdb7a577be66ddb71d54b00daa7cf33ca321b06c3af468e8412baa852b6479",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:19:08+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/s23_pruebas/cfg_hogar_tope.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/s23_pruebas/cfg_hogar_tope.json",
+   "bytes": 1098,
+   "sha256": "4eafefe3f69f1fc3823bc840075b0e871b4e56c726be486c1be208a7afce525e",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:19:08+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/s23_pruebas/cola45.sh",
+   "destino": "src/semana1/Modelos_claude/experimentos/s23_pruebas/cola45.sh",
+   "bytes": 972,
+   "sha256": "8dd641c31b6c76ff157a39025c17282e927a81bf0379d9a42ea5a8d7dc45d440",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:19:09+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/s23_pruebas/cola46.sh",
+   "destino": "src/semana1/Modelos_claude/experimentos/s23_pruebas/cola46.sh",
+   "bytes": 836,
+   "sha256": "0ebb031f50b209d8f8a0729086facebb359280ee44e7d5e9f9724f2d08ce1278",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:19:09+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/s23_pruebas/deriva_s23_prueba.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/s23_pruebas/deriva_s23_prueba.json",
+   "bytes": 1464,
+   "sha256": "11234c2cec4484a8445406afec0ee38e880b602dab5646a6afd12642fa84d568",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:19:10+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/s23_pruebas/deriva_s23r_prueba.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/s23_pruebas/deriva_s23r_prueba.json",
+   "bytes": 1458,
+   "sha256": "fbca590a9936a6de47fd994e98a617eeab99904258cb3911a22e36267a95e04c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:19:10+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/s23_pruebas/eval_hT.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/s23_pruebas/eval_hT.json",
+   "bytes": 243,
+   "sha256": "e73cbc3baadce21f6cf95d6662887b7699f4717f1ce733d2553b8189fb08dd04",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:19:10+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/s23_pruebas/log_S12t.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/s23_pruebas/log_S12t.txt",
+   "bytes": 1843,
+   "sha256": "cc73d8498e33fd380648a707977f08864252f95e0950a396ec8f67bb5c35b2dc",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:19:11+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/s23_pruebas/log_hT.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/s23_pruebas/log_hT.txt",
+   "bytes": 228,
+   "sha256": "6099dd4e824dffd3d60b8b3dcea1d49075989bce5fa7edd2f266fcd8fb37cbf9",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:19:11+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/s23_pruebas/log_sev_tope.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/s23_pruebas/log_sev_tope.txt",
+   "bytes": 4619,
+   "sha256": "0b3c44e856df1636b2506976063721e4ca5772e5bc8e0734e0d958d0857d89eb",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:19:12+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/s23_pruebas/robustez_s23_prueba.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/s23_pruebas/robustez_s23_prueba.json",
+   "bytes": 5146,
+   "sha256": "f565cddfa418e5dfa4a0ce191a4a5c6e0d0d976d6f0a7d66e0d4b8313a921009",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:19:12+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/s23_pruebas/robustez_s23r_prueba.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/s23_pruebas/robustez_s23r_prueba.json",
+   "bytes": 2595,
+   "sha256": "31a06774b784b4863f4fd68ddad2feaf461db08f158714422c468c2393d1547d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:19:13+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/s23_pruebas/spec_s23_prueba.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/s23_pruebas/spec_s23_prueba.json",
+   "bytes": 672,
+   "sha256": "c009c6aab3f973c199f05365a0403fb9382bd1df79345d32ff19906151547d1c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:19:13+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/s23_pruebas/spec_s23r_prueba.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/s23_pruebas/spec_s23r_prueba.json",
+   "bytes": 675,
+   "sha256": "58925c61478495108a919ec33d4d4fa88405ed5235f5074763724b27b8505691",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:19:13+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/s23_pruebas/spec_s23t_prueba.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/s23_pruebas/spec_s23t_prueba.json",
+   "bytes": 664,
+   "sha256": "5a75f2879834086faccf500c5280df18f89d3e5a49b2efc2958415e0a28e2f81",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:19:14+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/semestres_s20.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/semestres_s20.json",
+   "bytes": 8705,
+   "sha256": "652f1ff1ca654eae6497f88b8c34b90d6be0a10f82277280d85258715b236df0",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:37+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/semestres_s21.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/semestres_s21.json",
+   "bytes": 11760,
+   "sha256": "333915de43c8ceb1cc617092def2d33d22c03f0e76ff1824c6346953527055c8",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:23:50+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/semestres_s22.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/semestres_s22.json",
+   "bytes": 11779,
+   "sha256": "281bb2b694717fa91a3bba0fa71b9cd818726fd4bf841c2843bb1cfa2d4f1e21",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T20:15:31+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/severidad_ampliada/CFSX_buildings_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/severidad_ampliada/CFSX_buildings_resumen.json",
+   "bytes": 2397,
+   "sha256": "8b8519cebc7072b2a5c5accba81987c0e1895e9b784242b7b38b829b3b5e5bd4",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:42+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/severidad_ampliada/CFSX_contents_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/severidad_ampliada/CFSX_contents_resumen.json",
+   "bytes": 1678,
+   "sha256": "6f0d2d80e6c70711b9e1bd3c84f625b195fb782be75695a80f61644968282d7a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:42+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/severidad_ampliada/CFSX_motor_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/severidad_ampliada/CFSX_motor_resumen.json",
+   "bytes": 2066,
+   "sha256": "a7a889106a1e6f60e17705d5a811efe60b5b8af52e7c79d342df955059c500d7",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:43+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/severidad_ampliada/CFSXc_buildings_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/severidad_ampliada/CFSXc_buildings_resumen.json",
+   "bytes": 2396,
+   "sha256": "29f465e3e9ff2049bc20110142e4c4752823e542c534e4a5453ba76abd2b924c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:43+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/severidad_ampliada/CFSXc_contents_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/severidad_ampliada/CFSXc_contents_resumen.json",
+   "bytes": 1675,
+   "sha256": "3cea229d6d51641f24fdede03e587feb307bfe25b25e321f192474666875ec0c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:44+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/severidad_ampliada/CFSXc_motor_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/severidad_ampliada/CFSXc_motor_resumen.json",
+   "bytes": 2066,
+   "sha256": "4a9cb6d480e0a9adde21986f545edc59300b53af023dbfb7dfd387351701dcb1",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:44+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/severidad_ampliada/CFSXr_buildings_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/severidad_ampliada/CFSXr_buildings_resumen.json",
+   "bytes": 2389,
+   "sha256": "db589e5f8fc32dc3214cc35d69f0d570f6a4fb103f8112ad0ab3e7f97a52ae8b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:45+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/severidad_ampliada/FSAX4_buildings_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/severidad_ampliada/FSAX4_buildings_resumen.json",
+   "bytes": 2444,
+   "sha256": "68a1b84bab22eda930758f0627651de8968e8d89b7d4afb3846f7cbf910dacfa",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:45+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/severidad_ampliada/FSAX4_contents_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/severidad_ampliada/FSAX4_contents_resumen.json",
+   "bytes": 1722,
+   "sha256": "9260f277a5338bca7836534b39444d69c29e274dab6d180e2ae4288439e3ba58",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:45+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/severidad_ampliada/FSAXc4_buildings_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/severidad_ampliada/FSAXc4_buildings_resumen.json",
+   "bytes": 2443,
+   "sha256": "61e9c541fb54f0c63cc72d4e0f06f147b9e4d7c8bfb630d49cdd77eb54e6546b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:46+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/severidad_ampliada/FSAXr4_buildings_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/severidad_ampliada/FSAXr4_buildings_resumen.json",
+   "bytes": 2436,
+   "sha256": "a87ca8183a929b5b4d0b11558b52aa03ef88980b2f4cd1dbe1b091d753b2354d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_c_a.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/spec_c_a.json",
+   "bytes": 492,
+   "sha256": "89c79a9359bf7037b11f7a62e6a931bdb4c558679cd93904c85fda4c08e83d59",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:29:40+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_c_b.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/spec_c_b.json",
+   "bytes": 490,
+   "sha256": "12af56b6d52e8120ed28df8889790ca886967f5c9ce12c4e58ea6ec7c3cbaca4",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:29:40+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_c_c.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/spec_c_c.json",
+   "bytes": 492,
+   "sha256": "cc94c1a5d01f983899c4d426af3927870c92658f9b943befa9e88b8c30fa5dc6",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:29:41+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_c_d.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/spec_c_d.json",
+   "bytes": 535,
+   "sha256": "e37ca07c92dcd9018b707d28bb0022bda4f609b60eb143e015293cd047e7c684",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:29:41+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s06.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/spec_s06.json",
+   "bytes": 325,
+   "sha256": "28199c0f30eaeb0e101ab0e6cf9d52bdde9bd4da4a9c46859c0ed70f9b9c6a34",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:46+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s09.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/spec_s09.json",
+   "bytes": 409,
+   "sha256": "a95febd11864ea06630077711a0cb43434e2d1297696de336da557ab5c2afc49",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:46+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s09b_plano.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/spec_s09b_plano.json",
+   "bytes": 481,
+   "sha256": "4e24e0e67b5bc252607061721ca8f10bd640f5ba137602e33a6c496d750e6bcb",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:29:41+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s10.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/spec_s10.json",
+   "bytes": 540,
+   "sha256": "d950a566c016e16dd76e41d863b28fc55fffecac7b64c688c1c317e8680865af",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:29:42+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s12.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/spec_s12.json",
+   "bytes": 493,
+   "sha256": "7125bc1fee51604886805b28c9d2f05109892ec7dd7f8fefdb73f4deb93812f9",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:29:42+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s13.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/spec_s13.json",
+   "bytes": 498,
+   "sha256": "1919b9a15df2b84d7b2e16e68c821c929849c3e7d25084905778aa859fc49ede",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T08:30:04+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s14.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/spec_s14.json",
+   "bytes": 501,
+   "sha256": "beb927b823a5a22a02a8ff938ed3c10ea02d354cac62a6ba7863ade194a38097",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T08:30:04+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s15.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/spec_s15.json",
+   "bytes": 559,
+   "sha256": "9b32ccb23177e69a1d2a2be5eeba0d6900ad946e673d860d59fd857f959f98c2",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T09:37:03+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s15_final.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/spec_s15_final.json",
+   "bytes": 598,
+   "sha256": "f1dbe0c8c05fdcfe29d3179e72f0ba961d6d4a8a1d529c63018b9cec5b34a419",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T12:53:53+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s15_propio.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/spec_s15_propio.json",
+   "bytes": 595,
+   "sha256": "6122e2bd4e9a970724c97962d729585779308a643f58d9d2bfcbaf60f963b212",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T10:46:19+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s16_g10_revision_gam_codex.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/spec_s16_g10_revision_gam_codex.json",
+   "bytes": 618,
+   "sha256": "288b9adaeb256055d2dae369a52132952465d0ff461b0ff1962bd3d1fa5f703c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T10:46:20+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s16_g20_revision_gam_codex.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/spec_s16_g20_revision_gam_codex.json",
+   "bytes": 615,
+   "sha256": "a917ad0584150893386123806f98ddad374072536f371b96564997cb04bbbbcd",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T10:46:20+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s16_propio.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/spec_s16_propio.json",
+   "bytes": 544,
+   "sha256": "23ce64e5c619ffe3f951f4c8c9bfe797dec4a1e1d65c2ddd574f68b32588e5b2",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T12:53:53+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s17_propio.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/spec_s17_propio.json",
+   "bytes": 602,
+   "sha256": "815f66f1e0fa0fae7c6ead230e8e591095edd45ab395e991db5a59beda40dff4",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:37+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s18_propio.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/spec_s18_propio.json",
+   "bytes": 601,
+   "sha256": "fee139c7b353588ef5acd5b14e47696e2caf10c78ad667c2bc4a6652e7ec8352",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:37+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s19_propio.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/spec_s19_propio.json",
+   "bytes": 605,
+   "sha256": "9c06e9a265a2dd48c146ee13a33e308283b9a443e99f798d11fa851c5e9d7301",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:37+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s20_propio.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/spec_s20_propio.json",
+   "bytes": 663,
+   "sha256": "e70c417e9c09a469d0d461d82dc0beec01c5b3ee7f09721d67454904d77126a4",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:03:12+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s20a_propio.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/spec_s20a_propio.json",
+   "bytes": 659,
+   "sha256": "272c51f55000b10eba8ec4591b0e7c89aaa37160cf91f54c844f2cfcc990561d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:03:12+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s21_prueba.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/spec_s21_prueba.json",
+   "bytes": 713,
+   "sha256": "d4696c4b9be49e89c0195da20de837c7faf165d49c79685dc85f7edfe62017ea",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T17:18:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/spec_s21_tmp_forma.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/spec_s21_tmp_forma.json",
+   "bytes": 665,
+   "sha256": "5fcda5fd9cf3cf4b285871dea51b789f3e69a28604ca23ba62e2b6dcee2325b1",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:06:41+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/tercer_motor/FS2P_buildings_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/tercer_motor/FS2P_buildings_resumen.json",
+   "bytes": 1107,
+   "sha256": "d4e6e6bcce334527c3ac8931f8699373ca4c9581f0da85566b5de84d7003b800",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:25:46+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/tercer_motor/FS2P_contents_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/tercer_motor/FS2P_contents_resumen.json",
+   "bytes": 786,
+   "sha256": "8d7365c8d845ff8b38129c18aad8f9d6faa4862f4c7e6df5fda6d2827db3d67d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:37:27+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/tercer_motor/FS2P_motor_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/tercer_motor/FS2P_motor_resumen.json",
+   "bytes": 956,
+   "sha256": "62ceca053434773dbd1f52ab52cfb3b7590dd443276ecaafd97811990e5c6c89",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T21:20:39+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/tercer_motor/FS2S_buildings_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/tercer_motor/FS2S_buildings_resumen.json",
+   "bytes": 1726,
+   "sha256": "2019a808f41d34c23a7365daf9c0f74f1455d8ef4cb34ef8b518246e5fdf9808",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:25:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/tercer_motor/FS2S_motor_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/tercer_motor/FS2S_motor_resumen.json",
+   "bytes": 1476,
+   "sha256": "2f7547ebd7caa92e0b64d47ac9de99e1c038fb6c3c27aaec310a89ed843c730b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T21:20:40+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/tercer_motor/FS2Xc_contents_resumen.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/tercer_motor/FS2Xc_contents_resumen.json",
+   "bytes": 1678,
+   "sha256": "ea1d266d04761d21034920f15f8773b1eadb3da4f0e0a1eb6c43d6c426922c52",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:37:28+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/tercer_motor/cola44.sh",
+   "destino": "src/semana1/Modelos_claude/experimentos/tercer_motor/cola44.sh",
+   "bytes": 551,
+   "sha256": "1ed9cb2aa817964c488fb1a7a2d11b601b785b9f6baf6bee572297ee9c2bd913",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:37:28+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/tercer_motor/deriva_tmp_fs2_buildings.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/tercer_motor/deriva_tmp_fs2_buildings.json",
+   "bytes": 659,
+   "sha256": "77ada0c235393238f1aa06b981d98cb48d4b6aa1466581694d6d61bf6e383edc",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:25:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/tercer_motor/deriva_tmp_fs2_contents.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/tercer_motor/deriva_tmp_fs2_contents.json",
+   "bytes": 779,
+   "sha256": "f1f5172496f0f7deabaddd5f3380d3a2a5039bd7edca357147452013253369af",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:37:28+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/tercer_motor/deriva_tmp_fs2_motor.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/tercer_motor/deriva_tmp_fs2_motor.json",
+   "bytes": 653,
+   "sha256": "f58cd5603651a2e706bac6519fb6dfd94176c3598008262d7eba31108d35a80b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T21:20:40+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/tercer_motor/log_fs2p.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/tercer_motor/log_fs2p.txt",
+   "bytes": 4567,
+   "sha256": "4c7b69a9b78e13b9b87940c2013303a4d54a5f750871339d2fc1214a5265d270",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:37:29+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/tercer_motor/log_fs2p_motor.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/tercer_motor/log_fs2p_motor.txt",
+   "bytes": 2726,
+   "sha256": "4a1702375a7997021b6c339c073a8ededf7e91b83574117f9203a455e3112955",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T21:20:40+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/tercer_motor/log_fs2p_parcial.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/tercer_motor/log_fs2p_parcial.txt",
+   "bytes": 2648,
+   "sha256": "ffbbbcea387b175c57dc65fd414b39cbafad189ec3122beb95c31d339d93a276",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:25:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/tercer_motor/log_fs2s_buildings.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/tercer_motor/log_fs2s_buildings.txt",
+   "bytes": 1153,
+   "sha256": "909a9a872cf79b13a508efb272b599408c1d0c2226a96a50fb507340f3e5ad82",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:25:48+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/tercer_motor/log_rejilla_pesos_buildings_fs2s.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/tercer_motor/log_rejilla_pesos_buildings_fs2s.txt",
+   "bytes": 1592,
+   "sha256": "7bdec9e4d3670d4bfcd42a8f6b322c19c3ff527af1b2b64a0971ca523bfbc89d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:25:48+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/tercer_motor/log_rejilla_pesos_contents_fs2xc.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/tercer_motor/log_rejilla_pesos_contents_fs2xc.txt",
+   "bytes": 1696,
+   "sha256": "5cbca6516c0511b09fa96fdc6a557f698b9bf5aa114f8d2471173349a9269585",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:37:29+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/tercer_motor/log_rejilla_pesos_motor_fs2s.txt",
+   "destino": "src/semana1/Modelos_claude/experimentos/tercer_motor/log_rejilla_pesos_motor_fs2s.txt",
+   "bytes": 1693,
+   "sha256": "1bb0e54d23e2685a03c19b198c0e2dbc9b39b18a35bdb91e8df889eef5949b87",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T21:20:41+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/tercer_motor/robustez_s21_prueba_fs2s_motor.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/tercer_motor/robustez_s21_prueba_fs2s_motor.json",
+   "bytes": 2504,
+   "sha256": "a831f9a4a2eb3f8e5abd113ebb0c01fc5faf2f02f70e8d3e43e32cbcc25253de",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T21:20:41+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/tercer_motor/spec_s21_prueba_fs2s_motor.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/tercer_motor/spec_s21_prueba_fs2s_motor.json",
+   "bytes": 670,
+   "sha256": "776c8fa47a7e0aac6a21c3ed1e66ef30d99e1c1af6e841b5d91f1dbc1bc08762",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T21:20:42+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/var_buildings.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/var_buildings.json",
+   "bytes": 73,
+   "sha256": "142274392d5279487c98a94bd25143512019367871b8e5d222bdbb02fea3023b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:46+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "experimentos/var_contents.json",
+   "destino": "src/semana1/Modelos_claude/experimentos/var_contents.json",
+   "bytes": 128,
+   "sha256": "434f6c250578587afbea111613672a3906fcc855c10363f5ba02b2d1dc42d387",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261018-001.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261018-001.md",
+   "bytes": 7304,
+   "sha256": "5ca351fdde91aef1cdd4de4201c72b3795ef9e902aca795809425d35a321ffac",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T10:22:31+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261018-002.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261018-002.md",
+   "bytes": 2479,
+   "sha256": "cbf256241083d5d686a688fe797dc55797d02021fd67b71ed8d7a4fd05a36830",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T10:42:00+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261018-003.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261018-003.md",
+   "bytes": 2930,
+   "sha256": "694406a62f45a4e8faf425aaa39cd7f1f9c58e80c6fdd0b87f142ea070de1eb7",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T11:17:38+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261018-004.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261018-004.md",
+   "bytes": 3224,
+   "sha256": "ef1eb14b32b110637cc2b8889931d4efe1f01619ccd3e4ba4dbf9f29bb2396d5",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T12:55:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261018-005.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261018-005.md",
+   "bytes": 6234,
+   "sha256": "b6a9d12813a154bd216d29c1247b3a6d84dc44ffece264bb8d4177de2a388272",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T14:05:24+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261018-006.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261018-006.md",
+   "bytes": 2980,
+   "sha256": "adbc0c0af612ac2438ddd1bbef2c28ad93973ff253707bc991648a5d540b3586",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T14:41:54+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261018-007.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261018-007.md",
+   "bytes": 4295,
+   "sha256": "41b5cee0891aa76c20ccbdef22ea5e2ea7d7841c301076c2368e2a517f8542fe",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:08:05+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261018-008.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261018-008.md",
+   "bytes": 3103,
+   "sha256": "7c30cc53c1e400a2681d08be8a7c1bc4bb342b072bb6a293050ad5e4513f12a9",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T17:17:03+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261018-009.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261018-009.md",
+   "bytes": 2551,
+   "sha256": "c26025fc67a4190b3c80ddc7a7d695d6a20fc3cfc4718f65135268813747138f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T18:14:45+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261018-010.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261018-010.md",
+   "bytes": 6325,
+   "sha256": "bd40e33644fe052025d265c7c9b9a6d184b8e5fcfd844f47adb266d335b53726",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:26:28+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261018-011.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261018-011.md",
+   "bytes": 930,
+   "sha256": "dfd3ca4ce43875a9feebb4a21a069a3d9ffbe4c267146af5d952783b516e365c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:31:05+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261018-012.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261018-012.md",
+   "bytes": 2447,
+   "sha256": "6e24455deb3d76b5fe0f1912815a0918ff559df92cc1feea7b07b5233e1f693c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:47:27+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261018-013.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261018-013.md",
+   "bytes": 3168,
+   "sha256": "ed859158454b8cc5cf8cf59b62a65ab541a02d1fc96b6875d26d4a8377ec60b3",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T20:30:21+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261018-014.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261018-014.md",
+   "bytes": 1837,
+   "sha256": "5fbe8a44f1f16dddcf3f61b97e3a34f1c6d0d1febe1b3c99be6b13ad77733807",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T21:20:42+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261018-015.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261018-015.md",
+   "bytes": 1604,
+   "sha256": "38eb9197fbc7adac071293f8f0d6b4f5f8a4d6eb2c8d4733f4a91db6e558d076",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T21:23:57+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261018-016.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261018-016.md",
+   "bytes": 776,
+   "sha256": "748db2fa862f534ce25f1042c477ae57e984af43629ffbadf2097220e14dc9ea",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T21:25:29+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261018-017.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261018-017.md",
+   "bytes": 723,
+   "sha256": "2ca0b14db0020b8088f0f3f93b4c4b8b2dee3bfec4774fbdc60e2502cfa4901e",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T21:26:27+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261018-018.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261018-018.md",
+   "bytes": 1570,
+   "sha256": "a60966970cfec826af6cd3228729650c15744da94d74c80bcfa9fa5fbdaf7c9d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:01:25+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261018-019.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261018-019.md",
+   "bytes": 1626,
+   "sha256": "61ffb90a23cde3981cb81179fed793f2b7b2fbff0b0583f2ef10cd9527a9af7e",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:07:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261018-020.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261018-020.md",
+   "bytes": 1865,
+   "sha256": "2275e6e7418e76b10438f376474310389c40f7ca5d79ba46b30542eb8e6f4387",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:19:14+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261018-021.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261018-021.md",
+   "bytes": 989,
+   "sha256": "b1e9e2da5a2e0d1248eb6ddfa3699bc4345f7af12b57c298a309ee0f74a19c9f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:21:10+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261018-022.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261018-022.md",
+   "bytes": 1782,
+   "sha256": "bd182ed014bccf5852f73105a8a4f52ccfcc512d8c62bab76ca427be3470fee4",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T23:23:02+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261018-023.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261018-023.md",
+   "bytes": 1738,
+   "sha256": "7be08a9d5563bf3123bb8e4b2bb35b193a59310d088574dc3625295d243937ce",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:21:02+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261018-024.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261018-024.md",
+   "bytes": 3631,
+   "sha256": "48f6ec5d6a133694f95d56e15f2e47e9fd8369a2b1cc627ee825692c84f0deac",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T02:01:52+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261019-001.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261019-001.md",
+   "bytes": 3236,
+   "sha256": "34ad27ead8b5097b59e4459989ab0445f50f9810e39b10bcdec9c31358e07ec6",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T02:38:29+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261019-002.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261019-002.md",
+   "bytes": 2319,
+   "sha256": "13a2c532300bf55303e7b4116ce61846131af0b5af966f6eb8dbd5dae7dfd6fe",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T03:01:20+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/CLA-20261019-003.md",
+   "destino": "src/semana1/Modelos_claude/foro/CLA-20261019-003.md",
+   "bytes": 5135,
+   "sha256": "34bf43e8c32c8f875c439b93596aa82de4d122c9bc47b08dd8ef9716c1ff0f64",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T13:08:42+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/Cierre_D84_DECISIONES.md",
+   "destino": "src/semana1/Modelos_claude/foro/Cierre_D84_DECISIONES.md",
+   "bytes": 1299,
+   "sha256": "817b682f50466feb8aff322f42cee36aacfbcd16adcdd9f4002e1655c19ccbfe",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T17:17:26+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/Cierre_D86_DECISIONES.md",
+   "destino": "src/semana1/Modelos_claude/foro/Cierre_D86_DECISIONES.md",
+   "bytes": 1515,
+   "sha256": "0645b6c99b52924cf9a22baf4ee56851529a818cf9fca2ec0f2a6af1a853585c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T21:20:42+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/Cierre_D87_DECISIONES.md",
+   "destino": "src/semana1/Modelos_claude/foro/Cierre_D87_DECISIONES.md",
+   "bytes": 1284,
+   "sha256": "6f05b48b197cb430cec1947469f6d048da3c1736db1b3ab766b37764252a13f3",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T23:23:49+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/D83_DECISIONES.md",
+   "destino": "src/semana1/Modelos_claude/foro/D83_DECISIONES.md",
+   "bytes": 4879,
+   "sha256": "68db40739dfd9db8e6105fdaddafe48c11332e1e1b248532d85f8a15dae76b89",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T14:06:27+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/D84_DECISIONES.md",
+   "destino": "src/semana1/Modelos_claude/foro/D84_DECISIONES.md",
+   "bytes": 3446,
+   "sha256": "f950b551edcd640d112226cb41fcf6c7479a0cc3e58c139569e674b296d8c97f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:08:41+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/D85_DECISIONES.md",
+   "destino": "src/semana1/Modelos_claude/foro/D85_DECISIONES.md",
+   "bytes": 3659,
+   "sha256": "2339eb53c23df46310437d122594f494abf43e41f38b494c917012cde25e6ce4",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:28:59+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/D86_DECISIONES.md",
+   "destino": "src/semana1/Modelos_claude/foro/D86_DECISIONES.md",
+   "bytes": 3396,
+   "sha256": "5c42f3dfe8952bc22758ad2c3e1143875a05e215a3f99a5c09d59f1b33a4527e",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T20:30:22+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/D87_DECISIONES.md",
+   "destino": "src/semana1/Modelos_claude/foro/D87_DECISIONES.md",
+   "bytes": 2443,
+   "sha256": "36fe688ee1834c085c32f0955a2c2c6ca917f00b80856b6b0e84e5c6b0f5dab8",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:21:34+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/cierre_docs_s22.py",
+   "destino": "src/semana1/Modelos_claude/foro/cierre_docs_s22.py",
+   "bytes": 4251,
+   "sha256": "f5cae2e2c4284acded7e3d3e7ff2557712573d06ff92c7833c6d149c4cf093ee",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T21:21:48+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/claude_md_s13_20261018.md",
+   "destino": "src/semana1/Modelos_claude/foro/claude_md_s13_20261018.md",
+   "bytes": 7964,
+   "sha256": "3a235c30af53de448638150ee532a6a48ea4a3bfb31c8594d3352dec51f0e2a1",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T14:12:07+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/claude_md_s21_vigente.md",
+   "destino": "src/semana1/Modelos_claude/foro/claude_md_s21_vigente.md",
+   "bytes": 2333,
+   "sha256": "af86cf0579b8d7e75cc669a5183f434a2ead3d5ae51fc10597ef00bbf581856d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:40:10+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/docs_cierre_d87.py",
+   "destino": "src/semana1/Modelos_claude/foro/docs_cierre_d87.py",
+   "bytes": 4098,
+   "sha256": "1ffa06031682e77e543a99baa794c2cd030f640024fb303918a469f6168635a7",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T23:23:49+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/docs_cuerpo_cola.py",
+   "destino": "src/semana1/Modelos_claude/foro/docs_cuerpo_cola.py",
+   "bytes": 3258,
+   "sha256": "e46c954a19917d8700ffd1c0651c5a6bc7ccc781dc93e1b60c00e207d207c314",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T21:24:21+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/docs_final_noche.py",
+   "destino": "src/semana1/Modelos_claude/foro/docs_final_noche.py",
+   "bytes": 2360,
+   "sha256": "2ed0dcf96d463fc4130780086769a39b1f4fe2f0e4d70971a7778e5584c49134",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-19T00:21:22+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/docs_rejilla_robusta.py",
+   "destino": "src/semana1/Modelos_claude/foro/docs_rejilla_robusta.py",
+   "bytes": 1011,
+   "sha256": "9e36f30ec02bd2b5f69c8e21bac3134d33175256fb81c325c3e55997897062db",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T21:26:27+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/docs_s22_publico.py",
+   "destino": "src/semana1/Modelos_claude/foro/docs_s22_publico.py",
+   "bytes": 6484,
+   "sha256": "a7572fe86d21bbe8dc1f7ad574c4034914442d656ba5de28ac3e1be37a559641",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T22:22:16+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/escribir_aporte.py",
+   "destino": "src/semana1/Modelos_claude/foro/escribir_aporte.py",
+   "bytes": 2080,
+   "sha256": "119d228275c8603ff54254fdb5224dc37434c2ef933fd03bf74f8ad19a6815a7",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T10:22:32+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/informe_4_10_s22.md",
+   "destino": "src/semana1/Modelos_claude/foro/informe_4_10_s22.md",
+   "bytes": 1858,
+   "sha256": "22ca8d081ebe674c384ade76cc7c085089c40d57b3723226b9cf5f8582c8f11f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T20:30:22+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/informe_4_9_s21.md",
+   "destino": "src/semana1/Modelos_claude/foro/informe_4_9_s21.md",
+   "bytes": 3531,
+   "sha256": "11e2c01a3e2cfec97f39be0795ffb98ea9ae25c8def59e189fa41895546f85f1",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:39:02+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/informe_resumen_s21.md",
+   "destino": "src/semana1/Modelos_claude/foro/informe_resumen_s21.md",
+   "bytes": 1618,
+   "sha256": "4d91a553da7870b6e394a49090055f389279f11d06bdda451073918cea00d216",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:39:02+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/parche_claude_md_s21.py",
+   "destino": "src/semana1/Modelos_claude/foro/parche_claude_md_s21.py",
+   "bytes": 3265,
+   "sha256": "b1d928b5789ba866b854bef8735cfbe5362a64dc8c796e627b9c6265ea19baa0",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:40:09+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/parche_claude_md_s22.py",
+   "destino": "src/semana1/Modelos_claude/foro/parche_claude_md_s22.py",
+   "bytes": 3822,
+   "sha256": "e63c7548333e8156446f5a8c8942709b5b6871649a5213f114030259d3f09003",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T20:31:26+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/readme_decima_ronda.md",
+   "destino": "src/semana1/Modelos_claude/foro/readme_decima_ronda.md",
+   "bytes": 3537,
+   "sha256": "999120a7b25b0734da9eb2155693287ba3e5a690fc08176995980b86747a3ab8",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T20:30:22+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/readme_novena_ronda.md",
+   "destino": "src/semana1/Modelos_claude/foro/readme_novena_ronda.md",
+   "bytes": 6167,
+   "sha256": "7bdac250236701ef95dab8fd7495a8882794c91a229f90271f5b942a601e0eeb",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T19:37:30+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/readme_octava_cierre.md",
+   "destino": "src/semana1/Modelos_claude/foro/readme_octava_cierre.md",
+   "bytes": 1188,
+   "sha256": "29b039e97bd44f0fbbf60e4837a06cdf5b355aa3b8fbb23d799285dfbb59e2c6",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T17:19:03+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/readme_octava_ronda.md",
+   "destino": "src/semana1/Modelos_claude/foro/readme_octava_ronda.md",
+   "bytes": 4689,
+   "sha256": "437ef9bdee4d667ce7013023795ebae5f2569c3c51d747a6e7cdcdb7dbc4d17c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:09:35+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/readme_septima_ronda.md",
+   "destino": "src/semana1/Modelos_claude/foro/readme_septima_ronda.md",
+   "bytes": 5393,
+   "sha256": "9491490012d5c681771938b28b5144c074016aa868a339c39b1ef3e91eda951f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T14:08:16+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "foro/readme_sexta_ronda.md",
+   "destino": "src/semana1/Modelos_claude/foro/readme_sexta_ronda.md",
+   "bytes": 4628,
+   "sha256": "f3a0193d8732965b22066b03085b5bfcb4502e59b42cfbffea627aa0919a08a0",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T12:56:35+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "hibrido_autos.py",
+   "destino": "src/semana1/Modelos_claude/hibrido_autos.py",
+   "bytes": 5558,
+   "sha256": "242d9d4fe604c552d41ce55eae12beaeac0d3115142e753c497b4169a6fbe61b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:47+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "importancia_permutacion.py",
+   "destino": "src/semana1/Modelos_claude/importancia_permutacion.py",
+   "bytes": 3182,
+   "sha256": "98376aad6609ad5297d810047f5ee52951ff50af3e1050c496c971b188f7f8d8",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T22:02:25+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "importar_gam_codex.py",
+   "destino": "src/semana1/Modelos_claude/importar_gam_codex.py",
+   "bytes": 2936,
+   "sha256": "564c884b76f5515acb20ff15f86fa416c9f46b4e33d2e13565c2e8afc411e11c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T10:46:12+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "mezcla.py",
+   "destino": "src/semana1/Modelos_claude/mezcla.py",
+   "bytes": 5188,
+   "sha256": "835b886457879ad5d4d992be91c820b15f8b3854eeb19974668ba16af5dd2d19",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T20:39:35+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "mezcla2.py",
+   "destino": "src/semana1/Modelos_claude/mezcla2.py",
+   "bytes": 4959,
+   "sha256": "3b8dabd6e1b6b98f3d673f98f2408f947afa050b9fc8b68cb27ee78a01f6410e",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T22:02:24+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "mezcla_codex.py",
+   "destino": "src/semana1/Modelos_claude/mezcla_codex.py",
+   "bytes": 8067,
+   "sha256": "88a34a5b949f7faea780ddeeb9be1d76883eb5c2258cb7632375f4b398b2ad1b",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:48+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "peligro_aislado.py",
+   "destino": "src/semana1/Modelos_claude/peligro_aislado.py",
+   "bytes": 2851,
+   "sha256": "eda9dbc68179d6ef721138b6037131a850823e466d8afddfa692e767cb3c81ed",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T16:11:56+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "produccion_frecsev.py",
+   "destino": "src/semana1/Modelos_claude/produccion_frecsev.py",
+   "bytes": 3653,
+   "sha256": "6834bcc64f4a6aaa91b0d4b61bfec361343f3fc60b30299d61644e01e19a4e25",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T20:39:36+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "prueba_cambio.py",
+   "destino": "src/semana1/Modelos_claude/prueba_cambio.py",
+   "bytes": 3266,
+   "sha256": "2b107d0ead3ae9efa4b86171273eea87c0eaf5914de0b08b1c1e3db3784e146a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:30:03+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "prueba_clima_actual.py",
+   "destino": "src/semana1/Modelos_claude/prueba_clima_actual.py",
+   "bytes": 1379,
+   "sha256": "22a99d271cbff14ef8dd1543d6c6860f04fab0899bb6d91d6f044fdcc9046ac5",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T20:39:38+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "prueba_eef_segmento.py",
+   "destino": "src/semana1/Modelos_claude/prueba_eef_segmento.py",
+   "bytes": 2592,
+   "sha256": "849d6642bd59e0e63e2f27ced7ccf9a4777a8d08f973cc3d3c1e5358bbc4951d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:49+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "prueba_f3_hogar.py",
+   "destino": "src/semana1/Modelos_claude/prueba_f3_hogar.py",
+   "bytes": 3270,
+   "sha256": "4e53f0a1df104a214bfb9e3c752d4259634870b5ee51957ca09d4239d41600be",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:30:03+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "prueba_hogar_forma.py",
+   "destino": "src/semana1/Modelos_claude/prueba_hogar_forma.py",
+   "bytes": 2253,
+   "sha256": "c6eb9c035e22f383bcac772a5422e882c5bd0587b2108fedfe21295d09445c9a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T22:02:27+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "prueba_hogar_reg.py",
+   "destino": "src/semana1/Modelos_claude/prueba_hogar_reg.py",
+   "bytes": 1492,
+   "sha256": "343aaf8ec009d335faf029503b859e4e9e7cff2878841275bf618d03a320f06a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T22:02:26+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "prueba_inundacion.py",
+   "destino": "src/semana1/Modelos_claude/prueba_inundacion.py",
+   "bytes": 1624,
+   "sha256": "eea7b4ea6fe09cac5ace38cdd410df087c42758c89e1b60addbcc79babfc5292",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T20:39:37+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "prueba_makemodel.py",
+   "destino": "src/semana1/Modelos_claude/prueba_makemodel.py",
+   "bytes": 1214,
+   "sha256": "1dfc905676872d7df1a2c7042d7e41c44d35b34e5027c29d2fb3a69bf92917bd",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T22:02:26+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "prueba_monotona_autos.py",
+   "destino": "src/semana1/Modelos_claude/prueba_monotona_autos.py",
+   "bytes": 2518,
+   "sha256": "2de80985c46c1828573c92ef7a081083fe71c94f86794ec9577d0715c2d2a188",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:30:03+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "prueba_potencia.py",
+   "destino": "src/semana1/Modelos_claude/prueba_potencia.py",
+   "bytes": 1783,
+   "sha256": "f26d631a59b8cc5b2d569e5710f291b2ea7267b5be3ee5fc6966c1fc87f0e41d",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:49+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "prueba_ventana.py",
+   "destino": "src/semana1/Modelos_claude/prueba_ventana.py",
+   "bytes": 1864,
+   "sha256": "91526f4615145d8feca01b89e090049e220aeefa263947e2af12762c0bdf716c",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:02:50+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "rejilla.py",
+   "destino": "src/semana1/Modelos_claude/rejilla.py",
+   "bytes": 4559,
+   "sha256": "e5f309ae21040bf5647a6e39364ca7ecf3adcdcce7ec8ffe2ed26887991a494f",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T19:33:28+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "rejilla_forma.py",
+   "destino": "src/semana1/Modelos_claude/rejilla_forma.py",
+   "bytes": 3261,
+   "sha256": "a1ffbd047443098e5ff019f2021db72140791e91829bd724a98113479a257066",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T14:11:18+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "rejilla_hogar.py",
+   "destino": "src/semana1/Modelos_claude/rejilla_hogar.py",
+   "bytes": 2686,
+   "sha256": "58890b165d4f8094861736af41dc58d5576403468ee37a78e3b0153dea307755",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:30:04+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "selecciones_v23/MANIFIESTO.json",
+   "destino": "src/semana1/Modelos_claude/selecciones_v23/MANIFIESTO.json",
+   "bytes": 1878,
+   "sha256": "76ed3102f507e9fd7e5632dc5f8373a0df52a0ad0564948fcb9be6faabb70dcf",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T14:14:04+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "severidad_cfs2.py",
+   "destino": "src/semana1/Modelos_claude/severidad_cfs2.py",
+   "bytes": 7818,
+   "sha256": "3892091aaff8c4cd742ed48a13d8c84a07e8794b61d1d5c3081ece4e2ee8312a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T13:57:35+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "v23_cap.py",
+   "destino": "src/semana1/Modelos_claude/v23_cap.py",
+   "bytes": 1088,
+   "sha256": "c9afd695efddf08b75323036b6094fc0c3d70db625dc7a0ad70e39e4dd2380e2",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T19:33:29+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "v24_cap.py",
+   "destino": "src/semana1/Modelos_claude/v24_cap.py",
+   "bytes": 857,
+   "sha256": "1d1ae36883bbef35292100b2224c16e856865b44cd15c99c1ee6b494fd86c24a",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T19:33:29+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "v24_cap2.py",
+   "destino": "src/semana1/Modelos_claude/v24_cap2.py",
+   "bytes": 1146,
+   "sha256": "019ab2966d376cea1fd2091ceb9e5c99b27fb445389ccd9397f3b395d1917b28",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T19:33:30+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "variables_cambio.py",
+   "destino": "src/semana1/Modelos_claude/variables_cambio.py",
+   "bytes": 3132,
+   "sha256": "6cab493a91fc3b5a30eab14f1943e34265867f8e2f5fbcaf5f360c64dc135ce9",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:30:19+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "variables_cartera.py",
+   "destino": "src/semana1/Modelos_claude/variables_cartera.py",
+   "bytes": 2298,
+   "sha256": "32d9828609c291a381edfb82ecf0b47d7e59d827eb79d781e507efcde1c88f00",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T20:39:39+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "variables_fin.py",
+   "destino": "src/semana1/Modelos_claude/variables_fin.py",
+   "bytes": 1540,
+   "sha256": "c675c77b5890c36e1ba437afad4646cbe24e6eeb9c0f9718cd49073671c93cb8",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T05:30:20+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "variables_interaccion.py",
+   "destino": "src/semana1/Modelos_claude/variables_interaccion.py",
+   "bytes": 3935,
+   "sha256": "ae714fa014c45d6183e7dd5b2a1b6308beeb847f9a727b569980fccbb23ee5db",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-17T20:39:39+00:00",
+   "duplicado_de": null
+  },
+  {
+   "origen": "xgb_experimento.py",
+   "destino": "src/semana1/Modelos_claude/xgb_experimento.py",
+   "bytes": 4285,
+   "sha256": "f26eac85b8686b23955e2e712a9d20e1fafb1563bbd4af14316aa1f15c809746",
+   "estado": "sin_cambios",
+   "modificado_utc": "2026-10-18T03:03:13+00:00",
+   "duplicado_de": null
+  }
+ ],
+ "omitidos_detalle": [
+  {
+   "ruta": "README.md",
+   "motivo": "ya está en el repositorio como docs/evidencia/experimentos_linea_principal.md"
+  },
+  {
+   "ruta": "anexar_entrega.py",
+   "motivo": "ya está en el repositorio como src/modelos/anexar_entrega.py"
+  },
+  {
+   "ruta": "bootstrap_codex.py",
+   "motivo": "ya está en el repositorio como src/modelos/bootstrap_codex.py"
+  },
+  {
+   "ruta": "calibracion_deciles.py",
+   "motivo": "ya está en el repositorio como src/modelos/calibracion_deciles.py"
+  },
+  {
+   "ruta": "calibrar_siguiente_anio.py",
+   "motivo": "ya está en el repositorio como src/modelos/calibrar_siguiente_anio.py"
+  },
+  {
+   "ruta": "cat_experimento.py",
+   "motivo": "ya está en el repositorio como src/modelos/cat_experimento.py"
+  },
+  {
+   "ruta": "cat_frecsev.py",
+   "motivo": "ya está en el repositorio como src/modelos/cat_frecsev.py"
+  },
+  {
+   "ruta": "cat_produccion.py",
+   "motivo": "ya está en el repositorio como src/modelos/cat_produccion.py"
+  },
+  {
+   "ruta": "combinar_semillas.py",
+   "motivo": "ya está en el repositorio como src/modelos/combinar_semillas.py"
+  },
+  {
+   "ruta": "comparar_codex.py",
+   "motivo": "ya está en el repositorio como src/modelos/comparar_codex.py"
+  },
+  {
+   "ruta": "comun.py",
+   "motivo": "ya está en el repositorio como src/modelos/comun.py"
+  },
+  {
+   "ruta": "construir_variables.py",
+   "motivo": "ya está en el repositorio como src/modelos/construir_variables.py"
+  },
+  {
+   "ruta": "deriva_nivel.py",
+   "motivo": "ya está en el repositorio como src/modelos/deriva_nivel.py"
+  },
+  {
+   "ruta": "diagnostico_cuerpo_cola.py",
+   "motivo": "ya está en el repositorio como src/modelos/diagnostico_cuerpo_cola.py"
+  },
+  {
+   "ruta": "diagnostico_forma_nivel.py",
+   "motivo": "ya está en el repositorio como src/modelos/diagnostico_forma_nivel.py"
+  },
+  {
+   "ruta": "escenarios_reserva.py",
+   "motivo": "ya está en el repositorio como src/modelos/escenarios_reserva.py"
+  },
+  {
+   "ruta": "evaluar.py",
+   "motivo": "ya está en el repositorio como src/modelos/evaluar.py"
+  },
+  {
+   "ruta": "experimentos.py",
+   "motivo": "ya está en el repositorio como src/modelos/experimentos.py"
+  },
+  {
+   "ruta": "exportar_predicciones.py",
+   "motivo": "ya está en el repositorio como src/modelos/exportar_predicciones.py"
+  },
+  {
+   "ruta": "frecsev2.py",
+   "motivo": "ya está en el repositorio como src/modelos/frecsev2.py"
+  },
+  {
+   "ruta": "influencia_reservas.py",
+   "motivo": "ya está en el repositorio como src/modelos/influencia_reservas.py"
+  },
+  {
+   "ruta": "intervalos_region.py",
+   "motivo": "ya está en el repositorio como src/modelos/intervalos_region.py"
+  },
+  {
+   "ruta": "mezcla3.py",
+   "motivo": "ya está en el repositorio como src/modelos/mezcla3.py"
+  },
+  {
+   "ruta": "mlp_tweedie.py",
+   "motivo": "ya está en el repositorio como src/modelos/mlp_tweedie.py"
+  },
+  {
+   "ruta": "produccion.py",
+   "motivo": "ya está en el repositorio como src/modelos/produccion.py"
+  },
+  {
+   "ruta": "publico_simulado.py",
+   "motivo": "ya está en el repositorio como src/modelos/publico_simulado.py"
+  },
+  {
+   "ruta": "rejilla_pesos.py",
+   "motivo": "ya está en el repositorio como src/modelos/rejilla_pesos.py"
+  },
+  {
+   "ruta": "rejilla_robusta.py",
+   "motivo": "ya está en el repositorio como src/modelos/rejilla_robusta.py"
+  },
+  {
+   "ruta": "reproducir_mezcla.py",
+   "motivo": "ya está en el repositorio como src/modelos/reproducir_mezcla.py"
+  },
+  {
+   "ruta": "robustez.py",
+   "motivo": "ya está en el repositorio como src/modelos/robustez.py"
+  },
+  {
+   "ruta": "semestres.py",
+   "motivo": "ya está en el repositorio como src/modelos/semestres.py"
+  },
+  {
+   "ruta": "severidad_cfs.py",
+   "motivo": "ya está en el repositorio como src/modelos/severidad_cfs.py"
+  },
+  {
+   "ruta": "severidad_cfs3.py",
+   "motivo": "ya está en el repositorio como src/modelos/severidad_cfs3.py"
+  },
+  {
+   "ruta": "_to_delete/.prueba_b",
+   "motivo": "extensión (sin) fuera de código y documentación"
+  },
+  {
+   "ruta": "_to_delete/.prueba_borrado",
+   "motivo": "extensión (sin) fuera de código y documentación"
+  },
+  {
+   "ruta": "experimentos/cfg_hogar_s2.json",
+   "motivo": "ya está en el repositorio como receta/especificaciones/cfg_hogar_s2.json"
+  },
+  {
+   "ruta": "experimentos/cfg_hogar_s3.json",
+   "motivo": "ya está en el repositorio como receta/especificaciones/cfg_hogar_s3.json"
+  },
+  {
+   "ruta": "experimentos/cfg_m595_f3.json",
+   "motivo": "ya está en el repositorio como receta/especificaciones/cfg_m595_f3.json"
+  },
+  {
+   "ruta": "experimentos/cfg_motor_red.json",
+   "motivo": "ya está en el repositorio como receta/especificaciones/cfg_motor_red.json"
+  },
+  {
+   "ruta": "experimentos/cfg_s03.json",
+   "motivo": "ya está en el repositorio como receta/especificaciones/cfg_s03.json"
+  },
+  {
+   "ruta": "experimentos/cfg_total.json",
+   "motivo": "ya está en el repositorio como receta/especificaciones/cfg_total.json"
+  },
+  {
+   "ruta": "experimentos/cfg_total_motor_red.json",
+   "motivo": "ya está en el repositorio como receta/especificaciones/cfg_total_motor_red.json"
+  },
+  {
+   "ruta": "experimentos/deriva_nivel_s22.json",
+   "motivo": "copia idéntica de experimentos/deriva_nivel_s21.json en el mismo origen"
+  },
+  {
+   "ruta": "experimentos/log_cola17.txt",
+   "motivo": "ya está en el repositorio como docs/controles/20261019T125425Z_nube_referencia/registros/A27.stderr.txt"
+  },
+  {
+   "ruta": "experimentos/log_cola18.txt",
+   "motivo": "ya está en el repositorio como docs/controles/20261019T125425Z_nube_referencia/registros/A27.stderr.txt"
+  },
+  {
+   "ruta": "experimentos/log_cola19.txt",
+   "motivo": "ya está en el repositorio como docs/controles/20261019T125425Z_nube_referencia/registros/A27.stderr.txt"
+  },
+  {
+   "ruta": "experimentos/predicciones_v23_v24_s21.parquet",
+   "motivo": "extensión .parquet fuera de código y documentación"
+  },
+  {
+   "ruta": "experimentos/predicciones_v23_v24_s22.parquet",
+   "motivo": "extensión .parquet fuera de código y documentación"
+  },
+  {
+   "ruta": "experimentos/spec_s21_propio.json",
+   "motivo": "ya está en el repositorio como receta/especificaciones/spec_s22_propio.json"
+  },
+  {
+   "ruta": "experimentos/spec_s22_propio.json",
+   "motivo": "ya está en el repositorio como receta/especificaciones/spec_s22_propio.json"
+  },
+  {
+   "ruta": "insumos/exposicion_buildings.parquet",
+   "motivo": "extensión .parquet fuera de código y documentación"
+  },
+  {
+   "ruta": "insumos/exposicion_contents.parquet",
+   "motivo": "extensión .parquet fuera de código y documentación"
+  },
+  {
+   "ruta": "insumos/exposicion_motor.parquet",
+   "motivo": "extensión .parquet fuera de código y documentación"
+  },
+  {
+   "ruta": "selecciones_v23/sel_CFSS6_motor.parquet",
+   "motivo": "extensión .parquet fuera de código y documentación"
+  },
+  {
+   "ruta": "selecciones_v23/sel_cat1a.parquet",
+   "motivo": "extensión .parquet fuera de código y documentación"
+  },
+  {
+   "ruta": "selecciones_v23/sel_fs1.parquet",
+   "motivo": "extensión .parquet fuera de código y documentación"
+  },
+  {
+   "ruta": "selecciones_v23/sel_total_F01234.parquet",
+   "motivo": "extensión .parquet fuera de código y documentación"
+  },
+  {
+   "ruta": "selecciones_v23/sel_total_F0124.parquet",
+   "motivo": "extensión .parquet fuera de código y documentación"
+  },
+  {
+   "ruta": "selecciones_v23/sel_total_motor_red.parquet",
+   "motivo": "extensión .parquet fuera de código y documentación"
+  }
+ ],
+ "nota": "Copia sin cambios del código tal como se ejecutó, con su fecha de modificación; la carpeta de origen sigue siendo la de trabajo. Las versiones anteriores de un archivo actualizado quedan en los commits anteriores.",
+ "actualizaciones": [
+  {
+   "utc": "2026-10-26T21:35:59Z",
+   "nuevo": 0,
+   "actualizado": 0,
+   "sin_cambios": 416,
+   "omitidos": 59
+  }
+ ]
+}
