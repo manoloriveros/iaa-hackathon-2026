@@ -1,0 +1,24 @@
+{
+ "razon_nivel": {
+  "0.3": 0.8335,
+  "0.5": 0.8464,
+  "0.7": 0.8787
+ },
+ "sigma_publico_privado_a": 0.0975,
+ "tau": 0.2,
+ "Z": 0.808,
+ "archivos": {
+  "sonda_forma_motor1_a03.csv": {
+   "a": 0.3,
+   "sha256": "aa118bb78f127a266ea4aa83fecd4d397cc330df2cbcc2b492d7e690b90dbae6",
+   "total_motor_1": 34116876.88
+  },
+  "sonda_forma_motor1_a07.csv": {
+   "a": 0.7,
+   "sha256": "84fc16c656a15b8782c881e701743c2c404aff4d8964b56cb9918a414d2f08f5",
+   "total_motor_1": 35967169.05
+  }
+ },
+ "total_motor_1_F1": 34644510.54,
+ "regla": "Con D²(F1) y las dos sondas: parábola en a por los tres puntos (0,3; 0,5; 0,7); si es cóncava y el vértice a* cae en [0,1; 1,0], a_final = 0,5 + Z (a* − 0,5); si no, se queda 0,5. Nunca se marca una sonda."
+}

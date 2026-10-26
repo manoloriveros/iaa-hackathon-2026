@@ -1,0 +1,50 @@
+{
+ "id": "CLA-S2-AB-20261026-v2",
+ "escrito_utc": "2026-10-26T03:43:00Z",
+ "sustituye_a": {
+  "id": "CLA-S2-AB-20261026",
+  "sha256": "2d68c55cbccd4330e54334173c4eab652efff3bc71ba60833d5b30ee8f6b9e0f",
+  "motivo": "Codex envió final_creible (1a003d86…) con autorización de Manuel: público 0,16519, dentro de la previsión de la auditoría J (0,16511–0,16522). Se usa como referencia medida y los candidatos se rehacen sobre ese archivo para que cada diferencia mida solo un paso. F3b/F4b tenían −0,00024 de nivel público frente a final_creible (forma con Σ√μ fijo); quedan como alternativas, no se proponen."
+ },
+ "referencia_medida": {
+  "archivo": "final_creible_2025.csv",
+  "sha256": "1a003d8682f1fcd71ad4a44f59f785d394488fc1cc95e60722f418b04c30ef29",
+  "publico": 0.16519
+ },
+ "candidatos": {
+  "F3c": {
+   "archivo": "F3c_2025.csv",
+   "sha256": "5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276",
+   "que_es": "final_creible × factores residuales (género en autos y contenidos; teletrabajo y segmento de marketing en contenidos), total de celda conservado, × razón de nivel local de los factores",
+   "nivel_publico_frente_a_final_creible": -1e-05,
+   "publico_esperado": 0.1666,
+   "intervalo_80": [
+    0.1647,
+    0.1682
+   ]
+  },
+  "F4c": {
+   "archivo": "F4c_2025.csv",
+   "sha256": "d5dfbf5769a134a09a3a3b23550eda496471b3511f9f66226c24301bb0de18f4",
+   "que_es": "final_creible × mezcla FSp por peligro (autos 0,25, contenidos 0,5, edificios 0; conservando los multiplicadores de F2) × factores × razón",
+   "nivel_publico_frente_a_final_creible": 2e-06,
+   "publico_esperado": 0.1669,
+   "intervalo_80_F4c_menos_F3c": [
+    -0.0024,
+    0.0029
+   ]
+  }
+ },
+ "orden_de_envio_propuesto": [
+  "F3c",
+  "F4c"
+ ],
+ "ruido_publico_diferencias_pareadas": 0.0005,
+ "regla_de_lectura": [
+  "Factores: si F3c − 0,16519 ≥ +0,0005 se confirman; si ≤ −0,0005 se retiran; entre medias se conservan (respaldo local y de frecuencia).",
+  "Mezcla FSp: si F4c − F3c ≥ +0,0005 entra; si no, queda fuera (F3c es más simple y está más validado).",
+  "Selección final: el candidato que dejen las dos reglas (final_creible, F3c o F4c). Nunca una sonda.",
+  "Si F3c se aparta más de 0,003 de 0,16519 en cualquier dirección, revisar el álgebra antes de seleccionar."
+ ],
+ "autorizacion": "Ningún envío sin autorización expresa de Manuel; los envíos los hace Codex."
+}

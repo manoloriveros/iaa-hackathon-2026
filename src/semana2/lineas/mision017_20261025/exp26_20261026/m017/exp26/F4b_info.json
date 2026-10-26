@@ -1,0 +1,105 @@
+{
+ "archivo": "exp26/F4b_2025.csv",
+ "sha256": "dfcb27817008391adfcf43f89e5ec5599f78bb0b082d2186bf9e7358c7b561fd",
+ "pesos_fsp": {
+  "motor": 0.25,
+  "buildings": 0.0,
+  "contents": 0.5
+ },
+ "a_motor_1": 1.2977524,
+ "seq": [
+  "gender",
+  "works_from_home",
+  "marketing_segment"
+ ],
+ "kappa_prod": {
+  "motor": {
+   "bodily_injury": 0.83,
+   "glass_hail": 1.674,
+   "own_damage": 0.982,
+   "theft": 1.165,
+   "third_party_prop": 1.114
+  },
+  "buildings": {
+   "accidental_damage": 0.759,
+   "escape_of_water": 0.743,
+   "fire": 1.192,
+   "flood": 0.848,
+   "storm": 1.079,
+   "subsidence": 0.898
+  },
+  "contents": {
+   "accidental_damage": 0.774,
+   "escape_of_water": 0.944,
+   "flood": 1.051,
+   "theft": 1.001
+  }
+ },
+ "razon_nivel": {
+  "motor_0": 1.0012,
+  "motor_1": 0.9998,
+  "buildings_0": 1.0,
+  "buildings_1": 1.0,
+  "contents_0": 0.9904,
+  "contents_1": 0.9963
+ },
+ "razon_por_serie": {
+  "DEV23_T2b": {
+   "motor_0": 1.0043,
+   "motor_1": 0.9856,
+   "buildings_0": 1.0,
+   "buildings_1": 1.0,
+   "contents_0": 0.9897,
+   "contents_1": 0.9976
+  },
+  "HOLD24_T2b": {
+   "motor_0": 0.9985,
+   "motor_1": 1.0145,
+   "buildings_0": 1.0,
+   "buildings_1": 1.0,
+   "contents_0": 0.9907,
+   "contents_1": 0.9946
+  },
+  "HOLD24_A1": {
+   "motor_0": 0.9977,
+   "motor_1": 1.0136,
+   "buildings_0": 1.0,
+   "buildings_1": 1.0,
+   "contents_0": 0.9918,
+   "contents_1": 0.9955
+  },
+  "HOLD24_mezcla": {
+   "motor_0": 0.9981,
+   "motor_1": 1.0139,
+   "buildings_0": 1.0,
+   "buildings_1": 1.0,
+   "contents_0": 0.9912,
+   "contents_1": 0.995
+  }
+ },
+ "nivel_cred_rel_F": {
+  "contents_0": 0.8582,
+  "buildings_0": 0.8479,
+  "motor_0": 0.9793,
+  "contents_1": 0.9095,
+  "buildings_1": 0.9868,
+  "motor_1": 1.113
+ },
+ "total": 84949286.36,
+ "total_celda": {
+  "motor_0": 8666860.61,
+  "motor_1": 46219538.14,
+  "buildings_0": 4948027.4,
+  "buildings_1": 19296188.29,
+  "contents_0": 1266258.27,
+  "contents_1": 4552413.64
+ },
+ "corr_log_F2": {
+  "motor_0": 0.9608,
+  "motor_1": 0.9813,
+  "buildings_0": 1.0,
+  "buildings_1": 1.0,
+  "contents_0": 0.9641,
+  "contents_1": 0.9632
+ }
+}

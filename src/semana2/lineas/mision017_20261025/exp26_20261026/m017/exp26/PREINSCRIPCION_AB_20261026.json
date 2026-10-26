@@ -1,0 +1,51 @@
+{
+ "id": "CLA-S2-AB-20261026",
+ "escrito_utc": "2026-10-26T03:40:07Z",
+ "autor": "Claude (Cowork), sesión de consolidación / misión 0,17",
+ "pedido": "Manuel, 25-10: conservar los dos intentos del día y seguir buscando mejoras validadas hasta convencerse de que el modelo es significativamente mejor.",
+ "naturaleza": "Comparación A/B de candidatos completos (no sondas). Los tres tienen casi el mismo nivel por celda; sus diferencias públicas miden orden dentro de celda.",
+ "candidatos": {
+  "F3b_sinfac": {
+   "archivo": "F3b_sinfac_2025.csv",
+   "sha256": "64d7abe40e6445512c47e4958e5413f91120655a121e2198969bbd19102d4b93",
+   "que_es": "F2 + forma de autos NB (a = 1,298, vértice sin fuga de nivel) con Σ√μ fijo + nivel creíble por celda",
+   "publico_esperado": 0.165,
+   "nota": "nivel + orden F2 exactos = 0,16319; forma +0,0018 (parábola corregida)"
+  },
+  "F3b": {
+   "archivo": "F3b_2025.csv",
+   "sha256": "5755513e9579748de236f3ce0c22910320ff1de29b442d0864dc00c48a32af27",
+   "que_es": "F3b_sinfac + factores residuales (género en autos y contenidos; teletrabajo y segmento de marketing en contenidos)",
+   "publico_esperado": 0.1664,
+   "intervalo_80": [
+    0.1643,
+    0.1686
+   ],
+   "evidencia": "revisor I: nulo por permutación con niveles correctos p 0,0005 (género autos), 0,011 (género contenidos), 0,002 (teletrabajo), 0,028 (segmento); efecto de género en frecuencia M/F 1,24 homogéneo NB/renovación; ganancia esperada 2025 +0,0014 (sd 0,0007)"
+  },
+  "F4b": {
+   "archivo": "F4b_2025.csv",
+   "sha256": "dfcb27817008391adfcf43f89e5ec5599f78bb0b082d2186bf9e7358c7b561fd",
+   "que_es": "F3b + mezcla geométrica con FSp por peligro (autos 0,25, contenidos 0,5, edificios 0) conservando los multiplicadores de F2",
+   "publico_esperado": 0.1667,
+   "intervalo_80_F4b_menos_F3b": [
+    -0.0024,
+    0.0029
+   ],
+   "evidencia": "revisor K: la ganancia es de ensamblado (κ por peligro no aporta); renovación robusta (+0,0025, P<0 = 0); NB ruido local (+0,0006, P<0 = 0,37); en el desarrollado 2024 NB de año completo +0,0033 autos, +0,0017 contenidos"
+  }
+ },
+ "orden_de_envio_propuesto": [
+  "F3b",
+  "F4b",
+  "F3b_sinfac"
+ ],
+ "ruido_publico_diferencias_pareadas": 0.0005,
+ "regla_de_lectura": [
+  "Si F3b − F3b_sinfac ≥ +0,0005: los factores se confirman. Si ≤ −0,0005: se retiran (final sin factores). Entre medias: se conservan (la evidencia local y la de frecuencia los respaldan).",
+  "Si F4b − F3b ≥ +0,0005: la mezcla FSp entra. Si < +0,0005: final sin mezcla (F3b es más simple y está más validado).",
+  "Si F3b puntúa por debajo de 0,1640 o por encima de 0,1690, se revisa el álgebra antes de seleccionar.",
+  "La marca final es uno de estos tres candidatos (o su combinación según las dos reglas anteriores). Nunca una sonda."
+ ],
+ "autorizacion": "Ningún envío sin autorización expresa de Manuel; los envíos los hace Codex."
+}

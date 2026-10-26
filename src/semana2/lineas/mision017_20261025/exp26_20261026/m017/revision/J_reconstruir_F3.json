@@ -1,0 +1,134 @@
+{
+ "a_motor_1": 1.2977524,
+ "factores_vs_publicados": {
+  "gender": {
+   "n_niveles": 4,
+   "max_dif_abs": 3.1356673150684244e-05,
+   "faltan": []
+  },
+  "previous_insurer": {
+   "n_niveles": 40,
+   "max_dif_abs": 4.807700634845702e-05,
+   "faltan": []
+  },
+  "occ": {
+   "n_niveles": 21,
+   "max_dif_abs": 4.589032456547848e-05,
+   "faltan": []
+  },
+  "works_from_home": {
+   "n_niveles": 2,
+   "max_dif_abs": 4.8505374645735344e-05,
+   "faltan": []
+  },
+  "marketing_segment": {
+   "n_niveles": 12,
+   "max_dif_abs": 4.871902969016961e-05,
+   "faltan": []
+  }
+ },
+ "F2_factores_max_dif": {
+  "ncb": 4.923254773170349e-05,
+  "previos": 4.676309763529396e-05
+ },
+ "R3": {
+  "motor_0": 0.9626967874816007,
+  "motor_1": 1.035826625015594,
+  "buildings_0": 1.0001092647113448,
+  "buildings_1": 1.000512906744062,
+  "contents_0": 0.989649957057382,
+  "contents_1": 0.9924465355752605
+ },
+ "R3_dif_publicado": {
+  "motor_0": -3.2125183992981476e-06,
+  "motor_1": 2.662501559402841e-05,
+  "buildings_0": 9.264711344769694e-06,
+  "buildings_1": 1.2906744061957909e-05,
+  "contents_0": 4.995705738197742e-05,
+  "contents_1": 4.653557526057561e-05
+ },
+ "R3_sin_factores": {
+  "motor_0": 0.971873693192646,
+  "motor_1": 1.0431020983649504,
+  "buildings_0": 1.0001092647113448,
+  "buildings_1": 1.000512906744062,
+  "contents_0": 0.9987517752210859,
+  "contents_1": 0.9958474125917085
+ },
+ "nivel": {
+  "a_s": {
+   "contents_0": 0.01802620257523473,
+   "buildings_0": 0.02640309902015911,
+   "motor_0": 0.06830585666224014,
+   "contents_1": 0.07027790823025554,
+   "buildings_1": 0.13492211442112423,
+   "motor_1": 0.3033918907041909
+  },
+  "b_s": {
+   "contents_0": 0.019623850584990152,
+   "buildings_0": 0.034138286487509925,
+   "motor_0": 0.05730895883756353,
+   "contents_1": 0.06536220510533078,
+   "buildings_1": 0.1123578474899699,
+   "motor_1": 0.2192034401857972
+  },
+  "c_opt": {
+   "contents_0": 0.918586415910778,
+   "buildings_0": 0.7734160597023267,
+   "motor_0": 1.1918879359830319,
+   "contents_1": 1.0752071188082337,
+   "buildings_1": 1.2008250196602301,
+   "motor_1": 1.3840653707215336
+  },
+  "cred_rel_F": {
+   "contents_0": 0.8582267487061847,
+   "buildings_0": 0.8478965627010309,
+   "motor_0": 0.9792813439351779,
+   "contents_1": 0.9095091906379882,
+   "buildings_1": 0.9867831741758367,
+   "motor_1": 1.1130139385851283
+  }
+ },
+ "formato_y_coincidencia": {
+  "sha256": "b913970354e08e7d44f256c51f4b7708daa2805011b4a1692b0f95c2a2a6d765",
+  "sha_info": "b913970354e08e7d44f256c51f4b7708daa2805011b4a1692b0f95c2a2a6d765",
+  "filas": 209063,
+  "cabecera": "row_id,prediction",
+  "CRLF": false,
+  "termina_en_LF": true,
+  "mismo_orden_row_id": true,
+  "row_id_unicos": true,
+  "finitos": true,
+  "positivos": true,
+  "min": 0.100659,
+  "max": 5569.377955,
+  "decimales_6": true,
+  "max_dif_rel_vs_mia": 4.733515388322118e-06,
+  "p99_dif_rel": 3.349354393833448e-08,
+  "max_dif_rel_por_celda": {
+   "motor_0": 7.755708276713236e-07,
+   "motor_1": 1.5722119539596235e-06,
+   "buildings_0": 8.363759179674801e-07,
+   "buildings_1": 6.177009019836532e-07,
+   "contents_0": 4.733515388322118e-06,
+   "contents_1": 3.3903895457765287e-06
+  },
+  "total_mio": 85829230.51764812,
+  "total_archivo": 85829230.517844
+ },
+ "F3_sinfac_J": {
+  "archivo": "/home/claude/m017/revision/J_F3_sinfac_2025.csv",
+  "sha256": "05b9a2f6346cf9f998e92b29ece77a1242e649464750fcd0d0262833c82f3e2c",
+  "total": 86269677.56819114,
+  "total_celda": {
+   "motor_0": 8656372.911950568,
+   "motor_1": 47521386.23453381,
+   "buildings_0": 4948027.403652767,
+   "buildings_1": 19296188.29400689,
+   "contents_0": 1278470.8655246552,
+   "contents_1": 4569231.858522462
+  }
+ },
+ "F3_mio_sha": "b913970354e08e7d44f256c51f4b7708daa2805011b4a1692b0f95c2a2a6d765",
+ "F3_mio_igual_bytes_archivo": true
+}

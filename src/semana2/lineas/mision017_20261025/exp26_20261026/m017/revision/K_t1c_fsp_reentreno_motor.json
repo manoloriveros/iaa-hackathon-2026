@@ -1,0 +1,148 @@
+{
+ "motor": {
+  "comprobacion": {
+   "bodily_injury": {
+    "rondas_f": 110,
+    "rondas_s": 20,
+    "corr_log_f_autor": 1.0,
+    "ratio_f_autor": 1.0,
+    "corr_log_s_autor": 1.0,
+    "ratio_s_autor": 1.0,
+    "sum_f_cp_entren/sum_n": 0.99629
+   },
+   "glass_hail": {
+    "rondas_f": 132,
+    "rondas_s": 10,
+    "corr_log_f_autor": 1.0,
+    "ratio_f_autor": 1.0,
+    "corr_log_s_autor": 1.0,
+    "ratio_s_autor": 1.0,
+    "sum_f_cp_entren/sum_n": 0.99865
+   },
+   "own_damage": {
+    "rondas_f": 237,
+    "rondas_s": 98,
+    "corr_log_f_autor": 1.0,
+    "ratio_f_autor": 1.0,
+    "corr_log_s_autor": 1.0,
+    "ratio_s_autor": 1.0,
+    "sum_f_cp_entren/sum_n": 0.9998
+   },
+   "theft": {
+    "rondas_f": 93,
+    "rondas_s": 12,
+    "corr_log_f_autor": 1.0,
+    "ratio_f_autor": 1.0,
+    "corr_log_s_autor": 1.0,
+    "ratio_s_autor": 1.0,
+    "sum_f_cp_entren/sum_n": 0.99689
+   },
+   "third_party_prop": {
+    "rondas_f": 166,
+    "rondas_s": 20,
+    "corr_log_f_autor": 1.0,
+    "ratio_f_autor": 1.0,
+    "corr_log_s_autor": 1.0,
+    "ratio_s_autor": 1.0,
+    "sum_f_cp_entren/sum_n": 0.99952
+   }
+  },
+  "desarrollado_2024": {
+   "REN": {
+    "n": 215595,
+    "pos": 20456,
+    "D2_T2b": 0.06413,
+    "D2_FSp": 0.0699,
+    "gan_w0.1": 0.00099,
+    "gan_comp_w0.1": 4e-05,
+    "gan_w0.25": 0.00231,
+    "gan_comp_w0.25": 6e-05,
+    "gan_w0.5": 0.00404,
+    "gan_comp_w0.5": -3e-05,
+    "gan_w0.75": 0.00519,
+    "gan_comp_w0.75": -0.00027,
+    "boot_gan_w_linea": [
+     0.00189,
+     0.00231,
+     0.00282
+    ]
+   },
+   "NB": {
+    "n": 39103,
+    "pos": 2778,
+    "D2_T2b": 0.13238,
+    "D2_FSp": 0.13937,
+    "gan_w0.1": 0.00133,
+    "gan_comp_w0.1": 0.00032,
+    "gan_w0.25": 0.00307,
+    "gan_comp_w0.25": 0.00074,
+    "gan_w0.5": 0.00525,
+    "gan_comp_w0.5": 0.00127,
+    "gan_w0.75": 0.00656,
+    "gan_comp_w0.75": 0.00159,
+    "boot_gan_w_linea": [
+     0.00219,
+     0.00311,
+     0.0041
+    ]
+   },
+   "NB_anio_completo": {
+    "n": 3258,
+    "pos": 482,
+    "D2_T2b": 0.05132,
+    "D2_FSp": 0.05979,
+    "gan_w0.1": 0.00142,
+    "gan_comp_w0.1": 0.00014,
+    "gan_w0.25": 0.00331,
+    "gan_comp_w0.25": 0.00032,
+    "gan_w0.5": 0.00582,
+    "gan_comp_w0.5": 0.0005,
+    "gan_w0.75": 0.00754,
+    "gan_comp_w0.75": 0.00055,
+    "boot_gan_w_linea": [
+     0.00162,
+     0.00334,
+     0.00527
+    ]
+   },
+   "NB_parcial": {
+    "n": 35845,
+    "pos": 2296,
+    "D2_T2b": 0.13501,
+    "D2_FSp": 0.14156,
+    "gan_w0.1": 0.0013,
+    "gan_comp_w0.1": 0.00034,
+    "gan_w0.25": 0.00297,
+    "gan_comp_w0.25": 0.00079,
+    "gan_w0.5": 0.00506,
+    "gan_comp_w0.5": 0.00135,
+    "gan_w0.75": 0.00625,
+    "gan_comp_w0.75": 0.0017,
+    "boot_gan_w_linea": [
+     0.00188,
+     0.00309,
+     0.00427
+    ]
+   },
+   "REN_anio_completo": {
+    "n": 156526,
+    "pos": 17423,
+    "D2_T2b": 0.04137,
+    "D2_FSp": 0.04749,
+    "gan_w0.1": 0.00106,
+    "gan_comp_w0.1": 9e-05,
+    "gan_w0.25": 0.00245,
+    "gan_comp_w0.25": 0.00018,
+    "gan_w0.5": 0.00429,
+    "gan_comp_w0.5": 0.0002,
+    "gan_w0.75": 0.00551,
+    "gan_comp_w0.75": 8e-05,
+    "boot_gan_w_linea": [
+     0.00202,
+     0.00247,
+     0.00296
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,164 @@
+{
+ "archivo": "exp26/F3_2025.csv",
+ "sha256": "b913970354e08e7d44f256c51f4b7708daa2805011b4a1692b0f95c2a2a6d765",
+ "K": 300.0,
+ "a_motor_1": 1.2977524,
+ "factores": {
+  "gender": {
+   "motor|F": 0.8881,
+   "motor|M": 1.1127,
+   "contents|F": 1.0821,
+   "contents|M": 0.9151
+  },
+  "previous_insurer": {
+   "motor|INS00": 0.9495,
+   "motor|INS01": 0.9981,
+   "motor|INS02": 0.9934,
+   "motor|INS03": 1.187,
+   "motor|INS04": 1.0221,
+   "motor|INS05": 0.9838,
+   "motor|INS06": 0.9056,
+   "motor|INS07": 0.9282,
+   "motor|INS08": 1.0193,
+   "motor|INS09": 0.945,
+   "motor|INS10": 0.9523,
+   "motor|INS11": 0.9002,
+   "motor|INS12": 0.9324,
+   "motor|INS13": 1.0612,
+   "motor|INS14": 1.0259,
+   "motor|INS15": 0.9222,
+   "motor|INS16": 0.9608,
+   "motor|INS17": 0.9863,
+   "motor|INS18": 0.981,
+   "motor|INS19": 0.8848,
+   "motor|INS20": 1.0929,
+   "motor|INS21": 0.9206,
+   "motor|INS22": 1.1113,
+   "motor|INS23": 1.082,
+   "motor|INS24": 1.0793,
+   "motor|INS25": 0.9905,
+   "motor|INS26": 0.925,
+   "motor|INS27": 1.0461,
+   "motor|INS28": 1.0728,
+   "motor|INS29": 0.9348,
+   "motor|INS30": 0.935,
+   "motor|INS31": 1.24,
+   "motor|INS32": 0.932,
+   "motor|INS33": 1.0268,
+   "motor|INS34": 0.9772,
+   "motor|INS35": 0.8896,
+   "motor|INS36": 1.0286,
+   "motor|INS37": 1.0579,
+   "motor|INS38": 0.9669,
+   "motor|INS39": 1.0037
+  },
+  "occ": {
+   "motor|accountant": 0.9852,
+   "motor|administrator": 0.9715,
+   "motor|builder": 1.0313,
+   "motor|care worker": 0.9677,
+   "motor|chef": 1.1742,
+   "motor|doctor": 1.0631,
+   "motor|driver": 0.909,
+   "motor|electrician": 0.8939,
+   "motor|engineer": 0.9398,
+   "motor|hairdresser": 1.0621,
+   "motor|manager": 0.8975,
+   "motor|mechanic": 1.0723,
+   "motor|nan": 1.0041,
+   "motor|nurse": 1.13,
+   "motor|retail assistant": 0.9436,
+   "motor|retired": 0.963,
+   "motor|sales representative": 1.0908,
+   "motor|software developer": 0.8934,
+   "motor|student": 0.9759,
+   "motor|teacher": 1.0568,
+   "motor|unemployed": 0.9758
+  },
+  "works_from_home": {
+   "contents|False": 0.9341,
+   "contents|True": 1.1222
+  },
+  "marketing_segment": {
+   "contents|mature_affluent": 0.9694,
+   "contents|mature_budget": 1.0187,
+   "contents|mature_mainstream": 1.0325,
+   "contents|midlife_affluent": 0.9323,
+   "contents|midlife_budget": 1.0133,
+   "contents|midlife_mainstream": 0.9975,
+   "contents|senior_affluent": 0.992,
+   "contents|senior_budget": 0.9975,
+   "contents|senior_mainstream": 0.9098,
+   "contents|young_affluent": 0.9669,
+   "contents|young_budget": 1.0906,
+   "contents|young_mainstream": 1.1146
+  }
+ },
+ "razon_nivel_local": {
+  "motor_0": 0.9627,
+  "motor_1": 1.0358,
+  "buildings_0": 1.0001,
+  "buildings_1": 1.0005,
+  "contents_0": 0.9896,
+  "contents_1": 0.9924
+ },
+ "razon_por_serie": {
+  "DEV23_T2b": {
+   "motor_0": 0.9743,
+   "motor_1": 0.9667,
+   "buildings_0": 0.9969,
+   "buildings_1": 0.9979,
+   "contents_0": 0.9879,
+   "contents_1": 0.9968
+  },
+  "HOLD24_T2b": {
+   "motor_0": 0.9561,
+   "motor_1": 1.0618,
+   "buildings_0": 1.0014,
+   "buildings_1": 1.0016,
+   "contents_0": 0.9897,
+   "contents_1": 0.9902
+  },
+  "HOLD24_A1": {
+   "motor_0": 0.961,
+   "motor_1": 1.0576,
+   "buildings_0": 1.001,
+   "buildings_1": 1.0012,
+   "contents_0": 0.9908,
+   "contents_1": 0.9918
+  },
+  "HOLD24_mezcla": {
+   "motor_0": 0.9594,
+   "motor_1": 1.0571,
+   "buildings_0": 1.0012,
+   "buildings_1": 1.0014,
+   "contents_0": 0.9902,
+   "contents_1": 0.991
+  }
+ },
+ "nivel_cred_rel_F": {
+  "contents_0": 0.8582,
+  "buildings_0": 0.8479,
+  "motor_0": 0.9793,
+  "contents_1": 0.9095,
+  "buildings_1": 0.9868,
+  "motor_1": 1.113
+ },
+ "total": 85829230.52,
+ "total_celda": {
+  "motor_0": 8574635.21,
+  "motor_1": 47189932.03,
+  "buildings_0": 4948027.4,
+  "buildings_1": 19296188.29,
+  "contents_0": 1266819.91,
+  "contents_1": 4553627.67
+ },
+ "total_F_celda": {
+  "motor_0": 9095333.95,
+  "motor_1": 40931878.72,
+  "buildings_0": 5835012.24,
+  "buildings_1": 19544613.98,
+  "contents_0": 1491527.36,
+  "contents_1": 5044792.47
+ }
+}

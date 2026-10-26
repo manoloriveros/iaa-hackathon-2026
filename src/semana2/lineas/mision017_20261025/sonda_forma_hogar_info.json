@@ -1,0 +1,37 @@
+{
+ "buildings_1": {
+  "sigma": 0.163,
+  "tau": 0.25,
+  "Z": 0.702,
+  "archivos": {
+   "sonda_forma_buildings_1_a07.csv": {
+    "a": 0.7,
+    "razon_nivel": 0.8353,
+    "sha256": "16c3438122456b91053da02f236ea37aee0eb1d38cc941bc5438d228653a41a7"
+   },
+   "sonda_forma_buildings_1_a13.csv": {
+    "a": 1.3,
+    "razon_nivel": 1.3553,
+    "sha256": "608a1eaf92229542dcabc79fa16306b9fbc2b67ac8e00ecd6401e20552e933e6"
+   }
+  }
+ },
+ "contents_1": {
+  "sigma": 0.168,
+  "tau": 0.25,
+  "Z": 0.688,
+  "archivos": {
+   "sonda_forma_contents_1_a07.csv": {
+    "a": 0.7,
+    "razon_nivel": 0.9069,
+    "sha256": "873d32fbc371882a36c99754ee3c73eb0cb7995f367a85cd936459b3bf16536c"
+   },
+   "sonda_forma_contents_1_a13.csv": {
+    "a": 1.3,
+    "razon_nivel": 1.2011,
+    "sha256": "a6201f2666ec94df8b018b0b2d6b5b18f2bb766376e90c6c8c4350f31ec26599"
+   }
+  }
+ },
+ "regla": "Por celda: parábola en a por (0,7; 1,0 = F1; 1,3); si es cóncava y a* en [0,3; 1,8], a_final = 1 + Z (a* − 1); si no, 1. Nunca se marca una sonda."
+}

@@ -1,0 +1,17 @@
+{
+ "id": "CLA-S2-MISION017-F1-20261025",
+ "autor": "Claude (Proyecto IAA, sesión de consolidación)",
+ "pedido": "Manuel, 25-10: «ayudame a seguir mejorando constantemente el modelo hasta que la calificación de kaggle supere el 0.17»",
+ "archivo": "Repositorio_IAA2026/privado/semana2/claude_mision017_20261025/F1_forma_ncb_2025.csv",
+ "sha256": "4a72964a5a574e6e968d571e081f1719f8bf659014f93a41b9208c83382238a8",
+ "base": "final_sonda_global_2025.csv (42659dbb…, público 0,15948)",
+ "cambio": "Solo autos. Factor NCB por tipo de negocio (2023+2024, credibilidad n/(n+300)), total de cada celda conservado; forma r' = g (r/g)^a con a = 0,5 en nuevo negocio y 0,85 en renovación, total de celda conservado; razón de nivel Tweedie tras el cambio 0,8464 y 0,9341 (media de cuatro series). Hogar sin cambios.",
+ "evidencia_local": "a óptimo de nuevo negocio de autos 0,4 a 0,5 en 2023 y 2024 con T2b y A1 (p95 bootstrap por cliente 0,8 a 0,95); a estimado en 2023 y aplicado en 2024 con la composición de 2025: +0,0044 a +0,0063 de D². Corrección NCB de 2023 aplicada en 2024: +0,0012 a +0,0015. El nivel Tweedie óptimo del nuevo negocio de autos estaba 1,23 a 1,37 veces sobre el balance antes de la forma y 1,05 a 1,15 después.",
+ "prevision_publico": "0,15948 + entre 0,004 y 0,007 si 2025 se parece a 2023-2024 en esta celda",
+ "lectura_fijada_antes_de_puntuar": {
+  "confirmada": "público(F1) >= 0,16148 (+0,002): F1 pasa a ser la base de la misión y de la sonda por celda",
+  "no_concluyente": "entre 0,15748 y 0,16148: se mantiene F1 por la evidencia local (regla: estructura por validación local) y se mide con la sonda por celda",
+  "rechazada": "público(F1) < 0,15748 (−0,002): la forma no se traslada al bloque de enero; se vuelve a F y se revisa el mecanismo"
+ },
+ "utc": "2026-10-25T14:30:00Z"
+}

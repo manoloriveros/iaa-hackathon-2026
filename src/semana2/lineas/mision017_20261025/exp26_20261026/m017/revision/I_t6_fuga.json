@@ -1,0 +1,149 @@
+{
+ "clientes_filas_unicas": true,
+ "wfh_polizas_multianio_con_cambio": 0,
+ "wfh_polizas_multianio": 15144,
+ "occ_NA_por_siniestro": {
+  "contents|2023|sin": 0.1189,
+  "contents|2023|con": 0.1058,
+  "contents|2024|sin": 0.1199,
+  "contents|2024|con": 0.117,
+  "motor|2023|sin": 0.1202,
+  "motor|2023|con": 0.1166,
+  "motor|2024|sin": 0.12,
+  "motor|2024|con": 0.1286
+ },
+ "panel_balanceado": {
+  "motor|gender": {
+   "F": {
+    "frec23": 0.899,
+    "frec24": 0.888,
+    "pp23": 0.897,
+    "pp24": 0.833
+   },
+   "M": {
+    "frec23": 1.1,
+    "frec24": 1.107,
+    "pp23": 1.102,
+    "pp24": 1.16
+   }
+  },
+  "motor|previous_insurer": {
+   "corr_frec_23_24": -0.084,
+   "corr_pp_23_24": 0.341,
+   "niveles": 40,
+   "clientes": 20084
+  },
+  "motor|occ": {
+   "corr_frec_23_24": 0.69,
+   "corr_pp_23_24": 0.437,
+   "niveles": 21,
+   "clientes": 20084
+  },
+  "motor|clientes_panel": 20084,
+  "contents|gender": {
+   "F": {
+    "frec23": 1.018,
+    "frec24": 1.037,
+    "pp23": 1.124,
+    "pp24": 1.147
+   },
+   "M": {
+    "frec23": 0.981,
+    "frec24": 0.962,
+    "pp23": 0.872,
+    "pp24": 0.849
+   }
+  },
+  "contents|works_from_home": {
+   "False": {
+    "frec23": 0.945,
+    "frec24": 1.013,
+    "pp23": 0.912,
+    "pp24": 0.912
+   },
+   "True": {
+    "frec23": 1.167,
+    "frec24": 0.96,
+    "pp23": 1.27,
+    "pp24": 1.272
+   }
+  },
+  "contents|marketing_segment": {
+   "corr_frec_23_24": 0.564,
+   "corr_pp_23_24": 0.266,
+   "niveles": 12,
+   "clientes": 14982
+  },
+  "contents|clientes_panel": 14982
+ },
+ "NB2024_frec_rel": {
+  "motor|gender": {
+   "F": 0.894,
+   "M": 1.102
+  },
+  "contents|gender": {
+   "F": 0.995,
+   "M": 1.005
+  },
+  "contents|works_from_home": {
+   "False": 0.913,
+   "True": 1.25
+  }
+ },
+ "prior_claims_5y_media": {
+  "gender": {
+   "F": 0.266,
+   "M": 0.266
+  },
+  "marketing_segment": {
+   "mature_affluent": 0.269,
+   "mature_budget": 0.26,
+   "mature_mainstream": 0.271,
+   "midlife_affluent": 0.264,
+   "midlife_budget": 0.262,
+   "midlife_mainstream": 0.255,
+   "senior_affluent": 0.268,
+   "senior_budget": 0.263,
+   "senior_mainstream": 0.266,
+   "young_affluent": 0.266,
+   "young_budget": 0.267,
+   "young_mainstream": 0.269
+  },
+  "previous_insurer_rango_media": [
+   0.238,
+   0.282
+  ]
+ },
+ "segmento_vs_edad": {
+  "17-24": {
+   "mature": 0.0,
+   "midlife": 0.0,
+   "senior": 0.0,
+   "young": 0.59
+  },
+  "25-34": {
+   "mature": 0.0,
+   "midlife": 0.23,
+   "senior": 0.0,
+   "young": 0.41
+  },
+  "35-49": {
+   "mature": 0.0,
+   "midlife": 0.74,
+   "senior": 0.0,
+   "young": 0.0
+  },
+  "50-64": {
+   "mature": 0.72,
+   "midlife": 0.03,
+   "senior": 0.0,
+   "young": 0.0
+  },
+  "65+": {
+   "mature": 0.28,
+   "midlife": 0.0,
+   "senior": 1.0,
+   "young": 0.0
+  }
+ }
+}

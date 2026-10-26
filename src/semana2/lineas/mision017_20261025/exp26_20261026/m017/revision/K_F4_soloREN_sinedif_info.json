@@ -1,0 +1,189 @@
+{
+ "archivo": "/home/claude/m017/revision/K_F4_soloREN_sinedif_2025.csv",
+ "sha256": "75a2d00192d049865aeea71c1d76e26a629d5e6a085a4d9e7e7c3e894fe313bf",
+ "pesos": {
+  "motor_0": 0.25,
+  "motor_1": 0.0,
+  "buildings_0": 0.0,
+  "buildings_1": 0.0,
+  "contents_0": 0.5,
+  "contents_1": 0.0
+ },
+ "A_M1": 1.2977524,
+ "R4": {
+  "motor_0": 1.0001611058928983,
+  "motor_1": 0.9997365628512203,
+  "buildings_0": 1.0,
+  "buildings_1": 1.0,
+  "contents_0": 0.9767664186916265,
+  "contents_1": 0.9962785785222846
+ },
+ "R_solo_mezcla": {
+  "motor_0": 0.9988787507176236,
+  "motor_1": 0.9999999999999999,
+  "buildings_0": 1.0,
+  "buildings_1": 1.0,
+  "contents_0": 0.9856014910266064,
+  "contents_1": 1.0
+ },
+ "raz_por_serie": {
+  "DEV23_T2b": {
+   "motor_0": 1.0034450034641824,
+   "motor_1": 0.9857429846558388,
+   "buildings_0": 1.0,
+   "buildings_1": 1.0,
+   "contents_0": 0.968378162956774,
+   "contents_1": 0.997621115381299
+  },
+  "HOLD24_T2b": {
+   "motor_0": 0.9965535016460614,
+   "motor_1": 1.0141613962744414,
+   "buildings_0": 1.0,
+   "buildings_1": 1.0,
+   "contents_0": 0.975095152291591,
+   "contents_1": 0.9944864157027017
+  },
+  "HOLD24_A1": {
+   "motor_0": 0.9960792992518145,
+   "motor_1": 1.0133673091788442,
+   "buildings_0": 1.0,
+   "buildings_1": 1.0,
+   "contents_0": 0.99290786648468,
+   "contents_1": 0.9954046147961346
+  },
+  "HOLD24_mezcla": {
+   "motor_0": 0.9979988240669668,
+   "motor_1": 1.01366171768652,
+   "buildings_0": 1.0,
+   "buildings_1": 1.0,
+   "contents_0": 0.9874610045031654,
+   "contents_1": 0.9949170944909743
+  }
+ },
+ "raz_mezcla_por_serie": {
+  "DEV23_T2b": {
+   "motor_0": 0.9991639669796446,
+   "motor_1": 0.9999999999999998,
+   "buildings_0": 1.0,
+   "buildings_1": 1.0,
+   "contents_0": 0.9780083143508568,
+   "contents_1": 0.9999999999999999
+  },
+  "HOLD24_T2b": {
+   "motor_0": 0.9979581299400697,
+   "motor_1": 1.0000000000000002,
+   "buildings_0": 1.0,
+   "buildings_1": 1.0,
+   "contents_0": 0.9833212152008826,
+   "contents_1": 0.9999999999999999
+  },
+  "HOLD24_A1": {
+   "motor_0": 0.9981257768123951,
+   "motor_1": 1.0,
+   "buildings_0": 1.0,
+   "buildings_1": 1.0,
+   "contents_0": 1.000740610625601,
+   "contents_1": 1.0
+  },
+  "HOLD24_mezcla": {
+   "motor_0": 0.9996966966143433,
+   "motor_1": 1.0,
+   "buildings_0": 1.0,
+   "buildings_1": 1.0,
+   "contents_0": 0.995522177280585,
+   "contents_1": 0.9999999999999999
+  }
+ },
+ "kappa_prod": {
+  "motor": {
+   "bodily_injury": 0.8299249249873821,
+   "glass_hail": 1.6741273602056315,
+   "own_damage": 0.9820769279073058,
+   "theft": 1.1651351345339207,
+   "third_party_prop": 1.1141961303905232
+  },
+  "buildings": {
+   "accidental_damage": 0.7585941275049495,
+   "escape_of_water": 0.7432212333957767,
+   "fire": 1.1917670707578656,
+   "flood": 0.8481346421037583,
+   "storm": 1.078663707878092,
+   "subsidence": 0.8980707254600911
+  },
+  "contents": {
+   "accidental_damage": 0.7744365817481808,
+   "escape_of_water": 0.9444461468492569,
+   "flood": 1.0511503948943308,
+   "theft": 1.0007209825663508
+  }
+ },
+ "cred_rel_F": {
+  "contents_0": 0.8582267487061847,
+  "buildings_0": 0.8478965627010309,
+  "motor_0": 0.979281343935178,
+  "contents_1": 0.9095091906379882,
+  "buildings_1": 0.9867831741758366,
+  "motor_1": 1.1130139385851283
+ },
+ "a_s": {
+  "contents_0": 0.01802620257523473,
+  "buildings_0": 0.02640309902015911,
+  "motor_0": 0.06830585666224014,
+  "contents_1": 0.07027790823025554,
+  "buildings_1": 0.13492211442112423,
+  "motor_1": 0.3033918907041909
+ },
+ "b_s": {
+  "contents_0": 0.019623850584990152,
+  "buildings_0": 0.034138286487509925,
+  "motor_0": 0.05730895883756353,
+  "contents_1": 0.06536220510533078,
+  "buildings_1": 0.1123578474899699,
+  "motor_1": 0.2192034401857972
+ },
+ "c_estrella": {
+  "contents_0": 0.918586415910778,
+  "buildings_0": 0.7734160597023267,
+  "motor_0": 1.1918879359830319,
+  "contents_1": 1.0752071188082337,
+  "buildings_1": 1.2008250196602301,
+  "motor_1": 1.3840653707215336
+ },
+ "dF": 0.15948,
+ "g": 1.187658238648521,
+ "factores": {
+  "gender": {
+   "motor|F": 0.8886544922741404,
+   "motor|M": 1.1121226053888853,
+   "contents|F": 1.0769201314723198,
+   "contents|M": 0.9205210067478687
+  },
+  "works_from_home": {
+   "contents|False": 0.9371161858748015,
+   "contents|True": 1.1167864253922621
+  },
+  "marketing_segment": {
+   "contents|mature_affluent": 0.9629563875383855,
+   "contents|mature_budget": 1.0217897179990958,
+   "contents|mature_mainstream": 1.0358277201977468,
+   "contents|midlife_affluent": 0.9271289018058085,
+   "contents|midlife_budget": 1.017046315225194,
+   "contents|midlife_mainstream": 0.9987830544571862,
+   "contents|senior_affluent": 0.9929591835811732,
+   "contents|senior_budget": 1.0020731192730499,
+   "contents|senior_mainstream": 0.912073501806696,
+   "contents|young_affluent": 0.9640653852711288,
+   "contents|young_budget": 1.089955562751082,
+   "contents|young_mainstream": 1.1160590115281879
+  }
+ },
+ "total": 84942661.70844465,
+ "total_celda": {
+  "motor_0": 8657767.504608762,
+  "motor_1": 46239683.276535675,
+  "buildings_0": 4948027.403662414,
+  "buildings_1": 19296188.293930765,
+  "contents_0": 1248767.4087463936,
+  "contents_1": 4552227.82096064
+ }
+}

@@ -1,0 +1,156 @@
+{
+ "estabilidad_niveles": {
+  "contents|gender": {
+   "levels": 2,
+   "corr_logk_w": 1.0,
+   "corr_logk": 1.0
+  },
+  "contents|marketing_segment": {
+   "levels": 12,
+   "corr_logk_w": 0.4485507668333891,
+   "corr_logk": 0.3930491172786172
+  },
+  "contents|works_from_home": {
+   "levels": 2,
+   "corr_logk_w": 1.0000000000000002,
+   "corr_logk": 1.0
+  },
+  "motor|gender": {
+   "levels": 2,
+   "corr_logk_w": 1.0,
+   "corr_logk": 1.0
+  },
+  "motor|occ": {
+   "levels": 21,
+   "corr_logk_w": 0.4125790665051514,
+   "corr_logk": 0.4115977686782964
+  },
+  "motor|previous_insurer": {
+   "levels": 40,
+   "corr_logk_w": 0.25371917057593263,
+   "corr_logk": 0.25382320083003196
+  }
+ },
+ "oot_K300": {
+  "motor|oneway:gender|2023->2024": {
+   "all": 0.00251,
+   "nb": -0.00377,
+   "ren": 0.00348
+  },
+  "motor|oneway:previous_insurer|2023->2024": {
+   "all": 0.00086,
+   "nb": -0.00135,
+   "ren": 0.0012
+  },
+  "motor|oneway:occ|2023->2024": {
+   "all": 0.00074,
+   "nb": 9e-05,
+   "ren": 0.00085
+  },
+  "motor|seq1:+gender|2023->2024": {
+   "all": 0.00251,
+   "nb": -0.00377,
+   "ren": 0.00348
+  },
+  "motor|seq2:+previous_insurer|2023->2024": {
+   "all": 0.00337,
+   "nb": -0.00498,
+   "ren": 0.00465
+  },
+  "motor|seq3:+occ|2023->2024": {
+   "all": 0.00417,
+   "nb": -0.00461,
+   "ren": 0.00552
+  },
+  "motor|oneway:gender|2024->2023": {
+   "all": 0.00164,
+   "nb": 0.01217,
+   "ren": -6e-05
+  },
+  "motor|oneway:previous_insurer|2024->2023": {
+   "all": 0.00075,
+   "nb": 0.00286,
+   "ren": 0.0004
+  },
+  "motor|oneway:occ|2024->2023": {
+   "all": 0.00103,
+   "nb": 0.00175,
+   "ren": 0.00091
+  },
+  "motor|seq1:+gender|2024->2023": {
+   "all": 0.00164,
+   "nb": 0.01217,
+   "ren": -6e-05
+  },
+  "motor|seq2:+previous_insurer|2024->2023": {
+   "all": 0.00239,
+   "nb": 0.01461,
+   "ren": 0.00042
+  },
+  "motor|seq3:+occ|2024->2023": {
+   "all": 0.00333,
+   "nb": 0.01445,
+   "ren": 0.00154
+  },
+  "contents|oneway:gender|2023->2024": {
+   "all": 0.00159,
+   "nb": 0.00313,
+   "ren": 0.00134
+  },
+  "contents|oneway:works_from_home|2023->2024": {
+   "all": 0.00193,
+   "nb": -0.00225,
+   "ren": 0.00262
+  },
+  "contents|oneway:marketing_segment|2023->2024": {
+   "all": 0.00103,
+   "nb": 0.00318,
+   "ren": 0.00068
+  },
+  "contents|seq1:+gender|2023->2024": {
+   "all": 0.00159,
+   "nb": 0.00313,
+   "ren": 0.00134
+  },
+  "contents|seq2:+works_from_home|2023->2024": {
+   "all": 0.00354,
+   "nb": 0.00089,
+   "ren": 0.00398
+  },
+  "contents|seq3:+marketing_segment|2023->2024": {
+   "all": 0.00467,
+   "nb": 0.00407,
+   "ren": 0.00477
+  },
+  "contents|oneway:gender|2024->2023": {
+   "all": 0.00163,
+   "nb": -0.00257,
+   "ren": 0.00206
+  },
+  "contents|oneway:works_from_home|2024->2023": {
+   "all": 0.00202,
+   "nb": 0.00043,
+   "ren": 0.00219
+  },
+  "contents|oneway:marketing_segment|2024->2023": {
+   "all": 0.00109,
+   "nb": 0.00273,
+   "ren": 0.00093
+  },
+  "contents|seq1:+gender|2024->2023": {
+   "all": 0.00163,
+   "nb": -0.00257,
+   "ren": 0.00206
+  },
+  "contents|seq2:+works_from_home|2024->2023": {
+   "all": 0.00365,
+   "nb": -0.00212,
+   "ren": 0.00425
+  },
+  "contents|seq3:+marketing_segment|2024->2023": {
+   "all": 0.00484,
+   "nb": 0.00073,
+   "ren": 0.00528
+  }
+ }
+}

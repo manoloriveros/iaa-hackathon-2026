@@ -1,0 +1,65 @@
+{
+ "archivo": "F1_forma_ncb_2025.csv",
+ "sha256": "4a72964a5a574e6e968d571e081f1719f8bf659014f93a41b9208c83382238a8",
+ "base": "final_sonda_global_2025.csv (42659dbb…)",
+ "forma": {
+  "motor_1": 0.5,
+  "motor_0": 0.85
+ },
+ "factores_ncb": {
+  "REN|0": 0.9167,
+  "REN|1-2": 0.9569,
+  "REN|10+": 1.0856,
+  "REN|3-5": 0.9953,
+  "REN|6-9": 1.1016,
+  "NB|0": 0.899,
+  "NB|1-2": 1.0436,
+  "NB|10+": 1.1637,
+  "NB|3-5": 0.9796,
+  "NB|6-9": 0.9567
+ },
+ "razon_nivel_media": {
+  "motor_0": 0.9341,
+  "motor_1": 0.8464
+ },
+ "razon_nivel_por_serie": {
+  "DEV23_T2b": {
+   "motor_0": 0.9417,
+   "motor_1": 0.8449
+  },
+  "HOLD24_T2b": {
+   "motor_0": 0.924,
+   "motor_1": 0.8374
+  },
+  "HOLD24_A1": {
+   "motor_0": 0.9378,
+   "motor_1": 0.8531
+  },
+  "HOLD24_mezcla": {
+   "motor_0": 0.9332,
+   "motor_1": 0.8501
+  }
+ },
+ "total": 75056817.03,
+ "total_F": 81943158.72,
+ "total_por_celda": {
+  "buildings_0": 5835012.24,
+  "buildings_1": 19544613.98,
+  "contents_0": 1491527.36,
+  "contents_1": 5044792.47,
+  "motor_0": 8496360.44,
+  "motor_1": 34644510.54
+ },
+ "total_F_por_celda": {
+  "buildings_0": 5835012.24,
+  "buildings_1": 19544613.98,
+  "contents_0": 1491527.36,
+  "contents_1": 5044792.47,
+  "motor_0": 9095333.95,
+  "motor_1": 40931878.72
+ },
+ "corr_log_con_F_por_celda": {
+  "motor_0": 0.9934,
+  "motor_1": 0.9479
+ }
+}

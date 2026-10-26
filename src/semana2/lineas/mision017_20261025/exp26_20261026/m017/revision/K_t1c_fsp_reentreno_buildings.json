@@ -1,0 +1,157 @@
+{
+ "buildings": {
+  "comprobacion": {
+   "accidental_damage": {
+    "rondas_f": 67,
+    "rondas_s": 1,
+    "corr_log_f_autor": 1.0,
+    "ratio_f_autor": 1.0,
+    "corr_log_s_autor": 1.0,
+    "ratio_s_autor": 1.0,
+    "sum_f_cp_entren/sum_n": 0.98805
+   },
+   "escape_of_water": {
+    "rondas_f": 104,
+    "rondas_s": 54,
+    "corr_log_f_autor": 1.0,
+    "ratio_f_autor": 1.0,
+    "corr_log_s_autor": 1.0,
+    "ratio_s_autor": 1.0,
+    "sum_f_cp_entren/sum_n": 0.99821
+   },
+   "fire": {
+    "rondas_f": 23,
+    "rondas_s": 237,
+    "corr_log_f_autor": 1.0,
+    "ratio_f_autor": 1.0,
+    "corr_log_s_autor": 1.0,
+    "ratio_s_autor": 1.0,
+    "sum_f_cp_entren/sum_n": 0.98386
+   },
+   "flood": {
+    "rondas_f": 127,
+    "rondas_s": 75,
+    "corr_log_f_autor": 1.0,
+    "ratio_f_autor": 1.0,
+    "corr_log_s_autor": 1.0,
+    "ratio_s_autor": 1.0,
+    "sum_f_cp_entren/sum_n": 0.99076
+   },
+   "storm": {
+    "rondas_f": 119,
+    "rondas_s": 42,
+    "corr_log_f_autor": 1.0,
+    "ratio_f_autor": 1.0,
+    "corr_log_s_autor": 1.0,
+    "ratio_s_autor": 1.0,
+    "sum_f_cp_entren/sum_n": 0.99619
+   },
+   "subsidence": {
+    "rondas_f": 53,
+    "rondas_s": 47,
+    "corr_log_f_autor": 1.0,
+    "ratio_f_autor": 1.0,
+    "corr_log_s_autor": 1.0,
+    "ratio_s_autor": 1.0,
+    "sum_f_cp_entren/sum_n": 0.9751
+   }
+  },
+  "desarrollado_2024": {
+   "REN": {
+    "n": 155971,
+    "pos": 5738,
+    "D2_T2b": 0.09984,
+    "D2_FSp": 0.0996,
+    "gan_w0.1": 0.00086,
+    "gan_comp_w0.1": -6e-05,
+    "gan_w0.25": 0.00178,
+    "gan_comp_w0.25": -0.00025,
+    "gan_w0.5": 0.00234,
+    "gan_comp_w0.5": -0.00088,
+    "gan_w0.75": 0.00167,
+    "gan_comp_w0.75": -0.0019,
+    "boot_gan_w_linea": [
+     0.00097,
+     0.00177,
+     0.00283
+    ]
+   },
+   "NB": {
+    "n": 28030,
+    "pos": 602,
+    "D2_T2b": 0.15372,
+    "D2_FSp": 0.15622,
+    "gan_w0.1": 0.00102,
+    "gan_comp_w0.1": 8e-05,
+    "gan_w0.25": 0.00224,
+    "gan_comp_w0.25": 0.00014,
+    "gan_w0.5": 0.0034,
+    "gan_comp_w0.5": 5e-05,
+    "gan_w0.75": 0.00349,
+    "gan_comp_w0.75": -0.00025,
+    "boot_gan_w_linea": [
+     0.00039,
+     0.00235,
+     0.00461
+    ]
+   },
+   "NB_anio_completo": {
+    "n": 2545,
+    "pos": 129,
+    "D2_T2b": 0.07588,
+    "D2_FSp": 0.07114,
+    "gan_w0.1": 0.00021,
+    "gan_comp_w0.1": -0.00061,
+    "gan_w0.25": 0.00024,
+    "gan_comp_w0.25": -0.00162,
+    "gan_w0.5": -0.00047,
+    "gan_comp_w0.5": -0.00357,
+    "gan_w0.75": -0.00213,
+    "gan_comp_w0.75": -0.00585,
+    "boot_gan_w_linea": [
+     -0.003,
+     2e-05,
+     0.00539
+    ]
+   },
+   "NB_parcial": {
+    "n": 25485,
+    "pos": 473,
+    "D2_T2b": 0.13409,
+    "D2_FSp": 0.14067,
+    "gan_w0.1": 0.00146,
+    "gan_comp_w0.1": 0.00024,
+    "gan_w0.25": 0.00331,
+    "gan_comp_w0.25": 0.00054,
+    "gan_w0.5": 0.00551,
+    "gan_comp_w0.5": 0.00087,
+    "gan_w0.75": 0.0066,
+    "gan_comp_w0.75": 0.00099,
+    "boot_gan_w_linea": [
+     0.00177,
+     0.00342,
+     0.00486
+    ]
+   },
+   "REN_anio_completo": {
+    "n": 121645,
+    "pos": 5093,
+    "D2_T2b": 0.07798,
+    "D2_FSp": 0.07649,
+    "gan_w0.1": 0.00077,
+    "gan_comp_w0.1": -0.00014,
+    "gan_w0.25": 0.00154,
+    "gan_comp_w0.25": -0.00047,
+    "gan_w0.5": 0.00181,
+    "gan_comp_w0.5": -0.00132,
+    "gan_w0.75": 0.0008,
+    "gan_comp_w0.75": -0.00257,
+    "boot_gan_w_linea": [
+     0.00065,
+     0.0015,
+     0.00255
+    ]
+   }
+  }
+ }
+}

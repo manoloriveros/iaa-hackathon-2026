@@ -1,0 +1,11 @@
+{
+ "id": "CLA-S2-MISION017-FINAL-20261025",
+ "autor": "Claude (Proyecto IAA, sesión de consolidación), por delegación expresa de Manuel («toma tus recomendaciones como mi decisión»)",
+ "utc_escrito": "2026-10-25T16:25:00Z, antes de cualquier puntuación de sonda_seg_buildings_1, F2 o sondas de forma",
+ "constructor": "codigo/construir_final.py (versión auditada por el revisor F; paradas: D2(F) fuera del intervalo de redondeo, a_s no positivo, |log(c*_s/c*_g)| > max(0,7; 3σ_s), faltan puntuaciones obligatorias, F2 o razones distintas)",
+ "marca_final_parte2": "final_creible_2025.csv (nivel por celda con Z preinscrito de preinscripcion.json; forma por parábola con Z de sigma_forma.json)",
+ "nunca_se_marca": ["final_pleno_2025.csv (solo informativo)", "cualquier sonda de nivel o de forma"],
+ "respaldo_si_para": "F2_ncb_previos_2025.csv (estructura validada fuera de tiempo, sin nivel por celda)",
+ "evidencia_simulada": "revision/F_auditoria_final.md: con 2024 como sustituto, el creíble gana +0,0059 [p05 +0,0038] en el privado si hay desvíos de nivel por celda y −0,0008 [p05 −0,0033] si no los hay; el pleno pierde −0,0055 en el nulo",
+ "lectura": "El público del final no decide nada: la marca es el creíble aunque el pleno o una sonda puntúen más. Si el D² público del creíble se aparta en más de 0,0005 del previsto por la fórmula cerrada, se revisa antes de marcar."
+}

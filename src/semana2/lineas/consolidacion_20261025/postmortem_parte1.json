@@ -1,0 +1,50 @@
+{
+ "utc": "2026-10-25T11:39:11.165517+00:00",
+ "autor": "Claude (sesion de consolidacion)",
+ "fuente": "Hackaton/Repositorio_IAA2026/privado/resultados_privados_parte1_20261023/consulta_viva_envios.json",
+ "sha256_fuente": "ebae2049dea1fd30914a70c2019da9f58f13f83935d375855c27135e1855a20f",
+ "correlacion_rangos": {
+  "diez_candidatos": {
+   "n": 10,
+   "v24_privado": 0.9394,
+   "publico_privado": 0.6121
+  },
+  "ocho_mejores": {
+   "n": 8,
+   "v24_privado": 0.881,
+   "publico_privado": 0.2381
+  }
+ },
+ "nivel_por_ramo": {
+  "motor": {
+   "c_opt_publico": 0.9774,
+   "c_opt_privado": 0.9386,
+   "desvio_en_sigmas": 0.8
+  },
+  "buildings": {
+   "c_opt_publico": 1.0751,
+   "c_opt_privado": 1.0031,
+   "desvio_en_sigmas": 0.97
+  },
+  "contents": {
+   "c_opt_publico": 1.084,
+   "c_opt_privado": 1.0068,
+   "desvio_en_sigmas": 1.38
+  }
+ },
+ "privado_previsto": {
+  "S41": 0.13864,
+  "S42": 0.13863,
+  "optimo_publico_pleno": 0.13844,
+  "optimo_privado": 0.1389
+ },
+ "privado_observado": {
+  "S41": 0.13864,
+  "S42": 0.13863
+ },
+ "limites": [
+  "Scores a cinco decimales; el redondeo mueve c_opt privado menos de 0,002.",
+  "Una sola realizacion del privado.",
+  "V24 tomado de CLAUDE.md seccion 13."
+ ]
+}

@@ -1,0 +1,101 @@
+{
+ "archivo": "F2_ncb_previos_2025.csv",
+ "sha256": "119627d93003a98933d261e773ffaf6e29a7125346367f716a0a411b97dca11a",
+ "base": "F 42659dbb…",
+ "forma": {
+  "motor_0": 0.9
+ },
+ "factores_ncb": {
+  "motor_0|0": 0.9167,
+  "motor_0|1-2": 0.9569,
+  "motor_0|10+": 1.0856,
+  "motor_0|3-5": 0.9953,
+  "motor_0|6-9": 1.1016,
+  "motor_1|0": 0.899,
+  "motor_1|1-2": 1.0436,
+  "motor_1|10+": 1.1637,
+  "motor_1|3-5": 0.9796,
+  "motor_1|6-9": 0.9567
+ },
+ "factores_previos": {
+  "buildings_0|0": 0.9788,
+  "buildings_0|1": 0.9692,
+  "buildings_0|2": 1.1183,
+  "buildings_1|0": 0.9734,
+  "buildings_1|1": 1.0243,
+  "buildings_1|2": 1.0062,
+  "contents_0|0": 1.0268,
+  "contents_0|1": 0.9297,
+  "contents_0|2": 1.036,
+  "contents_1|0": 0.9641,
+  "contents_1|1": 1.059,
+  "contents_1|2": 0.9922,
+  "motor_0|0": 1.0036,
+  "motor_0|1": 0.9921,
+  "motor_0|2": 0.9953,
+  "motor_1|0": 1.0849,
+  "motor_1|1": 0.8778,
+  "motor_1|2": 0.9685
+ },
+ "razon_nivel": {
+  "motor_0": 0.9719,
+  "motor_1": 0.9757,
+  "buildings_0": 1.0001,
+  "buildings_1": 1.0005,
+  "contents_0": 0.9988,
+  "contents_1": 0.9958
+ },
+ "razon_por_serie": {
+  "DEV23_T2b": {
+   "motor_0": 0.975,
+   "motor_1": 0.9661,
+   "buildings_0": 0.9969,
+   "buildings_1": 0.9979,
+   "contents_0": 0.9982,
+   "contents_1": 0.9976
+  },
+  "HOLD24_T2b": {
+   "motor_0": 0.9676,
+   "motor_1": 0.9785,
+   "buildings_0": 1.0014,
+   "buildings_1": 1.0016,
+   "contents_0": 0.9989,
+   "contents_1": 0.9949
+  },
+  "HOLD24_A1": {
+   "motor_0": 0.9735,
+   "motor_1": 0.9791,
+   "buildings_0": 1.001,
+   "buildings_1": 1.0012,
+   "contents_0": 0.9989,
+   "contents_1": 0.9956
+  },
+  "HOLD24_mezcla": {
+   "motor_0": 0.9714,
+   "motor_1": 0.9789,
+   "buildings_0": 1.0012,
+   "buildings_1": 1.0014,
+   "contents_0": 0.9989,
+   "contents_1": 0.9953
+  }
+ },
+ "total": 80678630.85,
+ "total_F": 81943158.72,
+ "total_celda": {
+  "motor_0": 8839515.8,
+  "motor_1": 39935317.58,
+  "buildings_0": 5835649.8,
+  "buildings_1": 19554638.55,
+  "contents_0": 1489665.6,
+  "contents_1": 5023843.53
+ },
+ "total_F_celda": {
+  "motor_0": 9095333.95,
+  "motor_1": 40931878.72,
+  "buildings_0": 5835012.24,
+  "buildings_1": 19544613.98,
+  "contents_0": 1491527.36,
+  "contents_1": 5044792.47
+ },
+ "evidencia_fuera_de_tiempo": "eval_v2.json: NCB+previos de 2023 aplicados en 2024 con la composición 2025 por celda y banda de exposición: +0,0029 a +0,0031 (T2b, A1, mezcla); de 2024 en 2023: +0,0093"
+}
