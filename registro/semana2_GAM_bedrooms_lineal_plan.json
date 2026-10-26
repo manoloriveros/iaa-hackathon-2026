@@ -1,0 +1,154 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T17:46:20.997918+00:00",
+  "candidate": "GAM4_MI_bedrooms_linear",
+  "amendment": "Actual source bedrooms has tied quantile knots. Original preregistered guard stopped before contents estimator.fit. Retain the already-registered linear main effect for bedrooms; no new knot count/location is searched.",
+  "actual_contents_quantiles_covariates_only": {
+    "bedrooms": [
+      1.0,
+      3.0,
+      3.0,
+      6.0
+    ],
+    "log_si": [
+      9.179881164491475,
+      10.328755287940472,
+      10.789319076925574,
+      11.740857533016236
+    ],
+    "distance_to_river_km": [
+      0.05826890812397577,
+      0.9082585601768908,
+      1.5107219394949425,
+      2.7047112998366956
+    ],
+    "elevation_m": [
+      0.3,
+      5.2,
+      12.1,
+      79.7
+    ]
+  },
+  "retained": "Original motor/buildings curve definitions/data/methods exactly; reuse their completed artifacts. Contents retains3other source curves, all indicators, alpha1 and original other predictors/offsets.",
+  "original_plan": "Hackaton/Repositorio_IAA2026/registro/semana2_GAM_fuente_privada_plan.json",
+  "original_plan_sha256": "144d4327d1050e7b6ae28299b68a704f5aa03edb5d0288ddeeee9e0472ef270f",
+  "curves": {
+    "motor": [
+      "ncb_years",
+      "vehicle_age",
+      "years_licensed",
+      "vehicle_value_group",
+      "engine_size_cc"
+    ],
+    "buildings": [
+      "log_si",
+      "prop_age",
+      "distance_to_river_km",
+      "elevation_m"
+    ],
+    "contents": [
+      "log_si",
+      "distance_to_river_km",
+      "elevation_m"
+    ]
+  },
+  "reuse": {
+    "motor": {
+      "motor/application.json": "b0f5fe3fe2b9872bce0c89791788bc9701e69fcea806387432a1801f0097c91c",
+      "motor/fit_invoked.json": "cf5b00bbb71c984db518361dfe2fdf934479a56d84aa7ac2a8dbe5c9f0484bae",
+      "motor/fit_record.json": "98037869b0e335196aac39e28cd2dcae5ca856deb840652547f44eddee25ec91",
+      "motor/model.json": "e91230d89d72d5ddd70b853717b72acfdfe444d80fefba313e45039c7610d3bf",
+      "motor/source_raw.parquet": "b5019dac5cbd06ca67bab534aef96cb96703d393f4d6e00c37383ea1ef9a4ad3",
+      "historical_motor_three_seed.parquet": "ce97f44a467429cff2aa0c7174867f055f908b043ea6fa6e81da9be85ee69b7d"
+    },
+    "buildings": {
+      "buildings/application.json": "32b4ac2c630b5ebed48c427636c6896988b7260b0f2707a2e1ecdb89b1c37bd2",
+      "buildings/fit_invoked.json": "7d7e5fcd05d8880b1f836ad106ea7a31423949ae6ba1e60fef98066f8261d50b",
+      "buildings/fit_record.json": "a72d1a2ea7897c60cc05a245568be9e10bf785cde63d9398355980dda255be90",
+      "buildings/model.json": "84e28a729494b3202fef836273e8dd57e4494d0e33737e2eeb081f6f976f7530",
+      "buildings/source_raw.parquet": "1a070d7759031be9891ba8fff6d6f9a0350656c04cc72ad81486f1d9fbf84719",
+      "historical_buildings_three_seed.parquet": "aa861eea12357b193bba036e9e878a372f0b14c08dd3c0e8556df696143ec5a2"
+    }
+  },
+  "fit_accounting": {
+    "original_price_pipeline_invocations": 3,
+    "original_actual_estimator_fits": 2,
+    "original_preprocessing_failures_before_estimator_fit": 1,
+    "new_actual_estimator_fits": 1,
+    "combined_actual_source_GAMfits": 3,
+    "new_C0_fits": 0,
+    "new_target_calibrations": 0,
+    "new_target_scores": 0,
+    "new_future2025inference": 0,
+    "new_finaltestprices": 0,
+    "new_submissions": 0
+  },
+  "reused_functions_unchanged": [
+    "P16fit_preprocessor",
+    "P16transform",
+    "P16basis_input",
+    "P11fit_source"
+  ],
+  "preflight": {
+    "one_new_synthetic_GAMfit": 1,
+    "tied_bedrooms_retained_linear": true,
+    "other3actual_source_quantile_sets_strict": true,
+    "JSONreplay_order_exact": true
+  },
+  "predictive_adoption": false,
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/entrenar_GLM_fuente_P11.py": "07dfc3670abcbd2b1178acd76e888291e645cc1ad007c5b4168f1a5ab175f2c4",
+    "Hackaton/Repositorio_IAA2026/herramientas/ablar_exposicion_fuente_P9.py": "db458fcb0dcd2d7ac37ec4b830a502b95b60eba0005bb76c770821a15f619501",
+    "Hackaton/Repositorio_IAA2026/src/semana2/modelo_profesor_comun2023.py": "b8fffff61f16da937b206299685dbe3be9c4fb97f5c5ee0c2b4ef544a0749279",
+    "Hackaton/Repositorio_IAA2026/src/semana2/modelo_transferencia2023_v2.py": "6737d8c4e63d28e80df82dcb69bdb43e1ddcf4e68329b61dcd4bd74230a7a1d1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/report.json": "16e00f41001ef78ba607d5cd2fd41fe77974b13c1e6d2bf18dc3573b7fa2534a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/report.json": "94b27c0bafeb80f5e9238957d028880784586a619377239381154aecc1335ea3",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P10_validacion_sin_exposicion_20261026/report.json": "bb0c972e04f1a2d05cbacf041ead01002e63e8e4b96c98652421cb635d1f50da",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s1_motor.parquet": "c2a2f3d5a14f96892bdd6f6f973b03449f874a7df0ff42d687533254a5833ed3",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_motor.parquet": "ded113876f2069f7341491aa855e7e0fc4036e5e6e38d476466da905f5bee99c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s2_motor.parquet": "2063f50044d41963032164373dcc895583e92dd7e9d1687aac7efda31910e75d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s2_motor.parquet": "7a6e236ecb97dda159f73650b660955206b33a73bd4b22e3935581c72afc3631",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s1_buildings.parquet": "471922f7f8318216270fc7332028286d84162fbe78aa0279173903525b4aee90",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_buildings.parquet": "a04a76fa8564f83a6da02d4f1885972b7ef82b3d741cc5a6bd22f0df1d98bf88",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s2_buildings.parquet": "801b708d1738b6b6e04e1e9e814ec798397e65f817e9267bfc425c537f153846",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s2_buildings.parquet": "26dad682688854722be16ff52bc4332fd9acfe310b5ea4838d8c772bea32b775",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s1_contents.parquet": "07c2395bc8efe3045baec7677e56c3824c44200bd9ab75c14212e862f6e63993",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_contents.parquet": "f8d5c595dc4bc1357decca37bc73660a557a473638f2aae83e085c9e68d4e1f1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s2_contents.parquet": "1576409971c67f28f9bc61a82b887c63a93a2e783ae12ed39b15e07fe34f46c7",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s2_contents.parquet": "633f4b7bbccd5929daf418a062c5023e761bfabfd5db2a7da432354c47472ccc",
+    "Hackaton/Repositorio_IAA2026/herramientas/GLM_ausentes_privada_P14.py": "4d34de1404cfb4a719cd6f95e1cc8aae851ea0162cd3e9b9af5cc9d894c3b993",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_GLM_fuente_privada_plan.json": "3f03ed107190ba68e97c5a9cf16754c5c617adc21b88ad6fd06f9aed807cd5e0",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P11_GLM_fuente_20261026/report.json": "bb967e19e1695c5cca2130eac4b916d6ed66d1dc228772b9a35b1df2264be854",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P13_atribucion_GLM_20261026/report.json": "b24224f501aef3962fcfbe3d9dc4e037136ee213f7f51fe93f043ab68d06878e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P13_atribucion_GLM_20261026/bounded_missing_indicator_review.json": "060a458c9647ca77781b286245059241b11e3c2dc72a5f1fb7aa4a6ca90fc123",
+    "Hackaton/Repositorio_IAA2026/herramientas/GAM_fuente_privada_P16.py": "09e787d338ba983a92615705f8fd7b9cb4203a64c6b6d9cac397609f541cee73",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_GLM_ausentes_fuente_plan.json": "01bb18296536f4086b2598a9d2415a9dfdc4b73445fd1ed3e3378376e5439b88",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P14_GLM_ausentes_20261026/context_report.json": "190dc3ed486e0d6ace249d677c755685e9b68cb30704dfb6c47994e61f69dd31",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P15_validacion_ausentes_20261026/context_report.json": "d7a75659fd38f74a15d8d3d35666010a942381e0a88c9f0666c452069d8e0a00",
+    "Hackaton/Repositorio_IAA2026/src/semana2/modelos_robustos2023.py": "af3dcaf489367def2cb29a9785e8003cb12bd2f3378062bd274919e080466bf8",
+    "Hackaton/Repositorio_IAA2026/src/semana2/modelo_fuente_aditivo2023.py": "5d587285970a90733e8689951041bd90eba824b85de89d4f42e837fea0433ecd",
+    "Hackaton/Repositorio_IAA2026/herramientas/GAM_continuar_bedrooms_P16.py": "4a1109f1cf6ee0669d9bdabcd7abfa92c6d2ba9b6fbc09d779acfb9050bd5c34",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_GAM_fuente_privada_plan.json": "144d4327d1050e7b6ae28299b68a704f5aa03edb5d0288ddeeee9e0472ef270f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P16_GAM_fuente_20261026/motor/application.json": "b0f5fe3fe2b9872bce0c89791788bc9701e69fcea806387432a1801f0097c91c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P16_GAM_fuente_20261026/motor/fit_invoked.json": "cf5b00bbb71c984db518361dfe2fdf934479a56d84aa7ac2a8dbe5c9f0484bae",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P16_GAM_fuente_20261026/motor/fit_record.json": "98037869b0e335196aac39e28cd2dcae5ca856deb840652547f44eddee25ec91",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P16_GAM_fuente_20261026/motor/model.json": "e91230d89d72d5ddd70b853717b72acfdfe444d80fefba313e45039c7610d3bf",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P16_GAM_fuente_20261026/motor/source_raw.parquet": "b5019dac5cbd06ca67bab534aef96cb96703d393f4d6e00c37383ea1ef9a4ad3",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P16_GAM_fuente_20261026/historical_motor_three_seed.parquet": "ce97f44a467429cff2aa0c7174867f055f908b043ea6fa6e81da9be85ee69b7d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P16_GAM_fuente_20261026/buildings/application.json": "32b4ac2c630b5ebed48c427636c6896988b7260b0f2707a2e1ecdb89b1c37bd2",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P16_GAM_fuente_20261026/buildings/fit_invoked.json": "7d7e5fcd05d8880b1f836ad106ea7a31423949ae6ba1e60fef98066f8261d50b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P16_GAM_fuente_20261026/buildings/fit_record.json": "a72d1a2ea7897c60cc05a245568be9e10bf785cde63d9398355980dda255be90",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P16_GAM_fuente_20261026/buildings/model.json": "84e28a729494b3202fef836273e8dd57e4494d0e33737e2eeb081f6f976f7530",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P16_GAM_fuente_20261026/buildings/source_raw.parquet": "1a070d7759031be9891ba8fff6d6f9a0350656c04cc72ad81486f1d9fbf84719",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P16_GAM_fuente_20261026/historical_buildings_three_seed.parquet": "aa861eea12357b193bba036e9e878a372f0b14c08dd3c0e8556df696143ec5a2",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P16_GAM_fuente_20261026/failure_174024525599.json": "963dfe9b57ef95c4e544c3b2feb71a69234e12e38a85a05862ce4ece6ad7d315",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P16_GAM_fuente_20261026/contents/fit_invoked.json": "3a9a8754b128bd10bec9e31ee50e8480aac78a2342123bd13e6ecf2458973b77"
+  },
+  "limits": [
+    "Amendment based only on source covariates and pre-fit failure, not target score.",
+    "Motor/buildings fit under original recipe, contents under this lower-capacity amendment; both recipes/failure preserved.",
+    "No claim that this change establishes private generalization. Complete target validation still required."
+  ],
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true
+}

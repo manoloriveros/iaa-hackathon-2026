@@ -1,0 +1,117 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T17:22:42.189998+00:00",
+  "candidate": "GLM4_MI",
+  "hypothesis": "A plain median-imputed GLM cannot distinguish observed median from missing numeric data. Explicit source-learned missing main effects may improve transport with12percent missing target versus2.5percent source, without interactions or changed data.",
+  "necessity": "P13shows a representation limitation and a continuing missingness gap, not causal proof of P12loss. Current sourceGLMhas no numeric missing indicators. Do not repeat historical source2023masking fits.",
+  "change": "Add centered/scaled binary is_missing columns for every numeric variable with nonconstant source missingness. Feature selection uses source covariates only; no missingness-outcome screening.",
+  "retained": "All source2021-2024matrices,T0,e_cost, original median/0.5-99.5clip/scales/categories, duration predictor and alpha1main-effects GLM parameters.",
+  "source_engine": {
+    "path": "Hackaton/Repositorio_IAA2026/herramientas/entrenar_GLM_fuente_P11.py",
+    "sha256": "07dfc3670abcbd2b1178acd76e888291e645cc1ad007c5b4168f1a5ab175f2c4",
+    "process_local_bindings": [
+      "fit_preprocessor=P14function",
+      "transform=P14function",
+      "OUT/PLAN/INDEX=P14paths"
+    ],
+    "note": "Raw report/status/cache interface identifies the reused P11engine; context_report identifies this new candidate. One sourceGLMperline, not3seeds."
+  },
+  "estimator": {
+    "power": 1.5,
+    "alpha": 1.0,
+    "link": "log",
+    "solver": "lbfgs",
+    "max_iter": 3000,
+    "tol": 1e-07
+  },
+  "scopes": [
+    {
+      "line": "motor",
+      "source_rows": 979968,
+      "source_years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ]
+    },
+    {
+      "line": "buildings",
+      "source_rows": 707726,
+      "source_years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ]
+    },
+    {
+      "line": "contents",
+      "source_rows": 721617,
+      "source_years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ]
+    }
+  ],
+  "budget": {
+    "source_GLM_fits": 3,
+    "new_C0_fits": 0,
+    "target_calibrations": 0,
+    "target_scores": 0,
+    "future2025inference": 0,
+    "finaltestprices": 0,
+    "submissions": 0
+  },
+  "criteria": "Same source convergence/gradient/scalar/JSONreplay controls. No predictive adoption without separately preregistered complete primary comparison versus A1S/S2/H1and secondary versus plainP12GLM. All original gates/stresses remain.",
+  "preflight": {
+    "synthetic_source_GLM_fits_separate": 1,
+    "whole_fit_transform_predict_JSONreplay_order_checked": true,
+    "unknown_missing_categories_handled": true,
+    "penalized_gradient_finite_difference_max_error": 6.922135087350677e-11,
+    "rate_offset_two_methods": true,
+    "new_contest_fits": 0,
+    "old_missing_and_observed_median_collision_proved": true,
+    "new_indicator_distinguishes_pair": true,
+    "constant_missing_indicators_not_added": true
+  },
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/entrenar_GLM_fuente_P11.py": "07dfc3670abcbd2b1178acd76e888291e645cc1ad007c5b4168f1a5ab175f2c4",
+    "Hackaton/Repositorio_IAA2026/herramientas/ablar_exposicion_fuente_P9.py": "db458fcb0dcd2d7ac37ec4b830a502b95b60eba0005bb76c770821a15f619501",
+    "Hackaton/Repositorio_IAA2026/src/semana2/modelo_profesor_comun2023.py": "b8fffff61f16da937b206299685dbe3be9c4fb97f5c5ee0c2b4ef544a0749279",
+    "Hackaton/Repositorio_IAA2026/src/semana2/modelo_transferencia2023_v2.py": "6737d8c4e63d28e80df82dcb69bdb43e1ddcf4e68329b61dcd4bd74230a7a1d1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/report.json": "16e00f41001ef78ba607d5cd2fd41fe77974b13c1e6d2bf18dc3573b7fa2534a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/source_models/report.json": "94b27c0bafeb80f5e9238957d028880784586a619377239381154aecc1335ea3",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P10_validacion_sin_exposicion_20261026/report.json": "bb0c972e04f1a2d05cbacf041ead01002e63e8e4b96c98652421cb635d1f50da",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s1_motor.parquet": "c2a2f3d5a14f96892bdd6f6f973b03449f874a7df0ff42d687533254a5833ed3",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_motor.parquet": "ded113876f2069f7341491aa855e7e0fc4036e5e6e38d476466da905f5bee99c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s2_motor.parquet": "2063f50044d41963032164373dcc895583e92dd7e9d1687aac7efda31910e75d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s2_motor.parquet": "7a6e236ecb97dda159f73650b660955206b33a73bd4b22e3935581c72afc3631",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s1_buildings.parquet": "471922f7f8318216270fc7332028286d84162fbe78aa0279173903525b4aee90",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_buildings.parquet": "a04a76fa8564f83a6da02d4f1885972b7ef82b3d741cc5a6bd22f0df1d98bf88",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s2_buildings.parquet": "801b708d1738b6b6e04e1e9e814ec798397e65f817e9267bfc425c537f153846",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s2_buildings.parquet": "26dad682688854722be16ff52bc4332fd9acfe310b5ea4838d8c772bea32b775",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s1_contents.parquet": "07c2395bc8efe3045baec7677e56c3824c44200bd9ab75c14212e862f6e63993",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_contents.parquet": "f8d5c595dc4bc1357decca37bc73660a557a473638f2aae83e085c9e68d4e1f1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s2_contents.parquet": "1576409971c67f28f9bc61a82b887c63a93a2e783ae12ed39b15e07fe34f46c7",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s2_contents.parquet": "633f4b7bbccd5929daf418a062c5023e761bfabfd5db2a7da432354c47472ccc",
+    "Hackaton/Repositorio_IAA2026/herramientas/GLM_ausentes_privada_P14.py": "4d34de1404cfb4a719cd6f95e1cc8aae851ea0162cd3e9b9af5cc9d894c3b993",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_GLM_fuente_privada_plan.json": "3f03ed107190ba68e97c5a9cf16754c5c617adc21b88ad6fd06f9aed807cd5e0",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P11_GLM_fuente_20261026/report.json": "bb967e19e1695c5cca2130eac4b916d6ed66d1dc228772b9a35b1df2264be854",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P13_atribucion_GLM_20261026/report.json": "b24224f501aef3962fcfbe3d9dc4e037136ee213f7f51fe93f043ab68d06878e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P13_atribucion_GLM_20261026/bounded_missing_indicator_review.json": "060a458c9647ca77781b286245059241b11e3c2dc72a5f1fb7aa4a6ca90fc123"
+  },
+  "limits": [
+    "Source2021-2024labels and whole-source C0 are conditional, not prospective2023.",
+    "Undated source masters and emerging adaptive2024limits remain.",
+    "Main effects and fixed penalty may underfit; simplicity alone does not establish private improvement.",
+    "Not the exact historical delivered F3c backbone, no publicscore decision.",
+    "Source missingness may have a different mechanism from target; flags do not restore lost values or establish transportability.",
+    "Standardized indicator penalty is fixed alpha1, not selected by score.",
+    "No P13oracle levels or per-line selection are used."
+  ],
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true
+}

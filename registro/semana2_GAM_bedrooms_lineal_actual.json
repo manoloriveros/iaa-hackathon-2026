@@ -1,0 +1,59 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T17:50:17.874662+00:00",
+  "status": "P16combined_GAMcomplete_after_contents_amendment",
+  "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_GAM_bedrooms_lineal_plan.json",
+  "plan_sha256": "f86f751a4030947bb289b70bf2cdc1752e1f1bd0b295e209601a1d472f8f626e",
+  "forum": {
+    "author": "Codex",
+    "id": "COD-S2-20261026-PRIVADA-P16-GAM-RESULTADO",
+    "utc": "2026-10-26T17:50:18+00:00",
+    "previous_sha256": "59a8bfffedac16569b421a7b93b79a2de680c5876cd382b98b1b7fba7987e265",
+    "sha256": "ca093bf903cd6334f9c781a96a88ab8d145843f908837313875202a802fb8df4"
+  },
+  "output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P16_GAM_bedrooms_lineal_20261026",
+  "candidate": "GAM4_MI_bedrooms_linear",
+  "reused_models": 2,
+  "new_source_GAMfits_in_amendment": 1,
+  "combined_source_GAMfits": 3,
+  "failed_preprocessing_scopes_before_price_fit": 1,
+  "new_C0_fits": 0,
+  "new_target_calibrations": 0,
+  "new_target_scores": 0,
+  "new_future2025inference": 0,
+  "new_finaltestprices": 0,
+  "new_submissions": 0,
+  "curves": {
+    "motor": [
+      "ncb_years",
+      "vehicle_age",
+      "years_licensed",
+      "vehicle_value_group",
+      "engine_size_cc"
+    ],
+    "buildings": [
+      "log_si",
+      "prop_age",
+      "distance_to_river_km",
+      "elevation_m"
+    ],
+    "contents": [
+      "log_si",
+      "distance_to_river_km",
+      "elevation_m"
+    ]
+  },
+  "private_improvement_established": false,
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true,
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P16_GAM_bedrooms_lineal_20261026/report.json",
+  "report_sha256": "e14d7177c4c6a6d30ef98b398628915ef7551914693401061ad3589eee18301c",
+  "replay": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P16_GAM_bedrooms_lineal_20261026/amendment_replay_context.json",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P16_GAM_FUENTE_Y_ENMIENDA.md",
+  "parameters": {
+    "motor": 157,
+    "buildings": 129,
+    "contents": 125
+  },
+  "next_unit": "P17: implement and preregister complete comparison of GAM4_MI_bedrooms_linear from P16_GAM_bedrooms_lineal_20261026 versus original A1S/S2/H1primary and P15linear-MIsecondary. Source packet complete; do not refit any of its3models or resume failed original P16run. Bind current3historical caches with same scopes/offsets/C0/N3/H1ratios;30primaryS2closedlearners plus30full-held-poisoncontrols, no new C0/sourcefits/futureinference. Reuse frozen P12/P15 complete numerical engine and source keys; keep .002minimum, fold/year/Post31/cell floors and4scenarios. Paired secondary bootstrap can subtract existing P15draws with identical groups/outcomes/order/seeds/null denominators, no second resampling. Declare current family GAM5/4/3curves, bedrooms linear and one source model perline despite legacy cache filename. Freeze wrapper/source hashes/criterion/cost/forum before new calibration or scoring; no oraclelevels, line-selection or publicscore tuning. All outcomes remain exploratory with source2024and adaptive target years; no uploads or private-performance claim from source-only completion."
+}

@@ -1,0 +1,480 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T17:35:07.654137+00:00",
+  "status": "P15complete_missing_indicator_GLM_evaluated",
+  "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_GLM_ausentes_validacion_plan.json",
+  "plan_sha256": "6f3208ef00bc7068d2f8f6e0bd38d534fa0ab1729e67e5240f42e05dd315d493",
+  "forum": {
+    "author": "Codex",
+    "id": "COD-S2-20261026-PRIVADA-P15-AUSENTES-RESULTADO",
+    "utc": "2026-10-26T17:35:08+00:00",
+    "previous_sha256": "da03ffdd3edbe676bcf8bbb6a378ad0c8c744ea9317b7789ef8734698e3f88b2",
+    "sha256": "007c363e51ed536784f9201554aa3f076733175200284d71c888db76c61cbd11"
+  },
+  "output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P15_validacion_ausentes_20261026",
+  "candidate": "GLM4_MI_complete_S2_H1",
+  "engine_report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P15_validacion_ausentes_20261026/report.json",
+  "engine_report_sha256": "b38338be2c9fc83d48a0ca6c4dbdc44e1f6f4117b337162f9fc13572b8ec7b72",
+  "primary_diagnostic_gates": {
+    "pooled_delta_ge002": false,
+    "pooled_lower95_positive": false,
+    "pooled_atleast4positive_folds": false,
+    "both_pooled_years_nonnegative": true,
+    "pooled_post31_nonnegative": false,
+    "conditional_transfer_nonnegative": false,
+    "all_nominal_and_stress_cell_floors": false
+  },
+  "primary_nominal": {
+    "POOLED": {
+      "delta": 0.00046557316364887857,
+      "bootstrap95": [
+        -0.002099816670306034,
+        0.0030849960321059416
+      ],
+      "simultaneous95_family10": [
+        -0.0030655068083316776,
+        0.004393395730055242
+      ],
+      "post31_delta": -0.0037067125621865933,
+      "folds": {
+        "0": 0.0006189541869735374,
+        "1": -0.0007117660174076453,
+        "2": -0.0003118689857626765,
+        "3": 0.00043670942089130843,
+        "4": 0.0004335445589543549
+      },
+      "years": {
+        "2023": 0.0003922851197867503,
+        "2024": 7.328804386212862e-05
+      },
+      "cells": [
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 0,
+          "rows": 11073,
+          "delta_global": 0.0009222111072601233,
+          "delta_cell_null": 0.006026011153429075,
+          "AE_base": 1.2583942386427394,
+          "AE_candidate": 1.2795279329571534
+        },
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 1,
+          "rows": 1507,
+          "delta_global": -5.580372077557092e-05,
+          "delta_cell_null": -0.0038117114463865395,
+          "AE_base": 1.166214903357763,
+          "AE_candidate": 1.1132545180648274
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 0,
+          "rows": 12588,
+          "delta_global": -5.199236443644196e-05,
+          "delta_cell_null": -0.0004038383412438079,
+          "AE_base": 0.7742547297078182,
+          "AE_candidate": 0.7681359276321976
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2279,
+          "delta_global": -0.0001738846469951046,
+          "delta_cell_null": -0.011133123769657577,
+          "AE_base": 0.6225216997772074,
+          "AE_candidate": 0.5894775919840906
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 0,
+          "rows": 13987,
+          "delta_global": -0.00030182784781479104,
+          "delta_cell_null": -0.0037856700700031123,
+          "AE_base": 1.0680298936213382,
+          "AE_candidate": 1.080162088539694
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 1,
+          "rows": 1847,
+          "delta_global": -8.687086195551914e-05,
+          "delta_cell_null": -0.01082938288822726,
+          "AE_base": 1.0599284915717062,
+          "AE_candidate": 1.0335182412010941
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 0,
+          "rows": 15863,
+          "delta_global": -0.00010407109139583482,
+          "delta_cell_null": -0.00124393579207493,
+          "AE_base": 0.9740366453944687,
+          "AE_candidate": 0.9647670850831056
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2869,
+          "delta_global": 0.0001322222302775826,
+          "delta_cell_null": 0.00953866527068282,
+          "AE_base": 1.429418709460475,
+          "AE_candidate": 1.3881205126630347
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 0,
+          "rows": 19060,
+          "delta_global": -0.0001500178235198604,
+          "delta_cell_null": -0.0008225075901606463,
+          "AE_base": 0.9280020691480009,
+          "AE_candidate": 0.9339071739416148
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 1,
+          "rows": 2620,
+          "delta_global": 6.459426659236857e-05,
+          "delta_cell_null": 0.0021908531116835565,
+          "AE_base": 1.268101465959399,
+          "AE_candidate": 1.2568092190646278
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 0,
+          "rows": 21688,
+          "delta_global": 0.00027817264851619125,
+          "delta_cell_null": 0.0013980879684575324,
+          "AE_base": 1.0775040805284564,
+          "AE_candidate": 1.0713128097315043
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 1,
+          "rows": 3915,
+          "delta_global": -7.158732104263835e-06,
+          "delta_cell_null": -0.00023709392971324076,
+          "AE_base": 0.8568608485576714,
+          "AE_candidate": 0.8407685427202445
+        }
+      ],
+      "worst_cell_delta": -0.011133123769657577,
+      "base_D2": 0.13840694770665685,
+      "candidate_D2": 0.13887252087030588,
+      "futureweight_point_only_ESS_failed": -0.011481535537353349,
+      "same_level_sensitivity": {
+        "0.95": 0.0006211124629450914,
+        "1.0": 0.00046557316364887857,
+        "1.05": 0.00031790997205487876
+      }
+    },
+    "TRANSFER": {
+      "delta": -0.0005496746839168824,
+      "bootstrap95": [
+        -0.002814143037665061,
+        0.0019992998245182496
+      ],
+      "simultaneous95_family10": [
+        -0.003801501952319068,
+        0.002902077059154608
+      ],
+      "post31_delta": -0.004486949481718588,
+      "folds": {
+        "0": 0.0001837882631470593,
+        "1": -0.0011031013429052296,
+        "2": 0.0003593689527752717,
+        "3": -0.0005742890896676168,
+        "4": 0.0005845585327336329
+      },
+      "years": {
+        "2024": -0.0005496746839168824
+      },
+      "cells": [
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 0,
+          "rows": 12588,
+          "delta_global": -0.0006584150889751008,
+          "delta_cell_null": -0.0025415538357549793,
+          "AE_base": 0.6217864960513668,
+          "AE_candidate": 0.6120199666454644
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2279,
+          "delta_global": -0.0005077928790604058,
+          "delta_cell_null": -0.016157492487936024,
+          "AE_base": 0.4922636127333661,
+          "AE_candidate": 0.4614012748259405
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 0,
+          "rows": 15863,
+          "delta_global": -0.0003482719432948923,
+          "delta_cell_null": -0.0020687971123152923,
+          "AE_base": 0.9547886492821178,
+          "AE_candidate": 0.9309273542395795
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2869,
+          "delta_global": 0.00032115951772455486,
+          "delta_cell_null": 0.01151424549059588,
+          "AE_base": 1.4819395588582684,
+          "AE_candidate": 1.405820930803748
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 0,
+          "rows": 21688,
+          "delta_global": 0.0006951730031557856,
+          "delta_cell_null": 0.0017363790128069629,
+          "AE_base": 1.1590407861224514,
+          "AE_candidate": 1.1465592515888916
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 1,
+          "rows": 3915,
+          "delta_global": -5.1527293466823884e-05,
+          "delta_cell_null": -0.0008481120091565755,
+          "AE_base": 0.8687200327304127,
+          "AE_candidate": 0.8402079471429543
+        }
+      ],
+      "worst_cell_delta": -0.016157492487936024,
+      "base_D2": 0.1318209954932763,
+      "candidate_D2": 0.13127132080935966,
+      "futureweight_point_only_ESS_failed": -0.006785991571296218,
+      "same_level_sensitivity": {
+        "0.95": -0.0001615904786815165,
+        "1.0": -0.0005496746839168824,
+        "1.05": -0.0009191519242815211
+      }
+    }
+  },
+  "new_primary_closed_learners": 30,
+  "new_adverse_closed_learners_separate": 30,
+  "new_source_fits": 0,
+  "new_C0_fits": 0,
+  "new_secondary_resampling": 0,
+  "new_future2025inference": 0,
+  "new_finaltestprices": 0,
+  "new_submissions": 0,
+  "formal_promotion": false,
+  "submission_allowed": false,
+  "private_improvement_established": false,
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true,
+  "goal_achieved": false,
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P15_validacion_ausentes_20261026/context_report.json",
+  "report_sha256": "d7a75659fd38f74a15d8d3d35666010a942381e0a88c9f0666c452069d8e0a00",
+  "replay": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P15_validacion_ausentes_20261026/P15_replay_context.json",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P15_VALIDACION_AUSENTES.md",
+  "secondary_nominal": {
+    "POOLED": {
+      "delta": -0.00012771612586114678,
+      "bootstrap95_paired_existing_draws": [
+        -0.0010178849699251996,
+        0.0007834533189797516
+      ],
+      "simultaneous95_secondary_family10": [
+        -0.0013150790369719433,
+        0.001137393446788366
+      ],
+      "post31_delta": -0.0014605036387886792,
+      "folds": {
+        "0": -2.8772504414560947e-05,
+        "1": -8.597016854908039e-05,
+        "2": 0.00010336764046565367,
+        "3": 5.026563352368912e-05,
+        "4": -0.0001666067268868483
+      },
+      "years": {
+        "2023": -0.00013708121792337934,
+        "2024": 9.36509206223254e-06
+      },
+      "cells": [
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 0,
+          "delta_cell_null": -0.0013032433803622562
+        },
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 1,
+          "delta_cell_null": -0.0007337901270781296
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 0,
+          "delta_cell_null": 0.0017382063600644847
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 1,
+          "delta_cell_null": 0.0005048355319290967
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 0,
+          "delta_cell_null": 0.0007094371436717909
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 1,
+          "delta_cell_null": 0.0010454833802733734
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 0,
+          "delta_cell_null": -0.0007209399112309232
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 1,
+          "delta_cell_null": -0.004505108280143199
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 0,
+          "delta_cell_null": -0.00018166752959115337
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 1,
+          "delta_cell_null": 0.0014005377889178057
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 0,
+          "delta_cell_null": -0.00036470867195314134
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 1,
+          "delta_cell_null": -0.0008934613960434182
+        }
+      ],
+      "worst_cell_delta": -0.004505108280143199,
+      "new_resampling": 0,
+      "admission_from_secondary_alone": false
+    },
+    "TRANSFER": {
+      "delta": 7.518910655597913e-05,
+      "bootstrap95_paired_existing_draws": [
+        -0.0008152952495423841,
+        0.0009644145591272971
+      ],
+      "simultaneous95_secondary_family10": [
+        -0.0012966502687491279,
+        0.00134414084567069
+      ],
+      "post31_delta": -0.0012563007955468692,
+      "folds": {
+        "0": -2.9327550379695736e-05,
+        "1": -4.647528348108297e-06,
+        "2": -3.707983335795615e-06,
+        "3": 0.00010341103661163682,
+        "4": 9.46113200794169e-06
+      },
+      "years": {
+        "2024": 7.518910655597913e-05
+      },
+      "cells": [
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 0,
+          "delta_cell_null": 0.0017524328688684097
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 1,
+          "delta_cell_null": 0.001029562285286462
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 0,
+          "delta_cell_null": -0.00047853491775409144
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 1,
+          "delta_cell_null": -0.004789341409097919
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 0,
+          "delta_cell_null": -0.00036120025419681507
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 1,
+          "delta_cell_null": -0.0008624531241245695
+        }
+      ],
+      "worst_cell_delta": -0.004789341409097919,
+      "new_resampling": 0,
+      "admission_from_secondary_alone": false
+    }
+  },
+  "primary_constants": 670,
+  "primary_constant_breakdown": {
+    "shape_factors": 280,
+    "level_constants": 90,
+    "residual_factors": 180,
+    "training_nuisance_levels": 120,
+    "shape_training_normalizers_separate": 80,
+    "training_stage_normalizers_separate": 120,
+    "held_stage_normalizers_separate": 120
+  },
+  "adverse_constant_breakdown_separate": {
+    "shape_factors": 280,
+    "level_constants": 90,
+    "residual_factors": 180,
+    "training_nuisance_levels": 120,
+    "shape_training_normalizers_separate": 80,
+    "training_stage_normalizers_separate": 120,
+    "held_stage_normalizers_separate": 120
+  },
+  "missing_indicator_GLM_adopted": false,
+  "next_unit": "P16preflight: fixed additive source main effects on current2021-2024contract, retaining P14missing flags and alpha1; no interactions or hypersearch. Reuse the historical sourceGAMfixed risk-variable list as a domain specification rather than select from target gains: motor ncb_years,vehicle_age,years_licensed,vehicle_value_group,engine_size_cc; buildings log_si,prop_age,distance_to_river_km,elevation_m; contents log_si,bedrooms,distance_to_river_km,elevation_m. Use4source-only quantileknots,degree2,constant extrapolation and source standardized basis, no source2023fit repetition. Preserve direct columns/offsets/C0and all remaining linear/categorical features. Before fitting, demonstrate JSONbasis serialization, endpoint/missing treatment, gradient and complete synthetic fit/forward replay; then freeze code,hypothesis,cost and forum. At most3sourcefits; separately registered complete comparison versus incumbent primary and P15linear-MIsecondary. P13allocated-loss failures justify testing functional flexibility, but do not prove nonlinear causality; P15did not validate missingness as the cause. No oraclelevels, line selection, new2025prices or uploads until appropriate review. Preserve alladverses and private priority,2024adaptiveopen. Version this completed block locally without claiming full historical repository regularization."
+}

@@ -1,0 +1,73 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T17:27:48.942646+00:00",
+  "status": "P14source_missing_indicators_complete_target_validation_pending",
+  "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_GLM_ausentes_fuente_plan.json",
+  "plan_sha256": "01bb18296536f4086b2598a9d2415a9dfdc4b73445fd1ed3e3378376e5439b88",
+  "forum": {
+    "author": "Codex",
+    "id": "COD-S2-20261026-PRIVADA-P14-AUSENTES-RESULTADO",
+    "utc": "2026-10-26T17:27:49+00:00",
+    "previous_sha256": "0612a918b7f7cd3c662384782c800473066f2f31b3a4c9614ef799ca223a125d",
+    "sha256": "da03ffdd3edbe676bcf8bbb6a378ad0c8c744ea9317b7789ef8734698e3f88b2"
+  },
+  "output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P14_GLM_ausentes_20261026",
+  "candidate": "GLM4_MI",
+  "engine_report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P14_GLM_ausentes_20261026/report.json",
+  "engine_report_sha256": "ea58c8bf91785fd340cd1bb1f8737c7f1117886d0a03112342e308e2229e59ea",
+  "indicators": {
+    "motor": [
+      "household_size",
+      "years_at_address",
+      "flood_zone",
+      "distance_to_river_km",
+      "vehicle_age",
+      "engine_size_cc"
+    ],
+    "buildings": [
+      "household_size",
+      "years_at_address",
+      "flood_zone",
+      "distance_to_river_km",
+      "days_unoccupied"
+    ],
+    "contents": [
+      "household_size",
+      "years_at_address",
+      "flood_zone",
+      "distance_to_river_km",
+      "high_value_items"
+    ]
+  },
+  "parameters": {
+    "motor": 142,
+    "buildings": 117,
+    "contents": 116
+  },
+  "source_models_per_line": 1,
+  "new_source_GLM_fits": 3,
+  "new_C0_fits": 0,
+  "new_target_calibrations": 0,
+  "new_target_scores": 0,
+  "new_future2025inference": 0,
+  "new_finaltestprices": 0,
+  "new_submissions": 0,
+  "predictive_adoption": false,
+  "private_improvement_established": false,
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true,
+  "limits": [
+    "Source2021-2024labels and whole-source C0 are conditional, not prospective2023.",
+    "Undated source masters and emerging adaptive2024limits remain.",
+    "Main effects and fixed penalty may underfit; simplicity alone does not establish private improvement.",
+    "Not the exact historical delivered F3c backbone, no publicscore decision.",
+    "Source missingness may have a different mechanism from target; flags do not restore lost values or establish transportability.",
+    "Standardized indicator penalty is fixed alpha1, not selected by score.",
+    "No P13oracle levels or per-line selection are used."
+  ],
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P14_GLM_ausentes_20261026/context_report.json",
+  "report_sha256": "190dc3ed486e0d6ace249d677c755685e9b68cb30704dfb6c47994e61f69dd31",
+  "replay": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P14_GLM_ausentes_20261026/P14_replay_context.json",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P14_GLM_AUSENTES_FUENTE.md",
+  "next_unit": "P15complete primary versus A1S/S2/H1and paired secondary versus plainGLM; same gates/stresses, no uploads."
+}
