@@ -1,0 +1,103 @@
+{
+ "herramienta": "herramientas/versionado.py",
+ "version": "1.1",
+ "sha256_herramienta": "1a7e38d0a46b2a3fe241ca0f3cf2c6e47c7090695e1dac47beb9e0c2d0a79edb",
+ "orden": "auditar",
+ "utc": "2026-10-26T21:46:26Z",
+ "repositorio": "Repositorio_IAA2026",
+ "git": "git version 2.54.0.windows.1",
+ "historial": {
+  "head": "5efc95a35c2da6607835650c5d9056f6de171dce",
+  "rama": "main",
+  "commits": 64,
+  "ultimo_commit": {
+   "sha": "5efc95a35c2da6607835650c5d9056f6de171dce",
+   "fecha": "2026-10-26T16:45:00-05:00",
+   "autor": "manoloriveros",
+   "mensaje": "Fija UTF-8 en la ejecución Windows de los originales"
+  },
+  "commits_por_dia": {
+   "2026-10-19": 6,
+   "2026-10-20": 1,
+   "2026-10-26": 57
+  },
+  "dias_desde_ultimo_commit": 0.0,
+  "remoto": {
+   "rama": "origin/main",
+   "commits_sin_subir": 58,
+   "commits_sin_bajar": 0,
+   "nota": "según la copia local del remoto; esta herramienta no consulta GitHub"
+  },
+  "etiquetas": [
+   {
+    "nombre": "parte1-entrega-final-S41",
+    "objeto": "5f37402",
+    "fecha": "2026-10-26T16:39:13-05:00",
+    "asunto": "Entrega final de la parte 1 (S41, CIE-D103). Etiquetada el 2026-10-26 en la reconstruccion del historial, sobre el ultimo commit con archivos de la parte 1."
+   },
+   {
+    "nombre": "parte1-mezcla-por-peligro",
+    "objeto": "797f1f2",
+    "fecha": "2026-10-26T16:39:13-05:00",
+    "asunto": "Mezcla por peligro (S30) declarada modelo definitivo, D99, 20 de octubre. Etiquetada el 2026-10-26."
+   },
+   {
+    "nombre": "semana1-revision-20261019",
+    "objeto": "3b59ad1",
+    "fecha": "2026-10-19T09:21:17-05:00",
+    "asunto": "Expediente preparado para revisión humana, sin selección final manual"
+   }
+  ]
+ },
+ "pendiente": {
+  "total": 0,
+  "por_tipo": {
+   "modificado": 0,
+   "sin_versionar": 0,
+   "borrado": 0,
+   "preparado": 0
+  },
+  "por_area": {}
+ },
+ "codigo": {
+  "archivos_en_repositorio": 1162,
+  "versionados": 1162,
+  "sin_versionar": 0,
+  "nombres_con_vN": 87
+ },
+ "guardia_pendiente": {
+  "bloqueos": [],
+  "avisos": [],
+  "info": []
+ },
+ "gitignore_cubre": {
+  "privado/x.csv": true,
+  "a.parquet": true,
+  "b.csv": true,
+  "c.joblib": true
+ },
+ "historia": {
+  "blobs": 3695,
+  "bytes": 82391998,
+  "bloqueos": [],
+  "avisos": []
+ },
+ "etiquetas_documentadas": {
+  "documento": "docs/VERSION_CONTROL.md",
+  "documentadas": [
+   "entrega-final",
+   "parte1-entrega-final-S41",
+   "parte1-mezcla-por-peligro",
+   "parte2-entrega-final",
+   "semana1-revision-20261019"
+  ],
+  "ausentes": [
+   "entrega-final",
+   "parte2-entrega-final"
+  ]
+ },
+ "plan_commits": [],
+ "plan_cronologico": [],
+ "segundos": 9.5,
+ "veredicto": "sin_bloqueos"
+}

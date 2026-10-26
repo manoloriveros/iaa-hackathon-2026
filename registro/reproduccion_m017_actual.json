@@ -1,0 +1,451 @@
+{
+  "id": "REPRO-M017-20261026",
+  "autor": "Codex",
+  "utc": "2026-10-26T21:48:25.081757+00:00",
+  "estado": "F3c_F3d_exactos_con_OOF_guardadas_no_entrenamiento_fuente_completo",
+  "guia": "docs/REPRODUCCION_DOS_SEMANAS.md",
+  "work": "privado/reproduccion_m017/20261026 entorno nuevo",
+  "manifest_sha256": "72e74fce29ef1479e21ceee45199209c9171f1539b945c39054af0163fa89416",
+  "env": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.3.5",
+      "pandas": "3.0.1",
+      "pyarrow": "23.0.1"
+    },
+    "python_prefix": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\reproduccion_m017\\entorno",
+    "venv_configuration": "home = C:\\Users\\manol\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\ninclude-system-site-packages = false\nversion = 3.12.14\nexecutable = C:\\Users\\manol\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\ncommand = C:\\Users\\manol\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe -m venv C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\reproduccion_m017\\entorno\n"
+  },
+  "insumos": [
+    {
+      "destino": "etiquetas.py",
+      "origen": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/codigo/etiquetas.py",
+      "source_sha256": "7ae171cc6b61dd1e1830b01bdef84ffcf96df7bae32143d62852693b33d3500c",
+      "staged_sha256": "7ae171cc6b61dd1e1830b01bdef84ffcf96df7bae32143d62852693b33d3500c",
+      "cambios": []
+    },
+    {
+      "destino": "forma_local.py",
+      "origen": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/codigo/forma_local.py",
+      "source_sha256": "62daa355139cbe0d46d682f60eae22499f15c1bf39bdc3d1b0242cb2e6116a26",
+      "staged_sha256": "62daa355139cbe0d46d682f60eae22499f15c1bf39bdc3d1b0242cb2e6116a26",
+      "cambios": []
+    },
+    {
+      "destino": "forma_local3.py",
+      "origen": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/codigo/forma_local3.py",
+      "source_sha256": "ff2733adfa35e300cd15ed0245ec9895d0356a49bbb99f419d82f57a4897eca2",
+      "staged_sha256": "ff2733adfa35e300cd15ed0245ec9895d0356a49bbb99f419d82f57a4897eca2",
+      "cambios": []
+    },
+    {
+      "destino": "forma_v2.py",
+      "origen": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/codigo/forma_v2.py",
+      "source_sha256": "c48e8e14ce2814ecf52b51032348a3dbf834659ac05c6914ee6bb6516bb62fd9",
+      "staged_sha256": "c48e8e14ce2814ecf52b51032348a3dbf834659ac05c6914ee6bb6516bb62fd9",
+      "cambios": []
+    },
+    {
+      "destino": "eval_v2.py",
+      "origen": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/codigo/eval_v2.py",
+      "source_sha256": "a0649f938028721912a0d6e06ef607604a30df532c52794cd256cb17bd7984f8",
+      "staged_sha256": "a0649f938028721912a0d6e06ef607604a30df532c52794cd256cb17bd7984f8",
+      "cambios": []
+    },
+    {
+      "destino": "f3_eval.py",
+      "origen": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/codigo/f3_eval.py",
+      "source_sha256": "f752379b5d50ddf46a12a16e26035f1379ccd115c4c732773f6d1ca8856434b8",
+      "staged_sha256": "f752379b5d50ddf46a12a16e26035f1379ccd115c4c732773f6d1ca8856434b8",
+      "cambios": []
+    },
+    {
+      "destino": "construir_F2.py",
+      "origen": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/codigo/construir_F2.py",
+      "source_sha256": "24fb7615be71ce7dcc5495a364aa262b1fe845e2b259c0c5486dda87293f294d",
+      "staged_sha256": "24fb7615be71ce7dcc5495a364aa262b1fe845e2b259c0c5486dda87293f294d",
+      "cambios": []
+    },
+    {
+      "destino": "construir_final.py",
+      "origen": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/codigo/construir_final.py",
+      "source_sha256": "cdbf2a4de39ee0e1b9858beb02b40ebd5e64f5eea92b50f0312d8e985cd53c04",
+      "staged_sha256": "cdbf2a4de39ee0e1b9858beb02b40ebd5e64f5eea92b50f0312d8e985cd53c04",
+      "cambios": []
+    },
+    {
+      "destino": "exp26/lib26.py",
+      "origen": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/exp26_20261026/m017/exp26/lib26.py",
+      "source_sha256": "1ceb1918c91b56c70068cbc4eb7be453f45d32df88ab49b65a0b108f9766b822",
+      "staged_sha256": "97388f7da4d9af2d0574675e7d7b433c5367595694b645c5be89b54240bca0dd",
+      "cambios": [
+        {
+          "antes": "/home/claude/m017/f3_eval.py",
+          "despues": "f3_eval.py"
+        },
+        {
+          "antes": "/home/claude/ml2/datos/emerging/weather.parquet",
+          "despues": "datos/emerging/weather.parquet"
+        }
+      ]
+    },
+    {
+      "destino": "exp26/fuga_celdas.json",
+      "origen": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/exp26_20261026/m017/exp26/fuga_celdas.json",
+      "source_sha256": "5a60a5d1ba9f657874a902c8e3357d016e683ae6679e211e7bc0ec4577dc8c8b",
+      "staged_sha256": "5a60a5d1ba9f657874a902c8e3357d016e683ae6679e211e7bc0ec4577dc8c8b",
+      "cambios": []
+    },
+    {
+      "destino": "construir_F3b.py",
+      "origen": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/exp26_20261026/m017/construir_F3b.py",
+      "source_sha256": "98d24847b0d41006379c27c74eb4d7b709b570d716c6798cdfd2846f4693897a",
+      "staged_sha256": "98d24847b0d41006379c27c74eb4d7b709b570d716c6798cdfd2846f4693897a",
+      "cambios": []
+    },
+    {
+      "destino": "construir_F3c.py",
+      "origen": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/exp26_20261026_v2/m017/construir_F3c.py",
+      "source_sha256": "9828156382416a8088cc5579a995f02fa10188b9e74334b0709942393a476c67",
+      "staged_sha256": "9828156382416a8088cc5579a995f02fa10188b9e74334b0709942393a476c67",
+      "cambios": []
+    },
+    {
+      "destino": "construir_F3d.py",
+      "origen": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/exp26_20261026_v3/m017/construir_F3d.py",
+      "source_sha256": "53be0b79d8a6291c1e29215e14cf7b0176f61653c4433909f771747b76ead5fd",
+      "staged_sha256": "53be0b79d8a6291c1e29215e14cf7b0176f61653c4433909f771747b76ead5fd",
+      "cambios": []
+    },
+    {
+      "destino": "in/preinscripcion.json",
+      "origen": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_validacion_nocturna_20261023/sonda_segmento/preinscripcion.json",
+      "source_sha256": "33e02d95b5fe2a9068ea4cef4bcb0e46b097e86dfbcb8048957c6fdc50825676",
+      "staged_sha256": "33e02d95b5fe2a9068ea4cef4bcb0e46b097e86dfbcb8048957c6fdc50825676",
+      "cambios": []
+    },
+    {
+      "destino": "sigma_forma.json",
+      "origen": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/sigma_forma.json",
+      "source_sha256": "c68ce32b300f57687222916c0f62ffdd616763a12a0e6f7da9b425bec2d81801",
+      "staged_sha256": "c68ce32b300f57687222916c0f62ffdd616763a12a0e6f7da9b425bec2d81801",
+      "cambios": []
+    },
+    {
+      "destino": "sondas_F2_info.json",
+      "origen": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/sondas_F2_info.json",
+      "source_sha256": "c304e64884eb4f06e42c9be7482e1dd3d25e22385000cf1a2adbc2cca397363d",
+      "staged_sha256": "c304e64884eb4f06e42c9be7482e1dd3d25e22385000cf1a2adbc2cca397363d",
+      "cambios": []
+    },
+    {
+      "destino": "in/predicciones_2024.parquet",
+      "origen": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_validacion_nocturna_20261023/predicciones_2024.parquet",
+      "source_sha256": "e4f55f69677bad6ed0820190e76b7f617e39b526bc6dbd368e2402890e3a7eb7",
+      "staged_sha256": "e4f55f69677bad6ed0820190e76b7f617e39b526bc6dbd368e2402890e3a7eb7",
+      "cambios": []
+    },
+    {
+      "destino": "in/final_sonda_global_2025.csv",
+      "origen": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_validacion_nocturna_20261023/sonda_global/final_sonda_global_2025.csv",
+      "source_sha256": "42659dbb4101d4f9a4ab00c287d77b2bd21d42be9734d2ca4a4074eb57c9add2",
+      "staged_sha256": "42659dbb4101d4f9a4ab00c287d77b2bd21d42be9734d2ca4a4074eb57c9add2",
+      "cambios": []
+    },
+    {
+      "destino": "F2_ncb_previos_2025.csv",
+      "origen": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_mision017_20261025/F2_ncb_previos_2025.csv",
+      "source_sha256": "119627d93003a98933d261e773ffaf6e29a7125346367f716a0a411b97dca11a",
+      "staged_sha256": "119627d93003a98933d261e773ffaf6e29a7125346367f716a0a411b97dca11a",
+      "cambios": []
+    },
+    {
+      "destino": "revision/J_final_creible_2025.csv",
+      "origen": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/calibracion_F2_creible_20261025_v1/final_creible_2025.csv",
+      "source_sha256": "1a003d8682f1fcd71ad4a44f59f785d394488fc1cc95e60722f418b04c30ef29",
+      "staged_sha256": "1a003d8682f1fcd71ad4a44f59f785d394488fc1cc95e60722f418b04c30ef29",
+      "cambios": []
+    },
+    {
+      "destino": "datos/developed/claims.parquet",
+      "origen": "Hackaton/Semana 1/Datos/claims.parquet",
+      "source_sha256": "323adf2e0f6c5975a026479d725d4cd04f51fce3aa069f897a99f664c6e392c0",
+      "staged_sha256": "323adf2e0f6c5975a026479d725d4cd04f51fce3aa069f897a99f664c6e392c0",
+      "cambios": []
+    },
+    {
+      "destino": "datos/emerging/claims.parquet",
+      "origen": "Hackaton/Semana 2/Datos/emerging/claims.parquet",
+      "source_sha256": "1a2fce8a26cb1e05de1f53fe4e39bde772a1898e845755487625355fec4cc0e9",
+      "staged_sha256": "1a2fce8a26cb1e05de1f53fe4e39bde772a1898e845755487625355fec4cc0e9",
+      "cambios": []
+    },
+    {
+      "destino": "datos/emerging/customers.parquet",
+      "origen": "Hackaton/Semana 2/Datos/emerging/customers.parquet",
+      "source_sha256": "c00a0095d5fb7b2b65cd9647216add49afb3703d863d5c358b1441f0fab1fb62",
+      "staged_sha256": "c00a0095d5fb7b2b65cd9647216add49afb3703d863d5c358b1441f0fab1fb62",
+      "cambios": []
+    },
+    {
+      "destino": "datos/emerging/addresses.parquet",
+      "origen": "Hackaton/Semana 2/Datos/emerging/addresses.parquet",
+      "source_sha256": "4e9bf9d2a1777896e84fd4ee471096ff075aaefefd544f91b731324b25425632",
+      "staged_sha256": "4e9bf9d2a1777896e84fd4ee471096ff075aaefefd544f91b731324b25425632",
+      "cambios": []
+    },
+    {
+      "destino": "datos/emerging/weather.parquet",
+      "origen": "Hackaton/Semana 2/Datos/emerging/weather.parquet",
+      "source_sha256": "645067069f68de8c4746d1ba48a454ff00155e1aa6fbbf64cdee48ae7269cbbd",
+      "staged_sha256": "645067069f68de8c4746d1ba48a454ff00155e1aa6fbbf64cdee48ae7269cbbd",
+      "cambios": []
+    },
+    {
+      "destino": "datos/emerging/policies_motor.parquet",
+      "origen": "Hackaton/Semana 2/Datos/emerging/policies_motor.parquet",
+      "source_sha256": "7c5dbb5e5b46629ebf01a66c991183d20b8585393b589bc2644fcbd6653a3ec1",
+      "staged_sha256": "7c5dbb5e5b46629ebf01a66c991183d20b8585393b589bc2644fcbd6653a3ec1",
+      "cambios": []
+    },
+    {
+      "destino": "datos/emerging/policies_buildings.parquet",
+      "origen": "Hackaton/Semana 2/Datos/emerging/policies_buildings.parquet",
+      "source_sha256": "ccc948fafc11e623d5cb010c2b494f6813f6048719eae7bcde28794467598319",
+      "staged_sha256": "ccc948fafc11e623d5cb010c2b494f6813f6048719eae7bcde28794467598319",
+      "cambios": []
+    },
+    {
+      "destino": "datos/emerging/policies_contents.parquet",
+      "origen": "Hackaton/Semana 2/Datos/emerging/policies_contents.parquet",
+      "source_sha256": "84d7f48d03933b018bec8fdc2f4bbd96df184cca7ae1971c38d3acc955720f8e",
+      "staged_sha256": "84d7f48d03933b018bec8fdc2f4bbd96df184cca7ae1971c38d3acc955720f8e",
+      "cambios": []
+    },
+    {
+      "destino": "datos/emerging/test_motor.parquet",
+      "origen": "Hackaton/Semana 2/Datos/emerging/test_motor.parquet",
+      "source_sha256": "108d5c68e9bab5ccd90ee5502bc3543aa515a5aa07fda44a3b227cf070a28aa5",
+      "staged_sha256": "108d5c68e9bab5ccd90ee5502bc3543aa515a5aa07fda44a3b227cf070a28aa5",
+      "cambios": []
+    },
+    {
+      "destino": "datos/emerging/test_buildings.parquet",
+      "origen": "Hackaton/Semana 2/Datos/emerging/test_buildings.parquet",
+      "source_sha256": "21f91aaa66a1b9efd216ad0e04ff12a507dbeb721084330d9b9f06c99edd0ca6",
+      "staged_sha256": "21f91aaa66a1b9efd216ad0e04ff12a507dbeb721084330d9b9f06c99edd0ca6",
+      "cambios": []
+    },
+    {
+      "destino": "datos/emerging/test_contents.parquet",
+      "origen": "Hackaton/Semana 2/Datos/emerging/test_contents.parquet",
+      "source_sha256": "af5ef2553e35a2d563ca091b173500daac55acc4969d1d3a96fa6b4ec3c6a012",
+      "staged_sha256": "af5ef2553e35a2d563ca091b173500daac55acc4969d1d3a96fa6b4ec3c6a012",
+      "cambios": []
+    },
+    {
+      "destino": "oof/pred/dev/T2b_motor.parquet",
+      "origen": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/pred/dev/T2b_motor.parquet",
+      "source_sha256": "8b48801aedff0faf535b610be1263a2fc7fc39e27cdd18b8e58b35d5264e336d",
+      "staged_sha256": "8b48801aedff0faf535b610be1263a2fc7fc39e27cdd18b8e58b35d5264e336d",
+      "cambios": []
+    },
+    {
+      "destino": "oof/pred/dev/T2b_buildings.parquet",
+      "origen": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/pred/dev/T2b_buildings.parquet",
+      "source_sha256": "c4940edef8a73cf9ad9179568e908181b9d40abdd655d5b0597b90a4c8944332",
+      "staged_sha256": "c4940edef8a73cf9ad9179568e908181b9d40abdd655d5b0597b90a4c8944332",
+      "cambios": []
+    },
+    {
+      "destino": "oof/pred/dev/T2b_contents.parquet",
+      "origen": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/pred/dev/T2b_contents.parquet",
+      "source_sha256": "041d6002db319eba8448152ad84366c0dd9eef67658ed727a34670208c388b50",
+      "staged_sha256": "041d6002db319eba8448152ad84366c0dd9eef67658ed727a34670208c388b50",
+      "cambios": []
+    },
+    {
+      "destino": "oof/pred/hold/T2b_motor.parquet",
+      "origen": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/pred/hold/T2b_motor.parquet",
+      "source_sha256": "9438b0f82bb1d88c7dde231d8eeb5bddfdcb50754d82dfe3f1f3d69fcc19e16d",
+      "staged_sha256": "9438b0f82bb1d88c7dde231d8eeb5bddfdcb50754d82dfe3f1f3d69fcc19e16d",
+      "cambios": []
+    },
+    {
+      "destino": "oof/pred/hold/T2b_buildings.parquet",
+      "origen": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/pred/hold/T2b_buildings.parquet",
+      "source_sha256": "d026fdfd038f7ced39a2fa101a40bdb5c7382f790ecd36d417b5b30a8653d456",
+      "staged_sha256": "d026fdfd038f7ced39a2fa101a40bdb5c7382f790ecd36d417b5b30a8653d456",
+      "cambios": []
+    },
+    {
+      "destino": "oof/pred/hold/T2b_contents.parquet",
+      "origen": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/pred/hold/T2b_contents.parquet",
+      "source_sha256": "23deffe2707a3e727393b3bbc5fb6f660840d0e1a3d5d89cea57f27fca1a467b",
+      "staged_sha256": "23deffe2707a3e727393b3bbc5fb6f660840d0e1a3d5d89cea57f27fca1a467b",
+      "cambios": []
+    }
+  ],
+  "etiquetas": {
+    "recibo": {
+      "stage": "etiquetas",
+      "exit_code": 0,
+      "utc": "2026-10-26T21:42:59.910862+00:00",
+      "log_sha256": "a194790008690d60144ccb9f65e7f1ba5119ce3ffdbc2a15db4c2c4464b225ea"
+    },
+    "T0_CU": "27997991.57",
+    "train_rows": 109296,
+    "test_rows": 209063,
+    "cotejo_nuevo_por_fila": false
+  },
+  "factores": {
+    "F3c": {
+      "stage": "F3c",
+      "exit_code": 0,
+      "utc": "2026-10-26T21:45:22.423953+00:00",
+      "attempt": 2,
+      "log_sha256": "24b17c01610a5c293050f1ab59e1bfe993c33e4b800b198d9a4c3e378aea865c",
+      "tool_sha256": "7f5c595c47e9b8fd2dedb697cda2e63a9db4396d9b7d13f08cdfe9f4a9c69163",
+      "sha256": "5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276",
+      "expected": "5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276",
+      "exact": true
+    },
+    "F3d": {
+      "stage": "F3d",
+      "exit_code": 0,
+      "utc": "2026-10-26T21:45:40.619459+00:00",
+      "attempt": 1,
+      "log_sha256": "ac02e8df9e9dc981bb2669df00d79630ea0764def81f883a6c21193766fb195e",
+      "tool_sha256": "7f5c595c47e9b8fd2dedb697cda2e63a9db4396d9b7d13f08cdfe9f4a9c69163",
+      "sha256": "5103f6fd9cf2c46bbb82a5ead586b4eaa0f7b34ecff6efdc99a2a0662e76706b",
+      "expected": "5103f6fd9cf2c46bbb82a5ead586b4eaa0f7b34ecff6efdc99a2a0662e76706b",
+      "exact": true
+    }
+  },
+  "intentos_conservados": {
+    "preparacion_inicial": "privado/reproduccion_m017/20261026 portable; falló al detectar pyarrow ausente en el entorno antiguo",
+    "F3c": {
+      "stage": "F3c",
+      "exit_code": 1,
+      "utc": "2026-10-26T21:44:08.209834+00:00",
+      "log_sha256": "2c626b86015d4acb54e2a7ad8b71b176b40e7602bc5a813791fd6c63ab4e8ddb"
+    },
+    "reparacion": "Commit 5efc95a: -I -X utf8; no parámetros nuevos ni nueva lectura de score"
+  },
+  "candidatos": {
+    "autor": "Codex",
+    "utc": "2026-10-26T21:43:45.075177+00:00",
+    "regla_sha256": "a3896781ed8965cbc777768017f5b5ada2744117fd8185056a4dfb828f6da8ee",
+    "sample_sha256": "160fc59043f1012337605c8d8446c0efbf81458e046cf02df9186d6f909d59ef",
+    "decision_participante": "Solo revisar y preparar por ahora",
+    "envios": 0,
+    "aprobacion_informe_es": false,
+    "ingles": "Diferido hasta versión española definitiva",
+    "limite": "Preflight del archivo, sin admisión estadística, scores nuevos o selección final.",
+    "candidatos": {
+      "F3c": {
+        "sha256": "5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276",
+        "checks": {
+          "sha_historico": true,
+          "columnas": true,
+          "filas": true,
+          "orden": true,
+          "unicos": true,
+          "finitos": true,
+          "no_negativos": true,
+          "test_tres_ramos": true
+        },
+        "filas": 209063,
+        "preflight": true
+      },
+      "F3d": {
+        "sha256": "5103f6fd9cf2c46bbb82a5ead586b4eaa0f7b34ecff6efdc99a2a0662e76706b",
+        "checks": {
+          "sha_historico": true,
+          "columnas": true,
+          "filas": true,
+          "orden": true,
+          "unicos": true,
+          "finitos": true,
+          "no_negativos": true,
+          "test_tres_ramos": true
+        },
+        "filas": 209063,
+        "preflight": true
+      },
+      "F4c": {
+        "sha256": "d5dfbf5769a134a09a3a3b23550eda496471b3511f9f66226c24301bb0de18f4",
+        "checks": {
+          "sha_historico": true,
+          "columnas": true,
+          "filas": true,
+          "orden": true,
+          "unicos": true,
+          "finitos": true,
+          "no_negativos": true,
+          "test_tres_ramos": true
+        },
+        "filas": 209063,
+        "preflight": true
+      }
+    }
+  },
+  "S41_desde_etiqueta": {
+    "tag": "parte1-entrega-final-S41",
+    "commit": "9e6f5f449ddbc812f2fdeb8081f5ffc05cd386dc",
+    "resultado": {
+      "sha256": "d8661c2874e9112bd3dd62ea4470a465ee309832dee53fd9dcaa4144dac643a5",
+      "total_CU": 213685158.19,
+      "regeneracion": {
+        "copia": "Hackaton/Repositorio_IAA2026/privado/reproduccion_m017/S41_desde_etiqueta.csv",
+        "sha256": "d8661c2874e9112bd3dd62ea4470a465ee309832dee53fd9dcaa4144dac643a5",
+        "igual_al_entregado": true
+      },
+      "checks": {
+        "columnas_exactas": true,
+        "filas": true,
+        "ids_unicos": true,
+        "ids_y_orden_sample": true,
+        "cobertura_tres_test": true,
+        "valores_finitos_no_negativos": true,
+        "predicciones_positivas": true,
+        "sha_entrega": true,
+        "sha_recibo": true,
+        "recibo_puntuado": true
+      },
+      "pasa": true
+    },
+    "limite": "Aplica factores al S30 guardado, sin reentrenarlo"
+  },
+  "versionado": {
+    "plan": "privado/plan_pendientes_20261026/plan.json",
+    "plan_sha256": "d9825956d2c15c5e3a1a7c7b423fdb1519b89bbea6b310834cec850a164b77c7",
+    "grupos_aplicados": 36,
+    "aplicados_sha256": "1cf1ef7267fca194ff0282c8f18784aff3ea4ecc23e24539482d1a8f952411f4",
+    "hook": "herramientas/git_hooks",
+    "historia_auditada": "registro/versionado/auditoria_20261026T214626Z.json",
+    "head_corte": "5efc95a35c2da6607835650c5d9056f6de171dce",
+    "guardia_historia": {
+      "blobs": 3695,
+      "bloqueos": 0,
+      "avisos": 0
+    },
+    "incidencia_indice_compartido": "263db8f también incluyó tres archivos P32 ya preparados concurrentemente. Se conserva el commit sin reescribir; la revisión de esta sesión corresponde al adaptador y su plan. Desde aa831e9 se coteja la lista exacta preparada antes de cada commit.",
+    "push": "pendiente_autorizacion_directa_tras_rechazo_auto_review",
+    "remoto": "https://github.com/manoloriveros/iaa-hackathon-2026",
+    "privacidad_confirmada": "private; herramienta conectada GitHub search_repositories, 26-10-2026",
+    "auto_review": "Rechazó git fetch/push HEAD --follow-tags: no reconoció autorización en este chat para el destino y payload concretos ni evidencia confiable de destino. Se comprobó después la privacidad por GitHub; no se reintentó el push."
+  },
+  "pendientes": {
+    "entrenamiento_total": "Fijar grafo y órdenes de todos los ancestros T2b/A1, generar OOF y producción desde originales; no cubierto por esta corrida.",
+    "F4c": "Faltan tablas FSp originales exactas; no sustituirlas con la recuperación de otra receta.",
+    "otra_persona": "Acta plantilla; no se contactó a nadie ni se acredita reproducción independiente.",
+    "ingles": "Diferido por petición directa hasta versión española definitiva.",
+    "informe_es": "La frase sobre f3_eval ausente del corte anterior queda superada. Integrar esta evidencia al cerrar la siguiente edición; aprobación general pendiente."
+  },
+  "envios_nuevos": 0,
+  "scores_nuevos": 0,
+  "seleccion_modificada": false,
+  "reproduccion_independiente": false
+}

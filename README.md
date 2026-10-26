@@ -38,6 +38,8 @@ Two AI assistants, Claude and Codex, worked in three lines: modelling, creative 
 
 ## Reproduce
 
+For the current two-week reproduction status, see [REPRODUCCION_DOS_SEMANAS.md](docs/REPRODUCCION_DOS_SEMANAS.md). The 26 October Windows check rebuilt S41 from its Git tag and F3c/F3d exactly in a new Python environment using original labels and saved OOF predictions. Full source-model retraining, F4c reconstruction and reproduction by another person remain open. See also [version control](docs/CONTROL_DE_VERSIONES.md) and [LICENSE](LICENSE).
+
 The competition data are not in this repository: the rules forbid redistributing them. The scripts read them from a folder with the structure of `Hackaton/Semana 1`, passed with `--semana1=<folder>` or the `IAA_SEMANA1` variable. Install the versions in `requirements.txt` (Python 3.13); with other versions the blend repeats exactly, but retraining may not be byte for byte.
 
 ```text
