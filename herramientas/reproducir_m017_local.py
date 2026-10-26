@@ -126,13 +126,18 @@ def run(work, mode):
         raise RuntimeError('Primero reconstruya las etiquetas desde originales.')
     results = []
     for name, args in commands:
-        receipt = work / f'receipt_{name}.json'
-        if receipt.exists():
-            raise RuntimeError(f'Ya existe {receipt.name}; no se repite un aprendizaje terminado.')
-        with (work / f'{name}.log').open('wb') as log:
-            r = subprocess.run([sys.executable, '-I', *args], cwd=work, stdout=log, stderr=subprocess.STDOUT)
+        previous = sorted(work.glob(f'receipt_{name}*.json'))
+        if any((r := json.loads(p.read_text(encoding='utf-8')))['exit_code'] == 0
+               and r.get('exact', True) for p in previous):
+            continue  # Nunca repetir una etapa ya completada.
+        attempt = len(previous) + 1
+        suffix = '' if attempt == 1 else f'_intento{attempt}'
+        receipt = work / f'receipt_{name}{suffix}.json'
+        logpath = work / f'{name}{suffix}.log'
+        with logpath.open('wb') as log:
+            r = subprocess.run([sys.executable, '-I', '-X', 'utf8', *args], cwd=work, stdout=log, stderr=subprocess.STDOUT)
         result = {'stage': name, 'exit_code': r.returncode, 'utc': datetime.now(timezone.utc).isoformat(),
-                  'log_sha256': sha(work / f'{name}.log')}
+                  'attempt': attempt, 'log_sha256': sha(logpath), 'tool_sha256': sha(__file__)}
         if name in EXPECTED and r.returncode == 0:
             result.update({'sha256': sha(work / f'exp26/{name}_2025.csv'), 'expected': EXPECTED[name]})
             result['exact'] = result['sha256'] == result['expected']
