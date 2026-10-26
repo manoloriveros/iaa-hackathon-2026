@@ -1,14 +1,78 @@
 {
   "author": "Codex",
-  "utc": "2026-10-26T19:36:24.850110+00:00",
-  "status": "P23registered_before_real_stage_learning",
+  "utc": "2026-10-26T19:49:13.349151+00:00",
+  "status": "P23complete_adverse_no_adoption",
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_canal_privada_plan.json",
   "plan_sha256": "6579975d775b8f5c4c06075d8bf5ee3cdf241b8640940b7389b87e8a60d477f3",
   "forum": {
     "author": "Codex",
-    "id": "COD-S2-20261026-PRIVADA-P23-CANAL-PREVIO",
-    "utc": "2026-10-26T19:36:24+00:00",
-    "previous_sha256": "b92646f2f13d7872081f4f804d4c40bec080a6486cfb64885e6dc54674d5d2c2",
-    "sha256": "17b0819814e73491f9fd1e0daea7826c310805895f2872c618e16fffc8cd0c43"
-  }
+    "id": "COD-S2-20261026-PRIVADA-P23-CANAL-RESULTADO",
+    "utc": "2026-10-26T19:49:13+00:00",
+    "previous_sha256": "17b0819814e73491f9fd1e0daea7826c310805895f2872c618e16fffc8cd0c43",
+    "sha256": "e64476bfe0815f7870ae8f48183aff2aac5931b2b54446f84e107e3da9265b6b"
+  },
+  "context_report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P23_canal_principal_20261026/P23_context_report.json",
+  "context_report_sha256": "25f6d7d452e638be7a245dc3f5dfda145dd3a603c46ad3725631f79d2bfe5981",
+  "replay": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P23_canal_principal_20261026/P23_replay_context.json",
+  "replay_sha256": "775a24deb0350eb3d4009fc0bcb4ae553c96f763a53e7f16638aadaaae9fc360",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P23_CANAL_PRINCIPAL.md",
+  "primary_new_closed_stages": 30,
+  "adverse_new_closed_stages_separate": 30,
+  "new_primary_closed_constants": 150,
+  "constants": {
+    "shape_factors": 0,
+    "level_constants": 0,
+    "residual_factors": 60,
+    "training_nuisance_levels": 90,
+    "shape_training_normalizers_separate": 0,
+    "training_stage_normalizers_separate": 90,
+    "held_stage_normalizers_separate": 90
+  },
+  "global_nominal": {
+    "POOLED": {
+      "delta": -0.00035539047978680195,
+      "bootstrap95": [
+        -0.0008291715596085247,
+        6.890894171308873e-05
+      ],
+      "post31_delta": -0.00077447202875259,
+      "worst_cell_delta": -0.004196086958520782
+    },
+    "TRANSFER": {
+      "delta": 0.0001696057077609334,
+      "bootstrap95": [
+        -0.00030500125631011306,
+        0.000699797904344899
+      ],
+      "post31_delta": -0.0005960504286948014,
+      "worst_cell_delta": -0.002634317582696468
+    }
+  },
+  "global_gates": {
+    "pooled_delta_ge002": false,
+    "pooled_lower95_positive": false,
+    "pooled_atleast4positive_folds": false,
+    "both_pooled_years_nonnegative": false,
+    "pooled_post31_nonnegative": false,
+    "conditional_transfer_nonnegative": true,
+    "all_nominal_and_stress_cell_floors": false
+  },
+  "new_business_gates": {
+    "cohort_nominal_points_above_floor": false,
+    "cohort_nominal_lower95_above_floor": false,
+    "cohort_family16_lower_above_floor": false,
+    "cohort_all_stress_points_above_floor": false,
+    "pooled_nominal_family16_lower_positive": false
+  },
+  "new_source_fits": 0,
+  "new_C0_fits": 0,
+  "new_future_inference": 0,
+  "new_final_prices": 0,
+  "new_submissions": 0,
+  "adopted": false,
+  "private_improvement_established": false,
+  "goal_achieved": false,
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true,
+  "next_unit": "P24: prepare one lower-complexity structural ablation of the current complete algorithm: use the existing calibrated A1Ssource component alone instead of the fixed50/50direct A1S+N3price mixture, before the original gender/telework/marketing stages; keep the same frozen H1/G3mean and observation contract. First inspect existing S0/S1/S2evidence and prior source-only recipes to rule out an identical completed experiment. Existing S0without residuals/H1or under a different observation link cannot establish this whole algorithm, but do not relabel an already tested equivalent. This is one fixed ablation, not lambda/line/business weight search; preserve N3and all alternatives. Reuse unchanged A1Sshape/level parents and learn only residual stages whose input base changes, at most40primary plus40adverse stage calls, zero source/C0fits. Prove synthetic/full-forward and cached-parent group ancestry first; freeze code/config/criteria/cost/forum before any real fit or score, with unchanged global gates and P23new-business safeguards. Do not claim eliminating all conditional features: A1S/observation/H1also retain documented availability limits. No new2025inference, prices or uploads in preparation. B00/F3c/all adverses preserved,2024open/adaptive, private improvement unproven."
 }
