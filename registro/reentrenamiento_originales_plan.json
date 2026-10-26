@@ -1,0 +1,18 @@
+{
+  "id": "REENTRENO-ORIGINALES-20261026",
+  "autor_orquestador": "Codex",
+  "autor_recetas_originales": "Claude",
+  "autorizacion_chat": "Sigamos con el reentrenamiento completo desde los datos originales en un entorno limpio. Revisa qué falta y avanza para resolverlo, sin enviar nada a Kaggle.",
+  "objetivo": "Cerrar los ancestros del F3c/F3d histórico desde originales; revisar y resolver también F4c sin cambiar selección ni enviar.",
+  "source_commit": "40b3100ba1fe59eb35faf5b3af84aa55b5ee6159",
+  "unidad_inicial": "Reconstruir bases e historia y entrenar T2b fuente dev/prod en los tres ramos; regenerar predicciones dev/hold/pcv/prod.",
+  "entorno": {"python_disponible": "3.12.14", "python_referencia_declarado": "3.13", "numpy": "2.5.3", "pandas": "3.0.5", "pyarrow": "26.0.0", "lightgbm": "4.7.0", "scipy": "1.18.1", "scikit-learn": "1.9.1", "include_system_site_packages": false},
+  "parametros": "Sin cambios respecto a gbm.py congelado: semilla 20261024, 2 hilos, hasta 5000 rondas con parada interna de 150 y reajuste de las rondas seleccionadas. SOLO=ninguno excluye nuevas variantes emergentes.",
+  "coste_unidad_inicial": "6 árboles fuente finales y 6 ajustes internos; 4 fases de predicción/calibración por ramo. No se entrenan T1/T3 ni se abren rejillas nuevas.",
+  "entradas_calculo": "Solo código congelado y copias de Parquet originales con SHA; directorios de modelos/predicciones inicialmente vacíos. Los procesos hijo bloquean red, subprocesos y lectura de archivos ajenos al entorno o corrida.",
+  "comparacion": "Después de ajustar, cotejar modelos y todas las predicciones por claves con el archivo histórico, en un proceso separado del entrenamiento. Registrar igualdad exacta y diferencias numéricas. Las referencias históricas nunca se inyectan como insumos.",
+  "criterio": "Las diferencias se conservan y se explican por receta/entorno; no se ajustan parámetros o semillas para forzar igualdad. No implica generalización privada o validación independiente.",
+  "ancestros_por_resolver": ["A1 confirmación 2024 y referencia designada A1fixF1b3n de 2025 desde sus originales", "Receta completa de mezcla y factores, con constantes públicas históricas congeladas", "FSp por peligro original y producción para F4c"],
+  "kaggle": "Sin envíos, consultas de cuota, nuevos scores, runs remotos o subidas. No hay autorización de envío.",
+  "ingles": "Diferido hasta versión española definitiva; sin cambio."
+}
