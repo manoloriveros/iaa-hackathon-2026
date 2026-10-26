@@ -1,14 +1,89 @@
 {
   "author": "Codex",
-  "utc": "2026-10-26T22:25:50.767173+00:00",
-  "status": "P37registered_before_target_learning",
+  "utc": "2026-10-26T22:31:58.400021+00:00",
+  "status": "P37complete_not_automatically_admitted",
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_clima_A1S_validacion_privada_plan.json",
   "plan_sha256": "cdb446df0619d16a866d28d39493b6c3d75f93d1888b65ba68467729aa34a24d",
   "forum": {
     "author": "Codex",
-    "id": "COD-S2-20261026-PRIVADA-P37-CLIMA-VALIDACION-PREVIO",
-    "utc": "2026-10-26T22:25:50+00:00",
-    "previous_sha256": "d69b5bcf8283b9af2870c87a85e11c4af56f55649907c40d25160cf11c95ee30",
-    "sha256": "39bf76a2cba91b9ad80fedda9b2e7b3c189dea8f55556d48087b1034e17a528c"
-  }
+    "id": "COD-S2-20261026-PRIVADA-P37-CLIMA-VALIDACION-RESULTADO",
+    "utc": "2026-10-26T22:31:58+00:00",
+    "previous_sha256": "39bf76a2cba91b9ad80fedda9b2e7b3c189dea8f55556d48087b1034e17a528c",
+    "sha256": "33597fd9e964f84e913fea0ea177957187c4b987437d8a5eb8edb982c37aca56"
+  },
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P37_VALIDACION_CLIMA_COMPLETA.md",
+  "context_report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P37_validacion_clima_20261026/P37_context_report.json",
+  "context_report_sha256": "d34f24fa7479ad5cf1ac198f4eb0b5b795a3d4f9e3b63bfb7148961c9a5cbcf3",
+  "replay": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P37_validacion_clima_20261026/P37_replay_context.json",
+  "replay_sha256": "e8fb25c573e09eb0d80b89fdba25170786fedbaab56401dfef3c03078f8c567c",
+  "new_primary_closed_learners": 30,
+  "adverse_closed_learners_separate": 30,
+  "new_primary_constants": 670,
+  "constants": {
+    "shape_factors": 280,
+    "level_constants": 90,
+    "residual_factors": 180,
+    "training_nuisance_levels": 120,
+    "new_source_component_calls": 30,
+    "new_residual_stage_calls": 40,
+    "shape_training_normalizers_separate": 80,
+    "training_stage_normalizers_separate": 120,
+    "held_stage_normalizers_separate": 120
+  },
+  "all_exploratory_gates_pass": false,
+  "global_nominal": {
+    "POOLED": {
+      "delta": -0.00014426996760744717,
+      "bootstrap95": [
+        -0.0008423311869840489,
+        0.0005331370890537162
+      ],
+      "post31_delta": -0.0010850465780454538,
+      "worst_cell_delta": -0.0048347708907962444
+    },
+    "TRANSFER": {
+      "delta": -0.00043064193758560296,
+      "bootstrap95": [
+        -0.0009982860802302872,
+        0.0001688388284387466
+      ],
+      "post31_delta": -0.00122323158544392,
+      "worst_cell_delta": -0.004115277482613858
+    }
+  },
+  "global_gates": {
+    "pooled_delta_ge002": false,
+    "pooled_lower95_positive": false,
+    "pooled_atleast4positive_folds": false,
+    "both_pooled_years_nonnegative": false,
+    "pooled_post31_nonnegative": false,
+    "conditional_transfer_nonnegative": false,
+    "all_nominal_and_stress_cell_floors": false
+  },
+  "new_business_gates": {
+    "cohort_nominal_points_above_floor": true,
+    "cohort_nominal_lower95_above_floor": false,
+    "cohort_family16_lower_above_floor": false,
+    "cohort_all_stress_points_above_floor": true,
+    "pooled_nominal_family16_lower_positive": false
+  },
+  "range_gates": {
+    "range_positive_group_support_min100": true,
+    "range_nominal_point_floor": true,
+    "range_nominal_lower95_floor": false,
+    "range_family20_lower_floor": false,
+    "range_all_stress_points_floor": true,
+    "pooled_nominal_stricter_family20_lower_positive": false,
+    "NB_stricter_family20_lower_floor": false
+  },
+  "adopted": false,
+  "new_source_fits": 0,
+  "new_C0_fits": 0,
+  "new2025inference": 0,
+  "new_submissions": 0,
+  "next_unit": "P38: use saved P37evidence to distinguish climate range limitations from source category handling without refitting or repeating P13/P32. First inspect existing source CatBoost recipes and current complete-model inputs; only prepare a materially distinct standard source alternative if current evidence documents a failure it can address. Preserve all gates and failed weather/weight recipes; no favorable-line rescue, ad-hoc climate extrapolation, new weights or publicscore tuning. No2025inference or upload from a failed P37.",
+  "private_improvement_established": false,
+  "goal_achieved": false,
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true
 }

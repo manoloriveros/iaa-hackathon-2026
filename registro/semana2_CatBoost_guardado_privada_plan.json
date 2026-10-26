@@ -1,0 +1,69 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T22:39:14.139785+00:00",
+  "candidate": "Existing_Q1_source_CatBoost_component_recovery_not_a_new_fit",
+  "necessity": "Do not blindly repeat earlier CatBoost or add source capacity. Three saved source2021-2024Q1models already exist. Their N0/Q1/Q2/Q3target calibration is not the current complete S2/H1algorithm. Reuse the exact teachers to prepare a distinct whole-algorithm assay.",
+  "precedents": "C18Ordered2023GLM-residual and E15/T3CatBoost adverse results remain. T3Q1localD2was belowN0; Q2/Q3small average gains did not authorize a robust delivery. No family or source holdout novelty claimed.",
+  "scope": "Load exactly3existing models, nofit. Use exact saved sourceF2features/categorical conversion and source rows2021-2024. VerifyT0/e_cost against current A1Ssource rows and hashes, not a newC0. Reproduce saved historical2023/2024annual_CBvalues, then center raw deltas on source exposure_model for compatibility.",
+  "relative": "raw delta minus log(weighted source mean exp(delta)), weights=unchanged A1Ssource exposure_model. Initial source rate is already fixed in the saved model metadata; raw_log_rate=log(initial)+rawdelta. The center is covariate/model only, not reestimation of the pricing objective.",
+  "controls": [
+    "All source/model/metadata hashes unchanged and exact parameter/source lineage.",
+    "No2025rows before prediction; historical keys/years match all current canonical rows.",
+    "Existing CBannual cache replay by model; save/load/reversal and leaf-value sum by another method.",
+    "Source centering by logsumexp and scalar summation; do not call historical producers which fit curves/models.",
+    "Block CatBoostRegressor.fit during every model read/application."
+  ],
+  "budget": {
+    "new_source_fits": 0,
+    "new_C0_fits": 0,
+    "new_target_fits": 0,
+    "new_scores": 0,
+    "new2025inference": 0,
+    "source_covariate_centers": 3,
+    "new_submissions": 0
+  },
+  "limits": [
+    "Existing full-source models have no new independent source-held veto; do not fake a held-source assessment on their training rows.",
+    "Recovery does not overcome old model failures or certify private benefit; whole-target protected comparison must be separately preregistered.",
+    "Underlying F2features use persistent climate and undated master information, with source2024and snapshot/reporting assumptions.",
+    "One saved model perline, not a three-seed ensemble. Compatibility filenames must state that difference."
+  ],
+  "technical_sources": [
+    "https://catboost.ai/docs/en/concepts/python-reference_catboost",
+    "https://catboost.ai/docs/en/concepts/loss-functions-regression"
+  ],
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/adaptar_CatBoost_guardado_P38.py": "06bc45de82426c60ed865dbddefdad77e6b864b2b9df504405151282cc745104",
+    "Hackaton/Repositorio_IAA2026/herramientas/mision017_fase2_tanda3_v3.py": "ef1af52ad294559ec70c0ab096e5599bc91b598f8fea3f1ad7e47a63dd0a6509",
+    "Hackaton/Repositorio_IAA2026/src/semana2/fuente_f2_2024_cb.py": "7c1e0926af8904624753b208480c24977f82b9b3d168ed5038472426ce05725e",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_mision017_fase2_tanda3_plan_v3.json": "c69b2c7f75cd0990bb2055120d40c022c6d1217a7d93261c22ec7d504cc04ad5",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_robustez2023_ciclo18_plan.json": "908c175a511c3387ef13a9461e9293e0b2ffb09c21f9f11ccdfa1dde85b58a6e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda3_20261025_v3/price_report.json": "cf24af894b154a54cb86b793239184d854547e55dd3710b707f1712732fe017a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda3_20261025_v3/validation_v1/report.json": "254ac56867ebcc1ae4a3819cc88eb2e38f92eaddee6749346e52cd4da19654b5",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/report.json": "57eda2556d06a969e2586abcc186261ae197cc0fd911977f0b2b296917fbbb1d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P37_validacion_clima_20261026/completion_receipt.json": "b0380a3a8a43512e41246d203670a51df16673278a0410d2ffc6cf9dc22268e8",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda3_20261025_v3/CB_motor.cbm": "bbd82cf7ee8425215c18e2a9f57f8f1833d20a56b8fde4827badef1d82959e09",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda3_20261025_v3/CB_motor_metadata.json": "43fb40adf049aee4eab35248798d9f21409c630f9854613105cd41a82aa24c6d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda3_20261025_v3/raw_CB_motor.parquet": "3f9cf1ef55c5228d7fa4d85a993646766dea00606e0b32878959a4af67c0aec0",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/motor.parquet": "5576c0178b1d17b4a9a3349461241dd2bd3113426388db5c33d320d455f1cf49",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/features_motor.parquet": "a25e433cdf217c5870447000797a1664551ba2727a64af1cbfc437dc7f596a83",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_motor.parquet": "ded113876f2069f7341491aa855e7e0fc4036e5e6e38d476466da905f5bee99c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/canonical_motor.parquet": "263f5a20d9048b4e035f311b6f3d9c7bb79499bd190dea879afdc45680fa29d5",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda3_20261025_v3/CB_buildings.cbm": "d785864198b9c8bfb4cad82810477ad959ce8e07284b341a060f48fcbaadf1fe",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda3_20261025_v3/CB_buildings_metadata.json": "30718fba675e1dd8bf7cb2f6b6e08e9c4b886ae89f4e608186fd2dad5a94bc4b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda3_20261025_v3/raw_CB_buildings.parquet": "0fe8226ab96b2b089f5748e348ca632a5c103e655dfc01a68025d43bd8e93b03",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/buildings.parquet": "0e732f8fba5eba51ee5e10c7fe99b7c9018c2dd63849a2a5bcb2bbf25e14d444",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/features_buildings.parquet": "056e53626aaa696c767f0cc32cec23b2b5c5a244eaa7a3bd0b4fa5ce65ef7f6a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_buildings.parquet": "a04a76fa8564f83a6da02d4f1885972b7ef82b3d741cc5a6bd22f0df1d98bf88",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/canonical_buildings.parquet": "e76a5d07cb7f0c6aaaa061762f48c5b1012eeda48d0b40f9ba238f56676b6e1e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda3_20261025_v3/CB_contents.cbm": "c90db2ee76b52b097608ddedb0eaeb187a60bc87a42193ad8ee968d6720f33e9",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda3_20261025_v3/CB_contents_metadata.json": "87509f21951deb694192fc42c0331a0a3e9a1015de225d39e88e3504460f19b6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda3_20261025_v3/raw_CB_contents.parquet": "9891cf0cd9d74ac370bc2e9af7a039228c11224b50f13f096e00dad3d1e56371",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/fuente_f2_2024_v2/contents.parquet": "037207ea2f474de6ab858b2e9953b8539bafd01844c733d58ada93aa9815fdbb",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/linaje_T2b_v1/features_contents.parquet": "b1c66e0ef27ab205d1de695e3ce6ded772c60fd43f0852236f0de074fb8b880b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_contents.parquet": "f8d5c595dc4bc1357decca37bc73660a557a473638f2aae83e085c9e68d4e1f1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/canonical_contents.parquet": "1fb354c30f8f093903203d896abcc6cfef3f0696677b3f6d7daa2edf67c35092"
+  },
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true
+}
