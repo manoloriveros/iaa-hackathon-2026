@@ -1,0 +1,26 @@
+{
+  "id": "PANEL-DATOS-S1-S2-20261026",
+  "autor": "Codex",
+  "solicitud": "Complementar y validar en detalle el dashboard para incluirlo en el informe con la primera y segunda semana.",
+  "alcance": "Análisis descriptivo de los originales de ambos mercados; exposición conciliada y T0 observado reconstruidos con las reglas vigentes; sin entrenamiento, selección, inferencia o envío.",
+  "entradas": ["week_1_data", "week_2_emerging_data", "week_2_preparation_index"],
+  "resolucion": "RUTAS_PROYECTO.json, relativo a C:/dev/Hakaton",
+  "criterios": [
+    "Integridad SHA-256 de originales y correspondencia con manifiestos vigentes",
+    "Asignación única por mercado, ramo, póliza y fecha; exclusiones disjuntas y conciliadas",
+    "Suma T0 en centavos igual a objetivos existentes de ambas semanas, por fila",
+    "Exposición inclusiva días/365, cuatro decimales, cotejada con capas existentes",
+    "Test 2025 sin etiquetas, nunca representado como coste cero",
+    "Comparaciones de mercados limitadas a años comunes 2023 y 2024",
+    "Totales y razones comprobados por una agregación alternativa, sin promediar porcentajes",
+    "Panel sin dependencias de red, filtros, tablas, exportación y diseño adaptable verificados",
+    "Figuras y anexo PDF revisados visualmente; límites y autoría visibles"
+  ],
+  "limites": [
+    "T0 es incurrido neto al cierre de 2024, no último observado",
+    "Frecuencia y retrasos solo de siniestros reportados al corte; truncamiento a la derecha",
+    "Los datos de 2024 ya se abrieron de forma adaptativa; este EDA no restablece confirmación",
+    "Revisión propia asistida por IA, sin validación profesional independiente",
+    "Agregados para uso local; no publicación ni redistribución autorizada"
+  ]
+}

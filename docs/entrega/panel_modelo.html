@@ -189,6 +189,7 @@ footer{color:var(--text-muted);font-size:12px;border-top:1px solid var(--border)
   <div class="kicker" data-t="kicker"></div>
   <h1 data-t="titulo"></h1>
   <p data-t="subtitulo"></p>
+  <p><a href="panel_analisis.html">Datos de ambas semanas / Data from both weeks</a></p>
   <div class="conmutadores" role="group" aria-label="Idioma / Language">
     <button type="button" data-idioma="es">Español</button>
     <button type="button" data-idioma="en">English</button>
@@ -4013,7 +4014,7 @@ footer{color:var(--text-muted);font-size:12px;border-top:1px solid var(--border)
         ['Entrega', 'Columnas, filas, orden, identificadores, valores y SHA-256', '10 de 10']
       ],
       t_bat: ['Entorno', 'Python', 'Versión del paquete', 'Casos', 'Pasan'], env: { controles_nube: 'Nube de referencia', controles_vm: 'Máquina virtual del participante', controles_windows: 'Windows' },
-      lim_lead: 'Lo que el modelo no puede demostrar con estos datos, y cómo se adaptará al mercado nuevo de la parte 2.',
+      lim_lead: 'Límites del modelo de semana 1 y protocolo de adaptación definido en ese corte. El análisis de los dos mercados está en el panel de datos de ambas semanas, enlazado en el menú.',
       t_lim: ['Límite', 'Por qué importa', 'Qué hacemos'],
       lim: [
         ['Una sola valoración (31-12-2024)', 'No permite observar el último ni demostrar suficiencia de reservas; un error del {res_autos} en las de autos ({res_edif} en edificios) ya mueve el nivel de 2025 un 1 %', 'Incertidumbre material declarada en los tres ramos; pedir valoraciones sucesivas'],
@@ -4114,7 +4115,7 @@ footer{color:var(--text-muted);font-size:12px;border-top:1px solid var(--border)
         ['Delivery', 'Columns, rows, order, identifiers, values and SHA-256', '10 of 10']
       ],
       t_bat: ['Environment', 'Python', 'Package version', 'Cases', 'Passed'], env: { controles_nube: 'Reference cloud', controles_vm: 'Participant virtual machine', controles_windows: 'Windows' },
-      lim_lead: 'What the model cannot prove with these data, and how it will adapt to the new market of Part 2.',
+      lim_lead: 'Limits of the Week 1 model and adaptation protocol defined at that cut. The data dashboard linked in the menu covers both markets.',
       t_lim: ['Limitation', 'Why it matters', 'What we do'],
       lim: [
         ['A single valuation (31-12-2024)', 'Ultimate cannot be observed and reserve adequacy cannot be proven; a {res_autos} error in motor case reserves ({res_edif} in buildings) already moves the 2025 level by 1%', 'Declared a material uncertainty in all three lines; request successive valuations'],
@@ -4386,7 +4387,8 @@ footer{color:var(--text-muted);font-size:12px;border-top:1px solid var(--border)
     var li = el('section', { id: 'limites' }, [el('h2', { text: T.sec.limites }), el('p', { class: 'lead', text: T.lim_lead })]);
     var ra = C.reservas_acotacion.por_ramo, pc = function (x) { return n(x * 100, { dec: 1 }) + (lang === 'en' ? '%' : '\u00a0%'); };
     li.appendChild(tablaHTML(T.t_lim, T.lim.map(function (fila) { return fila.map(function (s) { return s.replace('{res_autos}', pc(ra.motor.error_material)).replace('{res_edif}', pc(ra.buildings.error_material)); }); })));
-    li.appendChild(el('h3', { text: lang === 'en' ? 'Week 2: adaptation protocol' : 'Semana 2: protocolo de adaptación' }));
+    li.appendChild(el('h3', { text: lang === 'en' ? 'Adaptation protocol defined in Week 1' : 'Protocolo de adaptación definido en semana 1' }));
+    li.appendChild(el('p', {}, [el('a', { href: 'panel_analisis.html', text: lang === 'en' ? 'Open the data analysis for both weeks: exposure, claims, missingness and source checks.' : 'Abrir el análisis de ambas semanas: exposición, siniestros, faltantes y conciliación con las fuentes.' })]));
     li.appendChild(tablaHTML(T.t_ad, T.ad));
     main.appendChild(li);
     main.appendChild(el('footer', { text: T.pie + ' · ' + C.generado_utc }));
