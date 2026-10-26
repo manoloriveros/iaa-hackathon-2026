@@ -50,3 +50,7 @@ El acta separa repetir factores desde OOF, reentrenar toda la cadena y revisar l
 F3d y F4c se revisan y preparan, sin envío o cambio de selección. La regla v4 queda como antecedente para una futura decisión, no como autorización de envío ni cierre de las guardas comunes de selección. Su ventaja privada esperada depende de supuestos; F3d conserva la sensibilidad a clientes influyentes y F4c la brecha de reproducción.
 
 El inglés queda diferido hasta que la versión española sea definitiva. El informe español anterior y sus PDF se conservan como corte fechado: su frase sobre `f3_eval` ausente queda superada por esta evidencia y tendrá que actualizarse al cerrar la siguiente edición completa. No se atribuye aprobación humana general.
+
+## Cotejo posterior de alcance, 26 de octubre
+
+El [cierre de doce pendientes](semana2/CIERRE_DOCE_PENDIENTES_F3C.md) agrega igualdad por fila de las 109.296 etiquetas históricas, cuatro contrastes de receta residual, cinco archivos de intervalos guardados y un grafo de nueve nodos. No reentrena todos los ancestros A1/T2b ni FSp. Los controles adversos protegen los factores y niveles nuevos; la mezcla de peligros, categorías y folds heredados conservan los límites allí identificados. La puerta `herramientas/puerta_uso_F3c.py claim_full_reproduction` rechaza esa afirmación con la evidencia actual. La reproducción integral y la realizada por otra persona siguen abiertas.

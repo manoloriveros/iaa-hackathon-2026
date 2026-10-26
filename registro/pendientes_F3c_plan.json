@@ -1,0 +1,29 @@
+{
+  "id": "CIERRE-12-F3C-20261026",
+  "author": "Codex",
+  "scope": "Doce pendientes del texto aportado por el participante; evaluación local, sin envíos ni selección manual",
+  "status": "frozen_before_new_calculations",
+  "historical_information_already_seen": ["SENSIBILIDAD_SEMANA2.md y B05 de Claude", "P19, P20, P26, P30, P32", "reproduccion_m017_actual.json"],
+  "evidence_class": "Exploratoria y adaptativa. Congelar ahora no restaura independencia de 2024 ni corrige selección histórica.",
+  "candidates": ["sin_factores_propios", "F3c_receta_residual_transferida", "constante_ramo_negocio"],
+  "comparisons": "Comparación principal F3c menos sin factores en 2023->2024 T2b; A1 y mezcla como sensibilidad de base, 2024->2023 como traslado inverso descriptivo. El F3c exacto de producción usa ambos años: no llamarlo OOT.",
+  "fixed_recipe_clarification_before_calculation": "Se conservan los exponentes a_cred de final_info_3puntos.json, originados en el público2025, iguales entre candidatos. Calibración histórica significa nivel estimado solo en entrenamiento; no significa una receta elegida sin público. Se añade vista sin esos exponentes de público. La constante recibe mismo overlay de nivel, nunca un óptimo público propio supuesto. Familia6 se refiere solo al contraste principal y sus contrastes de referencia; intervalos de sensibilidades/segmentos no controlan toda la búsqueda histórica.",
+  "metric": {"power": 1.5, "primary": "D2 unweighted on observed T0, period cost", "secondary": "2025 cell x exposure-band row weights; no equivalence to future population established", "bootstrap": "10000 paired customer-address connected-component draws, common draws for all models within view", "seed": 2026102607, "family_size": 6, "simultaneous_quantiles": [0.004166666666666667, 0.9958333333333333], "delta_min": 0.0005},
+  "acceptance": {
+    "01": "No recomendar promoción: límite inferior simultáneo >0.0005, diferencias motor/buildings/contents/new_business/renewal >=-0.001 y guardas históricas completas. Toda incertidumbre conserva referencia sencilla y alternativas.",
+    "02": "Conservar salvaguarda original fallida. Soporte futuro descriptivo por filas, exposición, composición, grupos positivos; celda material >=1% exposición2025, alerta si n_eff<100 o menos de30grupos positivos o categoría no vista. Falta de potencia bloquea afirmación de protección.",
+    "03": "Separar nivel histórico, overlay público común y lectura pública real. Prohibido atribuir a constante una calibración pública propia sin sondas de esa constante; declarar esa comparación no identificada. No nuevas sondas.",
+    "04": "Factores K300 fijos en secuencia género,teletrabajo,segmento; años/ramo/negocio completos. Reversión de signo o pérdida motorNB<-0.001 impide afirmar estabilidad. No elegir subfactores ex post.",
+    "05": "Mismos escenarios para todos: retirar top max(5,ceil(.001*G)) y31 grupos favorables por contraste, excluir top1% costes positivos,100 perturbaciones fijas de1% grupos al azar con semilla2026102608. Pérdida de ganancia bloquea robustez; top retrospectivo solo diagnóstico.",
+    "06": "Curvas de conteo y coste separadas; severidad tardíos/tempranos por peligro2023. Escenarios severidad tardíos x0.5,x1.5,x2 y cola BI/subsidence5%,10%. Reportar antes/después de overlay público congelado; recalibración pública contrafactual queda no identificada sin recibos propios. No llamar conteo a curva ponderada por coste.",
+    "07": "Reserva de caso x0.75,x1.25 agregado,por ramo y por peligro; inversos BI1.25/resto0.75 y BI0.75/resto1.25. Evaluar objetivos y niveles históricos reaprendidos, primas y rangos. Cambio individual>=10% material; no suficiencia real con una sola valoración.",
+    "08": "Auditoría estática de cada etapa y joins/grupos; no aprobación integral si ancestros fuente/OOF sin replay protegido. Prueba de alteración de y retenido para nuevos factores/calibración: parámetros y precios deben coincidir exactos.",
+    "09": "Inventario con hash de consultas2024 existentes, candidatos/criterios/code/input hashes antes de cómputo nuevo; no confirmación intacta ni corrección multiplicidad retrospectiva.",
+    "10": "Campos disponibles al cotizar demostrados con fecha o contrato; maestro sin fecha=supuesto. Categorías nuevas/ausencias/soporte futuro; fallback sin factores para claves no vistas y todos los factores propios neutralizados si falta disponibilidad/admisibilidad. No establecer legalidad fuera del mercado sintético.",
+    "11": "Entorno limpio y grafo completo desde originales con versiones,semillas,órdenes y tolerancias; OOF guardadas=parcial. No declarar cierre si faltan órdenes/artefactos de ancestros; documentar impedimento exacto y conservar evidencia parcial existente. Otra persona requiere acta real.",
+    "12": "20 referencias con todos los candidatos guardados comparables, escenarios deterministas explícitos, fórmula oficial Decimal, exposición de periodo una sola vez,gastos/comisiones y redondeo HALF_UP; señal>=10% individual o>=5% total. Escenarios no son IC ni margen suficiente. Predicciones/ref IDs solo privado."
+  },
+  "cost": "Sin árboles fuente nuevos, sin C0 nuevo. Factores escalares K300, niveles históricos, bootstrap, escenarios deterministas y auditoría. Originales/corridas históricas de solo lectura. Sin automatizaciones, delegación, push o mensajes externos.",
+  "consequence": "Emitir matriz prueba/criterio/resultado/limitación/consecuencia. Todo pendiente no acreditado conserva bloqueo operativo con condición verificable; no marcar completo lo que no se ejecutó.",
+  "user_attachment": "Texto pegado.txt, attachment259a158e-ca3d-4d84-9df1-d5eb4025650a"
+}

@@ -23,3 +23,9 @@ La UI pasó 508 comprobaciones sobre 96 combinaciones de cohorte, ramo e indicad
 Se conserva un primer intento de seis páginas: una línea de la segunda pasó a una página huérfana. Se acortó esa explicación sin reducir el cuerpo tipográfico. La prueba inicial de navegación trató el fragmento `#limites` como parte del nombre de archivo; se corrigió la prueba. El informe y el dashboard pasaron después sus comprobaciones finales.
 
 El índice es `registro/informe_comparativo_actual.json`. `datos_informe.json` recoge fuentes con autoría y SHA-256; la corrida conserva el PDF, sus cinco PNG, las veinte referencias y los recibos. Los comandos están en [el README de entrega](../README.md). No hubo entrenamiento, nuevas predicciones, envíos o modificación de la selección final. S41 permanece seleccionada en parte 1; F3c es la referencia pública medida al corte y la selección de parte 2 sigue abierta.
+
+## Revisión posterior de los doce pendientes, 26 de octubre
+
+El [cierre técnico de F3c](../../semana2/CIERRE_DOCE_PENDIENTES_F3C.md) limita las conclusiones que pueden trasladarse a la entrega: ganancia global condicional, incertidumbre de negocio nuevo, concentración y cadena completa pendiente de reproducción. No promueve F3c ni acredita uso profesional.
+
+También corrige un supuesto de la página de primas: la descripción oficial dice gasto fijo por póliza, sin indicar prorrateo anual. La lectura principal nueva cobra 85 CU por referencia y suma 20.800,02 CU en F3c; la anterior, 85 × exposición, sumaba 20.304,23 CU y se conserva como sensibilidad. La nueva tabla por referencia está en privado, enlazada desde el cierre. El PDF de esta edición permanece como corte anterior y requiere integrar esa corrección antes de otra entrega. Sus controles de cálculo y maquetación no resolvían la interpretación del gasto.
