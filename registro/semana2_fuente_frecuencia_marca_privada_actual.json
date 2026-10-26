@@ -1,14 +1,34 @@
 {
   "author": "Codex",
-  "utc": "2026-10-26T20:56:54.686932+00:00",
-  "status": "P28registered_before_source_inner_fits",
+  "utc": "2026-10-26T21:02:27.970317+00:00",
+  "status": "P28source_inner_verified_target_pending",
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_fuente_frecuencia_marca_privada_plan.json",
   "plan_sha256": "c9cd1765ef9ef722b1479ee16f494d8e1a3f4323d234a2d09018a11755f0a44a",
   "forum": {
     "author": "Codex",
-    "id": "COD-S2-20261026-PRIVADA-P28-FRECUENCIA-PREVIO",
-    "utc": "2026-10-26T20:56:54+00:00",
-    "previous_sha256": "618614f880e596b935e3047a4e17143b5c00c98b12528d075d6c257076bd3270",
-    "sha256": "103bcba54a1ca5be0728be0182e36aed1ad8c046fc66079c58b4b54d4ae30cfa"
-  }
+    "id": "COD-S2-20261026-PRIVADA-P28-FRECUENCIA-RESULTADO",
+    "utc": "2026-10-26T21:02:28+00:00",
+    "previous_sha256": "103bcba54a1ca5be0728be0182e36aed1ad8c046fc66079c58b4b54d4ae30cfa",
+    "sha256": "07d43b587b42e6a4cee6a3e7a170550cfb7c438d026b0f82171ce4a3afc3531a"
+  },
+  "execution": null,
+  "attempts": 30,
+  "completed": 30,
+  "output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P28_fuente_frecuencia_marca_20261026",
+  "new_C0_fits": 0,
+  "new_target_scores": 0,
+  "new_submissions": 0,
+  "source_gate_all_pass": true,
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P28_fuente_frecuencia_marca_20261026/report.json",
+  "report_sha256": "2397372d70dd5a38926b60aa58a0b607d54dd9b5557a4d47724d3c1a7cca7685",
+  "replay": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P28_fuente_frecuencia_marca_20261026/numerical_replay.json",
+  "replay_sha256": "f03f3e2de60344e9980536ef1c2e1792e2a4a5e3e3b27e6f1d02bac26811ee9c",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P28_FRECUENCIA_MARCA_FUENTE.md",
+  "new_source_GLM_fits": 30,
+  "new_source_baseline_constants": 30,
+  "new_future_inference": 0,
+  "next_unit": "P29: preregister30full-source GLM refits with exact P28features,families,nominal penalties and paired offset formulas, no source hyperparameter/seed/line search. Fit preprocessing on all source only; scale penalties by the full-source training weights according to frozen P27formula. Do not refit source C0. Export summed annual frequency*mark rates and original exposure-weighted relative normalization, historical2023/2024only, sourceJSON/gradient/scalar/source-calendar checks. Legacy three_seed cache name would denote one fixed15peril sum, never3seeds. No target calibration/score,2025inference, finalprice or upload in that unit. Only later separately preregister whole original50/50S2/H1comparison with all global/NB/cohort/stress gates; no private improvement from source pass.",
+  "goal_achieved": false,
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true
 }

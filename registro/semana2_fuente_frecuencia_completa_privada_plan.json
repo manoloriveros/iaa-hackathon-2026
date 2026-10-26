@@ -1,0 +1,102 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T21:04:33.130071+00:00",
+  "candidate": "P28fixed_peril_GLMs_full_source",
+  "hypothesis": "Refit the exact source-eligible standard pair recipe on all source before evaluating transport; no new architecture or tuning from source differences.",
+  "configuration": {
+    "frequency": {
+      "class": "PoissonRegressor",
+      "nominal_alpha": 0.001,
+      "response": "N/E_N_RKM",
+      "weight": "E_N_RKM",
+      "alpha": ".001*n_original_training_rows/sum(E_N_RKM)"
+    },
+    "mark": {
+      "class": "TweedieRegressor",
+      "power": 1.5,
+      "nominal_alpha": 1.0,
+      "response": "C/(N*r),r=E_C/E_N_RKM",
+      "weight": "N*sqrt(r)",
+      "alpha": "sum(N)/sum(N*sqrt(r))"
+    },
+    "estimator": {
+      "fit_intercept": true,
+      "solver": "lbfgs",
+      "max_iter": 3000,
+      "tol": 1e-07
+    },
+    "counts": "Actual accepted claims, no T0positive-period proxy",
+    "reference_constants": "Per-peril Poisson rate=sum(N)/sum(E_N); mark=sum(C/sqrt(r))/sum(N*sqrt(r)), source training only.",
+    "held_observed_cost": "sum_perils(E_C*predicted_frequency*predicted_mark)"
+  },
+  "features_and_preprocessing": "Exact P28/P14main-effects predictors and missing flags; learn same medians/clips/scales/categories using full source only. No target preprocessing.",
+  "source_composition": "One Poisson/Tweedie1.5pair per15fixed perils; sum annual frequency*mark. No cost-completion or calendar exposure multiplication in annual rate.",
+  "normalization": "Original A1Sexposure_model-weighted source mean annual rate; centered relative mean1, target calibration remains later.",
+  "cache_interface": "historical_line_three_seed.parquet compatibility name denotes ONE fixed15peril sum, not3seeds or independent validation.",
+  "budget": {
+    "full_source_GLM_fits": 30,
+    "new_source_baseline_constants": 0,
+    "source_covariate_normalizers": 3,
+    "new_synthetic_fits": 0,
+    "new_C0_fits": 0,
+    "new_target_calibrations": 0,
+    "new_target_scores": 0,
+    "new_future_inference": 0,
+    "new_final_prices": 0,
+    "new_submissions": 0
+  },
+  "criteria": [
+    "Same P28gradient<=1e-4,no convergence warning, JSON/order/manual predictor controls before consuming each saved model.",
+    "Save every model before controls; reconcile each invoked attempt, do not repeat failed fits.",
+    "Annual peril sum and normalization by scalar arithmetic; positive finite historical components, exact keys/years.",
+    "Filter2025before transform/predict; no future inference or prices. No target admission from full-source completion."
+  ],
+  "preflight": {
+    "new_GLM_fits": 0,
+    "annual_peril_product_sum_scalar_verified": true,
+    "JSON_and_order_exact": true,
+    "weighted_relative_mean_one": true,
+    "center_other_method_verified": true
+  },
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/completar_fuente_frecuencia_P29.py": "576d0c141c4bad499a7d3697be56d618be73fec9d52749f1caaad522ebaaaa89",
+    "Hackaton/Repositorio_IAA2026/herramientas/fuente_frecuencia_marca_P28.py": "db03b83029f8fca9ae638e7b05555ffb94dfbf34595dc85d108b85c73264d3ad",
+    "Hackaton/Repositorio_IAA2026/herramientas/GLM_ausentes_privada_P14.py": "4d34de1404cfb4a719cd6f95e1cc8aae851ea0162cd3e9b9af5cc9d894c3b993",
+    "Hackaton/Repositorio_IAA2026/herramientas/entrenar_GLM_fuente_P11.py": "07dfc3670abcbd2b1178acd76e888291e645cc1ad007c5b4168f1a5ab175f2c4",
+    "Hackaton/Repositorio_IAA2026/herramientas/preparar_contrato_frecuencia_P27.py": "67e43d252325a6855feba1a9d1596fe8054240d137098e5d3a96e7bdb091562c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P28_fuente_frecuencia_marca_20261026/report.json": "2397372d70dd5a38926b60aa58a0b607d54dd9b5557a4d47724d3c1a7cca7685",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P28_fuente_frecuencia_marca_20261026/completion_receipt.json": "ab54e5a5bc15c28cdea75768f74b84e101c627452871e1743d35b99087f5bd87",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P28_fuente_frecuencia_marca_20261026/numerical_replay.json": "f03f3e2de60344e9980536ef1c2e1792e2a4a5e3e3b27e6f1d02bac26811ee9c",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_fuente_frecuencia_marca_privada_plan.json": "c9cd1765ef9ef722b1479ee16f494d8e1a3f4323d234a2d09018a11755f0a44a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s1_motor.parquet": "c2a2f3d5a14f96892bdd6f6f973b03449f874a7df0ff42d687533254a5833ed3",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_motor.parquet": "ded113876f2069f7341491aa855e7e0fc4036e5e6e38d476466da905f5bee99c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s2_motor.parquet": "2063f50044d41963032164373dcc895583e92dd7e9d1687aac7efda31910e75d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s2_motor.parquet": "7a6e236ecb97dda159f73650b660955206b33a73bd4b22e3935581c72afc3631",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/recuentos_fuente2024_v1/counts_motor.parquet": "3488603e1d5ff29535eb6d617fa9b9dc237f19ab5d4fad1d0b8344951371f19b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/recuentos_fuente2024_rkm_reuse_v1/rkm_links_motor.parquet": "1a76df55747f948f1f60b739133d4a06e74cc93920f4677ecbf554a94e7e8db5",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s1_buildings.parquet": "471922f7f8318216270fc7332028286d84162fbe78aa0279173903525b4aee90",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_buildings.parquet": "a04a76fa8564f83a6da02d4f1885972b7ef82b3d741cc5a6bd22f0df1d98bf88",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s2_buildings.parquet": "801b708d1738b6b6e04e1e9e814ec798397e65f817e9267bfc425c537f153846",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s2_buildings.parquet": "26dad682688854722be16ff52bc4332fd9acfe310b5ea4838d8c772bea32b775",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/recuentos_fuente2024_v1/counts_buildings.parquet": "47fffb7a872db2d99894670f0273d666be1e3cb38b0bc43f6d5048075eb10dff",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/recuentos_fuente2024_rkm_reuse_v1/rkm_links_buildings.parquet": "93d91bb1bc408d3e974fd2752ef77a762d24950060885003c213ef532e7ccb80",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s1_contents.parquet": "07c2395bc8efe3045baec7677e56c3824c44200bd9ab75c14212e862f6e63993",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_contents.parquet": "f8d5c595dc4bc1357decca37bc73660a557a473638f2aae83e085c9e68d4e1f1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s2_contents.parquet": "1576409971c67f28f9bc61a82b887c63a93a2e783ae12ed39b15e07fe34f46c7",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s2_contents.parquet": "633f4b7bbccd5929daf418a062c5023e761bfabfd5db2a7da432354c47472ccc",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/recuentos_fuente2024_v1/counts_contents.parquet": "da10794289296fd749b11c26948dbce4fcd5be480d5ad81ff8f432801ed35c50",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/recuentos_fuente2024_rkm_reuse_v1/rkm_links_contents.parquet": "2e8a58fb3a7ff90d1dfb04f5c17bcb0b60384bd2f25923a471b28de6a0af4bd8"
+  },
+  "limits": [
+    "Accepted reported events as of official cut; source-only RKM and empirical cost completion are frozen assumptions, not identified ultimate event counts.",
+    "Count RKM support and cost empirical1095support differ; tail beyond observed support and reserve adequacy remain unknown.",
+    "New-source count/mark model would change only source annual cost relativities; later whole target comparison still required.",
+    "Support thresholds100train/20held are source-preflight feasibility, not target credibility or proof of private generalization.",
+    "A main-effects mixture may underfit within-peril nonlinearities; no guarantee from simplicity.",
+    "Source holdout and prior search are adaptive/conditional; no private-performance or professional independent-validation claim.",
+    "Source-observation objects have common ancestry including source-held groups; only coefficients/preprocessing had the prior protected new source split.",
+    "All-source production fitting is legitimate but supplies no new independent validation."
+  ],
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true
+}
