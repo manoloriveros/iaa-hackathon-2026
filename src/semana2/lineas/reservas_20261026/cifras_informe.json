@@ -1,0 +1,2788 @@
+{
+ "autor": "Claude (Cowork)",
+ "documento": "INFORME.md",
+ "fuentes": {
+  "datos": "resultados/datos.json",
+  "a": "resultados/parte_a.json",
+  "b": "resultados/parte_b.json",
+  "c": "resultados/parte_c.json",
+  "d": "resultados/parte_d.json",
+  "e": "resultados/parte_e.json",
+  "f": "resultados/parte_f.json",
+  "g": "resultados/parte_g.json",
+  "ctx": "resultados/contexto.json",
+  "cur": "resultados/curvas.json"
+ },
+ "descripcion": "Cada cifra de INFORME.md con su ruta o cálculo sobre los JSON de resultados/, su formato y el fragmento literal donde aparece; las citas de otros documentos van en literales con su fuente.",
+ "cifras": [
+  {
+   "id": "c002",
+   "formato": "raw",
+   "valor": "13:53:19",
+   "contexto": "etapa de cálculo empezó a las 13:53:19 UTC ([`resultados/datos.json`",
+   "calculo": "=hora(datos/utc)"
+  },
+  {
+   "id": "c003",
+   "formato": "dec3",
+   "valor": "0,141",
+   "contexto": "llega una fracción que va de 0,141 a 0,505 según la celda, y 0",
+   "calculo": "=elasticidad_min()"
+  },
+  {
+   "id": "c004",
+   "formato": "dec3",
+   "valor": "0,505",
+   "contexto": "una fracción que va de 0,141 a 0,505 según la celda, y 0,146 si el",
+   "calculo": "=elasticidad_max()"
+  },
+  {
+   "id": "c005",
+   "formato": "dec3",
+   "valor": "0,146",
+   "contexto": "0,141 a 0,505 según la celda, y 0,146 si el error fuera igual en los",
+   "ruta": "d/elasticidad_analitica/uniforme"
+  },
+  {
+   "id": "c006",
+   "formato": "dec3",
+   "valor": "0,647",
+   "contexto": "intervalo al 90 % baja hasta 0,647 y F3c se movería un 1 % con",
+   "ruta": "b/beta/motor|_ramo/ic90/0"
+  },
+  {
+   "id": "c007",
+   "formato": "udec3",
+   "valor": "0,697",
+   "contexto": "F3c se movería un 1 % con b = 0,697. Con la β puntual, el nivel",
+   "ruta": "d/escenarios/motor|b|ramo/umbral_F3c/0"
+  },
+  {
+   "id": "c008",
+   "formato": "spct2",
+   "valor": "−0,66",
+   "contexto": "puntual, el nivel de F3c cambiaría −0,66 % en autos, −0,10 % en edificios",
+   "ruta": "d/escenarios/motor|b|ramo/F3c_con_beta_puntual"
+  },
+  {
+   "id": "c009",
+   "formato": "spct2",
+   "valor": "−0,10",
+   "contexto": "cambiaría −0,66 % en autos, −0,10 % en edificios y +0,47 % en",
+   "ruta": "d/escenarios/buildings|b|ramo/F3c_con_beta_puntual"
+  },
+  {
+   "id": "c010",
+   "formato": "spct2",
+   "valor": "+0,47",
+   "contexto": "autos, −0,10 % en edificios y +0,47 % en contenidos.",
+   "ruta": "d/escenarios/contents|b|ramo/F3c_con_beta_puntual"
+  },
+  {
+   "id": "c011",
+   "formato": "pct1",
+   "valor": "42,7",
+   "contexto": "coste que llegó tarde fue un 42,7 % mayor de lo que prevé la curva",
+   "calculo": "=menos_uno(c/k/motor|bodily_injury/k_e)"
+  },
+  {
+   "id": "c012",
+   "formato": "dec3",
+   "valor": "1,021",
+   "contexto": "curva del desarrollado (IC90 1,021 a 2,021). Aun así, en F3c ese",
+   "ruta": "c/k/motor|bodily_injury/ic90_k_e/0"
+  },
+  {
+   "id": "c013",
+   "formato": "dec3",
+   "valor": "2,021",
+   "contexto": "del desarrollado (IC90 1,021 a 2,021). Aun así, en F3c ese desvío",
+   "ruta": "c/k/motor|bodily_injury/ic90_k_e/1"
+  },
+  {
+   "id": "c014",
+   "formato": "apct2",
+   "valor": "0,36",
+   "contexto": "sube el nivel de autos solo un 0,36 %, porque la sonda lo absorbe",
+   "ruta": "d/escenarios/motor|k|largo/F3c_con_k_e_puntual"
+  },
+  {
+   "id": "c015",
+   "formato": "dec3",
+   "valor": "0,021",
+   "contexto": "relatividades cambia como mucho 0,021, y los factores de F2 y F3c",
+   "calculo": "=e1_max_abs_delta_a()"
+  },
+  {
+   "id": "c016",
+   "formato": "dec3",
+   "valor": "0,026",
+   "contexto": "credibilidad que usan, menos de 0,026 en logaritmo (esta última, lectura",
+   "calculo": "=e3_max('todos', 'max_abs_cambio_log_factor_con_credibilidad_no_preinscrito')"
+  },
+  {
+   "id": "c017",
+   "formato": "spct2",
+   "valor": "−0,36",
+   "contexto": "puntuales a la vez F3c se movería −0,36 % en autos, −0,11 % en edificios",
+   "ruta": "g/G2_escenario_central/por_ramo_aislado/motor/nivel_F3c"
+  },
+  {
+   "id": "c018",
+   "formato": "spct2",
+   "valor": "−0,11",
+   "contexto": "se movería −0,36 % en autos, −0,11 % en edificios y +0,27 % en",
+   "ruta": "g/G2_escenario_central/por_ramo_aislado/buildings/nivel_F3c"
+  },
+  {
+   "id": "c019",
+   "formato": "spct2",
+   "valor": "+0,27",
+   "contexto": "autos, −0,11 % en edificios y +0,27 % en contenidos, todo dentro",
+   "ruta": "g/G2_escenario_central/por_ramo_aislado/contents/nivel_F3c"
+  },
+  {
+   "id": "c020",
+   "formato": "apct2",
+   "valor": "5,52",
+   "contexto": "= 0,75, T0 de autos baja un 5,52 % y el nivel base de la mezcla",
+   "calculo": "=cambio_T0('motor', 0.75)"
+  },
+  {
+   "id": "c021",
+   "formato": "spct2",
+   "valor": "−5,55",
+   "contexto": "base de la mezcla otro tanto (−5,55 %). Las sondas del público corrigen",
+   "ruta": "d/escenarios/motor|b|ramo/en_0.75/rho_mezcla"
+  },
+  {
+   "id": "c022",
+   "formato": "dec3",
+   "valor": "0,854",
+   "contexto": "credibilidad Z: la global con Z_g = 0,854 y las de cada celda (ramo por",
+   "ruta": "ctx/Z_g"
+  },
+  {
+   "id": "c023",
+   "formato": "dec2",
+   "valor": "0,36",
+   "contexto": "o renovación) con Z_s entre 0,36 y 0,866. Al final el nivel 2025",
+   "ruta": "ctx/Z_s/buildings_0"
+  },
+  {
+   "id": "c024",
+   "formato": "dec3",
+   "valor": "0,866",
+   "contexto": "renovación) con Z_s entre 0,36 y 0,866. Al final el nivel 2025 de F3c",
+   "ruta": "ctx/Z_s/motor_1"
+  },
+  {
+   "id": "c025",
+   "formato": "spct2",
+   "valor": "−0,82",
+   "contexto": "2025 de F3c en autos cambia −0,82 %. Una sonda con Z = 1 copiaría",
+   "ruta": "d/escenarios/motor|b|ramo/en_0.75/F3c_ramo"
+  },
+  {
+   "id": "c026",
+   "formato": "dec2",
+   "valor": "27.997.991,57",
+   "contexto": "T0 suma 27.997.991,57 CU, la misma cifra que obtuvieron",
+   "ruta": "a/totales/T0"
+  },
+  {
+   "id": "c027",
+   "formato": "dec2",
+   "valor": "4.995.797,64",
+   "contexto": "no hizo falta. De ese total, 4.995.797,64 CU (17,8 %) es reserva de caso",
+   "ruta": "a/totales/reserva"
+  },
+  {
+   "id": "c028",
+   "formato": "pct1",
+   "valor": "17,8",
+   "contexto": "ese total, 4.995.797,64 CU (17,8 %) es reserva de caso de 1.055",
+   "ruta": "a/totales/reserva_sobre_T0"
+  },
+  {
+   "id": "c029",
+   "formato": "int",
+   "valor": "1.055",
+   "contexto": "17,8 %) es reserva de caso de 1.055 siniestros abiertos (5 de ellos",
+   "ruta": "a/totales/abiertos"
+  },
+  {
+   "id": "c030",
+   "formato": "int",
+   "valor": "5",
+   "contexto": "de 1.055 siniestros abiertos (5 de ellos sin reserva). El peso",
+   "ruta": "a/totales/abiertos_sin_reserva"
+  },
+  {
+   "id": "c031",
+   "formato": "pct1",
+   "valor": "9,3",
+   "contexto": "peso cambia mucho con el año: 9,3 % en 2023 y 28,1 % en 2024.",
+   "calculo": "=razon(a/totales/reserva_2023, a/totales/T0_2023)"
+  },
+  {
+   "id": "c032",
+   "formato": "pct1",
+   "valor": "28,1",
+   "contexto": "con el año: 9,3 % en 2023 y 28,1 % en 2024. Las cifras de 2023",
+   "calculo": "=razon(a/totales/reserva_2024, a/totales/T0_2024)"
+  },
+  {
+   "id": "c033",
+   "formato": "dec0",
+   "valor": "8.162.761",
+   "contexto": "| Autos 2023 | 8.162.761 | 1.137.404 | 13,9 % | 130 ",
+   "ruta": "a/por_ramo_anio/motor_2023/T0"
+  },
+  {
+   "id": "c034",
+   "formato": "dec0",
+   "valor": "1.137.404",
+   "contexto": "| Autos 2023 | 8.162.761 | 1.137.404 | 13,9 % | 130 | 0,975 | 213",
+   "ruta": "a/por_ramo_anio/motor_2023/reserva"
+  },
+  {
+   "id": "c035",
+   "formato": "pct1",
+   "valor": "13,9",
+   "contexto": "2023 | 8.162.761 | 1.137.404 | 13,9 % | 130 | 0,975 | 213.475 |",
+   "ruta": "a/por_ramo_anio/motor_2023/reserva_sobre_T0"
+  },
+  {
+   "id": "c036",
+   "formato": "int",
+   "valor": "130",
+   "contexto": "8.162.761 | 1.137.404 | 13,9 % | 130 | 0,975 | 213.475 |",
+   "ruta": "a/por_ramo_anio/motor_2023/abiertos"
+  },
+  {
+   "id": "c037",
+   "formato": "dec3",
+   "valor": "0,975",
+   "contexto": " 1.137.404 | 13,9 % | 130 | 0,975 | 213.475 |",
+   "ruta": "a/por_ramo_anio/motor_2023/completitud_media_coste"
+  },
+  {
+   "id": "c038",
+   "formato": "dec0",
+   "valor": "213.475",
+   "contexto": "1.137.404 | 13,9 % | 130 | 0,975 | 213.475 |",
+   "ruta": "a/por_ramo_anio/motor_2023/ibnr_implicito"
+  },
+  {
+   "id": "c039",
+   "formato": "dec0",
+   "valor": "7.693.127",
+   "contexto": "| Autos 2024 | 7.693.127 | 2.363.988 | 30,7 % | 709 ",
+   "ruta": "a/por_ramo_anio/motor_2024/T0"
+  },
+  {
+   "id": "c040",
+   "formato": "dec0",
+   "valor": "2.363.988",
+   "contexto": "| Autos 2024 | 7.693.127 | 2.363.988 | 30,7 % | 709 | 0,803 | 1.891",
+   "ruta": "a/por_ramo_anio/motor_2024/reserva"
+  },
+  {
+   "id": "c041",
+   "formato": "pct1",
+   "valor": "30,7",
+   "contexto": "2024 | 7.693.127 | 2.363.988 | 30,7 % | 709 | 0,803 | 1.891.350",
+   "ruta": "a/por_ramo_anio/motor_2024/reserva_sobre_T0"
+  },
+  {
+   "id": "c042",
+   "formato": "int",
+   "valor": "709",
+   "contexto": "7.693.127 | 2.363.988 | 30,7 % | 709 | 0,803 | 1.891.350 |",
+   "ruta": "a/por_ramo_anio/motor_2024/abiertos"
+  },
+  {
+   "id": "c043",
+   "formato": "dec3",
+   "valor": "0,803",
+   "contexto": " 2.363.988 | 30,7 % | 709 | 0,803 | 1.891.350 |",
+   "ruta": "a/por_ramo_anio/motor_2024/completitud_media_coste"
+  },
+  {
+   "id": "c044",
+   "formato": "dec0",
+   "valor": "1.891.350",
+   "contexto": "2.363.988 | 30,7 % | 709 | 0,803 | 1.891.350 |",
+   "ruta": "a/por_ramo_anio/motor_2024/ibnr_implicito"
+  },
+  {
+   "id": "c045",
+   "formato": "dec0",
+   "valor": "5.848.688",
+   "contexto": "| Edificios 2023 | 5.848.688 | 290.511 | 5,0 % | 21 | 0,996",
+   "ruta": "a/por_ramo_anio/buildings_2023/T0"
+  },
+  {
+   "id": "c046",
+   "formato": "dec0",
+   "valor": "290.511",
+   "contexto": "Edificios 2023 | 5.848.688 | 290.511 | 5,0 % | 21 | 0,996 | 23.393",
+   "ruta": "a/por_ramo_anio/buildings_2023/reserva"
+  },
+  {
+   "id": "c047",
+   "formato": "pct1",
+   "valor": "5,0",
+   "contexto": "2023 | 5.848.688 | 290.511 | 5,0 % | 21 | 0,996 | 23.393 |",
+   "ruta": "a/por_ramo_anio/buildings_2023/reserva_sobre_T0"
+  },
+  {
+   "id": "c048",
+   "formato": "int",
+   "valor": "21",
+   "contexto": "5.848.688 | 290.511 | 5,0 % | 21 | 0,996 | 23.393 |",
+   "ruta": "a/por_ramo_anio/buildings_2023/abiertos"
+  },
+  {
+   "id": "c049",
+   "formato": "dec3",
+   "valor": "0,996",
+   "contexto": "5.848.688 | 290.511 | 5,0 % | 21 | 0,996 | 23.393 |",
+   "ruta": "a/por_ramo_anio/buildings_2023/completitud_media_coste"
+  },
+  {
+   "id": "c050",
+   "formato": "dec0",
+   "valor": "23.393",
+   "contexto": "290.511 | 5,0 % | 21 | 0,996 | 23.393 |",
+   "ruta": "a/por_ramo_anio/buildings_2023/ibnr_implicito"
+  },
+  {
+   "id": "c051",
+   "formato": "dec0",
+   "valor": "3.710.061",
+   "contexto": "| Edificios 2024 | 3.710.061 | 1.010.188 | 27,2 % | 136 ",
+   "ruta": "a/por_ramo_anio/buildings_2024/T0"
+  },
+  {
+   "id": "c052",
+   "formato": "dec0",
+   "valor": "1.010.188",
+   "contexto": "Edificios 2024 | 3.710.061 | 1.010.188 | 27,2 % | 136 | 0,942 | 227",
+   "ruta": "a/por_ramo_anio/buildings_2024/reserva"
+  },
+  {
+   "id": "c053",
+   "formato": "pct1",
+   "valor": "27,2",
+   "contexto": "2024 | 3.710.061 | 1.010.188 | 27,2 % | 136 | 0,942 | 227.313 |",
+   "ruta": "a/por_ramo_anio/buildings_2024/reserva_sobre_T0"
+  },
+  {
+   "id": "c054",
+   "formato": "int",
+   "valor": "136",
+   "contexto": "3.710.061 | 1.010.188 | 27,2 % | 136 | 0,942 | 227.313 |",
+   "ruta": "a/por_ramo_anio/buildings_2024/abiertos"
+  },
+  {
+   "id": "c055",
+   "formato": "dec3",
+   "valor": "0,942",
+   "contexto": " 1.010.188 | 27,2 % | 136 | 0,942 | 227.313 |",
+   "ruta": "a/por_ramo_anio/buildings_2024/completitud_media_coste"
+  },
+  {
+   "id": "c056",
+   "formato": "dec0",
+   "valor": "227.313",
+   "contexto": "1.010.188 | 27,2 % | 136 | 0,942 | 227.313 |",
+   "ruta": "a/por_ramo_anio/buildings_2024/ibnr_implicito"
+  },
+  {
+   "id": "c057",
+   "formato": "dec0",
+   "valor": "1.285.655",
+   "contexto": "| Contenidos 2023 | 1.285.655 | 0 | 0,0 % | 0 | 0,996 | 4",
+   "ruta": "a/por_ramo_anio/contents_2023/T0"
+  },
+  {
+   "id": "c058",
+   "formato": "dec0",
+   "valor": "0",
+   "contexto": "Contenidos 2023 | 1.285.655 | 0 | 0,0 % | 0 | 0,996 | 4.980",
+   "ruta": "a/por_ramo_anio/contents_2023/reserva"
+  },
+  {
+   "id": "c059",
+   "formato": "pct1",
+   "valor": "0,0",
+   "contexto": "Contenidos 2023 | 1.285.655 | 0 | 0,0 % | 0 | 0,996 | 4.980 |",
+   "ruta": "a/por_ramo_anio/contents_2023/reserva_sobre_T0"
+  },
+  {
+   "id": "c060",
+   "formato": "int",
+   "valor": "0",
+   "contexto": "2023 | 1.285.655 | 0 | 0,0 % | 0 | 0,996 | 4.980 |",
+   "ruta": "a/por_ramo_anio/contents_2023/abiertos"
+  },
+  {
+   "id": "c061",
+   "formato": "dec3",
+   "valor": "0,996",
+   "contexto": "1.285.655 | 0 | 0,0 % | 0 | 0,996 | 4.980 |",
+   "ruta": "a/por_ramo_anio/contents_2023/completitud_media_coste"
+  },
+  {
+   "id": "c062",
+   "formato": "dec0",
+   "valor": "4.980",
+   "contexto": "1.285.655 | 0 | 0,0 % | 0 | 0,996 | 4.980 |",
+   "ruta": "a/por_ramo_anio/contents_2023/ibnr_implicito"
+  },
+  {
+   "id": "c063",
+   "formato": "dec0",
+   "valor": "1.297.700",
+   "contexto": "| Contenidos 2024 | 1.297.700 | 193.707 | 14,9 % | 59 | 0",
+   "ruta": "a/por_ramo_anio/contents_2024/T0"
+  },
+  {
+   "id": "c064",
+   "formato": "dec0",
+   "valor": "193.707",
+   "contexto": "Contenidos 2024 | 1.297.700 | 193.707 | 14,9 % | 59 | 0,964 | 48.963",
+   "ruta": "a/por_ramo_anio/contents_2024/reserva"
+  },
+  {
+   "id": "c065",
+   "formato": "pct1",
+   "valor": "14,9",
+   "contexto": "2024 | 1.297.700 | 193.707 | 14,9 % | 59 | 0,964 | 48.963 |",
+   "ruta": "a/por_ramo_anio/contents_2024/reserva_sobre_T0"
+  },
+  {
+   "id": "c066",
+   "formato": "int",
+   "valor": "59",
+   "contexto": "1.297.700 | 193.707 | 14,9 % | 59 | 0,964 | 48.963 |",
+   "ruta": "a/por_ramo_anio/contents_2024/abiertos"
+  },
+  {
+   "id": "c067",
+   "formato": "dec3",
+   "valor": "0,964",
+   "contexto": "1.297.700 | 193.707 | 14,9 % | 59 | 0,964 | 48.963 |",
+   "ruta": "a/por_ramo_anio/contents_2024/completitud_media_coste"
+  },
+  {
+   "id": "c068",
+   "formato": "dec0",
+   "valor": "48.963",
+   "contexto": "193.707 | 14,9 % | 59 | 0,964 | 48.963 |",
+   "ruta": "a/por_ramo_anio/contents_2024/ibnr_implicito"
+  },
+  {
+   "id": "c069",
+   "formato": "dec0",
+   "valor": "2.447.771",
+   "contexto": "Lesiones corporales de autos tiene 2.447.771 CU en 260 abiertos: el 69,9",
+   "ruta": "a/por_peligro/motor|bodily_injury/reserva"
+  },
+  {
+   "id": "c070",
+   "formato": "int",
+   "valor": "260",
+   "contexto": "autos tiene 2.447.771 CU en 260 abiertos: el 69,9 % de la reserva",
+   "ruta": "a/por_peligro/motor|bodily_injury/abiertos"
+  },
+  {
+   "id": "c071",
+   "formato": "pct1",
+   "valor": "69,9",
+   "contexto": "2.447.771 CU en 260 abiertos: el 69,9 % de la reserva de autos y el",
+   "ruta": "a/por_peligro/motor|bodily_injury/peso_en_reserva_ramo"
+  },
+  {
+   "id": "c072",
+   "formato": "pct1",
+   "valor": "49,0",
+   "contexto": "de la reserva de autos y el 49,0 % de toda la reserva. 125 de",
+   "calculo": "=razon(a/por_peligro/motor|bodily_injury/reserva, a/totales/reserva)"
+  },
+  {
+   "id": "c073",
+   "formato": "int",
+   "valor": "125",
+   "contexto": "el 49,0 % de toda la reserva. 125 de esos abiertos son de 2023",
+   "ruta": "a/por_peligro/motor|bodily_injury/abiertos_2023"
+  },
+  {
+   "id": "c074",
+   "formato": "pct1",
+   "valor": "39,7",
+   "contexto": "edificios pesan inundación (39,7 %), hundimiento (21,4 %, con",
+   "ruta": "a/por_peligro/buildings|flood/peso_en_reserva_ramo"
+  },
+  {
+   "id": "c075",
+   "formato": "pct1",
+   "valor": "21,4",
+   "contexto": "inundación (39,7 %), hundimiento (21,4 %, con 28 abiertos) e incendio",
+   "ruta": "a/por_peligro/buildings|subsidence/peso_en_reserva_ramo"
+  },
+  {
+   "id": "c076",
+   "formato": "int",
+   "valor": "28",
+   "contexto": "%), hundimiento (21,4 %, con 28 abiertos) e incendio (18,8 %",
+   "ruta": "a/por_peligro/buildings|subsidence/abiertos"
+  },
+  {
+   "id": "c077",
+   "formato": "pct1",
+   "valor": "18,8",
+   "contexto": "con 28 abiertos) e incendio (18,8 %); en contenidos, inundación",
+   "ruta": "a/por_peligro/buildings|fire/peso_en_reserva_ramo"
+  },
+  {
+   "id": "c078",
+   "formato": "pct1",
+   "valor": "60,9",
+   "contexto": "%); en contenidos, inundación (60,9 %).",
+   "ruta": "a/por_peligro/contents|flood/peso_en_reserva_ramo"
+  },
+  {
+   "id": "c079",
+   "formato": "pct1",
+   "valor": "30,6",
+   "contexto": "que la renovación: en autos, 30,6 % de su T0 frente a 20,9 %;",
+   "ruta": "a/por_negocio/motor_1/reserva_sobre_T0"
+  },
+  {
+   "id": "c080",
+   "formato": "pct1",
+   "valor": "20,9",
+   "contexto": "autos, 30,6 % de su T0 frente a 20,9 %; en edificios, 27,5 % frente",
+   "ruta": "a/por_negocio/motor_0/reserva_sobre_T0"
+  },
+  {
+   "id": "c081",
+   "formato": "pct1",
+   "valor": "27,5",
+   "contexto": "frente a 20,9 %; en edificios, 27,5 % frente a 12,7 %; en contenidos",
+   "ruta": "a/por_negocio/buildings_1/reserva_sobre_T0"
+  },
+  {
+   "id": "c082",
+   "formato": "pct1",
+   "valor": "12,7",
+   "contexto": "en edificios, 27,5 % frente a 12,7 %; en contenidos, 16,2 % frente",
+   "ruta": "a/por_negocio/buildings_0/reserva_sobre_T0"
+  },
+  {
+   "id": "c083",
+   "formato": "pct1",
+   "valor": "16,2",
+   "contexto": "frente a 12,7 %; en contenidos, 16,2 % frente a 6,6 %. Importa para",
+   "ruta": "a/por_negocio/contents_1/reserva_sobre_T0"
+  },
+  {
+   "id": "c084",
+   "formato": "pct1",
+   "valor": "6,6",
+   "contexto": "contenidos, 16,2 % frente a 6,6 %. Importa para 2025, donde",
+   "ruta": "a/por_negocio/contents_0/reserva_sobre_T0"
+  },
+  {
+   "id": "c085",
+   "formato": "pct1",
+   "valor": "76,0",
+   "contexto": "Importa para 2025, donde el 76,0 % de las filas son de nuevo",
+   "ruta": "ctx/nuevo_negocio_filas/total/cuota_nb_2025"
+  },
+  {
+   "id": "c086",
+   "formato": "pct1",
+   "valor": "13,8",
+   "contexto": "de nuevo negocio, frente al 13,8 % de 2023-2024. El nuevo negocio",
+   "ruta": "ctx/nuevo_negocio_filas/total/cuota_nb_2023_2024"
+  },
+  {
+   "id": "c087",
+   "formato": "pct1",
+   "valor": "84,8",
+   "contexto": "2023-2024. El nuevo negocio pesa el 84,8 % del total de F3c en autos",
+   "ruta": "ctx/cuota_nuevo_negocio_en_total_F3c_2025/motor"
+  },
+  {
+   "id": "c088",
+   "formato": "pct1",
+   "valor": "79,6",
+   "contexto": "del total de F3c en autos, el 79,6 % en edificios y el 78,5 % en",
+   "ruta": "ctx/cuota_nuevo_negocio_en_total_F3c_2025/buildings"
+  },
+  {
+   "id": "c089",
+   "formato": "pct1",
+   "valor": "78,5",
+   "contexto": "el 79,6 % en edificios y el 78,5 % en contenidos, así que domina",
+   "ruta": "ctx/cuota_nuevo_negocio_en_total_F3c_2025/contents"
+  },
+  {
+   "id": "c090",
+   "formato": "pct1",
+   "valor": "24,0",
+   "contexto": "cerrados: daños propios recupera el 24,0 % de su incurrido y robo el",
+   "ruta": "a/recobros/motor/por_peligro/own_damage/tasa_recobro_cerrados"
+  },
+  {
+   "id": "c091",
+   "formato": "pct1",
+   "valor": "3,9",
+   "contexto": "% de su incurrido y robo el 3,9 %. Los abiertos no llevan ningún",
+   "ruta": "a/recobros/motor/por_peligro/theft/tasa_recobro_cerrados"
+  },
+  {
+   "id": "c092",
+   "formato": "dec0",
+   "valor": "97.361",
+   "contexto": "autos estaría sobrestimado en 97.361 CU (0,61 %).",
+   "ruta": "a/recobros/motor/sobrestimacion_total"
+  },
+  {
+   "id": "c093",
+   "formato": "pct2",
+   "valor": "0,61",
+   "contexto": "estaría sobrestimado en 97.361 CU (0,61 %).",
+   "ruta": "a/recobros/motor/sobre_T0"
+  },
+  {
+   "id": "c094",
+   "formato": "int",
+   "valor": "107",
+   "contexto": "Hay 107 siniestros rechazados en autos",
+   "ruta": "a/rechazados/motor/n"
+  },
+  {
+   "id": "c095",
+   "formato": "int",
+   "valor": "13",
+   "contexto": "siniestros rechazados en autos y 13 en contenidos, todos con importes",
+   "ruta": "a/rechazados/contents/n"
+  },
+  {
+   "id": "c096",
+   "formato": "pct2",
+   "valor": "1,64",
+   "contexto": "de su peligro, T0 subiría un 1,64 % en autos y un 1,06 % en contenidos",
+   "ruta": "a/rechazados/motor/sobre_T0"
+  },
+  {
+   "id": "c097",
+   "formato": "pct2",
+   "valor": "1,06",
+   "contexto": "subiría un 1,64 % en autos y un 1,06 % en contenidos. Otros 36 siniestros",
+   "ruta": "a/rechazados/contents/sobre_T0"
+  },
+  {
+   "id": "c098",
+   "formato": "int",
+   "valor": "36",
+   "contexto": "1,06 % en contenidos. Otros 36 siniestros no caen en ningún",
+   "ruta": "a/sin_periodo/n"
+  },
+  {
+   "id": "c099",
+   "formato": "int",
+   "valor": "1",
+   "contexto": "ningún periodo de su póliza (1 abierto, 92.267 CU netos) y",
+   "ruta": "a/sin_periodo/abiertos"
+  },
+  {
+   "id": "c100",
+   "formato": "dec0",
+   "valor": "92.267",
+   "contexto": "periodo de su póliza (1 abierto, 92.267 CU netos) y quedan fuera de",
+   "ruta": "a/sin_periodo/neto_aceptado"
+  },
+  {
+   "id": "c101",
+   "formato": "int",
+   "valor": "20",
+   "contexto": "semana 1: celdas con al menos 20 cerrados, intervalo al 90 %",
+   "ruta": "b/min_cerrados"
+  },
+  {
+   "id": "c102",
+   "formato": "int",
+   "valor": "400",
+   "contexto": "cerrados, intervalo al 90 % con 400 réplicas Poisson por siniestro",
+   "ruta": "b/replicas"
+  },
+  {
+   "id": "c103",
+   "formato": "raw",
+   "valor": "20261026",
+   "contexto": "Poisson por siniestro (semilla 20261026) y la prueba A2 de S1, la pendiente",
+   "ruta": "b/semilla"
+  },
+  {
+   "id": "c104",
+   "formato": "dec3",
+   "valor": "0,797",
+   "contexto": "| Autos | 0,797 | 0,647 a 0,997 | 65,5 % | 1",
+   "ruta": "b/beta/motor|_ramo/beta"
+  },
+  {
+   "id": "c105",
+   "formato": "dec3",
+   "valor": "0,647",
+   "contexto": "| Autos | 0,797 | 0,647 a 0,997 | 65,5 % | 1,56 | 0",
+   "ruta": "b/beta/motor|_ramo/ic90/0"
+  },
+  {
+   "id": "c106",
+   "formato": "dec3",
+   "valor": "0,997",
+   "contexto": "| Autos | 0,797 | 0,647 a 0,997 | 65,5 % | 1,56 | 0,850 | −0",
+   "ruta": "b/beta/motor|_ramo/ic90/1"
+  },
+  {
+   "id": "c107",
+   "formato": "pct1",
+   "valor": "65,5",
+   "contexto": "Autos | 0,797 | 0,647 a 0,997 | 65,5 % | 1,56 | 0,850 | −0,381 a",
+   "ruta": "b/beta/motor|_ramo/cobertura_reserva"
+  },
+  {
+   "id": "c108",
+   "formato": "dec2",
+   "valor": "1,56",
+   "contexto": "0,797 | 0,647 a 0,997 | 65,5 % | 1,56 | 0,850 | −0,381 a 0,258 |",
+   "ruta": "b/beta/motor|_ramo/A2/t"
+  },
+  {
+   "id": "c109",
+   "formato": "dec3",
+   "valor": "0,850",
+   "contexto": "0,647 a 0,997 | 65,5 % | 1,56 | 0,850 | −0,381 a 0,258 |",
+   "ruta": "b/beta/motor|_ramo/desarrollado/beta_recalculado"
+  },
+  {
+   "id": "c110",
+   "formato": "dec3",
+   "valor": "−0,381",
+   "contexto": "0,997 | 65,5 % | 1,56 | 0,850 | −0,381 a 0,258 |",
+   "ruta": "b/beta/motor|_ramo/diferencia_emergente_menos_desarrollado/ic90/0"
+  },
+  {
+   "id": "c111",
+   "formato": "dec3",
+   "valor": "0,258",
+   "contexto": "% | 1,56 | 0,850 | −0,381 a 0,258 |",
+   "ruta": "b/beta/motor|_ramo/diferencia_emergente_menos_desarrollado/ic90/1"
+  },
+  {
+   "id": "c112",
+   "formato": "dec3",
+   "valor": "0,758",
+   "contexto": "Autos: lesiones corporales | 0,758 | 0,512 a 1,077 | 55,1 % | 0",
+   "ruta": "b/beta/motor|bodily_injury/beta"
+  },
+  {
+   "id": "c113",
+   "formato": "dec3",
+   "valor": "0,512",
+   "contexto": "lesiones corporales | 0,758 | 0,512 a 1,077 | 55,1 % | 0,07 | 0",
+   "ruta": "b/beta/motor|bodily_injury/ic90/0"
+  },
+  {
+   "id": "c114",
+   "formato": "dec3",
+   "valor": "1,077",
+   "contexto": "corporales | 0,758 | 0,512 a 1,077 | 55,1 % | 0,07 | 0,823 | −0",
+   "ruta": "b/beta/motor|bodily_injury/ic90/1"
+  },
+  {
+   "id": "c115",
+   "formato": "pct1",
+   "valor": "55,1",
+   "contexto": "corporales | 0,758 | 0,512 a 1,077 | 55,1 % | 0,07 | 0,823 | −0,485 a",
+   "ruta": "b/beta/motor|bodily_injury/cobertura_reserva"
+  },
+  {
+   "id": "c116",
+   "formato": "dec2",
+   "valor": "0,07",
+   "contexto": "0,758 | 0,512 a 1,077 | 55,1 % | 0,07 | 0,823 | −0,485 a 0,342 |",
+   "ruta": "b/beta/motor|bodily_injury/A2/t"
+  },
+  {
+   "id": "c117",
+   "formato": "dec3",
+   "valor": "0,823",
+   "contexto": "0,512 a 1,077 | 55,1 % | 0,07 | 0,823 | −0,485 a 0,342 |",
+   "ruta": "b/beta/motor|bodily_injury/desarrollado/beta_recalculado"
+  },
+  {
+   "id": "c118",
+   "formato": "dec3",
+   "valor": "−0,485",
+   "contexto": "1,077 | 55,1 % | 0,07 | 0,823 | −0,485 a 0,342 |",
+   "ruta": "b/beta/motor|bodily_injury/diferencia_emergente_menos_desarrollado/ic90/0"
+  },
+  {
+   "id": "c119",
+   "formato": "dec3",
+   "valor": "0,342",
+   "contexto": "% | 0,07 | 0,823 | −0,485 a 0,342 |",
+   "ruta": "b/beta/motor|bodily_injury/diferencia_emergente_menos_desarrollado/ic90/1"
+  },
+  {
+   "id": "c120",
+   "formato": "dec3",
+   "valor": "0,852",
+   "contexto": " Autos: resto de peligros | 0,852 | 0,729 a 1,012 | 89,6 % | 2",
+   "ruta": "b/beta/motor|_resto/beta"
+  },
+  {
+   "id": "c121",
+   "formato": "dec3",
+   "valor": "0,729",
+   "contexto": "resto de peligros | 0,852 | 0,729 a 1,012 | 89,6 % | 2,80 | 0",
+   "ruta": "b/beta/motor|_resto/ic90/0"
+  },
+  {
+   "id": "c122",
+   "formato": "dec3",
+   "valor": "1,012",
+   "contexto": "de peligros | 0,852 | 0,729 a 1,012 | 89,6 % | 2,80 | 0,962 | −0",
+   "ruta": "b/beta/motor|_resto/ic90/1"
+  },
+  {
+   "id": "c123",
+   "formato": "pct1",
+   "valor": "89,6",
+   "contexto": "peligros | 0,852 | 0,729 a 1,012 | 89,6 % | 2,80 | 0,962 | −0,256 a",
+   "ruta": "b/beta/motor|_resto/cobertura_reserva"
+  },
+  {
+   "id": "c124",
+   "formato": "dec2",
+   "valor": "2,80",
+   "contexto": "0,852 | 0,729 a 1,012 | 89,6 % | 2,80 | 0,962 | −0,256 a 0,068 |",
+   "ruta": "b/beta/motor|_resto/A2/t"
+  },
+  {
+   "id": "c125",
+   "formato": "dec3",
+   "valor": "0,962",
+   "contexto": "0,729 a 1,012 | 89,6 % | 2,80 | 0,962 | −0,256 a 0,068 |",
+   "ruta": "b/beta/motor|_resto/desarrollado/beta_recalculado"
+  },
+  {
+   "id": "c126",
+   "formato": "dec3",
+   "valor": "−0,256",
+   "contexto": "1,012 | 89,6 % | 2,80 | 0,962 | −0,256 a 0,068 |",
+   "ruta": "b/beta/motor|_resto/diferencia_emergente_menos_desarrollado/ic90/0"
+  },
+  {
+   "id": "c127",
+   "formato": "dec3",
+   "valor": "0,068",
+   "contexto": "% | 2,80 | 0,962 | −0,256 a 0,068 |",
+   "ruta": "b/beta/motor|_resto/diferencia_emergente_menos_desarrollado/ic90/1"
+  },
+  {
+   "id": "c128",
+   "formato": "dec3",
+   "valor": "0,974",
+   "contexto": "| Edificios | 0,974 | 0,500 a 1,333 | 9,9 % | 2",
+   "ruta": "b/beta/buildings|_ramo/beta"
+  },
+  {
+   "id": "c129",
+   "formato": "dec3",
+   "valor": "0,500",
+   "contexto": "| Edificios | 0,974 | 0,500 a 1,333 | 9,9 % | 2 celdas ",
+   "ruta": "b/beta/buildings|_ramo/ic90/0"
+  },
+  {
+   "id": "c130",
+   "formato": "dec3",
+   "valor": "1,333",
+   "contexto": "Edificios | 0,974 | 0,500 a 1,333 | 9,9 % | 2 celdas | 0,985 ",
+   "ruta": "b/beta/buildings|_ramo/ic90/1"
+  },
+  {
+   "id": "c131",
+   "formato": "pct1",
+   "valor": "9,9",
+   "contexto": "Edificios | 0,974 | 0,500 a 1,333 | 9,9 % | 2 celdas | 0,985 | −0,514",
+   "ruta": "b/beta/buildings|_ramo/cobertura_reserva"
+  },
+  {
+   "id": "c132",
+   "formato": "dec3",
+   "valor": "0,985",
+   "contexto": "a 1,333 | 9,9 % | 2 celdas | 0,985 | −0,514 a 0,354 |",
+   "ruta": "b/beta/buildings|_ramo/desarrollado/beta_recalculado"
+  },
+  {
+   "id": "c133",
+   "formato": "dec3",
+   "valor": "−0,514",
+   "contexto": " 9,9 % | 2 celdas | 0,985 | −0,514 a 0,354 |",
+   "ruta": "b/beta/buildings|_ramo/diferencia_emergente_menos_desarrollado/ic90/0"
+  },
+  {
+   "id": "c134",
+   "formato": "dec3",
+   "valor": "0,354",
+   "contexto": "2 celdas | 0,985 | −0,514 a 0,354 |",
+   "ruta": "b/beta/buildings|_ramo/diferencia_emergente_menos_desarrollado/ic90/1"
+  },
+  {
+   "id": "c135",
+   "formato": "dec3",
+   "valor": "0,996",
+   "contexto": "hundimiento | sin celdas | | 0 % | | 0,996 | |",
+   "ruta": "b/beta/buildings|subsidence/desarrollado/beta_recalculado"
+  },
+  {
+   "id": "c136",
+   "formato": "dec3",
+   "valor": "0,974",
+   "contexto": "Edificios: resto de peligros | 0,974 | 0,487 a 1,335 | 12,6 % | 2",
+   "ruta": "b/beta/buildings|_resto/beta"
+  },
+  {
+   "id": "c137",
+   "formato": "dec3",
+   "valor": "0,487",
+   "contexto": "resto de peligros | 0,974 | 0,487 a 1,335 | 12,6 % | 2 celdas",
+   "ruta": "b/beta/buildings|_resto/ic90/0"
+  },
+  {
+   "id": "c138",
+   "formato": "dec3",
+   "valor": "1,335",
+   "contexto": "de peligros | 0,974 | 0,487 a 1,335 | 12,6 % | 2 celdas | 0,980",
+   "ruta": "b/beta/buildings|_resto/ic90/1"
+  },
+  {
+   "id": "c139",
+   "formato": "pct1",
+   "valor": "12,6",
+   "contexto": "peligros | 0,974 | 0,487 a 1,335 | 12,6 % | 2 celdas | 0,980 | −0,487",
+   "ruta": "b/beta/buildings|_resto/cobertura_reserva"
+  },
+  {
+   "id": "c140",
+   "formato": "dec3",
+   "valor": "0,980",
+   "contexto": "1,335 | 12,6 % | 2 celdas | 0,980 | −0,487 a 0,354 |",
+   "ruta": "b/beta/buildings|_resto/desarrollado/beta_recalculado"
+  },
+  {
+   "id": "c141",
+   "formato": "dec3",
+   "valor": "−0,487",
+   "contexto": "12,6 % | 2 celdas | 0,980 | −0,487 a 0,354 |",
+   "ruta": "b/beta/buildings|_resto/diferencia_emergente_menos_desarrollado/ic90/0"
+  },
+  {
+   "id": "c142",
+   "formato": "dec3",
+   "valor": "0,354",
+   "contexto": "2 celdas | 0,980 | −0,487 a 0,354 |",
+   "ruta": "b/beta/buildings|_resto/diferencia_emergente_menos_desarrollado/ic90/1"
+  },
+  {
+   "id": "c143",
+   "formato": "dec3",
+   "valor": "1,222",
+   "contexto": "| Contenidos | 1,222 | 0,740 a 2,078 | 33,9 % | 2",
+   "ruta": "b/beta/contents|_ramo/beta"
+  },
+  {
+   "id": "c144",
+   "formato": "dec3",
+   "valor": "0,740",
+   "contexto": "| Contenidos | 1,222 | 0,740 a 2,078 | 33,9 % | 2 celdas",
+   "ruta": "b/beta/contents|_ramo/ic90/0"
+  },
+  {
+   "id": "c145",
+   "formato": "dec3",
+   "valor": "2,078",
+   "contexto": "Contenidos | 1,222 | 0,740 a 2,078 | 33,9 % | 2 celdas | 0,983",
+   "ruta": "b/beta/contents|_ramo/ic90/1"
+  },
+  {
+   "id": "c146",
+   "formato": "pct1",
+   "valor": "33,9",
+   "contexto": "Contenidos | 1,222 | 0,740 a 2,078 | 33,9 % | 2 celdas | 0,983 | −0,236",
+   "ruta": "b/beta/contents|_ramo/cobertura_reserva"
+  },
+  {
+   "id": "c147",
+   "formato": "dec3",
+   "valor": "0,983",
+   "contexto": "2,078 | 33,9 % | 2 celdas | 0,983 | −0,236 a 1,139 |",
+   "ruta": "b/beta/contents|_ramo/desarrollado/beta_recalculado"
+  },
+  {
+   "id": "c148",
+   "formato": "dec3",
+   "valor": "−0,236",
+   "contexto": "33,9 % | 2 celdas | 0,983 | −0,236 a 1,139 |",
+   "ruta": "b/beta/contents|_ramo/diferencia_emergente_menos_desarrollado/ic90/0"
+  },
+  {
+   "id": "c149",
+   "formato": "dec3",
+   "valor": "1,139",
+   "contexto": "2 celdas | 0,983 | −0,236 a 1,139 |",
+   "ruta": "b/beta/contents|_ramo/diferencia_emergente_menos_desarrollado/ic90/1"
+  },
+  {
+   "id": "c150",
+   "formato": "dec3",
+   "valor": "0,851",
+   "contexto": "código; la de la semana 1 era 0,851 en autos, 0,985 en edificios",
+   "ruta": "b/beta/motor|_ramo/desarrollado/beta_semana1"
+  },
+  {
+   "id": "c151",
+   "formato": "dec3",
+   "valor": "0,985",
+   "contexto": "semana 1 era 0,851 en autos, 0,985 en edificios y 0,982 en contenidos",
+   "ruta": "b/beta/buildings|_ramo/desarrollado/beta_semana1"
+  },
+  {
+   "id": "c152",
+   "formato": "dec3",
+   "valor": "0,982",
+   "contexto": "autos, 0,985 en edificios y 0,982 en contenidos.",
+   "ruta": "b/beta/contents|_ramo/desarrollado/beta_semana1"
+  },
+  {
+   "id": "c153",
+   "formato": "pct1",
+   "valor": "65,5",
+   "contexto": "celdas con 20 cerrados cubren el 65,5 % de la reserva de autos, el",
+   "ruta": "b/beta/motor|_ramo/cobertura_reserva"
+  },
+  {
+   "id": "c154",
+   "formato": "pct1",
+   "valor": "33,9",
+   "contexto": "% de la reserva de autos, el 33,9 % de la de contenidos y solo",
+   "ruta": "b/beta/contents|_ramo/cobertura_reserva"
+  },
+  {
+   "id": "c155",
+   "formato": "pct1",
+   "valor": "9,9",
+   "contexto": "de la de contenidos y solo el 9,9 % de la de edificios. Hundimiento",
+   "ruta": "b/beta/buildings|_ramo/cobertura_reserva"
+  },
+  {
+   "id": "c156",
+   "formato": "int",
+   "valor": "189",
+   "contexto": "que concentra la reserva, hay 189 cerrados para 260 abiertos.",
+   "ruta": "b/beta/motor|bodily_injury/cerrados"
+  },
+  {
+   "id": "c157",
+   "formato": "int",
+   "valor": "260",
+   "contexto": "reserva, hay 189 cerrados para 260 abiertos.",
+   "ruta": "b/beta/motor|bodily_injury/abiertos"
+  },
+  {
+   "id": "c158",
+   "formato": "dec2",
+   "valor": "2,80",
+   "contexto": "resto de peligros de autos (t = 2,80) y, al separar por negocio,",
+   "ruta": "b/beta/motor|_resto/A2/t"
+  },
+  {
+   "id": "c159",
+   "formato": "dec2",
+   "valor": "2,18",
+   "contexto": "la renovación de autos (t = 2,18) y en el nuevo negocio con el",
+   "ruta": "b/beta/motor|_ramo|nb0/A2/t"
+  },
+  {
+   "id": "c160",
+   "formato": "dec2",
+   "valor": "−2,72",
+   "contexto": "con el signo contrario (t = −2,72). En lesiones no la contradice",
+   "ruta": "b/beta/motor|_ramo|nb1/A2/t"
+  },
+  {
+   "id": "c161",
+   "formato": "dec2",
+   "valor": "0,07",
+   "contexto": "lesiones no la contradice (t = 0,07). β depende de S1, y en esos",
+   "ruta": "b/beta/motor|bodily_injury/A2/t"
+  },
+  {
+   "id": "c162",
+   "formato": "dec3",
+   "valor": "0,849",
+   "contexto": "mercados, mucho más estrecha: autos 0,849 (0,617 a 1,085), edificios 0",
+   "ruta": "b/beta/motor|_ramo/agrupado_secundario/beta"
+  },
+  {
+   "id": "c163",
+   "formato": "dec3",
+   "valor": "0,617",
+   "contexto": "mucho más estrecha: autos 0,849 (0,617 a 1,085), edificios 0,984 (0",
+   "ruta": "b/beta/motor|_ramo/agrupado_secundario/ic90/0"
+  },
+  {
+   "id": "c164",
+   "formato": "dec3",
+   "valor": "1,085",
+   "contexto": "estrecha: autos 0,849 (0,617 a 1,085), edificios 0,984 (0,874 a 1",
+   "ruta": "b/beta/motor|_ramo/agrupado_secundario/ic90/1"
+  },
+  {
+   "id": "c165",
+   "formato": "dec3",
+   "valor": "0,984",
+   "contexto": "0,849 (0,617 a 1,085), edificios 0,984 (0,874 a 1,113) y contenidos",
+   "ruta": "b/beta/buildings|_ramo/agrupado_secundario/beta"
+  },
+  {
+   "id": "c166",
+   "formato": "dec3",
+   "valor": "0,874",
+   "contexto": "0,617 a 1,085), edificios 0,984 (0,874 a 1,113) y contenidos 0,988",
+   "ruta": "b/beta/buildings|_ramo/agrupado_secundario/ic90/0"
+  },
+  {
+   "id": "c167",
+   "formato": "dec3",
+   "valor": "1,113",
+   "contexto": "1,085), edificios 0,984 (0,874 a 1,113) y contenidos 0,988 (0,819 a",
+   "ruta": "b/beta/buildings|_ramo/agrupado_secundario/ic90/1"
+  },
+  {
+   "id": "c168",
+   "formato": "dec3",
+   "valor": "0,988",
+   "contexto": "0,874 a 1,113) y contenidos 0,988 (0,819 a 1,136).",
+   "ruta": "b/beta/contents|_ramo/agrupado_secundario/beta"
+  },
+  {
+   "id": "c169",
+   "formato": "dec3",
+   "valor": "0,819",
+   "contexto": "a 1,113) y contenidos 0,988 (0,819 a 1,136).",
+   "ruta": "b/beta/contents|_ramo/agrupado_secundario/ic90/0"
+  },
+  {
+   "id": "c170",
+   "formato": "dec3",
+   "valor": "1,136",
+   "contexto": "y contenidos 0,988 (0,819 a 1,136).",
+   "ruta": "b/beta/contents|_ramo/agrupado_secundario/ic90/1"
+  },
+  {
+   "id": "c172",
+   "formato": "int",
+   "valor": "3.557",
+   "contexto": "| Autos | 3.557 | 234 | 1,267 | 0,912 a 1,718",
+   "ruta": "c/k/motor|_ramo/siniestros_2023"
+  },
+  {
+   "id": "c173",
+   "formato": "int",
+   "valor": "234",
+   "contexto": "| Autos | 3.557 | 234 | 1,267 | 0,912 a 1,718 | 0",
+   "ruta": "c/k/motor|_ramo/tardios"
+  },
+  {
+   "id": "c174",
+   "formato": "dec3",
+   "valor": "1,267",
+   "contexto": "| Autos | 3.557 | 234 | 1,267 | 0,912 a 1,718 | 0,873 | 0",
+   "ruta": "c/k/motor|_ramo/k_e"
+  },
+  {
+   "id": "c175",
+   "formato": "dec3",
+   "valor": "0,912",
+   "contexto": "Autos | 3.557 | 234 | 1,267 | 0,912 a 1,718 | 0,873 | 0,774 a 0",
+   "ruta": "c/k/motor|_ramo/ic90_k_e/0"
+  },
+  {
+   "id": "c176",
+   "formato": "dec3",
+   "valor": "1,718",
+   "contexto": "3.557 | 234 | 1,267 | 0,912 a 1,718 | 0,873 | 0,774 a 0,987 |",
+   "ruta": "c/k/motor|_ramo/ic90_k_e/1"
+  },
+  {
+   "id": "c177",
+   "formato": "dec3",
+   "valor": "0,873",
+   "contexto": "234 | 1,267 | 0,912 a 1,718 | 0,873 | 0,774 a 0,987 |",
+   "ruta": "c/k/motor|_ramo/k_conteos"
+  },
+  {
+   "id": "c178",
+   "formato": "dec3",
+   "valor": "0,774",
+   "contexto": "1,267 | 0,912 a 1,718 | 0,873 | 0,774 a 0,987 |",
+   "ruta": "c/k/motor|_ramo/ic90_k_conteos/0"
+  },
+  {
+   "id": "c179",
+   "formato": "dec3",
+   "valor": "0,987",
+   "contexto": "0,912 a 1,718 | 0,873 | 0,774 a 0,987 |",
+   "ruta": "c/k/motor|_ramo/ic90_k_conteos/1"
+  },
+  {
+   "id": "c180",
+   "formato": "int",
+   "valor": "266",
+   "contexto": "Autos: lesiones corporales | 266 | 105 | 1,427 | 1,021 a 2,021",
+   "ruta": "c/k/motor|bodily_injury/siniestros_2023"
+  },
+  {
+   "id": "c181",
+   "formato": "int",
+   "valor": "105",
+   "contexto": "lesiones corporales | 266 | 105 | 1,427 | 1,021 a 2,021 | 0",
+   "ruta": "c/k/motor|bodily_injury/tardios"
+  },
+  {
+   "id": "c182",
+   "formato": "dec3",
+   "valor": "1,427",
+   "contexto": "lesiones corporales | 266 | 105 | 1,427 | 1,021 a 2,021 | 0,916 | 0",
+   "ruta": "c/k/motor|bodily_injury/k_e"
+  },
+  {
+   "id": "c183",
+   "formato": "dec3",
+   "valor": "1,021",
+   "contexto": "corporales | 266 | 105 | 1,427 | 1,021 a 2,021 | 0,916 | 0,739 a 1",
+   "ruta": "c/k/motor|bodily_injury/ic90_k_e/0"
+  },
+  {
+   "id": "c184",
+   "formato": "dec3",
+   "valor": "2,021",
+   "contexto": "266 | 105 | 1,427 | 1,021 a 2,021 | 0,916 | 0,739 a 1,140 |",
+   "ruta": "c/k/motor|bodily_injury/ic90_k_e/1"
+  },
+  {
+   "id": "c185",
+   "formato": "dec3",
+   "valor": "0,916",
+   "contexto": "105 | 1,427 | 1,021 a 2,021 | 0,916 | 0,739 a 1,140 |",
+   "ruta": "c/k/motor|bodily_injury/k_conteos"
+  },
+  {
+   "id": "c186",
+   "formato": "dec3",
+   "valor": "0,739",
+   "contexto": "1,427 | 1,021 a 2,021 | 0,916 | 0,739 a 1,140 |",
+   "ruta": "c/k/motor|bodily_injury/ic90_k_conteos/0"
+  },
+  {
+   "id": "c187",
+   "formato": "dec3",
+   "valor": "1,140",
+   "contexto": "1,021 a 2,021 | 0,916 | 0,739 a 1,140 |",
+   "ruta": "c/k/motor|bodily_injury/ic90_k_conteos/1"
+  },
+  {
+   "id": "c188",
+   "formato": "int",
+   "valor": "3.291",
+   "contexto": " Autos: resto de peligros | 3.291 | 129 | 0,694 | 0,541 a 0,886",
+   "ruta": "c/k/motor|_resto/siniestros_2023"
+  },
+  {
+   "id": "c189",
+   "formato": "int",
+   "valor": "129",
+   "contexto": "resto de peligros | 3.291 | 129 | 0,694 | 0,541 a 0,886 | 0",
+   "ruta": "c/k/motor|_resto/tardios"
+  },
+  {
+   "id": "c190",
+   "formato": "dec3",
+   "valor": "0,694",
+   "contexto": "de peligros | 3.291 | 129 | 0,694 | 0,541 a 0,886 | 0,840 | 0",
+   "ruta": "c/k/motor|_resto/k_e"
+  },
+  {
+   "id": "c191",
+   "formato": "dec3",
+   "valor": "0,541",
+   "contexto": "peligros | 3.291 | 129 | 0,694 | 0,541 a 0,886 | 0,840 | 0,721 a 0",
+   "ruta": "c/k/motor|_resto/ic90_k_e/0"
+  },
+  {
+   "id": "c192",
+   "formato": "dec3",
+   "valor": "0,886",
+   "contexto": "3.291 | 129 | 0,694 | 0,541 a 0,886 | 0,840 | 0,721 a 0,971 |",
+   "ruta": "c/k/motor|_resto/ic90_k_e/1"
+  },
+  {
+   "id": "c193",
+   "formato": "dec3",
+   "valor": "0,840",
+   "contexto": "129 | 0,694 | 0,541 a 0,886 | 0,840 | 0,721 a 0,971 |",
+   "ruta": "c/k/motor|_resto/k_conteos"
+  },
+  {
+   "id": "c194",
+   "formato": "dec3",
+   "valor": "0,721",
+   "contexto": "0,694 | 0,541 a 0,886 | 0,840 | 0,721 a 0,971 |",
+   "ruta": "c/k/motor|_resto/ic90_k_conteos/0"
+  },
+  {
+   "id": "c195",
+   "formato": "dec3",
+   "valor": "0,971",
+   "contexto": "0,541 a 0,886 | 0,840 | 0,721 a 0,971 |",
+   "ruta": "c/k/motor|_resto/ic90_k_conteos/1"
+  },
+  {
+   "id": "c196",
+   "formato": "int",
+   "valor": "519",
+   "contexto": "| Edificios | 519 | 40 | 0,991 | 0,551 a 1,686",
+   "ruta": "c/k/buildings|_ramo/siniestros_2023"
+  },
+  {
+   "id": "c197",
+   "formato": "int",
+   "valor": "40",
+   "contexto": "| Edificios | 519 | 40 | 0,991 | 0,551 a 1,686 | 1",
+   "ruta": "c/k/buildings|_ramo/tardios"
+  },
+  {
+   "id": "c198",
+   "formato": "dec3",
+   "valor": "0,991",
+   "contexto": "| Edificios | 519 | 40 | 0,991 | 0,551 a 1,686 | 1,351 | 0",
+   "ruta": "c/k/buildings|_ramo/k_e"
+  },
+  {
+   "id": "c199",
+   "formato": "dec3",
+   "valor": "0,551",
+   "contexto": "Edificios | 519 | 40 | 0,991 | 0,551 a 1,686 | 1,351 | 0,967 a 1",
+   "ruta": "c/k/buildings|_ramo/ic90_k_e/0"
+  },
+  {
+   "id": "c200",
+   "formato": "dec3",
+   "valor": "1,686",
+   "contexto": " 519 | 40 | 0,991 | 0,551 a 1,686 | 1,351 | 0,967 a 1,794 |",
+   "ruta": "c/k/buildings|_ramo/ic90_k_e/1"
+  },
+  {
+   "id": "c201",
+   "formato": "dec3",
+   "valor": "1,351",
+   "contexto": "40 | 0,991 | 0,551 a 1,686 | 1,351 | 0,967 a 1,794 |",
+   "ruta": "c/k/buildings|_ramo/k_conteos"
+  },
+  {
+   "id": "c202",
+   "formato": "dec3",
+   "valor": "0,967",
+   "contexto": "0,991 | 0,551 a 1,686 | 1,351 | 0,967 a 1,794 |",
+   "ruta": "c/k/buildings|_ramo/ic90_k_conteos/0"
+  },
+  {
+   "id": "c203",
+   "formato": "dec3",
+   "valor": "1,794",
+   "contexto": "0,551 a 1,686 | 1,351 | 0,967 a 1,794 |",
+   "ruta": "c/k/buildings|_ramo/ic90_k_conteos/1"
+  },
+  {
+   "id": "c204",
+   "formato": "int",
+   "valor": "32",
+   "contexto": "| Edificios: hundimiento | 32 | 10 | 0,946 | 0,282 a 2,135",
+   "ruta": "c/k/buildings|subsidence/siniestros_2023"
+  },
+  {
+   "id": "c205",
+   "formato": "int",
+   "valor": "10",
+   "contexto": "Edificios: hundimiento | 32 | 10 | 0,946 | 0,282 a 2,135 | 0",
+   "ruta": "c/k/buildings|subsidence/tardios"
+  },
+  {
+   "id": "c206",
+   "formato": "dec3",
+   "valor": "0,946",
+   "contexto": "Edificios: hundimiento | 32 | 10 | 0,946 | 0,282 a 2,135 | 0,967 | 0",
+   "ruta": "c/k/buildings|subsidence/k_e"
+  },
+  {
+   "id": "c207",
+   "formato": "dec3",
+   "valor": "0,282",
+   "contexto": "hundimiento | 32 | 10 | 0,946 | 0,282 a 2,135 | 0,967 | 0,451 a 1",
+   "ruta": "c/k/buildings|subsidence/ic90_k_e/0"
+  },
+  {
+   "id": "c208",
+   "formato": "dec3",
+   "valor": "2,135",
+   "contexto": "| 32 | 10 | 0,946 | 0,282 a 2,135 | 0,967 | 0,451 a 1,679 |",
+   "ruta": "c/k/buildings|subsidence/ic90_k_e/1"
+  },
+  {
+   "id": "c209",
+   "formato": "dec3",
+   "valor": "0,967",
+   "contexto": "10 | 0,946 | 0,282 a 2,135 | 0,967 | 0,451 a 1,679 |",
+   "ruta": "c/k/buildings|subsidence/k_conteos"
+  },
+  {
+   "id": "c210",
+   "formato": "dec3",
+   "valor": "0,451",
+   "contexto": "0,946 | 0,282 a 2,135 | 0,967 | 0,451 a 1,679 |",
+   "ruta": "c/k/buildings|subsidence/ic90_k_conteos/0"
+  },
+  {
+   "id": "c211",
+   "formato": "dec3",
+   "valor": "1,679",
+   "contexto": "0,282 a 2,135 | 0,967 | 0,451 a 1,679 |",
+   "ruta": "c/k/buildings|subsidence/ic90_k_conteos/1"
+  },
+  {
+   "id": "c212",
+   "formato": "int",
+   "valor": "487",
+   "contexto": "Edificios: resto de peligros | 487 | 30 | 1,041 | 0,566 a 1,675",
+   "ruta": "c/k/buildings|_resto/siniestros_2023"
+  },
+  {
+   "id": "c213",
+   "formato": "int",
+   "valor": "30",
+   "contexto": "Edificios: resto de peligros | 487 | 30 | 1,041 | 0,566 a 1,675 | 1",
+   "ruta": "c/k/buildings|_resto/tardios"
+  },
+  {
+   "id": "c214",
+   "formato": "dec3",
+   "valor": "1,041",
+   "contexto": "resto de peligros | 487 | 30 | 1,041 | 0,566 a 1,675 | 1,557 | 1",
+   "ruta": "c/k/buildings|_resto/k_e"
+  },
+  {
+   "id": "c215",
+   "formato": "dec3",
+   "valor": "0,566",
+   "contexto": "peligros | 487 | 30 | 1,041 | 0,566 a 1,675 | 1,557 | 1,105 a 2",
+   "ruta": "c/k/buildings|_resto/ic90_k_e/0"
+  },
+  {
+   "id": "c216",
+   "formato": "dec3",
+   "valor": "1,675",
+   "contexto": " 487 | 30 | 1,041 | 0,566 a 1,675 | 1,557 | 1,105 a 2,051 |",
+   "ruta": "c/k/buildings|_resto/ic90_k_e/1"
+  },
+  {
+   "id": "c217",
+   "formato": "dec3",
+   "valor": "1,557",
+   "contexto": "30 | 1,041 | 0,566 a 1,675 | 1,557 | 1,105 a 2,051 |",
+   "ruta": "c/k/buildings|_resto/k_conteos"
+  },
+  {
+   "id": "c218",
+   "formato": "dec3",
+   "valor": "1,105",
+   "contexto": "1,041 | 0,566 a 1,675 | 1,557 | 1,105 a 2,051 |",
+   "ruta": "c/k/buildings|_resto/ic90_k_conteos/0"
+  },
+  {
+   "id": "c219",
+   "formato": "dec3",
+   "valor": "2,051",
+   "contexto": "0,566 a 1,675 | 1,557 | 1,105 a 2,051 |",
+   "ruta": "c/k/buildings|_resto/ic90_k_conteos/1"
+  },
+  {
+   "id": "c220",
+   "formato": "int",
+   "valor": "491",
+   "contexto": "| Contenidos | 491 | 21 | 0,674 | 0,230 a 1,271",
+   "ruta": "c/k/contents|_ramo/siniestros_2023"
+  },
+  {
+   "id": "c221",
+   "formato": "int",
+   "valor": "21",
+   "contexto": "| Contenidos | 491 | 21 | 0,674 | 0,230 a 1,271 | 1",
+   "ruta": "c/k/contents|_ramo/tardios"
+  },
+  {
+   "id": "c222",
+   "formato": "dec3",
+   "valor": "0,674",
+   "contexto": "| Contenidos | 491 | 21 | 0,674 | 0,230 a 1,271 | 1,235 | 0",
+   "ruta": "c/k/contents|_ramo/k_e"
+  },
+  {
+   "id": "c223",
+   "formato": "dec3",
+   "valor": "0,230",
+   "contexto": "Contenidos | 491 | 21 | 0,674 | 0,230 a 1,271 | 1,235 | 0,786 a 1",
+   "ruta": "c/k/contents|_ramo/ic90_k_e/0"
+  },
+  {
+   "id": "c224",
+   "formato": "dec3",
+   "valor": "1,271",
+   "contexto": " 491 | 21 | 0,674 | 0,230 a 1,271 | 1,235 | 0,786 a 1,674 |",
+   "ruta": "c/k/contents|_ramo/ic90_k_e/1"
+  },
+  {
+   "id": "c225",
+   "formato": "dec3",
+   "valor": "1,235",
+   "contexto": "21 | 0,674 | 0,230 a 1,271 | 1,235 | 0,786 a 1,674 |",
+   "ruta": "c/k/contents|_ramo/k_conteos"
+  },
+  {
+   "id": "c226",
+   "formato": "dec3",
+   "valor": "0,786",
+   "contexto": "0,674 | 0,230 a 1,271 | 1,235 | 0,786 a 1,674 |",
+   "ruta": "c/k/contents|_ramo/ic90_k_conteos/0"
+  },
+  {
+   "id": "c227",
+   "formato": "dec3",
+   "valor": "1,674",
+   "contexto": "0,230 a 1,271 | 1,235 | 0,786 a 1,674 |",
+   "ruta": "c/k/contents|_ramo/ic90_k_conteos/1"
+  },
+  {
+   "id": "c228",
+   "formato": "pct1",
+   "valor": "42,7",
+   "contexto": "lesiones corporales llegó tarde un 42,7 % más de coste del previsto",
+   "calculo": "=menos_uno(c/k/motor|bodily_injury/k_e)"
+  },
+  {
+   "id": "c229",
+   "formato": "dec0",
+   "valor": "1.444.498",
+   "contexto": "% más de coste del previsto (1.444.498 CU frente a 1.012.492), y el",
+   "ruta": "c/k/motor|bodily_injury/coste_tardio_observado"
+  },
+  {
+   "id": "c230",
+   "formato": "dec0",
+   "valor": "1.012.492",
+   "contexto": "previsto (1.444.498 CU frente a 1.012.492), y el intervalo excluye el",
+   "ruta": "c/k/motor|bodily_injury/coste_tardio_previsto"
+  },
+  {
+   "id": "c231",
+   "formato": "dec3",
+   "valor": "0,916",
+   "contexto": "es el previsto (k en número 0,916): llegan los que se esperaban",
+   "ruta": "c/k/motor|bodily_injury/k_conteos"
+  },
+  {
+   "id": "c232",
+   "formato": "int",
+   "valor": "65",
+   "contexto": "se esperaban, pero más caros. 65 de esos 105 tardíos siguen abiertos",
+   "calculo": "=contar_abiertos_tardios(c/k/motor|bodily_injury)"
+  },
+  {
+   "id": "c233",
+   "formato": "int",
+   "valor": "105",
+   "contexto": "esperaban, pero más caros. 65 de esos 105 tardíos siguen abiertos, así",
+   "ruta": "c/k/motor|bodily_injury/tardios"
+  },
+  {
+   "id": "c234",
+   "formato": "dec3",
+   "valor": "1,365",
+   "contexto": "la β de lesiones, k_e baja a 1,365 (lectura no preinscrita, sección",
+   "ruta": "g/G1_k_e_lesiones_con_reserva_por_beta/k_e_ajustado"
+  },
+  {
+   "id": "c235",
+   "formato": "dec3",
+   "valor": "0,694",
+   "contexto": "autos pasa lo contrario, con k_e 0,694, y los dos efectos se compensan",
+   "ruta": "c/k/motor|_resto/k_e"
+  },
+  {
+   "id": "c236",
+   "formato": "dec3",
+   "valor": "0,873",
+   "contexto": "En número salen del 1 autos (0,873), el resto de peligros de autos",
+   "ruta": "c/k/motor|_ramo/k_conteos"
+  },
+  {
+   "id": "c237",
+   "formato": "dec3",
+   "valor": "0,840",
+   "contexto": "resto de peligros de autos (0,840) y el resto de edificios (1",
+   "ruta": "c/k/motor|_resto/k_conteos"
+  },
+  {
+   "id": "c238",
+   "formato": "dec3",
+   "valor": "1,557",
+   "contexto": "0,840) y el resto de edificios (1,557). Son 14 intervalos al 90 %",
+   "ruta": "c/k/buildings|_resto/k_conteos"
+  },
+  {
+   "id": "c239",
+   "formato": "int",
+   "valor": "14",
+   "contexto": "resto de edificios (1,557). Son 14 intervalos al 90 % sobre grupos",
+   "calculo": "=intervalos_k()"
+  },
+  {
+   "id": "c240",
+   "formato": "int",
+   "valor": "5",
+   "contexto": "uno o dos fuera del 1, y hay 5. Esta cuenta no estaba en el",
+   "calculo": "=intervalos_k_fuera()"
+  },
+  {
+   "id": "c242",
+   "formato": "sci1",
+   "valor": "4,9 × 10⁻⁷",
+   "contexto": "diferencia relativa máxima de 4,9 × 10⁻⁷. Los pasos de F2 y de los factores",
+   "ruta": "d/control/max_dif_relativa"
+  },
+  {
+   "id": "c243",
+   "formato": "dec3",
+   "valor": "0,571",
+   "contexto": "del ramo en la sonda global: 0,571 en autos, 0,274 en edificios",
+   "ruta": "d/elasticidad_analitica/motor/w_r"
+  },
+  {
+   "id": "c244",
+   "formato": "dec3",
+   "valor": "0,274",
+   "contexto": "sonda global: 0,571 en autos, 0,274 en edificios y 0,155 en contenidos",
+   "ruta": "d/elasticidad_analitica/buildings/w_r"
+  },
+  {
+   "id": "c245",
+   "formato": "dec3",
+   "valor": "0,155",
+   "contexto": "autos, 0,274 en edificios y 0,155 en contenidos. Las celdas de",
+   "ruta": "d/elasticidad_analitica/contents/w_r"
+  },
+  {
+   "id": "c246",
+   "formato": "dec3",
+   "valor": "0,810",
+   "contexto": "| Autos, renovación | 0,810 | 0,165 | 15,2 % |",
+   "ruta": "ctx/Z_s/motor_0"
+  },
+  {
+   "id": "c247",
+   "formato": "dec3",
+   "valor": "0,165",
+   "contexto": "Autos, renovación | 0,810 | 0,165 | 15,2 % |",
+   "ruta": "d/elasticidad_analitica/motor/motor_0"
+  },
+  {
+   "id": "c248",
+   "formato": "pct1",
+   "valor": "15,2",
+   "contexto": "renovación | 0,810 | 0,165 | 15,2 % |",
+   "calculo": "=uno_menos(ctx/cuota_nuevo_negocio_en_total_F3c_2025/motor)"
+  },
+  {
+   "id": "c249",
+   "formato": "dec3",
+   "valor": "0,866",
+   "contexto": "| Autos, nuevo negocio | 0,866 | 0,141 | 84,8 % |",
+   "ruta": "ctx/Z_s/motor_1"
+  },
+  {
+   "id": "c250",
+   "formato": "dec3",
+   "valor": "0,141",
+   "contexto": "Autos, nuevo negocio | 0,866 | 0,141 | 84,8 % |",
+   "ruta": "d/elasticidad_analitica/motor/motor_1"
+  },
+  {
+   "id": "c251",
+   "formato": "pct1",
+   "valor": "84,8",
+   "contexto": "nuevo negocio | 0,866 | 0,141 | 84,8 % |",
+   "ruta": "ctx/cuota_nuevo_negocio_en_total_F3c_2025/motor"
+  },
+  {
+   "id": "c252",
+   "formato": "dec3",
+   "valor": "0,360",
+   "contexto": "| Edificios, renovación | 0,360 | 0,505 | 20,4 % |",
+   "ruta": "ctx/Z_s/buildings_0"
+  },
+  {
+   "id": "c253",
+   "formato": "dec3",
+   "valor": "0,505",
+   "contexto": "Edificios, renovación | 0,360 | 0,505 | 20,4 % |",
+   "ruta": "d/elasticidad_analitica/buildings/buildings_0"
+  },
+  {
+   "id": "c254",
+   "formato": "pct1",
+   "valor": "20,4",
+   "contexto": "renovación | 0,360 | 0,505 | 20,4 % |",
+   "calculo": "=uno_menos(ctx/cuota_nuevo_negocio_en_total_F3c_2025/buildings)"
+  },
+  {
+   "id": "c255",
+   "formato": "dec3",
+   "valor": "0,724",
+   "contexto": " Edificios, nuevo negocio | 0,724 | 0,240 | 79,6 % |",
+   "ruta": "ctx/Z_s/buildings_1"
+  },
+  {
+   "id": "c256",
+   "formato": "dec3",
+   "valor": "0,240",
+   "contexto": "Edificios, nuevo negocio | 0,724 | 0,240 | 79,6 % |",
+   "ruta": "d/elasticidad_analitica/buildings/buildings_1"
+  },
+  {
+   "id": "c257",
+   "formato": "pct1",
+   "valor": "79,6",
+   "contexto": "nuevo negocio | 0,724 | 0,240 | 79,6 % |",
+   "ruta": "ctx/cuota_nuevo_negocio_en_total_F3c_2025/buildings"
+  },
+  {
+   "id": "c258",
+   "formato": "dec3",
+   "valor": "0,534",
+   "contexto": "| Contenidos, renovación | 0,534 | 0,416 | 21,5 % |",
+   "ruta": "ctx/Z_s/contents_0"
+  },
+  {
+   "id": "c259",
+   "formato": "dec3",
+   "valor": "0,416",
+   "contexto": "Contenidos, renovación | 0,534 | 0,416 | 21,5 % |",
+   "ruta": "d/elasticidad_analitica/contents/contents_0"
+  },
+  {
+   "id": "c260",
+   "formato": "pct1",
+   "valor": "21,5",
+   "contexto": "renovación | 0,534 | 0,416 | 21,5 % |",
+   "calculo": "=uno_menos(ctx/cuota_nuevo_negocio_en_total_F3c_2025/contents)"
+  },
+  {
+   "id": "c261",
+   "formato": "dec3",
+   "valor": "0,736",
+   "contexto": "Contenidos, nuevo negocio | 0,736 | 0,246 | 78,5 % |",
+   "ruta": "ctx/Z_s/contents_1"
+  },
+  {
+   "id": "c262",
+   "formato": "dec3",
+   "valor": "0,246",
+   "contexto": "Contenidos, nuevo negocio | 0,736 | 0,246 | 78,5 % |",
+   "ruta": "d/elasticidad_analitica/contents/contents_1"
+  },
+  {
+   "id": "c263",
+   "formato": "pct1",
+   "valor": "78,5",
+   "contexto": "nuevo negocio | 0,736 | 0,246 | 78,5 % |",
+   "ruta": "ctx/cuota_nuevo_negocio_en_total_F3c_2025/contents"
+  },
+  {
+   "id": "c264",
+   "formato": "raw",
+   "valor": "0,955 a 1,045",
+   "contexto": "| Autos, reserva de caso | 0,955 a 1,045 | 0,697 a 1,321 | β 0,647 a",
+   "calculo": "=umbral_txt(d/escenarios/motor|b|ramo/umbral_mezcla)"
+  },
+  {
+   "id": "c265",
+   "formato": "raw",
+   "valor": "0,697 a 1,321",
+   "contexto": "reserva de caso | 0,955 a 1,045 | 0,697 a 1,321 | β 0,647 a 0,997 | incertidumbre",
+   "calculo": "=umbral_txt(d/escenarios/motor|b|ramo/umbral_F3c)"
+  },
+  {
+   "id": "c266",
+   "formato": "dec3",
+   "valor": "0,647",
+   "contexto": "a 1,045 | 0,697 a 1,321 | β 0,647 a 0,997 | incertidumbre material",
+   "ruta": "b/beta/motor|_ramo/ic90/0"
+  },
+  {
+   "id": "c267",
+   "formato": "dec3",
+   "valor": "0,997",
+   "contexto": "| 0,697 a 1,321 | β 0,647 a 0,997 | incertidumbre material | −0",
+   "ruta": "b/beta/motor|_ramo/ic90/1"
+  },
+  {
+   "id": "c268",
+   "formato": "raw",
+   "valor": "incertidumbre material",
+   "contexto": "a 1,321 | β 0,647 a 0,997 | incertidumbre material | −0,66 % |",
+   "calculo": "=clase(d/escenarios/motor|b|ramo/clase_F3c)"
+  },
+  {
+   "id": "c269",
+   "formato": "spct2",
+   "valor": "−0,66",
+   "contexto": "0,997 | incertidumbre material | −0,66 % |",
+   "ruta": "d/escenarios/motor|b|ramo/F3c_con_beta_puntual"
+  },
+  {
+   "id": "c270",
+   "formato": "raw",
+   "valor": "0,934 a 1,066",
+   "contexto": "| Autos, solo lesiones | 0,934 a 1,066 | 0,558 a 1,469 | β 0,512 a",
+   "calculo": "=umbral_txt(d/escenarios/motor|b|largo/umbral_mezcla)"
+  },
+  {
+   "id": "c271",
+   "formato": "raw",
+   "valor": "0,558 a 1,469",
+   "contexto": "solo lesiones | 0,934 a 1,066 | 0,558 a 1,469 | β 0,512 a 1,077 | incertidumbre",
+   "calculo": "=umbral_txt(d/escenarios/motor|b|largo/umbral_F3c)"
+  },
+  {
+   "id": "c272",
+   "formato": "dec3",
+   "valor": "0,512",
+   "contexto": "a 1,066 | 0,558 a 1,469 | β 0,512 a 1,077 | incertidumbre material",
+   "ruta": "b/beta/motor|bodily_injury/ic90/0"
+  },
+  {
+   "id": "c273",
+   "formato": "dec3",
+   "valor": "1,077",
+   "contexto": "| 0,558 a 1,469 | β 0,512 a 1,077 | incertidumbre material | −0",
+   "ruta": "b/beta/motor|bodily_injury/ic90/1"
+  },
+  {
+   "id": "c274",
+   "formato": "raw",
+   "valor": "incertidumbre material",
+   "contexto": "a 1,469 | β 0,512 a 1,077 | incertidumbre material | −0,54 % |",
+   "calculo": "=clase(d/escenarios/motor|b|largo/clase_F3c)"
+  },
+  {
+   "id": "c275",
+   "formato": "spct2",
+   "valor": "−0,54",
+   "contexto": "1,077 | incertidumbre material | −0,54 % |",
+   "ruta": "d/escenarios/motor|b|largo/F3c_con_beta_puntual"
+  },
+  {
+   "id": "c276",
+   "formato": "raw",
+   "valor": "0,857 a 1,143",
+   "contexto": " Autos, resto de peligros | 0,857 a 1,143 | 0,041 a 2,018 | β 0,729 a",
+   "calculo": "=umbral_txt(d/escenarios/motor|b|resto/umbral_mezcla)"
+  },
+  {
+   "id": "c277",
+   "formato": "raw",
+   "valor": "0,041 a 2,018",
+   "contexto": "de peligros | 0,857 a 1,143 | 0,041 a 2,018 | β 0,729 a 1,012 | acotado",
+   "calculo": "=umbral_txt(d/escenarios/motor|b|resto/umbral_F3c)"
+  },
+  {
+   "id": "c278",
+   "formato": "dec3",
+   "valor": "0,729",
+   "contexto": "a 1,143 | 0,041 a 2,018 | β 0,729 a 1,012 | acotado | −0,15 %",
+   "ruta": "b/beta/motor|_resto/ic90/0"
+  },
+  {
+   "id": "c279",
+   "formato": "dec3",
+   "valor": "1,012",
+   "contexto": "| 0,041 a 2,018 | β 0,729 a 1,012 | acotado | −0,15 % |",
+   "ruta": "b/beta/motor|_resto/ic90/1"
+  },
+  {
+   "id": "c280",
+   "formato": "raw",
+   "valor": "acotado",
+   "contexto": "a 2,018 | β 0,729 a 1,012 | acotado | −0,15 % |",
+   "calculo": "=clase(d/escenarios/motor|b|resto/clase_F3c)"
+  },
+  {
+   "id": "c281",
+   "formato": "spct2",
+   "valor": "−0,15",
+   "contexto": "β 0,729 a 1,012 | acotado | −0,15 % |",
+   "ruta": "d/escenarios/motor|b|resto/F3c_con_beta_puntual"
+  },
+  {
+   "id": "c282",
+   "formato": "raw",
+   "valor": "0,926 a 1,074",
+   "contexto": "Edificios, reserva de caso | 0,926 a 1,074 | 0,751 a 1,255 | β 0,500 a",
+   "calculo": "=umbral_txt(d/escenarios/buildings|b|ramo/umbral_mezcla)"
+  },
+  {
+   "id": "c283",
+   "formato": "raw",
+   "valor": "0,751 a 1,255",
+   "contexto": "reserva de caso | 0,926 a 1,074 | 0,751 a 1,255 | β 0,500 a 1,333 | incertidumbre",
+   "calculo": "=umbral_txt(d/escenarios/buildings|b|ramo/umbral_F3c)"
+  },
+  {
+   "id": "c284",
+   "formato": "dec3",
+   "valor": "0,500",
+   "contexto": "a 1,074 | 0,751 a 1,255 | β 0,500 a 1,333 | incertidumbre material",
+   "ruta": "b/beta/buildings|_ramo/ic90/0"
+  },
+  {
+   "id": "c285",
+   "formato": "dec3",
+   "valor": "1,333",
+   "contexto": "| 0,751 a 1,255 | β 0,500 a 1,333 | incertidumbre material | −0",
+   "ruta": "b/beta/buildings|_ramo/ic90/1"
+  },
+  {
+   "id": "c286",
+   "formato": "raw",
+   "valor": "incertidumbre material",
+   "contexto": "a 1,255 | β 0,500 a 1,333 | incertidumbre material | −0,10 % |",
+   "calculo": "=clase(d/escenarios/buildings|b|ramo/clase_F3c)"
+  },
+  {
+   "id": "c287",
+   "formato": "spct2",
+   "valor": "−0,10",
+   "contexto": "1,333 | incertidumbre material | −0,10 % |",
+   "ruta": "d/escenarios/buildings|b|ramo/F3c_con_beta_puntual"
+  },
+  {
+   "id": "c288",
+   "formato": "raw",
+   "valor": "0,673 a 1,327",
+   "contexto": "Edificios, solo hundimiento | 0,673 a 1,327 | hasta 2,123 | sin β | sin",
+   "calculo": "=umbral_txt(d/escenarios/buildings|b|largo/umbral_mezcla)"
+  },
+  {
+   "id": "c289",
+   "formato": "raw",
+   "valor": "hasta 2,123",
+   "contexto": "hundimiento | 0,673 a 1,327 | hasta 2,123 | sin β | sin estimación | ",
+   "calculo": "=umbral_txt(d/escenarios/buildings|b|largo/umbral_F3c)"
+  },
+  {
+   "id": "c290",
+   "formato": "raw",
+   "valor": "sin estimación",
+   "contexto": "1,327 | hasta 2,123 | sin β | sin estimación | |",
+   "calculo": "=clase(d/escenarios/buildings|b|largo/clase_F3c)"
+  },
+  {
+   "id": "c291",
+   "formato": "raw",
+   "valor": "0,904 a 1,096",
+   "contexto": "Edificios, resto de peligros | 0,904 a 1,096 | 0,677 a 1,330 | β 0,487 a",
+   "calculo": "=umbral_txt(d/escenarios/buildings|b|resto/umbral_mezcla)"
+  },
+  {
+   "id": "c292",
+   "formato": "raw",
+   "valor": "0,677 a 1,330",
+   "contexto": "de peligros | 0,904 a 1,096 | 0,677 a 1,330 | β 0,487 a 1,335 | incertidumbre",
+   "calculo": "=umbral_txt(d/escenarios/buildings|b|resto/umbral_F3c)"
+  },
+  {
+   "id": "c293",
+   "formato": "dec3",
+   "valor": "0,487",
+   "contexto": "a 1,096 | 0,677 a 1,330 | β 0,487 a 1,335 | incertidumbre material",
+   "ruta": "b/beta/buildings|_resto/ic90/0"
+  },
+  {
+   "id": "c294",
+   "formato": "dec3",
+   "valor": "1,335",
+   "contexto": "| 0,677 a 1,330 | β 0,487 a 1,335 | incertidumbre material | −0",
+   "ruta": "b/beta/buildings|_resto/ic90/1"
+  },
+  {
+   "id": "c295",
+   "formato": "raw",
+   "valor": "incertidumbre material",
+   "contexto": "a 1,330 | β 0,487 a 1,335 | incertidumbre material | −0,08 % |",
+   "calculo": "=clase(d/escenarios/buildings|b|resto/clase_F3c)"
+  },
+  {
+   "id": "c296",
+   "formato": "spct2",
+   "valor": "−0,08",
+   "contexto": "1,335 | incertidumbre material | −0,08 % |",
+   "ruta": "d/escenarios/buildings|b|resto/F3c_con_beta_puntual"
+  },
+  {
+   "id": "c297",
+   "formato": "raw",
+   "valor": "0,866 a 1,134",
+   "contexto": "Contenidos, reserva de caso | 0,866 a 1,134 | 0,533 a 1,479 | β 0,740 a",
+   "calculo": "=umbral_txt(d/escenarios/contents|b|ramo/umbral_mezcla)"
+  },
+  {
+   "id": "c298",
+   "formato": "raw",
+   "valor": "0,533 a 1,479",
+   "contexto": "reserva de caso | 0,866 a 1,134 | 0,533 a 1,479 | β 0,740 a 2,078 | incertidumbre",
+   "calculo": "=umbral_txt(d/escenarios/contents|b|ramo/umbral_F3c)"
+  },
+  {
+   "id": "c299",
+   "formato": "dec3",
+   "valor": "0,740",
+   "contexto": "a 1,134 | 0,533 a 1,479 | β 0,740 a 2,078 | incertidumbre material",
+   "ruta": "b/beta/contents|_ramo/ic90/0"
+  },
+  {
+   "id": "c300",
+   "formato": "dec3",
+   "valor": "2,078",
+   "contexto": "| 0,533 a 1,479 | β 0,740 a 2,078 | incertidumbre material | +0",
+   "ruta": "b/beta/contents|_ramo/ic90/1"
+  },
+  {
+   "id": "c301",
+   "formato": "raw",
+   "valor": "incertidumbre material",
+   "contexto": "a 1,479 | β 0,740 a 2,078 | incertidumbre material | +0,47 % |",
+   "calculo": "=clase(d/escenarios/contents|b|ramo/clase_F3c)"
+  },
+  {
+   "id": "c302",
+   "formato": "spct2",
+   "valor": "+0,47",
+   "contexto": "2,078 | incertidumbre material | +0,47 % |",
+   "ruta": "d/escenarios/contents|b|ramo/F3c_con_beta_puntual"
+  },
+  {
+   "id": "c303",
+   "formato": "raw",
+   "valor": "0,885 a 1,121",
+   "contexto": "| Autos, IBNR | 0,885 a 1,121 | 0,341 a 2,001 | k_e 0,912",
+   "calculo": "=umbral_txt(d/escenarios/motor|k|ramo/umbral_mezcla)"
+  },
+  {
+   "id": "c304",
+   "formato": "raw",
+   "valor": "0,341 a 2,001",
+   "contexto": "Autos, IBNR | 0,885 a 1,121 | 0,341 a 2,001 | k_e 0,912 a 1,718 | acotado",
+   "calculo": "=umbral_txt(d/escenarios/motor|k|ramo/umbral_F3c)"
+  },
+  {
+   "id": "c305",
+   "formato": "dec3",
+   "valor": "0,912",
+   "contexto": "1,121 | 0,341 a 2,001 | k_e 0,912 a 1,718 | acotado | +0,31 %",
+   "ruta": "c/k/motor|_ramo/ic90_k_e/0"
+  },
+  {
+   "id": "c306",
+   "formato": "dec3",
+   "valor": "1,718",
+   "contexto": "0,341 a 2,001 | k_e 0,912 a 1,718 | acotado | +0,31 % |",
+   "ruta": "c/k/motor|_ramo/ic90_k_e/1"
+  },
+  {
+   "id": "c307",
+   "formato": "raw",
+   "valor": "acotado",
+   "contexto": "2,001 | k_e 0,912 a 1,718 | acotado | +0,31 % |",
+   "calculo": "=clase(d/escenarios/motor|k|ramo/clase_F3c)"
+  },
+  {
+   "id": "c308",
+   "formato": "spct2",
+   "valor": "+0,31",
+   "contexto": "k_e 0,912 a 1,718 | acotado | +0,31 % |",
+   "ruta": "d/escenarios/motor|k|ramo/F3c_con_k_e_puntual"
+  },
+  {
+   "id": "c309",
+   "formato": "raw",
+   "valor": "0,855 a 1,160",
+   "contexto": "| Autos, IBNR de lesiones | 0,855 a 1,160 | 0,243 a 2,572 | k_e 1,021",
+   "calculo": "=umbral_txt(d/escenarios/motor|k|largo/umbral_mezcla)"
+  },
+  {
+   "id": "c310",
+   "formato": "raw",
+   "valor": "0,243 a 2,572",
+   "contexto": "de lesiones | 0,855 a 1,160 | 0,243 a 2,572 | k_e 1,021 a 2,021 | acotado",
+   "calculo": "=umbral_txt(d/escenarios/motor|k|largo/umbral_F3c)"
+  },
+  {
+   "id": "c311",
+   "formato": "dec3",
+   "valor": "1,021",
+   "contexto": "1,160 | 0,243 a 2,572 | k_e 1,021 a 2,021 | acotado | +0,36 %",
+   "ruta": "c/k/motor|bodily_injury/ic90_k_e/0"
+  },
+  {
+   "id": "c312",
+   "formato": "dec3",
+   "valor": "2,021",
+   "contexto": "0,243 a 2,572 | k_e 1,021 a 2,021 | acotado | +0,36 % |",
+   "ruta": "c/k/motor|bodily_injury/ic90_k_e/1"
+  },
+  {
+   "id": "c313",
+   "formato": "raw",
+   "valor": "acotado",
+   "contexto": "2,572 | k_e 1,021 a 2,021 | acotado | +0,36 % |",
+   "calculo": "=clase(d/escenarios/motor|k|largo/clase_F3c)"
+  },
+  {
+   "id": "c314",
+   "formato": "spct2",
+   "valor": "+0,36",
+   "contexto": "k_e 1,021 a 2,021 | acotado | +0,36 % |",
+   "ruta": "d/escenarios/motor|k|largo/F3c_con_k_e_puntual"
+  },
+  {
+   "id": "c315",
+   "formato": "raw",
+   "valor": "0,633 a 1,402",
+   "contexto": "| Edificios, IBNR | 0,633 a 1,402 | hasta 2,501 | k_e 0,551 a",
+   "calculo": "=umbral_txt(d/escenarios/buildings|k|ramo/umbral_mezcla)"
+  },
+  {
+   "id": "c316",
+   "formato": "raw",
+   "valor": "hasta 2,501",
+   "contexto": "Edificios, IBNR | 0,633 a 1,402 | hasta 2,501 | k_e 0,551 a 1,686 | acotado",
+   "calculo": "=umbral_txt(d/escenarios/buildings|k|ramo/umbral_F3c)"
+  },
+  {
+   "id": "c317",
+   "formato": "dec3",
+   "valor": "0,551",
+   "contexto": "a 1,402 | hasta 2,501 | k_e 0,551 a 1,686 | acotado | −0,01 %",
+   "ruta": "c/k/buildings|_ramo/ic90_k_e/0"
+  },
+  {
+   "id": "c318",
+   "formato": "dec3",
+   "valor": "1,686",
+   "contexto": "| hasta 2,501 | k_e 0,551 a 1,686 | acotado | −0,01 % |",
+   "ruta": "c/k/buildings|_ramo/ic90_k_e/1"
+  },
+  {
+   "id": "c319",
+   "formato": "raw",
+   "valor": "acotado",
+   "contexto": "2,501 | k_e 0,551 a 1,686 | acotado | −0,01 % |",
+   "calculo": "=clase(d/escenarios/buildings|k|ramo/clase_F3c)"
+  },
+  {
+   "id": "c320",
+   "formato": "spct2",
+   "valor": "−0,01",
+   "contexto": "k_e 0,551 a 1,686 | acotado | −0,01 % |",
+   "ruta": "d/escenarios/buildings|k|ramo/F3c_con_k_e_puntual"
+  },
+  {
+   "id": "c321",
+   "formato": "raw",
+   "valor": "0,231 a 2,506",
+   "contexto": "Edificios, IBNR de hundimiento | 0,231 a 2,506 | cualquiera de 0 a 20 | k_e",
+   "calculo": "=umbral_txt(d/escenarios/buildings|k|largo/umbral_mezcla)"
+  },
+  {
+   "id": "c322",
+   "formato": "raw",
+   "valor": "cualquiera de 0 a 20",
+   "contexto": "hundimiento | 0,231 a 2,506 | cualquiera de 0 a 20 | k_e 0,282 a 2,135 | acotado",
+   "calculo": "=umbral_txt(d/escenarios/buildings|k|largo/umbral_F3c)"
+  },
+  {
+   "id": "c323",
+   "formato": "dec3",
+   "valor": "0,282",
+   "contexto": " cualquiera de 0 a 20 | k_e 0,282 a 2,135 | acotado | −0,02 %",
+   "ruta": "c/k/buildings|subsidence/ic90_k_e/0"
+  },
+  {
+   "id": "c324",
+   "formato": "dec3",
+   "valor": "2,135",
+   "contexto": "cualquiera de 0 a 20 | k_e 0,282 a 2,135 | acotado | −0,02 % |",
+   "ruta": "c/k/buildings|subsidence/ic90_k_e/1"
+  },
+  {
+   "id": "c325",
+   "formato": "raw",
+   "valor": "acotado",
+   "contexto": "0 a 20 | k_e 0,282 a 2,135 | acotado | −0,02 % |",
+   "calculo": "=clase(d/escenarios/buildings|k|largo/clase_F3c)"
+  },
+  {
+   "id": "c326",
+   "formato": "spct2",
+   "valor": "−0,02",
+   "contexto": "k_e 0,282 a 2,135 | acotado | −0,02 % |",
+   "ruta": "d/escenarios/buildings|k|largo/F3c_con_k_e_puntual"
+  },
+  {
+   "id": "c327",
+   "formato": "raw",
+   "valor": "0,522 a 1,489",
+   "contexto": "| Contenidos, IBNR | 0,522 a 1,489 | hasta 2,800 | k_e 0,230 a",
+   "calculo": "=umbral_txt(d/escenarios/contents|k|ramo/umbral_mezcla)"
+  },
+  {
+   "id": "c328",
+   "formato": "raw",
+   "valor": "hasta 2,800",
+   "contexto": "Contenidos, IBNR | 0,522 a 1,489 | hasta 2,800 | k_e 0,230 a 1,271 | acotado",
+   "calculo": "=umbral_txt(d/escenarios/contents|k|ramo/umbral_F3c)"
+  },
+  {
+   "id": "c329",
+   "formato": "dec3",
+   "valor": "0,230",
+   "contexto": "a 1,489 | hasta 2,800 | k_e 0,230 a 1,271 | acotado | −0,19 %",
+   "ruta": "c/k/contents|_ramo/ic90_k_e/0"
+  },
+  {
+   "id": "c330",
+   "formato": "dec3",
+   "valor": "1,271",
+   "contexto": "| hasta 2,800 | k_e 0,230 a 1,271 | acotado | −0,19 % |",
+   "ruta": "c/k/contents|_ramo/ic90_k_e/1"
+  },
+  {
+   "id": "c331",
+   "formato": "raw",
+   "valor": "acotado",
+   "contexto": "2,800 | k_e 0,230 a 1,271 | acotado | −0,19 % |",
+   "calculo": "=clase(d/escenarios/contents|k|ramo/clase_F3c)"
+  },
+  {
+   "id": "c332",
+   "formato": "spct2",
+   "valor": "−0,19",
+   "contexto": "k_e 0,230 a 1,271 | acotado | −0,19 % |",
+   "ruta": "d/escenarios/contents|k|ramo/F3c_con_k_e_puntual"
+  },
+  {
+   "id": "c333",
+   "formato": "pct2",
+   "valor": "2,48",
+   "contexto": "ejemplo, su nivel subiría un 2,48 %, frente al 0,36 % de F3c.",
+   "ruta": "d/escenarios/motor|k|largo/mezcla_con_k_e_puntual"
+  },
+  {
+   "id": "c334",
+   "formato": "pct2",
+   "valor": "0,36",
+   "contexto": "subiría un 2,48 %, frente al 0,36 % de F3c.",
+   "ruta": "d/escenarios/motor|k|largo/F3c_con_k_e_puntual"
+  },
+  {
+   "id": "c335",
+   "formato": "udec3",
+   "valor": "0,633",
+   "contexto": "la reserva de caso se abre a 0,633 a 1,396, y con el error solo",
+   "ruta": "d/escenarios/motor|b|ramo/variantes/Zg_0.90/umbral/0"
+  },
+  {
+   "id": "c336",
+   "formato": "udec3",
+   "valor": "1,396",
+   "contexto": "reserva de caso se abre a 0,633 a 1,396, y con el error solo en 2024",
+   "ruta": "d/escenarios/motor|b|ramo/variantes/Zg_0.90/umbral/1"
+  },
+  {
+   "id": "c337",
+   "formato": "udec3",
+   "valor": "0,560",
+   "contexto": "con el error solo en 2024, a 0,560 a 1,467; en los dos casos autos",
+   "ruta": "d/escenarios/motor|b|ramo/variantes/solo_2024/umbral/0"
+  },
+  {
+   "id": "c338",
+   "formato": "udec3",
+   "valor": "1,467",
+   "contexto": "error solo en 2024, a 0,560 a 1,467; en los dos casos autos y lesiones",
+   "ruta": "d/escenarios/motor|b|ramo/variantes/solo_2024/umbral/1"
+  },
+  {
+   "id": "c339",
+   "formato": "udec3",
+   "valor": "0,696",
+   "contexto": "ML el umbral apenas cambia (0,696 y 0,699 por abajo). En edificios",
+   "ruta": "d/escenarios/motor|b|ramo/variantes/solo_designada/umbral/0"
+  },
+  {
+   "id": "c340",
+   "formato": "udec3",
+   "valor": "0,699",
+   "contexto": "umbral apenas cambia (0,696 y 0,699 por abajo). En edificios y contenidos",
+   "ruta": "d/escenarios/motor|b|ramo/variantes/solo_mlind/umbral/0"
+  },
+  {
+   "id": "c341",
+   "formato": "dec3",
+   "valor": "0,617",
+   "contexto": "intervalo agrupado baja hasta 0,617.",
+   "ruta": "b/beta/motor|_ramo/agrupado_secundario/ic90/0"
+  },
+  {
+   "id": "c342",
+   "formato": "udec3",
+   "valor": "0,854",
+   "contexto": "en esa celda con b fuera de 0,854 a 1,148. Es la celda con la",
+   "ruta": "d/escenarios/buildings|b|ramo/umbral_celda_buildings_0/0"
+  },
+  {
+   "id": "c343",
+   "formato": "udec3",
+   "valor": "1,148",
+   "contexto": "celda con b fuera de 0,854 a 1,148. Es la celda con la sonda menos",
+   "ruta": "d/escenarios/buildings|b|ramo/umbral_celda_buildings_0/1"
+  },
+  {
+   "id": "c344",
+   "formato": "dec2",
+   "valor": "0,36",
+   "contexto": "la sonda menos creíble (Z_s = 0,36) y por eso con la fracción más",
+   "ruta": "ctx/Z_s/buildings_0"
+  },
+  {
+   "id": "c345",
+   "formato": "dec3",
+   "valor": "0,505",
+   "contexto": "eso con la fracción más alta (0,505). Le sigue la renovación de",
+   "ruta": "d/elasticidad_analitica/buildings/buildings_0"
+  },
+  {
+   "id": "c346",
+   "formato": "udec3",
+   "valor": "0,681",
+   "contexto": "renovación de contenidos (umbral 0,681 a 1,323). Pesa poco en el nivel",
+   "ruta": "d/escenarios/contents|b|ramo/umbral_celda_contents_0/0"
+  },
+  {
+   "id": "c347",
+   "formato": "udec3",
+   "valor": "1,323",
+   "contexto": "de contenidos (umbral 0,681 a 1,323). Pesa poco en el nivel del",
+   "ruta": "d/escenarios/contents|b|ramo/umbral_celda_contents_0/1"
+  },
+  {
+   "id": "c348",
+   "formato": "apct2",
+   "valor": "0,83",
+   "contexto": "0,75 en todo, autos bajaría un 0,83 %, edificios un 0,28 % y contenidos",
+   "ruta": "d/ilustracion_b_uniforme/0.75/motor"
+  },
+  {
+   "id": "c349",
+   "formato": "apct2",
+   "valor": "0,28",
+   "contexto": "bajaría un 0,83 %, edificios un 0,28 % y contenidos subiría un 0",
+   "ruta": "d/ilustracion_b_uniforme/0.75/buildings"
+  },
+  {
+   "id": "c350",
+   "formato": "apct2",
+   "valor": "0,14",
+   "contexto": "0,28 % y contenidos subiría un 0,14 %: al bajar autos, que pesa",
+   "ruta": "d/ilustracion_b_uniforme/0.75/contents"
+  },
+  {
+   "id": "c351",
+   "formato": "dec6",
+   "valor": "0,532569",
+   "contexto": "umbral de b en contenidos es 0,532569 a 1,479203, frente a 0,532594",
+   "ruta": "d/F3d_contenidos/umbral_b/0"
+  },
+  {
+   "id": "c352",
+   "formato": "dec6",
+   "valor": "1,479203",
+   "contexto": "en contenidos es 0,532569 a 1,479203, frente a 0,532594 a 1,479177",
+   "ruta": "d/F3d_contenidos/umbral_b/1"
+  },
+  {
+   "id": "c353",
+   "formato": "dec6",
+   "valor": "0,532594",
+   "contexto": "0,532569 a 1,479203, frente a 0,532594 a 1,479177 de F3c, así que todo",
+   "ruta": "d/escenarios/contents|b|ramo/umbral_F3c/0"
+  },
+  {
+   "id": "c354",
+   "formato": "dec6",
+   "valor": "1,479177",
+   "contexto": "1,479203, frente a 0,532594 a 1,479177 de F3c, así que todo lo anterior",
+   "ruta": "d/escenarios/contents|b|ramo/umbral_F3c/1"
+  },
+  {
+   "id": "c355",
+   "formato": "dec3",
+   "valor": "0,889",
+   "contexto": "exponente a que mejor ajusta T0 es 0,889 en autos, 0,959 en edificios",
+   "ruta": "e/E1_emergente/motor/a_T0"
+  },
+  {
+   "id": "c356",
+   "formato": "dec3",
+   "valor": "0,959",
+   "contexto": "ajusta T0 es 0,889 en autos, 0,959 en edificios y 0,981 en contenidos",
+   "ruta": "e/E1_emergente/buildings/a_T0"
+  },
+  {
+   "id": "c357",
+   "formato": "dec3",
+   "valor": "0,981",
+   "contexto": "autos, 0,959 en edificios y 0,981 en contenidos. Que salga por",
+   "ruta": "e/E1_emergente/contents/a_T0"
+  },
+  {
+   "id": "c358",
+   "formato": "dec3",
+   "valor": "0,021",
+   "contexto": "intervalo de β), a cambia como mucho 0,021, en edificios con b = 0,5, y",
+   "calculo": "=e1_max_abs_delta_a()"
+  },
+  {
+   "id": "c359",
+   "formato": "sci1",
+   "valor": "3,4 × 10⁻⁵",
+   "contexto": "en D² de 2023-2024 no pasa de 3,4 × 10⁻⁵.",
+   "calculo": "=e1_max_coste()"
+  },
+  {
+   "id": "c360",
+   "formato": "pct1",
+   "valor": "29,2",
+   "contexto": "semana 1. Ahí la reserva pesa el 29,2 % del T0 en autos, el 28,1 %",
+   "ruta": "e/E2_desarrollado/motor/cuota_total"
+  },
+  {
+   "id": "c361",
+   "formato": "pct1",
+   "valor": "28,1",
+   "contexto": "el 29,2 % del T0 en autos, el 28,1 % en edificios y el 14,1 % en",
+   "ruta": "e/E2_desarrollado/buildings/cuota_total"
+  },
+  {
+   "id": "c362",
+   "formato": "pct1",
+   "valor": "14,1",
+   "contexto": "el 28,1 % en edificios y el 14,1 % en contenidos, y en autos",
+   "ruta": "e/E2_desarrollado/contents/cuota_total"
+  },
+  {
+   "id": "c363",
+   "formato": "pct1",
+   "valor": "55,9",
+   "contexto": "el decil de menor predicción (55,9 % de su T0). Un error del 25",
+   "ruta": "e/E2_desarrollado/motor/cuota_reserva_por_decil/0"
+  },
+  {
+   "id": "c364",
+   "formato": "sdec3",
+   "valor": "+0,021",
+   "contexto": "de autos con una pendiente de +0,021 (b = 0,75) o −0,017 (b = 1,25",
+   "ruta": "e/E2_desarrollado/motor/b_0.75/pendiente_log_AE_vs_log_pred"
+  },
+  {
+   "id": "c365",
+   "formato": "sdec3",
+   "valor": "−0,017",
+   "contexto": "pendiente de +0,021 (b = 0,75) o −0,017 (b = 1,25) por unidad de logaritmo",
+   "ruta": "e/E2_desarrollado/motor/b_1.25/pendiente_log_AE_vs_log_pred"
+  },
+  {
+   "id": "c366",
+   "formato": "dec3",
+   "valor": "0,169",
+   "contexto": "la cota preinscrita llega a 0,169 en logaritmo (0,01 equivale",
+   "calculo": "=e3_max('todos', 'max_abs_cambio_log_factor')"
+  },
+  {
+   "id": "c367",
+   "formato": "int",
+   "valor": "4",
+   "contexto": "más siniestros previos tiene 4 filas con coste. Con la credibilidad",
+   "ruta": "e/E3_factores/contents|previos/contents_1/niveles/2+/filas_con_coste"
+  },
+  {
+   "id": "c368",
+   "formato": "dec3",
+   "valor": "0,026",
+   "contexto": "`construir_F3.py`, el mayor cambio baja a 0,026 (segmento mature_affluent de",
+   "calculo": "=e3_max('todos', 'max_abs_cambio_log_factor_con_credibilidad_no_preinscrito')"
+  },
+  {
+   "id": "c369",
+   "formato": "dec3",
+   "valor": "0,016",
+   "contexto": "mature_affluent de contenidos), 0,016 en autos y 0,007 en edificios",
+   "calculo": "=e3_max('motor', 'max_abs_cambio_log_factor_con_credibilidad_no_preinscrito')"
+  },
+  {
+   "id": "c370",
+   "formato": "dec3",
+   "valor": "0,007",
+   "contexto": "contenidos), 0,016 en autos y 0,007 en edificios. Esta segunda lectura",
+   "calculo": "=e3_max('buildings', 'max_abs_cambio_log_factor_con_credibilidad_no_preinscrito')"
+  },
+  {
+   "id": "c371",
+   "formato": "dec6",
+   "valor": "0,000029",
+   "contexto": "cambia el D² público como mucho 0,000029. Bajar los tres ramos un 1 %",
+   "calculo": "=max_abs(f/por_ramo/motor/0.99, f/por_ramo/motor/1.01, f/por_ramo/buildings/0.99, f/por_ramo/buildings/1.01, f/por_ramo/contents/0.99, f/por_ramo/contents/1.01)"
+  },
+  {
+   "id": "c372",
+   "formato": "sdec6",
+   "valor": "+0,000028",
+   "contexto": "un 1 % a la vez lo cambiaría +0,000028, y subirlos, −0,000056. Es una",
+   "ruta": "f/tres_ramos/0.99"
+  },
+  {
+   "id": "c373",
+   "formato": "sdec6",
+   "valor": "−0,000056",
+   "contexto": "cambiaría +0,000028, y subirlos, −0,000056. Es una aproximación declarada:",
+   "ruta": "f/tres_ramos/1.01"
+  },
+  {
+   "id": "c376",
+   "formato": "dec3",
+   "valor": "0,758",
+   "contexto": "lesiones se escala por su β (0,758), k_e de lesiones baja de 1",
+   "ruta": "g/G1_k_e_lesiones_con_reserva_por_beta/beta_lesiones"
+  },
+  {
+   "id": "c377",
+   "formato": "dec3",
+   "valor": "1,427",
+   "contexto": "0,758), k_e de lesiones baja de 1,427 a 1,365: el exceso de coste",
+   "ruta": "g/G1_k_e_lesiones_con_reserva_por_beta/k_e_publicado"
+  },
+  {
+   "id": "c378",
+   "formato": "dec3",
+   "valor": "1,365",
+   "contexto": "de lesiones baja de 1,427 a 1,365: el exceso de coste tardío no",
+   "ruta": "g/G1_k_e_lesiones_con_reserva_por_beta/k_e_ajustado"
+  },
+  {
+   "id": "c379",
+   "formato": "spct2",
+   "valor": "−2,46",
+   "contexto": "separado, la mezcla cambiaría −2,46 % en autos, −0,37 % en edificios",
+   "ruta": "g/G2_escenario_central/por_ramo_aislado/motor/nivel_mezcla"
+  },
+  {
+   "id": "c380",
+   "formato": "spct2",
+   "valor": "−0,37",
+   "contexto": "cambiaría −2,46 % en autos, −0,37 % en edificios y +0,97 % en",
+   "ruta": "g/G2_escenario_central/por_ramo_aislado/buildings/nivel_mezcla"
+  },
+  {
+   "id": "c381",
+   "formato": "spct2",
+   "valor": "+0,97",
+   "contexto": "autos, −0,37 % en edificios y +0,97 % en contenidos, y F3c −0,36",
+   "ruta": "g/G2_escenario_central/por_ramo_aislado/contents/nivel_mezcla"
+  },
+  {
+   "id": "c382",
+   "formato": "spct2",
+   "valor": "−0,36",
+   "contexto": "+0,97 % en contenidos, y F3c −0,36 %, −0,11 % y +0,27 %. Con los",
+   "ruta": "g/G2_escenario_central/por_ramo_aislado/motor/nivel_F3c"
+  },
+  {
+   "id": "c383",
+   "formato": "spct2",
+   "valor": "−0,11",
+   "contexto": "en contenidos, y F3c −0,36 %, −0,11 % y +0,27 %. Con los tres ramos",
+   "ruta": "g/G2_escenario_central/por_ramo_aislado/buildings/nivel_F3c"
+  },
+  {
+   "id": "c384",
+   "formato": "spct2",
+   "valor": "+0,27",
+   "contexto": "contenidos, y F3c −0,36 %, −0,11 % y +0,27 %. Con los tres ramos a la vez",
+   "ruta": "g/G2_escenario_central/por_ramo_aislado/contents/nivel_F3c"
+  },
+  {
+   "id": "c385",
+   "formato": "spct2",
+   "valor": "−0,36",
+   "contexto": "ramos a la vez, F3c cambiaría −0,36 %, +0,15 % y +0,52 %.",
+   "ruta": "g/G2_escenario_central/tres_ramos_a_la_vez/motor"
+  },
+  {
+   "id": "c386",
+   "formato": "spct2",
+   "valor": "+0,15",
+   "contexto": "vez, F3c cambiaría −0,36 %, +0,15 % y +0,52 %.",
+   "ruta": "g/G2_escenario_central/tres_ramos_a_la_vez/buildings"
+  },
+  {
+   "id": "c387",
+   "formato": "spct2",
+   "valor": "+0,52",
+   "contexto": "cambiaría −0,36 %, +0,15 % y +0,52 %.",
+   "ruta": "g/G2_escenario_central/tres_ramos_a_la_vez/contents"
+  },
+  {
+   "id": "c388",
+   "formato": "spct2",
+   "valor": "−0,09",
+   "contexto": "cerrados movería F3c de autos −0,09 %, y pagar los rechazados lo",
+   "ruta": "g/G3_recobros_y_rechazados_en_F3c/motor|recobros/nivel_F3c"
+  },
+  {
+   "id": "c389",
+   "formato": "spct2",
+   "valor": "+0,24",
+   "contexto": "pagar los rechazados lo movería +0,24 % en autos y +0,30 % en contenidos",
+   "ruta": "g/G3_recobros_y_rechazados_en_F3c/motor|rechazados_pagados/nivel_F3c"
+  },
+  {
+   "id": "c390",
+   "formato": "spct2",
+   "valor": "+0,30",
+   "contexto": "lo movería +0,24 % en autos y +0,30 % en contenidos.",
+   "ruta": "g/G3_recobros_y_rechazados_en_F3c/contents|rechazados_pagados/nivel_F3c"
+  },
+  {
+   "id": "c391",
+   "formato": "dec4",
+   "valor": "0,8503",
+   "contexto": "excluía. Las cifras apenas cambian (0,8503 frente a 0,8510 en autos).",
+   "ruta": "b/beta/motor|_ramo/desarrollado/beta_recalculado"
+  },
+  {
+   "id": "c392",
+   "formato": "dec4",
+   "valor": "0,8510",
+   "contexto": "apenas cambian (0,8503 frente a 0,8510 en autos).",
+   "ruta": "b/beta/motor|_ramo/desarrollado/beta_semana1"
+  },
+  {
+   "id": "c394",
+   "formato": "spct2",
+   "valor": "−0,66",
+   "contexto": "nivel 2025 es pequeño (entre −0,66 % y +0,47 % con la β puntual",
+   "ruta": "d/escenarios/motor|b|ramo/F3c_con_beta_puntual"
+  },
+  {
+   "id": "c395",
+   "formato": "spct2",
+   "valor": "+0,47",
+   "contexto": "es pequeño (entre −0,66 % y +0,47 % con la β puntual), pero el",
+   "ruta": "d/escenarios/contents|b|ramo/F3c_con_beta_puntual"
+  },
+  {
+   "id": "c396",
+   "formato": "apct2",
+   "valor": "0,36",
+   "contexto": "eso sube el nivel de autos un 0,36 %.",
+   "ruta": "d/escenarios/motor|k|largo/F3c_con_k_e_puntual"
+  }
+ ],
+ "literales": [
+  {
+   "id": "l171",
+   "texto": "siniestros aceptados de al menos 1.095 días de desarrollo. Estos datos permiten",
+   "valor": "1.095 días",
+   "fuente": "codigo/reservas_s2.py, constante D"
+  },
+  {
+   "id": "l241",
+   "texto": "lesiones del desarrollado un k de 0,867, es decir, un IBNR sobrevalorado",
+   "valor": "0,867",
+   "fuente": "docs/RESERVAS_ACOTACION.md (ba610972…cd47)"
+  },
+  {
+   "id": "l374",
+   "texto": "PUL2 sobre G3 se mantiene entre +0,00251 y +0,00264 de D² con las reservas al 75",
+   "valor": "+0,00251 y +0,00264",
+   "fuente": "COD-S2-20261026-MISION017-PUL2-OBS-STRESS-RESULTADO, privado/semana2/mision017_fase2/sensibilidad_observacion_PUL2_20261026_v2/report.json"
+  },
+  {
+   "id": "l375",
+   "texto": "nivel nominal de 2023 de B14 en −2,484 % y +2,483 %, del orden de lo que se mueve",
+   "valor": "−2,484 % y +2,483 %",
+   "fuente": "docs/semana2/NIVEL_C0_REPORTES_Y_RESERVAS_2023.md"
+  },
+  {
+   "id": "l393",
+   "texto": "autos en F3c. Coinciden las 18 comprobaciones. No es una revisión independiente",
+   "valor": "18 comprobaciones",
+   "fuente": "revision/recalculo_propio.json"
+  }
+ ],
+ "huellas": [
+  {
+   "id": "h001",
+   "archivo": "PREINSCRIPCION.md",
+   "sha256": "67abc8e2cc16a1970603d94e4b4dc62f9432f6da0a1efaa39cff43e31d6900c6"
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "utc": "2026-10-26T14:09:21+00:00",
+ "nota": "forma cerrada por celda con a_s y b_s de la sonda por celda, en unidades de la mezcla; el nivel de F3c en cada celda se aproxima por el cociente de totales F3c/mezcla, y su cambio de forma dentro de la celda no se modela",
+ "nivel_F3c_rel_mezcla": {
+  "motor_0": 1.1316,
+  "motor_1": 1.4061,
+  "buildings_0": 1.0071,
+  "buildings_1": 1.1734,
+  "contents_0": 1.0083,
+  "contents_1": 1.0873
+ },
+ "por_ramo": {
+  "motor": {
+   "0.99": -3.9e-06,
+   "1.01": -1.2e-05
+  },
+  "buildings": {
+   "0.99": 2.18e-05,
+   "1.01": -2.92e-05
+  },
+  "contents": {
+   "0.99": 1.04e-05,
+   "1.01": -1.46e-05
+  }
+ },
+ "tres_ramos": {
+  "0.99": 2.83e-05,
+  "1.01": -5.59e-05
+ },
+ "codex_citado": {
+  "PUL2_frente_G3": {
+   "R075_C": 0.00250519,
+   "R125_C": 0.00264151,
+   "R075_V": 0.00262017,
+   "R125_V": 0.00252881,
+   "TAIL005": 0.00259096,
+   "TAIL010": 0.00256596,
+   "fuente": "COD-S2-20261026-MISION017-PUL2-OBS-STRESS-RESULTADO; privado/semana2/mision017_fase2/sensibilidad_observacion_PUL2_20261026_v2/report.json"
+  },
+  "nivel_2023_R075_R125_B14": {
+   "nominal": [
+    -0.02484,
+    0.02483
+   ],
+   "fuente": "Repositorio_IAA2026/docs/semana2/NIVEL_C0_REPORTES_Y_RESERVAS_2023.md"
+  }
+ }
+}

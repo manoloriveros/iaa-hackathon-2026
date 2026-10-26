@@ -1,0 +1,429 @@
+{
+ "utc": "2026-10-26T13:54:35+00:00",
+ "semilla": 20261026,
+ "replicas": 400,
+ "min_cerrados": 20,
+ "beta": {
+  "motor|_ramo": {
+   "abiertos": 839,
+   "cerrados": 6209,
+   "reserva": 3501391.79,
+   "beta": 0.7971,
+   "celdas": 18,
+   "cobertura_reserva": 0.6553,
+   "ic90": [
+    0.647,
+    0.9967
+   ],
+   "replicas_validas": 400,
+   "A2": {
+    "celdas": 13,
+    "pendiente": 0.1206,
+    "t": 1.56,
+    "contradice_S1": false
+   },
+   "desarrollado": {
+    "beta_recalculado": 0.8503,
+    "ic90": [
+     0.6246,
+     1.1145
+    ],
+    "celdas": 36,
+    "beta_semana1": 0.851,
+    "ic90_semana1": [
+     0.6133,
+     1.106
+    ],
+    "nota": "recalculado sin asignación a periodo (incluye prehistoria y no asignados); la semana 1 los excluía"
+   },
+   "diferencia_emergente_menos_desarrollado": {
+    "puntual": -0.0532,
+    "ic90": [
+     -0.381,
+     0.2575
+    ],
+    "excluye_cero": false
+   },
+   "agrupado_secundario": {
+    "beta": 0.8485,
+    "ic90": [
+     0.6173,
+     1.0845
+    ]
+   }
+  },
+  "motor|bodily_injury": {
+   "abiertos": 260,
+   "cerrados": 189,
+   "reserva": 2447770.73,
+   "beta": 0.7585,
+   "celdas": 5,
+   "cobertura_reserva": 0.5515,
+   "ic90": [
+    0.5125,
+    1.0775
+   ],
+   "replicas_validas": 400,
+   "A2": {
+    "celdas": 5,
+    "pendiente": 0.0496,
+    "t": 0.07,
+    "contradice_S1": false
+   },
+   "desarrollado": {
+    "beta_recalculado": 0.823,
+    "ic90": [
+     0.5595,
+     1.1333
+    ],
+    "celdas": 16,
+    "beta_semana1": 0.8236,
+    "ic90_semana1": [
+     0.5502,
+     1.1542
+    ],
+    "nota": "recalculado sin asignación a periodo (incluye prehistoria y no asignados); la semana 1 los excluía"
+   },
+   "diferencia_emergente_menos_desarrollado": {
+    "puntual": -0.0645,
+    "ic90": [
+     -0.4853,
+     0.342
+    ],
+    "excluye_cero": false
+   },
+   "agrupado_secundario": {
+    "beta": 0.8213,
+    "ic90": [
+     0.5942,
+     1.1399
+    ]
+   }
+  },
+  "motor|_resto": {
+   "abiertos": 579,
+   "cerrados": 6020,
+   "reserva": 1053621.06,
+   "beta": 0.8524,
+   "celdas": 13,
+   "cobertura_reserva": 0.8964,
+   "ic90": [
+    0.7293,
+    1.0123
+   ],
+   "replicas_validas": 400,
+   "A2": {
+    "celdas": 8,
+    "pendiente": 0.1301,
+    "t": 2.8,
+    "contradice_S1": true
+   },
+   "desarrollado": {
+    "beta_recalculado": 0.9617,
+    "ic90": [
+     0.9108,
+     1.0136
+    ],
+    "celdas": 20,
+    "beta_semana1": null,
+    "ic90_semana1": null,
+    "nota": "recalculado sin asignación a periodo (incluye prehistoria y no asignados); la semana 1 los excluía"
+   },
+   "diferencia_emergente_menos_desarrollado": {
+    "puntual": -0.1093,
+    "ic90": [
+     -0.2563,
+     0.0676
+    ],
+    "excluye_cero": false
+   },
+   "agrupado_secundario": {
+    "beta": 0.9541,
+    "ic90": [
+     0.9097,
+     1.0027
+    ]
+   }
+  },
+  "motor|_ramo|nb0": {
+   "abiertos": 698,
+   "cerrados": 5653,
+   "reserva": 2925914.21,
+   "beta": 0.7438,
+   "celdas": 18,
+   "cobertura_reserva": 0.6632,
+   "ic90": [
+    0.5932,
+    0.9187
+   ],
+   "replicas_validas": 400,
+   "A2": {
+    "celdas": 13,
+    "pendiente": 0.1385,
+    "t": 2.18,
+    "contradice_S1": true
+   }
+  },
+  "motor|_ramo|nb1": {
+   "abiertos": 141,
+   "cerrados": 556,
+   "reserva": 575477.58,
+   "beta": 0.9595,
+   "celdas": 6,
+   "cobertura_reserva": 0.2586,
+   "ic90": [
+    0.7104,
+    1.4822
+   ],
+   "replicas_validas": 400,
+   "A2": {
+    "celdas": 5,
+    "pendiente": -0.1393,
+    "t": -2.72,
+    "contradice_S1": true
+   }
+  },
+  "buildings|_ramo": {
+   "abiertos": 157,
+   "cerrados": 899,
+   "reserva": 1300698.96,
+   "beta": 0.974,
+   "celdas": 7,
+   "cobertura_reserva": 0.0989,
+   "ic90": [
+    0.5,
+    1.3333
+   ],
+   "replicas_validas": 400,
+   "A2": {
+    "celdas": 2,
+    "t": null
+   },
+   "desarrollado": {
+    "beta_recalculado": 0.9845,
+    "ic90": [
+     0.8757,
+     1.1116
+    ],
+    "celdas": 49,
+    "beta_semana1": 0.9845,
+    "ic90_semana1": [
+     0.873,
+     1.1089
+    ],
+    "nota": "recalculado sin asignación a periodo (incluye prehistoria y no asignados); la semana 1 los excluía"
+   },
+   "diferencia_emergente_menos_desarrollado": {
+    "puntual": -0.0105,
+    "ic90": [
+     -0.514,
+     0.354
+    ],
+    "excluye_cero": false
+   },
+   "agrupado_secundario": {
+    "beta": 0.9844,
+    "ic90": [
+     0.8743,
+     1.1132
+    ]
+   }
+  },
+  "buildings|subsidence": {
+   "abiertos": 28,
+   "cerrados": 24,
+   "reserva": 278717.16,
+   "beta": null,
+   "celdas": 0,
+   "cobertura_reserva": 0.0,
+   "ic90": [
+    null,
+    null
+   ],
+   "replicas_validas": 0,
+   "A2": {
+    "celdas": 0,
+    "t": null
+   },
+   "desarrollado": {
+    "beta_recalculado": 0.9958,
+    "ic90": [
+     0.8002,
+     1.21
+    ],
+    "celdas": 13,
+    "beta_semana1": 0.9965,
+    "ic90_semana1": [
+     0.8289,
+     1.2022
+    ],
+    "nota": "recalculado sin asignación a periodo (incluye prehistoria y no asignados); la semana 1 los excluía"
+   },
+   "diferencia_emergente_menos_desarrollado": {
+    "puntual": null,
+    "ic90": [
+     null,
+     null
+    ],
+    "excluye_cero": null
+   }
+  },
+  "buildings|_resto": {
+   "abiertos": 129,
+   "cerrados": 875,
+   "reserva": 1021981.8,
+   "beta": 0.974,
+   "celdas": 7,
+   "cobertura_reserva": 0.1259,
+   "ic90": [
+    0.4869,
+    1.3351
+   ],
+   "replicas_validas": 400,
+   "A2": {
+    "celdas": 2,
+    "t": null
+   },
+   "desarrollado": {
+    "beta_recalculado": 0.9802,
+    "ic90": [
+     0.8439,
+     1.1263
+    ],
+    "celdas": 36,
+    "beta_semana1": null,
+    "ic90_semana1": null,
+    "nota": "recalculado sin asignación a periodo (incluye prehistoria y no asignados); la semana 1 los excluía"
+   },
+   "diferencia_emergente_menos_desarrollado": {
+    "puntual": -0.0062,
+    "ic90": [
+     -0.4871,
+     0.3537
+    ],
+    "excluye_cero": false
+   },
+   "agrupado_secundario": {
+    "beta": 0.9801,
+    "ic90": [
+     0.8476,
+     1.1331
+    ]
+   }
+  },
+  "buildings|_ramo|nb0": {
+   "abiertos": 140,
+   "cerrados": 839,
+   "reserva": 1132503.48,
+   "beta": 1.025,
+   "celdas": 7,
+   "cobertura_reserva": 0.0946,
+   "ic90": [
+    0.6288,
+    1.5659
+   ],
+   "replicas_validas": 400,
+   "A2": {
+    "celdas": 2,
+    "t": null
+   }
+  },
+  "buildings|_ramo|nb1": {
+   "abiertos": 17,
+   "cerrados": 60,
+   "reserva": 168195.48,
+   "beta": null,
+   "celdas": 0,
+   "cobertura_reserva": 0.0,
+   "ic90": [
+    null,
+    null
+   ],
+   "replicas_validas": 0,
+   "A2": {
+    "celdas": 0,
+    "t": null
+   }
+  },
+  "contents|_ramo": {
+   "abiertos": 59,
+   "cerrados": 939,
+   "reserva": 193706.89,
+   "beta": 1.2219,
+   "celdas": 7,
+   "cobertura_reserva": 0.3389,
+   "ic90": [
+    0.7401,
+    2.0779
+   ],
+   "replicas_validas": 400,
+   "A2": {
+    "celdas": 2,
+    "t": null
+   },
+   "desarrollado": {
+    "beta_recalculado": 0.9825,
+    "ic90": [
+     0.8102,
+     1.1476
+    ],
+    "celdas": 19,
+    "beta_semana1": 0.9824,
+    "ic90_semana1": [
+     0.7865,
+     1.1563
+    ],
+    "nota": "recalculado sin asignación a periodo (incluye prehistoria y no asignados); la semana 1 los excluía"
+   },
+   "diferencia_emergente_menos_desarrollado": {
+    "puntual": 0.2394,
+    "ic90": [
+     -0.236,
+     1.1386
+    ],
+    "excluye_cero": false
+   },
+   "agrupado_secundario": {
+    "beta": 0.9883,
+    "ic90": [
+     0.8186,
+     1.1358
+    ]
+   }
+  },
+  "contents|_ramo|nb0": {
+   "abiertos": 42,
+   "cerrados": 854,
+   "reserva": 152645.68,
+   "beta": 1.0339,
+   "celdas": 5,
+   "cobertura_reserva": 0.3474,
+   "ic90": [
+    0.5586,
+    1.9923
+   ],
+   "replicas_validas": 400,
+   "A2": {
+    "celdas": 2,
+    "t": null
+   }
+  },
+  "contents|_ramo|nb1": {
+   "abiertos": 17,
+   "cerrados": 85,
+   "reserva": 41061.21,
+   "beta": null,
+   "celdas": 0,
+   "cobertura_reserva": 0.0,
+   "ic90": [
+    null,
+    null
+   ],
+   "replicas_validas": 0,
+   "A2": {
+    "celdas": 0,
+    "t": null
+   }
+  }
+ }
+}

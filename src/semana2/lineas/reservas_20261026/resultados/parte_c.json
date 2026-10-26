@@ -1,0 +1,139 @@
+{
+ "utc": "2026-10-26T13:54:45+00:00",
+ "definicion": "k_e = coste de 2023 reportado en 2024 / el previsto por la curva de coste del desarrollado dado el coste reportado en 2023 (ambos valorados al 31-12-2024)",
+ "k": {
+  "motor|_ramo": {
+   "siniestros_2023": 3557,
+   "tardios": 234,
+   "coste_temprano": 6522753.22,
+   "coste_tardio_observado": 1640007.99,
+   "coste_tardio_previsto": 1294074.59,
+   "k_e": 1.2673,
+   "ic90_k_e": [
+    0.9124,
+    1.7184
+   ],
+   "k_conteos": 0.8725,
+   "ic90_k_conteos": [
+    0.7741,
+    0.9874
+   ],
+   "cuota_tardia_observada": 0.2009,
+   "pct_abiertos_tardios": 0.2863
+  },
+  "motor|bodily_injury": {
+   "siniestros_2023": 266,
+   "tardios": 105,
+   "coste_temprano": 1346099.66,
+   "coste_tardio_observado": 1444497.64,
+   "coste_tardio_previsto": 1012491.68,
+   "k_e": 1.4267,
+   "ic90_k_e": [
+    1.021,
+    2.0208
+   ],
+   "k_conteos": 0.9158,
+   "ic90_k_conteos": [
+    0.7394,
+    1.1404
+   ],
+   "cuota_tardia_observada": 0.5176,
+   "pct_abiertos_tardios": 0.619
+  },
+  "motor|_resto": {
+   "siniestros_2023": 3291,
+   "tardios": 129,
+   "coste_temprano": 5176653.56,
+   "coste_tardio_observado": 195510.35,
+   "coste_tardio_previsto": 281582.91,
+   "k_e": 0.6943,
+   "ic90_k_e": [
+    0.5414,
+    0.8859
+   ],
+   "k_conteos": 0.8401,
+   "ic90_k_conteos": [
+    0.7205,
+    0.9711
+   ],
+   "cuota_tardia_observada": 0.0364,
+   "pct_abiertos_tardios": 0.0155
+  },
+  "buildings|_ramo": {
+   "siniestros_2023": 519,
+   "tardios": 40,
+   "coste_temprano": 5518583.95,
+   "coste_tardio_observado": 330104.15,
+   "coste_tardio_previsto": 333138.25,
+   "k_e": 0.9909,
+   "ic90_k_e": [
+    0.5514,
+    1.6862
+   ],
+   "k_conteos": 1.3505,
+   "ic90_k_conteos": [
+    0.9672,
+    1.7943
+   ],
+   "cuota_tardia_observada": 0.0564,
+   "pct_abiertos_tardios": 0.2
+  },
+  "buildings|subsidence": {
+   "siniestros_2023": 32,
+   "tardios": 10,
+   "coste_temprano": 349385.18,
+   "coste_tardio_observado": 165961.86,
+   "coste_tardio_previsto": 175464.38,
+   "k_e": 0.9458,
+   "ic90_k_e": [
+    0.2825,
+    2.135
+   ],
+   "k_conteos": 0.9667,
+   "ic90_k_conteos": [
+    0.4509,
+    1.6789
+   ],
+   "cuota_tardia_observada": 0.322,
+   "pct_abiertos_tardios": 0.7
+  },
+  "buildings|_resto": {
+   "siniestros_2023": 487,
+   "tardios": 30,
+   "coste_temprano": 5169198.77,
+   "coste_tardio_observado": 164142.29,
+   "coste_tardio_previsto": 157673.87,
+   "k_e": 1.041,
+   "ic90_k_e": [
+    0.5658,
+    1.6745
+   ],
+   "k_conteos": 1.5566,
+   "ic90_k_conteos": [
+    1.1049,
+    2.0511
+   ],
+   "cuota_tardia_observada": 0.0308,
+   "pct_abiertos_tardios": 0.0333
+  },
+  "contents|_ramo": {
+   "siniestros_2023": 491,
+   "tardios": 21,
+   "coste_temprano": 1252270.96,
+   "coste_tardio_observado": 33383.57,
+   "coste_tardio_previsto": 49562.1,
+   "k_e": 0.6736,
+   "ic90_k_e": [
+    0.2295,
+    1.2709
+   ],
+   "k_conteos": 1.2351,
+   "ic90_k_conteos": [
+    0.7859,
+    1.674
+   ],
+   "cuota_tardia_observada": 0.026,
+   "pct_abiertos_tardios": 0.0
+  }
+ }
+}
