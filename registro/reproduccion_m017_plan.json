@@ -1,0 +1,17 @@
+{
+  "id": "REPRO-M017-20261026",
+  "autor": "Codex",
+  "objetivo": "Comprobar etiquetas desde originales y reaprender los factores históricos de F3c/F3d con OOF guardadas en una carpeta nueva con espacios y un venv sin paquetes heredados.",
+  "productor": "herramientas/reproducir_m017_local.py",
+  "antes_de_calcular": true,
+  "receta": "Código original de Claude incorporado con ORIGEN.json. Dos sustituciones de rutas en la copia privada de lib26. Sin cambios estadísticos o búsqueda de parámetros.",
+  "constantes": {"F3c_K": 300, "F3d_K_motor": 300, "F3d_K_contents": 60},
+  "secuencia": ["preparar", "etiquetas", "factores"],
+  "comparador": "SHA-256 de los CSV históricos F3c y F3d, sin consultar scores nuevos",
+  "aceptacion": "Cada CSV debe igualar exactamente el SHA histórico; cualquier diferencia se conserva y detiene la secuencia.",
+  "coste_maximo": "Una reconstrucción de etiquetas y una ejecución de cada constructor F3c/F3d. Cero árboles fuente, nuevos OOF, C0 o bootstrap; los factores de producción que los originales calculan se reaprenden sin modificar su receta.",
+  "F4c": "Solo integridad y revisión estática. No sustituir predicciones FSp históricas ausentes por componentes reconstruidos con otra receta.",
+  "envios": "No autorizados en este chat: el participante pidió solo revisar y preparar.",
+  "ingles": "Diferido por el participante hasta tener definitiva la versión española.",
+  "limites": ["No es entrenamiento completo desde originales de todos los ancestros.", "No es reproducción por otra persona.", "La igualdad del CSV no acredita generalización privada ni validación profesional independiente."]
+}

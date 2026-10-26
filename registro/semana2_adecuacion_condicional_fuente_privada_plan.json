@@ -1,0 +1,97 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T21:37:15.704175+00:00",
+  "question": "Does the saved paired-peril source GLM have a residual business/broker interaction beyond the saved original source tree, before considering additional main-effect capacity?",
+  "scope": "All saved P28source-held groups over2021-2024, all3lines, same frozen prices and labels. No target readout, inference, fitting, calibration, new forecast or model admission.",
+  "cells": [
+    "REN_OTHER",
+    "REN_BROKER",
+    "NB_OTHER",
+    "NB_BROKER"
+  ],
+  "channel": "broker vs direct/comparison_site. Unknowns retain their own readout and all-source bootstrap group universe; they are not silently assigned OTHER or removed from any training data.",
+  "statistic": "For model m, logR_m=log(AE_NB_BROKER/AE_NB_OTHER)-log(AE_REN_BROKER/AE_REN_OTHER). Primary D=logR_GLM-logR_originaltree. AE is descriptive observed/expected cost, never applied as a fitted price factor.",
+  "bootstrap": {
+    "replicates": 2000,
+    "seed_motor": 2026102672,
+    "seed_buildings": 2026102673,
+    "seed_contents": 2026102674,
+    "unit": "held connected source customer/address group",
+    "family": 3,
+    "quantiles": [
+      0.008333333333333333,
+      0.9916666666666667
+    ],
+    "invalid": "Keep nonfinite draws and fail screen; do not refill, alter groups, add pseudo-cost or resample for a pass."
+  },
+  "screen": {
+    "minimum_positive_groups_each_pooled_cell": 100,
+    "minimum_positive_groups_each_cell_after_drop31": 30,
+    "absolute_primary_D_min": 0.09531017980432493,
+    "family3_band_excludes_zero": true,
+    "GLM_absolute_logR_larger_than_tree": true,
+    "GLM_logR_same_direction_as_D": true,
+    "source_year_support_positive_groups_each_cell": 30,
+    "at_least3years_same_D_direction": true,
+    "drop31_D_same_direction_and_absolute_min": 0.04879016416943204,
+    "interpretation": "Descriptive source mechanism screen, not causal proof, a price acceptance rule or automatic authorization to fit."
+  },
+  "dominant_group_rule": "Remove31source-held groups with largest total observedT0within each line, ties by groupID, all their rows; chosen by costs, not favorable candidate improvement. Keep full result primary.",
+  "controls": [
+    "Saved source input/prediction hashes, row/year/held-group exact binding.",
+    "All four known-channel cells plus unknown readout; no model/line chosen from target scores.",
+    "Primary contrast by group sums and independent scalar arithmetic.",
+    "Actual original-tree baseline and GLM share the same source-held rows; source-observation ancestors remain conditional."
+  ],
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/revisar_residuo_fuente_P32.py": "cffe92d01e0cb702057c48e6d6ac341ed1a63b5c5785faa18e5c748d8563ba4f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P28_fuente_frecuencia_marca_20261026/report.json": "2397372d70dd5a38926b60aa58a0b607d54dd9b5557a4d47724d3c1a7cca7685",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P28_fuente_frecuencia_marca_20261026/completion_receipt.json": "ab54e5a5bc15c28cdea75768f74b84e101c627452871e1743d35b99087f5bd87",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P28_fuente_frecuencia_marca_20261026/numerical_replay.json": "f03f3e2de60344e9980536ef1c2e1792e2a4a5e3e3b27e6f1d02bac26811ee9c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P31_compatibilidad_puente_20261026/report.json": "427680a1271f37d03d716bda22e7d5ee4ce7ca2111a35337f33464e7b79a559f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P28_fuente_frecuencia_marca_20261026/motor/held_predictions.parquet": "60e8d68da664859a1c6d36439c0af46ab43b383089f2e17491e5bedb2db5cede",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P28_fuente_frecuencia_marca_20261026/motor/summary.json": "425bf64be209033c58fbf2f5dd328e679fefeb7a42ec6668f3a02a91b0e48edf",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_motor.parquet": "ded113876f2069f7341491aa855e7e0fc4036e5e6e38d476466da905f5bee99c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s1_motor.parquet": "c2a2f3d5a14f96892bdd6f6f973b03449f874a7df0ff42d687533254a5833ed3",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/partition_source/folds_motor.parquet": "81f9c33285595d956952e2431696095b017503a15a4080215efe232c232575a1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P28_fuente_frecuencia_marca_20261026/buildings/held_predictions.parquet": "10520c689c161c23bca38534d9d82675554cb8102bc76f7aafe0b08bb43cea41",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P28_fuente_frecuencia_marca_20261026/buildings/summary.json": "33bfc2f2fbbaabe64331b989b1fec96f8bff1dc32f816d542be242d91e17f96f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_buildings.parquet": "a04a76fa8564f83a6da02d4f1885972b7ef82b3d741cc5a6bd22f0df1d98bf88",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s1_buildings.parquet": "471922f7f8318216270fc7332028286d84162fbe78aa0279173903525b4aee90",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/partition_source/folds_buildings.parquet": "99ffe4451eda354a687d01465c6ceaca740e1c38b766d520b65107e95b4778e8",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P28_fuente_frecuencia_marca_20261026/contents/held_predictions.parquet": "5aec8e392f07a642da0673c32fc979f3dcefdf5b72d77b24eb084103cf83ea5c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P28_fuente_frecuencia_marca_20261026/contents/summary.json": "35f80bf0a389ad1114a03849e90a2a0a49c70f4254f3bdad06bd06058c1549aa",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_contents.parquet": "f8d5c595dc4bc1357decca37bc73660a557a473638f2aae83e085c9e68d4e1f1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s1_contents.parquet": "07c2395bc8efe3045baec7677e56c3824c44200bd9ab75c14212e862f6e63993",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/partition_source/folds_contents.parquet": "de57e8d6bcd92628778104a627d4c98c046063ed31139ac1fc50c6194e804279"
+  },
+  "fixture": {
+    "multiplicative_main_effects_zero_residual_interaction": true,
+    "known_interaction_and_model_difference_verified": true,
+    "new_fits": 0
+  },
+  "budget": {
+    "new_model_fits": 0,
+    "new_C0_fits": 0,
+    "new_model_inference": 0,
+    "new_prices": 0,
+    "new_target_scores": 0,
+    "new_source_group_bootstrap_contrasts": 3,
+    "new_submissions": 0
+  },
+  "limits": [
+    "Source response and both model predictions are conditional on frozen source-observation objects; bootstrap does not refit observation or source models.",
+    "Target P30adverse motivated this question; current source holdout already used, adaptive exploratory review.",
+    "Different source likelihood/observation structures, confounding and risk composition can produce residual contrasts; not a causal channel diagnosis.",
+    "Source support adds no emerging newbusiness support or private-performance guarantee."
+  ],
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true,
+  "pre_readout_implementation_amendment": {
+    "reason": "Handle missing channel with explicit false broker flag and unsupported whole-cell contrasts as null; no changes to formulas, thresholds, groups, sources or hypothesis. Before source readout, no bootstrap or pricing run.",
+    "old_plan": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P32_adecuacion_condicional_fuente_20261026/plan_before_unknown_guard.json",
+    "old_plan_sha256": "2c81685cda74030c1636a56539a5e1e66852553917c5148044f805499f06f9de",
+    "new_control": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P32_adecuacion_condicional_fuente_20261026/unknown_channel_control.json",
+    "new_control_sha256": "296e31cb4732f330f8814fbf5b7dbcfddcf42ac0e9a5844125a814896d96250a"
+  }
+}
