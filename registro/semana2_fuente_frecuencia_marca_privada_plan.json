@@ -1,0 +1,156 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T20:56:53.909762+00:00",
+  "candidate": "Paired_reporting_peril_Poisson_Tweedie15_main_effects_source_inner",
+  "hypothesis": "El coste agregado mezcla perils con retrasos y severidades distintos. Una suma de GLM número/marca con vínculos explícitos puede aportar una estructura de transporte más simple, sin árboles o interacciones.",
+  "precedent": [
+    {
+      "recipe": "Ciclo3R25",
+      "existing": "Poisson/Gamma on emerging2023positive-count response, B20comparison, same older observation mapping.",
+      "why_not_current": "No developed2021-2024paired RKM-count/frozen-cost source mark offsets; standard two-part idea already tried."
+    },
+    {
+      "recipe": "Ciclo8R38/R39 and ciclo16R58/R59/R60/R61",
+      "existing": "Developed2023peril PoissonGLM and Tweedie1.5/1.8marks retaining zeros, target count/cost credibility adapters. C16also adds small Poisson trees.",
+      "why_not_current": "Source marks are observed cost/count with calendar exposure, not current4year source RKM-frequency and E_C/E_Nmark offsets. Preserve old results, do not rerun or call this a first family."
+    },
+    {
+      "recipe": "FS/FSp and restored FSpbuildings",
+      "existing": "Developed2021-2023and2021-2024Poisson/Gamma trees with cost-completion offset in frequency and observed positive marks.",
+      "why_not_current": "Cost proxy product may remain coherent; it does not separately identify latent count frequency/marks. Proposed paired source offsets and linear main effects differ. No declaration that historical f*s is invalid."
+    },
+    {
+      "recipe": "Tanda8",
+      "existing": "Current4year source Poisson on physical-peril weather ratios with existing RKM count offsets, source-only nuisance controls.",
+      "why_not_current": "Frequency/weather correction only, no complete paired mark model or complete backbone. Do not repeat weather fits."
+    }
+  ],
+  "necessity_and_limits": "P26small gain was concentrated and adverse in pooled newbusiness. Aggregate standard GLM/GAM variants failed whole-target gates. This does not prove causality of reporting or that another model will improve; source current4year paired-offset main effects differs from prior2023GLMs and FS/FSp cost proxies.",
+  "features_and_preprocessing": "All unchanged A1Smatrix predictors including duration, P14main effects and missing indicators. Fit preprocessing on source training groups only: median,0.5/99.5percentnumeric clip/scales,categories min100max40/dropfirst/OTHER, missing flags. No row/claim cost winsorization, feature search or interactions.",
+  "configuration": {
+    "frequency": {
+      "class": "PoissonRegressor",
+      "nominal_alpha": 0.001,
+      "response": "N/E_N_RKM",
+      "weight": "E_N_RKM",
+      "alpha": ".001*n_original_training_rows/sum(E_N_RKM)"
+    },
+    "mark": {
+      "class": "TweedieRegressor",
+      "power": 1.5,
+      "nominal_alpha": 1.0,
+      "response": "C/(N*r),r=E_C/E_N_RKM",
+      "weight": "N*sqrt(r)",
+      "alpha": "sum(N)/sum(N*sqrt(r))"
+    },
+    "estimator": {
+      "fit_intercept": true,
+      "solver": "lbfgs",
+      "max_iter": 3000,
+      "tol": 1e-07
+    },
+    "counts": "Actual accepted claims, no T0positive-period proxy",
+    "reference_constants": "Per-peril Poisson rate=sum(N)/sum(E_N); mark=sum(C/sqrt(r))/sum(N*sqrt(r)), source training only.",
+    "held_observed_cost": "sum_perils(E_C*predicted_frequency*predicted_mark)"
+  },
+  "source_gate": {
+    "comparator": "Same-peril constant number/mark model trained on same source training groups, same paired offsets.",
+    "max_relative_deviance_increase_each_line": 0.002,
+    "rule": "All3lines aggregate held cost deviance <=1.002times same-contract constant baseline.",
+    "A1S_tree_reference": "Record original saved source-inner ensemble native predictions as context; no relative tree noninferiority gate for this different low-capacity family. Never infer target admission from this source gate.",
+    "why": "Standard family must improve its own same-estimand constant comparator; its transport merits require the unchanged later whole-target global/NBcriteria, not source tree imitation."
+  },
+  "budget": {
+    "source_inner_GLM_fits": 30,
+    "source_closed_baseline_constants": 30,
+    "synthetic_GLM_fits_separate": 2,
+    "source_full_refits": 0,
+    "new_C0_fits": 0,
+    "new_target_calibrations": 0,
+    "new_target_scores": 0,
+    "new_future_inference": 0,
+    "new_final_prices": 0,
+    "new_submissions": 0
+  },
+  "criteria": [
+    "Save each JSONmodel before gradient/convergence checks, reconcile actual attempts, never blindly repeat failed fit.",
+    "Gradient<=1e-4,no convergencewarning, finite positive predictions, JSON/ordering/scalar predictor agreement.",
+    "Exact source training groups and rows from current partition; preprocessing and fit arguments exclude held labels/covariates.",
+    "Argument extraction invariance for held count/cost poisoning, without extra real refits.",
+    "All source gates and labels/offsets unchanged; no full refit or target assessment in this source-inner unit."
+  ],
+  "checkpoint": "Stop between saved perils after30minutes; resume only after process reconciliation and all invoked fits have records. No failed-fit retry.",
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/fuente_frecuencia_marca_P28.py": "db03b83029f8fca9ae638e7b05555ffb94dfbf34595dc85d108b85c73264d3ad",
+    "Hackaton/Repositorio_IAA2026/herramientas/GLM_ausentes_privada_P14.py": "4d34de1404cfb4a719cd6f95e1cc8aae851ea0162cd3e9b9af5cc9d894c3b993",
+    "Hackaton/Repositorio_IAA2026/herramientas/entrenar_GLM_fuente_P11.py": "07dfc3670abcbd2b1178acd76e888291e645cc1ad007c5b4168f1a5ab175f2c4",
+    "Hackaton/Repositorio_IAA2026/herramientas/preparar_contrato_frecuencia_P27.py": "67e43d252325a6855feba1a9d1596fe8054240d137098e5d3a96e7bdb091562c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P27_contrato_frecuencia_20261026/report.json": "b74669746ab15c24348844e5679cd5fb11762187852b2e2b265707c1c1f3f4ac",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P27_contrato_frecuencia_20261026/completion_receipt.json": "ca2804669133ee2664dbd08edf4981d1a57f23d4bbc83f8f33c44d21d9e3f0c8",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P27_contrato_frecuencia_20261026/synthetic_objective_identity.json": "745f7f759ad770abba51779bd7efd4e62f5586192f40e925c85f6ce6db330360",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_robustez2023_ciclo8_plan.json": "64a56e2887bf9fd890dfc0922f848a9d59bc623ef2a123c49124f3ceab60747b",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_robustez2023_ciclo16_plan.json": "b0875cc61b59fdcbce5cdbe6604e7695a3801fdf15f3ceb7e81c86bb0576aac2",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/recuentos_fuente2024_v1/report.json": "47a3fdba8d7b09e3ffc97772ce54e5cf23e1c334e2012ba9568e56ad15e6ab1d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/recuentos_fuente2024_rkm_reuse_v1/report.json": "92fd18616644ea973fb59c147c4163c0df6104b0a3400d45a3e2b7de2abfed7a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s1_motor.parquet": "c2a2f3d5a14f96892bdd6f6f973b03449f874a7df0ff42d687533254a5833ed3",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_motor.parquet": "ded113876f2069f7341491aa855e7e0fc4036e5e6e38d476466da905f5bee99c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/partition_source/folds_motor.parquet": "81f9c33285595d956952e2431696095b017503a15a4080215efe232c232575a1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/recuentos_fuente2024_v1/counts_motor.parquet": "3488603e1d5ff29535eb6d617fa9b9dc237f19ab5d4fad1d0b8344951371f19b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/recuentos_fuente2024_rkm_reuse_v1/rkm_links_motor.parquet": "1a76df55747f948f1f60b739133d4a06e74cc93920f4677ecbf554a94e7e8db5",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P25_fuente_ausencias_20261026/motor_seed11_inner/validation_predictions.parquet": "33e0e6465e4b8e9b1952b30b67e834437259ac404c2193cdccb72640946dfae1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P25_fuente_ausencias_20261026/motor_seed12_inner/validation_predictions.parquet": "04cd4480622d7bb9f878f66c6dbe84e3edc17a09bf613c7a54e41e8e46ce8c5b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P25_fuente_ausencias_20261026/motor_seed13_inner/validation_predictions.parquet": "38047d409cf9e2875ca3ec99bdd701c54f4e8dcccd01b75592200a746ecafaa9",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s1_buildings.parquet": "471922f7f8318216270fc7332028286d84162fbe78aa0279173903525b4aee90",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_buildings.parquet": "a04a76fa8564f83a6da02d4f1885972b7ef82b3d741cc5a6bd22f0df1d98bf88",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/partition_source/folds_buildings.parquet": "99ffe4451eda354a687d01465c6ceaca740e1c38b766d520b65107e95b4778e8",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/recuentos_fuente2024_v1/counts_buildings.parquet": "47fffb7a872db2d99894670f0273d666be1e3cb38b0bc43f6d5048075eb10dff",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/recuentos_fuente2024_rkm_reuse_v1/rkm_links_buildings.parquet": "93d91bb1bc408d3e974fd2752ef77a762d24950060885003c213ef532e7ccb80",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P25_fuente_ausencias_20261026/buildings_seed11_inner/validation_predictions.parquet": "84f2412d610a42a6290ed25b2ae6696c7fe2e6b112ed0b4b2900f8c807f9de8b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P25_fuente_ausencias_20261026/buildings_seed12_inner/validation_predictions.parquet": "f8a2ceab2200850d1ca94aa96dab7e5ca239a74d1c2679d98e375272b95a4d62",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P25_fuente_ausencias_20261026/buildings_seed13_inner/validation_predictions.parquet": "3e4ae35c2b0dfdf9b135042c60a31eb8399c5603b2048a1c0b4157ece9332228",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s1_contents.parquet": "07c2395bc8efe3045baec7677e56c3824c44200bd9ab75c14212e862f6e63993",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_contents.parquet": "f8d5c595dc4bc1357decca37bc73660a557a473638f2aae83e085c9e68d4e1f1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/partition_source/folds_contents.parquet": "de57e8d6bcd92628778104a627d4c98c046063ed31139ac1fc50c6194e804279",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/recuentos_fuente2024_v1/counts_contents.parquet": "da10794289296fd749b11c26948dbce4fcd5be480d5ad81ff8f432801ed35c50",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/recuentos_fuente2024_rkm_reuse_v1/rkm_links_contents.parquet": "2e8a58fb3a7ff90d1dfb04f5c17bcb0b60384bd2f25923a471b28de6a0af4bd8",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P25_fuente_ausencias_20261026/contents_seed11_inner/validation_predictions.parquet": "a351410a031061e2600f8a8d659ecf0340dd53d1ae32660aa709c8b9442da870",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P25_fuente_ausencias_20261026/contents_seed12_inner/validation_predictions.parquet": "3f93cfd10d50b3b2afcd2a4d13cde2f6261e59d93459bbe086cf328e8cd95690",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P25_fuente_ausencias_20261026/contents_seed13_inner/validation_predictions.parquet": "2f1e3152b49643132e5590c0570b162e51b67b90ee183d911750bf43d375c770"
+  },
+  "synthetic": {
+    "author": "Codex",
+    "utc": "2026-10-26T20:56:53.908769+00:00",
+    "synthetic_GLM_fits_separate": 2,
+    "new_contest_fits": 0,
+    "source_only_preprocessing_JSON_exact": true,
+    "source_held_payload_argument_boundary": true,
+    "zero_mark_retained": true,
+    "controls": [
+      {
+        "family": "frequency",
+        "max_abs_gradient": 7.649644652094056e-08,
+        "JSON_order_exact": true,
+        "manual_predictor_parity": true,
+        "finite_difference_max_error": 5.574747499902306e-11
+      },
+      {
+        "family": "mark",
+        "max_abs_gradient": 6.808023388787943e-08,
+        "JSON_order_exact": true,
+        "manual_predictor_parity": true,
+        "finite_difference_max_error": 4.6216055288310675e-11
+      }
+    ],
+    "limit": "Argument-boundary and synthetic objective checks; not repeated real fits under source-held poisoning."
+  },
+  "limits": [
+    "Accepted reported events as of official cut; source-only RKM and empirical cost completion are frozen assumptions, not identified ultimate event counts.",
+    "Count RKM support and cost empirical1095support differ; tail beyond observed support and reserve adequacy remain unknown.",
+    "New-source count/mark model would change only source annual cost relativities; later whole target comparison still required.",
+    "Support thresholds100train/20held are source-preflight feasibility, not target credibility or proof of private generalization.",
+    "A main-effects mixture may underfit within-peril nonlinearities; no guarantee from simplicity.",
+    "Source holdout and prior search are adaptive/conditional; no private-performance or professional independent-validation claim."
+  ],
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true
+}
