@@ -1,9 +1,9 @@
 {
   "author": "Codex",
-  "as_of_utc": "2026-10-26T20:44:15.756019+00:00",
+  "as_of_utc": "2026-10-26T22:42:22.409440+00:00",
   "scope": "Own pricing/development lineage only; not all project fits or other authors. Historical main catalog retains its dated counter.",
-  "cumulative_price_base_fits": 1687,
-  "cumulative_closed_form_constants": 25664,
+  "cumulative_price_base_fits": 1705,
+  "cumulative_closed_form_constants": 26334,
   "auxiliary_Poisson_Gamma_fits_separate": 30,
   "baseline": {
     "index": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_v7_snapshot.json",
@@ -2052,5 +2052,63 @@
     "new_C0_fits": 0,
     "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P30_validacion_frecuencia_marca_20261026/P30_context_report.json",
     "report_sha256": "f6ca0ac5884951704d4f4c23b6052a4a48617f7fe46c3ad33fc9a42630e300a4"
+  },
+  "phase2_private_P36_source_climate": {
+    "counted_fit_keys": [
+      "buildings_seed11_full",
+      "buildings_seed11_inner",
+      "buildings_seed12_full",
+      "buildings_seed12_inner",
+      "buildings_seed13_full",
+      "buildings_seed13_inner",
+      "contents_seed11_full",
+      "contents_seed11_inner",
+      "contents_seed12_full",
+      "contents_seed12_inner",
+      "contents_seed13_full",
+      "contents_seed13_inner",
+      "motor_seed11_full",
+      "motor_seed11_inner",
+      "motor_seed12_full",
+      "motor_seed12_inner",
+      "motor_seed13_full",
+      "motor_seed13_inner"
+    ],
+    "attempts": 18,
+    "completed": 18,
+    "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_fuente_clima_A1S_privada_plan.json"
+  },
+  "phase2_private_P37_climate_target": {
+    "primary_closed_learners": 30,
+    "adverse_closed_learners_separate": 30,
+    "new_primary_constants": 670,
+    "constant_breakdown": {
+      "shape_factors": 280,
+      "level_constants": 90,
+      "residual_factors": 180,
+      "training_nuisance_levels": 120,
+      "new_source_component_calls": 30,
+      "new_residual_stage_calls": 40,
+      "shape_training_normalizers_separate": 80,
+      "training_stage_normalizers_separate": 120,
+      "held_stage_normalizers_separate": 120
+    },
+    "new_iterative_price_fits": 0,
+    "new_source_fits": 0,
+    "new_C0_fits": 0,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P37_validacion_clima_20261026/P37_context_report.json"
+  },
+  "phase2_private_P38_saved_CB_recovery": {
+    "existing_models_reused": 3,
+    "new_source_model_fits": 0,
+    "new_C0_fits": 0,
+    "new_target_fits": 0,
+    "new_closed_form_constants": 0,
+    "new_covariate_model_source_centers_separate": 3,
+    "historical_component_rows": 109296,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P38_CatBoost_guardado_20261026/report.json",
+    "report_sha256": "873fb556fd7f238a10ee577b22dc02733f7ea275c77f78e6e94cb46f3229d9b5"
   }
 }
