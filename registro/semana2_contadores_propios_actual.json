@@ -1,8 +1,8 @@
 {
   "author": "Codex",
-  "as_of_utc": "2026-10-26T23:12:07.485704+00:00",
+  "as_of_utc": "2026-10-26T23:20:30.798045+00:00",
   "scope": "Own pricing/development lineage only; not all project fits or other authors. Historical main catalog retains its dated counter.",
-  "cumulative_price_base_fits": 1705,
+  "cumulative_price_base_fits": 1735,
   "cumulative_closed_form_constants": 27004,
   "auxiliary_Poisson_Gamma_fits_separate": 30,
   "baseline": {
@@ -2139,5 +2139,43 @@
     "new_C0_fits": 0,
     "new_target_scores": 0,
     "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P42_frecuencia_marca_constante_20261026/report.json"
+  },
+  "phase2_private_P43_capital_mark": {
+    "counted_fit_keys": [
+      "buildings/accidental_damage_full",
+      "buildings/accidental_damage_inner",
+      "buildings/escape_of_water_full",
+      "buildings/escape_of_water_inner",
+      "buildings/fire_full",
+      "buildings/fire_inner",
+      "buildings/flood_full",
+      "buildings/flood_inner",
+      "buildings/storm_full",
+      "buildings/storm_inner",
+      "buildings/subsidence_full",
+      "buildings/subsidence_inner",
+      "contents/accidental_damage_full",
+      "contents/accidental_damage_inner",
+      "contents/escape_of_water_full",
+      "contents/escape_of_water_inner",
+      "contents/flood_full",
+      "contents/flood_inner",
+      "contents/theft_full",
+      "contents/theft_inner",
+      "motor/bodily_injury_full",
+      "motor/bodily_injury_inner",
+      "motor/glass_hail_full",
+      "motor/glass_hail_inner",
+      "motor/own_damage_full",
+      "motor/own_damage_inner",
+      "motor/theft_full",
+      "motor/theft_inner",
+      "motor/third_party_prop_full",
+      "motor/third_party_prop_inner"
+    ],
+    "attempts": 30,
+    "completed": 30,
+    "new_frequency_fits": 0,
+    "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_marca_capital_privada_plan.json"
   }
 }
