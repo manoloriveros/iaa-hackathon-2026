@@ -1,0 +1,297 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T18:42:18.965452+00:00",
+  "status": "P18complete_adverse_not_adopted",
+  "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_calibracion_conjunta_privada_plan.json",
+  "plan_sha256": "c2c626619b10249557e5a4b9031272efaee178b10b814cd21108d4716db406ff",
+  "forum": {
+    "author": "Codex",
+    "id": "COD-S2-20261026-PRIVADA-P18-CONJUNTA-RESULTADO",
+    "utc": "2026-10-26T18:42:19+00:00",
+    "previous_sha256": "91c7e0a8c545d79f4076bb87d6e5be5f8f1f61b037844edfdac3492b68a7c8dd",
+    "sha256": "c53028833fa528fcf2fd18d93791a0e63382bfdee34bd42c36dad60ff5d10846"
+  },
+  "output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P18_calibracion_conjunta_20261026",
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P18_calibracion_conjunta_20261026/report.json",
+  "report_sha256": "a0e05a95f171e1fbc3fda51082d3c0196b89b9d2be3a70df2df955f5c1cd1339",
+  "secondary_report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P18_calibracion_conjunta_20261026/secondary_report.json",
+  "secondary_report_sha256": "edadd0f68544caeee7767c143f678b95ccf92282beeadf7782b80e91ae42a30e",
+  "replay": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P18_calibracion_conjunta_20261026/replay_report.json",
+  "replay_sha256": "53f4f047a2b1a1cff405bd79321f80e802d868f2b932e3aef0b69d4eb5efb0ed",
+  "secondary_replay": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P18_calibracion_conjunta_20261026/secondary_replay_receipt.json",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P18_CALIBRACION_CONJUNTA.md",
+  "primary_nominal": {
+    "POOLED": {
+      "delta": -0.0014624159909434249,
+      "bootstrap95": [
+        -0.006047372421163841,
+        0.0028618092851201205
+      ],
+      "simultaneous95_family10": [
+        -0.007522193176135635,
+        0.004694718295657986
+      ],
+      "post31_delta": -0.007424788682023057,
+      "folds": {
+        "0": 1.512925945736537e-05,
+        "1": -0.0006588152422896447,
+        "2": 0.00043942890580512075,
+        "3": -0.0006008196810931623,
+        "4": -0.0006573392328231041
+      },
+      "years": {
+        "2023": -0.002202139261454401,
+        "2024": 0.0007397232705109762
+      },
+      "cells": [
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 0,
+          "rows": 11073,
+          "delta_global": -0.00031966298161731474,
+          "delta_cell_null": -0.0020887762871207674,
+          "AE_base": 1.2583942386427394,
+          "AE_candidate": 1.3753591330823745
+        },
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 1,
+          "rows": 1507,
+          "delta_global": -0.0003806028694376518,
+          "delta_cell_null": -0.025997340209582404,
+          "AE_base": 1.166214903357763,
+          "AE_candidate": 1.1861969491450277
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 0,
+          "rows": 12588,
+          "delta_global": 0.0014507011869465077,
+          "delta_cell_null": 0.011267976890973508,
+          "AE_base": 0.7742547297078182,
+          "AE_candidate": 0.8153931736912435
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2279,
+          "delta_global": -0.00031338958091062783,
+          "delta_cell_null": -0.02006505492401157,
+          "AE_base": 0.6225216997772074,
+          "AE_candidate": 0.6489211805477022
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 0,
+          "rows": 13987,
+          "delta_global": -0.00010367173109301754,
+          "delta_cell_null": -0.0013003007255482765,
+          "AE_base": 1.0680298936213382,
+          "AE_candidate": 1.0884335083387386
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 1,
+          "rows": 1847,
+          "delta_global": -0.0001056494788749029,
+          "delta_cell_null": -0.013170338510786606,
+          "AE_base": 1.0599284915717062,
+          "AE_candidate": 0.9605893199240121
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 0,
+          "rows": 15863,
+          "delta_global": 4.175604950994205e-05,
+          "delta_cell_null": 0.0004990996426040036,
+          "AE_base": 0.9740366453944687,
+          "AE_candidate": 0.9507798733232647
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2869,
+          "delta_global": 0.00016222841216484494,
+          "delta_cell_null": 0.011703346084740664,
+          "AE_base": 1.429418709460475,
+          "AE_candidate": 1.3118790763812997
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 0,
+          "rows": 19060,
+          "delta_global": -0.000526818538213355,
+          "delta_cell_null": -0.0028884050984812224,
+          "AE_base": 0.9280020691480009,
+          "AE_candidate": 0.8922954105939664
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 1,
+          "rows": 2620,
+          "delta_global": -0.0007657336622181595,
+          "delta_cell_null": -0.025971499718052373,
+          "AE_base": 1.268101465959399,
+          "AE_candidate": 1.1684701262658055
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 0,
+          "rows": 21688,
+          "delta_global": -0.0003597688076750955,
+          "delta_cell_null": -0.0018081879872800873,
+          "AE_base": 1.0775040805284564,
+          "AE_candidate": 1.0452193859212602
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 1,
+          "rows": 3915,
+          "delta_global": -0.00024180398952459504,
+          "delta_cell_null": -0.008008437424635416,
+          "AE_base": 0.8568608485576714,
+          "AE_candidate": 0.7890751462551607
+        }
+      ],
+      "worst_cell_delta": -0.025997340209582404,
+      "base_D2": 0.13840694770665685,
+      "candidate_D2": 0.1369445317157134,
+      "futureweight_point_only_ESS_failed": -0.02316412505538083,
+      "same_level_sensitivity": {
+        "0.95": -0.0013656550937725905,
+        "1.0": -0.0014624159909434249,
+        "1.05": -0.0015553466429126276
+      }
+    },
+    "TRANSFER": {
+      "delta": 0.0026876623343805505,
+      "bootstrap95": [
+        -0.002107958768626393,
+        0.007927546933763643
+      ],
+      "simultaneous95_family10": [
+        -0.004171150810860976,
+        0.010802825622292185
+      ],
+      "post31_delta": -0.005294025807575199,
+      "folds": {
+        "0": 0.0003947497480978056,
+        "1": -0.00025617122394481964,
+        "2": 0.002057962919676695,
+        "3": -0.00039895019736647464,
+        "4": 0.0008900710879173437
+      },
+      "years": {
+        "2024": 0.0026876623343805505
+      },
+      "cells": [
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 0,
+          "rows": 12588,
+          "delta_global": 0.00428380638295769,
+          "delta_cell_null": 0.016535958434952442,
+          "AE_base": 0.6217864960513668,
+          "AE_candidate": 0.6747568735034166
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2279,
+          "delta_global": -0.00025274458072126253,
+          "delta_cell_null": -0.008042095178503971,
+          "AE_base": 0.4922636127333661,
+          "AE_candidate": 0.5454584456358176
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 0,
+          "rows": 15863,
+          "delta_global": -0.00029665064606877197,
+          "delta_cell_null": -0.001762157451293441,
+          "AE_base": 0.9547886492821178,
+          "AE_candidate": 0.9025166126267646
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2869,
+          "delta_global": 0.00042830289079977583,
+          "delta_cell_null": 0.015355561198812465,
+          "AE_base": 1.4819395588582684,
+          "AE_candidate": 1.3581238466886012
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 0,
+          "rows": 21688,
+          "delta_global": -2.6358277207203502e-05,
+          "delta_cell_null": -6.583679048031137e-05,
+          "AE_base": 1.1590407861224514,
+          "AE_candidate": 1.0904021021885935
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 1,
+          "rows": 3915,
+          "delta_global": -0.0014486934353796777,
+          "delta_cell_null": -0.02384472805510104,
+          "AE_base": 0.8687200327304127,
+          "AE_candidate": 0.664616111158999
+        }
+      ],
+      "worst_cell_delta": -0.02384472805510104,
+      "base_D2": 0.1318209954932763,
+      "candidate_D2": 0.1345086578276572,
+      "futureweight_point_only_ESS_failed": 0.002608042864522404,
+      "same_level_sensitivity": {
+        "0.95": 0.0032708662946991547,
+        "1.0": 0.0026876623343805505,
+        "1.05": 0.0021345653046828776
+      }
+    }
+  },
+  "diagnostic_gates": {
+    "pooled_delta_ge002": false,
+    "pooled_lower95_positive": false,
+    "pooled_atleast4positive_folds": false,
+    "both_pooled_years_nonnegative": false,
+    "pooled_post31_nonnegative": false,
+    "conditional_transfer_nonnegative": true,
+    "all_nominal_and_stress_cell_floors": false
+  },
+  "primary_GLM_fits": 10,
+  "adverse_GLM_fits_separate": 10,
+  "primary_coefficients": 290,
+  "maximum_gradient": 8.349148008721108e-08,
+  "new_closed_form_constants": 0,
+  "new_source_fits": 0,
+  "new_C0_fits": 0,
+  "new_2025inference": 0,
+  "new_final_prices": 0,
+  "new_submissions": 0,
+  "adopted": false,
+  "private_improvement_established": false,
+  "goal_achieved": false,
+  "B00_all_alternatives_preserved": true,
+  "2024_open": true,
+  "next_unit": "P19: covariate-only preflight of broker acquisition proxies against 2025inputs, then preregister an audit of saved common-qSource OOF algorithms on fixed cohorts (NB; NB/broker; NB/broker/no prior observed exposure). Compare incumbent A1S/S2/H1 and already evaluated D0/P12/P15/P17/P18 only under the same observation contract. Inspect group/positive-claim support by line/year/cohort before interpreting scores. No new weights, classifiers, model/C0fits or inference; no repeat of global diagnostics. If a new bounded paired bootstrap is needed, freeze its support rules/family/seeds before scoring. Do not choose lines, weights or candidates from thin subgroup results. B00/F3c/all alternatives preserved; 2024open/adaptive; no uploads or private-performance claim."
+}

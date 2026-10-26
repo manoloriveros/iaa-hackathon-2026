@@ -1,0 +1,83 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T18:47:21.104440+00:00",
+  "status": "frozen_before_new_cohort_scoring",
+  "hypothesis": "New-business and little-history cases dominate the 2025portfolio; global adaptive scores may conceal failures in comparable historical cohorts. Audit existing complete algorithms before another fit.",
+  "cohorts": {
+    "NB": "new_business is true",
+    "NB_BROKER": "NB and channel equals broker",
+    "NB_BROKER_ZERO": "NB_BROKER and prepared f1_anios_observados equals exactly zero"
+  },
+  "cohort_interpretation": "Nested descriptive proxies, not a label identifying the acquired portfolio; no unseen private outcome or private/public membership is known.",
+  "algorithms": {
+    "D0": "P10_validacion_sin_exposicion_20261026",
+    "GLM": "P12_validacion_GLM_20261026",
+    "GLM_MI": "P15_validacion_ausentes_20261026",
+    "GAM": "P17_validacion_GAM_20261026",
+    "JOINT": "P18_calibracion_conjunta_20261026"
+  },
+  "comparator": "Fixed A1S/S2/H1 old_nominal, same observation chain qSource as every saved candidate",
+  "evaluations": [
+    "POOLED2023_2024global_group_OOF",
+    "TRANSFERtarget2023_to_2024conditional_source2024"
+  ],
+  "primary": "Nominal point deltaD2 inside the three fixed cohorts; line/year/fold descriptive breakdown and group support. Do not repeat global score or claim causality.",
+  "uncertainty": {
+    "replicates": 2000,
+    "seed": 2026102660,
+    "groups": "One shared multinomial bootstrap of all NB global customer/address groups; use the same multiplicities for all 30 comparisons across overlapping cohorts/evaluations.",
+    "null": "Recompute cohort-specific weighted mean target and null deviance for each draw.",
+    "family": "30 nominal comparisons; marginal percentile95 and a shared max-absolute-standardized-deviation simultaneous95 exploratory band.",
+    "training_uncertainty": "OOF prices fixed; fitted source and training-stage uncertainty not re-estimated."
+  },
+  "descriptive_support_flag": {
+    "minimum_positive_groups_per_line_year_cohort": 30,
+    "minimum_positive_groups_in_each_stored_fold": 10,
+    "meaning": "Screen for obvious thin support only; passing does not establish transfer, causality, an adequate tail or private improvement."
+  },
+  "decisions": "No automatic promotion, line selection, model weights, threshold relaxation or submission from this audit. Retain all adverse cells and nested-cohort dependence.",
+  "cost": {
+    "price_fits": 0,
+    "C0_fits": 0,
+    "source_queries": 0,
+    "new_future_prices": 0,
+    "submissions": 0,
+    "new_bootstrap_families": 1
+  },
+  "preflight": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P19_cohortes_broker_20261026/covariate_preflight.json",
+  "preflight_sha256": "976d01f14c2304bfc508c567414f0e796f82a7450d9aff190855983a85f2043d",
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/auditar_cohortes_broker_P19.py": "a785b7087f9c89d1ca3b44304ffc92c707e05bf70727f2456e959c5443c21e39",
+    "Hackaton/Repositorio_IAA2026/herramientas/preparar_nucleo_A1S.py": "143e4373473c03889626b10b0a49dd504aeb7b9d8066da9d2a10a4d822ed228d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/report.json": "16e00f41001ef78ba607d5cd2fd41fe77974b13c1e6d2bf18dc3573b7fa2534a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s2_motor.parquet": "7a6e236ecb97dda159f73650b660955206b33a73bd4b22e3935581c72afc3631",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s2_motor.parquet": "2063f50044d41963032164373dcc895583e92dd7e9d1687aac7efda31910e75d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s2_buildings.parquet": "26dad682688854722be16ff52bc4332fd9acfe310b5ea4838d8c772bea32b775",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s2_buildings.parquet": "801b708d1738b6b6e04e1e9e814ec798397e65f817e9267bfc425c537f153846",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s2_contents.parquet": "633f4b7bbccd5929daf418a062c5023e761bfabfd5db2a7da432354c47472ccc",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/matrix_s2_contents.parquet": "1576409971c67f28f9bc61a82b887c63a93a2e783ae12ed39b15e07fe34f46c7",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/canonical_motor.parquet": "263f5a20d9048b4e035f311b6f3d9c7bb79499bd190dea879afdc45680fa29d5",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/canonical_buildings.parquet": "e76a5d07cb7f0c6aaaa061762f48c5b1012eeda48d0b40f9ba238f56676b6e1e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/canonical_contents.parquet": "1fb354c30f8f093903203d896abcc6cfef3f0696677b3f6d7daa2edf67c35092",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P10_validacion_sin_exposicion_20261026/POOLED_prices.parquet": "04cfd8d5fb44578af64e42826f2c5d6a51d2bc20fc42d9ab73c1fedc89b4c7c9",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P10_validacion_sin_exposicion_20261026/TRANSFER_prices.parquet": "6e0d4ca76f8074e2dbde030c71f045a1555e402b80d21427ab103259c9628a48",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P12_validacion_GLM_20261026/POOLED_prices.parquet": "1c2b3e56d55187312e5462328414612bca461d6ce74abb902486b11779b82e1e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P12_validacion_GLM_20261026/TRANSFER_prices.parquet": "931c2759a01e27c1ba72dc0903e766a7ea6b1aefc262ba2c17131662a9c26d16",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P15_validacion_ausentes_20261026/POOLED_prices.parquet": "024de212030b8a726ed98da330c1f12af048cf1269a70ceefadeb70488bbc7a2",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P15_validacion_ausentes_20261026/TRANSFER_prices.parquet": "6d62ec999f60fc29127ce7e1324a26c3bad4c3b9387545ceadd17ce960c56b35",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P17_validacion_GAM_20261026/POOLED_prices.parquet": "e0b8369a378747a3a8d4405a0f2ca650278cbf5131a227d371a7d3fce70230bc",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P17_validacion_GAM_20261026/TRANSFER_prices.parquet": "f529e1a260ea29ed6ecf50398cc88bf5bb1f7496f883fea24f9d4dff8739ffc7",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P18_calibracion_conjunta_20261026/POOLED_prices.parquet": "588e51a91278af42fa0dd87ba7d33316dbc864e41844a4581e8cde91195a7c58",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P18_calibracion_conjunta_20261026/TRANSFER_prices.parquet": "5ea1c0747ec791a696ea7dda5d7774cf2ed1c0dc473392593998dcb06d32f38f"
+  },
+  "covariates_sha256": "179f06e488bc8f074851b3f7dc8fcc4c31b9bf46e4af6bdba7336d3f9b60ccff",
+  "limits": [
+    "2023/2024have already been used adaptively; no pristine holdout is restored.",
+    "Current source data and common claim marks include2024; annual transfer remains conditional.",
+    "Marginal cohort resemblance cannot establish joint covariate/outcome support.",
+    "F3c full historical replay is still missing; this audit does not directly compare F3c private performance.",
+    "Broker status does not identify only the new acquisition; zero history concerns this dataset only."
+  ],
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true
+}

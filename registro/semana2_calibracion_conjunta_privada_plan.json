@@ -1,0 +1,217 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T18:28:16.755618+00:00",
+  "candidate": "GAM_absolute_joint_ridge",
+  "hypothesis": "Joint country calibration with regularized line/business main effects may reduce level variance while retaining fixed source risk functions and existing target covariates.",
+  "necessity": "P17sourceGAMpoint gain is not robust and buildings component levels vary across folds. Existing credibility already uses positive claims, not row counts; no counting bug is alleged.",
+  "algorithm": "New complete simpler algorithm: absolute sourceGAMannualrate plus one joint ridgeTweediecalibrator. No N3blend, target band corrections, H1member mean or prediction-cohort normalization.",
+  "calibration": {
+    "parameters": {
+      "power": 1.5,
+      "alpha": 1.0,
+      "link": "log",
+      "solver": "lbfgs",
+      "max_iter": 3000,
+      "tol": 1e-07
+    },
+    "global_intercept_unpenalized": true,
+    "cell_effects": "All6line/newbusinesscells, full symmetric onehot; alpha1coefficient penalty.",
+    "covariates": {
+      "motor": [
+        "gender"
+      ],
+      "buildings": [],
+      "contents": [
+        "gender",
+        "works_from_home",
+        "marketing_segment"
+      ]
+    },
+    "encoding": "Training-only category levels with OTHERfallback, full onehot, training mean/std; constant-columnscale1.",
+    "objective": "m0=absoluteGAMannualrate*roundedE*qSource; response=T0/m0,weights=sqrt(m0). Weighted Tweedie1.5deviance equals costdeviance up to fixed normalizer. Alpha1fixed in normalized objective, no search."
+  },
+  "forward": "sourceannualrate*calendarE*exp(intercept+Zbeta), rowwise with fixed training encoders/scales. No observed outcome, qSource or cohort normalizer in ultimate prediction.",
+  "evaluation": "Same frozen qSource outer adapter and4scenarios as A1S/S2/H1. PureGammaalgorithm versus incumbent primary and P17GAM/S2/H1secondary; not a one-change causal ablation.",
+  "budget": {
+    "primary_joint_price_GLMfits": 10,
+    "adverse_joint_price_GLMfits_separate": 10,
+    "new_source_fits": 0,
+    "new_C0_fits": 0,
+    "new_future2025inference": 0,
+    "new_finaltestprices": 0,
+    "new_submissions": 0
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "pooled_seed": 2026102640,
+    "transfer_seed": 2026102641,
+    "group": "saved connected customer/address component",
+    "bonferroni_family": 10,
+    "interpretation": "Exploratory conditional on fixed source, reused learned curves and adaptive search, not model-selection confirmation."
+  },
+  "level_sensitivity": [
+    0.95,
+    1.0,
+    1.05
+  ],
+  "criteria": {
+    "nominal_pooled_delta_min": 0.002,
+    "nominal_pooled_lower95_positive": true,
+    "at_least4positive_folds": true,
+    "both_pooled_years_nonnegative": true,
+    "post31_nonnegative": true,
+    "all_nominal_and_stress_cell_floors": -0.001,
+    "conditional_transfer_nominal_nonnegative": true
+  },
+  "source_models_per_line": 1,
+  "preflight": {
+    "synthetic_joint_GLMfits_separate": 2,
+    "complete_held_poison_JSON_shuffle_batch_invariant": true,
+    "offset_objective_gradient_two_methods": true,
+    "gradient_finite_difference_max_error": 2.1538866176729066e-11,
+    "no_application_normalizers": true,
+    "new_contest_fits": 0
+  },
+  "scopes": [
+    {
+      "cohort": "POOLED",
+      "outer": 0,
+      "train_rows": 87405,
+      "held_rows": 21891,
+      "training_row_digest": "a3d4ddaec590a500a6a1891c01046471ee6f8c4c54d973209f094084318157c9",
+      "training_group_digest": "c4a167b72344a147406f5167cb55bc67fb9f35a759ea822b7e7fd0dcd2acd17d"
+    },
+    {
+      "cohort": "POOLED",
+      "outer": 1,
+      "train_rows": 87389,
+      "held_rows": 21907,
+      "training_row_digest": "a6c52b0254eca17ff43ab4b5d13747edc6ec4a5e3c8ef9682aa3da4cc4dafb61",
+      "training_group_digest": "f91e1da922de17d93261a4f92b19bfcbd48d8b5ec845c7353077451ade743dca"
+    },
+    {
+      "cohort": "POOLED",
+      "outer": 2,
+      "train_rows": 87289,
+      "held_rows": 22007,
+      "training_row_digest": "cf85923e7c3f9cb3bc014c99386dc7e27c5a6a81a7e3ce209079ed7134b1e640",
+      "training_group_digest": "9c279cb6152647806701440f6d8341b4edcd7280dce915df59afa7abd036a07d"
+    },
+    {
+      "cohort": "POOLED",
+      "outer": 3,
+      "train_rows": 87240,
+      "held_rows": 22056,
+      "training_row_digest": "e55ebcf9b271acaacb03bbc8dd82176761c050c43416709133240ea6d492f562",
+      "training_group_digest": "9c3db019047e198fe0a7b516a32608cb38e5115a8359e05376013b0bfc99f41a"
+    },
+    {
+      "cohort": "POOLED",
+      "outer": 4,
+      "train_rows": 87861,
+      "held_rows": 21435,
+      "training_row_digest": "ae73746392c047a52e0ca6f3a440ac9308abd282af6a48ac09fcefcb1d3537f5",
+      "training_group_digest": "212169b688cb95ac932687eed1e0242cb2f2c4e352b842e5e017ff3245b22a3b"
+    },
+    {
+      "cohort": "TRANSFER",
+      "outer": 0,
+      "train_rows": 40046,
+      "held_rows": 11843,
+      "training_row_digest": "5defb2d7db390f7afe19a1193ddeeef1370a2d26748c208d474dd02e1e89aca7",
+      "training_group_digest": "76334a78cca61c1dba80a2331de632ab4881a375249751387e8293fb18cfc919"
+    },
+    {
+      "cohort": "TRANSFER",
+      "outer": 1,
+      "train_rows": 40107,
+      "held_rows": 11920,
+      "training_row_digest": "e51b914fca7abd81360c4a13697cc953e957b94764e24b0d6c2bbe22a86d33a7",
+      "training_group_digest": "8a44880ba1600452f8266896f6093656f5049f3f6eb8a4e34f5c9d21438eb04d"
+    },
+    {
+      "cohort": "TRANSFER",
+      "outer": 2,
+      "train_rows": 40044,
+      "held_rows": 11957,
+      "training_row_digest": "9b5dcd4e6798700c3ef4ad04b9fd0f5bf5ac274e31b9cbd268c6439fae27cfe3",
+      "training_group_digest": "185d145d281b676074ad8d45509b36e122f5563940eff469ce7d05c30fc1cbcf"
+    },
+    {
+      "cohort": "TRANSFER",
+      "outer": 3,
+      "train_rows": 39920,
+      "held_rows": 11882,
+      "training_row_digest": "afc1b333c0de6581054e98332d0ad82a556dbb39a844b8ee95eb2268ac619883",
+      "training_group_digest": "4e955dba9198f08af1be851f681c0ad7bb5cf7feed8154da88b8246d293af7c9"
+    },
+    {
+      "cohort": "TRANSFER",
+      "outer": 4,
+      "train_rows": 40259,
+      "held_rows": 11600,
+      "training_row_digest": "9dd1ebd46556410c1446c413fbc98ba11bf65f6b0542b842e0d3dddfdfa11026",
+      "training_group_digest": "2968882b7f7e5eb4dabb3966db12bf38e86fa4898ba7aad80a0d070a719f906e"
+    }
+  ],
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/calibracion_conjunta_privada_P18.py": "449820b7fd28d6cb6d7558b3d718cddd795bc0454129d76d60922674546d667c",
+    "Hackaton/Repositorio_IAA2026/herramientas/validar_GAM_privada_P17.py": "cd023248d45a1ca50269f3891421ac967947d9312ab952063099b539e1d7911a",
+    "Hackaton/Repositorio_IAA2026/herramientas/validar_ablacion_fuente_P10.py": "294415513ff66c877eb43959b65026ffad6dbaff76b314d91b78563f15c2bb51",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P16_GAM_bedrooms_lineal_20261026/report.json": "e14d7177c4c6a6d30ef98b398628915ef7551914693401061ad3589eee18301c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P16_GAM_bedrooms_lineal_20261026/amendment_replay_context.json": "d336310b4d07c9957c49fc409ce04cffbcef269d72ebb5be3a6d8d6e5b6f46f5",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_GAM_bedrooms_lineal_plan.json": "f86f751a4030947bb289b70bf2cdc1752e1f1bd0b295e209601a1d472f8f626e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P17_validacion_GAM_20261026/report.json": "06f1149e69bb860ad195853dc3c87ee6c80a2922e73647c1eeb0dbc5a4ed7d87",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P17_validacion_GAM_20261026/context_report.json": "2b4e0975cebec86ed443cf3e2f6dfc18adbb975acd569bfd5aec041dcef704b4",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/estimando_cartera2025_v3/weights.parquet": "cb14dff16c82b83195b17a100c4e8eae62a01622129a7c757968b2ca10c8a486",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/canonical_motor.parquet": "263f5a20d9048b4e035f311b6f3d9c7bb79499bd190dea879afdc45680fa29d5",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P16_GAM_bedrooms_lineal_20261026/historical_motor_three_seed.parquet": "ce97f44a467429cff2aa0c7174867f055f908b043ea6fa6e81da9be85ee69b7d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/canonical_buildings.parquet": "e76a5d07cb7f0c6aaaa061762f48c5b1012eeda48d0b40f9ba238f56676b6e1e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P16_GAM_bedrooms_lineal_20261026/historical_buildings_three_seed.parquet": "aa861eea12357b193bba036e9e878a372f0b14c08dd3c0e8556df696143ec5a2",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/canonical_contents.parquet": "1fb354c30f8f093903203d896abcc6cfef3f0696677b3f6d7daa2edf67c35092",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P16_GAM_bedrooms_lineal_20261026/historical_contents_three_seed.parquet": "3815b416749cffc34d521859235829cb463ac41dde49083c3601579b2c7589ef",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P17_validacion_GAM_20261026/POOLED_prices.parquet": "e0b8369a378747a3a8d4405a0f2ca650278cbf5131a227d371a7d3fce70230bc",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P17_validacion_GAM_20261026/POOLED_joint_bootstrap.npy": "047b4d54bb8c83e131a566c1296eda1e60351c80bfc5beba7e3561313a3e5cca",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_motor_fold0.json": "217ff527fc1c084a423f9db50a164a281d691601273d03730c872c8fd3c13057",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_buildings_fold0.json": "243027e20d64f20e7c0dd573dadf9a3d0ed48e74a3211f2d6cf4762f4e18d29d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_contents_fold0.json": "3e17ec76549baac258553ce7a46bd298f01b10d56a18238180d1c2e2e395197d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_motor_fold1.json": "fc5da7ea8d2d7ebb0640356d73a511b10a2d3321554e648e0fb0eb8ed7bf8b05",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_buildings_fold1.json": "6efcba1d4e91d1145d12fd12cb719dcaffa14b75212b3bffbe150ee7e34a48f4",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_contents_fold1.json": "0f1df633d131bd3c4fabce1914cb241f2ad99a1f0035a73da299f5aa74e962cb",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_motor_fold2.json": "bb21ab5a2600e45b3dadd669d164499b956df99af8a73c3303b56d1d4fa58f83",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_buildings_fold2.json": "a2e1797549e9279e6b69312cd3f32d2fe2b3105dccce320ce98607e9ed04712a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_contents_fold2.json": "5632e4076f539f3ef4b55e972f80a006e720b83e9b986667b7377eb3045681aa",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_motor_fold3.json": "6a651a06736ad9611a7005b4c2b488028d8003a5c0fb10d551bfa5741902bcfe",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_buildings_fold3.json": "2f69262774a2121fd399884c527cb138cb62330ce85d8c40bcafd725220d29a7",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_contents_fold3.json": "8a25af0b73ab8d7c8da967cd77a0b8500eff532a7b95a03755d7556a9a4c9e34",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_motor_fold4.json": "565d0a8a8978572936cd163020221823de1cc6b7728c98a003abe15496916d4f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_buildings_fold4.json": "9cae2e3ec161fc2453df41ad8d2916b85b97ff7fb37037f7f9ee4f2d7be3a127",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda2_20261025_v1/learning_contents_fold4.json": "f66f8b61d13e44d34de86ee1cf90b8ce529442f852ffbae0180f50ed0ba5a998",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P17_validacion_GAM_20261026/TRANSFER_prices.parquet": "f529e1a260ea29ed6ecf50398cc88bf5bb1f7496f883fea24f9d4dff8739ffc7",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P17_validacion_GAM_20261026/TRANSFER_joint_bootstrap.npy": "1444d32b8f173a50ebc001c6e498bd8c026688b39e174a3404229d7edb616944",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P4_transferencia_anual_H1_20261026_v1/scope_motor_outer0_member-1/primary/C0.json": "2de96e41b5b83b7fff9719abd531bf196eea94d615ede5f5d35223fb8d4e65f3",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P4_transferencia_anual_H1_20261026_v1/scope_buildings_outer0_member-1/primary/C0.json": "70a1b8e29f1f99fd6c15a978927038cbbd06b09c96232a5dd2ed594253706baf",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P4_transferencia_anual_H1_20261026_v1/scope_contents_outer0_member-1/primary/C0.json": "1094760aa67fc87d6e656d66d9fae6c8a9cdb72ff44b16823d2d929d122e75a9",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P4_transferencia_anual_H1_20261026_v1/scope_motor_outer1_member-1/primary/C0.json": "d42434f986c675e0826be6ed5f82444cc8761dcf4e58cb49002b6c20db9a3a18",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P4_transferencia_anual_H1_20261026_v1/scope_buildings_outer1_member-1/primary/C0.json": "35fbaab5fee6dcc12ec960b6838f466c1a938bf7e721de743ea0b72a471f6cf3",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P4_transferencia_anual_H1_20261026_v1/scope_contents_outer1_member-1/primary/C0.json": "e0ca8d25641381c2396dc6660a59e8f2699be6d35e79d0d8aaae2d6c8a214701",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P4_transferencia_anual_H1_20261026_v1/scope_motor_outer2_member-1/primary/C0.json": "e61c637cbc76e85b9b5492077fb3650f3659f3290211cc2eaa17f4fb1fc171b5",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P4_transferencia_anual_H1_20261026_v1/scope_buildings_outer2_member-1/primary/C0.json": "3a6938d9523c3de570fe2e74b7ae2c291846c14361934ece364f9ee1e994d539",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P4_transferencia_anual_H1_20261026_v1/scope_contents_outer2_member-1/primary/C0.json": "82d1e24b2ba11f2e147d655f6bd16f6f177e2a9d76b6f972606debbb80010ecb",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P4_transferencia_anual_H1_20261026_v1/scope_motor_outer3_member-1/primary/C0.json": "303208197bbe16500cffe5dadc19768c72ee5a7dfc931cfddf1ff577518f0601",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P4_transferencia_anual_H1_20261026_v1/scope_buildings_outer3_member-1/primary/C0.json": "ee5d6e0d05905ef92fded00d2b2e4f494e720917b181f47ccf558f296fcfb7bf",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P4_transferencia_anual_H1_20261026_v1/scope_contents_outer3_member-1/primary/C0.json": "c88329fe92eaa7c3eec1942fe3add7250dd7f6059a34d1caa13cbd59c910872d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P4_transferencia_anual_H1_20261026_v1/scope_motor_outer4_member-1/primary/C0.json": "95fd8f3279762f0d305e694fa2aa41a82ce4cb203eb55f7a6c7d3f8ac4aae599",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P4_transferencia_anual_H1_20261026_v1/scope_buildings_outer4_member-1/primary/C0.json": "57f4751aecc033b59d97bddf266a9f77ad64ea45741a20357dc2a8445f51106e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P4_transferencia_anual_H1_20261026_v1/scope_contents_outer4_member-1/primary/C0.json": "cbd2f2755c314ba91db9d2ff6c9183c67bb9e395da536fae398f104f0edff224"
+  },
+  "limits": [
+    "Pooling assumes country-scale adjustments can borrow across lines; genuinely different market effects may be overshrunk.",
+    "Several components are removed together, so a gain cannot be assigned solely to ridge regularization.",
+    "Current source2024and adaptive target2023/2024remain conditional; no private outcome is available.",
+    "Frozen valuation/tail sensitivities do not revalue/refit the source or every branch.",
+    "Covariate temporal availability and failed2025weightESS remain unresolved."
+  ],
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true
+}

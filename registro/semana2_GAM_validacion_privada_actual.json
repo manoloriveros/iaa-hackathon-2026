@@ -1,0 +1,480 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T18:20:12.682434+00:00",
+  "status": "P17complete_additive_source_algorithm_evaluated",
+  "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_GAM_validacion_privada_plan.json",
+  "plan_sha256": "137d45d78bf65b39d5bde2d17840d991c498bcd4c90420fb6e04d2f99e6b701e",
+  "forum": {
+    "author": "Codex",
+    "id": "COD-S2-20261026-PRIVADA-P17-GAM-RESULTADO",
+    "utc": "2026-10-26T18:20:12+00:00",
+    "previous_sha256": "ca8baaf912ca81a28a377aa7554c5c97e7b2665bd1c7f687842350f0e7c1671d",
+    "sha256": "213421a39d7f5f02e2fa7c2316b9201f2749662247c28174e081754895ba34a3"
+  },
+  "output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P17_validacion_GAM_20261026",
+  "candidate": "GAM4_MI_bedrooms_linear_complete_S2_H1",
+  "engine_report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P17_validacion_GAM_20261026/report.json",
+  "engine_report_sha256": "06f1149e69bb860ad195853dc3c87ee6c80a2922e73647c1eeb0dbc5a4ed7d87",
+  "primary_diagnostic_gates": {
+    "pooled_delta_ge002": false,
+    "pooled_lower95_positive": false,
+    "pooled_atleast4positive_folds": true,
+    "both_pooled_years_nonnegative": true,
+    "pooled_post31_nonnegative": false,
+    "conditional_transfer_nonnegative": true,
+    "all_nominal_and_stress_cell_floors": false
+  },
+  "primary_nominal": {
+    "POOLED": {
+      "delta": 0.0013249419729078422,
+      "bootstrap95": [
+        -0.000691611488298338,
+        0.0036034076608831415
+      ],
+      "simultaneous95_family10": [
+        -0.001593102442222737,
+        0.0047139834756806265
+      ],
+      "post31_delta": -0.002214561203754985,
+      "folds": {
+        "0": 0.00026890444870331185,
+        "1": -0.00022573544073507075,
+        "2": 0.00026394829347655676,
+        "3": 0.0005288939772451909,
+        "4": 0.0004889306942178533
+      },
+      "years": {
+        "2023": 7.758918406930047e-05,
+        "2024": 0.001247352788838542
+      },
+      "cells": [
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 0,
+          "rows": 11073,
+          "delta_global": 0.0005545416001212175,
+          "delta_cell_null": 0.0036235454562013793,
+          "AE_base": 1.2583942386427394,
+          "AE_candidate": 1.2804073566021703
+        },
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 1,
+          "rows": 1507,
+          "delta_global": -0.00010496779131537262,
+          "delta_cell_null": -0.007169897026541524,
+          "AE_base": 1.166214903357763,
+          "AE_candidate": 1.1069666060925045
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 0,
+          "rows": 12588,
+          "delta_global": 0.0010799220478433912,
+          "delta_cell_null": 0.008388037997518243,
+          "AE_base": 0.7742547297078182,
+          "AE_candidate": 0.7683533982823699
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2279,
+          "delta_global": -0.00024162157647407027,
+          "delta_cell_null": -0.015470042713899521,
+          "AE_base": 0.6225216997772074,
+          "AE_candidate": 0.5912639672062037
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 0,
+          "rows": 13987,
+          "delta_global": -3.71434347991676e-05,
+          "delta_cell_null": -0.00046587082813711835,
+          "AE_base": 1.0680298936213382,
+          "AE_candidate": 1.0815259740988143
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 1,
+          "rows": 1847,
+          "delta_global": -6.902469730096647e-05,
+          "delta_cell_null": -0.008604667422304335,
+          "AE_base": 1.0599284915717062,
+          "AE_candidate": 1.032113542320519
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 0,
+          "rows": 15863,
+          "delta_global": 0.00023883717405349172,
+          "delta_cell_null": 0.002854761156997521,
+          "AE_base": 0.9740366453944687,
+          "AE_candidate": 0.9667432978330974
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2869,
+          "delta_global": 2.201240860227046e-05,
+          "delta_cell_null": 0.0015880007243695377,
+          "AE_base": 1.429418709460475,
+          "AE_candidate": 1.3922687204143749
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 0,
+          "rows": 19060,
+          "delta_global": 6.200738460080035e-05,
+          "delta_cell_null": 0.0003399699001326781,
+          "AE_base": 0.9280020691480009,
+          "AE_candidate": 0.9290208245446409
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 1,
+          "rows": 2620,
+          "delta_global": -0.0003278238772372107,
+          "delta_cell_null": -0.011118850006637648,
+          "AE_base": 1.268101465959399,
+          "AE_candidate": 1.2384510737169463
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 0,
+          "rows": 21688,
+          "delta_global": 0.00018033315348002963,
+          "delta_cell_null": 0.0009063493968198677,
+          "AE_base": 1.0775040805284564,
+          "AE_candidate": 1.0729325559299918
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 1,
+          "rows": 3915,
+          "delta_global": -3.213041866657104e-05,
+          "delta_cell_null": -0.0010641447555289373,
+          "AE_base": 0.8568608485576714,
+          "AE_candidate": 0.833582950006227
+        }
+      ],
+      "worst_cell_delta": -0.015470042713899521,
+      "base_D2": 0.13840694770665685,
+      "candidate_D2": 0.13973188967956462,
+      "futureweight_point_only_ESS_failed": -0.005808820250710239,
+      "same_level_sensitivity": {
+        "0.95": 0.001416500162758805,
+        "1.0": 0.0013249419729078422,
+        "1.05": 0.0012386615269513064
+      }
+    },
+    "TRANSFER": {
+      "delta": 0.0015261919706000492,
+      "bootstrap95": [
+        -0.0012780956185816804,
+        0.0049545010118208594
+      ],
+      "simultaneous95_family10": [
+        -0.00260936615814966,
+        0.006591104704315422
+      ],
+      "post31_delta": -0.0037172423209503253,
+      "folds": {
+        "0": 0.0001593379810676776,
+        "1": -0.0007390571218371067,
+        "2": 0.0007956343072399886,
+        "3": 5.6906380204670624e-05,
+        "4": 0.001253370423924819
+      },
+      "years": {
+        "2024": 0.0015261919706000492
+      },
+      "cells": [
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 0,
+          "rows": 12588,
+          "delta_global": 0.0013372508075804894,
+          "delta_cell_null": 0.005161933522305964,
+          "AE_base": 0.6217864960513668,
+          "AE_candidate": 0.6083899015570393
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2279,
+          "delta_global": -0.0006224874240988657,
+          "delta_cell_null": -0.019806965188882874,
+          "AE_base": 0.4922636127333661,
+          "AE_candidate": 0.4608744199862634
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 0,
+          "rows": 15863,
+          "delta_global": 0.00037818686894567505,
+          "delta_cell_null": 0.002246497076360526,
+          "AE_base": 0.9547886492821178,
+          "AE_candidate": 0.934630405975472
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 1,
+          "rows": 2869,
+          "delta_global": 9.013049161710363e-05,
+          "delta_cell_null": 0.0032313680566598986,
+          "AE_base": 1.4819395588582684,
+          "AE_candidate": 1.4170654546764172
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 0,
+          "rows": 21688,
+          "delta_global": 0.0004423759099891151,
+          "delta_cell_null": 0.0011049512026351607,
+          "AE_base": 1.1590407861224514,
+          "AE_candidate": 1.1517548962373765
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 1,
+          "rows": 3915,
+          "delta_global": -9.926468343346839e-05,
+          "delta_cell_null": -0.0016338442103359246,
+          "AE_base": 0.8687200327304127,
+          "AE_candidate": 0.8353904428307882
+        }
+      ],
+      "worst_cell_delta": -0.019806965188882874,
+      "base_D2": 0.1318209954932763,
+      "candidate_D2": 0.13334718746387653,
+      "futureweight_point_only_ESS_failed": -0.0019250786223894123,
+      "same_level_sensitivity": {
+        "0.95": 0.0018567626044492236,
+        "1.0": 0.0015261919706000492,
+        "1.05": 0.0012126881882347765
+      }
+    }
+  },
+  "new_primary_closed_learners": 30,
+  "new_adverse_closed_learners_separate": 30,
+  "new_source_fits": 0,
+  "new_C0_fits": 0,
+  "new_secondary_resampling": 0,
+  "new_future2025inference": 0,
+  "new_finaltestprices": 0,
+  "new_submissions": 0,
+  "formal_promotion": false,
+  "submission_allowed": false,
+  "private_improvement_established": false,
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true,
+  "goal_achieved": false,
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P17_validacion_GAM_20261026/context_report.json",
+  "report_sha256": "2b4e0975cebec86ed443cf3e2f6dfc18adbb975acd569bfd5aec041dcef704b4",
+  "replay": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P17_validacion_GAM_20261026/P17_replay_context.json",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P17_VALIDACION_GAM.md",
+  "secondary_nominal": {
+    "POOLED": {
+      "delta": 0.0008593688092589629,
+      "bootstrap95_paired_existing_draws": [
+        -0.0011198109508698925,
+        0.0029196232404231654
+      ],
+      "simultaneous95_secondary_family10": [
+        -0.001998827708091492,
+        0.0039744002173468
+      ],
+      "post31_delta": -0.001836625915194199,
+      "folds": {
+        "0": -0.0003500497382702255,
+        "1": 0.0004860305766725746,
+        "2": 0.0005758172792392333,
+        "3": 9.218455635388275e-05,
+        "4": 5.538613526349817e-05
+      },
+      "years": {
+        "2023": -0.0003146959357174502,
+        "2024": 0.0011740647449764133
+      },
+      "cells": [
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 0,
+          "delta_cell_null": -0.0024024656972276956
+        },
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 1,
+          "delta_cell_null": -0.0033581855801549797
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 0,
+          "delta_cell_null": 0.00879187633876205
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 1,
+          "delta_cell_null": -0.0043369189442419446
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 0,
+          "delta_cell_null": 0.0033197992418659956
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 1,
+          "delta_cell_null": 0.002224715465922922
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 0,
+          "delta_cell_null": 0.0040986969490724515
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 1,
+          "delta_cell_null": -0.007950664546313284
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 0,
+          "delta_cell_null": 0.001162477490293325
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 1,
+          "delta_cell_null": -0.013309703118321203
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 0,
+          "delta_cell_null": -0.0004917385716376645
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 1,
+          "delta_cell_null": -0.0008270508258156967
+        }
+      ],
+      "worst_cell_delta": -0.013309703118321203,
+      "new_resampling": 0,
+      "admission_from_secondary_alone": false
+    },
+    "TRANSFER": {
+      "delta": 0.002075866654516932,
+      "bootstrap95_paired_existing_draws": [
+        -3.33621339471789e-05,
+        0.004300215142476955
+      ],
+      "simultaneous95_secondary_family10": [
+        -0.000631062633311495,
+        0.0056119436041699045
+      ],
+      "post31_delta": -0.0015305875597788582,
+      "folds": {
+        "0": -2.445028207938183e-05,
+        "1": 0.00036404422106812306,
+        "2": 0.0004362653544647167,
+        "3": 0.0006311954698722876,
+        "4": 0.0006688118911911861
+      },
+      "years": {
+        "2024": 0.002075866654516932
+      },
+      "cells": [
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 0,
+          "delta_cell_null": 0.007703487358060943
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 1,
+          "delta_cell_null": -0.0036494727009468496
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 0,
+          "delta_cell_null": 0.0043152941886758205
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 1,
+          "delta_cell_null": -0.008282877433935984
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 0,
+          "delta_cell_null": -0.0006314278101718022
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 1,
+          "delta_cell_null": -0.0007857322011793481
+        }
+      ],
+      "worst_cell_delta": -0.008282877433935984,
+      "new_resampling": 0,
+      "admission_from_secondary_alone": false
+    }
+  },
+  "primary_constants": 670,
+  "primary_constant_breakdown": {
+    "shape_factors": 280,
+    "level_constants": 90,
+    "residual_factors": 180,
+    "training_nuisance_levels": 120,
+    "shape_training_normalizers_separate": 80,
+    "training_stage_normalizers_separate": 120,
+    "held_stage_normalizers_separate": 120
+  },
+  "adverse_constant_breakdown_separate": {
+    "shape_factors": 280,
+    "level_constants": 90,
+    "residual_factors": 180,
+    "training_nuisance_levels": 120,
+    "shape_training_normalizers_separate": 80,
+    "training_stage_normalizers_separate": 120,
+    "held_stage_normalizers_separate": 120
+  },
+  "GAM_adopted": false,
+  "next_unit": "P18: preregister a simpler joint ridge-Tweedie calibration prototype on fixed absolute GAMsource annual rates, with one unpenalized country intercept, six regularized line/business cell main effects and only existing G3target covariates by line (motor gender; contents gender/work-from-home/marketing). Same alpha1/no search, training-only encoders/scales. Use ratio target T0/m0 and sqrt(m0)weights with m0=source_abs_rate*roundedE*qSource; prove exact cost-deviance equivalence and full grouped learner/JSON/poison/batch flow on synthetic data. This is a new complete lower-complexity algorithm, not a one-change causal ablation: no N3blend, target band corrections or five-member H1ratio at forward, and no application cohort normalizers. Forward annual source rate*calendarE*learned factor; evaluate with same frozen qSource and scenarios as incumbent, keeping minimum/gates. Reuse saved outer C0objects with exact membership; at most10joint primary GLMs(5pooled+5transfer)and10poison controls, zero source/C0fits or futureinference. Primary versus A1S/S2/H1, secondary versus P17GAM/S2/H1with paired draws. Document pooling assumption and source-level uncertainty; the existing credibility already uses positive claims, not row count. Do not claim a counting bug or use held-oracle levels. Freeze code/config/cost/forum before real fit. No uploads, line selection or publicscore tuning; B00/F3c/all alternatives preserved,2024open."
+}
