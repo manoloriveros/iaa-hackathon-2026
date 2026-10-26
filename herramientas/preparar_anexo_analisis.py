@@ -46,6 +46,8 @@ def figures():
         for ext in ['png','svg']:
             p=figdir/(name+'.'+ext)
             fig.savefig(p,dpi=190,bbox_inches='tight')
+            if ext=='svg':
+                p.write_text('\n'.join(line.rstrip() for line in p.read_text(encoding='utf-8').splitlines())+'\n',encoding='utf-8',newline='\n')
             receipt.append({'ruta':p.relative_to(REPO).as_posix(),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
         plt.close(fig)
     fig,axes=plt.subplots(1,2,figsize=(10.7,3.8))
