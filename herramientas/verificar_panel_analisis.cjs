@@ -1,2 +1,2 @@
-/* Entrada vigente de la verificación UI; la edición anterior queda en Git y en el corte privado. */
-require('./verificar_comparacion.cjs');
+/* Verificación de la vista vigente, centrada en datos y modelos. */
+require('./verificar_validaciones_panel.cjs');

@@ -1,5 +1,7 @@
 # Final deliverables · Entregables finales
 
+La vista actual de [panel_analisis.html](panel_analisis.html) contiene solo validaciones de datos y modelos. No enlaza ni incrusta el informe. Usa textos breves, estados visibles y detalle desplegable. Su índice vigente es `registro/panel_validaciones_actual.json`; la evidencia de modelos se recoge de recibos guardados, sin entrenar o puntuar otra vez.
+
 El informe conjunto actual está en [`privado/entrega_final/informe_dos_semanas.pdf`](../../privado/entrega_final/informe_dos_semanas.pdf), con cinco páginas totales y las veinte referencias comerciales. El PDF se conserva fuera de Git porque contiene sus primas por fila. Su [texto editable](informe_final/INFORME_ES.md), [figuras](informe_final/figuras/) y [trazabilidad](informe_final/README.md) están aquí. El [dashboard](panel_analisis.html) compara ambas semanas simultáneamente.
 
 The Week 1 model deliverables use [`datos/cifras_entregables.json`](datos/cifras_entregables.json); the joint data analysis uses [`analisis/datos_panel.json`](analisis/datos_panel.json). The joint five-page report has its own [source manifest](informe_final/datos_informe.json). Versioned deliverables contain aggregates; the PDF with the twenty reference prices stays private. Las fuentes conservan sus rutas y SHA-256.
@@ -42,7 +44,17 @@ python herramientas/compilar_paneles_analisis.py
 node herramientas/verificar_panel_analisis.cjs
 ```
 
-Los productores de datos y clima leen fuentes locales por fila y guardan la auditoría en privado. El constructor de figuras del anexo lee agregados. La verificación UI vigente se delega desde `verificar_panel_analisis.cjs` a `verificar_comparacion.cjs`, con Playwright y Chrome. Los recibos y capturas quedan en el corte privado del informe actual. Python para los datos requiere pandas, NumPy y PyArrow; figuras, Matplotlib; PDF, ReportLab, Pillow, pypdf, pdfplumber y pypdfium2. La [validación del agregado base](analisis/VALIDACION_PANEL.md) conserva su corte; la [edición comparativa](informe_final/README.md) registra los controles nuevos.
+Los productores de datos y clima leen fuentes locales por fila y guardan la auditoría en privado. El constructor de figuras del anexo lee agregados. La verificación UI vigente se delega desde `verificar_panel_analisis.cjs` a `verificar_validaciones_panel.cjs`, con Playwright y Chrome. El corte `privado/panel_validaciones/` conserva recibos y capturas de esta vista. Python para los datos requiere pandas, NumPy y PyArrow; figuras, Matplotlib; PDF, ReportLab, Pillow, pypdf, pdfplumber y pypdfium2. La [validación del agregado base](analisis/VALIDACION_PANEL.md) y la [edición comparativa anterior](informe_final/README.md) conservan sus propios cortes.
+
+Para recopilar recibos y actualizar solo la vista de validaciones:
+
+```text
+python herramientas/recoger_validaciones_panel.py
+python herramientas/compilar_paneles_analisis.py
+node herramientas/verificar_panel_analisis.cjs
+```
+
+El recopilador copia evidencia existente; no vuelve a ajustar modelos o consultar puntuaciones. `validaciones_panel.json` embebe diagnósticos agregados de S30, dos contrastes exploratorios de semana 2 y el recibo portable de F3c/F3d. Sus alcances y comparadores aparecen en cada control.
 
 Para preparar el informe conjunto:
 
