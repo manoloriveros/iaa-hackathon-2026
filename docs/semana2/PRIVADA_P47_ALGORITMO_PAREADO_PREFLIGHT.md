@@ -1,0 +1,13 @@
+# P47: contrato y entradas del algoritmo pareado
+
+Codex, 2026-10-26T23:55:34.700136+00:00. El flujo nuevo pasó las comprobaciones sintéticas; se prepararon150entradas de miembros internos y30adaptadores exteriores. Cada miembro usa el C0cuyas claves coinciden exactamente con su entrenamiento, distinto del C0exterior. No se ajustaron modelos reales ni se midió rendimiento.
+
+La propuesta PS1 usa la suma anual de los GLM pareados fuente P43. Aprende las formas cerradas NCB/previos, niveles de negocio contraídos y los residuales estándar, con observación por peril y exposición calendario una vez. Avanza cada miembro a último y promedia cinco costes. El C0exterior se reserva para evaluar ese promedio. Se prescinde de N3directo y del cocienteH1/G3: es otro algoritmo completo con varios componentes ligados, no una atribución causal a un único cambio o una repetición de P24/HET.
+
+Se conservaron las curvas, respuestas, grupos y particiones; no se retocaron colas o reservas. Los escenarios exteriores nominal/reservas75/125/cola5/10 quedan guardados antes de aprender. Las tasas por peril ya estaban exportadas: aquí no se aplicaron modelos fuente otra vez. El fixture incluyó nueve calibraciones cerradas sintéticas, alteración de respuestas retenidas, sensibilidad al entrenamiento, JSON, exposición, futuro sintético con completitud cero y composición de la media. No acredita independencia de la revisión ni mejora privada.
+
+Cero ajustes reales fuente/destino/C0, inferencias nuevas, precios, scores o envíos. Los miembros del backtest usarán64%del histórico frente al80%de los cinco de producción; los datos2024son desarrollo adaptativo y fuente2024condicional. Reservas/cola, maestros sin fecha y soporte siguen como límites. B00, F3c y todos los fallos permanecen.
+
+Próximo: P48: separately preregister the exact PS1standalone paired-source nested five-member algorithm with P47saved scoped inputs and outer adapters.150primary closed calibrators+150poison controls, no source/C0fit; all original global/NB/broker/hist0family16gates and scenarios. Commit code/configuration before any contest fit/price/score. Validate actual new learner/ultimate means/scalar level and replay with learning blocked, preserve each member checkpoint and every adverse. Do not substitute another model or weight if it fails; no2025inference/upload without later exact-file review.
+
+Evidencia: Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P47_preflight_pareado_20261026/report.json; Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P47_preflight_pareado_20261026/synthetic.json.
