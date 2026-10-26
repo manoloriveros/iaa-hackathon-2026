@@ -83,7 +83,7 @@ runpy.run_path(str(script),run_name='__main__')
 '''
 
 
-def prepare(work):
+def prepare(work, developed=None, emerging=None):
     if work.exists():
         raise RuntimeError('La carpeta de cálculo debe ser nueva; no se borra una corrida previa.')
     versions = {name: importlib.metadata.version(name) for name in
@@ -102,16 +102,18 @@ def prepare(work):
         files.append({'path': target.relative_to(work).as_posix(), 'source': source,
                       'commit': COMMIT, 'sha256': sha(target), 'kind': 'code_original_Claude'})
     for market, original in (
-        ('developed', ROOT / 'Hackaton/Semana 1/Datos'),
-        ('emerging', ROOT / 'Hackaton/Semana 2/Datos/emerging'),
+        ('developed', developed or ROOT / 'Hackaton/Semana 1/Datos'),
+        ('emerging', emerging or ROOT / 'Hackaton/Semana 2/Datos/emerging'),
     ):
         for source in sorted(original.glob('*.parquet')):
             target = work / 'ml/datos' / market / source.name
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(source, target)
             assert sha(target) == sha(source)
+            try: source_name = source.relative_to(ROOT).as_posix()
+            except ValueError: source_name = str(source.resolve())
             files.append({'path': target.relative_to(work).as_posix(),
-                          'source': source.relative_to(ROOT).as_posix(), 'sha256': sha(target), 'kind': 'original_data'})
+                          'source': source_name, 'sha256': sha(target), 'kind': 'original_data'})
     for relative in ('tmp', 'logs', 'receipts', 'ml/trabajo/modelos/dev', 'ml/trabajo/modelos/prod', 'ml/entrega', 'ml/privado'):
         (work / relative).mkdir(parents=True, exist_ok=True)
     (work / 'ejecutar_etapa.py').write_text(BOOTSTRAP, encoding='utf-8')
@@ -192,12 +194,14 @@ def main():
     parser.add_argument('mode', choices=('preparar', 'correr'))
     parser.add_argument('--trabajo', type=Path, required=True)
     parser.add_argument('--hasta', choices=[name for name, _ in steps()], default=steps()[-1][0])
+    parser.add_argument('--datos-desarrollado', type=Path, help='Parquet originales de semana 1; permite un checkout independiente')
+    parser.add_argument('--datos-emergente', type=Path, help='Parquet originales emergentes; permite un checkout independiente')
     args = parser.parse_args()
     work = args.trabajo.resolve()
     if REPO / 'privado' not in work.parents:
         parser.error('La corrida debe quedar dentro de privado/')
     if args.mode == 'preparar':
-        prepare(work)
+        prepare(work, args.datos_desarrollado, args.datos_emergente)
         return 0
     return run(work, args.hasta)
 

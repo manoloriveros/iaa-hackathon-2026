@@ -38,6 +38,8 @@ Se creó un venv nuevo con `include-system-site-packages = false`, Python 3.12.1
 
 El espacio de cálculo comienza solo con código congelado, copias de los Parquet originales y metadatos agregados de la receta pública. Los directorios de modelos y predicciones están vacíos antes del primer ajuste. Cada original se verifica por SHA; el preparador MLind vuelve a comprobar su contrato de huellas. Los procesos hijo corren con `-I -X utf8`, sin credenciales heredadas, con dos hilos y sus temporales dentro de la corrida.
 
+Las dependencias completas instaladas están fijadas en `receta/requirements_reentrenamiento_completo.txt`. `receta/semana2_constantes_historicas.json` agrupa únicamente constantes agregadas y recibos públicos necesarios; evita depender de un archivo de configuración dentro de `privado/` en otra máquina. No contiene datos originales ni predicciones por fila.
+
 El bloqueo de red y de lecturas ajenas al entorno/corrida impide usar silenciosamente una predicción histórica. También se bloquea escribir sobre las copias de originales. La prueba de los tres controles se conserva en `corrida/verification_isolation.json`.
 
 ## Ejecución y comprobación
@@ -45,7 +47,7 @@ El bloqueo de red y de lecturas ajenas al entorno/corrida impide usar silenciosa
 Las órdenes se dan desde la raíz del repositorio y con el Python del entorno nuevo:
 
 ```powershell
-python -X utf8 herramientas/reentrenar_desde_originales.py preparar --trabajo privado/una_corrida_nueva
+python -X utf8 herramientas/reentrenar_desde_originales.py preparar --trabajo privado/una_corrida_nueva --datos-desarrollado C:/datos/desarrollado --datos-emergente C:/datos/emergente
 python -X utf8 herramientas/reentrenar_desde_originales.py correr --trabajo privado/una_corrida_nueva
 python -X utf8 herramientas/completar_reentrenamiento_cadena.py preparar --trabajo privado/una_corrida_nueva
 python -X utf8 herramientas/completar_reentrenamiento_cadena.py correr --trabajo privado/una_corrida_nueva

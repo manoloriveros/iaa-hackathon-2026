@@ -193,19 +193,18 @@ def prepare(work):
     stage('aux/reproduccion_cadena.py', 'src/semana2/reproduccion_cadena.py', local=True)
     # Únicos insumos derivados externos: constantes públicas y registros congelados,
     # sin importes por fila ni modelos. Se conserva su procedencia por SHA.
+    source = REPO / 'receta/semana2_constantes_historicas.json'
+    constants = json.loads(source.read_text(encoding='utf-8'))['items']
     configs = {
-       'm017/in/preinscripcion.json': REPO / 'privado/semana2/claude_validacion_nocturna_20261023/sonda_segmento/preinscripcion.json',
-       'm017/sigma_forma.json': REPO / f'{M017}/sigma_forma.json',
-       'm017/sondas_F2_info.json': REPO / f'{M017}/sondas_F2_info.json',
-       'm017/recibos_reales_20261026.json': REPO / f'{M017}/recibos_reales_20261026.json',
-       'm017/exp26/fuga_celdas.json': REPO / f'{M017}/exp26_20261026/m017/exp26/fuga_celdas.json',
+       'm017/in/preinscripcion.json': 'preinscripcion', 'm017/sigma_forma.json': 'sigma_forma',
+       'm017/sondas_F2_info.json': 'sondas_F2_info', 'm017/recibos_reales_20261026.json': 'recibos_reales',
+       'm017/exp26/fuga_celdas.json': 'fuga_celdas',
     }
-    for dest, source in configs.items():
-        p = work / dest; p.parent.mkdir(parents=True, exist_ok=True); shutil.copyfile(source, p)
-        entries.append({'path': dest, 'source': source.relative_to(ROOT).as_posix(), 'sha256': sha(p), 'kind': 'frozen_historical_metadata_not_row_predictions'})
-    source = REPO / 'registro/semana2_envio_final_sonda_global_20261024.json'
-    g = json.loads(source.read_text(encoding='utf-8'))['credibility_factor']
-    save(work / 'm017/in/constantes_publicas.json', {'factor_global': g, 'source': source.relative_to(ROOT).as_posix(), 'source_sha256': sha(source)})
+    for dest, key in configs.items():
+        p = work / dest; save(p, constants[key])
+        entries.append({'path': dest, 'source': source.relative_to(REPO).as_posix(), 'source_sha256': sha(source),
+                        'sha256': sha(p), 'kind': 'frozen_historical_metadata_not_row_predictions'})
+    save(work / 'm017/in/constantes_publicas.json', {'factor_global': constants['factor_global'], 'source': source.relative_to(REPO).as_posix(), 'source_sha256': sha(source)})
     entries.append({'path': 'm017/in/constantes_publicas.json', 'sha256': sha(work / 'm017/in/constantes_publicas.json')})
     for market, target in (('developed','s1'),('emerging','s2')):
         for source in sorted((work / f'ml/datos/{market}').glob('*.parquet')):
