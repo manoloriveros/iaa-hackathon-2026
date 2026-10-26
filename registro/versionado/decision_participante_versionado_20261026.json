@@ -1,0 +1,37 @@
+{
+ "id": "DEC-VERSIONADO-20261026",
+ "utc": "2026-10-26T19:30:00Z",
+ "fuente": "Respuestas del participante en una sesión de Claude (Cowork, Proyecto IAA) a cuatro preguntas de opción, tras el aporte CLA-S2-20261026-007",
+ "preguntas_y_respuestas": [
+  {
+   "pregunta": "¿Autorizas que Codex reconstruya el historial en orden cronológico (28 commits del 20 al 26 de octubre, fecha de autor real de cada archivo, fecha de commit de hoy, declarado en cada mensaje) y lo suba a GitHub?",
+   "respuesta": "Sí, primero -Simular (Recommended)"
+  },
+  {
+   "pregunta": "¿Qué código que hoy vive fuera del repositorio se incorpora antes de la reconstrucción (copia sin cambios, con su fecha y ORIGEN.json)?",
+   "respuesta": "Líneas de Claude S2 (Recommended), Semana 2/Codex, Trabajo de la semana 1"
+  },
+  {
+   "pregunta": "¿Quién ejecuta la vigía (versionado.py vigia) cada pocas horas hasta el cierre?",
+   "respuesta": "Codex, y hace el commit (Recommended)"
+  },
+  {
+   "pregunta": "¿Cómo se abre el repositorio después del cierre de la parte 2 (30 de octubre, 22:59:59 de Bogotá)?",
+   "respuesta": "Público con licencia MIT (Recommended)"
+  }
+ ],
+ "aplicado_por_claude": [
+  "Incorporación sin cambios, con fecha y ORIGEN.json: 10 carpetas de la semana 2 en src/semana2/lineas/ (nueve de Semana 2/Claude y Semana 2/Codex; 778 archivos, 272 .py) y 29 carpetas de trabajo de la semana 1 en src/semana1/ (1.009 archivos, 208 .py). Semana 1/Modelado_codex no se incorporó: guarda miles de copias instantáneas por corrida y la simulación no terminó en la VM; Codex puede incorporarlo en Windows. Preparación no entra por decisión del participante.",
+  "LICENSE (MIT, Manuel Rodríguez, 2026) y NOTICE.md en la raíz del repositorio.",
+  "AGENTS.md: vigía y actualización de incorporaciones en la automatización horaria de Codex; repositorio privado hasta el cierre y público con MIT después."
+ ],
+ "pendiente_de_codex": [
+  "git config core.hooksPath herramientas/git_hooks",
+  "plan --cronologico --carpeta privado/plan_commits_<fecha>",
+  "aplicar_plan.ps1 -Simular y luego aplicarlo",
+  "git fetch y git push origin HEAD --follow-tags",
+  "regenerar_s41.py desde la etiqueta parte1-entrega-final-S41",
+  "vigía e incorporar --actualizar-todo en la automatización horaria"
+ ],
+ "limites": "Commits y push los hace Codex en Windows; la sesión de Claude no hizo commits ni push. Es una decisión del participante registrada por IA, sin firma adicional."
+}

@@ -1,0 +1,47 @@
+{
+ "herramienta": "versionado.py 1.1",
+ "orden": "vigia",
+ "utc": "2026-10-26T16:50:33Z",
+ "pendientes": 1137,
+ "motivos": [
+  {
+   "motivo": "código sin registrar",
+   "detalle": "489 archivos de código con más de 3 h sin commit",
+   "ejemplos": [
+    "herramientas/actualizar_revision.py",
+    "herramientas/revision_formulario.js",
+    "herramientas/sonda_nivel.py",
+    "herramientas/prima_escrita_por_anio.py",
+    "herramientas/regenerar_s42.py"
+   ]
+  },
+  {
+   "motivo": "evidencia de envío o decisión sin registrar",
+   "detalle": "49 archivos",
+   "ejemplos": [
+    "registro/CLA-20261022-001_recibo.json",
+    "registro/CLA-20261022-002_recibo.json",
+    "registro/CLA-20261022-003_recibo.json",
+    "registro/CLA-20261022-004_recibo.json",
+    "registro/CLA-20261022-005_recibo.json"
+   ]
+  },
+  {
+   "motivo": "muchos archivos pendientes",
+   "detalle": "1137 > 40",
+   "ejemplos": []
+  },
+  {
+   "motivo": "commits sin subir",
+   "detalle": "1 commits; el último tiene más de 24 h",
+   "ejemplos": []
+  }
+ ],
+ "bloqueos_guardia": [],
+ "veredicto": "registrar ahora",
+ "umbrales": {
+  "horas_codigo": 3,
+  "max_pendientes": 40,
+  "horas_push": 24
+ }
+}

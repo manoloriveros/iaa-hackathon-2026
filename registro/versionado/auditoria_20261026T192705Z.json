@@ -1,0 +1,690 @@
+{
+ "herramienta": "herramientas/versionado.py",
+ "version": "1.1",
+ "sha256_herramienta": "8d7f29f09ea44e8c2860d33d2c65fda20976e789f24e9a494e4e54a3799e86d5",
+ "orden": "auditar",
+ "utc": "2026-10-26T19:27:05Z",
+ "repositorio": "Repositorio_IAA2026",
+ "git": "git version 2.34.1",
+ "historial": {
+  "head": "6f4335fc502f9b72288e83b3a5cee8680a931e61",
+  "rama": "main",
+  "commits": 11,
+  "ultimo_commit": {
+   "sha": "6f4335fc502f9b72288e83b3a5cee8680a931e61",
+   "fecha": "2026-10-26T14:03:56-05:00",
+   "autor": "manoloriveros",
+   "mensaje": "Documenta las dependencias pendientes del flujo F3c"
+  },
+  "commits_por_dia": {
+   "2026-10-19": 6,
+   "2026-10-20": 1,
+   "2026-10-26": 4
+  },
+  "dias_desde_ultimo_commit": 0.02,
+  "remoto": {
+   "rama": "origin/main",
+   "commits_sin_subir": 5,
+   "commits_sin_bajar": 0,
+   "nota": "según la copia local del remoto; esta herramienta no consulta GitHub"
+  },
+  "etiquetas": [
+   {
+    "nombre": "semana1-revision-20261019",
+    "objeto": "3b59ad1",
+    "fecha": "2026-10-19T09:21:17-05:00",
+    "asunto": "Expediente preparado para revisión humana, sin selección final manual"
+   }
+  ]
+ },
+ "pendiente": {
+  "total": 2924,
+  "por_tipo": {
+   "modificado": 87,
+   "sin_versionar": 2837,
+   "borrado": 0,
+   "preparado": 0
+  },
+  "por_area": {
+   "(raíz)": {
+    "modificado": 4,
+    "sin_versionar": 0,
+    "borrado": 0,
+    "preparado": 0
+   },
+   "docs": {
+    "modificado": 6,
+    "sin_versionar": 12,
+    "borrado": 0,
+    "preparado": 0
+   },
+   "docs/entrega": {
+    "modificado": 61,
+    "sin_versionar": 2,
+    "borrado": 0,
+    "preparado": 0
+   },
+   "docs/evidencia": {
+    "modificado": 2,
+    "sin_versionar": 3,
+    "borrado": 0,
+    "preparado": 0
+   },
+   "docs/expediente": {
+    "modificado": 3,
+    "sin_versionar": 2,
+    "borrado": 0,
+    "preparado": 0
+   },
+   "herramientas": {
+    "modificado": 5,
+    "sin_versionar": 415,
+    "borrado": 0,
+    "preparado": 0
+   },
+   "registro": {
+    "modificado": 6,
+    "sin_versionar": 372,
+    "borrado": 0,
+    "preparado": 0
+   },
+   "docs/figuras": {
+    "modificado": 0,
+    "sin_versionar": 24,
+    "borrado": 0,
+    "preparado": 0
+   },
+   "docs/fuentes": {
+    "modificado": 0,
+    "sin_versionar": 2,
+    "borrado": 0,
+    "preparado": 0
+   },
+   "docs/semana2": {
+    "modificado": 0,
+    "sin_versionar": 110,
+    "borrado": 0,
+    "preparado": 0
+   },
+   "src/semana1": {
+    "modificado": 0,
+    "sin_versionar": 1038,
+    "borrado": 0,
+    "preparado": 0
+   },
+   "src/semana2": {
+    "modificado": 0,
+    "sin_versionar": 857,
+    "borrado": 0,
+    "preparado": 0
+   }
+  }
+ },
+ "codigo": {
+  "archivos_en_repositorio": 1136,
+  "versionados": 121,
+  "sin_versionar": 1015,
+  "nombres_con_vN": 87
+ },
+ "guardia_pendiente": {
+  "bloqueos": [],
+  "avisos": [],
+  "info": [
+   {
+    "ruta": "herramientas/cerrar_balance_nocturno_20261024.py",
+    "nivel": "info",
+    "regla": "ruta personal",
+    "detalle": "cita una ruta de la carpeta de usuario de Windows"
+   },
+   {
+    "ruta": "herramientas/conciliar_cierre_glm_ridge2023.py",
+    "nivel": "info",
+    "regla": "ruta personal",
+    "detalle": "cita una ruta de la carpeta de usuario de Windows"
+   },
+   {
+    "ruta": "herramientas/documentar_desarrollo2023_v5_semana2.py",
+    "nivel": "info",
+    "regla": "ruta personal",
+    "detalle": "cita una ruta de la carpeta de usuario de Windows"
+   },
+   {
+    "ruta": "registro/versionado/auditoria_20261026T150354Z.json",
+    "nivel": "info",
+    "regla": "ruta personal",
+    "detalle": "cita una ruta de la carpeta de usuario de Windows"
+   },
+   {
+    "ruta": "src/semana1/Documentacion_datos/verify_documentation.py",
+    "nivel": "info",
+    "regla": "ruta personal",
+    "detalle": "cita una ruta de la carpeta de usuario de Windows"
+   },
+   {
+    "ruta": "src/semana1/Modelado/archivo/D64_20261017T020315Z/integrar_D64.py",
+    "nivel": "info",
+    "regla": "ruta personal",
+    "detalle": "cita una ruta de la carpeta de usuario de Windows"
+   },
+   {
+    "ruta": "src/semana2/lineas/mision017_20261025/CLAUDE_antes_s49.md",
+    "nivel": "info",
+    "regla": "ruta personal",
+    "detalle": "cita una ruta de la carpeta de usuario de Windows"
+   },
+   {
+    "ruta": "src/semana2/lineas/mision017_20261025/CLAUDE_antes_s50.md",
+    "nivel": "info",
+    "regla": "ruta personal",
+    "detalle": "cita una ruta de la carpeta de usuario de Windows"
+   },
+   {
+    "ruta": "src/semana2/lineas/validacion_nocturna_20261023/respaldo_registros/CLAUDE_antes.md",
+    "nivel": "info",
+    "regla": "ruta personal",
+    "detalle": "cita una ruta de la carpeta de usuario de Windows"
+   },
+   {
+    "ruta": "src/semana2/lineas/validacion_nocturna_20261023/respaldo_registros/CLAUDE_antes_n12.md",
+    "nivel": "info",
+    "regla": "ruta personal",
+    "detalle": "cita una ruta de la carpeta de usuario de Windows"
+   },
+   {
+    "ruta": "src/semana2/lineas/validacion_nocturna_20261023/respaldo_registros/CLAUDE_antes_n15.md",
+    "nivel": "info",
+    "regla": "ruta personal",
+    "detalle": "cita una ruta de la carpeta de usuario de Windows"
+   },
+   {
+    "ruta": "src/semana2/lineas/validacion_nocturna_20261023/respaldo_registros/CLAUDE_antes_n18.md",
+    "nivel": "info",
+    "regla": "ruta personal",
+    "detalle": "cita una ruta de la carpeta de usuario de Windows"
+   },
+   {
+    "ruta": "src/semana2/lineas/validacion_nocturna_20261023/respaldo_registros/CLAUDE_antes_n19.md",
+    "nivel": "info",
+    "regla": "ruta personal",
+    "detalle": "cita una ruta de la carpeta de usuario de Windows"
+   },
+   {
+    "ruta": "src/semana2/lineas/validacion_nocturna_20261023/respaldo_registros/CLAUDE_antes_n20.md",
+    "nivel": "info",
+    "regla": "ruta personal",
+    "detalle": "cita una ruta de la carpeta de usuario de Windows"
+   },
+   {
+    "ruta": "src/semana2/lineas/validacion_nocturna_20261023/respaldo_registros/CLAUDE_antes_n20b.md",
+    "nivel": "info",
+    "regla": "ruta personal",
+    "detalle": "cita una ruta de la carpeta de usuario de Windows"
+   },
+   {
+    "ruta": "src/semana2/lineas/validacion_nocturna_20261023/respaldo_registros/CLAUDE_antes_n4.md",
+    "nivel": "info",
+    "regla": "ruta personal",
+    "detalle": "cita una ruta de la carpeta de usuario de Windows"
+   },
+   {
+    "ruta": "src/semana2/lineas/validacion_nocturna_20261023/respaldo_registros/CLAUDE_antes_n8.md",
+    "nivel": "info",
+    "regla": "ruta personal",
+    "detalle": "cita una ruta de la carpeta de usuario de Windows"
+   },
+   {
+    "ruta": "src/semana2/lineas/validacion_nocturna_20261023/respaldo_registros/CLAUDE_antes_n9.md",
+    "nivel": "info",
+    "regla": "ruta personal",
+    "detalle": "cita una ruta de la carpeta de usuario de Windows"
+   }
+  ]
+ },
+ "gitignore_cubre": {
+  "privado/x.csv": true,
+  "a.parquet": true,
+  "b.csv": true,
+  "c.joblib": true
+ },
+ "historia": {
+  "blobs": 652,
+  "bytes": 22699060,
+  "bloqueos": [],
+  "avisos": []
+ },
+ "codigo_externo": {
+  "raiz": "Hakaton",
+  "completo": true,
+  "segundos": 5.7,
+  "carpetas": [
+   {
+    "carpeta": "Hackaton/Semana 2/Claude",
+    "existe": true,
+    "archivos": 255,
+    "distintos": 239,
+    "copia_versionada": 0,
+    "copia_sin_versionar": 251,
+    "sin_copia": 4,
+    "nombres_con_vN": 3,
+    "ejemplos_sin_copia": [
+     "Hackaton/Semana 2/Claude/informe_final_20261026/fuente/anexos.py",
+     "Hackaton/Semana 2/Claude/informe_final_20261026/fuente/build.py",
+     "Hackaton/Semana 2/Claude/informe_final_20261026/fuente/charts.py",
+     "Hackaton/Semana 2/Claude/informe_final_20261026/fuente/paginas.py"
+    ]
+   },
+   {
+    "carpeta": "Hackaton/Semana 2/Codex",
+    "existe": true,
+    "archivos": 48,
+    "distintos": 48,
+    "copia_versionada": 0,
+    "copia_sin_versionar": 48,
+    "sin_copia": 0,
+    "nombres_con_vN": 16,
+    "ejemplos_sin_copia": []
+   },
+   {
+    "carpeta": "Hackaton/Semana 2/Foro",
+    "existe": true,
+    "archivos": 1,
+    "distintos": 1,
+    "copia_versionada": 0,
+    "copia_sin_versionar": 0,
+    "sin_copia": 1,
+    "nombres_con_vN": 0,
+    "ejemplos_sin_copia": [
+     "Hackaton/Semana 2/Foro/comentar.py"
+    ]
+   },
+   {
+    "carpeta": "Hackaton/Semana 1/Modelos_claude",
+    "existe": true,
+    "archivos": 101,
+    "distintos": 101,
+    "copia_versionada": 32,
+    "copia_sin_versionar": 69,
+    "sin_copia": 0,
+    "nombres_con_vN": 1,
+    "ejemplos_sin_copia": []
+   },
+   {
+    "carpeta": "Hackaton/Semana 1/Modelos_claude_b",
+    "existe": true,
+    "archivos": 23,
+    "distintos": 23,
+    "copia_versionada": 4,
+    "copia_sin_versionar": 19,
+    "sin_copia": 0,
+    "nombres_con_vN": 0,
+    "ejemplos_sin_copia": []
+   },
+   {
+    "carpeta": "Hackaton/Semana 1/Envios",
+    "existe": true,
+    "archivos": 4,
+    "distintos": 4,
+    "copia_versionada": 0,
+    "copia_sin_versionar": 4,
+    "sin_copia": 0,
+    "nombres_con_vN": 0,
+    "ejemplos_sin_copia": []
+   },
+   {
+    "carpeta": "Hackaton/Semana 1/Bases_actuariales_claude",
+    "existe": true,
+    "archivos": 2,
+    "distintos": 2,
+    "copia_versionada": 1,
+    "copia_sin_versionar": 1,
+    "sin_copia": 0,
+    "nombres_con_vN": 0,
+    "ejemplos_sin_copia": []
+   },
+   {
+    "carpeta": "Hackaton/Semana 1/Matriz_F0_claude",
+    "existe": true,
+    "archivos": 2,
+    "distintos": 2,
+    "copia_versionada": 1,
+    "copia_sin_versionar": 1,
+    "sin_copia": 0,
+    "nombres_con_vN": 0,
+    "ejemplos_sin_copia": []
+   },
+   {
+    "carpeta": "Hackaton/Semana 1/Limpieza",
+    "existe": true,
+    "archivos": 34,
+    "distintos": 33,
+    "copia_versionada": 0,
+    "copia_sin_versionar": 34,
+    "sin_copia": 0,
+    "nombres_con_vN": 0,
+    "ejemplos_sin_copia": []
+   },
+   {
+    "carpeta": "Hackaton/Semana 1/Modelado",
+    "existe": true,
+    "archivos": 15,
+    "distintos": 13,
+    "copia_versionada": 0,
+    "copia_sin_versionar": 15,
+    "sin_copia": 0,
+    "nombres_con_vN": 0,
+    "ejemplos_sin_copia": []
+   },
+   {
+    "carpeta": "Preparación/src",
+    "existe": true,
+    "archivos": 15,
+    "distintos": 15,
+    "copia_versionada": 0,
+    "copia_sin_versionar": 0,
+    "sin_copia": 15,
+    "nombres_con_vN": 0,
+    "ejemplos_sin_copia": [
+     "Preparación/src/iaa_lab/conversations.py",
+     "Preparación/src/iaa_lab/data.py",
+     "Preparación/src/iaa_lab/demo.py",
+     "Preparación/src/iaa_lab/development.py",
+     "Preparación/src/iaa_lab/kaggle.py"
+    ]
+   },
+   {
+    "carpeta": "Preparación/scripts",
+    "existe": true,
+    "archivos": 21,
+    "distintos": 21,
+    "copia_versionada": 0,
+    "copia_sin_versionar": 0,
+    "sin_copia": 21,
+    "nombres_con_vN": 0,
+    "ejemplos_sin_copia": [
+     "Preparación/scripts/adopt_week1_modeling.py",
+     "Preparación/scripts/build_kaggle_notebook.py",
+     "Preparación/scripts/check_environment.py",
+     "Preparación/scripts/check_kaggle_integrations.py",
+     "Preparación/scripts/check_kaggle_mcp_headers.py"
+    ]
+   }
+  ]
+ },
+ "etiquetas_documentadas": {
+  "documento": "docs/VERSION_CONTROL.md",
+  "documentadas": [
+   "entrega-final",
+   "parte1-entrega-final-S41",
+   "parte1-mezcla-por-peligro",
+   "parte2-entrega-final",
+   "semana1-revision-20261019"
+  ],
+  "ausentes": [
+   "entrega-final",
+   "parte1-entrega-final-S41",
+   "parte1-mezcla-por-peligro",
+   "parte2-entrega-final"
+  ]
+ },
+ "plan_commits": [
+  {
+   "grupo": "gobierno",
+   "mensaje": "Gobernar el control de versiones con guardia, sello, vigía y auditoría",
+   "archivos": 13
+  },
+  {
+   "grupo": "parte1_entregables",
+   "mensaje": "Actualizar los entregables de la parte 1: informe, panel, láminas, guion y guías de IA",
+   "archivos": 76
+  },
+  {
+   "grupo": "parte1_cierre",
+   "mensaje": "Registrar el cierre de la parte 1: sondas, sensibilidad, reservas, reproducción y selección final",
+   "archivos": 52
+  },
+  {
+   "grupo": "semana1_codigo",
+   "mensaje": "Registrar el código de trabajo de la semana 1 que no estaba en el repositorio",
+   "archivos": 1038
+  },
+  {
+   "grupo": "semana2_codigo",
+   "mensaje": "Registrar el código de la semana 2: datos, modelos, validación y selección",
+   "archivos": 1255
+  },
+  {
+   "grupo": "semana2_docs",
+   "mensaje": "Documentar los experimentos de la semana 2 y su protocolo de selección",
+   "archivos": 125
+  },
+  {
+   "grupo": "semana2_registro",
+   "mensaje": "Registrar planes preinscritos, actas, recibos y decisiones de la semana 2",
+   "archivos": 292
+  },
+  {
+   "grupo": "registro_general",
+   "mensaje": "Actualizar el registro común: estado, requisitos, revisiones y recibos",
+   "archivos": 59
+  },
+  {
+   "grupo": "resto",
+   "mensaje": "Registrar documentos y herramientas restantes",
+   "archivos": 14
+  }
+ ],
+ "plan_cronologico": [
+  {
+   "dia": "2026-10-11",
+   "grupo": "semana1_codigo",
+   "archivos": 1,
+   "fecha_autor": "2026-10-11T15:51:12-05:00"
+  },
+  {
+   "dia": "2026-10-16",
+   "grupo": "semana1_codigo",
+   "archivos": 449,
+   "fecha_autor": "2026-10-16T21:57:09-05:00"
+  },
+  {
+   "dia": "2026-10-17",
+   "grupo": "semana1_codigo",
+   "archivos": 130,
+   "fecha_autor": "2026-10-17T23:55:27-05:00"
+  },
+  {
+   "dia": "2026-10-18",
+   "grupo": "semana1_codigo",
+   "archivos": 427,
+   "fecha_autor": "2026-10-18T22:01:20-05:00"
+  },
+  {
+   "dia": "2026-10-19",
+   "grupo": "semana1_codigo",
+   "archivos": 1,
+   "fecha_autor": "2026-10-19T08:08:42-05:00"
+  },
+  {
+   "dia": "2026-10-20",
+   "grupo": "parte1_entregables",
+   "archivos": 2,
+   "fecha_autor": "2026-10-20T17:32:44-05:00"
+  },
+  {
+   "dia": "2026-10-20",
+   "grupo": "semana2_codigo",
+   "archivos": 1,
+   "fecha_autor": "2026-10-20T17:49:26-05:00"
+  },
+  {
+   "dia": "2026-10-20",
+   "grupo": "registro_general",
+   "archivos": 13,
+   "fecha_autor": "2026-10-20T18:44:46-05:00"
+  },
+  {
+   "dia": "2026-10-20",
+   "grupo": "resto",
+   "archivos": 7,
+   "fecha_autor": "2026-10-20T18:44:46-05:00"
+  },
+  {
+   "dia": "2026-10-21",
+   "grupo": "registro_general",
+   "archivos": 1,
+   "fecha_autor": "2026-10-21T09:47:40-05:00"
+  },
+  {
+   "dia": "2026-10-22",
+   "grupo": "parte1_entregables",
+   "archivos": 12,
+   "fecha_autor": "2026-10-22T15:18:59-05:00"
+  },
+  {
+   "dia": "2026-10-22",
+   "grupo": "gobierno",
+   "archivos": 1,
+   "fecha_autor": "2026-10-22T15:23:15-05:00"
+  },
+  {
+   "dia": "2026-10-22",
+   "grupo": "parte1_cierre",
+   "archivos": 34,
+   "fecha_autor": "2026-10-22T23:21:24-05:00"
+  },
+  {
+   "dia": "2026-10-22",
+   "grupo": "registro_general",
+   "archivos": 20,
+   "fecha_autor": "2026-10-22T23:23:36-05:00"
+  },
+  {
+   "dia": "2026-10-23",
+   "grupo": "semana1_codigo",
+   "archivos": 1,
+   "fecha_autor": "2026-10-23T09:51:26-05:00"
+  },
+  {
+   "dia": "2026-10-23",
+   "grupo": "parte1_entregables",
+   "archivos": 62,
+   "fecha_autor": "2026-10-23T11:06:23-05:00"
+  },
+  {
+   "dia": "2026-10-23",
+   "grupo": "parte1_cierre",
+   "archivos": 18,
+   "fecha_autor": "2026-10-23T12:06:05-05:00"
+  },
+  {
+   "dia": "2026-10-23",
+   "grupo": "registro_general",
+   "archivos": 25,
+   "fecha_autor": "2026-10-23T12:21:07-05:00"
+  },
+  {
+   "dia": "2026-10-23",
+   "grupo": "semana2_codigo",
+   "archivos": 373,
+   "fecha_autor": "2026-10-23T23:04:27-05:00"
+  },
+  {
+   "dia": "2026-10-23",
+   "grupo": "semana2_docs",
+   "archivos": 37,
+   "fecha_autor": "2026-10-23T23:04:36-05:00"
+  },
+  {
+   "dia": "2026-10-23",
+   "grupo": "semana2_registro",
+   "archivos": 104,
+   "fecha_autor": "2026-10-23T23:04:36-05:00"
+  },
+  {
+   "dia": "2026-10-24",
+   "grupo": "resto",
+   "archivos": 2,
+   "fecha_autor": "2026-10-24T09:36:14-05:00"
+  },
+  {
+   "dia": "2026-10-24",
+   "grupo": "semana2_docs",
+   "archivos": 20,
+   "fecha_autor": "2026-10-24T20:29:03-05:00"
+  },
+  {
+   "dia": "2026-10-24",
+   "grupo": "semana2_registro",
+   "archivos": 38,
+   "fecha_autor": "2026-10-24T20:29:04-05:00"
+  },
+  {
+   "dia": "2026-10-24",
+   "grupo": "semana2_codigo",
+   "archivos": 368,
+   "fecha_autor": "2026-10-24T20:35:14-05:00"
+  },
+  {
+   "dia": "2026-10-25",
+   "grupo": "resto",
+   "archivos": 2,
+   "fecha_autor": "2026-10-25T22:02:46-05:00"
+  },
+  {
+   "dia": "2026-10-25",
+   "grupo": "semana2_docs",
+   "archivos": 21,
+   "fecha_autor": "2026-10-25T23:55:23-05:00"
+  },
+  {
+   "dia": "2026-10-25",
+   "grupo": "semana2_registro",
+   "archivos": 75,
+   "fecha_autor": "2026-10-25T23:57:34-05:00"
+  },
+  {
+   "dia": "2026-10-25",
+   "grupo": "semana2_codigo",
+   "archivos": 391,
+   "fecha_autor": "2026-10-25T23:59:51-05:00"
+  },
+  {
+   "dia": "2026-10-26",
+   "grupo": "gobierno",
+   "archivos": 12,
+   "fecha_autor": "2026-10-26T14:03:19-05:00"
+  },
+  {
+   "dia": "2026-10-26",
+   "grupo": "semana2_codigo",
+   "archivos": 122,
+   "fecha_autor": "2026-10-26T14:09:44-05:00"
+  },
+  {
+   "dia": "2026-10-26",
+   "grupo": "semana2_docs",
+   "archivos": 47,
+   "fecha_autor": "2026-10-26T14:14:07-05:00"
+  },
+  {
+   "dia": "2026-10-26",
+   "grupo": "semana2_registro",
+   "archivos": 75,
+   "fecha_autor": "2026-10-26T14:17:32-05:00"
+  },
+  {
+   "dia": "2026-10-26",
+   "grupo": "resto",
+   "archivos": 3,
+   "fecha_autor": "2026-10-26T14:19:48-05:00"
+  },
+  {
+   "dia": "2026-10-26",
+   "grupo": "semana1_codigo",
+   "archivos": 29,
+   "fecha_autor": "2026-10-26T14:26:07-05:00"
+  }
+ ],
+ "segundos": 87.7,
+ "veredicto": "sin_bloqueos"
+}

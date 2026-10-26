@@ -1,0 +1,16 @@
+#!/bin/sh
+# Guardia del repositorio IAA 2026: antes de cada commit revisa lo preparado con
+# herramientas/versionado.py y detiene el commit si entran datos del concurso,
+# predicciones por fila, modelos entrenados, archivos de más de 10 MB o secretos.
+# Instalar una vez, desde la raíz del repositorio:  git config core.hooksPath herramientas/git_hooks
+raiz="$(git rev-parse --show-toplevel)"
+guardia="$raiz/herramientas/versionado.py"
+for py in "$IAA_PYTHON" "$raiz/../../Preparación/.venv/Scripts/python.exe" "$raiz/../../Preparación/.venv/bin/python" python3 python py; do
+  [ -z "$py" ] && continue
+  if [ -x "$py" ] || command -v "$py" >/dev/null 2>&1; then
+    "$py" "$guardia" guardia
+    exit $?
+  fi
+done
+echo "pre-commit: no encontré Python para ejecutar la guardia; define IAA_PYTHON con la ruta de python." >&2
+exit 1
