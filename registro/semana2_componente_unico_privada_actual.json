@@ -1,14 +1,79 @@
 {
   "author": "Codex",
-  "utc": "2026-10-26T19:56:36.004269+00:00",
-  "status": "P24registered_before_real_learning",
+  "utc": "2026-10-26T20:13:42.671597+00:00",
+  "status": "P24complete_adverse_no_adoption",
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_componente_unico_privada_plan.json",
   "plan_sha256": "5a4752b0e68bb457618043008839f80ad9bf127e0c3c7c54382da2af8e27ab22",
   "forum": {
     "author": "Codex",
-    "id": "COD-S2-20261026-PRIVADA-P24-COMPONENTE-PREVIO",
-    "utc": "2026-10-26T19:56:35+00:00",
-    "previous_sha256": "e64476bfe0815f7870ae8f48183aff2aac5931b2b54446f84e107e3da9265b6b",
-    "sha256": "5fb8123f2b1e66b8465a37c3f5c39cbb3143993e589f844478ec14484e55715c"
-  }
+    "id": "COD-S2-20261026-PRIVADA-P24-COMPONENTE-RESULTADO",
+    "utc": "2026-10-26T20:13:42+00:00",
+    "previous_sha256": "5fb8123f2b1e66b8465a37c3f5c39cbb3143993e589f844478ec14484e55715c",
+    "sha256": "06b4f837dbc06891a5e5601553b6be7f8a98f7eb0e3970701fb0d15540953ce4"
+  },
+  "context_report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P24_componente_unico_20261026/P24_context_report.json",
+  "context_report_sha256": "e68fb30e0d3dbf347bef41c5660f143c7b6d77e29bade21815acb1c71e8a91c8",
+  "replay": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P24_componente_unico_20261026/P24_replay_context.json",
+  "replay_sha256": "95fa9f5b091cdee3be6b69f0ffbc83e0b87abd940926c2001c7907a76660b7ca",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P24_COMPONENTE_UNICO.md",
+  "new_primary_stages": 40,
+  "adverse_stages_separate": 40,
+  "new_primary_constants": 300,
+  "new_constant_breakdown": {
+    "shape_factors": 0,
+    "level_constants": 0,
+    "residual_factors": 180,
+    "training_nuisance_levels": 120,
+    "new_residual_stage_calls": 40,
+    "shape_training_normalizers_separate": 0,
+    "training_stage_normalizers_separate": 120,
+    "held_stage_normalizers_separate": 120
+  },
+  "global_nominal": {
+    "POOLED": {
+      "delta": -0.0016520783940761105,
+      "bootstrap95": [
+        -0.00363808249657599,
+        0.0002511646657887175
+      ],
+      "post31_delta": -0.004169270655790481,
+      "worst_cell_delta": -0.006503642963358366
+    },
+    "TRANSFER": {
+      "delta": -0.002126483039843586,
+      "bootstrap95": [
+        -0.004455249131275574,
+        -0.00011064660297786852
+      ],
+      "post31_delta": -0.004045637537363443,
+      "worst_cell_delta": -0.005447973882615581
+    }
+  },
+  "global_gates": {
+    "pooled_delta_ge002": false,
+    "pooled_lower95_positive": false,
+    "pooled_atleast4positive_folds": false,
+    "both_pooled_years_nonnegative": false,
+    "pooled_post31_nonnegative": false,
+    "conditional_transfer_nonnegative": false,
+    "all_nominal_and_stress_cell_floors": false
+  },
+  "new_business_gates": {
+    "cohort_nominal_points_above_floor": false,
+    "cohort_nominal_lower95_above_floor": false,
+    "cohort_family16_lower_above_floor": false,
+    "cohort_all_stress_points_above_floor": false,
+    "pooled_nominal_family16_lower_positive": false
+  },
+  "new_source_fits": 0,
+  "new_C0_fits": 0,
+  "new_future_inference": 0,
+  "new_final_prices": 0,
+  "new_submissions": 0,
+  "adopted": false,
+  "private_improvement_established": false,
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true,
+  "goal_achieved": false,
+  "next_unit": "P25: prepare one source-only missingness-augmentation test on current native A1S LightGBM, same model capacity/parameters and source-chosen round counts. Inspect and preserve cycle26: its six-pair developed2023 GLM passed source but failed target, its smalltree failed motor source veto; do not repeat that recipe or claim a first masking idea. Current candidate would use current2021-2024 source/eCost, 16numeric currently-missing field/line pairs and3native tree seeds, with the same fixed10percent additional, label-independent, entity-consistent masks. Do not mask labels/exposure/history/dates or remove observations. Freeze all fields/entity keys/seed/probability/rounds before source fitting, test source-native and masked held-group views against saved original inner models, not seeds as independent validation. Source conditional-on-frozen-C0 and early-stop-selection limits remain. At most9fixed-round inner fits first; only if a preregistered all-line two-view noninferiority veto passes allow9full-source refits. No C0, targetcalibration/score, future2025inference, finalprice or submission in this unit. Source-stage completion is not predictive admission; any eventual whole target comparison keeps the original50/50mix, all global/NB/cohort safeguards and must be separately preregistered. B00/F3c/N3and all failed versions retained,2024open/adaptive."
 }
