@@ -1,14 +1,34 @@
 {
   "author": "Codex",
-  "utc": "2026-10-26T20:24:31.747416+00:00",
-  "status": "P25source_registered_no_fit",
+  "utc": "2026-10-26T20:34:11.415850+00:00",
+  "status": "P25source_complete_not_admitted",
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_fuente_ausencias_privada_plan.json",
   "plan_sha256": "db5b17ab5d29c2ff597a5d5bac8fabb4d167fb0c4c9e8ec762833b06bb504e91",
   "forum": {
     "author": "Codex",
-    "id": "COD-S2-20261026-PRIVADA-P25-AUSENCIAS-PREVIO",
-    "utc": "2026-10-26T20:24:31+00:00",
-    "previous_sha256": "06b4f837dbc06891a5e5601553b6be7f8a98f7eb0e3970701fb0d15540953ce4",
-    "sha256": "5e98e59b8694fbd6ba757c423e9ad15ee12ed405ff5162ad8c79d2e151135ec4"
-  }
+    "id": "COD-S2-20261026-PRIVADA-P25-AUSENCIAS-RESULTADO",
+    "utc": "2026-10-26T20:34:11+00:00",
+    "previous_sha256": "5e98e59b8694fbd6ba757c423e9ad15ee12ed405ff5162ad8c79d2e151135ec4",
+    "sha256": "cf55c9eb9f3358f2c7bc6d1f599c435a606db2f95a9eb97126f31d82bc7ddfbd"
+  },
+  "attempts": 18,
+  "completed": 18,
+  "execution": null,
+  "output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P25_fuente_ausencias_20261026",
+  "new_C0_fits": 0,
+  "new_target_scores": 0,
+  "new_submissions": 0,
+  "source_veto_all_pass": true,
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P25_fuente_ausencias_20261026/report.json",
+  "report_sha256": "0100ab4ad7bf9025c39643576b57252e4334a60f3addc7328d45c79cd7db5163",
+  "replay": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P25_fuente_ausencias_20261026/scalar_replay.json",
+  "replay_sha256": "d2f0374bd58bc484342e13fe011cd964d7aa56710b7bb62230239f4f991b2943",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P25_FUENTE_AUSENCIAS.md",
+  "new_source_fits": 18,
+  "new_source_covariate_normalizers": 9,
+  "new_future_inference": 0,
+  "next_unit": "P26: prepare and preregister one complete target comparison with P25 source components in the original fixed50/50S2/H1 algorithm. Relearn only source-dependent target shapes/levels/residual stages on saved outer training groups; keep C0/N3/H1 and all global/NB/broker/influence/stress gates. First inspect the existing P17 source-swap adapter, verify complete synthetic flow and exact ancestry, and freeze code/configuration/cost before any target fit or score. Do not choose seeds, mask rates, line subsets or new mixture weights from P25. No future inference or upload before target assessment. Passing one conditional source holdout is not evidence of private generalization.",
+  "goal_achieved": false,
+  "B00_all_alternatives_preserved": true,
+  "2024_open": true
 }
