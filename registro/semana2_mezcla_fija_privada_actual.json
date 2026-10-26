@@ -1,14 +1,66 @@
 {
   "author": "Codex",
-  "utc": "2026-10-26T23:36:09.501109+00:00",
-  "status": "P45registered_before_pool_prices_or_scores",
+  "utc": "2026-10-26T23:38:11.832855+00:00",
+  "status": "P45complete_not_automatically_admitted",
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_mezcla_fija_privada_plan.json",
   "plan_sha256": "d845b60fd9ef16453825f1374e74cf33effb4395b65e3c2f8bcdc0a9ca20db45",
   "forum": {
     "author": "Codex",
-    "id": "COD-S2-20261026-PRIVADA-P45-MEZCLA-PREVIO",
-    "utc": "2026-10-26T23:36:09+00:00",
-    "previous_sha256": "12c4f31ba04bf4ea3f2b160ff2d2fba380bfe304934ed117e95412e9c8ca52c7",
-    "sha256": "c5d2c5e8d306b7498fda103be3d344d7ed27fa537fbb34b4edc7421b9992950e"
-  }
+    "id": "COD-S2-20261026-PRIVADA-P45-MEZCLA-RESULTADO",
+    "utc": "2026-10-26T23:38:12+00:00",
+    "previous_sha256": "c5d2c5e8d306b7498fda103be3d344d7ed27fa537fbb34b4edc7421b9992950e",
+    "sha256": "dc9a792e82b783257b30f1b8eac9bb0198f6328d88a9857b790d993ed02263cc"
+  },
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P45_mezcla_fija_20261026/report.json",
+  "report_sha256": "df00a57f93f92310847623f5587934d6b28e514805c82f4f72845c848eb43945",
+  "replay": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P45_mezcla_fija_20261026/replay_report.json",
+  "replay_sha256": "9341daff8549292db30507ddd4ac0ad2a2ba83cbb1a10b942dd853741166ed05",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P45_MEZCLA_FIJA.md",
+  "nominal": {
+    "POOLED": {
+      "delta": 0.0009063212366194968,
+      "bootstrap95": [
+        -0.0003954206137887489,
+        0.0022462513020739413
+      ],
+      "post31_delta": -0.0012541922198407737,
+      "worst_cell_delta": -0.0048186254353285805
+    },
+    "TRANSFER": {
+      "delta": 0.00040981209883588393,
+      "bootstrap95": [
+        -0.0007307288786106931,
+        0.0017074747132761283
+      ],
+      "post31_delta": -0.0016203024620871204,
+      "worst_cell_delta": -0.00701171084312087
+    }
+  },
+  "all_exploratory_gates_pass": false,
+  "global_gates": {
+    "pooled_delta_ge002": false,
+    "pooled_lower95_positive": false,
+    "pooled_atleast4positive_folds": false,
+    "both_pooled_years_nonnegative": true,
+    "pooled_post31_nonnegative": false,
+    "conditional_transfer_nonnegative": true,
+    "all_nominal_and_stress_cell_floors": false
+  },
+  "new_business_gates": {
+    "cohort_nominal_points_above_floor": false,
+    "cohort_nominal_lower95_above_floor": false,
+    "cohort_family16_lower_above_floor": false,
+    "cohort_all_stress_points_above_floor": false,
+    "pooled_nominal_family16_lower_positive": false
+  },
+  "new_fits": 0,
+  "new_C0_fits": 0,
+  "new_constants": 0,
+  "new2025inference": 0,
+  "new_submissions": 0,
+  "adopted": false,
+  "next_unit": "P46: inspect the complete target observation/response contract and the already saved P13allocated-loss cells alongside group support, before selecting another model. All standard source-family changes and this fixed mixture failed current whole-algorithm robustness. Isolate whether one material observation/exposure or validation-target uncertainty can be resolved with existing legitimate evidence, or document a concrete standard target-level hypothesis with protected prospective comparison. Do not repeat prior audits on unchanged inputs, search mixture weights or add source capacity to chase public/private proxies. Preserve failed P45 and no automatic upload.",
+  "goal_achieved": false,
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true
 }
