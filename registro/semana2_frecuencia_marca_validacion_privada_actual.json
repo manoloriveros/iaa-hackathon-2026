@@ -1,14 +1,79 @@
 {
   "author": "Codex",
-  "utc": "2026-10-26T21:09:17.679948+00:00",
-  "status": "P30registered_before_target_learning",
+  "utc": "2026-10-26T21:13:54.957862+00:00",
+  "status": "P30complete_transport_adverse_not_admitted",
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_frecuencia_marca_validacion_privada_plan.json",
   "plan_sha256": "652dfe965a924d8b24a18fca33e3ee24aaf5748d244036c49c086697b62f676f",
   "forum": {
     "author": "Codex",
-    "id": "COD-S2-20261026-PRIVADA-P30-FRECUENCIA-PREVIO",
-    "utc": "2026-10-26T21:09:17+00:00",
-    "previous_sha256": "dd9a54420cc1941dfc71ca36a225a1f24a16a4d3bc2f2b075704ce65b0f857e2",
-    "sha256": "e74ed3463c46d3bc9e42b390a1c1188a115f844be054743e0635968609202b87"
-  }
+    "id": "COD-S2-20261026-PRIVADA-P30-FRECUENCIA-RESULTADO",
+    "utc": "2026-10-26T21:13:55+00:00",
+    "previous_sha256": "e74ed3463c46d3bc9e42b390a1c1188a115f844be054743e0635968609202b87",
+    "sha256": "97e0e5fb76866d3bc59e5aa9354c65c0d4d50882aee589a1335dad3ec6397df2"
+  },
+  "context_report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P30_validacion_frecuencia_marca_20261026/P30_context_report.json",
+  "context_report_sha256": "f6ca0ac5884951704d4f4c23b6052a4a48617f7fe46c3ad33fc9a42630e300a4",
+  "replay": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P30_validacion_frecuencia_marca_20261026/P30_replay_context.json",
+  "replay_sha256": "04bd3f7996db9d4bc827a2dcc25bacd878091a6a2dc1aa57c0ebea90a7326195",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P30_VALIDACION_NUMERO_MARCA.md",
+  "new_primary_closed_learners": 30,
+  "adverse_closed_learners_separate": 30,
+  "new_primary_constants": 670,
+  "constants": {
+    "shape_factors": 280,
+    "level_constants": 90,
+    "residual_factors": 180,
+    "training_nuisance_levels": 120,
+    "new_source_component_calls": 30,
+    "new_residual_stage_calls": 40,
+    "shape_training_normalizers_separate": 80,
+    "training_stage_normalizers_separate": 120,
+    "held_stage_normalizers_separate": 120
+  },
+  "global_nominal": {
+    "POOLED": {
+      "delta": 0.00039406251297904914,
+      "bootstrap95": [
+        -0.001851007331403469,
+        0.0027495485086638815
+      ],
+      "post31_delta": -0.0035434732271015677,
+      "worst_cell_delta": -0.013853818559417747
+    },
+    "TRANSFER": {
+      "delta": -0.0008505906312900777,
+      "bootstrap95": [
+        -0.003176545256567765,
+        0.0013606986084595803
+      ],
+      "post31_delta": -0.004792673450458569,
+      "worst_cell_delta": -0.01732329030653307
+    }
+  },
+  "global_gates": {
+    "pooled_delta_ge002": false,
+    "pooled_lower95_positive": false,
+    "pooled_atleast4positive_folds": false,
+    "both_pooled_years_nonnegative": true,
+    "pooled_post31_nonnegative": false,
+    "conditional_transfer_nonnegative": false,
+    "all_nominal_and_stress_cell_floors": false
+  },
+  "new_business_gates": {
+    "cohort_nominal_points_above_floor": false,
+    "cohort_nominal_lower95_above_floor": false,
+    "cohort_family16_lower_above_floor": false,
+    "cohort_all_stress_points_above_floor": false,
+    "pooled_nominal_family16_lower_positive": false
+  },
+  "adopted": false,
+  "new_source_fits": 0,
+  "new_C0_fits": 0,
+  "new_future_inference": 0,
+  "new_submissions": 0,
+  "next_unit": "P31: review the compatibility of the frozen observation-to-ultimate bridge with the new peril source package using existing HET/P0/P1/P2/P26/P30metadata and code, without fitting or scoring. Distinguish an intentionally model-independent evaluation contract from a trainable/risk-dependent observation link. Inspect existing HETsource/outermix hypotheses and ancestry first; do not repeat their finished diagnostics or assume a new mechanism. Identify whether per-peril historical rates were persisted and whether a legitimate source/outer-held-free link exists for any proposed future adapter. Do not reconstruct missing peril weights from aggregate rates, modify the target/bridge posthoc to rescue P30, or claim reporting caused its failure. Any genuinely new observation contract would require separately frozen objective/comparator/configuration/cost and forum before new predictions or scores. No source inference, C0,2025prices or uploads in the review. Keep B00/F3c/all failures,2024open/adaptive.",
+  "goal_achieved": false,
+  "private_improvement_established": false,
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true
 }
