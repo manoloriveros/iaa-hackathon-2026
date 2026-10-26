@@ -1,0 +1,58 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T22:05:05.463965+00:00",
+  "question": "Does ONE exact, unclipped business-only source reweighting have adequate support before any training?",
+  "hypothesis": "Source risk fit prioritizes its predominantly renewal portfolio; finite-capacity approximation may be less relevant for the known emerging2025business composition. Coarse weighting is a training-relevance hypothesis, not equality of conditional risks across markets.",
+  "novelty": {
+    "C34_C35": "Motor logistic source/emerging2023attribute density, clipped and then tempered, both stopped by ESS. Different source cohorts, weights and objective. Preserve both failures.",
+    "old2025weights": "18 line/business/duration emerging historical validation strata, ESS failed; this review neither recomputes nor replaces that evaluation.",
+    "P33": "Target-cell positive cost support failed in20/30scopes. Developed source covariates do not resolve it."
+  },
+  "formula": "For each line and source fit scope, r_b=(official2025row_share_b)/(current_source_training_row_share_b), b=NB/REN. Positive untrimmed per-row weights with mean1. No duration/channel/region strata, clipping, exponent or parameter search.",
+  "source_scopes": [
+    "saved source internal training groups, exclude internal_validation",
+    "all source groups for a possible later full refit"
+  ],
+  "read_allowlist": "Source row_id,year,new_business,exposure_calendar; saved source partition row_id,source_group,internal_validation; official2025 row_id,new_business,period_start,period_end. No T0,e_cost,claim,price or model columns/objects.",
+  "screen": {
+    "all_six_scopes_required": true,
+    "row_ESS_fraction_min": 0.5,
+    "group_ESS_fraction_min": 0.5,
+    "each_business_unique_source_groups_min": 100,
+    "rationale": "Retain the previous source-training weight rowESS>=.5 screen fromC34/C35; also screen connected group ESS>=.5. This differs from the older .1diagnostic evaluation-weight gate and does not relax either.",
+    "additional_exposure_proxy": "Report ESS of r*sqrt(calendar exposure), normalized to preserve sum sqrt(exposure), with same.5floor. Covariate proxy only: not actual label-dependent e_cost curvature or a proof of numerical fitting."
+  },
+  "if_fail": "No weighted price fit, clipping, tempering, regrouping or selecting favorable lines to salvage this recipe. Keep the evidence. Revisit a distinct observed modeling failure before another recipe.",
+  "if_pass": "Only permits preparing a separate same-capacity source-only recipe and objective/regularization controls, followed by whole-target validation under unchanged criteria. No automated fit from this report.",
+  "limitations": [
+    "No evidence of conditional outcome stationarity between markets or within business.",
+    "No private labels or prospective availability established; official2025covariates are conditional competition inputs.",
+    "A coarse support pass does not overturn failed fine-grained ESS or sparse emerging cells."
+  ],
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/revisar_ponderacion_negocio_P34.py": "ccb8791fe5b6b9fa55b28034ab0f367aaec1765c8ec916ff181d724c60cd9fa8",
+    "Hackaton/Repositorio_IAA2026/herramientas/robustez2023_ciclo34.py": "d0210b418c3019314de29f98edc935866508db208d3acb7c4efd6c46d6803227",
+    "Hackaton/Repositorio_IAA2026/herramientas/robustez2023_ciclo35.py": "bf6d93096e2d0d9f76a989adf9609e97f4a986a5250892cc9f83de013dd058d5",
+    "Hackaton/Repositorio_IAA2026/herramientas/preparar_estimando_cartera2025.py": "c5003fa49e05c13d6c92f704077eb9520700f6ce81b6b4c374a6f8ecda23d6c9",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_robustez2023_ciclo34_plan.json": "0a42cd78cc8dcb746e2667808e5dd64257ef30d82de276d290ab40581abb08fa",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_robustez2023_ciclo35_plan.json": "bf4f18c5f720fc6a5763ce4078296bb3feaac20b97194d883097b5167314d96b",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_mision017_A1S_fuente_plan_v1.json": "9b585699d0a06612fa65d9ad19cb7e7c2f8f31ba6529980431d805d91c168e82",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/estimando_cartera2025_v3/report.json": "aeac7a539813c6b72f6d12a184bb41430f52b8d367b76ccac57daa4aef1d4581",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P33_soporte_adaptacion_destino_20261026/report.json": "70111bb122b2be56ba3feb84852d79904827970696b40cd6334c5879daadb1da",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_motor.parquet": "ded113876f2069f7341491aa855e7e0fc4036e5e6e38d476466da905f5bee99c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/partition_source/folds_motor.parquet": "81f9c33285595d956952e2431696095b017503a15a4080215efe232c232575a1",
+    "Hackaton/Semana 2/Datos/emerging/test_motor.parquet": "108d5c68e9bab5ccd90ee5502bc3543aa515a5aa07fda44a3b227cf070a28aa5",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_buildings.parquet": "a04a76fa8564f83a6da02d4f1885972b7ef82b3d741cc5a6bd22f0df1d98bf88",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/partition_source/folds_buildings.parquet": "99ffe4451eda354a687d01465c6ceaca740e1c38b766d520b65107e95b4778e8",
+    "Hackaton/Semana 2/Datos/emerging/test_buildings.parquet": "21f91aaa66a1b9efd216ad0e04ff12a507dbeb721084330d9b9f06c99edd0ca6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/rows_s1_contents.parquet": "f8d5c595dc4bc1357decca37bc73660a557a473638f2aae83e085c9e68d4e1f1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/A1S_nucleo_20261026_v1/partition_source/folds_contents.parquet": "de57e8d6bcd92628778104a627d4c98c046063ed31139ac1fc50c6194e804279",
+    "Hackaton/Semana 2/Datos/emerging/test_contents.parquet": "af5ef2553e35a2d563ca091b173500daac55acc4969d1d3a96fa6b4ec3c6a012"
+  },
+  "new_fits": 0,
+  "new_scores": 0,
+  "new_C0_fits": 0,
+  "new_submissions": 0,
+  "B00_all_alternatives_preserved": true,
+  "2024_open": true
+}
