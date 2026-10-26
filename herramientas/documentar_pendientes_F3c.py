@@ -109,7 +109,10 @@ def main(run, audit_run):
     private = '# Veinte primas, candidatos y escenarios\n\nCodex. Importes restringidos, fuera de Git. No son precios aprobados para uso real.\n\n'
     private += table(['Ref', 'row_id', 'Ramo', 'Exposición', 'F3c CU', 'Sin factores CU', 'Cambio %', 'Mín. escenarios', 'Máx. escenarios'],
         [[x['reference'], x['row_id'], x['line'], f(x['exposure'], 4), x['F3c'], x['without_own_factors'], f(x['difference_without_factors_pct'], 2), x['scenario_min'], x['scenario_max']] for x in refs])
-    private += '\n\nEl riesgo del CSV corresponde al periodo. La tasa anual se obtiene dividiendo por exposición solo para comparar; no se vuelve a multiplicar por exposición para construir el precio. El gasto fijo sí se prorratea con la exposición oficial, redondeada a cuatro decimales. Todos los decimales exactos, denominadores y escenarios están en veinte_primas_privadas.json. Los extremos mezclan tensiones de reservas y de severidad; no representan probabilidades ni justifican el margen de beneficio.\n'
+    private += '\n\nEl riesgo del CSV corresponde al periodo. La tasa anual se obtiene dividiendo por exposición solo para comparar; no se vuelve a multiplicar por exposición para construir el precio. '
+    private += ('El gasto fijo principal es 85 CU por póliza, sin prorrateo. Los decimales exactos, denominadores y escenarios están en veinte_primas_gasto_por_poliza.json. ' if expense_corrected else
+                'En esta hipótesis previa el gasto fijo se prorratea con la exposición oficial, redondeada a cuatro decimales. Los decimales exactos, denominadores y escenarios están en veinte_primas_privadas.json. ')
+    private += 'Los extremos mezclan tensiones de reservas y de severidad; no representan probabilidades ni justifican el margen de beneficio.\n'
     if expense_corrected:
         private += '\n\nLectura principal: 85 CU por póliza, según el nombre y unidad oficiales. El prorrateo previo se conserva en VEINTE_PRIMAS_COMPARADAS.md y veinte_primas_privadas.json. No hay indicación oficial de que los 85 CU sean anuales. La incertidumbre de asignar gastos a subperiodos se muestra por separado, sin cambiar el riesgo del CSV.\n'
     (run / ('VEINTE_PRIMAS_GASTO_POR_POLIZA.md' if expense_corrected else 'VEINTE_PRIMAS_COMPARADAS.md')).write_text(private, encoding='utf-8')
