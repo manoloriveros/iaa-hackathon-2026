@@ -1,0 +1,23 @@
+{
+  "id": "REENTRENO-CADENA-20261026",
+  "autor_original": "Claude",
+  "orquestacion_y_restauraciones": "Codex",
+  "autorizacion": "Pedido directo de reentrenamiento completo desde originales, en entorno limpio y sin envíos a Kaggle.",
+  "complementa": "registro/reentrenamiento_originales_plan.json",
+  "source_commit": "40b3100ba1fe59eb35faf5b3af84aa55b5ee6159",
+  "orden": ["T2b dev/hold/pcv/prod desde la unidad inicial", "C1 de MLind", "Bases s1/s2, curva de coste global, exposiciones y curva de confirmación de A1", "18 modelos completos A1 (tres semillas, tres ramos, con/sin historia) y tres modelos de confirmación históricos", "A1 designada y A1/R0 de 2024", "Mezcla inicial 50/50 y nivel global histórico fijo", "F2, final_creible, F3c y F3d", "Conteos desde originales y FSp original histórico/producción en tres ramos", "F4c"],
+  "coste_adicional": {"A1_finales": 21, "A1_ajustes_internos": 21, "FSp_finales": 60, "FSp_ajustes_internos": 60, "busquedas_de_modelo_o_parametros": 0},
+  "A1_parametros": "Los de desarrollado_gbm.py: semillas 11/12/13 ya adoptadas, lr0.02, hasta4000rondas, paciencia400, dos hilos, deterministic y force_row_wise. F1 y ausencia de make_model en autos como en la receta final histórica. Sin reentrenar confirmaciones F1 que no consume F3c.",
+  "FSp_parametros": "Scripts originales fsp_light.py/fsp_light_prod.py: semilla20261026; Poisson lr0.08/31hojas/min1000, Gamma lr0.05/15hojas/min200; hasta2000rondas, paciencia50; mismos offsets y clima por ámbito. No usar la familia transfer2 FSp, que es distinta.",
+  "restauraciones_de_codigo_ausente": [
+    "Curva global REP-N2: expresión exacta de conf_insumos.py retirando solo el filtro de ocurrencias<=2023; no se afirma recuperar su generador original perdido.",
+    "Solo la A1 histórica de confirmación de autos conserva el cruce anterior a ID01 (sin zfill8). La fuente anterior no está localizada: es una restauración explícita del defecto documentado, sujeta a cotejo por claves. La producción A1 mantiene la corrección ID01."
+  ],
+  "constantes_publicas": "Registros históricos y factor global1.1876582386485208 congelados por SHA. No nuevas sondas o consultas a Kaggle.",
+  "cotejo": "Proceso separado compara valores por row_id, esquema y SHA con los históricos. Registrar exactitud bit a bit, max_abs y max_rel; tolerancia numérica diagnóstica1e-10rel/1e-9abs antes del redondeo; CSV6decimales se informa por igualdad y máxima diferencia. No sustituye prueba privada ni selección.",
+  "guardas_SHA": "En copias de constructores M017, las guardas que exigen el SHA del archivo histórico pasan al cotejo externo; quedan todos los controles de claves, valores, soportes y paradas estadísticas. Esto permite medir diferencias de reentrenamiento, no forzar igualdad con predicciones previas.",
+  "aislamiento": "Solo originales, código congelado y metadatos agregados históricos. Sin modelos/predicciones previos como insumos; procesos hijo sin red ni lectura externa al venv/corrida. Las comparaciones históricas no alteran el entrenamiento.",
+  "no_enviar": true,
+  "seleccion_final_modificada": false,
+  "reproduccion_independiente": false
+}
