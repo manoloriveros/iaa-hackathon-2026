@@ -1,14 +1,75 @@
 {
   "author": "Codex",
-  "utc": "2026-10-26T23:23:50.583753+00:00",
-  "status": "P44registered_before_target_learning",
+  "utc": "2026-10-26T23:27:56.062749+00:00",
+  "status": "P44complete_not_automatically_admitted",
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_marca_capital_validacion_privada_plan.json",
   "plan_sha256": "0e48e93848a0f572d6b96fbfdd785ef2955e99df9a0095607eef43c8f3aa760a",
   "forum": {
     "author": "Codex",
-    "id": "COD-S2-20261026-PRIVADA-P44-MARCA-CAPITAL-PREVIO",
-    "utc": "2026-10-26T23:23:50+00:00",
-    "previous_sha256": "0d05eeadd9f54fc52ac4e87036748de1cba6cfbc99e2583e4ce560ce8e092bdb",
-    "sha256": "c49567b2e10320cf3708c023301deabca1c891b2a07cf82b9478eba1dc05787d"
-  }
+    "id": "COD-S2-20261026-PRIVADA-P44-MARCA-CAPITAL-RESULTADO",
+    "utc": "2026-10-26T23:27:56+00:00",
+    "previous_sha256": "c49567b2e10320cf3708c023301deabca1c891b2a07cf82b9478eba1dc05787d",
+    "sha256": "12c4f31ba04bf4ea3f2b160ff2d2fba380bfe304934ed117e95412e9c8ca52c7"
+  },
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P44_validacion_marca_capital_20261026/P44_context_report.json",
+  "report_sha256": "d7eca946541aaddf4d419282aff47ea85f5e349803ca87b82cf20e82a2d0886e",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P44_MARCA_CAPITAL_COMPLETA.md",
+  "all_exploratory_gates_pass": false,
+  "nominal": {
+    "POOLED": {
+      "delta": 0.00035637637409561044,
+      "bootstrap95": [
+        -0.0014386773836403384,
+        0.002194811051102289
+      ],
+      "post31_delta": -0.00259155033186675,
+      "worst_cell_delta": -0.011256643624720071
+    },
+    "TRANSFER": {
+      "delta": -0.00043534091249405204,
+      "bootstrap95": [
+        -0.0022781915939353524,
+        0.00157303671679067
+      ],
+      "post31_delta": -0.0035306402848380267,
+      "worst_cell_delta": -0.013590283744861719
+    }
+  },
+  "global_gates": {
+    "pooled_delta_ge002": false,
+    "pooled_lower95_positive": false,
+    "pooled_atleast4positive_folds": false,
+    "both_pooled_years_nonnegative": true,
+    "pooled_post31_nonnegative": false,
+    "conditional_transfer_nonnegative": false,
+    "all_nominal_and_stress_cell_floors": false
+  },
+  "new_business_gates": {
+    "cohort_nominal_points_above_floor": false,
+    "cohort_nominal_lower95_above_floor": false,
+    "cohort_family16_lower_above_floor": false,
+    "cohort_all_stress_points_above_floor": false,
+    "pooled_nominal_family16_lower_positive": false
+  },
+  "new_primary_closed_learners": 30,
+  "adverse_closed_learners_separate": 30,
+  "new_primary_constants": 670,
+  "constants": {
+    "shape_factors": 280,
+    "level_constants": 90,
+    "residual_factors": 180,
+    "training_nuisance_levels": 120,
+    "new_source_component_calls": 30,
+    "new_residual_stage_calls": 40,
+    "shape_training_normalizers_separate": 80,
+    "training_stage_normalizers_separate": 120,
+    "held_stage_normalizers_separate": 120
+  },
+  "new_source_fits": 0,
+  "new_C0_fits": 0,
+  "new2025inference": 0,
+  "new_submissions": 0,
+  "next_unit": "P45: before more source capacity or mark feature searches, inspect a prespecified standard two-family equal-cost ensemble of the protected reference and the existing P15missing-indicator aggregate GLM. Verify no identical whole-algorithm recipe already exists, exact common keys/adapter/ultimate price bridge and no held-label learned weights. Freeze one50/50arithmetic complete-price mixture and current gates before computing new prices or scores; no line/cohort-dependent tuning. Use only saved protected artifacts, zero new source/target/C0fits. P44adverse retained; no missingf3_evalblock, new public probes or upload.",
+  "goal_achieved": false,
+  "2024_open": true
 }
