@@ -1,9 +1,9 @@
 {
   "author": "Codex",
-  "as_of_utc": "2026-10-26T22:42:22.409440+00:00",
+  "as_of_utc": "2026-10-26T22:51:17.459704+00:00",
   "scope": "Own pricing/development lineage only; not all project fits or other authors. Historical main catalog retains its dated counter.",
   "cumulative_price_base_fits": 1705,
-  "cumulative_closed_form_constants": 26334,
+  "cumulative_closed_form_constants": 27004,
   "auxiliary_Poisson_Gamma_fits_separate": 30,
   "baseline": {
     "index": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_v7_snapshot.json",
@@ -2110,5 +2110,25 @@
     "new_submissions": 0,
     "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P38_CatBoost_guardado_20261026/report.json",
     "report_sha256": "873fb556fd7f238a10ee577b22dc02733f7ea275c77f78e6e94cb46f3229d9b5"
+  },
+  "phase2_private_P39_saved_CB_target": {
+    "primary_closed_learners": 30,
+    "adverse_closed_learners_separate": 30,
+    "new_primary_constants": 670,
+    "constant_breakdown": {
+      "shape_factors": 280,
+      "level_constants": 90,
+      "residual_factors": 180,
+      "training_nuisance_levels": 120,
+      "new_source_component_calls": 30,
+      "new_residual_stage_calls": 40,
+      "shape_training_normalizers_separate": 80,
+      "training_stage_normalizers_separate": 120,
+      "held_stage_normalizers_separate": 120
+    },
+    "new_iterative_price_fits": 0,
+    "new_source_fits": 0,
+    "new_C0_fits": 0,
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P39_validacion_CatBoost_guardado_20261026/P39_context_report.json"
   }
 }

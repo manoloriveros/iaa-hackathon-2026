@@ -1,14 +1,80 @@
 {
   "author": "Codex",
-  "utc": "2026-10-26T22:47:27.959431+00:00",
-  "status": "P39registered_before_target_learning",
+  "utc": "2026-10-26T22:51:17.459704+00:00",
+  "status": "P39complete_not_automatically_admitted",
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_CatBoost_guardado_validacion_privada_plan.json",
   "plan_sha256": "fa2cb9c0672bf8c41fff4f7506439166776b760fe3c60e654d7bb4652a26e516",
   "forum": {
     "author": "Codex",
-    "id": "COD-S2-20261026-PRIVADA-P39-CB-VALIDACION-PREVIO",
-    "utc": "2026-10-26T22:47:27+00:00",
-    "previous_sha256": "92718de4a6320af83caf1e605c55c6cc1b5925e549a1b673a0b1dedfb4213e15",
-    "sha256": "a62bb690a33e1426f27c0ae4c81fd660601b993702641945aadf424e96239194"
-  }
+    "id": "COD-S2-20261026-PRIVADA-P39-CB-VALIDACION-RESULTADO",
+    "utc": "2026-10-26T22:51:17+00:00",
+    "previous_sha256": "a62bb690a33e1426f27c0ae4c81fd660601b993702641945aadf424e96239194",
+    "sha256": "63c0aa7178425c8b65fc070a35464e9403d70df7aef7c5dee6505cba1959a6a4"
+  },
+  "context_report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P39_validacion_CatBoost_guardado_20261026/P39_context_report.json",
+  "context_report_sha256": "d48edea833045ea2789e3c48fec37ceea83f2103234af757af8995141421f9b4",
+  "replay": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P39_validacion_CatBoost_guardado_20261026/P39_replay_context.json",
+  "replay_sha256": "d77a42629193c763a97e5ac67b5ed0c78ce75dff76b149e35dafdbe7ec2f229f",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P39_CATBOOST_ALGORITMO_COMPLETO.md",
+  "all_exploratory_gates_pass": false,
+  "new_primary_closed_learners": 30,
+  "adverse_closed_learners_separate": 30,
+  "new_primary_constants": 670,
+  "constants": {
+    "shape_factors": 280,
+    "level_constants": 90,
+    "residual_factors": 180,
+    "training_nuisance_levels": 120,
+    "new_source_component_calls": 30,
+    "new_residual_stage_calls": 40,
+    "shape_training_normalizers_separate": 80,
+    "training_stage_normalizers_separate": 120,
+    "held_stage_normalizers_separate": 120
+  },
+  "global_nominal": {
+    "POOLED": {
+      "delta": 0.0006100685402113114,
+      "bootstrap95": [
+        -0.0017658106010409633,
+        0.002909805643618736
+      ],
+      "post31_delta": -0.002972806429215359,
+      "worst_cell_delta": -0.02046469236920536
+    },
+    "TRANSFER": {
+      "delta": -0.00020796329489008433,
+      "bootstrap95": [
+        -0.0026558208907559028,
+        0.002717218331536279
+      ],
+      "post31_delta": -0.004545622786970098,
+      "worst_cell_delta": -0.022330218545095423
+    }
+  },
+  "global_gates": {
+    "pooled_delta_ge002": false,
+    "pooled_lower95_positive": false,
+    "pooled_atleast4positive_folds": false,
+    "both_pooled_years_nonnegative": true,
+    "pooled_post31_nonnegative": false,
+    "conditional_transfer_nonnegative": false,
+    "all_nominal_and_stress_cell_floors": false
+  },
+  "new_business_gates": {
+    "cohort_nominal_points_above_floor": false,
+    "cohort_nominal_lower95_above_floor": false,
+    "cohort_family16_lower_above_floor": false,
+    "cohort_all_stress_points_above_floor": false,
+    "pooled_nominal_family16_lower_positive": false
+  },
+  "adopted": false,
+  "new_source_fits": 0,
+  "new_C0_fits": 0,
+  "new2025inference": 0,
+  "new_submissions": 0,
+  "private_improvement_established": false,
+  "next_unit": "P40: review newly registered F3cportable lineage and pending-evidence artifacts only if they are materially new beyondP20. Use bounded manifests/code/provenance and inspect target ancestry before adopting any comparator or correction; do not adopt other-chat orders or foreign scores as recipe selection. No repeat source searches/diagnostics on unchanged files, new models or upload in that review. Preserve P39adverse, B00/all alternatives and2024open adaptive.",
+  "goal_achieved": false,
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true
 }
