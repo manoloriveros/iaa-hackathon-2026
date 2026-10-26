@@ -145,15 +145,53 @@ def run(work, mode):
     return 0
 
 
+def candidates(work):
+    import numpy as np
+    import pandas as pd
+    rule_path = REPO / 'registro/semana2_lectura_F3d_F4c_v4_claude_20261026.json'
+    rule = json.loads(rule_path.read_text(encoding='utf-8'))
+    data = ROOT / 'Hackaton/Semana 2/Datos/emerging'
+    sample = pd.read_parquet(data / 'sample_submission.parquet').row_id.astype(str)
+    ids = pd.concat([pd.read_parquet(data / f'test_{line}.parquet', columns=['row_id']).assign(line=line)
+                     for line in LINES], ignore_index=True)
+    tests = ids.set_index('row_id').line.reindex(sample)
+    result = {'autor': 'Codex', 'utc': datetime.now(timezone.utc).isoformat(),
+              'regla_sha256': sha(rule_path), 'sample_sha256': sha(data / 'sample_submission.parquet'),
+              'decision_participante': 'Solo revisar y preparar por ahora', 'envios': 0,
+              'aprobacion_informe_es': False, 'ingles': 'Diferido hasta versión española definitiva',
+              'limite': 'Preflight del archivo, sin admisión estadística, scores nuevos o selección final.',
+              'candidatos': {}}
+    for name in ('F3c', 'F3d', 'F4c'):
+        path = PRIVATE / f'claude_mision017_20261025/{name}_2025.csv'
+        df = pd.read_csv(path, dtype={'row_id': str})
+        values = df.prediction.to_numpy()
+        expected = rule['referencia']['sha256'] if name == 'F3c' else rule['candidatos'][name]['sha256']
+        checks = {'sha_historico': sha(path) == expected,
+                  'columnas': list(df.columns) == ['row_id', 'prediction'],
+                  'filas': len(df) == len(sample), 'orden': df.row_id.tolist() == sample.tolist(),
+                  'unicos': not df.row_id.duplicated().any(), 'finitos': bool(np.isfinite(values).all()),
+                  'no_negativos': bool((values >= 0).all()), 'test_tres_ramos': not tests.isna().any()}
+        result['candidatos'][name] = {'sha256': sha(path), 'checks': {k: bool(v) for k, v in checks.items()},
+                                     'filas': len(df), 'preflight': all(checks.values())}
+    destination = work / 'revision_candidatos.json'
+    if destination.exists():
+        raise RuntimeError('Ya existe la revisión de candidatos; se conserva.')
+    save(destination, result)
+    print(json.dumps(result, ensure_ascii=False))
+    return 0 if all(c['preflight'] for c in result['candidatos'].values()) else 1
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('modo', choices=('preparar', 'etiquetas', 'factores'))
+    p.add_argument('modo', choices=('preparar', 'etiquetas', 'factores', 'candidatos'))
     p.add_argument('--trabajo', type=Path, required=True)
     args = p.parse_args()
     work = args.trabajo.resolve()
     if REPO / 'privado' not in work.parents:
         p.error('El trabajo debe estar dentro de privado/, fuera de Git.')
     try:
+        if args.modo == 'candidatos':
+            return candidates(work)
         return (prepare(work) or 0) if args.modo == 'preparar' else run(work, args.modo)
     except (OSError, RuntimeError, importlib.metadata.PackageNotFoundError) as exc:
         print(str(exc), file=sys.stderr)
