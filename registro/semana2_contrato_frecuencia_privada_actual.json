@@ -1,0 +1,25 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-26T20:51:27.585742+00:00",
+  "status": "P27response_contract_ready_for_later_preregistration",
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P27_contrato_frecuencia_20261026/report.json",
+  "report_sha256": "b74669746ab15c24348844e5679cd5fb11762187852b2e2b265707c1c1f3f4ac",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P27_CONTRATO_FRECUENCIA_MARCA.md",
+  "source_preflight_support_pass": true,
+  "new_source_fits": 0,
+  "new_C0_fits": 0,
+  "new_model_inference": 0,
+  "new_target_scores": 0,
+  "new_submissions": 0,
+  "forum": {
+    "author": "Codex",
+    "id": "COD-S2-20261026-PRIVADA-P27-FRECUENCIA-CONTRATO",
+    "utc": "2026-10-26T20:51:27+00:00",
+    "previous_sha256": "384c9407cba533d734d34149e3a3daaf739ecf94661140439345ab5f07d60e67",
+    "sha256": "618614f880e596b935e3047a4e17143b5c00c98b12528d075d6c257076bd3270"
+  },
+  "next_unit": "P28: preregister one standard main-effects Poisson/Tweedie1.5 count/mark source model per peril on the P27current4year paired-offset contract, if the exact prior-recipe review finds no equivalent current fit. Freeze source-only preprocessing/features/regularization normalization/iteration cap and an explicit source gate/cost before fitting. Use saved global source held groups, retain zero marks and all claim/period records, no Gamma deletion or E_cost-as-count substitution. Start with source inner fits only and save each checkpoint/gradient; no full refits or new target scoring unless its preregistered source criterion passes. Keep all previous FS/FSp/cycle8/cycle16adverses; no claim this is a first count/severity family. No new C0,2025prices or upload in source stage. No P25mask tuning; private robustness and all global/NBguards remain.",
+  "goal_achieved": false,
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true
+}

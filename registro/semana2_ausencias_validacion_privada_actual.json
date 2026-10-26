@@ -1,14 +1,80 @@
 {
   "author": "Codex",
-  "utc": "2026-10-26T20:38:59.830737+00:00",
-  "status": "P26registered_before_target_learning",
+  "utc": "2026-10-26T20:44:15.756019+00:00",
+  "status": "P26complete_weak_point_gain_not_admitted",
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_ausencias_validacion_privada_plan.json",
   "plan_sha256": "d2496de4b84196b7ca0045affd6552eb132a592a9bfd2ebe7f30961451f788cf",
   "forum": {
     "author": "Codex",
-    "id": "COD-S2-20261026-PRIVADA-P26-AUSENCIAS-PREVIO",
-    "utc": "2026-10-26T20:38:59+00:00",
-    "previous_sha256": "cf55c9eb9f3358f2c7bc6d1f599c435a606db2f95a9eb97126f31d82bc7ddfbd",
-    "sha256": "74e7b0cb804cdca17ae21d50307ad58856c93e9f31a36ea32a775947cd146e31"
-  }
+    "id": "COD-S2-20261026-PRIVADA-P26-AUSENCIAS-RESULTADO",
+    "utc": "2026-10-26T20:44:15+00:00",
+    "previous_sha256": "74e7b0cb804cdca17ae21d50307ad58856c93e9f31a36ea32a775947cd146e31",
+    "sha256": "384c9407cba533d734d34149e3a3daaf739ecf94661140439345ab5f07d60e67"
+  },
+  "context_report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P26_validacion_ausencias_20261026/P26_context_report.json",
+  "context_report_sha256": "3c0fb7a430dd0b6101805ebee4c21f1bf0dbed697be6089c76ceeda6b4f8f860",
+  "replay": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P26_validacion_ausencias_20261026/P26_replay_context.json",
+  "replay_sha256": "7201123e28812f87f61ae8cbbad9a881d14b3a290df4deed0f95d6c653003570",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P26_VALIDACION_AUSENCIAS.md",
+  "new_primary_closed_learners": 30,
+  "adverse_closed_learners_separate": 30,
+  "new_primary_constants": 670,
+  "constants": {
+    "shape_factors": 280,
+    "level_constants": 90,
+    "residual_factors": 180,
+    "training_nuisance_levels": 120,
+    "new_source_component_calls": 30,
+    "new_residual_stage_calls": 40,
+    "shape_training_normalizers_separate": 80,
+    "training_stage_normalizers_separate": 120,
+    "held_stage_normalizers_separate": 120
+  },
+  "global_nominal": {
+    "POOLED": {
+      "delta": 0.00033314922249426133,
+      "bootstrap95": [
+        -8.043100002634877e-05,
+        0.0007877310841533964
+      ],
+      "post31_delta": -0.0004120786249712605,
+      "worst_cell_delta": -0.0044723873952137
+    },
+    "TRANSFER": {
+      "delta": 0.00043423671017232265,
+      "bootstrap95": [
+        -4.1443696534429495e-05,
+        0.0009325968822217882
+      ],
+      "post31_delta": -0.000464122847615727,
+      "worst_cell_delta": -0.00026592934038631655
+    }
+  },
+  "global_gates": {
+    "pooled_delta_ge002": false,
+    "pooled_lower95_positive": false,
+    "pooled_atleast4positive_folds": true,
+    "both_pooled_years_nonnegative": true,
+    "pooled_post31_nonnegative": false,
+    "conditional_transfer_nonnegative": true,
+    "all_nominal_and_stress_cell_floors": false
+  },
+  "new_business_gates": {
+    "cohort_nominal_points_above_floor": true,
+    "cohort_nominal_lower95_above_floor": false,
+    "cohort_family16_lower_above_floor": false,
+    "cohort_all_stress_points_above_floor": true,
+    "pooled_nominal_family16_lower_positive": false
+  },
+  "new_source_fits": 0,
+  "new_C0_fits": 0,
+  "new_future_inference": 0,
+  "new_final_prices": 0,
+  "new_submissions": 0,
+  "adopted": false,
+  "private_improvement_established": false,
+  "goal_achieved": false,
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true,
+  "next_unit": "P27: inspect existing frequency/severity/peril recipes and their response/exposure/reporting contracts before considering a distinct standard source model. Use bounded existing B00-B20and phase2FS/FSp/tanda1/tanda8/tanda9recipes, preserve their adverse results and avoid rerunning them. Establish whether an untied count/severity model under current source2021-2024/eCost is genuinely new and identifiable with saved reporting objects. Never derive claim counts from aggregate positive T0, treat cost completion as frequency completion, or reuse absent C0ancestry. Inspect row/year/group/response/source hashes and missing dependencies only; no fitting, source inference, new target scores or2025prices in this readiness unit. If an equivalent recipe exists, reuse its evidence; if prerequisites fail, document the missing contract rather than fit an arbitrary offset. Do not search P25mask rates/seed/line mixtures or lift floors from its weak P26point gain. Keep B00/F3c and2024open/adaptive."
 }
