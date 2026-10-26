@@ -61,6 +61,18 @@ def remove_output_hash_gates(text):
     return data.decode('utf-8'), len(spans)
 
 
+def persist_fsp_models(text, production):
+    scope = 'fsp_prod' if production else 'fsp_dev'
+    directory = f'TRABAJO / "modelos/{scope}"'
+    needle = '    bf, nf = fit(Xd, n, off, PF, val)'
+    assert text.count(needle) == 1
+    text = text.replace(needle, needle + f'\n    ({directory}).mkdir(parents=True, exist_ok=True)\n    bf.save_model(str({directory} / f"f_{{linea}}_{{p}}.txt"))')
+    needle = '    bs, ns = fit(Xd[s].reset_index(drop=True), yp[s] / n[s], np.full(s.sum(), np.log(msev)), PS, val[s], w=n[s])'
+    assert text.count(needle) == 1
+    text = text.replace(needle, needle + f'\n    bs.save_model(str({directory} / f"s_{{linea}}_{{p}}.txt"))\n    guardar_json({{"b0": b0, "msev": msev, "nf": nf, "ns": ns}}, {directory} / f"meta_{{linea}}_{{p}}.json")')
+    return text
+
+
 def plan():
     rows = []
     def add(name, family, argv, **extra): rows.append(dict(id=name, family=family, argv=argv, **extra))
@@ -151,6 +163,9 @@ def prepare(work):
         if m017:
             text, count = remove_output_hash_gates(text)
             if count: changes.append({'guardas_sha_historico_trasladadas_al_cotejo_externo': count})
+        if destination in ('ml/codigo/fsp_light.py','ml/codigo/fsp_light_prod.py'):
+            text = persist_fsp_models(text, destination.endswith('_prod.py'))
+            changes.append({'persistencia': 'Guardar cada modelo final y sus offsets después del ajuste, sin cambiar cálculos ni parámetros.'})
         p = work / destination
         if p.exists(): raise RuntimeError('Destino ya existente: ' + destination)
         p.parent.mkdir(parents=True, exist_ok=True)
@@ -203,6 +218,28 @@ def prepare(work):
          'historical_row_predictions_as_inputs': False, 'source_models_as_inputs': False,
          'restorations_not_recovered_originals': ['REP-N2 global curve from conf_insumos formula without year filter', 'pre-ID01 customer linkage for historical motor A1']})
     print(json.dumps({'supplement_files': len(entries), 'steps': len(plan())}))
+
+
+def add_persistence(work):
+    # Enmienda operativa antes del primer ajuste FSp. No modifica una etapa
+    # activa ni repite ajustes; conserva el manifiesto anterior completo.
+    manifest_path=work/'chain_manifest.json'
+    manifest=json.loads(manifest_path.read_text(encoding='utf-8'))
+    assert not list((work/'chain_receipts').glob('FSp_*.json')), 'Ya se calculó FSp; no cambiar su código'
+    livepath=work/'chain_live.json'
+    if livepath.exists():assert not json.loads(livepath.read_text(encoding='utf-8')).get('stage','').startswith('FSp_')
+    previous=work/'chain_manifest_antes_persistencia_fsp.json'
+    assert not previous.exists(),'La enmienda ya fue aplicada'
+    shutil.copyfile(manifest_path,previous)
+    for entry in manifest['files']:
+        if entry['path'] in ('ml/codigo/fsp_light.py','ml/codigo/fsp_light_prod.py'):
+            p=work/entry['path'];assert sha(p)==entry['sha256']
+            text=persist_fsp_models(p.read_text(encoding='utf-8'),p.name.endswith('_prod.py'))
+            compile(text,str(p),'exec');p.write_text(text,encoding='utf-8',newline='\n')
+            entry['sha256']=sha(p);entry['changes'].append({'persistencia':'Guardar modelos finales y offsets, sin cambio estadístico.'})
+    manifest['persistence_amendment']={'utc':now(),'previous_manifest_sha256':sha(previous),'new_fits':0,'statistical_changes':False}
+    save(manifest_path,manifest)
+    print(json.dumps(manifest['persistence_amendment']))
 
 
 def scan(work):
@@ -258,8 +295,9 @@ def run(work, until):
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('mode',choices=('preparar','correr'));p.add_argument('--trabajo',type=Path,required=True);p.add_argument('--hasta',choices=[s['id'] for s in plan()],default='m017_F4c')
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('mode',choices=('preparar','correr','conservar-modelos-fsp'));p.add_argument('--trabajo',type=Path,required=True);p.add_argument('--hasta',choices=[s['id'] for s in plan()],default='m017_F4c')
     a=p.parse_args();w=a.trabajo.resolve()
     assert REPO/'privado' in w.parents
     if a.mode=='preparar':prepare(w)
+    elif a.mode=='conservar-modelos-fsp':add_persistence(w)
     else:raise SystemExit(run(w,a.hasta))

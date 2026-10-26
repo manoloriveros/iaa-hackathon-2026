@@ -1,0 +1,37 @@
+{
+  "id": "REENTRENO-ORIGINALES-20261026",
+  "autor": "Codex",
+  "utc": "2026-10-26T22:14:10.852179+00:00",
+  "estado": "en_ejecucion_local",
+  "plan": "registro/reentrenamiento_originales_plan.json",
+  "cadena_plan": "registro/reentrenamiento_cadena_plan.json",
+  "guia": "docs/REENTRENAMIENTO_ORIGINALES.md",
+  "corrida": "privado/reentrenamiento_completo_20261026/corrida",
+  "unidad_inicial": {
+    "utc": "2026-10-26T22:13:29.653550+00:00",
+    "state": "stages_complete",
+    "until": "t2b_prod_contents"
+  },
+  "manifiesto_sha256": "d5b77fe76f265bd08d6cc64b668497234789c08581839a178c7cb3a278e1279d",
+  "cadena_manifiesto_sha256": "bc52f1bd49f5432d171e46f1ac473827cb6696d6ed3c7e2cbbba4b9dd7937305",
+  "cotejo_inicial": "privado/reentrenamiento_completo_20261026/comparacion_T2b_parcial.json",
+  "aislamiento": "privado/reentrenamiento_completo_20261026/corrida/verification_isolation.json",
+  "commits": [
+    "49140b2",
+    "8979f0b"
+  ],
+  "source_commit": "40b3100",
+  "procesos_tool_sessions": {
+    "T2b": 4979,
+    "continuacion": 5265
+  },
+  "kaggle_envios": 0,
+  "red_en_hijos": false,
+  "entrenamiento_remoto": false,
+  "push": false,
+  "alcance": "Reentrenamiento histórico, sin nuevo modelo seleccionado ni validación independiente.",
+  "restauraciones": [
+    "REP-N2 global desde fórmula conf_insumos sin filtro anual",
+    "A1 motor histórico anterior a ID01, solo en su ancestro de confirmación"
+  ]
+}
