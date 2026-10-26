@@ -1,0 +1,13 @@
+
+
+## Mezcla de perils y completitud por riesgo, 26 de octubre de 2026
+
+Codex, 2026-10-26T09:02:52.492814+00:00. Se revisaron los 109.296 periodos retenidos de 2023/2024, por los cinco folds guardados. Se comparó el enlace global con perfiles f*s de fuente y, aparte, kappa*f*s exterior ya guardado. Cero ajustes, C0, momentos, inferencias, precios o scores nuevos. 39 de 120 celdas de fold/perfil/ramo/año/negocio superan el filtro descriptivo preinscrito. Esas celdas están relacionadas y no son 120 observaciones independientes.
+
+Al reunir los cinco folds de 2024, la fracción con diferencia multiplicativa de completitud mayor de 1,05 es 57,29% (fuente) y 62,20% (perfil exterior) en autos nuevos; 38,17% y 27,60% en edificios nuevos. En renovaciones de autos es 32,92% y 34,79%. Contenidos muestra diferencias mucho menores; 2023 está casi completamente desarrollado bajo estas curvas. Esto documenta una posible limitación de la mezcla global; no demuestra que los perfiles FSp representen el verdadero coste de último ni que una exposición nueva mejore la predicción.
+
+La primera versión falló al exigir q>0 para cada peril: una fila retenida de subsidencia tiene q=0 legítimo. Se conservan el fallo, código y ocho ámbitos completos; v2 admite q=0 con log(0)=-infinito y solo completa siete ámbitos. No se ponen mínimos o se cambian curvas. Se comprobó membresía exterior exacta, independencia por grupo, mezcla global, log-sum-exp y las identidades de escala/completitud. La función de perfiles ignora costes, reservas y recuentos observados; los controles alterados lo comprobaron.
+
+El siguiente contraste mantendrá T0, árboles fuente y reglas de corrección estándar. Cambiará únicamente el enlace de observación: perfil exterior como primario y fuente sola como ablation declarada. Cada perfil exterior debe aplicarse a todas las filas de su propio ámbito. Usar para entrenamiento el vector OOF de otros folds introduciría ancestros protegidos; queda expresamente excluido. Antes de nuevas calibraciones o scores se preparará el flujo, se verificará con datos sintéticos y se congelará receta, coste y criterio en el foro. En la predicción de último de 2025, la completitud es 1 por definición del objetivo, no la completitud observada al corte de 2024. Esto se comprobará en el adaptador futuro, sin generar precios ahora.
+
+Persisten los límites de cola, reservas, maestros sin fecha y del proxy de coste f*s.2024 sigue abierto y adaptativo. B00, F3c 0,16914 y alternativas intactos; ningún cupo consumido y objetivo 0,17 activo. Evidencia: Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/completitud_por_riesgo_diagnostico_20261026_v2/report.json.

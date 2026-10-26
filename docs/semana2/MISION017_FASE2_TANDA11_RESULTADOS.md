@@ -1,0 +1,23 @@
+
+
+## GLM conjunto de factores residuales: tanda 11, 26 de octubre de 2026 (Bogotá)
+
+Codex, 2026-10-26T05:01:52.103307+00:00. Se completaron20GLM Tweedie sencillos con los mismos efectos principales de la tanda10. La contracción conserva K300 mediante precisión Fisher de entrenamiento; se estiman conjuntamente las categorías y los cuatro interceptos año/negocio, estos últimos sin transferir. Se mantuvieron grupos, años, C0/N3, exposición y categorías. No se eligió una penalización nueva ni se añadieron interacciones para corregir los folds que perdían.
+
+| Variante | D² local | Diferencia frente a N3 | Diferencia frente a su etapa G | IC 95 % por componentes frente a N3 |
+|---|---:|---:|---:|---|
+| J1 | 0.136406 | +0.001156 | +0.00000055 | [+0.000018; +0.002360] |
+| J2 | 0.136743 | +0.001494 | +0.00001320 | [+0.000235; +0.002867] |
+| J3 | 0.137099 | +0.001849 | -0.00000101 | [+0.000592; +0.003240] |
+
+El ajuste conjunto produce prácticamente lo mismo que el pase secuencial. J3 gana+0,001849 frente a N3, pero queda−0,000001 frente a G3. Sigue por debajo de+0,002, solo tres folds son positivos y la diferencia tras retirar los31grupos favorables queda apenas negativa (−0,000011). El sustituto A1 original2024 también queda ligeramente negativo bajo la ponderación diagnóstica (−0,000145). J1/J2 tampoco pasan todos los controles. No se presenta la casi igualdad como una nueva mejora.
+
+La ganancia media de los factores se mantiene en ambos años y el intervalo simultáneo de J3 frente a N3 es positivo, pero eso no elimina la fragilidad por folds/influencia ni acredita mejora del C1/F2 completo. La sensibilidad hacia2025 es positiva y ancha, con intervalos compatibles con cero y el mismo fallo previo de ESS. No se admite otro CSV ni se gasta un envío por estas tandas. Las alternativas G/J quedan conservadas.
+
+Los20objetivos pasaron una codificación independiente de categorías completas, cálculo de la pérdida scikit-learn, gradientes y Hessianos por diferencias finitas. Todos los Hessianos penalizados son definidos positivos. Las10reproducciones por ámbito fueron exactas, con el optimizador bloqueado, C0 excluyendo al retenido y aplicación invariante a costes/reservas retenidos. El flujo sintético de aprendizaje también pasó la alteración del retenido y las identidades neutral/desconocida. La advertencia de pandas sobre futuras versiones ante categorías desconocidas apareció en esa prueba intencional y no invalida la identidad comprobada en el entorno actual; no se cambió la librería.
+
+Coste:20GLM reales (cinco de motor compartidos entre variantes),80normalizadores sin etiquetas, cero C0, modelos fuente, precios de test o envíos. Tres ajustes sintéticos se cuentan aparte. Quedan107ajustes iterativos nuevos en esta fase; las90estimaciones cerradas de factores y80niveles de la tanda10 se conservan en sus contadores separados. Los resultados son exploratorios tras búsqueda adaptativa; no revisión profesional independiente. 2024 sigue abierto por instrucción humana y se mantiene como desarrollo. B00, F2, C1 y todas las versiones siguen guardadas. El mejor público comprobado continúa en0,16519:0,17 aún no está demostrado.
+
+Evidencia: Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/tanda11_conjunto_20261026_v1/validation_v1/report.json.
+
+Siguiente unidad: No repetir el contraste secuencial/conjunto o retocar K/umbrales por sus resultados: la diferencia es mínima y no resuelve los folds adversos. Conciliar ahora mediante lectura la cuota y los recibos públicos propios actuales, sin leer private_score o enviar nada, para comprobar posibles cambios y evitar duplicados antes de decidir el siguiente experimento de entrega. Revisar de forma concreta el expediente de F3c recibido y su regla de aplicación sobre el C1 medido; separar evidencia estable de frecuencia, mejora media por ambos años y efecto marginal de cada paso de los controles que fallaron. Cualquier excepción para un envío de investigación debe quedar explícita y justificada, con receta/CSV, coste, trazabilidad y límites revisados; no equivale a promoción formal ni a declarar superados los criterios, y la propuesta de otra IA no es una autorización humana nueva. La autorización directa vigente del participante permite continuar y decidir sin nuevas preguntas, pero conserva el cuidado de los cupos, la consistencia y la robustez. No ejecutar colas antiguas o cambiar autorizaciones ajenas. Si no hay un candidato suficientemente respaldado, seguir con una necesidad material distinta documentada, no con reajustes pequeños sobre las mismas fuentes. 2024 sigue abierto como desarrollo, B00/F2/C1 y alternativas permanecen. Meta0.17 activa, último recibo comprobado0.16519.

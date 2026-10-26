@@ -1,0 +1,23 @@
+
+
+## Privada P0/P1: puente de producción y soporte anidado, 26 de octubre de 2026
+
+Codex, 2026-10-26T13:34:03.467456+00:00. Se cerró P0 con los objetos guardados y se prepararon los ámbitos de P1. No hubo ajustes de precio, C0, recalibraciones, inferencias de modelos fuente, CSV finales o envíos. H1 continúa diferido por la nueva prioridad privada.
+
+La relación correcta entre observado O y último U incluye exposición y normalizadores: O_m/U_m=(Eredondeada/Ecalendario)*q_m*L_m, con L_m=producto(Núltimo/Nobservado) de sus etapas. El cociente observado H1/G3 incluye L_H1/L_G3. Se verificó por otro cálculo usando precios observados y normalizadores guardados, con error relativo máximo1,11e-15. Una fixture sin respuestas demuestra que ignorar ese término puede producir una discrepancia; no es una medición de error real o privado.
+
+En las filas reales, L_H1/L_G3 varía entre0,99967337y1,00083912 en autos,0,99993926y1,00004074 en contenidos, y es1 en edificios sin etapas residuales. La fórmula de producción se reprodujo con la base S2 completa y protegida. La observación se aplicó después de los normalizadores de último, sin renormalizar precios observados a posteriori. La entrada de cinco miembros futura todavía no se considera validada por esta única instancia por fold.
+
+La diferencia primaria de H1 sobre esa base S2 es +0.00104505, IC95por grupos[+0.00059358,+0.00149932], post31+0.00049094 y peor celda-0.00049825. La dirección es positiva en los cinco folds y ambos años. El mínimo diagnóstico de fase2,0,002, sigue incumplido. El valor apenas cambia respecto al contraste anterior, que se conserva y no se volvió a puntuar. Estas diferencias son de desarrollo local adaptativo, sin una mejora privada demostrada, replay del F3c real o promoción formal.
+
+El nuevo avance de último usó calendario una sola vez, mantuvo los objetos aprendidos y pasó en quince ámbitos la invariancia ante costes/reservas retenidos alterados. Se bloquearon las entradas de aprendizaje durante ese avance. Se calcularon240normalizadores de predicción primarios y240en el control adverso, separados de parámetros ajustados. La base alternativa S2 es reproducible y distinta del F3c recibido; esa limitación permanece explícita.
+
+P1 conservó los cinco folds externos por componentes cliente/dirección y fijó los internos por SHA256 con salH1-NEST-v1 y módulo5, sin respuestas o scores en la asignación. Cada uno de los75ámbitos de ramo/fold externo/miembro excluye los grupos externos y su parte interna. Los componentes f/s y la tasa T2b fueron idénticos en las copias exteriores, por lo que pudieron conservarse como entradas fuente congeladas. Se retiraron de las entradas internas los precios, q y exposiciones efectivas aprendidas previamente.
+
+Todos los ámbitos pasan los mínimos numéricos de notificaciones, marcas de reservas75/100/125y fechas; el mínimo es24notificaciones. Ambas celdas de negocio tienen costes positivos de entrenamiento. Esto acredita que el estimador existente puede intentarse, no credibilidad o precisión suficiente. El mayor peso bruto de un grupo en el coste de un peril de entrenamiento llega a5,70% en autos,19,91% en edificios y12,68% en contenidos; se conserva para evaluar estabilidad y no motiva eliminación de siniestros o cambios de partición.
+
+La siguiente unidad será el flujo numérico anidado completo de la corrección estándar, con375ajustes primarios de curva por peril y375repeticiones adversas de invariancia contabilizadas aparte, además de150aprendizajes cerrados primarios G3/H1 y150controles. No requerirá nuevos modelos fuente ni mayor capacidad. Antes se congelarán el código, presupuesto, criterio y fuentes y se probará el flujo completo con datos sintéticos. La media usará cinco cocientes de último con pesos iguales y el puente externo solo para evaluar; no se aprovecharán objetos externos como si fueran internamente independientes.
+
+El tamaño de entrenamiento interno será aproximadamente64%de las filas frente al80%de los miembros de producción. Los resultados futuros conservarán esa limitación y el uso adaptativo previo de2023/2024. Una evaluación anidada no restituye un holdout intacto. Se mantienen las carencias de cola/reservas, soporte ponderado y disponibilidad temporal de maestros. B00, F3c y todas las alternativas quedan intactos;2024abierto. La prioridad es generalización privada, con pública secundaria y sin declaración de éxito.
+
+Evidencia: Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/puente_ultimo_observado_H1_20261026_v1/report.json y Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/report.json.

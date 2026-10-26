@@ -1,0 +1,15 @@
+
+
+## FSp en nuevo negocio: resultado adverso, 26 de octubre de 2026
+
+Codex, 2026-10-26T07:28:45.245787+00:00. Se aplicó el mismo núcleo fuente prod, C0, κ y pesos fijos a NB, sin estimar ningún parámetro. La aportación NB frente a G3 es +0,00006719, con IC95 [−0,00026738; +0,00036444]. Pierde en2023, solo dos folds son positivos y se deterioran celdas de motor/contenidos2023. La receta completa REN+NB gana +0,00191256 frente a G3, pero falla mínimo, influencia y celdas. No se oculta el daño NB detrás de la mejora REN.
+
+La sensibilidad2025 es −0,00219730 para añadir solo NB y −0,00181573 para la receta completa. El sustituto A1 original mejora, pero no es el A1 corregido ni F3c completo y no rescata el veto de composición. El fallo previo de ESS se mantiene. No se adopta FSp en NB ni se genera otro CSV2025 o envío con ese bloque. Se conservan ambas alternativas y precios históricos.
+
+Pasaron los15controles de aplicación congelada: cambio adverso de costes/recuentos/reservas retenidos sin efecto, identidad de peso cero, filas REN intactas y aritmética logarítmica independiente. Cambiar la bandera de selección NB/REN reproduce exactamente el motor anterior. El primer control falló por dot frente a sum, con diferencia4,55e−13CU antes de puntuar; se conservóv1 y se adoptó la suma canónica del flujo, sin relajar igualdad o cambiar configuración, criterios o bootstrap. Se reutilizó la comprobación de fuentes/pertenencia con SHA; no se repitió aprendizaje.
+
+Coste:45normalizadores sin etiquetas y15.037precios OOF NB aplicados; cero modelos, C0, constantes, inferencias fuente, precios2025 o envíos. Las recomputaciones de controles se conservan separadas. El prototipo REN previo mantiene su condición no admitida y F3c0,16914 sigue como entrega vigente. B00 y alternativas quedan intactos,2024abierto como desarrollo.
+
+El fallo concreto es de transferencia de forma a NB bajo el núcleo probado, no de capacidad insuficiente demostrada. Antes de otro modelo complejo se probará solo la corrección de edad NB por GLM estándar con fuerte contracción, bandas de póliza ya disponibles, sin reestimar C0 ni cambiar la referencia. Evidencia: Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/FSp_NB_aplicacion_20261026_v2/report.json.
+
+Siguiente unidad: NB FSp completo y adverso: no repetir aplicación, κ, modelos, bootstrap o pesos. Registrar y probar un único GLM Tweedie1.5 de ajuste de edad en NB, por ramo, sobre G3 congelado, cinco bandas de edad de póliza, ridge Fisher K300 ya usado, dos interceptos año de entrenamiento no transferidos y normalización NB por año sin etiquetas. Quince ajustes pequeños máximo, sin nuevos árboles/C0/variables de maestros o2025precios. Preparar edad de matrices existentes y soporte; usar los mismos15ámbitos/C0. Conservar los mismos criterios/guardas NB y medir la receta completa con REN congelada sin usarla para ocultar daño NB. No afinar K/bandas/pesos por los retenidos. Falta comparador completoF3c/A1corregido; prototipo ed639b1c no admitido no se envía.2024abierto, B00/alternativas guardados, cuota0, meta0.17activa.
