@@ -2,7 +2,7 @@
   "author": "Codex",
   "as_of_utc": "2026-10-27T02:37:45.227878+00:00",
   "scope": "Own pricing/development lineage only; not all project fits or other authors. Historical main catalog retains its dated counter.",
-  "cumulative_price_base_fits": 1975,
+  "cumulative_price_base_fits": 2005,
   "cumulative_closed_form_constants": 38769,
   "auxiliary_Poisson_Gamma_fits_separate": 30,
   "baseline": {
@@ -3367,6 +3367,50 @@
       "new_CDF_fits": 0,
       "new_scores": 0,
       "new_submissions": 0
+    }
+  },
+  "phase2_private_P75_direct_source_GLM": {
+    "author": "Codex",
+    "utc": "2026-10-27T05:35:42.719190+00:00",
+    "status": "P75single_direct_source_GLM_pooled_complete_transfer_unmeasured",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P75_validacion_GLM_fuente_directa_20261027/report.json",
+    "report_sha256": "60f0483194403eaa64b87416129df0eae978f6ade2a8069ee2080d095bf12a4a",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P75_VALIDACION_GLM_FUENTE_DIRECTA.md",
+    "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+    "nominal": {
+      "delta": -0.005709240897686902,
+      "bootstrap95": [
+        -0.010934649463878033,
+        -0.001196194473805321
+      ],
+      "post31_delta": -0.009327017906080176,
+      "worst_cell_delta": -0.0685597956232357
+    },
+    "P75_minus_P65_point_only": -0.005761751923555176,
+    "all_pooled_gates_pass": false,
+    "conditional_transfer_gate": null,
+    "primary_GLM_fits": 15,
+    "adverse_GLM_fits_separate": 15,
+    "primary_iterative_parameter_counts": {
+      "iterative_GLM_coefficients": 685,
+      "iterative_GLM_intercepts": 15
+    },
+    "target_price_base_ancestors": 0,
+    "new_target_base_fits": 0,
+    "new_source_fits": 0,
+    "new_CDF_fits": 0,
+    "new_closed_constants": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "Review NEWP75single-source-offset GLMloss/coefficients and source-signal contributions vs P65reference architecture without new fits/resampling. The target-base-offset miss is no longer its ancestor, so do not blame that missing stage for its loss. No alpha/field/line rescue, source feature leakage fixes by oracle or public probes; identify a new concrete standard mechanism before another recipe.",
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P75-DIRECTO-RESULTADO",
+      "utc": "2026-10-27T05:35:42+00:00",
+      "previous_sha256": "ac6f4e8c86c4c8c287c19c6d0b4dcbbfeb16da473f6641a1c99c3fca52f92c1f",
+      "sha256": "07d1f2c6cc8d0907f710fe3cfbcdda2a1903ea1eec783310ca6475b895971a5e"
     }
   }
 }
