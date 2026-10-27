@@ -151,8 +151,10 @@ def features():
         for col in ['period_start','period_end']:t[col]=pd.to_datetime(t[col])
         t['year']=t.period_start.dt.year;assert t.year.eq(2025).all()
         t['exposure']=((t.period_end-t.period_start).dt.days+1)/365.
-        t=t.merge(cu,on='customer_id',how='left',validate='m:1').merge(ad,on='address_id',how='left',validate='m:1').merge(weather,on='address_id',how='left',validate='m:1')
-        assert len(t)==n and t.occupation.notna().all()
+        t=t.merge(cu,on='customer_id',how='left',validate='m:1',indicator='customer_join')
+        t=t.merge(ad,on='address_id',how='left',validate='m:1',indicator='address_join')
+        assert len(t)==n and t.customer_join.eq('both').all() and t.address_join.eq('both').all()
+        t=t.drop(columns=['customer_join','address_join']).merge(weather,on='address_id',how='left',validate='m:1')
         t['tenure_years']=t.year-t.customer_since_year;t['property_age']=t.year-t.year_built
         t['start_month']=t.period_start.dt.month;t['full_year']=t.exposure.ge(.99).astype(int);t['log_days_quote']=np.log1p(t.days_quote_to_inception.clip(lower=0))
         t['age_band']=t.driver_age_band if line=='motor' else t.policyholder_age_band
