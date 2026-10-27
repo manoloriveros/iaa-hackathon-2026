@@ -1,14 +1,40 @@
 {
   "author": "Codex",
-  "utc": "2026-10-27T01:40:13.501655+00:00",
-  "status": "P53registered_before_matched_control_learning",
+  "utc": "2026-10-27T01:43:18.706172+00:00",
+  "status": "P53matched_source_control_complete",
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_control_fuente_privada_plan.json",
   "plan_sha256": "212445da2f1e4956ccf9e8d8b6a5a80e3df2a50d5d121d9661820405629595b1",
   "forum": {
     "author": "Codex",
-    "id": "COD-S2-20261027-PRIVADA-P53-FUENTE-PREVIO",
-    "utc": "2026-10-27T01:40:13+00:00",
-    "previous_sha256": "1dc93d97dbebec86ab84413ab51af6b8fddc1bcd9e975a06ad227b92e0b3d48f",
-    "sha256": "3960e0e0983f5db185772d72971ea0164aea6ed79b6228f9f1e1176f684084cd"
+    "id": "COD-S2-20261027-PRIVADA-P53-FUENTE-RESULTADO",
+    "utc": "2026-10-27T01:43:18+00:00",
+    "previous_sha256": "3960e0e0983f5db185772d72971ea0164aea6ed79b6228f9f1e1176f684084cd",
+    "sha256": "8e3e20fbf12d6bbfc26ec87c46864fdbebe24a64116900eb441438cc4cc93b44"
+  },
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P53_control_fuente_20261027/report.json",
+  "report_sha256": "8d7fe3e50fc7b06b18a31559a6b9fe79c9fbb7d1127ff1f324a0bf9999198dfe",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P53_CONTROL_FUENTE_DESTINO_COMUN.md",
+  "global": {
+    "scope": "GLOBAL",
+    "rows": 109296,
+    "groups": 36398,
+    "delta_control_vs_reference": -0.0028081950990514063,
+    "delta_A1R_vs_control": -0.0001900237411293193,
+    "delta_A1R_vs_reference": -0.0029982188401807257
+  },
+  "primary_learners": 15,
+  "adverse_learners_separate": 15,
+  "new_primary_constants": 355,
+  "new_source_fits": 0,
+  "new_C0_fits": 0,
+  "new_submissions": 0,
+  "next_unit": "Review the matched-source effect and its saved cell/fold support before another recipe. Do not tune levels, lines, qcurves or weights to retained outcomes. No control point alone admits a delivery; preserve all fixed gates and require a concrete mechanism.",
+  "2024_open": true,
+  "goal_achieved": false,
+  "execution": null,
+  "terminal_tool_receipt": {
+    "exec_session_id": 13447,
+    "exit_code": 0,
+    "pid": 41024
   }
 }

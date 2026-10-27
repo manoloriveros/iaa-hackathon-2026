@@ -3,7 +3,7 @@
   "as_of_utc": "2026-10-27T01:34:20.615722+00:00",
   "scope": "Own pricing/development lineage only; not all project fits or other authors. Historical main catalog retains its dated counter.",
   "cumulative_price_base_fits": 1825,
-  "cumulative_closed_form_constants": 31379,
+  "cumulative_closed_form_constants": 31734,
   "auxiliary_Poisson_Gamma_fits_separate": 30,
   "baseline": {
     "index": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_v7_snapshot.json",
@@ -2308,5 +2308,137 @@
     "synthetic_primary_learners": 3,
     "synthetic_adverse_learners_separate": 3,
     "new_source_fits": 0
+  },
+  "phase2_private_P53_matched_source": {
+    "author": "Codex",
+    "utc": "2026-10-27T01:43:18.706172+00:00",
+    "status": "P53matched_source_control_complete",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P53_control_fuente_20261027/report.json",
+    "report_sha256": "8d7fe3e50fc7b06b18a31559a6b9fe79c9fbb7d1127ff1f324a0bf9999198dfe",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P53_CONTROL_FUENTE_DESTINO_COMUN.md",
+    "global": {
+      "scope": "GLOBAL",
+      "rows": 109296,
+      "groups": 36398,
+      "delta_control_vs_reference": -0.0028081950990514063,
+      "delta_A1R_vs_control": -0.0001900237411293193,
+      "delta_A1R_vs_reference": -0.0029982188401807257
+    },
+    "primary_learners": 15,
+    "adverse_learners_separate": 15,
+    "new_primary_constants": 355,
+    "new_source_fits": 0,
+    "new_C0_fits": 0,
+    "new_submissions": 0,
+    "next_unit": "Review the matched-source effect and its saved cell/fold support before another recipe. Do not tune levels, lines, qcurves or weights to retained outcomes. No control point alone admits a delivery; preserve all fixed gates and require a concrete mechanism.",
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P53-FUENTE-RESULTADO",
+      "utc": "2026-10-27T01:43:18+00:00",
+      "previous_sha256": "3960e0e0983f5db185772d72971ea0164aea6ed79b6228f9f1e1176f684084cd",
+      "sha256": "8e3e20fbf12d6bbfc26ec87c46864fdbebe24a64116900eb441438cc4cc93b44"
+    }
+  },
+  "phase2_private_P54_mixture_preflight": {
+    "author": "Codex",
+    "utc": "2026-10-27T01:47:58.089387+00:00",
+    "records": [
+      {
+        "line": "motor",
+        "held_label_and_held_q_ultimate_invariance": true,
+        "serialization_exact": true,
+        "arithmetic_half_components_scalar_check": true,
+        "observation_bridge_component_identity": true,
+        "ultimate_and_observed_normalizers_recorded_separately": {
+          "ultimate": {
+            "gender": {
+              "2023|0": 1.0012198142359992,
+              "2023|1": 0.999012778276496,
+              "2024|0": 1.0066327587334207,
+              "2024|1": 1.0058472942730379
+            }
+          },
+          "observed": {
+            "gender": {
+              "2023|0": 0.9995882379430303,
+              "2023|1": 0.9983362173731903,
+              "2024|0": 1.0064021405901564,
+              "2024|1": 1.0066188801597857
+            }
+          }
+        }
+      },
+      {
+        "line": "buildings",
+        "held_label_and_held_q_ultimate_invariance": true,
+        "serialization_exact": true,
+        "arithmetic_half_components_scalar_check": true,
+        "observation_bridge_component_identity": true,
+        "ultimate_and_observed_normalizers_recorded_separately": {
+          "ultimate": {},
+          "observed": {}
+        }
+      },
+      {
+        "line": "contents",
+        "held_label_and_held_q_ultimate_invariance": true,
+        "serialization_exact": true,
+        "arithmetic_half_components_scalar_check": true,
+        "observation_bridge_component_identity": true,
+        "ultimate_and_observed_normalizers_recorded_separately": {
+          "ultimate": {
+            "gender": {
+              "2023|0": 1.001279384069578,
+              "2023|1": 0.9988816210489557,
+              "2024|0": 1.0066396348047848,
+              "2024|1": 1.0058634859032705
+            },
+            "works_from_home": {
+              "2023|0": 0.9964084129363485,
+              "2023|1": 1.0006019821069616,
+              "2024|0": 1.0020620339614388,
+              "2024|1": 0.99652992099194
+            },
+            "marketing_segment": {
+              "2023|0": 0.9948066820467957,
+              "2023|1": 1.0025962183921002,
+              "2024|0": 0.9953264817640349,
+              "2024|1": 0.9964489436018759
+            }
+          },
+          "observed": {
+            "gender": {
+              "2023|0": 0.9996424895744596,
+              "2023|1": 0.9982254083034336,
+              "2024|0": 1.0063972070450478,
+              "2024|1": 1.0066439828781764
+            },
+            "works_from_home": {
+              "2023|0": 0.997179317528763,
+              "2023|1": 1.0006913389029843,
+              "2024|0": 1.0011623880128302,
+              "2024|1": 0.9974054476152417
+            },
+            "marketing_segment": {
+              "2023|0": 0.9924351863576181,
+              "2023|1": 1.0062756547790879,
+              "2024|0": 0.9942281039381831,
+              "2024|1": 0.9980520029986225
+            }
+          }
+        }
+      }
+    ],
+    "synthetic_primary_whole_learners": 3,
+    "synthetic_adverse_whole_learners_separate": 3,
+    "synthetic_component_calibrations_primary": 6,
+    "synthetic_component_calibrations_adverse_separate": 6,
+    "synthetic_residual_stage_calls_primary": 4,
+    "synthetic_residual_stage_calls_adverse_separate": 4,
+    "real_price_fits": 0,
+    "new_C0_fits": 0,
+    "new_scores": 0
   }
 }
