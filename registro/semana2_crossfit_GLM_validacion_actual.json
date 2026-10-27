@@ -1,15 +1,15 @@
 {
   "author": "Codex",
-  "utc": "2026-10-27T03:06:33.046747+00:00",
-  "status": "P60registered_before_real_crossfit_learning",
+  "utc": "2026-10-27T03:20:08.164787+00:00",
+  "status": "P60crossfitted_GLM_pooled_complete_transfer_unmeasured",
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_crossfit_GLM_validacion_plan.json",
   "plan_sha256": "003f1850c0d64d6b8c3243dfd4975025df82544e5e3791b1eecd733cc752906c",
   "forum": {
     "author": "Codex",
-    "id": "COD-S2-20261027-PRIVADA-P60-CROSSFIT-PREVIO",
-    "utc": "2026-10-27T03:06:33+00:00",
-    "previous_sha256": "848077a85c8363f62c74eff281b292689399b71b0a5528e457fcb9aa3dc035b2",
-    "sha256": "e7c17ac900026f5ab3d07554e82b79d99ed13546b68b87ba8580d7e05b22d8c0"
+    "id": "COD-S2-20261027-PRIVADA-P60-CROSSFIT-RESULTADO",
+    "utc": "2026-10-27T03:20:08+00:00",
+    "previous_sha256": "a6d01f25f182ab001ae7a75320816b2a843326d4cd2f07401ebdd4a2914275e3",
+    "sha256": "a2aa82472e3afdb8e63c66615db858a320b511fc5af429ee721093732e3715a8"
   },
   "trace_guard_amendment_forum": {
     "author": "Codex",
@@ -17,5 +17,56 @@
     "utc": "2026-10-27T03:09:25+00:00",
     "previous_sha256": "e7c17ac900026f5ab3d07554e82b79d99ed13546b68b87ba8580d7e05b22d8c0",
     "sha256": "aa59332da1ad0582b41910c684e856647394fcbd6564808e3e7cb717ca2e6779"
+  },
+  "execution": null,
+  "terminal_tool_receipt": {
+    "exec_session_id": 94891,
+    "exit_code": 0,
+    "replay_exit_code": 0
+  },
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P60_validacion_crossfit_GLM_20261027/report.json",
+  "report_sha256": "92ab31b9a84edca5eab02879539dda8444c30dd69a6cc33793f0d2e77046d048",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P60_VALIDACION_CROSSFIT_GLM.md",
+  "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+  "nominal": {
+    "delta": -0.003058913364891191,
+    "bootstrap95": [
+      -0.005569848016489322,
+      -0.0008299022621248233
+    ],
+    "post31_delta": -0.004785478592613658,
+    "worst_cell_delta": -0.014399998159199203
+  },
+  "all_pooled_gates_pass": false,
+  "conditional_transfer_gate": null,
+  "primary_GLM_fits": 15,
+  "adverse_GLM_fits_separate": 15,
+  "primary_inner_base_learners": 75,
+  "adverse_inner_base_learners_separate": 75,
+  "primary_cost_CDF_estimators": 275,
+  "adverse_cost_CDF_estimators_separate": 275,
+  "primary_components": 150,
+  "adverse_components_separate": 150,
+  "primary_shared_residual_stages": 100,
+  "adverse_shared_residual_stages_separate": 100,
+  "new_primary_closed_constants": 2700,
+  "new_source_price_fits": 0,
+  "new2025inference": 0,
+  "new_submissions": 0,
+  "next_unit": "Review NEWP60cross-fitted results/coefficients versus the saved P57in-sample and P55base without refitting. Determine whether cross-fitting addressed the documented transport issue; no automatic alpha/field/weight rescue. Keep all adverse scenarios/cohorts and explain remaining standard-model need before another registered candidate. No repeat old support/C0audits or public probes.",
+  "2024_open": true,
+  "goal_achieved": false,
+  "continuation_decision": {
+    "utc": "2026-10-27T03:22:14.659915+00:00",
+    "paired_point_P60minusP57": -0.0003000174557118611,
+    "paired_interval_not_computed": true,
+    "next_unit": "Before further price fitting, review the conditional observation contract: trace ORIGINALdeveloped-only T2bper-peril f/s fields from saved P1canonical to source ancestry and annual/monetary units, and whether a row-weighted cost completion can be defined under the NEWP50/P60curves. Reuse existing P41/P1evidence; do not repeat P46paired-GLMprofile comparisons or unchanged audits. No C0/source/GLMrefits, alpha/field/weight search or public probe. If trace valid, freeze a parsimonious standard observation-link hypothesis and full unchanged gates before any later fit. Current common line qremains an assumption, not a proved failure or gain.",
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P60-CONTINUIDAD",
+      "utc": "2026-10-27T03:22:14+00:00",
+      "previous_sha256": "a2aa82472e3afdb8e63c66615db858a320b511fc5af429ee721093732e3715a8",
+      "sha256": "1f93f12571df29f6223e206a53c071f9392cd8c9b531843b42c3ffa3372ec995"
+    }
   }
 }

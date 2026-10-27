@@ -4,7 +4,7 @@
   "utc": "2026-10-26T13:15:10.432194+00:00",
   "scope": "Own prepared H1 research delivery only; no statement about other authors or chats",
   "allow_new_submission": false,
-  "reason": "P57offsetGLMconverged and its full replay passed, but fails all predictive pooled/cohort gates: delta-.00275890with95interval belowzero. P58shows training improvements15/15vsheld5/15and incremental delta-.00171113vsits P55base; this does not prove a cross-fitting remedy. Preserve F3cCOMPLETEand every alternative. No admitted own CSVor missing authorization; next unit is train-only inner-evaluation preflight before another fit.",
+  "reason": "P60complete cross-fitted model also fails every predictive pooled/cohort guard (delta-.00305891,95interval belowzero), despite solver and full-flow replay controls passing. No admitted new own CSV. Preserve F3cCOMPLETE/all alternatives and quota. Next review is source-peril observation ancestry/units, not another alpha/feature or public-score search. No missing human authorization.",
   "policy": "Hackaton/Repositorio_IAA2026/registro/semana2_mision_privada_plan_v1.json",
   "policy_sha256": "3329dbc7fe931d71e1e945bdf536fd9d810040f2626709f3d103c2dc5cdd7876",
   "historical_admission_unmodified": true,
@@ -13,7 +13,7 @@
   "release_requires_new_admission_for_exact_transport_hash": true,
   "2024_open": true,
   "B00_all_alternatives_preserved": true,
-  "last_evidence_review_utc": "2026-10-27T02:37:45.194946+00:00",
+  "last_evidence_review_utc": "2026-10-27T03:22:14.789804+00:00",
   "prior_reason_superseded": {
     "utc": "2026-10-26T13:15:10.432194+00:00",
     "reason": "Participant now prioritizes private generalization; complete production/observation bridge and ensemblevalidation remain unestablished. Preserve quota until that review."
@@ -30,7 +30,8 @@
     "P48",
     "P52",
     "P55",
-    "P57"
+    "P57",
+    "P60"
   ],
   "last_confirmed_own_submission": {
     "ref": 57654514,
@@ -64,7 +65,11 @@
     "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P57_validacion_GLM_offset_20261027/replay_report.json": "fd99baff23953f2a6343e95e63518ec6d8683f0b7b13efcf072393851aa7772b",
     "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P57_validacion_GLM_offset_20261027/completion_receipt.json": "547a33adeded2f5c8cbe9e16befb9fc0ca4afaa9a96cf1630c5113a7a42a7969",
     "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P58_diagnostico_GLM_20261027/report.json": "7f59f7dbbf8ab6359fbe36c234a6dec84960262398fe43cae6428b2085bd7015",
-    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P58_diagnostico_GLM_20261027/completion_receipt.json": "c534f2318ff5981df25875c8411ca0121d85f86882f83e0e61d89939e17c3514"
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P58_diagnostico_GLM_20261027/completion_receipt.json": "c534f2318ff5981df25875c8411ca0121d85f86882f83e0e61d89939e17c3514",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P60_validacion_crossfit_GLM_20261027/report.json": "92ab31b9a84edca5eab02879539dda8444c30dd69a6cc33793f0d2e77046d048",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P60_validacion_crossfit_GLM_20261027/input_report.json": "99a0147fc7d570bdfa53b8585d10fa9cbab7fd9a8ac374cdd2e03295b04353d1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P60_validacion_crossfit_GLM_20261027/replay_report.json": "0280d65bf73fea8ae61dcc78948b073b26d3967348a96a1fef73f593e72e4dca",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P60_validacion_crossfit_GLM_20261027/completion_receipt.json": "63b764b426359479121aba72213bd3230d0d76b0add71e33fea49acd010c1b1e"
   },
   "user_authorization_not_pending": true,
   "new_fits_this_status_review": 0,

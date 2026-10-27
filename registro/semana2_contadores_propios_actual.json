@@ -2,8 +2,8 @@
   "author": "Codex",
   "as_of_utc": "2026-10-27T02:37:45.227878+00:00",
   "scope": "Own pricing/development lineage only; not all project fits or other authors. Historical main catalog retains its dated counter.",
-  "cumulative_price_base_fits": 1855,
-  "cumulative_closed_form_constants": 32274,
+  "cumulative_price_base_fits": 1885,
+  "cumulative_closed_form_constants": 34974,
   "auxiliary_Poisson_Gamma_fits_separate": 30,
   "baseline": {
     "index": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_v7_snapshot.json",
@@ -2638,5 +2638,49 @@
     "real_fits": 0,
     "real_scores": 0,
     "new_submissions": 0
+  },
+  "phase2_private_P60_crossfit_GLM": {
+    "author": "Codex",
+    "utc": "2026-10-27T03:20:08.164787+00:00",
+    "status": "P60crossfitted_GLM_pooled_complete_transfer_unmeasured",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P60_validacion_crossfit_GLM_20261027/report.json",
+    "report_sha256": "92ab31b9a84edca5eab02879539dda8444c30dd69a6cc33793f0d2e77046d048",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P60_VALIDACION_CROSSFIT_GLM.md",
+    "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+    "nominal": {
+      "delta": -0.003058913364891191,
+      "bootstrap95": [
+        -0.005569848016489322,
+        -0.0008299022621248233
+      ],
+      "post31_delta": -0.004785478592613658,
+      "worst_cell_delta": -0.014399998159199203
+    },
+    "all_pooled_gates_pass": false,
+    "conditional_transfer_gate": null,
+    "primary_GLM_fits": 15,
+    "adverse_GLM_fits_separate": 15,
+    "primary_inner_base_learners": 75,
+    "adverse_inner_base_learners_separate": 75,
+    "primary_cost_CDF_estimators": 275,
+    "adverse_cost_CDF_estimators_separate": 275,
+    "primary_components": 150,
+    "adverse_components_separate": 150,
+    "primary_shared_residual_stages": 100,
+    "adverse_shared_residual_stages_separate": 100,
+    "new_primary_closed_constants": 2700,
+    "new_source_price_fits": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "Review NEWP60cross-fitted results/coefficients versus the saved P57in-sample and P55base without refitting. Determine whether cross-fitting addressed the documented transport issue; no automatic alpha/field/weight rescue. Keep all adverse scenarios/cohorts and explain remaining standard-model need before another registered candidate. No repeat old support/C0audits or public probes.",
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P60-CROSSFIT-RESULTADO",
+      "utc": "2026-10-27T03:20:08+00:00",
+      "previous_sha256": "a6d01f25f182ab001ae7a75320816b2a843326d4cd2f07401ebdd4a2914275e3",
+      "sha256": "a2aa82472e3afdb8e63c66615db858a320b511fc5af429ee721093732e3715a8"
+    }
   }
 }
