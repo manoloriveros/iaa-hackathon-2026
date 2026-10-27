@@ -2565,5 +2565,78 @@
     "new_resampling": 0,
     "new2025inference": 0,
     "new_submissions": 0
+  },
+  "phase2_private_P59_crossfit_preflight": {
+    "author": "Codex",
+    "utc": "2026-10-27T02:56:57.556433+00:00",
+    "records": [
+      {
+        "outer": 0,
+        "line": "motor",
+        "OOFtraining_rows": 480,
+        "outer_held_rows": 120,
+        "all_learning_ancestry_exclusions": true,
+        "actual_whole_composition_poison_invariance": true,
+        "JSON_final_forward_exact": true
+      },
+      {
+        "outer": 0,
+        "line": "buildings",
+        "OOFtraining_rows": 480,
+        "outer_held_rows": 120,
+        "all_learning_ancestry_exclusions": true,
+        "actual_whole_composition_poison_invariance": true,
+        "JSON_final_forward_exact": true
+      },
+      {
+        "outer": 0,
+        "line": "contents",
+        "OOFtraining_rows": 480,
+        "outer_held_rows": 120,
+        "all_learning_ancestry_exclusions": true,
+        "actual_whole_composition_poison_invariance": true,
+        "JSON_final_forward_exact": true
+      },
+      {
+        "outer": 1,
+        "line": "motor",
+        "OOFtraining_rows": 480,
+        "outer_held_rows": 120,
+        "all_learning_ancestry_exclusions": true,
+        "actual_whole_composition_poison_invariance": true,
+        "JSON_final_forward_exact": true
+      },
+      {
+        "outer": 1,
+        "line": "buildings",
+        "OOFtraining_rows": 480,
+        "outer_held_rows": 120,
+        "all_learning_ancestry_exclusions": true,
+        "actual_whole_composition_poison_invariance": true,
+        "JSON_final_forward_exact": true
+      },
+      {
+        "outer": 1,
+        "line": "contents",
+        "OOFtraining_rows": 480,
+        "outer_held_rows": 120,
+        "all_learning_ancestry_exclusions": true,
+        "actual_whole_composition_poison_invariance": true,
+        "JSON_final_forward_exact": true
+      }
+    ],
+    "synthetic_primary_cost_CDF_estimators": 132,
+    "synthetic_adverse_cost_CDF_estimators_separate": 132,
+    "synthetic_primary_base_learners": 36,
+    "synthetic_adverse_base_learners_separate": 36,
+    "synthetic_primary_components": 72,
+    "synthetic_adverse_components_separate": 72,
+    "synthetic_primary_shared_residual_stages": 48,
+    "synthetic_adverse_shared_residual_stages_separate": 48,
+    "synthetic_primary_GLMfits": 6,
+    "synthetic_adverse_GLMfits_separate": 6,
+    "real_fits": 0,
+    "real_scores": 0,
+    "new_submissions": 0
   }
 }
