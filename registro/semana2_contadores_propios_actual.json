@@ -2682,5 +2682,43 @@
       "previous_sha256": "a6d01f25f182ab001ae7a75320816b2a843326d4cd2f07401ebdd4a2914275e3",
       "sha256": "a2aa82472e3afdb8e63c66615db858a320b511fc5af429ee721093732e3715a8"
     }
+  },
+  "phase2_private_P61_proxy_observation_preflight": {
+    "author": "Codex",
+    "utc": "2026-10-27T03:45:30.218409+00:00",
+    "records": [
+      {
+        "line": "motor",
+        "period_vs_annual_proxy_weights_cancel_exposure": true,
+        "daily_scalar_completion_match": true,
+        "target_payload_not_accessed_by_link": true,
+        "actual_price_learning_poison_invariance": true,
+        "JSON_ultimate_forward_exact": true
+      },
+      {
+        "line": "buildings",
+        "period_vs_annual_proxy_weights_cancel_exposure": true,
+        "daily_scalar_completion_match": true,
+        "target_payload_not_accessed_by_link": true,
+        "actual_price_learning_poison_invariance": true,
+        "JSON_ultimate_forward_exact": true
+      },
+      {
+        "line": "contents",
+        "period_vs_annual_proxy_weights_cancel_exposure": true,
+        "daily_scalar_completion_match": true,
+        "target_payload_not_accessed_by_link": true,
+        "actual_price_learning_poison_invariance": true,
+        "JSON_ultimate_forward_exact": true
+      }
+    ],
+    "synthetic_primary_closed_learners": 3,
+    "synthetic_adverse_closed_learners_separate": 3,
+    "synthetic_primary_components": 6,
+    "synthetic_adverse_components_separate": 6,
+    "synthetic_CDF_fits": 0,
+    "real_fits": 0,
+    "real_scores": 0,
+    "new_submissions": 0
   }
 }

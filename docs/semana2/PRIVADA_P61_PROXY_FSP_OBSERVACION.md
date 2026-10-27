@@ -1,0 +1,13 @@
+# P61: procedencia de FSp y nuevo enlace de observación
+
+Codex, 2026-10-27T03:47:51.317182+00:00. La referencia P60pedía revisar tentativamente un perfil T2bpor peril. La evidencia guardada P21y el código separan dos cosas: T2baporta una tasa anual total, sin salidas por peril; las columnas f/sdel canónico proceden de FSpPROD. No se repitió aquella auditoría ni se renombraron sus valores como T2b.
+
+En FSp, fya incluye exposición del periodo y srepresenta una marca positiva observada. El canónico reescala fpor exposición redondeada/calendario; por eso(f·s)/exposición redondeada es un proxy anual monetario. La frecuencia se ajustó con completitud de coste: no identifica una frecuencia/severidad últimas independientes. La procedencia desarrollada de respuestas/reportes y los límites de covariables/historia/clima quedan explícitos, sin nueva revisión masiva del linaje.
+
+La hipótesis nueva toma ese perfil como PROXYde composición para ponderar las curvas de coste P50, común a los dos componentes de precio A1S/T2b. No se afirma que descomponga sus totales o sea la composición real. El marco conserva calendario una vez y distingue curvas nominales/reservas/cola por SHA. Pasaron3flujos sintéticos primarios/3adversos, anualización/exposición cancelada, cálculo diario escalar y replay final. Se prepararon3tablas históricas y75enlaces de completitud; cero ajustes reales/CDF/scoring/2025/envíos.
+
+Las recetas P55-P60no cambiaron: sus precios usaban tasas totales A1S/T2b, sin tratar f/scomo sus componentes. Persisten qpor peril compartido entre líneas donde el nombre coincide, préstamo entre mercados, marcas/censura, maestros sin fecha y fuente2024condicional. B00/F3c y todas las alternativas se conservan;2024es desarrollo adaptativo, sin mejora privada establecida o revisión profesional independiente.
+
+Próximo: P62: separately preregister complete standard P55fixed-half learner with ONLYthe observation-link substitution to explicit fixedFSpPROXYcomposition under savedP50/P52costCDFs.15primary+15adverse closed learners (30+30components,20+20residual stages), no GLM/source/CDFfits. Keep all unchanged global/cohort/family16/scenario/level/influence/transfer gates and full ultimateforward. Not a T2bdecomposition or identified truth; no automatic CSVor public tuning.
+
+Plan/evidencia: Hackaton/Repositorio_IAA2026/registro/semana2_proxy_observacion_preflight_plan.json; Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P61_proxy_observacion_20261027/report.json; Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P61_proxy_observacion_20261027/synthetic.json.
