@@ -32,8 +32,12 @@ THREAD='01a17a2a-2650-7201-9b42-c688b92ac726'
 
 def utc():return datetime.now(timezone.utc).isoformat()
 def dump(path,data):
+    def scalar(value):
+        if isinstance(value,np.generic):return value.item()
+        raise TypeError('Unsupported JSON value: '+type(value).__name__)
+    encoded=json.dumps(data,ensure_ascii=False,indent=2,allow_nan=False,default=scalar)
     path.parent.mkdir(parents=True,exist_ok=True)
-    with path.open('x',encoding='utf8') as f:json.dump(data,f,ensure_ascii=False,indent=2,allow_nan=False)
+    with path.open('x',encoding='utf8') as f:f.write(encoded)
 def post(path,identifier,subject):
     import subprocess
     result=subprocess.run([sys.executable,str(ROOT/'Hackaton/Semana 2/Foro/comentar.py'),'--autor','Codex','--id',identifier,

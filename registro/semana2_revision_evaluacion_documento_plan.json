@@ -47,7 +47,7 @@
   },
   "decision": "Any critical predictive/stress gate failure means research-only/no newCSV. Even pass requires mapped production/provenance and full-file admission; no relaxation for public/private speculation.",
   "sources": {
-    "Hackaton/Repositorio_IAA2026/herramientas/auditar_evaluacion_documento.py": "7080b5d3cbbc5b9a056877ad468af26e45f131ef2b2ec314b399724fb865b633",
+    "Hackaton/Repositorio_IAA2026/herramientas/auditar_evaluacion_documento.py": "309c40ed26d8364cbb07dd8a3204423e5bd80baa06b89ece9bcd60dcae18c6fa",
     "Hackaton/Repositorio_IAA2026/privado/validacion_cadena_f3c/20261027T153123Z/PLAN.json": "9315674a0096120059c00e1269e9f0340d9d218b46715fa9819f339ad8dc1fa3",
     "Hackaton/Repositorio_IAA2026/privado/validacion_cadena_f3c/20261027T153123Z/freeze.json": "f6328e77144ed1014eac8c0ebeea36ac2a22934f74bba80af837c6b3b05d249c",
     "Hackaton/Repositorio_IAA2026/privado/validacion_cadena_f3c/20261027T153123Z/fuentes.json": "8389c9e781a102d3c40608823f7429aecc28afe4826a2511fef711b3e3997d36",
@@ -83,5 +83,16 @@
   "late_bound_owner_outputs": "Owner results/composition/scenarios/postverification can finish after registration. Read only completed JSON/NPZ, archive exact hashes at use; require unchanged frozen source code/PLAN and fixed source prediction hashes. Never treat in-progress absence as failure.",
   "B00_F3c_all_alternatives_preserved": true,
   "2024_open_adaptive": true,
-  "goal_achieved": false
+  "goal_achieved": false,
+  "writer_correction": {
+    "author": "Codex",
+    "utc": "2026-10-27T18:46:03.846792+00:00",
+    "kind": "JSONwriter_only_before_policy",
+    "old_plan_sha256": "1355f7f53a37f13d4b815a140df1fab271497e916d7fae0b495fd09d9dfa1b7b",
+    "old_code_sha256": "7080b5d3cbbc5b9a056877ad468af26e45f131ef2b2ec314b399724fb865b633",
+    "new_code_sha256": "309c40ed26d8364cbb07dd8a3204423e5bd80baa06b89ece9bcd60dcae18c6fa",
+    "statistical_recipe_criteria_unchanged": true,
+    "policy_not_evaluated": true,
+    "incident": "writer_correction_before_policy/incident.json"
+  }
 }
