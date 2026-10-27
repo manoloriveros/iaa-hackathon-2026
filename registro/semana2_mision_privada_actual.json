@@ -6,7 +6,7 @@
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_mision_privada_plan_v1.json",
   "plan_sha256": "3329dbc7fe931d71e1e945bdf536fd9d810040f2626709f3d103c2dc5cdd7876",
   "execution_control": "Hackaton/Repositorio_IAA2026/registro/semana2_control_entregas_codex_actual.json",
-  "execution_control_sha256": "c6ae16c97a6544dddc17f543ccd01a14a52b756b416c23b166703db5f27d9078",
+  "execution_control_sha256": "54e745f5096d67bfaefe5dce15fb865bb44c0afae43b95f96bb6f6fd21492bea",
   "guard_test": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/entrega_H1_investigacion_20261026_v1/prioridad_privada_20261026T131510432194Z/private_priority_guard_test.json",
   "guard_test_sha256": "bd738071e41cacaf51c93fe3a8de6fe046e87cb14bbcc664699322393979dd99",
   "document": "Hackaton/Repositorio_IAA2026/docs/semana2/MISION_PRIVADA_PRIORIDAD_Y_PLAN.md",
@@ -17,7 +17,7 @@
     "previous_sha256": "6d59e27de8b0a990b903b1cf19e79963507e408dc9a23e937978d9678c2169d3",
     "sha256": "61b4c2ca7fd790b2ff916ef8696824758ce9fc6608087dbf7b89c949f733ff36"
   },
-  "next_unit": "P65: register and commit complete unchanged P54price learner with P64line/peril reporting and fixed FSpPROXYrow weights. Same all gates;15primary/15adverse whole learners, zero source/report refits. No CSVuntil pooled plus OWNconditional transfer and exact-file admission.",
+  "next_unit": "Use NEW P65saved failure to decide whether line/peril reporting materially addresses the observation miss. No resampling or refit of unchanged models, line/peril overrides, public probes or missing authorization. Preserve source/target transport and ultimate-tail uncertainties before registering the next standard mechanism.",
   "old_app_goal_text_stale": true,
   "public017_or0175_not_sufficient_for_completion": true,
   "hidden_private_improvement_established": false,
@@ -7481,5 +7481,44 @@
     "successful_synthetic_parent_curves": 11,
     "total_synthetic_parent_curves_across_attempts": 22,
     "real_curve_refits_due_to_fixture_failure": 0
+  },
+  "P65": {
+    "author": "Codex",
+    "utc": "2026-10-27T04:20:02.445105+00:00",
+    "status": "P65line_peril_reporting_pooled_complete_transfer_unmeasured",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P65_validacion_reporte_por_ramo_20261027/report.json",
+    "report_sha256": "d9ef3a132512e4d9403a44386db89cef2d2891577bbcdaa21873c17471d711ec",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P65_VALIDACION_REPORTE_POR_RAMO.md",
+    "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+    "nominal": {
+      "delta": 5.2511025868273234e-05,
+      "bootstrap95": [
+        -0.0001421743702353269,
+        0.00028718587035098185
+      ],
+      "post31_delta": -0.0002686958136725911,
+      "worst_cell_delta": -0.0032855515584451675
+    },
+    "P65_minus_P62_point_only": -3.0505641658555926e-06,
+    "all_pooled_gates_pass": false,
+    "conditional_transfer_gate": null,
+    "primary_closed_whole_learners": 15,
+    "adverse_closed_whole_learners_separate": 15,
+    "new_primary_constants": 540,
+    "new_GLM_fits": 0,
+    "new_source_fits": 0,
+    "new_CDF_fits": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "Use NEW P65saved failure to decide whether line/peril reporting materially addresses the observation miss. No resampling or refit of unchanged models, line/peril overrides, public probes or missing authorization. Preserve source/target transport and ultimate-tail uncertainties before registering the next standard mechanism.",
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P65-RAMO-RESULTADO",
+      "utc": "2026-10-27T04:20:02+00:00",
+      "previous_sha256": "8077845d1b55f22b063d788e64a1934bba18f2be54f8b5e4133892ade1d4241a",
+      "sha256": "b6ddb25e75272416f9a021776c115e380018c0f50a834e951334a5028cfb29e7"
+    }
   }
 }

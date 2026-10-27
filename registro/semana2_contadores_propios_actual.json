@@ -3,7 +3,7 @@
   "as_of_utc": "2026-10-27T02:37:45.227878+00:00",
   "scope": "Own pricing/development lineage only; not all project fits or other authors. Historical main catalog retains its dated counter.",
   "cumulative_price_base_fits": 1885,
-  "cumulative_closed_form_constants": 35514,
+  "cumulative_closed_form_constants": 36054,
   "auxiliary_Poisson_Gamma_fits_separate": 30,
   "baseline": {
     "index": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_v7_snapshot.json",
@@ -2820,6 +2820,45 @@
       "successful_synthetic_parent_curves": 11,
       "total_synthetic_parent_curves_across_attempts": 22,
       "real_curve_refits_due_to_fixture_failure": 0
+    }
+  },
+  "phase2_private_P65_line_reporting": {
+    "author": "Codex",
+    "utc": "2026-10-27T04:20:02.445105+00:00",
+    "status": "P65line_peril_reporting_pooled_complete_transfer_unmeasured",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P65_validacion_reporte_por_ramo_20261027/report.json",
+    "report_sha256": "d9ef3a132512e4d9403a44386db89cef2d2891577bbcdaa21873c17471d711ec",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P65_VALIDACION_REPORTE_POR_RAMO.md",
+    "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+    "nominal": {
+      "delta": 5.2511025868273234e-05,
+      "bootstrap95": [
+        -0.0001421743702353269,
+        0.00028718587035098185
+      ],
+      "post31_delta": -0.0002686958136725911,
+      "worst_cell_delta": -0.0032855515584451675
+    },
+    "P65_minus_P62_point_only": -3.0505641658555926e-06,
+    "all_pooled_gates_pass": false,
+    "conditional_transfer_gate": null,
+    "primary_closed_whole_learners": 15,
+    "adverse_closed_whole_learners_separate": 15,
+    "new_primary_constants": 540,
+    "new_GLM_fits": 0,
+    "new_source_fits": 0,
+    "new_CDF_fits": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "Use NEW P65saved failure to decide whether line/peril reporting materially addresses the observation miss. No resampling or refit of unchanged models, line/peril overrides, public probes or missing authorization. Preserve source/target transport and ultimate-tail uncertainties before registering the next standard mechanism.",
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P65-RAMO-RESULTADO",
+      "utc": "2026-10-27T04:20:02+00:00",
+      "previous_sha256": "8077845d1b55f22b063d788e64a1934bba18f2be54f8b5e4133892ade1d4241a",
+      "sha256": "b6ddb25e75272416f9a021776c115e380018c0f50a834e951334a5028cfb29e7"
     }
   }
 }

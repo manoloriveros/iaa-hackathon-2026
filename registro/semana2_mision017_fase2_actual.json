@@ -33,7 +33,7 @@
   },
   "legacy_2023_index": "Hackaton/Repositorio_IAA2026/registro/semana2_mision017_actual.json",
   "legacy_goal_tool_objective_note": "Goal resumed via explicituserrequest/UI;tool still carries old2024closed sentence. Latest directhuman authorization above overrides that stale scope;do not reclose2024 on auto-continuation. Numeric target/robustness remain.",
-  "next_unit": "P65: register and commit complete unchanged P54price learner with P64line/peril reporting and fixed FSpPROXYrow weights. Same all gates;15primary/15adverse whole learners, zero source/report refits. No CSVuntil pooled plus OWNconditional transfer and exact-file admission.",
+  "next_unit": "Use NEW P65saved failure to decide whether line/peril reporting materially addresses the observation miss. No resampling or refit of unchanged models, line/peril overrides, public probes or missing authorization. Preserve source/target transport and ultimate-tail uncertainties before registering the next standard mechanism.",
   "new_price_fits": 489,
   "new_C0_fits": 960,
   "new_submissions": 2,
@@ -14520,5 +14520,57 @@
     "successful_synthetic_parent_curves": 11,
     "total_synthetic_parent_curves_across_attempts": 22,
     "real_curve_refits_due_to_fixture_failure": 0
+  },
+  "private_P65": {
+    "author": "Codex",
+    "utc": "2026-10-27T04:20:02.445105+00:00",
+    "status": "P65line_peril_reporting_pooled_complete_transfer_unmeasured",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P65_validacion_reporte_por_ramo_20261027/report.json",
+    "report_sha256": "d9ef3a132512e4d9403a44386db89cef2d2891577bbcdaa21873c17471d711ec",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P65_VALIDACION_REPORTE_POR_RAMO.md",
+    "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+    "nominal": {
+      "delta": 5.2511025868273234e-05,
+      "bootstrap95": [
+        -0.0001421743702353269,
+        0.00028718587035098185
+      ],
+      "post31_delta": -0.0002686958136725911,
+      "worst_cell_delta": -0.0032855515584451675
+    },
+    "P65_minus_P62_point_only": -3.0505641658555926e-06,
+    "all_pooled_gates_pass": false,
+    "conditional_transfer_gate": null,
+    "primary_closed_whole_learners": 15,
+    "adverse_closed_whole_learners_separate": 15,
+    "new_primary_constants": 540,
+    "new_GLM_fits": 0,
+    "new_source_fits": 0,
+    "new_CDF_fits": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "Use NEW P65saved failure to decide whether line/peril reporting materially addresses the observation miss. No resampling or refit of unchanged models, line/peril overrides, public probes or missing authorization. Preserve source/target transport and ultimate-tail uncertainties before registering the next standard mechanism.",
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P65-RAMO-RESULTADO",
+      "utc": "2026-10-27T04:20:02+00:00",
+      "previous_sha256": "8077845d1b55f22b063d788e64a1934bba18f2be54f8b5e4133892ade1d4241a",
+      "sha256": "b6ddb25e75272416f9a021776c115e380018c0f50a834e951334a5028cfb29e7"
+    }
+  },
+  "P65_execution": {
+    "author": "Codex",
+    "utc": "2026-10-27T04:18:42.786815+00:00",
+    "pid": 33384,
+    "unit": "P65",
+    "session_id": 43165,
+    "state": "TERMINAL_SUCCESS",
+    "exit_code": 0,
+    "replay_exit_code": 0,
+    "close_exit_code": 0,
+    "terminal_utc": "2026-10-27T04:22:14.459761+00:00",
+    "completion_receipt_sha256": "2d5f588adae617811678290c6c19206f86e7b3d32ac12bcbb9d4b26264052be6"
   }
 }
