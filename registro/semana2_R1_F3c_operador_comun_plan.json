@@ -1,0 +1,37 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-27T20:11:43.840941+00:00",
+  "parent": "Hackaton/Repositorio_IAA2026/registro/semana2_R1_F3c_tronco_comun_plan.json",
+  "reason": "Matched policy showed small total changes but material individual effects; residual source/F2/nuisance confounding remains. Need SAME complete preprocessing operator for both incoming risks.",
+  "scope": "Freeze all R1 F2/commonshape/normalizers/cell levels and own-renewal parameters. Apply rowwise to R1 incoming base and historical F input of F3c. Identical features, exposures and q1. No new fit or parameter selection.",
+  "input_warning": "Old F is the existing global-calibrated mixture input, not pure source risk. Its inherited global multiplier stays fixed. This does not isolate source year, F1, seeds, mixture or internal old completion.",
+  "price_path": "PublishedF3c -> frozenR1operator(oldFinput) -> frozenR1operator(R1input)=R1. Exact additive path in CU, order-dependent, not causal or D2 decomposition. No claim about uncomputed legacyoperator(R1input).",
+  "controls": [
+    "All209063R1reproduced with identical full operator",
+    "AlloldFIDs align and no rowloss",
+    "Fixed parameters unchanged, no labels passed",
+    "OldFapplication reorder/singleton preserves per-row prices",
+    "Finite positive outputs, both original hashes preserved"
+  ],
+  "budget": {
+    "native_or_closed_fits": 0,
+    "CDF_fits": 0,
+    "Booster_inference": 0,
+    "submissions": 0
+  },
+  "no_candidate_admission": true,
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/aplicar_operador_comun_R1_F3c.py": "f5c81a386ec724222ed619d4cc71b9472f4f0484eb4ab9b882e190c3d297bdb8",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/claude_validacion_nocturna_20261023/sonda_global/final_sonda_global_2025.csv": "42659dbb4101d4f9a4ab00c287d77b2bd21d42be9734d2ca4a4074eb57c9add2",
+    "Hackaton/Repositorio_IAA2026/herramientas/comparar_R1_F3c_tronco_comun.py": "b44dd7f7c36c8125dcfbc164c943a8f0b4daa996aabb813fb507a8386020b2be",
+    "Hackaton/Repositorio_IAA2026/herramientas/producir_R1_prioridad_privada.py": "550df80026dcb932a7603a42ffcd431b24deeb7425031a259360679ce0ad3128",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/R1_F3c_tronco_comun_20261027/results.json": "c3504f628f5ee0a894faec2c031683eaa16404e860bd6c466b3c2021045506ab",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/produccion_R1_privada_20261027/parameters.json": "274249816b26817ed42caa69c1291e8577a2724d8f515abc7f3593de1c031fbd",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/produccion_R1_privada_20261027/production_quotes.parquet": "e05665d0383157abefbb0dd95ed1d9e35c240f2019075296ec7e1949a21f08a6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/claude_mision017_20261025/F3c_2025.csv": "5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276",
+    "Hackaton/Semana 2/Datos/emerging/test_motor.parquet": "108d5c68e9bab5ccd90ee5502bc3543aa515a5aa07fda44a3b227cf070a28aa5",
+    "Hackaton/Semana 2/Datos/emerging/test_buildings.parquet": "21f91aaa66a1b9efd216ad0e04ff12a507dbeb721084330d9b9f06c99edd0ca6",
+    "Hackaton/Semana 2/Datos/emerging/test_contents.parquet": "af5ef2553e35a2d563ca091b173500daac55acc4969d1d3a96fa6b4ec3c6a012",
+    "Hackaton/Semana 2/Datos/emerging/customers.parquet": "c00a0095d5fb7b2b65cd9647216add49afb3703d863d5c358b1441f0fab1fb62"
+  }
+}

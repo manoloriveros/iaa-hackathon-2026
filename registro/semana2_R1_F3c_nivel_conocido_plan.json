@@ -1,0 +1,28 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-27T20:15:12.727881+00:00",
+  "reason": "The common-operator comparison still includes inherited global g in old F. Separate its already documented value to avoid calling calibration a source-trunk effect.",
+  "known_global_g": 1.187658238648521,
+  "not_estimated_from_new_scores_or_outcomes": true,
+  "configuration": "Use raw mixture with documented matchingSHA and verify oldF=rawmixture*g within original CSV rounding. Apply same frozen R1 operator to rawmixture; commonshape implies scaling power.9 in motorrenewal and1elsewhere. Trace each fixed F2 step, commonshape and final baseline level on rawmixture and R1incoming base.",
+  "controls": "Full-file CSV roundoff and homogeneity identities, actualR1 reproduction, all stages finitepositive, identical covariates/exposure/fixed parameters. No fitting, changed coefficients, new centering, selected multiplier, price clipping, hidden-label inference or sending.",
+  "scope_limits": "g is inherited historical public calibration, not justified for private by this decomposition. Rawmixture still contains its own source/target preparation and historical adaptation. Tracing stage totals does not establish which mean or multiplier is correct.",
+  "budget": {
+    "new_native_or_closed_fits": 0,
+    "new_CDF_fits": 0,
+    "new_Booster_inference": 0,
+    "new_submissions": 0
+  },
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/separar_nivel_R1_F3c.py": "4e05daa6efc2cfc1b798333a08b6448becf413e67eed536381b8b30834a385ad",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/claude_validacion_nocturna_20261023/sonda_segmento/preinscripcion.json": "33e02d95b5fe2a9068ea4cef4bcb0e46b097e86dfbcb8048957c6fdc50825676",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/claude_ml_independiente_20261023/mezcla50_designada_mlind_2025.csv": "12831ef4a05c1773824abe5fa139d9503dd2989b4874e7d93cfc000406cfdb4a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/claude_validacion_nocturna_20261023/sonda_global/final_sonda_global_2025.csv": "42659dbb4101d4f9a4ab00c287d77b2bd21d42be9734d2ca4a4074eb57c9add2",
+    "Hackaton/Repositorio_IAA2026/herramientas/producir_R1_prioridad_privada.py": "550df80026dcb932a7603a42ffcd431b24deeb7425031a259360679ce0ad3128",
+    "Hackaton/Repositorio_IAA2026/herramientas/validar_cadena_f3c.py": "2e301e50a9f5f60d02dc924068d6086e4a9c3b2376d40c1ddfdeb3dcede7a292",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/produccion_R1_privada_20261027/parameters.json": "274249816b26817ed42caa69c1291e8577a2724d8f515abc7f3593de1c031fbd",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/produccion_R1_privada_20261027/production_quotes.parquet": "e05665d0383157abefbb0dd95ed1d9e35c240f2019075296ec7e1949a21f08a6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/R1_F3c_tronco_comun_20261027/same_operator_results.json": "5a3c38861759c809d0d859319891fc809dceaf6bd03c1af12ce4415da285171e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/R1_F3c_tronco_comun_20261027/same_operator_price_path.parquet": "fdd3909a759acfe3be4d275878d7fb652a1f3520bd5e84ff97e77936d66a3e69"
+  }
+}

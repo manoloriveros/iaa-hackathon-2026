@@ -1,0 +1,53 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-27T20:05:18.344000+00:00",
+  "request": "Compare R1 and F3c on identical trunk/preprocessing, preserve both, publish findings locally, no new submission without evidence.",
+  "prior_knowledge": "R1 public .15820 vs F3c .16914 known. Earlier diagnostic showed substantial six-cell level differences. No hidden target/segment scores inferred.2024 is adaptive development.",
+  "hypothesis": "The delivery gap confounds own-NB policy with source/preprocessing, F2/nuisance, learned renewal effects and public shape/level overlays. Matched policy applications and an exact price bridge can locate price changes, not score loss.",
+  "design": {
+    "matched_F3c_trunk": "Hold final_creible C1 baseline and ALL preprocessing fixed. PublishedF3c versus NB=C1, renewal=publishedF3c. No later normalization, factor or level; preserve exact baseline.",
+    "matched_R1_trunk": "Hold R1 frozen T2b baseline, F2/shape, target2023-24 parameters and cell normalizers fixed. PublishedR1 policy versus full own block with those SAME parameters. No re-estimation.",
+    "control": "Both matched pairs must be identical on renewal; F3c-NB andR1-NB fallback equal their own base. Buildings own-block identity within CSV-rounding tolerance. NB data missing from own fields does not alter NB fallback.",
+    "decomposition": "Four fixed positive price multipliers: NB own-policy removal on F3c, own-block relearning only in renewal, removal of C1/F2 historical public shape/level, remaining R1baseline/F2. Exact multiplicative bridge, and order-invariant 4factor Shapley CU decomposition. Not causal D2 attribution.",
+    "historical_evidence": "Reuse existing protected T2b primary and A1/mix sensitivity policy intervals/scenario receipts exactly; no repeat bootstrap/fit/scoring. They compare policies within each matched family, not exact legacy3seedF1/public F3c.",
+    "strata": "Six ramo/business cells; exposure fixed bins <.5,.5-.9,>=.9. No data-driven bins or weight search.",
+    "limits": "Ratios F3c/C1 derive from published output artifacts; do not claim recovery of fitted factors or clean training. C1/F2 are historical public-calibration changes, not evidence to adopt public multipliers on T2b."
+  },
+  "acceptance": "Diagnostic only: all provenance, price identities, independent permutation-average Shapley, full-file and fallback controls pass. No candidate promotion/admission or private-superiority statement from aggregate prices. Failure preserved, no rescue by new factors.",
+  "budget": {
+    "new_native_or_closed_fits": 0,
+    "new_CDF_fits": 0,
+    "new_Booster_inference": 0,
+    "new_bootstrap_draws": 0,
+    "new_submissions": 0,
+    "shadow_price_files": "private Parquet only, no upload CSV"
+  },
+  "future_decision": "Prioritize matched protected history and target-level/ultimate transport before further source/feature complexity; any later experiment needs its own criterion and scope. Preserve failed versions and concurrent authorship.",
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/comparar_R1_F3c_tronco_comun.py": "b44dd7f7c36c8125dcfbc164c943a8f0b4daa996aabb813fb507a8386020b2be",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/calibracion_F2_creible_20261025_v1/final_creible_2025.csv": "1a003d8682f1fcd71ad4a44f59f785d394488fc1cc95e60722f418b04c30ef29",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/claude_mision017_20261025/F2_ncb_previos_2025.csv": "119627d93003a98933d261e773ffaf6e29a7125346367f716a0a411b97dca11a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/claude_mision017_20261025/F3c_2025.csv": "5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/produccion_R1_privada_20261027/R1_T2b_2025.csv": "1f5967ec88b7198397b11f5a8e41d1d22f20d0f8fe64ba9799c246b9d796daed",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/produccion_R1_privada_20261027/parameters.json": "274249816b26817ed42caa69c1291e8577a2724d8f515abc7f3593de1c031fbd",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/produccion_R1_privada_20261027/production_quotes.parquet": "e05665d0383157abefbb0dd95ed1d9e35c240f2019075296ec7e1949a21f08a6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/produccion_R1_privada_20261027/production_validation.json": "348f54120682a61e7023cad8e26d11cf47d8f4008724eac54224b494534ff8f9",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/produccion_R1_privada_20261027/public_receipt.json": "e33692e7a35b58d6d3d40f0e473b8685d9549d216f15ada8a45b16ab4dfab036",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/revision_chat_documento_20261027/policy_results.json": "3a2d27b5b88c0521543f901a2dfa6b864c7a4049bdd93b74e911a6b874c93bca",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/revision_chat_documento_20261027/scenario_review.json": "0d490c857145d3c36942cc4e57bc57ccd89d8d7a49f09f45325168e4a1da1ec3",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/revision_chat_documento_20261027/policy_verification.json": "f557947e5ccda4fde5e1665804914008705d5b8458442807fd49c88b90baf922",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/entrega_F3c_investigacion_20261026_v1/replay_report.json": "b8f1d18e6225f8704f283e8a8eb80c3531e0d250764cfb30af05e4a7acfab496",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/entrega_F3c_investigacion_20261026_v1/public_receipt.json": "7da5f5d5b177f5dc50b1d4024c533270c3c8d7362b9674dbad93c716927c93b4",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/calibracion_F2_creible_20261025_v1/report.json": "47e60f780d5960984866479b9bff402ff07389aae473890b2c7e268c90b64238",
+    "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/exp26_20261026_v2/m017/construir_F3c.py": "9828156382416a8088cc5579a995f02fa10188b9e74334b0709942393a476c67",
+    "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/exp26_20261026/m017/construir_F3b.py": "98d24847b0d41006379c27c74eb4d7b709b570d716c6798cdfd2846f4693897a",
+    "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/codigo/construir_F2.py": "24fb7615be71ce7dcc5495a364aa262b1fe845e2b259c0c5486dda87293f294d",
+    "Hackaton/Repositorio_IAA2026/herramientas/producir_R1_prioridad_privada.py": "550df80026dcb932a7603a42ffcd431b24deeb7425031a259360679ce0ad3128",
+    "Hackaton/Repositorio_IAA2026/herramientas/validar_cadena_f3c.py": "2e301e50a9f5f60d02dc924068d6086e4a9c3b2376d40c1ddfdeb3dcede7a292",
+    "Hackaton/Semana 2/Datos/emerging/customers.parquet": "c00a0095d5fb7b2b65cd9647216add49afb3703d863d5c358b1441f0fab1fb62",
+    "Hackaton/Semana 2/Datos/emerging/sample_submission.parquet": "160fc59043f1012337605c8d8446c0efbf81458e046cf02df9186d6f909d59ef",
+    "Hackaton/Semana 2/Datos/emerging/test_motor.parquet": "108d5c68e9bab5ccd90ee5502bc3543aa515a5aa07fda44a3b227cf070a28aa5",
+    "Hackaton/Semana 2/Datos/emerging/test_buildings.parquet": "21f91aaa66a1b9efd216ad0e04ff12a507dbeb721084330d9b9f06c99edd0ca6",
+    "Hackaton/Semana 2/Datos/emerging/test_contents.parquet": "af5ef2553e35a2d563ca091b173500daac55acc4969d1d3a96fa6b4ec3c6a012"
+  }
+}
