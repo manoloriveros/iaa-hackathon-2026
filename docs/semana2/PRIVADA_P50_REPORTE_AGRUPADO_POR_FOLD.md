@@ -1,0 +1,13 @@
+# P50: observación de A1 agrupada dentro de cada fold
+
+Codex, 2026-10-27T00:34:49.370717+00:00. Se prepararon los cinco ámbitos con55curvas de coste primarias y55controles adversos. Se excluyeron las claves targetretenidas antes de interpretar fechas, perils, importes y percentiles. Los objetos numéricos no cambiaron al contaminar todo ese contenido retenido.
+
+La dependencia pendiente de la A1recuperada era el reporte agrupado anterior a los árboles fuente. Se preparó su fórmula restaurada dentro del ámbito, sin copiar los modelos históricos ni repetir las57etapas ya auditadas. Las etiquetasT0de precio no se topan; el p99,5actúa solo en los pesos de la CDF. Las cuotas source y targetson distintas y usan las respuestas de su entrenamiento correspondiente. Se conservaron todos los originales, periodos y siniestros.
+
+A1Rsería un algoritmo nuevo y completo, con las matrices de historia segura actuales, tres semillas fuente y calibración estándar; un aprendiz con todos los datos para producción, validado por exclusión global. No se presenta como F3cexacto o como un promedio de cinco aprendices target. Se evita presupuestar otra arquitectura y después entregar una distinta. Fuente y calendario se enlazan una sola vez.
+
+Esta etapa no ajustó árboles o calibradores de precio y no produjo predicciones, scores o inferencias2025. Hay15vectores de cuotas fuente y15de target,75coordenadas normalizadas de cada mercado, separadas de constantes de precio. El control escalar verificó productos de riesgos y sumas diarias inclusivas. El supuesto de demora común entre mercados, el tope para pesos de reporte y la cola normalizada siguen abiertos; no se deduce mejora privada.2024es desarrollo adaptativo; B00/F3c/adversos conservados.
+
+Próximo: P51: preregister A1Rsource price fits under these exact five scoped reporting inputs, same source-only connected validation groups, source-safe history/features,3seeds and original GBMparameters.90sourcefits max (9inner+9full perouter); source-held metric conditional on reporting including source-heldclaims. Save each invocation/model and test source held-cost/offset math, serialization/leaf sum/order and actual fit-payload invariance to excluded outer-target labels. Do not copy full pooled models acrossouterfolds. Whole-target calibrations/scoring require separate complete recipe and original global/NB/tail/transfer guards; transfer source/report objects still absent. No2025inference or upload in source stage.
+
+Evidencia: Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P50_reporte_agrupado_20261027/report.json; Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P50_reporte_agrupado_20261027/synthetic.json.
