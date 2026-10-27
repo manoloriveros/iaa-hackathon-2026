@@ -763,7 +763,7 @@
     "Hackaton/Repositorio_IAA2026/registro/semana2_seleccion_GLM_interna_validacion_plan.json": "a376c950884e34c2d6c12c385bf6e29cc0df499b5464029df9ca435cd4abba30",
     "Hackaton/Repositorio_IAA2026/registro/semana2_selector_rondas_preflight_plan.json": "baf0d6f72ece0445ac8474da9f4c1c71e3e980492a1b5f1b4f3f7134e3e40c3d",
     "Hackaton/Repositorio_IAA2026/registro/semana2_selector_rondas_validacion_plan.json": "41456e217a37664bf8c47c6f665a239b00c1ba17003869b71d444c064d5fd060",
-    "Hackaton/Repositorio_IAA2026/herramientas/preparar_centrado_fijo_P101.py": "2474950a6dd3cb4069d3c94a04edbed379c3e79c8cd335f2b5f2699a5a01928b",
+    "Hackaton/Repositorio_IAA2026/herramientas/preparar_centrado_fijo_P101.py": "6996dd9953fe016d3ebf53fbed38f74db29472fb0789f330c41aafc32648cdfe",
     "Hackaton/Repositorio_IAA2026/registro/semana2_componentes_sin_G_preflight_plan.json": "2ee5590d4d08dcfa514d4994887187c562c8d1af05b96affd3980bd4382221fd",
     "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P99_componentes_sin_G_preflight_20261027/report.json": "466dd1947974702de35f3b821ee04835a1c097d1a84e7f22d6b7cb9e572cc2ce",
     "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P99_componentes_sin_G_preflight_20261027/synthetic.json": "bf70f465424a94fc5fb2ba18bddf03a40d85bf033557eeb3371cb25353214384",
@@ -783,5 +783,18 @@
   ],
   "2024_open": true,
   "B00_all_alternatives_preserved": true,
-  "goal_achieved": false
+  "goal_achieved": false,
+  "typed_fixture_implementation_amendment": {
+    "author": "Codex",
+    "utc": "2026-10-27T09:46:47.724301+00:00",
+    "failure": "Synthetic first-line adverse original G fit guard np.isfinite(train.T0) rejects object dtype remaining after held string poison. No real parameter or forward was run.",
+    "original_plan_sha256": "2fa7a11856f444a69aed14800add88b0e7cd7964045fd02c430b7943ec52c68f",
+    "original_code_sha256": "2474950a6dd3cb4069d3c94a04edbed379c3e79c8cd335f2b5f2699a5a01928b",
+    "new_code_sha256": "6996dd9953fe016d3ebf53fbed38f74db29472fb0789f330c41aafc32648cdfe",
+    "repair": "Select training rows and assert held group exclusion first; restore ONLY train.T0 numeric dtype before calling original synthetic learning. Sentinel remains unchanged in held rows. No historical producer or candidate factors/centers formula changed.",
+    "failed_attempt_synthetic_primary_components": 2,
+    "failed_attempt_synthetic_adverse_components": 2,
+    "failed_attempt_completed_primary_Gstages": 1,
+    "failed_attempt_real_fits": 0
+  }
 }

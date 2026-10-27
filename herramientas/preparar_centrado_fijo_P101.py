@@ -92,6 +92,15 @@ def cached(frame,line,outer):
     return old
 
 
+def learn_original_fixture(frame,line):
+    # Typed held poison leaves the pandas column dtype as object even after
+    # row exclusion. Restore numeric dtype ONLY on selected training rows.
+    train=frame.loc[~frame.is_held].copy()
+    assert set(train.group_id).isdisjoint(set(frame.loc[frame.is_held,'group_id']))
+    train['T0']=pd.to_numeric(train.T0,errors='raise').astype(float)
+    return k.learn(train,line)
+
+
 def synthetic():
     rng=np.random.default_rng(20261027101);n=480;i=np.arange(n)
     f=pd.DataFrame({'row_id':['s'+str(j) for j in i],'group_id':['g'+str(j) for j in i],'is_held':i%5==0,
@@ -102,10 +111,10 @@ def synthetic():
     records=[]
     for line in q.LINES:
         f['line']=line
-        original=k.learn(f,line);a=freeze_centers(f,original);bad=f.copy()
+        original=learn_original_fixture(f,line);a=freeze_centers(f,original);bad=f.copy()
         for name in ['T0','reserve','annual_A1S','annual_T2b','exposure_calendar','q_paired','new_business','ncb_years','prior_claims_5y','gender','works_from_home','marketing_segment']:
             bad[name]=bad[name].astype('object');bad.loc[bad.is_held,name]='INVALID_HELD'
-        adverse_original=k.learn(bad,line);adverse=freeze_centers(bad,adverse_original)
+        adverse_original=learn_original_fixture(bad,line);adverse=freeze_centers(bad,adverse_original)
         assert a==adverse and original==adverse_original
         # Independent fresh alternative chain: learned nuisance cancels each
         # year/business scale change induced by earlier fixed centering.
