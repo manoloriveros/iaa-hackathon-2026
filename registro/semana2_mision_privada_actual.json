@@ -6,7 +6,7 @@
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_mision_privada_plan_v1.json",
   "plan_sha256": "3329dbc7fe931d71e1e945bdf536fd9d810040f2626709f3d103c2dc5cdd7876",
   "execution_control": "Hackaton/Repositorio_IAA2026/registro/semana2_control_entregas_codex_actual.json",
-  "execution_control_sha256": "e181102de6720edb1c46b8ed333d45e8537fa8245e55257b435670b958753563",
+  "execution_control_sha256": "ea8002209a0aeace460b8059aa666db26d9dcb1a60fadce6ba3636a6405fd745",
   "guard_test": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/entrega_H1_investigacion_20261026_v1/prioridad_privada_20261026T131510432194Z/private_priority_guard_test.json",
   "guard_test_sha256": "bd738071e41cacaf51c93fe3a8de6fe046e87cb14bbcc664699322393979dd99",
   "document": "Hackaton/Repositorio_IAA2026/docs/semana2/MISION_PRIVADA_PRIORIDAD_Y_PLAN.md",
@@ -17,7 +17,7 @@
     "previous_sha256": "6d59e27de8b0a990b903b1cf19e79963507e408dc9a23e937978d9678c2169d3",
     "sha256": "61b4c2ca7fd790b2ff916ef8696824758ce9fc6608087dbf7b89c949f733ff36"
   },
-  "next_unit": "P70: register and commit exact P69two-stage GLMshape/uncapped level,15primary+15adverse GLMshape/quantile/level calls, using byte-identical P67OOFinputs. ZEROnew base/report/source fits. Every original gate plus raw-shape convergence/uncapped-level math, no target or threshold rescue; pooled pass requires OWNconditional transfer before CSV.",
+  "next_unit": "Review NEWP70whole comparison and saved shape/uncapped-level artifacts against P67/P65before another candidate, no refit/resampling. Do not tune the cap, alpha, fields or selected line overrides after failure. Distinguish shape sensitivity from remaining source-risk/observation/crossfit-normalizer limits; document the next concrete standard mechanism, no public probe.",
   "old_app_goal_text_stale": true,
   "public017_or0175_not_sufficient_for_completion": true,
   "hidden_private_improvement_established": false,
@@ -7638,6 +7638,48 @@
       "utc": "2026-10-27T04:46:30+00:00",
       "previous_sha256": "3d044a44fbef973e6accf5b20dd93861cec3b64f954be97558fa197b8c14cb0c",
       "sha256": "99fab3688a6de38ff25733e9a61e963e592bcaa2c4382c91e294785e61a83e36"
+    }
+  },
+  "P70": {
+    "author": "Codex",
+    "utc": "2026-10-27T04:52:45.623507+00:00",
+    "status": "P70bounded_response_shape_uncapped_level_pooled_complete_transfer_unmeasured",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P70_validacion_GLM_forma_acotada_20261027/report.json",
+    "report_sha256": "6c1f0fd52fb8b6db3ff5e51eb79a1c1200aa0f6693a7a4048e27890d90899a3c",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P70_VALIDACION_FORMA_ACOTADA.md",
+    "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+    "nominal": {
+      "delta": -0.0019589601525858507,
+      "bootstrap95": [
+        -0.004346036656415408,
+        0.00014760173632779125
+      ],
+      "post31_delta": -0.0036965238905681307,
+      "worst_cell_delta": -0.012849735524307453
+    },
+    "P70_minus_P67_point_only": 0.00013900443713479394,
+    "all_pooled_gates_pass": false,
+    "conditional_transfer_gate": null,
+    "primary_GLMshape_fits": 15,
+    "adverse_GLMshape_fits_separate": 15,
+    "primary_positive_shape_quantiles": 15,
+    "adverse_positive_shape_quantiles_separate": 15,
+    "new_primary_uncapped_closed_levels": 15,
+    "adverse_uncapped_closed_levels_separate": 15,
+    "new_source_fits": 0,
+    "new_base_fits": 0,
+    "new_CDF_fits": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "Review NEWP70whole comparison and saved shape/uncapped-level artifacts against P67/P65before another candidate, no refit/resampling. Do not tune the cap, alpha, fields or selected line overrides after failure. Distinguish shape sensitivity from remaining source-risk/observation/crossfit-normalizer limits; document the next concrete standard mechanism, no public probe.",
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P70-FORMA-RESULTADO",
+      "utc": "2026-10-27T04:52:45+00:00",
+      "previous_sha256": "0704465b1772d7de4acefb284fa32c6087c15beb77344bfc062b8ae930bfbc73",
+      "sha256": "792f403e2d4ff7aa2e88a3209ab8b5b25ddce75fb2949cf30902dd9cf5b23879"
     }
   }
 }

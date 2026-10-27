@@ -1,14 +1,44 @@
 {
   "author": "Codex",
-  "utc": "2026-10-27T04:48:41.793548+00:00",
-  "status": "P70registered_before_real_shape_level_learning",
+  "utc": "2026-10-27T04:52:45.623507+00:00",
+  "status": "P70bounded_response_shape_uncapped_level_pooled_complete_transfer_unmeasured",
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_GLM_forma_acotada_validacion_plan.json",
   "plan_sha256": "3cabd081002c97beb36485b4201a239fb9452a3c14f1e249b5916a17e5f1c11e",
   "forum": {
     "author": "Codex",
-    "id": "COD-S2-20261027-PRIVADA-P70-FORMA-PREVIO",
-    "utc": "2026-10-27T04:48:41+00:00",
-    "previous_sha256": "99fab3688a6de38ff25733e9a61e963e592bcaa2c4382c91e294785e61a83e36",
-    "sha256": "0704465b1772d7de4acefb284fa32c6087c15beb77344bfc062b8ae930bfbc73"
-  }
+    "id": "COD-S2-20261027-PRIVADA-P70-FORMA-RESULTADO",
+    "utc": "2026-10-27T04:52:45+00:00",
+    "previous_sha256": "0704465b1772d7de4acefb284fa32c6087c15beb77344bfc062b8ae930bfbc73",
+    "sha256": "792f403e2d4ff7aa2e88a3209ab8b5b25ddce75fb2949cf30902dd9cf5b23879"
+  },
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P70_validacion_GLM_forma_acotada_20261027/report.json",
+  "report_sha256": "6c1f0fd52fb8b6db3ff5e51eb79a1c1200aa0f6693a7a4048e27890d90899a3c",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P70_VALIDACION_FORMA_ACOTADA.md",
+  "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+  "nominal": {
+    "delta": -0.0019589601525858507,
+    "bootstrap95": [
+      -0.004346036656415408,
+      0.00014760173632779125
+    ],
+    "post31_delta": -0.0036965238905681307,
+    "worst_cell_delta": -0.012849735524307453
+  },
+  "P70_minus_P67_point_only": 0.00013900443713479394,
+  "all_pooled_gates_pass": false,
+  "conditional_transfer_gate": null,
+  "primary_GLMshape_fits": 15,
+  "adverse_GLMshape_fits_separate": 15,
+  "primary_positive_shape_quantiles": 15,
+  "adverse_positive_shape_quantiles_separate": 15,
+  "new_primary_uncapped_closed_levels": 15,
+  "adverse_uncapped_closed_levels_separate": 15,
+  "new_source_fits": 0,
+  "new_base_fits": 0,
+  "new_CDF_fits": 0,
+  "new2025inference": 0,
+  "new_submissions": 0,
+  "next_unit": "Review NEWP70whole comparison and saved shape/uncapped-level artifacts against P67/P65before another candidate, no refit/resampling. Do not tune the cap, alpha, fields or selected line overrides after failure. Distinguish shape sensitivity from remaining source-risk/observation/crossfit-normalizer limits; document the next concrete standard mechanism, no public probe.",
+  "2024_open": true,
+  "goal_achieved": false
 }
