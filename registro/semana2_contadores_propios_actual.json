@@ -2758,5 +2758,68 @@
       "previous_sha256": "695d148082c05e761289a84c5bab53bea2bceab737111b7f0a41b8c2e5ee16a0",
       "sha256": "0b1866dad6664cbf03a30b667b1c4a09785de5f65402b246a71de9f079622fc6"
     }
+  },
+  "phase2_private_P64_reporting_preflight": {
+    "author": "Codex",
+    "utc": "2026-10-27T04:17:24.788296+00:00",
+    "status": "P64stratified_reporting_and_full_synthetic_flow_passed",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/report.json",
+    "report_sha256": "f064663b407993eaf0c1a1a5bd1eb5fefa1e9b7222135f705f45be1b9b49e8a8",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P64_REPORTE_POR_RAMO_PREFLIGHT.md",
+    "next_unit": "P65: register and commit complete unchanged P54price learner with P64line/peril reporting and fixed FSpPROXYrow weights. Same all gates;15primary/15adverse whole learners, zero source/report refits. No CSVuntil pooled plus OWNconditional transfer and exact-file admission.",
+    "primary_real_curve_strata": 225,
+    "adverse_real_curve_strata_separate": 225,
+    "new_real_price_fits": 0,
+    "new_source_fits": 0,
+    "new_scores": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P64-RAMO-RESULTADO",
+      "utc": "2026-10-27T04:17:24+00:00",
+      "previous_sha256": "9eafe6561abf270f12def47ff6def91ba8bec0488d1de539716fef15ba812754",
+      "sha256": "25ac19614147bcb87b64f677e374fd1fe2e94eaeee1d9f223f96e366c420fe32"
+    },
+    "synthetic": {
+      "author": "Codex",
+      "utc": "2026-10-27T04:15:09.237417+00:00",
+      "results": [
+        {
+          "line": "motor",
+          "all_scalar_curve_buckets_match": true,
+          "held_claim_payload_poison_invariant": true,
+          "price_learning_and_JSON_forward_invariant": true
+        },
+        {
+          "line": "buildings",
+          "all_scalar_curve_buckets_match": true,
+          "held_claim_payload_poison_invariant": true,
+          "price_learning_and_JSON_forward_invariant": true
+        },
+        {
+          "line": "contents",
+          "all_scalar_curve_buckets_match": true,
+          "held_claim_payload_poison_invariant": true,
+          "price_learning_and_JSON_forward_invariant": true
+        }
+      ],
+      "synthetic_primary_curve_strata": 15,
+      "synthetic_adverse_curve_strata_separate": 15,
+      "synthetic_parent_pooled_curves": 11,
+      "synthetic_primary_closed_learners": 3,
+      "synthetic_adverse_closed_learners_separate": 3,
+      "real_price_fits": 0
+    },
+    "fixture_failure_preserved": {
+      "receipt": "Hackaton/Repositorio_IAA2026/privado/P64_fixture_dtype_correction/failed_execution.json",
+      "sha256": "c25004312a3ed36c525959ef89405ba2930cc3b61557f03cbd7cecf21f0dfbbd",
+      "failed_synthetic_parent_curves_separate": 11,
+      "successful_synthetic_parent_curves": 11,
+      "total_synthetic_parent_curves_across_attempts": 22,
+      "real_curve_refits_due_to_fixture_failure": 0
+    }
   }
 }
