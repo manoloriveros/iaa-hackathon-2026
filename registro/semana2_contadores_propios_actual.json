@@ -2,8 +2,8 @@
   "author": "Codex",
   "as_of_utc": "2026-10-27T02:37:45.227878+00:00",
   "scope": "Own pricing/development lineage only; not all project fits or other authors. Historical main catalog retains its dated counter.",
-  "cumulative_price_base_fits": 2575,
-  "cumulative_closed_form_constants": 39489,
+  "cumulative_price_base_fits": 2725,
+  "cumulative_closed_form_constants": 39939,
   "auxiliary_Poisson_Gamma_fits_separate": 30,
   "baseline": {
     "index": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_v7_snapshot.json",
@@ -4490,6 +4490,108 @@
       "utc": "2026-10-27T07:56:45+00:00",
       "previous_sha256": "a8b903c778b59e42a6a64224e804150624d40ef3b6690e19dd0b61530e64115d",
       "sha256": "a1e29f11bbd0934e7bdb58d256b9c0c9b0dc56351cb8a957a72e2d0c0ea9b6cc"
+    }
+  },
+  "phase2_private_P92_length_selector_preflight": {
+    "author": "Codex",
+    "utc": "2026-10-27T08:25:31.190598+00:00",
+    "status": "P92whole_length_selector_prefix_synthetic_and_reused_bindings_passed",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P92_selector_rondas_preflight_20261027/report.json",
+    "report_sha256": "d7a8e3608cb6a1a4b04788ea736237d1b8260c87c17c0ff129eff5df438b7d68",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P92_SELECTOR_RONDAS_PREFLIGHT.md",
+    "next_unit": "P93: register/commit EXACTP92common-inner-length-selection whole algorithm,75primary/75adverse max256inner fits plus atmost15+15newfinal fits,450+450newinnerlevels, reuse fullouterP90levels and exact64models when selected64. All old outerguards/native integrity/conditionaltransfer, no round/depth/field/step/line rescue. Replay225inner objectives/all5selectors and15final models without fitting.",
+    "new_real_fits": 0,
+    "new_CDF_fits": 0,
+    "new_scores": 0,
+    "new_submissions": 0,
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P92-RONDAS-RESULTADO",
+      "utc": "2026-10-27T08:25:31+00:00",
+      "previous_sha256": "b8f6145033c12815a19ce8641e5f65f2768e0c85b2d67f4499552cacc43e1078",
+      "sha256": "b0f4e795d904f372c75224edc8eb4b366f29b78e0353478c51a9bc2e21a3b1b4"
+    },
+    "synthetic": {
+      "author": "Codex",
+      "utc": "2026-10-27T08:18:07.599428+00:00",
+      "synthetic_selected_rounds_only": 256,
+      "primary_adverse_whole_bundles_exact": true,
+      "all45inner_objectives_and_final_predictions_replayed_exact": true,
+      "prefix64_equivalence": [
+        {
+          "line": "motor",
+          "prefix64_equals_standalone64_structure_and_predictions": true
+        },
+        {
+          "line": "buildings",
+          "prefix64_equals_standalone64_structure_and_predictions": true
+        },
+        {
+          "line": "contents",
+          "prefix64_equals_standalone64_structure_and_predictions": true
+        }
+      ],
+      "tie_prefers_shorter": true,
+      "synthetic_primary_maximum_nativefits": 18,
+      "synthetic_adverse_maximum_nativefits_separate": 18,
+      "synthetic_standalone64_controls": 3,
+      "synthetic_primary_closed_levels": 108,
+      "synthetic_adverse_closed_levels_separate": 108,
+      "reporting_limit": "Synthetic qtables are fixed own-scope fixtures; real reporting uses unchanged P84protected tables/ancestry bySHA, no new RPLvalidation claim.",
+      "new_real_fits": 0,
+      "new_CDF_fits": 0,
+      "new_scores": 0,
+      "new2025inference": 0,
+      "new_submissions": 0
+    }
+  },
+  "phase2_private_P93_length_selector": {
+    "author": "Codex",
+    "utc": "2026-10-27T08:36:28.365237+00:00",
+    "status": "P93common_inner_selected_length_pooled_complete_transfer_unmeasured",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P93_validacion_selector_rondas_20261027/report.json",
+    "report_sha256": "a1d315ea302ce6b5c70afffcf0ff37e9bfdd07ce52a3effda877af35800a5025",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P93_VALIDACION_SELECTOR_RONDAS.md",
+    "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+    "nominal": {
+      "delta": -0.00441343088237781,
+      "bootstrap95": [
+        -0.007625714468965994,
+        -0.0013130152285583203
+      ],
+      "post31_delta": -0.007213722710072899,
+      "worst_cell_delta": -0.029061147537156773
+    },
+    "P93_minus_P90_point_only": 0.0,
+    "all_pooled_gates_pass": false,
+    "conditional_transfer_gate": null,
+    "actual_new_primary_nativefits": 75,
+    "actual_new_adverse_nativefits_separate": 75,
+    "native_fits_added_to_counter": 150,
+    "new_primary_closed_levels": 450,
+    "adverse_closed_levels_separate": 450,
+    "primary_selected_lengths": [
+      64,
+      64,
+      64,
+      64,
+      64
+    ],
+    "new_source_fits": 0,
+    "new_CDF_fits": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "Review ONLYNEWP93saved inner selection margins and whole held cells against fixedP90/P88/P65without refit/resampling. No round-grid extension, depth/step/field or perline rescue from outer/public outcomes. Need distinct documented source/target/observation mechanism before another candidate; preserve quota/all alternatives.",
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P93-RONDAS-RESULTADO",
+      "utc": "2026-10-27T08:36:28+00:00",
+      "previous_sha256": "44ab54cc8ab9f8e92d01af4f1efbf1f0cfa91ac755257fbf2bc2abe2258f69ba",
+      "sha256": "47ff6d28d972f4f21962da59c9a3abe07da06111019b09640febe72c7d99b1e9"
     }
   }
 }

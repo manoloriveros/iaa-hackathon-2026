@@ -1,0 +1,62 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-27T08:54:23.835948+00:00",
+  "scope": "P93 saved inner margins and exact pooled-frame identity; static lineage of capital omitted from current direct target design. No old source/support suites.",
+  "hypothesis": "A source capital function already exists, but a direct target main effect could represent market-specific scale response absent from the current rating design. This is a candidate need, not evidence of benefit or a source omission.",
+  "criterion": "Exact same P90/P93 pooled rows, column order, dtypes and values; all five saved losses copied without scoring. Distinguish actual A1S deterministic normalization from premium-dependent G4 quality repair.",
+  "future_contract": {
+    "lines": [
+      "buildings",
+      "contents"
+    ],
+    "raw_field": "sum_insured from official emerging policies, projected row_id/period_start/sum_insured only; historical 2023/2024",
+    "normal_range_upper_inclusive": {
+      "buildings": 10000000,
+      "contents": 1000000
+    },
+    "threshold_provenance": "Existing F0 uncertainty filters in VARIABLES_Y_ULTIMO.md; not official limits or newly optimized thresholds.",
+    "normal_value": "Keep original finite positive sum_insured within fixed uncertainty filter. Log1p once, train-only median/center/scale in the existing standard GLM.",
+    "uncertain_value": "Outside range or nonfinite becomes missing; impute own-training median. No division by1000, premium test, learned capital bounds or capital-uncertainty pricing flag.",
+    "motor": "Unchanged vehicle_value_group and existing motor model; no invented monetary value.",
+    "availability": "Conditional supplied policy snapshot, period keyed; no transaction timestamp proves quote-time vintage. Do not certify prospective availability.",
+    "comparator": "P88 complete own-training calibrated two-source prior and alpha1 standard GLM, unchanged target/exposure/q/folds/other fields.",
+    "reuse": "Reuse same-scope P88 source-level calibrations and motor models by code/data/keys hashes; never copy an outer calibration into an inner scope.",
+    "prohibition": "No claims/premium for capital transformation, no G4 2023 buildings object transferred to another scope, no new capital flag as pricing predictor.",
+    "next_gate": "Separate synthetic whole-flow preflight and raw-key binding before any real fit; then separate preregistration of full fixed evaluation."
+  },
+  "budget": {
+    "new_fits": 0,
+    "model_loads": 0,
+    "predictions": 0,
+    "new_scores": 0,
+    "resampling": 0,
+    "CDF_fits": 0,
+    "2025_inference": 0,
+    "submissions": 0
+  },
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/revisar_entradas_capital_P94.py": "d4c5f7be96e52ec6bc05613ddea606592d10129a458a066f5865fa8c3bc78f42",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P93_validacion_selector_rondas_20261027/completion_receipt.json": "9dc894ce4db7528e6d7c7c96a4239b92abcc9b8108f5e4874abc0df5f6a9ff93",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P93_validacion_selector_rondas_20261027/report.json": "a1d315ea302ce6b5c70afffcf0ff37e9bfdd07ce52a3effda877af35800a5025",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P93_validacion_selector_rondas_20261027/POOLED_prices.parquet": "04d8f0ebf901af80679c12a0cd985e314b3499b69a9cb918e53ea715eba8f9ac",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P90_validacion_boosting_prior_20261027/POOLED_prices.parquet": "04d8f0ebf901af80679c12a0cd985e314b3499b69a9cb918e53ea715eba8f9ac",
+    "Hackaton/Semana 2/Claude/validacion_nocturna_20261023/codigo/variables.py": "bc2a39e97e645878ca03e921edb3a2434ed2b1596cf33aa92b538e796449c11d",
+    "Hackaton/Semana 2/Claude/validacion_nocturna_20261023/codigo/base_mercado.py": "cf7f858234255cb8711c7a09fc09d3b6a0710f0ca94d77124aae048c19d53ba4",
+    "Hackaton/Repositorio_IAA2026/herramientas/preparar_nucleo_A1S.py": "143e4373473c03889626b10b0a49dd504aeb7b9d8066da9d2a10a4d822ed228d",
+    "Hackaton/Repositorio_IAA2026/herramientas/preparar_GLM_offset_P56.py": "8da60c8b95560b4f4879c68c935bc0653c14567fc61cfddab1314c42020b7073",
+    "Hackaton/Repositorio_IAA2026/herramientas/fuente_marca_capital_P43.py": "9ae42e8b34e61356e416845bfe07f7b8d25df450aae79816a6bc63cfb419f670",
+    "Hackaton/Repositorio_IAA2026/docs/semana2/VARIABLES_Y_ULTIMO.md": "794f584e9f74c82a3fd4a14f7a2da5f420ffd1c55faf724b42f80567c4e2e26b",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_g4_capital_contrato_v2.json": "17b6c41ce294826bb61166799865759802c309534cb3a34d9b4c4a34860abae4",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P93_validacion_selector_rondas_20261027/outer0/primary_bundle.json": "14ad7109a974ba7f69adff0956f126f38edc5374a3b6a7b614391e65b3c1ab09",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P93_validacion_selector_rondas_20261027/outer1/primary_bundle.json": "12d3e3d15b1ac25ec4f432c070c90371afea9b8636bf99f3afd06c5cbd5de81c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P93_validacion_selector_rondas_20261027/outer2/primary_bundle.json": "7569feb1e0a770cf4183f99e660a523cb96da33abafe663a711606d6c45c76b2",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P93_validacion_selector_rondas_20261027/outer3/primary_bundle.json": "739ce93c0da2205464ed1155ad4cb223d3dfa425aedd4a62f28820a714e008dc",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P93_validacion_selector_rondas_20261027/outer4/primary_bundle.json": "2cc67b5879659fd9617e7dbeac48da12005ece8f63b9e923f8f8a28aa89abb9f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/input_motor_0.parquet": "75a0287ddfd6e5e5783cd9e1cd3d1942b17d4821ab0cf9ea61fc52ecf2a42ca9",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/input_buildings_0.parquet": "f7500a10acdeb71391d2964486196a60b662649ad3f6afb7530f83d8f162e2f0",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/input_contents_0.parquet": "e662522306d03cbdf7120451d38194ecf26c40a5ac884fc8eed4bc07a71afd40"
+  },
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true,
+  "goal_achieved": false
+}
