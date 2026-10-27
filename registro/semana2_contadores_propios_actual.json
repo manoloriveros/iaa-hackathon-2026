@@ -3111,5 +3111,87 @@
       "previous_sha256": "0704465b1772d7de4acefb284fa32c6087c15beb77344bfc062b8ae930bfbc73",
       "sha256": "792f403e2d4ff7aa2e88a3209ab8b5b25ddce75fb2949cf30902dd9cf5b23879"
     }
+  },
+  "phase2_private_P71_residual_tree_preflight": {
+    "author": "Codex",
+    "utc": "2026-10-27T04:59:32.525612+00:00",
+    "status": "P71native_offset_tree_synthetic_and_real_bindings_passed",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P71_boosting_residual_preflight_20261027/report.json",
+    "report_sha256": "0521f08acd8ec7dcda82a83028e81d39086ae7651e94296300e1c5ffd01831df",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P71_BOOSTING_RESIDUAL_PREFLIGHT.md",
+    "next_unit": "P72: register/commit fixed64round restricted native-offset residual GBDT,15primary/15adverse fits on exact P67inputs. No base/report/source fits or field/hyperparameter search. Every old predictive/cohort/scenario/family16gate plus actual tree/offset math; transfer OWN2023required after pooled pass, no automatic CSV.",
+    "new_real_fits": 0,
+    "new_base_fits": 0,
+    "new_CDF_fits": 0,
+    "new_scores": 0,
+    "new_submissions": 0,
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P71-ARBOL-RESULTADO",
+      "utc": "2026-10-27T04:59:32+00:00",
+      "previous_sha256": "54a1f1941df339a0d11a86dfd562756381d5e8103e7dda89aee25536df7b800d",
+      "sha256": "ec45323bbee9aab5c8de752731cbb7a47776c2b4ad59705de84063e79b8b8c4c"
+    },
+    "synthetic": {
+      "author": "Codex",
+      "utc": "2026-10-27T04:58:33.954748+00:00",
+      "records": [
+        {
+          "line": "motor",
+          "native_training_offset_metric_verified": true,
+          "held_all_payload_learning_invariant": true,
+          "held_labels_q_observedoffset_not_used_by_ultimate": true,
+          "JSON_native_model_replay_exact": true,
+          "tree_splits_exercised": true,
+          "fitted_leaf_values": 128,
+          "actual_min_leaf_count": 1647,
+          "independent_math": {
+            "native_training_metric_scalar_with_actual_label_precision": 37.01454714976839,
+            "original_uncapped_Tweedie_deviance_scalar": 128206.049959123,
+            "offset_in_actual_training_metric_verified": true,
+            "no_stationarity_or_convergence_claim_from_fixed_rounds": true
+          }
+        },
+        {
+          "line": "buildings",
+          "native_training_offset_metric_verified": true,
+          "held_all_payload_learning_invariant": true,
+          "held_labels_q_observedoffset_not_used_by_ultimate": true,
+          "JSON_native_model_replay_exact": true,
+          "tree_splits_exercised": true,
+          "fitted_leaf_values": 128,
+          "actual_min_leaf_count": 1626,
+          "independent_math": {
+            "native_training_metric_scalar_with_actual_label_precision": 37.58074669421241,
+            "original_uncapped_Tweedie_deviance_scalar": 128404.67765497124,
+            "offset_in_actual_training_metric_verified": true,
+            "no_stationarity_or_convergence_claim_from_fixed_rounds": true
+          }
+        },
+        {
+          "line": "contents",
+          "native_training_offset_metric_verified": true,
+          "held_all_payload_learning_invariant": true,
+          "held_labels_q_observedoffset_not_used_by_ultimate": true,
+          "JSON_native_model_replay_exact": true,
+          "tree_splits_exercised": true,
+          "fitted_leaf_values": 128,
+          "actual_min_leaf_count": 1605,
+          "independent_math": {
+            "native_training_metric_scalar_with_actual_label_precision": 38.52110183775011,
+            "original_uncapped_Tweedie_deviance_scalar": 133334.11952305806,
+            "offset_in_actual_training_metric_verified": true,
+            "no_stationarity_or_convergence_claim_from_fixed_rounds": true
+          }
+        }
+      ],
+      "synthetic_primary_tree_fits": 3,
+      "synthetic_adverse_tree_fits_separate": 3,
+      "new_real_fits": 0,
+      "new_scores": 0,
+      "new_submissions": 0
+    }
   }
 }
