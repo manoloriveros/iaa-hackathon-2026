@@ -1,14 +1,53 @@
 {
   "author": "Codex",
-  "utc": "2026-10-27T10:26:26.045338+00:00",
-  "status": "P105registered_before_real_weight_selection_and_Glearning",
+  "utc": "2026-10-27T10:34:39.555084+00:00",
+  "status": "P105complete_common_source_mix_selection_pooled_transfer_unmeasured",
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_selector_mezcla_validacion_plan.json",
   "plan_sha256": "707874817e48ecc6b4cb1da824e7b65f7040bb758ec8347df736416fb85555fa",
   "forum": {
     "author": "Codex",
-    "id": "COD-S2-20261027-PRIVADA-P105-MEZCLA-PREVIO",
-    "utc": "2026-10-27T10:26:26+00:00",
-    "previous_sha256": "1d7737ec1d00bf1dcc4dcb89431d11ab7530ea4b458dd06668b62088c5f5fa3c",
-    "sha256": "1b748c4276e8f1f770ccc25c1de4be5cfd62f821320f62f0d685fec7e1137f64"
-  }
+    "id": "COD-S2-20261027-PRIVADA-P105-MEZCLA-RESULTADO",
+    "utc": "2026-10-27T10:34:39+00:00",
+    "previous_sha256": "3f487938a09bceba2e10cc5c534e592268757d4e61640acc9f70164b1c506ac9",
+    "sha256": "ec13b0d153e84fdf687c3a89c9807bb9c70d91f6ad4fefcaee2fe8ec6208a5a2"
+  },
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P105_validacion_selector_mezcla_20261027/report.json",
+  "report_sha256": "30d08bdafae07c44c1dc3a52c31a0fb2927da8cdfa6630fae8d47a3f1c5f5edd",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P105_VALIDACION_SELECTOR_MEZCLA.md",
+  "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+  "nominal": {
+    "delta": -0.00041405593541967545,
+    "bootstrap95": [
+      -0.0011842087585952643,
+      0.00026579937914829587
+    ],
+    "post31_delta": -0.001051554038769898,
+    "worst_cell_delta": -0.0073821479601959734
+  },
+  "P105_minus_P65_point_only": -0.0004665669612879487,
+  "selected_weights": [
+    0.25,
+    0.25,
+    0.25,
+    0.5,
+    0.5
+  ],
+  "all_pooled_gates_pass": false,
+  "conditional_transfer_gate": null,
+  "primary_whole_selectors": 5,
+  "primary_final_models": 15,
+  "new_primary_Gstage_calls": 412,
+  "new_adverse_Gstage_calls_separate": 412,
+  "new_primary_closed_constants": 5150,
+  "adverse_closed_constants_separate": 5150,
+  "reused_distinct_component_objects": 180,
+  "new_native_fits": 0,
+  "new_source_fits": 0,
+  "new_CDF_fits": 0,
+  "new_component_fits": 0,
+  "new2025inference": 0,
+  "new_submissions": 0,
+  "next_unit": "Inspect only saved new P105all5weight selections/inner margins and complete held cells against P65, without any refit/resampling. Do not expand weight grid, choose perline/stage, reuse selected weights outside their own training or probe the public board. If default half is selected everywhere, preserve exact existing result and move to distinct documented source/observation evidence.",
+  "2024_open": true,
+  "goal_achieved": false
 }
