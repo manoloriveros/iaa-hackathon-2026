@@ -5,6 +5,7 @@ import argparse
 import importlib.util
 import json
 import sys
+from collections import Counter
 
 R=Path(__file__).resolve().parents[1];ROOT=R.parents[1]
 
@@ -73,13 +74,16 @@ def final_dump(path,data):
             assert a['prior_level_calibration']==w.read(OLD/file.parent.name/'learning.json')['prior_level_calibration']
             if a['line'] in k.UPPER:assert k.FIELD+'__missing' not in a['preprocess']['columns']
         for key in ['primary_components','adverse_components_separate','primary_shared_residual_stages','adverse_shared_residual_stages_separate']:data.pop(key,None)
-        data['primary_iterative_parameter_counts']=data.pop('primary_constants')
+        if 'primary_constants' in data:
+            data['primary_iterative_parameter_counts']=data.pop('primary_constants')
+        assert 'primary_iterative_parameter_counts' in data
         data['pooled_gates']['all_direct_GLM_convergence_pass']=convergence
         data['all_pooled_gates_pass']=data['all_pooled_gates_pass'] and convergence
         data.update(status='P96ordinary_capital_main_effect_pooled_complete_transfer_unmeasured',
             decision='TRANSFER_REQUIRED_BEFORE_ADMISSION' if data['all_pooled_gates_pass'] else 'REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED',
             primary_GLM_fits=10,adverse_GLM_fits_separate=10,reused_primary_motor_models=5,reused_adverse_motor_models_separate=5,
             reused_primary_closed_levels=90,new_primary_closed_levels=0,new_CDF_fits=0,new_source_fits=0,
+            target_cost_trained_price_base_ancestors_used=True,
             target_learned_offset_levels=True,target_learned_shape_or_rowprice_feature_ancestors=False,
             all_direct_GLM_convergence_pass=convergence)
     return dump(path,data)
@@ -114,6 +118,8 @@ def setup():
     h.OUT=OUT;h.PLAN=PLAN;h.INDEX=INDEX;h.DOC=DOC;h.frame_for=k.frame_for;h.learn=learn;h.forward=forward;h.dump=final_dump
     h.r.independent_math=k.independent_math
     h.setup()
+    # This candidate owns report decoration; do not rename counters twice via P75.
+    h.v.dump=final_dump
     def reject(*args,**kwargs):raise AssertionError('P96 reuses levels; no fresh level estimator allowed')
     k.p.calibrate_levels=reject
 
@@ -121,6 +127,87 @@ def setup():
 def run():
     setup();h.r.TweedieRegressor.fit=h.observed_fit
     m.check_sources(w.read(PLAN));h.v.run();m.check_sources(w.read(PLAN))
+
+
+def recover_metrics(meta,data,cohort,weight,plan):
+    """Rebuild deterministic report fields using the ALREADY SAVED draws.
+
+    This is the unchanged P10 metric algebra. The only omitted operation is
+    bootstrap generation. Persisted influence must match the rebuilt sums.
+    """
+    codes,groups=pd.factorize(meta.group_id,sort=True);G=len(groups);N=len(meta)
+    gaincols=[];losses=[]
+    for y,base,candidate in data:
+        assert np.isfinite(candidate).all() and (candidate>0).all()
+        assert abs(m.e.unit(y,candidate).mean()-m.e.mean_tweedie_deviance(y,candidate,power=1.5))<1e-8
+        gain=m.e.unit(y,base)-m.e.unit(y,candidate);losses.append(gain)
+        gaincols.append(np.bincount(codes,weights=gain,minlength=G))
+    gaincols=np.column_stack(gaincols)
+    draws=np.load(OUT/(cohort+'_joint_bootstrap.npy'))
+    assert draws.shape==(plan['bootstrap']['replicates'],len(m.e.NAMES)) and np.isfinite(draws).all()
+    influence=pd.DataFrame(gaincols,columns=m.e.NAMES);influence.insert(0,'group_id',groups)
+    assert influence.equals(pd.read_parquet(OUT/(cohort+'_group_influence.parquet')))
+    result={}
+    for j,name in enumerate(m.e.NAMES):
+        y,base,candidate=data[j];gain=losses[j];den=m.e.unit(y,np.full(N,y.mean())).sum();cells=[]
+        for (line,year,nb),ix in meta.groupby(['line','year','new_business']).groups.items():
+            ii=np.asarray(list(ix));yy=y[ii];dd=m.e.unit(yy,np.full(len(ii),yy.mean())).sum()
+            cells.append({'line':line,'year':int(year),'NB':int(nb),'rows':len(ii),
+                'delta_global':float(gain[ii].sum()/den),'delta_cell_null':float(gain[ii].sum()/dd),
+                'AE_base':float(yy.sum()/base[ii].sum()),'AE_candidate':float(yy.sum()/candidate[ii].sum())})
+        weighted_den=np.sum(weight*m.e.unit(y,np.full(N,np.average(y,weights=weight))))
+        result[name]={'delta':float(gain.sum()/den),'bootstrap95':np.quantile(draws[:,j],[.025,.975]).tolist(),
+            'simultaneous95_family10':np.quantile(draws[:,j],[.0025,.9975]).tolist(),
+            'post31_delta':float((gaincols[:,j].sum()-np.sort(gaincols[:,j])[::-1][:31].sum())/den),
+            'folds':{str(i):float(gain[meta.fold.eq(i)].sum()/den) for i in range(5)},
+            'years':{str(int(i)):float(gain[meta.year.eq(i)].sum()/den) for i in sorted(meta.year.unique())},
+            'cells':cells,'worst_cell_delta':min(c['delta_cell_null'] for c in cells),
+            'base_D2':float(1-m.e.unit(y,base).sum()/den),'candidate_D2':float(1-m.e.unit(y,candidate).sum()/den),
+            'futureweight_point_only_ESS_failed':float(np.sum(weight*gain)/weighted_den),
+            'same_level_sensitivity':{str(i):float((m.e.unit(y,i*base)-m.e.unit(y,i*candidate)).sum()/den) for i in plan['level_sensitivity']}}
+    return result
+
+
+def recover_report():
+    """Repair the failed report writer; never rerun fitting or resampling."""
+    assert not (OUT/'report.json').exists()
+    setup();plan=w.read(PLAN);m.check_sources(plan)
+    repair=w.read(OUT/'report_writer_repair.json')
+    assert repair['original_plan_sha256']==w.read(OUT/'registration.json')['plan_sha256']
+    for path,sha in repair['preserved_outputs'].items():assert w.sha(ROOT/path)==sha
+    def reject(*args,**kwargs):raise AssertionError('Report recovery forbids learning, inference and resampling')
+    k.fit=reject;k.forward=reject;k.r.TweedieRegressor.fit=reject;np.random.default_rng=reject
+    counts=Counter()
+    for line in q.LINES:
+        for outer in range(5):
+            folder=OUT/f'{line}_{outer}';commit=w.read(folder/'committed.json')
+            assert all(w.sha(ROOT/path)==sha for path,sha in commit['outputs'].items())
+            counts.update(commit['constants'])
+    frame=pd.read_parquet(OUT/'POOLED_prices.parquet');N=len(frame)
+    reserve=pd.concat([pd.read_parquet(m.P1/f'canonical_{line}.parquet',columns=['row_id','reserve']) for line in q.LINES]).set_index('row_id').loc[frame.row_id,'reserve'].to_numpy()
+    y=frame.T0.to_numpy(float);ys=[y,y-.25*reserve,y+.25*reserve,y,y]
+    data=[(y,frame.old_nominal.to_numpy(),frame.new_nominal.to_numpy())]
+    for j,name in enumerate(m.e.NAMES[1:],1):data.append((ys[j],frame[name+'_old'].to_numpy(),frame[name+'_new'].to_numpy()))
+    weights=pd.read_parquet(BASE/'estimando_cartera2025_v3/weights.parquet').set_index('row_id').loc[frame.row_id]
+    assert np.array_equal(weights.group_id,frame.group_id)
+    metrics=recover_metrics(frame,data,'POOLED',weights.weight.to_numpy(float),plan)
+    cohorts=w.read(OUT/'cohort_report.json');a=metrics['NOMINAL'];crit=plan['criteria']
+    gates={'pooled_delta_ge002':a['delta']>=crit['nominal_pooled_delta_min'],'pooled_lower95_positive':a['bootstrap95'][0]>0,
+        'pooled_atleast4positive_folds':sum(v>0 for v in a['folds'].values())>=4,'both_pooled_years_nonnegative':min(a['years'].values())>=0,
+        'pooled_post31_nonnegative':a['post31_delta']>=0,'all_nominal_and_stress_cell_floors':all(v['worst_cell_delta']>=-.001 for v in metrics.values())}
+    passed=all(gates.values()) and all(cohorts['gates'].values())
+    report={'author':'Codex','utc':utc(),'status':'P96_report_recovered','plan_sha256':w.sha(PLAN),
+        'results':{'POOLED':metrics,'TRANSFER':None},'pooled_gates':gates,'pooled_cohort_gates':cohorts['gates'],
+        'all_pooled_gates_pass':passed,'conditional_transfer_gate':None,'all_required_gates_pass':False,
+        'decision':'TRANSFER_REQUIRED_BEFORE_ADMISSION' if passed else 'REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED',
+        'primary_whole_learners':15,'adverse_whole_learners_separate':15,'primary_constants':dict(counts),
+        'new_source_fits':0,'new_C0_fits':0,'new2025inference':0,'new_submissions':0,'adopted':False,'2024_open':True,'goal_achieved':False,
+        'report_recovery':{'original_failure':'Duplicate primary_constants rename after all fits and saved resampling; no numeric recipe change.',
+            'new_fits':0,'new_predictions':0,'new_resampling':0,'saved_influence_recomputed_exact':True,'rows':N}}
+    assert h.v.dump is final_dump
+    h.v.dump(OUT/'report.json',report)
+    for path,sha in repair['preserved_outputs'].items():assert w.sha(ROOT/path)==sha
+    print(json.dumps({'report_recovered_without_fit_or_resampling':True,'nominal':{key:a[key] for key in ['delta','bootstrap95','post31_delta','worst_cell_delta']},'gates':gates}))
 
 
 def replay():
@@ -172,5 +259,5 @@ def close():
 
 
 if __name__=='__main__':
-    sys.stdout.reconfigure(encoding='utf8');a=argparse.ArgumentParser(description=__doc__);a.add_argument('mode',choices=['prepare','run','replay','close'])
-    with m.e.threadpool_limits(limits=2):{'prepare':prepare,'run':run,'replay':replay,'close':close}[a.parse_args().mode]()
+    sys.stdout.reconfigure(encoding='utf8');a=argparse.ArgumentParser(description=__doc__);a.add_argument('mode',choices=['prepare','run','recover-report','replay','close'])
+    with m.e.threadpool_limits(limits=2):{'prepare':prepare,'run':run,'recover-report':recover_report,'replay':replay,'close':close}[a.parse_args().mode]()

@@ -999,7 +999,7 @@
     "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P94_contrato_capital_destino_20261027/completion_receipt.json": "23bfee59df7d8df5f4b3d81a081f1492b8224e917e10b9176e4f1b25df5502f6",
     "Hackaton/Semana 2/Datos/emerging/policies_buildings.parquet": "ccc948fafc11e623d5cb010c2b494f6813f6048719eae7bcde28794467598319",
     "Hackaton/Semana 2/Datos/emerging/policies_contents.parquet": "84d7f48d03933b018bec8fdc2f4bbd96df184cca7ae1971c38d3acc955720f8e",
-    "Hackaton/Repositorio_IAA2026/herramientas/validar_capital_destino_P96.py": "df90f88e8a658f6e61b2c5b5cbae001011f3f823be83c7d2bcc9deb39470c729",
+    "Hackaton/Repositorio_IAA2026/herramientas/validar_capital_destino_P96.py": "c2a8f98703444c7a2419a8629f2934f8bd97750f52650b621676d7e067c83015",
     "Hackaton/Repositorio_IAA2026/herramientas/validar_GLM_fuente_directa_P75.py": "26754d04bd0483b757035a0eb9d9ac8ac3429515fea7f6bd3f6f2efe7244edec",
     "Hackaton/Repositorio_IAA2026/registro/semana2_capital_destino_preflight_plan.json": "5f4700a475a1a12f0f047874aff66bf229e20f5db95ec1b76d807452f6660e32",
     "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P95_capital_destino_preflight_20261027/report.json": "eba0a9d0dbb65c2dbf45bf73ab7acbe4c2b7dbd51aa58392414448d0f8c1a993",
@@ -1056,5 +1056,17 @@
   ],
   "2024_open": true,
   "B00_all_alternatives_preserved": true,
-  "goal_achieved": false
+  "goal_achieved": false,
+  "report_writer_implementation_amendment": {
+    "author": "Codex",
+    "utc": "2026-10-27T09:07:21.156656+00:00",
+    "failure": "KeyError primary_constants in duplicated P75/P96 report counter decoration, after all15scope commits and bootstrap files. Terminal session95790 exit1.",
+    "original_plan_sha256": "b4e9d39e4acb8e798ccc9eb6d2e32879be9427d74b29c6be1cf760afc1ad4d7d",
+    "original_code_sha256": "df90f88e8a658f6e61b2c5b5cbae001011f3f823be83c7d2bcc9deb39470c729",
+    "new_code_sha256": "c2a8f98703444c7a2419a8629f2934f8bd97750f52650b621676d7e067c83015",
+    "new_code_scope": "Bypass duplicate parent report decoration; deterministic report recovery from unchanged prices/influence and saved draws. No recipe, criterion or parameters changed.",
+    "new_fits": 0,
+    "new_predictions": 0,
+    "new_resampling": 0
+  }
 }
