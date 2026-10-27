@@ -6,7 +6,7 @@
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_mision_privada_plan_v1.json",
   "plan_sha256": "3329dbc7fe931d71e1e945bdf536fd9d810040f2626709f3d103c2dc5cdd7876",
   "execution_control": "Hackaton/Repositorio_IAA2026/registro/semana2_control_entregas_codex_actual.json",
-  "execution_control_sha256": "fa4b4a373d23f7026c823442ddf1f2aef5c6d081ca469873dd78eb3613e06d3f",
+  "execution_control_sha256": "c6ae16c97a6544dddc17f543ccd01a14a52b756b416c23b166703db5f27d9078",
   "guard_test": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/entrega_H1_investigacion_20261026_v1/prioridad_privada_20261026T131510432194Z/private_priority_guard_test.json",
   "guard_test_sha256": "bd738071e41cacaf51c93fe3a8de6fe046e87cb14bbcc664699322393979dd99",
   "document": "Hackaton/Repositorio_IAA2026/docs/semana2/MISION_PRIVADA_PRIORIDAD_Y_PLAN.md",
@@ -17,7 +17,7 @@
     "previous_sha256": "6d59e27de8b0a990b903b1cf19e79963507e408dc9a23e937978d9678c2169d3",
     "sha256": "61b4c2ca7fd790b2ff916ef8696824758ce9fc6608087dbf7b89c949f733ff36"
   },
-  "next_unit": "Run fixed P62standard closed-price validation with explicit FSpPROXYrow observation; all original guards and full source/curve/input checks. No GLM/source/CDFrefits or public probe.",
+  "next_unit": "Review the NEW P62closed comparison against P55same-price/common-q before further capacity. Do not attribute causality, turn FSpinto T2bdecomposition, tune weights/fields or repeat old P46tests. If rowproxy fails, return to the declared reporting/line/market assumptions and source evidence before another registered standard candidate; no public probe or missing authorization.",
   "old_app_goal_text_stale": true,
   "public017_or0175_not_sufficient_for_completion": true,
   "hidden_private_improvement_established": false,
@@ -7386,18 +7386,40 @@
   },
   "P62": {
     "author": "Codex",
-    "utc": "2026-10-27T03:50:20.177568+00:00",
-    "status": "P62registered_before_real_closed_learning",
-    "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_proxy_observacion_validacion_plan.json",
-    "plan_sha256": "13f039cbba0e9a41d7fcbddffa9eb3fb741e632df71ebd800a1ca725f4d76c45",
+    "utc": "2026-10-27T03:59:43.706151+00:00",
+    "status": "P62FSp_proxy_observation_pooled_complete_transfer_unmeasured",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P62_validacion_proxy_observacion_20261027/report.json",
+    "report_sha256": "294dc09eaea87b1386fa420288fb25a74a697ee0cfc084900c180f4e5ed83d8f",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P62_VALIDACION_PROXY_OBSERVACION.md",
+    "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+    "nominal": {
+      "delta": 5.556159003412883e-05,
+      "bootstrap95": [
+        -0.00013994382728083283,
+        0.0002889189187702324
+      ],
+      "post31_delta": -0.00026612438808353017,
+      "worst_cell_delta": -0.0033154270653174885
+    },
+    "all_pooled_gates_pass": false,
+    "conditional_transfer_gate": null,
+    "primary_closed_learners": 15,
+    "adverse_closed_learners_separate": 15,
+    "new_primary_constants": 540,
+    "new_source_price_fits": 0,
+    "new_GLM_fits": 0,
+    "new_CDF_fits": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "Review the NEW P62closed comparison against P55same-price/common-q before further capacity. Do not attribute causality, turn FSpinto T2bdecomposition, tune weights/fields or repeat old P46tests. If rowproxy fails, return to the declared reporting/line/market assumptions and source evidence before another registered standard candidate; no public probe or missing authorization.",
+    "2024_open": true,
+    "goal_achieved": false,
     "forum": {
       "author": "Codex",
-      "id": "COD-S2-20261027-PRIVADA-P62-PROXY-PREVIO",
-      "utc": "2026-10-27T03:50:20+00:00",
-      "previous_sha256": "bfe3b94fba83e24fd102e10b43a807b19ca3f0c79cd3454fe010aad2dbfe8529",
-      "sha256": "695d148082c05e761289a84c5bab53bea2bceab737111b7f0a41b8c2e5ee16a0"
-    },
-    "actual_adapter_precheck": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P62_validacion_proxy_observacion_20261027/actual_adapter_precheck.json",
-    "actual_adapter_precheck_sha256": "273f4b8656ca99d13fe1995b912ee7133bc28b839f26a5bbd2b20d6bff6c14e7"
+      "id": "COD-S2-20261027-PRIVADA-P62-PROXY-RESULTADO",
+      "utc": "2026-10-27T03:59:43+00:00",
+      "previous_sha256": "695d148082c05e761289a84c5bab53bea2bceab737111b7f0a41b8c2e5ee16a0",
+      "sha256": "0b1866dad6664cbf03a30b667b1c4a09785de5f65402b246a71de9f079622fc6"
+    }
   }
 }
