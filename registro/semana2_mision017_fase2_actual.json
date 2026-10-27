@@ -33,7 +33,7 @@
   },
   "legacy_2023_index": "Hackaton/Repositorio_IAA2026/registro/semana2_mision017_actual.json",
   "legacy_goal_tool_objective_note": "Goal resumed via explicituserrequest/UI;tool still carries old2024closed sentence. Latest directhuman authorization above overrides that stale scope;do not reclose2024 on auto-continuation. Numeric target/robustness remain.",
-  "next_unit": "Run frozen P57offset GLMvalidation; actual15primary+15adverse estimator invocations and no source/base/C0refits. Keep every guard and coefficient checkpoint.",
+  "next_unit": "Before more fields/capacity or alpha changes, preflight a standard TRAIN-ONLYinner evaluation/cross-fitted calibration design, including OWNinner C0and P54base. Never reuse P55pooled base/C0as independent inner learning. Freeze exact cost/criterion and whole outer-validation algorithm before actual learning. The new gap/stability diagnose uncertainty, not a proved cross-fitting benefit or admission.",
   "new_price_fits": 489,
   "new_C0_fits": 960,
   "new_submissions": 2,
@@ -14219,18 +14219,75 @@
   },
   "private_P57": {
     "author": "Codex",
-    "utc": "2026-10-27T02:20:14.771913+00:00",
-    "status": "P57registered_before_real_GLM_fit_score",
-    "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_GLM_offset_validacion_plan.json",
-    "plan_sha256": "e2337a952dc1feff1592b0fed675f26e364c94aee6eefcee46ac690e326e11ab",
+    "utc": "2026-10-27T02:26:28.102174+00:00",
+    "status": "P57offset_GLM_complete_pooled_transfer_unmeasured",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P57_validacion_GLM_offset_20261027/report.json",
+    "report_sha256": "0193c61d511e2334dcc1ee1a92c2becb26b488c0a92ada15f6b5b1d8874a99b4",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P57_VALIDACION_GLM_OFFSET.md",
+    "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+    "nominal": {
+      "delta": -0.00275889590917933,
+      "bootstrap95": [
+        -0.005344235237117775,
+        -0.000408630273137354
+      ],
+      "post31_delta": -0.004398451699738956,
+      "worst_cell_delta": -0.014626437053940577
+    },
+    "all_pooled_gates_pass": false,
+    "all_GLM_convergence_controls_pass": true,
+    "conditional_transfer_gate": null,
+    "primary_GLM_fits": 15,
+    "adverse_GLM_fits_separate": 15,
+    "actual_fit_invocations_total": 30,
+    "primary_parameter_counts": {
+      "iterative_GLM_coefficients": 615,
+      "iterative_GLM_intercepts": 15
+    },
+    "new_source_fits": 0,
+    "new_P55_base_fits": 0,
+    "new_C0_fits": 0,
+    "new_closed_constants": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "Review NEW P57saved coefficients, convergence and group/cohort loss for a concrete unresolved mechanism before another recipe. Preserve all main effects, failed outcomes and source baselines; do not tune alpha/weights/fields by held or public scores. No repeat old source/scalar/control diagnostics or unchanged curve fits. Goal active, no admitted delivery or missing human authorization.",
+    "2024_open": true,
+    "goal_achieved": false,
     "forum": {
       "author": "Codex",
-      "id": "COD-S2-20261027-PRIVADA-P57-GLM-PREVIO",
-      "utc": "2026-10-27T02:20:14+00:00",
-      "previous_sha256": "b63889407264bea3e184cfb7ad80634a2d70d874b7506d64239fe36178105d62",
-      "sha256": "f730e572c4030f338d58ead59c90fbe2d86441eafdf4fa087c9ce95657850e33"
+      "id": "COD-S2-20261027-PRIVADA-P57-GLM-RESULTADO",
+      "utc": "2026-10-27T02:26:28+00:00",
+      "previous_sha256": "f730e572c4030f338d58ead59c90fbe2d86441eafdf4fa087c9ce95657850e33",
+      "sha256": "2b45416df092f753defd009cb15375169bf0a64a77859021e18a62cc8feb398d"
+    }
+  },
+  "private_P58": {
+    "author": "Codex",
+    "utc": "2026-10-27T02:36:28.476049+00:00",
+    "status": "P58new_saved_GLM_diagnostic_complete",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P58_diagnostico_GLM_20261027/report.json",
+    "report_sha256": "7f59f7dbbf8ab6359fbe36c234a6dec84960262398fe43cae6428b2085bd7015",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P58_ESTABILIDAD_GLM.md",
+    "training_positive_scopes": 15,
+    "held_positive_scopes": 5,
+    "global_incremental_GLM_delta_vs_P55": -0.001711125327911063,
+    "new_fits": 0,
+    "new_resampling": 0,
+    "new_submissions": 0,
+    "next_unit": "Before more fields/capacity or alpha changes, preflight a standard TRAIN-ONLYinner evaluation/cross-fitted calibration design, including OWNinner C0and P54base. Never reuse P55pooled base/C0as independent inner learning. Freeze exact cost/criterion and whole outer-validation algorithm before actual learning. The new gap/stability diagnose uncertainty, not a proved cross-fitting benefit or admission.",
+    "registration": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P58-GLM-PREVIO",
+      "utc": "2026-10-27T02:36:20+00:00",
+      "previous_sha256": "2b45416df092f753defd009cb15375169bf0a64a77859021e18a62cc8feb398d",
+      "sha256": "4533beed4a934dcaf04ecb680aec4ee1b80f708f9836ba2be02b3349ac357fca"
     },
-    "category_precheck": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P57_validacion_GLM_offset_20261027/category_input_precheck.json",
-    "category_precheck_sha256": "e6470b814778aadd0b0999dd8ece705a5f99eb4cc205c86caf751e7f9ca6be2b"
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P58-GLM-RESULTADO",
+      "utc": "2026-10-27T02:36:28+00:00",
+      "previous_sha256": "4533beed4a934dcaf04ecb680aec4ee1b80f708f9836ba2be02b3349ac357fca",
+      "sha256": "af8df4d4de68c233b2329b03697eb82123b46c8a05a791bbc3aa31b63c2db76f"
+    }
   }
 }
