@@ -15,7 +15,7 @@ La pantalla descriptiva prefijada (diferencia multiplicativa mayor del5%en al me
 | TRANSFER | buildings | 5 / 10 |
 | TRANSFER | contents | 0 / 10 |
 
-Quince aplicaciones de coeficientes fuente existentes sobre109.296filas históricas; cero ajustes fuente/destino/C0, constantes nuevas, precios, scores, inferencias2025 o envíos. B00, F3c y todos los adversos permanecen.2024 es desarrollo abierto adaptativo; fuente2024, maestros sin fecha y reservas/cola siguen como límites. Las identidades de mezcla son condicionales al modelo, no una verdad última o revisión profesional independiente.
+Quince aplicaciones de pares frecuencia/marca (treinta productos de matrices con coeficientes existentes) sobre109.296filas históricas; cero ajustes fuente/destino/C0, constantes nuevas, precios, scores, inferencias2025 o envíos. B00, F3c y todos los adversos permanecen.2024 es desarrollo abierto adaptativo; fuente2024, maestros sin fecha y reservas/cola siguen como límites. Las identidades de mezcla son condicionales al modelo, no una verdad última o revisión profesional independiente.
 
 Próximo: P47: prepare a coherent paired-profile observation contract using these exported P43peril rates and each already fitted C0scope. Before any new target fit or score, map every required outer/inner member to its own protected C0and original global groups; prove synthetic whole learning/exposure/ultimate/mean/observation invariance. Define whether the source component alone changes or a new whole target algorithm, with explicit original reference, fixed configuration/cost and all gates. Do not merely replace q at scoring or reuse outer C0inside inner learners. This review authorizes no automatic fit, new curves, weights or upload.
 
