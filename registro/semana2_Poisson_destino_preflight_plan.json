@@ -1,0 +1,197 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-27T11:27:00.424028+00:00",
+  "scope": "New fixed standard count-supervised target kernel: synthetic whole-learning test and15strict numerical scope inputs only. No real target/source/CDFfit or target score in this unit.",
+  "need": "Cost-supervised standard shape/capacity/level variants failed. True accepted counts are9102events, not8071positive periods. Test whether a less severity-sensitive response can transfer risk shape; source P30cost transport failure remains.",
+  "hypothesis": "A regularized Poisson correction of source accepted-event frequency may transfer shape more stably than cost-only corrections. Source mark allocation stays frozen and a single own-train Tweedie1.5cost level perline preserves the final original T0cost objective.",
+  "configuration": {
+    "count_offset": "B_N=sum_peril(lambda_source*E_count_source); source count exposure fixed from P107, no target claim in its CDF.",
+    "cost_offset": "S=sum_peril(lambda_source*mark_source); E_Cmix=sum(lambda*mark*E_Cscope)/S, own P64cost curves, same fixed source peril weights in cost scenarios.",
+    "frequency_model": "Poisson E[N|x]=B_N*exp(Xbeta+intercept), main effects and existing business-specific history/NCBbands. No source cost covariates or target-learned price/base feature.",
+    "numeric": {
+      "motor": [
+        "voluntary_excess",
+        "compulsory_excess",
+        "vehicle_age",
+        "years_licensed",
+        "engine_size_cc"
+      ],
+      "buildings": [
+        "voluntary_excess",
+        "compulsory_excess",
+        "prop_age",
+        "bedrooms"
+      ],
+      "contents": [
+        "voluntary_excess",
+        "compulsory_excess",
+        "prop_age",
+        "bedrooms"
+      ]
+    },
+    "categorical": {
+      "motor": [
+        "new_business",
+        "channel",
+        "vehicle_value_group",
+        "age_band",
+        "cover_type",
+        "vehicle_use",
+        "overnight_parking",
+        "named_young_driver",
+        "history_business_band",
+        "ncb_business_band"
+      ],
+      "buildings": [
+        "new_business",
+        "channel",
+        "construction_type",
+        "occupancy",
+        "smoke_alarms",
+        "accidental_damage_cover",
+        "property_type",
+        "roof_type",
+        "history_business_band"
+      ],
+      "contents": [
+        "new_business",
+        "channel",
+        "security_level",
+        "high_value_items",
+        "accidental_damage_cover",
+        "bicycle_cover",
+        "tenure",
+        "property_type",
+        "history_business_band"
+      ]
+    },
+    "nominal_alpha_original_row_mean": 0.001,
+    "parameters": {
+      "fit_intercept": true,
+      "solver": "lbfgs",
+      "max_iter": 3000,
+      "tol": 1e-07,
+      "warm_start": false
+    },
+    "weight_and_penalty": "Fit N/B_N with weight B_N on B_N>0, alpha_adjusted=.001*n_original_train/sum(B_N). Zero-exposure zero-count has zero likelihood and stays in n_original. No reweighting or exposure floor.",
+    "preprocessing": "Select own training and eligible count rows BEFORE parsing features. Training-only log1p numeric medians/center/scales/missing flags and full onehot existing bands; unknown levels allzero.",
+    "cost_level": "kappa=sum(T0/sqrt(S*a*E_Cmix))/sum(sqrt(S*a*E_Cmix)), all own training. Final ultimate period price=calendar*S*a*kappa. No live batch normalization or NB level rescue.",
+    "matched_null": "Same source S/E_Cmix and one own-train cost level, with count shape a=1. Store own count level sum(N)/sum(B_N) for count diagnostics; it cancels in cost-level-calibrated null price.",
+    "model_ancestry": "Count coefficients and preprocessing learn counts/covariates; cost level learns T0. Full staged algorithm is target learned, never pure-source or an ultimate-frequency identification claim."
+  },
+  "criterion": "3+3synthetic full staged fits with poisoned entire held payload before selection; count objective/scalar cost identity/gradient, JSONlabel-free replay, projectivity, cost0events and zero-exposure handling.15real exact key/group/calendar/label bindings and explicit paired count/cost exposure. No real fit here.",
+  "future_validation": {
+    "primary": "Register separately before15primary+15adverse real Poisson fits,45+45closed levels, unchanged all5globalcustomer/addressfolds2023/2024.",
+    "comparators": "Primary F3c/A1S reference and all current fixed guards; matched null and P65 secondary mechanism contrasts. No line/weight/alpha/feature rescue.",
+    "adverse": "Poison all held cost/count/rating/source/exposure payload before training; numeric qcost own-scope ancestry remains pinned; test full quote flow and replay with ALL count/cost/preprocessing learning blocked.",
+    "scenarios": "Same reserve075/125 and tail005/010protocol with own stored cost curves, same nominal source paired weights and final nominal model held fixed; no scenario count/price fit.",
+    "staged": "Every unchanged P82predictive/cohort/convergence/level/influence/family16guard. Pooledfailure forbids admission; pooledpass still needs OWN2023-only conditionaltransfer with proper own cost reporting before CSV."
+  },
+  "future_budget": {
+    "primary_Poisson_fits": 15,
+    "adverse_Poisson_fits_separate": 15,
+    "primary_closed_levels": 45,
+    "adverse_closed_levels_separate": 45,
+    "new_source_fits": 0,
+    "new_CDF_fits": 0,
+    "new2025inference": 0,
+    "new_submissions": 0
+  },
+  "criteria": {
+    "nominal_pooled_delta_min": 0.002,
+    "nominal_pooled_lower95_positive": true,
+    "at_least4positive_folds": true,
+    "both_pooled_years_nonnegative": true,
+    "post31_nonnegative": true,
+    "all_nominal_and_stress_cell_floors": -0.001,
+    "conditional_transfer_nominal_nonnegative": true
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "pooled_seed": 2026102640,
+    "transfer_seed": 2026102641,
+    "group": "saved connected customer/address component",
+    "bonferroni_family": 10,
+    "interpretation": "Exploratory conditional on fixed source, reused learned curves and adaptive search, not model-selection confirmation."
+  },
+  "cohort_guard": {
+    "cohorts": [
+      "NB",
+      "NB_BROKER",
+      "NB_BROKER_ZERO"
+    ],
+    "evaluations": [
+      "POOLED",
+      "TRANSFER"
+    ],
+    "point_floor": -0.001,
+    "marginal95_lower_floor": -0.001,
+    "replicates": 2000,
+    "seed": 2026102660,
+    "family16_lower_floor": -0.001,
+    "all_stress_point_floor": -0.001,
+    "pooled_family16_lower_positive": true,
+    "same_group_multiplicities_as_P19": true,
+    "no_support_claim_from_passing_points": true,
+    "family16": "10global scenario comparisons plus6nominal cohort comparisons; exploratory Bonferroni percentile bands, limited by2000draw resolution"
+  },
+  "level_sensitivity": [
+    0.95,
+    1.0,
+    1.05
+  ],
+  "limits": [
+    "Frequency, mark and reporting transport can fail; sparse target events do not establish credible peril-specific mark updates.",
+    "Retrospective2024-12-31status/reserve/reporting snapshots, unobserved tail, adaptive search and source2024ancestry remain.",
+    "No private or public improvement is established; source-derived count shape and fixed severity may still underfit the private mixture."
+  ],
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/preparar_Poisson_destino_P109.py": "4120d2233c13a6bbe64318b528daba9c031db4b9b7d31aacfb022aa42cc793fc",
+    "Hackaton/Repositorio_IAA2026/herramientas/preparar_GLM_bandas_negocio_P81.py": "bc1d33d7d5161e5f2a762cc167a223edb63a6b38e4cb465ce977b5f7706e168b",
+    "Hackaton/Repositorio_IAA2026/herramientas/preparar_GLM_fuente_directa_P74.py": "ef228f4a9a5baf9b7a1b8143432315ee991c7521189569762ee185ee7819f453",
+    "Hackaton/Repositorio_IAA2026/herramientas/preparar_reporte_agrupado_P50.py": "ac4322dc82866a749c158d9c284722bc93eac930b03bd54f642617198d1a45c7",
+    "Hackaton/Repositorio_IAA2026/herramientas/exportar_pares_fuente_P108.py": "a1f0ed651dc2b349bef681f362eb9b675977d99a7cd9661326cd689a2ec8b869",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_pares_fuente_historicos_actual.json": "4a40ef05da0301dce45b60ec35d70ba36fc06a5d0fa078b131596aa9ca8ec70b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P108_pares_fuente_historicos_20261027/report.json": "7f8da578205a3c70930b0320c67614d230f60f5720a334fcac1263723f2734c0",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/report.json": "f064663b407993eaf0c1a1a5bd1eb5fefa1e9b7222135f705f45be1b9b49e8a8",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/completion_receipt.json": "16109d74e6192f19b76581cf3b0d0819dd88d6b858f55bdb5f43cc7fc6e8ef4b",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_GLM_bandas_negocio_validacion_plan.json": "8661a36f49b0dad7b8da3f4da4a7bc36dcdd44e81b969b65ce51bce9e0cbd932",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_mision_privada_plan_v1.json": "3329dbc7fe931d71e1e945bdf536fd9d810040f2626709f3d103c2dc5cdd7876",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P108_pares_fuente_historicos_20261027/paired_source_motor.parquet": "8ed2f6f07611ff2075c079ea382fcf55d8712ce7d4fde855e75851f7617b3002",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/input_motor_0.parquet": "75a0287ddfd6e5e5783cd9e1cd3d1942b17d4821ab0cf9ea61fc52ecf2a42ca9",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/NOMINAL_outer0/motor/primary_curves.json": "b2fca0c8edcf06c348e237ad728b2a95a14661822737fac9d13d0549432e8508",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/input_motor_1.parquet": "0b5b34cb4a28ebf94d20706e427b0303c148f93b2e9fc1546c17ef24be61faa2",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/NOMINAL_outer1/motor/primary_curves.json": "1308bfa79e4e5c60c8a4464c28af3f6e6a2c844ebeded3620452dca7391c8070",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/input_motor_2.parquet": "b057631ac932b954b1cd28110bc25e3c391a81c47101735cdbbc9b6164a7bb03",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/NOMINAL_outer2/motor/primary_curves.json": "a09a99544fe83e33885e8221cb6e2f82ccb6997026f235e57610cb6013f1382f",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/input_motor_3.parquet": "fa7dee2167c32a4463967ee8a3b68ddab4b7b362f868d2812ab4142debfa3393",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/NOMINAL_outer3/motor/primary_curves.json": "abd275fb02d86dcb1c02aac8b22d4bf3dbf3ecfe68572e4f92a5d17ade28b0dd",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/input_motor_4.parquet": "50a8b3ff5f7ca5523e681ee078d192af0b7e60d0a028fe163aeea2b3ea179195",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/NOMINAL_outer4/motor/primary_curves.json": "eac9a7e7c7aa073eb608f7f8fbc2b086a78e615fe43eb50225b93de3243225a5",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P108_pares_fuente_historicos_20261027/paired_source_buildings.parquet": "510bb02f380502337cf588f61055e2a50d435c1080b7aa4ffa33e1d4dc17bb47",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/input_buildings_0.parquet": "f7500a10acdeb71391d2964486196a60b662649ad3f6afb7530f83d8f162e2f0",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/NOMINAL_outer0/buildings/primary_curves.json": "246b004ebcffc83054e21d9b4b24c890fd0c01b4c0970bcc0863ceaf3c0bb6eb",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/input_buildings_1.parquet": "728b22aa6714a9749e8ab2c9414994bb2e08e98af6157b29fd19c081e8f02730",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/NOMINAL_outer1/buildings/primary_curves.json": "6ccb597b71928e11ee7e20c268b97af5ee3919b8bcc6bb985c339aa2453b325c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/input_buildings_2.parquet": "b83918216ae92fe18e89ff900c727b983760d3918e3b332d0d302a8d28fb9940",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/NOMINAL_outer2/buildings/primary_curves.json": "24b74b8000f66978c06ce4c5767537e212e260f4cdac28362607ada8ab54b281",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/input_buildings_3.parquet": "40e03709b7c84dc73ed69c9e1e604d2b34f30939b78d34d65df0b1a1781fed8a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/NOMINAL_outer3/buildings/primary_curves.json": "f417ae0bb30f97275bc8cd72b4c5e02aa31be9f0e3ab060c48c9fb1fdcc801f0",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/input_buildings_4.parquet": "7834185327828d7575039dc2cff95f87526480655e92fbcd6efa2a8c25c3caf7",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/NOMINAL_outer4/buildings/primary_curves.json": "f52e724833de4839fd7dcda609e04cbd1e3a41a8662af8c4877968c22075b9f7",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P108_pares_fuente_historicos_20261027/paired_source_contents.parquet": "15e5af5408d97d8d4d80c4ced73970209c2cae6df39da55618c7e224af20e49c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/input_contents_0.parquet": "e662522306d03cbdf7120451d38194ecf26c40a5ac884fc8eed4bc07a71afd40",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/NOMINAL_outer0/contents/primary_curves.json": "4a400e3d0929d2c513c6e70b5fe34a7b4300a030cdf3a0dd319d8b5eb3b7046b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/input_contents_1.parquet": "66e8fd7d9bbcdbdd236cfab89b6003bd10c42253895175ae039d3e045060429c",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/NOMINAL_outer1/contents/primary_curves.json": "aa318e69d432a8cd161fd7cefcb7aa15dbfab0e8980f46a4bc54cbf0894777eb",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/input_contents_2.parquet": "bbb4547f7a2db7f985cdee10ef0e97466f5101835bb175fcd437a618ab60e7b0",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/NOMINAL_outer2/contents/primary_curves.json": "bbbcd4eba3ffed9ddc72326461f3d5b2a4f0961cf5f7c08e0a7d7fea9d3a4765",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/input_contents_3.parquet": "21ffa14971431431b56406d56f6bb9e43d251585e7baf71700d53ba15dd5e293",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/NOMINAL_outer3/contents/primary_curves.json": "6a60c0535257a47e7aa68865f52ed3b09b72df3732cc66cd68eaa7251d8f47f0",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/input_contents_4.parquet": "44e7eb9a14aa81e2182ae1e2b3d35e8d5bcd3315830c57c81ab798e9fc7f1dd1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P64_reporte_por_ramo_preflight_20261027/NOMINAL_outer4/contents/primary_curves.json": "03f335d5cfaa738e99a9633a3f6ebe57200c81962c78070f74a3b66ca5c00643"
+  },
+  "B00_all_alternatives_preserved": true,
+  "2024_open": true,
+  "goal_achieved": false
+}

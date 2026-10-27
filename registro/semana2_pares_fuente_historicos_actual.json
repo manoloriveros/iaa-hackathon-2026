@@ -1,14 +1,33 @@
 {
   "author": "Codex",
-  "utc": "2026-10-27T11:20:00.968132+00:00",
-  "status": "P108registered_before_historical_pair_export",
+  "utc": "2026-10-27T11:20:44.617904+00:00",
+  "status": "P108historical_paired_source_rates_exported_no_target_model",
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_pares_fuente_historicos_plan.json",
   "plan_sha256": "a3d4b51a2c5f8b7701d57dc3c0a9984e854eb3d94fc67ea88c7423ecbdf25ed6",
   "forum": {
     "author": "Codex",
-    "id": "COD-S2-20261027-PRIVADA-P108-PARES-PREVIO",
-    "utc": "2026-10-27T11:20:01+00:00",
-    "previous_sha256": "933a7a8787adb90e88b4d8cf6b623b69de14251ed3865a83bd6c0ee5125acd17",
-    "sha256": "9f920f164a6d14cbbd56903f24e42b636aed34dc7d42579d08199c5ca596eb0c"
-  }
+    "id": "COD-S2-20261027-PRIVADA-P108-PARES-RESULTADO",
+    "utc": "2026-10-27T11:20:44+00:00",
+    "previous_sha256": "9f920f164a6d14cbbd56903f24e42b636aed34dc7d42579d08199c5ca596eb0c",
+    "sha256": "044ff8b9ce4606887115c89f50e092de6da4472090c7e16ca4759ad14fa21811"
+  },
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P108_pares_fuente_historicos_20261027/report.json",
+  "report_sha256": "7f8da578205a3c70930b0320c67614d230f60f5720a334fcac1263723f2734c0",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P108_PARES_FUENTE_HISTORICOS.md",
+  "outputs": {
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P108_pares_fuente_historicos_20261027/paired_source_motor.parquet": "8ed2f6f07611ff2075c079ea382fcf55d8712ce7d4fde855e75851f7617b3002",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P108_pares_fuente_historicos_20261027/paired_source_buildings.parquet": "510bb02f380502337cf588f61055e2a50d435c1080b7aa4ffa33e1d4dc17bb47",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P108_pares_fuente_historicos_20261027/paired_source_contents.parquet": "15e5af5408d97d8d4d80c4ced73970209c2cae6df39da55618c7e224af20e49c"
+  },
+  "new_model_fits": 0,
+  "new_CDF_fits": 0,
+  "new_normalizers": 0,
+  "historical_source_component_models_reused": 30,
+  "new_scores": 0,
+  "new2025inference": 0,
+  "new_final_prices": 0,
+  "new_submissions": 0,
+  "next_unit": "P109: design and freeze a standard target Poisson frequency correction using actual accepted-event counts, source-paired annual frequency offset and count-weighted completion from P107/P108. Keep original T0cost for final price-level calibration, keep source mark allocation and cost completion distinct. Specify all training normalizers, scope exclusions, penalty rescaling, comparator and whole-pipeline synthetic invariance before any real fit. Do not repeat P30 full source transfer or treat this export as predictive improvement.",
+  "2024_open": true,
+  "goal_achieved": false
 }
