@@ -1,14 +1,43 @@
 {
   "author": "Codex",
-  "utc": "2026-10-27T09:03:14.234785+00:00",
-  "status": "P96registered_before_real_property_GLMfits",
+  "utc": "2026-10-27T09:08:02.351827+00:00",
+  "status": "P96ordinary_capital_main_effect_pooled_complete_transfer_unmeasured",
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_capital_destino_validacion_plan.json",
   "plan_sha256": "b4e9d39e4acb8e798ccc9eb6d2e32879be9427d74b29c6be1cf760afc1ad4d7d",
   "forum": {
     "author": "Codex",
-    "id": "COD-S2-20261027-PRIVADA-P96-CAPITAL-PREVIO",
-    "utc": "2026-10-27T09:03:14+00:00",
-    "previous_sha256": "c34935bc62241825be02af85e4a79ef4dffb72b6dde53109a166a1f2fcdbd44b",
-    "sha256": "523c19071e844906f66f590b3502a7d7503f3ef2e9c6fec29ddbdd147ae42aa7"
-  }
+    "id": "COD-S2-20261027-PRIVADA-P96-CAPITAL-RESULTADO",
+    "utc": "2026-10-27T09:08:02+00:00",
+    "previous_sha256": "4d2fdceb9f7be1230db85609f03f6fdb38f64cbde61215e70871413972491525",
+    "sha256": "c5fa52de03db7a4d54151d9bd00b487a355e3c2b59e3062d1bf0f1ed8a133b1b"
+  },
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P96_validacion_capital_destino_20261027/report.json",
+  "report_sha256": "6d7f97da448d8ac011bb85fc85a8034f7b0d0cdc3e61df69b1324ca6fac53dcd",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P96_VALIDACION_CAPITAL_DESTINO.md",
+  "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+  "nominal": {
+    "delta": -0.004115084435247635,
+    "bootstrap95": [
+      -0.007063801422936526,
+      -0.0012336276866288527
+    ],
+    "post31_delta": -0.006663796027695045,
+    "worst_cell_delta": -0.02762937880623879
+  },
+  "P96_minus_P88_point_only": -0.00016800364361689926,
+  "all_pooled_gates_pass": false,
+  "conditional_transfer_gate": null,
+  "primary_GLM_fits": 10,
+  "adverse_GLM_fits_separate": 10,
+  "reused_primary_motor_models": 5,
+  "reused_primary_closed_levels": 90,
+  "new_primary_closed_levels": 0,
+  "motor_pooled_frame_exact_P88": true,
+  "new_source_fits": 0,
+  "new_CDF_fits": 0,
+  "new2025inference": 0,
+  "new_submissions": 0,
+  "next_unit": "Inspect only new P96 property capital coefficients, train support and all saved held cells against P88, without new inference/fit/resampling. Establish whether the added ordinary-capital main effect was too weak, adverse or insufficient across both businesses; no threshold/alpha/line rescue. A next candidate requires a different concrete underwriting/source/observation mechanism, not a public probe.",
+  "2024_open": true,
+  "goal_achieved": false
 }

@@ -33,7 +33,7 @@
   },
   "legacy_2023_index": "Hackaton/Repositorio_IAA2026/registro/semana2_mision017_actual.json",
   "legacy_goal_tool_objective_note": "Goal resumed via explicituserrequest/UI;tool still carries old2024closed sentence. Latest directhuman authorization above overrides that stale scope;do not reclose2024 on auto-continuation. Numeric target/robustness remain.",
-  "next_unit": "P96: separately register and freeze complete same-P88 standard GLM plus direct ordinary capital. Reuse all90 same-scope P88 prior levels and five motor models by code/data/keys; fit only10+10 property models. All old pooled/cohort/scenario/family/convergence/level/influence gates unchanged; whole poison includes capital; replay blocks fits and level estimators. No threshold/alpha/line rescue or 2025/upload before complete admission and transfer.",
+  "next_unit": "Inspect only new P96 property capital coefficients, train support and all saved held cells against P88, without new inference/fit/resampling. Establish whether the added ordinary-capital main effect was too weak, adverse or insufficient across both businesses; no threshold/alpha/line rescue. A next candidate requires a different concrete underwriting/source/observation mechanism, not a public probe.",
   "new_price_fits": 489,
   "new_C0_fits": 960,
   "new_submissions": 2,
@@ -15762,10 +15762,54 @@
     "unit": "P96",
     "pid": 24412,
     "session_id": 95790,
-    "state": "TERMINAL_REPORT_WRITE_FAILURE_FITS_COMPLETE",
+    "state": "TERMINAL_SUCCESS_WITH_PRESERVED_REPORT_WRITER_REPAIR",
     "scope": "10+10 property GLMs; same-scope P88 levels and motor models reused; no new source/CDF/2025/uploads",
-    "resumption": "Poll same session95790; no restarting unsaved fits. Reconcile raw checkpoints and committed scope artifacts first.",
+    "resumption": "Completed. Original report-write failure preserved; deterministic recovery and replay passed. No new fitting or resampling during recovery.",
     "failure_receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P96_validacion_capital_destino_20261027/report_writer_repair.json",
-    "repair": "Recover report only; no run or refit/resampling"
+    "repair": "Recover report only; no run or refit/resampling",
+    "reconciled_utc": "2026-10-27T09:14:04.036612+00:00",
+    "completion": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P96_validacion_capital_destino_20261027/completion_receipt.json",
+    "completion_sha256": "b528fa5d5e99bd19d37288d19412874042951e35592700b78120b6dcf1a3909f"
+  },
+  "private_P96": {
+    "author": "Codex",
+    "utc": "2026-10-27T09:08:02.351827+00:00",
+    "status": "P96ordinary_capital_main_effect_pooled_complete_transfer_unmeasured",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P96_validacion_capital_destino_20261027/report.json",
+    "report_sha256": "6d7f97da448d8ac011bb85fc85a8034f7b0d0cdc3e61df69b1324ca6fac53dcd",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P96_VALIDACION_CAPITAL_DESTINO.md",
+    "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+    "nominal": {
+      "delta": -0.004115084435247635,
+      "bootstrap95": [
+        -0.007063801422936526,
+        -0.0012336276866288527
+      ],
+      "post31_delta": -0.006663796027695045,
+      "worst_cell_delta": -0.02762937880623879
+    },
+    "P96_minus_P88_point_only": -0.00016800364361689926,
+    "all_pooled_gates_pass": false,
+    "conditional_transfer_gate": null,
+    "primary_GLM_fits": 10,
+    "adverse_GLM_fits_separate": 10,
+    "reused_primary_motor_models": 5,
+    "reused_primary_closed_levels": 90,
+    "new_primary_closed_levels": 0,
+    "motor_pooled_frame_exact_P88": true,
+    "new_source_fits": 0,
+    "new_CDF_fits": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "Inspect only new P96 property capital coefficients, train support and all saved held cells against P88, without new inference/fit/resampling. Establish whether the added ordinary-capital main effect was too weak, adverse or insufficient across both businesses; no threshold/alpha/line rescue. A next candidate requires a different concrete underwriting/source/observation mechanism, not a public probe.",
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P96-CAPITAL-RESULTADO",
+      "utc": "2026-10-27T09:08:02+00:00",
+      "previous_sha256": "4d2fdceb9f7be1230db85609f03f6fdb38f64cbde61215e70871413972491525",
+      "sha256": "c5fa52de03db7a4d54151d9bd00b487a355e3c2b59e3062d1bf0f1ed8a133b1b"
+    }
   }
 }
