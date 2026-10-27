@@ -17,7 +17,7 @@
     "previous_sha256": "6d59e27de8b0a990b903b1cf19e79963507e408dc9a23e937978d9678c2169d3",
     "sha256": "61b4c2ca7fd790b2ff916ef8696824758ce9fc6608087dbf7b89c949f733ff36"
   },
-  "next_unit": "P110: implement/register real complete validation of EXACT P109staged Poisson-count/cost-level algorithm and matched null. Reuse these15inputs and own P64cost curves, prepare paired-weight scenario q, retain ALL original private guards and raw fit attempt counters before running.15+15Poissonfits/45+45closed levels, no source/CDFfit or capacity rescue. Score only after preregistration; replay ALL learned stages blocked. Transfer remains pending unless pooled guards all pass.",
+  "next_unit": "Review ONLY new saved P110cost/count matched-null loss, coefficients and group/cell influence without fits/resampling. Separate whether observed-count correction transfers but frozen source marks/level fail. Preserve all raw outputs; no alpha/line/feature/weight rescue. Identify a new evidence-backed mechanism before another recipe; no new CSVadmitted.",
   "old_app_goal_text_stale": true,
   "public017_or0175_not_sufficient_for_completion": true,
   "hidden_private_improvement_established": false,
@@ -9031,5 +9031,134 @@
     "goal_active": true,
     "2024_open_adaptive": true,
     "B00_all_alternatives_preserved": true
+  },
+  "P110": {
+    "author": "Codex",
+    "utc": "2026-10-27T14:03:51.548741+00:00",
+    "status": "P110staged_Poisson_cost_level_pooled_complete_transfer_unmeasured",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P110_validacion_Poisson_destino_20261027/report.json",
+    "report_sha256": "967004357cc58afa2a5c70e1155dfa60fb343d8ddbb7e90fa0318f7d9660c84e",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P110_VALIDACION_POISSON_DESTINO.md",
+    "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+    "nominal": {
+      "delta": -0.007604893096957118,
+      "bootstrap95": [
+        -0.013442687129174787,
+        -0.0018166192633569814
+      ],
+      "post31_delta": -0.014380662551249021,
+      "worst_cell_delta": -0.09080526315790324
+    },
+    "matched_nominal": {
+      "scenario": "NOMINAL",
+      "delta_vs_matched_null": -0.0005521391917125549,
+      "post31_delta": -0.005327902537994536,
+      "cells": [
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 0,
+          "delta": -0.008018825418916421
+        },
+        {
+          "line": "buildings",
+          "year": 2023,
+          "NB": 1,
+          "delta": -0.008077156298298341
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 0,
+          "delta": 0.012484017188039662
+        },
+        {
+          "line": "buildings",
+          "year": 2024,
+          "NB": 1,
+          "delta": 0.007256595974819972
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 0,
+          "delta": -0.0054203580491071785
+        },
+        {
+          "line": "contents",
+          "year": 2023,
+          "NB": 1,
+          "delta": -0.0015326230944807228
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 0,
+          "delta": -0.003707113973480491
+        },
+        {
+          "line": "contents",
+          "year": 2024,
+          "NB": 1,
+          "delta": 0.011805114187797623
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 0,
+          "delta": 0.005183576813590239
+        },
+        {
+          "line": "motor",
+          "year": 2023,
+          "NB": 1,
+          "delta": -0.054964335463382974
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 0,
+          "delta": 0.001327685623998705
+        },
+        {
+          "line": "motor",
+          "year": 2024,
+          "NB": 1,
+          "delta": 0.0024709810560665383
+        }
+      ],
+      "worst_cell_delta": -0.054964335463382974,
+      "folds": {
+        "0": -0.0004491867739684512,
+        "1": -2.6371814992587657e-05,
+        "2": -1.718636126380904e-05,
+        "3": 8.735040053345368e-05,
+        "4": -0.00014674464202116082
+      },
+      "bootstrap95": [
+        -0.005521461218201281,
+        0.003928303983523911
+      ]
+    },
+    "all_pooled_gates_pass": false,
+    "conditional_transfer_gate": null,
+    "primary_Poisson_fits": 15,
+    "adverse_Poisson_fits_separate": 15,
+    "primary_closed_levels": 45,
+    "adverse_closed_levels_separate": 45,
+    "new_source_fits": 0,
+    "new_CDF_fits": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "Review ONLY new saved P110cost/count matched-null loss, coefficients and group/cell influence without fits/resampling. Separate whether observed-count correction transfers but frozen source marks/level fail. Preserve all raw outputs; no alpha/line/feature/weight rescue. Identify a new evidence-backed mechanism before another recipe; no new CSVadmitted.",
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P110-POISSON-RESULTADO",
+      "utc": "2026-10-27T14:03:51+00:00",
+      "previous_sha256": "3b2552fe7a47d29288f4e6fbe4de03ace115be8cf212dc6fcfad11b3bef730ea",
+      "sha256": "ec6f6c219a8debd52064e3be2778c59f5ed15b595f56f5a623dad53fc1d02c0b"
+    }
   }
 }
