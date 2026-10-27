@@ -17,7 +17,7 @@
     "previous_sha256": "6d59e27de8b0a990b903b1cf19e79963507e408dc9a23e937978d9678c2169d3",
     "sha256": "61b4c2ca7fd790b2ff916ef8696824758ce9fc6608087dbf7b89c949f733ff36"
   },
-  "next_unit": "P109: design and freeze a standard target Poisson frequency correction using actual accepted-event counts, source-paired annual frequency offset and count-weighted completion from P107/P108. Keep original T0cost for final price-level calibration, keep source mark allocation and cost completion distinct. Specify all training normalizers, scope exclusions, penalty rescaling, comparator and whole-pipeline synthetic invariance before any real fit. Do not repeat P30 full source transfer or treat this export as predictive improvement.",
+  "next_unit": "P110: implement/register real complete validation of EXACT P109staged Poisson-count/cost-level algorithm and matched null. Reuse these15inputs and own P64cost curves, prepare paired-weight scenario q, retain ALL original private guards and raw fit attempt counters before running.15+15Poissonfits/45+45closed levels, no source/CDFfit or capacity rescue. Score only after preregistration; replay ALL learned stages blocked. Transfer remains pending unless pooled guards all pass.",
   "old_app_goal_text_stale": true,
   "public017_or0175_not_sufficient_for_completion": true,
   "hidden_private_improvement_established": false,
@@ -8961,5 +8961,75 @@
       "previous_sha256": "9f920f164a6d14cbbd56903f24e42b636aed34dc7d42579d08199c5ca596eb0c",
       "sha256": "044ff8b9ce4606887115c89f50e092de6da4472090c7e16ca4759ad14fa21811"
     }
+  },
+  "P109": {
+    "author": "Codex",
+    "utc": "2026-10-27T11:28:21.152808+00:00",
+    "status": "P109synthetic_staged_Poisson_and15scope_inputs_complete_no_real_fit",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P109_Poisson_destino_preflight_20261027/report.json",
+    "report_sha256": "8f5e0d01255d4fb7ac5ec257b1e7053f52b501f9f00bc40a60394a14fcf64662",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P109_POISSON_DESTINO_PREFLIGHT.md",
+    "outputs": {
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P109_Poisson_destino_preflight_20261027/input_motor_0.parquet": "67606a42239de4cae51b905ff26859a19ae31db9e80eaf280a4ebfdca9c0f247",
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P109_Poisson_destino_preflight_20261027/input_motor_1.parquet": "d587e9ec23177ec0cc16e99575d8d6e619be90fe501f989c6bf5a7a66c6f52a5",
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P109_Poisson_destino_preflight_20261027/input_motor_2.parquet": "886cf4b79c1ef1e723aea33af29d6247422ce0d8064605471c74087499681a16",
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P109_Poisson_destino_preflight_20261027/input_motor_3.parquet": "032c028180b636f5ed723dad4ff125f09c87ef0bd0c6d0120ae17c6896cfcacb",
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P109_Poisson_destino_preflight_20261027/input_motor_4.parquet": "0422e238491b3b430f2f31b673559a149a0cc34cd533b1436ee217927ce495e8",
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P109_Poisson_destino_preflight_20261027/input_buildings_0.parquet": "9bfd682691e1af69263a7c98a268dcec1e0bf15d34617a2fb744a3705beadd01",
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P109_Poisson_destino_preflight_20261027/input_buildings_1.parquet": "034d089628f7f25fb949147c9d326529c67e634f4a2e28b31b1a016f7e800133",
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P109_Poisson_destino_preflight_20261027/input_buildings_2.parquet": "09343904a39ebae4a2c6b1d0e2ee8dd965985dc82b7b02419c7b4a22775c31ef",
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P109_Poisson_destino_preflight_20261027/input_buildings_3.parquet": "9c06bbd8e97a590a3a5dd380f63aea661c6762563b7da93d15b135c0867af018",
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P109_Poisson_destino_preflight_20261027/input_buildings_4.parquet": "5b592cd168dd04ebb54608f9248a98f9fffbc168426fde6d2fbb502428a5ad6c",
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P109_Poisson_destino_preflight_20261027/input_contents_0.parquet": "92e1dac6f3d2f80c20acb0d715e20e0e61d85cb34fa3a730f441d4316067cd3a",
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P109_Poisson_destino_preflight_20261027/input_contents_1.parquet": "3a771b3b3917ad7a98a5da9e813fc0cc5332ee84a969ca4c2e17d2ce83f98361",
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P109_Poisson_destino_preflight_20261027/input_contents_2.parquet": "45f5b802f3df7822f26a756e3c9c0f425b17d5bfa2b91d6261a084202dbc6152",
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P109_Poisson_destino_preflight_20261027/input_contents_3.parquet": "7a0be522af61d22e9824759bdb810274702a7e768f8f27ae5b9a897738228ebc",
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P109_Poisson_destino_preflight_20261027/input_contents_4.parquet": "208e5a71501b8e6e55950e40900de7c8a4fd286c9d20ee4115470af929b92ef6"
+    },
+    "new_real_fits": 0,
+    "new_CDF_fits": 0,
+    "new_scores": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "P110: implement/register real complete validation of EXACT P109staged Poisson-count/cost-level algorithm and matched null. Reuse these15inputs and own P64cost curves, prepare paired-weight scenario q, retain ALL original private guards and raw fit attempt counters before running.15+15Poissonfits/45+45closed levels, no source/CDFfit or capacity rescue. Score only after preregistration; replay ALL learned stages blocked. Transfer remains pending unless pooled guards all pass.",
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P109-POISSON-RESULTADO",
+      "utc": "2026-10-27T11:28:21+00:00",
+      "previous_sha256": "074ce612aa4c130d2d6073a788f94207ff7b201783c9a403fb2161b66a28e15a",
+      "sha256": "26ce0556f6d7cb640ddf9cad1e493aa5f83645a4b61f8d80ff6671b80adcbb97"
+    }
+  },
+  "P109_continuation": {
+    "author": "Codex",
+    "utc": "2026-10-27T11:30:42.559655+00:00",
+    "status": "finite_cut_P106_through_P109_complete_goal_active",
+    "completed": [
+      "P106counts",
+      "P107fixed_source_count_exposure",
+      "P108historical_paired_rates",
+      "P109whole_synthetic_and15numeric_inputs"
+    ],
+    "parent_curve_bindings": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P109_Poisson_destino_preflight_20261027/parent_curve_bindings.json",
+    "parent_curve_bindings_sha256": "ed7abdd42c1b78db6c3b9186f806f2123c2b9a536079a0f110338b209c25c1ef",
+    "new_real_price_or_count_fits": 0,
+    "new_real_closed_levels": 0,
+    "new_CDF_fits": 0,
+    "new2025inference": 0,
+    "new_scores": 0,
+    "new_submissions": 0,
+    "synthetic_primary_Poisson_fits": 3,
+    "synthetic_adverse_Poisson_fits_separate": 3,
+    "synthetic_primary_closed_model_levels": 9,
+    "synthetic_adverse_closed_model_levels_separate": 9,
+    "synthetic_additional_scalar_scale_identity_control_calls": 3,
+    "pending": "P110real evaluator not implemented or registered. Need actual Poisson fit observer, full attempt counters, paired-source cost scenario adapter (do not inherit P65FSp weights), matched-null paired results and primary-reference private guards before any real fit. No approval prerequisite or new CSVadmission is claimed.",
+    "next_unit": "P110: implement/register real complete validation of EXACT P109staged Poisson-count/cost-level algorithm and matched null. Reuse these15inputs and own P64cost curves, prepare paired-weight scenario q, retain ALL original private guards and raw fit attempt counters before running.15+15Poissonfits/45+45closed levels, no source/CDFfit or capacity rescue. Score only after preregistration; replay ALL learned stages blocked. Transfer remains pending unless pooled guards all pass.",
+    "goal_achieved": false,
+    "goal_active": true,
+    "2024_open_adaptive": true,
+    "B00_all_alternatives_preserved": true
   }
 }
