@@ -2,7 +2,7 @@
   "author": "Codex",
   "as_of_utc": "2026-10-27T02:37:45.227878+00:00",
   "scope": "Own pricing/development lineage only; not all project fits or other authors. Historical main catalog retains its dated counter.",
-  "cumulative_price_base_fits": 2065,
+  "cumulative_price_base_fits": 2515,
   "cumulative_closed_form_constants": 39309,
   "auxiliary_Poisson_Gamma_fits_separate": 30,
   "baseline": {
@@ -4053,6 +4053,119 @@
       "utc": "2026-10-27T06:40:26+00:00",
       "previous_sha256": "4b5d07e3580dcfb46b67996e283bf94bd3d9ccad6cd824037dcc9e07f6b20f1c",
       "sha256": "54343565f94c7c8c376bf683f9999fc028767c110728a0752f47ba51aad9e50d"
+    }
+  },
+  "phase2_private_P84_inner_selection_preflight": {
+    "author": "Codex",
+    "utc": "2026-10-27T07:04:19.755760+00:00",
+    "status": "P84whole_inner_selection_synthetic_and75numeric_bindings_passed",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P84_seleccion_GLM_preflight_20261027/report.json",
+    "report_sha256": "82d918363d8e0bf4310bdb6b701a1bea73aacf69a6653fc9e36c34c52612cb3f",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P84_SELECCION_GLM_INTERNA_PREFLIGHT.md",
+    "next_unit": "P85: register/commit EXACTP84inner-selected common-alpha whole algorithm,225inner+15finalGLMprimary and sameadverse, no new source/base/CDFfits. All existing outerguards plus inner/final convergence, exact whole selector/model replay. Pooledpass still needs own2023-only conditionaltransfer before CSV. No grid refinement or perline alpha/field/band rescue.",
+    "new_real_fits": 0,
+    "new_source_fits": 0,
+    "new_CDF_fits": 0,
+    "new_scores": 0,
+    "new_submissions": 0,
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P84-SELECTOR-RESULTADO",
+      "utc": "2026-10-27T07:04:19+00:00",
+      "previous_sha256": "9273e2912003944c2f1c11e24570638cf317a5aadeca40f7791ebe8d8452135e",
+      "sha256": "4d285f0ae9dfab03f4467710e0b2c1d8a8fb23f71889151a254c99e5d48a68f6"
+    },
+    "synthetic": {
+      "author": "Codex",
+      "utc": "2026-10-27T07:00:28.377636+00:00",
+      "selected_alpha_synthetic_only": 1.0,
+      "all_outer_payload_poison_selection_and_models_exact": true,
+      "all45inner_losses_and_selector_replayed_exact_without_fitting": true,
+      "JSONfinal_predictions_exact": true,
+      "ties_choose_larger_alpha": true,
+      "synthetic_primary_GLMfits": 48,
+      "synthetic_adverse_GLMfits_separate": 48,
+      "reporting_limit": "Synthetic qtables are fixed scope fixtures, not newly learned RPLcurves. Actual75bindings separately use pinned protected P67inner numeric CDFobjects and existing ancestry evidence. No claim that this synthetic fixture revalidates all reporting learning.",
+      "new_real_fits": 0,
+      "new_CDF_fits": 0,
+      "new_scores": 0,
+      "new2025inference": 0,
+      "new_submissions": 0
+    }
+  },
+  "phase2_private_P85_inner_selection": {
+    "author": "Codex",
+    "utc": "2026-10-27T07:18:15.607286+00:00",
+    "status": "P85common_inner_selected_GLM_pooled_complete_transfer_unmeasured",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P85_validacion_seleccion_GLM_20261027/report.json",
+    "report_sha256": "13680b4cc47ff35c4f4a874004186aee783e2d7adcfef071dfc9f2a12e428bfe",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P85_VALIDACION_SELECCION_GLM.md",
+    "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+    "nominal": {
+      "delta": -0.004515513294133541,
+      "bootstrap95": [
+        -0.007900488610715545,
+        -0.0013066821464543098
+      ],
+      "post31_delta": -0.006998300067582437,
+      "worst_cell_delta": -0.04640307301587655
+    },
+    "all_pooled_gates_pass": false,
+    "conditional_transfer_gate": null,
+    "actual_new_primary_nativefits": 225,
+    "actual_new_adverse_nativefits_separate": 225,
+    "native_fits_added_to_counter": 450,
+    "primary_selected_alphas": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "new_source_fits": 0,
+    "new_target_base_fits": 0,
+    "new_CDF_fits": 0,
+    "new_closed_constants": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "Review NEWP85saved selectedalphas/inner-vs-outer losses and complete held cells against fixedP82/P65without refit/resampling. Do not refine grid, choose perline alphas or override fields/bands from outer/public outcomes. Need a distinct documented source/target/reporting mechanism before another recipe; preserve all alternatives/quota.",
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P85-SELECTOR-RESULTADO",
+      "utc": "2026-10-27T07:18:15+00:00",
+      "previous_sha256": "089c40519b8a1f7b21a14b7bd05343c702352a89d528ab0b7e794084b81df958",
+      "sha256": "0363c9a516e8f183467fcead673b3678eb24155eb2116d6c47ff0851629b4479"
+    }
+  },
+  "phase2_private_P83_saved_penalty_review": {
+    "author": "Codex",
+    "utc": "2026-10-27T06:49:46.202415+00:00",
+    "status": "P83saved_band_penalty_curvature_review_complete",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P83_penalizacion_guardada_20261027/report.json",
+    "report_sha256": "59f66bf20168054ca536778b63ec99530d18aefcb0e8a2cc5c99dee1ac682d03",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P83_PENALIZACION_Y_BANDAS.md",
+    "next_unit": "P84: design and synthetic-preflight a finite TRAINING-ONLYregularization-selection algorithm for SAMEP82standardGLM, not an outer-score alpha rescue. Inspect/reuse only valid P67own-inner report objects/keys after numeric binding, no protected outerqborrowed. Freeze grid, exact selector, tie rule/cost/criteria and whole poison/replay before any real fit; unchanged outer/private guards. If inner inputs lack required provenance, prepare them without fitting rather than silently reuse.",
+    "new_real_fits": 0,
+    "new_source_fits": 0,
+    "new_CDF_fits": 0,
+    "new_diagnostic_training_mean_vectors": 15,
+    "new_Hessians": 15,
+    "new_held_scores": 0,
+    "new_resampling": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P83-PENALIZACION-RESULTADO",
+      "utc": "2026-10-27T06:49:46+00:00",
+      "previous_sha256": "aa641ab0bceb98aeedd6bd7047bc2dfce9104d140890379eaab441fac829b8a5",
+      "sha256": "ac974f4331b3e7c16ebac527699ab986c0f80f4dff4b7e02f627c8a6156ca8ef"
     }
   }
 }
