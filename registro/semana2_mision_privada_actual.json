@@ -6,7 +6,7 @@
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_mision_privada_plan_v1.json",
   "plan_sha256": "3329dbc7fe931d71e1e945bdf536fd9d810040f2626709f3d103c2dc5cdd7876",
   "execution_control": "Hackaton/Repositorio_IAA2026/registro/semana2_control_entregas_codex_actual.json",
-  "execution_control_sha256": "54e745f5096d67bfaefe5dce15fb865bb44c0afae43b95f96bb6f6fd21492bea",
+  "execution_control_sha256": "e181102de6720edb1c46b8ed333d45e8537fa8245e55257b435670b958753563",
   "guard_test": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/entrega_H1_investigacion_20261026_v1/prioridad_privada_20261026T131510432194Z/private_priority_guard_test.json",
   "guard_test_sha256": "bd738071e41cacaf51c93fe3a8de6fe046e87cb14bbcc664699322393979dd99",
   "document": "Hackaton/Repositorio_IAA2026/docs/semana2/MISION_PRIVADA_PRIORIDAD_Y_PLAN.md",
@@ -17,7 +17,7 @@
     "previous_sha256": "6d59e27de8b0a990b903b1cf19e79963507e408dc9a23e937978d9678c2169d3",
     "sha256": "61b4c2ca7fd790b2ff916ef8696824758ce9fc6608087dbf7b89c949f733ff36"
   },
-  "next_unit": "P67: register and commit the complete SAMEalpha1GLM with current P64/P65observation and all5saved inner group offsets. Pin every new inner report/base artifact, use fullouterP65ONLYon held.25report scopes/375lineCDFs/75baselearners/15GLMprimary plus separate actual adverse fits. Every previous gate unchanged; no new source trees, tuned fields/alpha or publicprobe.",
+  "next_unit": "Compare NEWP67saved coefficients/whole validation against P60old-observation GLM and P65current base, without refitting or resampling. Determine whether the observation change leaves a standard-model residual generalization failure. No alpha/field/weight rescue or public probes; document a concrete next mechanism before another registered candidate.",
   "old_app_goal_text_stale": true,
   "public017_or0175_not_sufficient_for_completion": true,
   "hidden_private_improvement_established": false,
@@ -7542,6 +7542,49 @@
       "utc": "2026-10-27T04:26:56+00:00",
       "previous_sha256": "8d3b56606e1457f3fec5a1d10ebc55abff67a2d34e8dd95016e39f8cd1cb452a",
       "sha256": "bc0b94edc0e9db540c3b776c2a572e37579c6d4c435fa29994d9851f96237f43"
+    }
+  },
+  "P67": {
+    "author": "Codex",
+    "utc": "2026-10-27T04:33:56.184089+00:00",
+    "status": "P67current_reporting_crossfit_GLM_pooled_complete_transfer_unmeasured",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P67_validacion_GLM_reporte_actual_20261027/report.json",
+    "report_sha256": "74d339318dbce0737759e2bd9b0dd9e82ef9ff1902a659049d973678594dace2",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P67_VALIDACION_GLM_REPORTE_ACTUAL.md",
+    "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+    "nominal": {
+      "delta": -0.0020979645897206446,
+      "bootstrap95": [
+        -0.004517601256354922,
+        6.641283409015452e-05
+      ],
+      "post31_delta": -0.003891322753150059,
+      "worst_cell_delta": -0.013843533899495174
+    },
+    "P67_minus_P65_point_only": -0.0021504756155889177,
+    "all_pooled_gates_pass": false,
+    "conditional_transfer_gate": null,
+    "primary_GLM_fits": 15,
+    "adverse_GLM_fits_separate": 15,
+    "primary_inner_base_learners": 75,
+    "adverse_inner_base_learners_separate": 75,
+    "primary_line_CDFs": 375,
+    "adverse_line_CDFs_separate": 375,
+    "primary_cap_vectors": 25,
+    "adverse_cap_vectors_separate": 25,
+    "new_primary_closed_constants": 2700,
+    "new_source_fits": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "Compare NEWP67saved coefficients/whole validation against P60old-observation GLM and P65current base, without refitting or resampling. Determine whether the observation change leaves a standard-model residual generalization failure. No alpha/field/weight rescue or public probes; document a concrete next mechanism before another registered candidate.",
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P67-GLM-RESULTADO",
+      "utc": "2026-10-27T04:33:56+00:00",
+      "previous_sha256": "c7ed4bc7c3ad990b9cc0de3027a04df0a9abcd0bcd8f6ad5f2e5e8b3cdf6448b",
+      "sha256": "bc193efad82e007f919ec918ba52d6990255b4e4be8225115c12a444e66f6cd2"
     }
   }
 }
