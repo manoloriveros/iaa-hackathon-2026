@@ -1,14 +1,33 @@
 {
   "author": "Codex",
-  "utc": "2026-10-27T11:04:36.355361+00:00",
-  "status": "P106registered_before_count_view_preparation",
+  "utc": "2026-10-27T11:04:51.733143+00:00",
+  "status": "P106existing_observed_counts_aligned_no_frequency_exposure_or_model",
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_recuentos_destino_plan.json",
   "plan_sha256": "c442fc43883770d32d91029774af4081a9a81634f2eb81f0de7d1be7ab59242f",
   "forum": {
     "author": "Codex",
-    "id": "COD-S2-20261027-PRIVADA-P106-RECUENTOS-PREVIO",
-    "utc": "2026-10-27T11:04:36+00:00",
-    "previous_sha256": "f9971977e99d83fe9d85595d2edc0481895aef359f4f392e3230ecd0d8bdd61d",
-    "sha256": "1150f171d13ab3e69d8249eea856f94443aa713891a5e2864e65ce45bb81c8fe"
-  }
+    "id": "COD-S2-20261027-PRIVADA-P106-RECUENTOS-RESULTADO",
+    "utc": "2026-10-27T11:04:51+00:00",
+    "previous_sha256": "1150f171d13ab3e69d8249eea856f94443aa713891a5e2864e65ce45bb81c8fe",
+    "sha256": "42b40d9d519a62899461a5b71c813b00b472021746e63a376d72b53749d89c55"
+  },
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P106_recuentos_destino_20261027/report.json",
+  "report_sha256": "def46945d5c537cac3922e444469a3ce67f7853e858b5ffc36bf125943638696",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P106_RECUENTOS_DESTINO.md",
+  "outputs": {
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P106_recuentos_destino_20261027/counts_motor.parquet": "a217a3756f819cd250af0b188245f814dd2997d8e77b4d2c89ac3ecd4f3ea789",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P106_recuentos_destino_20261027/counts_buildings.parquet": "7766328cb9fc6c4ffc8722ace11b70c789df02b1a80d3ff3b0c22c146d423abe",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P106_recuentos_destino_20261027/counts_contents.parquet": "e81327c14f3717c386fba11fd0aa3bf4dc86b7ddafd4c29509cc21943e17e461"
+  },
+  "count_reporting_exposure_implemented": false,
+  "paired_source_frequency_mark_views_exported": false,
+  "new_model_fits": 0,
+  "new_CDF_fits": 0,
+  "new_source_inference": 0,
+  "new_scores": 0,
+  "new2025inference": 0,
+  "new_submissions": 0,
+  "next_unit": "P107: design paired accepted-event count exposure for the new destination count path, using P27/P29definitions and current outer/inner group exclusions. Inspect existing source count-RKM support and q.cost_curves eligibility before implementing; count weights1must retain accepted cost0 events. Costweighted curves/caps cannot be silently reused as countCDF. Separate synthetic riskset/event enumeration and zero-exposure handling before any real CDFfit. Then registered historical P29frequency/mark export; no nativeFSpf-as-identified-frequency. No Poisson/cost model before complete paired-source/exposure recipe.",
+  "2024_open": true,
+  "goal_achieved": false
 }

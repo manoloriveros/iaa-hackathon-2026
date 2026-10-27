@@ -1,0 +1,62 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-27T11:13:53.083622+00:00",
+  "need": "P106 has accepted-event counts, but its destination path lacks event-count exposure. Native FSp and costq cannot substitute for the paired Poisson exposure.",
+  "decision": "Reuse the 15 already validated source-only daily unit-event RKM count objects from source2021-2023 at valuation2024-12-31. No new count CDF fit and no target label may enter this exposure adapter. This simpler source-fixed alternative precedes any need for scope-specific count curves.",
+  "configuration": {
+    "destination_years": [
+      2023,
+      2024
+    ],
+    "market": "emerging",
+    "test_excluded": true,
+    "source_count_cohort": [
+      2021,
+      2022,
+      2023
+    ],
+    "valuation": "2024-12-31",
+    "strata": "line/peril,15",
+    "calendar": "Inclusive insured daily sum of frozen countCDF(CUT-day)/365, exactly canonical exposure.",
+    "count_definition": "Accepted assigned reported events, including accepted cost0; unchanged P106 definitions.",
+    "cost_completion": "Unchanged cost targets and existing separate cost completion. No cost curve/cap borrowed for counts.",
+    "tail": "Frozen original F(max observed delay)=1, unobserved tail not identified; no extra mass or retuning.",
+    "domain": "No count model here. Later count likelihood must allow N=0,E_N=0 with zero contribution and reject N>0,E_N=0.",
+    "scope": "Shared source-only object is intentionally invariant across every outer/inner target group. Target keys/dates are needed to quote exposure; target labels/group/fold cannot alter the object."
+  },
+  "criterion": "Strict year/key/calendar validation; daily scalar synthetic integration, label/cost poisoning, subset/permutation; invalid curve/domain cases reject. All109296 canonical rows unchanged, E_count per15perils in[0,calendar]. No comparison score or model selection.",
+  "limits": [
+    "Source-to-target delay transport remains an assumption, not empirical target validation.",
+    "Retrospective snapshot2024-12-31 is not an inception-available label snapshot.",
+    "No ultimate frequency identified, no private score inferred; previous P30 and other adverse source recipes retained."
+  ],
+  "budget": {
+    "new_model_fits": 0,
+    "new_CDF_fits": 0,
+    "new_source_rate_inference": 0,
+    "new_scores": 0,
+    "new2025inference": 0,
+    "new_submissions": 0
+  },
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/preparar_exposicion_recuento_P107.py": "469ba0219b291e38bab58a456b8a9bb8a2aa2b5bffde93fe2d3a19cc5cc799cd",
+    "Hackaton/Repositorio_IAA2026/herramientas/preparar_recuentos_destino_P106.py": "5646906dd01d31984949269cbf529613a5c291e0386950f0112d5507de5ecc90",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_recuentos_destino_actual.json": "9bf41127a0055108135667cd0bd474d3ea4962da3a1ce488437265ce1101ea0d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P106_recuentos_destino_20261027/report.json": "def46945d5c537cac3922e444469a3ce67f7853e858b5ffc36bf125943638696",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/recuentos_fuente2024_rkm_reuse_v1/report.json": "92fd18616644ea973fb59c147c4163c0df6104b0a3400d45a3e2b7de2abfed7a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P27_contrato_frecuencia_20261026/report.json": "b74669746ab15c24348844e5679cd5fb11762187852b2e2b265707c1c1f3f4ac",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P29_fuente_frecuencia_completa_20261026/report.json": "10fedba90079e56dc1abcf4e9bafaf31b4de5e61b607f1ae28110905a647924e",
+    "Hackaton/Repositorio_IAA2026/src/semana2/variables_ultimo.py": "9f40d75e5b0ffafddc9ae6547df8b826825026e88d5f8aabd0258b88bbd0fec2",
+    "Hackaton/Repositorio_IAA2026/herramientas/reutilizar_reporte_fuente2024.py": "19a328830bc86559dcd478e1552145b0dd9b1ebd7792bb68d2b483ebc2925827",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_prioridad_privada_reafirmada_20261027.json": "f25fe3ae860a9ffb8af8eee330bafb91aa2badd9cff3de32d4501e363a9bb83a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P106_recuentos_destino_20261027/counts_motor.parquet": "a217a3756f819cd250af0b188245f814dd2997d8e77b4d2c89ac3ecd4f3ea789",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P106_recuentos_destino_20261027/counts_buildings.parquet": "7766328cb9fc6c4ffc8722ace11b70c789df02b1a80d3ff3b0c22c146d423abe",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P106_recuentos_destino_20261027/counts_contents.parquet": "e81327c14f3717c386fba11fd0aa3bf4dc86b7ddafd4c29509cc21943e17e461",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/entradas_temporales_v1/source_reporting_motor.json": "f93a850501aa9acdf82bad646818ce4dbbfed09047056481b4b5f6e8ed1097b1",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/entradas_temporales_v1/source_reporting_buildings.json": "0f63589a6e14f5a887ce665183d545a1260419066c7744e65e49ba9c31a797e9",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/entradas_temporales_v1/source_reporting_contents.json": "66821dd27accd9eb2912e77f7a581216362ecd107e6798b4913a70d7524bd062"
+  },
+  "B00_all_alternatives_preserved": true,
+  "2024_open": true,
+  "goal_achieved": false
+}
