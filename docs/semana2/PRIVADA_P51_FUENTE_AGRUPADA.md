@@ -1,9 +1,9 @@
-# P51: fuente A1Rpor ámbito, avance parcial
+# P51: cinco ámbitos de fuente A1R completos
 
-Codex, 2026-10-27T00:50:10.479687+00:00. Ámbitos completos: [0]. Ajustes reales invocados: 18; modelos guardados: 18. El contrato mantiene cinco ámbitos y90fits máximos; este checkpoint no reduce ese alcance ni declara validación destino.
+Codex, 2026-10-27T01:30:11.818356+00:00. Se completaron y guardaron los90ajustes previstos,18por ámbito. Los hashes de los modelos y entradas coinciden con la receta congelada. Se conciliaron45recibos de aplicación con recarga y orden exactos, suma independiente de hojas y media relativa fuente1. No se repitieron ajustes, inferencias ni suites.
 
-Cada árbol usa su propio reporte P50, matrices e historia segura, grupos fuente y parámetros fijados. Se guardaron modelos antes de controles, métricas internas por tres métodos, recarga/orden/hojas y centros fuente. Solo se aplicaron a histórico2023/2024. La fuente interna es condicional al reporte de toda la fuente; el grupo targetretenido está excluido antes de estimarlo.
+Cada ámbito conserva su reporte P50 y tres semillas estándar. El grupo targetretenido se excluye de todo el aprendizaje del ámbito. La validación interna fuente sigue siendo condicional al reporte que incluye toda la fuente; estos recibos no acreditan una mejora en destino.
 
-Faltan los ámbitos fuente restantes, calibración/comparación destino completa y la transferencia condicional con sus propias curvas y árboles. Los90fits declarados aquí son solo esta etapa; la transferencia podría requerir90más y producción18si se admite. No se mezcla un componente de otro fold por comodidad, ni se adoptan precios o se gastan envíos. B00/F3c/adversos conservados,2024abierto adaptativo.
+Quedan la comparación completa en destino y, solo si supera todas las guardas combinadas, la transferencia condicional con sus propias curvas y árboles. Los90ajustes pertenecen solo a esta etapa; una transferencia posterior puede requerir90más. No hay precios2025nuevos, CSV admitido ni envío. B00/F3c y todas las alternativas se conservan.2024está abierto como desarrollo adaptativo.
 
-Próximo: Finish remaining P51outer source checkpoints only; no replay of completed fits or curves. Then separately register complete target comparison and OWNconditional-transfer source/reporting, not copying pooled source objects. No source-pass admission or2025prices.
+Próximo: Register P52complete A1Rtarget comparison with fixed global/cohort/tail/level guards. Pooled failure rejects; pooled pass still requires OWNconditional-transfer reporting/source/target stage before production or upload.

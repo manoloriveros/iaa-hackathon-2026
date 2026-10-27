@@ -17,7 +17,7 @@
     "previous_sha256": "6d59e27de8b0a990b903b1cf19e79963507e408dc9a23e937978d9678c2169d3",
     "sha256": "61b4c2ca7fd790b2ff916ef8696824758ce9fc6608087dbf7b89c949f733ff36"
   },
-  "next_unit": "Finish remaining P51outer source checkpoints only; no replay of completed fits or curves. Then separately register complete target comparison and OWNconditional-transfer source/reporting, not copying pooled source objects. No source-pass admission or2025prices.",
+  "next_unit": "Run the frozen P52pooled complete target comparison; no source refits, no automatic transfer or upload. Preserve any invocation/checkpoint on failure.",
   "old_app_goal_text_stale": true,
   "public017_or0175_not_sufficient_for_completion": true,
   "hidden_private_improvement_established": false,
@@ -5716,7 +5716,7 @@
     "remote_push": false,
     "human_review": "pending"
   },
-  "last_finite_cut": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/corte_P21_P23_20261026/receipt.json",
+  "last_finite_cut": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/cut_P50_P51_20261027.json",
   "P21": {
     "author": "Codex",
     "utc": "2026-10-26T19:14:07.407983+00:00",
@@ -6989,31 +6989,91 @@
   },
   "P51": {
     "author": "Codex",
-    "utc": "2026-10-27T00:48:24.322782+00:00",
-    "status": "P51source_partial_checkpoint_target_validation_pending",
+    "utc": "2026-10-27T01:29:58.367930+00:00",
+    "status": "P51all_source_scopes_complete_target_pending",
     "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_fuente_agrupada_privada_plan.json",
     "plan_sha256": "0f36c9282d74c5ff0b9d8a8ea1cbd3616b4c69509e0e7a177f572d8a4782c87d",
     "forum": {
       "author": "Codex",
-      "id": "COD-S2-20261027-PRIVADA-P51-FUENTE-CORTE1",
-      "utc": "2026-10-27T00:50:10+00:00",
-      "previous_sha256": "5b27bd84b038fd6526b3668a5177f39402ba81ed5939990622b48a5098d34ba2",
-      "sha256": "6e0a7ed79b474192939a548ce7abb5f4dca11934c8ab1e5992bcf9e769603af0"
+      "id": "COD-S2-20261027-PRIVADA-P51-FUENTE-CIERRE",
+      "utc": "2026-10-27T01:30:11+00:00",
+      "previous_sha256": "8216d5cf05a3b8958cedf177d358154de563ff17a3f2b1c521469e6e044bc291",
+      "sha256": "15402978146a9fbf5e91d860a9de254d07ae27af12533aa6dfcf746df5b9a9bf"
     },
-    "attempted_source_fits": 18,
-    "completed_source_fits": 18,
+    "attempted_source_fits": 90,
+    "completed_source_fits": 90,
     "completed_outer_scopes": [
-      0
+      0,
+      1,
+      2,
+      3,
+      4
     ],
     "execution": null,
     "new_C0_fits": 0,
     "new_target_scores": 0,
     "new2025inference": 0,
     "new_submissions": 0,
-    "next_unit": "Finish remaining P51outer source checkpoints only; no replay of completed fits or curves. Then separately register complete target comparison and OWNconditional-transfer source/reporting, not copying pooled source objects. No source-pass admission or2025prices.",
+    "next_unit": "Register P52complete A1Rtarget comparison with fixed global/cohort/tail/level guards. Pooled failure rejects; pooled pass still requires OWNconditional-transfer reporting/source/target stage before production or upload.",
     "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P51_FUENTE_AGRUPADA.md",
     "goal_achieved": false,
     "B00_all_alternatives_preserved": true,
-    "2024_open": true
+    "2024_open": true,
+    "live_tool_handle_outer1": {
+      "author": "Codex",
+      "utc": "2026-10-27T00:52:43.419456+00:00",
+      "exec_session_id": 60336,
+      "outer": 1,
+      "scope": "Verified live write_stdin handle; poll same session before new work. No restart on timeout.",
+      "completed_outer0_receipt": "outer0/completed.json"
+    },
+    "current_live_tool_handle": {
+      "author": "Codex",
+      "utc": "2026-10-27T01:07:10.413234+00:00",
+      "exec_session_id": 9950,
+      "outer_sequence": [
+        2,
+        3,
+        4
+      ],
+      "completed_before_sequence": [
+        0,
+        1
+      ],
+      "kind": "Sequential PowerShell foreach invoking unchanged frozenP51driver; stop on first nonzeroexit",
+      "status_at_last_observation": "running confirmed by write_stdin",
+      "instruction": "Poll THISsame9950session. Do not restart based on timeout;60336is terminal. Source childPIDchanges between outer runs but handle9950is stable."
+    },
+    "completion_receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P51_fuente_agrupada_20261027/completion_receipt.json",
+    "completion_receipt_sha256": "966865df1dea65ee6de9970d458ab150f9b17945e58394ed8e17f3d6c82020f4"
+  },
+  "P51_live_tool_handle_outer1": {
+    "author": "Codex",
+    "utc": "2026-10-27T00:52:43.419456+00:00",
+    "exec_session_id": 60336,
+    "outer": 1,
+    "scope": "Verified live write_stdin handle; poll same session before new work. No restart on timeout.",
+    "completed_outer0_receipt": "outer0/completed.json"
+  },
+  "P52": {
+    "author": "Codex",
+    "utc": "2026-10-27T01:30:23.582290+00:00",
+    "status": "P52registered_before_target_or_branch_fit_score",
+    "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_A1R_destino_validacion_plan.json",
+    "plan_sha256": "5accc19ffdcc831867181c78ebc3c355b947552282c38cefc45818ffc74c965c",
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P52-A1R-PREVIO",
+      "utc": "2026-10-27T01:30:23+00:00",
+      "previous_sha256": "15402978146a9fbf5e91d860a9de254d07ae27af12533aa6dfcf746df5b9a9bf",
+      "sha256": "be6c9a7a3360e1c9eb266baef6cb7f2e7ac1a196813a33f2976ce73c149ef198"
+    },
+    "preflight_evidence": {
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P52_synthetic_preflight.json": "f4c202018434e6f5efdb05be9ed2ef06b850e2c055d32161c0b7aa503f2bf129",
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P52_recovery_preflight.json": "ad54222e34377427d52fd3acec4a38ffc26544a40a39f28a04134c3d2761ba6b",
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P52_real_binding_preflight.json": "9f36c4926408471c14a274454334c9ed859ba53d64f79b019f2f6ce89212d8a1",
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P52_code_domain_preflight.json": "c62dccfe695e2da503d23cf980209039fe1c982c3baaf73e869618af156c223e"
+    },
+    "next_unit": "Run the frozen P52pooled complete target comparison; no source refits, no automatic transfer or upload. Preserve any invocation/checkpoint on failure."
   }
 }

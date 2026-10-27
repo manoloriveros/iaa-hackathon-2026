@@ -1,29 +1,61 @@
 {
   "author": "Codex",
-  "utc": "2026-10-27T00:48:24.322782+00:00",
-  "status": "P51source_partial_checkpoint_target_validation_pending",
+  "utc": "2026-10-27T01:29:58.367930+00:00",
+  "status": "P51all_source_scopes_complete_target_pending",
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_fuente_agrupada_privada_plan.json",
   "plan_sha256": "0f36c9282d74c5ff0b9d8a8ea1cbd3616b4c69509e0e7a177f572d8a4782c87d",
   "forum": {
     "author": "Codex",
-    "id": "COD-S2-20261027-PRIVADA-P51-FUENTE-CORTE1",
-    "utc": "2026-10-27T00:50:10+00:00",
-    "previous_sha256": "5b27bd84b038fd6526b3668a5177f39402ba81ed5939990622b48a5098d34ba2",
-    "sha256": "6e0a7ed79b474192939a548ce7abb5f4dca11934c8ab1e5992bcf9e769603af0"
+    "id": "COD-S2-20261027-PRIVADA-P51-FUENTE-CIERRE",
+    "utc": "2026-10-27T01:30:11+00:00",
+    "previous_sha256": "8216d5cf05a3b8958cedf177d358154de563ff17a3f2b1c521469e6e044bc291",
+    "sha256": "15402978146a9fbf5e91d860a9de254d07ae27af12533aa6dfcf746df5b9a9bf"
   },
-  "attempted_source_fits": 18,
-  "completed_source_fits": 18,
+  "attempted_source_fits": 90,
+  "completed_source_fits": 90,
   "completed_outer_scopes": [
-    0
+    0,
+    1,
+    2,
+    3,
+    4
   ],
   "execution": null,
   "new_C0_fits": 0,
   "new_target_scores": 0,
   "new2025inference": 0,
   "new_submissions": 0,
-  "next_unit": "Finish remaining P51outer source checkpoints only; no replay of completed fits or curves. Then separately register complete target comparison and OWNconditional-transfer source/reporting, not copying pooled source objects. No source-pass admission or2025prices.",
+  "next_unit": "Register P52complete A1Rtarget comparison with fixed global/cohort/tail/level guards. Pooled failure rejects; pooled pass still requires OWNconditional-transfer reporting/source/target stage before production or upload.",
   "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P51_FUENTE_AGRUPADA.md",
   "goal_achieved": false,
   "B00_all_alternatives_preserved": true,
-  "2024_open": true
+  "2024_open": true,
+  "live_tool_handle_outer1": {
+    "author": "Codex",
+    "utc": "2026-10-27T00:52:43.419456+00:00",
+    "exec_session_id": 60336,
+    "outer": 1,
+    "scope": "Verified live write_stdin handle; poll same session before new work. No restart on timeout.",
+    "completed_outer0_receipt": "outer0/completed.json"
+  },
+  "current_live_tool_handle": {
+    "author": "Codex",
+    "utc": "2026-10-27T01:07:10.413234+00:00",
+    "exec_session_id": 9950,
+    "outer_sequence": [
+      2,
+      3,
+      4
+    ],
+    "completed_before_sequence": [
+      0,
+      1
+    ],
+    "kind": "Sequential PowerShell foreach invoking unchanged frozenP51driver; stop on first nonzeroexit",
+    "status_at_last_observation": "terminal_exit0_verified_by_write_stdin",
+    "instruction": "Poll THISsame9950session. Do not restart based on timeout;60336is terminal. Source childPIDchanges between outer runs but handle9950is stable.",
+    "terminal_utc": "2026-10-27T01:29:59+00:00"
+  },
+  "completion_receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P51_fuente_agrupada_20261027/completion_receipt.json",
+  "completion_receipt_sha256": "966865df1dea65ee6de9970d458ab150f9b17945e58394ed8e17f3d6c82020f4"
 }
