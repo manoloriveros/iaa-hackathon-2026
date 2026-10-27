@@ -33,7 +33,7 @@
   },
   "legacy_2023_index": "Hackaton/Repositorio_IAA2026/registro/semana2_mision017_actual.json",
   "legacy_goal_tool_objective_note": "Goal resumed via explicituserrequest/UI;tool still carries old2024closed sentence. Latest directhuman authorization above overrides that stale scope;do not reclose2024 on auto-continuation. Numeric target/robustness remain.",
-  "next_unit": "P72: register/commit fixed64round restricted native-offset residual GBDT,15primary/15adverse fits on exact P67inputs. No base/report/source fits or field/hyperparameter search. Every old predictive/cohort/scenario/family16gate plus actual tree/offset math; transfer OWN2023required after pooled pass, no automatic CSV.",
+  "next_unit": "Review NEWP72saved tree corrections/held cohort losses vs P65/P67/P70without refitting/resampling. No depth/round/leaf/step/feature or line rescue from this failure. Identify an actual source/observation/target mechanism before further capacity or a new registered model; no public probe or missing human authorization.",
   "new_price_fits": 489,
   "new_C0_fits": 960,
   "new_submissions": 2,
@@ -14798,5 +14798,62 @@
       "previous_sha256": "54a1f1941df339a0d11a86dfd562756381d5e8103e7dda89aee25536df7b800d",
       "sha256": "ec45323bbee9aab5c8de752731cbb7a47776c2b4ad59705de84063e79b8b8c4c"
     }
+  },
+  "private_P72": {
+    "author": "Codex",
+    "utc": "2026-10-27T05:05:22.888535+00:00",
+    "status": "P72standard_restricted_residual_trees_pooled_complete_transfer_unmeasured",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P72_validacion_boosting_residual_20261027/report.json",
+    "report_sha256": "61c4879aafddd384ee192c7e5ee0a50473e3c350de00d463eb8e04c92200f5b8",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P72_VALIDACION_BOOSTING_RESIDUAL.md",
+    "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+    "nominal": {
+      "delta": -0.0022081356034152197,
+      "bootstrap95": [
+        -0.005092650342381478,
+        0.0005033791539534556
+      ],
+      "post31_delta": -0.004945621934950279,
+      "worst_cell_delta": -0.016889186439713922
+    },
+    "P72_minus_P65_point_only": -0.0022606466292834928,
+    "all_pooled_gates_pass": false,
+    "conditional_transfer_gate": null,
+    "primary_final_tree_fits": 15,
+    "adverse_final_tree_fits_separate": 15,
+    "primary_iterative_tree_leaf_counts": {
+      "fitted_tree_leaf_values": 6258
+    },
+    "new_closed_constants": 0,
+    "new_base_fits": 0,
+    "new_source_fits": 0,
+    "new_CDF_fits": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "Review NEWP72saved tree corrections/held cohort losses vs P65/P67/P70without refitting/resampling. No depth/round/leaf/step/feature or line rescue from this failure. Identify an actual source/observation/target mechanism before further capacity or a new registered model; no public probe or missing human authorization.",
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P72-ARBOL-RESULTADO",
+      "utc": "2026-10-27T05:05:23+00:00",
+      "previous_sha256": "333ea7573b4173e5113e670265a2a6a74ae24021124278a9b886028a67560c91",
+      "sha256": "53e5beaa9b376823f7983dc2d8c152d42bb55caceb2583c94aa69c2ab4b8bc6f"
+    }
+  },
+  "P72_execution": {
+    "author": "Codex",
+    "utc": "2026-10-27T05:02:11.186871+00:00",
+    "pid": 18324,
+    "unit": "P72",
+    "session_id": 6779,
+    "state": "TERMINAL_SUCCESS",
+    "scope": "Fixed standard residual trees, no source/base/report fits/2025/submissions",
+    "resumption": "Poll same session6779first; never repeat an unsaved invoked fit. Own per-scope native models and commits preserved.",
+    "exit_code": 0,
+    "replay_exit_code": 0,
+    "close_exit_code": 0,
+    "terminal_utc": "2026-10-27T05:09:20.668178+00:00",
+    "completion_receipt_sha256": "4f4d7ec5a9c74a5936906e8f19bf7dfcf4a6e969dc7d8893029538af039d90ac"
   }
 }

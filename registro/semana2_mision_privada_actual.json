@@ -6,7 +6,7 @@
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_mision_privada_plan_v1.json",
   "plan_sha256": "3329dbc7fe931d71e1e945bdf536fd9d810040f2626709f3d103c2dc5cdd7876",
   "execution_control": "Hackaton/Repositorio_IAA2026/registro/semana2_control_entregas_codex_actual.json",
-  "execution_control_sha256": "ea8002209a0aeace460b8059aa666db26d9dcb1a60fadce6ba3636a6405fd745",
+  "execution_control_sha256": "5be67787cf7fb7465251bd2dd6b24977844e2cac6136a138b74469feac7b199e",
   "guard_test": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/entrega_H1_investigacion_20261026_v1/prioridad_privada_20261026T131510432194Z/private_priority_guard_test.json",
   "guard_test_sha256": "bd738071e41cacaf51c93fe3a8de6fe046e87cb14bbcc664699322393979dd99",
   "document": "Hackaton/Repositorio_IAA2026/docs/semana2/MISION_PRIVADA_PRIORIDAD_Y_PLAN.md",
@@ -17,7 +17,7 @@
     "previous_sha256": "6d59e27de8b0a990b903b1cf19e79963507e408dc9a23e937978d9678c2169d3",
     "sha256": "61b4c2ca7fd790b2ff916ef8696824758ce9fc6608087dbf7b89c949f733ff36"
   },
-  "next_unit": "P72: register/commit fixed64round restricted native-offset residual GBDT,15primary/15adverse fits on exact P67inputs. No base/report/source fits or field/hyperparameter search. Every old predictive/cohort/scenario/family16gate plus actual tree/offset math; transfer OWN2023required after pooled pass, no automatic CSV.",
+  "next_unit": "Review NEWP72saved tree corrections/held cohort losses vs P65/P67/P70without refitting/resampling. No depth/round/leaf/step/feature or line rescue from this failure. Identify an actual source/observation/target mechanism before further capacity or a new registered model; no public probe or missing human authorization.",
   "old_app_goal_text_stale": true,
   "public017_or0175_not_sufficient_for_completion": true,
   "hidden_private_improvement_established": false,
@@ -7703,6 +7703,48 @@
       "utc": "2026-10-27T04:59:32+00:00",
       "previous_sha256": "54a1f1941df339a0d11a86dfd562756381d5e8103e7dda89aee25536df7b800d",
       "sha256": "ec45323bbee9aab5c8de752731cbb7a47776c2b4ad59705de84063e79b8b8c4c"
+    }
+  },
+  "P72": {
+    "author": "Codex",
+    "utc": "2026-10-27T05:05:22.888535+00:00",
+    "status": "P72standard_restricted_residual_trees_pooled_complete_transfer_unmeasured",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P72_validacion_boosting_residual_20261027/report.json",
+    "report_sha256": "61c4879aafddd384ee192c7e5ee0a50473e3c350de00d463eb8e04c92200f5b8",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P72_VALIDACION_BOOSTING_RESIDUAL.md",
+    "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+    "nominal": {
+      "delta": -0.0022081356034152197,
+      "bootstrap95": [
+        -0.005092650342381478,
+        0.0005033791539534556
+      ],
+      "post31_delta": -0.004945621934950279,
+      "worst_cell_delta": -0.016889186439713922
+    },
+    "P72_minus_P65_point_only": -0.0022606466292834928,
+    "all_pooled_gates_pass": false,
+    "conditional_transfer_gate": null,
+    "primary_final_tree_fits": 15,
+    "adverse_final_tree_fits_separate": 15,
+    "primary_iterative_tree_leaf_counts": {
+      "fitted_tree_leaf_values": 6258
+    },
+    "new_closed_constants": 0,
+    "new_base_fits": 0,
+    "new_source_fits": 0,
+    "new_CDF_fits": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "Review NEWP72saved tree corrections/held cohort losses vs P65/P67/P70without refitting/resampling. No depth/round/leaf/step/feature or line rescue from this failure. Identify an actual source/observation/target mechanism before further capacity or a new registered model; no public probe or missing human authorization.",
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P72-ARBOL-RESULTADO",
+      "utc": "2026-10-27T05:05:23+00:00",
+      "previous_sha256": "333ea7573b4173e5113e670265a2a6a74ae24021124278a9b886028a67560c91",
+      "sha256": "53e5beaa9b376823f7983dc2d8c152d42bb55caceb2583c94aa69c2ab4b8bc6f"
     }
   }
 }
