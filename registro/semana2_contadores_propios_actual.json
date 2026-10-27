@@ -2,8 +2,8 @@
   "author": "Codex",
   "as_of_utc": "2026-10-27T02:37:45.227878+00:00",
   "scope": "Own pricing/development lineage only; not all project fits or other authors. Historical main catalog retains its dated counter.",
-  "cumulative_price_base_fits": 2035,
-  "cumulative_closed_form_constants": 38769,
+  "cumulative_price_base_fits": 2065,
+  "cumulative_closed_form_constants": 39309,
   "auxiliary_Poisson_Gamma_fits_separate": 30,
   "baseline": {
     "index": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_v7_snapshot.json",
@@ -3530,6 +3530,529 @@
       "utc": "2026-10-27T05:59:33+00:00",
       "previous_sha256": "e87051181808095c3f67dd02d37727840c6fac593238afb76d91271fc31f9688",
       "sha256": "1fb7505a935a9fb71b7026059cc1e74d5c42972403342790dcd4c84ee5986b3c"
+    }
+  },
+  "phase2_private_P79_shape_moment_preflight": {
+    "author": "Codex",
+    "utc": "2026-10-27T06:25:50.822428+00:00",
+    "status": "P79shape_moment_whole_synthetic_and_bindings_passed",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P79_formas_momento_preflight_20261027/report.json",
+    "report_sha256": "eaa83032698389b2e9fb8f7469aaa857aaae753e5e49a64e97f9daeab846aec0",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P79_FORMAS_MOMENTO_PREFLIGHT.md",
+    "next_unit": "P80: register/commit SAMEP65complete fixedhalf model with ONLYP79NCB/prior rawmoment change.15primary/15adverse closedwholelearners, no source/CDF/GLMfits, sameALLpredictive/cohort/scenario/family16/level/influence guards. Pooledpass requires OWN2023-only conditionaltransfer before anyCSV. No band/credibility/weight/line rescue.",
+    "synthetic_primary_whole_learners": 3,
+    "synthetic_adverse_whole_learners_separate": 3,
+    "new_real_fits": 0,
+    "new_source_fits": 0,
+    "new_CDF_fits": 0,
+    "new_scores": 0,
+    "new_resampling": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P79-MOMENTO-RESULTADO",
+      "utc": "2026-10-27T06:25:50+00:00",
+      "previous_sha256": "6c92bb7497df4ca4277476ba21da499735d5c3063b6ca34cf25e75880b41b405",
+      "sha256": "ef91697f9f8a8df90084be07433db295c5d1a8674ee34c79b0f68b29283b3e1c"
+    },
+    "synthetic": {
+      "author": "Codex",
+      "utc": "2026-10-27T06:25:45.893682+00:00",
+      "records": [
+        {
+          "line": "motor",
+          "all_held_payload_poison_before_selector_invariant": true,
+          "serialized_whole_flow_exact": true,
+          "ultimate_ignores_held_T0_reserve_q": true,
+          "component_shape_and_level_math": [
+            {
+              "scalar_factors_and_normalizers_match": true,
+              "raw_unshrunk_logscale_derivative_zero": true,
+              "max_absolute_raw_derivative": 8.304468224196171e-14,
+              "zero_positive_bands_neutral": 0,
+              "business_base_sum_preserved": true
+            },
+            {
+              "scalar_factors_and_normalizers_match": true,
+              "raw_unshrunk_logscale_derivative_zero": true,
+              "max_absolute_raw_derivative": 1.0746958878371515e-13,
+              "zero_positive_bands_neutral": 2,
+              "business_base_sum_preserved": true
+            },
+            {
+              "scalar_factors_and_normalizers_match": true,
+              "raw_unshrunk_logscale_derivative_zero": true,
+              "max_absolute_raw_derivative": 1.1191048088221578e-13,
+              "zero_positive_bands_neutral": 0,
+              "business_base_sum_preserved": true
+            },
+            {
+              "scalar_factors_and_normalizers_match": true,
+              "raw_unshrunk_logscale_derivative_zero": true,
+              "max_absolute_raw_derivative": 1.163513729807164e-13,
+              "zero_positive_bands_neutral": 2,
+              "business_base_sum_preserved": true
+            }
+          ],
+          "stage_normalizers_application_scope_preserved": {
+            "gender": {
+              "2023|0": 0.9974529837212835,
+              "2023|1": 0.9978496851008618,
+              "2024|0": 1.0014875349619572,
+              "2024|1": 0.9992036480317161
+            }
+          }
+        },
+        {
+          "line": "buildings",
+          "all_held_payload_poison_before_selector_invariant": true,
+          "serialized_whole_flow_exact": true,
+          "ultimate_ignores_held_T0_reserve_q": true,
+          "component_shape_and_level_math": [
+            {
+              "scalar_factors_and_normalizers_match": true,
+              "raw_unshrunk_logscale_derivative_zero": true,
+              "max_absolute_raw_derivative": 2.7200464103316335e-13,
+              "zero_positive_bands_neutral": 2,
+              "business_base_sum_preserved": true
+            },
+            {
+              "scalar_factors_and_normalizers_match": true,
+              "raw_unshrunk_logscale_derivative_zero": true,
+              "max_absolute_raw_derivative": 1.1723955140041653e-13,
+              "zero_positive_bands_neutral": 2,
+              "business_base_sum_preserved": true
+            }
+          ],
+          "stage_normalizers_application_scope_preserved": {}
+        },
+        {
+          "line": "contents",
+          "all_held_payload_poison_before_selector_invariant": true,
+          "serialized_whole_flow_exact": true,
+          "ultimate_ignores_held_T0_reserve_q": true,
+          "component_shape_and_level_math": [
+            {
+              "scalar_factors_and_normalizers_match": true,
+              "raw_unshrunk_logscale_derivative_zero": true,
+              "max_absolute_raw_derivative": 2.7200464103316335e-13,
+              "zero_positive_bands_neutral": 2,
+              "business_base_sum_preserved": true
+            },
+            {
+              "scalar_factors_and_normalizers_match": true,
+              "raw_unshrunk_logscale_derivative_zero": true,
+              "max_absolute_raw_derivative": 1.1723955140041653e-13,
+              "zero_positive_bands_neutral": 2,
+              "business_base_sum_preserved": true
+            }
+          ],
+          "stage_normalizers_application_scope_preserved": {
+            "gender": {
+              "2023|0": 0.9974168614304096,
+              "2023|1": 0.9978615915092622,
+              "2024|0": 1.0014568525167846,
+              "2024|1": 0.99923712951418
+            },
+            "works_from_home": {
+              "2023|0": 0.9975216664462963,
+              "2023|1": 0.9982109514052865,
+              "2024|0": 0.9945383389720726,
+              "2024|1": 1.0057190847539739
+            },
+            "marketing_segment": {
+              "2023|0": 1.000842739253622,
+              "2023|1": 0.9994057257312491,
+              "2024|0": 1.000330310054527,
+              "2024|1": 0.9998919731130825
+            }
+          }
+        }
+      ],
+      "new_shape_scalar_checks": [
+        {
+          "source": "A1S",
+          "variable": "ncb",
+          "scalar_factors_and_normalizers_match": true,
+          "raw_unshrunk_logscale_derivative_zero": true,
+          "max_absolute_raw_derivative": 8.304468224196171e-14,
+          "zero_positive_bands_neutral": 0,
+          "business_base_sum_preserved": true
+        },
+        {
+          "source": "A1S",
+          "variable": "prior",
+          "scalar_factors_and_normalizers_match": true,
+          "raw_unshrunk_logscale_derivative_zero": true,
+          "max_absolute_raw_derivative": 1.0746958878371515e-13,
+          "zero_positive_bands_neutral": 2,
+          "business_base_sum_preserved": true
+        },
+        {
+          "source": "T2b",
+          "variable": "ncb",
+          "scalar_factors_and_normalizers_match": true,
+          "raw_unshrunk_logscale_derivative_zero": true,
+          "max_absolute_raw_derivative": 1.1191048088221578e-13,
+          "zero_positive_bands_neutral": 0,
+          "business_base_sum_preserved": true
+        },
+        {
+          "source": "T2b",
+          "variable": "prior",
+          "scalar_factors_and_normalizers_match": true,
+          "raw_unshrunk_logscale_derivative_zero": true,
+          "max_absolute_raw_derivative": 1.163513729807164e-13,
+          "zero_positive_bands_neutral": 2,
+          "business_base_sum_preserved": true
+        }
+      ],
+      "different_from_AE_on_heterogeneous_synthetic_case": true,
+      "invalid_training_target_rejected": true,
+      "synthetic_primary_whole_learners": 3,
+      "synthetic_adverse_whole_learners_separate": 3,
+      "synthetic_primary_component_calibrations": 6,
+      "synthetic_adverse_component_calibrations_separate": 6,
+      "synthetic_primary_residual_stages": 4,
+      "synthetic_adverse_residual_stages_separate": 4,
+      "primary_stored_parameter_counts": [
+        {
+          "shape_factors": 40,
+          "level_constants": 6,
+          "residual_factors": 2,
+          "training_nuisance_levels": 4
+        },
+        {
+          "shape_factors": 16,
+          "level_constants": 6,
+          "residual_factors": 0,
+          "training_nuisance_levels": 0
+        },
+        {
+          "shape_factors": 16,
+          "level_constants": 6,
+          "residual_factors": 7,
+          "training_nuisance_levels": 12
+        }
+      ],
+      "new_real_fits": 0,
+      "new_CDF_fits": 0,
+      "new_scores": 0,
+      "new_submissions": 0
+    }
+  },
+  "phase2_private_P80_shape_moment": {
+    "author": "Codex",
+    "utc": "2026-10-27T06:30:02.136250+00:00",
+    "status": "P80shape_moment_only_pooled_complete_transfer_unmeasured",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P80_validacion_formas_momento_20261027/report.json",
+    "report_sha256": "b0e0b653e82970115c028ed89042ca0002aa89f8dde7ed41f9a7327e5f8b261e",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P80_VALIDACION_FORMAS_MOMENTO.md",
+    "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+    "nominal": {
+      "delta": -5.394163305983031e-05,
+      "bootstrap95": [
+        -0.00037023644875347044,
+        0.00026051453213922965
+      ],
+      "post31_delta": -0.0005219405807575427,
+      "worst_cell_delta": -0.002967914246021418
+    },
+    "P80_minus_P65_point_only": -0.00010645265892810354,
+    "all_pooled_gates_pass": false,
+    "conditional_transfer_gate": null,
+    "new_primary_constants": 540,
+    "primary_closed_whole_learners": 15,
+    "adverse_closed_whole_learners_separate": 15,
+    "primary_components": 30,
+    "adverse_components_separate": 30,
+    "primary_shared_residual_stages": 20,
+    "adverse_shared_residual_stages_separate": 20,
+    "new_GLM_fits": 0,
+    "new_source_fits": 0,
+    "new_CDF_fits": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "Review NEWP80saved shape factors/whole cells and difference from P65without refit/resampling. No new bands/K/weights or perline rescue from held outcomes. Identify a distinct documented source/target/reporting mechanism before another standard recipe. Preserve alternatives/quota; no public probe or missing human authorization.",
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P80-MOMENTO-RESULTADO",
+      "utc": "2026-10-27T06:30:02+00:00",
+      "previous_sha256": "9a33b6e5b7f3d617d16986c6e18cce9af08174b4bb3e39550ddeb3faf34c4f86",
+      "sha256": "6b22334dea26f16377707647b73c980dbae9dac70f3135861f2c64e81e12253a"
+    }
+  },
+  "phase2_private_P81_business_band_preflight": {
+    "author": "Codex",
+    "utc": "2026-10-27T06:35:50.219893+00:00",
+    "status": "P81band_GLMprotected_synthetic_and_bindings_passed",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P81_GLM_bandas_negocio_preflight_20261027/report.json",
+    "report_sha256": "d7c2e204b410f9111e27259845b83abac77c01dfa9e56c557aac76a03fa89d9a",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P81_GLM_BANDAS_NEGOCIO_PREFLIGHT.md",
+    "next_unit": "P82: register/commit SAMEP77single directGLMfixedsourceprior with ONLYP81history/NCBbusinessband representation.15primary/15adverseGLMfits, no source/base/CDFfits, all unchanged gates plus convergence; pooledpass requires own2023-only conditionaltransfer before CSV. No alpha/bands/field/weight/line rescue.",
+    "new_real_fits": 0,
+    "new_source_fits": 0,
+    "new_CDF_fits": 0,
+    "new_scores": 0,
+    "new_submissions": 0,
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P81-BANDAS-RESULTADO",
+      "utc": "2026-10-27T06:35:50+00:00",
+      "previous_sha256": "d4a64b81c3210c5803da456f2539a07a8029b484d243e8ef052e8acb90382a1e",
+      "sha256": "180b48a09b9c67b5b2ff759e7f65ac53a61f8ca045e14908ace757930f870e12"
+    },
+    "synthetic": {
+      "author": "Codex",
+      "utc": "2026-10-27T06:35:44.183401+00:00",
+      "records": [
+        {
+          "line": "motor",
+          "all_held_payload_poison_before_band_transform_invariant": true,
+          "objective_gradient": {
+            "fixed_half_offset_scalar_loss_identity": true,
+            "gradient_scalar_and_vector_match": true,
+            "gradient_inf": 5.688338823583994e-08
+          },
+          "JSON_replay_exact": true,
+          "subset_permutation_projective_given_source_inputs": true,
+          "unknown_band_allzero_no_refit": true,
+          "no_duplicate_ordinal_history_terms": true,
+          "preprocess_columns": [
+            "log_annual_T2b_source",
+            "log_relative_A1S_source",
+            "voluntary_excess",
+            "compulsory_excess",
+            "vehicle_age",
+            "years_licensed",
+            "engine_size_cc",
+            "log_annual_T2b_source__missing",
+            "log_relative_A1S_source__missing",
+            "voluntary_excess__missing",
+            "compulsory_excess__missing",
+            "vehicle_age__missing",
+            "years_licensed__missing",
+            "engine_size_cc__missing",
+            "new_business=0",
+            "new_business=1",
+            "channel=a",
+            "channel=b",
+            "channel=c",
+            "vehicle_value_group=a",
+            "vehicle_value_group=b",
+            "vehicle_value_group=c",
+            "age_band=a",
+            "age_band=b",
+            "age_band=c",
+            "cover_type=a",
+            "cover_type=b",
+            "cover_type=c",
+            "vehicle_use=a",
+            "vehicle_use=b",
+            "vehicle_use=c",
+            "overnight_parking=a",
+            "overnight_parking=b",
+            "overnight_parking=c",
+            "named_young_driver=a",
+            "named_young_driver=b",
+            "named_young_driver=c",
+            "history_business_band=0|-1",
+            "history_business_band=0|0",
+            "history_business_band=0|1",
+            "history_business_band=0|2",
+            "history_business_band=1|-1",
+            "history_business_band=1|0",
+            "history_business_band=1|1",
+            "history_business_band=1|2",
+            "ncb_business_band=0|0",
+            "ncb_business_band=0|1-2",
+            "ncb_business_band=0|10+",
+            "ncb_business_band=0|3-5",
+            "ncb_business_band=0|6-9",
+            "ncb_business_band=0|missing",
+            "ncb_business_band=1|0",
+            "ncb_business_band=1|1-2",
+            "ncb_business_band=1|10+",
+            "ncb_business_band=1|3-5",
+            "ncb_business_band=1|6-9",
+            "ncb_business_band=1|missing"
+          ]
+        },
+        {
+          "line": "buildings",
+          "all_held_payload_poison_before_band_transform_invariant": true,
+          "objective_gradient": {
+            "fixed_half_offset_scalar_loss_identity": true,
+            "gradient_scalar_and_vector_match": true,
+            "gradient_inf": 2.319458210133657e-08
+          },
+          "JSON_replay_exact": true,
+          "subset_permutation_projective_given_source_inputs": true,
+          "unknown_band_allzero_no_refit": true,
+          "no_duplicate_ordinal_history_terms": true,
+          "preprocess_columns": [
+            "log_annual_T2b_source",
+            "log_relative_A1S_source",
+            "voluntary_excess",
+            "compulsory_excess",
+            "prop_age",
+            "bedrooms",
+            "log_annual_T2b_source__missing",
+            "log_relative_A1S_source__missing",
+            "voluntary_excess__missing",
+            "compulsory_excess__missing",
+            "prop_age__missing",
+            "bedrooms__missing",
+            "new_business=0",
+            "new_business=1",
+            "channel=a",
+            "channel=b",
+            "channel=c",
+            "construction_type=a",
+            "construction_type=b",
+            "construction_type=c",
+            "occupancy=a",
+            "occupancy=b",
+            "occupancy=c",
+            "smoke_alarms=a",
+            "smoke_alarms=b",
+            "smoke_alarms=c",
+            "accidental_damage_cover=a",
+            "accidental_damage_cover=b",
+            "accidental_damage_cover=c",
+            "property_type=a",
+            "property_type=b",
+            "property_type=c",
+            "roof_type=a",
+            "roof_type=b",
+            "roof_type=c",
+            "history_business_band=0|-1",
+            "history_business_band=0|0",
+            "history_business_band=0|1",
+            "history_business_band=0|2",
+            "history_business_band=1|-1",
+            "history_business_band=1|0",
+            "history_business_band=1|1",
+            "history_business_band=1|2"
+          ]
+        },
+        {
+          "line": "contents",
+          "all_held_payload_poison_before_band_transform_invariant": true,
+          "objective_gradient": {
+            "fixed_half_offset_scalar_loss_identity": true,
+            "gradient_scalar_and_vector_match": true,
+            "gradient_inf": 4.621927129390413e-08
+          },
+          "JSON_replay_exact": true,
+          "subset_permutation_projective_given_source_inputs": true,
+          "unknown_band_allzero_no_refit": true,
+          "no_duplicate_ordinal_history_terms": true,
+          "preprocess_columns": [
+            "log_annual_T2b_source",
+            "log_relative_A1S_source",
+            "voluntary_excess",
+            "compulsory_excess",
+            "prop_age",
+            "bedrooms",
+            "log_annual_T2b_source__missing",
+            "log_relative_A1S_source__missing",
+            "voluntary_excess__missing",
+            "compulsory_excess__missing",
+            "prop_age__missing",
+            "bedrooms__missing",
+            "new_business=0",
+            "new_business=1",
+            "channel=a",
+            "channel=b",
+            "channel=c",
+            "security_level=a",
+            "security_level=b",
+            "security_level=c",
+            "high_value_items=a",
+            "high_value_items=b",
+            "high_value_items=c",
+            "accidental_damage_cover=a",
+            "accidental_damage_cover=b",
+            "accidental_damage_cover=c",
+            "bicycle_cover=a",
+            "bicycle_cover=b",
+            "bicycle_cover=c",
+            "tenure=a",
+            "tenure=b",
+            "tenure=c",
+            "property_type=a",
+            "property_type=b",
+            "property_type=c",
+            "history_business_band=0|-1",
+            "history_business_band=0|0",
+            "history_business_band=0|1",
+            "history_business_band=0|2",
+            "history_business_band=1|-1",
+            "history_business_band=1|0",
+            "history_business_band=1|1",
+            "history_business_band=1|2"
+          ]
+        }
+      ],
+      "synthetic_primary_GLMfits": 3,
+      "synthetic_adverse_GLMfits_separate": 3,
+      "new_real_fits": 0,
+      "new_source_fits": 0,
+      "new_CDF_fits": 0,
+      "new_scores": 0,
+      "new2025inference": 0,
+      "new_submissions": 0
+    }
+  },
+  "phase2_private_P82_business_band_GLM": {
+    "author": "Codex",
+    "utc": "2026-10-27T06:40:26.423560+00:00",
+    "status": "P82single_GLM_history_NCBbusinessbands_pooled_complete_transfer_unmeasured",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P82_validacion_GLM_bandas_negocio_20261027/report.json",
+    "report_sha256": "2886de03bbb8d06419ade31e6cbdaede77dc6fb0ef5270bfbb8526e052fc875a",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P82_VALIDACION_GLM_BANDAS_NEGOCIO.md",
+    "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+    "nominal": {
+      "delta": -0.004515513294133541,
+      "bootstrap95": [
+        -0.007900488610715545,
+        -0.0013066821464543098
+      ],
+      "post31_delta": -0.006998300067582437,
+      "worst_cell_delta": -0.04640307301587655
+    },
+    "P82_minus_P77_point_only": 0.0001574881128198792,
+    "all_pooled_gates_pass": false,
+    "conditional_transfer_gate": null,
+    "primary_GLM_fits": 15,
+    "adverse_GLM_fits_separate": 15,
+    "primary_iterative_parameter_counts": {
+      "iterative_GLM_coefficients": 785,
+      "iterative_GLM_intercepts": 15
+    },
+    "new_target_base_fits": 0,
+    "new_source_fits": 0,
+    "new_CDF_fits": 0,
+    "new_closed_constants": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "Review NEWP82saved fitted band contrasts and whole held-cell losses against P77/P65without refit/resampling. Retain known source/report/valuation limits; do not tune bands/alpha/fields/weights or select line overrides. A new candidate needs a distinct documented mechanism and preregistration, no public probe or missing human authorization.",
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P82-BANDAS-RESULTADO",
+      "utc": "2026-10-27T06:40:26+00:00",
+      "previous_sha256": "4b5d07e3580dcfb46b67996e283bf94bd3d9ccad6cd824037dcc9e07f6b20f1c",
+      "sha256": "54343565f94c7c8c376bf683f9999fc028767c110728a0752f47ba51aad9e50d"
     }
   }
 }
