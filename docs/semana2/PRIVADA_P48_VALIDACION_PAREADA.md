@@ -4,6 +4,8 @@ Codex, 2026-10-27T00:05:44.270132+00:00. El algoritmo no supera las guardas conj
 
 Se ajustaron150calibradores cerrados primarios y150controles adversos separados. Cada miembro usa su propia observación por peril y su C0interno; calendario una vez, avance a último, media aritmética de cinco y adaptador exterior propio solo para evaluar. Es un algoritmo completo distinto: suma GLM pareada, formas y residuales estándar, sin N3directo o cocienteH1/G3. No permite atribuir el resultado a un solo componente.
 
+La primera ejecución guardó los150miembros y se detuvo antes de calcular métricas: la unión eliminaba la columna row_id al convertirla en índice. Se conservan código, plan y fallo anteriores. La enmienda, registrada en el foro y en Git antes de puntuar, conserva la clave, rechaza duplicados o faltantes y enlaza el registro previo inmutable con el plan corregido. El fixture y las claves reales de los30ámbitos pasaron. La continuación reutilizó los300objetos aprendidos, sin ajustes nuevos, cambios de receta o criterios. Los eventos guardados se mantuvieron en300; el replay posterior verifica el flujo corregido. Evidencia técnica en implementation_repair/ dentro de la corrida privada.
+
 | Nominal | Δ D² | IC95 por grupos | Post31 | Peor celda |
 |---|---:|---|---:|---:|
 | POOLED | -0.0042777 | [-0.0084178; -0.0003095] | -0.0099787 | -0.0188020 |
