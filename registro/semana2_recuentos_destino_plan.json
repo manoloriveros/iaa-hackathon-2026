@@ -1,0 +1,48 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-27T11:04:36.298163+00:00",
+  "scope": "Reuse existing accepted/positive event counts for all historical emerging canonical rows; input adapter only, no raw claim recount or exposure/model fit.",
+  "need": "P105common weight selection failed complete outer admission; more generic total-cost corrections have not shown robust gains. Observed event count provides a distinct, less severity-sensitive supervised signal, but its observation law must be correct.",
+  "count_definition": "n_accepted counts assigned status!=repudiated claims, including cost0; n_positive counts accepted individual claims with T0cents>0. positive_period is only I(periodT0>0), not either event count. Definitions verified in original producer.",
+  "configuration": {
+    "years": [
+      2023,
+      2024
+    ],
+    "market": "emerging",
+    "test_excluded": true,
+    "valuation": "2024-12-31",
+    "join": "Exact row_id/line/year, one-to-one, preserve canonical order/global group/fold/calendar/T0/reserve.",
+    "no_label_change": "T0cost remains the final cost target; counts are an additional observed supervised signal, not ultimate frequency labels.",
+    "no_reporting_substitution": "Count exposure must use event-count completeness and matching accepted-event definition; costq and nativeFSpf from cost-completion likelihood cannot be relabelled as count exposure/identified ultimate frequency.",
+    "source_contract": "Reuse P27/P29 accepted-event Poisson and paired zero-capable Tweedie mark with E_count/E_cost; original B16/B17/P30 failures remain. No new rates exported or model recipe implemented in this unit."
+  },
+  "criterion": "All109296rows exact canonical keys/order/cents; integer ordered counts, cost/count flags coherent; Decimal and integer money agree; global group folds preserved. Adverse duplicate/missing/year/cents/fraction/negative/test/market cases reject; accepted cost0 and multiclaim remain distinct.",
+  "budget": {
+    "new_model_fits": 0,
+    "new_CDF_fits": 0,
+    "new_source_inference": 0,
+    "new_scores": 0,
+    "new2025inference": 0,
+    "new_submissions": 0
+  },
+  "pending": "Own-scope event-count reporting producer and explicit source frequency/mark rate export still unimplemented for this destination path. No Poisson fitting/admission from a count-label adapter alone.",
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/preparar_recuentos_destino_P106.py": "5646906dd01d31984949269cbf529613a5c291e0386950f0112d5507de5ecc90",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/preparacion/base_20261023T164102Z_b3e6c2a3/target_T0_and_stresses.parquet": "114dd8ae8048a04530855c7be8f8e718ebd9fe969f491c4513fc1fadbd0bcca6",
+    "Hackaton/Repositorio_IAA2026/src/semana2/preparar_base.py": "aaa0be38f70386e85351b6c4670151cffb95e6b76e65b17cd24c8860ba228d35",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_preparacion_actual.json": "6a8e18eb8d107eefed3e1b86e9600de03419b37c4b697cded031613d0a8e32f7",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/report.json": "5e5b2e61a886c0d1964202da46a07db85e14d6a75d9d169935189e956e2ef5f4",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_recuentos_destino_siguiente_plan.json": "7a2ea3d851abdc343d1b6cc7b053371e169537d5afd795afb6a5edf1b804d9d4",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_prioridad_privada_reafirmada_20261027.json": "f25fe3ae860a9ffb8af8eee330bafb91aa2badd9cff3de32d4501e363a9bb83a",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P27_contrato_frecuencia_20261026/report.json": "b74669746ab15c24348844e5679cd5fb11762187852b2e2b265707c1c1f3f4ac",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P29_fuente_frecuencia_completa_20261026/report.json": "10fedba90079e56dc1abcf4e9bafaf31b4de5e61b607f1ae28110905a647924e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/canonical_motor.parquet": "263f5a20d9048b4e035f311b6f3d9c7bb79499bd190dea879afdc45680fa29d5",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/canonical_buildings.parquet": "e76a5d07cb7f0c6aaaa061762f48c5b1012eeda48d0b40f9ba238f56676b6e1e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/preflight_anidado_H1_20261026_v1/canonical_contents.parquet": "1fb354c30f8f093903203d896abcc6cfef3f0696677b3f6d7daa2edf67c35092",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P106_recuentos_destino_20261027/forum_evidence_review.json": "e3d5a43144a2ea9b407acd342b569007827b08ec34cf78b50179d18494deee57"
+  },
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true,
+  "goal_achieved": false
+}
