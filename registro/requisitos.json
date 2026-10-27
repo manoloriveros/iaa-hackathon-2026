@@ -1,4 +1,17 @@
 {
+  "consulta_formulario_20261027": {
+    "utc": "2026-10-27T17:57:19.766087+00:00",
+    "index": "registro/formulario_final_actual.json",
+    "updated_requirements": [
+      "REQ08",
+      "REQ10",
+      "REQ11",
+      "REQ12",
+      "REQ13"
+    ],
+    "other_requirements_unchanged": true
+  },
+
   "fuente": "Kaggle, reglas, Evaluation y Submissions, consulta 19oct2026",
   "url": "https://www.kaggle.com/competitions/iaa-ai-assisted-hackathon-2026-part-1",
   "requisitos": [
@@ -86,11 +99,11 @@
       "titulo": "Control de versiones",
       "etapa": "Ambas",
       "requisito": "Repositorio con historial comprensible del desarrollo.",
-      "estado": "Repositorio versionado; historia anterior conservada en el expediente",
-      "evidencia": "README.md",
-      "limite": "No se crean commits retrospectivos ni se publican datos, modelos o conversaciones privadas.",
+      "estado": "Repositorio versionado; formulario pide URL de control de versiones",
+      "evidencia": "docs/CONTROL_DE_VERSIONES.md",
+      "limite": "Etiqueta y commit finales pendientes; confirmar acceso del jurado. El formulario no ofrece un campo separado para SHA ni carga de código.",
       "responsable": "Participante",
-      "fecha": "19oct"
+      "fecha": "2026-10-30 22:59:59 Bogotá"
     },
     {
       "id": "REQ09",
@@ -108,44 +121,44 @@
       "titulo": "Informe",
       "etapa": "Final parte 2",
       "requisito": "Solo primeras cinco páginas se califican; método, decisiones, IA, supuestos, límites, adaptación y guardas.",
-      "estado": "Informe bilingüe de semana 1 preparado para revisión",
-      "evidencia": "docs/entrega/informe_es.pdf",
-      "limite": "Cinco páginas calificables y tres de anexo. La adaptación observada de parte 2 debe entrar en las cinco primeras.",
+      "estado": "PDF conjunto español revisado el 27oct; versión final por aprobar",
+      "evidencia": "registro/informe_final_editorial_actual.json",
+      "limite": "Diez páginas en el PDF revisado, cinco calificables. Formulario admite un archivo de hasta 100 MB; aceptación de extensión e idioma no probada por subida. Considerar hallazgos posteriores antes de congelar.",
       "responsable": "Participante",
-      "fecha": "Final parte 2"
+      "fecha": "2026-10-30 22:59:59 Bogotá"
     },
     {
       "id": "REQ11",
       "titulo": "Video",
       "etapa": "Final parte 2",
       "requisito": "Solo primeros cinco minutos; enfoque, resultados, IA y cambios del nuevo mercado.",
-      "estado": "Guion y láminas preparados; sin video grabado",
-      "evidencia": "docs/GUION_ABREVIADO_PARA_REVISION.md",
-      "limite": "Propuesta de guion con espacio mayor para la parte 2; el video final requiere resultados reales y revisión humana.",
+      "estado": "Guion español conjunto existente; grabación y URL pendientes según registro",
+      "evidencia": "registro/guion_video_actual.json",
+      "limite": "Objetivo 4:45; duración grabada pendiente. Formulario pide URL del video, sin fijar alojamiento; solo primeros cinco minutos calificables según reglas.",
       "responsable": "Participante",
-      "fecha": "Final parte 2"
+      "fecha": "2026-10-30 22:59:59 Bogotá"
     },
     {
       "id": "REQ12",
       "titulo": "Predicción de la parte 2",
       "etapa": "Final parte 2",
       "requisito": "CSV adicional de la segunda competición.",
-      "estado": "Pendiente de datos y contrato oficiales",
-      "evidencia": "docs/ADAPTACION_SEMANA2.md",
-      "limite": "Mismo equipo. No inventar datos ni resultados futuros.",
+      "estado": "Datos oficiales disponibles; F3c declarada en informe; selección final por confirmar",
+      "evidencia": "registro/semana2_mision017_F3c_revision_entrega_v1.json",
+      "limite": "Un CSV de riesgo emerging 2025, no primas comerciales. Formulario admite un archivo de hasta 100 MB; sin cambio de elección ni verificación viva de marca en esta consulta.",
       "responsable": "Participante",
-      "fecha": "Final parte 2"
+      "fecha": "2026-10-30 22:59:59 Bogotá"
     },
     {
       "id": "REQ13",
       "titulo": "Formulario final",
       "etapa": "Final parte 2",
       "requisito": "Datos del equipo, ambos CSV, video, informe y código.",
-      "estado": "Pendiente de enlace oficial",
-      "evidencia": "docs/fuentes/reglas_kaggle_20261019.json",
-      "limite": "Detalles se publicarán con la parte 2.",
+      "estado": "Enlace aportado por participante; ocho campos obligatorios leídos y registrados",
+      "evidencia": "registro/formulario_final_actual.json",
+      "limite": "Tres archivos, cada uno hasta 100 MB, y dos URL. Sin rellenar, subir ni enviar; identidad, video, selección semana 2 y acceso del jurado pendientes.",
       "responsable": "Participante",
-      "fecha": "Final parte 2"
+      "fecha": "2026-10-30 22:59:59 Bogotá"
     },
     {
       "id": "REQ14",
