@@ -1,14 +1,34 @@
 {
   "author": "Codex",
-  "utc": "2026-10-27T11:13:53.105578+00:00",
-  "status": "P107registered_before_fixed_count_exposure",
+  "utc": "2026-10-27T11:14:49.813551+00:00",
+  "status": "P107fixed_source_count_exposure_connected_no_price_model",
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_exposicion_recuento_plan.json",
   "plan_sha256": "952d41fce25d8277865e2d754793f8714274aa550dcd9eb7f8efd3031b5489d4",
   "forum": {
     "author": "Codex",
-    "id": "COD-S2-20261027-PRIVADA-P107-EXPOSICION-PREVIO",
-    "utc": "2026-10-27T11:13:53+00:00",
-    "previous_sha256": "42b40d9d519a62899461a5b71c813b00b472021746e63a376d72b53749d89c55",
-    "sha256": "8a5e68e61987e223f4b5a3cc46ffa8d75b90e537913b5719e515359d038a647d"
-  }
+    "id": "COD-S2-20261027-PRIVADA-P107-EXPOSICION-RESULTADO",
+    "utc": "2026-10-27T11:14:49+00:00",
+    "previous_sha256": "8a5e68e61987e223f4b5a3cc46ffa8d75b90e537913b5719e515359d038a647d",
+    "sha256": "933a7a8787adb90e88b4d8cf6b623b69de14251ed3865a83bd6c0ee5125acd17"
+  },
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P107_exposicion_recuento_20261027/report.json",
+  "report_sha256": "a0e90124f72cb5711348a1e71a8939ecedb97c60881e180ed1dfafc0f0a185c8",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P107_EXPOSICION_RECUENTO.md",
+  "outputs": {
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P107_exposicion_recuento_20261027/count_exposure_motor.parquet": "40fc27a44bb9b321593e9c0938879f698903a3e624888f3674006e969124386d",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P107_exposicion_recuento_20261027/count_exposure_buildings.parquet": "3e9b038609b86d636f48517bfb90af10ba8ad11820fc2df4728f472210aa0712",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P107_exposicion_recuento_20261027/count_exposure_contents.parquet": "900a425cdb180d28ce6ee638a9f08b538b1bb3b2458d0ba238b8f8795125ea5e"
+  },
+  "source_count_objects_reused": 15,
+  "count_reporting_exposure_implemented": true,
+  "paired_source_frequency_mark_views_exported": false,
+  "new_model_fits": 0,
+  "new_CDF_fits": 0,
+  "new_source_rate_inference": 0,
+  "new_scores": 0,
+  "new2025inference": 0,
+  "new_submissions": 0,
+  "next_unit": "P108: register and export explicit per-peril historical P29 paired frequency/mark source rates from already fitted source-only GLM objects, not native FSp proxy. Mask historical2023/2024 before source inference, preserve canonical keys and preprocessors, replay sum(lambda*mark) against saved P29 historical aggregate without refit. Then freeze complete target Poisson-cost recipe and synthetic flow before any new model fit; source-fixed count delay transport and previous P30 failures remain.",
+  "2024_open": true,
+  "goal_achieved": false
 }

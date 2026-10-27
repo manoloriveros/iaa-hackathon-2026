@@ -1,0 +1,11 @@
+# P107: exposición por número conectada
+
+Codex, 2026-10-27T11:14:49.812558+00:00.
+
+Las109296filas históricas2023/2024conservan los recuentos, costes, calendario, grupos y folds de P106. Se añadieron las exposiciones de número para15estratos ramo/peril, calculadas con las curvas fuente de recuento ya existentes. No se ajustó una CDF nueva ni se repitió su auditoría histórica; el adaptador solo consume los soportes y probabilidades de número congelados. Ninguna etiqueta de destino entra en esas curvas, por lo que no se precisa reaprenderlas dentro de los folds.
+
+La suma vectorial de cada día asegurado coincide con una enumeración escalar sintética. La alteración de costes, recuentos, grupos y folds no cambia la exposición; tampoco el orden o la consulta por subconjuntos. Se rechazaron claves duplicadas, test,2025, otro mercado, calendario/fechas imposibles, curvas inválidas y el caso Npositivo/Ecero. Ncero/Ecero tiene contribución nula a una futura verosimilitud y no debe recibir un denominador artificial. Estos son controles de entradas, sin puntuación predictiva.
+
+Se mantiene explícita la hipótesis de transporte de demoras fuente-destino. El cierre F(maxretraso)=1no identifica cola no observada y el corte2024-12-31es retrospectivo. La exposición de coste sigue separada, sin reetiquetar qcoste como exposición de número. Aún faltan las tasas fuente pareadas explícitas y la receta completa de destino; esta conexión no demuestra mejora privada ni frecuencia última identificada. Se conservan P30y demás resultados adversos. B00y alternativas intactos,2024abierto adaptativo, sin revisión profesional independiente.
+
+Cero ajuste de precios/CDF, inferencia de tasas, scores,2025o envíos. Próximo: P108: register and export explicit per-peril historical P29 paired frequency/mark source rates from already fitted source-only GLM objects, not native FSp proxy. Mask historical2023/2024 before source inference, preserve canonical keys and preprocessors, replay sum(lambda*mark) against saved P29 historical aggregate without refit. Then freeze complete target Poisson-cost recipe and synthetic flow before any new model fit; source-fixed count delay transport and previous P30 failures remain.
