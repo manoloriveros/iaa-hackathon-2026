@@ -62,7 +62,7 @@ def synthetic():
     bad=target.copy()
     for name in ['line','peril','loss_date','report_date']:
         bad[name]=bad[name].astype('object');bad.loc[bad.row_id.eq('h'),name]='INVALID_PROTECTED'
-    bad.loc[bad.row_id.eq('h'),['T0_cents','reserve_cents']]=-1e30
+    bad.loc[bad.row_id.eq('h'),['T0_cents','reserve_cents']]=-10**12
     poisoned=q.pool_claims(source,m.selected_claims(bad,{'t'},1.),{'t'});assert pool.equals(poisoned)
     results=[]
     for line in q.LINES:
@@ -127,7 +127,7 @@ def run():
         protected=~target.row_id.isin(train_ids);bad=target.copy()
         for name in ['line','peril','loss_date','report_date']:
             bad[name]=bad[name].astype('object');bad.loc[protected,name]='INVALID_PROTECTED'
-        bad.loc[protected,['T0_cents','reserve_cents']]=-1e30
+        bad.loc[protected,['T0_cents','reserve_cents']]=-10**12
         for case,branch in BRANCHES.items():
             source=m.source_branch(branch);parent=w.read(u.curves_path(outer,case))
             selected=m.selected_claims(target,train_ids,branch);claims=q.pool_claims(source,selected,train_ids)

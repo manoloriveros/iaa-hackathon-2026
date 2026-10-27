@@ -488,7 +488,7 @@
     "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P61_proxy_observacion_20261027/synthetic.json": "c999ca2b4d52257bb1750ac6ea694410cab6a3ef3875f6fcfa8ec59a3be4bf67",
     "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P61_proxy_observacion_20261027/completion_receipt.json": "c0f0adcc85deef7a16a1b356011874998e9a4a29836c474be47174967c6be149",
     "Hackaton/Repositorio_IAA2026/registro/semana2_mezcla_estandar_validacion_plan.json": "86010d8b22447042046fde26f7ab96f5905b8b4191afe1d97664fc7169abfcf2",
-    "Hackaton/Repositorio_IAA2026/herramientas/preparar_reporte_por_ramo_P64.py": "69c259acba28aeec6ec0ddbffa3c265acfcaab71c6c240bdde422850cf514d5e",
+    "Hackaton/Repositorio_IAA2026/herramientas/preparar_reporte_por_ramo_P64.py": "95cc2359c54a454f35f200152ae1055d27bb6fd397cda3ae4806ed925d2460bd",
     "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P63_revision_proxy_guardado_20261027/report.json": "4ff17ea1822a1b6fc23170742baa8e7b07bf210200a8662455ebb05f7284e1d5",
     "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P63_revision_proxy_guardado_20261027/completion_receipt.json": "b57bf5c4d7de4894593b2bb86793790a5366ab8a0a5157d82ae5f854d11a0711",
     "Hackaton/Repositorio_IAA2026/registro/semana2_proxy_observacion_validacion_plan.json": "13f039cbba0e9a41d7fcbddffa9eb3fb741e632df71ebd800a1ca725f4d76c45",
@@ -502,5 +502,12 @@
   ],
   "2024_open": true,
   "B00_all_alternatives_preserved": true,
-  "goal_achieved": false
+  "goal_achieved": false,
+  "implementation_amendment": {
+    "utc": "2026-10-27T04:14:31.197468+00:00",
+    "previous_plan_sha256": "cc2e5e276aca698cf3bbdc12d8828e3f7092cdda076f71ca9eedad08a9256fcd",
+    "scope": "Test-only poison integer representation corrected from -1e30to -10**12before any actual curve/price fitting; same held-key exclusion and unchanged model/criterion/budget.",
+    "failure_receipt": "Hackaton/Repositorio_IAA2026/privado/P64_fixture_dtype_correction/failed_execution.json",
+    "failed_synthetic_parent_curves_separate": 11
+  }
 }
