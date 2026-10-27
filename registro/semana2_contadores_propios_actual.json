@@ -2,8 +2,8 @@
   "author": "Codex",
   "as_of_utc": "2026-10-27T02:37:45.227878+00:00",
   "scope": "Own pricing/development lineage only; not all project fits or other authors. Historical main catalog retains its dated counter.",
-  "cumulative_price_base_fits": 2515,
-  "cumulative_closed_form_constants": 39309,
+  "cumulative_price_base_fits": 2575,
+  "cumulative_closed_form_constants": 39489,
   "auxiliary_Poisson_Gamma_fits_separate": 30,
   "baseline": {
     "index": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_v7_snapshot.json",
@@ -4166,6 +4166,330 @@
       "utc": "2026-10-27T06:49:46+00:00",
       "previous_sha256": "aa641ab0bceb98aeedd6bd7047bc2dfce9104d140890379eaab441fac829b8a5",
       "sha256": "ac974f4331b3e7c16ebac527699ab986c0f80f4dff4b7e02f627c8a6156ca8ef"
+    }
+  },
+  "phase2_private_P87_calibrated_prior_preflight": {
+    "author": "Codex",
+    "utc": "2026-10-27T07:34:26.235305+00:00",
+    "status": "P87calibrated_prior_whole_synthetic_and_bindings_passed",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P87_prior_calibrado_preflight_20261027/report.json",
+    "report_sha256": "e594ff37bec146a98d6087f58b083e99878202bc1b50741d292cbcf322002431",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P87_PRIOR_CALIBRADO_GLM_PREFLIGHT.md",
+    "next_unit": "P88: register/commit EXACTP87same-bandGLMwith own-training unshaped percomponent line/business calibratedhalfprior.15primary/15adverseGLMfits,90primary/90adverse closedlevels, no source/shapepricebase/CDFfits. ALLexisting outerguards and conditionaltransfer requirement; no copiedP65levels, alpha/grid/field/line rescue.",
+    "new_real_fits": 0,
+    "new_CDF_fits": 0,
+    "new_scores": 0,
+    "new_submissions": 0,
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P87-NIVELES-RESULTADO",
+      "utc": "2026-10-27T07:34:26+00:00",
+      "previous_sha256": "f12eb797366e622794acf3ce0c9c628ade186073a1f6647e521779c290be5cef",
+      "sha256": "3b93adb2ba246d13bbbde536129429203fe5003e8e279f1b36c195d22b91e9ca"
+    },
+    "synthetic": {
+      "author": "Codex",
+      "utc": "2026-10-27T07:34:21.109408+00:00",
+      "records": [
+        {
+          "line": "motor",
+          "full_held_payload_poison_calibration_and_GLM_exact": true,
+          "JSONwhole_flow_exact": true,
+          "ultimate_no_cost_q_or_live_calibration": true,
+          "subset_permutation_projective_given_sources": true,
+          "prior_units_equivariant": true,
+          "independent_math": {
+            "calibration_scalar_checks": [
+              {
+                "component": "A1S",
+                "global_moment_and_business_K400_scalar_match": true,
+                "raw_global_logscale_derivative_zero": true
+              },
+              {
+                "component": "T2b",
+                "global_moment_and_business_K400_scalar_match": true,
+                "raw_global_logscale_derivative_zero": true
+              }
+            ],
+            "conditional_GLM_loss_and_gradient_scalar_match": true,
+            "gradient_inf": 4.815748243843648e-08,
+            "limit": "Conditional GLMstationarity given estimated prior; not a joint optimum for the staged shrunk calibration and GLM."
+          }
+        },
+        {
+          "line": "buildings",
+          "full_held_payload_poison_calibration_and_GLM_exact": true,
+          "JSONwhole_flow_exact": true,
+          "ultimate_no_cost_q_or_live_calibration": true,
+          "subset_permutation_projective_given_sources": true,
+          "prior_units_equivariant": true,
+          "independent_math": {
+            "calibration_scalar_checks": [
+              {
+                "component": "A1S",
+                "global_moment_and_business_K400_scalar_match": true,
+                "raw_global_logscale_derivative_zero": true
+              },
+              {
+                "component": "T2b",
+                "global_moment_and_business_K400_scalar_match": true,
+                "raw_global_logscale_derivative_zero": true
+              }
+            ],
+            "conditional_GLM_loss_and_gradient_scalar_match": true,
+            "gradient_inf": 7.863644105321477e-08,
+            "limit": "Conditional GLMstationarity given estimated prior; not a joint optimum for the staged shrunk calibration and GLM."
+          }
+        },
+        {
+          "line": "contents",
+          "full_held_payload_poison_calibration_and_GLM_exact": true,
+          "JSONwhole_flow_exact": true,
+          "ultimate_no_cost_q_or_live_calibration": true,
+          "subset_permutation_projective_given_sources": true,
+          "prior_units_equivariant": true,
+          "independent_math": {
+            "calibration_scalar_checks": [
+              {
+                "component": "A1S",
+                "global_moment_and_business_K400_scalar_match": true,
+                "raw_global_logscale_derivative_zero": true
+              },
+              {
+                "component": "T2b",
+                "global_moment_and_business_K400_scalar_match": true,
+                "raw_global_logscale_derivative_zero": true
+              }
+            ],
+            "conditional_GLM_loss_and_gradient_scalar_match": true,
+            "gradient_inf": 2.6781665045383374e-08,
+            "limit": "Conditional GLMstationarity given estimated prior; not a joint optimum for the staged shrunk calibration and GLM."
+          }
+        }
+      ],
+      "synthetic_primary_GLMfits": 3,
+      "synthetic_adverse_GLMfits_separate": 3,
+      "synthetic_primary_component_level_sets": 6,
+      "synthetic_adverse_component_level_sets_separate": 6,
+      "synthetic_primary_stored_level_parameters": 18,
+      "synthetic_adverse_level_parameters_separate": 18,
+      "zero_positive_business_guard_rejected_before_GLM": true,
+      "new_real_fits": 0,
+      "new_CDF_fits": 0,
+      "new_scores": 0,
+      "new2025inference": 0,
+      "new_submissions": 0
+    }
+  },
+  "phase2_private_P88_calibrated_prior_GLM": {
+    "author": "Codex",
+    "utc": "2026-10-27T07:41:25.848839+00:00",
+    "status": "P88staged_source_level_prior_GLM_pooled_complete_transfer_unmeasured",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P88_validacion_prior_calibrado_20261027/report.json",
+    "report_sha256": "64eebfd7a2441813b862f17dd743cad5f460da08426bec04572013f2a3cf7af9",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P88_VALIDACION_PRIOR_CALIBRADO.md",
+    "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+    "nominal": {
+      "delta": -0.003947080791630736,
+      "bootstrap95": [
+        -0.006903318739729647,
+        -0.0011083753360419956
+      ],
+      "post31_delta": -0.00644741847070281,
+      "worst_cell_delta": -0.02762937880623879
+    },
+    "P88_minus_P82_point_only": 0.0005684325025028048,
+    "all_pooled_gates_pass": false,
+    "conditional_transfer_gate": null,
+    "primary_GLM_fits": 15,
+    "adverse_GLM_fits_separate": 15,
+    "primary_component_level_sets": 30,
+    "adverse_component_level_sets_separate": 30,
+    "new_primary_closed_levels": 90,
+    "adverse_closed_levels_separate": 90,
+    "new_source_fits": 0,
+    "new_shape_price_base_fits": 0,
+    "new_CDF_fits": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "Review ONLYNEWP88saved calibration multipliers, residual coefficients and whole cells against P82/P65without refit/resampling. Do not tune K/alpha/weights or line/field overrides from held outcomes. Distinguish calibration/relative-penalty effects and risk allocation; next recipe needs a concrete standard mechanism, no public probe or missing authorization.",
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P88-NIVELES-RESULTADO",
+      "utc": "2026-10-27T07:41:25+00:00",
+      "previous_sha256": "308d514fb23d92644c85bd220063a9f26e8a0701a15856277f017a50afed4aba",
+      "sha256": "a5e2855d85997790f0305ec09f243f02add22faa9f3b2799f335efe4b6840c48"
+    }
+  },
+  "phase2_private_P89_prior_tree_preflight": {
+    "author": "Codex",
+    "utc": "2026-10-27T07:47:15.759782+00:00",
+    "status": "P89calibrated_prior_tree_whole_synthetic_and_bindings_passed",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P89_boosting_prior_preflight_20261027/report.json",
+    "report_sha256": "5ec16347dfd2852f3c2a9229be7506bde91be7ca54c45c01dea2ff128033380f",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P89_BOOSTING_PRIOR_PREFLIGHT.md",
+    "next_unit": "P90: register/commit EXACTP89restricted native tree on SAMEP88raw features/owntrain scalar calibratedprior.15primary/15adverse treefits,90+90closedlevels, no source/shapepricebase/CDFfits, all unchanged predictive/cohort/scenario/family16/level/influence gates and native integrity. Ownconditionaltransfer required beforeCSV; no depth/round/step/field/line rescue.",
+    "new_real_fits": 0,
+    "new_CDF_fits": 0,
+    "new_scores": 0,
+    "new_submissions": 0,
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P89-ARBOL-RESULTADO",
+      "utc": "2026-10-27T07:47:15+00:00",
+      "previous_sha256": "6c9f4a7e491f14f9f4ecaa84cc081258068e4007de8600282a45597cbf780294",
+      "sha256": "3f32e7a44f7f5cd1823e3683785de8d07fd5228827a8e29c18c992037808de2e"
+    },
+    "synthetic": {
+      "author": "Codex",
+      "utc": "2026-10-27T07:47:10.667740+00:00",
+      "records": [
+        {
+          "line": "motor",
+          "whole_prior_and_native_tree_held_payload_poison_exact": true,
+          "JSONreplay_and_subset_permutation_exact": true,
+          "native_observed_offset_and_label_precision_checked": true,
+          "no_price_feature": true,
+          "splits_exercised": true,
+          "fitted_leaf_values": 128,
+          "independent_math": {
+            "closed_levels": [
+              {
+                "component": "A1S",
+                "global_moment_and_business_K400_scalar_match": true,
+                "raw_global_logscale_derivative_zero": true
+              },
+              {
+                "component": "T2b",
+                "global_moment_and_business_K400_scalar_match": true,
+                "raw_global_logscale_derivative_zero": true
+              }
+            ],
+            "native_tree_offset": {
+              "native_training_metric_scalar_with_actual_label_precision": 44.36253132496634,
+              "original_uncapped_Tweedie_deviance_scalar": 148863.00371309154,
+              "offset_in_actual_training_metric_verified": true,
+              "no_stationarity_or_convergence_claim_from_fixed_rounds": true
+            }
+          }
+        },
+        {
+          "line": "buildings",
+          "whole_prior_and_native_tree_held_payload_poison_exact": true,
+          "JSONreplay_and_subset_permutation_exact": true,
+          "native_observed_offset_and_label_precision_checked": true,
+          "no_price_feature": true,
+          "splits_exercised": true,
+          "fitted_leaf_values": 128,
+          "independent_math": {
+            "closed_levels": [
+              {
+                "component": "A1S",
+                "global_moment_and_business_K400_scalar_match": true,
+                "raw_global_logscale_derivative_zero": true
+              },
+              {
+                "component": "T2b",
+                "global_moment_and_business_K400_scalar_match": true,
+                "raw_global_logscale_derivative_zero": true
+              }
+            ],
+            "native_tree_offset": {
+              "native_training_metric_scalar_with_actual_label_precision": 43.73981711253111,
+              "original_uncapped_Tweedie_deviance_scalar": 145539.92319129783,
+              "offset_in_actual_training_metric_verified": true,
+              "no_stationarity_or_convergence_claim_from_fixed_rounds": true
+            }
+          }
+        },
+        {
+          "line": "contents",
+          "whole_prior_and_native_tree_held_payload_poison_exact": true,
+          "JSONreplay_and_subset_permutation_exact": true,
+          "native_observed_offset_and_label_precision_checked": true,
+          "no_price_feature": true,
+          "splits_exercised": true,
+          "fitted_leaf_values": 128,
+          "independent_math": {
+            "closed_levels": [
+              {
+                "component": "A1S",
+                "global_moment_and_business_K400_scalar_match": true,
+                "raw_global_logscale_derivative_zero": true
+              },
+              {
+                "component": "T2b",
+                "global_moment_and_business_K400_scalar_match": true,
+                "raw_global_logscale_derivative_zero": true
+              }
+            ],
+            "native_tree_offset": {
+              "native_training_metric_scalar_with_actual_label_precision": 43.49871768959924,
+              "original_uncapped_Tweedie_deviance_scalar": 149397.15593330626,
+              "offset_in_actual_training_metric_verified": true,
+              "no_stationarity_or_convergence_claim_from_fixed_rounds": true
+            }
+          }
+        }
+      ],
+      "synthetic_primary_tree_fits": 3,
+      "synthetic_adverse_tree_fits_separate": 3,
+      "synthetic_primary_closed_levels": 18,
+      "synthetic_adverse_closed_levels_separate": 18,
+      "new_real_fits": 0,
+      "new_CDF_fits": 0,
+      "new_scores": 0,
+      "new2025inference": 0,
+      "new_submissions": 0
+    }
+  },
+  "phase2_private_P90_prior_tree": {
+    "author": "Codex",
+    "utc": "2026-10-27T07:56:45.321075+00:00",
+    "status": "P90restricted_tree_calibrated_source_prior_pooled_complete_transfer_unmeasured",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P90_validacion_boosting_prior_20261027/report.json",
+    "report_sha256": "8e0217fdb60834f5100cb2cd545fd0a444b283944dbfecc5d726aa51c7cb64cc",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P90_VALIDACION_BOOSTING_PRIOR.md",
+    "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+    "nominal": {
+      "delta": -0.00441343088237781,
+      "bootstrap95": [
+        -0.007625714468965994,
+        -0.0013130152285583203
+      ],
+      "post31_delta": -0.007213722710072899,
+      "worst_cell_delta": -0.029061147537156773
+    },
+    "P90_minus_P88_point_only": -0.00046635009074707384,
+    "all_pooled_gates_pass": false,
+    "conditional_transfer_gate": null,
+    "primary_native_tree_fits": 15,
+    "adverse_native_tree_fits_separate": 15,
+    "new_primary_closed_levels": 90,
+    "adverse_closed_levels_separate": 90,
+    "primary_iterative_tree_leaf_counts": {
+      "fitted_tree_leaf_values": 6292
+    },
+    "new_source_fits": 0,
+    "new_shape_price_base_fits": 0,
+    "new_CDF_fits": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "Review ONLYNEWP90saved whole cells/tree corrections and prior levels against P88/P65without refit/resampling. No tree depth/round/leaf/step/field or perline rescue. Separate failure of this specific constrained response from an interaction cause or a general capacity claim; new recipe needs distinct evidence before fitting.",
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P90-ARBOL-RESULTADO",
+      "utc": "2026-10-27T07:56:45+00:00",
+      "previous_sha256": "a8b903c778b59e42a6a64224e804150624d40ef3b6690e19dd0b61530e64115d",
+      "sha256": "a1e29f11bbd0934e7bdb58d256b9c0c9b0dc56351cb8a957a72e2d0c0ea9b6cc"
     }
   }
 }
