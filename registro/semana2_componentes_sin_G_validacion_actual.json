@@ -1,14 +1,41 @@
 {
   "author": "Codex",
-  "utc": "2026-10-27T09:34:01.401808+00:00",
-  "status": "P100registered_before_real_component_only_prices_and_scores",
+  "utc": "2026-10-27T09:36:34.588920+00:00",
+  "status": "P100components_only_no_shared_G_pooled_complete_transfer_unmeasured",
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_componentes_sin_G_validacion_plan.json",
   "plan_sha256": "907d421354d1793c00501916e6a715baf0d0f8bda7da625e0af96c3d3762896c",
   "forum": {
     "author": "Codex",
-    "id": "COD-S2-20261027-PRIVADA-P100-COMPONENTES-PREVIO",
-    "utc": "2026-10-27T09:34:01+00:00",
-    "previous_sha256": "55dfbfa6e9f79079cc7eaae8578e9e81ae269b9583dc05357640b3e8666b3706",
-    "sha256": "2eb9a40ec8f7680cab7e157b3a71cd56eaf0bcdc8e093a8083012fed5f6ded48"
-  }
+    "id": "COD-S2-20261027-PRIVADA-P100-COMPONENTES-RESULTADO",
+    "utc": "2026-10-27T09:36:34+00:00",
+    "previous_sha256": "2eb9a40ec8f7680cab7e157b3a71cd56eaf0bcdc8e093a8083012fed5f6ded48",
+    "sha256": "57a8107c56181efe70655c655b478ede0c5450d61df3c601d7dd2cfc75d6ee3e"
+  },
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P100_validacion_componentes_sin_G_20261027/report.json",
+  "report_sha256": "0a1ea99376541ccfc049d62ec2f658e57a3082ee900c45af7e8888037cb61a9d",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P100_VALIDACION_COMPONENTES_SIN_G.md",
+  "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+  "nominal": {
+    "delta": -0.0017882113760418353,
+    "bootstrap95": [
+      -0.0031863726839978946,
+      -0.00046795794923924745
+    ],
+    "post31_delta": -0.0033627540894581444,
+    "worst_cell_delta": -0.015051946648809827
+  },
+  "P100_minus_P65_point_only": -0.0018407224019101086,
+  "all_pooled_gates_pass": false,
+  "conditional_transfer_gate": null,
+  "reused_primary_components": 30,
+  "buildings_pooled_frame_exact_P65": true,
+  "new_native_fits": 0,
+  "new_primary_closed_levels": 0,
+  "new_source_fits": 0,
+  "new_CDF_fits": 0,
+  "new2025inference": 0,
+  "new_submissions": 0,
+  "next_unit": "Review only new P100 complete stage-ablation result against P65/P98 from saved reports. Preserve all lines/adverses; do not choose individual G stages or adjust K/weights after this outcome. Next candidate needs a distinct documented observation/valuation/source-allocation mechanism unresolved by the standard component and prior paths, with a finite frozen scope and no public probing.",
+  "2024_open": true,
+  "goal_achieved": false
 }
