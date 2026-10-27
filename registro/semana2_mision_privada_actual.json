@@ -17,7 +17,7 @@
     "previous_sha256": "6d59e27de8b0a990b903b1cf19e79963507e408dc9a23e937978d9678c2169d3",
     "sha256": "61b4c2ca7fd790b2ff916ef8696824758ce9fc6608087dbf7b89c949f733ff36"
   },
-  "next_unit": "Run the frozen P52pooled complete target comparison; no source refits, no automatic transfer or upload. Preserve any invocation/checkpoint on failure.",
+  "next_unit": "Review the NEW A1Rpooled loss using saved parameters and group/cell support before another recipe. No need to spend90transfer sourcefits on a candidate already rejected by unchanged pooled guards. Transfer remains missing, never certified as zero. Preserve all A1Rsource models and priors; no K/profile/line rescue or public probes. Select a materially justified standard mechanism, not repeat PS1or old source searches.",
   "old_app_goal_text_stale": true,
   "public017_or0175_not_sufficient_for_completion": true,
   "hidden_private_improvement_established": false,
@@ -7057,23 +7057,40 @@
   },
   "P52": {
     "author": "Codex",
-    "utc": "2026-10-27T01:30:23.582290+00:00",
-    "status": "P52registered_before_target_or_branch_fit_score",
-    "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_A1R_destino_validacion_plan.json",
-    "plan_sha256": "5accc19ffdcc831867181c78ebc3c355b947552282c38cefc45818ffc74c965c",
+    "utc": "2026-10-27T01:34:20.460048+00:00",
+    "status": "P52pooled_complete_transfer_not_evaluated",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P52_validacion_A1R_20261027/report.json",
+    "report_sha256": "a3349000fdf1e0d5123eb9d27d4901f7b147cae12ee3a4b288e5ed35a3bd5ed6",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P52_A1R_VALIDACION_DESTINO.md",
+    "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+    "nominal": {
+      "delta": -0.002998218840180838,
+      "bootstrap95": [
+        -0.005045955774379201,
+        -0.0010864910210218225
+      ],
+      "post31_delta": -0.005389435737132297,
+      "worst_cell_delta": -0.015756094421313416
+    },
+    "all_pooled_gates_pass": false,
+    "conditional_transfer_gate": null,
+    "primary_closed_learners": 15,
+    "adverse_closed_learners_separate": 15,
+    "new_primary_constants": 355,
+    "new_source_fits": 0,
+    "primary_branch_CDFs": 110,
+    "adverse_branch_CDFs_separate": 110,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "Review the NEW A1Rpooled loss using saved parameters and group/cell support before another recipe. No need to spend90transfer sourcefits on a candidate already rejected by unchanged pooled guards. Transfer remains missing, never certified as zero. Preserve all A1Rsource models and priors; no K/profile/line rescue or public probes. Select a materially justified standard mechanism, not repeat PS1or old source searches.",
+    "2024_open": true,
+    "goal_achieved": false,
     "forum": {
       "author": "Codex",
-      "id": "COD-S2-20261027-PRIVADA-P52-A1R-PREVIO",
-      "utc": "2026-10-27T01:30:23+00:00",
-      "previous_sha256": "15402978146a9fbf5e91d860a9de254d07ae27af12533aa6dfcf746df5b9a9bf",
-      "sha256": "be6c9a7a3360e1c9eb266baef6cb7f2e7ac1a196813a33f2976ce73c149ef198"
-    },
-    "preflight_evidence": {
-      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P52_synthetic_preflight.json": "f4c202018434e6f5efdb05be9ed2ef06b850e2c055d32161c0b7aa503f2bf129",
-      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P52_recovery_preflight.json": "ad54222e34377427d52fd3acec4a38ffc26544a40a39f28a04134c3d2761ba6b",
-      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P52_real_binding_preflight.json": "9f36c4926408471c14a274454334c9ed859ba53d64f79b019f2f6ce89212d8a1",
-      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P52_code_domain_preflight.json": "c62dccfe695e2da503d23cf980209039fe1c982c3baaf73e869618af156c223e"
-    },
-    "next_unit": "Run the frozen P52pooled complete target comparison; no source refits, no automatic transfer or upload. Preserve any invocation/checkpoint on failure."
+      "id": "COD-S2-20261027-PRIVADA-P52-A1R-RESULTADO",
+      "utc": "2026-10-27T01:34:20+00:00",
+      "previous_sha256": "be6c9a7a3360e1c9eb266baef6cb7f2e7ac1a196813a33f2976ce73c149ef198",
+      "sha256": "1dc93d97dbebec86ab84413ab51af6b8fddc1bcd9e975a06ad227b92e0b3d48f"
+    }
   }
 }
