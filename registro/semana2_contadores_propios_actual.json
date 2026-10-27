@@ -3412,5 +3412,80 @@
       "previous_sha256": "ac6f4e8c86c4c8c287c19c6d0b4dcbbfeb16da473f6641a1c99c3fca52f92c1f",
       "sha256": "07d1f2c6cc8d0907f710fe3cfbcdda2a1903ea1eec783310ca6475b895971a5e"
     }
+  },
+  "phase2_private_P76_two_source_prior_preflight": {
+    "author": "Codex",
+    "utc": "2026-10-27T05:48:18.391981+00:00",
+    "status": "P76two_source_prior_algebra_and_GLM_synthetic_passed",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P76_GLM_prior_dos_fuentes_preflight_20261027/report.json",
+    "report_sha256": "c57a21f4ef45755e0787a4ed6d0a80e02d9bdd1ef14cf8a0e885a95606bbd7ac",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P76_PRIOR_DOS_FUENTES_PREFLIGHT.md",
+    "next_unit": "P77: register/commit same single direct GLMwith fixed half SOURCE-monetary prior,15primary/15adverse fits, unchanged fields/alpha1and every previous gate. No target-base/source/CDFrefits, source anchors fixed and persisted. Pooledpass requires OWN2023-only conditional transfer before any CSV.",
+    "new_real_fits": 0,
+    "new_source_inference": 0,
+    "new_CDF_fits": 0,
+    "new_scores": 0,
+    "new_submissions": 0,
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P76-PRIOR-RESULTADO",
+      "utc": "2026-10-27T05:48:18+00:00",
+      "previous_sha256": "763bf4bbb9e3a0d4d994c613e29e563ed09d6451f189bfd43ddf10e03efd3850",
+      "sha256": "7eb2991d6dc445c09cdd7a182438931f12008aa3f791c793d3e8e620ab406928"
+    },
+    "synthetic": {
+      "author": "Codex",
+      "utc": "2026-10-27T05:45:56.620252+00:00",
+      "records": [
+        {
+          "line": "motor",
+          "held_all_payload_fit_invariant": true,
+          "JSON_replay_exact": true,
+          "fixed_source_anchor_in_artifact": true,
+          "ultimate_no_q_target_or_batchcenter": true,
+          "subset_projective_given_fixed_source_inputs": true,
+          "independent_math": {
+            "fixed_half_offset_scalar_loss_identity": true,
+            "gradient_scalar_and_vector_match": true,
+            "gradient_inf": 3.684268101884769e-08
+          }
+        },
+        {
+          "line": "buildings",
+          "held_all_payload_fit_invariant": true,
+          "JSON_replay_exact": true,
+          "fixed_source_anchor_in_artifact": true,
+          "ultimate_no_q_target_or_batchcenter": true,
+          "subset_projective_given_fixed_source_inputs": true,
+          "independent_math": {
+            "fixed_half_offset_scalar_loss_identity": true,
+            "gradient_scalar_and_vector_match": true,
+            "gradient_inf": 5.3134821681455335e-09
+          }
+        },
+        {
+          "line": "contents",
+          "held_all_payload_fit_invariant": true,
+          "JSON_replay_exact": true,
+          "fixed_source_anchor_in_artifact": true,
+          "ultimate_no_q_target_or_batchcenter": true,
+          "subset_projective_given_fixed_source_inputs": true,
+          "independent_math": {
+            "fixed_half_offset_scalar_loss_identity": true,
+            "gradient_scalar_and_vector_match": true,
+            "gradient_inf": 4.4047240362055096e-08
+          }
+        }
+      ],
+      "synthetic_primary_GLMfits": 3,
+      "synthetic_adverse_GLMfits_separate": 3,
+      "new_real_fits": 0,
+      "new_source_fits": 0,
+      "new_CDF_fits": 0,
+      "new_scores": 0,
+      "new_submissions": 0
+    }
   }
 }
