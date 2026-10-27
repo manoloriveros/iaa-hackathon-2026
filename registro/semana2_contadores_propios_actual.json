@@ -3,7 +3,7 @@
   "as_of_utc": "2026-10-27T01:34:20.615722+00:00",
   "scope": "Own pricing/development lineage only; not all project fits or other authors. Historical main catalog retains its dated counter.",
   "cumulative_price_base_fits": 1825,
-  "cumulative_closed_form_constants": 31734,
+  "cumulative_closed_form_constants": 32274,
   "auxiliary_Poisson_Gamma_fits_separate": 30,
   "baseline": {
     "index": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_v7_snapshot.json",
@@ -2438,6 +2438,80 @@
     "synthetic_residual_stage_calls_primary": 4,
     "synthetic_residual_stage_calls_adverse_separate": 4,
     "real_price_fits": 0,
+    "new_C0_fits": 0,
+    "new_scores": 0
+  },
+  "phase2_private_P55_fixed_mixture": {
+    "author": "Codex",
+    "utc": "2026-10-27T02:02:02.926588+00:00",
+    "status": "P55pooled_complete_transfer_unmeasured",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P55_validacion_mezcla_20261027/report.json",
+    "report_sha256": "4b25fedd24699ba04a7219cfdbb8ee1e023336d984cbb1960504051b7b886a90",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P55_VALIDACION_MEZCLA_ESTANDAR.md",
+    "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+    "nominal": {
+      "delta": -0.0010477705812682663,
+      "bootstrap95": [
+        -0.0014530860446319003,
+        -0.0006124928731953341
+      ],
+      "post31_delta": -0.0017781265187687136,
+      "worst_cell_delta": -0.009512345872398149
+    },
+    "all_pooled_gates_pass": false,
+    "conditional_transfer_gate": null,
+    "primary_whole_learners": 15,
+    "adverse_whole_learners_separate": 15,
+    "primary_components": 30,
+    "adverse_components_separate": 30,
+    "primary_shared_residual_stages": 20,
+    "adverse_shared_residual_stages_separate": 20,
+    "new_primary_constants": 540,
+    "new_source_fits": 0,
+    "new_C0_fits": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "Use the NEW P55saved global/cell/cohort loss and parameters to identify one concrete unresolved mechanism before further fitting. Fixed-half mixture and source controls remain preserved, no selected weights/lines or oracle-level rescue. Do not repeat P49/P53or refit source/reporting on unchanged data. Full/private admission still missing; no public probe.",
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P55-MEZCLA-RESULTADO",
+      "utc": "2026-10-27T02:02:03+00:00",
+      "previous_sha256": "4c5e2fb75ee85101f7171dc89cd899d307f302affc71ae2edad99a55bffe657b",
+      "sha256": "2bf07fb67a42cf4b51965c9d70d2ff81184d949f20719db8dad3c0f09f149bce"
+    }
+  },
+  "phase2_private_P56_offset_preflight": {
+    "author": "Codex",
+    "utc": "2026-10-27T02:11:48.906708+00:00",
+    "records": [
+      {
+        "line": "motor",
+        "held_payload_invariance": true,
+        "serialization_exact": true,
+        "scalar_linear_predictor": true,
+        "gradient_inf": 2.239501184497783e-08
+      },
+      {
+        "line": "buildings",
+        "held_payload_invariance": true,
+        "serialization_exact": true,
+        "scalar_linear_predictor": true,
+        "gradient_inf": 1.8064894014707678e-08
+      },
+      {
+        "line": "contents",
+        "held_payload_invariance": true,
+        "serialization_exact": true,
+        "scalar_linear_predictor": true,
+        "gradient_inf": 8.606520628118286e-09
+      }
+    ],
+    "homogeneity_three_currency_scales": true,
+    "synthetic_primary_GLM_fits": 3,
+    "synthetic_adverse_GLM_fits_separate": 3,
+    "real_GLM_fits": 0,
     "new_C0_fits": 0,
     "new_scores": 0
   }

@@ -6,7 +6,7 @@
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_mision_privada_plan_v1.json",
   "plan_sha256": "3329dbc7fe931d71e1e945bdf536fd9d810040f2626709f3d103c2dc5cdd7876",
   "execution_control": "Hackaton/Repositorio_IAA2026/registro/semana2_control_entregas_codex_actual.json",
-  "execution_control_sha256": "1dda18a01e3c91dc0836acf4fd5dd754ec5da4ec0d371f854d8f1f17ef8b8b11",
+  "execution_control_sha256": "c3ff7071bc15ee0368104e8a1b85faf4211ce92b6cc902a955ff94fb1d8e93da",
   "guard_test": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/entrega_H1_investigacion_20261026_v1/prioridad_privada_20261026T131510432194Z/private_priority_guard_test.json",
   "guard_test_sha256": "bd738071e41cacaf51c93fe3a8de6fe046e87cb14bbcc664699322393979dd99",
   "document": "Hackaton/Repositorio_IAA2026/docs/semana2/MISION_PRIVADA_PRIORIDAD_Y_PLAN.md",
@@ -17,7 +17,7 @@
     "previous_sha256": "6d59e27de8b0a990b903b1cf19e79963507e408dc9a23e937978d9678c2169d3",
     "sha256": "61b4c2ca7fd790b2ff916ef8696824758ce9fc6608087dbf7b89c949f733ff36"
   },
-  "next_unit": "Run preregistered P55fixed-half complete pooled validation. Preserve each primary/adverse invocation and outputs; no source/report refits, no transfer assumption or upload.",
+  "next_unit": "Run frozen P57offset GLMvalidation; actual15primary+15adverse estimator invocations and no source/base/C0refits. Keep every guard and coefficient checkpoint.",
   "old_app_goal_text_stale": true,
   "public017_or0175_not_sufficient_for_completion": true,
   "hidden_private_improvement_established": false,
@@ -7147,16 +7147,80 @@
   },
   "P55": {
     "author": "Codex",
-    "utc": "2026-10-27T01:57:14.520351+00:00",
-    "status": "P55registered_before_real_learning_or_score",
-    "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_mezcla_estandar_validacion_plan.json",
-    "plan_sha256": "86010d8b22447042046fde26f7ab96f5905b8b4191afe1d97664fc7169abfcf2",
+    "utc": "2026-10-27T02:02:02.926588+00:00",
+    "status": "P55pooled_complete_transfer_unmeasured",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P55_validacion_mezcla_20261027/report.json",
+    "report_sha256": "4b25fedd24699ba04a7219cfdbb8ee1e023336d984cbb1960504051b7b886a90",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P55_VALIDACION_MEZCLA_ESTANDAR.md",
+    "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+    "nominal": {
+      "delta": -0.0010477705812682663,
+      "bootstrap95": [
+        -0.0014530860446319003,
+        -0.0006124928731953341
+      ],
+      "post31_delta": -0.0017781265187687136,
+      "worst_cell_delta": -0.009512345872398149
+    },
+    "all_pooled_gates_pass": false,
+    "conditional_transfer_gate": null,
+    "primary_whole_learners": 15,
+    "adverse_whole_learners_separate": 15,
+    "primary_components": 30,
+    "adverse_components_separate": 30,
+    "primary_shared_residual_stages": 20,
+    "adverse_shared_residual_stages_separate": 20,
+    "new_primary_constants": 540,
+    "new_source_fits": 0,
+    "new_C0_fits": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "Use the NEW P55saved global/cell/cohort loss and parameters to identify one concrete unresolved mechanism before further fitting. Fixed-half mixture and source controls remain preserved, no selected weights/lines or oracle-level rescue. Do not repeat P49/P53or refit source/reporting on unchanged data. Full/private admission still missing; no public probe.",
+    "2024_open": true,
+    "goal_achieved": false,
     "forum": {
       "author": "Codex",
-      "id": "COD-S2-20261027-PRIVADA-P55-MEZCLA-PREVIO",
-      "utc": "2026-10-27T01:57:14+00:00",
-      "previous_sha256": "67d664069abfae77fed824f4023f44607876f4ef740d111c7563832cf5a7716c",
-      "sha256": "4c5e2fb75ee85101f7171dc89cd899d307f302affc71ae2edad99a55bffe657b"
+      "id": "COD-S2-20261027-PRIVADA-P55-MEZCLA-RESULTADO",
+      "utc": "2026-10-27T02:02:03+00:00",
+      "previous_sha256": "4c5e2fb75ee85101f7171dc89cd899d307f302affc71ae2edad99a55bffe657b",
+      "sha256": "2bf07fb67a42cf4b51965c9d70d2ff81184d949f20719db8dad3c0f09f149bce"
     }
+  },
+  "P56": {
+    "author": "Codex",
+    "utc": "2026-10-27T02:12:04.218579+00:00",
+    "status": "P56offset_GLM_synthetic_and_real_input_preflight_passed",
+    "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_GLM_offset_preflight_plan.json",
+    "plan_sha256": "fffb6e2c4eccd035bc1ecc1cc86ead159b0bef9bd7cc3b0140167b83577d85f2",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P56_GLM_OFFSET_PREFLIGHT.md",
+    "real_GLM_fits": 0,
+    "new_C0_fits": 0,
+    "new_scores": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "P57: preregister and commit complete P56offset GLMvalidation,15primary+15adverse fits, same unchanged gates/scenarios and whole conditional transfer requirement. No source/P55base/C0refits or public tuning. Keep convergence controls and actual train-only preprocess/offset ancestry.",
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P56-GLM-PREFLIGHT",
+      "utc": "2026-10-27T02:12:04+00:00",
+      "previous_sha256": "2bf07fb67a42cf4b51965c9d70d2ff81184d949f20719db8dad3c0f09f149bce",
+      "sha256": "b63889407264bea3e184cfb7ad80634a2d70d874b7506d64239fe36178105d62"
+    }
+  },
+  "P57": {
+    "author": "Codex",
+    "utc": "2026-10-27T02:20:14.771913+00:00",
+    "status": "P57registered_before_real_GLM_fit_score",
+    "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_GLM_offset_validacion_plan.json",
+    "plan_sha256": "e2337a952dc1feff1592b0fed675f26e364c94aee6eefcee46ac690e326e11ab",
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P57-GLM-PREVIO",
+      "utc": "2026-10-27T02:20:14+00:00",
+      "previous_sha256": "b63889407264bea3e184cfb7ad80634a2d70d874b7506d64239fe36178105d62",
+      "sha256": "f730e572c4030f338d58ead59c90fbe2d86441eafdf4fa087c9ce95657850e33"
+    },
+    "category_precheck": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P57_validacion_GLM_offset_20261027/category_input_precheck.json",
+    "category_precheck_sha256": "e6470b814778aadd0b0999dd8ece705a5f99eb4cc205c86caf751e7f9ca6be2b"
   }
 }
