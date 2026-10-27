@@ -100,7 +100,8 @@ def poison(frame):
     z=frame.copy();held=z.is_held
     for column in ['T0','reserve','exposure_calendar','q_paired','annual_A1S','annual_T2b','ncb_years','prior_claims_5y']:
         z.loc[held,column]=np.nan
-    for column in ['new_business','year','gender','works_from_home','marketing_segment']:z.loc[held,column]=-999
+    for column in ['new_business','year','works_from_home']:z.loc[held,column]=-999
+    for column in ['gender','marketing_segment']:z.loc[held,column]='__POISON_HELD__'
     return z
 
 
