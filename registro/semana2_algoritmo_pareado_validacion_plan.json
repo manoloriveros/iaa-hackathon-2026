@@ -3606,7 +3606,7 @@
     "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P47_preflight_pareado_20261026/TRANSFER_contents_4_3_inputs.parquet": "04853b3d325f0027fae6a0fe71d22ebd5530998ea9a14631f2873f220c13ec0a",
     "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P47_preflight_pareado_20261026/TRANSFER_contents_4_4_inputs.parquet": "6d08b95ef3aa213030e919e90a6b23af58ebec1d6ec4cf1dac6f0f9b23dc3f95",
     "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P47_preflight_pareado_20261026/TRANSFER_contents_4_outer_adapter.parquet": "82898d62ef66d4de4c3f13e85ade0bcc77b22071ab7485ab8758434bcea687a4",
-    "Hackaton/Repositorio_IAA2026/herramientas/validar_algoritmo_pareado_P48.py": "795bb610f5066eeeb2d42a9dd6e7358e66d5c92243400e54b1d5e01ca6a1daa1",
+    "Hackaton/Repositorio_IAA2026/herramientas/validar_algoritmo_pareado_P48.py": "36900c4806da15b67c2fea6f504b0f5d9080b966d803976a0dbffc9d86ba3504",
     "Hackaton/Repositorio_IAA2026/herramientas/validar_canal_privada_P23.py": "1563da6b5c49ff872b8425d97189db89b5c0dbdefa9b6bbadcb7c7673a44b8de",
     "Hackaton/Repositorio_IAA2026/herramientas/validar_ablacion_fuente_P10.py": "294415513ff66c877eb43959b65026ffad6dbaff76b314d91b78563f15c2bb51",
     "Hackaton/Repositorio_IAA2026/registro/semana2_algoritmo_pareado_preflight_plan.json": "81e52d6662df357855b97ce7a14f94f08f0f400e983752f01d4bd17d20160a6d",
@@ -3617,7 +3617,8 @@
     "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P19_cohortes_broker_20261026/first4_group_weights.npy": "dfa30a03254ca1183fef956814f9cb776e6c030d95ef0ac2e66c35f4c8f4ce7d",
     "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P48_validacion_pareada_20261026/covariates.parquet": "48ef7b2da82766197e6305556417f2633cc8de5d20d6095d8b0e8225ac458b6d",
     "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P15_validacion_ausentes_20261026/POOLED_prices.parquet": "024de212030b8a726ed98da330c1f12af048cf1269a70ceefadeb70488bbc7a2",
-    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P15_validacion_ausentes_20261026/TRANSFER_prices.parquet": "6d62ec999f60fc29127ce7e1324a26c3bad4c3b9387545ceadd17ce960c56b35"
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P15_validacion_ausentes_20261026/TRANSFER_prices.parquet": "6d62ec999f60fc29127ce7e1324a26c3bad4c3b9387545ceadd17ce960c56b35",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P48_validacion_pareada_20261026/implementation_repair/row_key_fixture.json": "6804ad10aaa49751709631049b9fe0a5196b356415a494b434dd6904a7d3cc5e"
   },
   "controls": [
     "Exact own scoped q/year/group digests before each calibrator, no outer C0in member input.",
@@ -3635,5 +3636,20 @@
   ],
   "after_failure": "Preserve adverses; no retuning K, weights, variables, model family or line/segment rescue withinP48.",
   "2024_open": true,
-  "B00_all_alternatives_preserved": true
+  "B00_all_alternatives_preserved": true,
+  "implementation_repair_before_scoring": {
+    "author": "Codex",
+    "utc": "2026-10-27T00:00:07.920785+00:00",
+    "old_plan_sha256": "d7ed355852a4b5c8e00528f6998c89086b3ff2055ce185f14d02a896f3d798b9",
+    "old_script_sha256": "795bb610f5066eeeb2d42a9dd6e7358e66d5c92243400e54b1d5e01ca6a1daa1",
+    "new_script_sha256": "36900c4806da15b67c2fea6f504b0f5d9080b966d803976a0dbffc9d86ba3504",
+    "all150members_300saved_calibrators_retained": true,
+    "no_scores_before_repair": true,
+    "learner_formula_hypothesis_parameters_thresholds_data_unchanged": true,
+    "change": "Preserve row_id in keyed_concat and reject duplicate/missing/extra keys; actual30outer metadata binding verified. No price-value formula changed.",
+    "failure": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P48_validacion_pareada_20261026/implementation_repair/failure.json",
+    "fixture": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P48_validacion_pareada_20261026/implementation_repair/row_key_fixture.json",
+    "new_fits": 0,
+    "immutable_original_registration_recognized_for_resume": true
+  }
 }

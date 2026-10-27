@@ -133,6 +133,13 @@ def fit_member(binding, canonical):
         'moment_relative_error': abs(moment/primary['level']-1), 'outputs': {w.rel(k): w.sha(k) for k in folder.iterdir() if k.is_file()}})
 
 
+def keyed_concat(pieces, reference_ids):
+    result = pd.concat(pieces)
+    assert result.row_id.is_unique and result.row_id.notna().all()
+    assert len(reference_ids) == len(set(reference_ids)) and set(result.row_id) == set(reference_ids)
+    return result.set_index('row_id', drop=False).loc[reference_ids].reset_index(drop=True)
+
+
 def evaluate(plan):
     results = {}
     for evaluation in ['POOLED', 'TRANSFER']:
@@ -149,7 +156,7 @@ def evaluate(plan):
                 f['ultimate_mean'] = ultimate
                 for name in e.NAMES[1:]: f[name+'_new'] = ultimate*adapter[name+'_q'].to_numpy()
                 pieces.append(f)
-        combined = pd.concat(pieces).set_index('row_id').loc[reference.row_id].reset_index(drop=True)
+        combined = keyed_concat(pieces, reference.row_id)
         for key in ['row_id', 'line', 'year', 'new_business', 'fold', 'group_id', 'T0']: assert np.array_equal(combined[key], reference[key]), key
         saved = combined.copy(); saved['old_nominal'] = reference.old_nominal.to_numpy()
         y = saved.T0.to_numpy(float); reserve = canonical.loc[saved.row_id].reserve.to_numpy(float); ys = [y, y-.25*reserve, y+.25*reserve, y, y]
@@ -165,7 +172,14 @@ def evaluate(plan):
 
 def run():
     assert not (OUT/'report.json').exists(); plan = w.read(PLAN); check_sources(plan)
-    assert w.read(OUT/'registration.json')['plan_sha256'] == w.sha(PLAN)
+    registered = w.read(OUT/'registration.json')['plan_sha256']
+    if registered != w.sha(PLAN):
+        repair = plan['implementation_repair_before_scoring']
+        assert registered == repair['old_plan_sha256']
+        assert repair['new_script_sha256'] == w.sha(Path(__file__))
+        assert len(list(OUT.glob('*/committed.json'))) == 150
+        assert not list(OUT.glob('*_joint_bootstrap.npy')) and not (OUT/'cohort_report.json').exists()
+        assert w.sha(OUT/'implementation_repair/plan_before_rowkey_fix.json') == registered
     if not (OUT/'started.json').exists(): dump(OUT/'started.json', {'author': 'Codex', 'utc': utc(), 'pid': os.getpid(), 'script': w.rel(Path(__file__)), 'kind': 'P48nested_standard_cost_algorithm'})
     execution = {'author': 'Codex', 'utc': utc(), 'pid': os.getpid(), 'script': w.rel(Path(__file__)), 'kind': 'P48nested_standard_cost_algorithm', 'output': w.rel(OUT)}
     execution_state(execution)
