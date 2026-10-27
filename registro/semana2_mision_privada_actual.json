@@ -17,7 +17,7 @@
     "previous_sha256": "6d59e27de8b0a990b903b1cf19e79963507e408dc9a23e937978d9678c2169d3",
     "sha256": "61b4c2ca7fd790b2ff916ef8696824758ce9fc6608087dbf7b89c949f733ff36"
   },
-  "next_unit": "P95: implement strict raw-capital historical join and same P88 standard GLM with one additional capital main effect for buildings/contents, no uncertainty pricing flag. Validate whole synthetic held-poison/replay/offset math and no premium reads; separate full evaluation registration before real fits. Reuse exact same-scope levels/motor, no threshold/alpha/line rescue.",
+  "next_unit": "P96: separately register and freeze complete same-P88 standard GLM plus direct ordinary capital. Reuse all90 same-scope P88 prior levels and five motor models by code/data/keys; fit only10+10 property models. All old pooled/cohort/scenario/family/convergence/level/influence gates unchanged; whole poison includes capital; replay blocks fits and level estimators. No threshold/alpha/line rescue or 2025/upload before complete admission and transfer.",
   "old_app_goal_text_stale": true,
   "public017_or0175_not_sufficient_for_completion": true,
   "hidden_private_improvement_established": false,
@@ -8485,6 +8485,34 @@
       "utc": "2026-10-27T08:54:58+00:00",
       "previous_sha256": "4de4282959e418990d466516555fc825f16b475df41d1981b5a85b5a14e17842",
       "sha256": "8308e0131b754616c777e358daa7570b296bfc85ce79e0d98a9c2117b324aedf"
+    }
+  },
+  "P95": {
+    "author": "Codex",
+    "utc": "2026-10-27T08:59:45.554620+00:00",
+    "status": "P95capital_main_effect_synthetic_and_historical_bindings_complete",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P95_capital_destino_preflight_20261027/report.json",
+    "report_sha256": "eba0a9d0dbb65c2dbf45bf73ab7acbe4c2b7dbd51aa58392414448d0f8c1a993",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P95_CAPITAL_DESTINO_PREFLIGHT.md",
+    "synthetic": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P95_capital_destino_preflight_20261027/synthetic.json",
+    "synthetic_sha256": "f496cd9fc62cbbf5d7b1610c79f016dbaa6df26b95d01611df1fac8ed65042ad",
+    "bindings": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P95_capital_destino_preflight_20261027/bindings.json",
+    "bindings_sha256": "1fa6115bc5703762833f32fe41494ac786c4b893a5648c6310789c0b3cb3701a",
+    "next_unit": "P96: separately register and freeze complete same-P88 standard GLM plus direct ordinary capital. Reuse all90 same-scope P88 prior levels and five motor models by code/data/keys; fit only10+10 property models. All old pooled/cohort/scenario/family/convergence/level/influence gates unchanged; whole poison includes capital; replay blocks fits and level estimators. No threshold/alpha/line rescue or 2025/upload before complete admission and transfer.",
+    "new_real_fits": 0,
+    "new_source_fits": 0,
+    "new_CDF_fits": 0,
+    "new_scores": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P95-CAPITAL-RESULTADO",
+      "utc": "2026-10-27T08:59:45+00:00",
+      "previous_sha256": "101447d0bf606040b023fb3b795702e36563585afd6b4501fba91c5de18a19b5",
+      "sha256": "c34935bc62241825be02af85e4a79ef4dffb72b6dde53109a166a1f2fcdbd44b"
     }
   }
 }
