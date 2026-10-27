@@ -1,0 +1,37 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-27T00:07:20.167119+00:00",
+  "question": "Does the NEW complete PS1loss arise from aggregate level penalty or remaining risk allocation even after an oracle scalar?",
+  "novelty": "Apply the previously verified P13algebra only to new P48whole-algorithm predictions. Do not rerun P13or score old models, fit, bootstrap, apply models or create scaled price arrays.",
+  "scopes": "Exactly20nominal decompositions: pooled global plus12line/year/business cells; transfer global plus6line/year/business cells. Include every adverse cell. No choosing scopes after outcomes.",
+  "mathematics": "A=sum(y/sqrt(mu)), B=sum(sqrt(mu)), C=sum(sqrt(y)); D=4(A+B-2C), D_min=8sqrt(AB)-8C, penalty=4(sqrt(A)-sqrt(B))^2. k_oracle=A/Bdiagnostic only. Delta_total=delta_profiled_minimum+delta_level_penalty under each fixed scope null.",
+  "diagnostic_consequence": "If even min-lossPS1is worse than fixed reference, no scalar correction can solve that scope. Otherwise this is only room for a training-only mechanism, not permission to use retained-label oracle scales or claim a deployable improvement.",
+  "support": "Reuse P47saved training-positive-period counts as context, explicitly not independent group support or new uncertainty validation. No new C0/support audit on unchanged inputs.",
+  "budget": {
+    "decompositions": 20,
+    "oracle_diagnostic_scalars_separate": 40,
+    "new_fits": 0,
+    "new_C0_fits": 0,
+    "new_source_inference": 0,
+    "new_predictive_vectors": 0,
+    "new_bootstraps": 0,
+    "new2025inference": 0,
+    "new_submissions": 0
+  },
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/descomponer_pareado_P49.py": "d4838576298dcd7df733d993bc4cc718670144c2008b890c2ec8aa904ec8e4cb",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P48_validacion_pareada_20261026/report.json": "f8a8042964ba65bed37666f419af2caabf2a8aa67fa922cf7f3b9e63be8eb28b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P48_validacion_pareada_20261026/completion_receipt.json": "31f59783357c1f4ea6becd27d89404547b233f0998d2900f7ebf5350e34048b6",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P48_validacion_pareada_20261026/replay_report.json": "a469419086d8c1ed6d4dbd61ee87390a408a20c4ee274480879bf9cf5a43bed5",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P47_preflight_pareado_20261026/report.json": "f00b4906260a20856689250fa384d53e661c6c8a551fa96d84543d707b003518",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P13_atribucion_GLM_20261026/report.json": "b24224f501aef3962fcfbe3d9dc4e037136ee213f7f51fe93f043ab68d06878e",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P48_validacion_pareada_20261026/POOLED_prices.parquet": "e1a111dd3ca2553ccdb29bb15a3248e1036cf3aab4930100a1d8d51b98e049d7",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P48_validacion_pareada_20261026/TRANSFER_prices.parquet": "e28fe1e161a5d8333de2bdcbb5e10ec09dc00713963426eb7397b2f83e4d3393"
+  },
+  "limits": [
+    "Profiled loss is not pure ranking or causal attribution; new model changed several linked components.",
+    "Adaptive2023/2024, conditional source2024, masters/tail/reserve/support limits unchanged. No admission from oracle diagnostics."
+  ],
+  "2024_open": true,
+  "B00_all_alternatives_preserved": true
+}

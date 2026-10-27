@@ -1,14 +1,70 @@
 {
   "author": "Codex",
-  "utc": "2026-10-26T23:55:40.085267+00:00",
-  "status": "P48registered_before_contest_fit_and_score",
+  "utc": "2026-10-27T00:05:44.272154+00:00",
+  "status": "P48complete_not_automatically_admitted",
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_algoritmo_pareado_validacion_plan.json",
   "plan_sha256": "d7ed355852a4b5c8e00528f6998c89086b3ff2055ce185f14d02a896f3d798b9",
   "forum": {
     "author": "Codex",
-    "id": "COD-S2-20261026-PRIVADA-P48-PAREADO-PREVIO",
-    "utc": "2026-10-26T23:55:40+00:00",
-    "previous_sha256": "862bbf5a6548f928775787fed074f28eef528b76a7ebae6d7b2d68990ea3bde0",
-    "sha256": "127b4a39495c0a3f82b7a1a09c1d21b03b60c6f1eae382e5a94ac7773ffc5c3e"
-  }
+    "id": "COD-S2-20261026-PRIVADA-P48-PAREADO-RESULTADO",
+    "utc": "2026-10-27T00:05:44+00:00",
+    "previous_sha256": "821e02554dc552e792f4e3939391d1d9751444d62fedde2bf2150cb77a0e6d48",
+    "sha256": "ab84a2be45d008e86ef19521e4394f5a63ae75e45188c16478cb42cda7758838"
+  },
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P48_validacion_pareada_20261026/report.json",
+  "report_sha256": "f8a8042964ba65bed37666f419af2caabf2a8aa67fa922cf7f3b9e63be8eb28b",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P48_VALIDACION_PAREADA.md",
+  "nominal": {
+    "POOLED": {
+      "delta": -0.00427765808162865,
+      "bootstrap95": [
+        -0.008417815931326551,
+        -0.0003094985906235549
+      ],
+      "post31_delta": -0.009978682630292094,
+      "worst_cell_delta": -0.018802041073533712
+    },
+    "TRANSFER": {
+      "delta": -0.005874386164113521,
+      "bootstrap95": [
+        -0.01020035375913146,
+        -0.0016704620161723015
+      ],
+      "post31_delta": -0.010897537131391976,
+      "worst_cell_delta": -0.018065550596943526
+    }
+  },
+  "all_exploratory_gates_pass": false,
+  "global_gates": {
+    "pooled_delta_ge002": false,
+    "pooled_lower95_positive": false,
+    "pooled_atleast4positive_folds": false,
+    "both_pooled_years_nonnegative": false,
+    "pooled_post31_nonnegative": false,
+    "conditional_transfer_nonnegative": false,
+    "all_nominal_and_stress_cell_floors": false
+  },
+  "new_business_gates": {
+    "cohort_nominal_points_above_floor": false,
+    "cohort_nominal_lower95_above_floor": false,
+    "cohort_family16_lower_above_floor": false,
+    "cohort_all_stress_points_above_floor": false,
+    "pooled_nominal_family16_lower_positive": false
+  },
+  "primary_closed_learners": 150,
+  "adverse_closed_learners_separate": 150,
+  "new_primary_constants": 3350,
+  "primary_constants": {
+    "shape_factors": 1400,
+    "level_constants": 450,
+    "residual_factors": 900,
+    "training_nuisance_levels": 600
+  },
+  "new_source_fits": 0,
+  "new_C0_fits": 0,
+  "new2025inference": 0,
+  "new_submissions": 0,
+  "next_unit": "P49: review the new PS1failure with its saved member parameters, training support and fixed-profile assumption before any further recipe. Diagnose whether new observation/level effects or unstable target shapes dominate, using a preregistered algebraic decomposition of these NEW predictions only; do not repeat old HET/P13/P31audits or source fits. Keep exact candidate, all adverse cells and unchanged guards. No K/weight/profile rescue, source capacity search or upload from this failed PS1.",
+  "goal_achieved": false,
+  "2024_open": true
 }
