@@ -2860,5 +2860,73 @@
       "previous_sha256": "8077845d1b55f22b063d788e64a1934bba18f2be54f8b5e4133892ade1d4241a",
       "sha256": "b6ddb25e75272416f9a021776c115e380018c0f50a834e951334a5028cfb29e7"
     }
+  },
+  "phase2_private_P66_GLM_current_preflight": {
+    "author": "Codex",
+    "utc": "2026-10-27T04:26:55.981918+00:00",
+    "status": "P66full_synthetic_and_real_raw_proxy_preflight_passed",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P66_GLM_reporte_actual_preflight_20261027/report.json",
+    "report_sha256": "82ce9cb4a09abd3d9253bf6986f1b0255210bd21d4d79e959fddd35176d53be4",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P66_GLM_REPORTE_ACTUAL_PREFLIGHT.md",
+    "next_unit": "P67: register and commit the complete SAMEalpha1GLM with current P64/P65observation and all5saved inner group offsets. Pin every new inner report/base artifact, use fullouterP65ONLYon held.25report scopes/375lineCDFs/75baselearners/15GLMprimary plus separate actual adverse fits. Every previous gate unchanged; no new source trees, tuned fields/alpha or publicprobe.",
+    "real_price_fits": 0,
+    "real_CDF_fits": 0,
+    "real_GLMfits": 0,
+    "new_scores": 0,
+    "new_submissions": 0,
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P66-GLM-RESULTADO",
+      "utc": "2026-10-27T04:26:56+00:00",
+      "previous_sha256": "8d3b56606e1457f3fec5a1d10ebc55abff67a2d34e8dd95016e39f8cd1cb452a",
+      "sha256": "bc0b94edc0e9db540c3b776c2a572e37579c6d4c435fa29994d9851f96237f43"
+    },
+    "synthetic": {
+      "author": "Codex",
+      "utc": "2026-10-27T04:25:46.401064+00:00",
+      "records": [
+        {
+          "line": "motor",
+          "whole_report_base_GLM_flow_poison_invariance": true,
+          "OOFtraining_rows": 480,
+          "outer_held_rows": 120,
+          "JSON_replay_exact": true,
+          "gradient_inf": 1.1727675403722104e-08
+        },
+        {
+          "line": "buildings",
+          "whole_report_base_GLM_flow_poison_invariance": true,
+          "OOFtraining_rows": 480,
+          "outer_held_rows": 120,
+          "JSON_replay_exact": true,
+          "gradient_inf": 1.6457426957675048e-08
+        },
+        {
+          "line": "contents",
+          "whole_report_base_GLM_flow_poison_invariance": true,
+          "OOFtraining_rows": 480,
+          "outer_held_rows": 120,
+          "JSON_replay_exact": true,
+          "gradient_inf": 3.5293939027424004e-08
+        }
+      ],
+      "synthetic_primary_line_CDFs": 90,
+      "synthetic_adverse_line_CDFs_separate": 90,
+      "synthetic_primary_cap_vectors": 6,
+      "synthetic_adverse_cap_vectors_separate": 6,
+      "synthetic_primary_base_learners": 18,
+      "synthetic_adverse_base_learners_separate": 18,
+      "synthetic_primary_components": 36,
+      "synthetic_adverse_components_separate": 36,
+      "synthetic_primary_residual_stages": 24,
+      "synthetic_adverse_residual_stages_separate": 24,
+      "synthetic_primary_GLMfits": 3,
+      "synthetic_adverse_GLMfits_separate": 3,
+      "real_fits": 0,
+      "real_scores": 0,
+      "new_submissions": 0
+    }
   }
 }
