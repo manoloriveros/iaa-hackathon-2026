@@ -4,7 +4,7 @@
   "utc": "2026-10-26T13:15:10.432194+00:00",
   "scope": "Own prepared H1 research delivery only; no statement about other authors or chats",
   "allow_new_submission": false,
-  "reason": "P75single direct target GLMwith pure sourceT2boffset fails every predictive pooled/cohort guard (delta-.00570924,interval entirely negative), despite convergence/math/exact replay. Target-price-base offsets are absent, so they cannot explain THISloss. No admitted CSV; no missing human authorization. Review both source signals and price prior, not alpha/field or public-score rescue.",
+  "reason": "P77same direct GLMwith fixed two-source monetary prior fails every predictive pooled/cohort guard (delta-.00467300,interval entirely negative), despite verified source monetary bridge, convergence and exact replay. Point recovery vsP75is not admission or private gain. No weight/alpha/field rescue or public probe; no missing human authorization.",
   "policy": "Hackaton/Repositorio_IAA2026/registro/semana2_mision_privada_plan_v1.json",
   "policy_sha256": "3329dbc7fe931d71e1e945bdf536fd9d810040f2626709f3d103c2dc5cdd7876",
   "historical_admission_unmodified": true,
@@ -13,7 +13,7 @@
   "release_requires_new_admission_for_exact_transport_hash": true,
   "2024_open": true,
   "B00_all_alternatives_preserved": true,
-  "last_evidence_review_utc": "2026-10-27T05:38:34.398775+00:00",
+  "last_evidence_review_utc": "2026-10-27T06:01:25.815237+00:00",
   "prior_reason_superseded": {
     "utc": "2026-10-26T13:15:10.432194+00:00",
     "reason": "Participant now prioritizes private generalization; complete production/observation bridge and ensemblevalidation remain unestablished. Preserve quota until that review."
@@ -37,7 +37,8 @@
     "P67",
     "P70",
     "P72",
-    "P75"
+    "P75",
+    "P77"
   ],
   "last_confirmed_own_submission": {
     "ref": 57654514,
@@ -102,7 +103,11 @@
     "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P75_validacion_GLM_fuente_directa_20261027/report.json": "60f0483194403eaa64b87416129df0eae978f6ade2a8069ee2080d095bf12a4a",
     "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P75_validacion_GLM_fuente_directa_20261027/replay_report.json": "7d2df7ecd8f54015a2dc67f9791074aa86a16587ca3cc7d2d28eeab10bfe6e2e",
     "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P75_validacion_GLM_fuente_directa_20261027/completion_receipt.json": "ed2536434de3fc18d123a792e3476f88fa00f584bb184f57d0fa169c9a215737",
-    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P75_validacion_GLM_fuente_directa_20261027/execution_control.json": "d97f51ce273120e6108e965d8ba1c97e721fa01b55f17c27901678bc896b254b"
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P75_validacion_GLM_fuente_directa_20261027/execution_control.json": "d97f51ce273120e6108e965d8ba1c97e721fa01b55f17c27901678bc896b254b",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P77_validacion_GLM_prior_dos_fuentes_20261027/report.json": "00069abe2938c964de0d1882581c379243686b20091c40993716c8e5274d6588",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P77_validacion_GLM_prior_dos_fuentes_20261027/replay_report.json": "c13c24f79755ee604fcb24fe5afb3cae81dcb42af7df991c1382a2a2c7b126e3",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P77_validacion_GLM_prior_dos_fuentes_20261027/completion_receipt.json": "8480a1febf5d94dafc8f092192c22cf942c343319aa8fcca15285f78b75324bf",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P77_validacion_GLM_prior_dos_fuentes_20261027/execution_control.json": "1a35351375fe71f1c455c9de781b3decf651c9547b44771a3255e31a38450020"
   },
   "user_authorization_not_pending": true,
   "new_fits_this_status_review": 0,
@@ -119,6 +124,6 @@
   "latest_source_only_pass_not_delivery": "P43",
   "source_presence_blocker_resolved_P40": true,
   "source_recovery_limit": "f3_eval exists and portable F3cCSV byte identity is verified. P41new57stage raw-input graph was reviewed; replay/retraining alone is not held-label-safe whole-algorithm private validation.",
-  "latest_diagnostic": "P75complete_single_direct_source_GLM",
+  "latest_diagnostic": "P77complete_fixed_two_source_prior_GLM",
   "next_candidate_preflight": null
 }

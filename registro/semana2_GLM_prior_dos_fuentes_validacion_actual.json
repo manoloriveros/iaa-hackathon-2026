@@ -1,15 +1,15 @@
 {
   "author": "Codex",
-  "utc": "2026-10-27T05:50:53.869287+00:00",
-  "status": "P77registered_before_real_two_source_prior_GLM",
+  "utc": "2026-10-27T05:59:33.520650+00:00",
+  "status": "P77single_GLM_fixed_two_source_prior_pooled_complete_transfer_unmeasured",
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_GLM_prior_dos_fuentes_validacion_plan.json",
   "plan_sha256": "626db3d1c8c20a599cbe50fecc84ef2878c6b50d6b56d6333718573bff980e0a",
   "forum": {
     "author": "Codex",
-    "id": "COD-S2-20261027-PRIVADA-P77-PRIOR-PREVIO",
-    "utc": "2026-10-27T05:50:54+00:00",
-    "previous_sha256": "8f6a2353ad6855fe859f96d3b1a9ad2c8e81e79badb572a62c8a50254e1feb4c",
-    "sha256": "73784a6444d7abd432a612dea8e67131335ce5ebb177b3b5187f04ae047315d2"
+    "id": "COD-S2-20261027-PRIVADA-P77-PRIOR-RESULTADO",
+    "utc": "2026-10-27T05:59:33+00:00",
+    "previous_sha256": "e87051181808095c3f67dd02d37727840c6fac593238afb76d91271fc31f9688",
+    "sha256": "1fb7505a935a9fb71b7026059cc1e74d5c42972403342790dcd4c84ee5986b3c"
   },
   "metadata_clarification": {
     "author": "Codex",
@@ -17,5 +17,48 @@
     "utc": "2026-10-27T05:52:41+00:00",
     "previous_sha256": "73784a6444d7abd432a612dea8e67131335ce5ebb177b3b5187f04ae047315d2",
     "sha256": "e87051181808095c3f67dd02d37727840c6fac593238afb76d91271fc31f9688"
+  },
+  "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P77_validacion_GLM_prior_dos_fuentes_20261027/report.json",
+  "report_sha256": "00069abe2938c964de0d1882581c379243686b20091c40993716c8e5274d6588",
+  "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P77_VALIDACION_PRIOR_DOS_FUENTES.md",
+  "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+  "nominal": {
+    "delta": -0.00467300140695342,
+    "bootstrap95": [
+      -0.008445064800062569,
+      -0.0012816649941595885
+    ],
+    "post31_delta": -0.007298292378947558,
+    "worst_cell_delta": -0.05621843776576998
+  },
+  "P77_minus_P75_point_only": 0.001036239490733482,
+  "all_pooled_gates_pass": false,
+  "conditional_transfer_gate": null,
+  "primary_GLM_fits": 15,
+  "adverse_GLM_fits_separate": 15,
+  "primary_iterative_parameter_counts": {
+    "iterative_GLM_coefficients": 685,
+    "iterative_GLM_intercepts": 15
+  },
+  "source_anchor_in_all_models": true,
+  "new_target_base_fits": 0,
+  "new_source_fits": 0,
+  "new_CDF_fits": 0,
+  "new_closed_constants": 0,
+  "new2025inference": 0,
+  "new_submissions": 0,
+  "next_unit": "P78: review NEWP75/P77saved source-signal elasticities and all held cells, then map existing P65history/NCB/business rating functions against the direct GLMlog-main-effects representation. No refit/resampling, no repeated source/bridge/support suite or field/weight rescue. Differences in function space/source prior are uncertainty, not a proved cause. Register the next standard mechanism only after identifying the concrete difference; preserve all alternatives and quota.",
+  "2024_open": true,
+  "goal_achieved": false,
+  "latest_continuation": {
+    "receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P77_validacion_GLM_prior_dos_fuentes_20261027/continuation_receipt.json",
+    "sha256": "7712b058bccc42897e915d93c8e0612a12b388926911e075bf9939e1ba6e39ab",
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P77-CONTINUIDAD",
+      "utc": "2026-10-27T06:01:26+00:00",
+      "previous_sha256": "1fb7505a935a9fb71b7026059cc1e74d5c42972403342790dcd4c84ee5986b3c",
+      "sha256": "23185c29f8122664b185ea5e5288da82f10e06bc737f26252aae50b54ffd7d24"
+    }
   }
 }

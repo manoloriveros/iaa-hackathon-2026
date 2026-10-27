@@ -2,7 +2,7 @@
   "author": "Codex",
   "as_of_utc": "2026-10-27T02:37:45.227878+00:00",
   "scope": "Own pricing/development lineage only; not all project fits or other authors. Historical main catalog retains its dated counter.",
-  "cumulative_price_base_fits": 2005,
+  "cumulative_price_base_fits": 2035,
   "cumulative_closed_form_constants": 38769,
   "auxiliary_Poisson_Gamma_fits_separate": 30,
   "baseline": {
@@ -3486,6 +3486,50 @@
       "new_CDF_fits": 0,
       "new_scores": 0,
       "new_submissions": 0
+    }
+  },
+  "phase2_private_P77_two_source_direct_GLM": {
+    "author": "Codex",
+    "utc": "2026-10-27T05:59:33.520650+00:00",
+    "status": "P77single_GLM_fixed_two_source_prior_pooled_complete_transfer_unmeasured",
+    "report": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/P77_validacion_GLM_prior_dos_fuentes_20261027/report.json",
+    "report_sha256": "00069abe2938c964de0d1882581c379243686b20091c40993716c8e5274d6588",
+    "document": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P77_VALIDACION_PRIOR_DOS_FUENTES.md",
+    "decision": "REJECT_FROM_POOLED_FAILURE_TRANSFER_UNEVALUATED",
+    "nominal": {
+      "delta": -0.00467300140695342,
+      "bootstrap95": [
+        -0.008445064800062569,
+        -0.0012816649941595885
+      ],
+      "post31_delta": -0.007298292378947558,
+      "worst_cell_delta": -0.05621843776576998
+    },
+    "P77_minus_P75_point_only": 0.001036239490733482,
+    "all_pooled_gates_pass": false,
+    "conditional_transfer_gate": null,
+    "primary_GLM_fits": 15,
+    "adverse_GLM_fits_separate": 15,
+    "primary_iterative_parameter_counts": {
+      "iterative_GLM_coefficients": 685,
+      "iterative_GLM_intercepts": 15
+    },
+    "source_anchor_in_all_models": true,
+    "new_target_base_fits": 0,
+    "new_source_fits": 0,
+    "new_CDF_fits": 0,
+    "new_closed_constants": 0,
+    "new2025inference": 0,
+    "new_submissions": 0,
+    "next_unit": "Review NEWP77whole validation and source-prior comparison against P75/P65without refitting/resampling. No weight/alpha/field or line rescue. Current scalar source monetary conversion is verified but not a transport/gain proof; identify a concrete remaining source/target/reporting mechanism before any next recipe. Preserve all alternatives and quota, no public probe.",
+    "2024_open": true,
+    "goal_achieved": false,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261027-PRIVADA-P77-PRIOR-RESULTADO",
+      "utc": "2026-10-27T05:59:33+00:00",
+      "previous_sha256": "e87051181808095c3f67dd02d37727840c6fac593238afb76d91271fc31f9688",
+      "sha256": "1fb7505a935a9fb71b7026059cc1e74d5c42972403342790dcd4c84ee5986b3c"
     }
   }
 }
