@@ -3,7 +3,7 @@ from pathlib import Path
 import importlib.util,json,sys
 R=Path(__file__).resolve().parents[1]
 s=importlib.util.spec_from_file_location('full_F3c_close',R/'herramientas/validar_F3c_completo.py');f=importlib.util.module_from_spec(s);s.loader.exec_module(f)
-w=f.w;read=f.read;sha=f.sha;OUT=f.OUT
+w=f.w;read=f.read;sha=f.sha;OUT=f.OUT;dump=f.dump
 
 def main():
     f.guard();assert read(OUT/'verification.json')['checks']['all_passed'];assert not (OUT/'closed.json').exists()
@@ -47,7 +47,7 @@ def main():
     w.update(f.INDEX,receipt,archive);w.update(R/'registro/semana2_mision017_fase2_actual.json',{'utc':f.utc(),'current_batch':receipt,'next_unit':receipt['next_unit']},archive)
     w.update(R/'registro/semana2_mision_privada_actual.json',{'utc':f.utc(),'latest_F3c_full_structure_validation':receipt,'next_unit':receipt['next_unit']},archive)
     state=f.ROOT/'Preparación/ESTADO_PROYECTO.json';w.update(state,{'week_2_mission017_phase2_20261025':receipt},archive)
-    summary='\n\n## Validación de F3c con el tronco completo, 27 de octubre de 2026 (Bogotá)\n\nCodex, '+f.utc()+'. Registro y evaluación temporal de la estructura completa N0/F1, tres semillas, T2b/C1, mezcla y todas las capas. CSV entregado preservado y cero envíos. Reproducción integral histórica byteexact reutilizada; nueva evaluación 2023→2024 adaptativo. Control del flujo y verificador pasaron. Resultados y límites: '+w.rel(f.DOC)+'. Estado de criterios condicionados: '+json.dumps(result['all_gates_pass'])+'. No se establece superioridad privada ni se sustituye F3c. La aceptación histórica, maestros sin versiones, valoración de reservas, bloques aprendidos del público y normalización por lote siguen siendo límites materiales.\n'
+    summary='\n\n## Validación de F3c con el tronco completo, 27–28 de octubre de 2026 (Bogotá)\n\nCodex, '+f.utc()+'. Registro y evaluación temporal de la estructura completa N0/F1, tres semillas, T2b/C1, mezcla y todas las capas. CSV entregado preservado y cero envíos. Reproducción integral histórica byteexact reutilizada; nueva evaluación 2023→2024 adaptativo. Control del flujo y verificador pasaron. Resultados y límites: '+w.rel(f.DOC)+'. Estado de criterios condicionados: '+json.dumps(result['all_gates_pass'])+'. No se establece superioridad privada ni se sustituye F3c. La aceptación histórica, maestros sin versiones, valoración de reservas, bloques aprendidos del público y normalización por lote siguen siendo límites materiales.\n'
     for name in ['MEMORIA_PROYECTO.md','DECISIONES.md']:w.append(f.ROOT/'Preparación'/name,summary,archive)
     counter=R/'registro/semana2_contadores_propios_actual.json';c=read(counter);assert 'F3c_full_structure_20261027' not in c
     w.update(counter,{'as_of_utc':f.utc(),'cumulative_price_base_fits':c['cumulative_price_base_fits']+79,'cumulative_closed_form_constants':c['cumulative_closed_form_constants']+primary,'F3c_full_structure_20261027':receipt},archive)
