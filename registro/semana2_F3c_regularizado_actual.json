@@ -1,7 +1,7 @@
 {
   "author": "Codex",
-  "utc": "2026-10-28T20:26:08.124935+00:00",
-  "status": "source_running_target_waiting_after_adapter_validation",
+  "utc": "2026-10-28T21:26:44.987526+00:00",
+  "status": "source_running_target_and_assessment_waiting",
   "candidate": "F3c-R",
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_F3c_regularizado_plan.json",
   "plan_sha256": "fcd5793980d241f781d492de9f595b3c7b47470f0d18eb99442d8c7f1af9088c",
@@ -17,20 +17,20 @@
   "new_2025_predictions": 0,
   "new_submissions": 0,
   "execution": {
-    "curve_preparation_completed": true,
-    "previous_source_session_unavailable": 85466,
-    "source_session_id": 23196,
-    "source_pid": 18128,
-    "source_queue_state_file": "Hackaton/Repositorio_IAA2026/privado/semana2/F3c_regularizado_20261028/source_scoped/queue_status.json",
-    "target_session_id": 16482,
-    "target_pid": 28568,
-    "target_queue_state_file": "Hackaton/Repositorio_IAA2026/privado/semana2/F3c_regularizado_20261028/target_real/status.json",
-    "verified_by_live_exec_sessions_and_log_progress": true,
-    "reconciled_utc": "2026-10-28T20:27:35.888355+00:00"
+    "mode": "detached_hidden_local_processes",
+    "source_pid": 31784,
+    "target_pid": 32424,
+    "evaluation_pid": 14004,
+    "source_state": "Hackaton/Repositorio_IAA2026/privado/semana2/F3c_regularizado_20261028/source_scoped/queue_status.json",
+    "target_state": "Hackaton/Repositorio_IAA2026/privado/semana2/F3c_regularizado_20261028/target_real/status.json",
+    "evaluation_state": "Hackaton/Repositorio_IAA2026/privado/semana2/F3c_regularizado_20261028/assessment/status.json",
+    "logs": "Hackaton/Repositorio_IAA2026/privado/corte_f3cr_20261028_2116",
+    "old_tool_sessions_no_longer_reliable": true,
+    "monitor": "f3c-r-completar-entrenamiento-y-validaci-n-privada"
   },
   "formal_promotion": false,
   "private_superiority_established": false,
-  "next_unit": "Conciliar colas vivas antes de reiniciar. Fuente26 completa habilita destino registrado. Despues de controles reales sellados, implementar/evaluar dos comparaciones y sensibilidades congeladas. No enviar sin evidencia.",
+  "next_unit": "Conciliar tres procesos/estados vivos antes de relanzar. Completar fuente26, controles destino y evaluacion ya registrada. Solo tras resultados revisar recomendacion robusta; no envio.",
   "preserved": [
     "B00",
     "R1",
@@ -128,5 +128,29 @@
   },
   "completed_source_scopes_at_cut": 4,
   "new_native_fit_attempts_at_cut": 101,
-  "fit_count_note": "Contadores historicos de propuesta sustituidos por recibos: intentos nativos no equivalen a completados; RKM por bundles separados; no ajuste destino real todavia."
+  "fit_count_note": "Contadores historicos de propuesta sustituidos por recibos: intentos nativos no equivalen a completados; RKM por bundles separados; no ajuste destino real todavia.",
+  "evaluation_preflight": {
+    "author": "Codex",
+    "utc": "2026-10-28T21:26:44.987526+00:00",
+    "status": "source_running_target_and_assessment_waiting",
+    "report": "Hackaton/Repositorio_IAA2026/docs/semana2/F3C_REGULARIZADO_EVALUADOR_20261028.md",
+    "report_sha256": "7fa76bb43b1a24e946af9236ef7b09da1a404189090bcf4c4422ea3dd49d37a5",
+    "evaluator_commit": "f23be96",
+    "evaluation_plan": "Hackaton/Repositorio_IAA2026/registro/semana2_F3c_regularizado_evaluacion_plan.json",
+    "evaluation_plan_sha256": "777ed1bdc6752d7df0c91899f501833552b5ccde4b02c8b4a454b18cac33c7bd",
+    "synthetic_checks": 11,
+    "new_fits_from_evaluator": 0,
+    "new_predictive_scores": 0,
+    "new_submissions": 0,
+    "source_completed_scopes_at_cut": 5,
+    "native_attempts_at_cut": 130,
+    "automation_id": "f3c-r-completar-entrenamiento-y-validaci-n-privada",
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261028-F3CR-EVALUADOR-PREFLIGHT",
+      "utc": "2026-10-28T21:26:45+00:00",
+      "previous_sha256": "c44ceedf192f5c2e323d3f0c8e0c0d0090fbd33531e377b969e59b4ad513c998",
+      "sha256": "281711e50b36f9941fa79eb67435d49ebd14fb9ded54d2250e557a69a16e9fe2"
+    }
+  }
 }
