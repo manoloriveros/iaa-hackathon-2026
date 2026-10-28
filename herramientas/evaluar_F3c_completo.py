@@ -24,7 +24,18 @@ def kopt(y,mu):
 v.kopt=kopt
 
 def guard():
-    f.guard();assert sha(Path(__file__))==read(OUT/'evaluator_sealed.json')['code_sha256']
+    f.guard();sealpath=OUT/'evaluator_amendment1.json';sealpath=sealpath if sealpath.exists() else OUT/'evaluator_sealed.json'
+    assert sha(Path(__file__))==read(sealpath)['code_sha256']
+
+def amend():
+    f.guard();assert not (OUT/'parameters.json').exists() and not (OUT/'target_started.json').exists()
+    body='Codex. Enmienda de integridad antes de todo aprendizaje o score destino, por cotejo de evaluar_final.py y construir_F2/final/F3c: los CSV originales contienen primas del período, E por tasa, no tasas anuales sin exposición. La neutralización F1 conserva el total de primas E_A1×riesgo; la mezcla conserva .5prima_A1+.5prima_T2b. La aplicación de F2/formas/factores se normaliza sobre primas últimas y usa exposición, con q=1; solo después se aplica qT2b para contrastar incurrido2024. Los factores y razones locales se siguen aprendiendo sobre T0 observado2023, como en el legado; el nivel final de la sensibilidad2023 se estima después del mismo puente. Corrijo el borrador anual/observado: no hay target_started, parámetros ni scores nuevos abiertos. Se conserva el evaluador inicial por SHA y commit, sin reescribir el plan original. No cambian modelos fuente, semillas, curvas, variables, criterios o presupuesto; no se repiten ajustes terminados. Cero envíos.'
+    forum=f.post(body,'COD-S2-20261028-F3C-COMPLETO-PUENTE-PREVIO','F3c completo: corrección de exposición y puente antes de calibrar o puntuar')
+    dump(OUT/'evaluator_amendment1.json',{'author':'Codex','utc':f.utc(),'code_sha256':sha(Path(__file__)),'original_seal_sha256':sha(OUT/'evaluator_sealed.json'),'initial_code_sha256':sha(OUT/'evaluator_initial_frozen.py'),'plan_sha256':sha(f.PLAN),
+        'reason':'Source-equation correction, not a score-driven recipe search. Freeze before any target learning/evaluation.',
+        'formula':'A1ultimate=round4(E)*exp(mean3logrisk)*balance; neutralize sumultimate F1 to N0 byramo. Mixultimate=.5A1ultimate+.5(T2bobservedC1/q). Normalize and transform ultimatepremiums with exposure and q=1; bridge toobserved onlyatend withqT2b.',
+        'sources':{str(p):sha(p) for p in [ROOT/'Hackaton/Semana 2/Claude/validacion_nocturna_20261023/codigo/evaluar_final.py',R/'src/semana2/lineas/mision017_20261025/codigo/construir_F2.py',R/'src/semana2/lineas/mision017_20261025/codigo/construir_final.py']},'forum':forum,'native_source_recipe_unchanged':True,'new_submissions':0})
+    print(json.dumps({'admitted_before_target_learning':True,'code_sha256':sha(Path(__file__)),'forum':forum}),flush=True)
 
 def seal():
     f.guard();assert not (OUT/'predictions2024.parquet').exists()
@@ -83,18 +94,19 @@ def build_trunk(em,raws):
     for fold in [0,1,2,3,4,None]:
         t,pt=base_scope(em,raws['T2b'],FT,fold,'T2b');n,pn=base_scope(em,raws['N0'],FC,fold,'A1',True);h,ph=base_scope(em,raws['F1'],FC,fold,'A1',True)
         assert np.array_equal(t.row_id,n.row_id) and np.array_equal(t.row_id,h.row_id)
-        # Legacy F1 neutralization is portfolio-dependent and uses no held cost.
+        # Production CSV carries period premium, including rounded exposure.
         neutral={}
         for line in LINES:
-            j=t.line.eq(line);ratio=float(n.loc[j,'annual'].sum()/h.loc[j,'annual'].sum());h.loc[j,'annual']*=ratio;neutral[line]=ratio
-        t['A1_N0']=n.annual.to_numpy();t['A1_F1']=h.annual.to_numpy();t['T2b_raw']=t.annual.to_numpy()*t.exposure.to_numpy()*t.q.to_numpy()
-        scope_params[str(fold)]={'T2b':pt,'N0':pn,'F1':ph,'annual_F1_neutralizers':neutral}
+            j=t.line.eq(line);expo=t.loc[j,'exposure'].to_numpy().round(4)
+            ratio=float(np.sum(n.loc[j,'annual'].to_numpy()*expo)/np.sum(h.loc[j,'annual'].to_numpy()*expo));h.loc[j,'annual']*=ratio;neutral[line]=ratio
+        t['A1_N0']=n.annual.to_numpy()*t.exposure.to_numpy().round(4);t['A1_F1']=h.annual.to_numpy()*t.exposure.to_numpy().round(4);t['T2b_raw']=t.annual.to_numpy()*t.exposure.to_numpy()*t.q.to_numpy()
+        scope_params[str(fold)]={'T2b':pt,'N0':pn,'F1':ph,'periodpremium_F1_neutralizers':neutral}
         if fold is None:target=t
         else:parts.append(t)
     train=pd.concat(parts,ignore_index=True).sort_values('row_id').reset_index(drop=True);target=target.sort_values('row_id').reset_index(drop=True)
     C1={line:kopt(train.loc[train.line.eq(line),'y'].to_numpy(),train.loc[train.line.eq(line),'T2b_raw'].to_numpy()) for line in LINES}
     for t in [train,target]:
-        t['T2b_C1']=t.T2b_raw*t.line.map(C1);t['mix']=.5*(t.A1_F1*t.exposure*t.q+t.T2b_C1)
+        t['T2b_C1']=t.T2b_raw*t.line.map(C1);t['mix']=.5*(t.A1_F1*t.q+t.T2b_C1)
         assert np.isfinite(t['mix']).all() and (t['mix']>0).all()
     return train,target,{'scopes':scope_params,'C1':C1}
 
@@ -130,6 +142,8 @@ def transform_own(t,mu,params):
 
 def apply_recipe(t,params):
     pb=read(f.PLAN)['preprocessing_full_structure']['public_blocks']
+    bridge=t.q.to_numpy(float).copy();u=t.copy(deep=False);u['q']=1.;u['mix']=t['mix'].to_numpy()/bridge
+    t=u
     # Actual full F3c: g -> F2/shape -> local ratios -> public NB forms/levels -> own.
     public=transform_f2(t,t['mix'].to_numpy()*pb['g'],params);public=bycell_mult(t,public,params['F2_ratio'])
     powers={line+'_1':power for line,power in pb['NB_shapes'].items()}
@@ -137,8 +151,8 @@ def apply_recipe(t,params):
     pubown=bycell_mult(t,transform_own(t,public,params),params['own_ratio'])
     secondary=bycell_mult(t,transform_f2(t,t['mix'].to_numpy(),params),params['F2_ratio'])
     secown=bycell_mult(t,transform_own(t,secondary,params),params['own_ratio'])
-    return {'public_noown':public,'public_full':pubown,'trainlevel_noown':bycell_mult(t,secondary,params['secondary_levels']['noown']),
-        'trainlevel_full':bycell_mult(t,secown,params['secondary_levels']['full'])}
+    return {'public_noown':public*bridge,'public_full':pubown*bridge,'trainlevel_noown':bycell_mult(t,secondary,params['secondary_levels']['noown'])*bridge,
+        'trainlevel_full':bycell_mult(t,secown,params['secondary_levels']['full'])*bridge}
 
 def learn_recipe(tr):
     assert tr.year.eq(2023).all() and tr.row_id.is_unique and np.isfinite(tr.y).all()
@@ -151,7 +165,9 @@ def learn_recipe(tr):
     for var,lines in v.SEQ:
         p=v.factor_train(tr,mown,'tw',v.ks(tr,var),lines);p['variable']=var;params['own'].append(p);mown=batch_factor(tr,mown,p,var)
     params['own_ratio']=ratios(tr,ownbase,mown)
-    secondary=bycell_mult(tr,transform_f2(tr,tr['mix'].to_numpy(),params),params['F2_ratio']);secown=bycell_mult(tr,transform_own(tr,secondary,params),params['own_ratio'])
+    bridge=tr.q.to_numpy(float);u=tr.copy(deep=False);u['q']=1.;u['mix']=tr['mix'].to_numpy()/bridge
+    secondary=bycell_mult(u,transform_f2(u,u['mix'].to_numpy(),params),params['F2_ratio']);secown=bycell_mult(u,transform_own(u,secondary,params),params['own_ratio'])
+    secondary*=bridge;secown*=bridge
     cell=v.cells(tr);y=tr.y.to_numpy();params['secondary_levels']={}
     for name,mu in [('noown',secondary),('full',secown)]:params['secondary_levels'][name]={cc:kopt(y[cell==cc],mu[cell==cc]) for cc in np.unique(cell)}
     return params
@@ -236,5 +252,5 @@ def evaluate():
     print(json.dumps({'global':results['global'],'NB':results['new_business'],'gates':gates,'stress':stressfloors}),flush=True)
 
 if __name__=='__main__':
-    sys.stdout.reconfigure(encoding='utf8');p=argparse.ArgumentParser();p.add_argument('mode',choices=['seal','predict','evaluate']);args=p.parse_args()
+    sys.stdout.reconfigure(encoding='utf8');p=argparse.ArgumentParser();p.add_argument('mode',choices=['seal','amend','predict','evaluate']);args=p.parse_args()
     with threadpool_limits(limits=2):globals()[args.mode]()

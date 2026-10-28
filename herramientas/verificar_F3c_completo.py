@@ -44,6 +44,20 @@ def verify_factor_learning(t,mu,p,var,lines=None):
     assert expected.keys()==actual.keys()
     assert all(math.isclose(z,actual[k],rel_tol=5e-14,abs_tol=1e-14) for k,z in expected.items())
 
+def independent_recipe(t,p):
+    bridge=t.q.to_numpy().copy();u=t.copy();u['q']=1.;base=t['mix'].to_numpy()/bridge
+    cell=e.v.cells(t);pb=read(e.f.PLAN)['preprocessing_full_structure']['public_blocks']
+    def scale(mu,d):return np.asarray([float(x)*d[c] for x,c in zip(mu,cell)])
+    def f2(mu):
+        for fac in p['F2']:mu=independent_factor(u,mu,fac,fac['variable'])
+        return independent_shape(u,mu,{'motor_0':.9})
+    def own(mu):
+        for fac in p['own']:mu=independent_factor(u,mu,fac,fac['variable'])
+        return scale(mu,p['own_ratio'])
+    public=scale(f2(base*pb['g']),p['F2_ratio']);public=independent_shape(u,public,{line+'_1':z for line,z in pb['NB_shapes'].items()});public=scale(scale(public,p['shape_ratio']),pb['cell_level_relative_to_g'])
+    secondary=scale(f2(base),p['F2_ratio'])
+    return {'public_noown':public*bridge,'public_full':own(public)*bridge,'trainlevel_noown':scale(secondary,p['secondary_levels']['noown'])*bridge,'trainlevel_full':scale(own(secondary),p['secondary_levels']['full'])*bridge}
+
 def synthetic():
     e.guard();rng=np.random.default_rng(20261028);n=360
     t=pd.DataFrame({'line':np.repeat(e.LINES,n//3),'new_business':np.tile(np.repeat([0,1],30),6),'exposure':rng.uniform(.1,1,n),'q':rng.uniform(.6,1,n),
@@ -82,6 +96,7 @@ def verify():
     checks['60_real_source_fits_recorded']=sum(len((OUT/('fit_attempts_'+line+'.jsonl')).read_text().splitlines()) for line in e.LINES)==60
     tr=pd.read_parquet(OUT/'training2023.parquet');te=pd.read_parquet(OUT/'predictions2024.parquet');pars=read(OUT/'parameters.json')['recipe'];replay=e.apply_recipe(te,pars)
     checks['saved_prediction_replay_exact']=all(np.array_equal(te[n],replay[n]) for n in e.NAMES)
+    manual=independent_recipe(te,pars);checks['complete_ultimate_pipeline_and_final_bridge_scalar_math']=all(np.allclose(te[n],manual[n],rtol=2e-13,atol=1e-8) for n in e.NAMES)
     mx=tr.T2b_raw.to_numpy().copy()
     for p in pars['F2']:
         verify_factor_learning(tr,mx,p,p['variable']);mx=independent_factor(tr,mx,p,p['variable'])
