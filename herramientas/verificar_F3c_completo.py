@@ -25,6 +25,25 @@ def independent_shape(t,mu,powers):
         for i,z in zip(ids,raw):out[i]=z*normal
     return out
 
+def verify_factor_learning(t,mu,p,var,lines=None):
+    cell=e.v.cells(t);key=e.v.ks(t,var);y=t.y.to_numpy();actual={(u,k):z for u,k,z in p['factors']};ref=mu.copy()
+    if p['kind']=='tw':
+        for cc in np.unique(cell):
+            j=cell==cc;ref[j]*=math.fsum((y[j]/np.sqrt(ref[j])).tolist())/math.fsum(np.sqrt(ref[j]).tolist())
+    units=np.unique(cell) if p['kind']=='ae' else lines
+    expected={}
+    for unit in units:
+        i=cell==unit if p['kind']=='ae' else t.line.eq(unit).to_numpy()
+        base=math.fsum(y[i].tolist())/math.fsum(mu[i].tolist())
+        for label in np.unique(key[i]):
+            j=i&(key==label);n=int((y[j]>0).sum())
+            if p['kind']=='ae':z=1+n/(n+300)*(math.fsum(y[j].tolist())/math.fsum(mu[j].tolist())/base-1)
+            elif n:z=math.exp(n/(n+300)*math.log(max(math.fsum((y[j]/np.sqrt(ref[j])).tolist())/math.fsum(np.sqrt(ref[j]).tolist()),1e-3)))
+            else:continue
+            expected[(unit,str(label))]=z
+    assert expected.keys()==actual.keys()
+    assert all(math.isclose(z,actual[k],rel_tol=5e-14,abs_tol=1e-14) for k,z in expected.items())
+
 def synthetic():
     e.guard();rng=np.random.default_rng(20261028);n=360
     t=pd.DataFrame({'line':np.repeat(e.LINES,n//3),'new_business':np.tile(np.repeat([0,1],30),6),'exposure':rng.uniform(.1,1,n),'q':rng.uniform(.6,1,n),
@@ -63,6 +82,13 @@ def verify():
     checks['60_real_source_fits_recorded']=sum(len((OUT/('fit_attempts_'+line+'.jsonl')).read_text().splitlines()) for line in e.LINES)==60
     tr=pd.read_parquet(OUT/'training2023.parquet');te=pd.read_parquet(OUT/'predictions2024.parquet');pars=read(OUT/'parameters.json')['recipe'];replay=e.apply_recipe(te,pars)
     checks['saved_prediction_replay_exact']=all(np.array_equal(te[n],replay[n]) for n in e.NAMES)
+    mx=tr.T2b_raw.to_numpy().copy()
+    for p in pars['F2']:
+        verify_factor_learning(tr,mx,p,p['variable']);mx=independent_factor(tr,mx,p,p['variable'])
+    mx=independent_shape(tr,mx,{'motor_0':.9});pb=read(e.f.PLAN)['preprocessing_full_structure']['public_blocks'];mx=independent_shape(tr,mx,{'motor_1':pb['own_training_motor_NB_shape_A_M1']})
+    for p,(_,lines) in zip(pars['own'],e.v.SEQ):
+        verify_factor_learning(tr,mx,p,p['variable'],lines);mx=independent_factor(tr,mx,p,p['variable'])
+    checks['all_factor_learning_scalar_sums_and_credibility']=True
     # Independent factor/shape implementation on real2024 values, without learning.
     x=te['mix'].to_numpy()
     for p in pars['F2']+pars['own']:
