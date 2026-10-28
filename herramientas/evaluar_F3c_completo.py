@@ -24,10 +24,18 @@ def kopt(y,mu):
 v.kopt=kopt
 
 def guard():
-    f.guard();sealpath=OUT/'evaluator_control_amendment.json'
+    f.guard();sealpath=OUT/'evaluator_implementation_correction.json'
+    if not sealpath.exists():sealpath=OUT/'evaluator_control_amendment.json'
     if not sealpath.exists():sealpath=OUT/'evaluator_amendment1.json'
     if not sealpath.exists():sealpath=OUT/'evaluator_sealed.json'
     assert sha(Path(__file__))==read(sealpath)['code_sha256']
+
+def admit_implementation():
+    f.guard();assert not (OUT/'parameters.json').exists() and not (OUT/'target_started.json').exists()
+    body='Codex. El cotejo de claves con el JSON congelado detectó antes del ajuste destino que NB_shapes ya usa motor_1/buildings_1/contents_1; añadir otro sufijo habría omitido sus formas al no encontrar celdas. Corrijo la implementación para usar esas claves exactas e incorporo rechazo de claves desconocidas y un control de que cada forma configurada cambia su celda y conserva las demás. La receta matemática ya preinscrita no cambia: se hace efectiva y comprobable. El error no produjo parámetros, predicciones o scores destino. Se conservan código y sellos anteriores, fuente nativa intacta, sin repetir entrenamientos terminados ni enviar.'
+    forum=f.post(body,'COD-S2-20261028-F3C-COMPLETO-CLAVES-PREVIO','F3c completo: claves de formas verificadas antes del ajuste destino')
+    dump(OUT/'evaluator_implementation_correction.json',{'author':'Codex','utc':f.utc(),'code_sha256':sha(Path(__file__)),'previous_admission_sha256':sha(OUT/'evaluator_control_amendment.json'),'logical_recipe_unchanged':True,'target_learning_not_started':True,'correction':'Use frozen NB_shapes cell keys directly; reject unknown shape keys, never silently skip an invalid configuration.','forum':forum,'new_submissions':0})
+    print(json.dumps({'implementation_corrected_before_target_learning':True,'code_sha256':sha(Path(__file__))}),flush=True)
 
 def admit_control():
     f.guard();assert not (OUT/'parameters.json').exists() and not (OUT/'target_started.json').exists()
@@ -129,6 +137,7 @@ def batch_factor(t,mu,p,var):
     return out
 
 def batch_shape(t,mu,powers):
+    assert set(powers).issubset({line+'_'+str(b) for line in LINES for b in [0,1]}),'Unknown shape cell key'
     cell=v.cells(t);out=mu.copy();ef=(t.exposure*t.q).to_numpy(float)
     for cc,power in powers.items():
         j=cell==cc
@@ -156,7 +165,7 @@ def apply_recipe(t,params):
     t=u
     # Actual full F3c: g -> F2/shape -> local ratios -> public NB forms/levels -> own.
     public=transform_f2(t,t['mix'].to_numpy()*pb['g'],params);public=bycell_mult(t,public,params['F2_ratio'])
-    powers={line+'_1':power for line,power in pb['NB_shapes'].items()}
+    powers=pb['NB_shapes'];assert set(powers)=={'motor_1','buildings_1','contents_1'}
     public=batch_shape(t,public,powers);public=bycell_mult(t,public,params['shape_ratio']);public=bycell_mult(t,public,pb['cell_level_relative_to_g'])
     pubown=bycell_mult(t,transform_own(t,public,params),params['own_ratio'])
     secondary=bycell_mult(t,transform_f2(t,t['mix'].to_numpy(),params),params['F2_ratio'])
@@ -170,7 +179,7 @@ def learn_recipe(tr):
     for var in ['ncb','prior']:
         p=v.factor_train(tr,m,'ae',v.ks(tr,var));p['variable']=var;params['F2'].append(p);m=batch_factor(tr,m,p,var)
     m=batch_shape(tr,m,{'motor_0':.9});params['F2_ratio']=ratios(tr,tr.T2b_raw.to_numpy(),m)
-    form=batch_shape(tr,m,{line+'_1':power for line,power in pb['NB_shapes'].items()});params['shape_ratio']=ratios(tr,m,form)
+    form=batch_shape(tr,m,pb['NB_shapes']);params['shape_ratio']=ratios(tr,m,form)
     ownbase=batch_shape(tr,m,{'motor_1':pb['own_training_motor_NB_shape_A_M1']});mown=ownbase.copy()
     for var,lines in v.SEQ:
         p=v.factor_train(tr,mown,'tw',v.ks(tr,var),lines);p['variable']=var;params['own'].append(p);mown=batch_factor(tr,mown,p,var)
@@ -262,5 +271,5 @@ def evaluate():
     print(json.dumps({'global':results['global'],'NB':results['new_business'],'gates':gates,'stress':stressfloors}),flush=True)
 
 if __name__=='__main__':
-    sys.stdout.reconfigure(encoding='utf8');p=argparse.ArgumentParser();p.add_argument('mode',choices=['seal','amend','admit_control','predict','evaluate']);args=p.parse_args()
+    sys.stdout.reconfigure(encoding='utf8');p=argparse.ArgumentParser();p.add_argument('mode',choices=['seal','amend','admit_control','admit_implementation','predict','evaluate']);args=p.parse_args()
     with threadpool_limits(limits=2):globals()[args.mode]()

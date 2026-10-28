@@ -54,7 +54,7 @@ def independent_recipe(t,p):
     def own(mu):
         for fac in p['own']:mu=independent_factor(u,mu,fac,fac['variable'])
         return scale(mu,p['own_ratio'])
-    public=scale(f2(base*pb['g']),p['F2_ratio']);public=independent_shape(u,public,{line+'_1':z for line,z in pb['NB_shapes'].items()});public=scale(scale(public,p['shape_ratio']),pb['cell_level_relative_to_g'])
+    public=scale(f2(base*pb['g']),p['F2_ratio']);public=independent_shape(u,public,pb['NB_shapes']);public=scale(scale(public,p['shape_ratio']),pb['cell_level_relative_to_g'])
     secondary=scale(f2(base),p['F2_ratio'])
     return {'public_noown':public*bridge,'public_full':own(public)*bridge,'trainlevel_noown':scale(secondary,p['secondary_levels']['noown'])*bridge,'trainlevel_full':scale(own(secondary),p['secondary_levels']['full'])*bridge}
 
@@ -88,6 +88,12 @@ def bridge():
         'prior_claims_5y':np.tile([0,1,2],40),'y':rng.gamma(2,20,n),'year':2023,'row_id':['toy'+str(i) for i in range(n)]})
     t['T2b_raw']=rng.lognormal(3,1,n);t['mix']=rng.lognormal(3,1,n);p=e.learn_recipe(t);pred=e.apply_recipe(t,p);manual=independent_recipe(t,p)
     checks={'full_independent_pipeline_variable_q':all(np.allclose(pred[k],manual[k],rtol=2e-13,atol=1e-9) for k in pred)}
+    for cc,power in read(e.f.PLAN)['preprocessing_full_structure']['public_blocks']['NB_shapes'].items():
+        changed=e.batch_shape(t,t['mix'].to_numpy(),{cc:power});mask=e.v.cells(t)==cc
+        checks['configured_shape_effect_'+cc]=bool(np.any(np.abs(changed[mask]-t['mix'].to_numpy()[mask])>1e-9) and np.array_equal(changed[~mask],t['mix'].to_numpy()[~mask]))
+    try:e.batch_shape(t,t['mix'].to_numpy(),{'motor_1_1':1.37})
+    except AssertionError:checks['invalid_shape_cell_rejected']=True
+    else:checks['invalid_shape_cell_rejected']=False
     u=t.copy();u['mix']=t['mix']/t.q;u['q']=1.;ultimate=e.apply_recipe(u,p)
     checks['ultimate_before_final_observed_bridge']=all(np.allclose(pred[k],ultimate[k]*t.q.to_numpy(),rtol=2e-14,atol=1e-10) for k in pred)
     oldlines=e.LINES;oldscope=e.base_scope
@@ -101,7 +107,7 @@ def bridge():
     raw=np.array([20.,15.])*expo*np.array([.3,.8]);level=e.original_kopt(np.array([4.,10.]),raw)
     checks['periodpremium_neutralization']=bool(np.allclose(target.A1_F1,uf1,rtol=1e-14))
     checks['mixture_periodpremium_final_bridge']=bool(np.allclose(target['mix'],.5*(uf1*np.array([.3,.8])+raw*level),rtol=1e-14))
-    checks['all_passed']=all(checks.values());assert checks['all_passed'];dump(OUT/'bridge_verifier.json',{'utc':e.f.utc(),'checks':checks,'synthetic_counts':dict(e.COUNTS),'real_fits':0,'verifier_code_sha256':sha(Path(__file__))});print(json.dumps(checks))
+    checks['all_passed']=all(checks.values());assert checks['all_passed'];dump(OUT/'bridge_and_keys_verifier.json',{'utc':e.f.utc(),'checks':checks,'synthetic_counts':dict(e.COUNTS),'real_fits':0,'verifier_code_sha256':sha(Path(__file__))});print(json.dumps(checks))
 
 def verify():
     e.guard();checks={};models=[];schemas={}
