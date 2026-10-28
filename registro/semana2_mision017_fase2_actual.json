@@ -223,7 +223,11 @@
   "new_source_C0_fits": 45,
   "new_bucket_factors": 230,
   "new_bucket_normalizers": 40,
-  "active_execution": null,
+  "active_execution": {
+    "type": "F3c_R_scoped_source",
+    "index": "Hackaton/Repositorio_IAA2026/registro/semana2_F3c_regularizado_actual.json",
+    "queue_status": "Hackaton/Repositorio_IAA2026/privado/semana2/F3c_regularizado_20261028/source_scoped/queue_status.json"
+  },
   "completed_batches": [
     {
       "batch": 1,
@@ -17030,6 +17034,47 @@
       "utc": "2026-10-28T17:34:57+00:00",
       "previous_sha256": "3b860890903f556e672d926b68b3941bca50d10582e4458f5a40169f8cc21b48",
       "sha256": "ae1c67f33e0c48b309013efffae6aa06d5da47262781271cc247e94e3cc9473e"
+    }
+  },
+  "F3c_regularized_execution": {
+    "author": "Codex",
+    "utc": "2026-10-28T18:07:24.195785+00:00",
+    "status": "source_production_in_progress_after_preflight",
+    "preflight_report": "Hackaton/Repositorio_IAA2026/docs/semana2/F3C_REGULARIZADO_PREFLIGHT_20261028.md",
+    "preflight_report_sha256": "166b412f978c0349f2fa29a5ad690f25c5917cadf1e0a53d36db4fd2cbfbc678",
+    "preflight_inventory": "Hackaton/Repositorio_IAA2026/privado/semana2/F3c_regularizado_20261028/preflight/scope_inventory.json",
+    "synthetic_optimizer": "Hackaton/Repositorio_IAA2026/privado/semana2/F3c_regularizado_20261028/preflight/synthetic_optimizer.json",
+    "synthetic_optimizer_fits": 36,
+    "synthetic_optimizer_checks_passed": 17,
+    "source_plan": "Hackaton/Repositorio_IAA2026/registro/semana2_F3c_regularizado_fuente_plan.json",
+    "source_plan_sha256": "2c7b2039ef2ed3c84e7b50486ac26de88fbdbde9533aa0fae961933a7f93496a",
+    "producer_commit": "900870e",
+    "queue_commit": "d254473",
+    "completed_curve_scopes_at_cut": 5,
+    "completed_primary_RKM_bundles_at_cut": 10,
+    "completed_adverse_RKM_bundles_at_cut": 10,
+    "current_partial_curve_calls_not_in_completed_counts": true,
+    "new_native_fits_at_cut": 0,
+    "new_predictive_scores": 0,
+    "new_submissions": 0,
+    "execution": {
+      "curve_tool_session": 36179,
+      "curve_observed_pid": 45864,
+      "queue_tool_session": 85466,
+      "queue_observed_pid": 18520,
+      "queue_state_file": "Hackaton/Repositorio_IAA2026/privado/semana2/F3c_regularizado_20261028/source_scoped/queue_status.json",
+      "queue_lease": "Hackaton/Repositorio_IAA2026/privado/semana2/F3c_regularizado_20261028/source_scoped/queue_lease.json",
+      "native_journal": "Hackaton/Repositorio_IAA2026/privado/semana2/F3c_regularizado_20261028/source_scoped/native_attempts.jsonl"
+    },
+    "next_unit": "Reconcile live queue/curve receipts first; never launch duplicate. Source queue processes registered26scopes with checkpoints and stops on failure. After sources complete, implement exact own-scope target-base/C1/F2/own inputs, poison/replay and real calibrator selector before any score. No autonomous submission from this stage.",
+    "formal_promotion": false,
+    "private_superiority_established": false,
+    "preflight_forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261028-F3CR-PREFLIGHT-RESULTADO",
+      "utc": "2026-10-28T18:07:24+00:00",
+      "previous_sha256": "7553e2ac02ce619072893cc8ee33cf340203bdcdea1d47e1c38a674db30c3979",
+      "sha256": "969d8690334c12d7eebab785a4de8585cf5f94a8364cb390eac148c90b40685d"
     }
   }
 }
