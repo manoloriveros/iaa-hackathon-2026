@@ -1,0 +1,138 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-28T17:32:16.811951+00:00",
+  "candidate": "F3c-R",
+  "status": "proposal_and_synthetic_analysis_only",
+  "hypothesis": "Joint penalized levels and bounded attenuation on the complete F3c trunk can reduce unstable corrections without assuming a ramo prior for new business. Not yet demonstrated.",
+  "current_scope": {
+    "real_fits": 0,
+    "synthetic_fits": 0,
+    "new_scores": 0,
+    "2025_predictions": 0,
+    "submissions": 0
+  },
+  "model": {
+    "formula": "mu = b * exp(a_cell + gamma_cell * z)",
+    "gamma_bounds": [
+      0,
+      1
+    ],
+    "public_terminal_blocks": "omit as in existing trainlevel view",
+    "inherited_A_M1_own_training_shape": "preserve and disclose historical selection",
+    "mix_A1_T2b": 0.5,
+    "cells": [
+      "motor_RN",
+      "buildings_RN",
+      "contents_RN",
+      "motor_NB",
+      "buildings_NB",
+      "contents_NB"
+    ],
+    "nominal_coefficients": 12,
+    "active_coefficients": 10,
+    "identity_buildings_gamma": 0,
+    "loss": "mean(Tweedie_deviance_p1.5)/(2*mean(sqrt(b))) + lambda/2*sum(D_j*beta_j^2)",
+    "D_j": "mean_in_cell(sqrt(b)*X_j^2)/(6*mean(sqrt(b)))",
+    "penalty_center": 0,
+    "period_premium_metric_no_extra_exposure_weight": true,
+    "trunk_batch_dependence_preserved": true
+  },
+  "future_selector": {
+    "lambda_grid": [
+      1.0,
+      0.1,
+      0.01
+    ],
+    "one_lambda_for_all_cells": true,
+    "folds": "existing grouped2023 five folds, fully nested feature and q provenance required",
+    "objective": "sum held inner period deviance",
+    "relative_tie_tolerance": 1e-10,
+    "tie_break": "largest lambda",
+    "unique_target_upstream_scopes": 16,
+    "calibrator_primary_fits": 16,
+    "adverse_replay_fits_separate": 16,
+    "positive_control_minimum_separate": 1,
+    "upstream_fit_budget": null,
+    "upstream_fit_budget_status": "must reconcile actual matched objects first; no real fit launch admitted by this proposal"
+  },
+  "future_comparisons": [
+    "candidate_vs_trainlevel_full",
+    "candidate_vs_public_full"
+  ],
+  "future_gates": {
+    "conditional_family": 20,
+    "global_family_lower_margin": 0.0005,
+    "broad_and_sixcell_floor": -0.001,
+    "NB_point_nonnegative": true,
+    "NB_lower95_floor": -0.001,
+    "savedfolds_positive_min": 4,
+    "top_favorable_groups_remove": "max(5,ceil(0.001*G))",
+    "postremoval_delta_min": 0,
+    "fixed_price_scenarios": 50,
+    "must_pass_both_comparisons": true,
+    "whole_learning_stability_required_before_production": true
+  },
+  "new_synthetic_checks": [
+    "scalar deviance/prediction",
+    "finite difference gradient/Hessian",
+    "positive Hessian active columns",
+    "currency invariance",
+    "identity and attenuation envelope",
+    "conditional calibration rowwise consistency"
+  ],
+  "sources": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/F3C_REVISION_FINAL_20261028.md",
+      "sha256": "5821ee2745b1f4edc1b084dfd8eb58e61472148c1bb00321d5e21caf03aeb4b8"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/F3C_VALIDACION_COMPLETA_20261027.md",
+      "sha256": "76f4bc9fb624afea710f43d4c5b74a946b0c059a9fb19b129e71a37f116db6f0"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/R1_F3C_TRONCO_COMUN_20261027.md",
+      "sha256": "f3dcbcee2843473cba631e77bff3f7d242a6a40a8567f62c5eea707feaf4fd00"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/NB_NIVEL_CREDIBILIDAD_20261027.md",
+      "sha256": "6de42deec19d66194fe80675d11e3eff115df9190ab34be1c499352c7ce7f931"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/NB_EDIFICIOS_PRIOR_DIAGNOSTICO_20261027.md",
+      "sha256": "24d8480078f860d3619971920b4b9a648f8fb318300b3f568a744236f36d3975"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P83_PENALIZACION_Y_BANDAS.md",
+      "sha256": "a3043f8bb546b0a67134a94847cc3eff68604786d8000706c0ef648acff5d5cc"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P85_VALIDACION_SELECCION_GLM.md",
+      "sha256": "acf0395bc45cc3b4b04a64b9712b3e69df58020233949c85d182b1c3132c9e81"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P88_VALIDACION_PRIOR_CALIBRADO.md",
+      "sha256": "edfe8cd362f3343bd7885e85d27579268a7167cddb0573edb581f6bc00948ea4"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P102_VALIDACION_CENTRADO_FIJO.md",
+      "sha256": "6a7e328a7e7346b711f49a7ed5978b80538134e1a3e28400adc29919bbd9117e"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P105_VALIDACION_SELECTOR_MEZCLA.md",
+      "sha256": "755f0f78998bdcf788e92e2f12b15a0b6223930afe280cd23916650e1e2893d5"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/PRIVADA_P111_DIAGNOSTICO_NUMERO_COSTE.md",
+      "sha256": "2c5a28272bfc552e9be9db2c962061a155ccb7b442fe222fdc294f0be3abcf47"
+    }
+  ],
+  "report": "docs/semana2/F3C_REGULARIZADO_PROPUESTA_20261028.md",
+  "private_superiority_established": false,
+  "formal_promotion": false,
+  "preserve": [
+    "B00",
+    "R1",
+    "F3c",
+    "all failed alternatives"
+  ]
+}
