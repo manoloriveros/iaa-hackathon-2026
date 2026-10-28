@@ -1,4 +1,19 @@
-# Una prima de riesgo para cada periodo de póliza, construida y contrastada con IA
+# AI Hackathon IAA 2026: reproduce las dos semanas
+
+Soy Manuel Rodríguez, participante individual en el AI Hackathon IAA 2026. Los notebooks explican y reproducen mi trabajo desde los datos oficiales del concurso. Cada uno integra el código, la configuración y los pasos de una semana, para abrirlo en Kaggle sin clonar este repositorio ni depender de archivos de mi equipo. El modelado se desarrolló con asistencia de IA; los notebooks conservan la autoría y las limitaciones de las fuentes.
+
+## Empieza por los notebooks
+
+| Semana | Notebook | Qué reproduzco |
+| --- | --- | --- |
+| 1 | [Notebook del mercado desarrollado](notebooks/week1_developed_market.ipynb) | Preparación de siniestros, modelo S30 y calibración de nivel S41. |
+| 2 | [Notebook del mercado emergente](notebooks/week2_emerging_market.ipynb) | Cadena de prima de riesgo F3c y veinte primas comerciales de referencia. |
+
+En cada notebook, añade como entrada los datos de la competición IAA correspondiente, selecciona una sesión CPU y corre las celdas en orden. Cada uno comprueba sus rutas y explica la instalación opcional de paquetes. Los datos, modelos y registros intermedios quedan en almacenamiento temporal; los CSV finales por fila van a `/kaggle/working` y deben mantenerse privados según las reglas del concurso. [Configuración y detalle de las verificaciones](notebooks/README.md).
+
+Ambas recetas reprodujeron las huellas históricas de sus CSV finales en ejecuciones locales reanudadas. La primera semana presenta diferencias en huellas intermedias, incluidas tres tablas de variables cuya causa no se pudo establecer. Ninguno de los notebooks se ha probado en Kaggle alojado; quedan por verificar el tiempo, el espacio y la compatibilidad de ese entorno. La receta completa de la primera semana es larga y no está garantizado que termine dentro del límite de sesión de Kaggle. Estas comprobaciones no constituyen una revisión profesional independiente.
+
+## Recorrido del proyecto de la primera semana
 
 AI Hackathon IAA 2026 · Parte 1, mercado establecido · Manuel Rodríguez, equipo individual (Kaggle: manoloriveros). La versión en inglés de esta página es el [README.md](README.md).
 
@@ -38,6 +53,8 @@ Dos asistentes de IA, Claude y Codex, trabajaron en tres líneas: modelado, alte
 
 ## Cómo reproducir
 
+Los [notebooks autocontenidos](#empieza-por-los-notebooks) son la entrada principal para las dos semanas. Los comandos siguientes describen el flujo original del repositorio y sus insumos locales.
+
 El [reentrenamiento completo de semana 2 desde originales](docs/REENTRENAMIENTO_ORIGINALES.md) terminó en un entorno limpio: 57 etapas, 87 modelos finales nuevos y CSV F3c, F3d y F4c idénticos a los históricos. La guía documenta dos restauraciones de código y diferencias numéricas internas. La reproducción por otra persona sigue pendiente; no hubo envíos a Kaggle.
 
 Los datos del concurso no están en este repositorio: las reglas prohíben redistribuirlos. Los scripts los leen de una carpeta con la estructura de `Hackaton/Semana 1`, que se indica con `--semana1=<carpeta>` o con la variable `IAA_SEMANA1`. Conviene instalar las versiones de `requirements.txt` (Python 3.13); con otras versiones la mezcla se repite igual, pero el reentrenamiento puede no ser byte a byte.
@@ -64,6 +81,7 @@ python herramientas/verificar_entregables.py
 
 | Carpeta o archivo | Contenido |
 | --- | --- |
+| `notebooks/` | Notebooks autocontenidos de Kaggle para ambas semanas y sus notas de validación |
 | `reproducir.py` | Punto de entrada único (`plan`, `datos`, `componentes`, `todo`, `mezcla`, `verificar`), versión 1.2 |
 | `receta/` | La receta congelada: 36 nodos con scripts, argumentos, dependencias, salidas y huellas esperadas |
 | `src/` | Etapas de datos, variables, modelos, severidades, mezcla y validación, copiados sin cambios desde donde se ejecutaron |

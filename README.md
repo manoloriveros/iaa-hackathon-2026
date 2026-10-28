@@ -1,4 +1,19 @@
-# A risk premium for every policy period, built and challenged with AI
+# IAA AI Hackathon 2026: reproduce both weeks
+
+I am Manuel Rodríguez, an individual participant in the IAA AI Hackathon 2026. I use the notebooks below to explain and reproduce my work from the official competition data. Each notebook contains the code, configuration and steps for one week, so it can be opened in Kaggle without a checkout of this repository or files from my computer. The modelling was developed with AI assistance; the notebooks preserve the source authorship and limitations.
+
+## Start with the notebooks
+
+| Week | Notebook | What I reproduce |
+| --- | --- | --- |
+| 1 | [Developed-market notebook](notebooks/week1_developed_market.ipynb) | Claims preparation, the S30 model and S41 level calibration. |
+| 2 | [Emerging-market notebook](notebooks/week2_emerging_market.ipynb) | The F3c risk-premium chain and the twenty reference commercial premiums. |
+
+For each notebook, add the corresponding IAA competition data as a Kaggle input, select a CPU session and run the cells in order. Each notebook checks its input paths and explains the optional package installation. Intermediate data, models and logs go to temporary storage; final row-level CSVs go to `/kaggle/working` and must remain private under the competition rules. [Notebook setup and verification details](notebooks/README.md).
+
+Both recipes reproduced their historical final CSV hashes in local, resumed runs. The first week has intermediate fingerprint differences, including three feature-table hashes whose cause remains unresolved. Neither notebook has been tested in hosted Kaggle; runtime, storage and platform compatibility are not established. The full Week 1 recipe is long, so finishing within Kaggle's session limit is not guaranteed. These checks are not an independent professional review.
+
+## Week 1 project account
 
 IAA AI Hackathon 2026 · Part 1, established market · Manuel Rodríguez, individual team (Kaggle: manoloriveros). A Spanish copy of this page is in [README.es.md](README.es.md).
 
@@ -38,6 +53,8 @@ Two AI assistants, Claude and Codex, worked in three lines: modelling, creative 
 
 ## Reproduce
 
+The [standalone notebooks](#start-with-the-notebooks) are the main entry point for both weeks. The commands below describe the original repository workflow and its local inputs.
+
 For the current two-week reproduction status, see [REPRODUCCION_DOS_SEMANAS.md](docs/REPRODUCCION_DOS_SEMANAS.md). The 26 October Windows check rebuilt S41 from its Git tag and F3c/F3d exactly in a new Python environment using original labels and saved OOF predictions. A subsequent [full Week 2 retraining from originals](docs/REENTRENAMIENTO_ORIGINALES.md) completed all 57 stages in an isolated new environment and reproduced F3c, F3d and F4c CSVs byte for byte. Internal numerical differences and two explicit source restorations are documented; reproduction by another person remains open. See also [version control](docs/CONTROL_DE_VERSIONES.md) and [LICENSE](LICENSE).
 
 The competition data are not in this repository: the rules forbid redistributing them. The scripts read them from a folder with the structure of `Hackaton/Semana 1`, passed with `--semana1=<folder>` or the `IAA_SEMANA1` variable. Install the versions in `requirements.txt` (Python 3.13); with other versions the blend repeats exactly, but retraining may not be byte for byte.
@@ -64,6 +81,7 @@ python herramientas/verificar_entregables.py
 
 | Folder or file | Contents |
 | --- | --- |
+| `notebooks/` | Standalone, documented Kaggle notebooks for both weeks and their validation notes |
 | `reproducir.py` | Single entry point (`plan`, `datos`, `componentes`, `todo`, `mezcla`, `verificar`), version 1.2 |
 | `receta/` | The frozen recipe: 36 nodes with scripts, arguments, dependencies, outputs and expected fingerprints |
 | `src/` | Data stages, features, models, severities, blend and validation code, copied unchanged from where it ran |
