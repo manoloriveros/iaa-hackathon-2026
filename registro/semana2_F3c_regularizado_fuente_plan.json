@@ -1,0 +1,229 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-28T17:57:03.598306+00:00",
+  "purpose": "Produce strict upstream inputs required by admitted F3c-R design, no evaluation yet",
+  "scopes": [
+    {
+      "scope": "all",
+      "excluded_folds": []
+    },
+    {
+      "scope": "exclude_0",
+      "excluded_folds": [
+        0
+      ]
+    },
+    {
+      "scope": "exclude_1",
+      "excluded_folds": [
+        1
+      ]
+    },
+    {
+      "scope": "exclude_2",
+      "excluded_folds": [
+        2
+      ]
+    },
+    {
+      "scope": "exclude_3",
+      "excluded_folds": [
+        3
+      ]
+    },
+    {
+      "scope": "exclude_4",
+      "excluded_folds": [
+        4
+      ]
+    },
+    {
+      "scope": "exclude_01",
+      "excluded_folds": [
+        0,
+        1
+      ]
+    },
+    {
+      "scope": "exclude_02",
+      "excluded_folds": [
+        0,
+        2
+      ]
+    },
+    {
+      "scope": "exclude_03",
+      "excluded_folds": [
+        0,
+        3
+      ]
+    },
+    {
+      "scope": "exclude_04",
+      "excluded_folds": [
+        0,
+        4
+      ]
+    },
+    {
+      "scope": "exclude_12",
+      "excluded_folds": [
+        1,
+        2
+      ]
+    },
+    {
+      "scope": "exclude_13",
+      "excluded_folds": [
+        1,
+        3
+      ]
+    },
+    {
+      "scope": "exclude_14",
+      "excluded_folds": [
+        1,
+        4
+      ]
+    },
+    {
+      "scope": "exclude_23",
+      "excluded_folds": [
+        2,
+        3
+      ]
+    },
+    {
+      "scope": "exclude_24",
+      "excluded_folds": [
+        2,
+        4
+      ]
+    },
+    {
+      "scope": "exclude_34",
+      "excluded_folds": [
+        3,
+        4
+      ]
+    },
+    {
+      "scope": "exclude_012",
+      "excluded_folds": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "scope": "exclude_013",
+      "excluded_folds": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "scope": "exclude_014",
+      "excluded_folds": [
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "scope": "exclude_023",
+      "excluded_folds": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "scope": "exclude_024",
+      "excluded_folds": [
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "scope": "exclude_034",
+      "excluded_folds": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "scope": "exclude_123",
+      "excluded_folds": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "scope": "exclude_124",
+      "excluded_folds": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "scope": "exclude_134",
+      "excluded_folds": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "scope": "exclude_234",
+      "excluded_folds": [
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "source_recipe": "Original full F3c N0/F1 three seeds11/12/13; same fields/params/source2021-23, source fold0 early stopping; only eligible emerging claims in pooled RKM. Full source and single-fold N0seed11 reused only if arguments/model/raw match.",
+  "scope_filter": "Filter assigned accepted claim pools by exact admitted source/target row keys before RKM; source-inner excludes developed fold0, target excludes every named fold. No filtering solely by one legacy excluded_fold attribute.",
+  "RKM_definition_unchanged": "Original per-peril pooled reverseKM weekly curve; same historical .995cost-weight cap belongs only to reporting learner, no removal/cap of price targetT0.",
+  "budget": {
+    "source_scopes": 26,
+    "model_pairs_per_scope": 18,
+    "new_primary_native_calls_upper": 900,
+    "new_primary_native_calls_if15singlefold_pairs_exact": 870,
+    "primary_RKM_bundles_max": 52,
+    "adverse_RKM_bundles_max_separate": 52,
+    "source_adverse_native_refits_this_stage": 0,
+    "adverse_scope": "held claims poisoned before actual scope filter; rebuild curves and native fit inputs, use exact argument-hash memoization for fixed training. No new native replay claimed.",
+    "synthetic_reporting_fits": 0,
+    "target_calibrator_real_fits": 0,
+    "scores": 0,
+    "2025_inference": 0,
+    "submissions": 0
+  },
+  "checkpoints": "Every early-stop selection and full native fit journals before invocation; completed same-argument artifacts verified and reused, never overwritten. Sequential source scopes/lines,2threads/native.",
+  "admission": "Full-scope curve parity and protected-claim poison invariance in all26 scopes required before source fits. Do not borrow full-scope source model into protected scope.",
+  "source_pair_budget_is_not_runtime_estimate": true,
+  "sources": {
+    "Hackaton/Repositorio_IAA2026/herramientas/producir_fuente_F3c_regularizado.py": "62d0c87fb95facd595458a22f89f766b0bf955976b507bb3303ae2045257a8f2",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/F3c_regularizado_20261028/preflight/scope_inventory.json": "52f8896c2159828f70bfc32f7f30bdb66d8ec2e2dfd3cb87e58c1320cb81edea",
+    "Hackaton/Repositorio_IAA2026/privado/semana2/F3c_regularizado_20261028/preflight/synthetic_optimizer.json": "bdd28880e9790b32abf166d9cc0b4dd2728d97fdc6461d33e2cf32b71c3b641b",
+    "Hackaton/Repositorio_IAA2026/herramientas/validar_F3c_completo.py": "9e5b63f87396ded59d1034d4b4afeb15ec0d8e59250bd6bd27d93cbe89eacc67",
+    "Hackaton/Repositorio_IAA2026/herramientas/ampliar_validacion_cadena_f3c.py": "0394cf113d10d32714969402af1936164f0f085742c91a2017c496a5d6468732",
+    "Hackaton/Repositorio_IAA2026/privado/validacion_cadena_f3c_A1_mezcla/20261027T175434Z/prepared/developed_claims.parquet": "102de942d9ddb9b7d8fa87b65c3c0c825ca295f97aa83de7cb6937195322c3b5",
+    "Hackaton/Repositorio_IAA2026/privado/validacion_cadena_f3c_A1_mezcla/20261027T175434Z/prepared/emerging_claims.parquet": "20b011e4ae8a54d6e18ce45968c785a4202849aa40b6d862184f7e5c57dfd247",
+    "Hackaton/Repositorio_IAA2026/privado/validacion_cadena_f3c_A1_mezcla/20261027T175434Z/prepared/developed_motor.parquet": "71b5909aaf9d7a42d0688f083ff8b882327ec69543cbf7585b90cddc6bac4194",
+    "Hackaton/Repositorio_IAA2026/privado/validacion_cadena_f3c_A1_mezcla/20261027T175434Z/prepared/developed_buildings.parquet": "0090af557909595425b888f448a6d4925429b311fe5accb0650e4247099ea91b",
+    "Hackaton/Repositorio_IAA2026/privado/validacion_cadena_f3c_A1_mezcla/20261027T175434Z/prepared/developed_contents.parquet": "3733f2869fd29871b9ea148acb65839edb8f84d356fc04138d5fc6c79c1ab6b8",
+    "Hackaton/Repositorio_IAA2026/privado/validacion_cadena_f3c_A1_mezcla/20261027T175434Z/prepared/emerging_motor.parquet": "a70af696ec692a75e9c16084cfaaec53c9193116644e56ec226664af93a7be70",
+    "Hackaton/Repositorio_IAA2026/privado/validacion_cadena_f3c_A1_mezcla/20261027T175434Z/prepared/emerging_buildings.parquet": "74039d35bcd5444af53ccf6a94f5493bc368d38cd61849ea6b91f7090c8b9745",
+    "Hackaton/Repositorio_IAA2026/privado/validacion_cadena_f3c_A1_mezcla/20261027T175434Z/prepared/emerging_contents.parquet": "a5a9da9493739ec9aeaba7fffe45818886d605b3c5e427a6453b7e30e86fe5e1",
+    "Hackaton/Repositorio_IAA2026/privado/reentrenamiento_completo_20261026/corrida/noche/salidas/s1/asignacion.parquet": "8e66dddaebf867cda09e4035e15227774eff138407f21fc907feab2306f1ffd9",
+    "Hackaton/Repositorio_IAA2026/privado/reentrenamiento_completo_20261026/corrida/noche/salidas/s2/asignacion.parquet": "ad288b2769fc338ef162649d70c6d0e93a9b8770f1b760ab75df0ebc8c2d5eed"
+  }
+}
