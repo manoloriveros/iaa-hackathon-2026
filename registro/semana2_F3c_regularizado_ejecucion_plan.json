@@ -1,0 +1,125 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-28T19:44:38.153416+00:00",
+  "candidate": "F3c-R",
+  "phase": "source_gated_target_production",
+  "hypothesis": "Misma contracci\u00f3n preinscrita, sin cambiar variables ni par\u00e1metros despu\u00e9s de resultados.",
+  "configuration": {
+    "folds": "cinco guardados2023",
+    "base_scopes": 26,
+    "recipe_scopes": 16,
+    "source": "18 pares A1 N0/F1 por \u00e1mbito ya preinscritos; T2b desarrollado fijo",
+    "target": "base por ramo; C1/F2/own aprendidos solo con entradas OOF internas; misma normalizaci\u00f3n por lote hist\u00f3rica",
+    "model": "b*exp(a_cell+gamma_cell*z); 6a,4gamma; gamma edificios0; resto0..1",
+    "lambda": [
+      1.0,
+      0.1,
+      0.01
+    ],
+    "selection": "suma devianza2023 en5folds; empate1e-10 relativo favorece lambda mayor",
+    "mixture": [
+      0.5,
+      0.5
+    ],
+    "historical_A_M1_conditioning_retained": true,
+    "inapplicable_peril_NaN": "Conservar NA fuera de su ramo; validar solo periles aplicables y su suma frente a T0. No imputar un peril aplicable."
+  },
+  "comparators": {
+    "controlled": "matched_trainlevel_full reconstruido con exactamente los mismos26\u00e1mbitos y preprocesamiento de F3c-R",
+    "practical": "public_full temporal original congelado en validaci\u00f3n completa20261027",
+    "old_trainlevel_full": "Conservado como evidencia hist\u00f3rica; no a\u00edsla calibraci\u00f3n al cambiar ancestros del tronco.",
+    "family": 20,
+    "new_contrasts": 2,
+    "thresholds": "Sin cambio frente al plan F3c-R original; IC condicionales despu\u00e9s de b\u00fasqueda adaptativa."
+  },
+  "start_gate": "26\u00e1mbitos fuente completos; hashes y metadatos exactos; pruebas sint\u00e9ticas aprobadas y preflight real de lectura aprobado.",
+  "primary_budget": {
+    "calibrator_fits": 16,
+    "base_analytical_levels": 234,
+    "C1_levels": 48,
+    "recipe_scopes": 16,
+    "native_source_fits": 0,
+    "RKM_fits": 0
+  },
+  "verification_budget": {
+    "held2024_calibrator_fits": 16,
+    "five_outer_fold_input_checks_no_calibrator_refit": 5,
+    "positive_training_calibrator_fit": 1,
+    "independent_optimizer_fit": 1,
+    "total_calibrator_calls": 34,
+    "target_analytical": "Dosbundles completos, cinco ramas exteriores y un positivo. Contar llamadas reales en recibo separado; cota por receta del plan destino vigente."
+  },
+  "new_orchestration_smoke_budget": {
+    "synthetic_calibrator_fits": 34,
+    "real_source_fits": 0,
+    "reason": "Probar el nuevo ejecutor completo, sus estados, serializaci\u00f3n, contadores y bloqueo de replay antes de conectarlo a datos reales."
+  },
+  "payload": "Etiquetas2024 y de cadafold2023 protegido se reemplazan antes del selector por texto no convertible; igualdad exacta de toda rama, receta y calibrador cuando proceda.",
+  "source_replay_limit": "Raw y modelos fuente se leen por hashes/\u00e1mbito. No vuelve a ajustar \u00e1rboles con payload alterado; controles de curvas y argumentos fuente pertenecen a sus recibos previos.",
+  "stop": "Cualquier error detiene la continuaci\u00f3n y conserva parciales. Termina con predicciones2024 y controles sellados; evaluaci\u00f3n temporal, sensibilidad y eventual env\u00edo quedan pendientes.",
+  "scores2024": 0,
+  "new2025_predictions": 0,
+  "submissions": 0,
+  "dependencies": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/continuar_destino_F3c_regularizado.py",
+      "sha256": "1dc8e5a498f308839dadc16eb11fd32e02083270858bba7ea9412ef4053f4d3e"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/entradas_F3c_regularizado.py",
+      "sha256": "d5866c936074930b38ab133cfdb1bc6040f78f086d881670dd0216a2585ff312"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/preparar_destino_F3c_regularizado.py",
+      "sha256": "bbeb3682c7b02d4b71abe00679190f5a311161623323b0344aab3a90c39cd060"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/calibrador_F3c_regularizado.py",
+      "sha256": "69842f4972cbe2eec8f807d9418381bab3848413d3b39584fa62142f007cbd7d"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_F3c_regularizado_destino_plan.json",
+      "sha256": "c87ca96d239ba20563ce430ace5740965b367c6d99c776b8ea0259a790c93ce0"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/F3c_regularizado_20261028/target_adapter/numeric_types_amendment.json",
+      "sha256": "c9f012779fc319017bed3a8956ba34b6ea4c5190385688ed09ef0df9db9033c0"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/semana2/F3c_regularizado_20261028/target_adapter/corrected_numeric_types/synthetic.json",
+      "sha256": "2d77084aa7f578c735edc15c00a11a0de95064139372b99c23154ec498730265"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_F3c_regularizado_fuente_plan.json",
+      "sha256": "2c7b2039ef2ed3c84e7b50486ac26de88fbdbde9533aa0fae961933a7f93496a"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/validacion_cadena_f3c/20261027T153123Z/baseline_parameters.json",
+      "sha256": "bdd07c5aff5f4a06d5215c0c6e2fdee9773204a52ef8b606df519366a234fdd9"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/validacion_cadena_f3c_A1_mezcla/20261027T175434Z/prepared/emerging_motor.parquet",
+      "sha256": "a70af696ec692a75e9c16084cfaaec53c9193116644e56ec226664af93a7be70"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/validacion_cadena_f3c_A1_mezcla/20261027T175434Z/prepared/emerging_buildings.parquet",
+      "sha256": "74039d35bcd5444af53ccf6a94f5493bc368d38cd61849ea6b91f7090c8b9745"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/validacion_cadena_f3c_A1_mezcla/20261027T175434Z/prepared/emerging_contents.parquet",
+      "sha256": "a5a9da9493739ec9aeaba7fffe45818886d605b3c5e427a6453b7e30e86fe5e1"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/validacion_cadena_f3c/20261027T153123Z/models/baseline/motor_raw.parquet",
+      "sha256": "8dd104a7129e1fbea8f2e43d0c16747699c42ec8e712790e5f476fd135c81139"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/validacion_cadena_f3c/20261027T153123Z/models/baseline/buildings_raw.parquet",
+      "sha256": "a1ac7d347a5ac9ec20e871c06e183cf722e9216f11783f61de827f3b8202cbe6"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/validacion_cadena_f3c/20261027T153123Z/models/baseline/contents_raw.parquet",
+      "sha256": "e66d659ac9813c98f45f9298b07990613083a0d23f041ddefc6c2726e8a1c1e0"
+    }
+  ]
+}

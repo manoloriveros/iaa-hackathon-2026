@@ -1,0 +1,110 @@
+{
+  "author": "Codex",
+  "utc": "2026-10-28T19:37:12.037249+00:00",
+  "candidate": "F3c-R",
+  "phase": "nested_numeric_target_adapter",
+  "hypothesis": "Regularizar los niveles y la intensidad del bloque propio reduce fragilidad de negocio nuevo sin cambiar las variables ni el tronco F3c; todo aprendizaje del selector excluye sus grupos retenidos.",
+  "configuration": {
+    "folds": "cinco guardados2023",
+    "base_scopes": 26,
+    "recipe_scopes": 16,
+    "source": "18 pares A1 N0/F1 por \u00e1mbito ya preinscritos; T2b desarrollado fijo",
+    "target": "base por ramo; C1/F2/own aprendidos solo con entradas OOF internas; misma normalizaci\u00f3n por lote hist\u00f3rica",
+    "model": "b*exp(a_cell+gamma_cell*z); 6a,4gamma; gamma edificios0; resto0..1",
+    "lambda": [
+      1.0,
+      0.1,
+      0.01
+    ],
+    "selection": "suma devianza2023 en5folds; empate1e-10 relativo favorece lambda mayor",
+    "mixture": [
+      0.5,
+      0.5
+    ],
+    "historical_A_M1_conditioning_retained": true,
+    "inapplicable_peril_NaN": "Conservar NA fuera de su ramo; validar solo periles aplicables y su suma frente a T0. No imputar un peril aplicable."
+  },
+  "comparators_clarified_before_new_fit_or_score": {
+    "controlled": "matched_trainlevel_full reconstruido con exactamente los mismos26\u00e1mbitos y preprocesamiento de F3c-R",
+    "practical": "public_full temporal original congelado en validaci\u00f3n completa20261027",
+    "old_trainlevel_full": "Conservado como evidencia hist\u00f3rica; no a\u00edsla calibraci\u00f3n al cambiar ancestros del tronco.",
+    "family": 20,
+    "new_contrasts": 2,
+    "thresholds": "Sin cambio frente al plan F3c-R original; IC condicionales despu\u00e9s de b\u00fasqueda adaptativa."
+  },
+  "synthetic_controls": [
+    "flujo completo26bases/16recetas/selector",
+    "costes2024 no num\u00e9ricos antes del selector",
+    "costes de cadafold2023 retenido no num\u00e9ricos antes de producir su rama",
+    "control positivo parcial de entrenamiento",
+    "replay JSON con estimadores bloqueados",
+    "extremos gamma0/1 equivalentes a controles completos",
+    "devianza por sklearn y soluci\u00f3n final por SLSQP",
+    "rechazo ancestro incorrecto y grupo en2folds",
+    "renovaci\u00f3n temporal permite grupo2023 repetido2024; exclusi\u00f3n interna sigue estricta"
+  ],
+  "budget": {
+    "synthetic_calibrator_fits": 49,
+    "synthetic_native_source_fits": 0,
+    "synthetic_target_analytic_levels": "26bases/16recetas por bundle; dosbundles, cinco ramas adversas, un positivo y controles endpoint sin fit; contabilizar llamadas reales.",
+    "real_primary_calibrator_fits_when_ready": 16,
+    "real_adverse_calibrator_fits_reserved": 16,
+    "real_base_levels_primary": 234,
+    "real_C1_levels_primary": 48,
+    "recipe_kopt_bound_per_scope": "66+sum(nunique(variable) para l\u00edneas elegibles de los3bloques propios); contar real, nunca usar esta cota como ejecuci\u00f3n.",
+    "new_native_source_or_C0_from_adapter": 0,
+    "new2025_predictions": 0,
+    "submissions": 0
+  },
+  "real_release_gate": "No ajustar destino real hasta26recibos fuente, hashes, controles sint\u00e9ticos y comentario previo. La corrida actual solo habilita el adaptador; no promociona ni env\u00eda.",
+  "dependencies": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/preparar_destino_F3c_regularizado.py",
+      "sha256": "3ff301a995e276ff21b02ace0a84013dd0c456cfa4dc5bec2f04e1ced7a84616"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/entradas_F3c_regularizado.py",
+      "sha256": "175604ce74a8172ac9e6354ffdc14e97d3e95558b64d22228eff058ae2bbeef3"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/calibrador_F3c_regularizado.py",
+      "sha256": "69842f4972cbe2eec8f807d9418381bab3848413d3b39584fa62142f007cbd7d"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/preparar_F3c_regularizado.py",
+      "sha256": "74ed227ca91f972ac7c4719f3cf1d7ea93aa199578fce90f40626e61b5430a4f"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/evaluar_F3c_completo.py",
+      "sha256": "77c831c008653b9886ed33309f4a51272478a7b4a38735c963e6b09c853ec391"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/validar_F3c_completo.py",
+      "sha256": "9e5b63f87396ded59d1034d4b4afeb15ec0d8e59250bd6bd27d93cbe89eacc67"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/ampliar_validacion_cadena_f3c.py",
+      "sha256": "0394cf113d10d32714969402af1936164f0f085742c91a2017c496a5d6468732"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/validar_cadena_f3c.py",
+      "sha256": "2e301e50a9f5f60d02dc924068d6086e4a9c3b2376d40c1ddfdeb3dcede7a292"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/herramientas/auditar_evaluacion_documento.py",
+      "sha256": "309c40ed26d8364cbb07dd8a3204423e5bd80baa06b89ece9bcd60dcae18c6fa"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_F3c_completo_validacion_plan.json",
+      "sha256": "60c14fc6565a9018ec5e764d3d229b955b15e420459a43f553d94b7fac6dce87"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_F3c_regularizado_plan.json",
+      "sha256": "fcd5793980d241f781d492de9f595b3c7b47470f0d18eb99442d8c7f1af9088c"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_F3c_regularizado_fuente_plan.json",
+      "sha256": "2c7b2039ef2ed3c84e7b50486ac26de88fbdbde9533aa0fae961933a7f93496a"
+    }
+  ]
+}
