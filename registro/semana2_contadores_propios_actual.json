@@ -1,9 +1,9 @@
 {
   "author": "Codex",
-  "as_of_utc": "2026-10-27T20:43:19.923388+00:00",
+  "as_of_utc": "2026-10-28T14:02:32.647713+00:00",
   "scope": "Own pricing/development lineage only; not all project fits or other authors. Historical main catalog retains its dated counter.",
-  "cumulative_price_base_fits": 2775,
-  "cumulative_closed_form_constants": 45249,
+  "cumulative_price_base_fits": 2855,
+  "cumulative_closed_form_constants": 45390,
   "auxiliary_Poisson_Gamma_fits_separate": 30,
   "baseline": {
     "index": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_v7_snapshot.json",
@@ -4985,5 +4985,55 @@
     "CDF_fits": 0,
     "receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/NB_nivel_credibilidad_20261027/completion_receipt.json",
     "counter_convention": "Add only primary fittedkopt constants to cumulative, derived shrink values and controls separate; no independent statistical degrees-of-freedom claim."
+  },
+  "F3c_full_structure_20261027": {
+    "author": "Codex",
+    "utc": "2026-10-28T14:02:32.538174+00:00",
+    "status": "F3c_full_structure_validation_completed_exploratory",
+    "execution": null,
+    "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_F3c_completo_validacion_plan.json",
+    "plan_sha256": "60c14fc6565a9018ec5e764d3d229b955b15e420459a43f553d94b7fac6dce87",
+    "output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/F3c_validacion_completa_20261027",
+    "report": "Hackaton/Repositorio_IAA2026/docs/semana2/F3C_VALIDACION_COMPLETA_20261027.md",
+    "report_sha256": "76f4bc9fb624afea710f43d4c5b74a946b0c059a9fb19b129e71a37f116db6f0",
+    "results": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/F3c_validacion_completa_20261027/results.json",
+    "results_sha256": "73a1eff91d99b61b8d778f56bd33e86e902161ce331ce0242a1c260d023fa1c1",
+    "verification": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/F3c_validacion_completa_20261027/verification.json",
+    "verification_sha256": "900c866292e49b8d8bf44149294635d0f2acae3a1f0e7e8269228e473c1fdb35",
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261028-F3C-COMPLETO-RESULTADOS",
+      "utc": "2026-10-28T14:02:32+00:00",
+      "previous_sha256": "20790d74381e6701b859912ebb935eb1c44362018b88cf873f54b7580ea1a0a0",
+      "sha256": "4a157f3c93f94c88e390701916ce9bfbf5f4ebc82b5bb7a33976e821fcd595a6"
+    },
+    "new_native_fits": 80,
+    "useful_primary_native_fits": 30,
+    "useful_adverse_source_replay_fits_separate": 30,
+    "preserved_wrong_pool_F1_native_fits": 18,
+    "interrupted_N0_inner_native_attempts": 1,
+    "additional_interrupted_native_attempts": 1,
+    "synthetic_native_fits_separate": 4,
+    "new_C0_fits": 0,
+    "primary_analytical_constants": 141,
+    "analytical_counts_separate": {
+      "primary_kopt": 105,
+      "primary_balance": 36,
+      "held2024_poison_kopt": 105,
+      "held2024_poison_balance": 36,
+      "positive_training_control_kopt": 105,
+      "positive_training_control_balance": 36
+    },
+    "new_submissions": 0,
+    "preserved_reference": "F3c",
+    "formal_promotion": false,
+    "private_superiority_not_established": true,
+    "2024_open_adaptive": true,
+    "gates": {
+      "public_full_vs_public_noown": false,
+      "trainlevel_full_vs_trainlevel_noown": false,
+      "public_full_vs_trainlevel_full": false
+    },
+    "next_unit": "Address documented adverse mechanisms/support and batch dependence under a new registered recipe; do not select or submit by adaptive2024/public alone."
   }
 }
