@@ -1,7 +1,7 @@
 {
   "id": "S2-MISION017-FASE2-20261025",
   "author": "Codex",
-  "utc": "2026-10-27T20:43:19.194991+00:00",
+  "utc": "2026-10-28T03:01:16.978259+00:00",
   "status": "active",
   "goal_objective_current": "Alcanzar un score público del equipo de al menos 0,17 mediante una mejora consistente y robusta, con los datos oficiales disponibles, incluido 2024, validación temporal y controles de fuga. Conservar B00, alternativas, autoría y presupuesto de envíos; exigir recibo procesado y evidencia local.",
   "human_authorization_literal": "2024 no tiene que estar bloqueado, usa todo lo que tenemos y necesites que nos lleve a mejorar significativamente el modelo",
@@ -33,7 +33,7 @@
   },
   "legacy_2023_index": "Hackaton/Repositorio_IAA2026/registro/semana2_mision017_actual.json",
   "legacy_goal_tool_objective_note": "Goal resumed via explicituserrequest/UI;tool still carries old2024closed sentence. Latest directhuman authorization above overrides that stale scope;do not reclose2024 on auto-continuation. Numeric target/robustness remain.",
-  "next_unit": "Review saved evidence on buildings NB: whether ramo level is a transportable prior, cohort/exposure/reporting maturity and large-loss support. No K grid, no retrospective motor-only candidate or new submission. One subsequent standard recipe requires new mechanism/config/criteria/cost and preregistration; preserve this failure.",
+  "next_unit": "Prepare protected temporal validation closer to actual F3c trunk/preprocessing: identify F1/three-seed A1 plus T2b mixture, fixed source/category/completion scopes and inherited public shape/level blocks. Separate training-only recipe from the exact public-calibrated CSV; preregister before any fit. Preserve F3c as delivered reference and all failures; no repeated one-seed noF1 audit as proof of the whole file, and no submission without new evidence.",
   "new_price_fits": 519,
   "new_C0_fits": 960,
   "new_submissions": 1,
@@ -43,60 +43,62 @@
   "goal_achieved": false,
   "current_batch": {
     "author": "Codex",
-    "utc": "2026-10-27T20:43:19.158022+00:00",
-    "status": "completed_standard_recipe_failed_predictive_gates_no_submission",
-    "candidate": "NB_CRED300",
-    "report": "Hackaton/Repositorio_IAA2026/docs/semana2/NB_NIVEL_CREDIBILIDAD_20261027.md",
-    "output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/NB_nivel_credibilidad_20261027",
+    "utc": "2026-10-28T03:01:16.941884+00:00",
+    "status": "completed_diagnostic_no_model_or_submission_change",
+    "report": "Hackaton/Repositorio_IAA2026/docs/semana2/NB_EDIFICIOS_PRIOR_DIAGNOSTICO_20261027.md",
+    "output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/NB_edificios_prior_diagnostico_20261027",
     "technical_controls_pass": true,
-    "all_nominal_guards_pass": false,
-    "fixed_price_stress_floor_pass": false,
-    "global_delta_vs_R1": 0.0022481969560629615,
-    "global_family15_vs_R1": [
-      -0.00023254458979334738,
-      0.0041207285714500875
-    ],
-    "NB_buildings_delta_vs_R1": -0.009828294143635657,
-    "failed_nominal_guards": [
-      "global_family15_lower_vs_R1_positive",
-      "all_sixcell_floor_vs_R1",
-      "broad_floor_vs_baseline"
-    ],
-    "adopted": false,
-    "candidate_admission": false,
-    "formal_promotion": false,
-    "new_submissions": 0,
-    "new_2025_quotes": 0,
-    "R1_F3c_B00_preserved": true,
-    "primary_kopt_constants": 3,
-    "derived_NB_levels_separate": 3,
-    "adverse_replay_kopt_constants_separate": 3,
-    "positive_control_kopt_constants_separate": 3,
-    "synthetic_kopt_constants_separate": 3,
-    "verification_only_scalar_optimizations": 3,
-    "new_native_fits": 0,
+    "original_failed_recipe_still_not_adopted": true,
+    "new_candidate_admission": false,
+    "new_native_or_closed_fits": 0,
     "new_CDF_fits": 0,
     "new_Booster_inference": 0,
-    "same10000original_group_multiplicities_new_statistics": true,
-    "new_independent_bootstrap_seed_or_draws": 0,
+    "new_bootstrap_draws": 0,
+    "new_2025_quotes": 0,
+    "new_submissions": 0,
+    "historical_fixed_formula_prices_reconstructed": true,
+    "F3c_R1_B00_preserved": true,
+    "model_roles": {
+      "author": "Codex",
+      "utc": "2026-10-28T03:01:16.191372+00:00",
+      "scope": "Own reviewed lineage and preserved receipts, not a fresh account-wide or manual-selection query.",
+      "F3c": {
+        "role": "preserved_delivered_reference",
+        "ref": 57654514,
+        "last_reviewed_public": 0.16914,
+        "private_superiority_established": false,
+        "receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/entrega_F3c_investigacion_20261026_v1/public_receipt.json",
+        "receipt_sha256": "7da5f5d5b177f5dc50b1d4024c533270c3c8d7362b9674dbad93c716927c93b4"
+      },
+      "R1": {
+        "role": "preserved_submitted_alternative_not_adopted_as_replacement",
+        "ref": 57711536,
+        "last_reviewed_public": 0.1582,
+        "receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/produccion_R1_privada_20261027/public_receipt.json",
+        "receipt_sha256": "e33692e7a35b58d6d3d40f0e473b8685d9549d216f15ada8a45b16ab4dfab036"
+      },
+      "NB_CRED300": {
+        "role": "local_failed_recipe_not_adopted_not_submitted"
+      },
+      "manual_final_selection_changed_by_this_work": false
+    },
+    "private_superiority_established": false,
+    "formal_promotion": false,
     "2024_open_adaptive": true,
-    "professional_independent_review": false,
+    "next_unit": "Prepare protected temporal validation closer to actual F3c trunk/preprocessing: identify F1/three-seed A1 plus T2b mixture, fixed source/category/completion scopes and inherited public shape/level blocks. Separate training-only recipe from the exact public-calibrated CSV; preregister before any fit. Preserve F3c as delivered reference and all failures; no repeated one-seed noF1 audit as proof of the whole file, and no submission without new evidence.",
     "goal_achieved": false,
     "active_jobs": [],
-    "next_unit": "Review saved evidence on buildings NB: whether ramo level is a transportable prior, cohort/exposure/reporting maturity and large-loss support. No K grid, no retrospective motor-only candidate or new submission. One subsequent standard recipe requires new mechanism/config/criteria/cost and preregistration; preserve this failure.",
     "forum": {
       "author": "Codex",
-      "id": "COD-S2-20261027-NB-CRED300-RESULTADO",
-      "utc": "2026-10-27T20:43:19+00:00",
-      "previous_sha256": "876f375276fb72c879d01de4573425d24f75ac1e5fe49c0b671673477eeb68b4",
-      "sha256": "99c11fe9ecefb0cc6ec6c9ae22daa521dda59105309257f6d9a0879878e3a8ac"
+      "id": "COD-S2-20261028-EDIFICIOS-NB-DIAG-RESULTADO",
+      "utc": "2026-10-28T03:01:16+00:00",
+      "previous_sha256": "d377373b90691e449674d6e414ec25c6ed6710c1be4b5a05cc313b91d01d9ae1",
+      "sha256": "3a271b3b23ee892b71e7120f31f2e78f9bbb966b20ca3fcca6c4bd5dfc8787d2"
     },
     "evidence": {
-      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/NB_nivel_credibilidad_20261027/parameters.json": "8c62d76125f7f38623658377704c2940380526ddd94b19dd472d47569c26fbe3",
-      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/NB_nivel_credibilidad_20261027/results.json": "243e4f03df4c1da692bb754b526db8fede14bf6822663d7af5fbdc1dc7f3d336",
-      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/NB_nivel_credibilidad_20261027/fixed_price_stresses.json": "b6ca40655187de5924fcd5557ba28328d3acf05f279b8e6c9c788f1bad350505",
-      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/NB_nivel_credibilidad_20261027/verification.json": "ce39bd991777503922a40d2852eb73514a902d245add5231474bb64b0cb97ed5",
-      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/NB_nivel_credibilidad_20261027/fit_attempts.jsonl": "ee87c7e0f000ca0cffef887d4cbddb3e64ff1b8fb60cc30f7b78863481111c9e"
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/NB_edificios_prior_diagnostico_20261027/results.json": "c8c1cc82b92207119679b7a3a251e99bed6f4203af8516174f5ae2e858db0c2e",
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/NB_edificios_prior_diagnostico_20261027/verification.json": "3ea4861a92e46fec934023cf913c3614a8c989ac7c1bc9f85ead9a22e3973a9a",
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/NB_edificios_prior_diagnostico_20261027/delivery_roles_clarification.json": "26be171d5cc7faa670c0d5f184c7d66247f4fe697bfd0f12fe870db71902321c"
     }
   },
   "2024_open": true,
@@ -16832,5 +16834,89 @@
       "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/NB_nivel_credibilidad_20261027/verification.json": "ce39bd991777503922a40d2852eb73514a902d245add5231474bb64b0cb97ed5",
       "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/NB_nivel_credibilidad_20261027/fit_attempts.jsonl": "ee87c7e0f000ca0cffef887d4cbddb3e64ff1b8fb60cc30f7b78863481111c9e"
     }
+  },
+  "NB_buildings_prior_diagnostic": {
+    "author": "Codex",
+    "utc": "2026-10-28T03:01:16.941884+00:00",
+    "status": "completed_diagnostic_no_model_or_submission_change",
+    "report": "Hackaton/Repositorio_IAA2026/docs/semana2/NB_EDIFICIOS_PRIOR_DIAGNOSTICO_20261027.md",
+    "output": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/NB_edificios_prior_diagnostico_20261027",
+    "technical_controls_pass": true,
+    "original_failed_recipe_still_not_adopted": true,
+    "new_candidate_admission": false,
+    "new_native_or_closed_fits": 0,
+    "new_CDF_fits": 0,
+    "new_Booster_inference": 0,
+    "new_bootstrap_draws": 0,
+    "new_2025_quotes": 0,
+    "new_submissions": 0,
+    "historical_fixed_formula_prices_reconstructed": true,
+    "F3c_R1_B00_preserved": true,
+    "model_roles": {
+      "author": "Codex",
+      "utc": "2026-10-28T03:01:16.191372+00:00",
+      "scope": "Own reviewed lineage and preserved receipts, not a fresh account-wide or manual-selection query.",
+      "F3c": {
+        "role": "preserved_delivered_reference",
+        "ref": 57654514,
+        "last_reviewed_public": 0.16914,
+        "private_superiority_established": false,
+        "receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/entrega_F3c_investigacion_20261026_v1/public_receipt.json",
+        "receipt_sha256": "7da5f5d5b177f5dc50b1d4024c533270c3c8d7362b9674dbad93c716927c93b4"
+      },
+      "R1": {
+        "role": "preserved_submitted_alternative_not_adopted_as_replacement",
+        "ref": 57711536,
+        "last_reviewed_public": 0.1582,
+        "receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/produccion_R1_privada_20261027/public_receipt.json",
+        "receipt_sha256": "e33692e7a35b58d6d3d40f0e473b8685d9549d216f15ada8a45b16ab4dfab036"
+      },
+      "NB_CRED300": {
+        "role": "local_failed_recipe_not_adopted_not_submitted"
+      },
+      "manual_final_selection_changed_by_this_work": false
+    },
+    "private_superiority_established": false,
+    "formal_promotion": false,
+    "2024_open_adaptive": true,
+    "next_unit": "Prepare protected temporal validation closer to actual F3c trunk/preprocessing: identify F1/three-seed A1 plus T2b mixture, fixed source/category/completion scopes and inherited public shape/level blocks. Separate training-only recipe from the exact public-calibrated CSV; preregister before any fit. Preserve F3c as delivered reference and all failures; no repeated one-seed noF1 audit as proof of the whole file, and no submission without new evidence.",
+    "goal_achieved": false,
+    "active_jobs": [],
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261028-EDIFICIOS-NB-DIAG-RESULTADO",
+      "utc": "2026-10-28T03:01:16+00:00",
+      "previous_sha256": "d377373b90691e449674d6e414ec25c6ed6710c1be4b5a05cc313b91d01d9ae1",
+      "sha256": "3a271b3b23ee892b71e7120f31f2e78f9bbb966b20ca3fcca6c4bd5dfc8787d2"
+    },
+    "evidence": {
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/NB_edificios_prior_diagnostico_20261027/results.json": "c8c1cc82b92207119679b7a3a251e99bed6f4203af8516174f5ae2e858db0c2e",
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/NB_edificios_prior_diagnostico_20261027/verification.json": "3ea4861a92e46fec934023cf913c3614a8c989ac7c1bc9f85ead9a22e3973a9a",
+      "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/NB_edificios_prior_diagnostico_20261027/delivery_roles_clarification.json": "26be171d5cc7faa670c0d5f184c7d66247f4fe697bfd0f12fe870db71902321c"
+    }
+  },
+  "delivery_roles_clarification": {
+    "author": "Codex",
+    "utc": "2026-10-28T03:01:16.191372+00:00",
+    "scope": "Own reviewed lineage and preserved receipts, not a fresh account-wide or manual-selection query.",
+    "F3c": {
+      "role": "preserved_delivered_reference",
+      "ref": 57654514,
+      "last_reviewed_public": 0.16914,
+      "private_superiority_established": false,
+      "receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/entrega_F3c_investigacion_20261026_v1/public_receipt.json",
+      "receipt_sha256": "7da5f5d5b177f5dc50b1d4024c533270c3c8d7362b9674dbad93c716927c93b4"
+    },
+    "R1": {
+      "role": "preserved_submitted_alternative_not_adopted_as_replacement",
+      "ref": 57711536,
+      "last_reviewed_public": 0.1582,
+      "receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/mision017_fase2/produccion_R1_privada_20261027/public_receipt.json",
+      "receipt_sha256": "e33692e7a35b58d6d3d40f0e473b8685d9549d216f15ada8a45b16ab4dfab036"
+    },
+    "NB_CRED300": {
+      "role": "local_failed_recipe_not_adopted_not_submitted"
+    },
+    "manual_final_selection_changed_by_this_work": false
   }
 }
