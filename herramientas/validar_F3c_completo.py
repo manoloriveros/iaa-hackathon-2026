@@ -31,6 +31,13 @@ PUBLIC=ROOT/'Hackaton/Semana 2/Claude/mision017_20261025/final_info_3puntos.json
 TRAIN_SHAPE=R/'src/semana2/lineas/mision017_20261025/exp26_20261026/m017/exp26/F3b_info.json'
 SEEDS=[11,12,13];LINES=['motor','buildings','contents']
 HISTORY_ADMISSION=OUT/'source_history_admission.json'
+EXECUTION_RECONCILIATION=OUT/'execution_reconciliations.json'
+
+def additional_interrupted(line=None):
+    if not EXECUTION_RECONCILIATION.exists():return 0
+    rec=read(EXECUTION_RECONCILIATION);counts=rec['additional_interrupted_by_line']
+    assert len(rec['cases'])==sum(counts.values())
+    return counts.get(line,0) if line else sum(counts.values())
 
 def source_folder(line,tag,family,seed):
     namespace='source_original_history' if family=='F1' and HISTORY_ADMISSION.exists() else 'source'
@@ -95,8 +102,12 @@ def freeze():
 def guard():
     assert sha(PLAN)==read(OUT/'registration.json')['plan_sha256']
     adm=read(HISTORY_ADMISSION) if HISTORY_ADMISSION.exists() else None
+    execution=read(EXECUTION_RECONCILIATION) if EXECUTION_RECONCILIATION.exists() else None
+    if execution:
+        assert adm and execution['source_history_admission_sha256']==sha(HISTORY_ADMISSION)
+        additional_interrupted()
     for name,digest in read(PLAN)['sources'].items():
-        if adm and name==w.rel(Path(__file__)):digest=adm['source_code_sha256']
+        if adm and name==w.rel(Path(__file__)):digest=execution['source_code_sha256'] if execution else adm['source_code_sha256']
         assert sha(ROOT/name)==digest,name
     if adm:
         assert adm['plan_sha256']==sha(PLAN)
@@ -228,7 +239,7 @@ def train_line(line):
                 dump(complete,rec);del bst,raw;gc.collect();print(json.dumps({'event':'source_complete','line':line,'tag':tag,'family':family,'seed':seed,'rounds':rounds}),flush=True)
             del Xi,Xv,Xf,Xe;gc.collect()
         del src,em,di,dv;gc.collect()
-    attempts=[json.loads(z) for z in attempt_path(line).read_text().splitlines()];expected=read(HISTORY_ADMISSION)['expected_new_native_by_line'][line] if HISTORY_ADMISSION.exists() else 20;assert len(attempts)==expected
+    attempts=[json.loads(z) for z in attempt_path(line).read_text().splitlines()];expected=read(HISTORY_ADMISSION)['expected_new_native_by_line'][line]+additional_interrupted(line) if HISTORY_ADMISSION.exists() else 20;assert len(attempts)==expected
     live('live_'+line,{'pid':os.getpid(),'line':line,'status':'complete','new_native_fits':len(attempts),'original_history':HISTORY_ADMISSION.exists()});dump(source_marker(line),{'utc':utc(),'line':line,'new_native_fits':len(attempts),'new_CDF_fits':0,'source2024_poison_replay_exact':True,'original_history':HISTORY_ADMISSION.exists()});print(json.dumps({'line_complete':line,'new_native_fits':len(attempts),'original_history':HISTORY_ADMISSION.exists()}),flush=True)
 
 if __name__=='__main__':

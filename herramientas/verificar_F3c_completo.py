@@ -131,8 +131,9 @@ def verify():
     checks['all18_original_production_feature_orders_match_temporal_family']=True
     admission=read(e.f.HISTORY_ADMISSION)
     attempts=sum(len(path.read_text().splitlines()) for path in OUT.glob('fit_attempts_*.jsonl'))
-    checks['79_native_attempts_including18_wrong_pool_and1_interrupted']=attempts==admission['expected_total_native_attempts']==79
-    checks['new_corrected48_native_attempts']=sum(len(e.f.attempt_path(line).read_text().splitlines()) for line in e.LINES)==48
+    extra=e.f.additional_interrupted()
+    checks['native_attempts_reconciled_including_wrong_pool_and_interruptions']=attempts==admission['expected_total_native_attempts']+extra
+    checks['corrected_native_attempts_reconciled']=sum(len(e.f.attempt_path(line).read_text().splitlines()) for line in e.LINES)==48+extra
     checks['original_F1_full_source_target_value_parity']=read(OUT/'original_history_preflight.json')['all_passed']
     checks['original_N0_value_parity_with_corrected_metadata']=read(OUT/'feature_value_parity_corrected_metadata.json')['all_passed']
     tr=pd.read_parquet(OUT/'training2023.parquet');te=pd.read_parquet(OUT/'predictions2024.parquet');pars=read(OUT/'parameters.json')['recipe'];replay=e.apply_recipe(te,pars)
