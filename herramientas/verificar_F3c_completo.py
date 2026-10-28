@@ -81,6 +81,28 @@ def synthetic():
     checks['sklearn_metric']=math.isclose(mean_tweedie_deviance(y,mu,power=1.5),math.fsum(e.audit.loss(y,mu))/n,rel_tol=1e-12)
     checks['all_passed']=all(checks.values());dump(OUT/'evaluator_synthetic.json',{'utc':e.f.utc(),'checks':checks,'synthetic_analytical_counts':dict(e.COUNTS),'synthetic_numerical_optimizations':1,'new_real_fits':0});assert checks['all_passed'];print(json.dumps(checks))
 
+def bridge():
+    e.guard();e.ROLE='synthetic_bridge';rng=np.random.default_rng(20261028);n=120
+    t=pd.DataFrame({'line':np.repeat(e.LINES,40),'new_business':np.tile(np.repeat([0,1],20),3),'exposure':rng.uniform(.1,1,n),'q':rng.uniform(.6,1,n),
+        'gender':np.tile(['M','F'],60),'works_from_home':np.tile([True,False],60),'marketing_segment':np.tile(['a','b','c'],40),'ncb_years':np.tile(np.arange(12),10),
+        'prior_claims_5y':np.tile([0,1,2],40),'y':rng.gamma(2,20,n),'year':2023,'row_id':['toy'+str(i) for i in range(n)]})
+    t['T2b_raw']=rng.lognormal(3,1,n);t['mix']=rng.lognormal(3,1,n);p=e.learn_recipe(t);pred=e.apply_recipe(t,p);manual=independent_recipe(t,p)
+    checks={'full_independent_pipeline_variable_q':all(np.allclose(pred[k],manual[k],rtol=2e-13,atol=1e-9) for k in pred)}
+    u=t.copy();u['mix']=t['mix']/t.q;u['q']=1.;ultimate=e.apply_recipe(u,p)
+    checks['ultimate_before_final_observed_bridge']=all(np.allclose(pred[k],ultimate[k]*t.q.to_numpy(),rtol=2e-14,atol=1e-10) for k in pred)
+    oldlines=e.LINES;oldscope=e.base_scope
+    def fixture(em,raw,F,fold,style,balance=False):
+        z=pd.DataFrame({'row_id':['f'+str(fold)+'a','f'+str(fold)+'b'],'line':['motor']*2,'new_business':[0,1],'exposure':[.1,1.],'q':[.3,.8],'y':[4.,10.],
+            'annual':{'t':[20.,15.],'n':[30.,12.],'h':[6.,6.]}[raw]});return z,{'fixture':True}
+    try:
+        e.LINES=['motor'];e.base_scope=fixture;_,target,_=e.build_trunk(None,{'T2b':'t','N0':'n','F1':'h'})
+    finally:e.LINES=oldlines;e.base_scope=oldscope
+    expo=np.array([.1,1.]);neutral=np.sum(np.array([30.,12.])*expo)/np.sum(np.array([6.,6.])*expo);uf1=np.array([6.,6.])*expo*neutral
+    raw=np.array([20.,15.])*expo*np.array([.3,.8]);level=e.original_kopt(np.array([4.,10.]),raw)
+    checks['periodpremium_neutralization']=bool(np.allclose(target.A1_F1,uf1,rtol=1e-14))
+    checks['mixture_periodpremium_final_bridge']=bool(np.allclose(target['mix'],.5*(uf1*np.array([.3,.8])+raw*level),rtol=1e-14))
+    checks['all_passed']=all(checks.values());assert checks['all_passed'];dump(OUT/'bridge_verifier.json',{'utc':e.f.utc(),'checks':checks,'synthetic_counts':dict(e.COUNTS),'real_fits':0,'verifier_code_sha256':sha(Path(__file__))});print(json.dumps(checks))
+
 def verify():
     e.guard();checks={};models=[]
     for line in e.LINES:
@@ -124,5 +146,5 @@ def verify():
     checks['all_passed']=all(checks.values());dump(OUT/'verification.json',{'author':'Codex','utc':e.f.utc(),'checks':checks,'source_models':models,'verifier_code_sha256':sha(Path(__file__)),'new_real_fits':0,'new2025model_inferences':0,'new_submissions':0});assert checks['all_passed'];print(json.dumps(checks),flush=True)
 
 if __name__=='__main__':
-    sys.stdout.reconfigure(encoding='utf8');p=argparse.ArgumentParser();p.add_argument('mode',choices=['synthetic','verify']);args=p.parse_args()
+    sys.stdout.reconfigure(encoding='utf8');p=argparse.ArgumentParser();p.add_argument('mode',choices=['synthetic','bridge','verify']);args=p.parse_args()
     with e.threadpool_limits(limits=2):globals()[args.mode]()
