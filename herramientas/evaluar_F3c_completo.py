@@ -24,8 +24,17 @@ def kopt(y,mu):
 v.kopt=kopt
 
 def guard():
-    f.guard();sealpath=OUT/'evaluator_amendment1.json';sealpath=sealpath if sealpath.exists() else OUT/'evaluator_sealed.json'
+    f.guard();sealpath=OUT/'evaluator_control_amendment.json'
+    if not sealpath.exists():sealpath=OUT/'evaluator_amendment1.json'
+    if not sealpath.exists():sealpath=OUT/'evaluator_sealed.json'
     assert sha(Path(__file__))==read(sealpath)['code_sha256']
+
+def admit_control():
+    f.guard();assert not (OUT/'parameters.json').exists() and not (OUT/'target_started.json').exists()
+    body='Codex. Refuerzo técnico del control positivo antes de aprender o puntuar destino: duplicar uniformemente todos los costos2023 mueve el nivel del tronco, pero puede dejar invariantes los factores relativos por diseño. Para comprobar su sensibilidad real se duplicarán los costos y periles de una de cada tres filas2023, con índice fijo del cargador;2024 no cambia. La corrida primaria, receta, exposición, puente, semillas, criterios y presupuesto nativo permanecen iguales. Se conserva el sello anterior. No se deriva de un score y no agrega una variante de precio; es un control adverso separado, sin envíos.'
+    forum=f.post(body,'COD-S2-20261028-F3C-COMPLETO-CONTROL-PREVIO','F3c completo: control positivo no uniforme antes del aprendizaje destino')
+    dump(OUT/'evaluator_control_amendment.json',{'author':'Codex','utc':f.utc(),'code_sha256':sha(Path(__file__)),'previous_admission_sha256':sha(OUT/'evaluator_amendment1.json'),'primary_recipe_unchanged':True,'target_learning_not_started':True,'positive_control':'Double2023cost/perily onlywhere fixed loader index modulo3=0; no2024changes. Relative residual coefficients must materially change.','forum':forum,'new_submissions':0})
+    print(json.dumps({'control_admitted_before_target_learning':True,'code_sha256':sha(Path(__file__))}),flush=True)
 
 def amend():
     f.guard();assert not (OUT/'parameters.json').exists() and not (OUT/'target_started.json').exists()
@@ -54,6 +63,7 @@ def load_em(poison=False,positive=False):
     assert em.row_id.is_unique and set(em.year)=={2023,2024}
     if poison or positive:
         mask=em.year.eq(2024 if poison else 2023)
+        if positive:mask=mask&(np.arange(len(em))%3==0)
         for col in ['y']+[c for c in em if c.startswith('y_')]:em.loc[mask,col]=em.loc[mask,col]* (17 if poison else 2)+(123 if poison else 0)
     return em
 
@@ -252,5 +262,5 @@ def evaluate():
     print(json.dumps({'global':results['global'],'NB':results['new_business'],'gates':gates,'stress':stressfloors}),flush=True)
 
 if __name__=='__main__':
-    sys.stdout.reconfigure(encoding='utf8');p=argparse.ArgumentParser();p.add_argument('mode',choices=['seal','amend','predict','evaluate']);args=p.parse_args()
+    sys.stdout.reconfigure(encoding='utf8');p=argparse.ArgumentParser();p.add_argument('mode',choices=['seal','amend','admit_control','predict','evaluate']);args=p.parse_args()
     with threadpool_limits(limits=2):globals()[args.mode]()
