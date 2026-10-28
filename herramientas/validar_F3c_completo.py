@@ -188,7 +188,7 @@ def source_inputs(line,poison=False):
         del events;gc.collect()
     curves=read(ACTIVE/'curves_full.json');F={k:a.parse_curves(curves[k]) for k in ['inner','full']}
     return src,em,F,changed
-def train_line(line):
+def train_line_body(line):
     guard();assert read(OUT/'preflight.json')['checks']['all_passed'];assert line in LINES
     if HISTORY_ADMISSION.exists():assert read(OUT/'original_history_preflight.json')['all_passed']
     for tag,poison in [('baseline',False),('poison2024',True)]:
@@ -241,6 +241,33 @@ def train_line(line):
         del src,em,di,dv;gc.collect()
     attempts=[json.loads(z) for z in attempt_path(line).read_text().splitlines()];expected=read(HISTORY_ADMISSION)['expected_new_native_by_line'][line]+additional_interrupted(line) if HISTORY_ADMISSION.exists() else 20;assert len(attempts)==expected
     live('live_'+line,{'pid':os.getpid(),'line':line,'status':'complete','new_native_fits':len(attempts),'original_history':HISTORY_ADMISSION.exists()});dump(source_marker(line),{'utc':utc(),'line':line,'new_native_fits':len(attempts),'new_CDF_fits':0,'source2024_poison_replay_exact':True,'original_history':HISTORY_ADMISSION.exists()});print(json.dumps({'line_complete':line,'new_native_fits':len(attempts),'original_history':HISTORY_ADMISSION.exists()}),flush=True)
+
+def train_line(line):
+    # Per-line ownership prevents a sequential queue duplicating an independently
+    # launched line. Nothing in the native model or its arguments changes.
+    assert line in LINES;path=OUT/('source_lease_'+line+'.json');started=time.monotonic()
+    owner={'pid':os.getpid(),'created':psutil.Process().create_time(),'line':line,'utc':utc()};announced=False
+    while True:
+        if source_marker(line).exists():guard();return
+        try:
+            with path.open('x',encoding='utf8') as stream:json.dump(owner,stream);stream.flush();os.fsync(stream.fileno())
+            break
+        except FileExistsError:
+            try:old=read(path)
+            except json.JSONDecodeError:
+                time.sleep(.2);assert time.monotonic()-started<30,'Incomplete source lease; reconcile manually.';continue
+            alive=psutil.pid_exists(old['pid'])
+            if alive:
+                try:alive=abs(psutil.Process(old['pid']).create_time()-old['created'])<.1
+                except psutil.NoSuchProcess:alive=False
+            if not alive:
+                before=path.read_bytes();dump(OUT/('stale_source_lease_'+line+'_'+str(time.time_ns())+'.json'),{'utc':utc(),'owner':old,'confirmed_not_alive':True})
+                assert path.read_bytes()==before;path.unlink();continue
+            if not announced:print(json.dumps({'event':'wait_existing_line_owner','line':line,'owner_pid':old['pid']}),flush=True);announced=True
+            assert time.monotonic()-started<3600,'Finite source-lease wait expired.';time.sleep(5)
+    try:train_line_body(line)
+    finally:
+        if path.exists() and read(path)==owner:path.unlink()
 
 if __name__=='__main__':
     sys.stdout.reconfigure(encoding='utf8');arg=argparse.ArgumentParser();arg.add_argument('mode',choices=['freeze','preflight','admit_history','history_preflight','train']);arg.add_argument('--line',choices=LINES);args=arg.parse_args()
