@@ -104,7 +104,7 @@ def bridge():
     checks['all_passed']=all(checks.values());assert checks['all_passed'];dump(OUT/'bridge_verifier.json',{'utc':e.f.utc(),'checks':checks,'synthetic_counts':dict(e.COUNTS),'real_fits':0,'verifier_code_sha256':sha(Path(__file__))});print(json.dumps(checks))
 
 def verify():
-    e.guard();checks={};models=[]
+    e.guard();checks={};models=[];schemas={}
     for line in e.LINES:
         for family in ['N0','F1']:
             for seed in e.f.SEEDS:
@@ -113,8 +113,16 @@ def verify():
                 assert sha(e.f.ROOT/base['model'])==base['model_sha256'] and sha(e.f.ROOT/base['raw'])==base['raw_sha256']
                 expect={'motor':49,'buildings':41,'contents':42}[line]+(2 if family=='F1' else 0);assert len(base['columns'])==expect
                 model=e.f.lgb.Booster(model_file=str(e.f.ROOT/base['model']));assert list(model.feature_name())==base['columns'];del model
+                schemas[(line,family)]=base['columns']
                 models.append({'line':line,'family':family,'seed':seed,'features':expect,'rounds':base['rounds'],'reused':base['reused']})
     checks['all18_source_models_and18_replays_verified']=True
+    originals=read(OUT/'original18_source_schemas.json')['records'];assert len(originals)==18
+    for rec in originals:
+        path=R/rec['path'];assert sha(path)==rec['sha256']
+        with path.open(encoding='utf8') as stream:
+            names=next(line.strip().split('=',1)[1].split() for line in stream if line.startswith('feature_names='))
+        assert names==schemas[(rec['line'],rec['family'])]
+    checks['all18_original_production_feature_orders_match_temporal_family']=True
     checks['60_real_source_fits_recorded']=sum(len((OUT/('fit_attempts_'+line+'.jsonl')).read_text().splitlines()) for line in e.LINES)==60
     tr=pd.read_parquet(OUT/'training2023.parquet');te=pd.read_parquet(OUT/'predictions2024.parquet');pars=read(OUT/'parameters.json')['recipe'];replay=e.apply_recipe(te,pars)
     checks['saved_prediction_replay_exact']=all(np.array_equal(te[n],replay[n]) for n in e.NAMES)
