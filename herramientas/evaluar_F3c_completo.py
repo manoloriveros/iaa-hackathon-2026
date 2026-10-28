@@ -24,6 +24,8 @@ def kopt(y,mu):
 v.kopt=kopt
 
 def guard():
+    if f.HISTORY_ADMISSION.exists():
+        f.guard();assert sha(Path(__file__))==read(f.HISTORY_ADMISSION)['evaluator_code_sha256'];return
     f.guard();sealpath=OUT/'evaluator_implementation_correction.json'
     if not sealpath.exists():sealpath=OUT/'evaluator_control_amendment.json'
     if not sealpath.exists():sealpath=OUT/'evaluator_amendment1.json'
@@ -80,7 +82,7 @@ def source_raw(tag,family):
     for line in LINES:
         seeds=[]
         for seed in f.SEEDS:
-            rec=read(OUT/'source'/line/tag/f'{family}_seed{seed}'/'complete.json')
+            rec=read(f.source_folder(line,tag,family,seed)/'complete.json')
             assert sha(ROOT/rec['model'])==rec['model_sha256'] and sha(ROOT/rec['raw'])==rec['raw_sha256']
             raw=pd.read_parquet(ROOT/rec['raw']).set_index('row_id').raw
             seeds.append(raw)
@@ -193,7 +195,8 @@ def learn_recipe(tr):
 
 def predict():
     global ROLE
-    guard();assert all(read(OUT/(line+'_source_complete.json'))['source2024_poison_replay_exact'] for line in LINES)
+    guard();assert all(read(f.source_marker(line))['source2024_poison_replay_exact'] for line in LINES)
+    assert read(OUT/'original_history_preflight.json')['all_passed'] and read(OUT/'feature_value_parity_corrected_metadata.json')['all_passed']
     assert not (OUT/'parameters.json').exists()
     dump(OUT/'target_started.json',{'utc':f.utc(),'pid':os.getpid(),'evaluator_sha256':sha(Path(__file__))})
     em=load_em();raws={family:source_raw('baseline',family) for family in ['N0','F1']};raws['T2b']=a.t2b_raw()

@@ -114,7 +114,7 @@ def verify():
     for line in e.LINES:
         for family in ['N0','F1']:
             for seed in e.f.SEEDS:
-                base=read(OUT/'source'/line/'baseline'/f'{family}_seed{seed}'/'complete.json');replay=read(OUT/'source'/line/'poison2024'/f'{family}_seed{seed}'/'complete.json')
+                base=read(e.f.source_folder(line,'baseline',family,seed)/'complete.json');replay=read(e.f.source_folder(line,'poison2024',family,seed)/'complete.json')
                 for key in ['arguments_sha256','model_sha256','raw_sha256','rounds','source_center']:assert base[key]==replay[key],(line,family,seed,key)
                 assert sha(e.f.ROOT/base['model'])==base['model_sha256'] and sha(e.f.ROOT/base['raw'])==base['raw_sha256']
                 expect={'motor':49,'buildings':41,'contents':42}[line]+(2 if family=='F1' else 0);assert len(base['columns'])==expect
@@ -129,7 +129,12 @@ def verify():
             names=next(line.strip().split('=',1)[1].split() for line in stream if line.startswith('feature_names='))
         assert names==schemas[(rec['line'],rec['family'])]
     checks['all18_original_production_feature_orders_match_temporal_family']=True
-    checks['60_real_source_fits_recorded']=sum(len((OUT/('fit_attempts_'+line+'.jsonl')).read_text().splitlines()) for line in e.LINES)==60
+    admission=read(e.f.HISTORY_ADMISSION)
+    attempts=sum(len(path.read_text().splitlines()) for path in OUT.glob('fit_attempts_*.jsonl'))
+    checks['79_native_attempts_including18_wrong_pool_and1_interrupted']=attempts==admission['expected_total_native_attempts']==79
+    checks['new_corrected48_native_attempts']=sum(len(e.f.attempt_path(line).read_text().splitlines()) for line in e.LINES)==48
+    checks['original_F1_full_source_target_value_parity']=read(OUT/'original_history_preflight.json')['all_passed']
+    checks['original_N0_value_parity_with_corrected_metadata']=read(OUT/'feature_value_parity_corrected_metadata.json')['all_passed']
     tr=pd.read_parquet(OUT/'training2023.parquet');te=pd.read_parquet(OUT/'predictions2024.parquet');pars=read(OUT/'parameters.json')['recipe'];replay=e.apply_recipe(te,pars)
     checks['saved_prediction_replay_exact']=all(np.array_equal(te[n],replay[n]) for n in e.NAMES)
     manual=independent_recipe(te,pars);checks['complete_ultimate_pipeline_and_final_bridge_scalar_math']=all(np.allclose(te[n],manual[n],rtol=2e-13,atol=1e-8) for n in e.NAMES)

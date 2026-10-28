@@ -30,6 +30,14 @@ ORIGINAL_SHA='5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276'
 PUBLIC=ROOT/'Hackaton/Semana 2/Claude/mision017_20261025/final_info_3puntos.json'
 TRAIN_SHAPE=R/'src/semana2/lineas/mision017_20261025/exp26_20261026/m017/exp26/F3b_info.json'
 SEEDS=[11,12,13];LINES=['motor','buildings','contents']
+HISTORY_ADMISSION=OUT/'source_history_admission.json'
+
+def source_folder(line,tag,family,seed):
+    namespace='source_original_history' if family=='F1' and HISTORY_ADMISSION.exists() else 'source'
+    return OUT/namespace/line/tag/f'{family}_seed{seed}'
+
+def source_marker(line):return OUT/(line+('_original_history' if HISTORY_ADMISSION.exists() else '')+'_source_complete.json')
+def attempt_path(line):return OUT/(('fit_attempts_original_history_' if HISTORY_ADMISSION.exists() else 'fit_attempts_')+line+'.jsonl')
 def utc():return datetime.now(timezone.utc).isoformat()
 def dump(path,obj):
     encoded=json.dumps(v.clean(obj),ensure_ascii=False,indent=2,allow_nan=False)+'\n';path.parent.mkdir(parents=True,exist_ok=True)
@@ -86,7 +94,46 @@ def freeze():
     print(json.dumps({'registered':True,'plan_sha256':sha(PLAN),'native_budget':60,'synthetic_budget':4}),flush=True)
 def guard():
     assert sha(PLAN)==read(OUT/'registration.json')['plan_sha256']
-    for name,digest in read(PLAN)['sources'].items():assert sha(ROOT/name)==digest,name
+    adm=read(HISTORY_ADMISSION) if HISTORY_ADMISSION.exists() else None
+    for name,digest in read(PLAN)['sources'].items():
+        if adm and name==w.rel(Path(__file__)):digest=adm['source_code_sha256']
+        assert sha(ROOT/name)==digest,name
+    if adm:
+        assert adm['plan_sha256']==sha(PLAN)
+        for name,digest in adm['new_sources'].items():assert sha(ROOT/name)==digest,name
+
+def admit_history():
+    assert not HISTORY_ADMISSION.exists() and not (OUT/'target_started.json').exists() and not (OUT/'parameters.json').exists()
+    assert sha(PLAN)==read(OUT/'registration.json')['plan_sha256']
+    for name,digest in read(PLAN)['sources'].items():
+        if name!=w.rel(Path(__file__)):assert sha(ROOT/name)==digest,name
+    diagnosis=read(OUT/'F1_pool_diagnosis.json');assert diagnosis['counts_before_correction']=={'total_started_native':31,'F1_wrong_pool_started':18,'N0_started':13}
+    assert all(z['extra_in_prepared']==0 and set(z['missing_by_category'])=={'sin_fila'} for z in diagnosis['records'])
+    body='Codex. El cotejo integral de variables base pasó en109296filas destino2023/24 y5000por ramo fuente2023; F1 falló. El pool original conserva36reportes aceptados sin_fila emergentes y409desarrollados, omitidos por el adaptador de filas asignadas. Esto afecta conteos previos, no T0/exposición:24/2/4filas destino por motor/edificios/contenidos. Se detuvo el productor propio y la cola antes de todo ajuste o score destino. Conservo31intentos nativos:12N0completos reutilizables,18F1delpoolincorrecto no admisibles en la réplica, y1N0interno interrumpido sin checkpoint. Registro la corrección antes de ajustar: usar exactamente reportes aceptados de asignacion.parquet original, incluida sin_fila, siempre report_date<inception; duración desde primera póliza igual. No mover siniestros a etiquetas ni recalcular C0. F1 corregido irá en source_original_history; N0completo se reutiliza por argumentos/modelo/raw. Faltan48ajustes nativos para completar60útiles,79intentos totales incluida la versión fallida y el interrumpido; cuatro sintéticos separados. Exijo primero igualdad F1 en toda fuente2021–23 y destino2023/24 por búsqueda temporal independiente. Recetas/criterios/familia18/folds/curvas/semillas y entrega intactos. No envíos.'
+    forum=post(body,'COD-S2-20261028-F3C-POOL-HISTORIA-PREVIO','F3c: pool original de antecedentes, fallo conservado y corrección antes de puntuar')
+    paths=[LEGACY/'noche/salidas'/mk/'asignacion.parquet' for mk in ['s1','s2']]
+    dump(HISTORY_ADMISSION,{'author':'Codex','utc':utc(),'plan_sha256':sha(PLAN),'source_code_sha256':sha(Path(__file__)),'evaluator_code_sha256':sha(R/'herramientas/evaluar_F3c_completo.py'),'new_sources':{w.rel(p):sha(p) for p in paths},'forum':forum,
+        'definition':'Original accepted report pool including sin_fila; event before inception only; same original first observed inception duration. No claim amount from unassigned events enters y or C0.',
+        'require_original_history_parity_before_fit':True,'expected_new_native_by_line':{'motor':12,'buildings':16,'contents':20},'prior_native_attempts':31,'prior_completed_wrong_F1_fits':18,'prior_aborted_N0_inner':1,'expected_total_native_attempts':79,'expected_useful_native_fits':60,'new_C0':0,'new_submissions':0})
+    print(json.dumps({'original_history_admitted_before_fit':True,'remaining_native_fits':48,'preserved_wrong_pool_fits':18,'original_interrupted_fit':1}),flush=True)
+
+def history_preflight():
+    guard();assert HISTORY_ADMISSION.exists();records=[]
+    for line in LINES:
+        src,em,_,_=source_inputs(line)
+        for name,mk,frame in [('source','s1',src),('target','s2',em)]:
+            cut=2023 if mk=='s1' else 2024
+            old=pd.read_parquet(LEGACY/'noche/salidas'/mk/f'base_{line}.parquet',columns=['row_id','policy_id','period_start','year'],filters=[('year','<=',cut)]);old['period_start']=pd.to_datetime(old.period_start)
+            first=old.groupby('policy_id').period_start.min();query=old.set_index('row_id').loc[frame.row_id].reset_index()
+            events=pd.read_parquet(LEGACY/'noche/salidas'/mk/'asignacion.parquet',columns=['policy_id','report_date'],filters=[('line','==',line),('accepted','==',True)]);events['report_date']=pd.to_datetime(events.report_date)
+            mapping={p:np.sort(g.report_date.to_numpy('datetime64[ns]')) for p,g in events.groupby('policy_id')}
+            count=np.array([np.searchsorted(mapping.get(p,np.array([],dtype='datetime64[ns]')),np.datetime64(start,'ns'),side='left') for p,start in query[['policy_id','period_start']].itertuples(index=False,name=None)],float)
+            years=((query.period_start-query.policy_id.map(first)).dt.days/365.25).to_numpy()
+            checks={'accepted_report_count_exact':bool(np.array_equal(count,frame.f1_siniestros_previos.to_numpy())),'first_inception_duration_exact':bool(np.allclose(years,frame.f1_anios_observados.to_numpy(),rtol=0,atol=1e-12))}
+            records.append({'market':name,'line':line,'rows':len(frame),'years':sorted(frame.year.unique().tolist()),'checks':checks});assert all(checks.values()),records[-1]
+            del old,query,first,events,mapping;gc.collect()
+        del src,em;gc.collect()
+    dump(OUT/'original_history_preflight.json',{'author':'Codex','utc':utc(),'records':records,'all_passed':True,'real_fits':0,'new_submissions':0});print(json.dumps({'history_full_inputs_passed':True,'rows_checked':sum(z['rows'] for z in records)}),flush=True)
 def preflight():
     guard();checks={};rng=np.random.default_rng(71);X=pd.DataFrame({'x':rng.normal(size=120),'f1':np.tile([0.,1.,2.],40)})
     y=np.exp(.3*X.x.to_numpy()+.1*X.f1.to_numpy());pp=dict(objective='tweedie',tweedie_variance_power=1.5,num_leaves=3,min_data_in_leaf=5,learning_rate=.1,verbosity=-1,num_threads=2,seed=11,deterministic=True,force_row_wise=True)
@@ -122,13 +169,17 @@ def source_inputs(line,poison=False):
             for col in ['y']+['y_'+peril for peril in a.PERILS[line]]:frame.loc[future,col]=frame.loc[future,col]*17+123.
     src=src[src.year.le(2023)].reset_index(drop=True);assert src.groupby('address_id').fold.nunique().le(1).all()
     for name,frame in [('developed',src),('emerging',em)]:
-        events=pd.read_parquet(ACTIVE/'prepared'/f'{name}_claims.parquet',columns=['policy_id','line','report_date','accepted']);events=events[events.line.eq(line)]
+        if HISTORY_ADMISSION.exists():
+            mk='s1' if name=='developed' else 's2';events=pd.read_parquet(LEGACY/'noche/salidas'/mk/'asignacion.parquet',columns=['policy_id','report_date','accepted'],filters=[('line','==',line)])
+        else:
+            events=pd.read_parquet(ACTIVE/'prepared'/f'{name}_claims.parquet',columns=['policy_id','line','report_date','accepted']);events=events[events.line.eq(line)]
         n,years=history(frame,events);frame['f1_siniestros_previos']=n;frame['f1_anios_observados']=years
         del events;gc.collect()
     curves=read(ACTIVE/'curves_full.json');F={k:a.parse_curves(curves[k]) for k in ['inner','full']}
     return src,em,F,changed
 def train_line(line):
     guard();assert read(OUT/'preflight.json')['checks']['all_passed'];assert line in LINES
+    if HISTORY_ADMISSION.exists():assert read(OUT/'original_history_preflight.json')['all_passed']
     for tag,poison in [('baseline',False),('poison2024',True)]:
         src,em,F,changed=source_inputs(line,poison);inner=src.fold.ne(0).to_numpy();di=src[inner].reset_index(drop=True);dv=src[~inner].reset_index(drop=True)
         qi,qv,wi=a.completion(di,dv,line,F['inner'],'A1');qf,_,wf=a.completion(src,em,line,F['full'],'A1')
@@ -144,10 +195,11 @@ def train_line(line):
             del features,ev;gc.collect()
             baseparams=read(ACTIVE/'models/full'/f'{line}_receipt.json')['params']
             for seed in SEEDS:
-                params={**baseparams,'seed':seed};folder=OUT/'source'/line/tag/f'{family}_seed{seed}';folder.mkdir(parents=True,exist_ok=True)
+                params={**baseparams,'seed':seed};folder=source_folder(line,tag,family,seed);folder.mkdir(parents=True,exist_ok=True)
                 ah=v.digest(Xi,yi,oi+bi,Xv,yv,ov+bi,Xf,yf,of+bf,Xe,ci,cf,params,wi,wf)
                 complete=folder/'complete.json'
-                if complete.exists():assert read(complete)['arguments_sha256']==ah;continue
+                if complete.exists():
+                    rec=read(complete);assert rec['arguments_sha256']==ah;assert sha(ROOT/rec['model'])==rec['model_sha256'] and sha(ROOT/rec['raw'])==rec['raw_sha256'];continue
                 if family=='N0' and seed==11:
                     oldscope='replay_2024' if poison else 'full';old=ACTIVE/'models'/oldscope;rec=read(old/f'{line}_receipt.json')
                     assert rec['arguments_sha256']==ah,(line,tag,'N0_cached_arguments');assert sha(old/f'{line}.txt')==rec['model_sha256']
@@ -161,26 +213,26 @@ def train_line(line):
                 if roundfile.exists():
                     innerrec=read(roundfile);assert innerrec['arguments_sha256']==ah;rounds=innerrec['rounds']
                 else:
-                    with (OUT/('fit_attempts_'+line+'.jsonl')).open('a',encoding='utf8') as f:f.write(json.dumps({'utc':utc(),'tag':tag,'family':family,'seed':seed,'stage':'inner'})+'\n')
+                    with attempt_path(line).open('a',encoding='utf8') as f:f.write(json.dumps({'utc':utc(),'tag':tag,'family':family,'seed':seed,'stage':'inner'})+'\n')
                     bst=lgb.train(params,lgb.Dataset(Xi,label=yi,init_score=oi+bi),4000,valid_sets=[lgb.Dataset(Xv,label=yv,init_score=ov+bi)],callbacks=[lgb.early_stopping(400,verbose=False)])
                     rounds=max(1,bst.best_iteration);dump(roundfile,{'utc':utc(),'arguments_sha256':ah,'rounds':rounds});del bst;gc.collect()
                 assert psutil.virtual_memory().available>350*2**20,'Insufficient memory before full fit; resume this stage later'
-                with (OUT/('fit_attempts_'+line+'.jsonl')).open('a',encoding='utf8') as f:f.write(json.dumps({'utc':utc(),'tag':tag,'family':family,'seed':seed,'stage':'full'})+'\n')
+                with attempt_path(line).open('a',encoding='utf8') as f:f.write(json.dumps({'utc':utc(),'tag':tag,'family':family,'seed':seed,'stage':'full'})+'\n')
                 bst=lgb.train(params,lgb.Dataset(Xf,label=yf,init_score=of+bf),rounds)
                 center=float(np.log(np.average(np.exp(bst.predict(Xf,raw_score=True,num_threads=2)),weights=src.exposure.to_numpy().round(4))))
                 raw=bst.predict(Xe,raw_score=True,num_threads=2)-center;model=folder/'model.txt';bst.save_model(str(model));rawpath=folder/'raw.parquet';pd.DataFrame({'row_id':em.row_id.to_numpy(),'raw':raw}).to_parquet(rawpath,index=False)
                 rec={'utc':utc(),'arguments_sha256':ah,'reused':False,'model':w.rel(model),'raw':w.rel(rawpath),'model_sha256':sha(model),'raw_sha256':sha(rawpath),'rounds':rounds,'columns':list(Xf),'full_categories':cf,'source_center':center}
                 if poison:
-                    old=read(OUT/'source'/line/'baseline'/f'{family}_seed{seed}'/'complete.json')
+                    old=read(source_folder(line,'baseline',family,seed)/'complete.json')
                     for field in ['arguments_sha256','model_sha256','raw_sha256','rounds','source_center']:assert rec[field]==old[field],(line,family,seed,field)
                 dump(complete,rec);del bst,raw;gc.collect();print(json.dumps({'event':'source_complete','line':line,'tag':tag,'family':family,'seed':seed,'rounds':rounds}),flush=True)
             del Xi,Xv,Xf,Xe;gc.collect()
         del src,em,di,dv;gc.collect()
-    attempts=[json.loads(z) for z in (OUT/('fit_attempts_'+line+'.jsonl')).read_text().splitlines()];assert len(attempts)==20
-    live('live_'+line,{'pid':os.getpid(),'line':line,'status':'complete','new_native_fits':len(attempts)});dump(OUT/(line+'_source_complete.json'),{'utc':utc(),'line':line,'new_native_fits':len(attempts),'new_CDF_fits':0,'source2024_poison_replay_exact':True});print(json.dumps({'line_complete':line,'new_native_fits':len(attempts)}),flush=True)
+    attempts=[json.loads(z) for z in attempt_path(line).read_text().splitlines()];expected=read(HISTORY_ADMISSION)['expected_new_native_by_line'][line] if HISTORY_ADMISSION.exists() else 20;assert len(attempts)==expected
+    live('live_'+line,{'pid':os.getpid(),'line':line,'status':'complete','new_native_fits':len(attempts),'original_history':HISTORY_ADMISSION.exists()});dump(source_marker(line),{'utc':utc(),'line':line,'new_native_fits':len(attempts),'new_CDF_fits':0,'source2024_poison_replay_exact':True,'original_history':HISTORY_ADMISSION.exists()});print(json.dumps({'line_complete':line,'new_native_fits':len(attempts),'original_history':HISTORY_ADMISSION.exists()}),flush=True)
 
 if __name__=='__main__':
-    sys.stdout.reconfigure(encoding='utf8');arg=argparse.ArgumentParser();arg.add_argument('mode',choices=['freeze','preflight','train']);arg.add_argument('--line',choices=LINES);args=arg.parse_args()
+    sys.stdout.reconfigure(encoding='utf8');arg=argparse.ArgumentParser();arg.add_argument('mode',choices=['freeze','preflight','admit_history','history_preflight','train']);arg.add_argument('--line',choices=LINES);args=arg.parse_args()
     with threadpool_limits(limits=2):
         if args.mode=='train':train_line(args.line)
         else:globals()[args.mode]()

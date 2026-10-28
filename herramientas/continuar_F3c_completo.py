@@ -36,14 +36,16 @@ def main():
                 assert kernel.WaitForSingleObject(handle,0)==258,'Motor ended without a complete receipt; reconcile its tool output before resuming.'
                 time.sleep(10)
         finally:kernel.CloseHandle(handle)
+    original_history=(OUT/'source_history_admission.json').exists()
+    def marker(line):return OUT/(line+('_original_history' if original_history else '')+'_source_complete.json')
     for line in ['motor','buildings','contents']:
-        if (OUT/(line+'_source_complete.json')).exists():continue
+        if marker(line).exists():continue
         for attempt in range(5):
             if run('validar_F3c_completo.py','train','--line',line):break
             save(OUT/(line+'_resource_resume_'+str(attempt)+'.json'),{'utc':utc(),'reason':'Explicit pre-full-fit memory guard. Inner checkpoint preserved; no repeat of completed nativefits.','attempt':attempt})
             assert attempt<4,'Resource guards repeated; stop without altering recipe.'
             time.sleep(5)
-        assert (OUT/(line+'_source_complete.json')).exists()
+        assert marker(line).exists()
     if not (OUT/'parameters.json').exists():assert run('evaluar_F3c_completo.py','predict')
     assert (OUT/'target_controls.json').exists(),'Partial target run; manual reconciliation required.'
     if not (OUT/'results.json').exists():assert run('evaluar_F3c_completo.py','evaluate')
