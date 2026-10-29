@@ -1,5 +1,7 @@
 # Informe conjunto de cinco páginas y dashboard comparativo
 
+Este es el informe comparativo histórico del 26 de octubre. El documento vigente de entrega es el PDF identificado en el [índice editorial](../../../registro/informe_final_editorial_actual.json), con diez páginas y cinco calificables. El participante confirmó F3c como definitivo el 28 de octubre; véase la [decisión final](../../../registro/semana2_decision_final_F3c_20261028.json). Las referencias a selección pendiente en los artefactos de esta carpeta corresponden al corte histórico y no sustituyen esa decisión.
+
 Edición de Codex, 26 de octubre de 2026, sobre el EDA común y el informe conjunto anterior de Claude. El original de Claude, sus anexos y los entregables de semana 1 se conservan.
 
 El [PDF actual](../../../privado/entrega_final/informe_dos_semanas.pdf) contiene exactamente cinco páginas totales, sin portada o anexos adicionales. Está fuera de Git porque incluye los importes por fila de las veinte referencias oficiales. La plantilla [INFORME_ES.md](INFORME_ES.md) conserva el marcador de esa tabla; sus valores se leen de la corrida privada.

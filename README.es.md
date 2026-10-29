@@ -4,6 +4,8 @@ Soy Manuel Rodríguez, participante individual en el AI Hackathon IAA 2026. Los 
 
 ## Empieza por los notebooks
 
+El participante confirmó F3c como modelo definitivo de la semana 2 el 28 de octubre de 2026. Se conserva el CSV ya enviado. F3c-R no superó los criterios de robustez registrados; la elección de F3c no acredita superioridad privada ni aprobación de una tarifa operativa. Véanse la [decisión final](registro/semana2_decision_final_F3c_20261028.json) y el [cierre de la comparación](docs/semana2/F3C_REGULARIZADO_CIERRE_20261028.md).
+
 | Semana | Notebook | Qué reproduzco |
 | --- | --- | --- |
 | 1 | [Notebook del mercado desarrollado](notebooks/week1_developed_market.ipynb) | Preparación de siniestros, modelo S30 y calibración de nivel S41. |
@@ -17,7 +19,7 @@ Ambas recetas reprodujeron las huellas históricas de sus CSV finales en ejecuci
 
 AI Hackathon IAA 2026 · Parte 1, mercado establecido · Manuel Rodríguez, equipo individual (Kaggle: manoloriveros). La versión en inglés de esta página es el [README.md](README.md).
 
-La edición conjunta de ambas semanas está en [el informe de cinco páginas](privado/entrega_final/informe_dos_semanas.pdf), disponible localmente fuera de Git por sus veinte referencias comerciales, y en [el dashboard comparativo](docs/entrega/panel_analisis.html). [Fuentes, figuras y validación de esa edición](docs/entrega/informe_final/README.md). El recorrido de semana 1 que sigue se conserva como antecedente; la selección de semana 2 continúa abierta en el corte del 26 de octubre.
+El informe final vigente se identifica en el [registro editorial](registro/informe_final_editorial_actual.json): diez páginas, con las cinco primeras calificables, y F3c confirmado como definitivo. El PDF permanece local y fuera de Git por sus veinte referencias comerciales. El [informe comparativo de cinco páginas](privado/entrega_final/informe_dos_semanas.pdf), el [dashboard comparativo](docs/entrega/panel_analisis.html) y sus [fuentes y figuras](docs/entrega/informe_final/README.md) conservan el corte histórico del 26 de octubre. El recorrido de semana 1 que sigue se conserva como antecedente.
 
 El modelo predice, para cada periodo de póliza de 2025 en autos particulares, edificios y contenidos del hogar, el coste último esperado de los siniestros ocurridos en el periodo, neto de franquicias y recobros y sin siniestros rechazados. El modelo final es la Mezcla por peligro (S30 en el código y los recibos). En cada ramo mezcla modelos Tweedie del coste total con modelos de frecuencia × severidad por peligro y fija el nivel de 2025 con dos años fuera de muestra. La entrega final, S41, conserva ese modelo y solo calibra su nivel de 2025, con un factor por ramo (0,9962 autos, 1,0260 edificios, 1,0126 contenidos) leído de seis sondas al tablero público y aplicado con una regla de credibilidad fijada antes de puntuarlas; no se reentrenó nada. La IA participó en todas las etapas, sobre todo para contrastar posturas: tres líneas de trabajo publicaron sus hipótesis en un foro común antes de calcularlas, y un enjambre de agentes de validación auditó el proyecto cada seis horas. Los datos son sintéticos y los importes van en una unidad monetaria ficticia (CU).
 
@@ -43,7 +45,7 @@ Para hacer la revisión del participante, abre la [guía actual](docs/REVISION_P
 | Cómo se usó la IA y cómo se comprobó | [docs/entrega/USO_DE_IA_ES.md](docs/entrega/USO_DE_IA_ES.md) · [AI_WORKFLOW_EN.md](docs/entrega/AI_WORKFLOW_EN.md) |
 | Las cifras detrás de cada entregable | [docs/entrega/datos/cifras_entregables.json](docs/entrega/datos/cifras_entregables.json), con la ruta y el SHA-256 de cada fuente |
 | Expediente de trabajo: foro y registro de decisiones | [docs/expediente/](docs/expediente/) |
-| Adaptación de la semana 2 | [Informe conjunto y figuras](docs/entrega/informe_final/README.md); comparación al 26 de octubre, selección final pendiente |
+| Adaptación de la semana 2 | [Informe final vigente](registro/informe_final_editorial_actual.json); F3c definitivo por decisión del participante del 28 de octubre |
 
 ## Cómo se organizó el trabajo
 

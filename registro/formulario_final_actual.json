@@ -77,20 +77,22 @@
       "below_100000000_bytes": true
     },
     {
-      "purpose": "week2_declared_F3c_final_selection_pending",
+      "purpose": "week2_final_F3c_confirmed_by_participant",
       "path": "Hackaton/Repositorio_IAA2026/privado/semana2/claude_mision017_20261025/F3c_2025.csv",
       "bytes": 4351233,
       "sha256": "5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276",
       "matches_prior_record": true,
-      "below_100000000_bytes": true
+      "below_100000000_bytes": true,
+      "decision_index": "Hackaton/Repositorio_IAA2026/registro/semana2_decision_final_F3c_20261028.json"
     },
     {
       "purpose": "reviewed_report_es",
       "path": "Hackaton/Semana 2/Claude/informe_final_20261026/informe_final_IAA2026_es.pdf",
-      "bytes": 237574,
-      "sha256": "8ab0f8fb1ee225da6c5e0aba3196e58cb939bf0c03562734b21d0eea5a4c762f",
-      "matches_prior_record": true,
-      "below_100000000_bytes": true
+      "bytes": 244064,
+      "sha256": "ec28839f8a426d8f7d8aef8e54f3fe0a0df5ac3ae5a205fb08d5deee73fc103a",
+      "matches_prior_record": false,
+      "below_100000000_bytes": true,
+      "updated_editorial_record": true
     }
   ],
   "code_url": "https://github.com/manoloriveros/iaa-hackathon-2026",
@@ -98,7 +100,8 @@
     "Hackaton/Repositorio_IAA2026/registro/decision_final_S41_20261023.json",
     "Hackaton/Repositorio_IAA2026/registro/semana2_mision017_F3c_revision_entrega_v1.json",
     "Hackaton/Repositorio_IAA2026/registro/informe_final_editorial_actual.json",
-    "Hackaton/Repositorio_IAA2026/registro/guion_video_actual.json"
+    "Hackaton/Repositorio_IAA2026/registro/guion_video_actual.json",
+    "Hackaton/Repositorio_IAA2026/registro/semana2_decision_final_F3c_20261028.json"
   ],
   "rules_based_limits": {
     "graded_report_pages": 5,
@@ -107,7 +110,7 @@
   },
   "pending": [
     "confirm_contact_email_exact_team_name_and_full_name",
-    "confirm_week2_final_choice_and_Kaggle_selection",
+    "verify_existing_F3c_final_mark_in_Kaggle",
     "approve_final_report_considering_later_findings",
     "record_video_measure_duration_and_get_accessible_URL",
     "freeze_code_tag_and_ensure_jury_repository_access",
@@ -139,5 +142,7 @@
     "watcher_blocks": 0,
     "decision": "commit_tematico_documental_para_preservar_requisitos_de_entrega",
     "commit_receipt": "Hackaton/Repositorio_IAA2026/registro/formulario_final_commit_20261027.json"
-  }
+  },
+  "documentary_update_utc": "2026-10-29T02:32:36.948988+00:00",
+  "final_model_decision": "Hackaton/Repositorio_IAA2026/registro/semana2_decision_final_F3c_20261028.json"
 }

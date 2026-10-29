@@ -4,6 +4,8 @@ I am Manuel Rodríguez, an individual participant in the IAA AI Hackathon 2026. 
 
 ## Start with the notebooks
 
+On 28 October 2026, the participant confirmed **F3c as the definitive Week 2 model**, preserving the submitted CSV. F3c-R completed its registered comparison and failed the robustness criteria; both alternatives and adverse results remain archived. This final delivery choice does not establish private-leaderboard superiority or operational approval. See the [participant's decision](registro/semana2_decision_final_F3c_20261028.json) and the [completed comparison](docs/semana2/F3C_REGULARIZADO_CIERRE_20261028.md).
+
 | Week | Notebook | What I reproduce |
 | --- | --- | --- |
 | 1 | [Developed-market notebook](notebooks/week1_developed_market.ipynb) | Claims preparation, the S30 model and S41 level calibration. |
@@ -17,7 +19,7 @@ Both recipes reproduced their historical final CSV hashes in local, resumed runs
 
 IAA AI Hackathon 2026 · Part 1, established market · Manuel Rodríguez, individual team (Kaggle: manoloriveros). A Spanish copy of this page is in [README.es.md](README.es.md).
 
-The joint Spanish report now covers both weeks in [five total pages](privado/entrega_final/informe_dos_semanas.pdf), available locally outside Git because it includes the twenty reference prices. See the [comparison dashboard](docs/entrega/panel_analisis.html) and [sources, figures and checks](docs/entrega/informe_final/README.md). The Week 1 account below is preserved; the Week 2 final selection remains open at the 26 October cut.
+The current joint Spanish report has ten pages, with the first five graded; its [editorial index](registro/informe_final_editorial_actual.json) identifies the locally stored PDF and its checks. It records F3c as the definitive Week 2 model. The earlier [five-page comparative report](privado/entrega_final/informe_dos_semanas.pdf), [comparison dashboard](docs/entrega/panel_analisis.html) and [sources](docs/entrega/informe_final/README.md) retain their 26 October historical cut. Reports containing reference-level prices remain outside Git. The Week 1 account below is preserved.
 
 The model predicts, for every 2025 policy period in private motor, home buildings and home contents, the expected ultimate cost of the claims that occur in the period, net of excess and recoveries and excluding declined claims. The final model is the Per-peril blend (S30 in code and receipts). It blends Tweedie total-cost models with per-peril frequency × severity models in each line and sets the 2025 level with two out-of-sample years. The final submission, S41, keeps that model and calibrates only its 2025 level, with one factor per line (0.9962 motor, 1.0260 buildings, 1.0126 contents) read from six probe submissions to the public leaderboard and applied with a credibility rule fixed before they were scored; nothing was retrained. AI took part in every stage, mostly to challenge positions: three work lines posted their hypotheses to a shared forum before computing them, and a swarm of validation agents audited the project every six hours. The data are synthetic and amounts are in a fictional currency unit (CU).
 

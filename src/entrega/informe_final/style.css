@@ -1,0 +1,102 @@
+@font-face { font-family: "InterTT"; src: url("fonts/Inter-Regular.ttf"); font-weight: 400; font-style: normal; }
+@font-face { font-family: "InterTT"; src: url("fonts/Inter-Italic.ttf"); font-weight: 400; font-style: italic; }
+@font-face { font-family: "InterTT"; src: url("fonts/Inter-Medium.ttf"); font-weight: 500; font-style: normal; }
+@font-face { font-family: "InterTT"; src: url("fonts/Inter-SemiBold.ttf"); font-weight: 600; font-style: normal; }
+@font-face { font-family: "InterTT"; src: url("fonts/Inter-Bold.ttf"); font-weight: 700; font-style: normal; }
+@font-face { font-family: "LMMathTT"; src: url("fonts/LatinModernMath.ttf"); font-weight: 400; font-style: normal; }
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #ffffff; }
+body {
+  font-family: "InterTT", Inter, sans-serif;
+  font-size: 8.9pt;
+  line-height: 1.42;
+  color: #1b2a33;
+  font-feature-settings: "calt" 0, "liga" 0, "clig" 0;
+  font-variant-ligatures: none;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+.page {
+  width: 210mm; height: 297mm;
+  padding: 15mm 14mm 13mm 14mm;
+  position: relative; overflow: hidden;
+  break-after: page; page-break-after: always;
+}
+.page:last-child { break-after: auto; page-break-after: auto; }
+.content { height: 266mm; overflow: hidden; }
+.runhead {
+  position: absolute; top: 7.5mm; left: 14mm; right: 14mm;
+  display: flex; justify-content: space-between;
+  font-size: 7pt; letter-spacing: .04em; color: #6b7b85; text-transform: uppercase;
+  border-bottom: .5pt solid #d6dee3; padding-bottom: 1.6mm;
+}
+.foot {
+  position: absolute; bottom: 6.5mm; left: 14mm; right: 14mm;
+  display: flex; justify-content: space-between; font-size: 7pt; color: #6b7b85;
+}
+h1 { font-size: 20pt; line-height: 1.12; margin: 1mm 0 1.6mm; color: #174f59; font-weight: 700; letter-spacing: -.01em; }
+.sub { font-size: 10.2pt; color: #33505a; margin: 0 0 1.8mm; line-height: 1.32; }
+.byline { font-size: 7.6pt; color: #5b6b76; margin: 0 0 3.2mm; padding-bottom: 2.4mm; border-bottom: .6pt solid #d6dee3; }
+h2 { font-size: 12.2pt; color: #174f59; margin: 3.4mm 0 1.4mm; font-weight: 700; line-height: 1.2; }
+h2:first-child { margin-top: 0; }
+h3 { font-size: 9.6pt; color: #1b2a33; margin: 2.4mm 0 .8mm; font-weight: 650; }
+p { margin: 0 0 1.7mm; text-align: left; hyphens: auto; -webkit-hyphenate-limit-before: 4; -webkit-hyphenate-limit-after: 4; hyphenate-limit-chars: 9 4 4; }
+.lead { font-size: 9.4pt; line-height: 1.45; }
+.small { font-size: 7.8pt; color: #4a5a64; }
+.cap { font-size: 7.4pt; color: #5b6b76; line-height: 1.32; margin: .8mm 0 2mm; }
+.cap b { color: #1b2a33; font-weight: 650; }
+.kpis { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2.2mm; margin: 2.4mm 0 2.8mm; }
+.kpis3 { grid-template-columns: repeat(3, 1fr); }
+.kpi { border-top: 2pt solid #174f59; padding-top: 1.4mm; }
+.kpi .v { font-size: 15.5pt; font-weight: 700; color: #174f59; line-height: 1.05; letter-spacing: -.01em; }
+.kpi .l { font-size: 7.2pt; color: #4a5a64; line-height: 1.28; margin-top: .9mm; }
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+.cols-6040 { display: grid; grid-template-columns: 1.15fr .85fr; gap: 5mm; align-items: start; }
+.cols-6535 { display: grid; grid-template-columns: 1.3fr .7fr; gap: 5mm; align-items: start; }
+.cols-4060 { display: grid; grid-template-columns: .9fr 1.1fr; gap: 5mm; align-items: start; }
+table { border-collapse: collapse; width: 100%; font-size: 7.7pt; line-height: 1.3; margin: .6mm 0 1.6mm; }
+th { text-align: left; font-weight: 650; color: #174f59; border-bottom: .8pt solid #174f59; padding: .9mm 1.2mm .8mm; vertical-align: bottom; }
+td { border-bottom: .4pt solid #dfe5e9; padding: .85mm 1.2mm; vertical-align: top; }
+td.r, th.r { text-align: right; }
+tr.tot td { font-weight: 650; border-top: .6pt solid #9fb0ba; background: #f4f7f8; }
+.tight td, .tight th { padding: .55mm 1.1mm; }
+.flow { display: grid; grid-template-columns: 17mm repeat(6, 1fr); gap: 1.2mm; margin: 1.6mm 0 0; font-size: 7.1pt; line-height: 1.26; }
+.flow .st { background: #174f59; color: #fff; border-radius: 1.2mm; padding: 1.2mm 1.4mm; font-weight: 650; font-size: 7.6pt; position: relative; }
+.flow .st span { display: block; font-weight: 400; opacity: .82; font-size: 6.6pt; }
+.flow .rl { font-weight: 650; color: #174f59; font-size: 7.2pt; padding-top: 1.2mm; }
+.flow .c1 { background: #eef3f5; border-radius: 1mm; padding: 1.1mm 1.4mm; color: #22343e; }
+.flow .c2 { background: #e8f0f9; border-radius: 1mm; padding: 1.1mm 1.4mm; color: #1d3550; }
+.flow .band { grid-column: 2 / span 6; background: #f4f7f8; border: .5pt dashed #9fb0ba; border-radius: 1mm; padding: .9mm 1.6mm; text-align: center; color: #33505a; font-size: 7pt; }
+.box { background: #f3f7f8; border-left: 2.2pt solid #174f59; padding: 1.8mm 2.6mm 1.2mm; margin: 1.4mm 0 2mm; }
+.box h4 { margin: 0 0 .8mm; font-size: 8.6pt; color: #174f59; font-weight: 700; }
+.box p { margin-bottom: 1.1mm; }
+.defs { display: grid; grid-template-columns: 1fr 1fr; gap: 1.8mm 4mm; margin: 1mm 0 1.6mm; }
+.def { border-top: .8pt solid #b8c6cd; padding-top: 1mm; }
+.def h4 { margin: 0 0 .4mm; font-size: 8.4pt; color: #174f59; font-weight: 700; }
+.def p { margin: 0; font-size: 8.1pt; line-height: 1.36; }
+.formula { font-family: "LMMathTT", "Latin Modern Math", serif; font-size: 10pt; text-align: center; margin: 1mm 0 1.2mm; color: #1b2a33; }
+.proto { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.4mm; margin: 1.4mm 0 .6mm; font-size: 7pt; line-height: 1.25; }
+.proto div { border: .6pt solid #9fb0ba; border-radius: 1.2mm; padding: 1.2mm 1.3mm; background: #fff; position: relative; }
+.proto div b { display: block; color: #174f59; font-size: 7.5pt; margin-bottom: .4mm; }
+.proto div.h { background: #174f59; border-color: #174f59; color: #fff; }
+.proto div.h b { color: #fff; }
+.proto div:not(:last-child)::after { content: "›"; position: absolute; right: -1.25mm; top: 40%; color: #174f59; font-weight: 700; font-size: 10pt; transform: translateX(50%); }
+ul.lim { margin: .4mm 0 1.6mm; padding-left: 4mm; }
+ul.lim li { margin-bottom: .9mm; }
+.chip { display: inline-block; padding: 0 1.4mm; border-radius: 1mm; font-size: 7pt; font-weight: 650; }
+.ok { background: #e5f4e4; color: #23613a; }
+.alt { background: #f0efec; color: #55595c; }
+.no { background: #fbebeb; color: #8a2f2c; }
+.anx h1 { font-size: 15pt; }
+.refs p.ref { margin: 0 0 .9mm; padding-left: 5mm; text-indent: -5mm; }
+.mono { font-family: "DejaVu Sans Mono", monospace; font-size: 7.1pt; }
+.rule { border-top: .6pt solid #d6dee3; margin: 2mm 0 1.6mm; }
+a { color: #174f59; text-decoration: none; }
+
+math[display="block"] { font-family: "LMMathTT", "Latin Modern Math", serif; font-size: 11.5pt; margin: 1.2mm 0 1.4mm; }
+math { font-family: "LMMathTT", "Latin Modern Math", serif; }
+table.prim { font-size: 7pt; line-height: 1.15; }
+table.prim td, table.prim th { padding: .2mm .9mm; }
+
+.gloss { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2mm 3.5mm; margin: 0 0 2.2mm; padding: 1.8mm 2.4mm; background: #f3f7f8; border-radius: 1mm; font-size: 7.4pt; line-height: 1.3; color: #22343e; }
+.gloss b { color: #174f59; font-weight: 600; margin-right: .8mm; }
