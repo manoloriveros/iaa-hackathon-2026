@@ -29,7 +29,7 @@ Las rutas siguientes se resuelven desde `C:/dev/Hakaton`. Sus tamaños y hashes 
 | --- | --- | --- |
 | Predicción semana 1 | `Hackaton/Repositorio_IAA2026/privado/envios_S41_S42_20261022/S41_riesgo_ultimo.csv` | 13.014.667 bytes; coincide con la huella de la decisión final S41. |
 | Predicción semana 2 | `Hackaton/Repositorio_IAA2026/privado/semana2/claude_mision017_20261025/F3c_2025.csv` | 4.351.233 bytes; SHA intacto. Elección definitiva confirmada por el participante; no se modificó la selección en la interfaz de Kaggle en esta actualización. |
-| Informe revisado | `Hackaton/Semana 2/Claude/informe_final_20261026/informe_final_IAA2026_es.pdf` | 244.064 bytes; edición del cierre del 28 de octubre con la decisión F3c y el contraste F3c-R. Diez páginas en total y cinco calificables. |
+| Informe revisado | `Hackaton/Semana 2/Claude/informe_final_20261026/informe_final_IAA2026_es.pdf` | 235.087 bytes; revisión técnica del 29 de octubre centrada en modelo y validaciones, con F3c definitivo. Diez páginas en total y cinco calificables. |
 | Guion español | `Hackaton/Repositorio_IAA2026/docs/entrega/video/GUION_VIDEO_ES.md` | Guion existente; objetivo de 4:45. La grabación, su duración real y el enlace siguen pendientes según su registro. |
 | Código | [manoloriveros/iaa-hackathon-2026](https://github.com/manoloriveros/iaa-hackathon-2026) | URL existente; privado según la política del proyecto. Acceso del jurado y publicación posterior al cierre pendientes de comprobación. |
 
@@ -37,7 +37,7 @@ Las rutas siguientes se resuelven desde `C:/dev/Hakaton`. Sus tamaños y hashes 
 
 1. Confirmar correo, nombre exacto del equipo y nombre completo. Google avisa que el nombre, correo y foto de la cuenta se registrarán al subir archivos y enviar el formulario.
 2. La elección de semana 2 está cerrada en F3c por decisión del participante del 28 de octubre. Conciliar los dos CSV con las marcas finales de Kaggle y con el modelo descrito en informe y video. Esta actualización documental no acciona la interfaz de Kaggle.
-3. Revisar la versión final del informe. El PDF incorpora la decisión definitiva y el resultado adverso de F3c-R en sus cinco primeras páginas, sin atribuir aprobación operativa ni superioridad privada a la elección.
+3. Revisar la versión final del informe. Las cinco primeras páginas explican el problema, la arquitectura, las decisiones metodológicas, las validaciones y las primas comerciales; conservan el contraste adverso de F3c-R y el alcance de la evidencia.
 4. Grabar el video, medir la duración y obtener una URL que abra el jurado. Usar un alojamiento que permita consultar el video mediante el enlace y comprobar el acceso desde una sesión sin iniciar, si esa es la modalidad elegida. La plataforma y el tipo de visibilidad no están prescritos en la pantalla.
 5. Cerrar el código de ambas semanas, crear la etiqueta final y documentar su commit en README o en la documentación de entrega, porque el formulario solo ofrece una URL para el código. Seguir [la guía de control de versiones](../CONTROL_DE_VERSIONES.md); el formulario no pide subir ZIP ni bundle.
 6. Cargar un CSV por semana y un informe, pegar los dos enlaces y revisar que las tres cargas terminen sin error. No sustituir el archivo de riesgo por la tabla de primas comerciales.

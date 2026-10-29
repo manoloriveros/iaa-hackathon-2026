@@ -146,7 +146,7 @@ def escalera_publico():
 
 # ---------------------------------------------------------------- figura 7 (hueco ~284 px)
 def prevision_medido():
-    grupos = [("Calibraciones con sondas", [("Nivel por ramo, parte 1", .130158, .130158, .130158, .13016),
+    grupos = [("Calibración controlada", [("Nivel por ramo, parte 1", .130158, .130158, .130158, .13016),
                                            ("Nivel revisado, parte 1", .13033, .13033, .13033, .13033),
                                            ("Forma por ramo, parte 1", .13048, .13048, .13048, .13048),
                                            ("Nivel global", .15948, .15948, .15948, .15948),
@@ -267,8 +267,8 @@ def reservas():
         b.append(t(522, y + 3.5, "Incertidumbre material" if mat else "Acotado", FS_S, INK if mat else QUIET, "start", 650 if mat else 400))
         b.append(t(w, y + 3.5, cam, FS_S, QUIET, "end"))
     h = yb + 30
-    leg = (f'<rect x="{xa}" y="{h-11}" width="16" height="8" fill="{MUTED_SOFT}"/>' + t(xa + 20, h - 4, "Rango que admite F3c (con sondas)", FS_S, QUIET) +
-           f'<rect x="{xa+190}" y="{h-11}" width="16" height="8" fill="{MUTED}"/>' + t(xa + 210, h - 4, "Rango sin sondas", FS_S, QUIET) +
+    leg = (f'<rect x="{xa}" y="{h-11}" width="16" height="8" fill="{MUTED_SOFT}"/>' + t(xa + 20, h - 4, "Rango con nivel recalibrado", FS_S, QUIET) +
+           f'<rect x="{xa+190}" y="{h-11}" width="16" height="8" fill="{MUTED}"/>' + t(xa + 210, h - 4, "Rango con nivel fijo", FS_S, QUIET) +
            line(xa + 310, h - 7, xa + 327, h - 7, ACCENT, 'stroke-width="3"') + t(xa + 332, h - 4, "Estimación con los datos (IC90)", FS_S, QUIET))
     return svg(w, h, "".join(b) + leg, "Acreditación de reservas para F3c")
 
@@ -326,6 +326,6 @@ def flujo_ia():
     b.append(line(344,78,344,84,AXIS))
     box(0,85,330,29,'Controles y tableros de revisión','datos, métricas, trazabilidad y alertas')
     b.append(t(344,104,'→',16,BRAND,'middle',600))
-    box(358,85,330,29,'Mi decisión y autorización','aceptar, rechazar o continuar con límites',BRAND,'#ffffff')
-    b.append(t(344,129,'Entrega autorizada y registrada · revisión propia con IA',9,QUIET,'middle'))
-    return svg(688,133,''.join(b),'Líneas de IA comparten evidencia en un foro; controles y tableros apoyan mi decisión y autorización')
+    box(358,85,330,29,'Evaluación de resultados','contrastes, correcciones y selección',BRAND,'#ffffff')
+    b.append(t(344,129,'Receta y resultados trazables · supervisión continua del participante',9,QUIET,'middle'))
+    return svg(688,133,''.join(b),'Hipótesis, modelos y contrastes con IA, controles y evaluación técnica de resultados')

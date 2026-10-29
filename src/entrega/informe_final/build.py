@@ -8,7 +8,7 @@ BASE = Path(__file__).parent
 CSV = BASE / "prima_comercial_F3c_20ref.csv"
 OUT_HTML = BASE / "informe_final_es.html"
 OUT_PDF = BASE / "informe_final_es.pdf"
-anexos.SHAS[1] = ("final_creible, parte 2", "1a003d8682f1…", "construir_final.py con los recibos de las sondas")
+anexos.SHAS[1] = ("final_creible, parte 2", "1a003d8682f1…", "construir_final.py con los recibos de calibración")
 
 
 def es(v, d=2):

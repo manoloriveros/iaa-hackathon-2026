@@ -1,0 +1,53 @@
+{
+  "id": "INFORME-REVISION-TECNICA-20261029",
+  "utc": "2026-10-29T14:12:11.365985+00:00",
+  "author_editor": "Codex",
+  "request_owner": "participante",
+  "path_base": "workspace_root",
+  "status": "PDF_tecnico_reescrito_y_verificado",
+  "request_scope": "Reorientar el informe hacia problema, modelo, herramientas de IA, decisiones metodológicas y validaciones; resolver ocho anotaciones del PDF.",
+  "comments_resolved": {
+    "1": "Se elimina al 26 de octubre del valor público de F3c; queda identificado como modelo definitivo.",
+    "2": "Calibración mediante factores controlados, relación Tweedie y credibilidad, conservando su uso de información pública.",
+    "3": "Supervisión continua y revisión cruzada por modelos y agentes, con controles separados; se retira la frase repetida sobre revisión profesional.",
+    "4": "Vocabulario de calibración técnica en texto, diagramas y anexos.",
+    "5": "Se elimina el glosario de primera página.",
+    "6": "Se sustituye el relato de decisión/autorización por decisiones metodológicas y validación.",
+    "7": "Definiciones compactadas en objetivo de estimación y diseño de datos.",
+    "8": "Se conserva la consecuencia de la métrica y su fórmula."
+  },
+  "structure": [
+    "Problema actuarial y enfoque de solución",
+    "Objetivo, datos, controles y coste último",
+    "Arquitectura, transferencia y calibración",
+    "Validación, uso de IA y contraste F3c-R",
+    "Prima comercial, interpretación y solución final"
+  ],
+  "model": "F3c",
+  "model_changed": false,
+  "pdf": "Hackaton/Semana 2/Claude/informe_final_20261026/informe_final_IAA2026_es.pdf",
+  "pdf_sha256": "4ba664b536436020fe15eab460edaea0dd96235735e78935844d9cc325b070a5",
+  "pdf_bytes": 235087,
+  "run": "Hackaton/Repositorio_IAA2026/privado/revision_tecnica_informe_20261029",
+  "verification": "Hackaton/Repositorio_IAA2026/privado/revision_tecnica_informe_20261029/verificacion.json",
+  "graded_pages": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "total_pages": 10,
+  "numerical_evidence_preserved": true,
+  "external_human_review_claimed": false,
+  "private_performance_claimed": false,
+  "tex_text_synchronized": true,
+  "tex_compiled": false,
+  "tex_graphics_regenerated": false,
+  "new_training": false,
+  "new_predictions": false,
+  "new_submission": false,
+  "publication": false,
+  "forum_comment_id": "COD-S2-20261029-INFORME-ENFOQUE-TECNICO",
+  "forum_receipt": "Hackaton/Repositorio_IAA2026/privado/revision_tecnica_informe_20261029/foro_recibo.json"
+}
