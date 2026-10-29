@@ -1,0 +1,122 @@
+{
+  "id": "INFORME-FINAL-REVISION-CIERRE-20261029",
+  "utc": "2026-10-29T19:49:46.684626+00:00",
+  "author_editor": "Codex",
+  "voice_owner": "Manuel Rodríguez",
+  "original_author": "Claude y ediciones según registros",
+  "path_base": "workspace_root",
+  "status": "PDF_espanol_actualizado",
+  "scope": "Revisión final de claridad, coherencia, arquitectura de F3c y aporte de IA en las cinco páginas principales.",
+  "pdf": "Hackaton/Semana 2/Claude/informe_final_20261026/informe_final_IAA2026_es.pdf",
+  "delivery_copy": "Hackaton/Entrega_final/01_Para_entregar/Informe_final_ES.pdf",
+  "pdf_sha256": "70d0e9e1edd459e4190a57aae1a8074fd69afc730a8aab2c4b9afb3fc66523a2",
+  "previous_pdf_sha256": "afcaace72423279451efa1b4484b81b403fadc970a1afb842154ae597d933d70",
+  "pdf_bytes": 227885,
+  "run": "Hackaton/Repositorio_IAA2026/privado/informe_cierre_20261029",
+  "verification": "Hackaton/Repositorio_IAA2026/privado/informe_cierre_20261029/verificacion.json",
+  "layout": "Hackaton/Repositorio_IAA2026/privado/informe_cierre_20261029/maquetacion.json",
+  "model": "F3c",
+  "model_changed": false,
+  "model_sha256": "5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276",
+  "total_pages": 10,
+  "graded_pages": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "changed_pages": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "visual_review_pages": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "unchanged_pages": [
+    1,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "changes": [
+    "Página 2: símbolos de la fórmula y celda por ramo y tipo de negocio explicados junto al cálculo.",
+    "Página 3: media geométrica de A1, alcance del OOF para árboles y corrección por seis comparaciones aclarados.",
+    "Página 4: ejemplos de IA reformulados con efecto verificable; 36.408 se identifica como total de grupos; finalidad de F3c-R y carácter local de su comparación explícitos.",
+    "Página 5: P y R identifican prima comercial y prima de riesgo."
+  ],
+  "checks": {
+    "only_documentary_edits": true,
+    "all_numerical_tokens_preserved": true,
+    "model_source_pins_unchanged": true,
+    "all_tables_preserved_except_OOF_explanation": true,
+    "all_figures_and_formulas_identical": true,
+    "unchanged_pages_HTML_and_PDF_text_identical": true,
+    "model_and_commercial_CSV_unchanged": true,
+    "layout_and_fonts_pass": true,
+    "typography_unchanged": true,
+    "first_person_preserved": true
+  },
+  "review_matrix": [
+    {
+      "page": 1,
+      "focus": "Problema, cambio de cartera, circuito de IA y criterio de selección",
+      "finding": "Conservado: objetivo claro, uso real de IA y aplicación futura distinguida, fallo de protección declarado."
+    },
+    {
+      "page": 2,
+      "focus": "Objetivo/exposición, disponibilidad temporal, coste último y fórmula",
+      "finding": "Se explican y y μ junto a la fórmula y se identifica cada celda por ramo y tipo de negocio; reservas y temporalidad conservan límites."
+    },
+    {
+      "page": 3,
+      "focus": "Arquitectura exacta y alcance de los contrastes",
+      "finding": "Media geométrica de A1 contrastada con código; OOF explicado por exclusión del grupo en el ajuste de árboles; bandas ajustadas por seis comparaciones. Calibración pública y aprendizaje histórico diferenciados."
+    },
+    {
+      "page": 4,
+      "focus": "Validaciones, comparación F3c-R e impacto de la IA",
+      "finding": "Se aclara el propósito de regularizar y la referencia local de D²; 36.408 es el total de grupos, no los grupos favorables. Casos de IA conservan artefacto, comprobación y efecto."
+    },
+    {
+      "page": 5,
+      "focus": "Prima comercial, límites y conclusión",
+      "finding": "P y R identificados en el texto; tabla, gasto fijo, total y elección F3c intactos. Privado pendiente, sin promesa de rendimiento."
+    }
+  ],
+  "source_pins": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/reproduccion_cadena.py",
+      "sha256": "4cd5a7ae507a4c8719f03b43fcf4d4390e222a1faf0039f16e1fa49f86e4063c"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/semana2_F3c_regularizado_plan.json",
+      "sha256": "fcd5793980d241f781d492de9f595b3c7b47470f0d18eb99442d8c7f1af9088c"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/F3C_A1_MEZCLA_PROTEGIDAS_Y_ESCENARIOS.md",
+      "sha256": "d4bf21c95c5d68d33e3f6c4455ebe691a0c2d0b3a0abf428241f89d15cfdd89f"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/F3C_REGULARIZADO_CIERRE_20261028.md",
+      "sha256": "62cc900a28fc0c6ced666ced116116bdc5cea7500c8aa16ac0fa94767502f1db"
+    }
+  ],
+  "tex_text_synchronized": true,
+  "tex_compiled": false,
+  "new_training": false,
+  "new_inference": false,
+  "new_model_validation": false,
+  "new_submission": false,
+  "publication": false,
+  "forum_comment_id": "COD-S2-20261029-INFORME-REVISION-FINAL",
+  "forum_receipt": "Hackaton/Repositorio_IAA2026/privado/informe_cierre_20261029/foro_recibo.json"
+}

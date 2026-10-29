@@ -34,9 +34,9 @@ P2 = """
 <p>Excluí el número de contactos con atención al cliente porque no tenía fecha y se asociaba fuertemente con siniestros del mismo periodo: podía incorporar información posterior a la contratación. También excluí el resultado de renovación, presente solo en entrenamiento, y usé clima histórico en lugar del observado en 2025.</p>
 <p>Las tablas de clientes y viviendas no indican cuándo se actualizó cada atributo. Supuse que eran conocidos al cotizar, aunque no pude comprobarlo en todos los campos. Contrasté el modelo entre años y separé grupos de cliente y dirección. El ajuste final con resultados públicos de 2025 se describe por separado en la página 3.</p>
 <div class="box"><h4>Una consecuencia de la métrica que guió todo el proyecto</h4>
-<p>El factor que, multiplicado por todas las predicciones de un grupo, minimiza la desviación Tweedie 1,5 es</p>
+<p>Con y como coste observado y μ como predicción, el factor óptimo del grupo para Tweedie 1,5 es</p>
 <math display="block"><msup><mi>k</mi><mo>*</mo></msup><mo>=</mo><mfrac><mrow><mo>∑</mo><mo stretchy="false">(</mo><mi>y</mi><mo>/</mo><msqrt><mi>μ</mi></msqrt><mo stretchy="false">)</mo></mrow><mrow><mo>∑</mo><msqrt><mi>μ</mi></msqrt></mrow></mfrac></math>
-<p>Optimiza la desviación para unas predicciones dadas y puede diferir del cociente entre costes y predicciones totales. Lo apliqué por ramo y por celda. El recálculo con una implementación separada detectó y corrigió un script que elevaba el factor al cuadrado antes del envío.</p><p>Fuera del concurso necesitaría experiencia comparable del bloque adquirido para fijar el nivel. La tarifa histórica sugería +13 %, pero empeoró el backtest entre años; no la considero sustituto de la calibración.</p></div><h2>Preparación y controles de calidad</h2>
+<p>Optimiza la desviación para unas predicciones dadas y puede diferir del cociente entre costes y predicciones totales. Lo apliqué por ramo y por celda (ramo × nuevo/renovación). Un recálculo separado detectó un factor elevado al cuadrado; lo corregí antes del envío.</p><p>Fuera del concurso necesitaría experiencia comparable del bloque adquirido para fijar el nivel. La tarifa histórica sugería +13 %, pero empeoró el backtest entre años; no la considero sustituto de la calibración.</p></div><h2>Preparación y controles de calidad</h2>
 <p>Conservé los originales con huellas SHA-256 y apliqué las correcciones en capas derivadas reversibles. La preparación de la primera semana se contrastó con código separado: 41 de 41 comprobaciones. En la segunda se añadieron 74 controles. Las correcciones siguientes afectan directamente a los cruces, las tasas o las variables del modelo.</p>
 <table class="tight">
  <tr><th style="width:7%">Semana</th><th style="width:40%">Hallazgo</th><th class="r" style="width:13%">Filas</th><th>Tratamiento</th></tr>
@@ -67,11 +67,11 @@ P3 = """
 <p>Para los 209.063 periodos emergentes de 2025, aproveché las variables comunes y la mayor historia del desarrollado. En 2023, el contraste por cliente dio D² de 0,068 (tasa por ramo), 0,080 (GLM local), 0,083 (boosting local) y 0,121 (transferencia). Es evidencia histórica, anterior a corregir toda la cadena.</p>
 <p>En la apertura registrada de 2024, la transferencia ganó +0,049 frente a la tasa por ramo (banda por seis comparaciones: +0,027 a +0,073). Modifiqué la salvaguarda de negocio nuevo después de conocer su fallo (pág. 1); trato los contrastes posteriores de 2024 como desarrollo adaptativo.</p>
 <h3>F3c: dos bases y cinco pasos de ajuste</h3>
-<p>Combino T2b y A1, modelos LightGBM Tweedie 1,5 por ramo. T2b usa la curva de reporte del desarrollado; A1, la de ambos mercados. A1 incorpora historia previa F1, promedia predicciones logarítmicas de las semillas 11, 12 y 13 y recupera el total por ramo de su referencia sin F1. Ambas bases ya incluyen la exposición del periodo.</p>
+<p>Combino T2b y A1, modelos LightGBM Tweedie 1,5 por ramo. T2b usa la curva de reporte del desarrollado; A1, la de ambos mercados. A1 incorpora historia previa F1, combina por media geométrica las predicciones de las semillas 11, 12 y 13 y recupera el total por ramo de su referencia sin F1. Ambas bases ya incluyen la exposición del periodo.</p>
 <table class="tight architecture">
 <tr><th style="width:19%">Orden</th><th style="width:49%">Qué aplico a la predicción</th><th>Con qué información</th></tr>
 <tr><td>1. Mezcla y nivel</td><td>Promedio aritmético T2b/A1, 50/50; factor global g = 1,187658.</td><td>Fuente 2021–2024; nivel local 2023–2024 y calibración pública.</td></tr>
-<tr><td>2. Historial (F2)</td><td>Bonificación de autos → siniestros previos (0, 1, 2+) → exponente 0,9 en autos renovación → razón local de nivel.</td><td>T2b fuera de fold (OOF), 2023–2024; credibilidad n/(n + 300).</td></tr>
+<tr><td>2. Historial (F2)</td><td>Bonificación de autos → siniestros previos (0, 1, 2+) → exponente 0,9 en autos renovación → razón local de nivel.</td><td>T2b OOF: árboles sin el grupo evaluado, 2023–2024; credibilidad n/(n + 300).</td></tr>
 <tr><td>3. Nivel y dispersión</td><td>Exponentes contraídos en negocio nuevo y razones locales; nivel por ramo × nuevo/renovación. Base final_creible.</td><td>Respuesta pública, moderada por credibilidad; constantes congeladas.</td></tr>
 <tr><td>4. Factores propios</td><td>Género en autos/contenidos → teletrabajo en contenidos → marketing en contenidos. Contracción logarítmica, K = 300.</td><td>Residuos T2b 2023–2024 tras F2 y su transformación de forma.</td></tr>
 <tr><td>5. Nivel residual</td><td>Razón del óptimo Tweedie después/antes de factores, igual peso por año → F3c: 209.063 filas, seis decimales.</td><td>2023: T2b; 2024: promedio T2b/A1/mezcla. Sin etiquetas de 2025.</td></tr>
@@ -86,7 +86,7 @@ P3 = """
 <tr><td>Curva de ambos mercados</td><td>0,12092 / 0,12335</td><td>+0,00243</td><td>[+0,00072; +0,00429]</td></tr>
 <tr><td>Mezcla fija 50/50</td><td>0,12353 / 0,12590</td><td>+0,00237</td><td>[+0,00066; +0,00423]</td></tr>
 </table>
-<p class="cap">Bandas al 99,17 %, familia de seis; 10.000 réplicas por grupos, condicionadas a modelos aprendidos, sin repetir ajuste ni búsqueda. Las bases comparten etiquetas; no son confirmaciones independientes. La curva combinada usa una semilla y menos variables: no equivale a toda la producción de tres semillas. Precisión completa en el registro.</p>
+<p class="cap">Bandas al 99,17 %, ajustadas por seis comparaciones; 10.000 réplicas por grupos, condicionadas a modelos aprendidos, sin repetir ajuste ni búsqueda. Las bases comparten etiquetas; no son confirmaciones independientes. La curva combinada usa una semilla y menos variables: no equivale a toda la producción de tres semillas. Precisión completa en el registro.</p>
 <p>El límite inferior supera +0,0005, pero renovación explica el 98,09–99,39 % del aporte. Con composición de 2025, la mezcla gana +0,00099 (IC95: −0,00290 a +0,00476); las tres bandas cruzan cero. Concluyo mejora histórica global, con estabilidad de negocio nuevo aún incierta.</p>
 """
 
@@ -107,7 +107,7 @@ P4 = """
 <tr><td>Validación</td><td>Detectó aprendizaje fuera de ámbito; reconstruyó preparación, completitud, categorías y ajustes por partición.</td><td>Etiquetas retenidas alteradas: aprendizaje y predicciones iguales. La réplica incompleta se rechazó y reconstruyó antes de evaluar.</td></tr>
 <tr><td>Controles y reproducción</td><td>Corrigió controles que anunciaban éxito con archivos faltantes e integró recetas y comparadores para reconstruir el CSV.</td><td>Paquete de semana 1, v1.2: 45 casos sintéticos, 36 adversos. F3c: CSV idéntico desde originales, con diferencias intermedias conservadas.</td></tr>
 </table>
-<p class="cap">Con Claude y Codex contrasté código, derivaciones y resultados bajo mi seguimiento continuo. Otros controles corrigieron el ruido público frente a todo el test (semana 1, mejor privado frente a la variante) y el nulo de cardinalidad insuficiente: retiré aseguradora previa y ocupación. Registros, herramientas y código: anexos E–G.</p>
+<p class="cap">Con Claude y Codex contrasté código y resultados bajo mi seguimiento continuo. Revisé el ruido público frente a la parte no vista del test: cambió la elección de la semana 1 y mejoró su resultado privado frente a la variante. También corregí el número de categorías del contraste aleatorio y retiré aseguradora previa y ocupación como factores. Evidencia: anexos E–G.</p>
 <h3>Negocio nuevo e influencia de pocos grupos</h3>
 <table class="tight result-table">
 <tr><th>Receta protegida</th><th>Negocio nuevo: Δ / IC95</th><th>Δ autos nuevo</th><th>Δ sin 37 grupos favorables</th></tr>
@@ -115,11 +115,11 @@ P4 = """
 <tr><td>Curva de ambos mercados</td><td>+0,00037<br>[−0,00300; +0,00392]</td><td>−0,00088</td><td>+0,00013</td></tr>
 <tr><td>Mezcla 50/50</td><td>+0,00027<br>[−0,00327; +0,00393]</td><td>−0,00103</td><td>+0,00006</td></tr>
 </table>
-<p class="cap">Las tres bases fallan por el límite inferior; solo la curva combinada cumple el piso puntual de autos nuevo (−0,001). Retirar retrospectivamente 37, 42 y 39 de 36.408 grupos favorables anula sus ganancias. Negocio nuevo es el primer año de póliza, no una dirección nunca vista. Los umbrales son del proyecto.</p>
+<p class="cap">Las tres bases fallan por el límite inferior; solo la curva combinada cumple el piso puntual de autos nuevo (−0,001). Retirar retrospectivamente los 37, 42 y 39 grupos más favorables, de 36.408 en total, anula sus ganancias. Negocio nuevo es el primer año de póliza, no una dirección nunca vista. Los umbrales son del proyecto.</p>
 <h3>Qué cambia al tensar reservas y cola</h3>
 <p>Revisé 50 escenarios: 45 de coste, reservas y cola, y cinco de completitud. Δ global sigue positivo tanto con precios fijos como reaprendiendo el destino solo en 2023. En este último caso, los peores Δ son +0,00218, +0,00224 y +0,00220. Árboles y curvas fuente quedan congelados por ámbito: son sensibilidades condicionales, sin probabilidades; no certifican reservas ni el margen del 8 %.</p>
 <h3>Por qué conservé F3c frente a F3c-R</h3>
-<p>Tras completar los 26 ámbitos, comparé F3c-R con F3c y con un control del mismo tronco y preprocesamiento. El D² global fue 0,126662 frente a 0,126806 de F3c. Negocio nuevo ganó 0,005464, pero contenidos nuevos perdió 0,014658.</p>
+<p>F3c-R penaliza niveles y atenúa factores locales para reducir ajustes inestables. Completé 26 ámbitos y lo comparé con F3c y un control del mismo tronco y preparación. El D² local fue 0,126662 frente a 0,126806 de F3c. Negocio nuevo ganó 0,005464, pero contenidos nuevos perdió 0,014658.</p>
 <p>Los 10.000 remuestreos por grupos, 50 escenarios y cinco omisiones completas de folds no sostuvieron la estabilidad exigida. Sin 37 grupos favorables, Δ global cae a −0,003676. Conservé F3c sin escoger después un segmento o fold ganador.</p>
 <p class="cap">En el flujo real se alteraron etiquetas retenidas, se reprodujeron resultados sin aprendizaje y se usó otro optimizador. Las bandas condicionan modelos ajustados, sin cubrir toda la búsqueda adaptativa. Este contraste usa referencias distintas de la tabla de factores, identificadas en el registro.</p>
 
@@ -129,7 +129,7 @@ P5 = """
 <h2>Prima comercial de las 20 pólizas de referencia</h2>
 <div class="cols-6535">
 <div>
-<p>Calculo la prima comercial a partir de la prima de riesgo F3c y los supuestos del archivo de gastos. Al riesgo sumo el reaseguro catastrófico de hogar (12 %) y el gasto fijo. El gasto variable del 15 %, la comisión, el impuesto del 8 % y el margen del 8 % se incorporan mediante el denominador. Aplico 85 CU completos por póliza; el prorrateo por exposición (85·e), conservado como alternativa, daría 20.304,23 CU frente a los 20.800,02 de la solución final.</p>
+<p>Calculo la prima comercial P a partir de la prima de riesgo F3c (R) y los supuestos del archivo de gastos. Al riesgo sumo el reaseguro catastrófico de hogar (12 %) y el gasto fijo. El gasto variable del 15 %, la comisión, el impuesto del 8 % y el margen del 8 % se incorporan mediante el denominador. Aplico 85 CU completos por póliza; el prorrateo por exposición (85·e), conservado como alternativa, daría 20.304,23 CU frente a los 20.800,02 de la solución final.</p>
 </div>
 <div class="box" style="margin-top:0">
 <math display="block"><mi>P</mi><mo>=</mo><mfrac><mrow><mi>R</mi><mo>+</mo><mn>0,12</mn><mo>·</mo><msub><mi>R</mi><mtext>hogar</mtext></msub><mo>+</mo><mn>85</mn></mrow><mrow><mn>1</mn><mo>−</mo><mn>0,15</mn><mo>−</mo><mi>c</mi><mo>−</mo><mn>0,08</mn><mo>−</mo><mn>0,08</mn></mrow></mfrac></math>
