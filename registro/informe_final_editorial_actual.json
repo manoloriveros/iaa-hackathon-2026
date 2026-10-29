@@ -1,14 +1,14 @@
 {
   "id": "INFORME-FINAL-NARRACION-Y-DIAGRAMAS-20261028",
-  "utc": "2026-10-29T18:23:10.823810+00:00",
+  "utc": "2026-10-29T19:27:49.429358+00:00",
   "author_editor": "Codex",
   "prior_author": "Claude y líneas originales según su registro",
   "path_base": "workspace_root",
   "pdf": "Hackaton/Semana 2/Claude/informe_final_20261026/informe_final_IAA2026_es.pdf",
-  "pdf_sha256": "c13b652663d0db759e15a3a1b2d6cb69bec96958eb7fe7a89faa7e722b9c17ae",
+  "pdf_sha256": "afcaace72423279451efa1b4484b81b403fadc970a1afb842154ae597d933d70",
   "source_directory": "Hackaton/Semana 2/Claude/informe_final_20261026/fuente",
-  "run": "Hackaton/Repositorio_IAA2026/privado/informe_ia_actuarial_20261029",
-  "previous_pdf_sha256": "b7a514d5c83313bc82cccbeada8463681070e2bdd8dbc779107c655580b6e9ed",
+  "run": "Hackaton/Repositorio_IAA2026/privado/informe_anexos_20261029",
+  "previous_pdf_sha256": "c13b652663d0db759e15a3a1b2d6cb69bec96958eb7fe7a89faa7e722b9c17ae",
   "pdf_pages": 10,
   "graded_pages": [
     1,
@@ -46,7 +46,9 @@
     "Página 1: herramientas vinculadas a su función (Claude/Codex, Python, Kaggle MCP y Git) y aplicación propuesta a un nuevo cierre de siniestros.",
     "Página 4: cuatro casos de aporte de IA con artefacto, comprobación y efecto, dentro de las cinco páginas calificables.",
     "Corrección de atribución: los controles del paquete de semana 1 v1.2 son 45 casos sintéticos, 36 adversos; se separan del aislamiento de la validación F3c.",
-    "Modelo F3c, métricas, tablas y fórmulas conservados; sin reducir tipografía."
+    "Modelo F3c, métricas, tablas y fórmulas conservados; sin reducir tipografía.",
+    "Página 8: retirada la columna Tipo de la tabla de decisiones; se conservan las nueve fechas y decisiones, con más ancho para su lectura.",
+    "Página 9: comentario de Kaggle sustituido por Archivo y huella verificados; estado del envío cotejado con el recibo de Kaggle."
   ],
   "commercial_references_checked": 20,
   "fixed_expense_CU_per_policy": "85",
@@ -144,12 +146,12 @@
       "status": "coherente_con_alcance_explicito"
     }
   ],
-  "layout_receipt": "Hackaton/Repositorio_IAA2026/privado/informe_ia_actuarial_20261029/maquetacion.json",
+  "layout_receipt": "Hackaton/Repositorio_IAA2026/privado/informe_anexos_20261029/maquetacion.json",
   "visual_review_pages": [
-    1,
-    4
+    8,
+    9
   ],
-  "visual_review": "Diagrama y cuatro casos de IA legibles, dentro de páginas calificables, sin recortes ni solapamientos. Páginas 2, 3 y 5–10 con HTML y texto PDF idénticos a la versión previamente revisada.",
+  "visual_review": "Páginas 8 y 9 revisadas visualmente: tabla de decisiones con dos columnas, nueve decisiones preservadas, comentario de Kaggle legible; sin recortes ni solapamientos. Las otras ocho páginas conservan HTML y texto PDF idénticos.",
   "new_training": false,
   "new_model_inference": false,
   "new_submission": false,
@@ -159,8 +161,8 @@
   "score_limitation": "La edición no es una calificación del jurado ni cierra los límites predictivos, operativos o profesionales.",
   "editorial_status": "PDF_espanol_listo_para_entregar_en_primera_persona",
   "other_report_scope": "El informe comparativo común previo conserva su propio corte y no fue sustituido por esta edición del PDF indicado por el participante.",
-  "verification": "Hackaton/Repositorio_IAA2026/privado/informe_ia_actuarial_20261029/verificacion.json",
-  "visual_review_receipt": "Hackaton/Repositorio_IAA2026/privado/informe_ia_actuarial_20261029/verificacion.json",
+  "verification": "Hackaton/Repositorio_IAA2026/privado/informe_anexos_20261029/verificacion.json",
+  "visual_review_receipt": "Hackaton/Repositorio_IAA2026/privado/informe_anexos_20261029/verificacion.json",
   "evidence_report": "Hackaton/Repositorio_IAA2026/docs/semana2/F3C_A1_MEZCLA_PROTEGIDAS_Y_ESCENARIOS.md",
   "evidence_index": "Hackaton/Repositorio_IAA2026/registro/validacion_cadena_f3c_A1_mezcla_actual.json",
   "tex_text_synchronized": true,
@@ -333,16 +335,16 @@
   "pending_evidence_scope_note": "Se conserva como trazabilidad del corte previo, sin una lista de tareas en la narración ni cierre técnico nuevo en esta edición.",
   "final_clean_english_narration_synchronized": true,
   "dashboard_reuse": "Dos diagramas conceptuales redibujados; no se trasladan contadores o mezclas históricas de las capturas",
-  "pdf_bytes": 227788,
+  "pdf_bytes": 227540,
   "final_choice_confirmed_by_participant": true,
   "final_model_decision": "Hackaton/Repositorio_IAA2026/registro/semana2_decision_final_F3c_20261028.json",
-  "latest_edit_scope": "Refuerzo del aporte práctico de IA en páginas 1 y 4, con casos y controles comprobables; F3c conservado.",
-  "latest_revision_index": "Hackaton/Repositorio_IAA2026/registro/informe_final_ia_actuarial_20261029.json",
+  "latest_edit_scope": "Dos ajustes editoriales solicitados en anexos: columna Tipo y comentario de control de Kaggle.",
+  "latest_revision_index": "Hackaton/Repositorio_IAA2026/registro/informe_final_anexos_20261029.json",
   "tex_graphics_regenerated_this_edit": false,
   "narration_coherence_with_current_pdf_rechecked": false,
   "changed_pages": [
-    1,
-    4
+    8,
+    9
   ],
   "delivery_copy": "Hackaton/Entrega_final/01_Para_entregar/Informe_final_ES.pdf"
 }

@@ -48,7 +48,7 @@ HERRAMIENTAS = [
     ("Codex", "Base de modelado, recetas, rondas periódicas de validación y envíos a Kaggle", "Ningún envío sin mi autorización directa"),
     ("Subagentes revisores", "Rehacer con código propio cada hallazgo que iba a cambiar una entrega", "Sin acceso a las conclusiones del autor"),
     ("Gemini", "Una propuesta metodológica al inicio de la semana 1", "Contrastada con la literatura; se descartaron sus afirmaciones sin fuente"),
-    ("Kaggle: conexión MCP de solo lectura y CLI oficial", "Leer reglas, metadatos y puntuaciones; subir archivos desde Codex", "La marca final la decido yo"),
+    ("Kaggle: conexión MCP de solo lectura y CLI oficial", "Leer reglas, metadatos y puntuaciones; subir archivos desde Codex", "Archivo y huella verificados; estado del envío cotejado con el recibo de Kaggle"),
     ("Python: pandas, PyArrow, NumPy, scikit-learn, LightGBM, CatBoost, statsmodels, PyTorch", "Datos, modelos Tweedie, GLM residuales y un FT-Transformer de contraste", "La métrica propia se comparó con d2_tweedie_score de scikit-learn"),
     ("Git y GitHub, repositorio privado; SHA-256 y manifiestos", "Versionado de código, registro de decisiones y huella de cada archivo", "Datos y predicciones fuera de Git; huella comprobada antes de cada envío"),
     ("Foro en Markdown con escritura bloqueada y recibos", "Comunicación entre líneas con autor, hora UTC e identificador", "Un recibo por aporte y numeración sin saltos"),
@@ -173,16 +173,16 @@ PAGINAS = [
  <tr><td>Reservas</td><td>Un error plausible mueve el nivel de un ramo más del 1 %</td><td>Incertidumbre material declarada</td></tr>
 </table>
 <table class="tight">
- <tr><th style="width:12%">Fecha</th><th style="width:62%">Decisión metodológica (hora de Bogotá)</th><th>Tipo</th></tr>
- <tr><td>17 oct</td><td>Criterios para corregir capitales unas mil veces mayores</td><td>Delegada, registrada</td></tr>
- <tr><td>19 oct</td><td>Materialidad del 1 % del nivel de 2025 por ramo para juzgar reservas</td><td>Propia</td></tr>
- <tr><td>20 oct</td><td>Cierre de la parte 1 con la Mezcla por peligro, sin pasar todos los filtros internos</td><td>Propia</td></tr>
- <tr><td>23 oct</td><td>Acepto la alarma de sensibilidad y cambio la entrega final de la parte 1</td><td>Propia, a propuesta de la IA</td></tr>
- <tr><td>23 oct</td><td>Reglas de datos del emergente (capitales, clima, nivel del negocio nuevo); gasto fijo por exposición</td><td>Delegadas, salvo el gasto fijo</td></tr>
- <tr><td>24 oct</td><td>Enmiendo la salvaguarda de cliente nuevo conociendo el resultado de 2024</td><td>Propia, registrada</td></tr>
- <tr><td>24 oct</td><td>Se prioriza robustez del modelo antes de incorporar la calibración de nivel</td><td>Revisión del enfoque</td></tr>
- <tr><td>25 y 26 oct</td><td>Plan de mejora y reglas para leer los últimos candidatos</td><td>Delegadas («me quedo con tus recomendaciones»)</td></tr>
- <tr><td>26 oct</td><td>Gasto fijo completo por póliza (85 CU) en vez del prorrateo; se conserva F3c</td><td>Propia</td></tr>
+ <tr><th style="width:12%">Fecha</th><th style="width:88%">Decisión metodológica (hora de Bogotá)</th></tr>
+ <tr><td>17 oct</td><td>Criterios para corregir capitales unas mil veces mayores</td></tr>
+ <tr><td>19 oct</td><td>Materialidad del 1 % del nivel de 2025 por ramo para juzgar reservas</td></tr>
+ <tr><td>20 oct</td><td>Cierre de la parte 1 con la Mezcla por peligro, sin pasar todos los filtros internos</td></tr>
+ <tr><td>23 oct</td><td>Acepto la alarma de sensibilidad y cambio la entrega final de la parte 1</td></tr>
+ <tr><td>23 oct</td><td>Reglas de datos del emergente (capitales, clima, nivel del negocio nuevo); gasto fijo por exposición</td></tr>
+ <tr><td>24 oct</td><td>Enmiendo la salvaguarda de cliente nuevo conociendo el resultado de 2024</td></tr>
+ <tr><td>24 oct</td><td>Se prioriza robustez del modelo antes de incorporar la calibración de nivel</td></tr>
+ <tr><td>25 y 26 oct</td><td>Plan de mejora y reglas para leer los últimos candidatos</td></tr>
+ <tr><td>26 oct</td><td>Gasto fijo completo por póliza (85 CU) en vez del prorrateo; se conserva F3c</td></tr>
 </table>
 """,
 """
