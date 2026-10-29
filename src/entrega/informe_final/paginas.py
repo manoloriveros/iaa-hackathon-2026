@@ -82,15 +82,19 @@ P3 = """
 <p>En el mercado establecido se combinaron diez componentes de coste total y de frecuencia × severidad. LightGBM y CatBoost con objetivo Tweedie captan ceros, costes positivos e interacciones; la descomposición por peligro distingue mecanismos de siniestro. La combinación por ramo responde a que ningún componente dominaba en toda la cartera. La tendencia de severidad se acotó a ±15 % anual y aportó +0,000086 de D² en 2024. La mezcla alcanzó 0,138 frente a 0,071 de una tasa por ramo.</p>
 {{FIG:esquema_modelo}}
 <h2>Adaptación al mercado emergente</h2>
-<p>Para los 209.063 periodos de 2025, la escasez de historia y el peso del negocio nuevo favorecieron transferir relaciones estimadas con variables comunes. La evidencia de 2023 por cliente se resume en la figura 3. En otro contraste, la apertura registrada de 2024 dio +0,049 de D² frente a la tasa por ramo (banda por seis comparaciones: +0,027 a +0,073). La regla inicial de protección de negocio nuevo falló y se modificó después de conocer el resultado. Las comparaciones posteriores sobre 2024 son desarrollo adaptativo.</p>
-<div class="cols"><div>
-{{FIG:escalera_2023}}
-<p class="cap"><b>Figura 3.</b> Comparación histórica por cliente en 2023, anterior a corregir toda la cadena. Se distingue del contraste con aislamiento completo de la tabla inferior.</p>
-</div><div>
-<h3>Ajustes locales y calibración</h3>
-<p>Los factores propios complementan la señal transferida con credibilidad n/(n + K), K = 300 en F3c. El nivel y la dispersión dentro de las seis celdas de ramo × tipo de negocio se calibraron por separado. Para el nivel se aplicaron factores conocidos a las predicciones y se resolvió la curva Tweedie a partir de los resultados públicos; la credibilidad limitó el desplazamiento según el ruido estimado.</p>
-<p>De 0,15390 a 0,16914, los pasos de calibración aportaron 0,01044 y los cambios de modelo 0,00480. Es una descomposición secuencial, dependiente del orden y las interacciones. Dos decisiones de estructura también usaron respuesta pública. El anexo B conserva la ecuación y los contrastes; el resultado privado de la parte 2 sigue pendiente.</p>
-</div></div>
+<p>Para los 209.063 periodos de 2025, la escasez de historia y el peso del negocio nuevo favorecieron transferir relaciones estimadas con variables comunes. En 2023, la comparación histórica por cliente dio D² de 0,068 para la tasa por ramo, 0,080 para el GLM emergente, 0,083 para boosting emergente y 0,121 para la transferencia; precede a la corrección de toda la cadena. En otro contraste, la apertura registrada de 2024 dio +0,049 de D² frente a la tasa por ramo (banda por seis comparaciones: +0,027 a +0,073). La regla inicial de protección de negocio nuevo falló y se modificó después de conocer el resultado. Las comparaciones posteriores sobre 2024 son desarrollo adaptativo.</p>
+<h3>Cadena exacta del archivo F3c</h3>
+<p>F3c combina T2b y A1: modelos LightGBM Tweedie 1,5 por ramo, entrenados en el desarrollado y ajustados al nivel emergente. T2b usa la curva de reporte del desarrollado; A1, la curva combinada. A1 incorpora historia previa F1 y promedia las predicciones logarítmicas de las semillas 11, 12 y 13; después recupera el total por ramo de su referencia sin F1. Cada base ya incluye la exposición del periodo.</p>
+<table class="tight architecture">
+<tr><th style="width:20%">Orden de aplicación</th><th style="width:48%">Transformación conservada en la entrega</th><th>Origen de los ajustes</th></tr>
+<tr><td>1. Mezcla y nivel global</td><td>Promedio aritmético 50/50 de T2b y A1; multiplicador global g = 1,187658.</td><td>Bases fuente 2021–2024; nivel local 2023–2024 y calibración pública.</td></tr>
+<tr><td>2. Historial local (F2)</td><td>Bonificación sin siniestros en autos → siniestros previos (0, 1, 2+) → exponente 0,9 en autos renovación → razón local de nivel.</td><td>Predicciones fuera de fold (OOF) de T2b 2023–2024; credibilidad n/(n + 300).</td></tr>
+<tr><td>3. Nivel y dispersión</td><td>Exponentes contraídos en negocio nuevo y razones locales; nivel por ramo × nuevo/renovación, limitado por credibilidad. Produce la base final_creible.</td><td>Calibraciones controladas con respuesta pública; constantes históricas congeladas.</td></tr>
+<tr><td>4. Factores propios</td><td>Género en autos y contenidos → teletrabajo en contenidos → segmento de marketing en contenidos; contracción logarítmica, K = 300.</td><td>Residuos locales T2b 2023–2024 tras F2 y su transformación de forma.</td></tr>
+<tr><td>5. Nivel residual y salida</td><td>Razón del nivel Tweedie óptimo después/antes de los factores, con igual peso por año → F3c, 209.063 filas a seis decimales.</td><td>2023: T2b; 2024: promedio T2b, A1 y mezcla. Sin etiquetas de 2025.</td></tr>
+</table>
+<p class="cap">n cuenta periodos con coste positivo. Los factores y exponentes conservan el total previo de su celda antes de aplicar las razones de nivel; la normalización depende del lote. Se respeta este orden, sin volver a multiplicar la exposición. La tabla describe producción; la evaluación inferior reaprende otra receta. Código: reproduccion_cadena.py → construir_F2.py → construir_final.py → construir_F3c.py.</p>
+<p>El nivel se obtuvo aplicando factores conocidos a las predicciones y resolviendo la curva Tweedie con los resultados públicos. De 0,15390 a 0,16914, la calibración aportó 0,01044 y los cambios de modelo 0,00480, en una descomposición dependiente del orden. Dos decisiones de estructura también usaron respuesta pública. El anexo B conserva ecuación y contrastes; el privado de la parte 2 sigue pendiente.</p>
 <h3>Comparación con aislamiento del aprendizaje</h3>
 <p>El contraste posterior reaprende con 2023 y evalúa 59.202 periodos de 2024, sin niveles ni exponentes públicos. Completitud, categorías, grupos, selección interna, árboles y ajustes excluyen el ámbito retenido. La referencia mantiene siniestralidad, bonificación y la transformación común de autos renovación: se retira solo el bloque de factores propios. Alterar etiquetas retenidas no cambia el aprendizaje ni sus predicciones.</p>
 <table class="tight">
@@ -102,21 +106,27 @@ P3 = """
 <p class="cap">Valores redondeados; precisión completa en el registro. Bandas al 99,17 % por contraste, familia de seis; 10.000 réplicas por grupos condicionadas a modelos aprendidos: no repiten aprendizaje ni búsqueda histórica. Las tres bases comparten etiquetas, sin confirmación independiente. La receta de curva combinada evalúa una semilla y menos variables; no valida la configuración íntegra de producción de tres semillas.</p>
 <p>El límite inferior supera +0,0005 en las tres bases. Renovación explica el 98,09–99,39 % del aporte. Con composición de 2025, la mezcla mejora +0,00099 (IC95: −0,00290 a +0,00476); las tres bandas cruzan cero. El contraste respalda una ganancia histórica global, pero no resuelve la estabilidad del negocio nuevo.</p>
 
-<p>En una aplicación sin tablero, el nivel requeriría experiencia comparable del bloque adquirido. La tarifa histórica sugería +13 %, pero su variación entre años empeoró el backtest; no sustituye por sí sola la calibración del concurso.</p>
+
 """
 
 P4 = """
-<h2>Validación y uso de IA para contrastar la solución</h2>
-<p>Claude y Codex se integraron en un ciclo de hipótesis, código, contraste y corrección. Los modelos y agentes revisores cuestionaron supuestos y recalcularon resultados; los tableros reunieron métricas, alertas y trazabilidad para el seguimiento continuo. La IA también apoyó traducción y comunicación técnica. Su aporte al modelado se observa en las correcciones verificables de la tabla, no solo en la generación de código.</p>
-{{FIG:flujo_ia}}
-<p class="cap"><b>Figura 4.</b> Ciclo de desarrollo y contraste bajo supervisión del participante, con criterios previos y conservación de resultados adversos.</p>
-<table class="tight">
-<tr><th style="width:43%">Error o límite detectado</th><th style="width:22%">Comprobación</th><th>Consecuencia</th></tr>
-<tr><td>Preparación y completitud usaban información fuera del ámbito permitido</td><td>Auditoría de la cadena</td><td>Preparación y ajuste rehechos por ámbito</td></tr>
-<tr><td>Una réplica incompleta se daba por válida</td><td>Revisión integral</td><td>Controles reescritos; 45 pruebas, 35 adversas</td></tr>
-<tr><td>Ruido público medido contra todo el test</td><td>Batería de sensibilidad</td><td>Cambió la selección; mejoró el privado frente a la variante contrastada</td></tr>
-<tr><td>Un nulo de pocos niveles validaba variables falsas</td><td>Revisor de factores</td><td>Aseguradora previa y ocupación retiradas</td></tr>
+<h2>Validaciones: pregunta, comparación y alcance</h2>
+<table class="tight validation-map">
+<tr><th style="width:20%">Qué se comprueba</th><th style="width:43%">Diseño y referencia</th><th>Lectura del resultado</th></tr>
+<tr><td>Elección del enfoque</td><td>Comparación histórica por cliente en 2023: transferencia frente a tasa, GLM y boosting emergentes.</td><td>Favorece transferir; no acredita la cadena final de F3c.</td></tr>
+<tr><td>Aporte de factores</td><td>Aprendizaje con 2023; precios fijos en 2024. Tres bases, cada una con/sin factores, mismo tronco y preparación.</td><td>Mejora global; límites en negocio nuevo y concentración por grupos (págs. 3–4).</td></tr>
+<tr><td>Alternativa F3c-R</td><td>26 ámbitos; comparación con F3c y con control de igual tronco/preprocesamiento. Criterios fijados antes del resultado.</td><td>No sostiene la estabilidad exigida; se conserva F3c.</td></tr>
+<tr><td>Reproducción de entrega</td><td>Originales → preparación → modelos → calibraciones → CSV. Cotejo de huellas y métricas por otro cálculo.</td><td>Recupera el archivo final; acredita ejecución, no rendimiento privado.</td></tr>
 </table>
+<h3>Dos correcciones concretas apoyadas por IA</h3>
+<div class="cols ai-cases"><div class="box">
+<h4>Calibración: detectar y corregir una fórmula</h4>
+<p>Una versión elevaba al cuadrado el factor de nivel. La revisión cruzada contrastó el código con la derivada de la devianza Tweedie y el mínimo numérico: para p = 1,5 corresponde el cociente k* de la página 2, sin ese cuadrado. Se corrigió antes del envío. La fórmula y el recálculo separado permitieron comprobar la corrección, sin atribuirle una ganancia de score aislada.</p>
+</div><div class="box">
+<h4>Validación: aislar todo el aprendizaje</h4>
+<p>Revisar solo el modelo omitía que preparación y completitud aprendían fuera del ámbito permitido. La auditoría de dependencias llevó a rehacerlas por ámbito, junto con categorías, selección y ajustes. Se alteraron las etiquetas retenidas: el aprendizaje y sus predicciones no cambiaron. Una réplica incompleta se rechazó y sus controles se reescribieron: 45 pruebas, 35 adversas.</p>
+</div></div>
+<p class="cap">Claude y Codex apoyaron generación de código, derivaciones, revisiones cruzadas y controles, con seguimiento continuo del participante. Los casos documentan correcciones comprobables. Otros contrastes corrigieron el ruido público frente a todo el test (semana 1, mejor privado frente a la variante) y el nulo de cardinalidad insuficiente, que llevó a retirar aseguradora previa y ocupación. Registros, herramientas y código: anexos E–G.</p>
 <h3>Estabilidad por segmento e influencia</h3>
 <p>El criterio inicial exigía ΔD² de negocio nuevo ≥ 0 y límite inferior IC95 ≥ −0,001. La transferencia mejoró +0,013, con límite −0,011: la regla no se cumplió. Se aceptó la mejora puntual tras modificar ese veto; el cambio no constituye evidencia de protección del segmento. La revisión posterior de factores separa su ganancia global del resultado por negocio:</p>
 <table class="tight">
@@ -131,6 +141,7 @@ P4 = """
 <h3>Contraste final de una alternativa regularizada</h3>
 <p>F3c-R se completó en 26 ámbitos y se comparó con F3c y con un control del mismo tronco y preprocesamiento. El D² local global fue 0,126662 frente a 0,126806 de F3c; negocio nuevo mejoró 0,005464, pero contenidos nuevos perdió 0,014658. Los 10.000 remuestreos por grupos, 50 escenarios y cinco omisiones completas de folds no sostuvieron la estabilidad requerida. Al retirar 37 grupos favorables, Δ global cae a −0,003676. Estos resultados sustentan conservar F3c, sin escoger retrospectivamente un segmento o fold ganador.</p>
 <p class="cap">Los controles del flujo real incluyeron alteración de etiquetas retenidas, replay sin aprendizaje y un optimizador alternativo. Los intervalos son condicionales a modelos ajustados; no cubren toda la búsqueda adaptativa. Las cifras de F3c-R corresponden a una comparación distinta de la tabla de factores, con referencias explícitas en el registro.</p>
+<p>En una aplicación sin tablero, el nivel requeriría experiencia comparable del bloque adquirido. La tarifa histórica sugería +13 %, pero su variación entre años empeoró el backtest; no sustituye por sí sola la calibración del concurso.</p>
 """
 
 P5 = """

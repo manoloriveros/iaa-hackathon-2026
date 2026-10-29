@@ -1,14 +1,14 @@
 {
   "id": "INFORME-FINAL-NARRACION-Y-DIAGRAMAS-20261028",
-  "utc": "2026-10-29T14:12:11.365985+00:00",
+  "utc": "2026-10-29T14:54:16.226476+00:00",
   "author_editor": "Codex",
   "prior_author": "Claude y líneas originales según su registro",
   "path_base": "workspace_root",
   "pdf": "Hackaton/Semana 2/Claude/informe_final_20261026/informe_final_IAA2026_es.pdf",
-  "pdf_sha256": "4ba664b536436020fe15eab460edaea0dd96235735e78935844d9cc325b070a5",
+  "pdf_sha256": "e9e8565f673ed6a8b9b7f0cbb8e59fa4f3335d7e91f693a54eb585a562f8f60a",
   "source_directory": "Hackaton/Semana 2/Claude/informe_final_20261026/fuente",
-  "run": "Hackaton/Repositorio_IAA2026/privado/revision_tecnica_informe_20261029",
-  "previous_pdf_sha256": "ec28839f8a426d8f7d8aef8e54f3fe0a0df5ac3ae5a205fb08d5deee73fc103a",
+  "run": "Hackaton/Repositorio_IAA2026/privado/informe_arq_20261029",
+  "previous_pdf_sha256": "4ba664b536436020fe15eab460edaea0dd96235735e78935844d9cc325b070a5",
   "pdf_pages": 10,
   "graded_pages": [
     1,
@@ -29,7 +29,10 @@
     "Narración inglesa limpia traducida y cotejada; no se afirma sincronización del informe inglés completo",
     "Cifras, veinte primas, F3c y 85 CU por póliza preservados",
     "28 de octubre: decisión expresa de F3c definitivo y comparación F3c-R añadidas en páginas 1 y 5.",
-    "29 de octubre: reescritura técnica de las cinco páginas y ajuste terminológico de anexos según ocho anotaciones y aclaración del participante."
+    "29 de octubre: reescritura técnica de las cinco páginas y ajuste terminológico de anexos según ocho anotaciones y aclaración del participante.",
+    "Página 3: bases LightGBM T2b/A1, mezcla 50/50 y secuencia F2 → final_creible → factores y nivel residual.",
+    "Página 4: matriz de cuatro preguntas de validación, con diseño, referencia y alcance.",
+    "Página 4: casos de corrección del factor al cuadrado y aislamiento del aprendizaje, con comprobaciones concretas."
   ],
   "commercial_references_checked": 20,
   "fixed_expense_CU_per_policy": "85",
@@ -127,20 +130,12 @@
       "status": "coherente_con_alcance_explicito"
     }
   ],
-  "layout_receipt": "Hackaton/Repositorio_IAA2026/privado/revision_tecnica_informe_20261029/maquetacion.json",
+  "layout_receipt": "Hackaton/Repositorio_IAA2026/privado/informe_arq_20261029/maquetacion.json",
   "visual_review_pages": [
-    1,
-    2,
     3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10
+    4
   ],
-  "visual_review": "Sin recortes, solapamientos ni desbordamiento; diez páginas revisadas y nueva revisión de 5, 6 y 8 tras el ajuste final.",
+  "visual_review": "Maquetación legible, sin recortes ni solapamientos. Otras ocho páginas: texto idéntico; fuentes, estilos y gráficos intactos.",
   "new_training": false,
   "new_model_inference": false,
   "new_submission": false,
@@ -148,10 +143,10 @@
   "user_target_score": ">98/100",
   "score_above_98_accredited": false,
   "score_limitation": "La edición no es una calificación del jurado ni cierra los límites predictivos, operativos o profesionales.",
-  "editorial_status": "informe_tecnico_centrado_en_modelo_decisiones_y_validacion",
+  "editorial_status": "arquitectura_exacta_validaciones_organizadas_y_casos_IA_comprobables",
   "other_report_scope": "El informe comparativo común previo conserva su propio corte y no fue sustituido por esta edición del PDF indicado por el participante.",
-  "verification": "Hackaton/Repositorio_IAA2026/privado/revision_tecnica_informe_20261029/verificacion.json",
-  "visual_review_receipt": "Hackaton/Repositorio_IAA2026/privado/revision_tecnica_informe_20261029/verificacion.json",
+  "verification": "Hackaton/Repositorio_IAA2026/privado/informe_arq_20261029/verificacion.json",
+  "visual_review_receipt": "Hackaton/Repositorio_IAA2026/privado/informe_arq_20261029/verificacion.json",
   "evidence_report": "Hackaton/Repositorio_IAA2026/docs/semana2/F3C_A1_MEZCLA_PROTEGIDAS_Y_ESCENARIOS.md",
   "evidence_index": "Hackaton/Repositorio_IAA2026/registro/validacion_cadena_f3c_A1_mezcla_actual.json",
   "tex_text_synchronized": true,
@@ -324,11 +319,16 @@
   "pending_evidence_scope_note": "Se conserva como trazabilidad del corte previo, sin una lista de tareas en la narración ni cierre técnico nuevo en esta edición.",
   "final_clean_english_narration_synchronized": true,
   "dashboard_reuse": "Dos diagramas conceptuales redibujados; no se trasladan contadores o mezclas históricas de las capturas",
-  "pdf_bytes": 235087,
+  "pdf_bytes": 236232,
   "final_choice_confirmed_by_participant": true,
   "final_model_decision": "Hackaton/Repositorio_IAA2026/registro/semana2_decision_final_F3c_20261028.json",
-  "latest_edit_scope": "Reorientar el informe hacia problema, modelo, herramientas de IA, decisiones metodológicas y validaciones; resolver ocho anotaciones del PDF.",
-  "latest_revision_index": "Hackaton/Repositorio_IAA2026/registro/informe_final_revision_tecnica_20261029.json",
+  "latest_edit_scope": "Arquitectura exacta de F3c, matriz de validaciones y casos concretos del aporte de IA. Modelo y cifras conservados.",
+  "latest_revision_index": "Hackaton/Repositorio_IAA2026/registro/informe_final_arquitectura_validaciones_20261029.json",
   "tex_graphics_regenerated_this_edit": false,
-  "narration_coherence_with_current_pdf_rechecked": false
+  "narration_coherence_with_current_pdf_rechecked": false,
+  "changed_pages": [
+    3,
+    4
+  ],
+  "delivery_copy": "Hackaton/Entrega_final/01_Para_entregar/Informe_final_ES.pdf"
 }

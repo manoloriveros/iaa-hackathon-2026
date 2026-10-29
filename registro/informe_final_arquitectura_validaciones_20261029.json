@@ -1,0 +1,125 @@
+{
+  "id": "INFORME-F3C-ARQUITECTURA-VALIDACIONES-20261029",
+  "utc": "2026-10-29T14:54:16.226476+00:00",
+  "author_editor": "Codex",
+  "prior_author": "Claude y ediciones registradas",
+  "path_base": "workspace_root",
+  "status": "PDF_editado_y_verificado",
+  "scope": "Arquitectura exacta de F3c, matriz de validaciones y casos concretos del aporte de IA. Modelo y cifras conservados.",
+  "pdf": "Hackaton/Semana 2/Claude/informe_final_20261026/informe_final_IAA2026_es.pdf",
+  "delivery_copy": "Hackaton/Entrega_final/01_Para_entregar/Informe_final_ES.pdf",
+  "pdf_sha256": "e9e8565f673ed6a8b9b7f0cbb8e59fa4f3335d7e91f693a54eb585a562f8f60a",
+  "pdf_bytes": 236232,
+  "previous_pdf_sha256": "4ba664b536436020fe15eab460edaea0dd96235735e78935844d9cc325b070a5",
+  "model": "F3c",
+  "model_changed": false,
+  "model_sha256": "5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276",
+  "changes": [
+    "Página 3: bases LightGBM T2b/A1, mezcla 50/50 y secuencia F2 → final_creible → factores y nivel residual.",
+    "Página 4: matriz de cuatro preguntas de validación, con diseño, referencia y alcance.",
+    "Página 4: casos de corrección del factor al cuadrado y aislamiento del aprendizaje, con comprobaciones concretas."
+  ],
+  "source_pins": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/reproduccion_cadena.py",
+      "sha256": "4cd5a7ae507a4c8719f03b43fcf4d4390e222a1faf0039f16e1fa49f86e4063c"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/validacion_nocturna_20261023/codigo/desarrollado_gbm.py",
+      "sha256": "903f72ff4e79640874a9e541c02393d8079ae4638f5b3d4c1fdb100011ab6c00"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/ml_independiente_20261023/codigo/transfer2.py",
+      "sha256": "7c50fe735b2988434fa3a10ed3765ad6219d0976641c3f92721a22080418e3f5"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/codigo/construir_F2.py",
+      "sha256": "24fb7615be71ce7dcc5495a364aa262b1fe845e2b259c0c5486dda87293f294d"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/codigo/construir_final.py",
+      "sha256": "cdbf2a4de39ee0e1b9858beb02b40ebd5e64f5eea92b50f0312d8e985cd53c04"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/codigo/eval_v2.py",
+      "sha256": "a0649f938028721912a0d6e06ef607604a30df532c52794cd256cb17bd7984f8"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/codigo/forma_local.py",
+      "sha256": "62daa355139cbe0d46d682f60eae22499f15c1bf39bdc3d1b0242cb2e6116a26"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/codigo/forma_local3.py",
+      "sha256": "ff2733adfa35e300cd15ed0245ec9895d0356a49bbb99f419d82f57a4897eca2"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/exp26_20261026/m017/construir_F3b.py",
+      "sha256": "98d24847b0d41006379c27c74eb4d7b709b570d716c6798cdfd2846f4693897a"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/exp26_20261026/m017/exp26/lib26.py",
+      "sha256": "1ceb1918c91b56c70068cbc4eb7be453f45d32df88ab49b65a0b108f9766b822"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/mision017_20261025/exp26_20261026_v2/m017/construir_F3c.py",
+      "sha256": "9828156382416a8088cc5579a995f02fa10188b9e74334b0709942393a476c67"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/F3C_A1_MEZCLA_PROTEGIDAS_Y_ESCENARIOS.md",
+      "sha256": "6e6e6e6d83001a0a0388f8d5413cac60a6f0925940b28b31faddd1013062eb50"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/F3C_VALIDACION_COMPLETA_20261027.md",
+      "sha256": "76f4bc9fb624afea710f43d4c5b74a946b0c059a9fb19b129e71a37f116db6f0"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/F3C_REGULARIZADO_CIERRE_20261028.md",
+      "sha256": "18e9a7c0ca2dcff616dff01f2af52b95844c48c1766bf783579c1eecec204db6"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/REENTRENAMIENTO_ORIGINALES.md",
+      "sha256": "f00b3c32e166231e3dc1058337d1743c29f487cc0b6350373a1411937cceb616"
+    }
+  ],
+  "verification": "Hackaton/Repositorio_IAA2026/privado/informe_arq_20261029/verificacion.json",
+  "layout": "Hackaton/Repositorio_IAA2026/privado/informe_arq_20261029/maquetacion.json",
+  "run": "Hackaton/Repositorio_IAA2026/privado/informe_arq_20261029",
+  "total_pages": 10,
+  "graded_pages": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "changed_pages": [
+    3,
+    4
+  ],
+  "visual_review_pages": [
+    3,
+    4
+  ],
+  "unchanged_pages_text_identical": [
+    1,
+    2,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "all_prior_decimal_metrics_preserved": true,
+  "commercial_table_identical": true,
+  "tex_text_synchronized": true,
+  "tex_compiled": false,
+  "tex_graphics_regenerated": false,
+  "new_training": false,
+  "new_inference": false,
+  "new_model_validation": false,
+  "new_submission": false,
+  "publication": false,
+  "forum_comment_id": "COD-S2-20261029-INFORME-ARQUITECTURA-VALIDACIONES",
+  "forum_receipt": "Hackaton/Repositorio_IAA2026/privado/informe_arq_20261029/foro_recibo.json"
+}
