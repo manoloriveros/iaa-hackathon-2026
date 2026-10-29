@@ -1,0 +1,129 @@
+{
+  "id": "README-NOTEBOOKS-20261029",
+  "utc": "2026-10-29T19:52:36.969163+00:00",
+  "author_editor": "Codex",
+  "voice_owner": "Manuel Rodríguez",
+  "scope": "Presentación profesional de README EN/ES y revisión de ambos notebooks",
+  "changes": [
+    {
+      "path": "README.md",
+      "before_sha256": "7845d0e90d094ae750dc2beacd9fb23e9a30e8ba865bd0ea3f840e6a040b0189",
+      "after_sha256": "c89af13319bdcc3ccbc2187d204caf4d7dda54f349ea88a662b3e99a4aa76fa8"
+    },
+    {
+      "path": "README.es.md",
+      "before_sha256": "166d55f6e23a83a34d10f466082c21ed4ff2a0ed8f3195aa6401350c6e7a3c60",
+      "after_sha256": "7d9d10acea288992cee0493aab63401a2a0166f827015645528a4c335a9f071a"
+    },
+    {
+      "path": "notebooks/week1_developed_market.ipynb",
+      "before_sha256": "cd726fd232bc5ed97e1027ad0ec51c231d7af7037ea852078c562ef542438afe",
+      "after_sha256": "89e50706e4f0f0eda968183badef736469d3860b99648f0eeb5ed5575d9ef16d"
+    },
+    {
+      "path": "notebooks/week2_emerging_market.ipynb",
+      "before_sha256": "87d6bf8f771f9bae15903749d20aacee2273acb2914da5a3d58abf9d6fd13ee0",
+      "after_sha256": "5652c8a619327dcb7bcce87f97e431828bc50095c8c9f0bd620cdef704ed0517"
+    },
+    {
+      "path": "notebooks/README.md",
+      "before_sha256": "131a64e0841b445f18fe43ad709ed68a76ba8a54aea49c5b5be376f1c53aaf80",
+      "after_sha256": "9675b4219cac9b8bc34c461a2cfbbe3d095c78833244d8667ccf59345f59cbae"
+    },
+    {
+      "path": "herramientas/integrar_notebook_semana1.py",
+      "before_sha256": "5b94e388cc397f473c8ad87db77ad059cb3994a7220f8c5cd06a34823605daac",
+      "after_sha256": "da478b6f85b06550e2a3dc7bddc1b52add9d91dcea9cb90e8baf4cc9e4767e23"
+    },
+    {
+      "path": "herramientas/integrar_notebook_semana2.py",
+      "before_sha256": "320c29907ff7cb8e9bf2ff9917099547fb401b77f9bd49eb9a0f6c33b4bdaf58",
+      "after_sha256": "2c79fde0070849dd7713e7f51cc39cd753bac448df7d572936ff422565ff5e3a"
+    },
+    {
+      "path": "herramientas/presentacion_notebooks.py",
+      "before_sha256": null,
+      "after_sha256": "6d6c7f54eef513f3b7b26413d46cf590f624dc7520e08952e2627f3463c1501b"
+    },
+    {
+      "path": "registro/notebooks_kaggle_actual.json",
+      "before_sha256": "3e989f356f47efc3ef3c9613f64942caa317f19b04ac1c699b1f344494137bb3",
+      "after_sha256": "24d445fbe43c23d13d584046aa66ee45659ecb260c6b4640b79493b5b57b04f0"
+    }
+  ],
+  "guide": "notebooks/README.md",
+  "builder_presentation_module": "herramientas/presentacion_notebooks.py",
+  "notebook_index": "registro/notebooks_kaggle_actual.json",
+  "evidence_directory": "Hackaton/Repositorio_IAA2026/privado/readme_notebooks_20261029",
+  "model_code_changed": false,
+  "executable_notebook_cells_changed": false,
+  "fresh_training": false,
+  "new_predictions": false,
+  "new_scores": false,
+  "independent_review_claimed": false,
+  "hosted_run_claimed": false,
+  "previous_delivery_tag_preserved": "entrega-codigo-20261029",
+  "delivery_copies_updated": [
+    "02_Reproduccion/week1_developed_market.ipynb",
+    "02_Reproduccion/week2_emerging_market.ipynb",
+    "02_Reproduccion/README.md"
+  ],
+  "github_sync": {
+    "requested_by_user": true,
+    "branch": "main",
+    "final_receipt_local": "Hackaton/Repositorio_IAA2026/privado/readme_notebooks_20261029/github_final.json",
+    "historical_delivery_tag_moved": false
+  },
+  "verification": {
+    "utc": "2026-10-29T19:53:51.021002+00:00",
+    "ok": true,
+    "notebooks": [
+      {
+        "path": "notebooks/week1_developed_market.ipynb",
+        "nbformat_valid": true,
+        "code_cells": 54,
+        "executable_cells_byte_identical": true,
+        "embedded_sources": 44,
+        "embedded_sources_compile": true,
+        "presentation_idempotent": true,
+        "outputs_cleared": true,
+        "internal_links_valid": true,
+        "before_sha256": "cd726fd232bc5ed97e1027ad0ec51c231d7af7037ea852078c562ef542438afe",
+        "after_sha256": "89e50706e4f0f0eda968183badef736469d3860b99648f0eeb5ed5575d9ef16d",
+        "code_sequence_sha256": "651cc4dce1747d9e274d8bb7451f1a013e7a5a81e9ccb07cfee9e8eecfdfb78a"
+      },
+      {
+        "path": "notebooks/week2_emerging_market.ipynb",
+        "nbformat_valid": true,
+        "code_cells": 91,
+        "executable_cells_byte_identical": true,
+        "embedded_sources": 79,
+        "embedded_sources_compile": true,
+        "presentation_idempotent": true,
+        "outputs_cleared": true,
+        "internal_links_valid": true,
+        "before_sha256": "87d6bf8f771f9bae15903749d20aacee2273acb2914da5a3d58abf9d6fd13ee0",
+        "after_sha256": "5652c8a619327dcb7bcce87f97e431828bc50095c8c9f0bd620cdef704ed0517",
+        "code_sequence_sha256": "461cca16a3dde35fc9543c502010912de8e13578496bcbfb9c84380ecd062859"
+      }
+    ],
+    "embedded_sources_compile": 123,
+    "code_cells_compile": 145,
+    "markdown_local_links_checked": 60,
+    "broken_links": 0,
+    "delivery_copies_valid": 11,
+    "fresh_training": false,
+    "hosted_execution": false,
+    "receipt": "Hackaton/Repositorio_IAA2026/privado/readme_notebooks_20261029/verificacion.json"
+  },
+  "path_base": "repository",
+  "evidence_directory_base": "workspace_root",
+  "history_review": {
+    "blobs": 5156,
+    "blocks": 0,
+    "warnings": 1,
+    "reviewed_warning": "Las 54 cifras del panel histórico corresponden a agregados e identificadores de envíos, como consta en registro/sincronizacion_github_actual.json.",
+    "receipt": "privado/readme_notebooks_20261029/auditoria/auditoria_20261029T195518Z.json"
+  },
+  "commit_scope": "README EN/ES, guía, dos notebooks, sus constructores y registros propios. Los archivos de otra edición en curso quedan fuera del preparado."
+}

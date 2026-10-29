@@ -1,48 +1,91 @@
-# My IAA AI Hackathon 2026 project
+# IAA AI Hackathon 2026 · Actuarial pricing across markets
 
-I am Manuel Rodríguez, an individual participant. I built a pricing workflow for a developed market and adapted it to an emerging market with less history and a large new-business intake. I used Claude and Codex to explore data, implement alternatives, challenge decisions and prepare documentation. I made the delivery choices; checks performed by AI retain that attribution. My [Spanish overview](README.es.md) covers the same project.
+I built an AI-assisted pricing workflow for a developed insurance market and adapted it to an emerging market with shorter claims history and substantial new business. My submission covers motor, buildings and contents, with a reproducible path from the competition's original data to the selected predictions.
 
-I estimate the expected ultimate claim cost for each 2025 policy period, net of excess and recoveries and excluding declined claims. The prediction covers the row's period. I then use the supplied expense assumptions to calculate commercial premiums for the twenty reference policies.
+Manuel Rodríguez · Individual participant · [Leer en español](README.es.md)
 
-## Reproduce my two submissions
+[Video demonstration · 4:59](https://www.youtube.com/watch?v=AYLkpDmZfZo) · [Run the notebooks](#reproduce-the-submissions) · [Methods and evidence](docs/README.md) · [AI workflow](docs/entrega/AI_WORKFLOW_EN.md)
 
-I provide two standalone notebooks containing source code and frozen configuration. They read the official competition inputs, create a fresh workspace and do not download my repository or load previous models or predictions.
+## What this project delivers
 
-| Market | Notebook | Output I reconstruct |
+I estimate the expected ultimate claim cost for each 2025 policy period, net of excess and recoveries and excluding declined claims. Each prediction covers the period represented by its row. For the emerging market, I also calculate commercial premiums for the twenty official reference policies using the supplied expense assumptions.
+
+| Deliverable | Selected approach | Reproduction entry point |
 | --- | --- | --- |
-| Developed | [week1_developed_market.ipynb](notebooks/week1_developed_market.ipynb) | S30 blend and S41 level calibration |
-| Emerging | [week2_emerging_market.ipynb](notebooks/week2_emerging_market.ipynb) | F3c and the twenty commercial reference premiums |
+| Week 1: developed-market risk predictions | S41: the S30 model blend with a frozen credibility-based level adjustment | [Week 1 notebook](notebooks/week1_developed_market.ipynb) |
+| Week 2: emerging-market risk predictions | F3c: developed-market transfer, emerging-market calibration and documented residual adjustments | [Week 2 notebook](notebooks/week2_emerging_market.ipynb) |
+| Commercial pricing exercise | Expense and margin calculation for twenty emerging-market reference policies | Final section of the Week 2 notebook |
+| Explanation of the project | My decisions, use of AI, verification and limitations | [English video](https://www.youtube.com/watch?v=AYLkpDmZfZo) and [AI workflow](docs/entrega/AI_WORKFLOW_EN.md) |
 
-I start with the [notebook guide](notebooks/README.md) for inputs, environment, resources and checks. In Kaggle I attach the corresponding competition data, select CPU and run the cells in order. I can also supply local input directories using the documented environment variables. Intermediate data, models and logs remain in temporary storage. Row-level outputs remain restricted.
+The risk-prediction files use `row_id,prediction`. I calculate commercial premiums separately; they are not the values submitted for the risk-prediction task.
 
-Both recipes reproduced the historical final CSV hashes in resumed local runs. Week 1 retains intermediate differences, including three feature-table fingerprints whose cause was not established. Week 2 reproduced the F3c CSV exactly. I have not established a hosted Kaggle run or a single uninterrupted Run All for both notebooks. I retain these limits and the interruption receipts in the [reproduction record](registro/notebooks_kaggle_actual.json). These AI-assisted checks are not independent professional review.
+## How the pricing workflow works
 
-## My delivery video
+```mermaid
+flowchart LR
+    A[Official policy and claims data] --> B[Claim assignment and development assumptions]
+    B --> C[Features and frozen model recipes]
+    C --> D[Period risk predictions: S41 or F3c]
+    D --> E[Schema, identifier and fingerprint checks]
+    D --> F[Week 2 reference premiums with expenses and margin]
+```
 
-I provide my [English video, 4:59](https://www.youtube.com/watch?v=AYLkpDmZfZo) as the Video Demo Link. The [video record](registro/video_entrega_actual.json) identifies my selected local version and the scope of the link check.
+For Week 1, I combine total-cost Tweedie models with peril-specific frequency–severity models. S41 applies the recorded line-level calibration to that blend. I explain the assumptions and selection in the [final Week 1 model](docs/MODELO_FINAL_S41.md) and [decision](docs/DECISION_FINAL_S41.md).
 
-## My final choices
+For Week 2, I transfer developed-market structure through the T2b and A1 components, then apply the frozen F3c calibration chain. I confirmed F3c on 28 October after the later F3c-R comparison failed the registered joint criteria. The [final decision](registro/semana2_decision_final_F3c_20261028.json) and [comparison close](docs/semana2/F3C_REGULARIZADO_CIERRE_20261028.md) retain the evidence and adverse findings.
 
-For Week 1 I chose S41: the S30 per-peril blend with its documented 2025 credibility-based level adjustment. I retained the later experiments and adverse findings rather than selecting solely on the highest public score. I describe the model in [MODELO_FINAL_S41.md](docs/MODELO_FINAL_S41.md) and record my choice in [DECISION_FINAL_S41.md](docs/DECISION_FINAL_S41.md).
+## Reproduce the submissions
 
-For Week 2 I confirmed F3c on 28 October. I combine information transferred from the developed market with the available emerging-market information and a documented residual calibration. The later F3c-R comparison failed the joint registered criteria, so I retained F3c. The [decision record](registro/semana2_decision_final_F3c_20261028.json) and [comparison close](docs/semana2/F3C_REGULARIZADO_CIERRE_20261028.md) preserve that scope. My choice does not establish private-leaderboard superiority or operational tariff approval.
+I provide two standalone Jupyter notebooks. Each contains its source code and frozen configuration; it creates a fresh workspace from official competition inputs. A repository checkout, fitted models and previous prediction files are not required to run them.
 
-## How I used AI
+1. Open the notebook for the market I want to reconstruct.
+2. Attach the corresponding official competition data. Week 1 needs the eleven developed-market Parquet files. Week 2 needs the developed folder and the thirteen-file emerging folder, including expenses and reference policies.
+3. Check the notebook's environment section. The reference package versions and optional installation cell are included; installation requires a kernel restart.
+4. Run the cells in order in a CPU environment. The later execution cells train the frozen recipes. The notebooks print the temporary run folder, logs and export location.
+5. Inspect the final checks before using the generated CSVs. A different historical fingerprint stops the final export and requires investigation.
 
-I used assistants to propose data rules, write code, challenge predictor availability, compare recipes and build verification tools. I kept hypotheses, sources, corrections and adverse outcomes in the project record. I also used AI for explanation, translation and audiovisual preparation. I did not measure a time saving that I can substantiate.
-
-I distinguish my decisions from automated checks and independent review. A calculation repeated by another AI session remains an AI-assisted technical check. I explain the contributions and verification in [AI_WORKFLOW_EN.md](docs/entrega/AI_WORKFLOW_EN.md).
-
-## Navigate the project
-
-| What I need | Entry point |
+| Notebook | Exported files after successful checks |
 | --- | --- |
-| Current methods and decisions | [Documentation guide](docs/README.md) |
-| Final form, local files and access checks | [Submission guide](docs/entrega/FORMULARIO_FINAL.md) |
-| Original reproduction workflows | [Week 1](docs/REPRODUCCION_COMPLETA.md) and [Week 2](docs/REENTRENAMIENTO_ORIGINALES.md) |
-| Version history and delivery access | [Version control](docs/VERSION_CONTROL.md) |
-| Earlier proposals and reviews | [Document archive](docs/archivo/README.md) |
+| [Week 1](notebooks/week1_developed_market.ipynb) | `submission_week1_S41.csv` |
+| [Week 2](notebooks/week2_emerging_market.ipynb) | `submission_week2_F3c.csv` and `commercial_reference_premiums.csv` |
 
-In my local workspace, `Hackaton/Entrega_final` collects the current Spanish report, both CSVs, notebooks and my selected English voice-only video. Competition inputs, row-level outputs and the report containing individual reference premiums stay outside Git. [NOTICE.md](NOTICE.md) explains the scope of the MIT license.
+For local Jupyter runs, I set `IAA_W1_DATA`, or `IAA_W2_DEVELOPED` and `IAA_W2_EMERGING`, to the directories containing the Parquet files. `IAA_NOTEBOOK_WORK` and `IAA_NOTEBOOK_EXPORT` let me choose temporary storage and private exports. The [notebook guide](notebooks/README.md) provides the exact configuration, resource evidence and troubleshooting steps.
 
-I identify this code package with the `entrega-codigo-20261029` tag. My [synchronisation record](registro/sincronizacion_github_actual.json) records the checks and remote confirmation. I keep the repository private until the planned opening after the competition closes; judges' access still needs confirmation. My [delivery review](registro/revision_entrega_actual.json) retains the reproduction limits and the outstanding English report.
+Training can take several hours. I have not measured runtime or peak storage in a hosted Kaggle run. The notebooks keep intermediate models and data in temporary storage, which does not persist automatically.
+
+## What I verified, and what remains open
+
+| Evidence | Scope and limitation |
+| --- | --- |
+| Local reconstruction of the selected CSVs | Resumed local runs recovered the historical S41 and F3c file fingerprints. These were checks within the same AI-assisted project. |
+| Input and output contracts | The notebooks check required input files, template identifiers and order, prediction schema, and positive finite predictions. |
+| Week 1 intermediate artifacts | The reconstruction reported 160 intermediate differences, including three unexplained feature-table fingerprints. A matching final CSV does not resolve them. |
+| Execution environment | I have not established an uninterrupted Run All of both notebooks or a hosted Kaggle execution. Different packages or hardware can change numerical results. |
+| Actuarial use | Public leaderboard probes informed parts of the calibration. Quote-time feature availability, reserve assumptions, transport to new business and differential effects require further review before operational use. |
+
+I retain the [reproduction receipts](registro/notebooks_kaggle_actual.json) and [delivery review](registro/revision_entrega_actual.json). They distinguish file reproduction, model assessment and independent professional review. The selected models do not establish superiority on the private leaderboard or approval of an operational tariff.
+
+## How I worked with AI
+
+I directed Claude and Codex to explore the data, propose rules, implement models, question assumptions and construct verification tools. Claude developed the main modeling lines; Codex contributed data rules, reconstruction, checks and documentation. I made the delivery choices and kept the actual authorship of code and reviews.
+
+I preserved hypotheses, source references, failed alternatives and corrections. I also used AI for explanation, translation and audiovisual preparation. My [AI workflow](docs/entrega/AI_WORKFLOW_EN.md) explains those contributions and how I checked them; repeated calculations by another AI session remain AI-assisted checks.
+
+## Find the supporting material
+
+| Location | What I keep there |
+| --- | --- |
+| [`notebooks/`](notebooks/) | Standalone reproduction notebooks and their run guide |
+| [`src/`](src/) and [`receta/`](receta/) | Model source, provenance and frozen reproduction recipes |
+| [`herramientas/`](herramientas/) | Reproduction, checking and documentation tools |
+| [`docs/README.md`](docs/README.md) | Entry point to the current methods and decisions |
+| [`docs/archivo/`](docs/archivo/) | Earlier proposals and reviews, with a [path and version map](registro/archivo_documental_actual.json) |
+| [`registro/`](registro/) | Decisions, verification receipts and delivery records |
+
+## Delivery, access and license
+
+The [submission guide](docs/entrega/FORMULARIO_FINAL.md) identifies the files and links for the final form. My local `Hackaton/Entrega_final` folder holds the selected CSVs and Spanish report; the English report remains pending reconciliation with that version. The repository stays private under my policy until the competition closes, and judges' access still needs confirmation.
+
+I preserve the frozen code package under `entrega-codigo-20261029`; subsequent presentation changes remain in the Git history. The [version-control guide](docs/VERSION_CONTROL.md) explains that record.
+
+My code and documentation use the [MIT License](LICENSE). Competition data, fitted models, row-level predictions, individual reference premiums and private conversations are excluded from Git. Third-party materials retain their own terms; [NOTICE.md](NOTICE.md) describes the boundary.

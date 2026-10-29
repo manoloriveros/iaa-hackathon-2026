@@ -4,10 +4,11 @@
   "autor": "Codex",
   "estado": "ambas_recetas_reproducidas_localmente_con_limites",
   "archivos": {
-    "notebooks/week1_developed_market.ipynb": "cd726fd232bc5ed97e1027ad0ec51c231d7af7037ea852078c562ef542438afe",
-    "notebooks/week2_emerging_market.ipynb": "87d6bf8f771f9bae15903749d20aacee2273acb2914da5a3d58abf9d6fd13ee0",
-    "herramientas/integrar_notebook_semana1.py": "5b94e388cc397f473c8ad87db77ad059cb3994a7220f8c5cd06a34823605daac",
-    "herramientas/integrar_notebook_semana2.py": "320c29907ff7cb8e9bf2ff9917099547fb401b77f9bd49eb9a0f6c33b4bdaf58"
+    "notebooks/week1_developed_market.ipynb": "89e50706e4f0f0eda968183badef736469d3860b99648f0eeb5ed5575d9ef16d",
+    "notebooks/week2_emerging_market.ipynb": "5652c8a619327dcb7bcce87f97e431828bc50095c8c9f0bd620cdef704ed0517",
+    "herramientas/integrar_notebook_semana1.py": "da478b6f85b06550e2a3dc7bddc1b52add9d91dcea9cb90e8baf4cc9e4767e23",
+    "herramientas/integrar_notebook_semana2.py": "2c79fde0070849dd7713e7f51cc39cd753bac448df7d572936ff422565ff5e3a",
+    "herramientas/presentacion_notebooks.py": "6d6c7f54eef513f3b7b26413d46cf590f624dc7520e08952e2627f3463c1501b"
   },
   "alcance": "Código integrado de S30/S41 y T2b/A1/M017 hasta F3c; CAP01 reconstruida desde regla congelada y confirmación reconstruida mediante regla inferida retrospectivamente. Las dos restauraciones históricas de semana 2 quedan explícitas.",
   "pruebas": [
@@ -119,5 +120,19 @@
     "semana1_nodos_aislados": "finalizada",
     "semana2": "finalizada_en_reanudacion"
   },
-  "interrupcion": "Las actualizaciones de herramientas del 28oct2026 interrumpieron dos veces los procesos locales. Se verificó que no quedaron procesos residuales, se conservaron las carpetas previas y se revisaron arrays parciales legibles, finitos y no negativos. La tercera recuperación terminó en procesos locales ocultos independientes; autos reutilizó los peligros completos y FSAP_contents repitió la etapa parcial. No es un Run All ininterrumpido."
+  "interrupcion": "Las actualizaciones de herramientas del 28oct2026 interrumpieron dos veces los procesos locales. Se verificó que no quedaron procesos residuales, se conservaron las carpetas previas y se revisaron arrays parciales legibles, finitos y no negativos. La tercera recuperación terminó en procesos locales ocultos independientes; autos reutilizó los peligros completos y FSAP_contents repitió la etapa parcial. No es un Run All ininterrumpido.",
+  "presentacion_20261029": {
+    "utc": "2026-10-29T19:52:36.969163+00:00",
+    "author": "Codex",
+    "previous_file_hashes": {
+      "notebooks/week1_developed_market.ipynb": "cd726fd232bc5ed97e1027ad0ec51c231d7af7037ea852078c562ef542438afe",
+      "notebooks/week2_emerging_market.ipynb": "87d6bf8f771f9bae15903749d20aacee2273acb2914da5a3d58abf9d6fd13ee0",
+      "herramientas/integrar_notebook_semana1.py": "5b94e388cc397f473c8ad87db77ad059cb3994a7220f8c5cd06a34823605daac",
+      "herramientas/integrar_notebook_semana2.py": "320c29907ff7cb8e9bf2ff9917099547fb401b77f9bd49eb9a0f6c33b4bdaf58"
+    },
+    "index": "registro/readme_notebooks_actual.json",
+    "scope": "Guía inicial, navegación, salidas, diagnóstico y metadatos de presentación; todas las celdas ejecutables conservadas exactamente.",
+    "fresh_training": false,
+    "new_hosted_execution": false
+  }
 }

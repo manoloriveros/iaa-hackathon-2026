@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import sys
 from pathlib import Path
+from presentacion_notebooks import improve_presentation, strip_presentation
 
 R = Path(__file__).resolve().parents[1]
 ROOT = R.parents[1]
@@ -20,6 +21,7 @@ def source_literal(text):
     return '(' + '\n'.join(repr(line) for line in text.splitlines(True)) + ')'
 
 nb = read(NB)
+strip_presentation(nb)
 nb['cells'] = [c for c in nb['cells'] if not ''.join(c['source']).startswith(('## Optional dependency installation', 'INSTALL_REFERENCE_PACKAGES ='))][:6]
 nb['cells'][0]['source'] = ('''# Week 1: pricing in the developed market\n\nI am Manuel Rodríguez, an actuarial student and individual participant in the IAA AI Hackathon 2026. In this notebook I explain and reconstruct my Week 1 risk-premium model, developed with AI assistance.\n\nI estimate the expected ultimate claim cost for each 2025 policy period in motor, buildings and contents. The target is net of excess and recoveries and excludes declined claims. It is a period risk premium, not a commercial premium. Claims valued at the end of 2024 do not reveal the full ultimate cost, so the development assumptions and their sensitivity matter.\n''').splitlines(True)
 nb['cells'][3:3] = [cell('markdown', '''## Optional dependency installation\n\nKaggle usually includes these libraries. If the environment does not match the recorded reference, set the switch to `True` and run this cell with Internet enabled. Restart the kernel after installation, set the switch back to `False`, and run from the top. Keep the same Kaggle session so the installed packages remain available. The reference versions may not support every Kaggle Python image.\n'''), cell('code', '''INSTALL_REFERENCE_PACKAGES = False\nif INSTALL_REFERENCE_PACKAGES:\n    import subprocess, sys\n    subprocess.check_call([sys.executable, "-m", "pip", "install", "numpy==2.5.3", "pandas==3.0.5", "scipy==1.18.1", "scikit-learn==1.9.1", "lightgbm==4.7.0", "catboost==1.2.10", "pyarrow==26.0.0"])\n    raise RuntimeError("Packages installed. Restart the kernel, turn installation off, and run all cells again.")\n''')]
@@ -108,5 +110,6 @@ nb['cells'].append(cell('markdown', '''## Apply the S41 level factors and check 
 nb['cells'].append(cell('code', f'''factors = {factors!r}\ns30 = work / "work/S30_claude_b/S30_claude_b.csv"\npred = pd.read_csv(s30, dtype={{"row_id": str}})\nline_lookup = pd.concat([pd.read_parquet(developed / f"test_{{line}}.parquet", columns=["row_id"]).assign(line=line) for line in LINES]).set_index("row_id").line\nlabels = line_lookup.reindex(pred.row_id).to_numpy()\nassert pd.notna(labels).all()\nfor line, factor in factors.items():\n    pred.loc[labels == line, "prediction"] *= factor\nexpected_ids = pd.read_parquet(developed / "sample_submission.parquet", columns=["row_id"]).row_id.astype(str)\nassert list(pred.columns) == ["row_id", "prediction"] and pred.row_id.is_unique and pred.row_id.equals(expected_ids)\nassert np.isfinite(pred.prediction).all() and (pred.prediction > 0).all()\nout = RUN / "submission_week1_S41_candidate.csv"\npred.to_csv(out, index=False, float_format="%.6f", lineterminator="\\n")\nh = hashlib.sha256(out.read_bytes()).hexdigest()\nexpected_sha = "d8661c2874e9112bd3dd62ea4470a465ee309832dee53fd9dcaa4144dac643a5"\nprint("S41 SHA-256:", h, "matches historical:", h == expected_sha)\nif h != expected_sha:\n    raise RuntimeError(f"S41 differs from the historical CSV. Preserve and investigate {{out}} before treating this as an exact reproduction.")\nfinal_output = EXPORT / "submission_week1_S41.csv"\nshutil.copyfile(out, final_output)\nprint("Output:", final_output)\n'''))
 license_text = (R/'LICENSE').read_text(encoding='utf-8').strip()
 nb['cells'].append(cell('markdown', '## License and materials\n\nMy project code and documentation are covered by the MIT License below. Competition data and third-party packages retain their own terms and are not included in that license.\n\n' + license_text + '\n'))
+improve_presentation(nb, 1)
 NB.write_text(json.dumps(nb, ensure_ascii=False, indent=1)+'\n', encoding='utf-8')
 print('Embedded',len(paths),'sources in',NB,NB.stat().st_size)
