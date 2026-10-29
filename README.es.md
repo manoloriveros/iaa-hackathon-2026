@@ -49,7 +49,9 @@ Preparé dos notebooks Jupyter autocontenidos. Cada uno incluye su código y con
 | [Semana 1](notebooks/week1_developed_market.ipynb) | `submission_week1_S41.csv` |
 | [Semana 2](notebooks/week2_emerging_market.ipynb) | `submission_week2_F3c.csv` y `commercial_reference_premiums.csv` |
 
-En Jupyter local defino `IAA_W1_DATA`, o `IAA_W2_DEVELOPED` e `IAA_W2_EMERGING`, con las carpetas que contienen los Parquet. Puedo elegir almacenamiento temporal y exportaciones privadas mediante `IAA_NOTEBOOK_WORK` e `IAA_NOTEBOOK_EXPORT`. La [guía de los notebooks](notebooks/README.md) detalla la configuración, los recursos conocidos y las comprobaciones ante fallos.
+En mi carpeta local los notebooks resuelven las bases mediante `RUTAS_PROYECTO.json`. En otra copia defino `IAA_W1_DATA`, o `IAA_W2_DEVELOPED` e `IAA_W2_EMERGING`, con las carpetas de los Parquet; `IAA_DATA_ROOT` puede indicar su carpeta común. Antes de entrenar contrasto cada archivo con la huella archivada de su descarga y valido los identificadores de las plantillas. Puedo comprobar sólo esa conexión con `python herramientas/entradas_notebooks.py --week both`.
+
+Elijo almacenamiento temporal y exportaciones privadas fuera de las entradas mediante `IAA_NOTEBOOK_WORK` e `IAA_NOTEBOOK_EXPORT`. Cada corrida guarda `input_manifest.json`. La [guía de los notebooks](notebooks/README.md) detalla la configuración, los recursos conocidos y las comprobaciones ante fallos.
 
 El entrenamiento puede tardar varias horas. No he medido tiempo ni almacenamiento máximo en una ejecución alojada en Kaggle. Los modelos y datos intermedios quedan en almacenamiento temporal y no se conservan automáticamente.
 
@@ -84,7 +86,7 @@ Guardé hipótesis, fuentes, alternativas fallidas y correcciones. También usé
 
 ## Entrega, acceso y licencia
 
-La [guía del formulario](docs/entrega/FORMULARIO_FINAL.md) identifica los archivos y enlaces de entrega. Mi carpeta local `Hackaton/Entrega_final` reúne los CSV elegidos y el informe español; el inglés sigue pendiente de conciliar con esa versión. Mantengo el repositorio privado hasta el cierre según la política del proyecto y debo confirmar el acceso del jurado.
+La [guía del formulario](docs/entrega/FORMULARIO_FINAL.md) identifica los archivos y enlaces de entrega. Mi carpeta local `Hackaton/Entrega_final` reúne los archivos de predicción y los informes elegidos, con sus versiones vigentes en el manifiesto. Mantengo el repositorio privado hasta el cierre según la política del proyecto y debo confirmar el acceso del jurado.
 
 Conservo el paquete de código congelado bajo `entrega-codigo-20261029`; las mejoras posteriores de presentación permanecen en el historial de Git. La [guía de control de versiones](docs/CONTROL_DE_VERSIONES.md) explica ese registro.
 

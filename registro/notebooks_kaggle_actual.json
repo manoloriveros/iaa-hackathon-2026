@@ -4,11 +4,15 @@
   "autor": "Codex",
   "estado": "ambas_recetas_reproducidas_localmente_con_limites",
   "archivos": {
-    "notebooks/week1_developed_market.ipynb": "89e50706e4f0f0eda968183badef736469d3860b99648f0eeb5ed5575d9ef16d",
-    "notebooks/week2_emerging_market.ipynb": "5652c8a619327dcb7bcce87f97e431828bc50095c8c9f0bd620cdef704ed0517",
-    "herramientas/integrar_notebook_semana1.py": "da478b6f85b06550e2a3dc7bddc1b52add9d91dcea9cb90e8baf4cc9e4767e23",
-    "herramientas/integrar_notebook_semana2.py": "2c79fde0070849dd7713e7f51cc39cd753bac448df7d572936ff422565ff5e3a",
-    "herramientas/presentacion_notebooks.py": "6d6c7f54eef513f3b7b26413d46cf590f624dc7520e08952e2627f3463c1501b"
+    "notebooks/week1_developed_market.ipynb": "43573c6f44a914836072e13fd4133c16866a2a5e9b4bc1a95166e39d7cffed07",
+    "notebooks/week2_emerging_market.ipynb": "49e5a17119176baa81c6d74f17aaab557d705559bbac6086796865f12d80e76a",
+    "herramientas/integrar_notebook_semana1.py": "9ebb8787467a9d224910374755c52533dc54288ad5dd0a0d0b54e97b064e5101",
+    "herramientas/integrar_notebook_semana2.py": "116966943558615321c1757c95dfea17bde699a678e9bbd576cb89b8c8c9138c",
+    "herramientas/presentacion_notebooks.py": "6d6c7f54eef513f3b7b26413d46cf590f624dc7520e08952e2627f3463c1501b",
+    "herramientas/entradas_notebooks.py": "842624fab9c96bc6af85f969230beb795cdf67ae52d05b33ebb0752bcb2ad5dd",
+    "registro/contrato_entradas_notebooks.json": "f90f5b63b2f176ab692752f91dabb0e67277a71052a87bf65a97936f1b092cf4",
+    "notebooks/README.md": "257ff9f8ff3cc7704721f3cecb228db9c6ba204315e1fd947329b57f9cd0bb8b",
+    "herramientas/pruebas/test_entradas_notebooks.py": "7b1e05ebce68d54db3c9a5e5bf9eba39857edd01d42e26c20739b467a24e2179"
   },
   "alcance": "Código integrado de S30/S41 y T2b/A1/M017 hasta F3c; CAP01 reconstruida desde regla congelada y confirmación reconstruida mediante regla inferida retrospectivamente. Las dos restauraciones históricas de semana 2 quedan explícitas.",
   "pruebas": [
@@ -134,5 +138,20 @@
     "scope": "Guía inicial, navegación, salidas, diagnóstico y metadatos de presentación; todas las celdas ejecutables conservadas exactamente.",
     "fresh_training": false,
     "new_hosted_execution": false
+  },
+  "conexion_bases_20261029": {
+    "utc": "2026-10-29T20:05:04.405487+00:00",
+    "author": "Codex",
+    "previous_file_hashes": {
+      "notebooks/week1_developed_market.ipynb": "89e50706e4f0f0eda968183badef736469d3860b99648f0eeb5ed5575d9ef16d",
+      "notebooks/week2_emerging_market.ipynb": "5652c8a619327dcb7bcce87f97e431828bc50095c8c9f0bd620cdef704ed0517",
+      "herramientas/integrar_notebook_semana1.py": "da478b6f85b06550e2a3dc7bddc1b52add9d91dcea9cb90e8baf4cc9e4767e23",
+      "herramientas/integrar_notebook_semana2.py": "2c79fde0070849dd7713e7f51cc39cd753bac448df7d572936ff422565ff5e3a",
+      "herramientas/presentacion_notebooks.py": "6d6c7f54eef513f3b7b26413d46cf590f624dc7520e08952e2627f3463c1501b"
+    },
+    "contract": "registro/contrato_entradas_notebooks.json",
+    "review": "registro/entradas_notebooks_actual.json",
+    "scope": "Resuelve datos locales/Kaggle, contrasta huellas de descarga y valida plantillas antes de crear la corrida. Fuentes y configuración de modelos conservadas.",
+    "fresh_training": false
   }
 }

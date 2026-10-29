@@ -7,6 +7,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 from presentacion_notebooks import improve_presentation, strip_presentation
+from entradas_notebooks import apply_input_contract
 
 R = Path(__file__).resolve().parents[1]
 W = R / 'privado/reentrenamiento_completo_20261026/corrida'
@@ -105,6 +106,7 @@ nb['cells'].append(cell('markdown', '''## From risk premium to commercial premiu
 nb['cells'].append(cell('code', '''from decimal import Decimal, localcontext, ROUND_HALF_UP\n+reference = pd.read_parquet(emerging / "reference_policies.parquet")\n+expenses = pd.read_parquet(emerging / "expenses.parquet").set_index("item").emerging\n+refs = reference.merge(pred, on="row_id", how="left", validate="one_to_one")\n+assert len(refs) == 20 and refs.prediction.notna().all()\n+D = lambda x: Decimal(str(x))\n+E = lambda k: D(expenses[k])\n+commercial = []\n+with localcontext() as context:\n+    context.prec = 45\n+    for row in refs.itertuples(index=False):\n+        risk, exposure = D(row.prediction), D(row.exposure)\n+        commission = E("commission_" + row.channel)\n+        cat_rate = E("cat_reinsurance") if row.line in ("buildings", "contents") else D(0)\n+        denominator = 1 - E("variable_expense") - commission - E("premium_tax") - E("target_profit_margin")\n+        assert denominator > 0 and risk >= 0 and exposure > 0\n+        fixed = E("fixed_expense_per_policy")\n+        price = (risk * (1 + cat_rate) + fixed) / denominator\n+        prorated = (risk * (1 + cat_rate) + fixed * exposure) / denominator\n+        assert abs(price - (risk * (1 + cat_rate) + fixed + price * (1 - denominator))) < D("1e-30")\n+        commercial.append({"row_id": row.row_id, "line": row.line, "channel": row.channel, "exposure": float(exposure), "risk_premium": float(risk), "fixed_expense": float(fixed), "commercial_premium": str(price.quantize(D("0.01"), rounding=ROUND_HALF_UP)), "commercial_premium_prorated_fixed_sensitivity": str(prorated.quantize(D("0.01"), rounding=ROUND_HALF_UP))})\n+commercial_path = EXPORT / "commercial_reference_premiums.csv"\n+pd.DataFrame(commercial).to_csv(commercial_path, index=False)\n+print("Commercial reference calculations:", commercial_path)\n+'''.replace('\n+', '\n')))
 license_text = (R/'LICENSE').read_text(encoding='utf-8').strip()
 nb['cells'].append(cell('markdown', '## License and materials\n\nMy project code and documentation are covered by the MIT License below. Competition data and third-party packages retain their own terms and are not included in that license.\n\n' + license_text + '\n'))
+apply_input_contract(nb, 2)
 improve_presentation(nb, 2)
 NB.write_text(json.dumps(nb, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
 print('Embedded', len(items), 'sources in', NB, 'bytes', NB.stat().st_size)

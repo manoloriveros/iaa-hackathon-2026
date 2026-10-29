@@ -19,7 +19,11 @@ The final exported filenames are `submission_week1_S41.csv` for Week 1 and `subm
 
 ## How I supply the inputs
 
-In Kaggle I attach the competition data, select CPU and follow the cells in order. Automatic discovery requires one matching input folder. For a local run, or when more than one input matches, I set the input variables before starting the kernel:
+In Kaggle I attach the competition data, select CPU and follow the cells in order. In my existing local workspace the notebooks find `RUTAS_PROYECTO.json` in the current directory or its parents. They use its Week 1 data route for the developed reference and its emerging-data route for Week 2. I can open the local notebooks without copying the bases into the repository.
+
+The selection order is an explicit market variable, then `IAA_DATA_ROOT`, then the workspace routes, then Kaggle's input mount. A wrong explicit path stops the notebook; it does not silently select another folder. Discovery requires exactly one matching directory and rejects an emerging folder as developed input.
+
+For another local checkout, or when more than one input matches, I set the input variables before starting the kernel:
 
 ```powershell
 $env:IAA_W1_DATA = 'C:/path/to/week1/parquet'
@@ -30,6 +34,10 @@ $env:IAA_NOTEBOOK_EXPORT = 'C:/path/to/private_exports'
 ```
 
 I use paths to the Parquet directories themselves. Week 1 requires eleven files; emerging requires thirteen. The notebooks check required names, template IDs and input fingerprints before modelling. I keep the markets separate because their identifiers are not interchangeable.
+
+As alternatives to individual market paths, I can set `IAA_DATA_ROOT` to a common parent containing the official data folders, or `IAA_PROJECT_ROOT` to my workspace containing `RUTAS_PROYECTO.json` when the kernel starts elsewhere. These variables do not download or redistribute data. The [input contract](../registro/contrato_entradas_notebooks.json) contains file names, sizes and the SHA-256 fingerprints archived during the official downloads. The notebooks stop on any mismatch; they do not assume that displaying a calculated hash proves the input version.
+
+I check both developed and emerging template IDs for Week 2. A successful preflight writes `input_manifest.json` into the new run folder, with resolved directories, fingerprints and template counts. The notebooks reject temporary or export directories inside their input folders.
 
 Alternatively, I can set the variables in an extra configuration cell before the notebook's existing import and path cells. I replace the example paths with directories on my machine:
 
@@ -49,6 +57,16 @@ os.environ["IAA_NOTEBOOK_EXPORT"] = "C:/path/to/private_exports"
 ```
 
 If I install packages and restart the kernel, I rerun this configuration cell. Automatic discovery only works for the expected attached competition folders; an explicit path also supports a different local folder name.
+
+## How I check the data connection without training
+
+With pandas and PyArrow available, I can run the same input-resolution and validation code from the repository root:
+
+```powershell
+python herramientas/entradas_notebooks.py --week both
+```
+
+If my terminal starts outside the workspace, I add `--project-root C:/path/to/workspace`. For a separate data tree I use `--data-root C:/path/to/official_data`. An optional `--receipt privado/input_preflight.json` saves the result outside the input folders. This command reads the bases, checks fingerprints and template IDs, and does not train models or generate predictions. The notebook embeds the same runtime code and its contract, so it does not import this repository tool during execution.
 
 ## Environment and resources
 

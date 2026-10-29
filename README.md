@@ -49,7 +49,9 @@ I provide two standalone Jupyter notebooks. Each contains its source code and fr
 | [Week 1](notebooks/week1_developed_market.ipynb) | `submission_week1_S41.csv` |
 | [Week 2](notebooks/week2_emerging_market.ipynb) | `submission_week2_F3c.csv` and `commercial_reference_premiums.csv` |
 
-For local Jupyter runs, I set `IAA_W1_DATA`, or `IAA_W2_DEVELOPED` and `IAA_W2_EMERGING`, to the directories containing the Parquet files. `IAA_NOTEBOOK_WORK` and `IAA_NOTEBOOK_EXPORT` let me choose temporary storage and private exports. The [notebook guide](notebooks/README.md) provides the exact configuration, resource evidence and troubleshooting steps.
+In my local workspace the notebooks resolve the data through `RUTAS_PROYECTO.json`. In another checkout I set `IAA_W1_DATA`, or `IAA_W2_DEVELOPED` and `IAA_W2_EMERGING`, to the Parquet directories; `IAA_DATA_ROOT` can identify their common parent. Before training I compare every required file with its archived download fingerprint and validate template IDs. I can check only this connection with `python herramientas/entradas_notebooks.py --week both`.
+
+`IAA_NOTEBOOK_WORK` and `IAA_NOTEBOOK_EXPORT` let me choose temporary storage and private exports outside the input folders. Each run saves `input_manifest.json`. The [notebook guide](notebooks/README.md) provides the configuration, resource evidence and troubleshooting steps.
 
 Training can take several hours. I have not measured runtime or peak storage in a hosted Kaggle run. The notebooks keep intermediate models and data in temporary storage, which does not persist automatically.
 
@@ -84,7 +86,7 @@ I preserved hypotheses, source references, failed alternatives and corrections. 
 
 ## Delivery, access and license
 
-The [submission guide](docs/entrega/FORMULARIO_FINAL.md) identifies the files and links for the final form. My local `Hackaton/Entrega_final` folder holds the selected CSVs and Spanish report; the English report remains pending reconciliation with that version. The repository stays private under my policy until the competition closes, and judges' access still needs confirmation.
+The [submission guide](docs/entrega/FORMULARIO_FINAL.md) identifies the files and links for the final form. My local `Hackaton/Entrega_final` folder holds the selected prediction files and reports, with their current versions recorded in its manifest. The repository stays private under my policy until the competition closes, and judges' access still needs confirmation.
 
 I preserve the frozen code package under `entrega-codigo-20261029`; subsequent presentation changes remain in the Git history. The [version-control guide](docs/VERSION_CONTROL.md) explains that record.
 

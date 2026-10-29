@@ -1,0 +1,157 @@
+{
+  "id": "NOTEBOOK-INPUTS-20261029",
+  "utc": "2026-10-29T20:05:04.405487+00:00",
+  "author": "Codex",
+  "path_base": "repository",
+  "request": "Conectar notebooks con las bases oficiales y asegurar el arranque reproducible",
+  "changes": [
+    {
+      "path": "notebooks/week1_developed_market.ipynb",
+      "before_sha256": "89e50706e4f0f0eda968183badef736469d3860b99648f0eeb5ed5575d9ef16d",
+      "after_sha256": "43573c6f44a914836072e13fd4133c16866a2a5e9b4bc1a95166e39d7cffed07"
+    },
+    {
+      "path": "notebooks/week2_emerging_market.ipynb",
+      "before_sha256": "5652c8a619327dcb7bcce87f97e431828bc50095c8c9f0bd620cdef704ed0517",
+      "after_sha256": "49e5a17119176baa81c6d74f17aaab557d705559bbac6086796865f12d80e76a"
+    },
+    {
+      "path": "README.md",
+      "before_sha256": "c89af13319bdcc3ccbc2187d204caf4d7dda54f349ea88a662b3e99a4aa76fa8",
+      "after_sha256": "72d903f44524309e75293c06a6c840a21eaba7c26e212a8f5812b4e3b1ac6d53"
+    },
+    {
+      "path": "README.es.md",
+      "before_sha256": "7d9d10acea288992cee0493aab63401a2a0166f827015645528a4c335a9f071a",
+      "after_sha256": "871c61a48177029271b2c934d6daa1d6d2ffad957402bab8419e62b1808fe157"
+    },
+    {
+      "path": "notebooks/README.md",
+      "before_sha256": "9675b4219cac9b8bc34c461a2cfbbe3d095c78833244d8667ccf59345f59cbae",
+      "after_sha256": "257ff9f8ff3cc7704721f3cecb228db9c6ba204315e1fd947329b57f9cd0bb8b"
+    },
+    {
+      "path": "herramientas/integrar_notebook_semana1.py",
+      "before_sha256": "da478b6f85b06550e2a3dc7bddc1b52add9d91dcea9cb90e8baf4cc9e4767e23",
+      "after_sha256": "9ebb8787467a9d224910374755c52533dc54288ad5dd0a0d0b54e97b064e5101"
+    },
+    {
+      "path": "herramientas/integrar_notebook_semana2.py",
+      "before_sha256": "2c79fde0070849dd7713e7f51cc39cd753bac448df7d572936ff422565ff5e3a",
+      "after_sha256": "116966943558615321c1757c95dfea17bde699a678e9bbd576cb89b8c8c9138c"
+    },
+    {
+      "path": "herramientas/entradas_notebooks.py",
+      "before_sha256": null,
+      "after_sha256": "842624fab9c96bc6af85f969230beb795cdf67ae52d05b33ebb0752bcb2ad5dd"
+    },
+    {
+      "path": "herramientas/pruebas/test_entradas_notebooks.py",
+      "before_sha256": null,
+      "after_sha256": "7b1e05ebce68d54db3c9a5e5bf9eba39857edd01d42e26c20739b467a24e2179"
+    },
+    {
+      "path": "registro/contrato_entradas_notebooks.json",
+      "before_sha256": null,
+      "after_sha256": "f90f5b63b2f176ab692752f91dabb0e67277a71052a87bf65a97936f1b092cf4"
+    },
+    {
+      "path": "registro/notebooks_kaggle_actual.json",
+      "before_sha256": "24d445fbe43c23d13d584046aa66ee45659ecb260c6b4640b79493b5b57b04f0",
+      "after_sha256": "28746e1536dcb63749671e6f2d9baf29b5e67ef732d0fd72276659319565e6f8"
+    }
+  ],
+  "contract": "registro/contrato_entradas_notebooks.json",
+  "runtime_source": "herramientas/entradas_notebooks.py",
+  "evidence_directory": "Hackaton/Repositorio_IAA2026/privado/entradas_notebooks_20261029",
+  "evidence_directory_base": "workspace_root",
+  "model_source_changes": false,
+  "frozen_model_configuration_changes": false,
+  "new_training": false,
+  "new_predictions": false,
+  "new_scores": false,
+  "hosted_run_accredited": false,
+  "uninterrupted_run_all_accredited": false,
+  "verification": {
+    "utc": "2026-10-29T20:12:34.957376+00:00",
+    "ok": true,
+    "behavioral_tests": 12,
+    "actual_data_checks": [
+      {
+        "week": 1,
+        "market": "public",
+        "directory_relative_to_workspace": "Hackaton/Semana 1/Datos",
+        "file_count": 11,
+        "all_fingerprints_match": true,
+        "template_rows": 626639,
+        "input_files_unmodified": true
+      },
+      {
+        "week": 2,
+        "market": "developed",
+        "directory_relative_to_workspace": "Hackaton/Semana 1/Datos",
+        "file_count": 11,
+        "all_fingerprints_match": true,
+        "template_rows": 626639,
+        "input_files_unmodified": true
+      },
+      {
+        "week": 2,
+        "market": "emerging",
+        "directory_relative_to_workspace": "Hackaton/Semana 2/Datos/emerging",
+        "file_count": 13,
+        "all_fingerprints_match": true,
+        "template_rows": 209063,
+        "input_files_unmodified": true
+      }
+    ],
+    "distinct_downloaded_files_verified": 24,
+    "code_cells_compile": 145,
+    "embedded_sources_compile": 123,
+    "local_links_checked": 59,
+    "delivery_copies_valid": 12,
+    "model_training_started": false,
+    "prediction_generation": false,
+    "new_hosted_run": false,
+    "full_run_all_accredited": false,
+    "runtime_note": "La prueba de conexión usa PyArrow del lector local ya disponible; no instala ni acredita el entorno completo de entrenamiento.",
+    "notebooks": [
+      {
+        "path": "notebooks/week1_developed_market.ipynb",
+        "schema_valid": true,
+        "code_cells_compile": 54,
+        "changed_startup_code_cells": 2,
+        "embedded_sources": 44,
+        "frozen_sources_and_constants_unchanged": true,
+        "input_update_idempotent": true,
+        "actual_startup_cells_executed": true,
+        "workspace_creation_tested": true,
+        "outputs_cleared": true,
+        "sha256": "43573c6f44a914836072e13fd4133c16866a2a5e9b4bc1a95166e39d7cffed07",
+        "input_receipt": "Hackaton/Repositorio_IAA2026/privado/entradas_notebooks_20261029/smoke_runs/iaa_week1_cd36beaf7094/input_manifest.json"
+      },
+      {
+        "path": "notebooks/week2_emerging_market.ipynb",
+        "schema_valid": true,
+        "code_cells_compile": 91,
+        "changed_startup_code_cells": 3,
+        "embedded_sources": 79,
+        "frozen_sources_and_constants_unchanged": true,
+        "input_update_idempotent": true,
+        "actual_startup_cells_executed": true,
+        "workspace_creation_tested": true,
+        "outputs_cleared": true,
+        "sha256": "49e5a17119176baa81c6d74f17aaab557d705559bbac6086796865f12d80e76a",
+        "input_receipt": "Hackaton/Repositorio_IAA2026/privado/entradas_notebooks_20261029/smoke_runs/iaa_week2_9e290cd59b8e/input_manifest.json"
+      }
+    ],
+    "receipt": "Hackaton/Repositorio_IAA2026/privado/entradas_notebooks_20261029/verificacion.json"
+  },
+  "github_sync": {
+    "requested_by_user": true,
+    "branch": "main",
+    "final_receipt_local": "Hackaton/Repositorio_IAA2026/privado/entradas_notebooks_20261029/github_final.json"
+  },
+  "scope_note": "Las celdas de arranque y comprobación de datos cambian; las 123 fuentes y constantes de modelos, recetas, etapas y factores permanecen idénticos. No se presenta este arranque como una nueva reproducción completa.",
+  "publication_scope": "Únicamente la conexión a bases, los notebooks y sus guías y registros. Se publica sobre la versión remota segura; los commits locales de la traducción con un ejemplo de prima individual se conservan separados y no se incorporan a su historia."
+}
