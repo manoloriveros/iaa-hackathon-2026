@@ -15,7 +15,7 @@ OLD = BASE/'tanda3_20261025_v3'; SOURCE = BASE/'fuente_f2_2024_v2'; TARGET = BAS
 OUT = BASE/'P38_CatBoost_guardado_20261026'
 PLAN = R/'registro/semana2_CatBoost_guardado_privada_plan.json'
 INDEX = R/'registro/semana2_CatBoost_guardado_privada_actual.json'
-DOC = R/'docs/semana2/PRIVADA_P38_CATBOOST_GUARDADO.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P38_CATBOOST_GUARDADO.md'
 sys.path.insert(0, str(R/'src')); sys.path.insert(0, str(ROOT/'Preparación/.cache/parquet-reader'))
 import numpy as np
 import pandas as pd

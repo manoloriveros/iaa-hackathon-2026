@@ -14,7 +14,7 @@ g=importlib.util.module_from_spec(s);s.loader.exec_module(g)
 v=g.v;m=g.m;w=g.w;pd=g.pd;np=g.np;BASE=g.BASE
 OUT=BASE/'P57_validacion_GLM_offset_20261027'
 PLAN=R/'registro/semana2_GLM_offset_validacion_plan.json';INDEX=R/'registro/semana2_GLM_offset_validacion_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P57_VALIDACION_GLM_OFFSET.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P57_VALIDACION_GLM_OFFSET.md'
 BASELINE=g.v.OUT;RAW_DUMP=m.dump;ORIGINAL_FIT=g.TweedieRegressor.fit;FIT_PATH=None
 
 

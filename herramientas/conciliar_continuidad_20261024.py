@@ -8,7 +8,7 @@ REPO = ROOT / 'Hackaton/Repositorio_IAA2026'
 RUN = REPO / 'privado/semana2/desarrollo2023/continuidad_20261024T0310Z_v1'
 PLAN = REPO / 'registro/semana2_conciliacion_nocturna_plan_v1.json'
 INDEX = REPO / 'registro/semana2_conciliacion_nocturna_actual.json'
-DOC = REPO / 'docs/semana2/VIGENCIA_B20_E_INCIDENCIA_20261024.md'
+DOC = REPO / 'docs/archivo/semana2/VIGENCIA_B20_E_INCIDENCIA_20261024.md'
 NIGHT = REPO / 'registro/semana2_continuidad_nocturna.json'
 ARCHIVE = REPO / 'docs/fuentes/kaggle_discusion_752144_20261024T0307Z.json'
 IDENT = 'S2-CONTINUIDAD-INCIDENCIA2023-v1-20261024'
@@ -218,8 +218,8 @@ El primer intento del lector se detuvo por KeyError al buscar findings en el ín
     for name in ['MEMORIA_PROYECTO.md','DECISIONES.md']:
         change(ROOT/('Preparaci'+chr(243)+'n')/name,lambda raw:raw+section)
     supplement=f"\n\n## Actualización UTC{NOW()}: corrección anunciada\n\nHOST3543798 anunció a las02:57:36.893UTC que la incidencia estaba resuelta. La [consulta nueva](../fuentes/{ARCHIVE.name}) conserva la respuesta Kaggle MCP y el corte anterior permanece archivado. Se cotejaron mensaje nuevo, rol HOST, fecha y mensajes previos; no se repitió el cotejo de archivos. Estado actualizado: corrección anunciada, sin verificación propia de recepción/scoring ni causa interna. No hubo envío propio; el anuncio no autoriza uno. Se mantienen contrato emergente, selección y restricciones2024/test. Foro046 e [informe de conciliación](VIGENCIA_B20_E_INCIDENCIA_20261024.md).\n"
-    change(REPO/'docs/semana2/INCIDENCIA_KAGGLE_752144.md',lambda raw:raw+supplement)
-    change(REPO/'docs/semana2/PLAN_NOCTURNO_20261023.md',lambda raw:raw+f"\n\n## Conciliación incremental de cortes e incidencia\n\nCodex,{NOW()}. La [conciliación](VIGENCIA_B20_E_INCIDENCIA_20261024.md) reutiliza síntesis y añade incendio/AD sin repetirlos. G1-G6 continúan abiertas. HOST anunció arreglo752144; recepción/scoring propios sin verificar, sin envío o nuevo cotejo. La cola obsoleta se sustituye por novedades reales y balance07:00Bogotá; sin fuentes nuevas no repetir diagnósticos o añadir modelos. B00 y alternativas conservados,2024/testcerrados,195/285 al corte y cero ajustes nuevos. Ventana/frecuencia/otras automatizaciones sin cambios.\n")
+    change(REPO/'docs/archivo/semana2/INCIDENCIA_KAGGLE_752144.md',lambda raw:raw+supplement)
+    change(REPO/'docs/archivo/semana2/PLAN_NOCTURNO_20261023.md',lambda raw:raw+f"\n\n## Conciliación incremental de cortes e incidencia\n\nCodex,{NOW()}. La [conciliación](VIGENCIA_B20_E_INCIDENCIA_20261024.md) reutiliza síntesis y añade incendio/AD sin repetirlos. G1-G6 continúan abiertas. HOST anunció arreglo752144; recepción/scoring propios sin verificar, sin envío o nuevo cotejo. La cola obsoleta se sustituye por novedades reales y balance07:00Bogotá; sin fuentes nuevas no repetir diagnósticos o añadir modelos. B00 y alternativas conservados,2024/testcerrados,195/285 al corte y cero ajustes nuevos. Ventana/frecuencia/otras automatizaciones sin cambios.\n")
     change(ROOT/'RUTAS_PROYECTO.json',lambda raw:top(top(raw,'week_2_continuity_reconciliation_index',rel(INDEX)),'week_2_continuity_reconciliation_report',rel(DOC)))
     for p in paths[:2]+paths[3:5]: check('unmodified source '+p.name,sha(p)==next(x['sha256'] for x in frozen if x['path']==rel(p)))
     after=read(NIGHT)

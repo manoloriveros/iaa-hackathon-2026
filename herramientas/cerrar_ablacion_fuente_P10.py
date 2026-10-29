@@ -80,7 +80,7 @@ def main():
              'F3c histórico completo y no se afirma ganancia frente a su envío ni mejora privada. '
              'B00/F3c/P6y todas las alternativas permanecen; 2024abierto por autorización humana vigente.\n\n')
     note += 'Evidencia: '+w.rel(OUT/'report.json')+'; '+w.rel(OUT/'replay_report.json')+'.\n'
-    doc = R/'docs/semana2/PRIVADA_P10_VALIDACION_ABLACION.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
+    doc = R/'docs/archivo/semana2/PRIVADA_P10_VALIDACION_ABLACION.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md', 'DECISIONES.md']: w.append(ROOT/'Preparación'/name, note, cut)
     body = OUT/'forum_resultados.md'; body.write_text(note, encoding='utf8')
     result = subprocess.run([sys.executable, str(ROOT/'Hackaton/Semana 2/Foro/comentar.py'), '--autor', 'Codex',

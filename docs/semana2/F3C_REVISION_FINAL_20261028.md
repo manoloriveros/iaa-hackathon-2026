@@ -1,5 +1,7 @@
 # F3c: revisión final y sello del archivo conservado
 
+Uso este cierre para identificar mi archivo definitivo y el alcance de las comprobaciones sobre su integridad y trazabilidad. Mantengo las reservas predictivas documentadas; el sello del archivo no las resuelve.
+
 Codex, 2026-10-28T17:12:40.035306+00:00. Se completó la última revisión local solicitada. El CSV conservado pasa integridad, contrato de entrega, trazabilidad y conciliación de controles. Las reservas predictivas siguen vigentes; esta revisión no acredita superioridad privada ni cambia la selección manual de Kaggle.
 
 ## Archivo y reproducción

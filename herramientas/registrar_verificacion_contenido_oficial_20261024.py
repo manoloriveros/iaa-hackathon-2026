@@ -4,7 +4,7 @@ from datetime import datetime,timezone
 import hashlib,json,os,re,subprocess,sys
 ROOT=Path(__file__).resolve().parents[3];REPO=ROOT/'Hackaton/Repositorio_IAA2026'
 RUN=REPO/'privado/semana2/integridad_oficial/contenido_20261024_v1'
-DOC=REPO/'docs/semana2/VERIFICACION_CONTENIDO_KAGGLE_20261024.md'
+DOC=REPO/'docs/archivo/semana2/VERIFICACION_CONTENIDO_KAGGLE_20261024.md'
 INDEX=REPO/'registro/semana2_contenido_oficial_actual.json'
 SOURCES=REPO/'registro/semana2_b20_fuentes2023_actual.json'
 IDENT='S2-CONTENIDO-OFICIAL-20261024-v1';STATEKEY='week_2_official_parquet_binary_content20261024_v1'

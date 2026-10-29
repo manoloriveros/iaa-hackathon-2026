@@ -22,7 +22,7 @@ PARENT=R/'privado/validacion_cadena_f3c/20261027T153123Z'
 ACTIVE=R/'privado/validacion_cadena_f3c_A1_mezcla/20261027T175434Z'
 PLAN=R/'registro/semana2_revision_evaluacion_documento_plan.json'
 INDEX=R/'registro/semana2_revision_evaluacion_documento_actual.json'
-DOC=R/'docs/semana2/REVISION_EVALUACION_DOCUMENTO_20261027.md'
+DOC=R/'docs/archivo/semana2/REVISION_EVALUACION_DOCUMENTO_20261027.md'
 VIEWS=['T2b','A1','mezcla'];LINES=['motor','buildings','contents']
 F3C=R/'privado/semana2/claude_mision017_20261025/F3c_2025.csv'
 F3CSHA='5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276'

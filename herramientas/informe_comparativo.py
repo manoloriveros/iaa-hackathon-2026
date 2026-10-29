@@ -43,7 +43,7 @@ def prepare():
     source(REPO/'registro/panel_analisis_actual.json','indice_EDA')
     source(ROOT/'Hackaton/Semana 2/Claude/informe_final_20261026/informe_final_IAA2026_es.pdf','informe_previo_Claude')
     source(ROOT/'Hackaton/Semana 2/Claude/informe_final_20261026/fuente/paginas.py','redaccion_previa_Claude')
-    for name in ['docs/RESULTADOS_PRIVADOS_SEMANA1.md','docs/SENSIBILIDAD_SEMANA2.md','docs/semana2/PRIVADA_P20_REQUISITOS_F3C.md','registro/semana2_control_entregas_codex_actual.json','registro/recibo_reproduccion_completa_20261020.json']:
+    for name in ['docs/archivo/semana1/RESULTADOS_PRIVADOS_SEMANA1.md','docs/archivo/semana1/SENSIBILIDAD_SEMANA2.md','docs/archivo/semana2/PRIVADA_P20_REQUISITOS_F3C.md','registro/semana2_control_entregas_codex_actual.json','registro/recibo_reproduccion_completa_20261020.json']:
         source(REPO/name,'evidencia_previa')
     base=ROOT/'Hackaton/Semana 2/Datos/emerging'
     ref_path=source(base/'reference_policies.parquet','20_referencias')

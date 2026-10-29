@@ -13,7 +13,7 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, Tabl
 from pypdf import PdfReader
 
 REPO = Path(__file__).resolve().parents[1]
-SOURCE = REPO / "docs/INFORME_SEMANA1.md"
+SOURCE = REPO / "docs/archivo/semana1/INFORME_SEMANA1.md"
 OUT = REPO / "docs/informe_semana1.pdf"
 ink = colors.HexColor("#172b38")
 brand = colors.HexColor("#174f59")

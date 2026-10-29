@@ -46,7 +46,7 @@ def main():
     note+='En la predicción de último de 2025, la completitud es 1 por definición del objetivo, no la completitud observada al corte de 2024. Esto se comprobará en el adaptador futuro, sin generar precios ahora.\n\n'
     note+='Persisten los límites de cola, reservas, maestros sin fecha y del proxy de coste f*s.2024 sigue abierto y adaptativo. '
     note+='B00, F3c 0,16914 y alternativas intactos; ningún cupo consumido y objetivo 0,17 activo. Evidencia: '+w.rel(OUT/'report.json')+'.\n'
-    doc=R/'docs/semana2/MISION017_COMPLETITUD_POR_RIESGO_DIAGNOSTICO.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
+    doc=R/'docs/archivo/semana2/MISION017_COMPLETITUD_POR_RIESGO_DIAGNOSTICO.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md','DECISIONES.md']:w.append(ROOT/'Preparación'/name,note,archive)
     body=OUT/'forum_resultados.md';body.write_text(note,encoding='utf8')
     response=subprocess.run([sys.executable,str(ROOT/'Hackaton/Semana 2/Foro/comentar.py'),'--autor','Codex',

@@ -18,7 +18,7 @@ ORIGINAL = HOME/'source_models'; INPUT = BASE/'P35_entradas_clima_20261026'
 OUT = BASE/'P36_fuente_clima_20261026'
 PLAN = R/'registro/semana2_fuente_clima_A1S_privada_plan.json'
 INDEX = R/'registro/semana2_fuente_clima_A1S_privada_actual.json'
-DOC = R/'docs/semana2/PRIVADA_P36_CLIMA_EN_ARBOL_FUENTE.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P36_CLIMA_EN_ARBOL_FUENTE.md'
 sys.path.insert(0, str(ROOT/'Preparación/.cache/parquet-reader'))
 import numpy as np
 import pandas as pd

@@ -17,7 +17,7 @@ w=k.w;pd=k.pd;np=k.np;q=k.q;BASE=k.BASE
 OUT=BASE/'P110_validacion_Poisson_destino_20261027'
 PLAN=R/'registro/semana2_Poisson_destino_validacion_plan.json'
 INDEX=R/'registro/semana2_Poisson_destino_validacion_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P110_VALIDACION_POISSON_DESTINO.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P110_VALIDACION_POISSON_DESTINO.md'
 P65=BASE/'P65_validacion_reporte_por_ramo_20261027'
 ORIGINAL_FIT=k.PoissonRegressor.fit
 ORIGINAL_COST_LEVEL=k.cost_level

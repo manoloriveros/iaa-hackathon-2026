@@ -17,7 +17,7 @@ OUT=BASE/'NB_nivel_credibilidad_20261027'
 ACTIVE=p.ACTIVE;REVIEW=p.REVIEW
 PLAN=R/'registro/semana2_NB_nivel_credibilidad_plan.json'
 INDEX=R/'registro/semana2_NB_nivel_credibilidad_actual.json'
-DOC=R/'docs/semana2/NB_NIVEL_CREDIBILIDAD_20261027.md'
+DOC=R/'docs/archivo/semana2/NB_NIVEL_CREDIBILIDAD_20261027.md'
 PARTITIONS=ROOT/w.read(ROOT/'RUTAS_PROYECTO.json')['week_2_validation_partitions']
 LINES=['motor','buildings','contents'];K=300.;COMPS=['R1','full','baseline']
 F3=p.F3C;R1=p.OUT/'R1_T2b_2025.csv'

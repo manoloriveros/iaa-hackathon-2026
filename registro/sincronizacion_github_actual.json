@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "utc": "2026-10-29T17:58:57.347963+00:00",
+  "author": "Codex",
+  "authorization": "Solicitud expresa del participante: sincronizar GitHub y registrar el enlace del video",
+  "repository": "https://github.com/manoloriveros/iaa-hackathon-2026",
+  "branch": "main",
+  "package_tag": "entrega-codigo-20261029",
+  "status": "paquete_preparado_para_sincronizar",
+  "visibility": "private",
+  "visibility_changed": false,
+  "history_rewritten": false,
+  "video_url": "https://www.youtube.com/watch?v=AYLkpDmZfZo",
+  "notebooks": [
+    "notebooks/week1_developed_market.ipynb",
+    "notebooks/week2_emerging_market.ipynb"
+  ],
+  "documentation_archive": "docs/archivo",
+  "archive_map": "registro/archivo_documental_actual.json",
+  "source_completeness": {
+    "model_sources": "notebooks autocontenidos y recetas verificadas en revisión de entrega",
+    "additional_document_helpers": [
+      {
+        "origen": "Hackaton/Semana 2/Claude/informe_final_20261026/fuente/prima_comercial_20ref.py",
+        "destino": "src/entrega/informe_final/fuentes_auxiliares/fuente/prima_comercial_20ref.py",
+        "sha256": "c64e4a73149be49fcc0b767c7557a55030c0f06f63452de66b31eaaed6708c5a",
+        "copia_exacta": true
+      },
+      {
+        "origen": "Hackaton/Semana 2/Claude/informe_final_20261026/latex/herramientas/build_figuras.py",
+        "destino": "src/entrega/informe_final/fuentes_auxiliares/latex/herramientas/build_figuras.py",
+        "sha256": "6956e791c132dacf54cf8f381e60331495f4326326a4b48264501472f2b3fdb5",
+        "copia_exacta": true
+      },
+      {
+        "origen": "Hackaton/Semana 2/Claude/informe_final_20261026/latex/herramientas/html2tex.py",
+        "destino": "src/entrega/informe_final/fuentes_auxiliares/latex/herramientas/html2tex.py",
+        "sha256": "6e38f3d66d0b99c707f9ebf031a2afa0c8e416005d822aca79fdc316cc391509",
+        "copia_exacta": true
+      }
+    ],
+    "excluded_coordination_script": "Hackaton/Semana 2/Foro/comentar.py",
+    "excluded_historical_lab": "Preparación"
+  },
+  "history_guard": {
+    "audit": "registro/versionado/auditoria_20261029T174852Z.json",
+    "blocks": 0,
+    "warning_review": {
+      "blob": "947b39a293cd",
+      "file": "docs/entrega/panel_analisis.html",
+      "finding": "54 cifras de ocho dígitos detectadas por forma numérica",
+      "resolution": "Corresponden a agregados por mercado/ramos/año (reserve_cents, T0_cents, recoveries_cents) y a identificadores de envíos Kaggle. No son IDs de pólizas ni predicciones por fila. No se modifica el detector ni la historia."
+    }
+  },
+  "judges_access_confirmed": false,
+  "english_report_status": "pendiente_de_conciliar_con_espanol_vigente",
+  "form_submitted": false,
+  "model_training": false,
+  "new_predictions": false,
+  "evidence_directory": "Hackaton/Repositorio_IAA2026/privado/sincronizacion_20261029",
+  "local_verification": {
+    "utc": "2026-10-29T17:59:33.355756+00:00",
+    "ok": true,
+    "local_links_checked": 517,
+    "broken_local_links": 0,
+    "delivery_copies_valid": 11,
+    "original_archive_unchanged": 246,
+    "notebook_code_unchanged": true,
+    "dependency_pins_unchanged": true,
+    "receipt": "privado/sincronizacion_20261029/cierre/verificacion_editorial.json"
+  },
+  "pending_content_guard": {
+    "blocks": 0,
+    "warnings": 0,
+    "reviewed_files": 767
+  }
+}

@@ -16,7 +16,7 @@ w=m.w; np=m.np; pd=m.pd; BASE=m.BASE
 PARENT=m.OUT; OLD_SOURCE=BASE/'A1S_nucleo_20261026_v1/source_models'
 OUT=BASE/'P53_control_fuente_20261027'
 PLAN=R/'registro/semana2_control_fuente_privada_plan.json'; INDEX=R/'registro/semana2_control_fuente_privada_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P53_CONTROL_FUENTE_DESTINO_COMUN.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P53_CONTROL_FUENTE_DESTINO_COMUN.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

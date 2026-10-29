@@ -4,7 +4,7 @@ from datetime import datetime,timezone
 import json,hashlib,os,re,subprocess,sys
 ROOT=Path(__file__).resolve().parents[3];REPO=ROOT/'Hackaton/Repositorio_IAA2026'
 RUN=REPO/'privado/semana2/revision_F03_2023/f03_20261024_v1'
-DOC=REPO/'docs/semana2/F03_DESARROLLADO_2023_Y_MECANISMO_B20.md'
+DOC=REPO/'docs/archivo/semana2/F03_DESARROLLADO_2023_Y_MECANISMO_B20.md'
 INDEX=REPO/'registro/semana2_F03_desarrollado2023_actual.json'
 SOURCE=REPO/'registro/semana2_b20_fuentes2023_actual.json'
 IDENT='S2-F03-DESARROLLADO2023-v1-20261024';FID='COD-S2-20261024-054'
@@ -32,7 +32,7 @@ def main():
     b20=read(REPO/'registro/semana2_glm_ridge_coberturas_plan_v1.json')
     prior=read(REPO/'registro/semana2_desarrollo2023_plan_v6.json')['credibility_rule']
     assert b20['recipe']['params']['alpha']==1 and 'developed2021-2023' in prior['developed_prior']
-    paths=[SOURCE,REPO/'registro/semana2_b20_fuentes2023_plan_v1.json',REPO/'registro/semana2_F02_disponibilidad2023_actual.json',REPO/'registro/semana2_contenido_oficial_actual.json',REPO/'registro/semana2_b20_mecanismo_soporte_revision_actual.json',REPO/'registro/semana2_b20_soporte_folds_actual.json',REPO/'registro/semana2_glm_ridge_coberturas_plan_v1.json',REPO/'registro/semana2_desarrollo2023_plan_v6.json',REPO/'src/semana2/entrenar_glm_ridge_coberturas2023.py',REPO/'src/semana2/entrenar_desarrollo2023_v8.py',REPO/'src/semana2/credibilidad2023.py',REPO/'src/semana2/variables_ultimo.py',ROOT/'Hackaton/Semana 2/Claude/decisiones_20261023/aplicar_decisiones.py',REPO/'docs/semana2/CAPITAL_POR_FILA_Y_AUTOS_NUEVOS_2023.md',REPO/'registro/semana2_desarrollo2023_actual.json',REPO/'registro/semana2_contadores_propios_actual.json',REPO/'registro/semana2_continuidad_nocturna.json']
+    paths=[SOURCE,REPO/'registro/semana2_b20_fuentes2023_plan_v1.json',REPO/'registro/semana2_F02_disponibilidad2023_actual.json',REPO/'registro/semana2_contenido_oficial_actual.json',REPO/'registro/semana2_b20_mecanismo_soporte_revision_actual.json',REPO/'registro/semana2_b20_soporte_folds_actual.json',REPO/'registro/semana2_glm_ridge_coberturas_plan_v1.json',REPO/'registro/semana2_desarrollo2023_plan_v6.json',REPO/'src/semana2/entrenar_glm_ridge_coberturas2023.py',REPO/'src/semana2/entrenar_desarrollo2023_v8.py',REPO/'src/semana2/credibilidad2023.py',REPO/'src/semana2/variables_ultimo.py',ROOT/'Hackaton/Semana 2/Claude/decisiones_20261023/aplicar_decisiones.py',REPO/'docs/archivo/semana2/CAPITAL_POR_FILA_Y_AUTOS_NUEVOS_2023.md',REPO/'registro/semana2_desarrollo2023_actual.json',REPO/'registro/semana2_contadores_propios_actual.json',REPO/'registro/semana2_continuidad_nocturna.json']
     sources=[]
     for i,p in enumerate(paths):
         q=RUN/'sources'/f'{i:02d}_{p.name}';q.parent.mkdir(exist_ok=True)

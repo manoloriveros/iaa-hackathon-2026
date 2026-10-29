@@ -12,7 +12,7 @@ BASE = R / 'privado/semana2/mision017_fase2'
 PRODUCER = BASE / 'FSp_edificios_productor_20261026_v1'
 P = R / 'registro/semana2_mision017_fase2_actual.json'
 INDEX = R / 'registro/semana2_mision017_renovaciones_FSp_actual.json'
-DOC = R / 'docs/semana2/MISION017_RENOVACIONES_Y_RECUPERACION_FSp.md'
+DOC = R / 'docs/archivo/semana2/MISION017_RENOVACIONES_Y_RECUPERACION_FSp.md'
 spec = importlib.util.spec_from_file_location('writer_renewal_completion', R / 'herramientas/registrar_avance_mision017_fase2.py')
 w = importlib.util.module_from_spec(spec); spec.loader.exec_module(w)
 

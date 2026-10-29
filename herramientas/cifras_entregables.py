@@ -59,7 +59,7 @@ FUENTES = {
     "recalculo_d59": f"{SEMANA}/Validacion_ajustes_claude/current_run.json",
     "capitales_149": "Hackaton/Repositorio_IAA2026/docs/evidencia/capitales_149_prediccion.json",
     "sensibilidad": "Hackaton/Repositorio_IAA2026/privado/corridas/sens_20261019T212700Z_b9e7aa92/resultados/cifras_sensibilidad.json",
-    "sensibilidad_informe": "Hackaton/Repositorio_IAA2026/docs/SENSIBILIDAD_S30_S22.md",
+    "sensibilidad_informe": "Hackaton/Repositorio_IAA2026/docs/archivo/semana1/SENSIBILIDAD_S30_S22.md",
     "sens_e04": "Hackaton/Repositorio_IAA2026/privado/corridas/sens_20261019T212700Z_b9e7aa92/resultados/e04.json",
     "sens_e09": "Hackaton/Repositorio_IAA2026/privado/corridas/sens_20261019T212700Z_b9e7aa92/resultados/e09.json",
     "sens_e10": "Hackaton/Repositorio_IAA2026/privado/corridas/sens_20261019T212700Z_b9e7aa92/resultados/e10_reproduccion.json",
@@ -69,7 +69,7 @@ FUENTES = {
     "decisiones_participante": "Hackaton/Repositorio_IAA2026/registro/decisiones_participante_20261020.json",
     "reservas_resumen": "Hackaton/Repositorio_IAA2026/privado/corridas/reservas_20261019T225357Z_99b45271/resultados/resumen.json",
     "reservas_umbrales": "Hackaton/Repositorio_IAA2026/privado/corridas/reservas_20261019T225357Z_99b45271/resultados/parte_b.json",
-    "reservas_informe": "Hackaton/Repositorio_IAA2026/docs/RESERVAS_ACOTACION.md",
+    "reservas_informe": "Hackaton/Repositorio_IAA2026/docs/archivo/semana1/RESERVAS_ACOTACION.md",
     "reservas_autorizacion": "Hackaton/Repositorio_IAA2026/registro/autorizacion_reproduccion_reservas_20261019.json",
     "decision_modelo_definitivo": "Hackaton/Repositorio_IAA2026/registro/decision_modelo_definitivo_20261020.json",
     # Calibración del nivel 2025 con el marcador público (D100, D101) y entrega final S42
@@ -93,7 +93,7 @@ FUENTES = {
     "sens_n05": "Hackaton/Repositorio_IAA2026/privado/corridas/sens43_20261023T035154Z_aece6462/resultados/n05.json",
     "sens_n06": "Hackaton/Repositorio_IAA2026/privado/corridas/sens43_20261023T035154Z_aece6462/resultados/n06_clasificacion.json",
     "sens_robustez": "Hackaton/Repositorio_IAA2026/privado/corridas/sens43_20261023T035154Z_aece6462/resultados/n05_robustez.json",
-    "sensibilidad_s43_informe": "Hackaton/Repositorio_IAA2026/docs/SENSIBILIDAD_S43.md",
+    "sensibilidad_s43_informe": "Hackaton/Repositorio_IAA2026/docs/archivo/semana1/SENSIBILIDAD_S43.md",
     "prima_escrita": "Hackaton/Repositorio_IAA2026/docs/evidencia/prima_escrita_por_anio.json",
     "reservas_s42": "Hackaton/Repositorio_IAA2026/privado/corridas/repro_s42_20261022T170245Z_c9ea2fc3/resultados/parte2_resumen.json",
     "recibo_repro_s42": "Hackaton/Repositorio_IAA2026/registro/recibo_reproduccion_s42_20261022.json",
@@ -503,7 +503,7 @@ def rango_c_optimo_por_redondeo(d090, d100, d110, medio=0.000005):
 
 def bloque_evidencia_nivel(cal, ent, prima, s30, sens, pre, res42, recibo42, l05):
     """Evidencia del nivel 2025 que no usa el marcador: la de L05 de la batería sens42, publicada en
-    docs/SENSIBILIDAD_S43.md, con su criterio escrito antes de calcular. Señales por ramo: (a) el último año, f24/f − 1;
+    docs/archivo/semana1/SENSIBILIDAD_S43.md, con su criterio escrito antes de calcular. Señales por ramo: (a) el último año, f24/f − 1;
     (b) los efectos de etiqueta de D95 (IBNR del backtesting en los tres ramos y, en autos, las recuperaciones no
     anticipadas); (c) el ajuste que deja la siniestralidad de 2025 igual a la de 2024 (último de D67 entre prima escrita,
     por año expuesto). «Apoyado» si al menos dos señales coinciden en signo con el ajuste y su tamaño no supera la mayor
@@ -564,7 +564,7 @@ def bloque_evidencia_nivel(cal, ent, prima, s30, sens, pre, res42, recibo42, l05
                 "ibnr_lesiones_S3": {"S30": res42["ibnr_lesiones_S3"]["S30"]["nivel_autos"], "S42": res42["ibnr_lesiones_S3"]["principal"]["nivel_autos"],
                                      "S42_intervalo": [r(x, 5) for x in res42["ibnr_lesiones_S3"]["principal"]["ic"]],
                                      "S42_sigma_ampliada": res42["ibnr_lesiones_S3"]["variante_sigma_ampliada"]["nivel_autos"]},
-                "fuente": "privado/corridas/repro_s42_20261022T170245Z_c9ea2fc3 (CLA-20261022-005); docs/RESERVAS_ACOTACION.md, «Qué cambia con S42»"}
+                "fuente": "privado/corridas/repro_s42_20261022T170245Z_c9ea2fc3 (CLA-20261022-005); docs/archivo/semana1/RESERVAS_ACOTACION.md, «Qué cambia con S42»"}
     p1 = recibo42["parte1_paso_de_nivel"]
     reproduccion = {"raices": len(p1["corridas"]), "csv": len([k for k in p1["ocho_csv"] if k != "iguales_en_R0_R1_R2"]),
                     "iguales": p1["ocho_csv"]["iguales_en_R0_R1_R2"], "clase": sorted(set(p1["clase_preinscrita"].values())),
@@ -575,7 +575,7 @@ def bloque_evidencia_nivel(cal, ent, prima, s30, sens, pre, res42, recibo42, l05
         z = cal["ramos"][l]
         lo, hi = rango_c_optimo_por_redondeo(z["publico_x090"], cal["publico_modelo"], z["publico_x110"])
         redondeo[l] = {"c_optimo_min": r(lo, 6), "c_optimo_max": r(hi, 6), "semiancho_relativo": r((hi - lo) / 2 / z["c_optimo"], 4)}
-    return {"criterio": "L05 de sens42_20261022T165934Z_6ec8f1fe, publicado en docs/SENSIBILIDAD_S43.md: apoyado con dos señales del mismo signo que el ajuste y tamaño dentro de la mayor más la τ de D100; parcial con una, o con dos o más y tamaño fuera; sin apoyo con ninguna",
+    return {"criterio": "L05 de sens42_20261022T165934Z_6ec8f1fe, publicado en docs/archivo/semana1/SENSIBILIDAD_S43.md: apoyado con dos señales del mismo signo que el ajuste y tamaño dentro de la mayor más la τ de D100; parcial con una, o con dos o más y tamaño fuera; sin apoyo con ninguna",
             "estado": "L05 publicado (D103)", "ramos": ev,
             "condicion_prima": {"hallazgo": "DATA-006", "supuesto": "la señal (c) usa la prima escrita; su unidad (tarifa anual o importe del periodo) no está confirmada por el diccionario",
                                 "lectura": "la clasificación es la misma con las dos lecturas de la prima"},
@@ -624,7 +624,7 @@ def bloque_reservas_s41(res41, recibo41, dec41, cal):
             "decision": {"id": dec41["id"], "respuesta": dec41["respuesta_literal"], "utc": dec41["utc_registro"],
                          "alcance": dec41["alcance"]},
             "lectura": res41["lectura"],
-            "fuente": "privado/corridas/repro_s41_20261023T145808Z_c8055dfc (CLA-20261023-005); docs/RESERVAS_ACOTACION.md, «Qué cambia con S41»; "
+            "fuente": "privado/corridas/repro_s41_20261023T145808Z_c8055dfc (CLA-20261023-005); docs/archivo/semana1/RESERVAS_ACOTACION.md, «Qué cambia con S41»; "
                       "registro/decision_reservas_S41_20261023.json (CLA-20261023-006)"}
 
 

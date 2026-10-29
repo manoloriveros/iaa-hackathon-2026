@@ -1,0 +1,68 @@
+{
+  "id": "F3C-A1-MEZCLA-PROTEGIDAS-20261027",
+  "utc": "2026-10-27T18:39:53.830661+00:00",
+  "author": "Codex",
+  "path_base": "repository_root",
+  "status": "A1_mezcla_y_50_escenarios_verificados_exploratorios",
+  "run": "privado/validacion_cadena_f3c_A1_mezcla/20261027T175434Z",
+  "report": "docs/semana2/F3C_A1_MEZCLA_PROTEGIDAS_Y_ESCENARIOS.md",
+  "report_sha256": "6e6e6e6d83001a0a0388f8d5413cac60a6f0925940b28b31faddd1013062eb50",
+  "source_native_fits": 48,
+  "source_T2b_new_fits": 0,
+  "scenarios": 50,
+  "scenario_source_refit": false,
+  "historical_validation_branches_computational_protected": true,
+  "production_F1_ensemble_retrained": false,
+  "selection_changed": false,
+  "professional_independent_review": false,
+  "formal_promotion": false,
+  "views": {
+    "T2b": {
+      "delta": 0.0023316505748242067,
+      "family6": [
+        0.0005768740167966816,
+        0.00424877407691875
+      ],
+      "guards": {
+        "global_margin": true,
+        "NB_protection": false,
+        "segments": true,
+        "motor_NB_floor": false,
+        "influence": false,
+        "promotion": false
+      }
+    },
+    "A1": {
+      "delta": 0.0024317638022512966,
+      "family6": [
+        0.0007219356038355482,
+        0.004285787436258646
+      ],
+      "guards": {
+        "global_margin": true,
+        "NB_protection": false,
+        "segments": true,
+        "motor_NB_floor": true,
+        "influence": true,
+        "promotion": false
+      }
+    },
+    "mezcla": {
+      "delta": 0.002366165978378132,
+      "family6": [
+        0.0006577350559995087,
+        0.004233920677518343
+      ],
+      "guards": {
+        "global_margin": true,
+        "NB_protection": false,
+        "segments": true,
+        "motor_NB_floor": false,
+        "influence": true,
+        "promotion": false
+      }
+    }
+  },
+  "F3c_sha256": "5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276",
+  "pending": "registro/validacion_cadena_f3c_A1_mezcla_pendientes.json"
+}

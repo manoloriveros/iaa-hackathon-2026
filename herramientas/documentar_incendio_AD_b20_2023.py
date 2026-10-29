@@ -102,9 +102,9 @@ Pasaron {r['passed']} controles del productor, {v['passed']} cotejos propios por
 
 Plan [preinscrito](../../registro/semana2_b20_incendio_AD2023_plan_v1.json), índice `registro/semana2_b20_incendio_AD_actual.json`; fuentes con SHA y detalle por fila quedan en privado. Foro 043/044. 2024/test/SEL01/actas/precios/predicciones/scores/ledger siguen cerrados en este trabajo. La exposición anterior a un asunto externo permanece declarada, sin usar cifras o afirmar ceguera completa. No hubo remoto, envíos, nuevos chats, delegación o cambios a otras automatizaciones. Documentación IAA §§2–3 y Gobernanza §2.8 orientan la trazabilidad y separación de revisión propia, sin certificación o aprobación humana implícita.
 '''
-    doc=REPO/'docs/semana2/INCENDIO_Y_AD_B20_2023.md'
+    doc=REPO/'docs/archivo/semana2/INCENDIO_Y_AD_B20_2023.md'
     with doc.open('x',encoding='utf-8') as f:f.write(document)
-    body=f'''El diagnóstico 043 terminó solo con artefactos de 2023, sin entrenamiento, cargas de modelos, predicciones o bootstrap nuevos. Informe `Hackaton/Repositorio_IAA2026/docs/semana2/INCENDIO_Y_AD_B20_2023.md`. B00, todas las alternativas y siniestros conservados.
+    body=f'''El diagnóstico 043 terminó solo con artefactos de 2023, sin entrenamiento, cargas de modelos, predicciones o bootstrap nuevos. Informe `Hackaton/Repositorio_IAA2026/docs/archivo/semana2/INCENDIO_Y_AD_B20_2023.md`. B00, todas las alternativas y siniestros conservados.
 
 El incendio aporta 93,9% de la ganancia neta de los doce grupos previos, 71,8% de su mejora bruta positiva por componente, 35,8% de la ganancia global neta y 7,2% de la mejora bruta positiva global por componente (6,6% por fila). El 93,9% no describe a todo B20. Globalmente hay ganancias positivas por {fmt(s['global']['gross_group_positive_gain'],2)} y adversas por {fmt(s['global']['gross_group_negative_gain_abs'],2)}; las compensaciones explican la diferencia de denominadores.
 

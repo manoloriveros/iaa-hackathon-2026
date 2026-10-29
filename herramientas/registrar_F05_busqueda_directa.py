@@ -4,7 +4,7 @@ from datetime import datetime,timezone
 import hashlib,json,os,re,subprocess,sys
 ROOT=Path(__file__).resolve().parents[3];REPO=ROOT/'Hackaton/Repositorio_IAA2026'
 RUN=REPO/'privado/semana2/revision_F05_2023/f05_busqueda_directa_20261024_v1'
-DOC=REPO/'docs/semana2/F05_BUSQUEDA_DIRECTA_Y_COBERTURA_FORO.md'
+DOC=REPO/'docs/archivo/semana2/F05_BUSQUEDA_DIRECTA_Y_COBERTURA_FORO.md'
 INDEX=REPO/'registro/semana2_F05_busqueda_foro_actual.json'
 OLD=REPO/'registro/semana2_F05_clima2023_actual.json'
 SOURCE=REPO/'registro/semana2_b20_fuentes2023_actual.json'
@@ -32,7 +32,7 @@ def main():
     assert receipt['positive_control']['found'] and not receipt['negative_control']['found']
     assert not receipt['climate_matches'] and not receipt['temporal_context_matches']
     assert all(x['rejected'] for x in guards['cases']) and all(x['stable'] for x in stable)
-    paths=[SOURCE,OLD,REPO/'docs/semana2/F05_CLIMA_2023_Y_DISPONIBILIDAD_TEMPORAL.md',REPO/'privado/semana2/revision_F05_2023/f05_20261024_v1/documentary_review.json',REPO/'privado/semana2/revision_F05_2023/f05_20261024_v1/search_limitations_receipt.json',REPO/'registro/semana2_desarrollo2023_actual.json',REPO/'registro/semana2_contadores_propios_actual.json',REPO/'registro/semana2_continuidad_nocturna.json',REPO/'registro/semana2_glm_ridge_coberturas_plan_v1.json',REPO/'privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/availability_contract.json']
+    paths=[SOURCE,OLD,REPO/'docs/archivo/semana2/F05_CLIMA_2023_Y_DISPONIBILIDAD_TEMPORAL.md',REPO/'privado/semana2/revision_F05_2023/f05_20261024_v1/documentary_review.json',REPO/'privado/semana2/revision_F05_2023/f05_20261024_v1/search_limitations_receipt.json',REPO/'registro/semana2_desarrollo2023_actual.json',REPO/'registro/semana2_contadores_propios_actual.json',REPO/'registro/semana2_continuidad_nocturna.json',REPO/'registro/semana2_glm_ridge_coberturas_plan_v1.json',REPO/'privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/availability_contract.json']
     sources=[]
     for i,p in enumerate(paths):
         q=RUN/'sources'/f'{i:02d}_{p.name}';q.parent.mkdir(exist_ok=True)

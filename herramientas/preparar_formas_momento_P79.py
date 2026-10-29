@@ -13,7 +13,7 @@ p=importlib.util.module_from_spec(s);s.loader.exec_module(p)
 k=p.k;m=p.m;q=p.q;w=p.w;np=p.np;pd=p.pd;BASE=p.BASE
 OUT=BASE/'P79_formas_momento_preflight_20261027'
 PLAN=R/'registro/semana2_formas_momento_preflight_plan.json';INDEX=R/'registro/semana2_formas_momento_preflight_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P79_FORMAS_MOMENTO_PREFLIGHT.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P79_FORMAS_MOMENTO_PREFLIGHT.md'
 ORIGINAL_SHAPE=k.core.b.shape_fit
 ORIGINAL_LEARN=k.learn
 

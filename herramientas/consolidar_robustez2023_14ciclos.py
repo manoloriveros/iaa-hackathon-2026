@@ -3,7 +3,7 @@ from pathlib import Path
 from datetime import datetime,timezone
 import json,hashlib,os,re
 ROOT=Path('C:/dev/Hakaton');R=ROOT/'Hackaton/Repositorio_IAA2026';OUT=R/'privado/semana2/robustez2023/balance14_20261025_v1'
-DOC=R/'docs/semana2/BALANCE_ROBUSTEZ_2023_20261025.md';INDEX=R/'registro/semana2_robustez2023_actual.json'
+DOC=R/'docs/archivo/semana2/BALANCE_ROBUSTEZ_2023_20261025.md';INDEX=R/'registro/semana2_robustez2023_actual.json'
 read=lambda p:json.loads(p.read_text(encoding='utf-8-sig'));sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();rel=lambda p:p.relative_to(ROOT).as_posix();now=lambda:datetime.now(timezone.utc).isoformat()
 assert not OUT.exists() and not DOC.exists();OUT.mkdir(parents=True);idx=read(INDEX);counter=read(R/'registro/semana2_contadores_propios_actual.json');assert len(idx['completed_cycles'])==14 and counter['cumulative_price_base_fits']==684
 entries=[]

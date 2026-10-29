@@ -10,7 +10,7 @@ import sys
 ROOT = Path('C:/dev/Hakaton'); R = ROOT/'Hackaton/Repositorio_IAA2026'
 BASE = R/'privado/semana2/mision017_fase2'; OUT = BASE/'P37_validacion_clima_20261026'
 INDEX = R/'registro/semana2_clima_A1S_validacion_privada_actual.json'
-DOC = R/'docs/semana2/PRIVADA_P37_VALIDACION_CLIMA_COMPLETA.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P37_VALIDACION_CLIMA_COMPLETA.md'
 sp = importlib.util.spec_from_file_location('p37_close_writer', R/'herramientas/registrar_avance_mision017_fase2.py')
 w = importlib.util.module_from_spec(sp); sp.loader.exec_module(w)
 

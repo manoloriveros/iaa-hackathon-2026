@@ -29,7 +29,7 @@ def main():
     assert v['failed'] == 0 and v['passed'] == 205
     for item in plan['frozen_sources']:
         assert sha(ROOT / item['path']) == sha(ROOT / item['snapshot']) == item['sha256']
-    doc = REPO / 'docs/semana2/SINTESIS_B20_Y_SIGUIENTE_PASO_2023.md'
+    doc = REPO / 'docs/archivo/semana2/SINTESIS_B20_Y_SIGUIENTE_PASO_2023.md'
     outputs = [RUN / 'report.json', RUN / 'verification.json', RUN / 'decision_journal.json',
                RUN / 'evidence_gaps.json', doc]
     code = [REPO / 'herramientas' / name for name in ['consolidar_b20_evidencia2023.py',
@@ -121,7 +121,7 @@ def main():
         'Más consultas a OOF fijas no cierran la carencia. No se cambia el protocolo común ni se consulta su ledger.\n\n'
         '2024/test/actas/scores/SEL01 cerrados para este trabajo; exposición previa de título ajeno declarada sin uso ni ceguera completa. '
         'Estado/autorizaciones de otra tanda no conciliados aquí. Revisión propia de Codex, no profesional independiente. '
-        'Informe docs/semana2/SINTESIS_B20_Y_SIGUIENTE_PASO_2023.md e índice registro/semana2_b20_sintesis_actual.json en el repositorio común; '
+        'Informe docs/archivo/semana2/SINTESIS_B20_Y_SIGUIENTE_PASO_2023.md e índice registro/semana2_b20_sintesis_actual.json en el repositorio común; '
         'unidad concurrente respetada y fuera de este corte. Se actualiza continuidad para no repetir la síntesis, conservando ventana07:00Bogotá, '
         'frecuencia, incidente Kaggle y otras automatizaciones. Sin entrenamiento/remoto/envío/delegación o mensajes externos.\n')
     for filename in ['MEMORIA_PROYECTO.md', 'DECISIONES.md']:
@@ -135,7 +135,7 @@ def main():
               'posteriores quedan fuera de este corte. 2024/test/ledger cerrados; ventana y programación intactas. '
               'Este balance continúa siendo parcial, no un cierre de la noche.\n')
     for filename in ['PLAN_NOCTURNO_20261023.md', 'BALANCE_NOCTURNO_PARCIAL_20261024.md']:
-        with (REPO / 'docs/semana2' / filename).open('a', encoding='utf-8', newline='') as f:
+        with (REPO / 'docs/archivo/semana2' / filename).open('a', encoding='utf-8', newline='') as f:
             f.write(update)
     body = ('Resultado de ' + plan['forum_prior'] + ': 44 fuentes JSON/Markdown agregadas congeladas, '
             '205 conciliaciones documentales propias sin fallos. Sin repetir suites, replay, ajustes o bootstrap. '
@@ -148,7 +148,7 @@ def main():
             'Nueve decisiones y seis carencias: mecanismo, soporte/estabilidad, necesidad de capacidad, validación del aprendizaje completo '
             'tras búsqueda adaptativa, política común y sustento actuarial/revisión humana. Aún no hay modificación seleccionada; '
             'el siguiente paso defendible es un diseño previo finito si evidencia concreta lo justifica, sin entrenarlo en este encargo.\n\n'
-            'Informe docs/semana2/SINTESIS_B20_Y_SIGUIENTE_PASO_2023.md; índice registro/semana2_b20_sintesis_actual.json; '
+            'Informe docs/archivo/semana2/SINTESIS_B20_Y_SIGUIENTE_PASO_2023.md; índice registro/semana2_b20_sintesis_actual.json; '
             'diario, carencias, snapshots y SHA en corrida privada b20_sintesis_20261024_v1. '
             '2024/test/actas/scores/SEL01/ledger cerrados; exposición previa de título ajeno declarada sin uso ni ceguera completa. '
             'Revisión propia de Codex, no profesional independiente; no se concilia la tanda ajena. '

@@ -103,7 +103,7 @@ def main():
     note+='Se fijará una receta limitada antes de nuevos ajustes o scores, conservando los resultados adversos anteriores y el fallo de soporte de los pesos2025.\n\n'
     note+='H1permanece diferido por el control de prioridad privada. B00, F3c y todas las alternativas se conservan;2024abierto adaptativo, pública secundaria. '
     note+='No hay consulta de score privado, envío nuevo o declaración de éxito. Evidencia: '+w.rel(OUT/'report.json')+'.\n'
-    doc=R/'docs/semana2/PRIVADA_P2_MEDIA_ANIDADA_H1.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
+    doc=R/'docs/archivo/semana2/PRIVADA_P2_MEDIA_ANIDADA_H1.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md','DECISIONES.md']:w.append(ROOT/'Preparación'/name,note,archive)
     body=OUT/'forum_resultados.md';body.write_text(note,encoding='utf8')
     res=subprocess.run([sys.executable,str(ROOT/'Hackaton/Semana 2/Foro/comentar.py'),'--autor','Codex',

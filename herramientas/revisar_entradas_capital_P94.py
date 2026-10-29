@@ -17,7 +17,7 @@ BASE = R / 'privado/semana2/mision017_fase2'
 OUT = BASE / 'P94_contrato_capital_destino_20261027'
 PLAN = R / 'registro/semana2_capital_destino_revision_plan.json'
 INDEX = R / 'registro/semana2_capital_destino_revision_actual.json'
-DOC = R / 'docs/semana2/PRIVADA_P94_CAPITAL_DESTINO.md'
+DOC = R / 'docs/archivo/semana2/PRIVADA_P94_CAPITAL_DESTINO.md'
 OLD = BASE / 'P90_validacion_boosting_prior_20261027'
 NEW = BASE / 'P93_validacion_selector_rondas_20261027'
 LEGACY = ROOT / 'Hackaton/Semana 2/Claude/validacion_nocturna_20261023/codigo'
@@ -58,7 +58,7 @@ def register():
         LEGACY / 'variables.py', LEGACY / 'base_mercado.py',
         R / 'herramientas/preparar_nucleo_A1S.py', R / 'herramientas/preparar_GLM_offset_P56.py',
         R / 'herramientas/fuente_marca_capital_P43.py',
-        R / 'docs/semana2/VARIABLES_Y_ULTIMO.md',
+        R / 'docs/archivo/semana2/VARIABLES_Y_ULTIMO.md',
         R / 'registro/semana2_g4_capital_contrato_v2.json']
     files += [NEW / f'outer{i}/primary_bundle.json' for i in range(5)]
     files += [BASE / f'P64_reporte_por_ramo_preflight_20261027/input_{line}_0.parquet'

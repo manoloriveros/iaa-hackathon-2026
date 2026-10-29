@@ -61,7 +61,7 @@ def main():
         'Cero ajustes, C0, scores, precios de test o envíos nuevos. B00, F2, C1, versiones fallidas y autorías permanecen. '
         '2024 está abierto como desarrollo adaptativo; el mejor público procesado sigue en0,16519 y el objetivo0,17 no se ha cumplido.\n\n'
         'Evidencia: ' + w.rel(OUT / 'report.json') + '.\n\nSiguiente unidad: ' + next_unit + '\n')
-    doc = R / 'docs/semana2/MISION017_APORTES_F3c_F4c_RECIBIDOS.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
+    doc = R / 'docs/archivo/semana2/MISION017_APORTES_F3c_F4c_RECIBIDOS.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
     body = OUT / 'forum_recibo.md'; body.write_text(note, encoding='utf8')
     response = subprocess.run([sys.executable, str(ROOT / 'Hackaton/Semana 2/Foro/comentar.py'), '--autor', 'Codex',
         '--id', 'COD-S2-20261025-MISION017-APORTES-F3c-F4c-RECIBO', '--asunto',

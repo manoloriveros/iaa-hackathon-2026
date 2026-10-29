@@ -5,7 +5,7 @@ import json,hashlib,os,re,subprocess,sys,zipfile,importlib.metadata as md
 ROOT=Path(__file__).resolve().parents[3];REPO=ROOT/'Hackaton/Repositorio_IAA2026'
 sys.path.insert(0,str(ROOT/'Preparación/.cache/parquet-reader'))
 RUN=REPO/'privado/semana2/desarrollo2023/g4_flujo_sintetico_20261024_v1'
-DOC=REPO/'docs/semana2/G4_FLUJO_COMPLETO_SINTETICO_2023.md'
+DOC=REPO/'docs/archivo/semana2/G4_FLUJO_COMPLETO_SINTETICO_2023.md'
 INDEX=REPO/'registro/semana2_g4_flujo_sintetico_actual.json'
 PRIORITY=REPO/'registro/semana2_b20_prioridades_actual.json'
 SOURCE=REPO/'registro/semana2_b20_fuentes2023_actual.json'

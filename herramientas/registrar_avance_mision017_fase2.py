@@ -83,7 +83,7 @@ def main(mode):
         note+='Se completaron 12 ajustes de precio, 15 curvas de reporte de fuente y seis constantes de nivel. C0 emergente temporal se reutilizó sin reestimarlo. La versión inicial falló por códigos de construcción antes de ajustar precios; se conserva y sus cinco curvas de motor se reutilizaron. Replay numérico exacto y etiquetas retenidas alteradas sin efecto en las predicciones; ningún ajuste en ese replay.\n\n'
         note+='2024 es desarrollo adaptativo. El corte único de siniestros a diciembre 2024 y los maestros sin fecha impiden afirmar disponibilidad prospectiva completa; la cola y la suficiencia de reservas no están identificadas. Sin envíos nuevos ni promoción formal. La referencia pública del equipo sigue en 0,16033 y el objetivo 0,17 continúa activo. Evidencia: '+rel(validation)+'; plan: '+rel(plan)+'.\n'
         for n in ['MEMORIA_PROYECTO.md','DECISIONES.md']:append(ROOT/'Preparación'/n,note,archive)
-        doc=R/'docs/semana2/MISION017_FASE2_TANDA1_2024.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
+        doc=R/'docs/archivo/semana2/MISION017_FASE2_TANDA1_2024.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
         body=OUT/'forum_resultados.md';body.write_text(note,encoding='utf8')
         p=subprocess.run([sys.executable,str(ROOT/'Hackaton/Semana 2/Foro/comentar.py'),'--autor','Codex',
             '--id','COD-S2-20261025-MISION017-FASE2-TANDA1-RESULTADO','--asunto','Resultados temporales 2024 y límites de la primera tanda estándar',

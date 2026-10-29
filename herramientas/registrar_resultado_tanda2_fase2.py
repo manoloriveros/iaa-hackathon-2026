@@ -67,7 +67,7 @@ Próxima unidad: {next_unit}
 Evidencia: {rel(validation)}. Plan congelado: {current['plan']}. Índice vigente: {rel(P)}.
 '''
     for n in ['MEMORIA_PROYECTO.md','DECISIONES.md']:c.append(ROOT/'Preparación'/n,note,archive)
-    doc=R/'docs/semana2/MISION017_FASE2_TANDA2_2023_2024.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
+    doc=R/'docs/archivo/semana2/MISION017_FASE2_TANDA2_2023_2024.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
     body=OUT/'forum_resultado.md';body.write_text(note,encoding='utf8')
     p=subprocess.run([sys.executable,str(ROOT/'Hackaton/Semana 2/Foro/comentar.py'),'--autor','Codex',
         '--id','COD-S2-20261025-MISION017-FASE2-TANDA2-RESULTADO','--asunto','Correcciones con dos años: mejora pequeña y aún concentrada; sin envíos','--cuerpo',str(body)],

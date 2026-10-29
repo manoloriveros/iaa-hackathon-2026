@@ -13,7 +13,7 @@ r=importlib.util.module_from_spec(s);s.loader.exec_module(r)
 k=r.p.k;m=r.m;q=r.q;w=r.w;pd=r.pd;np=r.np;BASE=r.BASE
 MODELS={'P75':BASE/'P75_validacion_GLM_fuente_directa_20261027','P77':BASE/'P77_validacion_GLM_prior_dos_fuentes_20261027'}
 CONTROL=r.p.t.OUT;OUT=BASE/'P78_formas_riesgo_20261027'
-PLAN=R/'registro/semana2_formas_riesgo_revision_plan.json';INDEX=R/'registro/semana2_formas_riesgo_revision_actual.json';DOC=R/'docs/semana2/PRIVADA_P78_FORMAS_RIESGO.md'
+PLAN=R/'registro/semana2_formas_riesgo_revision_plan.json';INDEX=R/'registro/semana2_formas_riesgo_revision_actual.json';DOC=R/'docs/archivo/semana2/PRIVADA_P78_FORMAS_RIESGO.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

@@ -11,7 +11,7 @@ s=importlib.util.spec_from_file_location('p58_saved_GLM',R/'herramientas/validar
 t=importlib.util.module_from_spec(s);s.loader.exec_module(t)
 g=t.g;m=t.m;w=t.w;pd=t.pd;np=t.np;BASE=t.BASE
 OUT=BASE/'P58_diagnostico_GLM_20261027';PLAN=R/'registro/semana2_GLM_diagnostico_plan.json';INDEX=R/'registro/semana2_GLM_diagnostico_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P58_ESTABILIDAD_GLM.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P58_ESTABILIDAD_GLM.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

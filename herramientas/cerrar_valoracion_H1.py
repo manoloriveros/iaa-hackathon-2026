@@ -90,7 +90,7 @@ def main():
              'se conciliarán las cachés de entrenamiento completo y entradas futuras existentes para evitar '
              'repeticiones, y se registrará solo lo que falte.\n\n')
     note += f'Evidencia: {w.rel(OUT/"report.json")}; replay {w.rel(OUT/"replay_report.json")}.\n'
-    doc = R/'docs/semana2/PRIVADA_P5_RECALIBRACION_RESERVAS.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
+    doc = R/'docs/archivo/semana2/PRIVADA_P5_RECALIBRACION_RESERVAS.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md', 'DECISIONES.md']:
         w.append(ROOT/'Preparación'/name, note, archive)
     body = OUT/'forum_resultados.md'; body.write_text(note, encoding='utf8')
@@ -139,7 +139,7 @@ def main():
                'La siguiente preparación debe hacer coincidir productor nominal y algoritmo evaluado, conciliando primero las cachés. '
                'Cero envíos nuevos; B00/F3c/alternativas intactos,2024abierto adaptativo. '
                'Informes: [P4](PRIVADA_P4_TRANSFERENCIA_ENTRE_ANIOS.md) y [P5](PRIVADA_P5_RECALIBRACION_RESERVAS.md).\n')
-    w.append(R/'docs/semana2/MISION_PRIVADA_PRIORIDAD_Y_PLAN.md', summary, archive)
+    w.append(R/'docs/archivo/semana2/MISION_PRIVADA_PRIORIDAD_Y_PLAN.md', summary, archive)
     (OUT/'completion_receipt.json').write_text(json.dumps(receipt, ensure_ascii=False, indent=2), encoding='utf8')
     print(json.dumps({'status': receipt['status'], 'forum': receipt['forum'], 'new_submissions': 0,
                       'constant_counter': w.read(counters)['cumulative_closed_form_constants'], 'adverse_retained': True}))

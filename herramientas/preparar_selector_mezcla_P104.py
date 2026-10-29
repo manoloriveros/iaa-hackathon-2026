@@ -15,7 +15,7 @@ GRID=[0.,.25,.5,.75,1.]
 ORIGINAL_HALF_FORWARD=base.forward;ORIGINAL_HALF_LEARN=base.learn
 OUT=BASE/'P104_selector_mezcla_preflight_20261027'
 PLAN=R/'registro/semana2_selector_mezcla_preflight_plan.json';INDEX=R/'registro/semana2_selector_mezcla_preflight_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P104_SELECTOR_MEZCLA_PREFLIGHT.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P104_SELECTOR_MEZCLA_PREFLIGHT.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

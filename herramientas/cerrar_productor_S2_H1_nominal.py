@@ -91,7 +91,7 @@ def main():
              'También se conservarán como explicaciones alternativas las diferencias de backbone y calibración.\n\n')
     note += f'Evidencia: {w.rel(OUT/"report.json")}; {w.rel(OUT/"independent_process_replay.json")}; {w.rel(OUT/"reproduccion_comando_2025.receipt.json")}; {w.rel(OUT/"level_context.json")}.\n'
     note += f'\nSHA256 del CSV: `{report["CSV"]["sha256"]}`.\n'
-    doc = R/'docs/semana2/PRIVADA_P6_PRODUCTOR_NOMINAL_Y_CSV.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
+    doc = R/'docs/archivo/semana2/PRIVADA_P6_PRODUCTOR_NOMINAL_Y_CSV.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
     readme = ('# Productor nominal S2/H1, P6\n\n'
               'CSV técnico reproducible para la cartera oficial 2025. No enviado ni promovido. '
               'Los resultados de validación y sus adversos están en el informe P6.\n\n'
@@ -164,7 +164,7 @@ def main():
                'Es un productor técnico reproducible, sin promoción o prueba de mejora privada. '
                'La revisión siguiente se centra en ventana de observación/cola y diferencias de base, después de comprobar qué evidencia existe. '
                'Los adversos y referencias permanecen;2024abierto adaptativo. [InformeP6](PRIVADA_P6_PRODUCTOR_NOMINAL_Y_CSV.md).\n')
-    w.append(R/'docs/semana2/MISION_PRIVADA_PRIORIDAD_Y_PLAN.md', summary, archive)
+    w.append(R/'docs/archivo/semana2/MISION_PRIVADA_PRIORIDAD_Y_PLAN.md', summary, archive)
     (OUT/'completion_receipt.json').write_text(json.dumps(receipt, ensure_ascii=False, indent=2), encoding='utf8')
     print(json.dumps({'status': receipt['status'], 'CSV': receipt['CSV'], 'forum': receipt['forum'], 'new_submissions': 0}))
 

@@ -15,7 +15,7 @@ h=load('p93_outer_metric_engine',R/'herramientas/validar_boosting_residual_P72.p
 m=h.m;q=h.q;w=h.w;np=h.np;pd=h.pd;BASE=h.BASE;v=h.v
 OUT=BASE/'P93_validacion_selector_rondas_20261027'
 PLAN=R/'registro/semana2_selector_rondas_validacion_plan.json';INDEX=R/'registro/semana2_selector_rondas_validacion_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P93_VALIDACION_SELECTOR_RONDAS.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P93_VALIDACION_SELECTOR_RONDAS.md'
 OLD=BASE/'P90_validacion_boosting_prior_20261027'
 
 

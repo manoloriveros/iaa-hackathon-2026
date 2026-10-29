@@ -13,7 +13,7 @@ k=p.k;w=p.w;pd=p.pd;np=p.np
 OUT=p.BASE/'P111_diagnostico_numero_coste_20261027'
 PLAN=R/'registro/semana2_diagnostico_numero_coste_plan.json'
 INDEX=R/'registro/semana2_diagnostico_numero_coste_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P111_DIAGNOSTICO_NUMERO_COSTE.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P111_DIAGNOSTICO_NUMERO_COSTE.md'
 dump=p.dump;utc=p.utc
 
 

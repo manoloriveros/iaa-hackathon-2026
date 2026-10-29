@@ -2,7 +2,7 @@
 
 Desde el 19 de octubre de 2026 el participante pide trabajar aquí, sin abrir nuevas carpetas por asistente. Esta instrucción sustituye para trabajo nuevo la separación Codex/Claude del 18 de octubre. Conservar el autor real, el linaje y todos los resultados adversos. No renombrar ni reescribir corridas históricas.
 
-Leer `README.md`, `registro/estado_entrega.json`, `registro/requisitos.json` y `docs/INFORME_SEMANA1.md`. Usar `herramientas/actualizar_revision.py` para recoger evidencia existente, verificar los CSV y regenerar el panel, sin entrenar. El panel es una fotografía fechada; sus anotaciones personales no equivalen a aprobación registrada.
+Leer `README.md`, `registro/estado_entrega.json`, `registro/requisitos.json` y `docs/archivo/semana1/INFORME_SEMANA1.md`. Usar `herramientas/actualizar_revision.py` para recoger evidencia existente, verificar los CSV y regenerar el panel, sin entrenar. El panel es una fotografía fechada; sus anotaciones personales no equivalen a aprobación registrada.
 
 Código en `src/`, receta congelada en `receta/`, documentación en `docs/`, seguimiento en `registro/`, cálculos nuevos y archivos restringidos en `privado/` (fuera de Git). Cada experimento nuevo requiere hipótesis y criterio de aceptación previo, configuración, origen de datos, resultados, entorno y autor. No cambiar la receta S30 al documentarla ni mezclar linajes por conveniencia de nombres.
 
@@ -27,3 +27,15 @@ El concurso califica el repositorio y su historial (página Submissions y criter
 - Codex corre `versionado.py incorporar --actualizar-todo` y `versionado.py vigia` en su automatización horaria (decisión del participante, 26 de octubre). Con código 3 registra lo pendiente en commits temáticos el mismo día; con código 1 lo corrige antes de cualquier commit. Push al menos una vez al día.
 - Nada de datos del concurso, predicciones por fila, modelos o credenciales en Git; el hook se activa con `git config core.hooksPath herramientas/git_hooks`.
 - El repositorio sigue privado hasta el cierre de la parte 2 (31 de octubre, 03:59:59 UTC). Después se hace público con la licencia MIT de `LICENSE` (decisión del participante, 26 de octubre); `NOTICE.md` aclara lo que la licencia no cubre.
+
+
+## Archivo documental del 29 de octubre de 2026
+
+Por instrucción expresa del participante, 246 Markdown anteriores se trasladaron a `Hackaton/Repositorio_IAA2026/docs/archivo/`. Consultar `RUTAS_PROYECTO.json`, la guía `docs/README.md` y `registro/archivo_documental_actual.json` para las rutas actuales. Las referencias activas se ajustaron; las corridas, recetas, notebooks y registros históricos permanecen en su ubicación.
+
+Para una cita o un pin histórico, resolver la ruta con `herramientas/archivar_markdown.py resolver RUTA`. Cuando se exige una huella guardada, pasar `--sha256 HUELLA`: devuelve el original exacto o la copia de esa versión conservada durante el traslado. Desde Python puede usarse `runpy.run_path` sobre esa herramienta y llamar `resolve(ruta, expected_sha256)`. No comparar una copia con enlaces ajustados contra una huella anterior como si fueran la misma versión, ni reescribir los manifiestos históricos. El mapa conserva también los originales de los archivos activos cuyas rutas se ajustaron. Los límites de lectura y autorización previos siguen vigentes.
+
+
+## Voz de la documentación vigente, 29 de octubre de 2026
+
+Por petición del participante, redactar las guías y la presentación vigentes en su primera persona, con una voz natural y concreta. Conservar la declaración del uso de IA y la autoría real de revisiones, código, fuentes y registros. No transformar una comprobación de un asistente en una revisión humana atribuida a Manuel. Las instrucciones operativas y el histórico firmado conservan su función y autoría. Consultar registro/revision_entrega_actual.json para requisitos, situación de cierre y versiones anteriores de esta edición.

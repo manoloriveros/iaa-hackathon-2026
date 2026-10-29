@@ -12,7 +12,7 @@ h=importlib.util.module_from_spec(s);s.loader.exec_module(h)
 m=h.m;w=h.w;np=h.np;pd=h.pd;BASE=h.BASE;core=m.e.core;g=m.p.g
 OUT=BASE/'P54_mezcla_estandar_preflight_20261027'
 PLAN=R/'registro/semana2_mezcla_estandar_preflight_plan.json';INDEX=R/'registro/semana2_mezcla_estandar_preflight_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P54_MEZCLA_ESTANDAR_PREFLIGHT.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P54_MEZCLA_ESTANDAR_PREFLIGHT.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

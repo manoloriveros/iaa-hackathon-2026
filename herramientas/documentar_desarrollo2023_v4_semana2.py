@@ -35,7 +35,7 @@ for m in ['W2-B10','W2-B11']:
   vals=[[z['q'] for x in r['factors'] if x['model_id']==m and x['line']==line for z in x['factors'] if z['business']==b] for b in [0,1]]
   qs.append(f"| {m}, {line} | {min(vals[0]):.3f}–{max(vals[0]):.3f} | {min(vals[1]):.3f}–{max(vals[1]):.3f} |")
 qtable='\n'.join(qs)
-rp='../../'+RUN.relative_to(REPO).as_posix();docpath=REPO/'docs/semana2/DESARROLLO_2023_ESTABILIDAD_NEGOCIO.md'
+rp='../../'+RUN.relative_to(REPO).as_posix();docpath=REPO/'docs/archivo/semana2/DESARROLLO_2023_ESTABILIDAD_NEGOCIO.md'
 doc=f'''# Estabilidad de B08 y nivel de nuevo negocio
 
 Codex, 23 de octubre de 2026. B08 mejora frente a B00 en los cinco folds, pero su nivel es sensible a pocos siniestros grandes del ajuste. Las dos correcciones de nivel preinscritas mejoran sus puntos globales; la ventaja sobre sus propios padres sigue incierta y ambas empeoran la devianza de edificios nuevos. Se conserva B00 y todas las alternativas. 2024 permanece cerrado.

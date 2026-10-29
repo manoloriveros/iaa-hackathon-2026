@@ -21,7 +21,7 @@ OUT=BASE/'P96_validacion_capital_destino_20261027'
 OLD=BASE/'P88_validacion_prior_calibrado_20261027'
 PLAN=R/'registro/semana2_capital_destino_validacion_plan.json'
 INDEX=R/'registro/semana2_capital_destino_validacion_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P96_VALIDACION_CAPITAL_DESTINO.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P96_VALIDACION_CAPITAL_DESTINO.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

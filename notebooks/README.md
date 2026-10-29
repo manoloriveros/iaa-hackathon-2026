@@ -1,15 +1,48 @@
-# Reproduction notebooks
+# How I reproduce both weeks
 
-These two standalone notebooks embed source code and frozen aggregate configuration. At runtime they read the official Kaggle competition Parquet files and create a fresh workspace; they do not fetch a repository or load previous models or predictions. Both retain output-hash checks against the historical submissions. Intermediate data, models and logs stay in a temporary directory outside Kaggle's saved working output; only the final CSVs are exported to `/kaggle/working`. Those row-level results are restricted and must remain private. The temporary workspace is ephemeral and does not persist automatically. Kaggle execution has not yet been verified.
+I provide two standalone notebooks containing source code and frozen configuration. They read the official competition Parquet inputs and create a fresh workspace. I do not need to clone this repository or provide previous fitted models, OOF tables or final predictions for these notebook workflows.
 
-[Kaggle's notebook documentation](https://www.kaggle.com/docs/notebooks), consulted on 28 October 2026, describes a 12-hour CPU session and 20 GB of saved working storage. The historical 36-node Week 1 reconstruction including the S22 backup took 10.6 hours on its reference machine; the notebook uses the 30-node S30 dependency graph. Its hosted runtime and storage use have not been established, so completing within Kaggle's limit is not guaranteed.
+| Notebook | Inputs I attach | Output |
+| --- | --- | --- |
+| `week1_developed_market.ipynb` | The eleven developed-market files from Part 1 | S30 and final S41 CSVs |
+| `week2_emerging_market.ipynb` | Developed and emerging folders from Part 2, including expenses and reference policies | F3c CSV and the twenty commercial premiums |
 
-`week1_developed_market.ipynb` is designed to reconstruct S30 and apply the S41 level factors. Two audit-only F0 flags originally depended on restricted row-level ledgers. The notebook rebuilds CAP01 from its frozen rule. A separate retrospective rule inferred from the historical matrix reconstructs the confirmation flag; it matched that flag on this dataset but is not the original decision process. The notebook retains the complete F0 content check and final CSV hash check.
+The notebooks include 44 and 79 source files respectively. My Week 2 execution plan contains fourteen initial stages and thirty-four chain stages through F3c. The review record identifies the static syntax and entry-point checks; these do not replace execution.
 
-`week2_emerging_market.ipynb` embeds the reconstructed T2b/A1/M017 chain through F3c, its two documented historical restorations and frozen public-probe constants. It includes the calculation of the twenty commercial premiums with the fixed expense per policy, and shows annual proration as a sensitivity. That local reconstruction is not independent professional review.
+## How I supply the inputs
 
-The notebook builders under `herramientas/` are development aids. The notebooks do not call them. Their historical sources are documented in `docs/REPRODUCCION_COMPLETA.md` and `docs/REENTRENAMIENTO_ORIGINALES.md`. Notebook outputs are cleared in the repository. A valid upload or publication requires the competition data and sharing rules to be respected; running a notebook on Kaggle and submitting a prediction are separate actions.
+In Kaggle I attach the competition data, select CPU and follow the cells in order. Automatic discovery requires one matching input folder. For a local run, or when more than one input matches, I set the input variables before starting the kernel:
 
-Local checks for this adaptation: Week 1 reconstructed CAP01 with the same 2,073 identifiers as the historical ledger. Its actuarial bases, complete F0 tables, partitions and feature-block contract matched the historical content; the confirmation flag was reconstructed with a rule inferred retrospectively. The non-audit feature columns matched between earlier notebook versions. Six selection outputs from the current F0 had identical keys and labels, with prediction differences of at most approximately 2.1 × 10⁻¹⁵ relative to their references. The final S30 blend, tested from saved components, matched its historical CSV hash with an intermediate Parquet difference, and the S41 calibration cell matched its historical CSV hash when tested on saved S30. The embedded frozen configuration is materialized where the frequency-severity models expect it. A local reconstruction from the originals completed all 30 S30 nodes across isolated and resumed branches after two interruptions. Its S30 and S41 CSVs have the historical SHA-256 values. The runner returned code 3 and reported 160 intermediate content differences, so this is not a complete bit-for-bit reproduction: 100 historical numeric arrays and 51 prediction tables had maximum relative differences of 3.92 × 10⁻¹⁵ and 7.24 × 10⁻¹⁵, respectively, with matching keys and labels in the tables; six selection tables were compared separately. Three feature-table content hashes also differ, and their cause was not established with the historical reference available. The final hashes do not erase those limitations. Neither a single uninterrupted Run All nor a hosted Kaggle run has been verified.
+```powershell
+$env:IAA_W1_DATA = 'C:/path/to/week1/parquet'
+$env:IAA_W2_DEVELOPED = 'C:/path/to/week2/developed'
+$env:IAA_W2_EMERGING = 'C:/path/to/week2/emerging'
+$env:IAA_NOTEBOOK_WORK = 'C:/path/to/temporary_runs'
+$env:IAA_NOTEBOOK_EXPORT = 'C:/path/to/private_exports'
+```
 
-For Week 2, the local execution rebuilt the T2b/A1/M017 chain from originals and produced the historical F3c CSV hash, with 48 successful stage receipts. An interrupted stage was preserved and rerun in an isolated copy; this is therefore a resumed local execution, not a single uninterrupted Run All. Twenty-one A1 transfer tables matched their historical keys and values, and the final commercial calculation produced 20,800.02 CU for the twenty references. This is not an independent professional review, and neither notebook has been run on hosted Kaggle.
+I use paths to the Parquet directories themselves. Week 1 requires eleven files; emerging requires thirteen. The notebooks check required names, template IDs and input fingerprints before modelling. I keep the markets separate because their identifiers are not interchangeable.
+
+## Environment and resources
+
+The reference package versions are declared in each notebook's `REFERENCE` mapping and optional installation cell. For Week 1 the final S30/S41 route uses NumPy, pandas, SciPy, scikit-learn, LightGBM, CatBoost and PyArrow. The fixed Week 2 route declares its own subset. Some embedded historical alternatives import other packages inside functions; their presence does not mean those alternatives are run by the final recipe.
+
+If I need the optional installation cell, I run it once, restart the kernel, set `INSTALL_REFERENCE_PACKAGES` back to `False` and then run the notebook. I retain environment differences in the output record and rely on the final fingerprint checks rather than assume numerical identity across versions.
+
+The historical Week 1 reference environment declared Ubuntu, Python 3.13.16, two cores and 8 GB. Its larger reconstruction including S22 took 10.6 hours; the notebook runs the 30-node S30 graph. I have not established hosted Kaggle runtime, peak storage or memory. A long local reconstruction is not a guarantee that it will fit a hosted session.
+
+Intermediate data, models and logs use a new temporary directory. It does not persist automatically. I choose sufficient local storage and preserve a failed run before investigating it. Final outputs use the configured private export folder or Kaggle working storage. Row-level results remain restricted under the competition rules.
+
+## What my local checks established
+
+Week 1 rebuilt CAP01 and the complete F0 content from the originals. The confirmation audit flag uses a retrospective rule inferred from the historical matrix; it matched this dataset but does not recover the original decision process and is excluded from predictors. A resumed local execution completed all thirty S30 nodes and produced the historical S30/S41 CSV hashes. The runner returned code 3 with 160 intermediate differences. Three feature-table fingerprints remain unexplained; small numeric differences in other arrays and prediction tables do not remove that limitation.
+
+Week 2 rebuilt the chain from originals with forty-eight successful stage receipts and produced the historical F3c CSV. An interrupted stage was preserved and rerun in an isolated copy. The twenty-one A1 transfer tables matched their historical keys and values; the commercial calculation is included in the notebook.
+
+I have not established one uninterrupted Run All, a hosted Kaggle run or independent professional review. I retain the exact local receipts and source hashes in `registro/notebooks_kaggle_actual.json` in my repository.
+
+## Where I keep the original workflow
+
+The notebook builders in `herramientas/` are development aids; the notebooks do not call them. I document the original repository routes in `docs/REPRODUCCION_COMPLETA.md` and `docs/REENTRENAMIENTO_ORIGINALES.md`. My local input paths do not need to reproduce the authors' historical machine paths: the runners supply the required runtime bindings.
+
+I keep notebook outputs cleared in Git. Running a notebook, submitting its CSV and publishing code are separate actions with their own competition requirements.

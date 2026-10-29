@@ -1,0 +1,106 @@
+{
+  "id": "NARRACION-GEMINI-TTS-EN-20261028",
+  "utc": "2026-10-28T15:48:45.847632+00:00",
+  "author_translator": "Codex",
+  "scope": "translation_of_clean_TTS_text_only",
+  "source_es": "docs/entrega/video/NARRACION_GEMINI_TTS_ES.txt",
+  "source_es_sha256": "db18e98fe63d9f1bc2210fbe7cb28b463ebca5c5f96b166be736352f51dcc002",
+  "language": "en",
+  "variant": "international actuarial English, with British spellings analyse and generalisation",
+  "text": "docs/entrega/video/NARRACION_GEMINI_TTS_EN.txt",
+  "text_sha256": "a8da8820c5e92909c2c23b105263320a39067a3b549f4669334268c26a25a011",
+  "words_spoken": 696,
+  "terminology": {
+    "prima de riesgo": "risk premium",
+    "ramo": "line of business",
+    "causa de siniestro": "cause of loss",
+    "frecuencia y severidad": "frequency and severity",
+    "completitud": "reporting completeness",
+    "negocio nuevo": "new business",
+    "renovación": "renewals",
+    "capitales asegurados": "sums insured",
+    "siniestros tardíos de lesiones corporales": "late-reported bodily injury claims",
+    "prima comercial": "office premium",
+    "salvaguarda": "safeguard",
+    "límite inferior": "lower bound"
+  },
+  "source_phonetic_names_restored": {
+    "Clod": "Claude",
+    "Códex": "Codex",
+    "Tuídi": "Tweedie"
+  },
+  "decimal_values_preserved": true,
+  "scenes": [
+    {
+      "scene": 1,
+      "text": "I'm Manuel Rodríguez. I estimated risk premiums for motor, buildings and contents insurance in two markets. I used Claude and Codex to explore methods, support the coding and challenge results. I remained responsible for making and explaining the decisions.",
+      "words_spoken": 39,
+      "source_es_text": "Soy Manuel Rodríguez. Construí primas de riesgo para autos, edificios y contenidos en dos mercados. Usé Clod y Códex para investigar métodos y como apoyo para programar y cuestionar resultados; conservé la responsabilidad de elegir y explicar las decisiones.",
+      "audio_duration_measured": false
+    },
+    {
+      "scene": 2,
+      "text": "In the market with four years of history, I chose an ensemble by cause of loss. One component predicts total claims cost using decision trees and a Tweedie distribution, accommodating zeros and positive costs. Another estimates how often claims occur and how much they cost.\n\nI combined them by line of business because no single model dominated: fire and water damage involve different mechanisms. This captures interactions between variables while explaining risk through frequency and severity. The ensemble's D squared score was zero point one three eight, against zero point zero seven one for a constant rate by line. The calibrated submission scored zero point one three eight six four in the private evaluation, placing fourth among fifty-four teams. During week one, our submissions also topped the public leaderboard.",
+      "words_spoken": 129,
+      "source_es_text": "En el mercado con cuatro años de historia elegí una combinación por causa de siniestro. Un componente estima el coste total con árboles de aprendizaje automático y distribución Tuídi, que combina ceros y costes positivos. Otro separa cuántos siniestros ocurren y cuánto cuesta cada uno.\n\nLos combiné por ramo porque ningún modelo dominaba en todos: un incendio y una fuga de agua tienen mecanismos diferentes. Así aproveché las interacciones entre variables y la explicación por frecuencia y severidad. La mezcla obtuvo cero coma uno tres ocho de D cuadrado frente a cero coma cero siete uno de una tasa por ramo; la entrega calibrada alcanzó cero coma uno tres ocho seis cuatro en el privado, cuarta entre cincuenta y cuatro equipos. Durante la primera semana, nuestros envíos también llegaron al primer puesto público.",
+      "audio_duration_measured": false
+    },
+    {
+      "scene": 3,
+      "text": "The second market had only two years of data. New business represented fourteen percent of historical policy periods, but seventy-six percent in twenty twenty-five. Training from scratch could confuse sparse experience with differences in risk.\n\nI chose to transfer relationships learned in the market with more history, using common variables. I combined the transferred predictions and added local adjustments for claims history and market-specific variables. I limited their credibility where information was sparse. In the historical comparison for twenty twenty-three, transfer learning scored zero point one two one, against zero point zero eight three for the best model trained only on local data.",
+      "words_spoken": 103,
+      "source_es_text": "El segundo mercado tenía solo dos años de datos. Además, el negocio nuevo pasó del catorce por ciento de las filas históricas al setenta y seis por ciento en dos mil veinticinco. Reentrenar todo desde cero podía confundir escasez de experiencia con diferencias de riesgo.\n\nPreferí transferir relaciones aprendidas en el mercado con más historia, usando las variables comunes. Combiné predicciones transferidas y añadí ajustes locales de siniestralidad previa y variables propias. Les di credibilidad limitada cuando había poca información. En la comparación histórica de dos mil veintitrés, la transferencia dio cero coma uno dos uno frente a cero coma cero ocho tres del mejor modelo entrenado solo con datos locales.",
+      "audio_duration_measured": false
+    },
+    {
+      "scene": 4,
+      "text": "AI helped write checks and challenge hypotheses. We corrected identifiers missing leading zeros, exposures recorded under different conventions, and sums insured that were out of scale.\n\nWe also questioned unusually predictive variables. Customer service contacts could reveal claims from the period being priced, so I excluded them. Every correction was recorded and checked. The workflow also caught a calibration factor squared by mistake and corrected it before submission. AI's value lay in both building and challenging the calculations.",
+      "words_spoken": 78,
+      "source_es_text": "La IA ayudó a escribir controles y a contrastar hipótesis. Corregimos identificadores sin ceros iniciales, exposiciones con distintas convenciones y capitales fuera de escala.\n\nTambién cuestionamos variables demasiado predictivas. Los contactos con atención al cliente podían revelar siniestros del propio periodo: los excluí. Cada corrección quedó registrada y comprobada. El flujo también detectó un factor de calibración elevado al cuadrado por error y lo corrigió antes del envío. El valor de la IA estuvo en construir y desafiar los cálculos.",
+      "audio_duration_measured": false
+    },
+    {
+      "scene": 5,
+      "text": "To assess changes, I split the data by year and grouped linked customers and addresses. In the revised historical comparison, reporting completeness, category encodings, trees and adjustments were learned without evaluation data. We deliberately altered the held-out data and checked that the relevant models remained unchanged.\n\nWe compared models with and without additional factors, removed influential groups, and tested fifty scenarios for reserves and reporting delays. The overall difference stayed positive, with source models and reporting curves fixed. There were adverse findings: the observed cost of late-reported bodily injury claims exceeded projections. These time splits also informed selection, limiting my conclusions.",
+      "words_spoken": 101,
+      "source_es_text": "Para juzgar los cambios, separé años y agrupé clientes y direcciones relacionados. En la revisión de la comparación histórica, completitud, categorías, árboles y ajustes se aprendieron excluyendo la información reservada para evaluar. Alteramos deliberadamente esos datos y comprobamos que no cambiaran los modelos pertinentes.\n\nTambién contrastamos modelos con y sin factores, retiramos grupos influyentes y probamos cincuenta escenarios de reservas y retraso de reporte. La diferencia global conservó signo positivo, con la fuente congelada. Hubo resultados adversos: el coste tardío de lesiones corporales superó lo previsto. Los cortes también orientaron la selección; esas pruebas acotan lo que puedo concluir.",
+      "audio_duration_measured": false
+    },
+    {
+      "scene": 6,
+      "text": "A safeguard is a condition set before accepting a change. I required that overall gains should not conceal material deterioration for new business, considering the uncertainty interval.\n\nTransfer learning improved performance overall, but did not establish that protection. After seeing the result, I relaxed the rule, accepting a non-negative point estimate of the improvement without requiring the interval to meet the original lower bound. Waiving that requirement allowed us to proceed by exception; the risk remained. Gains from locally estimated factors were also concentrated in renewals, without establishing stability for new business. I retained the submission on that exploratory basis.",
+      "words_spoken": 100,
+      "source_es_text": "Una salvaguarda es una condición previa para aceptar un cambio. Exigí que la mejora global no ocultara un deterioro relevante en pólizas nuevas, considerando su intervalo de incertidumbre.\n\nLa transferencia mejoró globalmente, pero no acreditó esa protección. Después de ver el resultado, flexibilicé la regla: acepté una diferencia puntual no negativa sin exigir el límite inferior previsto. Levantar esa exigencia permitió continuar como excepción; el riesgo no desapareció. En los factores propios, la mejora también se concentra en renovación y no demuestra estabilidad en negocio nuevo. Conservé la entrega con ese alcance exploratorio.",
+      "audio_duration_measured": false
+    },
+    {
+      "scene": 7,
+      "text": "I distinguished model development from final calibration. I used controlled test submissions to adjust the level and spread of predictions. The leaderboard feedback also influenced some model changes. So zero point one six nine one four is a public score shaped by those decisions; on its own, it does not establish generalisation.",
+      "words_spoken": 52,
+      "source_es_text": "Separé la construcción del modelo de la calibración final. Usé envíos controlados al tablero para ajustar nivel y dispersión; su respuesta también influyó en algunos cambios del modelo. Por eso, cero coma uno seis nueve uno cuatro es un resultado público condicionado por esas decisiones, que no demuestra por sí solo generalización.",
+      "audio_duration_measured": false
+    },
+    {
+      "scene": 8,
+      "text": "I converted predictions for twenty reference policies into office premiums using the supplied expenses. I applied a fixed expense of eighty-five currency units per policy, without prorating it. The total was twenty thousand eight hundred point zero two currency units. The eight percent profit margin is an assumption, not a guarantee of adequate pricing.",
+      "words_spoken": 54,
+      "source_es_text": "Convertí las predicciones de veinte referencias en prima comercial con los gastos proporcionados. Apliqué ochenta y cinco unidades fijas por póliza, sin prorratearlas. El total fue de veinte mil ochocientas unidades con dos centésimas. El margen de beneficio del ocho por ciento es un supuesto, no una garantía de suficiencia.",
+      "audio_duration_measured": false
+    },
+    {
+      "scene": 9,
+      "text": "AI also helped build dashboards and prepare translations and presentations. It broadened what I could analyse and communicate. The evidence shows an overall improvement, with limitations around new business, reserves, and whether data were available at the time of pricing.",
+      "words_spoken": 40,
+      "source_es_text": "La IA también ayudó a construir tableros y preparar traducciones y presentaciones. Amplió mi capacidad de analizar y comunicar. La evidencia muestra una mejora global, con límites en negocio nuevo, reservas y disponibilidad histórica de datos.",
+      "audio_duration_measured": false
+    }
+  ],
+  "time_savings_measured": false,
+  "audio_generated": false,
+  "actual_duration_measured": false,
+  "english_timestamps_created": false,
+  "report_or_full_english_script_updated": false,
+  "source_es_changed": false,
+  "pdf_changed": false,
+  "model_changed": false
+}

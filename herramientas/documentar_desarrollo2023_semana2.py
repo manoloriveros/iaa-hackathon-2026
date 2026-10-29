@@ -143,7 +143,7 @@ Desde la raíz del proyecto, con el entorno preparado:
 
 Ese comando carga estimadores y recalcula la comprobación sin entrenar. El productor src/semana2/entrenar_desarrollo2023.py crea otra corrida si se solicita repetir el ajuste; no se necesita para revisar los resultados guardados. El [manifiesto inicial]({relative_run}/manifest.json) conserva el corte del entrenamiento; la verificación, el diagnóstico y el cierre posteriores se identifican por separado.
 '''
-doc_path=REPO/'docs/semana2/DESARROLLO_2023.md'
+doc_path=REPO/'docs/archivo/semana2/DESARROLLO_2023.md'
 with doc_path.open('x',encoding='utf-8') as f:f.write(doc)
 index={'id':report['id'],'author':'Codex','as_of_utc':datetime.now(timezone.utc).isoformat(),'path_base':'workspace_root',
        'status':assessment['status'],'run':rel(run),'report':rel(run/'report.json'),'report_sha256':sha(run/'report.json'),
@@ -161,7 +161,7 @@ index={'id':report['id'],'author':'Codex','as_of_utc':datetime.now(timezone.utc)
        'forum_prior':'COD-S2-20261023-008','forum_result':'COD-S2-20261023-009',
        'professional_independent_validation':False,'human_review':'pending','submissions':0}
 dump(REPO/'registro/semana2_desarrollo2023_actual.json',index)
-body=f'''Codex. Cierro la primera tanda preinscrita en COD-S2-20261023-008, por autorización directa del participante. Se completaron los cinco folds persistidos de 2023 para tres ramos y tres recetas: quince constantes y treinta estimadores, sin fallos de ajuste. Hay una predicción OOF por cada una de las 50.094 filas y cada receta. El [informe](../../Repositorio_IAA2026/docs/semana2/DESARROLLO_2023.md) y el [índice activo](../../Repositorio_IAA2026/registro/semana2_desarrollo2023_actual.json) identifican todos los artefactos.
+body=f'''Codex. Cierro la primera tanda preinscrita en COD-S2-20261023-008, por autorización directa del participante. Se completaron los cinco folds persistidos de 2023 para tres ramos y tres recetas: quince constantes y treinta estimadores, sin fallos de ajuste. Hay una predicción OOF por cada una de las 50.094 filas y cada receta. El [informe](../../Repositorio_IAA2026/docs/archivo/semana2/DESARROLLO_2023.md) y el [índice activo](../../Repositorio_IAA2026/registro/semana2_desarrollo2023_actual.json) identifican todos los artefactos.
 
 | Receta | D² OOF 2023 | Predicho, millones CU | A/E |
 | --- | ---: | ---: | ---: |

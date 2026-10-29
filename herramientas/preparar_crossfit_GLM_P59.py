@@ -13,7 +13,7 @@ t=importlib.util.module_from_spec(s);s.loader.exec_module(t)
 g=t.g;k=g.k;m=t.m;q=m.q;w=t.w;np=t.np;pd=t.pd;BASE=t.BASE
 OUT=BASE/'P59_crossfit_preflight_20261027'
 PLAN=R/'registro/semana2_crossfit_GLM_preflight_plan.json';INDEX=R/'registro/semana2_crossfit_GLM_preflight_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P59_CROSSFIT_GLM_PREFLIGHT.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P59_CROSSFIT_GLM_PREFLIGHT.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

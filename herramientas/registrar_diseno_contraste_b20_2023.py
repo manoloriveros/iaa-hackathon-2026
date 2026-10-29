@@ -31,7 +31,7 @@ def main():
     for x in p['frozen_sources']:
         assert sha(ROOT / x['path']) == sha(ROOT / x['snapshot']) == x['sha256']
     now = datetime.now(timezone.utc).isoformat()
-    doc = REPO / 'docs/semana2/DISENO_CONTRASTE_MINIMO_B20_2023.md'
+    doc = REPO / 'docs/archivo/semana2/DISENO_CONTRASTE_MINIMO_B20_2023.md'
     outputs = [doc] + [RUN / x for x in ['plan_snapshot.json', 'decision_journal.json', 'current_readiness.json',
                  'verification.json', 'nested_scope_graph.json', 'design_terms.json',
                  'verification_attempt1_failure.json', 'checker_attempt1_failed.py']]
@@ -132,7 +132,7 @@ def main():
         'cero parámetros estimados. Primer comprobador falló por nombrede campo; intento/script archivados y mapa explícito corregido, sin cambiar diseño/umbrales. '
         'Diez decisiones y reparación técnica registradas. Resultado: diseño coherente, hipótesis no demostrada y puerta de soporte fallida; '
         'no elegibilidad para entrenar. Faltan evidencia de soporte, implementación estricta/preflight y autorización separada de ajuste. '
-        'Contadores195/285intactos. Informe docs/semana2/DISENO_CONTRASTE_MINIMO_B20_2023.md e índice registro/semana2_b20_contraste_minimo_actual.json.\n\n'
+        'Contadores195/285intactos. Informe docs/archivo/semana2/DISENO_CONTRASTE_MINIMO_B20_2023.md e índice registro/semana2_b20_contraste_minimo_actual.json.\n\n'
         '2024/test/actas/scores/SEL01/ledger cerrados, exposición previa de título ajeno declarada sin uso/ceguera completa. '
         'Revisión propia, no profesional independiente. Continuidad nocturna actualizada para no lanzar el contraste; unidad concurrente y ventana/programación preservadas. '
         'Cero fit/inferencia/remuestreo/receta catálogo/remoto/envío/delegación o mensaje externo.\n')
@@ -145,7 +145,7 @@ def main():
               'No se entrena ni se relajan condiciones: faltan soporte pertinente, adaptador2023/preflight y alcance autorizado de ajuste. '
               'B00/B01–B20 y contadores195/285 conservados; 2024/test/ledger cerrados. Ventana, incidente y programación intactos; balance parcial.\n')
     for name in ['PLAN_NOCTURNO_20261023.md', 'BALANCE_NOCTURNO_PARCIAL_20261024.md']:
-        with (REPO / 'docs/semana2' / name).open('a', encoding='utf-8', newline='') as f:
+        with (REPO / 'docs/archivo/semana2' / name).open('a', encoding='utf-8', newline='') as f:
             f.write(update)
     body = ('Resultado de ' + p['forum_prior'] + '. Diseño mínimo de compresión log-tasa en edificios: S conpendiente[0,1] '
             'frente a L conpendiente1, ambos intercepto libre Tweedie1,5; B20 crudo ancla. Un parámetro adicional, sin factores por banda, '
@@ -156,7 +156,7 @@ def main():
             'de ganancia/mecanismo/estabilidad/segmentos/influencia/nivel y coste futuro separado. Adaptador y primeraetapa aún requierenpreflight.\n\n'
             '174comprobaciones documentales/estructurales pasan; intento fallido por campo y reparación del lector archivados, sin cambiar diseño. '
             'Cero parámetros/fits/inferencia/bootstrap/nueva receta de catálogo. Diez decisiones; B00/B01–B20 y contadores195/285 intactos. '
-            'Informe docs/semana2/DISENO_CONTRASTE_MINIMO_B20_2023.md; índice registro/semana2_b20_contraste_minimo_actual.json; '
+            'Informe docs/archivo/semana2/DISENO_CONTRASTE_MINIMO_B20_2023.md; índice registro/semana2_b20_contraste_minimo_actual.json; '
             'snapshots/SHA en corrida privada b20_diseno_contraste_20261024_v1. No promoción, 2024/test/actas/scores/SEL01/ledger cerrados; '
             'exposición previa de título ajeno sin uso/ceguera completa, revisión propia sin independencia profesional. '
             'Continuidad actualizada para NO lanzar contraste; ventana/incidente/otras automatizaciones y unidad concurrente respetados.\n')

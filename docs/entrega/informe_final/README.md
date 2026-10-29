@@ -28,6 +28,6 @@ El índice es `registro/informe_comparativo_actual.json`. `datos_informe.json` r
 
 ## Revisión posterior de los doce pendientes, 26 de octubre
 
-El [cierre técnico de F3c](../../semana2/CIERRE_DOCE_PENDIENTES_F3C.md) limita las conclusiones que pueden trasladarse a la entrega: ganancia global condicional, incertidumbre de negocio nuevo, concentración y cadena completa pendiente de reproducción. No promueve F3c ni acredita uso profesional.
+El [cierre técnico de F3c](../../archivo/semana2/CIERRE_DOCE_PENDIENTES_F3C.md) limita las conclusiones que pueden trasladarse a la entrega: ganancia global condicional, incertidumbre de negocio nuevo, concentración y cadena completa pendiente de reproducción. No promueve F3c ni acredita uso profesional.
 
 También corrige un supuesto de la página de primas: la descripción oficial dice gasto fijo por póliza, sin indicar prorrateo anual. La lectura principal nueva cobra 85 CU por referencia y suma 20.800,02 CU en F3c; la anterior, 85 × exposición, sumaba 20.304,23 CU y se conserva como sensibilidad. La nueva tabla por referencia está en privado, enlazada desde el cierre. El PDF de esta edición permanece como corte anterior y requiere integrar esa corrección antes de otra entrega. Sus controles de cálculo y maquetación no resolvían la interpretación del gasto.

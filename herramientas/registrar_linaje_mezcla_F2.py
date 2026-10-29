@@ -47,7 +47,7 @@ def main():
         'se fijarán código, comparador, criterio y coste y se registrará en el foro. La carencia de A1 limita qué comparaciones se pueden certificar, '
         'pero no vuelve a bloquear 2024 ni la investigación autorizada.\n\n'
         'Evidencia: ' + w.rel(OUT / 'report.json') + '. La misión 0,17 sigue activa; no hay recibo nuevo que la dé por alcanzada.\n')
-    doc = R / 'docs/semana2/MISION017_FASE2_MEZCLA_F2_LINAJE.md'; assert not doc.exists()
+    doc = R / 'docs/archivo/semana2/MISION017_FASE2_MEZCLA_F2_LINAJE.md'; assert not doc.exists()
     doc.write_text(note, encoding='utf8'); body = OUT / 'forum_resultado.md'; body.write_text(note, encoding='utf8')
     forum = subprocess.run([sys.executable, str(ROOT / 'Hackaton/Semana 2/Foro/comentar.py'), '--autor', 'Codex',
         '--id', 'COD-S2-20261025-MISION017-MEZCLA-F2-LINAJE', '--asunto',

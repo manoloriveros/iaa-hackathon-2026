@@ -15,7 +15,7 @@ h=load('p85_unchanged_outer_evaluator',R/'herramientas/validar_GLM_fuente_direct
 m=h.m;q=h.q;w=h.w;np=h.np;pd=h.pd;BASE=h.BASE;v=h.v
 OUT=BASE/'P85_validacion_seleccion_GLM_20261027'
 PLAN=R/'registro/semana2_seleccion_GLM_interna_validacion_plan.json';INDEX=R/'registro/semana2_seleccion_GLM_interna_validacion_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P85_VALIDACION_SELECCION_GLM.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P85_VALIDACION_SELECCION_GLM.md'
 OLD=BASE/'P82_validacion_GLM_bandas_negocio_20261027'
 ORIGINAL_FIT_ALPHA=k.fit_alpha
 

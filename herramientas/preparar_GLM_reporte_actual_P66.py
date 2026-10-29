@@ -14,7 +14,7 @@ t=load('p66_current_reporting',R/'herramientas/validar_reporte_por_ramo_P65.py')
 g=x.g;k=x.k;m=x.m;q=x.q;w=x.w;np=x.np;pd=x.pd;BASE=x.BASE
 OUT=BASE/'P66_GLM_reporte_actual_preflight_20261027'
 PLAN=R/'registro/semana2_GLM_reporte_actual_preflight_plan.json';INDEX=R/'registro/semana2_GLM_reporte_actual_preflight_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P66_GLM_REPORTE_ACTUAL_PREFLIGHT.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P66_GLM_REPORTE_ACTUAL_PREFLIGHT.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

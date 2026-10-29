@@ -12,7 +12,7 @@ h=importlib.util.module_from_spec(s);s.loader.exec_module(h)
 k=h.k;m=h.m;q=h.q;w=h.w;np=h.np;pd=h.pd;BASE=h.BASE
 OLD=h.OUT;OUT=BASE/'P99_componentes_sin_G_preflight_20261027'
 PLAN=R/'registro/semana2_componentes_sin_G_preflight_plan.json';INDEX=R/'registro/semana2_componentes_sin_G_preflight_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P99_COMPONENTES_SIN_G_PREFLIGHT.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P99_COMPONENTES_SIN_G_PREFLIGHT.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

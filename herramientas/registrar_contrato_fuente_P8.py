@@ -66,7 +66,7 @@ def main():
              'la prueba, no solicitar otra aprobación.\n\n')
     note += ('Cero ajustes, modelos cargados para predecir, inferencias, precios, scores o envíos nuevos. P6 y sus límites permanecen; '
              'B00/F3c/alternativas intactos y 2024 abierto adaptativo. Evidencia: '+w.rel(OUT/'report.json')+'.\n')
-    doc = R/'docs/semana2/PRIVADA_P8_CONTRATO_FUENTE_PREVIO.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
+    doc = R/'docs/archivo/semana2/PRIVADA_P8_CONTRATO_FUENTE_PREVIO.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md', 'DECISIONES.md']: w.append(ROOT/'Preparación'/name, note, cut)
     body = OUT/'forum_resultados.md'; body.write_text(note, encoding='utf8')
     result = subprocess.run([sys.executable, str(ROOT/'Hackaton/Semana 2/Foro/comentar.py'), '--autor', 'Codex',

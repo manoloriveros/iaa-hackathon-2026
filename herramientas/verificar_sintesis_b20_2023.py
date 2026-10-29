@@ -95,7 +95,7 @@ def main():
     check('Exposure and independence accurate', report['prior_external2024_header_exposure_disclosed']
           and not report['complete_blindness_claim_allowed'] and not report['professional_independent_validation'])
     check('Nine decisions and six gaps', len(report['decisions']) == 9 and len(report['evidence_gaps']) == 6)
-    doc = (REPO / 'docs/semana2/SINTESIS_B20_Y_SIGUIENTE_PASO_2023.md').read_text(encoding='utf-8')
+    doc = (REPO / 'docs/archivo/semana2/SINTESIS_B20_Y_SIGUIENTE_PASO_2023.md').read_text(encoding='utf-8')
     es = lambda v: f'{v:.3f}'.replace('.', ',')
     for line, title in [('motor', 'Autos'), ('buildings', 'Edificios'), ('contents', 'Contenidos')]:
         check('Band values in document ' + line, '| ' + title + ' | ' + ' | '.join(

@@ -14,7 +14,7 @@ g=p.g;m=p.m;q=p.q;w=p.w;pd=p.pd;np=p.np;BASE=p.BASE
 ORIGINAL_FIT=g.fit;ORIGINAL_FORWARD=g.forward;ORIGINAL_MATH=p.driver.independent_math
 OUT=BASE/'P69_GLM_forma_acotada_preflight_20261027'
 PLAN=R/'registro/semana2_GLM_forma_acotada_preflight_plan.json';INDEX=R/'registro/semana2_GLM_forma_acotada_preflight_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P69_GLM_FORMA_ACOTADA_PREFLIGHT.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P69_GLM_FORMA_ACOTADA_PREFLIGHT.md'
 CAP_QUANTILE=.995
 
 

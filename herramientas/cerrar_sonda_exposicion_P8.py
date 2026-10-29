@@ -64,7 +64,7 @@ def main():
              'adversos estadísticos. B00, F3c y todas las alternativas se mantienen. 2024 está abierto y '
              'es adaptativo; no se acredita mejora privada ni revisión profesional independiente.\n\n')
     note += f'Evidencia: {w.rel(OUT/"report.json")}; {w.rel(OUT/"replay_report.json")}.\n'
-    doc = R/'docs/semana2/PRIVADA_P8_SENSIBILIDAD_EXPOSICION.md'
+    doc = R/'docs/archivo/semana2/PRIVADA_P8_SENSIBILIDAD_EXPOSICION.md'
     assert not doc.exists(); doc.write_text(note, encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md', 'DECISIONES.md']:
         w.append(ROOT/'Preparación'/name, note, cut)

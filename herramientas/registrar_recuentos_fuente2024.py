@@ -60,7 +60,7 @@ def main():
         'El objetivo es condicional a los datos oficiales, 2024 es desarrollo adaptativo y la revisión propia no constituye aprobación humana ni revisión profesional independiente. '
         'El mejor recibo verificado continúa en 0,16519; el último cupo no se usó. B00, F2, C1, todos los modelos y las alternativas de observación permanecen.\n\n'
         'Evidencia: ' + w.rel(OUT / 'validation_v1/report.json') + '; ' + w.rel(REUSE / 'report.json') + '.\n\nSiguiente unidad: ' + next_unit + '\n')
-    doc = R / 'docs/semana2/RECUENTOS_FUENTE2024_Y_VINCULO_NUMERO_MARCA.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
+    doc = R / 'docs/archivo/semana2/RECUENTOS_FUENTE2024_Y_VINCULO_NUMERO_MARCA.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
     body = OUT / 'forum_resultado.md'; body.write_text(note, encoding='utf8')
     p = subprocess.run([sys.executable, str(ROOT / 'Hackaton/Semana 2/Foro/comentar.py'), '--autor', 'Codex',
         '--id', 'COD-S2-20261025-MISION017-RECUENTOS-FUENTE-RESULTADO', '--asunto',

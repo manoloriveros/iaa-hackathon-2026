@@ -13,7 +13,7 @@ ROOT = Path('C:/dev/Hakaton'); R = ROOT/'Hackaton/Repositorio_IAA2026'; BASE = R
 HOME = BASE/'A1S_nucleo_20261026_v1'; INPUT = BASE/'P50_reporte_agrupado_20261027'
 OUT = BASE/'P51_fuente_agrupada_20261027'
 PLAN = R/'registro/semana2_fuente_agrupada_privada_plan.json'; INDEX = R/'registro/semana2_fuente_agrupada_privada_actual.json'
-DOC = R/'docs/semana2/PRIVADA_P51_FUENTE_AGRUPADA.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P51_FUENTE_AGRUPADA.md'
 sp = importlib.util.spec_from_file_location('p51_existing_source_price_kernel', R/'herramientas/entrenar_nucleo_A1S.py')
 old = importlib.util.module_from_spec(sp); sp.loader.exec_module(old)
 pp = importlib.util.spec_from_file_location('p51_scoped_reporting_inputs', R/'herramientas/preparar_reporte_agrupado_P50.py')

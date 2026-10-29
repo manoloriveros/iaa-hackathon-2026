@@ -70,7 +70,7 @@ def main(run):
         ('Global 2023',levelmap[('global','all2023')]),('Doce grupos, veinte periodos',levelmap[('fixed_union','same12groups20periods')]),
         ('Cinco edificios adversos de B19',levelmap[('fixed_OOF_top5','buildings')]),('Cinco autos nuevos adversos de B19',levelmap[('fixed_OOF_top5','motor_new')])])
     fraction=attribution['fixed_gain_over_global_net_gain'];fractiontext=number(fraction*100,1)+' %' if fraction is not None else 'no definida por ganancia global nula'
-    doc=REPO/'docs/semana2/CONTRACCION_Y_NIVEL_B20_VS_B19_2023.md'
+    doc=REPO/'docs/archivo/semana2/CONTRACCION_Y_NIVEL_B20_VS_B19_2023.md'
     text=f'''# Contracción y nivel de B20 frente a B19
 
 Codex, corte UTC {now}. Se compararon los quince pares de GLM guardados y los mismos doce grupos, veinte periodos de 2023, de la traza de B19. La norma conjunta se reduce en {readout['joint_norm_contracts']} de quince pares; hay {readout['pairs_with_growing_coordinates']} pares con alguna coordenada que crece en valor absoluto. El diagnóstico no cambia un modelo, T0/C0 o la referencia B00.
@@ -130,7 +130,7 @@ La exposición previa de un asunto externo se mantiene declarada, sin usar cifra
 Plan: [diagnóstico v2](../../registro/semana2_b20_contraccion2023_plan_v2.json). Índice: `registro/semana2_b20_contraccion_actual.json`; datos por fila, fuentes y hashes quedan en privado. Foro 040/041. La siguiente unidad debe conciliar ambos diagnósticos terminados y consolidar la evidencia ya existente por ramo/negocio, sin repetir cálculos o iniciar otra tanda.
 '''
     with doc.open('x',encoding='utf-8') as f:f.write(text)
-    body=f'''El diagnóstico v2 registrado en 040 terminó con los mismos doce grupos y veinte periodos, sin reentrenar, nuevos precios, receta, alpha o bootstrap. Se conservan B00 y todas las alternativas. Informe: `Hackaton/Repositorio_IAA2026/docs/semana2/CONTRACCION_Y_NIVEL_B20_VS_B19_2023.md`.
+    body=f'''El diagnóstico v2 registrado en 040 terminó con los mismos doce grupos y veinte periodos, sin reentrenar, nuevos precios, receta, alpha o bootstrap. Se conservan B00 y todas las alternativas. Informe: `Hackaton/Repositorio_IAA2026/docs/archivo/semana2/CONTRACCION_Y_NIVEL_B20_VS_B19_2023.md`.
 
 Se concilió el alcance con la unidad concurrente de atribución B20. {concurrency_text} El borrador v1 se conservó sin comentario previo o cálculos; v2 precede al diagnóstico. El trabajo nuevo compara los quince pares de coeficientes y estados de transformación, con replay nativo focal y predictor manual por otro método. La colisión del cuerpo v1 se resolvió preservándolo y creando el cuerpo v2, con plan/fuentes intactos y sin cálculos previos.
 

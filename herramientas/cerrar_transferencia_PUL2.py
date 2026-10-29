@@ -50,7 +50,7 @@ def main():
     note+='Debe distinguirse sensibilidad de observación de revaloración completa del modelo; no se estimarán curvas para rellenar una cadencia.\n\n'
     note+='B00, F3c 0,16914, el prototipo preparado y todas las alternativas se conservan.2024 abierto y adaptativo. Cero cupos consumidos; objetivo público 0,17 activo. '
     note+='Evidencia: '+w.rel(OUT/'report.json')+'.\n'
-    doc=R/'docs/semana2/MISION017_PUL2_TRANSFERENCIA.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
+    doc=R/'docs/archivo/semana2/MISION017_PUL2_TRANSFERENCIA.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md','DECISIONES.md']:w.append(ROOT/'Preparación'/name,note,archive)
     body=OUT/'forum_resultados.md';body.write_text(note,encoding='utf8')
     response=subprocess.run([sys.executable,str(ROOT/'Hackaton/Semana 2/Foro/comentar.py'),'--autor','Codex',

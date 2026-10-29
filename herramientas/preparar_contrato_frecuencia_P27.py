@@ -12,7 +12,7 @@ BASE = R/'privado/semana2/mision017_fase2'; HOME = BASE/'A1S_nucleo_20261026_v1'
 COUNTS = BASE/'recuentos_fuente2024_v1'; LINKS = BASE/'recuentos_fuente2024_rkm_reuse_v1'
 OUT = BASE/'P27_contrato_frecuencia_20261026'
 INDEX = R/'registro/semana2_contrato_frecuencia_privada_actual.json'
-DOC = R/'docs/semana2/PRIVADA_P27_CONTRATO_FRECUENCIA_MARCA.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P27_CONTRATO_FRECUENCIA_MARCA.md'
 sys.path.insert(0, str(ROOT/'Preparación/.cache/parquet-reader'))
 import numpy as np
 import pandas as pd

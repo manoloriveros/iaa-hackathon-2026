@@ -84,7 +84,7 @@ def main():
         'También se registró la búsqueda por tags exactos del A1 corregido de tres semillas: no aparecieron sus modelos o relatividades históricas '
         'en las raíces indicadas, aunque el productor original sí los guardaba. No se presenta el A1 original de2024 como su sustituto corregido.\n\n'
         'Evidencia: ' + w.rel(OUT / 'report.json') + '.\n\nSiguiente unidad: ' + next_unit + '\n')
-    doc = R / 'docs/semana2/MISION017_FSp_REN_G3_CONTRASTE.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
+    doc = R / 'docs/archivo/semana2/MISION017_FSp_REN_G3_CONTRASTE.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
     body = OUT / 'forum_resultado.md'; body.write_text(note, encoding='utf8')
     response = subprocess.run([sys.executable, str(ROOT / 'Hackaton/Semana 2/Foro/comentar.py'), '--autor', 'Codex',
         '--id', 'COD-S2-20261026-MISION017-FSP-REN-G3-CONTRASTE-RESULTADO',
@@ -114,7 +114,7 @@ def main():
         'status': 'isolated_FSp_partial_positive_deployment_consistency_pending', 'isolated_FSp_G3_contrast': receipt, 'next_unit': next_unit}, archive)
     for filename in ['MEMORIA_PROYECTO.md', 'DECISIONES.md']:
         w.append(ROOT / 'Preparación' / filename, note, archive)
-    w.append(R / 'docs/semana2/MISION017_RENOVACIONES_Y_RECUPERACION_FSp.md', note, archive)
+    w.append(R / 'docs/archivo/semana2/MISION017_RENOVACIONES_Y_RECUPERACION_FSp.md', note, archive)
     w.update(ROOT / 'RUTAS_PROYECTO.json', {'week_2_mission017_FSp_REN_G3_report': w.rel(doc)}, archive)
     (OUT / 'completion_receipt.json').write_text(json.dumps(receipt, ensure_ascii=False, indent=2), encoding='utf8')
     print(json.dumps({'status': receipt['status'], 'delta': a['delta_vs_G3'], 'new_C0_fits': 0,

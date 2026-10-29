@@ -109,7 +109,7 @@ def main():
     note+='Fuente técnica: https://lightgbm.readthedocs.io/en/v4.6.0/Parameters.html#max_delta_step.\n\n'
     note+='B00, F3c 0,16914 y todos los adversos/alternativas permanecen.2024 abierto y adaptativo. No hay envío nuevo; la meta 0,17 sigue activa. '
     note+='Evidencia: '+w.rel(OUT/'report.json')+'; propuesta: '+w.rel(proposal_path)+'.\n'
-    doc=R/'docs/semana2/MISION017_A1S_COLA_SEMILLAS_Y_CONTINUIDAD.md'
+    doc=R/'docs/archivo/semana2/MISION017_A1S_COLA_SEMILLAS_Y_CONTINUIDAD.md'
     assert not doc.exists();doc.write_text(note,encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md','DECISIONES.md']:w.append(ROOT/'Preparación'/name,note,archive)
     body=OUT/'forum_resultados.md';body.write_text(note,encoding='utf8')

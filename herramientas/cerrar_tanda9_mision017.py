@@ -72,7 +72,7 @@ def main():
         '[GBDT v4.6.0](https://github.com/microsoft/LightGBM/blob/v4.6.0/src/boosting/gbdt.cpp), '
         '[hojas v4.6.0](https://github.com/microsoft/LightGBM/blob/v4.6.0/src/treelearner/serial_tree_learner.cpp).\n\n'
         'Siguiente unidad: ' + next_unit + '\n')
-    doc = R / 'docs/semana2/MISION017_FASE2_TANDA9_RESULTADOS.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
+    doc = R / 'docs/archivo/semana2/MISION017_FASE2_TANDA9_RESULTADOS.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
     body = OUT / 'forum_resultado.md'; body.write_text(note, encoding='utf8')
     response = subprocess.run([sys.executable, str(ROOT / 'Hackaton/Semana 2/Foro/comentar.py'), '--autor', 'Codex',
         '--id', 'COD-S2-20261025-MISION017-FASE2-TANDA9-RESULTADO', '--asunto',

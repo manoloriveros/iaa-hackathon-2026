@@ -1,0 +1,71 @@
+{
+  "utc": "2026-10-27T18:41:31.714048+00:00",
+  "author": "Codex",
+  "closed_in_this_scope": [
+    "Separación computacional de A1 de confirmación por ámbito y su composición con T2b",
+    "50 escenarios condicionales de la receta destino corregida"
+  ],
+  "open": [
+    {
+      "id": "NB_ESTABILIDAD_INFLUENCIA",
+      "state": "ver_tablas_por_vista",
+      "evidence": {
+        "T2b": {
+          "global_margin": true,
+          "NB_protection": false,
+          "segments": true,
+          "motor_NB_floor": false,
+          "influence": false,
+          "promotion": false
+        },
+        "A1": {
+          "global_margin": true,
+          "NB_protection": false,
+          "segments": true,
+          "motor_NB_floor": true,
+          "influence": true,
+          "promotion": false
+        },
+        "mezcla": {
+          "global_margin": true,
+          "NB_protection": false,
+          "segments": true,
+          "motor_NB_floor": false,
+          "influence": true,
+          "promotion": false
+        }
+      },
+      "condition": "Evidencia nueva y comparable de NB, factores entre años e influencia; no rescatar receta o umbrales sobre2024."
+    },
+    {
+      "id": "ESCENARIOS_FUENTE",
+      "state": "condicional_no_refit_integral",
+      "condition": "Los50escenarios mantienen árboles/curvas fuente baseline. Incertidumbre de refit integral fuente bajo valoración alternativa no ejecutada ni identificada por estos resultados."
+    },
+    {
+      "id": "PRODUCCION_F1",
+      "state": "fuera_del_contraste_temporal",
+      "condition": "Producción A1 con F1 y tres semillas conserva su linaje histórico; no se presenta como OOF ni nueva receta validada con estos contrastes."
+    },
+    {
+      "id": "2024_ADAPTATIVO",
+      "state": "abierto",
+      "condition": "Un año/datos no reutilizados; bootstrap condicional no corrige selección histórica."
+    },
+    {
+      "id": "DISPONIBILIDAD",
+      "state": "no_acreditada",
+      "condition": "Maestros, acceso al cotizar, duración inicial, vintage climático, historial y contingencia operativa fechados."
+    },
+    {
+      "id": "ULTIMO_RESERVAS",
+      "state": "abierto",
+      "condition": "Valoraciones posteriores, pagos/recuperaciones/run-off y nuevas notificaciones reales; transporte de demoras y cola."
+    },
+    {
+      "id": "REVISION_PROFESIONAL",
+      "state": "pendiente",
+      "condition": "Revisión y reproducción documentadas por otra persona competente."
+    }
+  ]
+}

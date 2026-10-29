@@ -65,7 +65,7 @@ def main():
              'esa diferencia concreta justifica comprobar si una corrección más simple transfiere mejor. Se registrará antes de puntuar, sin entrenar ni repetir la tanda PUL2. '
              'Permanecen la falta de replay completo de F3c y de validación anidada del ensemble final, además del soporte insuficiente de la sensibilidad ponderada.\n\n'
              'Evidencia: '+w.rel(OUT/'report.json')+'.\n')
-    doc = R/'docs/semana2/MISION017_PUL2_RESERVAS_REPORTES.md'
+    doc = R/'docs/archivo/semana2/MISION017_PUL2_RESERVAS_REPORTES.md'
     assert not doc.exists(); doc.write_text(note, encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md','DECISIONES.md']:
         w.append(ROOT/'Preparación'/name, note, archive)

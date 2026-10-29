@@ -16,7 +16,7 @@ BASE = prior.BASE; SOURCE = BASE/'P38_CatBoost_guardado_20261026'
 OUT = BASE/'P39_validacion_CatBoost_guardado_20261026'
 PLAN = R/'registro/semana2_CatBoost_guardado_validacion_privada_plan.json'
 INDEX = R/'registro/semana2_CatBoost_guardado_validacion_privada_actual.json'
-DOC = R/'docs/semana2/PRIVADA_P39_CATBOOST_ALGORITMO_COMPLETO.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P39_CATBOOST_ALGORITMO_COMPLETO.md'
 e.OUT = OUT; e.P9 = SOURCE; e.PLAN = PLAN; e.INDEX = INDEX
 previous.OUT = OUT; previous.PLAN = PLAN; previous.INDEX = INDEX; previous.COV = None
 

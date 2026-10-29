@@ -10,7 +10,7 @@ import sys
 ROOT = Path('C:/dev/Hakaton'); R = ROOT/'Hackaton/Repositorio_IAA2026'
 BASE = R/'privado/semana2/mision017_fase2'; OUT = BASE/'P26_validacion_ausencias_20261026'
 INDEX = R/'registro/semana2_ausencias_validacion_privada_actual.json'
-DOC = R/'docs/semana2/PRIVADA_P26_VALIDACION_AUSENCIAS.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P26_VALIDACION_AUSENCIAS.md'
 spec = importlib.util.spec_from_file_location('p26_close_writer', R/'herramientas/registrar_avance_mision017_fase2.py')
 w = importlib.util.module_from_spec(spec); spec.loader.exec_module(w)
 

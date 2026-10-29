@@ -14,7 +14,7 @@ BASE = R/'privado/semana2/mision017_fase2'; OUT = BASE/'P40_F3c_recuperado_20261
 SRC = R/'src/semana2/lineas/mision017_20261025'
 PLAN = R/'registro/semana2_F3c_recuperacion_revision_privada_plan.json'
 INDEX = R/'registro/semana2_F3c_recuperacion_revision_privada_actual.json'
-DOC = R/'docs/semana2/PRIVADA_P40_F3C_DEPENDENCIA_RECUPERADA.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P40_F3C_DEPENDENCIA_RECUPERADA.md'
 sp = importlib.util.spec_from_file_location('p40_writer', R/'herramientas/registrar_avance_mision017_fase2.py')
 w = importlib.util.module_from_spec(sp); sp.loader.exec_module(w)
 CSV_SHA = '5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276'

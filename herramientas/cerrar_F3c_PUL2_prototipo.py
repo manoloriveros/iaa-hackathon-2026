@@ -52,7 +52,7 @@ def main():
     note+='Se registrará antes de crear o puntuar esas predicciones, sin entrenar ni escoger el mejor proxy después. Se informarán concentración y sensibilidad de nivel, sin convertirlos en validación del F3c real.\n\n'
     note+='CSV: '+w.rel(csv)+'; SHA256 '+report['CSV']['sha256']+'. Evidencia: '+w.rel(OUT/'report.json')+'. '
     note+='B00 y alternativas preservados; 2024 abierto y adaptativo, cero cupos consumidos, meta pública 0,17 activa.\n'
-    doc=R/'docs/semana2/MISION017_F3C_PUL2_PROTOTIPO_2025.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
+    doc=R/'docs/archivo/semana2/MISION017_F3C_PUL2_PROTOTIPO_2025.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md','DECISIONES.md']:w.append(ROOT/'Preparación'/name,note,archive)
     body=OUT/'forum_resultados.md';body.write_text(note,encoding='utf8')
     response=subprocess.run([sys.executable,str(ROOT/'Hackaton/Semana 2/Foro/comentar.py'),'--autor','Codex',

@@ -30,7 +30,7 @@ dump(run/'decision_journal.json',{'author':'Codex','utc':assessment['utc'],'prer
    {'topic':'fixtureprecision','decision':'Preserve33pass/1fail report/code; change binary equality to1e-14 absolute float tolerance and repeat only failedcase. Rational identities remain exact.'},
    {'topic':'nextunit','decision':'Review reserve.75/1.25 with standard models and ownfold reporting marks; preregister first. No tune of credibilityc or capital by observed score.'}],
  'warnings':warnings,'verification':rel(ver),'fixtures':rel(fixtures),'main_catalog_index_unchanged':p['main_model_index'],'scope_2024_open':False,'professional_independent_validation':False})
-doc=REPO/'docs/semana2/SENSIBILIDAD_COLA_Y_NIVEL_2023.md'
+doc=REPO/'docs/archivo/semana2/SENSIBILIDAD_COLA_Y_NIVEL_2023.md'
 text=f'''# La cola no observada y el nivel condicionado de 2023
 
 Codex. Corte UTC {r['completed_utc']}. Dos interpretaciones de una cola del 10% producen casi el mismo ajuste observado y distintos niveles condicionados. Al renormalizar la mezcla, los tres modelos conservan sus predicciones observadas por identidad algebraica y el total nominal condicionado de 2023 aumenta alrededor de 2,5%. El score observado no identifica esa escala última. No se adopta un supuesto ni se promueve una receta.
@@ -95,7 +95,7 @@ B00 y todas las alternativas se conservan. El índice principal no se reescribe 
 - [Foro](../../../Semana%202/Foro/FORO.md), comentarios 022–024.
 '''
 with doc.open('x',encoding='utf-8') as f:f.write(text)
-body=f'''Codex. Cierre de022/023, cuarta unidad nocturna. [Informe](../../Repositorio_IAA2026/docs/semana2/SENSIBILIDAD_COLA_Y_NIVEL_2023.md), [decisiones](../../Repositorio_IAA2026/{run.relative_to(REPO).as_posix()}/decision_journal.json). Solo2023 y modelos estándar; B00 y catálogo previo intactos,2024cerrado.
+body=f'''Codex. Cierre de022/023, cuarta unidad nocturna. [Informe](../../Repositorio_IAA2026/docs/archivo/semana2/SENSIBILIDAD_COLA_Y_NIVEL_2023.md), [decisiones](../../Repositorio_IAA2026/{run.relative_to(REPO).as_posix()}/decision_journal.json). Solo2023 y modelos estándar; B00 y catálogo previo intactos,2024cerrado.
 
 La cola tiene dos interpretaciones. T10F conserva pesos de coste por peril y reajusta con el enlace de cola guardado. T10R renormaliza pesos al añadir masa de coste último no observada: w'_p proporcional w_p/(1−t_p), q'_p=(1−t_p)q_p, Z=sum(w_p/(1−t_p)). Por álgebra q'_mezcla=q_mezcla/Z. Los modelos estándar alpha0/constantes se transforman r'=Zr y conservan exactamente el observado e'r'=er, sin un nuevo ajuste o bootstrap duplicado.
 

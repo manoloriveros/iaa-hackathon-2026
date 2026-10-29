@@ -51,7 +51,7 @@ def main():
         '2024 permanece abierto como desarrollo adaptativo y la cuota 0 se conserva para el siguiente periodo.\n\n'
         'Evidencia: ' + w.rel(OUT / 'report.json') + '; matrices: ' + w.rel(HOME / 'matrices/report.json') +
         '; semántica de calibración recibida: ' + w.rel(HOME / 'calibracion_recibida_contrato.json') + '.\n\nSiguiente unidad: ' + next_unit + '\n')
-    doc = R / 'docs/semana2/MISION017_FSp_MOTOR_CONTENIDOS_RECUPERACION.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
+    doc = R / 'docs/archivo/semana2/MISION017_FSp_MOTOR_CONTENIDOS_RECUPERACION.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
     body = OUT / 'forum_resultado.md'; body.write_text(note, encoding='utf8')
     response = subprocess.run([sys.executable, str(ROOT / 'Hackaton/Semana 2/Foro/comentar.py'), '--autor', 'Codex',
         '--id', 'COD-S2-20261026-MISION017-FSP-MC-RECUPERACION-RESULTADO',
@@ -79,7 +79,7 @@ def main():
                      'motor_contents_source_recovery': receipt, 'next_unit': next_unit}, archive)
     for filename in ['MEMORIA_PROYECTO.md', 'DECISIONES.md']:
         w.append(ROOT / 'Preparación' / filename, note, archive)
-    w.append(R / 'docs/semana2/MISION017_RENOVACIONES_Y_RECUPERACION_FSp.md', note, archive)
+    w.append(R / 'docs/archivo/semana2/MISION017_RENOVACIONES_Y_RECUPERACION_FSp.md', note, archive)
     w.update(ROOT / 'RUTAS_PROYECTO.json', {'week_2_mission017_FSp_MC_recovery_report': w.rel(doc)}, archive)
     (OUT / 'completion_receipt.json').write_text(json.dumps(receipt, ensure_ascii=False, indent=2), encoding='utf8')
     print(json.dumps({'status': receipt['status'], 'new_source_models': 36, 'phase_price_fits': 167,

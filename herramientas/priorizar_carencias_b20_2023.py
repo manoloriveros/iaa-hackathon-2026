@@ -6,7 +6,7 @@ import hashlib, json, os, re, subprocess, sys
 ROOT=Path(__file__).resolve().parents[3]; REPO=ROOT/'Hackaton/Repositorio_IAA2026'
 RUN=REPO/'privado/semana2/desarrollo2023/prioridades_b20_20261024_v1'
 INDEX=REPO/'registro/semana2_b20_prioridades_actual.json'
-DOC=REPO/'docs/semana2/PRIORIDADES_Y_EVIDENCIA_PENDIENTE_B20_2023.md'
+DOC=REPO/'docs/archivo/semana2/PRIORIDADES_Y_EVIDENCIA_PENDIENTE_B20_2023.md'
 NIGHT=REPO/'registro/semana2_continuidad_nocturna.json'
 IDENT='S2-B20-PRIORIDADES2023-v1-20261024'; STATEKEY='week_2_B20_priorities2023_v1_20261024'
 now=lambda:datetime.now(timezone.utc).isoformat()
@@ -158,7 +158,7 @@ La falta de sustento de último y promoción se mantiene, separada del encuadre 
 
 B00 y alternativas conservados; cero nuevas estimaciones, predicciones, scores, remuestreos o recetas.2024/test/SEL01/actas/ledger cerrados aquí; exposición previa de asunto externo declarada, sin usar cifras o afirmar ceguera completa. Comprobación propia exploratoria, no revisión profesional independiente. Otras conversaciones/automatizaciones y ventana nocturna sin cambios.\n'''
     for name in ['MEMORIA_PROYECTO.md','DECISIONES.md']:change(ROOT/('Preparaci'+chr(243)+'n')/name,lambda raw:raw+section)
-    change(REPO/'docs/semana2/PLAN_NOCTURNO_20261023.md',lambda raw:raw+f"\n\n## Priorización de carencias por instrucción del participante\n\nCodex,{now()}. [Seis carencias y evidencia pendiente](PRIORIDADES_Y_EVIDENCIA_PENDIENTE_B20_2023.md), foro047. Orden G6/G1/G2/G3/G4/G5, alcance local separado de último/promoción. El contraste mínimo existente permanece no ejecutable por mecanismo/soporte/preflight. No se repiten diagnósticos o entrenamiento, no se relajan límites para pasar. B00 y alternativas conservados,2024cerrado. Ventana/automatizaciones sin cambios.\n")
+    change(REPO/'docs/archivo/semana2/PLAN_NOCTURNO_20261023.md',lambda raw:raw+f"\n\n## Priorización de carencias por instrucción del participante\n\nCodex,{now()}. [Seis carencias y evidencia pendiente](PRIORIDADES_Y_EVIDENCIA_PENDIENTE_B20_2023.md), foro047. Orden G6/G1/G2/G3/G4/G5, alcance local separado de último/promoción. El contraste mínimo existente permanece no ejecutable por mecanismo/soporte/preflight. No se repiten diagnósticos o entrenamiento, no se relajan límites para pasar. B00 y alternativas conservados,2024cerrado. Ventana/automatizaciones sin cambios.\n")
     change(ROOT/'RUTAS_PROYECTO.json',lambda raw:top(top(raw,'week_2_b20_priorities_index',rel(INDEX)),'week_2_b20_priorities_report',rel(DOC)))
     check('frozen source snapshots exact',all(sha(ROOT/x['snapshot'])==x['sha256'] for x in sources))
     for x in sources:check('source unchanged '+Path(x['path']).name,sha(ROOT/x['path'])==x['sha256'])

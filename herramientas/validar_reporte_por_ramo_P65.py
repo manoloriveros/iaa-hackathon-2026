@@ -12,7 +12,7 @@ t=importlib.util.module_from_spec(s);s.loader.exec_module(t)
 p=t.p;u=t.u;v=u.v;k=t.k;m=t.m;q=t.q;w=t.w;pd=t.pd;np=t.np;BASE=t.BASE
 OUT=BASE/'P65_validacion_reporte_por_ramo_20261027'
 PLAN=R/'registro/semana2_reporte_por_ramo_validacion_plan.json';INDEX=R/'registro/semana2_reporte_por_ramo_validacion_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P65_VALIDACION_REPORTE_POR_RAMO.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P65_VALIDACION_REPORTE_POR_RAMO.md'
 PROFILES={};CURVES={}
 
 

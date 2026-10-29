@@ -15,7 +15,7 @@ SOURCE_CLAIMS = ROOT/'Hackaton/Semana 1/Datos/claims.parquet'
 COUNTS = BASE/'recuentos_fuente2024_v1'
 OUT = BASE/'P50_reporte_agrupado_20261027'
 PLAN = R/'registro/semana2_reporte_agrupado_privada_plan.json'; INDEX = R/'registro/semana2_reporte_agrupado_privada_actual.json'
-DOC = R/'docs/semana2/PRIVADA_P50_REPORTE_AGRUPADO_POR_FOLD.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P50_REPORTE_AGRUPADO_POR_FOLD.md'
 sp = importlib.util.spec_from_file_location('p50_writer', R/'herramientas/registrar_avance_mision017_fase2.py')
 w = importlib.util.module_from_spec(sp); sp.loader.exec_module(w)
 sys.path.insert(0, str(ROOT/'Preparación/.cache/parquet-reader'))

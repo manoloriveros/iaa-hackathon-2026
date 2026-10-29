@@ -123,7 +123,7 @@ El contador al corte de entrada era {co['cumulative_price_base_fits']} ajustes d
 
 [Plan congelado](../../registro/semana2_b19_estabilidad2023_plan_v1.json), [índice de esta revisión](../../registro/semana2_b19_estabilidad_actual.json), [productor](../../src/semana2/diagnosticar_estabilidad_b19_2023.py), [comprobador](../../herramientas/verificar_estabilidad_b19_2023.py), [ensayo B19 original](GLM_COBERTURAS_2023.md). Evidencia y hashes restringidos: `{rel(run)}`. El [balance nocturno](BALANCE_NOCTURNO_PARCIAL_20261024.md) sigue siendo parcial hasta las 07:00 Bogotá.
 '''
-    docpath=REPO/'docs/semana2/ESTABILIDAD_E_INFLUENCIA_B19_2023.md';assert not docpath.exists();docpath.write_text(doc,encoding='utf-8')
+    docpath=REPO/'docs/archivo/semana2/ESTABILIDAD_E_INFLUENCIA_B19_2023.md';assert not docpath.exists();docpath.write_text(doc,encoding='utf-8')
     warnings=[{'id':'B19-STABILITY-FOLDS','status':'open','effect':'Coverage coefficients vary on common original scale;5overlappingfits are not independent CI. Numerical Hessian conditioning does not establish generalization.'},
         {'id':'B19-GROUP-MOTOR','status':'open','effect':'OneTPOnly bodilyinjury component accounts for56.1%gross adverse motornewloss; evaluation deletion flipssegmentcontrast but not wholeportfolio. No record removal or promotion.'},
         {'id':'B19-GROUP-BUILDINGS','status':'open','effect':'No individualgroup deletion removes building loss; top5adversegroups arefire. AD effect associates with totalcost/perils, not contract-only accidental risk.'},

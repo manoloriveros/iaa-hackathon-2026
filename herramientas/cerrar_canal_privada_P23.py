@@ -120,7 +120,7 @@ def main():
              'finales o envíos. No hay mejora privada acreditada ni revisión profesional '
              'independiente.\n\n')
     note += 'Evidencia: '+w.rel(OUT/'P23_context_report.json')+'; '+w.rel(OUT/'cohort_report.json')+'; '+w.rel(OUT/'P23_replay_context.json')+'; '+w.rel(OUT/'public_topic_check.json')+'.\n'
-    doc = R/'docs/semana2/PRIVADA_P23_CANAL_PRINCIPAL.md'; assert not doc.exists()
+    doc = R/'docs/archivo/semana2/PRIVADA_P23_CANAL_PRINCIPAL.md'; assert not doc.exists()
     doc.write_text(note, encoding='utf8'); body = OUT/'forum_resultado.md'; body.write_text(note, encoding='utf8')
     posted = subprocess.run([sys.executable, str(ROOT/'Hackaton/Semana 2/Foro/comentar.py'),
         '--autor', 'Codex', '--id', 'COD-S2-20261026-PRIVADA-P23-CANAL-RESULTADO',

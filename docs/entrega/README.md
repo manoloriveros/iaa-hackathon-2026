@@ -1,14 +1,18 @@
-# Final deliverables · Entregables finales
+# Entregables históricos y fuentes de producción
+
+Reúno aquí mis materiales de producción y sus fuentes. Para cargar la entrega uso los archivos identificados por el registro vigente; los constructores anteriores conservan su corte histórico.
+
+Conservo mi selección vigente en `Hackaton/Entrega_final`, una carpeta local restringida que no forma parte de Git. El [registro editorial actual](../../registro/informe_final_editorial_actual.json) identifica el informe español de diez páginas con F3c definitivo. Esta guía conserva los entregables de semana 1, el comparativo del 26 de octubre y sus herramientas; sus comandos no reconstruyen automáticamente el informe español vigente. Elegí el video inglés de solo voz el 29 de octubre; su identidad consta en el [registro de organización](../../registro/organizacion_actual.json). La concordancia de la versión inglesa del informe sigue sin confirmarse.
 
 La vista actual de [panel_analisis.html](panel_analisis.html) contiene solo validaciones de datos y modelos. No enlaza ni incrusta el informe. Usa textos breves, estados visibles y detalle desplegable. Su índice vigente es `registro/panel_validaciones_actual.json`; la evidencia de modelos se recoge de recibos guardados, sin entrenar o puntuar otra vez.
 
-El informe conjunto actual está en [`privado/entrega_final/informe_dos_semanas.pdf`](../../privado/entrega_final/informe_dos_semanas.pdf), con cinco páginas totales y las veinte referencias comerciales. El PDF se conserva fuera de Git porque contiene sus primas por fila. Su [texto editable](informe_final/INFORME_ES.md), [figuras](informe_final/figuras/) y [trazabilidad](informe_final/README.md) están aquí. El [dashboard](panel_analisis.html) compara ambas semanas simultáneamente.
+El informe comparativo histórico del 26 de octubre está en [`privado/entrega_final/informe_dos_semanas.pdf`](../../privado/entrega_final/informe_dos_semanas.pdf), con cinco páginas totales y las veinte referencias comerciales. El PDF se conserva fuera de Git porque contiene sus primas por fila. Su [texto editable](informe_final/INFORME_ES.md), [figuras](informe_final/figuras/) y [trazabilidad](informe_final/README.md) están aquí. El [dashboard](panel_analisis.html) compara ambas semanas simultáneamente.
 
 The Week 1 model deliverables use [`datos/cifras_entregables.json`](datos/cifras_entregables.json); the joint data analysis uses [`analisis/datos_panel.json`](analisis/datos_panel.json). The joint five-page report has its own [source manifest](informe_final/datos_informe.json). Versioned deliverables contain aggregates; the PDF with the twenty reference prices stays private. Las fuentes conservan sus rutas y SHA-256.
 
 | File | What it is | Archivo |
 | --- | --- | --- |
-| [`../../privado/entrega_final/informe_dos_semanas.pdf`](../../privado/entrega_final/informe_dos_semanas.pdf) | Current joint report, five total pages, Spanish; local private file | Informe conjunto actual |
+| [`../../privado/entrega_final/informe_dos_semanas.pdf`](../../privado/entrega_final/informe_dos_semanas.pdf) | Historical joint report, 26 October, five total pages, Spanish; local private file | Informe comparativo histórico |
 | [`report_en.pdf`](report_en.pdf) | Preserved Week 1 report with appendix | Informe previo de semana 1 en inglés |
 | [`informe_es.pdf`](informe_es.pdf) | Preserved Spanish Week 1 report | Informe previo de semana 1 en español |
 | [`informe/`](informe/) | Markdown sources of both reports | Fuentes Markdown del informe |
@@ -56,7 +60,7 @@ node herramientas/verificar_panel_analisis.cjs
 
 El recopilador copia evidencia existente; no vuelve a ajustar modelos o consultar puntuaciones. `validaciones_panel.json` embebe diagnósticos agregados de S30, dos contrastes exploratorios de semana 2 y el recibo portable de F3c/F3d. Sus alcances y comparadores aparecen en cada control.
 
-Para preparar el informe conjunto:
+Para reconstruir el informe comparativo histórico del 26 de octubre:
 
 ```text
 python herramientas/informe_comparativo.py datos

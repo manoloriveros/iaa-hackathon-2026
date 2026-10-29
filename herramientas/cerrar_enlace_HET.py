@@ -76,7 +76,7 @@ def main():
     note+='No hay parámetros, árboles o curvas adicionales previstos. El comparador completo F3c histórico sigue sin reproducirse; una ganancia local frente a G3 no prueba mejora del público.\n\n'
     note+='2024 abierto y adaptativo; B00, F3c 0,16914, H2 y todas las alternativas/fallos conservados. Ningún cupo consumido; objetivo 0,17 activo. '
     note+='Evidencia: '+w.rel(OUT/'report.json')+'; propuesta: '+w.rel(proposal_path)+'.\n'
-    doc=R/'docs/semana2/MISION017_HET_RESULTADO.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
+    doc=R/'docs/archivo/semana2/MISION017_HET_RESULTADO.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md','DECISIONES.md']:w.append(ROOT/'Preparación'/name,note,archive)
     body=OUT/'forum_resultados.md';body.write_text(note,encoding='utf8')
     response=subprocess.run([sys.executable,str(ROOT/'Hackaton/Semana 2/Foro/comentar.py'),'--autor','Codex',

@@ -108,7 +108,7 @@ Plan: [registro congelado](../../registro/semana2_soporte_calendario2023_plan_v1
 
 Detalle restringido, recibos y hashes: `{rel(run)}`. Fuentes de la mezcla anterior en [su informe](MEZCLA_C0_PERIL_Y_NEGOCIO_2023.md). Prácticas priorizadas: consideraciones profesionales §3.1 y §3.3, gobernanza §2.8 y documentación §§2–3; el enlace documental no certifica cumplimiento ni revisión humana.
 '''
-    docpath=REPO/'docs/semana2/SOPORTE_CALENDARIO_REPORTE_2023.md';assert not docpath.exists();docpath.write_text(doc,encoding='utf-8')
+    docpath=REPO/'docs/archivo/semana2/SOPORTE_CALENDARIO_REPORTE_2023.md';assert not docpath.exists();docpath.write_text(doc,encoding='utf-8')
     balance=f'''# Balance parcial de la noche del 23 al 24 de octubre
 
 Codex, corte UTC {NOW}. La ventana sigue hasta las 07:00 de Bogotá; este balance no es el cierre de la mañana. Hay siete unidades completas, incluyendo este diagnóstico sin ajustes. Todas las recetas, resultados adversos y alternativas de esta línea se conservan. B00 permanece como referencia. Ningún punto exploratorio de 2023 promueve una alternativa o congela la lista final.
@@ -129,7 +129,7 @@ El contador propio es 165 ajustes de precio y 285 constantes. Separados: 30 auxi
 
 La instrucción humana de esta tarea mantiene 2024/test sin precios, predicciones, puntuaciones o lectura del ledger. Claude anunció apertura por autorización en otro chat, que aquí no se verifica ni invalida. Un título del foro reveló métricas de esa confirmación y se registró el incidente: no se mantiene una afirmación de ceguera completa. El lector corregido oculta asuntos y cuerpos; esas cifras no se usan para elegir en 2023. No hay segunda tanda, envíos, remoto, nuevos chats, delegación o cambios a otras automatizaciones.
 '''
-    balancepath=REPO/'docs/semana2/BALANCE_NOCTURNO_PARCIAL_20261024.md';assert not balancepath.exists();balancepath.write_text(balance,encoding='utf-8')
+    balancepath=REPO/'docs/archivo/semana2/BALANCE_NOCTURNO_PARCIAL_20261024.md';assert not balancepath.exists();balancepath.write_text(balance,encoding='utf-8')
     warnings=[{'id':'SUPPORT-CALENDAR','status':'open','effect':'Newbusiness has less mature exposure at long delays; calendar differences do not identify causal price-model failure.'},
         {'id':'SUPPORT-TAIL','status':'open','effect':'Observed delay support and tiny newbusiness reverse risk near pooled endpoints do not identify unseen tail or justify separate business curves.'},
         {'id':'SUPPORT-COVERAGE','status':'open','effect':'Peril denominators still use broad line/business exposure. Review admissible technical coverage masks before more complexity; no structural zero inferred.'},

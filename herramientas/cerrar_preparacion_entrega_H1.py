@@ -73,7 +73,7 @@ def main():
     note+='El control de envío queda listo para una sola entrega cuando una respuesta real posterior permita cupo; no se sondeará cada turno sin motivo.\n\n'
     note+='B00, F3c0,16914 y todas las alternativas se conservan;2024abierto como desarrollo adaptativo. Meta0,17 activa, sin declaración de éxito. '
     note+='Evidencia: '+w.rel(OUT/'admission.json')+', '+w.rel(OUT/'dryrun_receipt.json')+', '+w.rel(OUT/'transport_selftest.json')+' y '+w.rel(waits[0])+'.\n'
-    doc=R/'docs/semana2/MISION017_H1_ENTREGA_INVESTIGACION.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
+    doc=R/'docs/archivo/semana2/MISION017_H1_ENTREGA_INVESTIGACION.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md','DECISIONES.md']:w.append(ROOT/'Preparación'/name,note,archive)
     body=OUT/'forum_preparado.md';body.write_text(note,encoding='utf8')
     res=subprocess.run([sys.executable,str(ROOT/'Hackaton/Semana 2/Foro/comentar.py'),'--autor','Codex',

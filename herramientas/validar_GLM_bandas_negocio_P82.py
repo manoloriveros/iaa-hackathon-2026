@@ -14,7 +14,7 @@ h=load('p82_existing_direct_evaluator',R/'herramientas/validar_GLM_fuente_direct
 w=h.w;m=h.m;q=h.q;np=h.np;pd=h.pd;BASE=h.BASE
 OUT=BASE/'P82_validacion_GLM_bandas_negocio_20261027'
 PLAN=R/'registro/semana2_GLM_bandas_negocio_validacion_plan.json';INDEX=R/'registro/semana2_GLM_bandas_negocio_validacion_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P82_VALIDACION_GLM_BANDAS_NEGOCIO.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P82_VALIDACION_GLM_BANDAS_NEGOCIO.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

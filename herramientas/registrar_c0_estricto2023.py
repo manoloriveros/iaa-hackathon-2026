@@ -47,7 +47,7 @@ def main():
         assert sha(ROOT / item['snapshot']) == item['sha256']
     sources = []
     for name in ['src/semana2/c0_estricto2023.py', 'herramientas/probar_c0_estricto2023.py',
-                 'herramientas/registrar_c0_estricto2023.py', 'docs/semana2/ADAPTADOR_C0_ESTRICTO_2023.md']:
+                 'herramientas/registrar_c0_estricto2023.py', 'docs/archivo/semana2/ADAPTADOR_C0_ESTRICTO_2023.md']:
         path = REPO / name
         snapshot = RUN / ('final_' + path.name)
         snapshot.write_bytes(path.read_bytes())
@@ -56,7 +56,7 @@ def main():
     record = {'id': plan['id'], 'author': 'Codex', 'utc': utc, 'path_base': 'workspace_root',
         'authorization_literal': plan['authorization_literal'],
         'status': 'C0_numeric_stage_synthetic_verified_only_support_failed_no_competition_execution',
-        'run': rel(RUN), 'documentation': rel(REPO / 'docs/semana2/ADAPTADOR_C0_ESTRICTO_2023.md'),
+        'run': rel(RUN), 'documentation': rel(REPO / 'docs/archivo/semana2/ADAPTADOR_C0_ESTRICTO_2023.md'),
         'plan': rel(REPO / 'registro/semana2_b20_c0_adaptador_sintetico_plan_v1.json'),
         'verification': {'path': rel(RUN / 'verification.json'), 'sha256': sha(RUN / 'verification.json')},
         'tests': verified['tests'], 'ordered_poison_cases': verified['ordered_poison_cases'],

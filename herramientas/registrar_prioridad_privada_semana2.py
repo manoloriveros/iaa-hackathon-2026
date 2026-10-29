@@ -55,7 +55,7 @@ def main():
     note+='La cadena antigua que menciona0,17 como meta principal y2024cerrado queda superada por las instrucciones directas del participante y este plan. '
     note+='No se marcó falsamente completo ni se pausó el objetivo para sustituir ese texto; el trabajo continúa bajo la prioridad nueva.\n\n'
     note+='Plan: '+w.rel(PLAN)+'. Control: '+w.rel(CONTROL)+'. Evidencia de entrada: '+w.rel(archive/'private_priority_guard_test.json')+'.\n'
-    doc=R/'docs/semana2/MISION_PRIVADA_PRIORIDAD_Y_PLAN.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
+    doc=R/'docs/archivo/semana2/MISION_PRIVADA_PRIORIDAD_Y_PLAN.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md','DECISIONES.md']:w.append(ROOT/'Preparación'/name,note,cuts)
     body=archive/'forum_prioridad_privada.md';body.write_text(note,encoding='utf8')
     res=subprocess.run([sys.executable,str(ROOT/'Hackaton/Semana 2/Foro/comentar.py'),'--autor','Codex',

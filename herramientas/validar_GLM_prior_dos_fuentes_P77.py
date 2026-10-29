@@ -14,7 +14,7 @@ h=load('p77_same_direct_evaluator',R/'herramientas/validar_GLM_fuente_directa_P7
 w=h.w;m=h.m;q=h.q;np=h.np;pd=h.pd;BASE=h.BASE
 OUT=BASE/'P77_validacion_GLM_prior_dos_fuentes_20261027'
 PLAN=R/'registro/semana2_GLM_prior_dos_fuentes_validacion_plan.json';INDEX=R/'registro/semana2_GLM_prior_dos_fuentes_validacion_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P77_VALIDACION_PRIOR_DOS_FUENTES.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P77_VALIDACION_PRIOR_DOS_FUENTES.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

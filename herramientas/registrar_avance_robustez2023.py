@@ -3,7 +3,7 @@ from pathlib import Path
 from datetime import datetime,timezone
 import json,hashlib,os,re,subprocess
 ROOT=Path('C:/dev/Hakaton');R=ROOT/'Hackaton/Repositorio_IAA2026';OUT=R/'privado/semana2/robustez2023/entrega_20261025_v1'
-DOC=R/'docs/semana2/ROBUSTEZ_MODELO_2023_20261025.md';INDEX=R/'registro/semana2_robustez2023_actual.json'
+DOC=R/'docs/archivo/semana2/ROBUSTEZ_MODELO_2023_20261025.md';INDEX=R/'registro/semana2_robustez2023_actual.json'
 read=lambda p:json.loads(p.read_text(encoding='utf-8-sig'));sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();rel=lambda p:p.relative_to(ROOT).as_posix();now=lambda:datetime.now(timezone.utc).isoformat()
 def top(raw,key,value):
  encoded=json.dumps(value,ensure_ascii=False,indent=2).replace('\n','\n  ')

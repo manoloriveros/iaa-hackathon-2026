@@ -23,7 +23,7 @@ m=p.m;q=p.q;w=p.w;pd=p.pd;BASE=p.BASE
 INNER=BASE/'P67_validacion_GLM_reporte_actual_20261027'
 OUT=BASE/'P103_mezcla_interna_ambitos_20261027'
 PLAN=R/'registro/semana2_mezcla_interna_ambitos_plan.json';INDEX=R/'registro/semana2_mezcla_interna_ambitos_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P103_MEZCLA_INTERNA_AMBITOS.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P103_MEZCLA_INTERNA_AMBITOS.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

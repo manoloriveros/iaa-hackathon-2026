@@ -52,7 +52,7 @@ def main():
         'Los intervalos condicionan en la fuente fijada y no identifican toda la incertidumbre de reservas, cola o maestros sin fecha. '
         'Es revisión propia exploratoria, no aprobación humana ni revisión profesional independiente. B00, F2, alternativas y autoría permanecen.\n\n'
         'Evidencia: ' + w.rel(OUT / 'validation_v1/report.json') + '; ' + w.rel(live) + '.\n\nSiguiente unidad: ' + next_unit + '\n')
-    doc = R / 'docs/semana2/MISION017_FASE2_TANDA6_RESULTADOS.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
+    doc = R / 'docs/archivo/semana2/MISION017_FASE2_TANDA6_RESULTADOS.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
     body = OUT / 'forum_resultado.md'; body.write_text(note, encoding='utf8')
     forum = subprocess.run([sys.executable, str(ROOT / 'Hackaton/Semana 2/Foro/comentar.py'), '--autor', 'Codex',
         '--id', 'COD-S2-20261025-MISION017-FASE2-TANDA6-RESULTADO', '--asunto',

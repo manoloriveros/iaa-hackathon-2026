@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[3];REPO=ROOT/'Hackaton/Repositorio_IAA2026
 RUN=REPO/'privado/semana2/desarrollo2023/fuentes_nuevas2023_20261024_v1'
 PLAN=REPO/'registro/semana2_b20_fuentes2023_plan_v1.json'
 INDEX=REPO/'registro/semana2_b20_fuentes2023_actual.json'
-DOC=REPO/'docs/semana2/FUENTES_2023_Y_PLAN_REVISION_B20.md'
+DOC=REPO/'docs/archivo/semana2/FUENTES_2023_Y_PLAN_REVISION_B20.md'
 NIGHT=REPO/'registro/semana2_continuidad_nocturna.json'
 IDENT='S2-B20-FUENTES-NUEVAS2023-v1-20261024';STATEKEY='week_2_B20_new_sources_plan20261024_v1'
 now=lambda:datetime.now(timezone.utc).isoformat()

@@ -13,7 +13,7 @@ r=importlib.util.module_from_spec(s);s.loader.exec_module(r)
 p=r.p;v=p.driver.v;m=r.m;q=r.q;w=r.w;pd=r.pd;np=r.np;BASE=r.BASE
 OUT=BASE/'P75_validacion_GLM_fuente_directa_20261027'
 PLAN=R/'registro/semana2_GLM_fuente_directa_validacion_plan.json';INDEX=R/'registro/semana2_GLM_fuente_directa_validacion_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P75_VALIDACION_GLM_FUENTE_DIRECTA.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P75_VALIDACION_GLM_FUENTE_DIRECTA.md'
 ORIGINAL_FIT=r.TweedieRegressor.fit;FIT_PATH=None
 
 

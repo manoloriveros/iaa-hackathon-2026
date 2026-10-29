@@ -1,5 +1,7 @@
 # Reentrenamiento completo desde originales
 
+En esta guía explico cómo reconstruí la receta histórica de semana 2 con asistencia de IA y qué diferencias quedaron registradas. Distingo esta ejecución del notebook autocontenido posterior y de una reproducción por otra persona.
+
 Codex, 26 de octubre de 2026. El participante pidió continuar el reentrenamiento completo en un entorno limpio, sin enviar nada a Kaggle. Esta corrida es una reconstrucción técnica del flujo histórico; no cambia la selección ni se presenta como revisión profesional independiente.
 
 El estado de ejecución se registra en `registro/reentrenamiento_originales_actual.json`. Las corridas y todos los archivos por fila permanecen en `privado/reentrenamiento_completo_20261026/`. La reproducción parcial anterior desde OOF guardadas se conserva y tiene un alcance distinto.
@@ -62,7 +64,7 @@ Esta comprobación no entrena con una nueva partición, no vuelve a seleccionar 
 
 ## Resultado verificado al terminar
 
-Las 57 etapas terminaron con código cero. Se conservaron 87 modelos finales nuevos (6 T2b, 21 A1 y 60 FSp), además de los 87 ajustes internos usados para fijar rondas. Los 24 originales y las copias de código de los dos manifiestos permanecieron intactos, incluida la enmienda previa a FSp para guardar sus modelos. Los controles de aislamiento aprobaron las pruebas de lectura ajena, escritura sobre originales y red bloqueadas.
+Las 57 etapas terminaron con código cero. Conservoron 87 modelos finales nuevos (6 T2b, 21 A1 y 60 FSp), además de los 87 ajustes internos usados para fijar rondas. Los 24 originales y las copias de código de los dos manifiestos permanecieron intactos, incluida la enmienda previa a FSp para guardar sus modelos. Los controles de aislamiento aprobaron las pruebas de lectura ajena, escritura sobre originales y red bloqueadas.
 
 El cotejo separado produjo nueve CSV idénticos byte por byte: ML_C1, A1 sin F1, A1 designada, F, F2, final_creible, F3c, F3d y F4c. Cada uno tiene 209.063 filas. En los tres candidatos finales también aprobaron esquema, unicidad, cobertura y orden de los identificadores contra el sample original, finitud y no negatividad.
 

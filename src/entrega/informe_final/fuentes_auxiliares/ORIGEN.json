@@ -1,0 +1,28 @@
+{
+  "utc": "2026-10-29T17:58:57.347963+00:00",
+  "autor_incorporacion": "Codex",
+  "autor_fuentes": "Claude",
+  "tipo": "fuentes_auxiliares_de_produccion_documental",
+  "archivos": [
+    {
+      "origen": "Hackaton/Semana 2/Claude/informe_final_20261026/fuente/prima_comercial_20ref.py",
+      "destino": "src/entrega/informe_final/fuentes_auxiliares/fuente/prima_comercial_20ref.py",
+      "sha256": "c64e4a73149be49fcc0b767c7557a55030c0f06f63452de66b31eaaed6708c5a",
+      "copia_exacta": true
+    },
+    {
+      "origen": "Hackaton/Semana 2/Claude/informe_final_20261026/latex/herramientas/build_figuras.py",
+      "destino": "src/entrega/informe_final/fuentes_auxiliares/latex/herramientas/build_figuras.py",
+      "sha256": "6956e791c132dacf54cf8f381e60331495f4326326a4b48264501472f2b3fdb5",
+      "copia_exacta": true
+    },
+    {
+      "origen": "Hackaton/Semana 2/Claude/informe_final_20261026/latex/herramientas/html2tex.py",
+      "destino": "src/entrega/informe_final/fuentes_auxiliares/latex/herramientas/html2tex.py",
+      "sha256": "6e38f3d66d0b99c707f9ebf031a2afa0c8e416005d822aca79fdc316cc391509",
+      "copia_exacta": true
+    }
+  ],
+  "nota": "Conservo los bytes y rutas heredadas de estas fuentes; no son la entrada portátil de reproducción. Los notebooks autocontenidos reconstruyen las entregas y primas. No ejecuté estos scripts ni incorporé PDF, HTML o TeX con primas individuales.",
+  "coordinacion_excluida": "Semana 2/Foro/comentar.py no integra la receta de los modelos. Preparación es el laboratorio histórico, fuera de este repositorio."
+}

@@ -4,7 +4,7 @@ from datetime import datetime,timezone
 import json,hashlib,os,re,subprocess,sys
 ROOT=Path(__file__).resolve().parents[3];REPO=ROOT/'Hackaton/Repositorio_IAA2026'
 RUN=REPO/'privado/semana2/revision_F05_2023/f05_20261024_v1'
-DOC=REPO/'docs/semana2/F05_CLIMA_2023_Y_DISPONIBILIDAD_TEMPORAL.md'
+DOC=REPO/'docs/archivo/semana2/F05_CLIMA_2023_Y_DISPONIBILIDAD_TEMPORAL.md'
 INDEX=REPO/'registro/semana2_F05_clima2023_actual.json'
 SOURCE=REPO/'registro/semana2_b20_fuentes2023_actual.json'
 IDENT='S2-F05-CLIMA2023-v1-20261024';FID='COD-S2-20261024-056'
@@ -46,7 +46,7 @@ def main():
       {'field':'wildfire_index','definition':'Riesgo de incendio forestal, escala0–1','interpretation':'No consta si es hazard previo,pronóstico o índice actualizado con experiencia del año','quote2023_availability':'Indeterminada; requiere emisión,ventana,insumos y vigencia, sin admisión nueva.'}]
     evidence={'id':IDENT,'author':'Codex','utc':now(),'part2_dictionary_unchanged':True,'part1_part2_weather_definitions_match':True,'new_official_temporal_clarification_located':False,'fields':fields,'reference_year_is_not_publication_date':True,'prior_calendar_guard_not_publication_proof':True,'prior_quote_date_proxy_not_capture_proof':True,'keyword_search_negative_evidence_valid':False,'keyword_search_reason':'Known Claims topic positive control returned empty; category filter also produced unrelated competitions. Discard these as absence evidence.','all_forum_comment_bodies_searched':False,'row_values_read':0,'climate_parquet_opened':False,'new_fits':0,'new_predictions':0,'new_scores':0,'new_numerical_diagnostics':0,'new_bootstrap':0,'new_feature_admission':False,'reference':'W2-B00','all_alternatives_preserved':True,'G1_closed':False,'G2_closed':False,'2024_test_model_validation_opened':False,'professional_independent_validation':False}
     dump(RUN/'documentary_review.json',evidence)
-    paths=[SOURCE,REPO/'registro/semana2_b20_fuentes2023_plan_v1.json',REPO/'registro/semana2_F04_fuentes2023_actual.json',REPO/'registro/semana2_F02_disponibilidad2023_actual.json',REPO/'registro/semana2_desarrollo2023_plan_v6.json',REPO/'docs/semana2/CAPITAL_CLIMA_CREDIBILIDAD_2023.md',REPO/'docs/semana2/VARIABLES_Y_ULTIMO.md',REPO/'src/semana2/variables_ultimo.py',REPO/'src/semana2/credibilidad2023.py',REPO/'privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/availability_contract.json',REPO/'registro/semana2_glm_ridge_coberturas_plan_v1.json',REPO/'registro/semana2_desarrollo2023_actual.json',REPO/'registro/semana2_contadores_propios_actual.json',REPO/'registro/semana2_continuidad_nocturna.json']
+    paths=[SOURCE,REPO/'registro/semana2_b20_fuentes2023_plan_v1.json',REPO/'registro/semana2_F04_fuentes2023_actual.json',REPO/'registro/semana2_F02_disponibilidad2023_actual.json',REPO/'registro/semana2_desarrollo2023_plan_v6.json',REPO/'docs/archivo/semana2/CAPITAL_CLIMA_CREDIBILIDAD_2023.md',REPO/'docs/archivo/semana2/VARIABLES_Y_ULTIMO.md',REPO/'src/semana2/variables_ultimo.py',REPO/'src/semana2/credibilidad2023.py',REPO/'privado/semana2/ultimo/f0_ultimo_20261023T170841Z_82038766/availability_contract.json',REPO/'registro/semana2_glm_ridge_coberturas_plan_v1.json',REPO/'registro/semana2_desarrollo2023_actual.json',REPO/'registro/semana2_contadores_propios_actual.json',REPO/'registro/semana2_continuidad_nocturna.json']
     sources=[]
     for i,p in enumerate(paths):
         q=RUN/'sources'/f'{i:02d}_{p.name}';q.parent.mkdir(exist_ok=True)

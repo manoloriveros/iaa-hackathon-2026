@@ -14,7 +14,7 @@ h=load('p88_same_outer_evaluator',R/'herramientas/validar_GLM_fuente_directa_P75
 m=h.m;q=h.q;w=h.w;pd=h.pd;np=h.np;BASE=h.BASE
 OUT=BASE/'P88_validacion_prior_calibrado_20261027'
 PLAN=R/'registro/semana2_prior_calibrado_GLM_validacion_plan.json';INDEX=R/'registro/semana2_prior_calibrado_GLM_validacion_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P88_VALIDACION_PRIOR_CALIBRADO.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P88_VALIDACION_PRIOR_CALIBRADO.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

@@ -95,7 +95,7 @@ def main():
              'etiqueta/CDF, los parámetros a recalcular, las fuentes, el coste y los controles; no se elegirán '
              'niveles, pesos o escenarios por el resultado retenido. La entrega H1 permanece diferida.\n\n')
     note += f'Evidencia: {w.rel(OUT/"report.json")}; replay {w.rel(OUT/"replay_report.json")}.\n'
-    doc = R/'docs/semana2/PRIVADA_P4_TRANSFERENCIA_ENTRE_ANIOS.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
+    doc = R/'docs/archivo/semana2/PRIVADA_P4_TRANSFERENCIA_ENTRE_ANIOS.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md', 'DECISIONES.md']:
         w.append(ROOT/'Preparación'/name, note, archive)
     body = OUT/'forum_resultados.md'; body.write_text(note, encoding='utf8')

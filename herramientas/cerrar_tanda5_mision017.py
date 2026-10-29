@@ -52,7 +52,7 @@ def main():
         'La revisión es exploratoria, realizada por Codex, y no constituye revisión profesional independiente.\n\n'
         'B00 y F2 se conservan. Cero envíos nuevos. La última marca pública conciliada del equipo sigue siendo 0,16033; no se ha alcanzado 0,17.\n\n'
         'Evidencia: ' + w.rel(OUT / 'validation_v1/report.json') + '.\n\nSiguiente unidad: ' + next_unit + '\n')
-    doc = R / 'docs/semana2/MISION017_FASE2_TANDA5_RESULTADOS.md'; assert not doc.exists()
+    doc = R / 'docs/archivo/semana2/MISION017_FASE2_TANDA5_RESULTADOS.md'; assert not doc.exists()
     doc.write_text(note, encoding='utf8'); body = OUT / 'forum_resultado.md'; body.write_text(note, encoding='utf8')
     receipt = subprocess.run([sys.executable, str(ROOT / 'Hackaton/Semana 2/Foro/comentar.py'), '--autor', 'Codex',
         '--id', 'COD-S2-20261025-MISION017-FASE2-TANDA5-RESULTADO', '--asunto',

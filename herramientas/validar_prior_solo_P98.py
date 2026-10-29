@@ -18,7 +18,7 @@ h=load('p98_same_outer_evaluator',R/'herramientas/validar_GLM_fuente_directa_P75
 m=h.m;q=h.q;w=h.w;np=h.np;pd=h.pd;BASE=h.BASE
 OUT=BASE/'P98_validacion_prior_solo_20261027'
 PLAN=R/'registro/semana2_prior_solo_validacion_plan.json';INDEX=R/'registro/semana2_prior_solo_validacion_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P98_VALIDACION_PRIOR_SOLO.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P98_VALIDACION_PRIOR_SOLO.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

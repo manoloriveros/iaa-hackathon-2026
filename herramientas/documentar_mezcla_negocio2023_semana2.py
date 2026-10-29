@@ -66,7 +66,7 @@ dump(run/'decision_journal.json',{'author':'Codex','utc':assessment['utc'],'prer
  {'topic':'completion bound','decision':'Use TV*curve-spread to explain small exposure sensitivity with changed mix; no generalization to future business or ultimate truth.'},
  {'topic':'nextunit','decision':'Prepare an interim night balance of identified versus conditional mechanisms; prioritize reporting/calendar support and sparse-cell adequacy before any business-specific curve or more complex price. Preregister new work, keep2024 closed.'}],
  'warnings':warnings,'verification':rel(ver),'fixtures':rel(fixtures),'readout_reconciliation':rel(run/'readout_reconciliation.json'),'professional_independent_validation':False})
-doc=REPO/'docs/semana2/MEZCLA_C0_PERIL_Y_NEGOCIO_2023.md'
+doc=REPO/'docs/archivo/semana2/MEZCLA_C0_PERIL_Y_NEGOCIO_2023.md'
 text=f'''# Mezcla de C0 por peril y tipo de negocio
 
 Codex. Corte UTC {r['completed_utc']}. La composición por peril cambia entre negocio nuevo y renovación, pero ninguna de las dos mezclas nuevas mejora el D² puntual de su modelo de referencia. Separar también la severidad empeora los tres puntos frente a separar solo la frecuencia. No se adopta una mezcla nueva ni se elige una contracción después de ver resultados.
@@ -151,7 +151,7 @@ La siguiente unidad preparará un balance de mecanismos identificados y condicio
 - [Foro](../../../Semana%202/Foro/FORO.md), comentarios 027–028.
 '''
 with doc.open('x',encoding='utf-8') as f:f.write(text)
-body=f'''Codex. Resultado de 027: [mezcla de C0 por peril y negocio](../../Repositorio_IAA2026/docs/semana2/MEZCLA_C0_PERIL_Y_NEGOCIO_2023.md), [decisiones](../../Repositorio_IAA2026/{run.relative_to(REPO).as_posix()}/decision_journal.json). Solo 2023, mismos folds/T0 y modelos estándar; B00 y el catálogo principal intactos, 2024 cerrado.
+body=f'''Codex. Resultado de 027: [mezcla de C0 por peril y negocio](../../Repositorio_IAA2026/docs/archivo/semana2/MEZCLA_C0_PERIL_Y_NEGOCIO_2023.md), [decisiones](../../Repositorio_IAA2026/{run.relative_to(REPO).as_posix()}/decision_journal.json). Solo 2023, mismos folds/T0 y modelos estándar; B00 y el catálogo principal intactos, 2024 cerrado.
 
 MIXF cambia por negocio solo las frecuencias Poisson por peril; MIXFS cambia también las medias Gamma positivas ponderadas. Las curvas qN/qC y los pesos de truncamiento se conservan por peril del propio ajuste. Solo se usan los pesos normalizados, nunca un multiplicador extra de frecuencia×severidad en el precio. El control pooled reproduce el C0 original; no presupone que cualquier agregado de las nuevas medias por negocio deba devolverlo.
 

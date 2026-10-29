@@ -1,0 +1,60 @@
+{
+  "id": "CINCO-PRIORIDADES-20261027",
+  "utc": "2026-10-27T15:18:12.397501+00:00",
+  "author": "Codex",
+  "path_base": "repository_root",
+  "scope": "Cinco revisores IA con una prioridad cada uno; investigación local sobre F3c y las referencias, sin adopción o selección nueva.",
+  "requested_agents": 5,
+  "run": "privado/validacion_cinco_prioridades/20261027T142339Z",
+  "plan_sha256": "df136d4d48051e5976cafb57bfc8df9e98a27247c2f90f54137392ccedcc8098",
+  "status": "cinco_revisiones_terminadas_y_verificadas_requisitos_abiertos",
+  "candidate": "F3c",
+  "selection_changed": false,
+  "professional_independent_review": false,
+  "jobs": {
+    "P01": {
+      "priority": "Protección de toda la cadena de validación",
+      "agent": "/root/prioridad_1_cadena",
+      "status": "revision_terminada_y_verificada_por_coordinador",
+      "report": "docs/validacion_cinco_prioridades/20261027T142339Z/P01.md",
+      "evidence": "privado/validacion_cinco_prioridades/20261027T142339Z/P01",
+      "report_sha256": "bd9a34dbeaf862abca4c15770464ac4a7c4d423250a52b82e61fbaffd55ff9e9"
+    },
+    "P02": {
+      "priority": "Robustez en negocio nuevo",
+      "agent": "/root/prioridad_2_negocio_nuevo",
+      "status": "revision_terminada_y_verificada_por_coordinador",
+      "report": "docs/validacion_cinco_prioridades/20261027T142339Z/P02.md",
+      "evidence": "privado/validacion_cinco_prioridades/20261027T142339Z/P02",
+      "report_sha256": "4ac5d4aa92e3fb08761d5f3cb8370236bdb445a6335e8e74837ebe49f9560051"
+    },
+    "P03": {
+      "priority": "Justificación de F3c frente a la versión sin factores",
+      "agent": "/root/prioridad_3_f3c_sin_factores",
+      "status": "revision_terminada_y_verificada_por_coordinador",
+      "report": "docs/validacion_cinco_prioridades/20261027T142339Z/P03.md",
+      "evidence": "privado/validacion_cinco_prioridades/20261027T142339Z/P03",
+      "report_sha256": "22d7ccd178cef22133b9cc518a817e60d309465d184690e589377fc109117319"
+    },
+    "P04": {
+      "priority": "Disponibilidad de los atributos al cotizar",
+      "agent": "/root/prioridad_4_disponibilidad",
+      "status": "revision_terminada_y_verificada_por_coordinador",
+      "report": "docs/validacion_cinco_prioridades/20261027T142339Z/P04.md",
+      "evidence": "privado/validacion_cinco_prioridades/20261027T142339Z/P04",
+      "report_sha256": "e38aedf0932acfe3ee63a583829d87afe51f4144f521ea92d08f40161cb77df1"
+    },
+    "P05": {
+      "priority": "Estimación del coste último, reporte y reservas",
+      "agent": "/root/prioridad_5_ultimo_reservas",
+      "status": "revision_terminada_y_verificada_por_coordinador",
+      "report": "docs/validacion_cinco_prioridades/20261027T142339Z/P05.md",
+      "evidence": "privado/validacion_cinco_prioridades/20261027T142339Z/P05",
+      "report_sha256": "536530d092ffe55d021a0d12913e8d7cf10d63d27fe3e5ce3f8f5b1333105af8"
+    }
+  },
+  "report": "docs/validacion_cinco_prioridades/20261027T142339Z/INFORME_CONJUNTO.md",
+  "all_model_requirements_approved": false,
+  "evidence": "privado/validacion_cinco_prioridades/20261027T142339Z",
+  "F3c_sha256": "5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276"
+}

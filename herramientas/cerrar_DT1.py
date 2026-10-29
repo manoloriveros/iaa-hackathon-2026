@@ -56,7 +56,7 @@ def main():
     note+='Este diagnóstico inicial no ajusta, recalcula curvas, crea precios o puntúa modelos. No se adopta todavía ninguna corrección de exposición.\n\n'
     note+='2024 abierto y adaptativo; B00, F3c 0,16914 y alternativas intactos. Ningún envío o cupo consumido. Meta 0,17 activa. '
     note+='Evidencia: '+w.rel(OUT/'report.json')+'.\n'
-    doc=R/'docs/semana2/MISION017_DT1_RESULTADO.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
+    doc=R/'docs/archivo/semana2/MISION017_DT1_RESULTADO.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md','DECISIONES.md']:w.append(ROOT/'Preparación'/name,note,archive)
     body=OUT/'forum_resultados.md';body.write_text(note,encoding='utf8')
     response=subprocess.run([sys.executable,str(ROOT/'Hackaton/Semana 2/Foro/comentar.py'),'--autor','Codex',

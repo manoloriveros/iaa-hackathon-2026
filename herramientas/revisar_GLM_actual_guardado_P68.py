@@ -14,7 +14,7 @@ g=p.g;m=p.m;q=p.q;w=p.w;pd=p.pd;np=p.np;BASE=p.BASE
 OLD=BASE/'P60_validacion_crossfit_GLM_20261027';CURRENT=p.OUT;CONTROL=p.t.OUT
 OUT=BASE/'P68_GLM_actual_guardado_20261027'
 PLAN=R/'registro/semana2_GLM_actual_diagnostico_plan.json';INDEX=R/'registro/semana2_GLM_actual_diagnostico_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P68_GLM_ACTUAL_GUARDADO.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P68_GLM_ACTUAL_GUARDADO.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

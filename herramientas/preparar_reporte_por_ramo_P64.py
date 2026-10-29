@@ -13,7 +13,7 @@ p=importlib.util.module_from_spec(s);s.loader.exec_module(p)
 u=p.u;m=p.m;k=p.k;q=p.q;w=p.w;pd=p.pd;np=p.np;BASE=p.BASE
 OUT=BASE/'P64_reporte_por_ramo_preflight_20261027'
 PLAN=R/'registro/semana2_reporte_por_ramo_preflight_plan.json';INDEX=R/'registro/semana2_reporte_por_ramo_preflight_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P64_REPORTE_POR_RAMO_PREFLIGHT.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P64_REPORTE_POR_RAMO_PREFLIGHT.md'
 BRANCHES={'NOMINAL':1.,'RESERVE075':.75,'RESERVE125':1.25}
 
 

@@ -16,7 +16,7 @@ m=k.m;w=k.w;pd=k.pd;np=k.np;BASE=k.BASE
 SCENARIO=BASE/'P52_validacion_A1R_20261027'
 OUT=BASE/'P55_validacion_mezcla_20261027'
 PLAN=R/'registro/semana2_mezcla_estandar_validacion_plan.json';INDEX=R/'registro/semana2_mezcla_estandar_validacion_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P55_VALIDACION_MEZCLA_ESTANDAR.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P55_VALIDACION_MEZCLA_ESTANDAR.md'
 m.OUT=OUT;m.e.OUT=OUT
 
 

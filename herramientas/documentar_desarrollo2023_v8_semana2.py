@@ -125,7 +125,7 @@ La decisión es conservar la receta adversa y estudiar estabilidad de coeficient
 
 [Plan congelado](../../registro/semana2_desarrollo2023_plan_v8.json), [índice actual](../../registro/semana2_desarrollo2023_actual.json), [snapshot anterior](../../registro/semana2_desarrollo2023_v7_snapshot.json), [productor](../../src/semana2/entrenar_desarrollo2023_v8.py), [comprobador](../../herramientas/verificar_desarrollo2023_v8_semana2.py), [adversos](../../herramientas/probar_desarrollo2023_v8_semana2.py). Fuentes, modelos, entorno, OOF y recibos restringidos: `{rel(run)}`. El [balance nocturno](BALANCE_NOCTURNO_PARCIAL_20261024.md) conserva su carácter parcial hasta las 07:00 de Bogotá.
 '''
-    docpath=REPO/'docs/semana2/GLM_COBERTURAS_2023.md';assert not docpath.exists();docpath.write_text(doc,encoding='utf-8')
+    docpath=REPO/'docs/archivo/semana2/GLM_COBERTURAS_2023.md';assert not docpath.exists();docpath.write_text(doc,encoding='utf-8')
     warnings=[{'id':'DEV8-HOME-OOF','status':'open','effect':'All15 nestedfit objectives improve but globalB19D2 falls; building D2.021094->.008352. A-E close1 does not establish row-level performance.'},
         {'id':'DEV8-MOTOR-NEW','status':'open','effect':'Motor aggregate slightly improves but newbusinessD2-.010045->-.031822 and thirdpartyonly worsens. Descriptive segment evidence, no segment superiority interval.'},
         {'id':'DEV8-INFLUENCE','status':'open','effect':'B19/B00 positive point reverses after own31 favorable groups; B19/B14 negative point and both exploratoryCIs include0. No promotion/equivalence/retirement.'},

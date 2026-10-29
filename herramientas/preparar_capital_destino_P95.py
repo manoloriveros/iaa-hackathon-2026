@@ -21,7 +21,7 @@ k=p.k; r=p.r; m=p.m; q=p.q; w=p.w; np=p.np; pd=p.pd; BASE=p.BASE
 OUT=BASE/'P95_capital_destino_preflight_20261027'
 PLAN=R/'registro/semana2_capital_destino_preflight_plan.json'
 INDEX=R/'registro/semana2_capital_destino_preflight_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P95_CAPITAL_DESTINO_PREFLIGHT.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P95_CAPITAL_DESTINO_PREFLIGHT.md'
 FIELD='capital_original_ordinary'
 UPPER={'buildings':10000000.,'contents':1000000.}
 NUM={line:list(k.NUM[line])+([FIELD] if line in UPPER else []) for line in q.LINES}

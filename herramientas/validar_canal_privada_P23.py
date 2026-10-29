@@ -151,7 +151,7 @@ def prepare():
         Path(e.b.__file__), Path(e.g.__file__), Path(e.core.g.__file__), Path(e.state.__file__),
         covpath, OUT/'covariates.parquet', OUT/'synthetic_report.json',
         R/'registro/semana2_robustez2023_ciclo13_plan.json',
-        R/'docs/semana2/BALANCE_ROBUSTEZ_2023_20261025.md']
+        R/'docs/archivo/semana2/BALANCE_ROBUSTEZ_2023_20261025.md']
     paths += [BASE/'P19_cohortes_broker_20261026'/name for name in ['group_universe.json', 'first4_group_weights.npy']]
     template = w.read(R/'registro/semana2_ablacion_fuente_validacion_plan.json')
     # Preserve the exact unchanged evaluation/C0/N3/H1 dependencies of the existing engine.

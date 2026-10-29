@@ -1,71 +1,130 @@
-# Guion del video
+# Guion del video: cómo elegí y contrasté la prima de riesgo
 
-Video de cinco minutos para la entrega final. El jurado califica solo los primeros cinco minutos, y la página de envíos pide el enfoque, los resultados, el flujo asistido por IA y la adaptación al mercado nuevo. Este guion cubre la parte 1 en unos 4:46 a 160 palabras por minuto y deja cerca de 0:09 para la adaptación de la semana 2, más el tiempo de la lámina 17, que las láminas de la semana 2 reemplazan; esa parte solo puede grabarse cuando termine la parte 2. La versión en inglés está en `GUION_VIDEO_EN.md`.
+Edición española del 28 de octubre de 2026. Voz de Manuel Rodríguez; reescritura de Codex con las metodologías y evidencias registradas por Claude y Codex. El modelo y la adaptación abren el relato; la IA se muestra en tareas concretas y las validaciones se conectan con decisiones. El cierre comunica limitaciones observadas, sin una lista de trabajo futuro.
 
-## Qué se necesita
+Duración objetivo: 4:45, con quince segundos de margen hasta cinco minutos. La narración tiene 641 palabras, unas 135 por minuto. Los tiempos son una previsión de lectura y montaje, sin medición de una grabación real. Se narra únicamente el texto marcado con `>`. Los rótulos no se leen completos.
 
-- Láminas: `docs/entrega/video/laminas_es.pdf` (17 láminas de 1920 × 1080) o los PNG de `docs/entrega/video/laminas/es/`. Salen de `docs/entrega/datos/cifras_entregables.json`, el mismo archivo del informe y del panel.
-- Si cambia alguna cifra (un aporte nuevo en el foro, un ciclo nuevo del enjambre, otra posición en la tabla), hay que regenerar antes de grabar: `python herramientas/cifras_entregables.py --raiz <espacio de trabajo> --salida docs/entrega/datos/cifras_entregables.json` y luego `python herramientas/construir_entrega.py todo`.
-- Capturas en vivo opcionales para la lámina 16: una terminal con las órdenes o el panel (`docs/entrega/panel_modelo.html`).
+## Escena 1 · 0:00-0:17 · El problema actuarial
 
-## Escena por escena
+> Soy Manuel Rodríguez. Construí primas de riesgo para autos, edificios y contenidos en dos mercados. Usé Claude y Codex para investigar métodos y como apoyo en programar y cuestionar resultados; conservé la responsabilidad de elegir y explicar las decisiones.
 
-| # | Tiempo | Lámina | Narración | En pantalla |
-| --- | --- | --- | --- | --- |
-| 1 | 0:00–0:15 | Una prima de riesgo para cada periodo de póliza, construida y contrastada con IA | Soy Manuel Rodríguez, actuario, y compito como equipo individual. Este modelo, la Mezcla por peligro, tarifica cada periodo de póliza de 2025. Se construyó con IA y, con la misma intención, se puso a prueba con IA. | Portada con las tres cifras. Si la cámara está activa, este es el momento de mirarla. |
-| 2 | 0:15–0:40 | La tarea: el coste último esperado de cada periodo | El objetivo es el coste último esperado de cada periodo, neto de franquicia y recobros. La mayoría de los periodos no cuesta nada, por eso la métrica es un D² Tweedie, donde cero equivale a cobrar a todos el promedio. Una tasa constante por ramo llega a 0,071; nuestro modelo, a 0,138 en 2024, y la entrega final, a 0,13016 en la tabla pública. | Señalar los cuadros de color y después las tres marcas de la escala del D². |
-| 3 | 0:40–0:52 | Seis etapas, cada una comprobada | Son seis etapas y cada una se comprueba. El retraso de reporte entra una sola vez, por la exposición de entrenamiento, y cada etapa deja huellas que cualquiera puede verificar. | Recorrer las seis cajas en orden y detenerse en la etapa 3. |
-| 4 | 0:52–1:10 | Datos: corregir lo demostrable, declarar lo que no | Los once archivos originales nunca se modifican. La IA auditó las 105 columnas y encontró defectos reales, como claves sin sus ceros iniciales, exposición guardada en días y 604 siniestros duplicados. Ocho reglas reversibles los corrigen, y una reconstrucción independiente coincidió en 148 millones de celdas. | Primero la tabla; luego el flujo de siniestros de abajo (de 163.150 a 160.432). |
-| 5 | 1:10–1:20 | Parte de los siniestros de 2024 aún no se conocía | Al cierre de 2024 solo se había reportado el 56 % de las lesiones corporales de autos. Entrenamos con esa exposición efectiva como offset, | Señalar las dos barras cortas, lesiones y hundimiento; la tarjeta de la derecha explica el offset. |
-| 6 | 1:20–1:31 | Con el IBNR, 2024 deja de ser una anomalía | y así 2024 deja de parecer barato: 454 observados, 584 con IBNR, en línea con los años anteriores, y 592 en la predicción final de 2025. | Panel de autos: la caída gris a 454, el punto de color en 584 y el círculo hueco en 592. |
-| 7 | 1:31–1:45 | La Mezcla por peligro: un modelo, diez componentes | Cada ramo mezcla modelos Tweedie del coste total con frecuencia por severidad por peligro. Cada cambio se juzgó en 2023 y 2024, con y sin las pérdidas más extremas, según criterios escritos de antemano. | Azul es frecuencia × severidad y naranja, coste total; después, las tres tarjetas. |
-| 8 | 1:45–2:04 | Ajustado con años pasados, medido en un año posterior | Validamos como se usa una tarifa: ajustar con años pasados y medir un año posterior completo. En 2024 el modelo explica cerca del doble de desviación que una tasa constante, y gana en cada ramo. Después, once experimentos preinscritos, con un backtesting del IBNR, volvieron a probarlo. | A la izquierda, los tres cortes temporales; a la derecha, barras grises frente a azules. |
-| 9 | 2:04–2:16 | Ordena el riesgo y se mantiene calibrado | Ordena el riesgo y se mantiene calibrado. Mover las reservas de caso un veinticinco por ciento casi no cambia la métrica, pero mueve el nivel de 2025 hasta un siete por ciento. | En cada panel la línea es la predicción y los círculos, el coste observado. |
-| 10 | 2:16–2:36 | La IA se organizó para que una línea contrastara a otra | Ahora, la IA. Dos asistentes, Claude y Codex, trabajaron en tres líneas: modelado, alternativas creativas y contraste. Las hipótesis iban a un foro común con su criterio de aceptación antes de calcular nada, y los fracasos también se publicaban. Las decisiones que llegaron al modelo pasaron por mi autorización. | Seguir fuentes → tres líneas → foro ← enjambre; luego el participante y la compuerta de controles. |
-| 11 | 2:36–2:46 | Qué hizo la IA en cada etapa y cómo se comprobó | Cada etapa tuvo su propia comprobación: una segunda implementación recalculó las reglas de datos y una guardia retiró una variable que medía el propio siniestro. | No leer la tabla en voz alta; detenerse en la columna «Cómo se verificó». |
-| 12 | 2:46–2:53 | Lo que mejoraba en local no mejoraba en público | Aquí el foro demostró su valor: la puntuación local seguía subiendo mientras la pública bajaba. | Señalar la primera zona sombreada, donde el naranja sube y el azul baja; las sondas de la derecha vuelven en la escena 15. |
-| 13 | 2:53–3:16 | El foro propuso juzgar el cuerpo sin sacar la cola | Una línea lo atribuyó a unos pocos siniestros extremos y otra lo convirtió en un criterio. Sin el medio por ciento de periodos más costosos, el D² local ordena como la puntuación pública: 0,83 frente a 0,49. Los dos envíos que siguieron marcaron el máximo público de la búsqueda de modelos, y el segundo es la Mezcla por peligro. | Candidatos grises frente a la Mezcla por peligro en azul; comparar 0,49 a la izquierda con 0,83 a la derecha. |
-| 14 | 3:16–3:34 | Un enjambre de agentes auditó el proyecto cada 6 horas | Tres agentes de validación auditaron datos, modelos y gobierno cada seis horas y levantaron veintidós hallazgos. Uno mostró que el paquete podía declarar éxito con archivos faltantes; se corrigió y se probó con 36 casos adversos. Trece siguen abiertos, cada uno con su criterio de cierre. | Barras por área y estado; después las tres tarjetas, primero GOV-007. |
-| 15 | 3:34–4:02 | El nivel de 2025: tres factores leídos del tablero público | Los años pasados no miden el nivel de 2025, así que seis sondas lo leyeron de la puntuación pública, en forma cerrada. Una regla de credibilidad fijada antes de mirar convirtió esa lectura en tres factores, S41, que puntuó justo lo previsto, sin reentrenar. Una batería posterior halló el ruido subestimado; corregido, S41 es el único archivo calibrado que supera a la mezcla en esperanza con todas las previas probadas. | En cada panel, las dos sondas y la mezcla fijan la curva; el círculo hueco es el óptimo del público y el lleno, sobre la línea discontinua, el factor de S41. Después, la columna Lectura: parcial en autos, apoyado en edificios y contenidos. |
-| 16 | 4:02–4:21 | Los archivos entregados se pueden regenerar y comprobar | Cuarenta y cinco casos de control pasan en tres entornos. Una orden reconstruye el archivo de la mezcla desde los componentes guardados, con el SHA-256 que recibió Kaggle, y otra aplica los tres factores para reconstruir S41. Reentrenar los treinta y seis nodos desde los originales dio el mismo archivo. | Tabla a la izquierda y recibos a la derecha; el último reconstruye S41. Opcional: una terminal con la orden, o 10 segundos del panel (docs/entrega/panel_modelo.html, sección Nivel 2025). |
-| 17 | 4:21–4:46 | Lo que aún no podemos demostrar y cómo lo probaremos | Declaramos nuestros límites: una sola valoración de siniestros, que deja las reservas como incertidumbre material; un nivel de 2025 calibrado con un tercio del test, con autos solo en parte respaldado por la evidencia independiente; y una ventaja sobre el envío anterior que no es robusta. Para la semana dos congelamos esta entrega y adaptamos solo donde la evidencia del mercado nuevo lo exija. | Límites a la izquierda y protocolo de la semana 2 a la derecha. Tras la parte 2 esta lámina se reemplaza (ver la sección de la semana 2). |
+En pantalla: «Una prima de riesgo por periodo de póliza». Debajo: «Coste último esperado, antes de gastos · Datos sintéticos · Dos mercados». Distinguir el objetivo último del coste observado en los archivos.
 
-## Espacio de la semana 2, unos 0:34
+## Escena 2 · 0:17-1:02 · Qué modelo elegí y por qué
 
-Se graba solo con resultados que existan. La lámina 17 se reemplaza por dos láminas hechas con los datos del mercado nuevo y las mismas herramientas:
+> En el mercado con cuatro años de historia elegí una combinación por causa de siniestro. Un componente estima el coste total con árboles de aprendizaje automático y distribución Tweedie, que combina ceros y costes positivos. Otro separa cuántos siniestros ocurren y cuánto cuesta cada uno.
+>
+> Los combiné por ramo porque ningún modelo dominaba en todos: un incendio y una fuga de agua tienen mecanismos diferentes. Así aproveché las interacciones entre variables y la explicación por frecuencia y severidad. La mezcla obtuvo 0,138 de D cuadrado frente a 0,071 de una tasa por ramo; la entrega calibrada alcanzó 0,13864 en el privado, cuarta entre 54 equipos, y en la escala pública quedó en primer lugar.
 
-1. Una lámina sobre lo que cambió en el mercado nuevo: las diferencias encontradas en contrato, unidades, peligros, desarrollo de siniestros y variables, cada una junto a la respuesta que preveía el protocolo (recalibrar, reajustar severidades, reestimar el chain-ladder, actualizar el contrato de variables).
-2. Otra sobre lo que logró la adaptación: D² del modelo congelado en el mercado nuevo frente al adaptado, calibración por decil, puntuación pública de la semana 2 y lo que encontraron el foro y el enjambre de validación durante la semana.
+En pantalla, primero el método:
 
-Guía de narración (los corchetes se llenan solo con valores medidos): «En el mercado nuevo medimos primero el modelo congelado: [D²]. Las diferencias principales fueron [lista]. Siguiendo el protocolo, [respuesta], y el D² pasó a [valor]. El foro hizo [n] contrastes nuevos y el enjambre levantó [n] hallazgos; [un ejemplo]. De los límites declarados en la parte 1, [cuáles se pusieron a prueba y cómo].»
+| Componente | Qué aporta a la prima |
+| --- | --- |
+| Árboles de coste total: LightGBM y CatBoost, con objetivo Tweedie | Relaciones e interacciones entre características del riesgo |
+| Frecuencia × severidad por causa de siniestro | Separa mecanismos y permite estudiar la evolución de la severidad |
+| Combinación por ramo | Aprovecha fortalezas distintas de los componentes |
 
-Si el espacio necesita más de un minuto, conviene acortar primero las escenas 9 y 12: su contenido también está en el informe.
+Después, sustituir el esquema por dos tarjetas: «Comparación histórica 2024: 0,138 frente a 0,071» y «Resultado privado, parte 1: 0,13864 · 4.º de 54». Pie: «Los cortes históricos también se usaron para elegir modelos. El privado corresponde a la entrega calibrada». D² Tweedie, potencia 1,5; no es un porcentaje de aciertos.
 
-## De dónde sale cada cifra en pantalla
+## Escena 3 · 1:02-1:46 · Cómo adapté el método al mercado nuevo
 
-| Cifra | Valor actual | Clave en `cifras_entregables.json` |
-| --- | --- | --- |
-| Puntuación pública de la entrega final (S41) | 0,13016 | `entrega_final.publico` |
-| Envío de Kaggle de S41 | 57531719 | `entrega_final.envio_kaggle` |
-| Puntuación pública del modelo solo (S30) | 0,12996 | `s30.publico` |
-| Factores de nivel de S41: autos / edificios / contenidos | 0,9962 / 1,0260 / 1,0126 | `entrega_final.factores_calibracion` |
-| Ganancia esperada de S41 en el privado frente a la mezcla, tres pares de previas | +0,000019 / +0,000062 / +0,000083 | `sensibilidad_final.esperanza_privado` |
-| D² de 2024 fuera de muestra | 0,13788 | `validacion.d2_recalculado.V24.agregado` |
-| Tasa constante por ramo, 2024 | 0,07094 | `validacion.referencia_m00.V24.agregado` |
-| Periodos de 2025 predichos | 626.639 | `entrega_final.filas` |
-| Lesiones de autos reportadas al cierre de 2024 | 56 % | `ibnr.completitud_2024_por_peligro` |
-| Prima de autos 2024: observada / con IBNR; predicción 2025 | 454 / 584; 592 | `ibnr.prima_riesgo_por_anio` |
-| Correlación de rangos con el público: cuerpo / completo | 0,83 / 0,49 | `publico_vs_local` |
-| Aportes y horas del foro | 252 · 124,8 | `foro.aportes, foro.horas` |
-| Hallazgos del enjambre: total / abiertos | 22 / 13 | `validacion_ia.hallazgos, validacion_ia.abiertos` |
-| Cambio del nivel 2025 con reservas ×0,75 o ×1,25 (mayor ramo): mezcla / S41 | 6,8 % / 5,7 % | `reservas_acotacion.nivel_max_con_b_075_125, calibracion_nivel.evidencia.reservas_S41.nivel_max_b_075_125_S41` |
-| Casos de control superados | 45/45 · 45/45 · 45/45 | `controles_paquete.baterias` |
+> El segundo mercado tenía solo dos años de datos. Además, el negocio nuevo pasó del 14 por ciento de las filas históricas al 76 por ciento en 2025. Reentrenar todo desde cero podía confundir escasez de experiencia con diferencias de riesgo.
+>
+> Preferí transferir relaciones aprendidas en el mercado con más historia, usando las variables comunes. Combiné predicciones transferidas y añadí ajustes locales de siniestralidad previa y variables propias. Les di credibilidad limitada cuando había poca información. En la comparación histórica de 2023, la transferencia dio 0,121 frente a 0,083 del mejor modelo entrenado solo con datos locales.
 
-## Antes de grabar
+En pantalla: «Más historia → árboles con variables comunes → ajustes con experiencia local». Definir negocio nuevo como primer año de póliza con la aseguradora, sin equipararlo a una dirección nunca vista.
 
-- Comprobar la puntuación pública y la posición en la tabla el mismo día; la portada toma ambas del archivo de datos.
-- Mantener un ritmo tranquilo, unas 160 palabras por minuto en español. El video completo debe quedar por debajo de 4:55.
-- Contar las decisiones en primera persona y nombrar las herramientas de IA como herramientas («dos asistentes, Claude y Codex»).
-- No mostrar credenciales, tokens, datos por fila ni conversaciones privadas. Las láminas y el panel solo muestran agregados.
-- Exportar a 1920 × 1080 (MP4, H.264), con subtítulos si el editor lo permite, y verlo una vez a velocidad normal contra el informe.
-- Subirlo donde lo pida el formulario de la entrega final; el enlace todavía no se ha publicado.
+Mostrar las decisiones de adaptación: edad por bandas y variables comunes; historial de siniestros y bonificación; factores propios de género, teletrabajo y segmento de marketing con credibilidad. Explicar credibilidad como peso limitado a una señal con poca experiencia. No afirmar que estos factores tienen respaldo uniforme por segmento.
+
+Tarjeta final: «Transferencia frente a aprendizaje solo local · Comparación histórica 2023 por cliente: 0,121 frente a 0,083». Pie: «Comparación utilizada en la selección, anterior a corregir toda la cadena; no es una evaluación independiente posterior». Esta cifra explica la elección histórica; no se presenta como prueba nueva de la receta final completa.
+
+## Escena 4 · 1:46-2:21 · La IA en datos y decisiones de variables
+
+> La IA ayudó a escribir controles y a contrastar hipótesis. Corregimos identificadores sin ceros iniciales, exposiciones con distintas convenciones y capitales fuera de escala.
+>
+> También cuestionamos variables demasiado predictivas. Los contactos con atención al cliente podían revelar siniestros del propio periodo: los excluí. Cada corrección quedó registrada y comprobada. El flujo también detectó un factor de calibración elevado al cuadrado por error y lo corrigió antes del envío. El valor de la IA estuvo en construir y desafiar los cálculos.
+
+En pantalla: una captura real de control con «Hallazgo → contraste → corrección → comprobación». Mostrar sucesivamente la recuperación del cruce con clientes, la exclusión de contactos y la fórmula corregida, sin código pequeño o datos privados por fila.
+
+Rótulo: «Originales preservados · Correcciones reversibles · Uso de IA verificado». Las verificaciones entre asistentes son propias, no revisión profesional independiente. No afirmar ahorro de tiempo medido.
+
+## Escena 5 · 2:21-3:03 · Cómo puse a prueba los resultados
+
+> Para juzgar los cambios, separé años y agrupé clientes y direcciones relacionados. En la revisión de la comparación histórica, completitud, categorías, árboles y ajustes se aprendieron excluyendo la información reservada para evaluar. Alteramos deliberadamente esos datos y comprobamos que no cambiaran los modelos pertinentes.
+>
+> También contrastamos modelos con y sin factores, retiramos grupos influyentes y probamos cincuenta escenarios de reservas y retraso de reporte. La diferencia global conservó signo positivo, con la fuente congelada. Hubo resultados adversos: el coste tardío de lesiones corporales superó lo previsto. Los cortes también orientaron la selección; esas pruebas acotan lo que puedo concluir.
+
+En pantalla, un control por vez, vinculado a su decisión:
+
+| Comprobación | Qué se aprendió |
+| --- | --- |
+| Corte temporal y grupos de clientes/direcciones | Distinguir pasado, evaluación y dependencias entre registros |
+| Preparación y aprendizaje excluyendo lo retenido; alteración adversa de costes | Verificar el aislamiento computacional de las recetas históricas comparadas |
+| Con y sin factores propios | Ganancia global aproximada de +0,0023 a +0,0024 de D²; no equivale a mejora uniforme |
+| Retirada retrospectiva de grupos favorables | Entre 37 y 42 de 36.408 grupos bastan para anular la ganancia según la base |
+| 50 escenarios: 45 de coste/reservas/cola y cinco de completitud | Mejora global positiva con precios fijos y destino reaprendido; árboles y curvas fuente congelados |
+
+Pie: «Las vistas comparten etiquetas; no son confirmaciones independientes. Los intervalos condicionan los modelos aprendidos; no repiten aprendizaje ni búsqueda histórica. La rama histórica evaluada no equivale a toda la configuración de producción».
+
+Mostrar brevemente el contraste adverso: «Lesiones corporales, cohorte emergente 2023: coste tardío +42,7 % frente al previsto · IC90: +2 % a +102 %». El coste observado al cierre de 2024 no es coste último. Los escenarios son deterministas, no probabilidades ni intervalos de confianza. La reproducción de los archivos históricos comprueba trazabilidad, sin aportar observaciones predictivas independientes.
+
+## Escena 6 · 3:03-3:45 · Qué significa una salvaguarda y su excepción
+
+> Una salvaguarda es una condición previa para aceptar un cambio. Exigí que la mejora global no ocultara un deterioro relevante en pólizas nuevas, considerando su intervalo de incertidumbre.
+>
+> La transferencia mejoró globalmente, pero no acreditó esa protección. Después de ver el resultado, flexibilicé la regla: acepté una diferencia puntual no negativa sin exigir el límite inferior previsto. Levantar esa exigencia permitió continuar como excepción; el riesgo no desapareció. En los factores propios, la mejora también se concentra en renovación y no demuestra estabilidad en negocio nuevo. Conservé la entrega con ese alcance exploratorio.
+
+En pantalla, explicar la regla con palabras antes de mostrar números:
+
+| Momento | Regla y significado |
+| --- | --- |
+| Antes de comparar la transferencia | Diferencia no negativa y límite inferior del intervalo al 95 % no inferior a −0,001 en negocio nuevo |
+| Resultado observado de ese contraste | Diferencia aproximada +0,013, pero límite inferior −0,011: la protección no se acreditó |
+| Excepción después de conocer el resultado | Se aceptó el resultado puntual no negativo sin exigir aquel límite inferior. La excepción no demuestra protección del segmento |
+
+Rótulo: «Regla del proyecto, no umbral impuesto por la IAA». Separar este contraste de transferencia del contraste posterior de factores propios. En este último, las tres recetas históricas incumplen la protección de negocio nuevo; renovación explica el 98,09–99,39 % del aporte neto. La reponderación con composición de 2025 tiene intervalos que cruzan cero. No afirmar que se levantaron todos los controles ni que la excepción corrigió el fallo estadístico.
+
+## Escena 7 · 3:45-4:08 · Qué papel tuvieron las sondas
+
+> Separé la construcción del modelo de la calibración final. Usé envíos controlados al tablero para ajustar nivel y dispersión; su respuesta también influyó en algunos cambios del modelo. Por eso, 0,16914 es un resultado público condicionado por esas decisiones, que no demuestra por sí solo generalización.
+
+En pantalla: «Modelo: relaciones de riesgo» y «Calibración: nivel y dispersión de las predicciones». Definir una sonda como envío de prueba multiplicado por un factor conocido, cuya puntuación informa del ajuste que favorece el tablero.
+
+Tarjeta: «Público inicial: 0,15390 → Entrega conservada: 0,16914». Pie: «Los pasos de calibración suman 0,01044 y los del modelo 0,00480 según el orden de la secuencia. El reparto tiene interacciones y no es una atribución causal». Evitar presentar la estructura o el archivo final como independientes del tablero. La parte 1 tiene privado observado; en la parte 2 la evidencia mostrada aquí es pública e histórica.
+
+## Escena 8 · 4:08-4:27 · Del riesgo a la prima comercial
+
+> Convertí las predicciones de veinte referencias en prima comercial con los gastos proporcionados. Apliqué 85 unidades fijas por póliza, sin prorratearlas. El total fue 20.800,02 unidades. El margen de beneficio del ocho por ciento es un supuesto, no una garantía de suficiencia.
+
+En pantalla: «Prima del periodo + catástrofe de hogar + 85 CU», dividido entre «1 − gastos proporcionales − comisión − impuesto − margen». Mostrar 15 % de gasto variable, 8 % de impuesto y 8 % de beneficio; comisión de 20 % con corredor y cero en directo; catástrofe 12 % de la prima de riesgo de hogar. Los gastos no entran en la predicción enviada al concurso. No volver a multiplicar el riesgo del periodo por exposición.
+
+## Escena 9 · 4:27-4:45 · Alcance de la IA y del resultado
+
+> La IA también ayudó a construir tableros y preparar traducciones y presentaciones. Amplió mi capacidad de analizar y comunicar. La evidencia muestra una mejora global, con límites en negocio nuevo, reservas y disponibilidad histórica de datos.
+
+En pantalla: una captura real de tablero con controles y resultados, seguida de material de traducción y guion/láminas identificado por su fecha. Se presenta preparación previa, sin afirmar equivalencia final del inglés o existencia de un video ya grabado. Cerrar con nombre y repositorio de la entrega.
+
+Rótulo final: «Decisión actuarial documentada · Incertidumbre explícita · Revisión propia con IA». Las revisiones entre asistentes no son revisión profesional independiente. Mostrar límites observados, sin una lista de próximas tareas o promesas de nuevas validaciones.
+
+## Notas de realización y alcance
+
+La elección metodológica se explica con comparaciones históricas y razones actuariales; no se declara óptima para todas las poblaciones. La calibración con el tablero y las excepciones de selección se conservan como hechos. La referencia declarada permanece intacta; sus códigos internos no se leen ni se usan en rótulos. Los nombres de algoritmos identifican métodos y se acompañan de su función.
+
+Priorizar uno o dos mensajes legibles por pantalla. Las tablas son una guía de producción: no deben mostrarse todas simultáneamente ni leerse completas. Narración, rótulos y subtítulos deben usar el mismo tipo de muestra y las mismas unidades. La duración indicada es estimada. La fuente inglesa y las láminas históricas conservan su fecha, sin atribuirles la equivalencia de esta edición.
+
+El PDF conserva su archivo y contenido. El cotejo del guion con sus primeras cinco páginas se registra por separado de la edición del PDF. La revisión integral de la configuración de producción figura en curso al corte y no se usa aquí para afirmar resultados favorables o cierre de validación. Las reconstrucciones históricas y las recetas de comparación conservan sus alcances respectivos.
+
+## Evidencia para producción, fuera de narración y rótulos
+
+Rutas relativas al repositorio, salvo el PDF, relativo a la raíz del proyecto:
+
+- Rúbrica IAA: página Evaluation de la parte 2, consultada el 28 de octubre de 2026: rendimiento/adaptación 40 %, IA 25 %, validación/controles 20 %, comunicación/documentación 15 %. La distribución de escenas es editorial, no una fórmula de puntuación.
+- Escenas 1–3: `docs/entrega/informe/INFORME_ES.md`, secciones de métodos y decisiones históricas; `docs/archivo/semana1/RESULTADOS_PRIVADOS_SEMANA1.md`; PDF `Hackaton/Semana 2/Claude/informe_final_20261026/informe_final_IAA2026_es.pdf`, páginas 1 y 3. Los documentos antiguos conservan su fecha y no sustituyen la edición final indicada.
+- Escena 4: PDF, páginas 2 y 4, correcciones de claves/exposición/capitales, exclusión de contactos y fórmula de nivel. No confundir verificación propia con revisión independiente.
+- Escena 5: `docs/semana2/F3C_CADENA_PROTEGIDA_REEVALUACION.md`, `docs/semana2/F3C_A1_MEZCLA_PROTEGIDAS_Y_ESCENARIOS.md` y `registro/validacion_cadena_f3c_A1_mezcla_actual.json`. Las tres vistas de comparación comparten etiquetas. La nueva configuración completa tiene un alcance distinto: `registro/semana2_F3c_completo_validacion_actual.json`, en curso, sin resultados favorables atribuidos en este guion.
+- Escena 6: PDF, páginas 3–4; política de selección y excepción de la transferencia frente a referencia. Separar de la protección posterior de factores. La enmienda tras conocer el resultado no se presenta como una regla original intacta.
+- Escena 7: PDF, página 3, y secuencia pública registrada. El uso del tablero también influyó en decisiones estructurales; no se presenta una entrega ajena a las sondas.
+- Escena 8: PDF, página 5, y `privado/pendientes_F3c/20261026_cierre12_recuperado/veinte_primas_gasto_por_poliza.json`, filas nominales de la referencia declarada. Veinte precios sin cambios, total 20.800,02 CU y gasto fijo 85 CU por póliza.
+- Escena 9: `docs/panel_revision.html`, `docs/entrega/panel_modelo.html`, `docs/entrega/panel_analisis.html`, textos ingleses y láminas existentes. Inventario de artefactos previos en `privado/edicion_informe_final/20261027T201801Z/evidencia_usos_IA.json`.
+
+Edición y comprobación: `registro/guion_video_actual.json`. El texto no autoriza envíos, publicación, cambios de modelo o nuevas ejecuciones de entrenamiento. Los archivos por fila, los identificadores individuales y las conversaciones privadas no se muestran en el video.

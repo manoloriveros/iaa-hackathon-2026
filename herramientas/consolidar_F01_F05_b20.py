@@ -4,7 +4,7 @@ from datetime import datetime,timezone
 import json,hashlib,os,re,subprocess,sys
 ROOT=Path(__file__).resolve().parents[3];REPO=ROOT/'Hackaton/Repositorio_IAA2026'
 RUN=REPO/'privado/semana2/revision_fuentes2023/consolidacion_F01_F05_20261024_v1'
-DOC=REPO/'docs/semana2/CONSOLIDACION_F01_F05_Y_BLOQUEOS_B20_2023.md'
+DOC=REPO/'docs/archivo/semana2/CONSOLIDACION_F01_F05_Y_BLOQUEOS_B20_2023.md'
 INDEX=REPO/'registro/semana2_b20_consolidacion_F01_F05_actual.json'
 SOURCE=REPO/'registro/semana2_b20_fuentes2023_actual.json'
 PRIORITY=REPO/'registro/semana2_b20_prioridades_actual.json'

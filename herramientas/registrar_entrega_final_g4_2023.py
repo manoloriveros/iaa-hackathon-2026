@@ -11,7 +11,7 @@ from registrar_resultado_entradas_g4_2023 import top
 RUN=REPO/'privado/semana2/modelo_final_g4_2023/final_20261024_v1'
 PLAN=REPO/'registro/semana2_g4_modelo_final_plan_v1.json'
 INDEX=REPO/'registro/semana2_g4_entrega_final_actual.json'
-DOC=REPO/'docs/semana2/G4_MODELO_PROPIO_Y_CSV_2025.md'
+DOC=REPO/'docs/archivo/semana2/G4_MODELO_PROPIO_Y_CSV_2025.md'
 PRIORITY=REPO/'registro/semana2_b20_prioridades_actual.json'
 SOURCE=REPO/'registro/semana2_b20_fuentes2023_actual.json'
 PREPARATION=REPO/'registro/semana2_g4_modelo_envio_preparacion_v1.json'

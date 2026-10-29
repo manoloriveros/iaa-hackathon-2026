@@ -16,7 +16,7 @@ BASE = p.BASE; SOURCE = BASE/'P43_marca_capital_20261026'
 OUT = BASE/'P44_validacion_marca_capital_20261026'
 PLAN = R/'registro/semana2_marca_capital_validacion_privada_plan.json'
 INDEX = R/'registro/semana2_marca_capital_validacion_privada_actual.json'
-DOC = R/'docs/semana2/PRIVADA_P44_MARCA_CAPITAL_COMPLETA.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P44_MARCA_CAPITAL_COMPLETA.md'
 e.OUT = OUT; e.P9 = SOURCE; e.PLAN = PLAN; e.INDEX = INDEX
 previous.OUT = OUT; previous.PLAN = PLAN; previous.INDEX = INDEX; previous.COV = None
 

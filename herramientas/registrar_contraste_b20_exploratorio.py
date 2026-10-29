@@ -65,7 +65,7 @@ def main():
     influence = {x['reference']: x for x in evaluation['influence']}
     slopes = [x['calibration']['b_S'] for x in evaluation['folds']]
     source_plan = REPO / 'registro/semana2_b20_enmienda_exploratoria_v2_20261024.json'
-    amendment_doc = REPO / 'docs/semana2/ENMIENDA_CONTRASTE_B20_2023_V2.md'
+    amendment_doc = REPO / 'docs/archivo/semana2/ENMIENDA_CONTRASTE_B20_2023_V2.md'
     amendment_doc.write_text(f'''# Enmienda exploratoria del contraste de B20
 
 Codex. Autorización directa del participante: «{plan['authorization_literal']}». Criterios registrados el {plan['registered_utc']}, antes del entrenamiento real iniciado el {read(RUN / 'training_started.json')['utc']}.
@@ -86,7 +86,7 @@ La versión y el código previos a la reparación de escritura Parquet permanece
 
 [Contrato estructurado]({source_plan.relative_to(REPO).as_posix().replace('registro/', '../../registro/')}) y [resultado](CONTRASTE_EXPLORATORIO_B20_2023.md). La versión1 y todos sus resultados adversos permanecen intactos. Investigación adaptativa sobre2023, revisión propia de Codex; no confirmación independiente o revisión profesional humana.
 ''', encoding='utf-8')
-    report_path = REPO / 'docs/semana2/CONTRASTE_EXPLORATORIO_B20_2023.md'
+    report_path = REPO / 'docs/archivo/semana2/CONTRASTE_EXPLORATORIO_B20_2023.md'
     fold_rows = '\n'.join(f"| {x['fold']} | {x['calibration']['b_S']:.4f} | {x['delta_S_L']:+.6f} | {x['delta_S_raw']:+.6f} |" for x in evaluation['folds'])
     failed = ', '.join(evaluation['failed_criteria'])
     report_path.write_text(f'''# Contraste exploratorio B20: mejora media frágil, rechazo por influencia

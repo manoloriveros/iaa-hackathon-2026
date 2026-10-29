@@ -1,6 +1,8 @@
 # Selección de modelos de semana 2: reglas vigentes
 
-Codex, 23 de octubre de 2026. El participante pide aplicar el protocolo y fijar criterios antes de comparar modelos. Esta versión adopta reglas operativas derivadas de la [revisión S22→S30](../REVISION_SELECCION_S22_S30.md). La propuesta anterior se conserva en `privado/semana2/seleccion/registro_v1_20261023/`. La [política v1](../../registro/semana2_politica_seleccion_v1.json) fija los números; el [índice activo](../../registro/semana2_seleccion_actual.json) conserva su SHA y el del evaluador. Son tolerancias prudenciales del proyecto, no requisitos de Kaggle ni valores óptimos estimados. Al registrarlas no se consultaron scores de candidatos ni se abrió confirmación de 2024.
+Fijé este protocolo para comparar las alternativas antes de elegir mi entrega. Conservo sus criterios, excepciones y versiones; mi elección final de F3c se registra por separado. La implementación y las comprobaciones de los asistentes mantienen su autoría.
+
+Codex, 23 de octubre de 2026. Pedí aplicar el protocolo y fijar criterios antes de comparar modelos. Esta versión adopta reglas operativas derivadas de la [revisión S22→S30](../archivo/semana1/REVISION_SELECCION_S22_S30.md). La propuesta anterior se conserva en `privado/semana2/seleccion/registro_v1_20261023/`. La [política v1](../../registro/semana2_politica_seleccion_v1.json) fija los números; el [índice activo](../../registro/semana2_seleccion_actual.json) conserva su SHA y el del evaluador. Son tolerancias prudenciales del proyecto, no requisitos de Kaggle ni valores óptimos estimados. Al registrarlas no se consultaron scores de candidatos ni se abrió confirmación de 2024.
 
 ## Referencia y criterio común
 
@@ -14,7 +16,7 @@ Una advertencia alta o crítica bloquea mientras no esté resuelta con evidencia
 
 ## Desarrollo y confirmación
 
-Se mantienen los folds de cliente/dirección compartidos entre ramos, ya persistidos. El ajuste de transformaciones, nivel, hiperparámetros y pesos se hace dentro del desarrollo de 2023 con predicciones fuera de muestra. No se incorporan etiquetas de 2024, de ningún mercado, al ajuste que pretenda simular 2024.
+Mantengo los folds de cliente/dirección compartidos entre ramos, ya persistidos. El ajuste de transformaciones, nivel, hiperparámetros y pesos se hace dentro del desarrollo de 2023 con predicciones fuera de muestra. No se incorporan etiquetas de 2024, de ningún mercado, al ajuste que pretenda simular 2024.
 
 Se permite una sola tanda de confirmación de 2024: referencia y hasta tres aspirantes. Se congelan recetas, artefactos y prioridades antes de abrir scores. Se aportan todos los pares. El evaluador recorre el orden fijado previamente y solo reemplaza a quien sea referencia en ese momento si el aspirante demuestra mejora clara frente a ella. Ganar a una referencia anterior no basta para reemplazar a la vigente. Los no incluidos en la lista corta se conservan con motivo, sin declararlos inferiores. Los datos ya se inspeccionaron para conciliación: no es un conjunto completamente ciego ni un backtest histórico plenamente prospectivo.
 
@@ -88,4 +90,4 @@ El evaluador consume recibos: **no calcula scores o bootstrap ni certifica por s
 
 Salida 0: operación correcta; 2: bloqueo o entrada inválida; 3: acta válida sin promoción. Releer la misma decisión es idempotente; otra evidencia no la sobrescribe. No hay autorización de entrenamiento o envío por ejecutar esta puerta.
 
-Pasaron 25 casos sintéticos: ganancia incierta, advertencia reconocida pero no resuelta, deterioro en población nueva/reservas, concentración de influencia, salto de nivel inexplicado, hash alterado, pares omitidos, cuantil modificado y reapertura, entre otros. Se conserva el intento inicial fallido por permisos de temporales; los fixtures finales se guardan en privado y no comparan modelos reales. El índice activo verifica política y ejecutable con SHA.
+Pasaron 25 casos sintéticos: ganancia incierta, advertencia reconocida pero no resuelta, deterioro en población nueva/reservas, concentración de influencia, salto de nivel inexplicado, hash alterado, pares omitidos, cuantil modificado y reapertura, entre otros. Conservo el intento inicial fallido por permisos de temporales; los fixtures finales se guardan en privado y no comparan modelos reales. El índice activo verifica política y ejecutable con SHA.

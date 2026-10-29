@@ -12,7 +12,7 @@ b=importlib.util.module_from_spec(s);s.loader.exec_module(b)
 r=b.r;m=b.m;q=b.q;w=b.w;pd=b.pd;np=b.np;BASE=b.BASE
 OUT=BASE/'P81_GLM_bandas_negocio_preflight_20261027'
 PLAN=R/'registro/semana2_GLM_bandas_negocio_preflight_plan.json';INDEX=R/'registro/semana2_GLM_bandas_negocio_preflight_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P81_GLM_BANDAS_NEGOCIO_PREFLIGHT.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P81_GLM_BANDAS_NEGOCIO_PREFLIGHT.md'
 BASE_NUM={line:list(r.NUM[line]) for line in q.LINES};BASE_CAT={line:list(r.CAT[line]) for line in q.LINES}
 NUM={line:[name for name in BASE_NUM[line] if name not in ['prior_claims_5y','ncb_years']] for line in q.LINES}
 CAT={line:BASE_CAT[line]+['history_business_band']+(['ncb_business_band'] if line=='motor' else []) for line in q.LINES}

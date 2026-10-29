@@ -15,7 +15,7 @@ INNER = BASE/'P28_fuente_frecuencia_marca_20261026'; FULL = BASE/'P29_fuente_fre
 OUT = BASE/'P42_frecuencia_marca_constante_20261026'
 PLAN = R/'registro/semana2_frecuencia_marca_constante_privada_plan.json'
 INDEX = R/'registro/semana2_frecuencia_marca_constante_privada_actual.json'
-DOC = R/'docs/semana2/PRIVADA_P42_FRECUENCIA_Y_MARCA_CONSTANTE.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P42_FRECUENCIA_Y_MARCA_CONSTANTE.md'
 sp = importlib.util.spec_from_file_location('p42_saved_GLM_pure', R/'herramientas/fuente_frecuencia_marca_P28.py')
 m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m)
 w = m.w; pd = m.pd; np = m.np; LINES = m.LINES

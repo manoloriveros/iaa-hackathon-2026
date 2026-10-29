@@ -19,7 +19,7 @@ p=importlib.util.module_from_spec(s);s.loader.exec_module(p)
 k=p.k;h=p.h;m=p.m;q=p.q;w=p.w;np=p.np;pd=p.pd;BASE=p.BASE
 OLD=p.OLD;OUT=BASE/'P101_centrado_fijo_preflight_20261027'
 PLAN=R/'registro/semana2_centrado_fijo_preflight_plan.json';INDEX=R/'registro/semana2_centrado_fijo_preflight_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P101_CENTRADO_FIJO_PREFLIGHT.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P101_CENTRADO_FIJO_PREFLIGHT.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

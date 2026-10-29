@@ -1,81 +1,34 @@
-# Cómo se usó la IA y cómo se mantuvo bajo control
+# Cómo trabajé con IA
 
-El modelo de tarificación, la Mezcla por peligro, es actuarial: modelos Tweedie del coste total y modelos de frecuencia × severidad por peligro, mezclados por ramo. La entrega final, S41, es ese modelo con su nivel de 2025 calibrado con tres factores, uno por ramo, leídos del tablero público con una regla de credibilidad fijada antes de mirar; para ello no se reentrenó ningún modelo. La IA se usó para construir y, sobre todo, para poner a prueba todo lo que lo rodea: la auditoría de datos, la metodología, los experimentos, los controles y la documentación. Las reglas del concurso permiten procesar los datos con herramientas de IA, incluidos modelos de lenguaje alojados, y los datos son sintéticos.
+Usé Claude y Codex durante las dos semanas del hackathon. Les pedí explorar los datos, proponer y programar métodos, cuestionar resultados y construir comprobaciones. También los usé para explicar el trabajo, traducir y preparar tableros y materiales audiovisuales. Las decisiones de selección final fueron mías y quedaron registradas.
 
-Participaron dos asistentes de IA, Claude y Codex, que aquí se nombran como herramientas. La responsabilidad de cada regla de datos, de cada envío a Kaggle, de la elección del modelo final y de la elección de la entrega final es del participante. La versión en inglés de esta guía está en [`AI_WORKFLOW_EN.md`](AI_WORKFLOW_EN.md).
+Mi interés fue construir un proceso que pudiera seguir y revisar, además de obtener predicciones competitivas. Conservé las propuestas con su criterio previo, las correcciones y los resultados adversos. No medí un ahorro de horas que pueda presentar como resultado.
 
-## Cómo se organizó el trabajo
+## Dónde intervino la IA
 
-![Flujo de trabajo con IA](figuras/es/flujo_ia.png)
-
-Los asistentes trabajaron en tres líneas. La de modelado produjo sus propias estimaciones; la creativa buscó alternativas que la primera no probaría; la de contraste replicó resultados y los atacó. Ninguna línea podía usar las predicciones de otra sin autorización expresa, de modo que el acuerdo entre líneas aportaba información.
-
-Todo pasó por un foro común con un protocolo fijo. Cada aporte lleva su autor real, la hora UTC y un identificador. Antes de un experimento se publican la hipótesis, los datos permitidos, el corte temporal, la métrica y el criterio de aceptación; después se publica el resultado, ayude o no. Hasta el registro de la selección final, en 103 horas, el foro reunió 233 aportes, y más de un tercio fueron preinscripciones o resultados adversos.
-
-![Aportes al foro por bloque de seis horas](figuras/es/foro.png)
-
-Un enjambre de tres agentes de validación, uno para datos, otro para modelos y otro para gobierno, se ejecuta de forma programada cada seis horas, con una revisión completa al menos una vez al día. Cada ciclo vuelve a correr sus propias comprobaciones y registra los hallazgos con su severidad, un criterio de cierre y el tipo de revisor humano que necesitan. Un hallazgo sigue abierto hasta que se cumple su criterio; una comprobación de IA nunca lo cierra por sí sola.
-
-![Hallazgos del enjambre de validación](figuras/es/hallazgos.png)
-
-## Qué hizo la IA en cada etapa
-
-| Etapa | Qué hizo la IA | Cómo se verificó | Qué cambió por el contraste |
-| --- | --- | --- | --- |
-| Auditoría de datos | Revisó las 105 columnas con 174 comprobaciones y 116 gráficos; encontró claves de cliente de autos sin ceros iniciales, exposición guardada en días, capitales cerca de ×1000 y 604 siniestros duplicados | Un segundo asistente recalculó las ocho reglas con código propio (41 de 41 controles); un productor alternativo reconstruyó las once tablas byte a byte (148 millones de celdas, sin diferencias) | Ocho reglas reversibles con bitácora por fila; 149 capitales divididos sin confirmación histórica se declaran como incertidumbre |
-| Objetivo e IBNR | Asignó cada siniestro al único periodo que lo cubre; estimó la completitud de reporte por peligro con un chain-ladder de conteos | Dos algoritmos de asignación coinciden; 18 de 18 controles de conciliación | El retraso entra una vez, por la exposición de entrenamiento, en lugar de un segundo factor de IBNR |
-| Variables | Construyó un contrato de disponibilidad por columna | Un análisis univariante marcó un conteo de contactos con atención al cliente que refleja el propio siniestro del periodo (D² 0,43, frente a menos de 0,04 en todas las demás columnas) | Una guardia de predictores lo excluye en el código |
-| Metodología | Dos búsquedas bibliográficas independientes con 51 fuentes primarias, cotejadas con DOI y arXiv, más tres papers de la IAA sobre IA | Se descartaron las afirmaciones sin fuente verificable | Se descartó una mejora del 17 % propuesta por otra herramienta de IA, porque nada la respaldaba |
-| Modelado | 44 contrastes numerados en la línea de contraste; 32 aportes del foro preinscribieron su hipótesis antes de calcularla; una batería preinscrita de 12 experimentos de sensibilidad sobre nivel, reservas, capitales, pesos y forma | Intervalos por grupos de cliente, dirección y región; escenarios de reserva ×0,75 y ×1,25; umbrales de quiebre del error de reserva con una materialidad del 1 % | El criterio del cuerpo (abajo) y la retirada de un ajuste de forma en hogar que dependía de la cola |
-| Calibración del nivel | Derivó la forma cerrada del D² público en función del factor de nivel de un ramo, midió el ruido del óptimo del público en 300 tercios aleatorios de 2024 y escribió la regla de credibilidad antes de que se puntuaran las seis sondas | Kaggle devolvió el archivo calibrado en el valor que preveía la forma cerrada, hasta el quinto decimal (0,13016); las sondas quedaron excluidas de antemano de la selección final | Una batería posterior halló el ruido subestimado 1,5 veces; con la corrección, el archivo de la regla fijada antes de mirar, S41, fue la única calibración por delante de la mezcla en esperanza con todas las previas probadas, y pasó a ser la entrega final |
-| Contexto del concurso | Leyó reglas, metadatos y puntuaciones de Kaggle por una conexión MCP de solo lectura | Páginas oficiales archivadas con su SHA-256; cada recibo de envío guardado con la huella de su CSV | Los envíos se hicieron solo con la autorización escrita del participante |
-| Automatización | Orquestador de 36 nodos (30 para el modelo final) con huellas de 184 salidas de referencia; batería de 45 casos de control; ciclos de validación programados | 45 de 45 casos pasan en la nube, en una máquina virtual y en Windows; reentrenar toda la receta reconstruyó byte a byte el archivo entregado, y una réplica desde 436 estimadores guardados coincidió sin reajustar | Un validador mostró que el paquete podía declarar éxito con archivos faltantes; se corrigió y el participante aceptó la corrección |
-| Herramientas de revisión | Construyó un panel de revisión y el panel del modelo final a partir de un archivo de datos que registra la huella de cada fuente que lee | Un script de verificación comprueba que el informe, las láminas y el panel coinciden con ese archivo; revisa cifras y redacción, no el criterio actuarial | Las cifras de los entregables no pueden separarse de sus fuentes sin que se note |
-
-## El hallazgo que cambió el resultado
-
-Varias propuestas mejoraban la validación local de 2024 y después bajaban en la tabla pública. Una línea atribuyó la inversión a unos pocos siniestros extremos. Otra convirtió esa observación en un criterio medible antes de enviar: el D² calculado sin el 0,5 % de periodos más costosos ordena los candidatos casi como la puntuación pública (correlación de rangos 0,83, frente a 0,49 con todas las pérdidas). La cola siguió dentro de la métrica; solo dejó de ser el único juez. Los dos envíos siguientes marcaron el máximo público de la búsqueda de modelos, y el segundo es la Mezcla por peligro.
-
-El contraste no terminó con la elección. Una batería de doce experimentos de sensibilidad, cada uno con su hipótesis y su criterio de aceptación escritos antes, puso después a prueba el propio modelo final (se corrieron once; corridas anteriores ya cubrían el duodécimo). Confirmó que los pesos están en una meseta y que los dos LightGBM de hogar que reentrenó se reproducen bit a bit, y moderó nuestra propia conclusión: la ventaja sobre el mejor envío anterior no es robusta, porque basta quitar seis clientes de 373.831 para invertirla. También midió cuán incierto es el nivel de 2025 en edificios y cuánto podría estar alto el de autos. Su backtesting del IBNR reestimó el chain-ladder de reporte en tres cortes anteriores: el método quedó fuera de su criterio en 6 o 7 de 15 peligros por corte, sobre todo en los de pocos avisos, y sobrestimó las lesiones corporales en los cierres de año. Un segundo análisis preinscrito estudió las reservas, con una materialidad del 1 % del nivel de 2025 de cada ramo que el participante fijó antes de ver resultados. Sus estimaciones puntuales no sugieren reservas cortas, pero sus intervalos no las descartan, y un error del 3,7 % en autos ya es material; por eso las reservas se declaran incertidumbre material en los tres ramos. En la rejilla probada (reservas de caso multiplicadas de forma uniforme entre 0,25 y 2,5), el orden agregado entre los dos mejores envíos no cambió, aunque algunos ramos por separado se invierten. El informe declara todo esto como límites, y su anexo detalla cada experimento con su resultado.
-
-![Backtesting del IBNR por peligro y corte](figuras/es/backtest.png)
-
-## El último paso: el nivel de 2025
-
-Los cortes de 2023 y 2024 sirven para ordenar el riesgo, pero no dicen cuánto costará 2025 en total, y el análisis de reservas ya había mostrado lo sensible que es ese nivel. El tablero público, que se calcula con cerca de un tercio del test de 2025, era la única medida de la experiencia de 2025. La IA dedujo que, con la desviación Tweedie de potencia 1,5, la puntuación pública responde al factor de nivel de un ramo en forma cerrada, así que bastan dos sondas por ramo (×0,90 y ×1,10) para ubicar su máximo; después midió en 2024 cuánto ruido tiene ese máximo con un tercio de los datos y propuso aplicar solo su parte creíble. La regla quedó escrita antes de que se puntuaran las sondas, y los archivos calibrados puntuaron lo que preveía la forma cerrada, hasta el quinto decimal, algo compatible con una desviación Tweedie de potencia 1,5 que no identifica al evaluador. La entrega final, S41, es esa regla aplicada sin cambios. Calibraciones posteriores del mismo tablero, una credibilidad revisada y un exponente de forma por ramo, puntuaron más en público; una batería de sensibilidad planeada después vio que el ruido se había medido frente a todo 2024, que contiene la muestra, y que frente a los dos tercios no vistos es 1,5 veces mayor. Con esa corrección, S41 fue el único archivo calibrado por delante de la mezcla en esperanza con todas las previas probadas, y las reglas de alarma de la batería lo favorecieron, por un margen pequeño frente a la dispersión; el participante lo seleccionó. El informe cuenta la secuencia completa en la página 4, con las hipótesis en que se apoya S41, y pone cada factor frente a tres indicadores que no usan el tablero, con un criterio escrito antes de calcularlos: apoyan edificios y contenidos, y autos solo en parte. Esos indicadores comparten los datos y los supuestos del proyecto, así que no sustituyen una validación profesional.
-
-![Puntuación pública según el factor de nivel de 2025 de cada ramo](figuras/es/calibracion.png)
-
-![Camino hasta la entrega final](figuras/es/curva.png)
-
-## Dónde se equivocó la IA y cómo se detectó
-
-La IA cometió errores, y la organización estaba pensada para sacarlos a la luz. Una mejora del 17 % afirmada por otra herramienta de IA no tenía fuente y se descartó. Una afirmación sobre la suficiencia de las reservas de caso iba más allá de la evidencia; la línea de contraste la rebajó a hipótesis en todos los documentos. El paquete de reproducción podía declarar éxito con archivos faltantes; un agente de validación lo detectó, se reescribieron los controles y ahora 36 casos adversos demuestran que el paquete se detiene. Otro agente encontró que la clave de la captura de modelos omitía entradas posicionales, de modo que dos entradas distintas podían pedir el mismo estimador guardado; se corrigió antes de la réplica completa, sin indicio de que tocara el archivo entregado. Varias mejoras locales no sobrevivieron a la puntuación pública, y así se encontró el criterio del cuerpo. La incertidumbre previa del nivel de 2025, fijada antes de las sondas, resultó más estrecha que los desvíos que las sondas mostraron; en vez de reescribirla, la revisión se registró como decisión aparte. Las dos reglas de sondas midieron además su ruido frente a datos que contenían la muestra, lo que lo subestimó; la batería que lo encontró dejó el error registrado, y el informe declara su consecuencia. Cada episodio queda en el foro con su identificador, su autor y su evidencia.
-
-## Controles
-
-Los once archivos originales nunca se modifican y se identifican por SHA-256. Los datos por fila, los modelos entrenados, las credenciales y las conversaciones privadas quedan fuera de Git; los archivos restringidos nuevos viven en una carpeta privada excluida del control de versiones. Las decisiones humanas se registran con fecha y alcance. Las comprobaciones de IA se etiquetan como tales: no se presentan como revisión profesional independiente, y tampoco la revisión del participante, porque participó en el desarrollo. De los 22 hallazgos del enjambre, 13 siguen abiertos, cada uno con el revisor que necesita, y el participante aceptó 2 como limitaciones declaradas del ejercicio: la reproducción independiente y la suficiencia de las reservas.
-
-## Cómo se aplicaron las referencias de la IAA
-
-Antes de que empezara el concurso, el proyecto adoptó una matriz de trabajo basada en los tres papers de la IAA sobre IA (`Preparación/Antecedentes/IAA_IA/PRACTICAS_PRIORITARIAS.md`). Es una decisión de trabajo del participante, no una certificación de cumplimiento.
-
-| Referencia IAA | Práctica adoptada | Dónde se ve en este repositorio |
+| Etapa | Cómo la incorporé | Evidencia que conservé |
 | --- | --- | --- |
-| Consideraciones profesionales, §§3.5–3.6 | Mantener la responsabilidad humana y comunicar el uso de IA | Decisiones fechadas en `registro/`; esta guía y el informe explican qué hizo la IA y qué se comprobó |
-| Consideraciones profesionales, §3.4 | Proteger los datos y revisar el uso de proveedores | Originales inmutables; sin datos por fila, modelos ni credenciales en Git; las reglas permiten procesar con IA los datos sintéticos |
-| Marco de gobernanza, §2.8 | Distinguir la validación propia de la independiente | Los hallazgos del enjambre conservan su origen y su estado; la revisión independiente se declara pendiente |
-| Marco de gobernanza, §§3.3.2 y 3.4–3.6 | Validar el flujo y planear revisión y cambios | Validación temporal, sensibilidad a reservas, casos de control adversos y el protocolo de la semana 2 |
-| Documentación, §§3–6 | Documentar el modelo, su operación y sus riesgos | Informe, anexo, panel, `receta/` y las órdenes de reproducción |
+| Datos y objetivo | Exploración de tablas, reglas de limpieza, cruces por periodo y discusión de la valoración de siniestros | Originales, código, contratos de variables, bitácoras y decisiones |
+| Modelado | Propuestas de coste total y frecuencia por peligro con severidad, mezclas y adaptación al nuevo mercado | Recetas, parámetros, fuentes y resultados, también los desfavorables |
+| Comprobaciones | Verificadores de formato, integridad, separación temporal, reproducción y sensibilidad | Recibos fechados, casos adversos, incidencias y criterios de cierre |
+| Comunicación | Explicación del método, traducción, gráficos, tableros y preparación del video | Fuentes editables y vínculos con los registros técnicos |
 
-## Dónde está la evidencia
+## Cómo contrasté las aportaciones en el proyecto
 
-| Qué | Dónde |
-| --- | --- |
-| Foro común, con identificadores y autores | `docs/expediente/foro/` (identificadores sintéticos enmascarados) |
-| Registro de decisiones | `docs/expediente/decisiones/` |
-| Hallazgos del enjambre y su estado | `docs/evidencia/hallazgos.json` y `registro/` |
-| Resultados de la batería de control | `docs/controles/` |
-| Calibración del nivel: regla fijada antes, resolución, batería de sensibilidad, selección y archivo final | `registro/sonda_nivel_D100_preinscripcion.json`, `sonda_nivel_D100_resolucion.json`, `docs/SENSIBILIDAD_S43.md`, `registro/decision_marca_final_S41_20261023.json` y `docs/evidencia/entrega_final_S41.json` |
-| Cada cifra de los entregables | `docs/entrega/datos/cifras_entregables.json` (ruta y SHA-256 de cada fuente) |
-| Reproducción | `reproducir.py`, `receta/` y la guía técnica |
+La IA también produjo errores. Por eso no tomé un texto convincente o una cifra aislada como comprobación suficiente. El código tuvo contrastes con los datos originales, controles de claves y periodos, pruebas adversas y verificadores separados del productor cuando existían. Los recibos identifican qué se comprobó y con qué versión.
+
+Entre las correcciones documentadas están reglas de datos que no debían aplicarse retrospectivamente como si fueran decisiones originales, diferencias entre prima anual y prima del periodo y problemas de separación computacional al reutilizar fuentes. Conservo esas correcciones y su alcance en el [archivo documental](../archivo/README.md) y el [expediente](../expediente/README.md).
+
+Usé distintos asistentes y sesiones para cuestionar propuestas. Esa colaboración aporta contraste técnico, pero no la presento como validación profesional independiente. Las revisiones conservan la firma del asistente que realmente las hizo; la primera persona de mi narración no cambia esa autoría.
+
+## Las decisiones que mantuve
+
+Elegí [S41 para la primera semana](../../registro/decision_final_S41_20261023.json) y confirmé [F3c para la segunda](../../registro/semana2_decision_final_F3c_20261028.json). La comparación posterior con F3c-R no cumplió los criterios conjuntos registrados, y mantuve F3c. No eliminé esa evidencia ni las alternativas por resultar desfavorables.
+
+Mi documentación distingue las decisiones humanas de los pasos automáticos. Las plantillas de revisión no son actas firmadas y una aceptación para el ejercicio no demuestra suficiencia de reservas o idoneidad operativa.
+
+## Qué permiten afirmar los resultados
+
+Los notebooks reconstruyeron las huellas históricas de los CSV finales en ejecuciones locales reanudadas. La primera semana conserva diferencias intermedias y tres huellas de variables sin causa establecida. No he acreditado una ejecución alojada en Kaggle, una repetición por otra persona o una revisión profesional independiente. Explico esos límites en la [guía de reproducción](../REPRODUCCION_DOS_SEMANAS.md).
+
+El registro de interacciones es selectivo. No reconstruyo conversaciones ausentes ni atribuyo a una persona cálculos que hicieron los asistentes. Conservo las fuentes anteriores de esta explicación en la [versión archivada](../archivo/versiones_previas_20261029/docs/entrega/USO_DE_IA_ES.md).

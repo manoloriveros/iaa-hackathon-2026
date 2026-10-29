@@ -67,7 +67,7 @@ def main():
     note+='La consulta vigente devolvió cero disponibles; no impide seguir preparando esa entrega. Se conservarán los fallos formales y las sensibilidades adversas en cualquier decisión.\n\n'
     note+='B00, F3c procesado0,16914, PUL2 y todas las alternativas se conservan; el objetivo público0,17 sigue activo. '
     note+='CSV: '+w.rel(csv)+'; SHA256 '+b['CSV']['sha256']+'. Evidencia: '+w.rel(TRANSFER/'report.json')+' y '+w.rel(OUT/'report.json')+'.\n'
-    doc=R/'docs/semana2/MISION017_H1_SOLO_TRANSFERENCIA_Y_PROTOTIPO.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
+    doc=R/'docs/archivo/semana2/MISION017_H1_SOLO_TRANSFERENCIA_Y_PROTOTIPO.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md','DECISIONES.md']:w.append(ROOT/'Preparación'/name,note,archive)
     body=OUT/'forum_resultados.md';body.write_text(note,encoding='utf8')
     response=subprocess.run([sys.executable,str(ROOT/'Hackaton/Semana 2/Foro/comentar.py'),'--autor','Codex',

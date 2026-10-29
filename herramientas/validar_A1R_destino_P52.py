@@ -13,7 +13,7 @@ ROOT = Path('C:/dev/Hakaton'); R = ROOT/'Hackaton/Repositorio_IAA2026'; BASE = R
 SOURCE = BASE/'P51_fuente_agrupada_20261027'; REPORTING = BASE/'P50_reporte_agrupado_20261027'
 OUT = BASE/'P52_validacion_A1R_20261027'
 PLAN = R/'registro/semana2_A1R_destino_validacion_plan.json'; INDEX = R/'registro/semana2_A1R_destino_validacion_actual.json'
-DOC = R/'docs/semana2/PRIVADA_P52_A1R_VALIDACION_DESTINO.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P52_A1R_VALIDACION_DESTINO.md'
 
 
 def load(name, path):

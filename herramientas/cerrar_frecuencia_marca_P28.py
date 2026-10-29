@@ -11,7 +11,7 @@ ROOT = Path('C:/dev/Hakaton'); R = ROOT/'Hackaton/Repositorio_IAA2026'
 spec = importlib.util.spec_from_file_location('p28_close_numeric', R/'herramientas/fuente_frecuencia_marca_P28.py')
 m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
 OUT = m.OUT; w = m.w; np = m.np; pd = m.pd
-INDEX = m.INDEX; DOC = R/'docs/semana2/PRIVADA_P28_FRECUENCIA_MARCA_FUENTE.md'
+INDEX = m.INDEX; DOC = R/'docs/archivo/semana2/PRIVADA_P28_FRECUENCIA_MARCA_FUENTE.md'
 
 
 def reject(*args, **kwargs): raise AssertionError('Learning blocked in P28saved numerical replay')

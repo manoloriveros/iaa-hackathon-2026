@@ -9,7 +9,7 @@ import sys
 ROOT = Path('C:/dev/Hakaton'); R = ROOT/'Hackaton/Repositorio_IAA2026'
 OUT = R/'privado/semana2/mision017_fase2/P29_fuente_frecuencia_completa_20261026'
 INDEX = R/'registro/semana2_fuente_frecuencia_completa_privada_actual.json'
-DOC = R/'docs/semana2/PRIVADA_P29_FUENTE_COMPLETA_NUMERO_MARCA.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P29_FUENTE_COMPLETA_NUMERO_MARCA.md'
 sp = importlib.util.spec_from_file_location('p29_close_writer', R/'herramientas/registrar_avance_mision017_fase2.py')
 w = importlib.util.module_from_spec(sp); sp.loader.exec_module(w)
 

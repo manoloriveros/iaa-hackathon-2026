@@ -12,7 +12,7 @@ r=importlib.util.module_from_spec(s);s.loader.exec_module(r)
 p=r.p;driver=p.driver;g=r.g;m=r.m;q=r.q;w=r.w;pd=r.pd;np=r.np;BASE=r.BASE
 OUT=BASE/'P70_validacion_GLM_forma_acotada_20261027'
 PLAN=R/'registro/semana2_GLM_forma_acotada_validacion_plan.json';INDEX=R/'registro/semana2_GLM_forma_acotada_validacion_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P70_VALIDACION_FORMA_ACOTADA.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P70_VALIDACION_FORMA_ACOTADA.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

@@ -56,7 +56,7 @@ def main():
     note+='H1sigue diferido. B00, F3c y todas las alternativas/fallos se conservan;2024abierto adaptativo. '
     note+='Estos resultados locales condicionados a S2no prueban el F3c recibido, un holdout intacto o la mejora privada. '
     note+='Evidencia: '+w.rel(OUT/'report.json')+' y '+w.rel(ATTR/'report.json')+'.\n'
-    doc=R/'docs/semana2/PRIVADA_P3A_SENSIBILIDAD_Y_ATRIBUCION_H1.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
+    doc=R/'docs/archivo/semana2/PRIVADA_P3A_SENSIBILIDAD_Y_ATRIBUCION_H1.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md','DECISIONES.md']:w.append(ROOT/'Preparación'/name,note,archive)
     body=OUT/'forum_resultados.md';body.write_text(note,encoding='utf8')
     res=subprocess.run([sys.executable,str(ROOT/'Hackaton/Semana 2/Foro/comentar.py'),'--autor','Codex',

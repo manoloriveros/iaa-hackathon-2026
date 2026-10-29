@@ -12,7 +12,7 @@ ROOT = Path('C:/dev/Hakaton'); R = ROOT/'Hackaton/Repositorio_IAA2026'
 BASE = R/'privado/semana2/mision017_fase2'; HOME = BASE/'A1S_nucleo_20261026_v1'
 OUT = BASE/'P25_fuente_ausencias_20261026'
 INDEX = R/'registro/semana2_fuente_ausencias_privada_actual.json'
-DOC = R/'docs/semana2/PRIVADA_P25_FUENTE_AUSENCIAS.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P25_FUENTE_AUSENCIAS.md'
 sys.path.insert(0, str(ROOT/'Preparación/.cache/parquet-reader'))
 import numpy as np
 import pandas as pd

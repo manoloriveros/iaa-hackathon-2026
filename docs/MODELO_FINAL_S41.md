@@ -1,12 +1,14 @@
 # El modelo final de la parte 1: S41, la Mezcla por peligro con nivel calibrado
 
+Presento el modelo que elegí para la primera semana y las hipótesis con las que lo interpreto. La descripción técnica procede del trabajo asistido por IA y conserva sus fuentes.
+
 Documento de Claude (sesión Cowork de las sondas), 23 de octubre de 2026, 10:30 de Bogotá, a pedido del participante: describir S41 como el modelo único de la entrega, sin tratarlo como una variante entre varias. Las cifras salen de los registros que se citan en el anexo; las decisiones humanas y las de IA se distinguen en cada paso. Es trabajo de IA, sin revisión humana independiente.
 
 ## Qué predice y con qué se mide
 
-S41 predice, para cada uno de los 626.639 periodos de póliza de 2025 del test (254.986 de autos, 184.155 de edificios del hogar y 187.498 de contenidos), el coste último esperado de los siniestros ocurridos dentro del periodo, neto de franquicia y recuperaciones y sin siniestros rechazados. Es una prima de riesgo por periodo en unidades monetarias ficticias, no una prima comercial. El concurso la evalúa con el D² de la desviación Tweedie de potencia 1,5, a maximizar; el marcador público usa el 33 % de las filas y el privado, que decide, el 67 % restante.
+Con S41 predigo, para cada uno de los 626.639 periodos de póliza de 2025 del test (254.986 de autos, 184.155 de edificios del hogar y 187.498 de contenidos), el coste último esperado de los siniestros ocurridos dentro del periodo, neto de franquicia y recuperaciones y sin siniestros rechazados. Es una prima de riesgo por periodo en unidades monetarias ficticias, no una prima comercial. El concurso la evalúa con el D² de la desviación Tweedie de potencia 1,5, a maximizar; el marcador público usa el 33 % de las filas y el privado, el 67 % restante; la evaluación global incorpora también el juicio del jurado.
 
-La entrega es el archivo `S41_nivel_credibilidad.csv`, marcado por el participante como selección final en Kaggle el 23 de octubre hacia las 09:45 de Bogotá, con puntuación pública 0,13016 (primer puesto al marcarlo; el segundo tenía 0,13003). Suma 213.685.158 CU: 118.454.953 en autos, 76.299.719 en edificios y 18.930.486 en contenidos; por año de exposición, 592 CU en autos, 508 en edificios y 126 en contenidos.
+Mi entrega es el archivo `S41_nivel_credibilidad.csv`, marcado por mí como selección final en Kaggle el 23 de octubre hacia las 09:45 de Bogotá, con puntuación pública 0,13016 (primer puesto al marcarlo; el segundo tenía 0,13003). Suma 213.685.158 CU: 118.454.953 en autos, 76.299.719 en edificios y 18.930.486 en contenidos; por año de exposición, 592 CU en autos, 508 en edificios y 126 en contenidos.
 
 ## En qué consiste, de los datos a la predicción
 
@@ -44,17 +46,17 @@ El quinto paso: el nivel calibrado con la experiencia de 2025. El factor de año
 
 S41 es, por tanto, S30 con autos multiplicado por 0,9962, edificios por 1,0260 y contenidos por 1,0126. Nada más cambia: ni las relatividades, ni los pesos, ni la forma.
 
-## Por qué es un modelo adecuado
+## Por qué lo elegí para el concurso
 
 Separa lo que se puede aprender de lo que hay que suponer. La parte difícil de una prima de riesgo es ordenar bien las pólizas y repartir el coste entre peligros; eso lo hacen los componentes, entrenados con historia y validados en dos cortes temporales con contrastes pareados. El nivel del año, que ningún corte histórico puede enseñar, se trata como lo que es, una incertidumbre, con una regla explícita para incorporar la única medida disponible de 2025.
 
-La calibración no contradice la evidencia independiente; la confirma. Antes de las sondas, el backtesting del IBNR y el hallazgo de que ningún siniestro abierto de autos lleva recuperaciones apuntaban a un nivel de autos algo alto; la prima escrita de 2025 (+5,3 % en edificios, +5,4 % en contenidos), la severidad creciente de hogar y el salto del factor de edificios entre 2023 y 2024 apuntaban a niveles de hogar más altos. El público pidió exactamente eso: autos un 2,3 % por debajo del nivel de S30, edificios un 7,5 % por encima y contenidos un 8,4 % por encima. Tres fuentes distintas en la misma dirección hacen poco probable que la señal sea solo ruido.
+La calibración coincide en dirección con la evidencia histórica que usé como contexto. Esas fuentes no son una revisión independiente. Antes de las sondas, el backtesting del IBNR y el hallazgo de que ningún siniestro abierto de autos lleva recuperaciones apuntaban a un nivel de autos algo alto; la prima escrita de 2025 (+5,3 % en edificios, +5,4 % en contenidos), la severidad creciente de hogar y el salto del factor de edificios entre 2023 y 2024 apuntaban a niveles de hogar más altos. Las sondas apuntaron en esa dirección: autos un 2,3 % por debajo del nivel de S30, edificios un 7,5 % por encima y contenidos un 8,4 % por encima. La coincidencia de dirección es un indicio; no demuestra que la señal supere el ruido ni corrige la reutilización de los cortes.
 
-Es la variante robusta. Después de S41 se probaron en el público una revisión de la credibilidad con los propios resultados (S42, 0,13033) y una calibración adicional de la dispersión de autos (S43, 0,13048). Las dos puntúan más en el público y las dos se descartaron: la batería de sensibilidad (D103) midió el ruido de la sonda frente a la parte no vista, en lugar de frente al total de 2024, y con esa corrección S41 tiene mayor esperanza en el privado que S43 bajo los tres pares de previas (media +0,0000376), no queda por debajo de S30 bajo ninguno y tiene menos de la mitad de dispersión. El participante aceptó esa recomendación por robustez, no por una ganancia segura.
+Elegí esta variante como la opción más prudente bajo los escenarios estudiados. Después de S41 se probaron en el público una revisión de la credibilidad con los propios resultados (S42, 0,13033) y una calibración adicional de la dispersión de autos (S43, 0,13048). Las dos puntúan más en el público y las dos se descartaron: la batería de sensibilidad (D103) midió el ruido de la sonda frente a la parte no vista, en lugar de frente al total de 2024, y con esa corrección S41 tiene mayor esperanza en el privado que S43 bajo los tres pares de previas (media +0,0000376), no queda por debajo de S30 bajo ninguno y tiene menos de la mitad de dispersión. Acepté esa recomendación por robustez, no por una ganancia segura.
 
-El mecanismo está entendido, no solo ajustado. La puntuación pública de S41 se calculó antes de enviarlo con la forma cerrada y coincidió al quinto decimal (0,13016); lo mismo ocurrió con S42 y con S43. Eso descarta que el marcador funcione con pesos o promedios que cambien la forma en el nivel, y convierte la calibración en una operación controlada de tres parámetros, no en una búsqueda.
+El mecanismo está entendido, no solo ajustado. La puntuación pública de S41 se calculó antes de enviarlo con la forma cerrada y coincidió al quinto decimal (0,13016); lo mismo ocurrió con S42 y con S43. Esa concordancia apoya el cálculo usado para la calibración, pero no identifica por completo el scorer oficial ni sus posibles pesos.
 
-Se reproduce desde los originales. S30 se reconstruyó en la nube desde los once archivos con todos sus estimadores guardados (D97: CSV con el SHA entregado; 19 de 181 huellas intermedias con diferencias de último bit por la elección automática de histogramas de LightGBM), y el paso de nivel es aritmética que `sonda_nivel.py resolver` repite con las seis puntuaciones registradas.
+Se reproduce desde los originales. S30 se reconstruyó en la nube desde los once archivos con todos sus estimadores guardados (D97: CSV con el SHA entregado; 19 de 181 huellas intermedias con diferencias intermedias registradas en ese corte), y el paso de nivel es aritmética que `sonda_nivel.py resolver` repite con las seis puntuaciones registradas.
 
 ## Las hipótesis que sostienen la predicción
 
@@ -111,4 +113,4 @@ Dos herramientas (`sonda_nivel.py`, `sonda_forma.py`) con su regla de credibilid
 | Decisiones | D100 (sonda con credibilidad), D101 y D102 (variantes probadas y no elegidas), D103 y CIE-D103 (marca final S41) |
 | Registros | `registro/sonda_nivel_D100_preinscripcion.json`, `registro/sonda_nivel_D100_resolucion.json`, `registro/decision_marca_final_S41_20261023.json`, `registro_envios.json` |
 | Foro | CLA-20261022-001 a 004 y 009 a 011; CLA-20261023-002 (marca final) |
-| Reproducción y reservas | `docs/REPRODUCCION_COMPLETA.md`, `docs/RESERVAS_ACOTACION.md`, `docs/SENSIBILIDAD_S30_S22.md`, `docs/SENSIBILIDAD_S43.md` |
+| Reproducción y reservas | `docs/REPRODUCCION_COMPLETA.md`, `docs/archivo/semana1/RESERVAS_ACOTACION.md`, `docs/archivo/semana1/SENSIBILIDAD_S30_S22.md`, `docs/archivo/semana1/SENSIBILIDAD_S43.md` |

@@ -12,7 +12,7 @@ BASE = R/'privado/semana2/mision017_fase2'; OUT = BASE/'P41_grafo_fuente_recuper
 WORK = R/'privado/reentrenamiento_completo_20261026/corrida'
 PLAN = R/'registro/semana2_grafo_fuente_recuperada_privada_plan.json'
 INDEX = R/'registro/semana2_grafo_fuente_recuperada_privada_actual.json'
-DOC = R/'docs/semana2/PRIVADA_P41_GRAFO_REENTRENADO_Y_ALCANCE.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P41_GRAFO_REENTRENADO_Y_ALCANCE.md'
 sp = importlib.util.spec_from_file_location('p41_writer', R/'herramientas/registrar_avance_mision017_fase2.py')
 w = importlib.util.module_from_spec(sp); sp.loader.exec_module(w)
 

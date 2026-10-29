@@ -14,7 +14,7 @@ u=importlib.util.module_from_spec(s);s.loader.exec_module(u)
 driver=u.x.t;g=u.g;k=u.k;m=u.m;q=u.q;w=u.w;np=u.np;pd=u.pd;t=u.t;BASE=u.BASE
 OUT=BASE/'P67_validacion_GLM_reporte_actual_20261027'
 PLAN=R/'registro/semana2_GLM_reporte_actual_validacion_plan.json';INDEX=R/'registro/semana2_GLM_reporte_actual_validacion_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P67_VALIDACION_GLM_REPORTE_ACTUAL.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P67_VALIDACION_GLM_REPORTE_ACTUAL.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

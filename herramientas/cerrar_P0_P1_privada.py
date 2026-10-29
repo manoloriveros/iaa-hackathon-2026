@@ -64,7 +64,7 @@ def main():
     note+='Se mantienen las carencias de cola/reservas, soporte ponderado y disponibilidad temporal de maestros. '
     note+='B00, F3c y todas las alternativas quedan intactos;2024abierto. La prioridad es generalización privada, con pública secundaria y sin declaración de éxito.\n\n'
     note+='Evidencia: '+w.rel(P0/'report.json')+' y '+w.rel(P1/'report.json')+'.\n'
-    doc=R/'docs/semana2/PRIVADA_P0_P1_PUENTE_Y_SOPORTE_H1.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
+    doc=R/'docs/archivo/semana2/PRIVADA_P0_P1_PUENTE_Y_SOPORTE_H1.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md','DECISIONES.md']:w.append(ROOT/'Preparación'/name,note,archive)
     body=P1/'forum_resultados.md';body.write_text(note,encoding='utf8')
     res=subprocess.run([sys.executable,str(ROOT/'Hackaton/Semana 2/Foro/comentar.py'),'--autor','Codex',

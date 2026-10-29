@@ -106,7 +106,7 @@ def main():
              'a ello. El soporte ponderado2025continúa insuficiente. No hay prueba de mejora '
              'privada ni revisión profesional independiente.\n\n')
     note += 'Evidencia: '+w.rel(OUT/'report.json')+'; '+w.rel(OUT/'support.json')+'; '+w.rel(OUT/'cells.json')+'; '+w.rel(OUT/'replay_report.json')+'; '+w.rel(OUT/'implementation_correction.json')+'.\n'
-    doc = R/'docs/semana2/PRIVADA_P19_COHORTES_BROKER.md'; assert not doc.exists()
+    doc = R/'docs/archivo/semana2/PRIVADA_P19_COHORTES_BROKER.md'; assert not doc.exists()
     doc.write_text(note, encoding='utf8')
     body = OUT/'forum_resultados.md'; body.write_text(note, encoding='utf8')
     posted = subprocess.run([sys.executable, str(ROOT/'Hackaton/Semana 2/Foro/comentar.py'),

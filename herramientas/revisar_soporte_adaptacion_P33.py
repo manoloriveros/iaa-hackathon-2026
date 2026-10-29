@@ -13,7 +13,7 @@ BASE = R/'privado/semana2/mision017_fase2'
 OUT = BASE/'P33_soporte_adaptacion_destino_20261026'
 PLAN = R/'registro/semana2_soporte_adaptacion_destino_privada_plan.json'
 INDEX = R/'registro/semana2_soporte_adaptacion_destino_privada_actual.json'
-DOC = R/'docs/semana2/PRIVADA_P33_SOPORTE_ADAPTACION_DESTINO.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P33_SOPORTE_ADAPTACION_DESTINO.md'
 sys.path.insert(0, str(ROOT/'Preparación/.cache/parquet-reader'))
 import numpy as np
 import pandas as pd

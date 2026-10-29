@@ -13,7 +13,7 @@ k=importlib.util.module_from_spec(s);s.loader.exec_module(k)
 m=k.m;q=k.q;w=k.w;pd=k.pd;np=k.np;BASE=k.BASE
 OUT=BASE/'P84_seleccion_GLM_preflight_20261027'
 PLAN=R/'registro/semana2_seleccion_GLM_interna_preflight_plan.json';INDEX=R/'registro/semana2_seleccion_GLM_interna_preflight_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P84_SELECCION_GLM_INTERNA_PREFLIGHT.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P84_SELECCION_GLM_INTERNA_PREFLIGHT.md'
 INNER=BASE/'P67_validacion_GLM_reporte_actual_20261027'
 PROXY=BASE/'P61_proxy_observacion_20261027'
 GRID=[1.,.1,.01]

@@ -25,7 +25,7 @@ import registrar_avance_mision017_fase2 as w
 BASE=R/'privado/semana2/F3c_regularizado_20261028'
 TARGET=BASE/'target_real';OUT=BASE/'assessment'
 PLAN=R/'registro/semana2_F3c_regularizado_evaluacion_plan.json'
-DOC=R/'docs/semana2/F3C_REGULARIZADO_RESULTADOS_20261028.md'
+DOC=R/'docs/archivo/semana2/F3C_REGULARIZADO_RESULTADOS_20261028.md'
 OLD=inp.f.OUT;ACTIVE=inp.f.ACTIVE
 AUDIT=inp.e.audit
 NAMES=['F3c_R','matched_trainlevel_full','public_full']

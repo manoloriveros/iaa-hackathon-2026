@@ -16,7 +16,7 @@ MODELS=BASE/'P82_validacion_GLM_bandas_negocio_20261027'
 CONTROL=BASE/'P65_validacion_reporte_por_ramo_20261027'
 OUT=BASE/'P83_penalizacion_guardada_20261027'
 PLAN=R/'registro/semana2_penalizacion_guardada_revision_plan.json';INDEX=R/'registro/semana2_penalizacion_guardada_revision_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P83_PENALIZACION_Y_BANDAS.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P83_PENALIZACION_Y_BANDAS.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

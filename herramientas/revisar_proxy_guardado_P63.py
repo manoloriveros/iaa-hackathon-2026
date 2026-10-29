@@ -15,7 +15,7 @@ OLD = BASE/'P55_validacion_mezcla_20261027'; NEW = p.OUT
 OUT = BASE/'P63_revision_proxy_guardado_20261027'
 PLAN = R/'registro/semana2_proxy_diagnostico_plan.json'
 INDEX = R/'registro/semana2_proxy_diagnostico_actual.json'
-DOC = R/'docs/semana2/PRIVADA_P63_OBSERVACION_Y_RAMOS.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P63_OBSERVACION_Y_RAMOS.md'
 POINTS = [30, 90, 180, 365, 730, 1095]
 
 

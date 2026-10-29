@@ -58,7 +58,7 @@ def main():
       {'topic':'next work','decision':'Next unit may review common C0/late-report/reserve and level/tail sensitivity only2023; preregister before any new fit. Do not tune c on these scores.'},
       {'topic':'scope','decision':'B00 retained;2024 closed by participant irrespective of selector technical state. No roster, submissions, remote, delegation or external messages.'}],
       'warnings':warnings,'verification':rel(ver),'fixtures':rel(fixtures),'incremental_reconciliation':rel(run/'motor_reconciliation.json'),'professional_independent_validation':False})
-    doc=REPO/'docs/semana2/CAPITAL_POR_FILA_Y_AUTOS_NUEVOS_2023.md'
+    doc=REPO/'docs/archivo/semana2/CAPITAL_POR_FILA_Y_AUTOS_NUEVOS_2023.md'
     text=f'''# Capital por fila y credibilidad en autos nuevos
 
 Codex. Corte UTC {r['completed_utc']}. La prueba registrada antes de calcular sus scores conserva los modelos estándar. Las tres correcciones nuevas empeoran el D² puntual de autos nuevos frente a B14. Los intervalos globales cruzan cero: esta tanda no establece superioridad, equivalencia o descarte. B00 sigue como referencia y 2024 permanece cerrado.
@@ -125,7 +125,7 @@ Se mantienen B00 y B01–B18, sin promoción o retiro. Continúa la programació
 - [Foro con registro previo y resultados](../../../Semana%202/Foro/FORO.md).
 '''
     with doc.open('x',encoding='utf-8') as f:f.write(text)
-    body=f'''Codex. Resultado de {p['forum_preregistration']}, respuesta a019. [Informe por fila y autos nuevos](../../Repositorio_IAA2026/docs/semana2/CAPITAL_POR_FILA_Y_AUTOS_NUEVOS_2023.md), [decisiones](../../Repositorio_IAA2026/{run.relative_to(REPO).as_posix()}/decision_journal.json).
+    body=f'''Codex. Resultado de {p['forum_preregistration']}, respuesta a019. [Informe por fila y autos nuevos](../../Repositorio_IAA2026/docs/archivo/semana2/CAPITAL_POR_FILA_Y_AUTOS_NUEVOS_2023.md), [decisiones](../../Repositorio_IAA2026/{run.relative_to(REPO).as_posix()}/decision_journal.json).
 
 Las 56 filas de capital corregido están dentro del rango normal de su ajuste. Se separó con B13 congelado el cambio de dato del reajuste B14: casi todo el movimiento (−62,36% a +154,09%) lo explica sustituir el capital imputado por el propio dividido; el reajuste aporta como máximo 0,157%/0,272% en escala log. Identidad verificada fila a fila, no una deducción del total. Todos T0=0: no confirma la escala económica. Se conservan B13/B14, la decisión CAPS2-01 y sus condiciones, sin retocar capital o F0 para ganar score.
 

@@ -16,7 +16,7 @@ FIELDS=['annual_'+name for name in ['hail_days','wind_exposure_index','freezing_
 OUT=BASE/'P112_clima_marca_preflight_20261027'
 PLAN=R/'registro/semana2_clima_marca_preflight_plan.json'
 INDEX=R/'registro/semana2_clima_marca_preflight_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P112_CLIMA_EN_MARCA_PREFLIGHT.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P112_CLIMA_EN_MARCA_PREFLIGHT.md'
 dump=p.dump;utc=p.utc
 
 
@@ -105,7 +105,7 @@ def register():
     assert w.read(previous.OUT/'completion_receipt.json')['report_sha256']==w.sha(previous.OUT/'report.json')
     paths=[Path(__file__),Path(m.__file__),Path(m.p14.__file__),Path(m.p14.old.__file__),Path(m.p27.__file__),
         previous.OUT/'report.json',previous.OUT/'completion_receipt.json',p.OUT/'report.json',INNER/'report.json',INNER/'completion_receipt.json',
-        BASE/'P37_validacion_clima_20261026/report.json',R/'docs/semana2/PRIVADA_P37_VALIDACION_CLIMA_COMPLETA.md',
+        BASE/'P37_validacion_clima_20261026/report.json',R/'docs/archivo/semana2/PRIVADA_P37_VALIDACION_CLIMA_COMPLETA.md',
         WEATHER/'report.json',R/'registro/semana2_alcance_covariables_oficiales2025_v3.json']
     for line in m.LINES:
         paths += [HOME/f'matrix_s1_{line}.parquet',HOME/f'rows_s1_{line}.parquet',HOME/f'partition_source/folds_{line}.parquet',

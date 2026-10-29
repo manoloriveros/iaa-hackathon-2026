@@ -11,7 +11,7 @@ ROOT = Path('C:/dev/Hakaton'); R = ROOT/'Hackaton/Repositorio_IAA2026'
 spec = importlib.util.spec_from_file_location('p32_saved_draw_recovery', R/'herramientas/revisar_residuo_fuente_P32.py')
 m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
 w = m.w; np = m.np; pd = m.pd; OUT = m.OUT
-DOC = R/'docs/semana2/PRIVADA_P32_ADECUACION_CONDICIONAL_FUENTE.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P32_ADECUACION_CONDICIONAL_FUENTE.md'
 
 
 def scalar(value):

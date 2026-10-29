@@ -1,6 +1,8 @@
 # F3c completo: reproducción, evaluación temporal y límites para el privado
 
-Codex, 2026-10-28T14:02:32.421530+00:00. Receta registrada antes de nuevos ajustes y evaluador sellado antes de aprender o puntuar en destino. Se conserva el CSV F3c ya enviado y todas las alternativas. Esta unidad no produce ni envía otro archivo del concurso.
+En mi revisión separo la reconstrucción de la cadena de las conclusiones que permite su evaluación temporal. Conservo la evidencia favorable y la adversa, con los supuestos y las restricciones que condicionan mi decisión.
+
+Codex, 2026-10-28T14:02:32.421530+00:00. Receta registrada antes de nuevos ajustes y evaluador sellado antes de aprender o puntuar en destino. Conservo el CSV F3c ya enviado y todas las alternativas. Esta unidad no produce ni envía otro archivo del concurso.
 
 ## Qué se comprobó
 
@@ -47,7 +49,7 @@ El CSV 2025 exacto y este análogo temporal no son el mismo archivo ni el mismo 
 
 El borrador inicial confundía tasas anuales con primas del período. Se corrigió por cotejo del código original antes de cualquier aprendizaje o score destino, mediante una enmienda previa en el foro y un nuevo sello, preservando código y sello iniciales. La neutralización F1 conserva el total de primas con exposición redondeada; la mezcla promedia primas del período. Factores y formas se aplican sobre primas últimas, con q=1, y solo después se usa q de T2b para contrastar incurrido. Las razones y factores se aprenden con la vista observada 2023 del legado. A1 conserva exposición redondeada a cuatro decimales para sus offsets; T2b usa exposición calendario. El cambio no afecta los modelos fuente ni selecciona el puente por score.
 
-El cotejo de claves detectó también antes del ajuste destino que los nombres de NB_shapes ya contienen el sufijo de celda; duplicarlo habría omitido esas formas. Se corrigió y se comprobó que cada forma actúa en su celda, con rechazo de claves inválidas. El control positivo pasó de escala uniforme a una alteración parcial fija de 2023, para que la invariancia de escala no lo volviera ininformativo. Se conservan estas correcciones y sus sellos; no son variantes seleccionadas por score.
+El cotejo de claves detectó también antes del ajuste destino que los nombres de NB_shapes ya contienen el sufijo de celda; duplicarlo habría omitido esas formas. Se corrigió y se comprobó que cada forma actúa en su celda, con rechazo de claves inválidas. El control positivo pasó de escala uniforme a una alteración parcial fija de 2023, para que la invariancia de escala no lo volviera ininformativo. Conservo estas correcciones y sus sellos; no son variantes seleccionadas por score.
 
 El cotejo de valores base coincidió en todas las 109.296 filas destino 2023/24 y una muestra sistemática de 5.000 filas 2023 por ramo de la fuente (numéricas con tolerancia absoluta 1e-12 y categorías exactas). Los antecedentes F1 detectaron otro fallo real del adaptador: había excluido 36 reportes emergentes y 409 desarrollados aceptados sin fila de exposición asignada. El original sí los conserva como historia si el reporte precede a la póliza. Se preservó el fallo y se corrigió ese pool antes de puntuar. No se asignaron esos costos a T0 ni se cambió C0. La nueva comprobación usa todas las filas fuente 2021–2023 y destino 2023/24, con búsqueda temporal independiente; la duración desde primera póliza se conserva.
 

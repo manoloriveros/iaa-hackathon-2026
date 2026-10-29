@@ -101,7 +101,7 @@ def main():
              'fuente y marcas incluyen2024, y el soporte ponderado2025sigue insuficiente. No se '
              'acredita mejora privada ni validación profesional independiente.\n\n')
     note += 'Evidencia: '+w.rel(OUT/'context_report.json')+'; '+w.rel(OUT/'P17_replay_context.json')+'; '+w.rel(OUT/'component_level_metadata.json')+'.\n'
-    doc = R/'docs/semana2/PRIVADA_P17_VALIDACION_GAM.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
+    doc = R/'docs/archivo/semana2/PRIVADA_P17_VALIDACION_GAM.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md', 'DECISIONES.md']: w.append(ROOT/'Preparación'/name, note, cut)
     body = OUT/'forum_resultados.md'; body.write_text(note, encoding='utf8')
     result = subprocess.run([sys.executable, str(ROOT/'Hackaton/Semana 2/Foro/comentar.py'), '--autor', 'Codex',

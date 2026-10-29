@@ -14,7 +14,7 @@ k=p.k;m=p.m;q=p.q;w=p.w;pd=p.pd;np=p.np;BASE=p.BASE
 CONTROL=p.t.OUT;RAW=p.t.t.OUT;TREE=BASE/'P72_validacion_boosting_residual_20261027'
 OUT=BASE/'P73_offsets_guardados_20261027'
 PLAN=R/'registro/semana2_offsets_actuales_revision_plan.json';INDEX=R/'registro/semana2_offsets_actuales_revision_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P73_OFFSETS_Y_ESCALA.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P73_OFFSETS_Y_ESCALA.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

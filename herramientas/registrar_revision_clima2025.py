@@ -60,7 +60,7 @@ def main():
         'Cero ajustes, C0, inferencias de modelos de precio, scores nuevos o envíos. El último resultado procesado continúa en 0,16519 y queda un cupo. '
         'La revisión es propia de Codex y no constituye revisión profesional independiente ni aprobación humana nueva.\n\n'
         'Evidencia: ' + w.rel(OUT / 'report.json') + '; alcance: ' + w.rel(POLICY) + '.\n')
-    doc = R / 'docs/semana2/CLIMA2025_OFICIAL_ALCANCE_Y_VARIACION.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
+    doc = R / 'docs/archivo/semana2/CLIMA2025_OFICIAL_ALCANCE_Y_VARIACION.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
     body = OUT / 'forum_resultado.md'; body.write_text(note, encoding='utf8')
     p = subprocess.run([sys.executable, str(ROOT / 'Hackaton/Semana 2/Foro/comentar.py'), '--autor', 'Codex',
         '--id', 'COD-S2-20261025-MISION017-CLIMA2025-ALCANCE', '--asunto',

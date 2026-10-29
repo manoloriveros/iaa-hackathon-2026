@@ -12,7 +12,7 @@ p=importlib.util.module_from_spec(s);s.loader.exec_module(p)
 m=p.m;q=p.q;w=p.w;np=p.np;pd=p.pd;BASE=p.BASE
 OUT=BASE/'P97_prior_solo_preflight_20261027';OLD=BASE/'P88_validacion_prior_calibrado_20261027'
 PLAN=R/'registro/semana2_prior_solo_preflight_plan.json';INDEX=R/'registro/semana2_prior_solo_preflight_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P97_PRIOR_SOLO_PREFLIGHT.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P97_PRIOR_SOLO_PREFLIGHT.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

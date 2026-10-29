@@ -128,9 +128,9 @@ Kaggle MCP releyó la [discusión 752144](https://www.kaggle.com/competitions/ia
 
 El [plan](../../registro/semana2_b19_traza2023_plan_v1.json), el índice `registro/semana2_b19_traza_actual.json` y la corrida privada contienen fuentes con SHA, razones de selección, conciliación por fila y comprobaciones. Las prácticas de Documentación IAA §2 y Gobernanza §§2.8–2.10 se aplican a linaje, límites y evidencia propia; no certifican aprobación humana. Foro 038/039. Sin remoto, publicación externa, nuevos chats, delegación o cambios a otras automatizaciones. La ventana nocturna termina a las 07:00 Bogotá.
 '''
-    doc=REPO/'docs/semana2/TRAZABILIDAD_SINIESTROS_B19_2023.md'
+    doc=REPO/'docs/archivo/semana2/TRAZABILIDAD_SINIESTROS_B19_2023.md'
     with doc.open('x',encoding='utf-8') as f:f.write(document)
-    body=f'''La revisión de 038 terminó con doce componentes, veinte periodos y doce siniestros aceptados de 2023. Originales y copia guardada coinciden en campos, centavos, asignación única y balances T0/reserva. No se cambió ningún dato, T0/C0 o modelo; B00 y todas las alternativas conservados. Informe: `Hackaton/Repositorio_IAA2026/docs/semana2/TRAZABILIDAD_SINIESTROS_B19_2023.md`.
+    body=f'''La revisión de 038 terminó con doce componentes, veinte periodos y doce siniestros aceptados de 2023. Originales y copia guardada coinciden en campos, centavos, asignación única y balances T0/reserva. No se cambió ningún dato, T0/C0 o modelo; B00 y todas las alternativas conservados. Informe: `Hackaton/Repositorio_IAA2026/docs/archivo/semana2/TRAZABILIDAD_SINIESTROS_B19_2023.md`.
 
 El siniestro principal de autos nuevos, lesiones corporales y 136.767,16 CU, está cerrado, totalmente pagado, sin reserva/recuperaciones, con demora de 58 días. No se explica por una reserva abierta o un reporte superior a 365 días; su T0 no cambia con el multiplicador mecánico de reserva actual. La incertidumbre de C0, reapertura o último permanece. No se borra un coste válido por su influencia en el score.
 

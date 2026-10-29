@@ -14,7 +14,7 @@ r=importlib.util.module_from_spec(s);s.loader.exec_module(r)
 m=r.m;q=r.q;w=r.w;pd=r.pd;np=r.np;BASE=r.BASE
 OUT=BASE/'P76_GLM_prior_dos_fuentes_preflight_20261027'
 PLAN=R/'registro/semana2_GLM_prior_dos_fuentes_preflight_plan.json';INDEX=R/'registro/semana2_GLM_prior_dos_fuentes_preflight_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P76_PRIOR_DOS_FUENTES_PREFLIGHT.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P76_PRIOR_DOS_FUENTES_PREFLIGHT.md'
 SOURCE=BASE/'A1S_nucleo_20261026_v1/source_models'
 ANCHORS=None
 

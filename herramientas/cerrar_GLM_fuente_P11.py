@@ -38,7 +38,7 @@ def main():
              'con los grupos y criterios intactos. Los modelos pueden perder señal no lineal. B00/F3c/P6y '
              'alternativas permanecen,2024abierto adaptativo; no se afirma mejora privada.\n\n')
     note += 'Evidencia: '+w.rel(OUT/'report.json')+'; '+w.rel(OUT/'replay_report.json')+'.\n'
-    doc = R/'docs/semana2/PRIVADA_P11_GLM_FUENTE.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
+    doc = R/'docs/archivo/semana2/PRIVADA_P11_GLM_FUENTE.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md', 'DECISIONES.md']: w.append(ROOT/'Preparación'/name, note, cut)
     body = OUT/'forum_resultados.md'; body.write_text(note, encoding='utf8')
     result = subprocess.run([sys.executable, str(ROOT/'Hackaton/Semana 2/Foro/comentar.py'), '--autor', 'Codex',

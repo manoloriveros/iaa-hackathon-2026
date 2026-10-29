@@ -7,7 +7,7 @@ import json
 ROOT=Path(__file__).resolve().parents[3]
 REPO=ROOT/'Hackaton/Repositorio_IAA2026'
 RUN=REPO/'privado/semana2/desarrollo2023/b20_soporte_folds_20261024_v1'
-DOC=REPO/'docs/semana2/SOPORTE_B20_POR_FOLD_2023.md'
+DOC=REPO/'docs/archivo/semana2/SOPORTE_B20_POR_FOLD_2023.md'
 INDEX=REPO/'registro/semana2_b20_soporte_folds_actual.json'
 read=lambda p:json.loads(p.read_text(encoding='utf-8-sig'))
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
@@ -169,7 +169,7 @@ def main():
         '50.094periodos y30.869componentes completos, T0conservado; sin repetir suites de modelado/calibración o bootstrap. '
         'Ocho decisiones registradas. Cero ajuste/parámetro/inferencia/modelocargado/remuestreo/recetanueva/exclusión o relajación. '
         'B00/B01–B20 y contador195/285 exactos; puerta fallida, sin promoción o complejidad. '
-        'Informe docs/semana2/SOPORTE_B20_POR_FOLD_2023.md e índice registro/semana2_b20_soporte_folds_actual.json; corrida privada b20_soporte_folds_20261024_v1.\n\n'
+        'Informe docs/archivo/semana2/SOPORTE_B20_POR_FOLD_2023.md e índice registro/semana2_b20_soporte_folds_actual.json; corrida privada b20_soporte_folds_20261024_v1.\n\n'
         '2024/test/actas/scores/SEL01/ledger cerrados; exposición previa del título ajeno declarada sin uso/ceguera completa. '
         'Revisión propia, no profesional independiente. Memoria/estado/decisiones/rutas/continuidad actualizados; ventana/incidente/otrasautomatizaciones '
         'y cualquierunidadconcurrente preservados. No remoto, envío, delegación o mensajeexterno.\n')
@@ -181,7 +181,7 @@ def main():
         'ajusteexterior guardado solo contexto, soporteinternoOOF aún desconocido. No entrenar ni repetir diagnósticos. '
         'B00/B01–B20, contador195/285, 2024/test/ledger cerrados y ventana/programación conservados; balanceparcial.\n')
     for name in ['PLAN_NOCTURNO_20261023.md','BALANCE_NOCTURNO_PARCIAL_20261024.md']:
-        with (REPO/'docs/semana2'/name).open('a',encoding='utf-8',newline='') as f:f.write(update)
+        with (REPO/'docs/archivo/semana2'/name).open('a',encoding='utf-8',newline='') as f:f.write(update)
     body=('Resultado de '+p['forum_prior']+': soporte B20 porfold bajo umbrales intactos del diseño. 75celdas retenidas y15agrupadas inventariadas; '
         'puerta solo10colas edificios1/5 y2agrupadas. Fallan5/10celdas en4folds:banda1folds1,2,3,4 ybanda5fold4. '
         'Todas≥10positivos; fallan ambasconcentraciones (máximo50%/equivalente3). Mayor%/equivalente:62,62/2,30;55,38/2,91;91,82/1,18;71,39/1,87;66,75/2,17. '
@@ -191,7 +191,7 @@ def main():
         'Documentación adicional no borra incumplimientonumérico. No umbralesrelajados, costesrecortados, exclusiones, rebinning o entrenamientos.\n\n'
         '911comprobaciones específicas propias sinfallos con centavos/diccionarios y reglasracionales; 50094periodos/30869componentes/T0conservados. '
         'Ocho decisiones; cero parámetro/fit/inferencia/modelocargado/bootstrap/recetanueva. B00/B01–B20 y195/285intactos. '
-        'Informe docs/semana2/SOPORTE_B20_POR_FOLD_2023.md; índice registro/semana2_b20_soporte_folds_actual.json. '
+        'Informe docs/archivo/semana2/SOPORTE_B20_POR_FOLD_2023.md; índice registro/semana2_b20_soporte_folds_actual.json. '
         '2024/test/actas/scores/SEL01/ledgercerrados; exposiciónprevia de títuloexterno declarada sinuso/cegueracompleta; revisiónpropia sinindependenciaprofesional. '
         'Continuidad actualizada con puerta fallida, sin permisooperativo para entrenar; ventana/incidente/otrasautomatizaciones y unidadconcurrente preservados.\n')
     (REPO/'registro'/(p['forum_result']+'_cuerpo.md')).write_text(body,encoding='utf-8')

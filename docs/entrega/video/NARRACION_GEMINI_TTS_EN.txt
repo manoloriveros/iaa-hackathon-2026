@@ -1,0 +1,27 @@
+I'm Manuel Rodríguez. I estimated risk premiums for motor, buildings and contents insurance in two markets. I used Claude and Codex to explore methods, support the coding and challenge results. I remained responsible for making and explaining the decisions.
+
+In the market with four years of history, I chose an ensemble by cause of loss. One component predicts total claims cost using decision trees and a Tweedie distribution, accommodating zeros and positive costs. Another estimates how often claims occur and how much they cost.
+
+I combined them by line of business because no single model dominated: fire and water damage involve different mechanisms. This captures interactions between variables while explaining risk through frequency and severity. The ensemble's D squared score was zero point one three eight, against zero point zero seven one for a constant rate by line. The calibrated submission scored zero point one three eight six four in the private evaluation, placing fourth among fifty-four teams. During week one, our submissions also topped the public leaderboard.
+
+The second market had only two years of data. New business represented fourteen percent of historical policy periods, but seventy-six percent in twenty twenty-five. Training from scratch could confuse sparse experience with differences in risk.
+
+I chose to transfer relationships learned in the market with more history, using common variables. I combined the transferred predictions and added local adjustments for claims history and market-specific variables. I limited their credibility where information was sparse. In the historical comparison for twenty twenty-three, transfer learning scored zero point one two one, against zero point zero eight three for the best model trained only on local data.
+
+AI helped write checks and challenge hypotheses. We corrected identifiers missing leading zeros, exposures recorded under different conventions, and sums insured that were out of scale.
+
+We also questioned unusually predictive variables. Customer service contacts could reveal claims from the period being priced, so I excluded them. Every correction was recorded and checked. The workflow also caught a calibration factor squared by mistake and corrected it before submission. AI's value lay in both building and challenging the calculations.
+
+To assess changes, I split the data by year and grouped linked customers and addresses. In the revised historical comparison, reporting completeness, category encodings, trees and adjustments were learned without evaluation data. We deliberately altered the held-out data and checked that the relevant models remained unchanged.
+
+We compared models with and without additional factors, removed influential groups, and tested fifty scenarios for reserves and reporting delays. The overall difference stayed positive, with source models and reporting curves fixed. There were adverse findings: the observed cost of late-reported bodily injury claims exceeded projections. These time splits also informed selection, limiting my conclusions.
+
+A safeguard is a condition set before accepting a change. I required that overall gains should not conceal material deterioration for new business, considering the uncertainty interval.
+
+Transfer learning improved performance overall, but did not establish that protection. After seeing the result, I relaxed the rule, accepting a non-negative point estimate of the improvement without requiring the interval to meet the original lower bound. Waiving that requirement allowed us to proceed by exception; the risk remained. Gains from locally estimated factors were also concentrated in renewals, without establishing stability for new business. I retained the submission on that exploratory basis.
+
+I distinguished model development from final calibration. I used controlled test submissions to adjust the level and spread of predictions. The leaderboard feedback also influenced some model changes. So zero point one six nine one four is a public score shaped by those decisions; on its own, it does not establish generalisation.
+
+I converted predictions for twenty reference policies into office premiums using the supplied expenses. I applied a fixed expense of eighty-five currency units per policy, without prorating it. The total was twenty thousand eight hundred point zero two currency units. The eight percent profit margin is an assumption, not a guarantee of adequate pricing.
+
+AI also helped build dashboards and prepare translations and presentations. It broadened what I could analyse and communicate. The evidence shows an overall improvement, with limitations around new business, reserves, and whether data were available at the time of pricing.

@@ -19,7 +19,7 @@ SOURCE=BASE/'P29_fuente_frecuencia_completa_20261026'
 OUT=BASE/'P108_pares_fuente_historicos_20261027'
 PLAN=R/'registro/semana2_pares_fuente_historicos_plan.json'
 INDEX=R/'registro/semana2_pares_fuente_historicos_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P108_PARES_FUENTE_HISTORICOS.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P108_PARES_FUENTE_HISTORICOS.md'
 dump=p107.dump;utc=p107.utc
 
 

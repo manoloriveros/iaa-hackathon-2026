@@ -10,7 +10,7 @@ REPO = ROOT / 'Hackaton/Repositorio_IAA2026'
 ID = 'S2-B20-DISENO-CONTRASTE2023-v1-20261024'
 RUN = REPO / 'privado/semana2/desarrollo2023/b20_diseno_contraste_20261024_v1'
 PLAN = REPO / 'registro/semana2_b20_contraste_minimo_diseno_v1.json'
-DOC = REPO / 'docs/semana2/DISENO_CONTRASTE_MINIMO_B20_2023.md'
+DOC = REPO / 'docs/archivo/semana2/DISENO_CONTRASTE_MINIMO_B20_2023.md'
 PRE, RESULT = 'COD-S2-20261024-B20-DESIGN-PRE', 'COD-S2-20261024-B20-DESIGN-RESULT'
 read = lambda p: json.loads(p.read_text(encoding='utf-8-sig'))
 sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()

@@ -100,7 +100,7 @@ def main():
              'B00, F3c, P6 y todas las alternativas/fallos permanecen; 2024 sigue abierto adaptativo y la privada '
              'continúa como prioridad. No se acredita mejora privada, promoción o validación profesional independiente.\n\n')
     note += f'Evidencia: {w.rel(OUT/"report.json")}; {w.rel(OUT/"replay_report.json")}; {w.rel(OUT/"preflight.json")}.\n'
-    doc = R/'docs/semana2/PRIVADA_P7_VENTANA_REPORTE_MADURA.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
+    doc = R/'docs/archivo/semana2/PRIVADA_P7_VENTANA_REPORTE_MADURA.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md', 'DECISIONES.md']: w.append(ROOT/'Preparación'/name, note, archive)
     body = OUT/'forum_resultados.md'; body.write_text(note, encoding='utf8')
     result = subprocess.run([sys.executable, str(ROOT/'Hackaton/Semana 2/Foro/comentar.py'), '--autor', 'Codex',
@@ -143,7 +143,7 @@ def main():
                'Se mantienen marcas finales comunes, límites de referencia y bootstrap condicional. '
                'No hubo modelos/precios competitivos o envíos nuevos. P6no cambia. La siguiente revisión se centra en variables y normalización de las bases. '
                '[InformeP7](PRIVADA_P7_VENTANA_REPORTE_MADURA.md).\n')
-    w.append(R/'docs/semana2/MISION_PRIVADA_PRIORIDAD_Y_PLAN.md', summary, archive)
+    w.append(R/'docs/archivo/semana2/MISION_PRIVADA_PRIORIDAD_Y_PLAN.md', summary, archive)
     (OUT/'completion_receipt.json').write_text(json.dumps(receipt, ensure_ascii=False, indent=2), encoding='utf8')
     print(json.dumps({'status': receipt['status'], 'forum': receipt['forum'], 'new_submissions': 0,
                       'source_tail_prior_adopted': False, 'P6_unchanged': True}))

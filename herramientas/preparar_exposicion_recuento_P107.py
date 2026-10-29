@@ -21,7 +21,7 @@ COUNTS = previous.OUT
 OLD = BASE/'entradas_temporales_v1'
 PLAN = R/'registro/semana2_exposicion_recuento_plan.json'
 INDEX = R/'registro/semana2_exposicion_recuento_actual.json'
-DOC = R/'docs/semana2/PRIVADA_P107_EXPOSICION_RECUENTO.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P107_EXPOSICION_RECUENTO.md'
 CUT = pd.Timestamp('2024-12-31')
 PERILS = {'motor': ['own_damage', 'third_party_prop', 'bodily_injury', 'theft', 'glass_hail'],
     'buildings': ['storm', 'flood', 'escape_of_water', 'subsidence', 'fire', 'accidental_damage'],

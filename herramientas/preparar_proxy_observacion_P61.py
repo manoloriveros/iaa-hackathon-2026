@@ -14,7 +14,7 @@ k=v.k;m=v.m;q=m.q;w=m.w;np=m.np;pd=m.pd;BASE=m.BASE
 RAW=BASE/'P59_crossfit_preflight_20261027';REPORTING=m.REPORTING;SCENARIO=v.SCENARIO
 OUT=BASE/'P61_proxy_observacion_20261027'
 PLAN=R/'registro/semana2_proxy_observacion_preflight_plan.json';INDEX=R/'registro/semana2_proxy_observacion_preflight_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P61_PROXY_FSP_OBSERVACION.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P61_PROXY_FSP_OBSERVACION.md'
 CASES=['NOMINAL','RESERVE075','RESERVE125','TAIL005','TAIL010']
 
 

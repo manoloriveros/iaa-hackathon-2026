@@ -15,7 +15,7 @@ rating=k.k.k
 m=h.m;q=h.q;w=h.w;pd=h.pd;np=h.np;BASE=h.BASE
 OUT=BASE/'P90_validacion_boosting_prior_20261027'
 PLAN=R/'registro/semana2_boosting_prior_validacion_plan.json';INDEX=R/'registro/semana2_boosting_prior_validacion_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P90_VALIDACION_BOOSTING_PRIOR.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P90_VALIDACION_BOOSTING_PRIOR.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

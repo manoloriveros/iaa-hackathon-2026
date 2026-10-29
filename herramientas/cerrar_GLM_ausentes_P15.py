@@ -89,7 +89,7 @@ def main():
              'es adaptativo; el ESS2025sigue insuficiente. No se acredita mejora privada, promoción '
              'formal o validación profesional independiente.\n\n')
     note += 'Evidencia: '+w.rel(OUT/'context_report.json')+'; '+w.rel(OUT/'report.json')+'; '+w.rel(OUT/'P15_replay_context.json')+'.\n'
-    doc = R/'docs/semana2/PRIVADA_P15_VALIDACION_AUSENTES.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
+    doc = R/'docs/archivo/semana2/PRIVADA_P15_VALIDACION_AUSENTES.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md', 'DECISIONES.md']: w.append(ROOT/'Preparación'/name, note, cut)
     body = OUT/'forum_resultados.md'; body.write_text(note, encoding='utf8')
     result = subprocess.run([sys.executable, str(ROOT/'Hackaton/Semana 2/Foro/comentar.py'), '--autor', 'Codex',

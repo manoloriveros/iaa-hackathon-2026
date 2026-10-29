@@ -4,7 +4,7 @@ from datetime import datetime,timezone
 import hashlib,json,os,re,subprocess,sys
 ROOT=Path(__file__).resolve().parents[3];REPO=ROOT/'Hackaton/Repositorio_IAA2026'
 RUN=REPO/'privado/semana2/revision_F02_2023/f02_20261024_v1'
-DOC=REPO/'docs/semana2/F02_SEMANTICA_Y_DISPONIBILIDAD_2023.md'
+DOC=REPO/'docs/archivo/semana2/F02_SEMANTICA_Y_DISPONIBILIDAD_2023.md'
 INDEX=REPO/'registro/semana2_F02_disponibilidad2023_actual.json'
 SOURCEINDEX=REPO/'registro/semana2_b20_fuentes2023_actual.json'
 IDENT='S2-F02-DISPONIBILIDAD2023-v1-20261024';STATEKEY='week_2_F02_temporal_availability2023_v1_20261024'
@@ -75,7 +75,7 @@ def main():
     assert {x['name'] for x in temporal_columns}=={'period_start','period_end'}
     review={'id':IDENT,'author':'Codex','utc':now(),'scope':'F02 semantic/temporal review for proposed2023 use; schema and documents only, no row values or diagnostics.','fields':fields,'explicit_quote_field_in_policy_schema':False,'field_capture_or_version_timestamp_in_policy_schema':False,'typed_temporal_fields':temporal_columns,'quote_date_proxy':'period_start - days_quote_to_inception; convention, not per-field capture evidence','static_code_review':'make_features copies row inputs; no per-field as-of join or capture-time check for these six fields. Constructor/run not executed.','prior_role_is_not_temporal_proof':True,'current_B20_includes_any_of_six':False,'future_default_decision':'No new prospective admission inferred from F0. Five defined fields remain conditional; days_unoccupied on hold until measurement window and temporal provenance clarified.','conditional_row_prediction_is_not_prospective_quote_backtest':True,'existing_feature_contract_modified':False,'old_models_retrained_or_discarded':False,'G1_closed':False,'G2_closed':False,'independent_components_added':0,'new_fits':0,'new_predictions':0,'new_scores':0,'new_numerical_diagnostics':0,'row_values_read':0,'2024_test_rows_read':0,'reference':'W2-B00','all_alternatives_preserved':True,'2024_model_validation_opened':False,'night_window_reopened':False,'professional_independent_validation':False}
     dump(RUN/'temporal_availability_review.json',review)
-    paths=[AV,CODE,RECIPE,REPO/'docs/semana2/VARIABLES_Y_ULTIMO.md',ROOT/'Hackaton/Semana 2/Codex/fuentes_variables_ultimo/data_description_response.json',SOURCEINDEX,REPO/'registro/semana2_contenido_oficial_actual.json',REPO/'registro/semana2_desarrollo2023_actual.json',REPO/'registro/semana2_contadores_propios_actual.json',REPO/'registro/semana2_continuidad_nocturna.json']
+    paths=[AV,CODE,RECIPE,REPO/'docs/archivo/semana2/VARIABLES_Y_ULTIMO.md',ROOT/'Hackaton/Semana 2/Codex/fuentes_variables_ultimo/data_description_response.json',SOURCEINDEX,REPO/'registro/semana2_contenido_oficial_actual.json',REPO/'registro/semana2_desarrollo2023_actual.json',REPO/'registro/semana2_contadores_propios_actual.json',REPO/'registro/semana2_continuidad_nocturna.json']
     sources=[]
     for i,p in enumerate(paths):
         q=RUN/'sources'/f'{i:02d}_{p.name}';q.parent.mkdir(exist_ok=True)

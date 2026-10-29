@@ -31,7 +31,7 @@ NEGRITA_INICIAL = re.compile(r"(?m)^\s*(?:[-*]|\d+\.)?\s*\*\*[^*\n]+\*\*\s*[:.]|
 CLICHES = re.compile(r"(?i)en el acelerado mundo|en la era digital|es importante destacar|vale la pena considerar|¿la trampa\?|¿el truco\?|"
                      r"pero aquí está el detalle|in today's fast-paced|in the digital age|it is important to note|it's worth noting|"
                      r"here's the catch|the catch\?")
-TEXTOS = ["README.md", "README.es.md", "docs/GUIA_TECNICA.md", "docs/entrega/README.md", "docs/entrega/AI_WORKFLOW_EN.md",
+TEXTOS = ["README.md", "README.es.md", "docs/archivo/semana1/GUIA_TECNICA.md", "docs/entrega/README.md", "docs/entrega/AI_WORKFLOW_EN.md",
           "docs/entrega/USO_DE_IA_ES.md", "docs/entrega/informe/INFORME_EN.md", "docs/entrega/informe/INFORME_ES.md",
           "docs/entrega/video/GUION_VIDEO_EN.md", "docs/entrega/video/GUION_VIDEO_ES.md", "docs/expediente/README.md"]
 PLANTILLAS = ["docs/entrega/web/laminas_plantilla.html", "docs/entrega/web/panel_plantilla.html", "docs/entrega/web/diagramas.js",

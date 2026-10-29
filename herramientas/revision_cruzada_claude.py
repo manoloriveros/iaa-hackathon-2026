@@ -1,4 +1,4 @@
-"""Revisión cruzada de Claude sobre el dictamen de Codex (docs/REVISION_DESDE_EL_PARTICIPANTE.md), 19-10-2026.
+"""Revisión cruzada de Claude sobre el dictamen de Codex (docs/archivo/semana1/REVISION_DESDE_EL_PARTICIPANTE.md), 19-10-2026.
 
 Solo lee archivos existentes y calcula agregados: no entrena, no infiere, no mezcla y no envía nada.
 Escribe registro/revision_cruzada_claude_20261019.json sin datos por fila.

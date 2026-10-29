@@ -72,7 +72,7 @@ def main():
              'de precio. Cero fits, C0, inferencias nuevas, vectores predictivos o envíos. B00/F3c/P6y '
              'todos los adversos permanecen;2024abierto adaptativo, prioridad privada activa.\n\n')
     note += 'Evidencia: '+w.rel(OUT/'report.json')+'; '+w.rel(OUT/'replay_report.json')+'; '+w.rel(OUT/'bounded_missing_indicator_review.json')+'.\n'
-    doc = R/'docs/semana2/PRIVADA_P13_NIVEL_ASIGNACION_AUSENTES.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
+    doc = R/'docs/archivo/semana2/PRIVADA_P13_NIVEL_ASIGNACION_AUSENTES.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md', 'DECISIONES.md']: w.append(ROOT/'Preparación'/name, note, cut)
     body = OUT/'forum_resultados.md'; body.write_text(note, encoding='utf8')
     result = subprocess.run([sys.executable, str(ROOT/'Hackaton/Semana 2/Foro/comentar.py'), '--autor', 'Codex',

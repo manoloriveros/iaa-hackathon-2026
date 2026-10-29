@@ -16,7 +16,7 @@ MAP=BASE/'P78_formas_riesgo_20261027/report.json'
 ANCHORS=BASE/'P76_GLM_prior_dos_fuentes_preflight_20261027/source_anchors.json'
 OUT=BASE/'P86_prior_y_selector_20261027'
 PLAN=R/'registro/semana2_prior_selector_revision_plan.json';INDEX=R/'registro/semana2_prior_selector_revision_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P86_PRIOR_Y_SELECTOR.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P86_PRIOR_Y_SELECTOR.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

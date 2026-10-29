@@ -1,8 +1,10 @@
 # Cierre de F3c-R: conservar F3c
 
+Elegí conservar F3c después de revisar la comparación con la alternativa regularizada. Guardo el experimento completo y sus resultados adversos para explicar esa decisión, junto con la autoría técnica de sus comprobaciones.
+
 Autor: Codex. Cierre del 28 de octubre de 2026, hora de Bogotá.
 
-Terminaron los 26 ámbitos fuente, la calibración y la comparación registrada. F3c-R no aporta evidencia suficiente para sustituir F3c pensando en el privado. Conservamos ambos modelos, R1 y B00, sin producir otro CSV ni gastar un envío.
+Terminaron los 26 ámbitos fuente, la calibración y la comparación registrada. F3c-R no aporta evidencia suficiente para sustituir F3c pensando en el privado. Conservo ambos modelos, R1 y B00, sin producir otro CSV ni gastar un envío.
 
 ## Qué encontró la comparación
 
@@ -18,7 +20,7 @@ El agregado de negocio nuevo mejora, pero la mejora no se distribuye de forma es
 
 La diferencia global frente a F3c es −0,000144. Su intervalo simultáneo condicional de familia 20 va de −0,006320 a +0,005783. El intervalo del 95 % de negocio nuevo también incluye pérdidas (−0,010009 a +0,022905). Por tanto, la mejora puntual de ese agregado no justifica reemplazar el modelo actual.
 
-Los 10.000 remuestreos por grupos, los 50 escenarios con precios fijos y las cinco omisiones completas de folds quedaron guardados. Al retirar los 37 grupos más favorables, la diferencia global frente a F3c cae a −0,003676. Ninguna de las cinco omisiones satisface conjuntamente las condiciones de estabilidad frente a F3c original. Se conservan todos los resultados; no se elige el mejor fold ni un segmento ganador después de observarlos.
+Los 10.000 remuestreos por grupos, los 50 escenarios con precios fijos y las cinco omisiones completas de folds quedaron guardados. Al retirar los 37 grupos más favorables, la diferencia global frente a F3c cae a −0,003676. Ninguna de las cinco omisiones satisface conjuntamente las condiciones de estabilidad frente a F3c original. Conservo todos los resultados; no se elige el mejor fold ni un segmento ganador después de observarlos.
 
 ## Qué quedó comprobado
 
@@ -34,4 +36,4 @@ Se cierra esta comparación y se conserva F3c como modelo actual. F3c-R queda co
 
 Siguen presentes el soporte escaso de edificios nuevos con exposición larga, las normalizaciones por lote, la historia adaptativa de A_M1 y la incertidumbre de cola y reservas. Una investigación posterior tendría que explicar el deterioro en renovaciones, contenidos nuevos y cola antes de registrar otra receta. Este resultado no autoriza escoger mezclas o segmentos a posteriori ni garantiza el desempeño privado de F3c.
 
-El [informe de resultados](F3C_REGULARIZADO_RESULTADOS_20261028.md) conserva las tablas completas y los criterios originales. El índice `registro/semana2_F3c_regularizado_actual.json` enlaza los recibos de `privado/semana2/F3c_regularizado_20261028/closeout/`, fuera de Git. El código de cotejo es `herramientas/verificar_cierre_F3c_regularizado.py`; no ajusta modelos ni genera inferencias.
+El [informe de resultados](../archivo/semana2/F3C_REGULARIZADO_RESULTADOS_20261028.md) conserva las tablas completas y los criterios originales. El índice `registro/semana2_F3c_regularizado_actual.json` enlaza los recibos de `privado/semana2/F3c_regularizado_20261028/closeout/`, fuera de Git. El código de cotejo es `herramientas/verificar_cierre_F3c_regularizado.py`; no ajusta modelos ni genera inferencias.

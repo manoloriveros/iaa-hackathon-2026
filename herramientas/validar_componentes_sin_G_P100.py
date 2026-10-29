@@ -12,7 +12,7 @@ k=importlib.util.module_from_spec(s);s.loader.exec_module(k)
 h=k.h;v=h.v;m=h.m;q=h.q;w=h.w;np=h.np;pd=h.pd;BASE=h.BASE
 OUT=BASE/'P100_validacion_componentes_sin_G_20261027'
 PLAN=R/'registro/semana2_componentes_sin_G_validacion_plan.json';INDEX=R/'registro/semana2_componentes_sin_G_validacion_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P100_VALIDACION_COMPONENTES_SIN_G.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P100_VALIDACION_COMPONENTES_SIN_G.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

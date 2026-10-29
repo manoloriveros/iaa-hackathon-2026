@@ -14,7 +14,7 @@ BASE = R/'privado/semana2/mision017_fase2'; HOME = BASE/'A1S_nucleo_20261026_v1'
 OUT = BASE/'P34_soporte_peso_negocio_20261026'
 PLAN = R/'registro/semana2_peso_negocio_fuente_privada_plan.json'
 INDEX = R/'registro/semana2_peso_negocio_fuente_privada_actual.json'
-DOC = R/'docs/semana2/PRIVADA_P34_SOPORTE_PESO_NEGOCIO.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P34_SOPORTE_PESO_NEGOCIO.md'
 sys.path.insert(0, str(ROOT/'Preparación/.cache/parquet-reader'))
 import numpy as np
 import pandas as pd

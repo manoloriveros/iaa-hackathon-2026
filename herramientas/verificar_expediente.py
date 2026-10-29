@@ -55,7 +55,7 @@ def main():
     ck("Sin aprobación humana inventada",leer(REPO/"registro/revision_humana.json")["estado"]=="pendiente")
     pdf=leer(REPO/"registro/verificacion_pdf.json")
     ck("Informe dentro del límite de cinco páginas",1 <= pdf["paginas"] <= 5)
-    ck("PDF corresponde al informe actual",pdf["fuente_sha256"]==sha(REPO/"docs/INFORME_SEMANA1.md") and pdf["pdf_sha256"]==sha(REPO/"docs/informe_semana1.pdf"))
+    ck("PDF corresponde al informe actual",pdf["fuente_sha256"]==sha(REPO/"docs/archivo/semana1/INFORME_SEMANA1.md") and pdf["pdf_sha256"]==sha(REPO/"docs/informe_semana1.pdf"))
     tracked=subprocess.check_output(["git","ls-files","-z","--cached"],cwd=REPO).decode("utf-8").split("\0")
     secret_patterns=[r"gh[pousr]_[A-Za-z0-9]{30,}",r"github_pat_[A-Za-z0-9_]{30,}",r"sk-[A-Za-z0-9_-]{24,}",r"AKIA[0-9A-Z]{16}",r"-----BEGIN (?:RSA |OPENSSH )?PRIVATE KEY-----"]
     forbidden=[];secrets=[]

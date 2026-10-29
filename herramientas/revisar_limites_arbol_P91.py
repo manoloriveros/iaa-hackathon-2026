@@ -13,7 +13,7 @@ m=k.m;q=k.q;w=k.w;np=k.np;BASE=k.BASE
 SOURCE=BASE/'P90_validacion_boosting_prior_20261027';GLM=BASE/'P88_validacion_prior_calibrado_20261027'
 OUT=BASE/'P91_limites_arbol_guardado_20261027'
 PLAN=R/'registro/semana2_limites_arbol_guardado_revision_plan.json';INDEX=R/'registro/semana2_limites_arbol_guardado_revision_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P91_LIMITES_ARBOL_GUARDADO.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P91_LIMITES_ARBOL_GUARDADO.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

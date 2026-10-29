@@ -11,7 +11,7 @@ import sys
 ROOT = Path('C:/dev/Hakaton'); R = ROOT/'Hackaton/Repositorio_IAA2026'; BASE = R/'privado/semana2/mision017_fase2'
 PARENT = BASE/'P48_validacion_pareada_20261026'; OUT = BASE/'P49_atribucion_pareada_20261027'
 PLAN = R/'registro/semana2_atribucion_pareada_privada_plan.json'; INDEX = R/'registro/semana2_atribucion_pareada_privada_actual.json'
-DOC = R/'docs/semana2/PRIVADA_P49_NIVEL_Y_ASIGNACION_PAREADA.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P49_NIVEL_Y_ASIGNACION_PAREADA.md'
 sp = importlib.util.spec_from_file_location('p49_writer', R/'herramientas/registrar_avance_mision017_fase2.py')
 w = importlib.util.module_from_spec(sp); sp.loader.exec_module(w)
 sys.path.insert(0, str(ROOT/'Preparación/.cache/parquet-reader'))

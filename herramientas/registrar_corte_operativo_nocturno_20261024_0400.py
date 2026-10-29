@@ -5,7 +5,7 @@ import hashlib,json,os,re,subprocess,sys
 ROOT=Path(__file__).resolve().parents[3];REPO=ROOT/'Hackaton/Repositorio_IAA2026'
 RUN=REPO/'privado/semana2/desarrollo2023/corte_operativo_nocturno_20261024T0400Z_v1'
 INDEX=REPO/'registro/semana2_corte_nocturno0400_actual.json'
-DOC=REPO/'docs/semana2/CORTE_NOCTURNO_20261024_0400.md'
+DOC=REPO/'docs/archivo/semana2/CORTE_NOCTURNO_20261024_0400.md'
 NIGHT=REPO/'registro/semana2_continuidad_nocturna.json'
 IDENT='S2-CORTE-OPERATIVO-NOCHE2023-0400-v1-20261024'
 STATEKEY='week_2_night_operational0400_20261024'
@@ -126,7 +126,7 @@ Esta continuación tenía texto obsoleto sobre B12/B13 e incidenciaHOST. Se actu
 
 2024/test/SEL01/actas/ledgercerrados aquí,exposición previa de asunto externo declarada sin usar métricas o afirmar ceguera completa. Revisión propia exploratoria, no profesional independiente o aprobación humana. Fuentes/versiones fallidas/concurrencia preservadas; ventana intacta.\n'''
     for name in ['MEMORIA_PROYECTO.md','DECISIONES.md']:change(ROOT/('Preparaci'+chr(243)+'n')/name,lambda raw:raw+section)
-    change(REPO/'docs/semana2/PLAN_NOCTURNO_20261023.md',lambda raw:raw+f"\n\n## Corte operativo0400 y texto de continuidad actualizado\n\nCodex,{now()}. [Corte operativo](CORTE_NOCTURNO_20261024_0400.md),foro049. Se concilia preflight C0 sin repetirlo: uso exterior original válido en su alcance,20reutilizaciones internas incompatibles; invariancia numérica completa ausente. G1/G2no resueltas. Solo prompt de esta continuación actualizado, con mismo chat/frecuencia/cierre07:00Bogotá y estado. Ningún ajuste,score,C0 o suite nuevo. Ante fuentes iguales no fabricar ciclos documentales: monitor y balance final. B00/alternativas conservados,2024cerrado,otras automatizaciones sin cambios propios.\n")
+    change(REPO/'docs/archivo/semana2/PLAN_NOCTURNO_20261023.md',lambda raw:raw+f"\n\n## Corte operativo0400 y texto de continuidad actualizado\n\nCodex,{now()}. [Corte operativo](CORTE_NOCTURNO_20261024_0400.md),foro049. Se concilia preflight C0 sin repetirlo: uso exterior original válido en su alcance,20reutilizaciones internas incompatibles; invariancia numérica completa ausente. G1/G2no resueltas. Solo prompt de esta continuación actualizado, con mismo chat/frecuencia/cierre07:00Bogotá y estado. Ningún ajuste,score,C0 o suite nuevo. Ante fuentes iguales no fabricar ciclos documentales: monitor y balance final. B00/alternativas conservados,2024cerrado,otras automatizaciones sin cambios propios.\n")
     change(ROOT/'RUTAS_PROYECTO.json',lambda raw:top(top(raw,'week_2_night_operational_checkpoint_index',rel(INDEX)),'week_2_night_operational_checkpoint_report',rel(DOC)))
     before=read(RUN/'registration_cuts/before'/NIGHT.relative_to(ROOT));after=read(RUN/'registration_cuts/after'/NIGHT.relative_to(ROOT))
     checks={'source_snapshots_exact':all(sha(ROOT/x['snapshot'])==x['sha256'] for x in sources),'source_indices_untouched':all(sha(ROOT/x['path'])==x['sha256'] for x in sources),'previous_completions_preserved':after['completed_units'][:-1]==before['completed_units'],'current_unit_preserved':after.get('current_unit')==before.get('current_unit'),'own2024closed':after['confirmation_2024_open'] is False,'night_schedule_unchanged':after['window_end']==before['window_end'] and after['automation_target_thread']==before['automation_target_thread'],'automation_update_exact':auto['prompt_exact'] and auto['all_other_fields_preserved']}

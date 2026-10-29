@@ -19,7 +19,7 @@ import pandas as pd
 BASE=R/'privado/semana2/mision017_fase2';P1=BASE/'preflight_anidado_H1_20261026_v1'
 OUT=BASE/'P106_recuentos_destino_20261027'
 PLAN=R/'registro/semana2_recuentos_destino_plan.json';INDEX=R/'registro/semana2_recuentos_destino_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P106_RECUENTOS_DESTINO.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P106_RECUENTOS_DESTINO.md'
 TARGET=ROOT/w.read(ROOT/'RUTAS_PROYECTO.json')['week_2_prepared_targets']
 LINES=['motor','buildings','contents']
 

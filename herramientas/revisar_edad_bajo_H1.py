@@ -92,7 +92,7 @@ def main():
     note+='No se repite la suite sintética del optimizador sin cambios; se verifica la conexión nueva.\n\n'
     note+='B00, F3c 0,16914, PUL2 y todos los resultados adversos permanecen.2024 abierto, cero envíos/cupos consumidos, meta 0,17 activa. '
     note+='Evidencia: '+w.rel(OUT/'report.json')+'; propuesta: '+w.rel(pp)+'.\n'
-    doc=R/'docs/semana2/MISION017_EDAD_H1_CAMBIO_ENLACE.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
+    doc=R/'docs/archivo/semana2/MISION017_EDAD_H1_CAMBIO_ENLACE.md';assert not doc.exists();doc.write_text(note,encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md','DECISIONES.md']:w.append(ROOT/'Preparación'/name,note,archive)
     body=OUT/'forum_hallazgos.md';body.write_text(note,encoding='utf8')
     response=subprocess.run([sys.executable,str(ROOT/'Hackaton/Semana 2/Foro/comentar.py'),'--autor','Codex',

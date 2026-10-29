@@ -12,7 +12,7 @@ k=importlib.util.module_from_spec(s);s.loader.exec_module(k)
 p=k.p;h=p.p.h;v=h.v;m=k.m;q=k.q;w=k.w;pd=k.pd;np=k.np;BASE=k.BASE
 OUT=BASE/'P105_validacion_selector_mezcla_20261027'
 PLAN=R/'registro/semana2_selector_mezcla_validacion_plan.json';INDEX=R/'registro/semana2_selector_mezcla_validacion_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P105_VALIDACION_SELECTOR_MEZCLA.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P105_VALIDACION_SELECTOR_MEZCLA.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

@@ -102,7 +102,7 @@ Se auditaron 50.094 periodos, 30.869 componentes, 150 celdas de denominadores y 
 
 Antecedente: [calendario y soporte](SOPORTE_CALENDARIO_REPORTE_2023.md). [Balance parcial de la noche](BALANCE_NOCTURNO_PARCIAL_20261024.md). La revisión aplica las prioridades de propósito/límites, segmentos y trazabilidad de las prácticas IAA del proyecto sin convertir documentación o controles propios en certificación.
 '''
-    docpath=REPO/'docs/semana2/COBERTURAS_Y_DENOMINADORES_PERIL_2023.md';assert not docpath.exists();docpath.write_text(doc,encoding='utf-8')
+    docpath=REPO/'docs/archivo/semana2/COBERTURAS_Y_DENOMINADORES_PERIL_2023.md';assert not docpath.exists();docpath.write_text(doc,encoding='utf-8')
     warnings=[{'id':'COV-HOME-POSITIVE-OUTSIDE','status':'open','effect':'30closed positive accidental_damage claims and29045.06CU outside flag-based home mask. Do not exclude exposure/claims or enforce structuralzero under currentT0.'},
         {'id':'COV-MOTOR-CONTRACT','status':'open','effect':'No observed motor claim outside conventional mask in2023 is necessary compatibility only, not complete contract mapping or future no-risk proof.'},
         {'id':'COV-NUMERATOR-DENOMINATOR','status':'open','effect':'Changing denominator alone with broad numerator is incoherent for home candidate; row-specific cost composition is not achieved by aggregate rate shrink/normalization.'},

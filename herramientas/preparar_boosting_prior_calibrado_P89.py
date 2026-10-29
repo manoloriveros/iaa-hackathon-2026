@@ -14,7 +14,7 @@ t=load('p89_fixed_native_tree_engine',R/'herramientas/preparar_boosting_residual
 m=k.m;q=k.q;w=k.w;pd=k.pd;np=k.np;BASE=k.BASE
 OUT=BASE/'P89_boosting_prior_preflight_20261027'
 PLAN=R/'registro/semana2_boosting_prior_preflight_plan.json';INDEX=R/'registro/semana2_boosting_prior_preflight_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P89_BOOSTING_PRIOR_PREFLIGHT.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P89_BOOSTING_PRIOR_PREFLIGHT.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

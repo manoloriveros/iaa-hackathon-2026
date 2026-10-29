@@ -13,7 +13,7 @@ k=importlib.util.module_from_spec(s);s.loader.exec_module(k)
 h=k.h;v=h.v;m=h.m;q=h.q;w=h.w;np=h.np;pd=h.pd;BASE=h.BASE
 OUT=BASE/'P102_validacion_centrado_fijo_20261027'
 PLAN=R/'registro/semana2_centrado_fijo_validacion_plan.json';INDEX=R/'registro/semana2_centrado_fijo_validacion_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P102_VALIDACION_CENTRADO_FIJO.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P102_VALIDACION_CENTRADO_FIJO.md'
 ORIGINAL_CENTERS=k.centers;CENTER_FOLDER=None;CENTER_BRANCH=None;CENTER_INDEX=0
 
 

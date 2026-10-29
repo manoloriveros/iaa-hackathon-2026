@@ -14,7 +14,7 @@ u=importlib.util.module_from_spec(s);s.loader.exec_module(u)
 t=u.t;g=u.g;k=u.k;m=u.m;q=u.q;w=u.w;np=u.np;pd=u.pd;BASE=u.BASE
 OUT=BASE/'P60_validacion_crossfit_GLM_20261027'
 PLAN=R/'registro/semana2_crossfit_GLM_validacion_plan.json';INDEX=R/'registro/semana2_crossfit_GLM_validacion_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P60_VALIDACION_CROSSFIT_GLM.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P60_VALIDACION_CROSSFIT_GLM.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

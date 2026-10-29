@@ -60,7 +60,7 @@ def main():
     note+='2024 permanece abierto y adaptativo. Falta el comparador histórico completo F3c; se mantienen las limitaciones de maestros sin fecha, reporte tardío, cola y reservas. '
     note+='Sin precios finales de 2025, envíos o cupos consumidos. Mejor público procesado 0,16914; meta 0,17 activa, sin promesa de éxito ni aprobación independiente.\n\n'
     note+='Evidencia: '+w.rel(OUT/'report.json')+'. Siguiente unidad: '+next_unit+'\n'
-    doc=R/'docs/semana2/MISION017_GLM_DISCREPANCIA_A1S_RESULTADO.md'
+    doc=R/'docs/archivo/semana2/MISION017_GLM_DISCREPANCIA_A1S_RESULTADO.md'
     assert not doc.exists();doc.write_text(note,encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md','DECISIONES.md']:w.append(ROOT/'Preparación'/name,note,archive)
     body=OUT/'forum_resultados.md';body.write_text(note,encoding='utf8')

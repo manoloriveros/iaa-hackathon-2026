@@ -13,7 +13,7 @@ p=a.p;v=p.v;k=a.k;m=a.m;q=a.q;w=a.w;pd=a.pd;np=a.np;BASE=a.BASE
 CONTROL=p.OUT
 OUT=BASE/'P80_validacion_formas_momento_20261027'
 PLAN=R/'registro/semana2_formas_momento_validacion_plan.json';INDEX=R/'registro/semana2_formas_momento_validacion_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P80_VALIDACION_FORMAS_MOMENTO.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P80_VALIDACION_FORMAS_MOMENTO.md'
 ORIGINAL_LEVEL_MATH=v.component_level_math
 
 

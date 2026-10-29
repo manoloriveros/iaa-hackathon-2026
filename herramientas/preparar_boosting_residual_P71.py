@@ -14,7 +14,7 @@ g=p.g;m=p.m;q=p.q;w=p.w;pd=p.pd;np=p.np;BASE=p.BASE
 import lightgbm as lgb
 OUT=BASE/'P71_boosting_residual_preflight_20261027'
 PLAN=R/'registro/semana2_boosting_residual_preflight_plan.json';INDEX=R/'registro/semana2_boosting_residual_preflight_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P71_BOOSTING_RESIDUAL_PREFLIGHT.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P71_BOOSTING_RESIDUAL_PREFLIGHT.md'
 ROUNDS=64
 PARAMS={'objective':'tweedie','tweedie_variance_power':1.5,'metric':'tweedie','boosting':'gbdt','learning_rate':.03,'num_leaves':7,'max_depth':3,
     'min_data_in_leaf':1000,'lambda_l2':10.,'max_delta_step':.1,'max_bin':63,'feature_fraction':1.,'bagging_fraction':1.,'bagging_freq':0,

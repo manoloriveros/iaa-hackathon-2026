@@ -21,7 +21,7 @@ from threadpoolctl import threadpool_limits
 OUT=BASE/'P109_Poisson_destino_preflight_20261027'
 PLAN=R/'registro/semana2_Poisson_destino_preflight_plan.json'
 INDEX=R/'registro/semana2_Poisson_destino_preflight_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P109_POISSON_DESTINO_PREFLIGHT.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P109_POISSON_DESTINO_PREFLIGHT.md'
 P64=BASE/'P64_reporte_por_ramo_preflight_20261027'
 PARAMS={'fit_intercept':True,'solver':'lbfgs','max_iter':3000,'tol':1e-7,'warm_start':False}
 ALPHA=.001

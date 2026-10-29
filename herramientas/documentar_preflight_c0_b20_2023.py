@@ -6,7 +6,7 @@ import json
 
 ROOT=Path(__file__).resolve().parents[3];REPO=ROOT/'Hackaton/Repositorio_IAA2026'
 RUN=REPO/'privado/semana2/desarrollo2023/b20_preflight_c0_20261024_v1'
-DOC=REPO/'docs/semana2/PREFLIGHT_C0_Y_AISLAMIENTO_B20_2023.md'
+DOC=REPO/'docs/archivo/semana2/PREFLIGHT_C0_Y_AISLAMIENTO_B20_2023.md'
 INDEX=REPO/'registro/semana2_b20_preflight_c0_actual.json'
 read=lambda p:json.loads(p.read_text(encoding='utf-8-sig'))
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
@@ -172,7 +172,7 @@ def main():
         'documentación/recursoscontados no borranconcentración. Nueve decisiones.\n\n'
         'B00/B01–B20 y195/285preservados;sinpromoción, umbralrelajado, exclusión, complejidad, entrenamiento/remoto/envío/delegación o mensajeexterno. '
         '2024/test/actas/scores/SEL01/ledgercerrados, exposiciónprevia de títuloajeno declarada sinuso/cegueracompleta, revisiónpropia sinindependenciaprofesional. '
-        'Informe docs/semana2/PREFLIGHT_C0_Y_AISLAMIENTO_B20_2023.md e índice registro/semana2_b20_preflight_c0_actual.json; corrida privada b20_preflight_c0_20261024_v1. '
+        'Informe docs/archivo/semana2/PREFLIGHT_C0_Y_AISLAMIENTO_B20_2023.md e índice registro/semana2_b20_preflight_c0_actual.json; corrida privada b20_preflight_c0_20261024_v1. '
         'Memoria/estado/decisiones/rutas/continuidad actualizados; ventana/incidente/otrasautomatizaciones yunidadconcurrente respetados.\n')
     for name in ['MEMORIA_PROYECTO.md','DECISIONES.md']:
         with (ROOT/'Preparación'/name).open('a',encoding='utf-8',newline='') as f:f.write(note)
@@ -182,7 +182,7 @@ def main():
         'y la condición de soporte medida permanece fallida. Noentrenar o repetir suites;195/285, B00/alternativas,2024/test/ledgercerrados, '
         'ventana/programación/incidente intactos. Balance parcial.\n')
     for name in ['PLAN_NOCTURNO_20261023.md','BALANCE_NOCTURNO_PARCIAL_20261024.md']:
-        with (REPO/'docs/semana2'/name).open('a',encoding='utf-8',newline='') as f:f.write(update)
+        with (REPO/'docs/archivo/semana2'/name).open('a',encoding='utf-8',newline='') as f:f.write(update)
     body=('Resultado de '+p['forum_prior']+':66fuentes congeladas,384checks propios/14fixturesmetadatos sinfallos. '
         'CincoC0exteriores2023 concilian registros/pesos/modelosguardados y links-cachesB20, sin cruces grupo/cliente/dirección. '
         'No se declara fugaen usoexterior original. Todoslosancestros C0 deben aislarse: conteocurvas/pesos, marcas/costecurvas, frecuencia/denominador ymezcla.\n\n'
@@ -193,7 +193,7 @@ def main():
         'Implementado selector puro con clavescompuestas yfixtures; no C0numérico o pruebadepoisoning deobjetosaprendidos. '
         'Pendientes adaptadorestricto/paridad/grafocaché/flujo real/artefactos internos y presupuestoimplementado. Soporte sigueFALLIDO, '
         'sin entrenar, nueva C0/inferencia/precio, parámetros, umbralesrelajados o exclusión. B00/B01–B20,195/285,2024/test/actas/scores/SEL01/ledgercerrados intactos. '
-        'Informe docs/semana2/PREFLIGHT_C0_Y_AISLAMIENTO_B20_2023.md; índice registro/semana2_b20_preflight_c0_actual.json. '
+        'Informe docs/archivo/semana2/PREFLIGHT_C0_Y_AISLAMIENTO_B20_2023.md; índice registro/semana2_b20_preflight_c0_actual.json. '
         'Exposiciónprevia ajena sinuso/cegueracompleta, revisiónpropia noindependiente; ventana/incidente/otrasautomatizaciones/unidadconcurrente preservados.\n')
     (REPO/'registro'/(p['forum_result']+'_cuerpo.md')).write_text(body,encoding='utf-8')
     print(json.dumps({'document':rel(DOC),'index':rel(INDEX),'completed_units_at_cut':len(n['completed_units']),'passed':384,'support_gate':'failed','new_fits':0}))

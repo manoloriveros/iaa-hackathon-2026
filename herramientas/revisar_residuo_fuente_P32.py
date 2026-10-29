@@ -14,7 +14,7 @@ SOURCE = BASE/'P28_fuente_frecuencia_marca_20261026'
 OUT = BASE/'P32_adecuacion_condicional_fuente_20261026'
 PLAN = R/'registro/semana2_adecuacion_condicional_fuente_privada_plan.json'
 INDEX = R/'registro/semana2_adecuacion_condicional_fuente_privada_actual.json'
-DOC = R/'docs/semana2/PRIVADA_P32_ADECUACION_CONDICIONAL_FUENTE.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P32_ADECUACION_CONDICIONAL_FUENTE.md'
 sys.path.insert(0, str(ROOT/'Preparación/.cache/parquet-reader'))
 import numpy as np
 import pandas as pd

@@ -17,7 +17,7 @@ from semana2 import entradas_g4_2023 as core
 
 RUN = REPO / 'privado/semana2/entradas_g4_2023/ingreso_20261024_v1'
 PLAN = REPO / 'registro/semana2_g4_entradas2023_plan_v1.json'
-DOC = REPO / 'docs/semana2/G4_ADAPTADOR_Y_ENTRADAS_ESTRICTAS_2023.md'
+DOC = REPO / 'docs/archivo/semana2/G4_ADAPTADOR_Y_ENTRADAS_ESTRICTAS_2023.md'
 INDEX = REPO / 'registro/semana2_g4_entradas2023_actual.json'
 PRIORITY = REPO / 'registro/semana2_b20_prioridades_actual.json'
 SOURCE = REPO / 'registro/semana2_b20_fuentes2023_actual.json'

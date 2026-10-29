@@ -86,7 +86,7 @@ def main():
         'Evidencia principal: ' + w.rel(CV / 'report.json') + '; vetos: ' + w.rel(CV / 'additional_veto_points.json') +
         '; prototipo: ' + w.rel(PROTO / 'report.json') + '; compatibilidad: ' + w.rel(HISTORY / 'report.json') +
         '; número/marca: ' + w.rel(LINK / 'report.json') + '.\n\nSiguiente unidad: ' + next_unit + '\n')
-    doc = R / 'docs/semana2/MISION017_RFS1P_Y_PROTO2025.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
+    doc = R / 'docs/archivo/semana2/MISION017_RFS1P_Y_PROTO2025.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
     body = CV / 'forum_resultado_y_prototipo.md'; body.write_text(note, encoding='utf8')
     response = subprocess.run([sys.executable, str(ROOT / 'Hackaton/Semana 2/Foro/comentar.py'), '--autor', 'Codex',
         '--id', 'COD-S2-20261026-MISION017-RFS1P-PROTOTIPO-RESULTADO',
@@ -122,7 +122,7 @@ def main():
         'status': receipt['status'], 'production_consistency_and_prototype': receipt, 'next_unit': next_unit}, archive)
     for filename in ['MEMORIA_PROYECTO.md', 'DECISIONES.md']:
         w.append(ROOT / 'Preparación' / filename, note, archive)
-    w.append(R / 'docs/semana2/MISION017_RENOVACIONES_Y_RECUPERACION_FSp.md', note, archive)
+    w.append(R / 'docs/archivo/semana2/MISION017_RENOVACIONES_Y_RECUPERACION_FSp.md', note, archive)
     w.update(ROOT / 'RUTAS_PROYECTO.json', {'week_2_mission017_RFS1P_prototype_report': w.rel(doc),
         'week_2_mission017_unadmitted_FSp_prototype_CSV': p['CSV']['path']}, archive)
     (CV / 'completion_receipt.json').write_text(json.dumps(receipt, ensure_ascii=False, indent=2), encoding='utf8')

@@ -15,7 +15,7 @@ PARENT = BASE/'P15_validacion_ausentes_20261026'
 OUT = BASE/'P45_mezcla_fija_20261026'
 PLAN = R/'registro/semana2_mezcla_fija_privada_plan.json'
 INDEX = R/'registro/semana2_mezcla_fija_privada_actual.json'
-DOC = R/'docs/semana2/PRIVADA_P45_MEZCLA_FIJA.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P45_MEZCLA_FIJA.md'
 sp = importlib.util.spec_from_file_location('p45_saved_metrics', R/'herramientas/validar_canal_privada_P23.py')
 coh = importlib.util.module_from_spec(sp); sp.loader.exec_module(coh)
 e = coh.e; w = e.w; np = e.np; pd = e.pd

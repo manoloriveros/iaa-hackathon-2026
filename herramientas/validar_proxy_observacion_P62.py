@@ -12,7 +12,7 @@ u=importlib.util.module_from_spec(s);s.loader.exec_module(u)
 v=u.v;k=u.k;m=u.m;q=u.q;w=u.w;pd=u.pd;np=u.np;BASE=u.BASE
 OUT=BASE/'P62_validacion_proxy_observacion_20261027'
 PLAN=R/'registro/semana2_proxy_observacion_validacion_plan.json';INDEX=R/'registro/semana2_proxy_observacion_validacion_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P62_VALIDACION_PROXY_OBSERVACION.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P62_VALIDACION_PROXY_OBSERVACION.md'
 PROFILES={}
 
 

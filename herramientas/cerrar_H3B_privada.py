@@ -70,7 +70,7 @@ def main():
              'No se repetirán E13, T7, E27 ni diagnósticos terminados por cambiarles el nombre. '
              'B00, F3c y todas las alternativas se conservan; 2024 permanece abierto y la entrega H1 diferida.\n\n')
     note += f'Evidencia: {w.rel(OUT / "report.json")}; receta {w.rel(R / "registro/semana2_H3B_mezcla_negocio_plan_v1.json")}.\n'
-    doc = R / 'docs/semana2/PRIVADA_H3B_MEZCLA_POR_NEGOCIO.md'
+    doc = R / 'docs/archivo/semana2/PRIVADA_H3B_MEZCLA_POR_NEGOCIO.md'
     assert not doc.exists()
     doc.write_text(note, encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md', 'DECISIONES.md']:

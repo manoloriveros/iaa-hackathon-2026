@@ -63,7 +63,7 @@ def main():
         'B00, F2, C1 y alternativas se conservan.2024 sigue abierto como desarrollo adaptativo. '
         'El mejor recibo público procesado continúa en0,16519 y la meta0,17 sigue activa.\n\n'
         'Evidencia: ' + w.rel(OUT / 'validation_v1/report.json') + '.\n\nSiguiente unidad: ' + next_unit + '\n')
-    doc = R / 'docs/semana2/MISION017_FASE2_TANDA10_RESULTADOS.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
+    doc = R / 'docs/archivo/semana2/MISION017_FASE2_TANDA10_RESULTADOS.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
     body = OUT / 'forum_resultado.md'; body.write_text(note, encoding='utf8')
     response = subprocess.run([sys.executable, str(ROOT / 'Hackaton/Semana 2/Foro/comentar.py'), '--autor', 'Codex',
         '--id', 'COD-S2-20261025-MISION017-FASE2-TANDA10-RESULTADO', '--asunto',

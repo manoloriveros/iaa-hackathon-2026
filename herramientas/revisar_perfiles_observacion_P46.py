@@ -13,7 +13,7 @@ BASE = R/'privado/semana2/mision017_fase2'; HOME = BASE/'A1S_nucleo_20261026_v1'
 OUT = BASE/'P46_perfiles_observacion_20261026'
 PLAN = R/'registro/semana2_perfiles_observacion_privada_plan.json'
 INDEX = R/'registro/semana2_perfiles_observacion_privada_actual.json'
-DOC = R/'docs/semana2/PRIVADA_P46_PERFILES_Y_OBSERVACION.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P46_PERFILES_Y_OBSERVACION.md'
 sp = importlib.util.spec_from_file_location('p46_existing_pair_application', R/'herramientas/fuente_marca_capital_P43.py')
 p = importlib.util.module_from_spec(sp); sp.loader.exec_module(p)
 w = p.w; np = p.np; pd = p.pd

@@ -621,7 +621,7 @@ p.formula { text-align: center; font-size: 9.6pt; margin: 0.4mm 0 1.6mm; }
 </tr>
 </tbody>
 </table>
-<p>Puntuación pública de S41, esperada y devuelta: 0,130158 y 0,13016 (envío 57531719). Con la previa, los desvíos estandarizados al cuadrado de c* respecto de 1 suman 6,68 con 3 grados de libertad (p = 0,083): el tablero pide correcciones mayores de lo que admite τ, y S41 aplica solo la parte creíble. Entrega final (S41): 626.639 filas, SHA-256 d8661c2874e9112bd3dd62ea4470a465ee309832dee53fd9dcaa4144dac643a5, total 213,7 millones de CU; <code>herramientas/regenerar_s41.py</code> la reconstruye byte a byte desde el archivo de la mezcla y pasa los 10 controles de entrega (<code>docs/evidencia/entrega_final_S41.json</code>), y el paso de nivel repetido desde el reajuste y desde la réplica congelada dio el mismo SHA-256. Registros: <code>registro/sonda_nivel_D100_preinscripcion.json</code> (regla fijada antes de las sondas), <code>sonda_nivel_D100_resolucion.json</code>, <code>decision_marca_final_S41_20261023.json</code> (la selección) y <code>docs/SENSIBILIDAD_S43.md</code> (la batería de sensibilidad).</p>
+<p>Puntuación pública de S41, esperada y devuelta: 0,130158 y 0,13016 (envío 57531719). Con la previa, los desvíos estandarizados al cuadrado de c* respecto de 1 suman 6,68 con 3 grados de libertad (p = 0,083): el tablero pide correcciones mayores de lo que admite τ, y S41 aplica solo la parte creíble. Entrega final (S41): 626.639 filas, SHA-256 d8661c2874e9112bd3dd62ea4470a465ee309832dee53fd9dcaa4144dac643a5, total 213,7 millones de CU; <code>herramientas/regenerar_s41.py</code> la reconstruye byte a byte desde el archivo de la mezcla y pasa los 10 controles de entrega (<code>docs/evidencia/entrega_final_S41.json</code>), y el paso de nivel repetido desde el reajuste y desde la réplica congelada dio el mismo SHA-256. Registros: <code>registro/sonda_nivel_D100_preinscripcion.json</code> (regla fijada antes de las sondas), <code>sonda_nivel_D100_resolucion.json</code>, <code>decision_marca_final_S41_20261023.json</code> (la selección) y <code>docs/archivo/semana1/SENSIBILIDAD_S43.md</code> (la batería de sensibilidad).</p>
 <table>
 <thead>
 <tr>
@@ -702,7 +702,7 @@ p.formula { text-align: center; font-size: 9.6pt; margin: 0.4mm 0 1.6mm; }
 </tbody>
 </table>
 <p>El criterio se escribió antes de calcular, en la preinscripción de la batería del nivel: un ramo queda apoyado si al menos dos indicadores coinciden en signo con el ajuste y el ajuste no supera el mayor de ellos más la τ de D100; parcial con uno, o con dos o más y el tamaño fuera; sin apoyo con ninguno. La batería lo aplicó a la credibilidad revisada; esta tabla aplica la misma regla a los ajustes de S41, que tienen los mismos signos y son menores, y esa aplicación no se preinscribió. El indicador (c) supone que la siniestralidad de 2024, coste último estimado entre prima escrita, se mantiene en 2025: descansa en nuestras estimaciones de reservas y en un supuesto de tarificación, no en un coste observado. El diccionario de datos solo define el campo como la prima cobrada con la tarifa vigente, sin su unidad (hallazgo DATA-006, abierto): la batería divide la prima sumada entre la exposición (crecimientos de +2,71&nbsp;%, +5,35&nbsp;% y +5,35&nbsp;%), y leerla como tarifa anual da +2,64&nbsp;%, +5,50&nbsp;% y +5,43&nbsp;% y las cifras entre paréntesis. Cada ramo conserva su lectura con las dos.</p>
-<p>Reservas y redondeo. Nuestras reservas no mueven el óptimo del público, así que un error de reserva mueve el nivel de S41 cerca de (1 − Z)/c de lo que mueve el de la mezcla: un 84&nbsp;%, un 64&nbsp;% y un 84&nbsp;%. El multiplicador de las reservas de caso que mueve un 1&nbsp;% el nivel de S41 va de 0,956 a 1,044 en autos, de 0,938 a 1,062 en edificios y de 0,893 a 1,107 en contenidos (mezcla: 0,963 a 1,037, 0,960 a 1,040 y 0,910 a 1,090). Los intervalos al 90&nbsp;% del multiplicador estimado cruzan esos umbrales en los tres ramos, así que las reservas de caso siguen como incertidumbre material, una limitación que mantuve para S41 el 23 de octubre. Con la comprobación de la severidad de lesiones (S3 del análisis de reservas, calculada antes de las sondas y no adoptada), el nivel de autos de S41 quedaría un 1,86&nbsp;% alto (de 1,10&nbsp;% a 2,61&nbsp;%), frente al 2,2&nbsp;% de la mezcla. Repetido en las tres raíces de la reproducción, el paso de la mezcla a S41 da su SHA-256, con notas que solo difieren en el último bit. Las puntuaciones tienen cinco decimales: mover cada una de las tres de un ramo ±0,000005 deja c* entre 0,97688 y 0,97785 en autos, entre 1,07335 y 1,07691 en edificios y entre 1,08031 y 1,08809 en contenidos. Fuentes: <code>privado/corridas/reservas_20261019T225357Z_99b45271/</code>, <code>privado/corridas/repro_s42_20261022T170245Z_c9ea2fc3/</code>, <code>privado/corridas/repro_s41_20261023T145808Z_c8055dfc/</code> y <code>docs/RESERVAS_ACOTACION.md</code>.</p>
+<p>Reservas y redondeo. Nuestras reservas no mueven el óptimo del público, así que un error de reserva mueve el nivel de S41 cerca de (1 − Z)/c de lo que mueve el de la mezcla: un 84&nbsp;%, un 64&nbsp;% y un 84&nbsp;%. El multiplicador de las reservas de caso que mueve un 1&nbsp;% el nivel de S41 va de 0,956 a 1,044 en autos, de 0,938 a 1,062 en edificios y de 0,893 a 1,107 en contenidos (mezcla: 0,963 a 1,037, 0,960 a 1,040 y 0,910 a 1,090). Los intervalos al 90&nbsp;% del multiplicador estimado cruzan esos umbrales en los tres ramos, así que las reservas de caso siguen como incertidumbre material, una limitación que mantuve para S41 el 23 de octubre. Con la comprobación de la severidad de lesiones (S3 del análisis de reservas, calculada antes de las sondas y no adoptada), el nivel de autos de S41 quedaría un 1,86&nbsp;% alto (de 1,10&nbsp;% a 2,61&nbsp;%), frente al 2,2&nbsp;% de la mezcla. Repetido en las tres raíces de la reproducción, el paso de la mezcla a S41 da su SHA-256, con notas que solo difieren en el último bit. Las puntuaciones tienen cinco decimales: mover cada una de las tres de un ramo ±0,000005 deja c* entre 0,97688 y 0,97785 en autos, entre 1,07335 y 1,07691 en edificios y entre 1,08031 y 1,08809 en contenidos. Fuentes: <code>privado/corridas/reservas_20261019T225357Z_99b45271/</code>, <code>privado/corridas/repro_s42_20261022T170245Z_c9ea2fc3/</code>, <code>privado/corridas/repro_s41_20261023T145808Z_c8055dfc/</code> y <code>docs/archivo/semana1/RESERVAS_ACOTACION.md</code>.</p>
 <h3>Experimentos tras la elección del modelo final</h3>
 <p>Once experimentos se escribieron con su hipótesis y su criterio de aceptación antes de calcular; el backtesting del IBNR se añadió a pedido del participante, con su propia preinscripción. Comparan el modelo final con el mejor envío anterior en la mitad de selección de 2023 y en el año 2024 completo, con el D² completo y el del cuerpo, y tratan como empate cualquier diferencia por debajo del piso de semillas. Un análisis preinscrito aparte acotó las reservas de caso con la materialidad del 1&nbsp;% que el participante fijó antes de ver resultados.</p>
 <table>
@@ -1036,7 +1036,7 @@ p.formula { text-align: center; font-size: 9.6pt; margin: 0.4mm 0 1.6mm; }
    "bytes": 22653
   },
   "sensibilidad_informe": {
-   "ruta": "Hackaton/Repositorio_IAA2026/docs/SENSIBILIDAD_S30_S22.md",
+   "ruta": "Hackaton/Repositorio_IAA2026/docs/archivo/semana1/SENSIBILIDAD_S30_S22.md",
    "sha256": "60e54b4e0566b48b5078fb52278b4c64e7958178763d939d4f575a25f8565368",
    "bytes": 19883
   },
@@ -1086,7 +1086,7 @@ p.formula { text-align: center; font-size: 9.6pt; margin: 0.4mm 0 1.6mm; }
    "bytes": 24767
   },
   "reservas_informe": {
-   "ruta": "Hackaton/Repositorio_IAA2026/docs/RESERVAS_ACOTACION.md",
+   "ruta": "Hackaton/Repositorio_IAA2026/docs/archivo/semana1/RESERVAS_ACOTACION.md",
    "sha256": "ba61097233d596bad64df720c2518fb39751a2ea19a9c70d6c9457686105cd47",
    "bytes": 21807
   },
@@ -1196,7 +1196,7 @@ p.formula { text-align: center; font-size: 9.6pt; margin: 0.4mm 0 1.6mm; }
    "bytes": 956
   },
   "sensibilidad_s43_informe": {
-   "ruta": "Hackaton/Repositorio_IAA2026/docs/SENSIBILIDAD_S43.md",
+   "ruta": "Hackaton/Repositorio_IAA2026/docs/archivo/semana1/SENSIBILIDAD_S43.md",
    "sha256": "912e906d4982c63aded9347c2835353b615f9739acd19aa43d07cef2f21820d3",
    "bytes": 40955
   },
@@ -3035,7 +3035,7 @@ p.formula { text-align: center; font-size: 9.6pt; margin: 0.4mm 0 1.6mm; }
     "revisor": "Actuario competente en reservas y tarificacion, bajo reglas de colaboracion; no designado ni contactado.",
     "decision_humana": {
      "fecha": "2026-10-20T15:21:59.556Z",
-     "alcance": "Se mantiene la acotación de docs/RESERVAS_ACOTACION.md (incertidumbre material, sin ajuste adoptado); no cambian T0, la receta ni S30."
+     "alcance": "Se mantiene la acotación de docs/archivo/semana1/RESERVAS_ACOTACION.md (incertidumbre material, sin ajuste adoptado); no cambian T0, la receta ni S30."
     }
    },
    {
@@ -4731,7 +4731,7 @@ p.formula { text-align: center; font-size: 9.6pt; margin: 0.4mm 0 1.6mm; }
   },
   "nota": "Las sondas son diagnósticas y nunca se seleccionan. S41 aplica la regla preinscrita; S42 la revisión posterior a ver el marcador (D101).",
   "evidencia": {
-   "criterio": "L05 de sens42_20261022T165934Z_6ec8f1fe, publicado en docs/SENSIBILIDAD_S43.md: apoyado con dos señales del mismo signo que el ajuste y tamaño dentro de la mayor más la τ de D100; parcial con una, o con dos o más y tamaño fuera; sin apoyo con ninguna",
+   "criterio": "L05 de sens42_20261022T165934Z_6ec8f1fe, publicado en docs/archivo/semana1/SENSIBILIDAD_S43.md: apoyado con dos señales del mismo signo que el ajuste y tamaño dentro de la mayor más la τ de D100; parcial con una, o con dos o más y tamaño fuera; sin apoyo con ninguna",
    "estado": "L05 publicado (D103)",
    "ramos": {
     "motor": {
@@ -4910,7 +4910,7 @@ p.formula { text-align: center; font-size: 9.6pt; margin: 0.4mm 0 1.6mm; }
      ],
      "S42_sigma_ampliada": -0.010132
     },
-    "fuente": "privado/corridas/repro_s42_20261022T170245Z_c9ea2fc3 (CLA-20261022-005); docs/RESERVAS_ACOTACION.md, «Qué cambia con S42»"
+    "fuente": "privado/corridas/repro_s42_20261022T170245Z_c9ea2fc3 (CLA-20261022-005); docs/archivo/semana1/RESERVAS_ACOTACION.md, «Qué cambia con S42»"
    },
    "reproduccion_S42": {
     "raices": 3,
@@ -5116,7 +5116,7 @@ p.formula { text-align: center; font-size: 9.6pt; margin: 0.4mm 0 1.6mm; }
      "alcance": "Decisión del participante sobre cómo declarar la limitación. No acredita la suficiencia de reservas, no es una valoración actuarial independiente ni cierra la revisión humana general (R06/R07). No cambia T0, la receta, la mezcla, S41 ni la marca de Kaggle. La recomendación de la opción la hizo Claude."
     },
     "lectura": "Con la regla de D100 (Z fija), el nivel de S41 se mueve con las reservas 0,84 / 0,64 / 0,84 veces lo que el de la mezcla. Los umbrales se ensanchan algo, pero los intervalos de β los siguen cruzando: la reserva de caso es incertidumbre material en los tres ramos. El hundimiento queda acotado por poco y no resiste σ/√0,67. Bajo S3, el nivel de autos de S41 quedaría alto un 1,86 % (1,10 % a 2,61 %): indicio de desvío material si S3.",
-    "fuente": "privado/corridas/repro_s41_20261023T145808Z_c8055dfc (CLA-20261023-005); docs/RESERVAS_ACOTACION.md, «Qué cambia con S41»; registro/decision_reservas_S41_20261023.json (CLA-20261023-006)"
+    "fuente": "privado/corridas/repro_s41_20261023T145808Z_c8055dfc (CLA-20261023-005); docs/archivo/semana1/RESERVAS_ACOTACION.md, «Qué cambia con S41»; registro/decision_reservas_S41_20261023.json (CLA-20261023-006)"
    }
   }
  },
@@ -6112,7 +6112,7 @@ p.formula { text-align: center; font-size: 9.6pt; margin: 0.4mm 0 1.6mm; }
   "envios_totales": 29
  },
  "sensibilidad_final": {
-  "informe": "Hackaton/Repositorio_IAA2026/docs/SENSIBILIDAD_S43.md",
+  "informe": "Hackaton/Repositorio_IAA2026/docs/archivo/semana1/SENSIBILIDAD_S43.md",
   "baterias": [
    "sens42_20261022T165934Z_6ec8f1fe",
    "sens43_20261023T035154Z_aece6462"

@@ -18,7 +18,7 @@ from sklearn.exceptions import ConvergenceWarning
 import sklearn
 HOME=BASE/'A1S_nucleo_20261026_v1';OUT=BASE/'P56_GLM_offset_preflight_20261027'
 PLAN=R/'registro/semana2_GLM_offset_preflight_plan.json';INDEX=R/'registro/semana2_GLM_offset_preflight_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P56_GLM_OFFSET_PREFLIGHT.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P56_GLM_OFFSET_PREFLIGHT.md'
 NUM={'motor':['voluntary_excess','compulsory_excess','vehicle_age','years_licensed','engine_size_cc'],
     'buildings':['voluntary_excess','compulsory_excess','prop_age','bedrooms'],
     'contents':['voluntary_excess','compulsory_excess','prop_age','bedrooms']}
@@ -166,7 +166,7 @@ def prepare():
                 'input_sha256':w.sha(OUT/f'input_{line}_{outer}.parquet'),'baseline_train_application_separate_from_held_covariates':True})
     dump(OUT/'bindings.json',bindings)
     paths=[Path(__file__),v.PLAN,v.OUT/'report.json',v.OUT/'replay_report.json',v.OUT/'completion_receipt.json',
-        OUT/'synthetic.json',OUT/'bindings.json',R/'docs/semana2/F02_SEMANTICA_Y_DISPONIBILIDAD_2023.md']
+        OUT/'synthetic.json',OUT/'bindings.json',R/'docs/archivo/semana2/F02_SEMANTICA_Y_DISPONIBILIDAD_2023.md']
     paths+=list(OUT.glob('input_*.parquet'))
     for line in m.q.LINES:paths += [HOME/f'rows_s2_{line}.parquet',HOME/f'matrix_s2_{line}.parquet']
     for outer in range(5):

@@ -42,7 +42,7 @@ dump(RUN/'decision_journal.json',journal)
 table='\n'.join(f"| {m} | {points[m]['D2']:.5f} | {points[m]['predicted_total']/1e6:.3f} | {points[m]['actual_over_expected']:.3f} | {seg(m,'business','new_business')['D2']:.5f} | {seg(m,'business','new_business')['actual_over_expected']:.3f} |" for m in ['W2-B00','W2-B08','W2-B12','W2-B13'])
 pairtab='\n'.join(f"| {p['candidate']} / {p['reference']} | {p['delta_D2']:.5f} | [{p['exploratory_lower95']:.5f}; {p['exploratory_upper95']:.5f}] | {p['delta_after_removal']:.5f} |" for p in contrasts)
 linetab='\n'.join('| '+label+' | '+' | '.join(f"{seg(mid,'line',line)['D2']:.5f}" for mid in ['W2-B00','W2-B12','W2-B13'])+' |' for line,label in [('motor','Autos'),('buildings','Edificios'),('contents','Contenidos')])
-rp='../../'+RUN.relative_to(REPO).as_posix();docpath=REPO/'docs/semana2/DESARROLLO_2023_MODELOS_ESTANDAR.md'
+rp='../../'+RUN.relative_to(REPO).as_posix();docpath=REPO/'docs/archivo/semana2/DESARROLLO_2023_MODELOS_ESTANDAR.md'
 doc=f'''# Modelos estándar: primera unidad nocturna
 
 Codex, 23 de octubre de 2026. Una constante por tipo de negocio y un GLM con seis variables por ramo proporcionan referencias sencillas útiles. Sus ventajas observadas en 2023 siguen inciertas y dependen de pocos grupos de evaluación. Se conserva B00, todas las alternativas y el cierre de 2024. Esta prueba no justifica añadir complejidad.
@@ -107,7 +107,7 @@ index={'id':plan['id'],'author':'Codex','as_of_utc':datetime.now(timezone.utc).i
  'verification':{'path':rel(vp),'sha256':sha(vp),'passed':v['passed'],'failed':0},'fixtures':{'path':rel(RUN/'fixture_checks.json'),'sha256':sha(RUN/'fixture_checks.json'),'passed':fixtures['passed'],'failed':0}}
 for key,path in [('report',RUN/'report.json'),('plan',REPO/'registro/semana2_desarrollo2023_plan_v5.json'),('producer',ROOT/plan['code']),('oof',RUN/'oof_2023.parquet'),('manifest',RUN/'manifest.json'),('assessment',RUN/'assessment.json'),('decision_journal',RUN/'decision_journal.json')]:index[key]=rel(path);index[key+'_sha256']=sha(path)
 dump(RUN/'active_index_proposed.json',index)
-body=f'''Codex. Resultado de COD-S2-20261023-016, primera unidad de la nueva continuidad nocturna autorizada. [Informe](../../Repositorio_IAA2026/docs/semana2/DESARROLLO_2023_MODELOS_ESTANDAR.md), [plan de la noche](../../Repositorio_IAA2026/docs/semana2/PLAN_NOCTURNO_20261023.md) e [índice de continuidad](../../Repositorio_IAA2026/registro/semana2_continuidad_nocturna.json).
+body=f'''Codex. Resultado de COD-S2-20261023-016, primera unidad de la nueva continuidad nocturna autorizada. [Informe](../../Repositorio_IAA2026/docs/archivo/semana2/DESARROLLO_2023_MODELOS_ESTANDAR.md), [plan de la noche](../../Repositorio_IAA2026/docs/archivo/semana2/PLAN_NOCTURNO_20261023.md) e [índice de continuidad](../../Repositorio_IAA2026/registro/semana2_continuidad_nocturna.json).
 
 B12 es la referencia con constantes por ramo y nuevo negocio/renovación; B13 es GLM Tweedie1,5 log sin penalización, seis predictores técnicos por ramo, sin interacciones. Los treinta niveles y quince GLM se ajustaron solo en los folds de2023; transformaciones fit-only. Mismos50.094periodos,30.869componentes,T0/C0, con B00–B11 exactos. Capital enmascarado vigente; sin clima o transferencia. No se añadieron factores o mezclas tras ver resultados.
 

@@ -13,7 +13,7 @@ BASE = R/'privado/semana2/mision017_fase2'
 OUT = BASE/'P47_preflight_pareado_20261026'
 PLAN = R/'registro/semana2_algoritmo_pareado_preflight_plan.json'
 INDEX = R/'registro/semana2_algoritmo_pareado_preflight_actual.json'
-DOC = R/'docs/semana2/PRIVADA_P47_ALGORITMO_PAREADO_PREFLIGHT.md'
+DOC = R/'docs/archivo/semana2/PRIVADA_P47_ALGORITMO_PAREADO_PREFLIGHT.md'
 sp = importlib.util.spec_from_file_location('p47_peril_profile_helpers', R/'herramientas/revisar_perfiles_observacion_P46.py')
 prev = importlib.util.module_from_spec(sp); sp.loader.exec_module(prev)
 w = prev.w; np = prev.np; pd = prev.pd; b = prev.frozen.b; g = prev.frozen.h.g

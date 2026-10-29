@@ -117,7 +117,7 @@ def main():
              'adaptativo; la fuente y las marcas incluyen2024y la evaluación anual sigue siendo '
              'condicional. No se acredita mejora privada ni revisión profesional independiente.\n\n')
     note += 'Evidencia: '+w.rel(OUT/'report.json')+'; '+w.rel(OUT/'secondary_report.json')+'; '+w.rel(OUT/'replay_report.json')+'; '+w.rel(OUT/'secondary_replay_receipt.json')+'.\n'
-    doc = R/'docs/semana2/PRIVADA_P18_CALIBRACION_CONJUNTA.md'
+    doc = R/'docs/archivo/semana2/PRIVADA_P18_CALIBRACION_CONJUNTA.md'
     assert not doc.exists()
     doc.write_text(note, encoding='utf8')
     body = OUT/'forum_resultados.md'

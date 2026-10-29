@@ -18,7 +18,7 @@ from sklearn.exceptions import ConvergenceWarning
 import sklearn
 OUT=BASE/'P74_GLM_fuente_directa_preflight_20261027'
 PLAN=R/'registro/semana2_GLM_fuente_directa_preflight_plan.json';INDEX=R/'registro/semana2_GLM_fuente_directa_preflight_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P74_GLM_FUENTE_DIRECTA_PREFLIGHT.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P74_GLM_FUENTE_DIRECTA_PREFLIGHT.md'
 PARAMS=dict(p.g.PARAMS)
 NUM={line:list(p.g.NUM[line])+['prior_claims_5y']+(['ncb_years'] if line=='motor' else []) for line in q.LINES}
 CAT={line:list(p.g.CAT[line]) for line in q.LINES}

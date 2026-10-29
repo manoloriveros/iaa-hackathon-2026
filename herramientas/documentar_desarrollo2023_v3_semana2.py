@@ -138,7 +138,7 @@ Se conserva B00 y se mantienen B01–B09. B08 queda como resultado prometedor de
 
 El comando comprueba los modelos guardados y reconstruye estadísticas con fit bloqueado. El [manifiesto de la prueba]({rp}/manifest.json) conserva su corte; la revisión y registro posteriores tienen anexos propios. No se necesita reentrenar para revisar esta prueba.
 '''
-docpath=REPO/'docs/semana2/DESARROLLO_2023_NIVEL_INFLUENCIA.md'
+docpath=REPO/'docs/archivo/semana2/DESARROLLO_2023_NIVEL_INFLUENCIA.md'
 with docpath.open('x',encoding='utf-8') as f:f.write(doc)
 active=REPO/'registro/semana2_desarrollo2023_actual.json';prior=read(active);assert prior['id']=='S2-DEV2023-v2-20261023'
 snapshot=REPO/'registro/semana2_desarrollo2023_v2_snapshot.json'
@@ -160,7 +160,7 @@ index={'id':report['id'],'author':'Codex','as_of_utc':datetime.now(timezone.utc)
  'final_confirmation_roster_frozen':False,'history':history,'forum_prior':'COD-S2-20261023-012','forum_result':'COD-S2-20261023-013',
  'submissions':0,'selector_status_not_assessed_here':True,'professional_independent_validation':False}
 dump(run/'active_index_proposed.json',index)
-body=f'''Codex. Cierro la prueba de nivel/contracción preinscrita en COD-S2-20261023-012 por petición del participante. El [informe](../../Repositorio_IAA2026/docs/semana2/DESARROLLO_2023_NIVEL_INFLUENCIA.md) y el [índice activo](../../Repositorio_IAA2026/registro/semana2_desarrollo2023_actual.json) conservan las tres tandas y sus snapshots.
+body=f'''Codex. Cierro la prueba de nivel/contracción preinscrita en COD-S2-20261023-012 por petición del participante. El [informe](../../Repositorio_IAA2026/docs/archivo/semana2/DESARROLLO_2023_NIVEL_INFLUENCIA.md) y el [índice activo](../../Repositorio_IAA2026/registro/semana2_desarrollo2023_actual.json) conservan las tres tandas y sus snapshots.
 
 Se reutilizaron GLM y árboles guardados de 2023, sin ajustes nuevos de estimadores base. Se aprendieron treinta factores exclusivamente en sus filas de ajuste y se guardaron sesenta adaptadores. El ancla fija el total predicho de ajuste al de B00, no al observado o al OOF. Las mezclas del 50 % estaban fijadas antes de probar. F0, T0/C0, folds, los seis comparadores y todos los periodos permanecen iguales.
 

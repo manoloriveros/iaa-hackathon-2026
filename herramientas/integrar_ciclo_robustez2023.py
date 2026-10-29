@@ -50,7 +50,7 @@ statepath=ROOT/'Preparación/ESTADO_PROYECTO.json';statekey='week_2_robustness20
 branch=read(statepath).get(statekey,{})
 branch.update({'status':'active','index':rel(idxpath),'latest_cycle':num,'completed_cycles':len(history),'own_new_fits':sum(x['fits'] for x in history)+deployed_fits,'2024_closed':True,'B00_preserved':True,'exploratory_screen_passed':passed_all,'robust_replacement_formally_established':False})
 change(statepath,{statekey:branch})
-change(ROOT/'RUTAS_PROYECTO.json',{'week_2_robustness_index':rel(idxpath),'week_2_robustness_report':'Hackaton/Repositorio_IAA2026/docs/semana2/ROBUSTEZ_MODELO_2023_20261025.md'})
+change(ROOT/'RUTAS_PROYECTO.json',{'week_2_robustness_index':rel(idxpath),'week_2_robustness_report':'Hackaton/Repositorio_IAA2026/docs/archivo/semana2/ROBUSTEZ_MODELO_2023_20261025.md'})
 devpath=R/'registro/semana2_desarrollo2023_actual.json'
 change(devpath,{'robustness2023_followup':{'index':rel(idxpath),'latest_cycle':num,'new_fits':sum(x['fits'] for x in history),'formal_promotion':False,'2024_closed':True}})
 own=[x for x in d['summaries'] if x['model_id'].startswith('W2-COD')]

@@ -168,7 +168,7 @@ Se mantiene W2-B00 como referencia y se conservan B01–B05. Los tres mecanismos
 
 El comando carga y comprueba, con fit bloqueado. Los modelos, OOF, filas, recetas y dependencias están identificados por SHA en el [manifiesto]({rp}/manifest.json); los anexos de revisión y cierre posteriores conservan sus propios cortes.
 '''
-docpath=REPO/'docs/semana2/DESARROLLO_2023_TANDA2.md'
+docpath=REPO/'docs/archivo/semana2/DESARROLLO_2023_TANDA2.md'
 with docpath.open('x',encoding='utf-8') as f:f.write(doc)
 prior_index_path=REPO/'registro/semana2_desarrollo2023_actual.json';prior=read(prior_index_path)
 assert prior['id']=='S2-DEV2023-v1-20261023'
@@ -192,7 +192,7 @@ index={'id':report['id'],'author':'Codex','as_of_utc':datetime.now(timezone.utc)
             {'id':report['id'],'run':rel(run),'documentation':rel(docpath)}],
  'forum_prior':'COD-S2-20261023-010','forum_result':'COD-S2-20261023-011','submissions':0,'professional_independent_validation':False}
 dump(run/'active_index_proposed.json',index)
-body=f'''Codex. Cierro la tanda preinscrita en COD-S2-20261023-010 por la petición del participante. El [informe](../../Repositorio_IAA2026/docs/semana2/DESARROLLO_2023_TANDA2.md) y el [índice activo](../../Repositorio_IAA2026/registro/semana2_desarrollo2023_actual.json) conservan la revisión, recetas y evidencia; v1 mantiene su snapshot y todas sus corridas.
+body=f'''Codex. Cierro la tanda preinscrita en COD-S2-20261023-010 por la petición del participante. El [informe](../../Repositorio_IAA2026/docs/archivo/semana2/DESARROLLO_2023_TANDA2.md) y el [índice activo](../../Repositorio_IAA2026/registro/semana2_desarrollo2023_actual.json) conservan la revisión, recetas y evidencia; v1 mantiene su snapshot y todas sus corridas.
 
 | Receta | D² OOF 2023 | Predicho, millones CU | A/E |
 | --- | ---: | ---: | ---: |

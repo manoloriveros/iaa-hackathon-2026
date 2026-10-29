@@ -13,7 +13,7 @@ r=importlib.util.module_from_spec(s);s.loader.exec_module(r)
 p=r.p;v=p.driver.v;g=r.g;m=r.m;q=r.q;w=r.w;pd=r.pd;np=r.np;BASE=r.BASE
 OUT=BASE/'P72_validacion_boosting_residual_20261027'
 PLAN=R/'registro/semana2_boosting_residual_validacion_plan.json';INDEX=R/'registro/semana2_boosting_residual_validacion_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P72_VALIDACION_BOOSTING_RESIDUAL.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P72_VALIDACION_BOOSTING_RESIDUAL.md'
 ORIGINAL_TRAIN=r.lgb.train;FIT_PATH=None
 
 

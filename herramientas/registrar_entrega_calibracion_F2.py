@@ -54,7 +54,7 @@ def main():
         'sin presentarlo como holdout intacto ni la colaboración de IA como revisión profesional independiente. '
         'Se conserva el único cupo restante para una mejora con evidencia nueva.\n\n'
         'Evidencia: ' + w.rel(OUT / 'public_receipt.json') + '; ' + w.rel(OUT / 'report.json') + '.\n\nSiguiente unidad: ' + next_unit + '\n')
-    doc = R / 'docs/semana2/MISION017_CALIBRACION_F2_ENVIO_RESULTADO.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
+    doc = R / 'docs/archivo/semana2/MISION017_CALIBRACION_F2_ENVIO_RESULTADO.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
     body = OUT / 'forum_resultado.md'; body.write_text(note, encoding='utf8')
     forum = subprocess.run([sys.executable, str(ROOT / 'Hackaton/Semana 2/Foro/comentar.py'), '--autor', 'Codex',
         '--id', 'COD-S2-20261025-MISION017-CALF2-RESULTADO', '--asunto',

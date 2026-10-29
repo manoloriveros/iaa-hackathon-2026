@@ -85,7 +85,7 @@ def main():
     note+='B00, F3c (0,16914) y todas las alternativas/adversos intactos. Meta pública 0,17 activa.\n\n'
     note+='Contabilidad nueva de esta unidad: 18 ajustes fuente ya anotados por invocación; '+str(learned)+' constantes de precio cerradas únicas, con normalizadores y recomputaciones adversas separados en el informe. '
     note+='Evidencia: '+w.rel(SOURCE/'report.json')+'; '+w.rel(TARGET/'report.json')+'.\n\nSiguiente unidad: '+next_unit+'\n'
-    doc=R/'docs/semana2/MISION017_A1S_NUCLEO_COMPLETO_RESULTADO.md'
+    doc=R/'docs/archivo/semana2/MISION017_A1S_NUCLEO_COMPLETO_RESULTADO.md'
     assert not doc.exists();doc.write_text(note,encoding='utf8')
     for name in ['MEMORIA_PROYECTO.md','DECISIONES.md']:
         w.append(ROOT/'Preparación'/name,note,archive)

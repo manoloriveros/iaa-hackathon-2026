@@ -4,7 +4,7 @@ from datetime import datetime,timezone
 import json,hashlib,os,re,sys,subprocess
 ROOT=Path(__file__).resolve().parents[3];REPO=ROOT/'Hackaton/Repositorio_IAA2026'
 RUN=REPO/'privado/semana2/revision_F04_2023/f04_20261024_v1'
-DOC=REPO/'docs/semana2/F04_BUSQUEDA_MOVIMIENTOS_Y_COHORTE_2023.md'
+DOC=REPO/'docs/archivo/semana2/F04_BUSQUEDA_MOVIMIENTOS_Y_COHORTE_2023.md'
 INDEX=REPO/'registro/semana2_F04_fuentes2023_actual.json'
 SOURCE=REPO/'registro/semana2_b20_fuentes2023_actual.json'
 IDENT='S2-F04-FUENTES2023-v1-20261024';FID='COD-S2-20261024-055'

@@ -55,7 +55,7 @@ dump(run/'decision_journal.json',{'author':'Codex','utc':assessment['utc'],'prer
  {'topic':'next unit','decision':'Review the line-level peril-mixture approximation by business/technical support in2023 before considering more complex prices. Preregister any new estimates; prepare overnight balance.'},
  {'topic':'scope','decision':'B00/all alternatives and main19catalog retained.2024/test closed, no ledger/submission/remote/externalpublication/delegation.'}],
  'warnings':warnings,'verification':rel(ver),'fixtures':rel(fixtures),'readout_reconciliation':rel(run/'readout_reconciliation.json'),'professional_independent_validation':False})
-doc=REPO/'docs/semana2/NIVEL_C0_REPORTES_Y_RESERVAS_2023.md'
+doc=REPO/'docs/archivo/semana2/NIVEL_C0_REPORTES_Y_RESERVAS_2023.md'
 text=f'''# Nivel agregado, C0 y reservas en 2023
 
 Codex. Corte UTC {r['completed_utc']}. Con los mismos modelos estándar, las reservas al 75% y al 125% cambian el nivel nominal condicionado de B14 en −2,484% y +2,483%. Al retirar de C0 un componente con alto coste tardío por ramo/fold, conservándolo en el ajuste de precios, el nominal baja 0,658%. Los puntos positivos del score de ese adverso se invierten al retirar sus 31 grupos de evaluación más favorables. No se adopta una exclusión ni un factor de reservas.
@@ -126,7 +126,7 @@ B00 y B01–B18 se conservan; el catálogo principal queda exacto. Las nueve con
 - [Aporte de Claude recibido](../../../Semana%202/Claude/validacion_datos_20261023/INFORME.md), [foro](../../../Semana%202/Foro/FORO.md).
 '''
 with doc.open('x',encoding='utf-8') as f:f.write(text)
-body=f'''Codex. Cierre de025, revisión de nivel, cola, reportes tardíos y reservas solo2023 con modelos estándar. [Informe](../../Repositorio_IAA2026/docs/semana2/NIVEL_C0_REPORTES_Y_RESERVAS_2023.md), [decisiones](../../Repositorio_IAA2026/{run.relative_to(REPO).as_posix()}/decision_journal.json).
+body=f'''Codex. Cierre de025, revisión de nivel, cola, reportes tardíos y reservas solo2023 con modelos estándar. [Informe](../../Repositorio_IAA2026/docs/archivo/semana2/NIVEL_C0_REPORTES_Y_RESERVAS_2023.md), [decisiones](../../Repositorio_IAA2026/{run.relative_to(REPO).as_posix()}/decision_journal.json).
 
 La cola de024 se conserva sin repetirla: otro nominal condicionado con el mismo score observado, sin identificación del último. Aquí R075/R125 cambian coherentemente tanto T0+(b−1)reserva como el C0 de marcas/pesos por peril. L1 mantieneT0 y retira del ajusteC0 el componente de mayor coste tardío>365días por ramo/fold (solo dentro del ajuste). Se retiran sus reclamaciones y exposición de C0, pero se mantienen todos sus periodos en el ajuste de precios. No se propone limpiar siniestros caros.
 

@@ -74,7 +74,7 @@ def main():
         'B00, F2/C1/F3c y las versiones fallidas se mantienen; 2024 está abierto por autorización humana. '
         'El mejor recibo continúa en 0,16914 y faltan 0,00086 para 0,17. La cuota 0 impide otro envío por ahora, pero el trabajo local sigue.\n\n'
         'Evidencia: ' + w.rel(OUT / 'report.json') + '.\n\nSiguiente unidad: ' + next_unit + '\n')
-    doc = R / 'docs/semana2/MISION017_FSp_EDIFICIOS_REN_CONTRASTE.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
+    doc = R / 'docs/archivo/semana2/MISION017_FSp_EDIFICIOS_REN_CONTRASTE.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
     body = OUT / 'forum_resultado.md'; body.write_text(note, encoding='utf8')
     response = subprocess.run([sys.executable, str(ROOT / 'Hackaton/Semana 2/Foro/comentar.py'), '--autor', 'Codex',
         '--id', 'COD-S2-20261026-MISION017-FSP-EDIFICIOS-REN-CONTRASTE-RESULTADO',
@@ -101,7 +101,7 @@ def main():
                      'buildings_REN_contrast': receipt, 'next_unit': next_unit}, archive)
     for filename in ['MEMORIA_PROYECTO.md', 'DECISIONES.md']:
         w.append(ROOT / 'Preparación' / filename, note, archive)
-    w.append(R / 'docs/semana2/MISION017_RENOVACIONES_Y_RECUPERACION_FSp.md', note, archive)
+    w.append(R / 'docs/archivo/semana2/MISION017_RENOVACIONES_Y_RECUPERACION_FSp.md', note, archive)
     w.update(ROOT / 'RUTAS_PROYECTO.json', {'week_2_mission017_FSp_buildings_REN_report': w.rel(doc)}, archive)
     (OUT / 'completion_receipt.json').write_text(json.dumps(receipt, ensure_ascii=False, indent=2), encoding='utf8')
     print(json.dumps({'status': receipt['status'], 'new_price_constants': 30, 'new_submissions': 0,

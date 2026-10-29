@@ -59,7 +59,7 @@ def main():
         'El objetivo0,17 sigue activo y no se declara alcanzado. B00, C1/F2, F3c, versiones fallidas y todas las alternativas quedan guardados. '
         '2024 permanece abierto por instrucción humana y se trata como desarrollo adaptativo.\n\n'
         'Recibo: ' + w.rel(OUT / 'public_receipt.json') + '. CSV: ' + admission['CSV']['path'] + '.\n\nSiguiente unidad: ' + next_unit + '\n')
-    doc = R / 'docs/semana2/MISION017_F3c_ENVIO_RESULTADO.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
+    doc = R / 'docs/archivo/semana2/MISION017_F3c_ENVIO_RESULTADO.md'; assert not doc.exists(); doc.write_text(note, encoding='utf8')
     body = OUT / 'forum_resultado.md'; body.write_text(note, encoding='utf8')
     response = subprocess.run([sys.executable, str(ROOT / 'Hackaton/Semana 2/Foro/comentar.py'), '--autor', 'Codex',
         '--id', 'COD-S2-20261026-MISION017-F3c-RESULTADO', '--asunto',

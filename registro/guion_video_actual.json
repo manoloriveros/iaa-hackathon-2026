@@ -1,0 +1,347 @@
+{
+  "id": "GUION-VIDEO-METODO-DECISION-LIMITES-20261028",
+  "utc": "2026-10-28T13:56:36.940428+00:00",
+  "author_editor": "Codex",
+  "path_base": "repository_root",
+  "source": "docs/entrega/video/GUION_VIDEO_ES.md",
+  "source_sha256": "ecb465cbbec5dd4f8b1e3b75d82ffd9c22448fbaa7d919fd47ecd9d590feb623",
+  "status": "guion_reescrito_metodologia_IA_validacion_y_limites",
+  "narration_words": 641,
+  "target_duration_seconds": 285,
+  "unmeasured_recording_margin_seconds": 15,
+  "timing_verified_by_recording": false,
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0,
+      "end": 17,
+      "words": 35,
+      "estimated_words_per_minute": 123.53,
+      "title": "El problema actuarial"
+    },
+    {
+      "scene": 2,
+      "start": 17,
+      "end": 62,
+      "words": 105,
+      "estimated_words_per_minute": 140.0,
+      "title": "Qué modelo elegí y por qué"
+    },
+    {
+      "scene": 3,
+      "start": 62,
+      "end": 106,
+      "words": 97,
+      "estimated_words_per_minute": 132.27,
+      "title": "Cómo adapté el método al mercado nuevo"
+    },
+    {
+      "scene": 4,
+      "start": 106,
+      "end": 141,
+      "words": 83,
+      "estimated_words_per_minute": 142.29,
+      "title": "La IA en datos y decisiones de variables"
+    },
+    {
+      "scene": 5,
+      "start": 141,
+      "end": 183,
+      "words": 99,
+      "estimated_words_per_minute": 141.43,
+      "title": "Cómo puse a prueba los resultados"
+    },
+    {
+      "scene": 6,
+      "start": 183,
+      "end": 225,
+      "words": 93,
+      "estimated_words_per_minute": 132.86,
+      "title": "Qué significa una salvaguarda y su excepción"
+    },
+    {
+      "scene": 7,
+      "start": 225,
+      "end": 248,
+      "words": 46,
+      "estimated_words_per_minute": 120.0,
+      "title": "Qué papel tuvieron las sondas"
+    },
+    {
+      "scene": 8,
+      "start": 248,
+      "end": 267,
+      "words": 42,
+      "estimated_words_per_minute": 132.63,
+      "title": "Del riesgo a la prima comercial"
+    },
+    {
+      "scene": 9,
+      "start": 267,
+      "end": 285,
+      "words": 41,
+      "estimated_words_per_minute": 136.67,
+      "title": "Alcance de la IA y del resultado"
+    }
+  ],
+  "part2_declared_candidate": "F3c",
+  "selection_change": false,
+  "formal_promotion": false,
+  "fixed_expense_basis": "85_CU_per_policy",
+  "reference_commercial_total_CU": "20800.02",
+  "week2_retraining_status": "reentrenamiento_completo_verificado_CSV_finales_exactos",
+  "independent_professional_review": false,
+  "evidence": [
+    "docs/semana2/F3C_A1_MEZCLA_PROTEGIDAS_Y_ESCENARIOS.md",
+    "registro/validacion_cadena_f3c_A1_mezcla_actual.json"
+  ],
+  "prior_versions": "privado/guion_video/20261028T134409Z/antes",
+  "verification": "privado/guion_video/20261028T134409Z/verificacion.json",
+  "video_recorded": false,
+  "video_published": false,
+  "new_training": false,
+  "kaggle_submissions": 0,
+  "other_chat_messaged": false,
+  "last_coherence_review_utc": "2026-10-28T13:56:36.940428+00:00",
+  "report_coherence": {
+    "pdf": "Hackaton/Semana 2/Claude/informe_final_20261026/informe_final_IAA2026_es.pdf",
+    "path_base": "workspace_root",
+    "pdf_sha256": "7e86069e538b5630706e3f19c26ae0eb547e510d6c48ed3cac3dc67bc8183b78",
+    "index": "registro/informe_final_editorial_actual.json",
+    "index_base": "repository_root",
+    "first_five_pages_checked": true,
+    "scenes": 9,
+    "pdf_changed": false
+  },
+  "previous_source_sha256": "74974fd905f44cb09920e3a070b97ca0b4af4b539015a390ade6f4bfe8cfd317",
+  "coherence_matrix": [
+    {
+      "scene": 1,
+      "report_pages": [
+        1,
+        2
+      ],
+      "topics": "Objetivo y responsabilidad en el uso de IA",
+      "status": "coherente_con_alcance_explicito"
+    },
+    {
+      "scene": 2,
+      "report_pages": [
+        1,
+        3
+      ],
+      "topics": "Combinación de coste total y frecuencia/severidad por peligro; motivo y resultados",
+      "status": "coherente_con_alcance_explicito"
+    },
+    {
+      "scene": 3,
+      "report_pages": [
+        1,
+        2,
+        3
+      ],
+      "topics": "Transferencia por escasez local, variables comunes y ajustes con credibilidad; comparación histórica",
+      "status": "coherente_con_alcance_explicito"
+    },
+    {
+      "scene": 4,
+      "report_pages": [
+        2,
+        4
+      ],
+      "topics": "IA en controles, variables excluidas y fórmula corregida",
+      "status": "coherente_con_alcance_explicito"
+    },
+    {
+      "scene": 5,
+      "report_pages": [
+        2,
+        3,
+        4
+      ],
+      "topics": "Temporalidad, grupos, aislamiento, adversos, influencia, escenarios y límites de las recetas comparadas",
+      "status": "coherente_con_alcance_explicito"
+    },
+    {
+      "scene": 6,
+      "report_pages": [
+        1,
+        3,
+        4
+      ],
+      "topics": "Salvaguarda definida, excepción posterior al resultado y protección no acreditada",
+      "status": "coherente_con_alcance_explicito"
+    },
+    {
+      "scene": 7,
+      "report_pages": [
+        1,
+        3
+      ],
+      "topics": "Calibración pública y selección adaptativa, distinguidas del modelo",
+      "status": "coherente_con_alcance_explicito"
+    },
+    {
+      "scene": 8,
+      "report_pages": [
+        5
+      ],
+      "topics": "Veinte primas, 85 CU por póliza y margen como supuesto",
+      "status": "coherente_con_alcance_explicito"
+    },
+    {
+      "scene": 9,
+      "report_pages": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "topics": "IA para comunicar y límites observados, sin lista de tareas futuras",
+      "status": "coherente_con_alcance_explicito"
+    }
+  ],
+  "operational_approval": false,
+  "automatic_guards_implemented_this_edit": false,
+  "AI_uses": [
+    "modelado",
+    "validación",
+    "dashboards",
+    "traducción",
+    "preparación_audiovisual"
+  ],
+  "AI_uses_evidence": "privado/edicion_informe_final/20261027T201801Z/evidencia_usos_IA.json",
+  "time_savings_measured": false,
+  "final_english_synchronized": false,
+  "final_video_recorded": false,
+  "previous_indexed_source_sha256": "14ef6c4f03fac96183db0e89b6e87921ad3ab8e43fa89c568eb086a5f2f3284d",
+  "prior_script_differed_from_index": true,
+  "observed_limitations": [
+    "año 2024 usado para selección",
+    "protección de negocio nuevo no acreditada",
+    "ganancia concentrada en renovación y pocos grupos",
+    "intervalos condicionales y vistas con etiquetas compartidas",
+    "escenarios con fuente congelada",
+    "una valoración no acredita coste último o reservas suficientes",
+    "disponibilidad histórica de atributos no reconstruida",
+    "comparación histórica distinta de configuración íntegra de producción",
+    "verificación propia con IA, no revisión profesional independiente",
+    "calibración pública influye en entrega y algunas decisiones"
+  ],
+  "narrative_has_future_work_list": false,
+  "method_selection_rationale": true,
+  "internal_model_names_in_viewer_content": false,
+  "safeguard_example": {
+    "source": "docs/archivo/semana2/CIERRE_DOCE_PENDIENTES_F3C.md",
+    "contrast": "transferencia frente a referencia, negocio nuevo",
+    "point_delta": 0.013062,
+    "CI95_lower": -0.010535,
+    "original_lower_floor": -0.001,
+    "exception": "retirada posterior del veto del intervalo; continúa diferencia puntual no negativa",
+    "not_factor_contrast": true
+  },
+  "candidate_preserved": "F3c",
+  "model_selection_changed": false,
+  "rubric_source": "privado/guion_video/20261028T134409Z/rubrica_consultada.json",
+  "final_clean_narration_coherence": {
+    "utc": "2026-10-28T17:07:07.626690+00:00",
+    "pdf": "Hackaton/Semana 2/Claude/informe_final_20261026/informe_final_IAA2026_es.pdf",
+    "pdf_sha256": "4d3416c040a1e8fd61c4530581f16ecbcd3731ac2f87417894023f891c3a4ac0",
+    "primary_narration": "Hackaton/Repositorio_IAA2026/docs/entrega/video/NARRACION_GEMINI_TTS_ES.txt",
+    "primary_narration_sha256": "db18e98fe63d9f1bc2210fbe7cb28b463ebca5c5f96b166be736352f51dcc002",
+    "english_clean_translation": "Hackaton/Repositorio_IAA2026/docs/entrega/video/NARRACION_GEMINI_TTS_EN.txt",
+    "english_clean_translation_sha256": "a8da8820c5e92909c2c23b105263320a39067a3b549f4669334268c26a25a011",
+    "matrix": [
+      {
+        "scene": 1,
+        "report_pages": [
+          1,
+          2
+        ],
+        "topics": "Objetivo, prima de riesgo y responsabilidad del participante",
+        "status": "coherente_con_alcance_explicito"
+      },
+      {
+        "scene": 2,
+        "report_pages": [
+          1,
+          3
+        ],
+        "topics": "Combinación por peligro, Tweedie y frecuencia/severidad; por qué y resultados",
+        "status": "coherente_con_alcance_explicito"
+      },
+      {
+        "scene": 3,
+        "report_pages": [
+          1,
+          2,
+          3
+        ],
+        "topics": "Transferencia por experiencia escasa, variables comunes y credibilidad; comparación histórica",
+        "status": "coherente_con_alcance_explicito"
+      },
+      {
+        "scene": 4,
+        "report_pages": [
+          2,
+          4
+        ],
+        "topics": "Controles de datos, exclusión de contactos y corrección del factor al cuadrado",
+        "status": "coherente_con_alcance_explicito"
+      },
+      {
+        "scene": 5,
+        "report_pages": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "topics": "Años y grupos; aislamiento computacional; influencia y 50 escenarios con fuente congelada",
+        "status": "coherente_con_alcance_explicito"
+      },
+      {
+        "scene": 6,
+        "report_pages": [
+          1,
+          3,
+          4
+        ],
+        "topics": "Definición y excepción posterior de salvaguarda; renovación y negocio nuevo",
+        "status": "coherente_con_alcance_explicito"
+      },
+      {
+        "scene": 7,
+        "report_pages": [
+          1,
+          3
+        ],
+        "topics": "Calibración mediante sondas y cambios de estructura; público no prueba generalización",
+        "status": "coherente_con_alcance_explicito"
+      },
+      {
+        "scene": 8,
+        "report_pages": [
+          5
+        ],
+        "topics": "Veinte referencias, 85 CU íntegros, total 20.800,02 y beneficio supuesto del 8 %",
+        "status": "coherente_con_alcance_explicito"
+      },
+      {
+        "scene": 9,
+        "report_pages": [
+          1,
+          4,
+          5
+        ],
+        "topics": "IA en tableros, traducción y comunicación; limitaciones observadas",
+        "status": "coherente_con_alcance_explicito"
+      }
+    ],
+    "verification": "Hackaton/Repositorio_IAA2026/privado/edicion_informe_final/20261028T165110Z/verificacion.json",
+    "scope": "Cotejo del PDF español con las narraciones limpias actuales; no se cambia guion, traducción ni audio",
+    "independent_professional_review": false
+  },
+  "current_source_actual_sha256": "ddf391d8a3732a1c8531a3e9dd5e91bc9cbd3e2beeb78a7290c0aeacb767badd",
+  "source_sha256_scope": "La huella source_sha256 identifica la edición originalmente indexada; el cotejo actual usa las narraciones limpias y conserva las ediciones posteriores del archivo fuente."
+}

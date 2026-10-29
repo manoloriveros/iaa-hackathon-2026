@@ -4,7 +4,7 @@ from datetime import datetime,timezone,timedelta
 import hashlib,json,os,re,subprocess,sys
 ROOT=Path(__file__).resolve().parents[3];REPO=ROOT/'Hackaton/Repositorio_IAA2026'
 RUN=REPO/'privado/semana2/desarrollo2023/balance_nocturno_20261024_cierre_v1'
-DOC=REPO/'docs/semana2/BALANCE_NOCTURNO_20261024.md'
+DOC=REPO/'docs/archivo/semana2/BALANCE_NOCTURNO_20261024.md'
 INDEX=REPO/'registro/semana2_balance_nocturno_final_actual.json'
 NIGHT=REPO/'registro/semana2_continuidad_nocturna.json'
 IDENT='S2-BALANCE-NOCHE20261024-v1'
@@ -35,7 +35,7 @@ def prepare():
     names=['semana2_desarrollo2023_actual.json','semana2_contadores_propios_actual.json','semana2_b20_prioridades_actual.json','semana2_b20_mecanismo_soporte_revision_actual.json','semana2_b20_soporte_folds_actual.json','semana2_b20_preflight_c0_actual.json','semana2_b20_sintesis_actual.json','semana2_b20_incendio_AD_actual.json','semana2_b20_contraccion_actual.json','semana2_incidencia_kaggle_752144.json']
     paths=[NIGHT]+[REPO/'registro'/x for x in names]
     for f in ['DESARROLLO_2023_MODELOS_ESTANDAR.md','CAPITAL_CLIMA_CREDIBILIDAD_2023.md','CAPITAL_POR_FILA_Y_AUTOS_NUEVOS_2023.md','BALANCE_NOCTURNO_PARCIAL_20261024.md','SINTESIS_B20_Y_SIGUIENTE_PASO_2023.md','PREFLIGHT_C0_Y_AISLAMIENTO_B20_2023.md','SOPORTE_B20_POR_FOLD_2023.md']:
-        paths.append(REPO/'docs/semana2'/f)
+        paths.append(REPO/'docs/archivo/semana2'/f)
     sources=[]
     for i,p in enumerate(paths):
         q=RUN/'sources'/f'{i:02d}_{p.name}';q.parent.mkdir(exist_ok=True)
@@ -111,7 +111,7 @@ B20: G1plausible/no establecido; G2retenido medido/fallido5/10celdas en4folds,in
 
 Solo esta automatización nocturna fue eliminada mediante herramienta nativa, con recibo privado; no prórroga, otros chats/automatizaciones conservados. B00/B01-B20,T0/C0/folds y adversos conservados;2024/test/SEL01/actas/ledgercerrados aquí. Exposición previa de asunto externo declarada sin usar métricas o afirmar ceguera completa. Último seguimiento propio Kaggle guardado09:58:39UTC, sin consulta nueva o envío para este balance; anuncioHOST no acredita scoring propio. Revisión propia exploratoria, sin aprobación humana o validación profesional independiente.\n'''
     for name in ['MEMORIA_PROYECTO.md','DECISIONES.md']:change(ROOT/('Preparaci'+chr(243)+'n')/name,lambda raw:raw+section)
-    change(REPO/'docs/semana2/PLAN_NOCTURNO_20261023.md',lambda raw:raw+f"\n\n## Ventana concluida: balance final publicado\n\nCodex, UTC {now()}. [Balance final](BALANCE_NOCTURNO_20261024.md), foro050. Preparado/publicado después del límite07:00Bogotá, con primera lectura07:27:30y hora real conservada. No nuevas pruebas o entrenamiento. Esta automatización nocturna fue eliminada por herramienta nativa; sin prórroga u otras automatizaciones modificadas. G1/G2/G4pendientes, B00/alternativas conservados,2024cerrado. El balance delimita evidencia para retomar sin dar por resuelta promoción o último.\n")
+    change(REPO/'docs/archivo/semana2/PLAN_NOCTURNO_20261023.md',lambda raw:raw+f"\n\n## Ventana concluida: balance final publicado\n\nCodex, UTC {now()}. [Balance final](BALANCE_NOCTURNO_20261024.md), foro050. Preparado/publicado después del límite07:00Bogotá, con primera lectura07:27:30y hora real conservada. No nuevas pruebas o entrenamiento. Esta automatización nocturna fue eliminada por herramienta nativa; sin prórroga u otras automatizaciones modificadas. G1/G2/G4pendientes, B00/alternativas conservados,2024cerrado. El balance delimita evidencia para retomar sin dar por resuelta promoción o último.\n")
     change(ROOT/'RUTAS_PROYECTO.json',lambda raw:top(top(raw,'week_2_night_final_balance_index',rel(INDEX)),'week_2_night_final_balance_report',rel(DOC)))
     before=read(RUN/'registration_cuts/before'/NIGHT.relative_to(ROOT));after=read(RUN/'registration_cuts/after'/NIGHT.relative_to(ROOT))
     observation={'id':IDENT,'utc':now(),'scope':'Administrative/documentary preservation only; no scientific suite or numerical diagnostic executed.','completed_history_preserved':before['completed_units']==after['completed_units'],'current_unit_preserved':before.get('current_unit')==after.get('current_unit'),'window_end_preserved':before['window_end']==after['window_end'],'own2024closed':after['confirmation_2024_open'] is False,'own_automation_deleted':closure['confirmed_deleted'],'frozen_source_copies_intact':all(sha(ROOT/x['snapshot'])==x['sha256'] for x in meta['sources']),'source_indices_changed_after_cut_excluding_own_night':[x['path'] for x in meta['sources'] if not x['mutable_shared_index'] and sha(ROOT/x['path'])!=x['sha256']]}

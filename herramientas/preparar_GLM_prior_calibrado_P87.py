@@ -15,7 +15,7 @@ r=k.r;m=k.m;q=k.q;w=k.w;np=k.np;pd=k.pd;BASE=k.BASE
 SCALAR=r.p.k.core.b
 OUT=BASE/'P87_prior_calibrado_preflight_20261027'
 PLAN=R/'registro/semana2_prior_calibrado_GLM_preflight_plan.json';INDEX=R/'registro/semana2_prior_calibrado_GLM_preflight_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P87_PRIOR_CALIBRADO_GLM_PREFLIGHT.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P87_PRIOR_CALIBRADO_GLM_PREFLIGHT.md'
 
 
 def utc():return datetime.now(timezone.utc).isoformat()

@@ -1,0 +1,79 @@
+# Verificación de la reconstrucción
+
+Este archivo recoge cada prueba de reconstrucción con su fecha, la máquina, la orden y el resultado. Una prueba nueva se añade al final; las anteriores no se reescriben.
+
+Entrada vigente del 19 de octubre, Codex: el paquete 1.2 y la mezcla real en Windows se describen en la sección 5 al final. El trabajo nuevo se concentra en esta carpeta común por instrucción del participante. Las secciones 1-4 conservan los cortes históricos de Claude.
+
+## 1. Mezcla desde los componentes guardados (19 de octubre de 2026)
+
+Orden: `python reproducir.py mezcla --semana1=<carpeta Semana 1> --trabajo=<carpeta nueva>`.
+
+| Máquina | Python, numpy, pandas, pyarrow | S30 (SHA-256 del CSV) | S22 (SHA-256 del CSV) | Tiempo |
+| --- | --- | --- | --- | ---: |
+| Entorno de referencia (nube de Claude, 2 núcleos) | 3.13.16, 2.5.3, 3.0.5, 26.0.0 | `fd9528e0…e3bc5`, igual al entregado | `c21a02e1…3541b0`, igual al entregado | 10 s |
+| Máquina virtual del participante | 3.10.12, 2.2.6, 2.3.3, 25.0.1 | igual al entregado | igual al entregado | 31 s |
+
+En la máquina virtual, `S30_claude_b/prediccion_2025.parquet` tiene los mismos `row_id` y ramos en el mismo orden y 558.129 de 626.639 predicciones distintas en el último bit (diferencia absoluta máxima 9,1 × 10⁻¹², relativa 1,4 × 10⁻¹⁵): son las funciones matemáticas de numpy 2.2.6 frente a 2.5.3. El CSV redondea y queda igual byte a byte.
+
+## 2. Etapas de datos desde los once originales (19 de octubre de 2026)
+
+Orden: `python reproducir.py datos --semana1=<carpeta Semana 1> --trabajo=<carpeta nueva>`, 1 minuto 57 segundos en el entorno de referencia.
+
+| Paso | Script | Resultado frente a la corrida original |
+| --- | --- | --- |
+| 00 Capa preparada | `src/datos/n62_codex/rebuild_base.py` (Codex, N62) | Once tablas con el SHA-256 de la capa preaudit |
+| 01 Bases actuariales | `src/datos/bases_actuariales.py` (D67) | `t0_por_row_id` y `asignacion_por_siniestro` iguales en contenido; tablas de desarrollo, completitud e IBNR iguales en bytes |
+| 02 Matriz F0 | `src/datos/construir_f0.py` (D68) | Tres matrices y particiones iguales en contenido; bloques del contrato iguales |
+| 03 Variables | `src/modelos/construir_variables.py` | Las tres matrices de variables iguales en contenido |
+
+Los bytes de las bases y de F0 cambian porque se escribieron con pandas 3.0.5 y no con el pandas 2.3.3 de la máquina virtual: las fechas de periodo quedan en segundos en lugar de nanosegundos y los metadatos llevan otra versión. Para descartar que eso cambie algo en los modelos se comparó el marco que construye `experimentos.py` para cada ramo (matriz de predictores con tipos y categorías, T0, exposiciones, conteos y costes por peligro, año y mitad de calibración) a partir de las variables originales y de las reconstruidas desde cero: las tres huellas coinciden. En las demás tablas de las bases, `reservas_caso_T1.csv` difiere en un céntimo en una celda (22.250.294,32 frente a ,33, redondeo de una suma), `expuestos_ramo_mes.csv` solo en la escritura del decimal y `controles.csv` en el texto del control K01, que cita la verificación de la capa.
+
+## 3. Reconstrucción de todos los componentes desde las variables (en curso)
+
+Orden: `python reproducir.py componentes --semana1=<carpeta Semana 1> --trabajo=reconstruccion`, lanzada el 18 de octubre a las 21:19 de Bogotá en el entorno de referencia. Cada nodo se compara con `receta/huellas_esperadas.json` al terminar. A las 21:57 el sistema mató el nodo S04b por falta de memoria mientras corrían a la vez las pruebas de la sección 2; se relanzó con la misma orden y retomó desde ese nodo. Resultado por nodo: se completa al terminar la corrida.
+
+Nota del 19 de octubre, 08:10 de Bogotá: esta reconstrucción corría en el contenedor de la sesión principal de Claude en la nube, que se reinicia cada pocas horas; desde la sesión que integró la versión 1.1 del paquete no se ve ese contenedor, así que su resultado por nodo sigue pendiente de recoger. Si se retoma, debe hacerse con la versión 1.1, que antes de saltar un nodo comprueba las huellas de sus salidas y se detiene ante una salida parcial (sección 4). Codex registró el 19 de octubre, en su revisión integral (`Validacion_enjambre/runs/20261019T120208Z_integral`), el hallazgo GOV-007 contra la versión anterior del orquestador, que podía saltar nodos por mera existencia de sus salidas y continuar o terminar con éxito pese a diferencias o faltantes; la sección 4 recoge la corrección.
+
+## 4. Controles de conformidad del paquete, versión 1.1 (19 de octubre de 2026)
+
+Hallazgo que corrige: GOV-007 (Codex, revisión integral del 19 de octubre, 12:02 UTC), «el paquete puede comunicar éxito o reanudar pese a discrepancias o archivos faltantes». Los sondeos de Codex (N64, N65 y N66, en `Modelado_codex/nocturna_20261017_N01/`) mostraban cuatro controles abiertos en la versión anterior (`reproducir.py` con SHA-256 `ec34abb2…41108c6` y `herramientas/etapas_datos.py` con `93751dab…4abedfc`): la reanudación saltaba un nodo si existían sus salidas, sin cotejar huellas; el modo `verificar` anunciaba faltantes o diferencias y terminaba con código 0; `preparar_datos` devolvía el informe aunque las bases, las tablas F0, los bloques del contrato o la copia local de una decisión congelada no coincidieran, y `main` lo aceptaba; y `--parar-si-difiere` era opcional, así que una diferencia de contenido no detenía la reconstrucción. Además la huella esperada de los bloques del contrato tenía un valor por defecto que hacía pasar la comprobación cuando faltaba, y un archivo truncado producía un error no controlado.
+
+Qué cambia en la versión 1.1 (`reproducir.py` SHA-256 `6481db2efb2045a5d1907ab0900bf669b084507b38937d780b053859d3c5de19`; `herramientas/etapas_datos.py` SHA-256 `0c0a90317130f5ee75054ef761edc5c84a52a57eea18652159fd71e056b8b9ab`, que con finales de línea CRLF da `98c7dd56…7b56c13`, el SHA de la propuesta N65 de Codex tal como la integró en N66; `receta/codigo.json`, sección `paquete`, lista los dos y las herramientas):
+
+- Antes de saltar un nodo cuyas salidas ya existen, cada artefacto que la receta manda verificar se compara con su huella esperada; si alguno falta, no se puede leer, no tiene huella esperada en la receta o difiere, el paquete se detiene (código 1). Un nodo con solo parte de sus salidas también se detiene; con `--relanzar-parciales` las salidas presentes se apartan con el sufijo `.parcial_<utc>` (no se borran) y el nodo se repite.
+- Después de cada nodo, la misma comprobación detiene la reconstrucción en el primer artefacto requerido no conforme. `--parar-si-difiere` deja de existir como opción porque es el comportamiento por defecto; `--continuar-si-difiere` permite seguir anotando cada diferencia de contenido, pero el paquete termina entonces con código 3 aunque los CSV finales coincidan, y nunca con 0. Un artefacto que falta, es ilegible o no tiene huella esperada detiene la reconstrucción también con esa opción.
+- `verificar` termina con código 1 si algo falta, es ilegible, no tiene huella esperada o difiere, y su JSON lleva `conforme`. Sin `receta/huellas_esperadas.json`, o con sus secciones `entradas` o `salidas` vacías, ningún modo continúa.
+- Etapas de datos: `preparar_datos` falla si la copia local de una decisión congelada no tiene el SHA-256 esperado, si una base o una tabla F0 requerida difiere en contenido o si los bloques del contrato difieren (propuesta N65 de Codex, sin cambios); `main` vuelve a exigir el informe completo contra el contrato `datos` de la receta antes de registrar o continuar.
+- Entradas: la huella esperada de los bloques del contrato F0 tiene que existir en la receta; una entrada ilegible se informa como tal.
+- Modo `mezcla`: cada componente guardado que se enlaza en `work/` y los tres insumos de exposición se comparan con su huella esperada antes de mezclar; `receta/huellas_esperadas.json` añade para eso la sección `mezcla` con las huellas de `Modelos_claude/insumos/exposicion_<ramo>.parquet` (las 8 entradas, las 184 salidas y la sección `datos` no cambian).
+- Códigos de salida documentados en la cabecera del script: 0 todo lo pedido coincide; 1 detenido o CSV final distinto; 2 uso incorrecto; 3 terminó con diferencias toleradas. El resultado final distingue `igual`, `csv_iguales_con_diferencias_intermedias` y `csv_distinto`, declara los objetivos que no se construyeron (con `--solo`) y `registro.jsonl` anota la versión al inicio de cada corrida.
+
+Ningún modelo, peso, etiqueta, especificación ni resultado cambia; los scripts de `src/` y `receta/receta.json` conservan sus SHA-256.
+
+Comprobación. `herramientas/probar_controles.py` arma, por caso, un paquete de prueba aislado con una receta sintética de dos nodos (un componente y una mezcla), archivos de dos filas y tres guardias en el lugar de las etapas reales de datos (N62, D67 y D68) que dejan una marca y fallan si alguien las invoca; el único script que corre como nodo es un emisor de archivos de prueba. Cada caso ejecuta `reproducir.py` desde la orden de consola y comprueba el código de salida, que ninguna etapa real se invocó y, donde aplica, que el nodo siguiente no llegó a ejecutarse. Son 45 casos: 9 nominales que deben terminar con código 0 (datos en caché, todo, verificar, reanudación verificada, componentes desde cero, Parquet con el mismo contenido y bytes distintos, mezcla con componentes verificados, relanzamiento de parciales y `--solo`), 35 adversos que deben terminar con código distinto de 0 (originales, capa, bases, F0, bloques y decisiones cambiados; CSV final que falta o con bytes distintos; salida sin huella esperada; huellas esperadas ausentes o vacías; Parquet truncado; reanudación con componente cambiado o salida parcial; entradas que faltan o difieren; nodo con error, que omite una salida o produce contenido distinto; componente guardado o insumo de exposición distinto o ausente en el modo mezcla; opciones inválidas) y 1 que debe terminar exactamente con código 3 (`--continuar-si-difiere` con un componente distinto y CSV final igual). El rechazo de A08 (falta la huella de bloques en modo `datos`) es por excepción no controlada de `etapas_datos.py`, que se dejó idéntico a la propuesta N65; el código de salida es 1 igualmente.
+
+| Entorno | Python, numpy, pyarrow | Casos | Resultado | Tiempo | Evidencia |
+| --- | --- | ---: | --- | ---: | --- |
+| Entorno de referencia (nube de Claude) | 3.13.16, 2.5.3, 26.0.0 | 45 | 45 pasan (9 con código 0, 35 con código ≠ 0, 1 con código 3); 0 etapas reales invocadas | 42 s | `docs/controles/20261019T125425Z_nube_referencia/` (`resultado.json` y la salida de cada caso) |
+| Máquina virtual del participante | 3.10.12, 2.2.6, 25.0.1 | 45 | 45 pasan; 0 etapas reales invocadas | 64 s | `docs/controles/20261019T125907Z_vm_participante/` |
+
+Mezcla real con la versión 1.1 en la máquina virtual del participante (`docs/controles/20261019T125907Z_vm_participante/mezcla_real_vm/`): con la orden estricta, los 46 archivos que enlaza el modo mezcla (43 salidas guardadas de los 20 componentes y selecciones que leen las dos mezclas, más los 3 insumos de exposición) coinciden en bytes y en contenido, `S22_claude_propio.csv` sale con el SHA-256 entregado y el paquete se detiene con código 1 en `S22_claude_propio/prediccion_2025.parquet`, que difiere en contenido por el último bit de numpy 2.2.6 (sección 1). Con `--continuar-si-difiere`, S30 y S22 salen iguales al entregado byte a byte (`fd9528e0…e3bc5` y `c21a02e1…3541b0`), los dos Parquet de 2025 quedan anotados como diferencias y el paquete termina con código 3, estado `csv_iguales_con_diferencias_intermedias`. Es la lectura correcta de ese entorno: los CSV se reproducen, la cadena intermedia no es idéntica, y el paquete ya no lo llama éxito. En el entorno de referencia la mezcla dio contenido idéntico en la sección 1, así que allí la misma orden debe terminar con código 0; no se repitió en esta sesión.
+
+Lo que esto cierra y lo que no. Cierra la parte técnica de GOV-007: la versión identificada rechaza los casos adversos conocidos y acepta los válidos, con evidencia en dos entornos. No cierra GOV-003 (reproducción por otra persona en otro entorno), MOD-005 (reproducción completa de la cadena de predicciones, cuya reconstrucción de componentes sigue pendiente de recoger) ni la revisión humana especializada; las verificaciones de esta sección son propias y asistidas por IA.
+
+
+## 5. Carpeta común, portabilidad y mezcla real Windows, 19 de octubre (Codex)
+
+Petición humana de preparar entrega y unificar el trabajo nuevo en este repositorio. La versión1.2 conserva los44archivos src del manifiesto y los pesos de S30/S22. Cambia el orquestador y el harness: copias de insumos en Windows con las mismas huellas, resolución de semana1 contra el directorio de invocación y wrapper de los dos escritores finales con LF antes de importar pandas. Las salidas finales siguen exigiendo SHA exacto.
+
+El primer ensayo de1.1 falló en N07 por WinError1314 (symlink); después se interrumpió por UnicodeEncodeError cp1252. Se preserva en docs/controles/20261019_windows_entrega/. Se corrigió el entorno con PYTHONUTF8=1. Los recibos intermedios1.2 tienen sus propios SHA y no se suman como casos nuevos de la versión final. Batería final: docs/controles/20261019_windows_v12_lf/resultado.json,45/45, nueve nominales y36adversos,0etapas reales.
+
+47archivos de referencia (46insumos y plantilla,193.093.273bytes) se copiaron a privado/artefactos_s30_s22 tras cotejar origen y destino por SHA; registro/artefactos_mezcla.json conserva el linaje. El primer replay con ruta relativa mostró que semana1 no se resolvía antes del cwd del hijo; se corrigió. El siguiente escribió CRLF de Windows: los valores y el contenido normalizado coincidían, pero el SHA del CSV no. Cambiar CRLF a LF recuperaba exactamente ambos SHA. Se añadió un wrapper de serialización previo a la escritura, sin tocar los scripts de modelo; el guard de CSV distinto de la batería sigue rechazando bytes inesperados.
+
+Replay final en Python3.12.14/numpy2.3.5 de Windows: ambos CSV exactos (fd9528e0…e3bc5 y c21a02e1…3541b0). Parquet de S30:180.496/626.639 valores distintos, diferencia máxima absoluta1,8189894e-12, relativa7,1839296e-16. S22:18.891/626.639 distintos, máxima absoluta9,0949470e-13, relativa6,1713062e-16. El proceso real devuelve3 y declara csv_iguales_con_diferencias_intermedias. El rc se registra mediante subprocess; el envoltorio PowerShell de la herramienta podía representar cualquier salida no cero como1. Recibo completo y logs en docs/evidencia/replay_windows*. No hubo entrenamiento, búsqueda nueva o envío Kaggle. No cierra la reproducción completa de componentes ni la revisión humana.
+
+## 6. Estado de la reconstrucción de componentes de la sección 3, 19 de octubre (Claude)
+
+La reconstrucción de la sección 3 no se puede recuperar. Corría en el contenedor de la nube de la sesión principal de Claude, y ningún archivo suyo llegó a la carpeta del participante: ni registros, ni resultados por nodo, ni salidas. Solo constan las declaraciones de CLA-20261019-001 y CLA-20261019-002: variables, seis selecciones V23 y S03 iguales byte a byte, y S04b relanzado tras el corte por memoria de las 02:57 UTC. Los otros 27 nodos no tienen evidencia. No se sabe si terminó y no se infiere. Para tener la cadena completa hace falta una corrida nueva con la versión 1.2, que reentrena y no está autorizada en este momento.
+
+El inventario de lo guardado (`registro/CLA-20261019-004_inventario_nodos.json`) muestra que ningún nodo de la receta guardó el modelo que ajusta, así que no existe un nivel intermedio de inferencia desde modelos congelados. De las 184 salidas con huella, 177 están en el equipo y coinciden por SHA-256. Detalle y respuesta a COD-20261019-113 en `docs/archivo/semana1/RESPUESTA_CLAUDE_REPRODUCCION_RESERVAS.md`.

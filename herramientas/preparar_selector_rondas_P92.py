@@ -15,7 +15,7 @@ scopes=load('p92_protected_inner_selector',R/'herramientas/preparar_seleccion_GL
 m=k.m;q=k.q;w=k.w;np=k.np;pd=k.pd;BASE=k.BASE;rating=k.k.k;prior=k.k;lgb=k.t.lgb
 OUT=BASE/'P92_selector_rondas_preflight_20261027'
 PLAN=R/'registro/semana2_selector_rondas_preflight_plan.json';INDEX=R/'registro/semana2_selector_rondas_preflight_actual.json'
-DOC=R/'docs/semana2/PRIVADA_P92_SELECTOR_RONDAS_PREFLIGHT.md'
+DOC=R/'docs/archivo/semana2/PRIVADA_P92_SELECTOR_RONDAS_PREFLIGHT.md'
 GRID=[64,128,256];MAX_ROUNDS=256;PARAMS=dict(k.t.PARAMS);ORIGINAL_TRAIN=lgb.train
 
 
