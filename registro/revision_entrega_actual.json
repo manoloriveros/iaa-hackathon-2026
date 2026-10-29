@@ -5,7 +5,7 @@
   "voice_owner": "Manuel Rodríguez",
   "path_base": "workspace_root",
   "scope": "Preparación técnica y editorial para la entrega del concurso; no es nueva validación predictiva ni acta humana.",
-  "verdict": "Material técnico local suficiente para preparar la entrega, con límites de reproducción documentados. Video registrado y paquete de código reunido para sincronización. Siguen pendientes el acceso del jurado, inglés del informe previsto, confirmaciones y envío final.",
+  "verdict": "El código, los dos notebooks y la documentación están sincronizados en GitHub; el video elegido está registrado. El material técnico permite preparar la entrega con límites de reproducción explícitos. Siguen pendientes acceso del jurado, versión inglesa prevista del informe, confirmaciones y envío del formulario.",
   "official_sources": [
     {
       "title": "Submissions",
@@ -104,13 +104,13 @@
     {
       "id": "version_control",
       "required": "Repositorio estructurado e historial de ambas semanas",
-      "status": "paquete_preparado_sincronizacion_pendiente",
-      "remote_latest_commit": "40b3100ba1fe59eb35faf5b3af84aa55b5ee6159",
-      "remote_latest_date": "2026-10-26T21:48:38Z",
-      "remote_has_notebooks_directory": false,
+      "status": "sincronizado_acceso_jurado_pendiente",
+      "remote_latest_commit": "f6b657ea6996b85d33f8a46a59853e83f90cff36",
+      "remote_latest_date": "2026-10-29T13:00:45-05:00",
+      "remote_has_notebooks_directory": true,
       "remote_visibility": "private",
       "judges_access_confirmed": false,
-      "evidence": "fuentes/github_root.json",
+      "evidence": "registro/sincronizacion_github_actual.json",
       "remote_snapshot_before_sync": {
         "remote_latest_commit": "40b3100ba1fe59eb35faf5b3af84aa55b5ee6159",
         "remote_latest_date": "2026-10-26T21:48:38Z",
@@ -118,7 +118,8 @@
         "remote_visibility": "private",
         "evidence": "fuentes/github_root.json"
       },
-      "sync_record": "registro/sincronizacion_github_actual.json"
+      "sync_record": "registro/sincronizacion_github_actual.json",
+      "package_tag": "entrega-codigo-20261029"
     },
     {
       "id": "human_review",
@@ -431,5 +432,11 @@
   "video_update": {
     "utc": "2026-10-29T17:58:57.347963+00:00",
     "index": "registro/video_entrega_actual.json"
+  },
+  "github_update": {
+    "utc": "2026-10-29T18:01:59.459303+00:00",
+    "index": "registro/sincronizacion_github_actual.json",
+    "content_commit": "f6b657ea6996b85d33f8a46a59853e83f90cff36",
+    "source": "consulta viva mediante plugin GitHub"
   }
 }

@@ -6,7 +6,7 @@
   "repository": "https://github.com/manoloriveros/iaa-hackathon-2026",
   "branch": "main",
   "package_tag": "entrega-codigo-20261029",
-  "status": "paquete_preparado_para_sincronizar",
+  "status": "contenido_sincronizado_y_verificado_en_github",
   "visibility": "private",
   "visibility_changed": false,
   "history_rewritten": false,
@@ -73,5 +73,37 @@
     "blocks": 0,
     "warnings": 0,
     "reviewed_files": 767
+  },
+  "remote_confirmation": {
+    "utc": "2026-10-29T18:01:59.459303+00:00",
+    "method": "GitHub plugin, GET ref/heads/main, contents/notebooks and repository metadata",
+    "sha": "f6b657ea6996b85d33f8a46a59853e83f90cff36",
+    "visibility": "private",
+    "branch": "main",
+    "notebooks": [
+      {
+        "path": "notebooks/week1_developed_market.ipynb",
+        "sha": "413d595a23a12f861544541d9884150e27d19240",
+        "bytes": 588712
+      },
+      {
+        "path": "notebooks/week2_emerging_market.ipynb",
+        "sha": "da5f7e2bfb92ddb46df13d301d60c49c715c58db",
+        "bytes": 479214
+      }
+    ],
+    "history_fast_forward": true,
+    "judges_access_confirmed": false
+  },
+  "package_tag_scope": "La etiqueta identifica el paquete y este cierre documental. El SHA de remote_confirmation es el commit de contenido verificado antes de registrar el recibo.",
+  "staged_content_guard": {
+    "blocks": 0,
+    "warnings": 0,
+    "files": 767,
+    "hook_passed": true
+  },
+  "whitespace_review": {
+    "result": "sin incidencias en texto editado",
+    "preserved_generated_svg": "Cuatro SVG de docs/figuras/pendientes_1a5 conservan espacios del generador. No reescribí sus bytes por formato."
   }
 }
