@@ -57,6 +57,7 @@ def fill(s):
 
 
 def page(body, n, total, cls=""):
+    if n in (3, 4): cls = (cls + " readable").strip()
     return (f'<section class="page {cls}"><div class="runhead"><span>{paginas.RUNHEAD}</span>'
             f'<span>Manuel Rodríguez · Kaggle: manoloriveros</span></div>'
             f'<div class="content">{fill(body)}</div>'

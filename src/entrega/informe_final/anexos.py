@@ -104,12 +104,12 @@ def tabla_shas():
 PAGINAS = [
 """
 <h1>Anexos</h1>
-<p class="small">Material de apoyo fuera de las cinco páginas calificadas. Cada cifra remite a un archivo o a un envío registrado en el repositorio.</p>
+<p class="small">Incluyo este material como apoyo, fuera de las cinco páginas calificadas. Cada cifra remite a un archivo o a un envío registrado en el repositorio.</p>
 <p class="small">En los archivos y en el foro se usan estos códigos. S41: entrega final de la parte 1 (Mezcla por peligro calibrada). B0: mezcla inicial de dos modelos transferidos. F: nivel global. F2: siniestros declarados y bonificación. final_creible: nivel por celda y forma. F3c: factores propios del emergente, modelo definitivo de la parte 2. F3d y F4c: variantes no incluidas en este informe.</p>
 <h2>Anexo A. Experimentos: qué se probó y qué quedó</h2>
-<p>Cada experimento se declaró antes de correr, con su hipótesis, sus datos y su criterio de aceptación. La tabla recoge 18 experimentos de las dos semanas, seis de la primera y doce de la segunda; detrás de la fila de la transferencia están los catorce modelos y tres mezclas que comparó la segunda línea de modelado (validación cruzada de 2023 por cliente y 2024 abierto una vez). El color resume la decisión: verde si entró en la tarifa, gris si quedó como referencia o alternativa y rojo si se descartó.</p>
+<p>Registré los experimentos antes de correrlos, con hipótesis, datos y criterio de aceptación. La tabla recoge 18 experimentos de las dos semanas, seis de la primera y doce de la segunda; detrás de la fila de la transferencia están los catorce modelos y tres mezclas que comparó la segunda línea de modelado (validación cruzada de 2023 por cliente y 2024 abierto una vez). El color resume la decisión: verde si entró en la tarifa, gris si quedó como referencia o alternativa y rojo si se descartó.</p>
 {{TABLA:experimentos}}
-<p>Casi todo lo descartado cayó en la validación local, antes de gastar un envío; las dos que se enviaron antes de descartarse, la forma de S43 y la mezcla robusta, se juzgaron después con validación local y con el ruido del tablero corregido. Los factores propios entraron con la regla pública; su respaldo local es el de la tabla de la página 3, y la entrega anterior sin factores (final_creible) sigue como referencia.</p>
+<p>Descarté casi todas las alternativas con validación local, antes de gastar un envío; las dos que se enviaron antes de descartarse, la forma de S43 y la mezcla robusta, se juzgaron después con validación local y con el ruido del tablero corregido. Los factores propios entraron con la regla pública; su respaldo local es el de la tabla de la página 3, y la entrega anterior sin factores (final_creible) sigue como referencia.</p>
 """,
 """
 <h2>Anexo B. Sensibilidad y reservas</h2>
@@ -129,7 +129,7 @@ PAGINAS = [
 </div>
 </div>
 <h3>Reservas e IBNR con los datos de la semana 2</h3>
-<p>Con una sola valoración de siniestros no se puede saber si una reserva es exacta. Sí se puede medir cuánto tendría que equivocarse para mover la tarifa más del 1 %, y comparar ese umbral con lo que estiman los datos. Dos multiplicadores lo ordenan: b escala la reserva de los siniestros abiertos (b = 0,75 quiere decir que faltaba por pagar un 25 % menos de lo reservado) y k escala el coste aún no reportado. La clase es «acotado» si el intervalo de la estimación cabe en el rango que tolera la tarifa e «incertidumbre material» si lo cruza.</p>
+<p>Con una sola valoración no puedo establecer si una reserva es exacta. Sí puedo medir cuánto tendría que equivocarse para mover la tarifa más del 1 %, y comparar ese umbral con lo que estiman los datos. Dos multiplicadores lo ordenan: b escala la reserva de los siniestros abiertos (b = 0,75 quiere decir que faltaba por pagar un 25 % menos de lo reservado) y k escala el coste aún no reportado. La clase es «acotado» si el intervalo de la estimación cabe en el rango que tolera la tarifa e «incertidumbre material» si lo cruza.</p>
 {{FIG:reservas}}
 <p class="cap"><b>Figura B3.</b> Sensibilidad histórica de reservas e IBNR para F3c, con 390 cifras cotejadas. La salida «acotada» recalcula los óptimos públicos: es un contrafactual condicionado, no absorción comprobada por la calibración de la entrega congelada. No demuestra suficiencia del ajuste original.</p>
 <p>La reserva de caso suma 4.995.797,64 CU sobre 27.997.991,57 CU observados (17,8 %): 9,3 % en 2023 y 28,1 % en 2024. Lesiones corporales concentra el 49,0 % de la reserva. Su coste tardío superó en 42,7 % al previsto. Los 50 escenarios nuevos conservan ganancia global positiva, pero congelan árboles y curvas fuente; no reemplazan evolución posterior ni prueban suficiencia (página 4).</p>
@@ -143,7 +143,7 @@ PAGINAS = [
 <p class="cap"><b>Figura B4.</b> Público medido menos previsto antes de cada envío; franja clara, intervalo previsto. Los ajustes de calibración quedaron dentro; los dos cambios de modelo, fuera.</p>
 </div>
 <div>
-<p>La credibilidad usa n/(n + K), con K = 300 en F3c. F3d (K = 60 en contenidos) no es la selección. La receta protegida aprendida en 2023 mejora entre +0,0023317 y +0,0024318 en 2024 según la base; renovación explica el 98,09–99,39 %. Ninguna banda con composición de 2025 separa la mejora de cero al 95 %. La protección de negocio nuevo falla en las tres bases. La evidencia histórica entre años se contradice y no se rehízo esa prueba inversa en esta corrida. Retirar 37/42/39 grupos favorables anula la ganancia de T2b/A1/mezcla. Estas cifras sustituyen el contraste anterior de +0,00239 y 38 grupos.</p>
+<p>La credibilidad usa n/(n + K), con K = 300 en F3c. No seleccioné F3d (K = 60 en contenidos). La receta protegida aprendida en 2023 mejora entre +0,0023317 y +0,0024318 en 2024 según la base; renovación explica el 98,09–99,39 %. Ninguna banda con composición de 2025 separa la mejora de cero al 95 %. La protección de negocio nuevo falla en las tres bases. La evidencia histórica entre años se contradice y no se rehízo esa prueba inversa en esta corrida. Retirar 37/42/39 grupos favorables anula la ganancia de T2b/A1/mezcla. Estas cifras sustituyen el contraste anterior de +0,00239 y 38 grupos.</p>
 </div>
 </div>
 
@@ -195,7 +195,7 @@ PAGINAS = [
 """,
 """
 <h2>Anexo G. Reproducción y trazabilidad</h2>
-<p>El código, el registro de decisiones y el foro viven en un repositorio privado de GitHub. Los datos de Kaggle y las predicciones no se suben, porque las reglas del concurso no permiten redistribuirlos: quedan en una carpeta privada fuera de Git, con su huella SHA-256 en manifiestos.</p>
+<p>Conservo el código, las decisiones y el foro en un repositorio privado de GitHub. No subo los datos de Kaggle ni las predicciones, porque las reglas del concurso no permiten redistribuirlos: quedan en una carpeta privada fuera de Git, con su huella SHA-256 en manifiestos.</p>
 <ul class="lim">
  <li>Antes de nada se comprobaron los datos: los 24 Parquet oficiales se compararon byte a byte con las copias originales cuando Kaggle cambió su fecha de publicación, sin diferencias.</li>
  <li>Para la parte 1, <span class="mono">reproducir.py</span> rehace la cadena completa desde los once Parquet originales: el reajuste de los 436 estimadores (unas once horas con dos núcleos) devolvió los dos CSV con su SHA registrado, con 19 de 181 huellas intermedias distintas en el último bit porque LightGBM elige por cronómetro el modo de cálculo (fijar <span class="mono">force_row_wise</span> devolvió el histórico); la réplica sin ajustes, con los estimadores guardados, repitió las 194 salidas y los dos CSV en 34 minutos.</li>

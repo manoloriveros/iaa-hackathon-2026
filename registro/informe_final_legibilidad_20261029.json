@@ -1,0 +1,96 @@
+{
+  "id": "INFORME-FINAL-LEGIBILIDAD-PRIMERA-PERSONA-20261029",
+  "utc": "2026-10-29T17:39:13.412925+00:00",
+  "author_editor": "Codex",
+  "voice_owner": "Manuel Rodríguez",
+  "original_author": "Claude y ediciones según registros",
+  "path_base": "workspace_root",
+  "status": "PDF_espanol_listo_para_entregar",
+  "scope": "Legibilidad de páginas 3–4 y narración en primera persona; receta F3c, cifras, fórmulas y alcance de validaciones conservados.",
+  "pdf": "Hackaton/Semana 2/Claude/informe_final_20261026/informe_final_IAA2026_es.pdf",
+  "delivery_copy": "Hackaton/Entrega_final/01_Para_entregar/Informe_final_ES.pdf",
+  "pdf_sha256": "8ff417595f5ca23a2d3d1462075a4e3b0ce0456d644cd43d4279f6020fa62eaf",
+  "previous_pdf_sha256": "e9e8565f673ed6a8b9b7f0cbb8e59fa4f3335d7e91f693a54eb585a562f8f60a",
+  "pdf_bytes": 232802,
+  "run": "Hackaton/Repositorio_IAA2026/privado/informe_legible_20261029",
+  "verification": "Hackaton/Repositorio_IAA2026/privado/informe_legible_20261029/verificacion.json",
+  "layout": "Hackaton/Repositorio_IAA2026/privado/informe_legible_20261029/maquetacion.json",
+  "model": "F3c",
+  "model_changed": false,
+  "model_sha256": "5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276",
+  "total_pages": 10,
+  "graded_pages": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "visual_review_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "body_words": {
+    "P3": {
+      "before": 785,
+      "after": 661
+    },
+    "P4": {
+      "before": 736,
+      "after": 562
+    }
+  },
+  "typography_pages_3_4": {
+    "body_pt": {
+      "before": 8.9,
+      "after": 9.15
+    },
+    "table_pt": {
+      "before": 7.7,
+      "after": 8.05
+    },
+    "caption_pt": {
+      "before": 7.4,
+      "after": 7.8
+    }
+  },
+  "changes": [
+    "Párrafos más cortos y menos repeticiones; tamaño de texto, tablas y notas aumentado en páginas 3 y 4.",
+    "Primera persona en el relato del proyecto, con atribución expresa de comprobaciones y correcciones a la IA.",
+    "Criterio fallido de negocio nuevo en página 1 y límite de extrapolación del nivel en página 2; ambos permanecen en las cinco páginas calificables.",
+    "Tablas de resultados con mayor separación y alternancia visual; arquitectura y valores cotejados."
+  ],
+  "checks": {
+    "model_and_commercial_CSV_unchanged": true,
+    "model_source_pins_unchanged": true,
+    "commercial_table_identical": true,
+    "data_architecture_validation_table_numbers_identical": true,
+    "all_prior_decimal_values_preserved": true,
+    "formulas_identical": true,
+    "chart_source_identical": true,
+    "appendix_tables_identical": true,
+    "limitations_retained_in_first_five_pages": true,
+    "first_person_main_narrative": true,
+    "AI_attribution_preserved": true,
+    "layout_and_fonts_pass": true
+  },
+  "previous_evidence_index": "Hackaton/Repositorio_IAA2026/registro/informe_final_arquitectura_validaciones_20261029.json",
+  "tex_text_synchronized": true,
+  "tex_compiled": false,
+  "tex_graphics_regenerated": false,
+  "new_training": false,
+  "new_inference": false,
+  "new_model_validation": false,
+  "new_submission": false,
+  "publication": false,
+  "forum_comment_id": "COD-S2-20261029-INFORME-LEGIBILIDAD-VOZ-FINAL",
+  "forum_receipt": "Hackaton/Repositorio_IAA2026/privado/informe_legible_20261029/foro_recibo.json"
+}
