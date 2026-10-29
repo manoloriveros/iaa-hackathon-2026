@@ -1,9 +1,9 @@
 {
   "author": "Codex",
-  "as_of_utc": "2026-10-28T14:02:32.647713+00:00",
+  "as_of_utc": "2026-10-29T02:10:14.093897+00:00",
   "scope": "Own pricing/development lineage only; not all project fits or other authors. Historical main catalog retains its dated counter.",
-  "cumulative_price_base_fits": 2855,
-  "cumulative_closed_form_constants": 45390,
+  "cumulative_price_base_fits": 3727,
+  "cumulative_closed_form_constants": 47016,
   "auxiliary_Poisson_Gamma_fits_separate": 30,
   "baseline": {
     "index": "Hackaton/Repositorio_IAA2026/registro/semana2_desarrollo2023_v7_snapshot.json",
@@ -5046,5 +5046,33 @@
     "native_work_in_progress": true,
     "analytical_smoke_count_partial_after_interruption": true,
     "note": "No reset ni suma duplicada al acumulado cerrado; conciliar diario al terminar fuente."
-  }
+  },
+  "F3c_R_completed_20261028": {
+    "author": "Codex",
+    "utc": "2026-10-29T02:10:14.093897+00:00",
+    "native_attempts_increment": 872,
+    "completed_native_fits": 870,
+    "interrupted_native_attempts": 2,
+    "native_reused_pairs_not_added": 33,
+    "primary_analytical_constants_increment": 1626,
+    "primary_analytical_breakdown": {
+      "base_Tweedie_levels": 78,
+      "base_balance_levels": 156,
+      "C1_levels": 48,
+      "recipe_kopt_calls": 1344
+    },
+    "target_kopt_calls_all_roles_separate_including_primary": 5760,
+    "target_calibrator_primary_fits_separate": 16,
+    "target_calibrator_verification_fits_separate": 18,
+    "synthetic_optimizer_fits_separate": 36,
+    "synthetic_adapter_fits_previous_branch": 132,
+    "synthetic_analytic_calls_in_interrupted_smoke_not_fully_journaled": true,
+    "primary_RKM_bundles_separate": 52,
+    "adverse_RKM_bundles_separate": 52,
+    "new_emerging_C0_fits": 0,
+    "source_receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/F3c_regularizado_20261028/closeout/source_reconciliation.json",
+    "verification_receipt": "Hackaton/Repositorio_IAA2026/privado/semana2/F3c_regularizado_20261028/closeout/final_verification.json",
+    "note": "El acumulado historico de ajustes nativos incluye intentos interrumpidos, como su entrada F3c_full_structure. Se suman 872 intentos, no se presentan como 872 ajustes terminados. Constantes acumuladas: solo 1626 primarias; verificaciones, calibradores y paquetes RKM separados. La instantanea previa de fuente en progreso se conserva y queda resuelta por esta entrada."
+  },
+  "latest_F3c_R_closeout": "Hackaton/Repositorio_IAA2026/registro/semana2_F3c_regularizado_actual.json"
 }

@@ -1,7 +1,7 @@
 {
   "author": "Codex",
-  "utc": "2026-10-28T21:26:44.987526+00:00",
-  "status": "source_running_target_and_assessment_waiting",
+  "utc": "2026-10-29T02:10:14.093897+00:00",
+  "status": "comparison_verified_preserve_F3c",
   "candidate": "F3c-R",
   "plan": "Hackaton/Repositorio_IAA2026/registro/semana2_F3c_regularizado_plan.json",
   "plan_sha256": "fcd5793980d241f781d492de9f595b3c7b47470f0d18eb99442d8c7f1af9088c",
@@ -30,7 +30,7 @@
   },
   "formal_promotion": false,
   "private_superiority_established": false,
-  "next_unit": "Conciliar tres procesos/estados vivos antes de relanzar. Completar fuente26, controles destino y evaluacion ya registrada. Solo tras resultados revisar recomendacion robusta; no envio.",
+  "next_unit": "Comparacion completada. Conservar F3c y cerrar solo su seguimiento F3c-R. Una receta posterior necesita explicar deterioro por segmentos y cola; no elegir mezcla ni enviar con estos resultados.",
   "preserved": [
     "B00",
     "R1",
@@ -152,5 +152,68 @@
       "previous_sha256": "c44ceedf192f5c2e323d3f0c8e0c0d0090fbd33531e377b969e59b4ad513c998",
       "sha256": "281711e50b36f9941fa79eb67435d49ebd14fb9ded54d2250e557a69a16e9fe2"
     }
+  },
+  "assessment": {
+    "author": "Codex",
+    "utc": "2026-10-29T02:06:51.078673+00:00",
+    "status": "evaluated_preserve_F3c",
+    "report": "Hackaton/Repositorio_IAA2026/docs/semana2/F3C_REGULARIZADO_RESULTADOS_20261028.md",
+    "report_sha256": "8b427dac8b2f69f36c68c6a41e8271e386286b13c538e4eee8b3867d81a26bbd",
+    "result": "Hackaton/Repositorio_IAA2026/privado/semana2/F3c_regularizado_20261028/assessment/results.json",
+    "result_sha256": "4dc1c242ebac5029edf02a60e7e45b91ecb3a6e2dad15d27c39fc5da7ce0c0d3",
+    "all_gates_pass": {
+      "F3c_R_vs_matched_trainlevel_full": false,
+      "F3c_R_vs_public_full": false
+    },
+    "formal_promotion": false,
+    "private_superiority_established": false,
+    "new_submissions": 0,
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261028-F3CR-EVALUACION-RESULTADO",
+      "utc": "2026-10-29T02:06:51+00:00",
+      "previous_sha256": "84a6f504c8f0c8306fc6b56dd0cbad438030dfcb371400cf497f40b63a6f9336",
+      "sha256": "0c14da2b56bf17c5a021ff8ec617e6b1a9ba318ef686699e04d2a0a13c421a1a"
+    }
+  },
+  "closeout": {
+    "author": "Codex",
+    "utc": "2026-10-29T02:10:14.093897+00:00",
+    "status": "comparison_verified_preserve_F3c",
+    "report": "Hackaton/Repositorio_IAA2026/docs/semana2/F3C_REGULARIZADO_CIERRE_20261028.md",
+    "report_sha256": "4349a624525a4028a0e0e407f9ce13266b90547cc6c7be33d1d474647b83d7e4",
+    "source_reconciliation": "Hackaton/Repositorio_IAA2026/privado/semana2/F3c_regularizado_20261028/closeout/source_reconciliation.json",
+    "source_reconciliation_sha256": "efcfca9d812dcb979ae1cf21bcf591715ce38578e1d812db5675eae88ec8212e",
+    "final_verification": "Hackaton/Repositorio_IAA2026/privado/semana2/F3c_regularizado_20261028/closeout/final_verification.json",
+    "final_verification_sha256": "6105527200b7423cd5018e8a4849cb9ead82b05e19bbc22a6061d8253ecb8d1c",
+    "forum": {
+      "author": "Codex",
+      "id": "COD-S2-20261028-F3CR-CIERRE-VERIFICADO",
+      "utc": "2026-10-29T02:10:14+00:00",
+      "previous_sha256": "0c14da2b56bf17c5a021ff8ec617e6b1a9ba318ef686699e04d2a0a13c421a1a",
+      "sha256": "2a144cd69ba5e220130802b68eef69a174060499aa0da3006f4620185a455ebc"
+    },
+    "candidate_criteria_pass": {
+      "F3c_R_vs_matched_trainlevel_full": false,
+      "F3c_R_vs_public_full": false
+    },
+    "formal_promotion": false,
+    "private_superiority_established": false,
+    "preserved": [
+      "F3c",
+      "F3c-R",
+      "R1",
+      "B00",
+      "adverse_results"
+    ],
+    "new_submissions": 0,
+    "source_completed_scopes": 26,
+    "native_attempts": 872,
+    "completed_native_fits": 870,
+    "interrupted_native_attempts": 2,
+    "calibrator_primary_fits": 16,
+    "calibrator_verification_fits": 18,
+    "F3c_original_csv_unchanged": true,
+    "next_unit": "Comparacion completada. Conservar F3c y cerrar solo su seguimiento F3c-R. Una receta posterior necesita explicar deterioro por segmentos y cola; no elegir mezcla ni enviar con estos resultados."
   }
 }
