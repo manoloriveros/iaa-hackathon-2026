@@ -1,0 +1,122 @@
+{
+  "id": "INFORME-FINAL-IA-ACTUARIAL-20261029",
+  "utc": "2026-10-29T18:23:10.823810+00:00",
+  "author_editor": "Codex",
+  "voice_owner": "Manuel Rodríguez",
+  "original_author": "Claude y ediciones según registros",
+  "path_base": "workspace_root",
+  "status": "PDF_espanol_actualizado",
+  "scope": "Refuerzo del aporte práctico de IA en páginas 1 y 4, con casos y controles comprobables; F3c conservado.",
+  "pdf": "Hackaton/Semana 2/Claude/informe_final_20261026/informe_final_IAA2026_es.pdf",
+  "delivery_copy": "Hackaton/Entrega_final/01_Para_entregar/Informe_final_ES.pdf",
+  "pdf_sha256": "c13b652663d0db759e15a3a1b2d6cb69bec96958eb7fe7a89faa7e722b9c17ae",
+  "previous_pdf_sha256": "b7a514d5c83313bc82cccbeada8463681070e2bdd8dbc779107c655580b6e9ed",
+  "pdf_bytes": 227788,
+  "run": "Hackaton/Repositorio_IAA2026/privado/informe_ia_actuarial_20261029",
+  "verification": "Hackaton/Repositorio_IAA2026/privado/informe_ia_actuarial_20261029/verificacion.json",
+  "layout": "Hackaton/Repositorio_IAA2026/privado/informe_ia_actuarial_20261029/maquetacion.json",
+  "model": "F3c",
+  "model_changed": false,
+  "model_sha256": "5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276",
+  "total_pages": 10,
+  "graded_pages": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "changed_pages": [
+    1,
+    4
+  ],
+  "visual_review_pages": [
+    1,
+    4
+  ],
+  "unchanged_pages": [
+    2,
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "changes": [
+    "Página 1: diagrama del circuito de IA con líneas de modelado, alternativas y contraste, foro, controles y revisión actuarial.",
+    "Página 1: herramientas vinculadas a su función (Claude/Codex, Python, Kaggle MCP y Git) y aplicación propuesta a un nuevo cierre de siniestros.",
+    "Página 4: cuatro casos de aporte de IA con artefacto, comprobación y efecto, dentro de las cinco páginas calificables.",
+    "Corrección de atribución: los controles del paquete de semana 1 v1.2 son 45 casos sintéticos, 36 adversos; se separan del aislamiento de la validación F3c.",
+    "Modelo F3c, métricas, tablas y fórmulas conservados; sin reducir tipografía."
+  ],
+  "checks": {
+    "model_and_commercial_CSV_unchanged": true,
+    "model_source_pins_unchanged": true,
+    "all_prior_tables_and_formulas_identical": true,
+    "all_prior_decimal_metrics_preserved": true,
+    "unchanged_pages_HTML_and_PDF_text_identical": true,
+    "quantitative_charts_unchanged": true,
+    "typography_unchanged": true,
+    "appendices_unchanged": true,
+    "layout_and_fonts_pass": true,
+    "four_cases_in_first_five_pages": true,
+    "historical_test_receipt_attributed_to_correct_stage_and_version": true,
+    "proposed_real_world_use_distinguished_from_implemented_work": true
+  },
+  "source_pins": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/entrega/panel_modelo.html",
+      "sha256": "75bc1126af2530401a5518bd238054f205824750a684ce03a97d6f96fa895c31"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/evidencia/base_N62.json",
+      "sha256": "b5dba85880788df85785b5b0d07797b399b8e3770cf881c19d5da7f7bebb38de"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/trazabilidad_ia_revision_20261020.json",
+      "sha256": "850c36805af126dba9797c3266f248af8c9d422e951795c7e2641554eed5cb16"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/F3C_VALIDACION_COMPLETA_20261027.md",
+      "sha256": "be33f0b05b36b747563b64f184fed9468b1d9a26882e5ad585b8694c3af65132"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/F3C_A1_MEZCLA_PROTEGIDAS_Y_ESCENARIOS.md",
+      "sha256": "d4bf21c95c5d68d33e3f6c4455ebe691a0c2d0b3a0abf428241f89d15cfdd89f"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/registro/informe_final_arquitectura_validaciones_20261029.json",
+      "sha256": "e2560ef1b588108fd20a52417ee4531acb49d359b7783f904a8a9dda3135a28e"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/archivo/semana1/verificacion.md",
+      "sha256": "a09c40058d852d8febf418acfec840253c79f1c3638d00581b0e8535c3783e23"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/controles/20261019_windows_v12_lf/resultado.json",
+      "sha256": "7c6cc9ea348ad4ec064261a0260650f4c5886a6f459b49d523a9eae9197ede63"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/docs/semana2/F3C_CADENA_PROTEGIDA_REEVALUACION.md",
+      "sha256": "04faa46f63edbf4ee12dc2cd13259f82ddad269cdedb218934a830c4f8b734b5"
+    }
+  ],
+  "previous_evidence_index": "Hackaton/Repositorio_IAA2026/registro/informe_final_aclaraciones_20261029.json",
+  "source_caveats": [
+    "La aplicación a una aseguradora es una propuesta de reutilización, no una implantación real ni una medida de ahorro.",
+    "Los casos de IA se apoyan en evidencia histórica; las pruebas sintéticas se identifican como tales."
+  ],
+  "correction": "El informe previo atribuía 45 pruebas/35 adversas al aislamiento de la cadena. La fuente corresponde al paquete v1.1 de semana 1; el cierre v1.2 de Windows pasó 45 casos/36 adversos. Se atribuye al caso correcto y su versión. No cambia un resultado predictivo.",
+  "tex_text_synchronized": true,
+  "tex_compiled": false,
+  "tex_AI_figure_regenerated": true,
+  "new_training": false,
+  "new_inference": false,
+  "new_model_validation": false,
+  "new_submission": false,
+  "publication": false,
+  "forum_comment_id": "COD-S2-20261029-INFORME-IA-ACTUARIAL",
+  "forum_receipt": "Hackaton/Repositorio_IAA2026/privado/informe_ia_actuarial_20261029/foro_recibo.json"
+}

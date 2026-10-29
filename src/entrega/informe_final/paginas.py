@@ -14,37 +14,18 @@ P1 = """
  <div class="kpi"><div class="v">0,13864</div><div class="l">D² privado de la parte 1. Cuarto puesto entre 54 equipos.</div></div>
  <div class="kpi"><div class="v">0,16914</div><div class="l">D² público de F3c, modelo definitivo de la parte 2. Resultado privado pendiente.</div></div>
 </div>
-<p>En el mercado establecido combiné coste total Tweedie con frecuencia × severidad por peligro. Esta descomposición permite recoger mecanismos distintos, como incendio, fuga de agua y lesiones corporales, y combinar componentes que no rinden igual en todos los ramos. Para el emergente transferí relaciones aprendidas con variables comunes y añadí ajustes locales con credibilidad. Así aproveché la historia disponible sin exigir que una muestra pequeña estime toda la estructura desde cero.</p>
-<div class="flow">
- <div></div>
- <div class="st">1. Definir<span>objetivo y métrica</span></div>
- <div class="st">2. Validar datos<span>antes de usarlos</span></div>
- <div class="st">3. Coste último<span>siniestros no reportados</span></div>
- <div class="st">4. Modelo<span>estructura del riesgo</span></div>
- <div class="st">5. Nivel de 2025<span>con credibilidad</span></div>
- <div class="st">6. Contrastar<span>estabilidad y reproducción</span></div>
- <div class="rl">Semana 1<br><span class="small">establecido</span></div>
- <div class="c1">Contrato escrito: qué se predice y cómo se mide</div>
- <div class="c1">58 controles; ocho reglas reversibles</div>
- <div class="c1">Retraso de reporte por peligro, en la exposición</div>
- <div class="c1">Mezcla por peligro: coste total y frecuencia × severidad</div>
- <div class="c1">Calibración por ramo con credibilidad</div>
- <div class="c1">12 experimentos preinscritos; reconstrucción desde originales</div>
- <div class="rl">Semana 2<br><span class="small">emergente</span></div>
- <div class="c2">Mismas definiciones; prima comercial de 20 pólizas</div>
- <div class="c2">74 controles nuevos; 12 hallazgos</div>
- <div class="c2">Curva del desarrollado, contrastada en 2023</div>
- <div class="c2">Modelo transferido más factores propios</div>
- <div class="c2">Nivel global y por celda, con credibilidad</div>
- <div class="c2">Sensibilidad, reservas y revisiones cruzadas con IA</div>
-</div>
-<p class="cap"><b>Figura 1.</b> Cadena de estimación común y adaptación al mercado emergente. La calibración incorpora información del tablero público; su alcance se distingue de la validación histórica.</p>
+<p>En el mercado establecido combiné coste total Tweedie con frecuencia × severidad por peligro, para recoger mecanismos distintos entre ramos. En el emergente transferí relaciones aprendidas con variables comunes y añadí ajustes locales con credibilidad, aprovechando la historia del desarrollado.</p>
+<h3>Cómo incorporé la IA al trabajo actuarial</h3>
+<p>Con Claude y Codex convertí preguntas actuariales en código, contrastes y documentación. Organicé líneas de modelado, alternativas y revisión crítica, con hipótesis y resultados adversos en un foro común. Python materializó los cálculos; Kaggle MCP conectó las fuentes oficiales y Git conservó las versiones.</p>
+{{FIG:flujo_ia}}
+<p class="cap"><b>Figura 1.</b> Circuito de trabajo aplicado en el proyecto. Los asistentes producen artefactos comprobables; las primas proceden de los modelos estadísticos. Los controles y las revisiones cruzadas informan mi decisión. Casos y resultados en la página 4.</p>
 <h3>Decisiones que dieron forma al modelo</h3>
-<p>Concilié la exposición antes de estimar tasas e incorporé el retraso de reporte por peligro, contrastado con cohortes observadas. Revisé qué datos podían conocerse al cotizar y excluí campos con riesgo de incorporar información posterior, como los contactos de servicio (página 2). Comparé la transferencia con modelos locales y revisé los ajustes por ramo y tipo de negocio. Calibré el nivel final mediante variaciones multiplicativas controladas y la respuesta analítica de la métrica, moderada por credibilidad. Esta etapa usa información del tablero de 2025 y se evalúa separadamente del ajuste histórico.</p>
+<p>Concilié exposición y retraso de reporte por peligro; excluí campos con riesgo de incorporar información posterior a contratar (página 2). Comparé la transferencia con modelos locales y revisé ajustes por ramo y negocio. Calibré el nivel final con variaciones multiplicativas controladas, la respuesta analítica de la métrica y credibilidad. Esta etapa incorpora información pública de 2025, separada del ajuste histórico.</p>
 <h3>Validación orientada a la cartera futura</h3>
 <p>Organicé la revisión con particiones por cliente y dirección, contrastes temporales, pruebas adversas de fuga, sensibilidad de reservas e influencia de grupos. La ganancia agregada de los factores se concentra en renovaciones; su traslado al negocio nuevo conserva incertidumbre. La alternativa regularizada F3c-R también se evaluó con el flujo completo y no aportó estabilidad suficiente para sustituir F3c (página 4). Conservo F3c y sus predicciones originales como solución final.</p>
 <p>Fijé ΔD² de negocio nuevo ≥ 0 y límite inferior IC95 ≥ −0,001. La transferencia dio +0,013, con límite −0,011: falló. Acepté la mejora puntual tras modificar el veto; eso no demuestra protección del segmento.</p>
-<p>Claude y Codex apoyaron la construcción de código y el diseño de contrastes. Bajo mi seguimiento continuo, se revisaron resultados con distintos modelos y agentes, se recalcularon controles con implementaciones separadas y se corrigieron fallos de datos, fórmulas y aislamiento. Ese trabajo permitió sostener una revisión iterativa dentro del plazo del concurso. Las páginas siguientes presentan el método y la evidencia que respalda cada decisión.</p>
+<h3>Aplicación a un cierre actuarial real</h3>
+<p>Trasladaría este circuito a cada nuevo cierre de siniestros: conciliar entradas, explicar cambios en exposición y reservas, contrastar la tarifa y preparar un expediente de decisión. Los entregables del proyecto, código reproducible, alertas y paneles, hacen viable esa revisión recurrente. Su uso en una aseguradora requeriría permisos sobre los datos, fechas de disponibilidad y revisión actuarial antes de aplicar precios.</p>
 """
 
 P2 = """
@@ -118,17 +99,16 @@ P4 = """
 <tr><td>F3c-R</td><td>26 ámbitos; comparación con F3c y control del mismo tronco/preprocesamiento. Criterios previos.</td><td>No sostiene la estabilidad exigida. Conservo F3c.</td></tr>
 <tr><td>Reproducción</td><td>Originales → preparación → modelos → calibraciones → CSV. Huellas y métricas por otro cálculo.</td><td>Recupera la entrega; prueba ejecución, no rendimiento privado.</td></tr>
 </table>
-<h3>Dos problemas que resolví con apoyo de IA</h3>
-<div class="cols ai-cases"><div class="box">
-<h4>Fórmula de calibración</h4>
-<p>Una versión elevaba al cuadrado el factor de nivel. La revisión cruzada de IA contrastó código, derivada Tweedie y mínimo numérico: para p = 1,5 corresponde k* de la página 2, sin cuadrado. Incorporé la corrección antes del envío, respaldada por un recálculo separado. No le atribuyo una ganancia de score aislada.</p>
-</div><div class="box">
-<h4>Aislamiento del aprendizaje</h4>
-<p>La auditoría de IA detectó aprendizaje fuera de ámbito en preparación y completitud. Incorporé su reconstrucción por ámbito, con categorías, selección y ajustes. Alterar etiquetas retenidas no cambió aprendizaje ni predicciones. La revisión rechazó una réplica incompleta y rehízo sus controles: 45 pruebas, 35 adversas.</p>
-</div></div>
+<h3>Qué produjo la IA y cómo lo comprobé</h3>
+<table class="tight ai-evidence">
+<tr><th style="width:16%">Caso</th><th style="width:43%">Aporte de Claude y Codex</th><th>Control y efecto en el proyecto</th></tr>
+<tr><td>Datos, semana 1</td><td>Código para conciliar claves, unidades y periodos, con reglas reversibles y bitácora.</td><td>41/41 controles; reconstrucción separada de 11 tablas idénticas. Incorporé la corrección y conservé originales.</td></tr>
+<tr><td>Nivel de prima</td><td>Revisión cruzada del código y derivada Tweedie, p = 1,5: detectó un factor elevado al cuadrado.</td><td>Mínimo numérico y recálculo separado: k* sin cuadrado. Corregí antes del envío, sin atribuir una ganancia aislada de score.</td></tr>
+<tr><td>Validación</td><td>Detectó aprendizaje fuera de ámbito; reconstruyó preparación, completitud, categorías y ajustes por partición.</td><td>Etiquetas retenidas alteradas: aprendizaje y predicciones iguales. La réplica incompleta se rechazó y reconstruyó antes de evaluar.</td></tr>
+<tr><td>Controles y reproducción</td><td>Corrigió controles que anunciaban éxito con archivos faltantes e integró recetas y comparadores para reconstruir el CSV.</td><td>Paquete de semana 1, v1.2: 45 casos sintéticos, 36 adversos. F3c: CSV idéntico desde originales, con diferencias intermedias conservadas.</td></tr>
+</table>
 <p class="cap">Con Claude y Codex contrasté código, derivaciones y resultados bajo mi seguimiento continuo. Otros controles corrigieron el ruido público frente a todo el test (semana 1, mejor privado frente a la variante) y el nulo de cardinalidad insuficiente: retiré aseguradora previa y ocupación. Registros, herramientas y código: anexos E–G.</p>
 <h3>Negocio nuevo e influencia de pocos grupos</h3>
-<p>La comparación de factores muestra qué ocurre en negocio nuevo y al retirar grupos favorables:</p>
 <table class="tight result-table">
 <tr><th>Receta protegida</th><th>Negocio nuevo: Δ / IC95</th><th>Δ autos nuevo</th><th>Δ sin 37 grupos favorables</th></tr>
 <tr><td>Curva del desarrollado</td><td>+0,00011<br>[−0,00370; +0,00398]</td><td>−0,00122</td><td>−0,00001</td></tr>
