@@ -1,0 +1,99 @@
+{
+  "id": "INFORME-FINAL-ACLARACIONES-DATOS-20261029",
+  "utc": "2026-10-29T18:05:21.997702+00:00",
+  "author_editor": "Codex",
+  "voice_owner": "Manuel Rodríguez",
+  "original_author": "Claude y ediciones según registros",
+  "path_base": "workspace_root",
+  "status": "PDF_espanol_actualizado",
+  "scope": "Aclaraciones de las seis anotaciones de páginas 1–2; revisión documental de procedencia, sin nuevas pruebas predictivas.",
+  "pdf": "Hackaton/Semana 2/Claude/informe_final_20261026/informe_final_IAA2026_es.pdf",
+  "delivery_copy": "Hackaton/Entrega_final/01_Para_entregar/Informe_final_ES.pdf",
+  "pdf_sha256": "b7a514d5c83313bc82cccbeada8463681070e2bdd8dbc779107c655580b6e9ed",
+  "previous_pdf_sha256": "8ff417595f5ca23a2d3d1462075a4e3b0ce0456d644cd43d4279f6020fa62eaf",
+  "pdf_bytes": 233280,
+  "run": "Hackaton/Repositorio_IAA2026/privado/informe_aclaraciones_20261029",
+  "verification": "Hackaton/Repositorio_IAA2026/privado/informe_aclaraciones_20261029/verificacion.json",
+  "layout": "Hackaton/Repositorio_IAA2026/privado/informe_aclaraciones_20261029/maquetacion.json",
+  "model": "F3c",
+  "model_changed": false,
+  "model_sha256": "5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276",
+  "total_pages": 10,
+  "graded_pages": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "changed_pages": [
+    1,
+    2
+  ],
+  "visual_review_pages": [
+    1,
+    2
+  ],
+  "unchanged_pages": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "changes": [
+    "Datos sintéticos sale de la portada y se explica como datos simulados del concurso, con CU ficticia, en página 2.",
+    "0,121 frente a 0,083 sale del indicador de portada; los valores y el contraste histórico permanecen en página 3.",
+    "La frase genérica sobre revelar siniestros se sustituye por el riesgo de incorporar información posterior a la contratación.",
+    "Se explica que contactos es un número suministrado por el concurso, sin fecha y relacionado con siniestros del periodo; su exclusión es una decisión del modelo.",
+    "Se separan exclusiones, disponibilidad temporal de atributos y diseño de validación, con referencia al ajuste público de 2025."
+  ],
+  "checks": {
+    "model_and_commercial_CSV_unchanged": true,
+    "model_source_pins_unchanged": true,
+    "all_tables_and_formulas_identical": true,
+    "all_prior_decimal_values_preserved": true,
+    "pages_3_to_10_HTML_and_PDF_text_identical": true,
+    "chart_source_identical": true,
+    "appendices_unchanged": true,
+    "layout_fonts_and_no_remote_requests_pass": true,
+    "official_data_provenance_checked": true,
+    "contact_field_and_prior_audit_VE38_VE64_checked": true,
+    "exclusion_is_modeling_choice_not_competition_prohibition": true
+  },
+  "source_pins": [
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/ml_independiente_20261023/codigo/variables.py",
+      "sha256": "1d3a9d40935d0be46268df1c9357b66bda14520d92c1f15b2fb7659a49478216"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/src/semana2/lineas/validacion_nocturna_20261023/codigo/variables.py",
+      "sha256": "bc2a39e97e645878ca03e921edb3a2434ed2b1596cf33aa92b538e796449c11d"
+    },
+    {
+      "path": "Hackaton/Semana 2/Claude/validacion_datos_20261023/evidencia_validacion.json",
+      "sha256": "32f3af75f0cbdc66802d474b528b828669ae8c5c886d1c56b29163aa09cfa345"
+    },
+    {
+      "path": "Hackaton/Repositorio_IAA2026/privado/informe_aclaraciones_20261029/kaggle_fuente.json",
+      "sha256": "58239078b5e13ae7a0b77537724c82691f9ef0f571bc5f78905cfb90334115e8"
+    }
+  ],
+  "previous_evidence_index": "Hackaton/Repositorio_IAA2026/registro/informe_final_legibilidad_20261029.json",
+  "source_caveats": [
+    "El diccionario oficial describe contactos, pero no fecha de registro ni causalidad. VE38 y VE64 son evidencia histórica del proyecto, no una nueva auditoría.",
+    "La tabla resumida del diccionario indica clima hasta 2024; VE13 y VE29 documentan observaciones de 2025 en los archivos. No se repite el cotejo ni se afirma prohibición del concurso."
+  ],
+  "tex_text_synchronized": true,
+  "tex_compiled": false,
+  "new_training": false,
+  "new_inference": false,
+  "new_model_validation": false,
+  "new_submission": false,
+  "publication": false,
+  "forum_comment_id": "COD-S2-20261029-INFORME-ACLARACIONES-DATOS",
+  "forum_receipt": "Hackaton/Repositorio_IAA2026/privado/informe_aclaraciones_20261029/foro_recibo.json"
+}

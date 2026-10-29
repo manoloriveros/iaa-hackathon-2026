@@ -7,13 +7,12 @@ RUNHEAD = 'AI Hackathon IAA 2026 · Informe final, partes 1 y 2'
 P1 = """
 <h1>Modelización de la prima de riesgo en dos mercados con apoyo de IA</h1>
 <p class="sub">De la experiencia de siniestros a la tarifa: modelos por peligro, transferencia de aprendizaje y validación actuarial</p>
-<p class="byline">AI Hackathon IAA 2026 · Partes 1 y 2 · Manuel Rodríguez (Kaggle: manoloriveros) · Edición del 29 de octubre de 2026 · Datos sintéticos; importes en CU</p>
+<p class="byline">AI Hackathon IAA 2026 · Partes 1 y 2 · Manuel Rodríguez (Kaggle: manoloriveros) · Edición del 29 de octubre de 2026</p>
 <h2>Problema actuarial y enfoque de solución</h2>
 <p class="lead">Me propuse estimar el coste último esperado de los siniestros de cada periodo de póliza de 2025 en autos, edificios y contenidos del hogar, antes de gastos y márgenes. El mercado establecido ofrecía cuatro años de historia. El emergente, solo dos y un cambio fuerte de composición: el negocio nuevo pasaba del 14 % histórico al 76 % de la cartera de 2025 tras la adquisición del bloque de un corredor. La solución debía combinar señal predictiva, tratamiento del desarrollo de siniestros y estabilidad ante ese cambio.</p>
-<div class="kpis kpis3">
+<div class="kpis kpis2">
  <div class="kpi"><div class="v">0,13864</div><div class="l">D² privado de la parte 1. Cuarto puesto entre 54 equipos.</div></div>
  <div class="kpi"><div class="v">0,16914</div><div class="l">D² público de F3c, modelo definitivo de la parte 2. Resultado privado pendiente.</div></div>
- <div class="kpi"><div class="v">0,121 frente a 0,083</div><div class="l">Contraste histórico por cliente en 2023: modelo transferido frente al mejor modelo solo local.</div></div>
 </div>
 <p>En el mercado establecido combiné coste total Tweedie con frecuencia × severidad por peligro. Esta descomposición permite recoger mecanismos distintos, como incendio, fuga de agua y lesiones corporales, y combinar componentes que no rinden igual en todos los ramos. Para el emergente transferí relaciones aprendidas con variables comunes y añadí ajustes locales con credibilidad. Así aproveché la historia disponible sin exigir que una muestra pequeña estime toda la estructura desde cero.</p>
 <div class="flow">
@@ -41,7 +40,7 @@ P1 = """
 </div>
 <p class="cap"><b>Figura 1.</b> Cadena de estimación común y adaptación al mercado emergente. La calibración incorpora información del tablero público; su alcance se distingue de la validación histórica.</p>
 <h3>Decisiones que dieron forma al modelo</h3>
-<p>Concilié la exposición antes de estimar tasas e incorporé el retraso de reporte por peligro, contrastado con cohortes observadas. Excluí variables capaces de revelar el siniestro del periodo. Comparé la transferencia con modelos locales y revisé los ajustes por ramo y tipo de negocio. Calibré el nivel final mediante variaciones multiplicativas controladas y la respuesta analítica de la métrica, moderada por credibilidad. Esta etapa usa información del tablero de 2025 y se evalúa separadamente del ajuste histórico.</p>
+<p>Concilié la exposición antes de estimar tasas e incorporé el retraso de reporte por peligro, contrastado con cohortes observadas. Revisé qué datos podían conocerse al cotizar y excluí campos con riesgo de incorporar información posterior, como los contactos de servicio (página 2). Comparé la transferencia con modelos locales y revisé los ajustes por ramo y tipo de negocio. Calibré el nivel final mediante variaciones multiplicativas controladas y la respuesta analítica de la métrica, moderada por credibilidad. Esta etapa usa información del tablero de 2025 y se evalúa separadamente del ajuste histórico.</p>
 <h3>Validación orientada a la cartera futura</h3>
 <p>Organicé la revisión con particiones por cliente y dirección, contrastes temporales, pruebas adversas de fuga, sensibilidad de reservas e influencia de grupos. La ganancia agregada de los factores se concentra en renovaciones; su traslado al negocio nuevo conserva incertidumbre. La alternativa regularizada F3c-R también se evaluó con el flujo completo y no aportó estabilidad suficiente para sustituir F3c (página 4). Conservo F3c y sus predicciones originales como solución final.</p>
 <p>Fijé ΔD² de negocio nuevo ≥ 0 y límite inferior IC95 ≥ −0,001. La transferencia dio +0,013, con límite −0,011: falló. Acepté la mejora puntual tras modificar el veto; eso no demuestra protección del segmento.</p>
@@ -50,8 +49,9 @@ P1 = """
 
 P2 = """
 <h2>Objetivo de estimación y diseño de los datos</h2>
-<p>Modelo el coste total del periodo, neto de franquicia y recobros, sin siniestros rechazados e incluido el coste aún no reportado. La exposición se expresa en días cubiertos / 365. La evaluación usa D² Tweedie con potencia 1,5; las predicciones entregadas corresponden al periodo completo, sin anualizar.</p>
-<p>Para reducir fuga excluí contactos con atención al cliente, decisión de renovación y clima observado de 2025. Traté los maestros sin fecha como disponibles al cotizar, supuesto que los archivos no permiten comprobar para todos sus campos. La validación separa años y grupos de cliente–dirección; los contrastes inversos examinan estabilidad, mientras la calibración pública incorpora información adicional de 2025.</p>
+<p>Trabajé con datos simulados proporcionados por el concurso, expresados en unidades monetarias ficticias (CU). Modelo el coste total del periodo, neto de franquicia y recobros, sin siniestros rechazados e incluido el coste aún no reportado. La exposición se expresa en días cubiertos / 365. La evaluación usa D² Tweedie con potencia 1,5; las predicciones entregadas corresponden al periodo completo, sin anualizar.</p>
+<p>Excluí el número de contactos con atención al cliente porque no tenía fecha y se asociaba fuertemente con siniestros del mismo periodo: podía incorporar información posterior a la contratación. También excluí el resultado de renovación, presente solo en entrenamiento, y usé clima histórico en lugar del observado en 2025.</p>
+<p>Las tablas de clientes y viviendas no indican cuándo se actualizó cada atributo. Supuse que eran conocidos al cotizar, aunque no pude comprobarlo en todos los campos. Contrasté el modelo entre años y separé grupos de cliente y dirección. El ajuste final con resultados públicos de 2025 se describe por separado en la página 3.</p>
 <div class="box"><h4>Una consecuencia de la métrica que guió todo el proyecto</h4>
 <p>El factor que, multiplicado por todas las predicciones de un grupo, minimiza la desviación Tweedie 1,5 es</p>
 <math display="block"><msup><mi>k</mi><mo>*</mo></msup><mo>=</mo><mfrac><mrow><mo>∑</mo><mo stretchy="false">(</mo><mi>y</mi><mo>/</mo><msqrt><mi>μ</mi></msqrt><mo stretchy="false">)</mo></mrow><mrow><mo>∑</mo><msqrt><mi>μ</mi></msqrt></mrow></mfrac></math>
