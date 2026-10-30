@@ -1,0 +1,90 @@
+{
+  "id": "RUNALL-20261029T203230Z",
+  "utc": "2026-10-29T20:33:28.379078+00:00",
+  "author": "Codex",
+  "status": "F3c_completo_identico_S41_ejecutandose_desde_cero",
+  "evidence_directory": "Hackaton/Repositorio_IAA2026/privado/runall_20261029T203230Z",
+  "source_commit": "03c6f4708f9a97fd991d99eefd05c8a2ff44d988",
+  "source_notebooks": [
+    {
+      "week": 1,
+      "path": "notebooks/week1_developed_market.ipynb",
+      "sha256": "43573c6f44a914836072e13fd4133c16866a2a5e9b4bc1a95166e39d7cffed07"
+    },
+    {
+      "week": 2,
+      "path": "notebooks/week2_emerging_market.ipynb",
+      "sha256": "49e5a17119176baa81c6d74f17aaab557d705559bbac6086796865f12d80e76a"
+    }
+  ],
+  "expected_outputs": {
+    "S41": {
+      "sha256": "d8661c2874e9112bd3dd62ea4470a465ee309832dee53fd9dcaa4144dac643a5",
+      "rows": 626639
+    },
+    "F3c": {
+      "sha256": "5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276",
+      "rows": 209063
+    }
+  },
+  "order": [
+    2,
+    1
+  ],
+  "fresh_kernel": true,
+  "reuse_previous_fitted_artifacts": false,
+  "new_kaggle_submission": false,
+  "new_remote_training": false,
+  "independent_review_claimed": false,
+  "last_progress_utc": "2026-10-30T00:00:06.635842+00:00",
+  "current_week": 1,
+  "progress_receipt": "privado/runall_s41_20261029T211710Z/monitor_latest.json",
+  "environment_receipt": "privado/runall_20261029T203230Z/environment.json",
+  "F3c_result": {
+    "week": 2,
+    "started_utc": "2026-10-29T20:36:03.562207+00:00",
+    "source_sha256": "49e5a17119176baa81c6d74f17aaab557d705559bbac6086796865f12d80e76a",
+    "resumed": false,
+    "status": "passed",
+    "code_cells_completed": 91,
+    "execution_counts_sequential": true,
+    "output": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\runall_20261029T203230Z\\exports\\iaa_week2_7e329851de90_exports\\submission_week2_F3c.csv",
+    "output_sha256": "5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276",
+    "expected_sha256": "5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276",
+    "rows": 209063,
+    "notebook_execution_sha256": "c33403d318f92d5aa817e7d57549c6250d296b86b15bb0cb8be1de679346bdf0",
+    "commercial_reference_rows": 20,
+    "commercial_sha256": "e3feea09e2b2c0418e0ed07708a5ce53a70580627af7c425684e89c766a9a2d6",
+    "completed_utc": "2026-10-29T21:16:42.168553+00:00",
+    "elapsed_seconds": 2438.6089999999967
+  },
+  "S41_previous_attempt": {
+    "week": 1,
+    "started_utc": "2026-10-29T21:16:42.193606+00:00",
+    "source_sha256": "43573c6f44a914836072e13fd4133c16866a2a5e9b4bc1a95166e39d7cffed07",
+    "resumed": false,
+    "status": "failed",
+    "error_type": "PermissionError",
+    "code_cells_completed": 18,
+    "active_cell": {
+      "cell_index": 41,
+      "phase": "source_assignment",
+      "started_utc": "2026-10-29T21:16:45.885163+00:00"
+    },
+    "private_error_file": "C:\\dev\\Hakaton\\Hackaton\\Repositorio_IAA2026\\privado\\runall_20261029T203230Z\\week1_error.txt",
+    "completed_utc": "2026-10-29T21:16:46.031433+00:00",
+    "elapsed_seconds": 3.8439999999973224
+  },
+  "S41_active_attempt": "Hackaton/Repositorio_IAA2026/privado/runall_s41_20261029T211710Z",
+  "executor_io_fix": "Sustitución atómica de progreso y checkpoints con reintento ante PermissionError transitorio de Windows. Notebook y modelos sin cambios.",
+  "S41_current_nodes_completed": 15,
+  "S41_resume_events": 0,
+  "F3c_commercial_report_check": {
+    "all_twenty_main_and_sensitivity_premiums_match_report": true,
+    "aggregate_total_matches": true,
+    "receipt": "privado/runall_20261029T203230Z/commercial_report_check.json"
+  },
+  "current_editorial_source_review": "registro/documentacion_codigo_actual.json",
+  "source_snapshots_preserved": true,
+  "current_editorial_code_has_separate_full_Run_All": false
+}

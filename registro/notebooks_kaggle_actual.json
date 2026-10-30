@@ -4,15 +4,18 @@
   "autor": "Codex",
   "estado": "ambas_recetas_reproducidas_localmente_con_limites",
   "archivos": {
-    "notebooks/week1_developed_market.ipynb": "43573c6f44a914836072e13fd4133c16866a2a5e9b4bc1a95166e39d7cffed07",
-    "notebooks/week2_emerging_market.ipynb": "49e5a17119176baa81c6d74f17aaab557d705559bbac6086796865f12d80e76a",
-    "herramientas/integrar_notebook_semana1.py": "9ebb8787467a9d224910374755c52533dc54288ad5dd0a0d0b54e97b064e5101",
-    "herramientas/integrar_notebook_semana2.py": "116966943558615321c1757c95dfea17bde699a678e9bbd576cb89b8c8c9138c",
+    "notebooks/week1_developed_market.ipynb": "83717f22aedcc4d3b1d588177f0f2c0e44c98c986e147fb123781a2341bd0ca8",
+    "notebooks/week2_emerging_market.ipynb": "1cdde6ab2cb14f667954a429c9be5bcff19445cd658520fc5633344b35bac683",
+    "herramientas/integrar_notebook_semana1.py": "78186c900ff415e7145f6c752e27447097a193cfa6d06e738472257ae4b73dab",
+    "herramientas/integrar_notebook_semana2.py": "947d0ee35cede01c1e242832a697c2944f386812dfd78804d5fa947b61be93dc",
     "herramientas/presentacion_notebooks.py": "6d6c7f54eef513f3b7b26413d46cf590f624dc7520e08952e2627f3463c1501b",
     "herramientas/entradas_notebooks.py": "842624fab9c96bc6af85f969230beb795cdf67ae52d05b33ebb0752bcb2ad5dd",
     "registro/contrato_entradas_notebooks.json": "f90f5b63b2f176ab692752f91dabb0e67277a71052a87bf65a97936f1b092cf4",
-    "notebooks/README.md": "257ff9f8ff3cc7704721f3cecb228db9c6ba204315e1fd947329b57f9cd0bb8b",
-    "herramientas/pruebas/test_entradas_notebooks.py": "7b1e05ebce68d54db3c9a5e5bf9eba39857edd01d42e26c20739b467a24e2179"
+    "notebooks/README.md": "b20f3c28ddb51cd6b260bac3d075ce36a0cfc2c7a641ef344e19cea7af35cfb3",
+    "herramientas/pruebas/test_entradas_notebooks.py": "7b1e05ebce68d54db3c9a5e5bf9eba39857edd01d42e26c20739b467a24e2179",
+    "herramientas/build_delivery_notebooks.py": "5acf4a713bcd35a88149425f148bb0b6d0b160a96b93916542df5e32453d5476",
+    "src/runtime/manifest.json": "1a3ac1fa1ee8765551fbe424ce892e861a28214c9f75d8069f099734fc4562c7",
+    "src/runtime/README.md": "e553e83115ef23dcbdd8e09b7f73ed0f5797e4c5d7a4f0f4fcd6f84a2a5ab069"
   },
   "alcance": "Código integrado de S30/S41 y T2b/A1/M017 hasta F3c; CAP01 reconstruida desde regla congelada y confirmación reconstruida mediante regla inferida retrospectivamente. Las dos restauraciones históricas de semana 2 quedan explícitas.",
   "pruebas": [
@@ -153,5 +156,23 @@
     "review": "registro/entradas_notebooks_actual.json",
     "scope": "Resuelve datos locales/Kaggle, contrasta huellas de descarga y valida plantillas antes de crear la corrida. Fuentes y configuración de modelos conservadas.",
     "fresh_training": false
+  },
+  "documentacion_ingles_20261029": {
+    "utc": "2026-10-30T00:00:10.179204+00:00",
+    "author": "Codex",
+    "index": "registro/documentacion_codigo_actual.json",
+    "previous_file_hashes": {
+      "notebooks/week1_developed_market.ipynb": "43573c6f44a914836072e13fd4133c16866a2a5e9b4bc1a95166e39d7cffed07",
+      "notebooks/week2_emerging_market.ipynb": "49e5a17119176baa81c6d74f17aaab557d705559bbac6086796865f12d80e76a",
+      "herramientas/integrar_notebook_semana1.py": "9ebb8787467a9d224910374755c52533dc54288ad5dd0a0d0b54e97b064e5101",
+      "herramientas/integrar_notebook_semana2.py": "116966943558615321c1757c95dfea17bde699a678e9bbd576cb89b8c8c9138c",
+      "herramientas/presentacion_notebooks.py": "6d6c7f54eef513f3b7b26413d46cf590f624dc7520e08952e2627f3463c1501b",
+      "herramientas/entradas_notebooks.py": "842624fab9c96bc6af85f969230beb795cdf67ae52d05b33ebb0752bcb2ad5dd",
+      "registro/contrato_entradas_notebooks.json": "f90f5b63b2f176ab692752f91dabb0e67277a71052a87bf65a97936f1b092cf4",
+      "notebooks/README.md": "257ff9f8ff3cc7704721f3cecb228db9c6ba204315e1fd947329b57f9cd0bb8b",
+      "herramientas/pruebas/test_entradas_notebooks.py": "7b1e05ebce68d54db3c9a5e5bf9eba39857edd01d42e26c20739b467a24e2179"
+    },
+    "scope": "English comments/docstrings, neutral runtime names and a standalone source builder; original model math, factors and final expected CSV hashes retained. Historical execution receipts continue to identify their own snapshots.",
+    "full_Run_All_of_editorial_edition": false
   }
 }

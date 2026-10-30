@@ -1,0 +1,635 @@
+{
+  "schema_version": 1,
+  "description": "English source package embedded in the final standalone notebooks. Historical sources and authorship remain in Git and project records.",
+  "weeks": {
+    "1": {
+      "notebook": "notebooks/week1_developed_market.ipynb",
+      "template": "src/runtime/week1/notebook_template.json",
+      "source_count": 44,
+      "sources": [
+        {
+          "key": "reproducir.py",
+          "file": "src/runtime/week1/reproducir.py",
+          "sha256": "4a2c2b8414f64a4975afe76e6a8a993eab966ea691db3fd9579e6246560bea33"
+        },
+        {
+          "key": "herramientas/huella.py",
+          "file": "src/runtime/week1/herramientas/huella.py",
+          "sha256": "7e38a9803075d5dc5830d801f00bb7f0186a1d29e5dc327a0c40e173315f2ce0"
+        },
+        {
+          "key": "herramientas/etapas_datos.py",
+          "file": "src/runtime/week1/herramientas/etapas_datos.py",
+          "sha256": "2ca891b066b6f639c9cb68ff2ed7e6de9e961e3a60c0419c788233ca10f8e09a"
+        },
+        {
+          "key": "herramientas/ejecutar_csv_lf.py",
+          "file": "src/runtime/week1/herramientas/ejecutar_csv_lf.py",
+          "sha256": "aabdd55c8c42efb7463442f2996ad8790fa1447150a49556828a544866e6fd6c"
+        },
+        {
+          "key": "herramientas/inventario.py",
+          "file": "src/runtime/week1/herramientas/inventario.py",
+          "sha256": "1061b7f9ef94f7a6bb0d9f4fccb34b8d9e15365e93ab8ea53fdb5fbeecd85bbc"
+        },
+        {
+          "key": "src/modelos/anexar_entrega.py",
+          "file": "src/runtime/week1/src/modelos/anexar_entrega.py",
+          "sha256": "0294fdb2a38a48f3afc1b5d95fa7c660a1a37a11e9cadf47891e020bc0ee847d"
+        },
+        {
+          "key": "src/modelos/bootstrap_reference.py",
+          "file": "src/runtime/week1/src/modelos/bootstrap_reference.py",
+          "sha256": "6fb203a1c65e6ba231d2206d6fd76bbf9da33ebc3c524e357dfc914f2360f5df"
+        },
+        {
+          "key": "src/modelos/calibracion_deciles.py",
+          "file": "src/runtime/week1/src/modelos/calibracion_deciles.py",
+          "sha256": "a88ea77d7c0509ce30a6ddb7209c661a79e17dd48f604f649c07508cff18e904"
+        },
+        {
+          "key": "src/modelos/calibrar_siguiente_anio.py",
+          "file": "src/runtime/week1/src/modelos/calibrar_siguiente_anio.py",
+          "sha256": "8cc30e193d1f2d05a64d830a57f6c11b3a8d104a3771b841586aec66effe9fbe"
+        },
+        {
+          "key": "src/modelos/cat_experimento.py",
+          "file": "src/runtime/week1/src/modelos/cat_experimento.py",
+          "sha256": "b887fd4f64636c49afc2d4cbf33853e17878ad33886fd2785cee8263c5dd0bbb"
+        },
+        {
+          "key": "src/modelos/cat_frecsev.py",
+          "file": "src/runtime/week1/src/modelos/cat_frecsev.py",
+          "sha256": "5e5b8c09cd803639eb5b5284cb2f3383c1fb7d5b012ee9bdbbeabc92b0d5abd5"
+        },
+        {
+          "key": "src/modelos/cat_produccion.py",
+          "file": "src/runtime/week1/src/modelos/cat_produccion.py",
+          "sha256": "fa1d4725a298606d9522847540d5336d5e45785be11b3c9e1c087e84bba3ffe4"
+        },
+        {
+          "key": "src/modelos/combinar_semillas.py",
+          "file": "src/runtime/week1/src/modelos/combinar_semillas.py",
+          "sha256": "539b4b1cb6ef37c24236efa0b973539c5be04ffbb01c560e08f63a899a6bc216"
+        },
+        {
+          "key": "src/modelos/compare_reference.py",
+          "file": "src/runtime/week1/src/modelos/compare_reference.py",
+          "sha256": "bdc279ef294661ba8e8fe3b78f4a2d105859bd7032cf3be151f9bc728af5e785"
+        },
+        {
+          "key": "src/modelos/comun.py",
+          "file": "src/runtime/week1/src/modelos/comun.py",
+          "sha256": "8ef64ab3f283550bc9a259624a4b934f140fb435dda3324eedc250ba84e1e1b8"
+        },
+        {
+          "key": "src/modelos/construir_variables.py",
+          "file": "src/runtime/week1/src/modelos/construir_variables.py",
+          "sha256": "4bed5c645da2bd540ed2738f63ea281dedf1c91c857eefbcaaf3356e2f6e72b8"
+        },
+        {
+          "key": "src/modelos/deriva_nivel.py",
+          "file": "src/runtime/week1/src/modelos/deriva_nivel.py",
+          "sha256": "c87de9852298d665c702ebf571d3ace599b90332d8854990893d75bc82a31be3"
+        },
+        {
+          "key": "src/modelos/diagnostico_cuerpo_cola.py",
+          "file": "src/runtime/week1/src/modelos/diagnostico_cuerpo_cola.py",
+          "sha256": "1969c8b06f39f943f1e65235d6e20948b99d263e4a213bed1aa19fef41fc2ddc"
+        },
+        {
+          "key": "src/modelos/diagnostico_forma_nivel.py",
+          "file": "src/runtime/week1/src/modelos/diagnostico_forma_nivel.py",
+          "sha256": "9bdba52658a287e069a66419f4659dfd6f816ac3c0def7eef9f860d3382145bf"
+        },
+        {
+          "key": "src/modelos/escenarios_reserva.py",
+          "file": "src/runtime/week1/src/modelos/escenarios_reserva.py",
+          "sha256": "6589370402480b84d9bad902d5cd06dc17fad1e6f59dd6e38dd607292f1a8da7"
+        },
+        {
+          "key": "src/modelos/evaluar.py",
+          "file": "src/runtime/week1/src/modelos/evaluar.py",
+          "sha256": "05ec0e71d74e50158bfbe77c37706cb339d30b196ac9a61135f019b076879288"
+        },
+        {
+          "key": "src/modelos/experimentos.py",
+          "file": "src/runtime/week1/src/modelos/experimentos.py",
+          "sha256": "650e9120bc6556f23c632d4cf4824223a36d05e0cb62845005dbbe85d195a72e"
+        },
+        {
+          "key": "src/modelos/exportar_predicciones.py",
+          "file": "src/runtime/week1/src/modelos/exportar_predicciones.py",
+          "sha256": "2383f82e6d1e60ed505939fa9c5495c491d6df0019a7d240c3fa7b161ab7fb2d"
+        },
+        {
+          "key": "src/modelos/frecsev2.py",
+          "file": "src/runtime/week1/src/modelos/frecsev2.py",
+          "sha256": "c4b93e38bd171f119283b23754e818c2b4cfb4bc9198d2ace84e7940f18cf431"
+        },
+        {
+          "key": "src/modelos/influencia_reservas.py",
+          "file": "src/runtime/week1/src/modelos/influencia_reservas.py",
+          "sha256": "959d19667f21fa3a54e2b835f5ea400c003802544f6bf69929eee063693baae7"
+        },
+        {
+          "key": "src/modelos/intervalos_region.py",
+          "file": "src/runtime/week1/src/modelos/intervalos_region.py",
+          "sha256": "10646ab45a5e60d56a2230e5edf86b85e937eb89ab5dfc318134766fd21df317"
+        },
+        {
+          "key": "src/modelos/mezcla3.py",
+          "file": "src/runtime/week1/src/modelos/mezcla3.py",
+          "sha256": "a3448950d8c0544ddf1d4bb904385ae522344870ab89526f9397a65541d1f2ba"
+        },
+        {
+          "key": "src/modelos/mlp_tweedie.py",
+          "file": "src/runtime/week1/src/modelos/mlp_tweedie.py",
+          "sha256": "d7d2f2470cd5c0ffec0634deb12fac3d01cef3f8c7434624a114ff93d075d885"
+        },
+        {
+          "key": "src/modelos/produccion.py",
+          "file": "src/runtime/week1/src/modelos/produccion.py",
+          "sha256": "11e15b69f6526e068862abbd6654a9348b7718656ce2a1a9dff1786e32763848"
+        },
+        {
+          "key": "src/modelos/publico_simulado.py",
+          "file": "src/runtime/week1/src/modelos/publico_simulado.py",
+          "sha256": "135e9d63c7c75acfc10395abdfad6b53720b8e2967c0dd35afb84ef8d7f1fa99"
+        },
+        {
+          "key": "src/modelos/rejilla_pesos.py",
+          "file": "src/runtime/week1/src/modelos/rejilla_pesos.py",
+          "sha256": "74298e214f614d4f24de5f1142db1d93eeef022276f5d4943ae05d6ad09c977e"
+        },
+        {
+          "key": "src/modelos/rejilla_robusta.py",
+          "file": "src/runtime/week1/src/modelos/rejilla_robusta.py",
+          "sha256": "9a2a233c28e7ce067128258e9af34d9ed1242e415795108c05776a1c3c68264f"
+        },
+        {
+          "key": "src/modelos/reproducir_mezcla.py",
+          "file": "src/runtime/week1/src/modelos/reproducir_mezcla.py",
+          "sha256": "cfc3cc16e8915141c08b9b09a26ad8f53174a8b90de0e7e6acfdde1f01bed593"
+        },
+        {
+          "key": "src/modelos/robustez.py",
+          "file": "src/runtime/week1/src/modelos/robustez.py",
+          "sha256": "f5f3bcaed050d09ed95a67ad1d4176b0b3cc8aada593df0c7411180d83adcc72"
+        },
+        {
+          "key": "src/modelos/semestres.py",
+          "file": "src/runtime/week1/src/modelos/semestres.py",
+          "sha256": "8c1f52ee69fbe9977a5cd21790d96aeb4e6b86597765af00c259d6ae644cebd4"
+        },
+        {
+          "key": "src/modelos/severidad_cfs.py",
+          "file": "src/runtime/week1/src/modelos/severidad_cfs.py",
+          "sha256": "cf9e7ffd2518da52627e39bcc2e6890e51863d4abc782d26aff8a7e218a7d210"
+        },
+        {
+          "key": "src/modelos/severidad_cfs3.py",
+          "file": "src/runtime/week1/src/modelos/severidad_cfs3.py",
+          "sha256": "a320db90b36c8fdde9edde3a7652f5793faa0ea4ba3e739836617e0df99f19c5"
+        },
+        {
+          "key": "src/linea_b/mezcla3_b.py",
+          "file": "src/runtime/week1/src/linea_b/mezcla3_b.py",
+          "sha256": "2cb8c523927aaac4376b23ea6abb15e8da06fbb405cb9765a75648402fd53194"
+        },
+        {
+          "key": "src/linea_b/nivel_b.py",
+          "file": "src/runtime/week1/src/linea_b/nivel_b.py",
+          "sha256": "f5d93edb8b84abe28101082633048336274d588305d1812090371c7477700f47"
+        },
+        {
+          "key": "src/linea_b/reproducir_s30_b.py",
+          "file": "src/runtime/week1/src/linea_b/reproducir_s30_b.py",
+          "sha256": "ac82dc78d4b8ebfc749a91b8fd0818b5925ef9b3a0f8ac46e9d2d48ded99adbf"
+        },
+        {
+          "key": "src/linea_b/severidad_tendencia.py",
+          "file": "src/runtime/week1/src/linea_b/severidad_tendencia.py",
+          "sha256": "0c5870b8ffd59ffdf0d9dc3deca4c56f2ac0728798d6951a25418e55700a4831"
+        },
+        {
+          "key": "src/datos/bases_actuariales.py",
+          "file": "src/runtime/week1/src/datos/bases_actuariales.py",
+          "sha256": "49e5bef169c6ede2fa4a98985b9f6e50edaa9f6e4182c33d8b9d1ff1323766df"
+        },
+        {
+          "key": "src/datos/construir_f0.py",
+          "file": "src/runtime/week1/src/datos/construir_f0.py",
+          "sha256": "4cac9625164d59923661c3d5a1fde226f3bcf04fa3de4f7077f98dd9a76b8aed"
+        },
+        {
+          "key": "src/datos/n62/rebuild_base.py",
+          "file": "src/runtime/week1/src/datos/n62/rebuild_base.py",
+          "sha256": "0881dbcd0df4dd54bfb181dfce1bbe20559207af340bc6f9ac72c8aedad03d29"
+        }
+      ]
+    },
+    "2": {
+      "notebook": "notebooks/week2_emerging_market.ipynb",
+      "template": "src/runtime/week2/notebook_template.json",
+      "source_count": 79,
+      "sources": [
+        {
+          "key": "ml/codigo/abrir_hold.py",
+          "file": "src/runtime/week2/ml/codigo/abrir_hold.py",
+          "sha256": "0063f8083b2cf75b848f5f911527cb56bd5bbcdc0f7ea1459f3268515d8f2ee4"
+        },
+        {
+          "key": "ml/codigo/adaptacion.py",
+          "file": "src/runtime/week2/ml/codigo/adaptacion.py",
+          "sha256": "2db641cd5b4ec54b98689fbcafc18908723787b13d8ddc5c90599f8a839f1547"
+        },
+        {
+          "key": "ml/codigo/anidado.py",
+          "file": "src/runtime/week2/ml/codigo/anidado.py",
+          "sha256": "c8166b1fc9fe8153fd74587afe65b67f8de822ae8da7351b2bc772160c80d98b"
+        },
+        {
+          "key": "ml/codigo/audit_checks.py",
+          "file": "src/runtime/week2/ml/codigo/audit_checks.py",
+          "sha256": "0d0f85d96a7732b68753ecc5d2f212f3a14120ef39c0749684f79d218a594378"
+        },
+        {
+          "key": "ml/codigo/bootstrap_final.py",
+          "file": "src/runtime/week2/ml/codigo/bootstrap_final.py",
+          "sha256": "137fb1ad13c64ba0f80a337495101e587f80d27d677ca8139acc7a2f97675b4b"
+        },
+        {
+          "key": "ml/codigo/calibracion.py",
+          "file": "src/runtime/week2/ml/codigo/calibracion.py",
+          "sha256": "df21218bc4bcdaafe2a957da86c049049a5e929b0daa152a930ec47c47b32f78"
+        },
+        {
+          "key": "ml/codigo/comparar_lineas.py",
+          "file": "src/runtime/week2/ml/codigo/comparar_lineas.py",
+          "sha256": "58627c95f82902b69b261ba33a008cb9f3fb594548cb942569a85bbdac2e5ea3"
+        },
+        {
+          "key": "ml/codigo/comparar_lineas_2.py",
+          "file": "src/runtime/week2/ml/codigo/comparar_lineas_2.py",
+          "sha256": "8f2ae4a2b207cc93a4080e7e4b0d3eac224705653ef01ee4771b93ace957251f"
+        },
+        {
+          "key": "ml/codigo/completitud.py",
+          "file": "src/runtime/week2/ml/codigo/completitud.py",
+          "sha256": "954460f1b0d5dfaa8e5b2c75a4b876cb80300f027896e3b860d806ca3492fd50"
+        },
+        {
+          "key": "ml/codigo/comun.py",
+          "file": "src/runtime/week2/ml/codigo/comun.py",
+          "sha256": "59ab6cbffd6a227afe623f3c3b7851d8362b061116a52e3c59ce652260cd87ac"
+        },
+        {
+          "key": "ml/codigo/conteos_peligro.py",
+          "file": "src/runtime/week2/ml/codigo/conteos_peligro.py",
+          "sha256": "425cfabc96a2a2b7583c6fa07941f957bf49626e31bbac2ce0c32cd6465d9878"
+        },
+        {
+          "key": "ml/codigo/credibilidad_entre_anios.py",
+          "file": "src/runtime/week2/ml/codigo/credibilidad_entre_anios.py",
+          "sha256": "a02a4e238743339b9e59169dcab6e98ab3c81efbde27046a1c32d7858d86a6a6"
+        },
+        {
+          "key": "ml/codigo/e09_e12_tabla.py",
+          "file": "src/runtime/week2/ml/codigo/e09_e12_tabla.py",
+          "sha256": "75c6fd7b24e3f1be2d46f53c706198a64a98436ba2d0d67c9e7fccfb64297085"
+        },
+        {
+          "key": "ml/codigo/e09_nivel.py",
+          "file": "src/runtime/week2/ml/codigo/e09_nivel.py",
+          "sha256": "ffed78bbb57ef357d4b414521f19154eedaef83e3bbf22a63869acf810bb55fb"
+        },
+        {
+          "key": "ml/codigo/e11_e12.py",
+          "file": "src/runtime/week2/ml/codigo/e11_e12.py",
+          "sha256": "5425ed679407e1e16372ecda5e13f04a9165d32ae66ecc8a8fca9f8765984790"
+        },
+        {
+          "key": "ml/codigo/e13_clima_anual.py",
+          "file": "src/runtime/week2/ml/codigo/e13_clima_anual.py",
+          "sha256": "91baeef3f3cd9c60b41d81ca1f19f410afc87418b18e5137882fcca7663ec7f4"
+        },
+        {
+          "key": "ml/codigo/e14_eval.py",
+          "file": "src/runtime/week2/ml/codigo/e14_eval.py",
+          "sha256": "d2ad371424e94c7d38e3b5be689a4d480a0c94681a8e0ef77f6f2efec354a107"
+        },
+        {
+          "key": "ml/codigo/e25_severidad.py",
+          "file": "src/runtime/week2/ml/codigo/e25_severidad.py",
+          "sha256": "a15a1ea68751d5880ba3c3be288b61999c0bd8eae4ae51c60941694329451a70"
+        },
+        {
+          "key": "ml/codigo/e26_hold.py",
+          "file": "src/runtime/week2/ml/codigo/e26_hold.py",
+          "sha256": "4f17edc0bfff63544a376d8eaf0f29499093cf3ffa35e7557d2c5691eda12a37"
+        },
+        {
+          "key": "ml/codigo/e26_pesos_des24.py",
+          "file": "src/runtime/week2/ml/codigo/e26_pesos_des24.py",
+          "sha256": "9d82d6d88c0048d767563f3dec72f83ba10d1b2d62d0cd4b9986c239f354a5f9"
+        },
+        {
+          "key": "ml/codigo/e27_backtest.py",
+          "file": "src/runtime/week2/ml/codigo/e27_backtest.py",
+          "sha256": "5d47c01a868934ce066b1174ad344138f784a2404d415698e426793fbc2dec6c"
+        },
+        {
+          "key": "ml/codigo/e27_nivel.py",
+          "file": "src/runtime/week2/ml/codigo/e27_nivel.py",
+          "sha256": "74f0a64744692eb3ffb40db4168f236b1cf933052f4cf7c03142a3e0de444536"
+        },
+        {
+          "key": "ml/codigo/evaluar.py",
+          "file": "src/runtime/week2/ml/codigo/evaluar.py",
+          "sha256": "e50c5306f1ea71566119430b7abde377280d41609c574956ba322ccb1c1d3695"
+        },
+        {
+          "key": "ml/codigo/figura_comparacion.py",
+          "file": "src/runtime/week2/ml/codigo/figura_comparacion.py",
+          "sha256": "c26709a927a4822c5b5d6af90fa2ce7b4c0fdaad71ed23e0255fabec84c171d0"
+        },
+        {
+          "key": "ml/codigo/figura_evolucion.py",
+          "file": "src/runtime/week2/ml/codigo/figura_evolucion.py",
+          "sha256": "1aa44191a86f66ff6ee61c9c77b41801ab87c3571b2680e93ab9fd11316d964b"
+        },
+        {
+          "key": "ml/codigo/figura_nivel.py",
+          "file": "src/runtime/week2/ml/codigo/figura_nivel.py",
+          "sha256": "dbe713dd9f0e728384e1e0a9e5697628c899d47ad6d0125f4cfb05b7d7df9a56"
+        },
+        {
+          "key": "ml/codigo/figuras_datos.py",
+          "file": "src/runtime/week2/ml/codigo/figuras_datos.py",
+          "sha256": "b09149eca8080085014575a5399b92f149eb93270ac01497230a92d5f519cfc2"
+        },
+        {
+          "key": "ml/codigo/figuras_extra.py",
+          "file": "src/runtime/week2/ml/codigo/figuras_extra.py",
+          "sha256": "8c804911d9e17c4931cea10a200181817aae4f3bc6af10c26966023f22f4b71d"
+        },
+        {
+          "key": "ml/codigo/figuras_resultados.py",
+          "file": "src/runtime/week2/ml/codigo/figuras_resultados.py",
+          "sha256": "d6c3fc955d5eafd438711d93b6da325879afb68c4ca5a1083e2114d9553decc9"
+        },
+        {
+          "key": "ml/codigo/gbm.py",
+          "file": "src/runtime/week2/ml/codigo/gbm.py",
+          "sha256": "36476e459ccec3feea769280a6e45d7f0dab650026b545267bcab570e821f5ac"
+        },
+        {
+          "key": "ml/codigo/glm.py",
+          "file": "src/runtime/week2/ml/codigo/glm.py",
+          "sha256": "787d9afdb7864024a4a6dabd98b9c46e6276f9bb57d8994d2b493f1888c87834"
+        },
+        {
+          "key": "ml/codigo/historia.py",
+          "file": "src/runtime/week2/ml/codigo/historia.py",
+          "sha256": "156a05567856e0beafba2acb7a76a254e9458d3fec50907dfb4cf8be1a78889c"
+        },
+        {
+          "key": "ml/codigo/historia2.py",
+          "file": "src/runtime/week2/ml/codigo/historia2.py",
+          "sha256": "81670766c3b3c978608298c75e54514e880ea8b6d592aa5a51f623f870894273"
+        },
+        {
+          "key": "ml/codigo/mezcla_designada.py",
+          "file": "src/runtime/week2/ml/codigo/mezcla_designada.py",
+          "sha256": "19a8b6ef4eecba8bdc9729a055a7cd786aec41cb8510f62bac11c53000daf565"
+        },
+        {
+          "key": "ml/codigo/mezcla_diagnostico.py",
+          "file": "src/runtime/week2/ml/codigo/mezcla_diagnostico.py",
+          "sha256": "3814da7189e93f7bccb9168899890eca1685641b6c2d3ee6eebf7ed09211918f"
+        },
+        {
+          "key": "ml/codigo/pcv_v2.py",
+          "file": "src/runtime/week2/ml/codigo/pcv_v2.py",
+          "sha256": "6c348997ba99d6a5fa821d7c5e4bf72c7ce6941958e47deb941829628e82ae97"
+        },
+        {
+          "key": "ml/codigo/peligros.py",
+          "file": "src/runtime/week2/ml/codigo/peligros.py",
+          "sha256": "e72fe98da959cb5cee128d69198948a40523efa60eb6d288aefa0207de61cb92"
+        },
+        {
+          "key": "ml/codigo/pesos_2025.py",
+          "file": "src/runtime/week2/ml/codigo/pesos_2025.py",
+          "sha256": "27b6141e7f288b2b25c05881ee7c68f660b04bddaf4fc84438c880eaf42d87b2"
+        },
+        {
+          "key": "ml/codigo/preparar_datos.py",
+          "file": "src/runtime/week2/ml/codigo/preparar_datos.py",
+          "sha256": "b58f401c0e14a8ba73febe8734fd0641ca8b55a7f0927046603ce65ef20e27a2"
+        },
+        {
+          "key": "ml/codigo/prima_comercial.py",
+          "file": "src/runtime/week2/ml/codigo/prima_comercial.py",
+          "sha256": "360d9dbb8580c57bc80c9fad07ae0a4f6ecfcde2c4de99176112b68f1b629ce7"
+        },
+        {
+          "key": "ml/codigo/produccion.py",
+          "file": "src/runtime/week2/ml/codigo/produccion.py",
+          "sha256": "416bb57bea3e88a8b0b2a46be96de5929e536c6c9e73e4ef5bab205d3c8b36c4"
+        },
+        {
+          "key": "ml/codigo/produccion2.py",
+          "file": "src/runtime/week2/ml/codigo/produccion2.py",
+          "sha256": "06869ef617d8ef5c88c22f155df95879ca6b4ea04dd60449f61de17d8ca0ef8e"
+        },
+        {
+          "key": "ml/codigo/receta.py",
+          "file": "src/runtime/week2/ml/codigo/receta.py",
+          "sha256": "572618cda6f74adedfd82917988e90b5b7f2943555cee6a7b3f765e5b93eba6f"
+        },
+        {
+          "key": "ml/codigo/red.py",
+          "file": "src/runtime/week2/ml/codigo/red.py",
+          "sha256": "65df8313b6eeaf6a56998a91b63d8b814c6dd47072fd8411c3aa7fc9afe1ee81"
+        },
+        {
+          "key": "ml/codigo/ruido_pareado.py",
+          "file": "src/runtime/week2/ml/codigo/ruido_pareado.py",
+          "sha256": "82f807f40b4ee33c2eba7c3f9e45a87669211ed9a509bec62a6b31cb825373a9"
+        },
+        {
+          "key": "ml/codigo/seg_eval.py",
+          "file": "src/runtime/week2/ml/codigo/seg_eval.py",
+          "sha256": "04c43f8bf095ca8e7a267c0067932537cdf3b479057f5c327cf0db71b0b13fb9"
+        },
+        {
+          "key": "ml/codigo/sonda_nivel_s2.py",
+          "file": "src/runtime/week2/ml/codigo/sonda_nivel_s2.py",
+          "sha256": "227863979190d85cffcef52d0376df93ad05d9251ff2768ce11a4132b7d8cdd1"
+        },
+        {
+          "key": "ml/codigo/t2_rejilla.py",
+          "file": "src/runtime/week2/ml/codigo/t2_rejilla.py",
+          "sha256": "397c9055b679dae241fbcab24f962e8f59ecc70b0e0ebeb7e7db9c33ea0cc8a2"
+        },
+        {
+          "key": "ml/codigo/t2cap.py",
+          "file": "src/runtime/week2/ml/codigo/t2cap.py",
+          "sha256": "c0f0de97eea003d088afc11fe19cef8c59dc77f7dfb7f18973da36e25aa9c386"
+        },
+        {
+          "key": "ml/codigo/t4.py",
+          "file": "src/runtime/week2/ml/codigo/t4.py",
+          "sha256": "30c1f2d1afc206689574f77c4657b2c7060a76474153639cab544539411036fa"
+        },
+        {
+          "key": "ml/codigo/tabla_dev_final.py",
+          "file": "src/runtime/week2/ml/codigo/tabla_dev_final.py",
+          "sha256": "7babf78a2c8870ebeb1960020f13c8c2e3c151a265a0d810d398e50d32ea960b"
+        },
+        {
+          "key": "ml/codigo/tendencia.py",
+          "file": "src/runtime/week2/ml/codigo/tendencia.py",
+          "sha256": "a35a39d3065ece616bceefde65d14c083c3d5301b240c8a66c4da30456f0480b"
+        },
+        {
+          "key": "ml/codigo/transfer2.py",
+          "file": "src/runtime/week2/ml/codigo/transfer2.py",
+          "sha256": "60e7c88afe0b6161f762057c839aaac3fbf5b58d71e3fb83fb92f11c7bddcd2c"
+        },
+        {
+          "key": "ml/codigo/variables.py",
+          "file": "src/runtime/week2/ml/codigo/variables.py",
+          "sha256": "7c97747b20f9d3728139517af8648ca3c619ac4a5c69ec17517dd557ada2139b"
+        },
+        {
+          "key": "ml/codigo/verificar_informe.py",
+          "file": "src/runtime/week2/ml/codigo/verificar_informe.py",
+          "sha256": "38aec221d8893ca7c926141f19fb0387748e172dcc8f2ae54675665ce55c0c4c"
+        },
+        {
+          "key": "noche/codigo/base_mercado.py",
+          "file": "src/runtime/week2/noche/codigo/base_mercado.py",
+          "sha256": "689a78af38f8206dec608a7d17f42d1755595bf80a719fce096d48eaae79afad"
+        },
+        {
+          "key": "noche/codigo/reporte.py",
+          "file": "src/runtime/week2/noche/codigo/reporte.py",
+          "sha256": "55deb5c37effbf30e7d7764d5044cd9b36a3dc1742da2da5db1d7502df50dde6"
+        },
+        {
+          "key": "noche/codigo/exposicion_efectiva.py",
+          "file": "src/runtime/week2/noche/codigo/exposicion_efectiva.py",
+          "sha256": "410ad5763e60f90a1160dde43f4ddd5d8639becab56d8a135f6dbc2e64432879"
+        },
+        {
+          "key": "noche/codigo/ultimo_mercado.py",
+          "file": "src/runtime/week2/noche/codigo/ultimo_mercado.py",
+          "sha256": "919b64b8460aee36056e148e6276f30d38f6bb6372cddb8c40f303febb5ccccb"
+        },
+        {
+          "key": "noche/codigo/conf_insumos.py",
+          "file": "src/runtime/week2/noche/codigo/conf_insumos.py",
+          "sha256": "0afa3952984e5b602bfd5bfb63fcac4ba281ee5b34f58208b9673dc398581cae"
+        },
+        {
+          "key": "noche/codigo/desarrollado_gbm.py",
+          "file": "src/runtime/week2/noche/codigo/desarrollado_gbm.py",
+          "sha256": "0e5bdeafa42fad0dbf7c00d4cb2b1e4de0f88d0964eeb81c81e657eacde41ecb"
+        },
+        {
+          "key": "noche/codigo/variables.py",
+          "file": "src/runtime/week2/noche/codigo/variables.py",
+          "sha256": "b3d890298b7f75c26fbb1b1479534873e31b0a12da164cfed54c2ccaed0b1180"
+        },
+        {
+          "key": "noche/codigo/marco.py",
+          "file": "src/runtime/week2/noche/codigo/marco.py",
+          "sha256": "1a16989f729a831b82f44e7479c32d975ebd2966ce83e62ec79e69bdc334f186"
+        },
+        {
+          "key": "ml/codigo/fsp_light.py",
+          "file": "src/runtime/week2/ml/codigo/fsp_light.py",
+          "sha256": "b2bc31437df4fc0d83c1052d2b762b211e15c32cd21e8938fd2562eaba2c69c2"
+        },
+        {
+          "key": "ml/codigo/fsp_light_prod.py",
+          "file": "src/runtime/week2/ml/codigo/fsp_light_prod.py",
+          "sha256": "5792aa1d1837592e13e32d805d7364f704b3eae80e00f287efa5307b865c9f86"
+        },
+        {
+          "key": "m017/forma_local.py",
+          "file": "src/runtime/week2/m017/forma_local.py",
+          "sha256": "dd9c7e1f45fa5e6356ad2a097442a73bf84c2b3bf7c67934fa64d25272e0a954"
+        },
+        {
+          "key": "m017/forma_local3.py",
+          "file": "src/runtime/week2/m017/forma_local3.py",
+          "sha256": "d59cffa0ea0e7ec90b56e05c57250b18abf1b7d2d583834e81389c4b79faa628"
+        },
+        {
+          "key": "m017/forma_v2.py",
+          "file": "src/runtime/week2/m017/forma_v2.py",
+          "sha256": "1b28cc04cf628d2bdff22f5f6ff2045f71998146abb9b1981bd0548d829eb368"
+        },
+        {
+          "key": "m017/eval_v2.py",
+          "file": "src/runtime/week2/m017/eval_v2.py",
+          "sha256": "a0649f938028721912a0d6e06ef607604a30df532c52794cd256cb17bd7984f8"
+        },
+        {
+          "key": "m017/f3_eval.py",
+          "file": "src/runtime/week2/m017/f3_eval.py",
+          "sha256": "247afa5391de16ad0b94a4d0f9f337b10b888c49c526fccd7f1bebe29131e738"
+        },
+        {
+          "key": "m017/construir_F2.py",
+          "file": "src/runtime/week2/m017/construir_F2.py",
+          "sha256": "4ae92b453c3bcf3d087fbae1c3bc6ed43c9d6470d9527586b3999f4d44434ba0"
+        },
+        {
+          "key": "m017/construir_final.py",
+          "file": "src/runtime/week2/m017/construir_final.py",
+          "sha256": "eef64a8e669ff457eba5d9aaf062c698b5d6e6013d6f5376f067bd6772ed37e6"
+        },
+        {
+          "key": "m017/exp26/lib26.py",
+          "file": "src/runtime/week2/m017/exp26/lib26.py",
+          "sha256": "b15b565463ac1e2cb6acde9860efa8deb7a2a6a7d66a73e78964838b3666c20f"
+        },
+        {
+          "key": "m017/exp26/fsp_blend_eval.py",
+          "file": "src/runtime/week2/m017/exp26/fsp_blend_eval.py",
+          "sha256": "487180c29a043fb89c8a404abd0343fbde02d5a2a5001e07e6be3f39df8d5eaa"
+        },
+        {
+          "key": "m017/construir_F3b.py",
+          "file": "src/runtime/week2/m017/construir_F3b.py",
+          "sha256": "0513c2949fc1e223923b19cc9a7c4e1e7bd22cca9ff57a25708cc66acaf81192"
+        },
+        {
+          "key": "m017/construir_F4b.py",
+          "file": "src/runtime/week2/m017/construir_F4b.py",
+          "sha256": "27033c3d1e83c296b1d7fb9fa359ea8bbcd666c49ed94dd9467c3a5f349bfe05"
+        },
+        {
+          "key": "m017/construir_F3c.py",
+          "file": "src/runtime/week2/m017/construir_F3c.py",
+          "sha256": "38d5b0020e95721a5c8f34c80deb3dc3988a76634828bebb514bc66afe086cb7"
+        },
+        {
+          "key": "m017/construir_F3d.py",
+          "file": "src/runtime/week2/m017/construir_F3d.py",
+          "sha256": "d03154778c3fee291f4d858dd31d668e8ce686d8cd75b6060744acc8e2c5771c"
+        },
+        {
+          "key": "aux/reproduccion_cadena.py",
+          "file": "src/runtime/week2/support/reproduccion_cadena.py",
+          "sha256": "edcdb950de4366956e41bcc527b7abec2e225e9ba39ae5f53dfdf3296a2cdf54"
+        }
+      ]
+    }
+  }
+}

@@ -9,6 +9,8 @@ I provide two standalone notebooks containing source code and frozen configurati
 
 The notebooks include 44 and 79 source files respectively. My Week 2 execution plan contains fourteen initial stages and thirty-four chain stages through F3c. The review record identifies the static syntax and entry-point checks; these do not replace execution.
 
+I keep the readable English source package in [`src/runtime/`](../src/runtime/README.md). Its comments and docstrings explain the methods without naming individual AI tools. Neutral runtime names replace older assistant-specific names; the original authorship and paths remain in the historical record. Internal field names and command options retain their frozen interfaces.
+
 ## How I read or run a notebook
 
 Each notebook opens with a guide linking its method, execution plan and output checks. I can read those sections without running training. The embedded source package preserves the individual programs; its source cells carry JupyterLab metadata to hide them initially, and I can expand them. GitHub may show all source cells.
@@ -78,17 +80,23 @@ The historical Week 1 reference environment declared Ubuntu, Python 3.13.16, two
 
 Intermediate data, models and logs use a new temporary directory. It does not persist automatically. I choose sufficient local storage and preserve a failed run before investigating it. Final outputs use the configured private export folder or Kaggle working storage. Row-level results remain restricted under the competition rules.
 
-## What my local checks established
+## My latest execution and source checks
+
+A fresh local execution of the preceding frozen Week 2 edition completed all 91 code cells and 48 stages, reproducing the F3c CSV byte for byte. Its twenty commercial premiums and fixed-expense sensitivities matched the report source. The fresh S41 execution is still running; I retain its actual status in the [execution index](../registro/ejecucion_notebooks_actual.json).
+
+For this English edition, I reviewed 469 comment/docstring items across the 123 embedded sources. Their executable structures match the frozen sources after removing documentation and normalizing the declared runtime-name changes. Separate checks rebuilt Week 1 data through F0 from the originals and resolved all 30 and 48 stage paths. These checks do not constitute another full Run All of the edited edition. The [source review](../registro/documentacion_codigo_actual.json) records that distinction.
+
+## Earlier local reconstruction evidence
 
 Week 1 rebuilt CAP01 and the complete F0 content from the originals. The confirmation audit flag uses a retrospective rule inferred from the historical matrix; it matched this dataset but does not recover the original decision process and is excluded from predictors. A resumed local execution completed all thirty S30 nodes and produced the historical S30/S41 CSV hashes. The runner returned code 3 with 160 intermediate differences. Three feature-table fingerprints remain unexplained; small numeric differences in other arrays and prediction tables do not remove that limitation.
 
 Week 2 rebuilt the chain from originals with forty-eight successful stage receipts and produced the historical F3c CSV. An interrupted stage was preserved and rerun in an isolated copy. The twenty-one A1 transfer tables matched their historical keys and values; the commercial calculation is included in the notebook.
 
-I have not established one uninterrupted Run All, a hosted Kaggle run or independent professional review. I retain the exact local receipts and source hashes in `registro/notebooks_kaggle_actual.json` in my repository.
+Those earlier executions used separate or resumed branches. They are retained separately from the fresh execution above. Hosted Kaggle execution and independent professional review remain unverified. I keep the historical receipts and source hashes in `registro/notebooks_kaggle_actual.json`.
 
 ## Where I keep the original workflow
 
-The notebook builders in `herramientas/` are development aids; the notebooks do not call them. I document the original repository routes in `docs/REPRODUCCION_COMPLETA.md` and `docs/REENTRENAMIENTO_ORIGINALES.md`. My local input paths do not need to reproduce the authors' historical machine paths: the runners supply the required runtime bindings.
+The builder `herramientas/build_delivery_notebooks.py --week both` assembles the notebooks from the pinned English sources and templates in `src/runtime/`. It does not train models, and the notebooks do not call it. The two `integrar_notebook_semana*.py` entry points call this same builder. I retain the original routes in `docs/REPRODUCCION_COMPLETA.md` and `docs/REENTRENAMIENTO_ORIGINALES.md`; runtime bindings supply the isolated paths.
 
 I keep notebook outputs cleared in Git. Running a notebook, submitting its CSV and publishing code are separate actions with their own competition requirements.
 

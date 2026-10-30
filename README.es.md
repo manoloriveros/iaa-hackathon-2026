@@ -59,13 +59,14 @@ El entrenamiento puede tardar varias horas. No he medido tiempo ni almacenamient
 
 | Evidencia | Alcance y límite |
 | --- | --- |
-| Reconstrucción local de los CSV elegidos | Las corridas locales reanudadas recuperaron las huellas históricas de S41 y F3c. Son comprobaciones dentro del mismo proyecto asistido por IA. |
+| Ejecución local desde cero | La edición congelada anterior de semana 2 completó sus 91 celdas y 48 etapas y reprodujo F3c exactamente. S41 continúa en el [registro de ejecución](registro/ejecucion_notebooks_actual.json). |
 | Contratos de entrada y salida | Los notebooks revisan archivos requeridos, identificadores y orden de la plantilla, formato de predicciones y valores positivos y finitos. |
 | Artefactos intermedios de semana 1 | La reconstrucción registró 160 diferencias, incluidas tres huellas de tablas de variables cuya causa no se estableció. La igualdad del CSV final no las resuelve. |
-| Entorno de ejecución | No he acreditado un Run All ininterrumpido de ambos notebooks ni una ejecución alojada en Kaggle. Cambiar paquetes o hardware puede modificar los resultados numéricos. |
+| Fuentes de entrega en inglés | Revisé comentarios y docstrings y adopté nombres neutrales. Las 123 fuentes pasaron la comparación de estructura ejecutable normalizada y comprobé por separado la preparación de datos y las rutas. Esta edición no tiene otro Run All completo. |
+| Entorno de ejecución | La ejecución nueva usa Windows, Python 3.12 y las versiones declaradas en un entorno nuevo. Kaggle alojado sigue sin comprobarse. Cambiar paquetes o hardware puede modificar los resultados numéricos. |
 | Aplicación actuarial | Parte de la calibración usó sondas del marcador público. La disponibilidad de variables al cotizar, las reservas, el traslado a negocio nuevo y los efectos diferenciales requieren revisión antes de una aplicación operativa. |
 
-Conservo los [recibos de reproducción](registro/notebooks_kaggle_actual.json) y la [revisión de entrega](registro/revision_entrega_actual.json). Distingo reproducción de archivos, evaluación de modelos y revisión profesional independiente. La selección no acredita superioridad en el marcador privado ni aprobación de una tarifa operativa.
+Conservo el [registro de ejecución](registro/ejecucion_notebooks_actual.json), la [revisión de fuentes](registro/documentacion_codigo_actual.json), los [recibos anteriores](registro/notebooks_kaggle_actual.json) y la [revisión de entrega](registro/revision_entrega_actual.json). Distingo reproducción de archivos, evaluación de modelos y revisión profesional independiente. La selección no acredita superioridad en el marcador privado ni aprobación de una tarifa operativa.
 
 ## Cómo trabajé con IA
 
@@ -78,7 +79,8 @@ Guardé hipótesis, fuentes, alternativas fallidas y correcciones. También usé
 | Ubicación | Qué conservo allí |
 | --- | --- |
 | [`notebooks/`](notebooks/) | Notebooks autocontenidos y su guía de ejecución |
-| [`src/`](src/) y [`receta/`](receta/) | Código, procedencia y recetas congeladas de reproducción |
+| [`src/runtime/`](src/runtime/) | Fuentes en inglés integradas en los notebooks finales y su manifiesto de construcción |
+| Otras carpetas de [`src/`](src/) y [`receta/`](receta/) | Código histórico, procedencia y recetas originales congeladas |
 | [`herramientas/`](herramientas/) | Herramientas de reproducción, comprobación y documentación |
 | [`docs/README.md`](docs/README.md) | Entrada a los métodos y decisiones vigentes |
 | [`docs/archivo/`](docs/archivo/) | Propuestas y revisiones anteriores, con su [mapa de rutas y versiones](registro/archivo_documental_actual.json) |

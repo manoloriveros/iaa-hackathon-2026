@@ -59,13 +59,14 @@ Training can take several hours. I have not measured runtime or peak storage in 
 
 | Evidence | Scope and limitation |
 | --- | --- |
-| Local reconstruction of the selected CSVs | Resumed local runs recovered the historical S41 and F3c file fingerprints. These were checks within the same AI-assisted project. |
+| Fresh local execution | The preceding frozen Week 2 edition completed all 91 code cells and 48 stages, reproducing F3c exactly. The fresh S41 execution remains in progress in the [execution record](registro/ejecucion_notebooks_actual.json). |
 | Input and output contracts | The notebooks check required input files, template identifiers and order, prediction schema, and positive finite predictions. |
 | Week 1 intermediate artifacts | The reconstruction reported 160 intermediate differences, including three unexplained feature-table fingerprints. A matching final CSV does not resolve them. |
-| Execution environment | I have not established an uninterrupted Run All of both notebooks or a hosted Kaggle execution. Different packages or hardware can change numerical results. |
+| English delivery source | I revised the comments and docstrings and adopted neutral runtime names. All 123 sources passed normalized executable-structure checks; original-data preparation and runtime paths passed separate checks. This is not another full Run All of the edited edition. |
+| Execution environment | The fresh local run uses Windows, Python 3.12 and the declared package versions in a new environment. Hosted Kaggle execution remains unverified. Different packages or hardware can change numerical results. |
 | Actuarial use | Public leaderboard probes informed parts of the calibration. Quote-time feature availability, reserve assumptions, transport to new business and differential effects require further review before operational use. |
 
-I retain the [reproduction receipts](registro/notebooks_kaggle_actual.json) and [delivery review](registro/revision_entrega_actual.json). They distinguish file reproduction, model assessment and independent professional review. The selected models do not establish superiority on the private leaderboard or approval of an operational tariff.
+I retain the [execution record](registro/ejecucion_notebooks_actual.json), [source review](registro/documentacion_codigo_actual.json), earlier [reproduction receipts](registro/notebooks_kaggle_actual.json) and [delivery review](registro/revision_entrega_actual.json). They distinguish file reproduction, model assessment and independent professional review. The selected models do not establish superiority on the private leaderboard or approval of an operational tariff.
 
 ## How I worked with AI
 
@@ -78,7 +79,8 @@ I preserved hypotheses, source references, failed alternatives and corrections. 
 | Location | What I keep there |
 | --- | --- |
 | [`notebooks/`](notebooks/) | Standalone reproduction notebooks and their run guide |
-| [`src/`](src/) and [`receta/`](receta/) | Model source, provenance and frozen reproduction recipes |
+| [`src/runtime/`](src/runtime/) | Readable English source package embedded in the final notebooks, with a checked build manifest |
+| Other [`src/`](src/) directories and [`receta/`](receta/) | Historical model source, provenance and frozen original recipes |
 | [`herramientas/`](herramientas/) | Reproduction, checking and documentation tools |
 | [`docs/README.md`](docs/README.md) | Entry point to the current methods and decisions |
 | [`docs/archivo/`](docs/archivo/) | Earlier proposals and reviews, with a [path and version map](registro/archivo_documental_actual.json) |

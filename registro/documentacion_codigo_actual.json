@@ -1,0 +1,45 @@
+{
+  "id": "DELIVERY-SOURCE-ENGLISH-20261029",
+  "utc": "2026-10-29T23:58:29.118847+00:00",
+  "author": "Codex",
+  "status": "English_documentation_and_neutral_delivery_runtime_preflight_passed",
+  "source_files": 123,
+  "comments_and_docstrings_reviewed": 469,
+  "notebook_code_cells_compiled": 145,
+  "vendor_names_in_delivery_notebooks_or_runtime": 0,
+  "notebooks": {
+    "notebooks/week1_developed_market.ipynb": "83717f22aedcc4d3b1d588177f0f2c0e44c98c986e147fb123781a2341bd0ca8",
+    "notebooks/week2_emerging_market.ipynb": "1cdde6ab2cb14f667954a429c9be5bcff19445cd658520fc5633344b35bac683"
+  },
+  "runtime_manifest": "src/runtime/manifest.json",
+  "builder": "herramientas/build_delivery_notebooks.py",
+  "normalized_executable_AST_checks_passed": 123,
+  "allowed_normalization": "Remove documentation-only docstrings; map neutral runtime paths, identifiers and provenance labels consistently. Training parameters, formulas, factors and expected final CSV hashes remain fixed.",
+  "additional_check": "Two __doc__ reads provide printed CLI help and argparse help text. Neither supplies model inputs or parameters; no source-inspection calls were found.",
+  "corrected_documentation": [
+    "The production FSp source now documents developed 2021-2024 and weather through 2024, matching its existing code.",
+    "The F3c source describes the selected recipe and the separately retained historical alternatives.",
+    "The readable support sources use support/ because aux is reserved by Windows and Git; the embedded runtime key remains unchanged."
+  ],
+  "checks": {
+    "nbformat": true,
+    "compiled_embedded_sources": 123,
+    "compiled_notebook_cells": 145,
+    "week1_original_data_reconstruction_without_models": true,
+    "week1_DAG_runtime_paths": 30,
+    "week2_runtime_stage_paths": 48,
+    "fresh_model_training_for_editorial_changes": false
+  },
+  "frozen_execution_source_commit": "03c6f4708f9a97fd991d99eefd05c8a2ff44d988",
+  "full_run_status_index": "registro/ejecucion_notebooks_actual.json",
+  "scope_of_execution_evidence": "The fresh full runs use the pre-edit frozen snapshots. English documentation and neutral runtime names were checked separately; they are not a second full Run All of the editorial version.",
+  "historical_code_and_authorship_preserved": true,
+  "evidence_directory": "privado/editorial_ingles_20261029",
+  "source_equivalence_receipt": "privado/editorial_ingles_20261029/source_equivalence.json",
+  "preflight_receipt": "privado/editorial_ingles_20261029/preflight_result.json",
+  "new_submission": false,
+  "remote_training": false,
+  "independent_professional_review": false,
+  "post_preflight_whitespace_only": "Removed a redundant final blank line in the N62 source for git diff --check; executable AST unchanged.",
+  "build_updates_embedded_source_fingerprints": true
+}

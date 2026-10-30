@@ -1,0 +1,2698 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# Week 2: adapting pricing to the emerging market\n",
+        "\n",
+        "I am Manuel Rodríguez, an actuarial student and individual participant in the IAA AI Hackathon 2026. In this notebook I explain and reconstruct my Week 2 adaptation, developed with AI assistance.\n",
+        "\n",
+        "I estimate the 2025 ultimate cost for each emerging-market policy period. The developed market provides a reference; I keep joins within each market. The separate commercial premium exercise applies expense assumptions to twenty reference policies and does not change the risk-premium submission.\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "tags": [
+          "reader-guide"
+        ]
+      },
+      "source": [
+        "## Notebook guide\n",
+        "\n",
+        "| Purpose | What I reconstruct |\n",
+        "| --- | --- |\n",
+        "| Selected recipe | F3c, my Week 2 submission |\n",
+        "| Required inputs | 11 developed-market and 13 emerging-market Parquet files from Part 2 |\n",
+        "| Final exports | `submission_week2_F3c.csv` and `commercial_reference_premiums.csv` |\n",
+        "| External model or repository download | None; source and frozen configuration are embedded |\n",
+        "\n",
+        "For a first reading, I follow the [method](#modeling-and-evidence), [execution plan](#inspect-the-execution-plan) and [output checks](#check-and-save-the-risk-premium-csv). The [embedded source package](#embedded-source-package) preserves the individual programs for inspection. Its source cells are marked as hidden in JupyterLab's presentation metadata; I can expand them. GitHub may display them in full.\n",
+        "\n",
+        "For execution, I attach the data, check [dependencies and storage](#dependencies-and-run-workspace) and run cells in order. The later [recipe execution](#run-the-frozen-stages) trains models and can take hours. Reading the notebook does not require starting that execution.\n",
+        "\n",
+        "A fresh local execution of the preceding frozen edition completed all 91 code cells and 48 stages and recovered the historical F3c CSV exactly. Its twenty commercial premiums and fixed-expense sensitivities also matched the report source. This English edition uses neutral runtime names and revised comments/docstrings. Its 123 embedded sources across both notebooks passed normalized executable-structure checks; the data and path checks are documented in the [source review](../registro/documentacion_codigo_actual.json). Those checks are separate from another full Run All of this edition. Hosted Kaggle execution and independent professional review remain unverified.\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Scope and reproducibility\n",
+        "\n",
+        "I rebuild the historical F3c risk-premium chain from the official Parquet inputs, including its developed-market T2b models, A1 transfer, public-probe calibration and F3c adjustment. I then calculate the twenty commercial reference premiums. The embedded code and frozen aggregate constants are part of this notebook; no repository checkout, previous model, prediction file or team script is required.\n",
+        "\n",
+        "This is a notebook adaptation of my historical reconstruction, not an independent professional validation. Its full execution on Kaggle has not yet been verified. Numerical differences can arise from library versions and hardware; a hash mismatch must be investigated rather than presented as an exact reproduction.\n",
+        "\n",
+        "Attach Part 2 and run the cells in order. The input files remain read-only. I keep intermediate data, models and logs in a fresh temporary directory outside `/kaggle/working`; only final CSVs go into `/kaggle/working`. The temporary directory does not persist with the notebook output. Keep the row-level final outputs private under the competition rules.\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Attach the competition data\n",
+        "\n",
+        "I use the eleven developed-market files and thirteen emerging-market files from Part 2. I resolve the folders in this order: explicit market variables (`IAA_W2_DEVELOPED` and `IAA_W2_EMERGING`), an optional `IAA_DATA_ROOT`, the local workspace's `RUTAS_PROYECTO.json`, then attached data under `/kaggle/input`.\n",
+        "\n",
+        "In my local project, I can open this notebook from the workspace without entering machine-specific paths. `IAA_PROJECT_ROOT` identifies that workspace when the kernel starts elsewhere. For another local checkout I set the market variables to the actual Parquet directories, or point `IAA_DATA_ROOT` to their common parent. In Kaggle I attach the corresponding competition; folder discovery stops if multiple candidates are possible.\n",
+        "\n",
+        "Before training, I check every required file against the frozen sizes and SHA-256 fingerprints of my archived official downloads, then check the template's identifiers and order against the test files. Week 2 validates both markets. An incorrect path, missing file, mixed market or different fingerprint stops execution. These hashes identify the downloaded bytes; they are not represented as hashes published by Kaggle.\n",
+        "\n",
+        "Only after these checks pass do I create the run folder. Its `input_manifest.json` records the resolved paths, input fingerprints and template counts. I keep inputs read-only and prevent output directories inside them.\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Optional dependency installation\n",
+        "\n",
+        "Kaggle usually includes these libraries. If the environment does not match the recorded reference, set the switch to `True` and run this cell with Internet enabled. Restart the kernel after installation, set the switch back to `False`, and run from the top. Keep the same Kaggle session so the installed packages remain available. The reference versions may not support every Kaggle Python image.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "INSTALL_REFERENCE_PACKAGES = False\n",
+        "if INSTALL_REFERENCE_PACKAGES:\n",
+        "    import subprocess, sys\n",
+        "    subprocess.check_call([sys.executable, \"-m\", \"pip\", \"install\", \"numpy==2.5.3\", \"pandas==3.0.5\", \"scipy==1.18.1\", \"scikit-learn==1.9.1\", \"lightgbm==4.7.0\", \"pyarrow==26.0.0\"])\n",
+        "    raise RuntimeError(\"Packages installed. Restart the kernel, turn installation off, and run all cells again.\")\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {},
+      "outputs": [],
+      "source": [
+        "import os, sys, hashlib, importlib.metadata\n",
+        "from pathlib import Path\n",
+        "import numpy as np\n",
+        "import pandas as pd\n",
+        "import pyarrow.parquet as pq\n",
+        "\n",
+        "for package in (\"numpy\", \"pandas\", \"pyarrow\"):\n",
+        "    print(f\"{package}: {importlib.metadata.version(package)}\")\n",
+        "print(\"Python:\", sys.version)\n",
+        "\n",
+        "DEVELOPED_DIR = os.environ.get(\"IAA_W2_DEVELOPED\", \"\")  # e.g. /kaggle/input/competitions/iaa-ai-assisted-hackathon-2026-part-2/developed\n",
+        "EMERGING_DIR = os.environ.get(\"IAA_W2_EMERGING\", \"\")  # e.g. /kaggle/input/competitions/iaa-ai-assisted-hackathon-2026-part-2/emerging\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {},
+      "outputs": [],
+      "source": [
+        "\"\"\"Resolve official notebook inputs and validate them without training models.\"\"\"\n",
+        "from pathlib import Path\n",
+        "import hashlib\n",
+        "import json\n",
+        "import os\n",
+        "\n",
+        "LINES = ('motor', 'buildings', 'contents')\n",
+        "BASE_FILES = ['addresses.parquet', 'claims.parquet', 'customers.parquet',\n",
+        "              'weather.parquet', 'sample_submission.parquet'] + [\n",
+        "    f'{prefix}_{line}.parquet' for prefix in ('policies', 'test') for line in LINES]\n",
+        "INPUT_CONTRACT = {}\n",
+        "NOTEBOOK_WEEK = None\n",
+        "_RESOLVED_INPUTS = {}\n",
+        "_VERIFIED_INPUTS = {}\n",
+        "_VERIFIED_TEMPLATES = {}\n",
+        "_VARIABLES = {'public': 'IAA_W1_DATA', 'developed': 'IAA_W2_DEVELOPED',\n",
+        "              'emerging': 'IAA_W2_EMERGING'}\n",
+        "_ROUTE_KEYS = {'public': 'week_1_data', 'developed': 'week_2_developed_reference',\n",
+        "               'emerging': 'week_2_emerging_data'}\n",
+        "\n",
+        "\n",
+        "def _directory(value):\n",
+        "    return Path(value).expanduser().resolve()\n",
+        "\n",
+        "\n",
+        "def _missing(folder, required):\n",
+        "    return [name for name in required if not (folder / name).is_file()]\n",
+        "\n",
+        "\n",
+        "def _discover(root, required, market):\n",
+        "    \"\"\"Search only an explicitly chosen data tree or the Kaggle input mount.\"\"\"\n",
+        "    candidates = set()\n",
+        "    if not root.is_dir():\n",
+        "        return []\n",
+        "    for current, directories, filenames in os.walk(root, followlinks=False):\n",
+        "        folder = Path(current)\n",
+        "        if len(folder.relative_to(root).parts) >= 6:\n",
+        "            directories[:] = []\n",
+        "        else:\n",
+        "            directories[:] = [d for d in directories if not d.startswith('.')]\n",
+        "        if 'sample_submission.parquet' not in filenames or _missing(folder, required):\n",
+        "            continue\n",
+        "        # The emerging folder also contains the eleven base filenames.\n",
+        "        if market != 'emerging' and (folder / 'reference_policies.parquet').is_file():\n",
+        "            continue\n",
+        "        candidates.add(folder.resolve())\n",
+        "    return sorted(candidates, key=str)\n",
+        "\n",
+        "\n",
+        "def _project_folder(market):\n",
+        "    explicit = os.environ.get('IAA_PROJECT_ROOT', '')\n",
+        "    if explicit:\n",
+        "        configs = [_directory(explicit) / 'RUTAS_PROYECTO.json']\n",
+        "        if not configs[0].is_file():\n",
+        "            raise RuntimeError(f'IAA_PROJECT_ROOT has no RUTAS_PROYECTO.json: {configs[0]}')\n",
+        "    else:\n",
+        "        start = Path.cwd().resolve()\n",
+        "        configs = [p / 'RUTAS_PROYECTO.json' for p in (start, *start.parents)\n",
+        "                   if (p / 'RUTAS_PROYECTO.json').is_file()][:1]\n",
+        "    if not configs:\n",
+        "        return None\n",
+        "    config = configs[0]\n",
+        "    routes = json.loads(config.read_text(encoding='utf-8-sig'))\n",
+        "    value = routes.get(_ROUTE_KEYS[market])\n",
+        "    if not isinstance(value, str) or not value.strip():\n",
+        "        raise RuntimeError(f'{config.name} lacks the data route {_ROUTE_KEYS[market]}')\n",
+        "    return (config.parent / value).resolve()\n",
+        "\n",
+        "\n",
+        "def find_market(market, required, override):\n",
+        "    \"\"\"Resolve one market, never silently select between multiple candidates.\"\"\"\n",
+        "    if market not in INPUT_CONTRACT or market not in _VARIABLES:\n",
+        "        raise RuntimeError(f'No frozen input contract for {market!r}')\n",
+        "    origin = _VARIABLES[market]\n",
+        "    if override:\n",
+        "        candidates = [_directory(override)]\n",
+        "    elif os.environ.get('IAA_DATA_ROOT'):\n",
+        "        origin = 'IAA_DATA_ROOT'\n",
+        "        candidates = _discover(_directory(os.environ['IAA_DATA_ROOT']), required, market)\n",
+        "    else:\n",
+        "        project = _project_folder(market)\n",
+        "        origin = 'RUTAS_PROYECTO.json' if project is not None else '/kaggle/input'\n",
+        "        candidates = [project] if project is not None else _discover(Path('/kaggle/input'), required, market)\n",
+        "    if len(candidates) != 1:\n",
+        "        raise RuntimeError(f'Expected one {market} directory via {origin}; found '\n",
+        "                           f'{[str(p) for p in candidates]}. Set {_VARIABLES[market]} '\n",
+        "                           'to the directory containing the required Parquet files.')\n",
+        "    folder = candidates[0]\n",
+        "    missing = _missing(folder, required)\n",
+        "    if missing:\n",
+        "        raise RuntimeError(f'Missing {market} files in {folder}: {\", \".join(missing)}. '\n",
+        "                           f'Check {_VARIABLES[market]}. No fallback was selected.')\n",
+        "    if market != 'emerging' and (folder / 'reference_policies.parquet').is_file():\n",
+        "        raise RuntimeError(f'{folder} contains emerging-market reference policies; '\n",
+        "                           f'check {_VARIABLES[market]} instead of mixing markets.')\n",
+        "    _RESOLVED_INPUTS[str(folder)] = {'market': market, 'origin': origin}\n",
+        "    _VERIFIED_INPUTS.pop(market, None)\n",
+        "    _VERIFIED_TEMPLATES.pop(market, None)\n",
+        "    return folder\n",
+        "\n",
+        "\n",
+        "def inventory(folder, filenames):\n",
+        "    import pandas as pd\n",
+        "    import pyarrow.parquet as pq\n",
+        "    folder = _directory(folder)\n",
+        "    binding = _RESOLVED_INPUTS.get(str(folder))\n",
+        "    if binding is None:\n",
+        "        raise RuntimeError('Resolve this input with find_market before inventory.')\n",
+        "    market = binding['market']\n",
+        "    _VERIFIED_INPUTS.pop(market, None)\n",
+        "    _VERIFIED_TEMPLATES.pop(market, None)\n",
+        "    expected = INPUT_CONTRACT[market]\n",
+        "    if set(filenames) != set(expected):\n",
+        "        raise RuntimeError(f'File list does not match the frozen {market} contract')\n",
+        "    rows = []\n",
+        "    for name in filenames:\n",
+        "        path = folder / name\n",
+        "        before = path.stat()\n",
+        "        digest = hashlib.sha256()\n",
+        "        with path.open('rb') as stream:\n",
+        "            for chunk in iter(lambda: stream.read(1024 * 1024), b''):\n",
+        "                digest.update(chunk)\n",
+        "        actual = digest.hexdigest()\n",
+        "        if before.st_size != expected[name]['bytes'] or actual != expected[name]['sha256']:\n",
+        "            raise RuntimeError(f'Official-download fingerprint mismatch: {market}/{name}. '\n",
+        "                               'Check the input version; training has not started.')\n",
+        "        parquet = pq.ParquetFile(path)\n",
+        "        after = path.stat()\n",
+        "        if (before.st_size, before.st_mtime_ns) != (after.st_size, after.st_mtime_ns):\n",
+        "            raise RuntimeError(f'Input changed while being checked: {path}')\n",
+        "        rows.append({'file': name, 'rows': parquet.metadata.num_rows,\n",
+        "                     'columns': len(parquet.schema_arrow), 'bytes': after.st_size,\n",
+        "                     'sha256': actual, 'matches_download': True,\n",
+        "                     'mtime_ns': after.st_mtime_ns})\n",
+        "    _VERIFIED_INPUTS[market] = {'directory': str(folder), 'origin': binding['origin'], 'files': rows}\n",
+        "    return pd.DataFrame([{k: v for k, v in row.items() if k != 'mtime_ns'} for row in rows])\n",
+        "\n",
+        "\n",
+        "def check_template(folder):\n",
+        "    import pandas as pd\n",
+        "    folder = _directory(folder)\n",
+        "    market = _RESOLVED_INPUTS[str(folder)]['market']\n",
+        "    _VERIFIED_TEMPLATES.pop(market, None)\n",
+        "    if market not in _VERIFIED_INPUTS:\n",
+        "        raise RuntimeError('Verify input fingerprints before checking the template.')\n",
+        "    sample = pd.read_parquet(folder / 'sample_submission.parquet')\n",
+        "    test = pd.concat([pd.read_parquet(folder / f'test_{line}.parquet', columns=['row_id'])\n",
+        "                      for line in LINES], ignore_index=True)\n",
+        "    if ('row_id' not in sample or not sample.row_id.notna().all()\n",
+        "            or not test.row_id.notna().all() or not test.row_id.is_unique\n",
+        "            or not sample.row_id.is_unique or not sample.row_id.equals(test.row_id)):\n",
+        "        raise RuntimeError(f'{market}: template and test identifiers/order do not agree')\n",
+        "    _VERIFIED_TEMPLATES[market] = len(sample)\n",
+        "    print(f'{market}: template matches test identifiers in order ({len(sample):,} rows)')\n",
+        "    return sample\n",
+        "\n",
+        "\n",
+        "def _safe_output_root(root):\n",
+        "    root = _directory(root)\n",
+        "    for binding in _RESOLVED_INPUTS:\n",
+        "        source = Path(binding)\n",
+        "        if root == source or source in root.parents:\n",
+        "            raise RuntimeError(f'Output directory is inside read-only input data: {root}')\n",
+        "    return root\n",
+        "\n",
+        "\n",
+        "def prepare_workspace(week):\n",
+        "    \"\"\"Create a run only after all input contracts and templates have passed.\"\"\"\n",
+        "    import tempfile\n",
+        "    import uuid\n",
+        "    from datetime import datetime, timezone\n",
+        "    if week not in (1, 2) or week != NOTEBOOK_WEEK:\n",
+        "        raise RuntimeError('Workspace week does not match the notebook input contract')\n",
+        "    required = {'public'} if week == 1 else {'developed', 'emerging'}\n",
+        "    if not required.issubset(_VERIFIED_INPUTS) or not required.issubset(_VERIFIED_TEMPLATES):\n",
+        "        raise RuntimeError('Run the input inventory and template cells before creating the workspace.')\n",
+        "    for market in required:\n",
+        "        for row in _VERIFIED_INPUTS[market]['files']:\n",
+        "            path = Path(_VERIFIED_INPUTS[market]['directory']) / row['file']\n",
+        "            stat = path.stat()\n",
+        "            if (stat.st_size, stat.st_mtime_ns) != (row['bytes'], row['mtime_ns']):\n",
+        "                raise RuntimeError(f'Input changed after validation: {market}/{row[\"file\"]}')\n",
+        "    work_root = _safe_output_root(os.environ.get('IAA_NOTEBOOK_WORK') or tempfile.gettempdir())\n",
+        "    export_value = os.environ.get('IAA_NOTEBOOK_EXPORT', '')\n",
+        "    export_root = _safe_output_root(export_value) if export_value else (\n",
+        "        Path('/kaggle/working') if Path('/kaggle/working').is_dir() else None)\n",
+        "    run = work_root / ('iaa_week' + str(week) + '_' + uuid.uuid4().hex[:12])\n",
+        "    run.mkdir(parents=True, exist_ok=False)\n",
+        "    export = (export_root if export_root is not None else run) / (run.name + '_exports')\n",
+        "    export.mkdir(parents=True, exist_ok=False)\n",
+        "    receipt = {'utc': datetime.now(timezone.utc).isoformat(), 'week': week,\n",
+        "               'inputs': {m: _VERIFIED_INPUTS[m] for m in sorted(required)},\n",
+        "               'template_rows': {m: _VERIFIED_TEMPLATES[m] for m in sorted(required)},\n",
+        "               'training_started': False}\n",
+        "    (run / 'input_manifest.json').write_text(json.dumps(receipt, indent=2) + '\\n', encoding='utf-8')\n",
+        "    print('New run:', run)\n",
+        "    print('Final outputs:', export)\n",
+        "    return run, export\n",
+        "\n",
+        "\n",
+        "\n",
+        "NOTEBOOK_WEEK = 2\n",
+        "INPUT_CONTRACT = {'developed': {'addresses.parquet': {'bytes': 8209304, 'sha256': '2f1a9a157649a73ed1b0ee9b2caa3660b4c2a11766af3c64ab5131389079c0b1'}, 'claims.parquet': {'bytes': 6393494, 'sha256': '323adf2e0f6c5975a026479d725d4cd04f51fce3aa069f897a99f664c6e392c0'}, 'customers.parquet': {'bytes': 9840123, 'sha256': '065458a0b3aa9d3499e80b3b25b76baf0ef6245146477b6861f6ea35edf581eb'}, 'policies_buildings.parquet': {'bytes': 28411001, 'sha256': 'eb84372c23c16ed0619d89c8eb1396ab6916e5ec46a5907ce42c3dfce4a91cbe'}, 'policies_contents.parquet': {'bytes': 28203870, 'sha256': '8c067cc80baed583100df999e1c3d5e389295702f7bac21d5331bbd639b83fcd'}, 'policies_motor.parquet': {'bytes': 44218528, 'sha256': '4d2d7ae03971d5d6df3a71bbaf0ebc168250a6807b27d1561d38b638434dc95e'}, 'sample_submission.parquet': {'bytes': 3271617, 'sha256': '9529f3b6a679d3410350baa7c2ef3fb085d1d8843a838360c5852dfe820d4d95'}, 'test_buildings.parquet': {'bytes': 7917305, 'sha256': '7b2b96507de29241c70617c17df66146ed30b51f826ce5219bbda5da536d4957'}, 'test_contents.parquet': {'bytes': 7795903, 'sha256': 'c2212f62f3b7a21431c0073277549c3db5e63857565a8b88855e79a65fa1b8b6'}, 'test_motor.parquet': {'bytes': 12035693, 'sha256': '8d28fb9fd091caf2a044913a013592226a4c0917d5c6fcc9c5e8cdcec2ab4fc5'}, 'weather.parquet': {'bytes': 41863008, 'sha256': 'b8407f0f3c7279a49297c969a4ab2905641b232910e316fb806730065987cd49'}}, 'emerging': {'addresses.parquet': {'bytes': 2094327, 'sha256': '4e9bf9d2a1777896e84fd4ee471096ff075aaefefd544f91b731324b25425632'}, 'claims.parquet': {'bytes': 373376, 'sha256': '1a2fce8a26cb1e05de1f53fe4e39bde772a1898e845755487625355fec4cc0e9'}, 'customers.parquet': {'bytes': 2319251, 'sha256': 'c00a0095d5fb7b2b65cd9647216add49afb3703d863d5c358b1441f0fab1fb62'}, 'expenses.parquet': {'bytes': 3124, 'sha256': '9033f666a5a45f0b44501d57e40ab1cc571c51c384f23a62942b75db323b1cdf'}, 'policies_buildings.parquet': {'bytes': 1049236, 'sha256': 'ccc948fafc11e623d5cb010c2b494f6813f6048719eae7bcde28794467598319'}, 'policies_contents.parquet': {'bytes': 1272728, 'sha256': '84d7f48d03933b018bec8fdc2f4bbd96df184cca7ae1971c38d3acc955720f8e'}, 'policies_motor.parquet': {'bytes': 1988978, 'sha256': '7c5dbb5e5b46629ebf01a66c991183d20b8585393b589bc2644fcbd6653a3ec1'}, 'reference_policies.parquet': {'bytes': 30934, 'sha256': '6d4c2839e87d092fccd4b3c3ddc16a2a4c4993c35e18481e322462cd382dd8f4'}, 'sample_submission.parquet': {'bytes': 1197460, 'sha256': '160fc59043f1012337605c8d8446c0efbf81458e046cf02df9186d6f909d59ef'}, 'test_buildings.parquet': {'bytes': 2507817, 'sha256': '21f91aaa66a1b9efd216ad0e04ff12a507dbeb721084330d9b9f06c99edd0ca6'}, 'test_contents.parquet': {'bytes': 3038763, 'sha256': 'af5ef2553e35a2d563ca091b173500daac55acc4969d1d3a96fa6b4ec3c6a012'}, 'test_motor.parquet': {'bytes': 4626510, 'sha256': '108d5c68e9bab5ccd90ee5502bc3543aa515a5aa07fda44a3b227cf070a28aa5'}, 'weather.parquet': {'bytes': 6060339, 'sha256': '645067069f68de8c4746d1ba48a454ff00155e1aa6fbbf64cdee48ae7269cbbd'}}}\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {},
+      "outputs": [],
+      "source": [
+        "emerging_files = BASE_FILES + [\"expenses.parquet\", \"reference_policies.parquet\"]\n",
+        "developed = find_market(\"developed\", BASE_FILES, DEVELOPED_DIR)\n",
+        "emerging = find_market(\"emerging\", emerging_files, EMERGING_DIR)\n",
+        "for name, folder, files in ((\"developed\", developed, BASE_FILES), (\"emerging\", emerging, emerging_files)):\n",
+        "    print(name, folder)\n",
+        "    display(inventory(folder, files))\n",
+        "developed_sample = check_template(developed)\n",
+        "sample = check_template(emerging)\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Modeling and evidence\n",
+        "\n",
+        "I use claims valued at 31 December 2024 as an incomplete observation of ultimate losses. T2b learns developed-market risk patterns; A1 transfers a separate developed-market structure. The F3c recipe combines the two and applies historical public-score information. Those public factors are frozen, so this is a reconstruction of the historical submission rather than a new blind evaluation. I do not recalculate leaderboard probes or select an alternative using the 2024 results.\n",
+        "\n",
+        "Two parts of the historical source were restored: a global reporting curve reconstructed from the documented formula and the old motor confirmation join before the ID01 correction. They are clearly distinguished from recovered original code. Availability at quotation, case reserves and the stability of new-business results remain open limitations. The reconstruction previously matched F3c in a Windows Python 3.12 environment; it was performed within the same AI-assisted workflow and is not independent professional review.\n",
+        "\n",
+        "I directed the source modeling and reconstruction work with AI assistance. The repository history and project records retain the authorship and provenance of those contributions. The source files are embedded as text and written into this run's temporary workspace so that their imports and the historical stage boundaries remain intact.\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## What changes in the emerging market\n",
+        "\n",
+        "The emerging market has a shorter claims history than the developed market. I use the developed portfolio to learn risk patterns, then adapt their level and other components to emerging-market experience. The markets stay separate when policies, customers and claims are joined: a matching identifier across markets is not evidence of the same entity.\n",
+        "\n",
+        "For each market I assign accepted claims to policy periods by line, policy and occurrence date and calculate observed net incurred cost. Claims are valued at 31 December 2024. I estimate reporting completeness to construct the effective exposure used by the models. This does not establish that open-claim reserves are adequate or that the reporting pattern transports perfectly between markets.\n",
+        "\n",
+        "## Training and validation timeline\n",
+        "\n",
+        "| Stage | Developed data | Emerging data | Purpose |\n",
+        "| --- | --- | --- | --- |\n",
+        "| `dev` | 2021–2023 | 2023, with customer folds | Out-of-fold predictions for local development |\n",
+        "| `hold` | 2021–2023 | Fit on 2023, evaluate 2024 | Temporal contrast |\n",
+        "| `pcv` | 2021–2024 | 2023–2024, with customer folds | Out-of-fold inputs for production calibration |\n",
+        "| `prod` | 2021–2024 | 2023–2024 | Predictions for 2025 |\n",
+        "\n",
+        "T2b is a developed-market LightGBM Tweedie model with line-specific settings. It uses an internal customer split to choose the number of rounds, then refits on the permitted source training data. A1 is a separate transfer line; the production reconstruction uses three seeds and its recorded claims-history variant. The intermediate 2024 contrast and the production A1 recipe have different scopes. I do not call the contrast an out-of-fold replay of the entire production file.\n",
+        "\n",
+        "Customer folds reduce same-customer leakage across fold boundaries; the year split tests transport across time. They address different problems. Both 2023 and 2024 contributed to development, so the resulting diagnostics are adaptive rather than an independent final validation.\n",
+        "\n",
+        "## From components to F3c\n",
+        "\n",
+        "The historical chain constructs a 50/50 blend of its designated T2b and A1 production components. It then applies the frozen global public-probe level, F2 adjustments and the credible final level and shape. F3c adds the recorded residual factors for gender in motor and contents, and for working from home and marketing segment in contents, followed by their historical level adjustment. The code recalculates the local factors from the newly generated inputs and uses the saved aggregate public-probe constants; it does not make new submissions.\n",
+        "\n",
+        "The public calibration makes this a competition reconstruction. It would need a different source of level information in an actual pricing deployment. Gender is included because it belongs to the historical F3c specification; its use would need a jurisdiction-specific review and an assessment of differential effects before any real pricing application. New-business support, feature timing, influential claims and reserve uncertainty remain material limits. The conditional sensitivity checks do not establish that the method will perform the same way on a new portfolio.\n",
+        "\n",
+        "## Reading the output\n",
+        "\n",
+        "I expect one positive finite prediction for each emerging-market test row, in the sample template's order. The notebook checks that contract and compares the CSV with the historical SHA-256. An exact match is a reproducibility check for the file, not independent validation of the actuarial assumptions. A mismatch stops the final step and leaves the generated file available for investigation. The reference premium calculation below is separate from the submission and does not reapply exposure to a period risk premium.\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Interpreting the metric\n",
+        "\n",
+        "For nonnegative observed cost `y` and positive prediction `mu`, Tweedie deviance at power 1.5 is `4 * (y / sqrt(mu) + sqrt(mu) - 2 * sqrt(y))`. The local D² is one minus the total model deviance divided by the deviance of the constant mean prediction. Higher is better; a negative value means worse than that constant on the evaluated rows. The observed target remains a valuation proxy for ultimate cost. I do not claim this local calculation proves every detail of Kaggle's unpublished evaluator.\n",
+        "\n",
+        "When comparing models, I keep the same rows and distinguish a global D² from segment-specific D² values, which have different null predictions. I also inspect the support and uncertainty of each segment instead of treating a small score difference as conclusive.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from sklearn.metrics import mean_tweedie_deviance, d2_tweedie_score\n",
+        "# A small synthetic calculation, including a zero-cost observation.\n",
+        "y_demo = np.array([0.0, 0.25, 2.0, 100.0])\n",
+        "mu_demo = np.array([0.1, 0.3, 1.5, 25.0])\n",
+        "d_demo = 4 * (y_demo / np.sqrt(mu_demo) + np.sqrt(mu_demo) - 2 * np.sqrt(y_demo))\n",
+        "null_demo = 4 * (y_demo / np.sqrt(y_demo.mean()) + np.sqrt(y_demo.mean()) - 2 * np.sqrt(y_demo))\n",
+        "assert np.isclose(d_demo.mean(), mean_tweedie_deviance(y_demo, mu_demo, power=1.5), rtol=1e-13)\n",
+        "assert np.isclose(1 - d_demo.sum() / null_demo.sum(), d2_tweedie_score(y_demo, mu_demo, power=1.5), rtol=1e-13)\n",
+        "print(\"The formula agrees with the local scikit-learn calculation.\")\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Dependencies and run workspace\n",
+        "\n",
+        "The reference reconstruction used Python 3.12.14, NumPy 2.5.3, pandas 3.0.5, PyArrow 26.0.0, SciPy 1.18.1, scikit-learn 1.9.1 and LightGBM 4.7.0. I check the installed versions before running. If the Kaggle image differs, install compatible versions in a separate setup step and restart the kernel; package installation may require enabling Internet. Exact bytes are not promised on a different platform. The historical local 57-stage reconstruction, which also included alternatives beyond F3c, took about 57 minutes excluding installation on its specific hardware. This notebook stops at F3c. [Kaggle's notebook documentation](https://www.kaggle.com/docs/notebooks), consulted on 28 October 2026, describes a 12-hour CPU session and 20 GB of saved working storage. Runtime and storage in a hosted run remain unverified.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import json, shutil, subprocess, time, uuid\n",
+        "from datetime import datetime, timezone\n",
+        "from importlib import metadata\n",
+        "REFERENCE = {\"numpy\": \"2.5.3\", \"pandas\": \"3.0.5\", \"pyarrow\": \"26.0.0\", \"scipy\": \"1.18.1\", \"scikit-learn\": \"1.9.1\", \"lightgbm\": \"4.7.0\"}\n",
+        "installed = {name: metadata.version(name) for name in REFERENCE}\n",
+        "print(\"Installed:\", installed)\n",
+        "print(\"Reference:\", REFERENCE)\n",
+        "if installed != REFERENCE:\n",
+        "    print(\"Environment differs from the recorded reference; output identity must be checked.\")\n",
+        "RUN, EXPORT = prepare_workspace(2)\n",
+        "SOURCES = {}\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "tags": [
+          "reader-guide"
+        ]
+      },
+      "source": [
+        "## Embedded source package\n",
+        "\n",
+        "I keep the source files below as text assignments. Running these cells registers the code in memory; the later execution section writes it into the new workspace and starts the recipe. I retain the original program boundaries, authorship and frozen configuration. No past row-level predictions or fitted models are embedded.\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/abrir_hold.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/abrir_hold.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/adaptacion.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/adaptacion.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/anidado.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/anidado.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/audit_checks.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/audit_checks.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/bootstrap_final.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/bootstrap_final.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/calibracion.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/calibracion.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/comparar_lineas.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/comparar_lineas.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/comparar_lineas_2.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/comparar_lineas_2.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/completitud.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/completitud.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/comun.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/comun.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/conteos_peligro.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/conteos_peligro.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/credibilidad_entre_anios.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/credibilidad_entre_anios.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/e09_e12_tabla.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/e09_e12_tabla.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/e09_nivel.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/e09_nivel.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/e11_e12.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/e11_e12.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/e13_clima_anual.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/e13_clima_anual.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/e14_eval.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/e14_eval.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/e25_severidad.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/e25_severidad.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/e26_hold.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/e26_hold.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/e26_pesos_des24.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/e26_pesos_des24.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/e27_backtest.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/e27_backtest.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/e27_nivel.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/e27_nivel.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/evaluar.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/evaluar.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/figura_comparacion.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/figura_comparacion.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/figura_evolucion.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/figura_evolucion.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/figura_nivel.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/figura_nivel.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/figuras_datos.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/figuras_datos.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/figuras_extra.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/figuras_extra.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/figuras_resultados.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/figuras_resultados.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/gbm.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/gbm.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/glm.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/glm.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/historia.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/historia.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/historia2.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/historia2.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/mezcla_designada.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/mezcla_designada.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/mezcla_diagnostico.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/mezcla_diagnostico.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/pcv_v2.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/pcv_v2.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/peligros.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/peligros.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/pesos_2025.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/pesos_2025.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/preparar_datos.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/preparar_datos.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/prima_comercial.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/prima_comercial.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/produccion.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/produccion.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/produccion2.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/produccion2.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/receta.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/receta.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/red.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/red.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/ruido_pareado.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/ruido_pareado.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/seg_eval.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/seg_eval.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/sonda_nivel_s2.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/sonda_nivel_s2.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/t2_rejilla.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/t2_rejilla.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/t2cap.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/t2cap.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/t4.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/t4.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/tabla_dev_final.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/tabla_dev_final.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/tendencia.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/tendencia.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/transfer2.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/transfer2.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/variables.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/variables.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/verificar_informe.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/verificar_informe.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `noche/codigo/base_mercado.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['noche/codigo/base_mercado.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `noche/codigo/reporte.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['noche/codigo/reporte.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `noche/codigo/exposicion_efectiva.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['noche/codigo/exposicion_efectiva.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `noche/codigo/ultimo_mercado.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['noche/codigo/ultimo_mercado.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `noche/codigo/conf_insumos.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['noche/codigo/conf_insumos.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `noche/codigo/desarrollado_gbm.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['noche/codigo/desarrollado_gbm.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `noche/codigo/variables.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['noche/codigo/variables.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `noche/codigo/marco.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['noche/codigo/marco.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/fsp_light.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/fsp_light.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `ml/codigo/fsp_light_prod.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['ml/codigo/fsp_light_prod.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `m017/forma_local.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['m017/forma_local.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `m017/forma_local3.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['m017/forma_local3.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `m017/forma_v2.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['m017/forma_v2.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `m017/eval_v2.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['m017/eval_v2.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `m017/f3_eval.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['m017/f3_eval.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `m017/construir_F2.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['m017/construir_F2.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `m017/construir_final.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['m017/construir_final.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `m017/exp26/lib26.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['m017/exp26/lib26.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `m017/exp26/fsp_blend_eval.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['m017/exp26/fsp_blend_eval.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `m017/construir_F3b.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['m017/construir_F3b.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `m017/construir_F4b.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['m017/construir_F4b.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `m017/construir_F3c.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['m017/construir_F3c.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `m017/construir_F3d.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['m017/construir_F3d.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Embedded source: `aux/reproduccion_cadena.py`\n",
+        "\n",
+        "This cell stores the code; a later cell materializes it inside the new run.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "tags": [
+          "embedded-source"
+        ],
+        "jupyter": {
+          "source_hidden": true
+        }
+      },
+      "source": [
+        "SOURCES['aux/reproduccion_cadena.py'] = \"\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Build the isolated workspace\n",
+        "\n",
+        "I copy the official inputs into the new run and verify their hashes. The embedded stages run in isolated child processes whose Python audit hook blocks socket connections and child process creation. They can read the run and Python environment; they cannot write to the original inputs. Historical per-row predictions are never used as inputs. Each completed stage has a receipt and log.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "CONFIG = {'m017/in/preinscripcion.json': {'id': 'CLA-S2-SONDA-SEGMENTO-20261025', 'autor': 'AI-assisted project workflow, sesión de validación nocturna', 'pedido': 'El participante eligió «Final + diseñar sonda por segmento» el 25-10 tras la sonda global.', 'base': {'archivo': 'Repositorio_IAA2026/privado/semana2/primary_validacion_nocturna_20261023/sonda_global/final_sonda_global_2025.csv', 'sha256': '42659dbb4101d4f9a4ab00c287d77b2bd21d42be9734d2ca4a4074eb57c9add2', 'g': 1.187658238648521, 'd2_publico_previsto': 0.15948, 'mezcla': {'sha256': '12831ef4a05c1773824abe5fa139d9503dd2989b4874e7d93cfc000406cfdb4a', 'd2_publico': 0.1539}, 'beta_A': 0.6213270716132047, 'beta_B': 0.5079950966862582, 'c_optimo_global': 1.2230965922038046}, 'celdas': {'contents_0': {'cuota_raiz_mu': 0.03863, 'filas': 15806, 'Z': 0.534, 'sigma': 0.1869, 'sigma_agrupado_simulacion': 0.1859}, 'buildings_0': {'cuota_raiz_mu': 0.067202, 'filas': 12579, 'Z': 0.36, 'sigma': 0.2666, 'sigma_agrupado_simulacion': 0.2646}, 'motor_0': {'cuota_raiz_mu': 0.112814, 'filas': 21698, 'Z': 0.81, 'sigma': 0.0969, 'sigma_agrupado_simulacion': 0.0941}, 'contents_1': {'cuota_raiz_mu': 0.128667, 'filas': 50441, 'Z': 0.736, 'sigma': 0.1198, 'sigma_agrupado_simulacion': 0.1115}, 'buildings_1': {'cuota_raiz_mu': 0.221179, 'filas': 39716, 'Z': 0.724, 'sigma': 0.1236, 'sigma_agrupado_simulacion': 0.1196}, 'motor_1': {'cuota_raiz_mu': 0.431507, 'filas': 68823, 'Z': 0.866, 'sigma': 0.0786, 'sigma_agrupado_simulacion': 0.0666}}, 'd2_F_intervalo_redondeo': [0.1594743, 0.1594849], 'celda_deducida': 'motor_1', 'sondas': {'sonda_seg_contents_0.csv': {'celda': 'contents_0', 'K': 1.2, 'filas_escaladas': 15806, 'sha256': 'fb568cefdd6cf8908b5a53ed37ed211b5a984bfaea65f6d9031eea0cc9183168', 'total': 82241464.19}, 'sonda_seg_buildings_0.csv': {'celda': 'buildings_0', 'K': 1.2, 'filas_escaladas': 12579, 'sha256': '62373a316abbb97b869c9fb315bf257b1e69fa94dcb29ee91a2515ce63efe5fb', 'total': 83110161.16}, 'sonda_seg_motor_0.csv': {'celda': 'motor_0', 'K': 1.2, 'filas_escaladas': 21698, 'sha256': 'f76c3a6c53057008b0fdf242b4cb36312822b1a6721e6100dfaee961bc966d76', 'total': 83762225.51}, 'sonda_seg_contents_1.csv': {'celda': 'contents_1', 'K': 1.2, 'filas_escaladas': 50441, 'sha256': '131716eede0d7a652063b21b86018622853f224026583450170b7d9eda3455a1', 'total': 82952117.21}, 'sonda_seg_buildings_1.csv': {'celda': 'buildings_1', 'K': 1.2, 'filas_escaladas': 39716, 'sha256': '28a61e3a5281bb56bae77836f0edc40ad625f1a104ac6b1b4678ee0d6980de7f', 'total': 85852081.51}}, 'metodo': 'b_s = βB × cuota_s (Σμ^½ de la celda en el test); a_s = [D2(F) − D2(sonda_s) − b_s((gK)^½ − g^½)] / ((gK)^−½ − g^−½) para las cinco celdas sondeadas, y a_deducida = βA − Σ a_s. c*_s = a_s / b_s. Factor final por celda: g × acotar((c*_s / c*_g)^Z_s, 0,75, 1,33). Archivo final = mezcla × factor de su celda.', 'credibilidad': {'tau': 0.2, 'tau_motivo': 'Desviación logarítmica de cada celda frente al nivel global: en 2024, con el nivel de 2023, los ramos se desviaron +0,22, −0,36 y +0,08 del global (RMS 0,25), y el cociente nuevo negocio / renovación osciló entre 0,79 y 1,70 por ramo y año.', 'sigma': 'desviación típica de log(c*_s/c*_g) público menos privado, remuestreo de 2023 y 2024 al tamaño y composición de 2025 (150 réplicas por año)'}, 'orden_de_envio': 'Primero F solo; si su D2 público es compatible con el intervalo de redondeo, después las cinco sondas. Así una parada en F no gasta las sondas.', 'entrada_de_puntuaciones': 'Por nombre de archivo (o por recibo con SHA-256), nunca por nombre de celda, para que una puntuación no se asigne a la celda equivocada.', 'paradas': ['Si el intervalo [D2(F) observado ± 0,000005] no toca el intervalo previsto por el redondeo de las puntuaciones globales, no se resuelve: la métrica no tendría la forma supuesta.', 'Si a_s o b_s ≤ 0 en alguna celda, no se resuelve: el modelo implica a_s > 0, así que un valor no positivo indica un supuesto roto (público no aleatorio u otra métrica).', 'Si |log(c*_s / c*_g)| > max(0,7; 3 σ_s) en alguna celda, el resolutor se detiene sin escribir el archivo final y se consulta al participante.'], 'nota_Z': 'Z usa el mayor σ de los dos años de la simulación (sigma_por_pool.json), más conservador que el σ agrupado con que se simularon las ganancias de diseno.json.', 'nota_previa': 'El escenario «previa» sortea seis desviaciones independientes con el mismo τ que fija Z; por construcción favorece a las segmentaciones con más celdas.', 'simulacion_privado': {'nulo_2024': {'media': -0.00048, 'p05_p50_p95': [-0.00149, -0.0004, 0.00041], 'prob_ganar': 0.22, 'techo_oraculo_media': 0.00118}, 'nulo_2023': {'media': -0.00062, 'p05_p50_p95': [-0.00203, -0.00049, 0.00037], 'prob_ganar': 0.193, 'techo_oraculo_media': 0.00128}, 'previa_2024': {'media': 0.0026, 'p05_p50_p95': [-0.0005, 0.00212, 0.00636], 'prob_ganar': 0.88, 'techo_oraculo_media': 0.00472}, 'previa_2023': {'media': 0.00222, 'p05_p50_p95': [-0.00099, 0.00182, 0.00678], 'prob_ganar': 0.813, 'techo_oraculo_media': 0.00462}, 'como_2024': {'media': 0.01125, 'p05_p50_p95': [0.00893, 0.01112, 0.01418], 'prob_ganar': 1.0, 'techo_oraculo_media': 0.01552}, 'como_2023': {'media': 0.01753, 'p05_p50_p95': [0.01271, 0.01757, 0.02366], 'prob_ganar': 1.0, 'techo_oraculo_media': 0.02114}}, 'alternativas_simuladas': {'nb': {'2024_nulo': -0.00017, '2024_como_el_año': 0.0001, '2024_previa': 0.00062, '2023_nulo': -0.00025, '2023_como_el_año': 0.00526, '2023_previa': 0.00056}, 'ramo': {'2024_nulo': -0.00038, '2024_como_el_año': 0.0112, '2024_previa': 0.0011, '2023_nulo': -0.00042, '2023_como_el_año': 0.01104, '2023_previa': 0.00095}}, 'coste': 'el archivo final global, cinco sondas y el archivo final por celda: siete envíos; quedan ocho hoy y diez por día hasta el 30 de octubre', 'limites': 'Supone un público de un tercio al azar por filas; b_s aproximado por cuotas del test; σ medido con 2023 y 2024 remuestreados (el nuevo negocio de esos años tiene pocos siniestros grandes). Solo ajusta un nivel por celda, no el orden dentro de la celda. El envío lo hace reference con autorización expresa del participante; la selección final es del participante.'}, 'm017/sigma_forma.json': {'motor_1': {'sigma': 0.07, 'a_opt_media_remuestreo': 1.092, 'bandas_2025': {'l': 0.821, 'c': 0.102, 'm': 0.077}, 'Z_tau0.25': 0.927}, 'buildings_1': {'sigma': 0.51, 'a_opt_media_remuestreo': 0.976, 'bandas_2025': {'l': 0.882, 'c': 0.067, 'm': 0.052}, 'Z_tau0.25': 0.194}, 'contents_1': {'sigma': 0.081, 'a_opt_media_remuestreo': 1.339, 'bandas_2025': {'l': 0.855, 'c': 0.082, 'm': 0.063}, 'Z_tau0.25': 0.905}}, 'm017/sondas_F2_info.json': {'base': {'archivo': 'F2_ncb_previos_2025.csv', 'sha256': '119627d93003a98933d261e773ffaf6e29a7125346367f716a0a411b97dca11a'}, 'sondas': {'sonda_F2_motor_1_a06.csv': {'celda': 'motor_1', 'a': 0.6, 'razon_nivel': 0.9466, 'sha256': '66fb61402bacd3a3f5c6bd2aba9a0979c244d553694b65515d68bb2453f78a78', 'total_celda': 37803870.18, 'total_celda_F2': 39935317.58}, 'sonda_F2_motor_1_a08.csv': {'celda': 'motor_1', 'a': 0.8, 'razon_nivel': 0.9679, 'sha256': 'b393dd709f5ef6ed208d353726cc40de8738852b74911fcc66525769f9a918eb', 'total_celda': 38654638.65, 'total_celda_F2': 39935317.58}, 'sonda_F2_buildings_1_a07.csv': {'celda': 'buildings_1', 'a': 0.7, 'razon_nivel': 0.9131, 'sha256': '451ac68bae3148da9d898fec483f45ea994a822e7aa9febbdce91a66a420a8fc', 'total_celda': 17856249.55, 'total_celda_F2': 19554638.55}, 'sonda_F2_buildings_1_a13.csv': {'celda': 'buildings_1', 'a': 1.3, 'razon_nivel': 1.1652, 'sha256': '2dff0eb76100a4116d5b4517402d0219d492adf7e708d21d08df259e92f44e01', 'total_celda': 22784970.13, 'total_celda_F2': 19554638.55}, 'sonda_F2_contents_1_a07.csv': {'celda': 'contents_1', 'a': 0.7, 'razon_nivel': 0.9525, 'sha256': 'f2401cda8e7a9c0373148995c4ee16210174011b229c2c6802c09d8b76e020b4', 'total_celda': 4785276.96, 'total_celda_F2': 5023843.53}, 'sonda_F2_contents_1_a13.csv': {'celda': 'contents_1', 'a': 1.3, 'razon_nivel': 1.0965, 'sha256': '859e2226240f682330aa7e04a8bcaaa40a101590b61beb22736496171439c4ce', 'total_celda': 5508762.58, 'total_celda_F2': 5023843.53}}}, 'm017/recibos_reales_20261026.json': [{'sha256': '42659dbb4101d4f9a4ab00c287d77b2bd21d42be9734d2ca4a4074eb57c9add2', 'd2': 0.15948}, {'sha256': 'fb568cefdd6cf8908b5a53ed37ed211b5a984bfaea65f6d9031eea0cc9183168', 'd2': 0.15888}, {'sha256': '62373a316abbb97b869c9fb315bf257b1e69fa94dcb29ee91a2515ce63efe5fb', 'd2': 0.15804}, {'sha256': 'f76c3a6c53057008b0fdf242b4cb36312822b1a6721e6100dfaee961bc966d76', 'd2': 0.15898}, {'sha256': '131716eede0d7a652063b21b86018622853f224026583450170b7d9eda3455a1', 'd2': 0.1583}, {'sha256': '28a61e3a5281bb56bae77836f0edc40ad625f1a104ac6b1b4678ee0d6980de7f', 'd2': 0.15858}, {'sha256': '119627d93003a98933d261e773ffaf6e29a7125346367f716a0a411b97dca11a', 'd2': 0.16033}, {'sha256': '66fb61402bacd3a3f5c6bd2aba9a0979c244d553694b65515d68bb2453f78a78', 'd2': 0.15246}, {'sha256': 'b393dd709f5ef6ed208d353726cc40de8738852b74911fcc66525769f9a918eb', 'd2': 0.15705}, {'sha256': '451ac68bae3148da9d898fec483f45ea994a822e7aa9febbdce91a66a420a8fc', 'd2': 0.15894}, {'sha256': '2dff0eb76100a4116d5b4517402d0219d492adf7e708d21d08df259e92f44e01', 'd2': 0.1591}, {'sha256': 'f2401cda8e7a9c0373148995c4ee16210174011b229c2c6802c09d8b76e020b4', 'd2': 0.15958}, {'sha256': '859e2226240f682330aa7e04a8bcaaa40a101590b61beb22736496171439c4ce', 'd2': 0.16001}], 'm017/exp26/fuga_celdas.json': {'motor_1': {'K_estrella_F2': 1.185914884205038, 'a0.6': {'raiz_ratio': 0.99164, 'd2_nivel': -0.000388}, 'a0.8': {'raiz_ratio': 0.99437, 'd2_nivel': -0.000257}, 'original': {'vertice': 1.4008, 'curv': -0.01637, 'ganancia': 0.00263}, 'sin_nivel': {'vertice': 1.3212, 'curv': -0.01794, 'ganancia': 0.001851}}, 'buildings_1': {'K_estrella_F2': 1.0114807998102306, 'a0.7': {'raiz_ratio': 0.98962, 'd2_nivel': -2.8e-05}, 'a1.3': {'raiz_ratio': 1.02326, 'd2_nivel': -3.3e-05}, 'original': {'vertice': 1.0092, 'curv': -0.01456, 'ganancia': 1e-06}, 'sin_nivel': {'vertice': 1.0097, 'curv': -0.01422, 'ganancia': 1e-06}}, 'contents_1': {'K_estrella_F2': 0.910477421323969, 'a0.7': {'raiz_ratio': 1.00059, 'd2_nivel': -4e-06}, 'a1.3': {'raiz_ratio': 1.00836, 'd2_nivel': -5.8e-05}, 'original': {'vertice': 1.0603, 'curv': -0.00594, 'ganancia': 2.2e-05}, 'sin_nivel': {'vertice': 1.072, 'curv': -0.0056, 'ganancia': 2.9e-05}}}, 'm017/in/constantes_publicas.json': {'factor_global': 1.1876582386485208}}\n",
+        "INITIAL_STEPS = [{'id': 'ml_preparar', 'argv': ['preparar_datos.py']}, {'id': 'ml_historia', 'argv': ['historia.py']}, {'id': 't2b_dev_motor', 'argv': ['gbm.py', 'dev', 'ninguno', 'motor']}, {'id': 't2b_dev_buildings', 'argv': ['gbm.py', 'dev', 'ninguno', 'buildings']}, {'id': 't2b_dev_contents', 'argv': ['gbm.py', 'dev', 'ninguno', 'contents']}, {'id': 't2b_hold_motor', 'argv': ['gbm.py', 'hold', 'ninguno', 'motor']}, {'id': 't2b_hold_buildings', 'argv': ['gbm.py', 'hold', 'ninguno', 'buildings']}, {'id': 't2b_hold_contents', 'argv': ['gbm.py', 'hold', 'ninguno', 'contents']}, {'id': 't2b_pcv_motor', 'argv': ['gbm.py', 'pcv', 'ninguno', 'motor']}, {'id': 't2b_pcv_buildings', 'argv': ['gbm.py', 'pcv', 'ninguno', 'buildings']}, {'id': 't2b_pcv_contents', 'argv': ['gbm.py', 'pcv', 'ninguno', 'contents']}, {'id': 't2b_prod_motor', 'argv': ['gbm.py', 'prod', 'ninguno', 'motor']}, {'id': 't2b_prod_buildings', 'argv': ['gbm.py', 'prod', 'ninguno', 'buildings']}, {'id': 't2b_prod_contents', 'argv': ['gbm.py', 'prod', 'ninguno', 'contents']}]\n",
+        "CHAIN_STEPS = [{'id': 'ml_C1', 'family': 'ml', 'argv': ['@aux', 'ml_c1']}, {'id': 'noche_base_s1', 'family': 'noche', 'argv': ['base_mercado.py', 's1']}, {'id': 'noche_base_s2', 'family': 'noche', 'argv': ['base_mercado.py', 's2']}, {'id': 'noche_curva_global', 'family': 'noche', 'argv': ['@aux', 'curve']}, {'id': 'noche_ultimo_s1', 'family': 'noche', 'argv': ['ultimo_mercado.py', 's1']}, {'id': 'noche_ultimo_s2', 'family': 'noche', 'argv': ['ultimo_mercado.py', 's2']}, {'id': 'noche_conf_insumos', 'family': 'noche', 'argv': ['conf_insumos.py']}, {'id': 'A1_full_motor_11_base', 'family': 'noche', 'argv': ['desarrollado_gbm.py', 'motor', '--sufijo', '_v2fixs11', '--lr', '.02', '--pat', '400', '--seed', '11', '--sin', 'make_model']}, {'id': 'A1_full_buildings_11_base', 'family': 'noche', 'argv': ['desarrollado_gbm.py', 'buildings', '--sufijo', '_m02', '--lr', '.02', '--pat', '400', '--seed', '11']}, {'id': 'A1_full_contents_11_base', 'family': 'noche', 'argv': ['desarrollado_gbm.py', 'contents', '--sufijo', '_m02', '--lr', '.02', '--pat', '400', '--seed', '11']}, {'id': 'A1_full_motor_12_base', 'family': 'noche', 'argv': ['desarrollado_gbm.py', 'motor', '--sufijo', '_v2fixs12', '--lr', '.02', '--pat', '400', '--seed', '12', '--sin', 'make_model']}, {'id': 'A1_full_buildings_12_base', 'family': 'noche', 'argv': ['desarrollado_gbm.py', 'buildings', '--sufijo', '_v2s12', '--lr', '.02', '--pat', '400', '--seed', '12']}, {'id': 'A1_full_contents_12_base', 'family': 'noche', 'argv': ['desarrollado_gbm.py', 'contents', '--sufijo', '_v2s12', '--lr', '.02', '--pat', '400', '--seed', '12']}, {'id': 'A1_full_motor_13_base', 'family': 'noche', 'argv': ['desarrollado_gbm.py', 'motor', '--sufijo', '_v2fixs13', '--lr', '.02', '--pat', '400', '--seed', '13', '--sin', 'make_model']}, {'id': 'A1_full_buildings_13_base', 'family': 'noche', 'argv': ['desarrollado_gbm.py', 'buildings', '--sufijo', '_v2s13', '--lr', '.02', '--pat', '400', '--seed', '13']}, {'id': 'A1_full_contents_13_base', 'family': 'noche', 'argv': ['desarrollado_gbm.py', 'contents', '--sufijo', '_v2s13', '--lr', '.02', '--pat', '400', '--seed', '13']}, {'id': 'A1_full_motor_11_F1', 'family': 'noche', 'argv': ['desarrollado_gbm.py', 'motor', '--sufijo', '_v2fixf1', '--lr', '.02', '--pat', '400', '--seed', '11', '--sin', 'make_model', '--f1']}, {'id': 'A1_full_buildings_11_F1', 'family': 'noche', 'argv': ['desarrollado_gbm.py', 'buildings', '--sufijo', '_v2f1', '--lr', '.02', '--pat', '400', '--seed', '11', '--f1']}, {'id': 'A1_full_contents_11_F1', 'family': 'noche', 'argv': ['desarrollado_gbm.py', 'contents', '--sufijo', '_v2f1', '--lr', '.02', '--pat', '400', '--seed', '11', '--f1']}, {'id': 'A1_full_motor_12_F1', 'family': 'noche', 'argv': ['desarrollado_gbm.py', 'motor', '--sufijo', '_v2fixf1s12', '--lr', '.02', '--pat', '400', '--seed', '12', '--sin', 'make_model', '--f1']}, {'id': 'A1_full_buildings_12_F1', 'family': 'noche', 'argv': ['desarrollado_gbm.py', 'buildings', '--sufijo', '_v2f1s12', '--lr', '.02', '--pat', '400', '--seed', '12', '--f1']}, {'id': 'A1_full_contents_12_F1', 'family': 'noche', 'argv': ['desarrollado_gbm.py', 'contents', '--sufijo', '_v2f1s12', '--lr', '.02', '--pat', '400', '--seed', '12', '--f1']}, {'id': 'A1_full_motor_13_F1', 'family': 'noche', 'argv': ['desarrollado_gbm.py', 'motor', '--sufijo', '_v2fixf1s13', '--lr', '.02', '--pat', '400', '--seed', '13', '--sin', 'make_model', '--f1']}, {'id': 'A1_full_buildings_13_F1', 'family': 'noche', 'argv': ['desarrollado_gbm.py', 'buildings', '--sufijo', '_v2f1s13', '--lr', '.02', '--pat', '400', '--seed', '13', '--f1']}, {'id': 'A1_full_contents_13_F1', 'family': 'noche', 'argv': ['desarrollado_gbm.py', 'contents', '--sufijo', '_v2f1s13', '--lr', '.02', '--pat', '400', '--seed', '13', '--f1']}, {'id': 'A1_conf_historico_motor', 'family': 'noche', 'argv': ['desarrollado_gbm.py', 'motor', '--años', '2021,2022,2023', '--sufijo', '_v2conf', '--lr', '.02', '--pat', '400', '--conf', '--seed', '11', '--sin', 'make_model'], 'legacy_id01': True}, {'id': 'A1_conf_historico_buildings', 'family': 'noche', 'argv': ['desarrollado_gbm.py', 'buildings', '--años', '2021,2022,2023', '--sufijo', '_v2conf', '--lr', '.02', '--pat', '400', '--conf', '--seed', '11'], 'legacy_id01': False}, {'id': 'A1_conf_historico_contents', 'family': 'noche', 'argv': ['desarrollado_gbm.py', 'contents', '--años', '2021,2022,2023', '--sufijo', '_v2conf', '--lr', '.02', '--pat', '400', '--conf', '--seed', '11'], 'legacy_id01': False}, {'id': 'A1_produccion_y_hold', 'family': 'noche', 'argv': ['@aux', 'a1_post']}, {'id': 'm017_insumos_generados', 'family': 'ml', 'argv': ['@aux', 'm017_inputs']}, {'id': 'm017_F2', 'family': 'm017', 'argv': ['construir_F2.py']}, {'id': 'm017_final_creible', 'family': 'm017', 'argv': ['construir_final.py', 'recibos_reales_20261026.json']}, {'id': 'm017_alias_J', 'family': 'm017', 'argv': ['@aux', 'final_alias']}, {'id': 'm017_F3c', 'family': 'm017', 'argv': ['construir_F3c.py', 'F3c']}]\n",
+        "BOOTSTRAP1 = \"\\nimport os,sys,runpy,json\\nfrom pathlib import Path\\nwork=Path(sys.argv[1]).resolve()\\ncode=work/'ml/codigo'\\nscript=code/sys.argv[2]\\nsys.path.insert(0,str(code))\\nallowed=[work,Path(sys.prefix).resolve(),Path(sys.base_prefix).resolve()]\\ndef inside(p,root):return p==root or root in p.parents\\ndef audit(event,args):\\n    if event in ('socket.connect','socket.bind','socket.sendto','subprocess.Popen'):\\n        raise PermissionError('Etapa sin red ni subprocesos: '+event)\\n    if event=='open' and isinstance(args[0],(str,bytes,os.PathLike)):\\n        path=Path(os.fsdecode(args[0])).resolve()\\n        if not any(inside(path,root) for root in allowed):\\n            raise PermissionError('Lectura externa al entorno limpio: '+str(path))\\n        mode=args[1] or ''\\n        flags=args[2] or 0\\n        writing=any(c in str(mode) for c in 'wax+') or flags & (os.O_WRONLY|os.O_RDWR|os.O_CREAT|os.O_TRUNC)\\n        if writing and (not inside(path,work) or inside(path,work/'ml/datos')):\\n            raise PermissionError('Escritura fuera de salidas permitidas: '+str(path))\\nsys.addaudithook(audit)\\nsys.argv=[str(script),*sys.argv[3:]]\\nrunpy.run_path(str(script),run_name='__main__')\\n\"\n",
+        "BOOTSTRAP2 = \"\\nimport sys,os,runpy\\nfrom pathlib import Path\\nwork=Path(sys.argv[1]).resolve();family=sys.argv[2]\\ncode=work/'ml/codigo' if family=='ml' else work/family/'codigo' if family=='noche' else work/'m017'\\nsys.path.insert(0,str(code))\\nname=sys.argv[3];script=work/'aux/reproduccion_cadena.py' if name=='@aux' else code/name\\nallowed=[work,Path(sys.prefix).resolve(),Path(sys.base_prefix).resolve()]\\ndef inside(p,r):return p==r or r in p.parents\\ndef hook(event,args):\\n    if event in ('socket.connect','socket.bind','socket.sendto','subprocess.Popen'):raise PermissionError('Etapa sin red/subprocesos: '+event)\\n    if event=='open' and isinstance(args[0],(str,bytes,os.PathLike)):\\n        p=Path(os.fsdecode(args[0])).resolve()\\n        if not any(inside(p,r) for r in allowed):raise PermissionError('Lectura ajena a la corrida limpia: '+str(p))\\n        mode=args[1] or '';flags=args[2] or 0\\n        wr=any(c in str(mode) for c in 'wax+') or flags&(os.O_WRONLY|os.O_RDWR|os.O_CREAT|os.O_TRUNC)\\n        if wr and (not inside(p,work) or inside(p,work/'ml/datos') or inside(p,work/'noche/datos')):raise PermissionError('Escritura no permitida: '+str(p))\\nsys.addaudithook(hook)\\nsys.argv=[str(script),*sys.argv[4:]]\\nrunpy.run_path(str(script),run_name='__main__')\\n\"\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Inspect the execution plan\n",
+        "\n",
+        "I show the stage identifiers and arguments before running. T2b builds the developed-market backbone first; the continuation then builds A1 and the F3c calibration. Each identifier becomes a separate log and receipt. The plan contains no historical row-level predictions.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "plan_rows = [{\"stage\": step[\"id\"], \"family\": \"T2b\", \"arguments\": \" \".join(step[\"argv\"])} for step in INITIAL_STEPS]\n",
+        "plan_rows += [{\"stage\": step[\"id\"], \"family\": step[\"family\"], \"arguments\": \" \".join(step[\"argv\"])} for step in CHAIN_STEPS]\n",
+        "print(f\"Stages through F3c: {len(plan_rows)}\")\n",
+        "display(pd.DataFrame(plan_rows))\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "def digest(path):\n",
+        "    h = hashlib.sha256()\n",
+        "    with Path(path).open(\"rb\") as f:\n",
+        "        for part in iter(lambda: f.read(1024 * 1024), b\"\"):\n",
+        "            h.update(part)\n",
+        "    return h.hexdigest()\n",
+        "\n",
+        "def write_json(path, value):\n",
+        "    path.parent.mkdir(parents=True, exist_ok=True)\n",
+        "    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + \"\\n\", encoding=\"utf-8\")\n",
+        "\n",
+        "for rel, source in SOURCES.items():\n",
+        "    dest = RUN / rel\n",
+        "    dest.parent.mkdir(parents=True, exist_ok=True)\n",
+        "    source = source.replace(\"__RUN_ROOT__\", RUN.as_posix())\n",
+        "    compile(source, str(dest), \"exec\")\n",
+        "    dest.write_text(source, encoding=\"utf-8\", newline=\"\\n\")\n",
+        "for rel, value in CONFIG.items():\n",
+        "    write_json(RUN / rel, value)\n",
+        "for market, folder, names in ((\"developed\", developed, BASE_FILES), (\"emerging\", emerging, emerging_files)):\n",
+        "    for name in names:\n",
+        "        dest = RUN / \"ml/datos\" / market / name\n",
+        "        dest.parent.mkdir(parents=True, exist_ok=True)\n",
+        "        shutil.copyfile(folder / name, dest)\n",
+        "        assert digest(dest) == digest(folder / name)\n",
+        "        dest2 = RUN / \"noche/datos\" / (\"s1\" if market == \"developed\" else \"s2\") / name\n",
+        "        dest2.parent.mkdir(parents=True, exist_ok=True)\n",
+        "        shutil.copyfile(dest, dest2)\n",
+        "        assert digest(dest) == digest(dest2)\n",
+        "for directory in (\"tmp\", \"logs\", \"receipts\", \"chain_logs\", \"chain_receipts\", \"ml/trabajo/modelos/dev\", \"ml/trabajo/modelos/prod\", \"ml/entrega\", \"ml/privado\", \"noche/salidas/conf\", \"noche/salidas/transfer\", \"noche/salidas/correccion\", \"m017/in\", \"m017/revision\"):\n",
+        "    (RUN / directory).mkdir(parents=True, exist_ok=True)\n",
+        "(RUN / \"ejecutar_etapa.py\").write_text(BOOTSTRAP1, encoding=\"utf-8\")\n",
+        "(RUN / \"ejecutar_bloque.py\").write_text(BOOTSTRAP2, encoding=\"utf-8\")\n",
+        "write_json(RUN / \"notebook_run.json\", {\"python\": sys.version, \"packages\": installed, \"input_directories\": {\"developed\": str(developed), \"emerging\": str(emerging)}, \"source_count\": len(SOURCES), \"utc\": datetime.now(timezone.utc).isoformat()})\n",
+        "print(\"Workspace prepared with\", len(SOURCES), \"embedded sources\")\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Run the frozen stages\n",
+        "\n",
+        "I train the six T2b source models and their internal round-selection fits, then reconstruct A1 and the calibration chain through F3c. This is the chain needed for the selected F3c reference. A failure stops the notebook and points to the stage log; it is not silently converted to success.\n",
+        "\n",
+        "This notebook starts a fresh run and does not automatically resume a stage after interruption. Preserve the logs and receipt for diagnosis. Any transfer of intermediate data or checkpoints is a separate operation subject to the competition's data rules.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "env = {k: v for k, v in os.environ.items() if k.upper() in (\"SYSTEMROOT\", \"WINDIR\", \"PATH\", \"COMSPEC\", \"PATHEXT\", \"NUMBER_OF_PROCESSORS\")}\n",
+        "env.update(RETRAIN_WORK=str(RUN), MLIND_RAIZ=str(RUN / \"ml\"), MLIND_BACKBONE=\"T2b\", PYTHONUTF8=\"1\", PYTHONDONTWRITEBYTECODE=\"1\", TEMP=str(RUN / \"tmp\"), TMP=str(RUN / \"tmp\"), OMP_NUM_THREADS=\"2\", OPENBLAS_NUM_THREADS=\"2\", MKL_NUM_THREADS=\"2\")\n",
+        "\n",
+        "def run_stage(name, command, cwd, log_dir, receipt_dir, extra_env=None):\n",
+        "    log = RUN / log_dir / (name + \".log\")\n",
+        "    receipt = RUN / receipt_dir / (name + \".json\")\n",
+        "    if receipt.exists():\n",
+        "        raise RuntimeError(f\"Stage already has a receipt: {receipt}; preserve this run and start a fresh one\")\n",
+        "    stage_env = dict(env, **(extra_env or {}))\n",
+        "    start = time.monotonic()\n",
+        "    print(\"Starting\", name, flush=True)\n",
+        "    with log.open(\"wb\") as stream:\n",
+        "        result = subprocess.run(command, cwd=cwd, env=stage_env, stdout=stream, stderr=subprocess.STDOUT)\n",
+        "    write_json(receipt, {\"stage\": name, \"exit_code\": result.returncode, \"seconds\": time.monotonic() - start, \"log_sha256\": digest(log)})\n",
+        "    if result.returncode:\n",
+        "        print(log.read_text(encoding=\"utf-8\", errors=\"replace\")[-8000:])\n",
+        "        raise RuntimeError(f\"Stage {name} failed; see {log}\")\n",
+        "    print(\"Completed\", name, flush=True)\n",
+        "\n",
+        "for step in INITIAL_STEPS:\n",
+        "    run_stage(step[\"id\"], [sys.executable, \"-I\", \"-X\", \"utf8\", \"-u\", str(RUN / \"ejecutar_etapa.py\"), str(RUN), *step[\"argv\"]], RUN / \"ml/codigo\", \"logs\", \"receipts\")\n",
+        "for step in CHAIN_STEPS:\n",
+        "    family = step[\"family\"]\n",
+        "    cwd = RUN / (\"ml/codigo\" if family == \"ml\" else \"noche/codigo\" if family == \"noche\" else \"m017\")\n",
+        "    extra = {\"A1_PRE_ID01\": \"1\"} if step.get(\"legacy_id01\") else {}\n",
+        "    run_stage(step[\"id\"], [sys.executable, \"-I\", \"-X\", \"utf8\", \"-u\", str(RUN / \"ejecutar_bloque.py\"), str(RUN), family, *step[\"argv\"]], cwd, \"chain_logs\", \"chain_receipts\", extra)\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Check and save the risk-premium CSV\n",
+        "\n",
+        "I compare the newly generated F3c file with the historical SHA-256 and check the submission schema and IDs. A different hash can reflect environment or numerical differences; the checks do not establish equivalence on their own.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "f3c = RUN / \"m017/exp26/F3c_2025.csv\"\n",
+        "assert f3c.is_file(), f\"Expected output missing: {f3c}\"\n",
+        "pred = pd.read_csv(f3c, dtype={\"row_id\": str})\n",
+        "expected_ids = pd.read_parquet(emerging / \"sample_submission.parquet\", columns=[\"row_id\"]).row_id.astype(str)\n",
+        "assert list(pred.columns) == [\"row_id\", \"prediction\"]\n",
+        "assert pred.row_id.is_unique and pred.row_id.equals(expected_ids)\n",
+        "assert np.isfinite(pred.prediction).all() and (pred.prediction > 0).all()\n",
+        "historical_sha = \"5ab5e4e34290cf6ed6a7a792f59e1e55a4f056400bbbdf8401933afd236b3276\"\n",
+        "actual_sha = digest(f3c)\n",
+        "print(\"F3c SHA-256:\", actual_sha, \"matches historical:\", actual_sha == historical_sha)\n",
+        "if actual_sha != historical_sha:\n",
+        "    raise RuntimeError(f\"F3c differs from the historical CSV. Preserve and investigate {f3c} before treating this as an exact reproduction.\")\n",
+        "output = EXPORT / \"submission_week2_F3c.csv\"\n",
+        "shutil.copyfile(f3c, output)\n",
+        "print(\"Risk premium output:\", output)\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## From risk premium to commercial premium\n",
+        "\n",
+        "For the twenty official reference policies, I add catastrophe reinsurance for home lines and the fixed expense per policy, then divide by one minus variable expenses, commission, premium tax and target margin. The risk prediction is already for the covered period, so I do not multiply it by exposure again. I use the literal fixed expense per policy as the main interpretation and show annual proration as a sensitivity.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "from decimal import Decimal, localcontext, ROUND_HALF_UP\n",
+        "reference = pd.read_parquet(emerging / \"reference_policies.parquet\")\n",
+        "expenses = pd.read_parquet(emerging / \"expenses.parquet\").set_index(\"item\").emerging\n",
+        "refs = reference.merge(pred, on=\"row_id\", how=\"left\", validate=\"one_to_one\")\n",
+        "assert len(refs) == 20 and refs.prediction.notna().all()\n",
+        "D = lambda x: Decimal(str(x))\n",
+        "E = lambda k: D(expenses[k])\n",
+        "commercial = []\n",
+        "with localcontext() as context:\n",
+        "    context.prec = 45\n",
+        "    for row in refs.itertuples(index=False):\n",
+        "        risk, exposure = D(row.prediction), D(row.exposure)\n",
+        "        commission = E(\"commission_\" + row.channel)\n",
+        "        cat_rate = E(\"cat_reinsurance\") if row.line in (\"buildings\", \"contents\") else D(0)\n",
+        "        denominator = 1 - E(\"variable_expense\") - commission - E(\"premium_tax\") - E(\"target_profit_margin\")\n",
+        "        assert denominator > 0 and risk >= 0 and exposure > 0\n",
+        "        fixed = E(\"fixed_expense_per_policy\")\n",
+        "        price = (risk * (1 + cat_rate) + fixed) / denominator\n",
+        "        prorated = (risk * (1 + cat_rate) + fixed * exposure) / denominator\n",
+        "        assert abs(price - (risk * (1 + cat_rate) + fixed + price * (1 - denominator))) < D(\"1e-30\")\n",
+        "        commercial.append({\"row_id\": row.row_id, \"line\": row.line, \"channel\": row.channel, \"exposure\": float(exposure), \"risk_premium\": float(risk), \"fixed_expense\": float(fixed), \"commercial_premium\": str(price.quantize(D(\"0.01\"), rounding=ROUND_HALF_UP)), \"commercial_premium_prorated_fixed_sensitivity\": str(prorated.quantize(D(\"0.01\"), rounding=ROUND_HALF_UP))})\n",
+        "commercial_path = EXPORT / \"commercial_reference_premiums.csv\"\n",
+        "pd.DataFrame(commercial).to_csv(commercial_path, index=False)\n",
+        "print(\"Commercial reference calculations:\", commercial_path)\n"
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "tags": [
+          "reader-guide"
+        ]
+      },
+      "source": [
+        "## Outputs and troubleshooting\n",
+        "\n",
+        "After the final checks pass, I find `submission_week2_F3c.csv` and `commercial_reference_premiums.csv` in the `EXPORT` directory printed near the beginning. Without an override, Kaggle exports to a run-specific subdirectory of `/kaggle/working`; local execution exports beneath the new run directory. I can set `IAA_NOTEBOOK_EXPORT` before starting to choose a persistent private destination. I keep row-level outputs private.\n",
+        "\n",
+        "| If execution stops | What I check |\n",
+        "| --- | --- |\n",
+        "| Missing or ambiguous input directory | The explicit market path, required filenames and attached competition data |\n",
+        "| Missing library or version mismatch | The optional installation cell, kernel restart and reference environment |\n",
+        "| Failed model stage | The stage's log and receipt under the printed run directory |\n",
+        "| Final fingerprint mismatch | Environment and generated artifacts; I retain the file and investigate the difference |\n",
+        "\n",
+        "For Week 2, a failed stage stops execution and leaves its log and receipt. This notebook does not automatically resume the chain. I preserve the failed run before starting a fresh one or investigating a separate recovery.\n",
+        "\n",
+        "I do not bypass a failed fingerprint check or interpret a resumed run as an uninterrupted execution. A schema-valid CSV and an exact historical file match answer different questions.\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## License and materials\n",
+        "\n",
+        "My project code and documentation are covered by the MIT License below. Competition data and third-party packages retain their own terms and are not included in that license.\n",
+        "\n",
+        "MIT License\n",
+        "\n",
+        "Copyright (c) 2026 Manuel Rodríguez\n",
+        "\n",
+        "Permission is hereby granted, free of charge, to any person obtaining a copy\n",
+        "of this software and associated documentation files (the \"Software\"), to deal\n",
+        "in the Software without restriction, including without limitation the rights\n",
+        "to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n",
+        "copies of the Software, and to permit persons to whom the Software is\n",
+        "furnished to do so, subject to the following conditions:\n",
+        "\n",
+        "The above copyright notice and this permission notice shall be included in all\n",
+        "copies or substantial portions of the Software.\n",
+        "\n",
+        "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n",
+        "IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n",
+        "FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n",
+        "AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n",
+        "LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n",
+        "OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n",
+        "SOFTWARE.\n"
+      ]
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 4
+}
